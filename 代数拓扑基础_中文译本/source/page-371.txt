@@ -1,0 +1,38 @@
+356
+Elements of Algebraic Topology
+3. Show that, if {A, B} is an excisive couple, then the cup product
+formula induces a bilinear map
+Hp(X, A; R) × Hq(X, B; R) −→Hp+q(X, A ∪B; R) .
+Interpret associativity in this case.
+4. (a) If G is an abelian group, show that the group Hom (G, R) can
+be given the structure of an R-module by defining
+⟨α ϕ, g⟩= α · ⟨ϕ, g⟩,
+for ϕ ∈Hom (G, R), α ∈R, and g ∈G. Show that if f : G →G′
+is a homomorphism, then f is an R-module homomorphism.
+(b) Give Sp(X; R) = Hom (Sp(X), R) the structure of an R-module
+as in (a). Show that δ is an R-module homomorphism, so that
+Hp(X; R) has the structure of an R-module.
+(c) Show that if h : X →Y is a continuous map, then h∗is an
+R-module homomorphism.
+(d) Show that the cup product, as a function of each variable sepa-
+rately, is an R-module homomorphism. [So H∗(X; R) is a ring
+with operators R, and in case R is a field F, it is an algebra
+over F.]
+5. Refer to Definition 5.9.8. Give three examples of algebras that arise
+naturally in mathematics.
+5.10
+Cohomology Rings of Surfaces
+There is no general method for computing the singular cohomology ring of X,
+even if X is a CW complex. The reason is not hard to find: It turns out that
+the cellular complex of X does not determine the cohomology ring of X. That
+is, two CW complexes can have isomorphic cellular chain complexes without
+having isomorphic cohomology rings!
+Therefore, to compute cup products, we turn to simplicial cohomology. In
+this section, we define a simplicial cup product formula that corresponds to
+the previous formula for singular cochains under the standard isomorphism of
+simplicial theory with singular theory. Then we use this formula to compute
+a number of examples.
+Definition 5.10.1 Given a complex K, choose a partial ordering of the ver-
+tices of K that linearly orders the vertices of each simplex of K. Define
+Cp(K; R) × Cq(K; R) ⌣
+−→Cp+q(K; R)

@@ -1,0 +1,32 @@
+Duality in Manifolds
+517
+Hk(X, D)←Hk(X, U)→Hk(XU, Bd U)
+Hn−k(XU)→Hn−k(X \ D)
+Hk(X, E)←Hk(X, V )→Hk(XV , Bd V )
+Hn−k(XV )→Hn−k(X \ E).
+Hk(XV , U \ V )
+⌢ΓU
+⌢ΓV
+⌢Γ′
+U
+V
+D
+E
+Figure 8.12.5
+Here we must interpret these groups as singular groups because the pair
+(XV , U \ V ) is not necessarily triangulable. This arises from the fact that
+U and V may not be polytopes of subcomplexes of the same triangulation of
+X. The top row of maps in this last diagram defines λD,U and the bottom
+row defines λE,V . All unlabeled maps are induced by inclusion. The class Γ′
+is the appropriate “restriction” of Γ—that is, the image of Γ under
+Hn(X, A)
+Hn(X, U)
+Hn(XV , U \ V ) .
+∼=
+All squares and triangles in the diagram commute, by naturality of the cap
+product. Our result follows.
+Step 4: We now show that λD,U is independent of the choice of U. We apply
+the preceding step to the case D = E. If U and U ′ are two neighborhoods
+of D satisfying the conditions of Lemma 8.12.4, then we can choose V [also
+satisfying these conditions] so that D ⊂V ⊂U ∩U ′. Then, by Step 3,
+λD,U = λD,V = λD,U ′ .

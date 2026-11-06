@@ -1,0 +1,33 @@
+Cover images by Carlos Sequin. All Rights Reserved
+Second edition published 2025
+by CRC Press
+2385 Executive Center Drive, Suite 320, Boca Raton, FL 33431, U.S.A.
+and by CRC Press
+4 Park Square, Milton Park, Abingdon, Oxon, OX14 4RN
+CRC Press is an imprint of Taylor & Francis Group, LLC
+© 2025 James R. Munkres, Steven G. Krantz, and Harold R. Parks  
+First edition published by CRC Press 1993
+Reasonable efforts have been made to publish reliable data and information, but the author and pub-
+lisher cannot assume responsibility for the validity of all materials or the consequences of their use. 
+The authors and publishers have attempted to trace the copyright holders of all material reproduced 
+in this publication and apologize to copyright holders if permission to publish in this form has not 
+been obtained. If any copyright material has not been acknowledged please write and let us know so 
+we may rectify in any future reprint.
+Except as permitted under U.S. Copyright Law, no part of this book may be reprinted, reproduced, 
+transmitted, or utilized in any form by any electronic, mechanical, or other means, now known or 
+hereafter invented, including photocopying, microfilming, and recording, or in any information 
+storage or retrieval system, without written permission from the publishers.
+For permission to photocopy or use material electronically from this work, access www.copyright.
+com or contact the Copyright Clearance Center, Inc. (CCC), 222 Rosewood Drive, Danvers, MA 
+01923, 978-750-8400. For works that are not available on CCC please contact mpkbookspermis-
+sions@tandf.co.uk
+Trademark notice: Product or corporate names may be trademarks or registered trademarks and are 
+used only for identification and explanation without intent to infringe.
+Library of Congress Cataloging‑in‑Publication Data
+ISBN: 978-1-032-76554-9 (hbk)
+ISBN: 978-1-041-02924-3 (pbk)	
+ISBN: 978-1-003-62147-8 (ebk)
+DOI: 10.1201/9781003621478
+Typeset in CMR10 
+by KnowledgeWorks Global Ltd.
+Publisher’s note: This book has been prepared from camera-ready copy provided by the authors.

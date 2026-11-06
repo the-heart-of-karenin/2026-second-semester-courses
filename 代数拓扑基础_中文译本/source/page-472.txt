@@ -1,0 +1,34 @@
+Duality in Manifolds
+457
+what the complex sd X looks like. The block dual to each 3-simplex of X is
+its barycenter. The closed block dual to the 2-simplex abc consists of the two
+line segments joining the barycenter of abc with the barycenters of the two
+3-simplices having abc as a face. The closed block D(ab) dual to the 1-simplex
+ab is the closed octagonal region pictured in Figure 8.4.3. The set ˙D(ab) is its
+boundary. It is the union of the blocks dual to the 2-simplices and 3-simplices
+of X having ab as a face.
+c
+d
+e
+f
+b
+a
+X
+D(abc)
+D(abcd)
+b
+a
+Figure 8.4.2
+Figure 8.4.3
+Keep these two examples in mind as we prove the following theorem.
+Theorem 8.4.6 Let X be a locally finite simplicial complex that consists
+entirely of n-simplices and their faces. Let σ be a k-simplex of X. Then:
+(a) The dual blocks are disjoint and their union is |X|.
+(b) D(σ) is the polytope of a subcomplex of sd X of dimension n−k.
+(c) ˙D(σ) is the union of all blocks D(τ) for which τ has σ as a
+proper face. These blocks have dimension less than n −k.
+(d) D(σ) equals the cone | ˙D(σ) ∗σ|.
+(e) If Hi(X, X \ σ) ∼= Z for i = n and vanishes otherwise, then
+(D(σ), ˙D(σ)) has the homology of an n−k cell modulo its boundary.
+Proof: (a) The open simplices of sd X are disjoint, and each one lies in
+precisely one block D(σ)—namely the one such that σ is its final vertex.

@@ -1,0 +1,66 @@
+552
+Index of Notation
+f ∗: Hp(L, L0; G) →Hp(K, K0; G)
+simplicial cohomology homomorphism induced
+by simplicial map f : (K, K0) →(L, L0)
+317
+δ∗: Hp−1(K0; G) →Hp(K, K0; G)
+induced simplicial coboundary homomorphism
+317
+Cp(C; G)
+p-dimensional cochain group of chain
+complex C = {Cp, ∂} with coefficients in G
+323
+{Cp(C; G), δ}
+cochain complex with coefficients in G
+323
+δ : Cp(C; G) →Cp+1(C; G)
+coboundary operator dual to boundary operator
+of chain complex C = {Cp, ∂}
+323
+Zp(C; G)
+cocycle group of chain complex C = {Cp, ∂}
+with coefficients in G
+323
+Bp(C; G)
+coboundary group of chain complex C = {Cp, ∂}
+with coefficients in G
+323
+Hp(C; G)
+cohomology group of chain complex C = {Cp, ∂}
+with coefficients in G
+323
+ϵ : Hom (Z, G) →C0(C; G)
+coaugmentation of chain complex C = {Cp, ∂}
+with coefficients in G
+323
+Hq(C; G)
+reduced cohomology group of chain complex
+C = {Cp, ∂} with coefficients in G
+323
+ϕ : Cp(C′; G) →Cp(C; G)
+cochain map induced by chain map ϕ : C →C′
+323
+ϕ∗: Hp(C′; G) →Hp(C; G)
+homomorphism of cohomology groups induced
+by chain map ϕ : C →C′
+324
+D : Cp+1(C′; G) →Cp(C; G)
+cochain homotopy
+324
+Hp(X, A; G) = Hp(S(X, A); G)
+relative singular cohomology group with
+coefficients in G
+326
+Hp(X; G) = Hp(S(X); G)
+reduced singular cohomology groups with coefficients
+in G
+326
+h# : Cp(Y, B; G) →Cp(X, A; G)
+singular cochain map induced by continuous
+map h : (X, A) →(Y, B)
+326
+h∗: Hp(Y, B; G) →Hp(X, A; G)
+singular cohomology homomorphism induced by
+continuous map h : (X, A) →(Y, B)
+326

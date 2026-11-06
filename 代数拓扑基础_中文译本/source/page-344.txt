@@ -1,0 +1,48 @@
+Cohomology
+329
+Theorem 5.5.3 Let (K, K0) be a simplicial pair. Then η induces a cohomol-
+ogy isomorphism
+Hp(C(K, K0); G) η∗
+←−Hp(S(|K|, |K0|); G)
+that is independent of the choice of partial ordering of the vertices of K. It
+commutes with δ∗and with homomorphisms induced by continuous maps.
+Proof: The chain map η carries the oriented simplex [v0, v1, . . . , vp] of K to
+the linear singular simplex ℓ(v0, v1, . . . , vp) of K, provided v0 < v1 < · · · < vp
+in the chosen ordering. Because the chain complexes involved are free and η in-
+duces a homology isomorphism, it induces a cohomology isomorphism as well.
+Furthermore, because η commutes with inclusions, it induces a homomorphism
+of relative cohomology. This homomorphism commutes with the coboundary
+operator δ∗, by the naturality of the zig-zag lemma. Therefore it is an isomor-
+phism in relative cohomology, by the Steenrod five-lemma [Lemma 3.3.4].
+To prove the rest of the theorem, we must examine the definition of η more
+closely. The map η was defined as the composite
+Cp(K) ϕ
+−→C′
+p(K)
+θ
+−→Sp(|K|) ,
+where ϕ([v0, v1, . . . , vp]) equals the ordered simplex (v0, v1, . . . , vp) if v0 < v1 <
+· · · < vp in the chosen ordering, and
+θ((w0, w1, . . . , wp)) = ℓ(w0, w1, . . . , wp) .
+In Section 1.14, we defined a chain-homotopy inverse to ϕ by the equation
+ψ((w0, w1, . . . , wp)) =
+
+[w0, w1, . . . , wp]
+if the wi are distinct,
+0
+otherwise.
+The maps ψ and θ do not depend on the ordering, although ϕ does. The
+fact that η∗is independent of the ordering follows from the equation η∗=
+(ψ∗)−1 ◦θ∗.
+To show that η∗commutes with induced homomorphisms, we first consider
+the case of a simplicial map f. We showed in proving Theorem 1.14.18 that f#
+commutes with ψ, and we showed in proving Theorem 4.7.6 that f# commutes
+with θ. It follows that f # commutes with the dual of ψ and θ, so that f ∗
+commutes with η∗. To extend this result to arbitrary continuous maps, one
+follows the pattern of Theorem 4.7.7.
+When a space is not compact, it is often convenient to look at the functions
+that have compact support.
+Definition 5.5.4 Let K be a complex. Let Cp
+c (K; G) denote the group of
+homomorphisms of Cp(K) into G that vanish on all but finitely many ori-
+ented simplices of K. These homomorphisms are called cochains with compact

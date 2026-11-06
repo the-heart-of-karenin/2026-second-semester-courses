@@ -1,0 +1,30 @@
+246
+Elements of Algebraic Topology
+The base point itself often only plays a tacit role in our discussions and calcu-
+lations. There is also a homotopy theory that is not founded on a base point.
+But the theory that we present here is the most common.
+Figure 4.10.4: Two loops in an annular region that cannot be homotopic.
+EXAMPLE 4.10.2 Let X be a subset of euclidean space, and let γ1 and γ2
+be loops in X. Suppose the line segment from γ1(t) to γ2(t) is contained in
+X, for each 0 ≤t ≤1, then γ1 ≃γ2. You have probably already realized that
+the homotopy function is
+Γ(t, u) = (1 −u) γ1(t) + u γ2(t) .
+Lemma 4.10.3 The relation ≃of Definition 4.10.1 defines an equivalence
+relation on the set of all loops with base point x0.
+Proof: Reflexivity and symmetry are easy, so we concentrate on transitivity.
+Suppose loop γ1 is homotopic to γ2 with homotopy map Γ12 and also that
+γ2 is homotopic to γ3 with homotopy map Γ23. Now define a new homotopy
+map Γ13 by
+Γ13(t, u) =
+ Γ12(t, 2u)
+if
+0 ≤u ≤1/2 ,
+Γ23(t, 2u −1)
+if
+1/2 ≤u ≤1 .
+When u = 1/2, we have Γ12(t, 2u) = γ2(t) = Γ23(t, 2u −1), so Γ13 is well-
+defined and continuous. Checking the values of Γ13(t, u) when u = 0 and u = 1,
+we see that Γ13 is a homotopy from γ1 to γ3. That confirms the transitivity
+of the relation.
+Definition 4.10.4 We call the equivalence classes of loops under the relation
+≃the homotopy classes for the topological space X. The homotopy class of

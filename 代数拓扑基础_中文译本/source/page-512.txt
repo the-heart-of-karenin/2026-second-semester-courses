@@ -1,0 +1,39 @@
+Duality in Manifolds
+497
+(a) Show that if ui generates Hi(X; Z/n) for i = 1, 2, then u1 ∪
+u2 generates H3(X; Z/n). [Hint: First show that there exist
+generators u1, u2 such that u1 ∪u2 generates H3 by showing
+that β∗: H1 →H2 is an isomorphism.]
+(b) Show that u1 ∪u2 is either 0 or of order 2.
+4. Give two examples of Bockstein homomorphisms for two different
+free chain complexes.
+8.10
+Lefschetz Duality
+As one might expect, the Poincar´e duality theorem generalizes to relative
+homology manifolds. The generalization is due to Lefschetz. It takes a partic-
+ularly nice form in the case of manifolds.
+First we need a lemma. Recall that A is said to be a full subcomplex of
+the complex X if every simplex of X whose vertices are in A is itself in A.
+In general, a subcomplex A of X need not be full. But if we pass to the first
+barycentric subdivision, then we can show easily that sd A is a full subcomplex
+of sd X. Let s = σ1σ2 . . . σk be a simplex of sd X, where σ1 ≻σ2 ≻· · · ≻σk.
+Then s ⊂σ1. If each vertex of s belongs to sd A, then in particular σ1 ∈sd A
+so that Int σ1 intersects |A|. It follows that σ1 ∈A so that s ⊂σ1 ⊂|A| as
+claimed.
+Lemma 8.10.1 Let A be a full subcomplex of the finite simplicial complex X.
+Let C consist of all simplices of X that are disjoint from |A|. Then |A| is a
+deformation retract of |X| \ |C|, and |C| is a deformation retract of |X| \ |A|.
+Proof: First we note that each vertex of X belongs to either A or C. Second,
+we note that C is a full subcomplex of X. If the vertices of σ are in C, then
+the simplex σ cannot intersect |A|, so it is in C. Third, we note that A consists
+of all simplices X disjoint from |C|. Every simplex of A is disjoint from |C|.
+Conversely, if σ is disjoint from |C|, then each vertex of σ is in A, hence σ
+belongs to A.
+By symmetry, it suffices to show that |A| is a deformation retract of |X| \
+|C|. Let σ be a simplex of X that belongs to neither A nor C. Then σ = s ∗t,
+where s is spanned by the vertices of σ that belong to A and t is spanned
+by the vertices that belong to C. Then s ∈A and t ∈C. Each point x of
+(σ \ s) \ t lies on a unique line segment joining a point of s with a point of t.
+Let us denote the endpoint of this line segment that lies in |A| by fσ(X). We
+extend fσ to the simplex s by letting it equal the identity on s. Then fσ is
+continuous on σ \ t. [Indeed,if s = v0v1 . . . vp and t = vp+1vp+2 . . . vn, and if x

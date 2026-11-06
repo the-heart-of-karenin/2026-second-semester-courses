@@ -1,0 +1,45 @@
+6
+Elements of Algebraic Topology
+(1) The
+barycentric
+coordinates
+ti(x)
+of
+x
+with
+respect
+to
+a0, a1, . . . , an are continuous functions of x.
+(2) The simplex σ equals the union of all line segments joining a0
+to points of the simplex s spanned by a1, . . . , an. Two such line
+segments intersect only in the point a0.
+(3) The simplex σ is a compact, convex set in RN, which equals the
+intersection of all convex sets in RN containing a0, a1, . . . , an.
+(4) Given a simplex σ, there is one and only one geometrically in-
+dependent sets of points spanning σ.
+(5) The set Int σ is convex and is open in the plane P; its closure is
+σ. Furthermore, Int σ equals the union of all the open line segments
+joining a0 to points of Int s, where s is the face of σ opposite a0.
+(6) There is a homeomorphism of σ with the unit ball Bn that carries
+Bd σ onto the unit sphere Sn−1.
+Proof: We leave parts (1)–(5) as exercises. Part (6) is a consequence of the
+next lemma, which is a stronger result that will be useful to us later.
+For a subset A of a topological space, we will use the notation A to denote
+the closure of A, the notation Int A to denote the interior of A, and the
+notation Bd A = A \ Int A to denote the boundary of A.
+Lemma 1.2.7 Let U be a bounded, convex open set in Rn; let w ∈U.
+(a) Each ray emanating from w intersects Bd U = U \ U in precisely one
+point.
+(b) There is a homeomorphism of U with Bn carrying Bd U onto Sn−1.
+Proof:
+(a) Given a ray R emanating from w, its intersection with U is convex,
+bounded and open in R. Hence it consists of all points of the form w + tp,
+where t ranges over a half-open interval [0, a). Thus the point x = w + ap is
+a point of R that is in U \ U.
+Suppose R intersects U\U in another point, say y. Then we have y = w+bp
+for some b > a. We can write
+x = (1 −t)w + ty,
+where t = a/b. We rewrite this last equation in the form
+w = (x −ty)/(1 −t).
+Then we choose a sequence of points yn ∈U converging to y, and we define
+wn = (x −tyn)/(1 −t).

@@ -1,0 +1,49 @@
+Singular Homology Theory
+291
+Chain-level proof: We assume that Sn is triangulated so that the antipodal
+map a : Sn →Sn is simplicial, and that Pn is triangulated so that p : Sn →Pn
+is simplicial. [Lemma 4.14.11 will show that this is possible. For now, we
+assume it.]
+We use simplicial homology. Let cn be a fundamental cycle for (En
++, Sn−1).
+Then p#(cn) is a fundamental cycle for (Pn, Pn−1), by Lemma 4.13.3.
+Consider the following chain of Sn:
+γn = cn + (−1)n−1a#(cn) .
+It is a cycle, for its boundary is
+∂γn
+=
+∂cn + (−1)n−1a#(∂cn)
+=
+∂cn + (−1)2n−1∂cn = 0 .
+This equation follows from the fact that a : Sn−1 →Sn−1 has degree (−1)n,
+so that a#, mapping the (n −1)-cycle group of Sn−1 to itself, equals multipli-
+cation by (−1)n. Furthermore, γn is a multiple of no other cycle of Sn, for its
+restriction to En
++ is cn, which is a fundamental cycle for (En
++, Sn−1). Thus γn
+is a fundamental cycle for Sn.
+Finally, we compute
+p#(γn) = p#(cn + (−1)n−1a#(cn)) .
+Since p ◦a = p, we conclude that
+p#(γn) = [1 + (−1)n−1]p#(cn) .
+Since γn is a fundamental cycle for Sn and p#(cn) is a fundamental cycle for
+(Pn, Pn−1), the lemma follows.
+Homology-level proof: This proof is similar to the preceding one, except
+that the computations are carried out on the homology level rather than the
+chain level. It may seem more complicated, but the ideas are basically the
+same.
+Step 1. Consider the diagram
+α ∈Hn(En
++, Sn−1)
+Hn(Sn)
+Hn(Sn, Sn−1)
+Hn−1(Sn−1)
+Hn(Sn, En
+−)
+i∗
+k∗
+m∗
+∂∗
+ℓ∗
+a∗
+(a|Sn−1)∗

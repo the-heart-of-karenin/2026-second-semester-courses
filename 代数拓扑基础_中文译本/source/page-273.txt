@@ -1,0 +1,57 @@
+258
+Elements of Algebraic Topology
+αi0
+ζ−1
+i2
+ζi1
+x0
+αi1
+ζi0
+ζ−1
+i2
+x0
+αi2
+ζi0
+ζ−1
+i1
+x0
+Figure 4.10.9: The loops βi0, βi1, βi2.
+Consider the loops βji given by
+βj0 = ζj1 · αj0 · ζ−1
+j2 ,
+βj1 = ζj0 · αj1 · ζ−1
+j2 ,
+βj2 = ζj0 · αj2 · ζ−1
+j1 ,
+where the · operation is to follow one path by the other from left to right
+[again we call this operation a product]. To obtain a map [0, 1] to X, the
+parametrizations need to be combined appropriately. This amounts to revers-
+ing the process in Lemma 4.10.16 where a path was broken into pieces. See
+Figure 4.10.9.
+αi0
+αi1
+αi2
+ζ−1
+i1
+ζi1
+x0
+σi
+Figure 4.10.10: The loop βi.
+Next we combine those loops to obtain [see Figure 4.10.10]
+βi = βi0 · β−1
+i1 · βi2 = ζi1 · αi0 · ζ−1
+i2 · (ζi0 · αi1 · ζ−1
+i2 )−1 · ζi0 · αi2 · ζ−1
+i1
+= ζi1 · αi0 · ζ−1
+i2 · ζi2 · α−1
+i1 · ζ−1
+i0 · ζi0 · αi2 · ζ−1
+i1
+≃ζi1 · αi0 · α−1
+i1 · αi2 · ζ−1
+i1 .
+We observe that the loop ζi1 · αi0 · α−1
+i1 · αi2 · ζ−1
+i1 starts at the base point,
+goes to xi1 = αi0(0), then around the boundary of σi to αi2(1) = αi0(0), and

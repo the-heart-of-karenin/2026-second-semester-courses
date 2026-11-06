@@ -1,0 +1,46 @@
+462
+Elements of Algebraic Topology
+In case X is not compact, but is triangulated by a locally finite complex,
+we extend this definition by saying that X is orientable if it is possible to
+orient the σi so that the [possibly infinite] chain σi is a cycle.
+In either case, if it is not possible to so orient the σi, then we say X is
+non-orientable.
+If X is not connected, then each component of X is itself a homology n-
+manifold. In order that X be orientable, it is necessary and sufficient that each
+component of X be orientable. A sum of orientation cycles for each component
+of X is an orientation cycle for X. We will show that orientability of X does
+not depend on the particular triangulation of X. [See Corollary 8.5.5.]
+Theorem 8.5.2 (Poincar´e duality—first version) Let X be a compact,
+triangulated homology n-manifold. If X is orientable, then for all p there is
+an isomorphism
+Hp(X; G) ∼= Hn−p(X; G) ,
+where G is an arbitrary coefficient group. If X is non-orientable, then there is
+for all p an isomorphism
+Hp(X; Z/2) ∼= Hn−p(X; Z/2) .
+Proof: We shall use the simplicial chain complex C(X) of X to compute
+the cohomology of X. Also we use the dual chain complex D(X) of X to
+compute the homology of X. There is a one-to-one correspondence between
+the p-simplices of X and the dual n −p blocks of X that maps each simplex
+to its dual block. Hence the free abelian groups Cp(X) and Dn−p(X) are
+isomorphic. This is by an isomorphism ϕ that carries the basis element σ∗for
+Cp(X) [where σ is an oriented p-simplex] to a generator of Hn−p(D(σ), ˙D(σ)).
+If X is orientable then we shall show that the sign of ϕ(σ∗) may be so chosen
+that the following diagram commutes:
+Cp−1(X)
+ϕ
+−−−−→Dn−p+1(X)
+δ
+
+∂
+Cp(X)
+ϕ
+−−−−→Dn−p(X) .
+This will prove the existence of the Poincar´e duality isomorphism in the case
+of integer coefficients.
+To define ϕ, we proceed as follows. First, orient the n-simplices of X so
+that their sum γ is a cycle. Orient the other simplices of X arbitrarily.
+We begin by defining ϕ in dimension n. The oriented n-simplices σ of X
+form a basis for Cn(X). Their duals σ∗form a basis for Cn(X). The dual
+block D(σ) of the n-simplex σ is the 0-cell σ. We define ϕ(σ∗) = σ. Note that
+σ is a generator of the group H0(σ). Thus we have defined an isomorphism
+ϕ : Cn(X) →D0(X) .

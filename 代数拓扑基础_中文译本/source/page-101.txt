@@ -1,0 +1,36 @@
+86
+Elements of Algebraic Topology
+Henceforth we shall normally omit subscripts on boundary operators and
+chain maps and chain homotopies. The preceding formula, for instance, then
+assumes the more familiar form ∂′D + D∂= ψ −ϕ.
+Definition 1.14.6 A chain map ϕ : C →C′ is called a chain equivalence if
+there is a chain map ϕ′ : C′ →C such that ϕ′◦ϕ and ϕ◦ϕ′ are chain homotopic
+to the identity maps of C and C′, respectively. We call ϕ′ a chain-homotopy
+inverse to ϕ.
+We list several properties of chain homotopies; proofs are left to the exer-
+cises.
+(1) Chain homotopy is an equivalence relation on the set of chain maps
+from C to C′.
+(2) Composion of chain maps induces a well-defined composition oper-
+ation of chain-homotopy classes.
+(3) If ϕ and ψ are chain homotopic, then they induce the same homo-
+morphism in homology.
+(4) If ϕ is a chain equivalence, with chain-homotopy inverse ϕ′, then
+ϕ∗and (ϕ′)∗are homology isomorphisms that are inverse to each
+other.
+(5) If ϕ : C →C′ and ψ : C′ →C′′ are chain equivalences, then ψ ◦ϕ is
+a chain equivalence.
+Now we investigate what all this means in the special case of augmented
+chain complexes.
+Lemma 1.14.7 Let C and C′ be non-negative chain complexes. Let ϕ, ψ : C →
+C′ be chain maps; let D be a chain homotopy between them. Suppose C and C′
+are augmented by ϵ and ϵ′, respectively. If ϕ preserves augmentation, then so
+does ψ. If we extend ϕ and ψ to be the identity in dimension −1, and extend D
+to be zero in dimension −1, then D is a chain homotopy between the extended
+chain maps.
+Proof: If c0 ∈C0, then we have
+∂Dc0 = ϕ(c0) −ψ(c0)
+because ∂c0 = 0. Then
+0 = ϵ′(∂Dc0) = ϵ′ϕ(c0) −ϵ′ψ(c0) = ϵ(c0) −ϵ′ψ(c0) ,
+as desired. Furthermore, we have in dimension 0 the equation
+Dϵ(c0) + ∂D(c0) = ϕ(c0) −ψ(c0) ,

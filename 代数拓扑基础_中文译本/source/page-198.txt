@@ -1,0 +1,47 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+183
+(e) The zig-zag lemma assigns to each short exact sequence of chain
+complexes a long exact sequence of their homology groups. The
+“naturality” property expressed in Theorem 3.3.3 is just the state-
+ment that this assignment is a functor.
+Definition 3.7.6 Let G and H be two functors from category C to category
+D. A natural transformation T from G to H is a rule assigning to each object
+X of C a morphism
+TX : G(X) →H(X)
+of D such that the following diagram commutes for all morphisms f : X →Y
+of the category C:
+G(X)
+H(X)
+G(Y )
+H(Y )
+TX
+G(f)
+H(f)
+TY
+If, for each X, the morphism TX is an equivalence in the category D, then T
+is called a natural equivalence of functors.
+EXAMPLE 3.7.7 Given a homology theory, let p be fixed, and consider the
+following two functors defined on admissible pairs:
+G(X, A) = Hp(X, A);
+G(f) = f∗,
+H(X, A) = Hp−1(A);
+H(f) = (f|A)∗.
+The commutativity of the diagram
+Hp(X, A)
+Hp−1(A)
+Hp(Y, B)
+Hp−1(B)
+∂∗
+f∗
+(f|A)∗
+∂∗
+tells us that ∂∗is a natural transformation of the functor G to the functor H.
+This is precisely the third of the Eilenberg–Steenrod axioms.
+EXAMPLE 3.7.8 Consider the category of pairs of spaces and pairs of
+maps. Let G and H be the functors
+G(X, Y ) = X × Y ;
+G(f, g) = f × g ,
+H(X, Y ) = Y × X;
+H(f, g) = g × f .
+Given (X, Y ), let T(X,Y ) be the homeomorphism of X × Y with Y × X that
+switches coordinates. Then T is a natural equivalence of G with H.

@@ -1,0 +1,42 @@
+420
+Elements of Algebraic Topology
+Figure 7.8.1
+it behaves like a cartesian product. For example, in the torus T = S1 × S1
+the K¨unneth theorem tells us that the cross product of the two 1-dimensional
+homology classes pictured in Figure 7.8.1 is the generator of the 2-dimensional
+homology. This is quite plausible, because if z =  si is a fundamental cycle
+for a triangulation K of S1, then z ⊗z =  si ⊗sj represents the sum of all
+the 2-cells of K × K, suitably oriented.
+It is geometrically less clear why, given a cycle z in K representing a torsion
+element in Hp(K) of order k, and a cycle z′ in L representing a torsion element
+in Hq(L) of order ℓ, there should be two elements in the homology of |K|×|L|
+of order n = gcd (k, ℓ). Of course one is their cross product in dimension p+q.
+The other is an element in dimension p + q + 1 arising from Hp(K) ∗Hq(L).
+Where does this unexpected element come from?
+Let us write
+kz = ∂d
+and
+ℓz′ = ∂′d′ ,
+where d and d′ are chains of K and L, respectively. The unexpected element
+in dimension p + q + 1 is exhibited by computing
+∂(d ⊗d′) = (kz) ⊗d′ + (−1)p+1d ⊗(ℓz′)
+= n
+k
+n(z ⊗d′) + (−1)p+1 ℓ
+n(d ⊗z′)
+
+.
+The expression in brackets is thus a cycle of dimension p + q + 1, and n times
+it is a bounday! This is the element we were seeking.
+The Universal Coefficient Theorem for Homology
+We now derive the universal coefficient theorem for homology as a corollary
+of the K¨unneth theorem.
+Proof of Theorem 7.5.1: Let C be a free chain complex, and let G be an
+abelian group. We define a chain complex C′ by the equation
+C′
+p =
+
+G
+if p = 0,
+0
+if p̸ = 0.

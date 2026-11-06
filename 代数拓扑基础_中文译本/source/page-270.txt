@@ -1,0 +1,37 @@
+Singular Homology Theory
+255
+Lemma 4.10.16 Suppose that 0 = a0 < a1 < a2 < · · · < ar = 1. If T :
+[0, 1] →X is a singular 1-simplex, then T is homologous to the singular 1-
+chain
+r−1
+
+i=0
+Ti ,
+where Ti(t) = T( (1 −t)ai + tai+1 ).
+L(0, 0) = a0
+L(0, r) = a1
+r = a1 −a0
+a2 −a0
+L(0, 1) = a2
+L(1, 0) = a1
+Figure 4.10.7
+Proof: It suffices to consider r = 2. It is straightforward to construct a func-
+tion L(x, y) = α x + β y + γ having the values indicated in Figure 4.10.7.
+Consider the singular 2-simplex W = T ◦L. We have ∂W = S0 −S1 + S2,
+where
+S0(t) = T ◦L(1 −t, t) = T1(t) ,
+S1(t) = T ◦L(0, t) = T(t) ,
+S2(t) = T ◦L(t, 0) = T0(t) .
+showing that T is homologous to T1 + T2.
+Proof of Theorem 4.10.15: (1) Show that χ is a homomorphism. We
+need to prove that
+χ([γ · γ′]) = χ([γ]) + χ([γ′]) .
+Lemma 4.10.16 tells us that if we consider γ·γ′ as a singular 1-simplex, then
+it is homologous to singular 1-chain γ +γ′. Thus we have {γ ·γ′} = {γ}+{γ′}.
+(2) Assuming that X is path connected, show that χ is surjective.
+For each x ∈X, let ζx : [0, 1] →X be a path with ζx(0) = x0 and ζx(1) = x.
+Also, let ζ−1
+x
+: [0, 1] →X be the path that runs in the opposite direction, i.e.,
+ζ−1
+x (t) = ζx(1 −t).

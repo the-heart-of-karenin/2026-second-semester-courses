@@ -1,0 +1,54 @@
+Homology Groups of a Simplicial Complex
+75
+Hp(K)
+Hp(M)
+Hp(L)
+(g ◦f)∗
+f∗
+g∗
+Proof: It is immediate from the definition that i∗is the identity and that
+(g ◦f)∗= g∗◦f∗, as you can check.
+This last theorem expresses what are called the “functorial properties” of
+the induced homomorphism. This phrase will be defined formally later when
+we discuss categories and functors. For the present, we point out simply that
+the operator Hp assigns to each simplicial complex an abelian group, and the
+operator ∗assigns to each simplicial map of one complex into another a ho-
+momorphism of the corresponding abelian groups. Because (a) and (b) hold,
+we say that (Hp, ∗) is a “functor” from the “category” of simplicial complexes
+and simplicial maps to the “category” of abelian groups and homomorphisms.
+Lemma 1.13.4 The chain map f# preserves the augmentation map ϵ; there-
+fore it induces a homomorphism f∗of reduced homology groups.
+Proof: Let f : K →L be simplicial. Then ϵf#(v) = 1 and ϵ(v) = 1 for each
+vertex v of K. Thus ϵ ◦f# = ϵ. This equation implies that f# carries the
+kernel of ϵK : C0(K) →Z into the kernel of ϵL : C0(L) →Z, and thus induces
+a homomorphism f∗: H0(K) →H0(L).
+EXAMPLE 1.13.5 Consider the complexes K and T
+shown in Fig-
+ure 1.13.1. Their underlying spaces are the circle and the torus, respectively.
+We have H1(K) ∼= Z; let us use the cycle z indicated in the figure as a gen-
+erator. Similarly, we have H1(T) ∼= Z ⊕Z. As a basis, let us use the cosets of
+the cycles
+w1 = [A, B] + [B, C] + [C, A] and z1 = [A, D] + [D, E] + [E, A] .
+Now consider the simplicial maps:
+f : a →A
+g : a →A
+h : a →A
+b →P
+b →B
+b →I
+c →D
+c →C
+c →J
+d →D
+d →A
+d →G
+e →P
+e →E
+e →G
+p →E
+p →D
+p →A
+You can check that f#(z) is homologous to z1, that g#(z) equals w1 −z1,
+and that h#(z) is homologous to w1 −z1. Thus g∗and h∗are equal as homo-
+morphisms of 1-dimensional homology. They are also equal on 0-dimensional
+homology.

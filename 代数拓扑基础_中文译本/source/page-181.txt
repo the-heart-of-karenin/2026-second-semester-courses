@@ -1,0 +1,41 @@
+166
+Elements of Algebraic Topology
+Theorem 3.4.1 Let K be a complex. Let K0 and K1 be subcomplexes such
+that K = K0 ∪K1. Let A = K0 ∩K1. Then there is an exact sequence
+· · · −→Hp(A) −→Hp(K0) ⊕Hp(K1) −→Hp(K) →Hp−1(A) −→· · · .
+There is a similar exact sequence in reduced homology if A is nonempty.
+Definition 3.4.2 The sequence in this last theorem is called the Mayer–
+Vietoris sequence of (K0, K1).
+Proof: The proof consists of constructing a short exact sequence of chain
+complexes
+0 −→C(A)
+ϕ
+−→C(K0) ⊕C(K1)
+ψ
+−→C(K) −→0 ,
+and applying the zig-zag lemma.
+First we need to define the chain complex in the middle. Its chain group
+in dimension p is
+Cp(K0) ⊕Cp(K1) ,
+and its boundary operator ∂′ is defined by
+∂′(d, e) = (∂0d, ∂1e) ,
+where ∂0 and ∂1 are the boundary operators in C(K0) and C(K1) repectively.
+Second, we need to define the chain maps ϕ and ψ. We do this as follows.
+Consider the inclusion mappings in the following commutative diagram:
+A
+K .
+K0
+K1
+m
+k
+i
+ℓ
+j
+Define homomorphisms ϕ and ψ by the equations
+ϕ(c) = (i#(c), −j#(c)) ,
+ψ(d, e) = k#(d) + l#(e) .
+It is immediate that ϕ and ψ are chain maps.
+Let us check exactness: First note that ϕ is injective since i# is just inclu-
+sion of chains. Second, we check that ψ is surjective. Given d ∈Cp(K), write
+d as a sum of oriented simplices and let d0 consist of those terms of d carried
+by K0, Then d −d0 is carried by K1. And ψ(d0, d −d0) = d.

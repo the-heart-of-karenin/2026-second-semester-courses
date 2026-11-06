@@ -1,0 +1,124 @@
+\section{Künneth 定理}
+\sourcepage{414}
+本节证明计算两个链复形张量积同调的基本定理。证明自然具有很强的代数性。先在适当条件下构造同调张量积到张量复形同调的自然单射。
+
+\entry{定义}{7.8.1}定义\textbf{同调张量同态}
+\[
+\Theta:H_p(\mathcal C)\otimes H_q(\mathcal C')\to H_{p+q}(\mathcal C\otimes\mathcal C'),\qquad
+\Theta(\{z\}\otimes\{z'\})=\{z\otimes z'\}.
+\]
+闭链的纯张量仍闭。改变第一个代表增加 $\overline\partial(d\otimes z')$，改变第二个增加 $(-1)^p\overline\partial(z\otimes d')$，故良定义。它由闭链包含诱导，因此对链映射自然。
+
+\entry{引理}{7.8.2}若两复形的闭链群在各自链群中都是直和项，则总张量同态
+\[
+\Theta:\bigoplus_{p+q=m}H_p(\mathcal C)\otimes H_q(\mathcal C')\to H_m(\mathcal C\otimes\mathcal C')
+\]
+单射，且像为直和项。
+
+\entry{注}{7.8.3}自由链复形满足此条件。
+
+\textbf{证明：}将闭链到同调的投影延拓为 $\varphi:C_p\to H_p(\mathcal C)$、$\varphi':C'_q\to H_q(\mathcal C')$。把目标群组成零边缘复形 $\mathcal E,\mathcal E'$，这些延拓为链映射。其张量诱导同态 $\lambda$，目标为 $\bigoplus H_p\otimes H_q$。对闭链纯张量，$\lambda\Theta(\{z\}\otimes\{z'\})=\{z\}\otimes\{z'\}$，所以它给出所求分裂。\hfill$\square$
+
+\sourcepage{415}
+\entry{定理}{7.8.4（链复形的 Künneth 定理）}若 $\mathcal C$ 自由，$\mathcal C'$ 为任意链复形，则有自然正合列
+\[
+\begin{split}
+0\to\bigoplus_{p+q=m}H_p(\mathcal C)\otimes H_q(\mathcal C')
+\xrightarrow{\Theta}H_m(\mathcal C\otimes\mathcal C')\\
+\to\bigoplus_{p+q=m}H_{p-1}(\mathcal C)*H_q(\mathcal C')\to0.
+\end{split}
+\]
+若第二复形的闭链逐维为直和项，则序列分裂，但分裂不自然。
+
+\textbf{证明：步骤 1。}令 $\mathcal Z$ 的链群为 $Z_p$，$\mathcal D$ 的链群为 $D_p=B_{p-1}$，边缘均为零。逐维分裂的短正合列 $0\to\mathcal Z\to\mathcal C\to\mathcal D\to0$ 张量 $\mathcal C'$ 后仍短正合，因为每一维由分裂正合列的直和组成。长正合列给出自然短正合列
+\[
+0\to\operatorname{coker}\beta_{m+1}\to H_m(\mathcal C\otimes\mathcal C')\to\ker\beta_m\to0,
+\]
+其中 $\beta$ 为连接同态。下面识别两端。
+
+\sourcepage{416--417}
+\textbf{步骤 2。}证明 $H_m(\mathcal Z\otimes\mathcal C')\cong\bigoplus_{p+q=m}Z_p\otimes H_q(\mathcal C')$。边缘在每项为 $(-1)^pi\otimes\partial'$。因为 $Z_p$ 自由，张量保持短正合列 $0\to Z'_q\to C'_q\to B'_{q-1}\to0$ 的正合性，所以张量复形的闭链、边缘分别为
+\[
+\bigoplus_{p+q=m}Z_p\otimes Z'_q,\qquad\bigoplus_{p+q=m}Z_p\otimes B'_q.
+\]
+再张量 $0\to B'_q\to Z'_q\to H_q(\mathcal C')\to0$ 并取直和，即得到所述商群同构。
+
+\textbf{步骤 3。}完全相同的论证给出 $H_m(\mathcal D\otimes\mathcal C')\cong\bigoplus D_p\otimes H_q(\mathcal C')$，其闭链为 $\bigoplus D_p\otimes Z'_q$。
+
+\sourcepage{418}
+\textbf{步骤 4。}连接同态 $\beta_{m+1}$ 在上述识别下由 $j_p:B_p\to Z_p$ 的包含张量恒等诱导。对生成闭链 $b_p\otimes z'_q$，选 $\partial_0c_{p+1}=b_p$，提升为 $c_{p+1}\otimes z'_q$；取边缘得 $b_p\otimes z'_q$，再视为 $\mathcal Z\otimes\mathcal C'$ 中的闭链，正是包含映射的效果。
+
+\textbf{步骤 5。}自由消解 $0\to B_p\to Z_p\to H_p(\mathcal C)\to0$ 与 $H_q(\mathcal C')$ 张量，得到
+\[
+\begin{split}
+0\to H_p(\mathcal C)*H_q(\mathcal C')\to B_p\otimes H_q(\mathcal C')\\
+\to Z_p\otimes H_q(\mathcal C')\to H_p(\mathcal C)\otimes H_q(\mathcal C')\to0.
+\end{split}
+\]
+因此 $\ker\beta_{m+1}$ 为同指标的挠积直和，$\operatorname{coker}\beta_{m+1}$ 为张量积直和。代入步骤 1，并将核的指标平移，即得所述序列。\translatornote{原书第 419 页汇总列把挠积与张量积两端颠倒；本式按自由消解张量正合列及定理陈述排列。}
+
+所有步骤自然，故整列自然。左侧映射由 $\mathcal Z\otimes\mathcal C'$ 的包含诱导，恰为 $\Theta$。若满足额外直和项条件，引理 7.8.2 给出分裂。\hfill$\square$
+
+\sourcepage{419}
+\entry{推论}{7.8.5}若 $\mathcal C,\mathcal D$ 自由，且 $\varphi:\mathcal C\to\mathcal D$、$\varphi':\mathcal C'\to\mathcal D'$ 都诱导各维同调同构，则其张量也诱导各维同调同构。
+
+\textbf{证明：}应用 Künneth 序列的自然性与五引理。\hfill$\square$
+
+\entry{例}{7.8.6}若单纯复形 $K,L$ 中至少一个局部有限，则
+\[
+H_m(|K|\times|L|)\cong\bigoplus_{p+q=m}
+\bigl(H_p(K)\otimes H_q(L)\oplus H_{p-1}(K)*H_q(L)\bigr).
+\]
+
+\entry{例}{7.8.7}对正维球面乘积 $S^r\times S^s$，挠积项为零。零维与 $r+s$ 维同调为 $\Z$；若 $r\ne s$，$r,s$ 维各为 $\Z$；若 $r=s$，该维为 $\Z\oplus\Z$；其余为零。
+
+\entry{例}{7.8.8}将 $\Theta(\alpha\otimes\beta)$ 记为 $\alpha\times\beta$，称为\textbf{同调叉积}（homology cross product）。它某种程度上像笛卡儿积。例如圆周两条基本闭链的叉积生成环面的二维同调：若 $z=\sum s_i$ 为圆周基本闭链，则 $z\otimes z=\sum s_i\otimes s_j$ 对应所有适当定向的二维乘积胞腔。
+
+\sourcepage{420}
+\begin{center}\includegraphics[width=.96\textwidth]{figures/7-8-1.pdf}\\图 7.8.1\end{center}
+若两个类分别有阶 $k,\ell$，则除 $p+q$ 维张量项外，挠积还在 $p+q+1$ 维给出阶与 $n=\gcd(k,\ell)$ 有关的项。其几何来源较不直观。写 $kz=\partial d$、$\ell z'=\partial'd'$，则
+\[
+\overline\partial(d\otimes d')=n\left[\frac{k}{n}z\otimes d'+(-1)^{p+1}\frac{\ell}{n}d\otimes z'\right].
+\]
+方括号中的链是 $p+q+1$ 维闭链，其 $n$ 倍为边缘，展示了所需挠类的来源。
+
+\subsection*{同调万有系数定理的证明}
+取 $\mathcal C'$ 仅在零维为 $G$，其他维为零。此时 $\mathcal C\otimes\mathcal C'$ 就是 $\mathcal C\otimes G$，且第二因子的闭链显然为直和项。将 $H_0(\mathcal C')=G$、其余同调为零代入 Künneth 序列，立即得到定理 7.5.1 及分裂性。
+
+\sourcepage{421}
+\subsection*{域系数的 Künneth 定理}
+若两链复形都是域 $F$ 上的向量空间且边缘线性，可使用 $\otimes_F$ 定义张量复形。
+
+\entry{定理}{7.8.9（向量空间 Künneth 定理）}存在自然向量空间同构
+\[
+\bigoplus_{p+q=m}H_p(\mathcal E)\otimes_FH_q(\mathcal E')\cong H_m(\mathcal E\otimes_F\mathcal E').
+\]
+\textbf{证明：}重复前面证明的前四步，均保持有效。第五步中向量空间短正合列张量后仍短正合，不出现挠积项，所以连接同态的核为零，得到同构。\hfill$\square$
+
+\sourcepage{422}
+\entry{定理}{7.8.10（域系数 Künneth 定理）}对自由链复形，有自然同构
+\[
+\bigoplus_{p+q=m}H_p(\mathcal C;F)\otimes_FH_q(\mathcal C';F)
+\cong H_m(\mathcal C\otimes\mathcal C';F).
+\]
+\translatornote{原书右侧把整数链复形之间的张量记为 $\otimes_F$，但它们未必为 $F$ 模；按证明，应先取整数张量积，再取 $F$ 系数同调。}
+
+\textbf{证明：}对 $\mathcal E=\mathcal C\otimes F$、$\mathcal E'=\mathcal C'\otimes F$ 应用上一定理。只需识别
+\[
+(\mathcal C\otimes F)\otimes_F(\mathcal C'\otimes F)\cong(\mathcal C\otimes\mathcal C')\otimes F.
+\]
+定义 $(x\otimes\alpha)\otimes_F(y\otimes\beta)\mapsto(x\otimes y)\otimes\alpha\beta$。它先由四变量多线性映射诱导，再由标量平衡性下降为 $F$ 上张量积的映射。对自由基，它将 $(x_i\otimes1)\otimes_F(y_j\otimes1)$ 映到 $(x_i\otimes y_j)\otimes1$，所以为同构。它自然并保持边缘，故得同调同构。\hfill$\square$
+
+\sourcepage{423}
+\entry{例}{7.8.11}若 $K,L$ 中至少一个局部有限，则由乘积胞腔链复形及上述定理，
+\[
+\bigoplus_{p+q=m}H_p(K;F)\otimes_FH_q(L;F)\cong H_m(|K|\times|L|;F).
+\]
+
+\subsection*{习题}
+\begin{enumerate}
+\item 说明约化同调不能直接使用本节 Künneth 公式。
+\item 对子复形 $K_0,L_0$，构造从相对链复形张量积到乘积空间偶的胞腔链复形的同调同构，空间偶为 $(|K|\times|L|,(|K_0|\times|L|)\cup(|K|\times|L_0|))$，推出相对单纯同调 Künneth 序列。
+\item 若 $\mathcal C$ 自由，证明存在自然正合列，其左端为 $\bigoplus H_p(\mathcal C)\otimes H_q(\mathcal C';G)$，中间为 $H_m(\mathcal C\otimes\mathcal C';G)$，右端为 $\bigoplus H_{p-1}(\mathcal C)*H_q(\mathcal C';G)$。若第二复形自由，且 $G$ 无挠或其整数同调均无挠，证明序列分裂。
+\item 补全推论 7.8.5 的证明。
+\end{enumerate}

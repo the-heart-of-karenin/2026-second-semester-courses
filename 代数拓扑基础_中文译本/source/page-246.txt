@@ -1,0 +1,44 @@
+Singular Homology Theory
+231
+where f(x) = [1 −x2
+1 −x2
+2 −· · · −x2
+n−1]1/2. Then you can check that h is a
+homeomorphism of U onto the open set V of Hm consisting of all points y
+with ∥y∥< 1 and yn ≥0. This homeomorphism carries p to a point of Bd Hn.
+[See Figure 4.8.3.]
+U
+V
+h
+p
+h(p)
+x
+h(x)
+Figure 4.8.3
+EXAMPLE 4.8.9 Let σ be an n-simplex. Then σ is an n-manifold with
+boundary, because there is a homeomorphism of σ with Bn. This homeomor-
+phism carries the union Y of the proper faces of σ onto Sn−1. Thus the set
+Y , which we have been denoting by Bd σ, is the boundary of σ when it is
+considered as an n-manifold with boundary. Also, the set σ\Y , which we have
+been denoting by Int σ, is the interior of σ as a manifold with boundary.
+There is a certain overlapping of terminology here, which we should clarify.
+In general topology, if A is a subset of a space X, then the interior of A,
+denoted Int A, is the union of all open sets of X contained in A. The boundary
+of A, denoted Bd A, is the set A∩X \ A. In the special case where A is an open
+set of X, it turns out that Bd A = A\A. We have used this terminology from
+general topology earlier in this book. For instance, the notion Bd U appeared
+in Lemma 1.2.7, and the notion Int A was used in formulating the excision
+axiom.
+The concepts of boundary and interior for a manifold with boundary are
+entirely different. It is unfortunate that the same terminology is commonly
+used in two different ways. Some authors use ∂X to denote the boundary of
+a manifold with boundary. But that leads to difficulty when one wishes to
+distinguish the boundary of the space σ from the simplicial chain ∂σ. As is
+usual in mathematics, we will simply endure some ambiguity, relying on the
+context to make the meaning clear.
+It happens that for the subset Bn of the topological space Rn, its boundary
+in the sense of general topology is the same as its boundary in the sense of
+manifolds with boundary. The same remark applies to the subspace Hn of Rn.
+But it is safest to think of these cases being the exception rather than the
+rule.
+Now we prove a result about triangulations of manifolds.

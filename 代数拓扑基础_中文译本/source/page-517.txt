@@ -1,0 +1,57 @@
+502
+Elements of Algebraic Topology
+sign, the resulting isomorphism ψ is a suitable candidate for our isomorphism
+ϕ just as before. [Here we are of course using the relative cap product
+Ck(sd X, sd A) ⊗Cn(sd X, sd A) →Cn−k(sd X)
+in defining the map ⌢sd γ.]
+So far, no difficulties have appeared. The problem arises when we pass to
+the cohomology-homology level. On this level, we have a homomorphism
+Hk(X, A)
+Hn−k(X) .
+⌢Γ
+The range of this map is not the group Hn−k(|X| \ |A|) that we wish it to be.
+Thus Lefschetz duality cannot in general be expressed by the cap product
+with an orientation class for (X, A). All that one can say is the following:
+Theorem 8.10.10 Let (X, A) be a compact, triangulable relative homology
+n-manifold. If (X, A) is orientable, then let Γ denote an orientation class for
+(X, A). Then the following diagram commutes, up to a sign that depends on
+k and n:
+Hn(X, A; G)
+Hn−k(X \ A; G)
+Hn
+k(X; G)
+⌢Γ
+ϕ∗
+∼=
+j∗
+−
+[Here ϕ∗is the Lefschetz duality isomorphism and j is inclusion.] The same
+result holds if (X, A) is not orientable as long as one replaces Γ by Γ(2) and
+replaces G by Z/2.
+Proof: Choose a triangulation of (X, A). Then consider the diagram
+Ck(X, A)
+Dn−k(X∗)
+Sn−k(|X∗|)
+Sn−k(|X| \ |A|)
+Ck(sd X, sd A)
+Cn
+k(sd X)
+Sn
+k( X )
+ϕ
+∼=
+g#
+η
+⌢sd γ
+η
+−
+−
+|
+|
+Here η is the chain map carrying simplicial chains to singular chains. The
+unlabeled maps are induced by inclusion. The proof of Theorem 8.7.2 applies
+to show that the first square commutes up to sign. The rest of the diagram
+clearly commutes.
+One situation in which the Lefschetz duality isomorphism is actually given
+by the cap product is the case of a manifold with boundary. We consider that
+situation now.

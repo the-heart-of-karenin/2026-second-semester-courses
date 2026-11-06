@@ -1,0 +1,36 @@
+506
+Elements of Algebraic Topology
+Therefore αj = βn−j and γj = γn−j−1. Substituting these results into (∗∗)
+and comparing with (∗), we find that
+rank µk = rank νn−k−1 .
+In particular, since n = 2m + 1, rank µm = rank νm. Then
+dim Hm(Bd M; Z/2)
+=
+dim Hm(Bd M; Z/2)
+=
+γm
+=
+rank µm + rank νm
+=
+2(rank νm) ,
+which is even.
+Corollary 8.10.14 The manifold P2m is not the boundary of a compact,
+triangulable 2m + 1 manifold.
+EXERCISES
+1. Let (X, A) be a compact, triangulable relative homology n-
+manifold. Assume that X \ A is connected. Show that if X is ori-
+entable, then
+Hn(X, A; G) ∼= G ∼= Hn(X, A; G) ,
+while if X is non-orientable, then
+Hn(X, A; G) ∼= ker(ϕ2) ,
+Hn(X, A; G) ∼= G/2G .
+As usual, ϕ2 : G →G is multiplication by 2.
+2. Let M be a compact, triangulable orientable n-manifold with
+boundary. Suppose that Bd M is the disjoint union of two n −1
+manifolds V0 and V1 and that Bd M has a product neighborhood in
+M. Let Γ be an orientation cycle for (M, Bd M). Show that
+Hk(M, V0)
+Hn−k(M, V1)
+⌢Γ
+is an isomorphism. [Hint: Consider the exact sequence of the triple
+(M, Bd M, V1).]

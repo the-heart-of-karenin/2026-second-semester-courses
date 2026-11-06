@@ -1,0 +1,40 @@
+58
+Elements of Algebraic Topology
+K
+K0
+e4
+σ4
+σ1
+σ2
+σ3
+Figure 1.10.1
+We showed in Example 1.6.13 that any 1-chain c of K is homologous to a
+1-chain c3 carried by K0 ∪e4. Now if c represents a relative 1-cycle [so that ∂c
+is carried by K0], then ∂c3 = ∂c is also carried by K0. It follows that the value
+of c3 on e4 must be zero, whence c3 is actually carried by K0. We conclude
+that
+H1(K, K0) = 0 .
+Comparing this computation with that of Example 1.10.2 lends some plausi-
+bility to the statement [yet to be proved] that the relative homology groups
+are topological invariants.
+EXAMPLE 1.10.5 Let K be the complex indicated in Figure 1.10.2. Its
+underlying space is called an annulus. Let K0 denote the 1-dimensional com-
+plex whose space is the union of the inner and outer edges of K. We compute
+the homology of K modulo K0.
+First, H0(K, K0) = 0 because the relative chain group itself vanishes in
+dimension 0. To compute H1 and H2, one first verifies three facts:
+(i) If c is a 1-chain of K, then c is homologous to a 1-chain of K
+that is carried by the subcomplex M pictured in Figure 1.10.3.
+(ii) Orient each 2-simplex of K counterclockwise. If d is any 2-chain
+of K such that ∂d is carried by M, then d = mγ, where γ is the
+sum of all the oriented 2-simplices of K.
+(iii) ∂γ is carried by K0.
+The computation then proceeds as follows: Let e0 be the oriented 1-simplex
+pictured in Figure 1.10.2; then e0 represents a relative 1-cycle of K modulo
+K0, because ∂e0 lies in K0. It follows from (i) that any relative 1-cycle is
+relatively homologous to a multiple of {e0}. Furthermore, no such relative
+cycle bounds. For suppose ne0 −∂d is carried by K0, for some 2-chain d of K.
+Then ∂d is carried by M, whence by (ii), d = mγ for some integer m. But
+∂d = m∂γ is carried by K0, by (iii), so that n = 0. We conclude that
+H1(K, K0) ∼= Z ,
+and the relative cycle e0 represents a generator.

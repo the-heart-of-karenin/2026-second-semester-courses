@@ -1,0 +1,45 @@
+Duality in Manifolds
+471
+Proof: The augmentation map ϵ : C0 →Z gives rise to a homomorphism
+Cp ⊗G →Z ⊗G ∼= G that carries boundaries to zero. Hence it induces a
+homology homomorphism ϵ∗. We compute directly as follows: If T : ∆p →X,
+then
+ϵ(cp ⌢T)
+=
+ϵ[T ◦ℓ(ϵ0) ⊗⟨cp, T ◦ℓ(ϵ0, . . . , ϵp)⟩]
+=
+⟨cp, T⟩.
+The theorem follows.
+It was convenient to define the Kronecker map
+κ : Hp(X; G) →Hom(Hp(X), G)
+as the map sending α to the homomorphism ⟨α, · ⟩. Its naturality was easier
+to formulate than that of the Kronecker index. There is a similar version of
+the cap product. Its naturality is expressed by the commutative diagram
+Hp+q(X; R)
+⌢
+−−−−→Hom(Hp(X; R), Hq(X; R))
+f∗
+Hom(f ∗, f∗)
+Hp+q(Y ; R)
+⌢
+−−−−→Hom(Hp(Y ; R), Hq(Y ; R)) ,
+where the horizontal maps carry the homology class γp+q to the homomor-
+phism ⌢γp+q. This is the formulation of naturality that we often use in
+practice.
+Simplicial Cap Product
+Just as with cup products, one needs a formula that holds for simplicial
+theory if one wants to readily compute. By now it may be clear how to obtain
+such a formula.
+Definition 8.6.5 Given a complex K, choose a partial ordering of the vertices
+of K that linearly orders the vertices of each simplex. We define a homomor-
+phism
+Cp(K; R) ⊗Cp+q(K; R) ⌢
+−→Cq(K; R) ,
+called the simplicial cap product, by the formula
+cp ⌢([v0, v1, . . . , vp+q] ⊗α) = [v0, v1, . . . , vq] ⊗α · ⟨cp, [vq, vq+1, . . . , vp+q]⟩.
+Theorem 8.6.6 The simplicial cap product satisfies the boundary formula
+and the cup product formula of Theorem 8.6.2. It induces a homomorphism
+in simplicial theory given by
+Hp(K; R) ⊗Hp+q(K; R) →Hq(K; R)
+that corresponds to the singular cap product under the standard isomorphism
+between simplicial and singular theory.

@@ -1,0 +1,61 @@
+76
+Elements of Algebraic Topology
+p
+a
+b
+c
+d
+e
+K
+h
+g
+f
+A
+B
+C
+A
+A
+B
+C
+A
+E
+D
+E
+D
+I
+P
+H
+J
+G
+h#z
+T
+f#z
+Figure 1.13.1
+In general, a given homomorphism can be induced by quite different sim-
+plicial maps, as the preceding example shows. This fact leads us to consider
+the general question: Under what conditions do two simplicial maps induce
+the same homomorphism of homology groups? Answering this question in-
+volves an important technique, one we shall use many times. So we begin by
+explaining the underlying motivation.
+Given simplicial maps f, g : K →L, we wish to find conditions under which
+f#(z) and g#(z) are homologous for each cycle z ∈Zp(K). Said differently,
+we want to find conditions under which there is a function [commonly called
+D] that assigns to each p-cycle z of K, a p + 1 chain Dz of L, such that
+∂Dz = g#(z) −f#(z) .
+Let us consider an example in which this is possible. Suppose that K is the
+boundary of a triangular region, and L consists of the sides of a triangular
+prism, as pictured in Figure 1.13.2. Suppose f and g are the simplicial maps
+that carry K onto the two ends of the prism, respectively. If z is the 1-cycle
+generating H1(K), as indicated in the figure, it is quite easy to find a 2-chain
+Dz whose boundary is g#(z) −f#(z); we let Dz equal the sum of all the
+2-simplices of L, oriented appropriately. You can check that this 2-chain does
+the job.
+In general, it is awkward to define D only for cycles, since that requires us
+to compute the group of cycles. What proves more satisfactory is to define D
+as a homomorphism on the entire chain group, because then one can define D
+one simplex at a time. How might that procedure work in the present example?
+Let us illustrate the process. Given a vertex v of K, we define Dv to be the
+edge of L that leads from f(v) to g(v), as indicated in Figure 1.13.3. And
+given the oriented 1-simplex σ of K, we define Dσ to be the sum of the two
+oriented simplices that are heavily shaded in the figure, which form one side
+of the prism. We proceed similarly for the other simplices of K. Since z is the

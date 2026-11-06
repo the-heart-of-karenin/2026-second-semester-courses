@@ -1,0 +1,45 @@
+Singular Homology Theory
+249
+on homotopy given by
+f∗: π1(X)
+→
+π1(Y )
+[γ]
+−→
+[f ◦γ]
+is in fact a group homomorphism. That is to say,
+f∗([γ] · [µ]) = f∗([γ]) · f∗([µ]) .
+Proof: The mapping is well defined, because if Γ is a homotopy between γ1
+and γ2, then f ◦Γ is a homotopy between f ◦γ1 and f ◦γ2.
+For the canonical homomorphism property, note that
+f([γ] · [η]) =
+ f(γ(2t))
+if
+0 ≤t ≤1/2
+f(η(2t −1))
+if
+1/2 < t ≤1
+
+= [f ◦γ] · [f ◦η] .
+In fact it is not difficult to see that if f is injective, then so is f∗and if f
+is surjective, then so is f∗. So we have the following corollary.
+Corollary 4.10.7 The fundamental group is a topological invariant of a
+space.
+Since the fundamental group is a topological invariant, if two spaces are
+homeomorphic, then their fundamental groups are isomorphic. Contraposi-
+tively, this says that if two spaces have different fundamental groups, then
+they cannot be homeomorphic.
+You might recall the elaborate build-up required before we defined the
+simplicial homology of a space, and how we labored to show that the sim-
+plicial homology is a topological invariant. Comparatively speaking, studying
+homotopy has been quite easy: We defined the fundamental group and proved
+its topological invariance in just a few pages. Homotopy theory becomes more
+challenging when we seek to compute a fundamental group.
+Proposition 4.10.8 The fundamental group of the circle is isomorphic to
+the integers, that is, π1(S1) ∼= Z.
+Proof: It will be convenient to identify S1 with
+{z ∈C : |z| = 1} .
+We shall use 1 as our base point. We denote the unit interval [0, 1] by I, so
+a loop then is a function σ : I →S1 with σ(0) = σ(1) = 1 and |σ(t)| = 1 for
+t ∈I. It will be convenient to use the function ϕ : R →S1 given by
+ϕ(x) = e2πix .

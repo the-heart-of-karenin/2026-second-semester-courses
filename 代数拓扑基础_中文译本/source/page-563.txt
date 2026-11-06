@@ -1,0 +1,84 @@
+548
+Index of Notation
+f ′
+∗: Hp(C′(K, K0)) →Hp(C′(L, L0))
+homomorphism of relative homology
+induced by simplicial map of pairs
+91
+σ
+barycenter of simplex σ
+100
+sd K
+first barycentric subdivision of complex K
+100
+sd2 K
+second barycentric subdivision of complex K
+100
+sdnK
+nth barycentric subdivision of complex K
+100
+σ1 ≻σ2
+σ2 is proper face of σ1
+100
+sd(K/K0)
+first barycentric subdivision of K
+holding K0 fixed
+104
+sd(sd(K/K0)/K0)
+second barycentric subdivision of K
+holding K0 fixed
+105
+sdN(σ)(σ ∗Lσ/Lσ) generalized barycentric subdivision of K
+corresponding to the function N(σ)
+105
+λ : Cp(K) →Cp(K′)
+subdivision operator on chain group
+of simplicial complex K
+111
+λ : C(K) →C(K′)
+subdivision operator on chain complex
+of simplicial complex K
+112
+sd : Cp(K) →Cp(sd K)
+barycentric subdivision operator
+115
+λ : Cp(K, K0) →Cp(K′, K′
+0)
+chain map induced by subdivision operator
+115
+h∗: Hp(K) →Hp(L)
+homomorphism induced by
+continuous h : |K| →|L|
+117
+h ≃k
+h and k are homotopic
+121
+E =  Eα
+topological sum of spaces Eα
+132
+C(X)
+cone over space X
+134
+tr A
+trace of matrix A
+141
+χ(K)
+Euler characteristic of complex K
+144
+Λ(h)
+Lefschetz number of h : |K| →|K|
+145
+∂∗: Hp(K, K0) →Hp−1(K0)
+induced simplicial homology boundary
+homomorphism
+154
+∂∗: Hp(E) →Hp−1(C)
+zig-zag homomorphism induced by short exact
+sequence of chain complexes
+159
+(X, A, B)
+simplicial triple
+163
+β∗: Hp(K; G′′) →Hp−1(K; G)
+Bockstein homomorphism
+164

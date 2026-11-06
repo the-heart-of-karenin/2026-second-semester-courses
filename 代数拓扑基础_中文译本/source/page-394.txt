@@ -1,0 +1,43 @@
+Homology with Coefficients
+379
+The connection between the current definition of homology with arbitrary
+coefficients and the definition we gave in Section 1.11 can now be made clear.
+In that section, we represented a simplicial p-chain cp with coefficients in G
+by a finite formal sum cp =  gασα, and its boundary was defined by the
+formula
+∂cp =
+
+gα(∂σα) .
+It follows that the chain complex C(K; G) defined in Section 1.11 is isomorphic
+to the chain complex C(K) ⊗G. Henceforth, we shall use the latter chain
+complex in dealing with simplicial homology with arbitrary coefficients.
+The existence of induced homomorphisms and the long exact homology se-
+quence, and the verification of the Eilenberg–Steenrod axioms, is so straight-
+forward that we omit the details. The argument follows the pattern given in
+Section 5.5 for simplicial cohomology.
+The Isomorphism between Simplicial and Singular Theory
+We have the chain map of Section 4.7,
+η : Cp(K, K0) →Sp(|K|, |K0|) ,
+which induces an isomorphism in ordinary homology. It follows from Theo-
+rem 6.3.1 that it induces an isomorphism in homology with arbitrary coeffi-
+cients as well. The fact that it is independent of the ordering of vertices used
+in defining η, and the fact that it commutes with the boundary homomor-
+phism ∂∗and with homomorphisms induced by continuous maps, follow as in
+the proof of Theorem 5.5.3.
+The Homology of CW Complexes
+If X is a CW complex with cellular chain complex D(X), we know that
+Hp(D(X)) ∼= Hp(X) for all p. It follows from Theorem 5.6.2 that there is
+a chain map inducing this isomorphism. It then follows from Theorem 6.3.1
+that
+Hp(D(X) ⊗G) ∼= Hp(X; G) .
+Thus the cellular chain complex of X can be used to compute homology with
+arbitrary coefficients. If X is a triangulable CW complex, then the chain map
+inducing this isomorphism is the inclusion map
+j : D(X) →C(X) .
+The proof of the following will be left to the exercises:
+Theorem 6.3.2 Let C be a free chain complex. Then there is a natural exact
+sequence
+0 −→Hp(C) ⊗G ϕ
+−→Hp(C ⊗G) −→cok ϕ −→0 ,
+where ϕ is induced by inclusion. The sequence splits, but not naturally. If
+Hi(C) is free for all i, then ϕ is an isomorphism.

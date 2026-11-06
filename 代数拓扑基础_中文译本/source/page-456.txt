@@ -1,0 +1,45 @@
+Homological Algebra
+441
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+z1
+Figure 7.11.2
+is nonzero. [See the exercises of Section 5.10.] By Theorem 7.11.8, the vector
+space H∗(P2 × P2; Z/2) has dimension 9 with the following basis elements:
+dim 0
+1 × 1 ,
+dim 1
+α × 1,
+1 × α ,
+dim 2
+α2 × 1,
+α × α,
+1 × α2 ,
+dim 3
+α2 × α,
+α × α2 ,
+dim 4
+α2 × α2 .
+The multiplication table is easily written down. No signs are involved because
+the coefficient field is Z/2.
+The following definition will be used in the Exercise 3:
+Definition 7.11.11 If M and N are connected n-manifolds, then the con-
+nected sum, M # N, is obtained by removing an open n-ball from each of M
+and N and pasting together what remains along their boundaries. For the
+manifolds in Exercise 3, the resulting manifold is well-defined up to homeo-
+morphism. In general, one must bring in the issue of “orientation.”
+EXERCISES
+1. (a) Suppose that A ⊂X and B ⊂Y . Show that if {X × B, A × Y }
+is excisive, then there is a relative cohomology cross product
+× : Hp(X, A) ⊗Hq(Y, B) →Hp+q(X × Y, (X × B) ∪(A × Y ))
+for our usual sets of coefficients.

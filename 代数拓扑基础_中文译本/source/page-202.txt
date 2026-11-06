@@ -1,0 +1,34 @@
+4
+Singular Homology Theory
+4.1
+Introduction
+Now we are in some sense going to begin all over again. We construct a new
+homology theory. As compared with simplicial theory, it is much more “natu-
+ral.” For one thing, the homology groups are defined for arbitrary topological
+spaces, not only for triangulable ones. For another, the homomorphism in-
+duced by a continuous map is defined directly and its functorial properties
+are proved easily; no difficult results such as the simplicial approximation the-
+orem are needed. The topological invariance of the singular homology groups
+follows at once.
+Unfortunately, the singular homology groups are not immediately com-
+putable. One must develop a good deal of singular theory before one can
+compute the homology of even such a simple space as the sphere Sn. Eventu-
+ally, when we develop the theory of CW complexes, we will see how singular
+homology can be computed fairly readily. Alternatively, since we shall show
+that simplicial and singular homology groups are isomorphic for triangulable
+spaces, we can always go back to simplicial theory if we want to compute
+something.
+In this chapter, we construct the singular homology groups and prove that
+they satisfy the Eilenberg–Steenrod axioms on the class of all topological
+spaces. [The homotopy axiom and the excision axiom, it turns out, require
+more effort than the others.] Then we construct a specific isomorphism be-
+tween the singular and simplicial theories that will be useful later.
+Finally, we give a number of applications. They include the Jordan curve
+theorem, theorems about manifolds, and the computation of the homology of
+real and complex projective spaces.
+4.2
+The Singular Homology Groups
+In this section we define the singular homology groups and derive their ele-
+mentary properties. First, we introduce some notation.
+DOI: 10.1201/9781003621478-4
+187

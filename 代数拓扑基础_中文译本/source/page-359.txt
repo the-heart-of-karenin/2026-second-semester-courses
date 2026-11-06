@@ -1,0 +1,53 @@
+344
+Elements of Algebraic Topology
+EXAMPLE 5.8.3 Let X denote either the torus T or the Klein bottle S,
+expressed as a CW complex having one open cell in dimension 2, two in
+dimension 1 and one in dimension 0. We computed the cellular chain complex
+of X, in Example 4.13.10, to be of the form
+· · · −→0 −→Z ∂2
+−→Z ⊕Z ∂1
+−→Z −→0 .
+Let γ generate D2(X), and let w1 and z1 be a basis for D1(X). We know
+∂2 and ∂1 vanish in the case of the torus. Passing to the dual sequence, we
+compute
+H2(T; G) ∼= G,
+H1(T; G) ∼= G ⊕G,
+H0(T; G) ∼= G.
+In the case of the Klein bottle, we know that ∂1 vanishes, and that we can
+choose w1 and z1 so that ∂2γ = 2z1. The dual sequence is of the form
+· · · ←−0 ←−G
+δ2
+←−G ⊕G
+δ1
+←−G ←−0 .
+Here Hom (D1(S), G) ∼= G ⊕G, where the first summand represents those
+homomorphisms ϕ : D1(S) →G that vanish on z1, and the second represents
+those homomorphisms ψ : D1(S) →G that vanish of w1. Because ∂1 is trivial,
+so is its dual δ1. We compute δ2 as follows:
+⟨δ2ϕ, γ⟩= ⟨ϕ, ∂2γ⟩= 2⟨ϕ, z1⟩= 0,
+⟨δ2ψ, γ⟩= ⟨ψ, ∂2γ⟩= 2⟨ψ, z1⟩.
+Thus δ2 carries the first summand to zero, and equals multiplication by 2 on
+the second summand. We conclude that
+H2(S; G) ∼= G/2G,
+H1(S; G) ∼= G ⊕ker(G
+2
+−→G),
+H0(S; G) ∼= G
+[here G
+2
+−→G denotes the map given by multiplication by 2]. In particular,
+we have
+H2(S) ∼= Z/2 ,
+H1(S) ∼= Z ,
+H0(S) ∼= Z ,
+and
+H2(S; Z/2) ∼= Z/2 ,
+H1(S; Z/2) ∼= Z/2 ⊕Z/2 ,
+H0(S) ∼= Z/2 .
+The computations given in the preceding example are typical. Once one
+has the cellular chain complex D(X), computing the cohomology groups is
+not hard.
+Nonetheless, there is an associated problem that is more difficult—namely,
+the problem of finding specific simplicial cocycles that generate these groups.
+In the next section, when we study cup products, we shall need to have such
+cocycles at hand. How can one find them?

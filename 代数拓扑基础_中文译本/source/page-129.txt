@@ -1,0 +1,40 @@
+114
+Elements of Algebraic Topology
+either σ or a face of σ. In any case, if τ appears in the chain λ(σ), then θ(τ) is
+carried by K(στ) ⊂K(σ). Thus θ(λ(σ)) is a chain of K(σ), so θ ◦λ is carried
+by Ψ.
+The identity map Cp(K′) →Cp(K′) is carried by Φ. For τ is contained in
+σ by definition, so that τ is a simplex of K′(στ). We show that λ ◦θ is also
+carried by Φ, hence λ ◦θ is chain homotopic to the identity. If τ ∈K′, then
+θ(τ) is carried by the complex K(στ) consisting of στ and its faces, so that it
+equals a sum of oriented faces of στ. Now if s is any face of στ, then λ(s) is
+carried by K′(s) ⊂K′(στ). It follows that λθ(τ) is carried by K′(στ) = Φ(τ),
+as desired.
+The preceding discussion is independent of the choice of the particular
+chain maps θ and λ. One choice for θ is the chain map g#. It follows from
+the preceding lemma that g# is carried by θ. Therefore g# and λ are chain-
+homotopy inverses.
+We now show that λ is unique. Suppose that λ′ is another augmentation-
+preserving chain map carried by λ. Then, by Theorem 1.14.10, there is a chain
+homotopy D, also carried by Λ, between λ and λ′. Note that if σ is a p-simplex,
+then Λ(σ) = K′(σ) is a complex of dimension p. Since D(σ) is a (p + 1)-chain
+carried by K′(σ), it must be zero. Thus D is identically zero. The equation
+∂D + D∂= λ −λ′ now implies that λ = λ′.
+Step 2: We show the theorem holds if K′ = sd K: For in this case, given
+σ ∈K, the complex K′(σ) is a cone. In fact K′(σ) = σ ∗J, where J is the first
+barycenetric subdivision of Bd σ. And we know from Theorem 1.9.6 that cones
+are acyclic. [This is the place where barycentric subdivisions are essential for
+the proof.]
+Step 3: We show the theorem is true if K′ = sdNK: In view of Step 1, it
+suffices to prove that for any simplex σ of K, the complex sdNK(σ) is acyclic.
+This follows from Step 2, which implies that for any complex L,
+Hi(L) ∼= Hi(sd L) ∼= Hi(sd2L) ∼= · · · .
+In particular, if L is acyclic, then so is sdNL.
+Step 4: We show the theorem is true in general: In view of Step 1, it suffices
+to show that if σ ∈K and if K′ is any subdivision of K, then K′(σ) is acyclic.
+Let L = K(σ) and L′ = K′(σ). Then L is acyclic, and we wish to prove
+that L′ is acyclic. Let g : L′ →L be a simplicial approximation to the identity.
+Choose N so that the identity map of |L| to itself has a simplicial approxima-
+tion f : sdN L →L′. For this we need the (finite) simplicial approximation
+theorem. Proceeding similarly, choose M so that the identity has a simplicial
+approximation k : sdM(L′) →sdNL.

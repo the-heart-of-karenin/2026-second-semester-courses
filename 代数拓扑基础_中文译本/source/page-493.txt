@@ -1,0 +1,46 @@
+478
+Elements of Algebraic Topology
+Cp(X) ⊗G ∼= Cp(X; G)
+Cp(sd X; G)
+Dn−p(X) ⊗G
+g#
+⌢sd γ
+equals the isomorphism Cp(X) →Dn−p(X) of Step 4 tensored with the iden-
+tity map of G. Hence it is an isomorphism.
+Step 6: In the case where X is not necessarily orientable, the preceding
+proof works if one reduces all the coefficients mod 2. Steps 1 and 2 proceed
+unchanged. The proof in Step 3 shows that g#(σ∗) ⌢sd γ(2) is the non-
+trivial (n −p)-cycle (with Z/2 coefficients) of the block (D(σ), ˙D(σ)). Step 4
+is easier, since no signs are involved.
+Our proof of this theorem used simplicial homology throughout. But the
+fact that simplicial theory and singular theory are isomorphic, by an isomor-
+phism that preserves cap products, means that this theorem holds for singular
+theory as well. In particular, the isomorphism given by ⌢Γ depends only on
+the homology class Γ, not on any particular triangulation involved.
+The preceding theorem gives us information about how the Poincar´e du-
+ality isomorphism behaves with respect to continuous maps. Specifically, one
+has the following result, whose proof is an immediate consequence of the nat-
+urality of the cap product.
+Theorem 8.7.3 Let X and Y be compact, connected, triangulable, ori-
+entable homology n-manifolds. Let ΓX and ΓY be orientation classes for
+X and Y , respectively. Given f : X →Y , let d be the integer such that
+f∗(ΓX) = d · Γy. Then the following diagram commutes:
+Hp(X; G)
+⌢ΓX
+−−−−−→
+Hn−k(X; G)
+f ∗
+f∗
+Hk(Y ; G)
+⌢d ΓY
+−−−−−−→Hn−k(Y ; G) .
+In particular, if d = ±1, then f ∗is injective and f∗is surjective. The same
+result holds for G = Z/2 without requiring X and Y to be orientable.
+Definition 8.7.4 The integer d appearing in the statement of this theorem
+is called the degree of f, written d(f), relative to the orientation cycles ΓX
+and ΓY . Since ΓX and ΓY are uniquely determined up to sign, so is d(f). If
+X = Y and if ΓX = ΓY , then d is uniquely determined.
+The second version of Poincar´e duality, in which the isomorphism is ob-
+tained by use of cap products, has consequences that go far beyond the nat-
+urality diagram just proved. Note that everything in the statement of Theo-
+rem 8.7.2 makes sense even if X is not triangulable—provided one knows what

@@ -1,0 +1,38 @@
+Topological Invariance of the Homology Groups
+139
+homotopy is well defined. Formally, we define the homotopy H : Sn × I →Sn
+by
+H(x, t) =
+(1 −t)h(x) + t(−x)
+∥(1 −t)h(x) + t(−x)∥.
+The proof is complete once we show that the denominator does not vanish. If
+(1−t)h(x) = tx for some t and x, then taking norms of both sides, we conclude
+that 1 −t = t, so t = 1/2. From this it follows that h(x) = x, contrary to
+hypothesis.
+Theorem 2.9.10 If h : Sn →Sn has degree different from 1, then h takes
+some point to its antipode.
+Proof: If a is the antipodal map as usual, then a◦h has degree different from
+(−1)n+1, so it has a fixed point x. Thus a(h(x)) = x or −h(x) = x as desired.
+Corollary 2.9.11 The sphere Sn has a non-vanishing tangent vector field if
+and only if n is odd.
+Proof: First, suppose n is odd. We simply construct an appropriate vector
+field as follows: Set n = 2k −1. For x ∈Sn ⊂R2k, we define
+v(x) = (−x2, x1, −x4, x3, . . . , −x2k, x2k−1) .
+We see that v(x) is perpendicular to x, hence tangent to the sphere at x. Since
+∥v(x)∥= ∥x∥= 1, v never vanishes.
+For the converse, suppose that w(x) is a tangent vector field to Sn at x
+with w(x)̸ = 0 for all x ∈Sn. Then
+h(x) =
+w(x)
+∥w(x)∥
+is a map from Sn into Sn. Since w(x) is perpendicular to x for all x, we cannot
+have either h(x) = x or h(x) = −x for any x. Thus h has no fixed point,
+and Theorem 2.9.9 tells us that deg(h) = (−1)n+1. Also h maps no point to
+its antipode, so Theorem 2.9.10 tells us that deg(h) = 1. We conclude that
+(−1)n+1 = 1. Thus n must be odd.
+Exercise 2 asks you to prove the fundamental theorem of algebra. For
+completeness, we state that theorem here.
+Theorem 2.9.12 (The Fundamental Theorem of Algebra) Every poly-
+nomial
+zn + an−1zn−1 + · · · + a1z + a0
+with real or complex coefficients and n ≥1 has a root in the complex plane.

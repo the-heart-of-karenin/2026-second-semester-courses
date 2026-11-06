@@ -1,0 +1,47 @@
+472
+Elements of Algebraic Topology
+Proof: Let η : Cp(K) →Sp(|K|) be the chain map defined in Section 4.7 that
+induces an isomorphism of simplicial theory with singular theory. Since η is a
+monomorphism onto a direct summand, its dual η is surjective.
+We first show that η commutes with ⌢on the chain level. That is, given
+cp ∈Cp(K; R), we choose dp ∈Sp(|K|; R) with η(dp) = cp. And we verify
+that, for cp+q ∈Cp+q(K; R), we have
+η(cp ⌢cp+q) = dp ⌢η(cp+q) .
+To prove this formula, we assume that v0 < v1 < · · · < vp+q and compute
+η(cp ⌢[v0, . . . , vp+q] ⊗α)
+=
+ℓ(v0, . . . , vq) ⊗α · (cp, [vq, . . . , vp+q])
+=
+ℓ(v0, . . . , vq) ⊗α · (dp, ℓ(vq, . . . , vp+q))
+=
+dp ⌢η([v0, . . . , vp+q] ⊗α) .
+This last equation uses the fact that
+ℓ(v0, . . . , vp+q) ◦ℓ(ϵ0, . . . , ϵq) = ℓ(v0, . . . , vq) .
+The boundary formula and cup product formula may be proved by direct
+computation, as in Theorem 8.6.2. Alternatively, they can be derived from the
+similar formulas for singular theory. For example, given cp, let η(dp) = cp as
+before. Then if we apply η to both sides of the desired equation
+∂(cp ⌢cp+q) = (−1)qδcp ⌢cp+q + cp ⌢∂cp+q ,
+(∗)
+we obtain
+∂(dp ⌢η(cp+q)) = (−1)qδdp ⌢η(cp+q) + dp ⌢∂η(cp+q) .
+Since η is a monomorphism, (∗) must hold. A similar argument applies to the
+cup product formula, using the fact that η commutes with the cup product.
+Relative Cap Products
+Just as with the cup product, there is a relative version of the cap product.
+It will be useful in what follows. The most general relative cap product is a
+bilinear map
+Hp(X, A) ⊗Hp+q(X, A ∪B) →Hq(X, B) ,
+which is defined when {A, B} is an excisive couple. [Here, as usual, we shall
+omit the coefficients for convenience.] We shall in fact be interested only in
+the cases where either A or B is empty, or A = B. That is, we are concerned
+with the following operations:
+Hp(X) ⊗Hp+q(X, B)
+Hq(X, B) ,
+Hp(X, A) ⊗Hp+q(X, A)
+Hq(X) ,
+Hp(X, A) ⊗Hp+q(X, A)
+Hq(X, A) .
+⌢
+⌢
+⌢

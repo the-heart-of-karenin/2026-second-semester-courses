@@ -1,0 +1,68 @@
+70
+Elements of Algebraic Topology
+Proof: Step 1. Let
+Zp = ker ∂p and Bp = im ∂p+1 .
+Let Wp consist of all elements cp of Cp such that some non-zero multiple of cp
+belongs to Bp. This is a subgroup of Cp called the group of weak boundaries.
+We have
+Bp ⊂Wp ⊂Zp ⊂Cp .
+The second inclusion holds because Cp is torsion free, so that the equation
+mcp = ∂p+1dp+1 implies ∂pcp = 0.
+Consider the natural projection
+Zp →Hp(C) →Hp(C)/Tp(C) ,
+where Tp(C) is the torsion subgroup of Hp(C). The kernel of this projection
+is Wp; therefore Zp/Wp ∼= Hp/Tp. The latter group is finitely generated and
+torsion-free, so it is free. If c1 +Wp, c2 +Wp, . . . , ck +Wp is a basis for Zp/Wp,
+and d1, d2, . . . , dℓis a basis for Wp, then it is straightforward to check that
+c1, c2, . . . , ck, d1, d2, . . . , dℓis a basis for Zp. Then Zp = Vp ⊕Wp, where Vp is
+the group with basis c1, c2, . . . , ck.
+Step 2. Suppose we choose bases e1, e2, . . . , en for Cp, and e′
+1, e′
+2, . . . , e′
+m for
+Cp−1, relative to which the matrix of ∂p : Cp →Cp−1 has the normal form
+e′
+1
+...
+e′
+ℓ
+e′
+ℓ+1
+...
+e′
+m
+b1
+e1
+eℓ+1 . . . en
+0
+...
+. . .
+0
+eℓ
+bℓ
+0
+0
+0
+where bi ≥1 and b1 | b2 | · · · | bℓ. Then the following hold:
+(1) eℓ+1, eℓ+2, . . . , en is a basis for Zp.
+(2) e′
+1, e′
+2, . . . , e′
+ℓis a basis for Wp−1.
+(3) b1e′
+1, b2e′
+2, . . . , bℓe′
+ℓis a basis for Bp−1.
+We prove these results as follows: Let cp be the general p-chain. We com-
+pute its boundary. If
+cp =
+n
+
+i=1
+aiei ,
+then ∂pcp =
+ℓ
+
+i=1
+aibie′
+i .

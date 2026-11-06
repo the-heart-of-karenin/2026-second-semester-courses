@@ -1,0 +1,47 @@
+346
+Elements of Algebraic Topology
+are a basis for the group Hom (D1(X), Z) ∼= Z ⊕Z. For the torus, δ vanishes,
+so λ generates H2(D(T)) and ϕ and ψ represent a basis for H1(D(T)). For
+the Klein bottle, we have δϕ = 0 and δψ = 2λ, so λ represents the non-zero
+element of H2(D(S)) ∼= Z/2 and ϕ represents a generator of H1(D(S)) ∼= Z.
+Now, unlike the situation in homology, the homomorphisms λ, ϕ, and ψ
+cannot be “considered” as cocycles of the simplicial complex X. For the in-
+clusion map i : Dp(X) →Cp(X) induces a homomorphism in the opposite
+direction
+Hom (Dp(X), Z)
+ı
+←−Hom (Cp(X), Z) .
+This homomorphism is a restriction map. To find the cocycles of the simplicial
+complex X that generate the simplicial cohomomology of X, we must pull back
+λ, ϕ, and ψ to cocycles
+z2 : C2(X) →Z ,
+w1, w2; C1(X) →Z ,
+whose restrictions to the subgroups D2(X) and D1(X) equal λ, ϕ, and ψ,
+respectively.
+There is no general procedure for finding such cocycles. But in the present
+case, since we know that a cocycle is supposed to look like a picket fence, we
+can find the desired cocycles without too much difficulty, as we now show.
+EXAMPLE 5.8.4 Generators for the cohomology of the torus. We represent
+T as a quotient space of the rectangle, as in the preceding example. Let w1
+and z1 be as in that example. The cochains w1 and z1 pictured in Figure 5.8.2
+are cocycles of T, by direct computation. Furthermore, when evaluated on the
+cycles w1 and z1 that generate D1(X), we have
+⟨w1, w1⟩= 1
+and
+⟨w1, z1⟩= 0,
+⟨z1, w1⟩= 0
+and
+⟨z1, z1⟩= 1 .
+Thus w1 is a pull-back of ϕ, and z1 is a pull-back of ψ. Therefore they represent
+a basis for H1(T).
+Similarly, if σ is any 2-simplex of T, oriented counterclockwise, then σ∗is a
+cocyle of T. Because ⟨σ∗, γ⟩= 1, the restriction of σ∗to the subgroups D2(X)
+of C2(X) equals λ, so σ∗is a pull-back of λ. Thus σ∗represents a generator of
+H2(T). [More generally, if all 2-simplices of T are oriented counterclockwise,
+then the cochain  niσ∗
+i of T is a pull-back of λ if and only if  ni = 1.]
+EXAMPLE 5.8.5 Generators for the cohomology of the Klein bottle, with
+integer coefficients. We follow the pattern of the preceding example.
+By switching the labels d and e on the right-hand side of the rectangle in
+Figure 5.8.2 that illustrates the cochain w1, we obtain Figure 5.8.3 represent-
+ing the Klein bottle and illustrating the cochain w1. Then w1 still represents

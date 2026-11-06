@@ -1,0 +1,59 @@
+Homological Algebra
+431
+The most general cross product is defined relative to an arbitrary coefficient
+pairing, which is a homomorphism A⊗R A′ →A′′ of R-modules. We shall not
+need this degree of generality.
+The K¨unneth Theorem for Cohomology with Integer Coefficients
+We will now prove the K¨unneth theorem for cohomology with integer coeffi-
+cients. The idea of the proof is to re-index the groups Hom (Cp, Z) so as to
+make Hom (C, Z) into a chain complex, and then apply the K¨unneth theorem
+that we have already proved. One difficulty is that Hom (Cp, Z) is in general
+not free. So some restrictive hypotheses are needed.
+An additional difficulty is that, by definition, the cohomology of C ⊗C′ is
+computed from the cochain complex Hom ((C ⊗C′)m, Z), and that is not the
+same as the cochain complex
+Hom (C, Z) ⊗Hom (C′, Z)
+to which we are going to apply the K¨unneth theorem. This is where the
+homomorphism θ comes into play, as we see in the following lemma:
+Lemma 7.10.6 Let C and C′ be chain complexes that vanish below a certain
+dimension. If C is free and finitely generated in each dimension, then
+θ : 
+p+q=mHom (Cp, Z) ⊗Hom (C′
+q, Z) →Hom ((C ⊗C′)m, Z)
+is an isomorphism.
+Proof: For purposes of this proof, we break θ up into a composite of two
+maps:
+Hom (Cp, Z) ⊗Hom (C′
+q, Z) M
+−→Hom (Cp ⊗C′
+q, Z) ,
+and
+
+p+q=mHom (Cp ⊗C′
+q, Z)
+e
+−→Hom
+
+p+q=mCp ⊗C′
+q, Z
+
+.
+The map M is given by the equation
+⟨M(ϕp ⊗ψq), cp ⊗c′
+q⟩= ⟨ϕp, cp⟩· ⟨ψq, c′
+q⟩.
+The map e is defined as follows: If F : Cp ⊗C′
+q →Z, then e(F) is the map of
+
+r+s=mCr ⊗C′
+s into Z that equals F on the summand Cp ⊗C′
+q and vanishes
+on all other summands.
+Step 1. Because Cp is free and of finite rank, it follows that
+M : Hom (Cp, Z) ⊗Hom (C′
+q, Z) →Hom (Cp ⊗C′
+q, Z)
+is an isomorphism. To see this, let a1, a2, . . . , ak be a basis for Cp, and let
+a1, a2, . . . , ak be the dual basis for Hom (Cp, Z). The group
+Hom (Cp, Z) ⊗Hom (C′
+q, Z)

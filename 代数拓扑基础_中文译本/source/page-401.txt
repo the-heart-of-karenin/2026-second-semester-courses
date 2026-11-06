@@ -1,0 +1,59 @@
+386
+Elements of Algebraic Topology
+There are homomorphisms
+cok ϕ4 ϵ3
+−→cok ϕ3 ϵ2
+−→cok ϕ2 ϵ1
+−→cok ϕ1
+induced by (iA′, iB′), (γ, δ), and (iA, iB), respectively. Both ϵ3 and ϵ1 are
+isomorphisms. By functoriality, the composite ϵ1 ◦ϵ2 ◦ϵ3 is the unique homo-
+morphism induced by
+( iA′ ◦γ ◦iA, iB ◦δ ◦iB′ ) = (γ, δ) ,
+relative to the canonical free resolutions, so it must equal Ext (γ, δ). Therefore
+the diagram
+Ext (A, B)
+cok ϕ2
+Hom (R, B)
+Ext (A′, B′)
+cok ϕ3
+Hom (R′, B′)
+ϵ1
+∼=
+Ext (γ,δ)
+ϵ3
+∼=
+ϵ2
+Hom (α,δ)
+commutes, and the proof is complete.
+We now prove some further properties of the Ext functor.
+Theorem 7.2.5
+(a) There are natural isomorphisms
+Ext (
+α∈JAα, B)
+∼=
+
+α∈J Ext (Aα, B) ,
+Ext
+
+A, 
+α∈J Bα
+
+∼=
+
+α∈J Ext (A, Bα) .
+(b) Ext (A, B) = 0 if A is free.
+(c) Given B, there is an exact sequence
+0 ←−Ext (Z/m, B) ←−B
+B ←−Hom (Z/m, B) ←−0 ,
+ϕm
+where ϕm is multiplication by m.
+Proof: In the proof, we shall use the fact that direct sums and direct products
+of exact sequences are exact, and the fact that a direct sum [but not a direct
+product] of free abelian groups is free abelian.
+(a) Let
+0 −→Rα −→Fα −→Aα −→0
+be a free resolution of Aα. Then
+0 −→
+α∈J Rα −→
+α∈J Fα −→
+α∈J Aα −→0

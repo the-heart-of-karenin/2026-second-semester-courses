@@ -1,0 +1,51 @@
+284
+Elements of Algebraic Topology
+The homology of the chain complex D(X) is isomorphic, by our theorem, with
+the singular homology of X.
+In the special case where X is a triangulable CW complex triangulated by a
+complex K, and Hp denotes simplicial homology, we interpret these comments
+as follows: The fact that Xp and Xp−1 are subcomplexes of K implies that
+each open p-cell eα is a union of open simplices of K, so eα is the polytope of
+a subcomplex of K. The group Hp(eα, ˙eα) equals the group of p-chains carried
+by eα whose boundaries are carried by ˙eα. This group is infinite cyclic, and
+either generator of this group is called a fundamental cycle for (eα, ˙eα).
+The cellular chain group Dp(X) equals the group of all simplicial p-chains
+of X carried by Xp whose boundaries are carried by Xp−1. Any such p-chain
+can be written uniquely as a finite linear combination of fundamental cycles
+for those pairs (eα, ˙eα) for which dim eα = p.
+Let us interpret these results in some familiar situations.
+A
+A
+B
+B
+L
+A
+A
+B
+B
+L
+g
+g
+X
+e′
+1
+e1
+e2
+e′
+1
+e2
+e1
+X
+Figure 4.13.2
+EXAMPLE 4.13.10 Let X denote either the torus or the Klein bottle, ex-
+pressed as a quotient space of the rectangle L in the usual way. See Fig-
+ure 4.13.2.
+Then X is a triangulable CW complex, having one open 2-cell e2, two open
+1-cells e1 and e′
+1 [that are the images of A and B, respectively], and one 0-cell
+e0. Then
+D2(X) ∼= Z,
+D1(X) ∼= Z ⊕Z,
+D0(X) ∼= Z.
+Let us find specific generators for these chain groups. The 2-chain d of L
+that is the sum of all the 2-simplices of L, oriented counterclockwise, is by

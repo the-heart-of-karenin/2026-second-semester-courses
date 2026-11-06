@@ -1,0 +1,39 @@
+108
+Elements of Algebraic Topology
+v
+v
+δ
+p
+St(v, B)
+St(v, B) × I
+Av
+St(v, K)
+ρ
+Figure 2.4.2
+This is part of what we want to prove.
+We are given that St(v, B) ⊂Av. We claim that we can choose δ > 0 such
+that
+St(v, K) ∩(Rm × [0, δ]) ⊂Av
+for each v ∈B. See Figure 2.4.2.
+To prove this assertion, consider the continuous map ρ : |B| × I →|K|
+defined by ρ(x, t) = (1−t)x+tp. The map ρ carries St(v, B)×I onto St(v, K)
+because K is a cone over B. Furthermore, ρ preserves the last coordinate since
+πρ(x, t)
+=
+(1 −t)π(x) + tπ(p)
+=
+(1 −t) · 0 + t · 1 = π(x, t) .
+Now St(v, B) is a compact set. The “tube lemma” of point-set topology
+[see for instance Section 26 of [Mun00]] enables us to choose δ > 0 so that
+St(v, B) × [0, δ] ⊂ρ−1(Av) .
+[More directly, one can cover St(v, B)×{0} with finitely many sets of the form
+Ui ×[0, δi], each lying in ρ−1(Av). Then one can choose δ = mini δi.] It follows
+that the set
+ρ(St(v, b) × [0, δ]) = St(v, K) ∩(Rm × [0, δ])
+lies in Av as desired.
+Now we can choose N0. Applying Step 1, we choose N0 so that when
+N ≥N0, each simplex of KN that intersects Rm × {0} lies in Rm × [0, δ].
+Then, if v is a vertex of B, the set St(v, KN) lies in Rm × [0, δ]. Since this set
+also lies in St(v, K), it lies in Av as desired.
+Step 3: The integer N0 is now fixed. Consider the complex KN0+1. Let Q be
+the union of all simplices of KN0+1 that do not intersect B. See Figure 2.4.3.

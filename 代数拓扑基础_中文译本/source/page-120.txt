@@ -1,0 +1,36 @@
+Topological Invariance of the Homology Groups
+105
+K
+K0
+sd K
+sd(K/K0)
+Figure 2.4.1
+Definition 2.4.3 Let K be a complex and let K0 be a subcomplex. We define
+a sequence of subdivisions of the skeleton of K as follows: Let J0 = K(0). In
+general, suppose that Jp is a subdivision of the p-skeleton of K and each
+simplex of K0 of dimension at most p belongs to Jp. Define Jp+1 to be the
+union of the complex Jp, all (p + 1)-simplices σ belonging to K0, and the
+cones σ ∗Jσ, as σ ranges over all (p + 1)-simplices of K not in K0. [Here Jσ
+is the subcomplex of Jp whose polytope is Bd σ.] The union of the complexes
+Jp is a subdivision of K, denoted sd(K/K0) and called the first barycentric
+subdivision of K, holding K0 fixed.
+As with barycentric subdivisions, this process can now be repeated. The
+complex sd(sd(K/K0)/K0) will be called the second barycentric subdivision
+of K, holding K0 fixed, and will be denoted by sd2(K/K0) and so forth.
+EXAMPLE 2.4.4 Figure 2.4.1 illustrates the first barycentric subdivision
+sd K of a complex K and the first barycentric subdivision sd(K/K0) holding
+a complex K0 fixed.
+To prove the general simplicial approximation theorem, iterated barycen-
+tric subdivisions will not suffice, just because the Lebesgue number argument
+used in the proof of Theorem 2.4.2 requires the space |K| to be compact. For a
+general complex K, the number λ that measures how finely a simplex must be
+subdivided may vary from one simplex to another. Thus we must generalize
+our notion of barycentric subdivision to allow for this possibility.
+Definition 2.4.5 Let K be a complex. Let N be a function assigning to
+each positive-dimensional simplex σ of K a non-negative integer N(σ). We
+construct a subdivision of K as follows. Let L0 = K(0). In general suppose
+that Lp is a subdivision of the p-skeleton of K. For each (p + 1)-simplex σ of
+K, let Lσ be the subcomplex of Lp whose polytope is Bd σ. Form the cone
+σ∗Lσ. Then subdivide this cone barycentrically N(σ) times, holding Lσ fixed.
+Define Lp+1 to be the union of Lp and the complexes
+sdN(σ)(σ ∗Lσ/Lσ)

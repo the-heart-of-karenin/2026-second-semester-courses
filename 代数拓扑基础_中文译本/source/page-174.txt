@@ -1,0 +1,68 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+159
+is exact, or that it is a short exact sequence of chain complexes if in each
+dimension p the sequence
+0 −→Cp
+ϕ
+−→Dp
+ψ
+−→Ep −→0
+is an exact sequence of groups.
+For example, if K is a complex and K0 is a subcomplex of K, then the
+sequence
+0 −→C(K0) −→C(K) −→C(K, K0) −→0
+is exact just because Cp(K, K0) = Cp(K)/Cp(K0) by definition.
+Lemma 3.3.2 (The zig-zag lemma) Suppose that one is given chain com-
+plexes C = {Cp, ∂C}, D = {Dp, ∂D}, and E = {Ep, ∂E}. Suppose that also
+given are chain maps ϕ, ψ such that the sequence
+0 −→C
+ϕ
+−→D ψ
+−→E −→0
+is exact. Then there is a long exact homology sequence
+· · · −→Hp(C) ϕ∗
+−→Hp(D) ψ∗
+−→Hp(E) ∂∗
+−→Hp−1(C) ϕ∗
+−→Hp−1(D) −→· · · ,
+where ∂∗is induced by the boundary operator on D.
+Proof: The proof is of a sort commonly known as “diagram chasing.” In the
+future we shall leave most diagram chasing proofs to the reader.
+We shall make use of the following commutative diagram:
+ϕ
+ϕ
+ϕ
+ψ
+ψ
+ψ
+∂C
+∂D
+∂E
+∂C
+∂D
+∂E
+cp
+dp
+ep
+dp+1
+ep+1
+cp−1
+0
+Cp+1
+Dp+1
+Ep+1
+0
+0
+Cp
+Dp
+Ep
+0
+0
+Cp−1
+Dp−1
+Ep−1
+0
+Step 1: First we define ∂∗. Given a cycle ep in Ep (that is to say, an element of
+ker ∂E), choose dp ∈Dp so that ψ(dp) = ep. [Recall here that ψ is surjective.]
+The element ∂Ddp of Dp−1 lies in ker ψ since
+ψ(∂Ddp) = ∂Eψ(dp) = ∂Eep = 0 .

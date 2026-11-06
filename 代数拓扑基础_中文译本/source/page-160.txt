@@ -1,0 +1,44 @@
+Topological Invariance of the Homology Groups
+145
+Definition 2.10.4 Let K be a finite complex. Let h : |K| →|K| be a con-
+tinuous map. The number
+Λ(h) =
+
+p
+(−1)ptr(h∗, Hp(K)/Tp(K))
+is called the Lefschetz number of h.
+Note that, by Theorem 2.7.5, Λ(h) depends only on the homotopy class of
+h. Also, it only depends on the topological space |K|, not on the particular
+complex K. If L is another complex with |L| = |K|, then the homomorphism
+j∗: Hp(L) →Hp(K)
+induced by the identity is an isomorphism. The fact that (hL)∗= j−1
+∗
+◦(hK)∗◦
+j∗implies that (hL)∗and (hK)∗have the same trace.
+Theorem 2.10.5 (Lefschetz fixed point theorem) Let K
+be a finite
+complex and h : |K| →|K| a continuous map. If Λ(h)̸ = 0 then h has a
+fixed point.
+Proof: Assume that h has no fixed point. Then we will prove that Λ(h) = 0.
+Step 1: We show that we may assume that
+h(St(v, K)) ∩St(v, K) = ∅for all vertices v of K.
+(∗)
+To begin, let ϵ = min |x −h(x)|. By the uniform continuity of h, we may
+select δ > 0 so that when |x −y| < δ then |h(x) −h(y)| ≤ϵ/3. Let λ =
+min{δ, ϵ/2}. Then, for any set A of diameter less than λ, both A and h(A)
+have diameter less than ϵ/2, so they are necessarily disjoint. Replace K by a
+subdivision of K in which the closed stars have diameter less than λ. Then
+the condition (∗) holds. As noted earlier, this does not change the value of
+Λ(h).
+Step 2: Assume that K satisfies (∗). Let us choose a subdivision K′ of K
+such that h has a simplicial approximation f : K′ →K. We show that if s
+and σ are simplices of K′ and K respectively, such that s ⊂σ, then f(s)̸ = σ.
+Suppose instead that f(s) = σ. Let w be a vertex of s, and let f(w) = v,
+a vertex of σ. The fact that s ⊂σ implies that w ∈St(v, K) so that
+h(w) ∈h(St(v, K)) .
+(∗∗)
+On the other hand, we have by the definition of simplicial approximation,
+h(St(w, K′)) ⊂St(f(w), K) .
+This implies that
+h(w) ∈St(v, K) .
+(∗∗∗)

@@ -1,0 +1,38 @@
+Homological Algebra
+395
+is a short exact sequence of vector spaces over F and linear transformations,
+then for any vector space V over F, the dual sequence
+0 ←−HomF (A, V ) ←−HomF (B, V ) ←−HomF (C, V ) ←−0
+is exact. The proof is easy, for since any vector space has a basis, the first
+sequence splits.
+Let E denote the chain complex C ⊗F. Then Ep = Cp ⊗F is a vector
+space over F. Let Bp and Zp denote boundaries and cycles, respectively, in
+the chain complex E. They are also vector spaces over F. Consider the short
+exact sequence of vector spaces
+0 →Zp −→Ep −→Bp−1 −→0 .
+It gives rise to the dual sequence
+0 ←−HomF (Zp, F) ←−HomF (Ep, F) ←−HomF (Bp−1, F) ←−0 .
+We apply the zig-zag lemma [Lemma 3.3.2], as before. The cochain complex in
+the middle is isomorphic to the cochain complex Hom (Cp, F), by the preceding
+lemma. Therefore, by the same argument as used before, we obtain an exact
+sequence
+0 ←−ker ȷ p ←−Hp(C; F) ←−cok ȷ p−1 ←−0 ,
+where jp : Bp →Zp is inclusion.
+Now the proof takes a different tack. Consider the exact sequence
+0 −→Bp
+jp
+−→Zp −→Hp(E) −→0 .
+Because it is a sequence of vector spaces and linear transformations, the dual
+sequence is exact:
+0 ←−HomF (Bp, F)
+ȷ p
+←−HomF (Zp, F) ←−HomF (Hp(E), F) ←−0 .
+Therefore cok ȷ p = 0 and
+ker ȷ p ∼= HomF (Hp(C; F), F) ,
+proving the theorem.
+Corollary 7.3.7 If (X, A) is a topological pair, then there is a natural vector
+space isomorphism
+HomF (Hp(X, A; F), F) ←−Hp(X, A; F) .
+Theorem 7.3.6 shows that if F is a field, then the vector space Hp(X, A; F)
+can be identified in a natural way with the dual vector space of the vector
+space Hp(X, A; F). In the case where the dimension of Hp(X, A; F) is finite,

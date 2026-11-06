@@ -1,0 +1,44 @@
+328
+Elements of Algebraic Topology
+and we have shown how a simplicial map f induces a homomorphism of these
+groups. Just as with homology, showing that an arbitrary continuous map
+induces a homomorphism requires a bit of work.
+The construction follows the pattern of Sections 2.2 through 2.6. First, we
+recall that if f and g are two simplicial approximations of the same continuous
+map, then they are contiguous, so the corresponding chain maps f# and g#
+are chain homotopic. It follows that f # and g# are cochain homotopic, so
+that the cohomology homomorphisms f ∗and g∗are equal. Furthermore, if K′
+is a subdivision of K, and if g : (K′, K′
+0) →(K, K0) is a simplicial approxi-
+mation to the identity, then g# is a chain equivalence, so that g# is a cochain
+equivalence, and g∗is an isomorphism.
+The homomorphism induced by the continuous map
+h : (|K|, |K0|) →(|L|, |L0|)
+is defined as follows: Choose a subdivision K′ of K so that h has a simplicial
+approximation f : (K′, K′
+0) →(L, L0). Choose g : (K′, K′
+0) →(K, K0) to be
+a simplicial approximation to the identity. Finally, define
+h∗= (g∗)−1 ◦f ∗.
+To verify that h∗is independent of the choices involved, and to check its func-
+torial properties, involves arguments very similar to those given in Section 2.6,
+where we verified the corresponding properties for the homomorphism h∗. In
+fact, one can use exactly the same diagrams as appear in that section by sim-
+ply reversing the arrows for all the induced homomorphisms! We leave the
+details for the reader.
+Verifying the Eilenberg–Steenrod axioms is now straightforward. The exis-
+tence of the long exact cohomology sequence we have already noted. Naturality
+of the sequence reduces to proving naturality in the case of a simplicial map,
+which we have already done. The homotopy axiom, the simplicial version of
+the excision axiom, and the dimension axiom follow just as they did in the
+case of singular cohomology. Nothing new of interest occurs.
+The topological invariance, indeed the homotopy-type invariance, of the
+simplicial cohomology groups follows at once.
+The Isomorphism between Simplicial and Singular Cohomology
+Let K be a simplicial complex. In Section 4.7, we defined a chain map
+η : C(K) →S(|K|)
+that induces an isomorphism in homology. Although it depends on a choice
+of a partial ordering for the vertices of K, the induced homomorphism η∗
+does not. Because η commutes with inclusions of subcomplexes, it induces a
+homomorphism on the relative groups, which is an isomorphism as well. We
+now show that the same result holds for cohomology.

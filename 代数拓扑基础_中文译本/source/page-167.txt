@@ -1,0 +1,57 @@
+152
+Elements of Algebraic Topology
+(ii) β is injective;
+(iii) ϕ is the zero homomorphism.
+(5) Suppose that the sequence
+A1
+α
+−→A2 −→A3 −→A4
+β
+−→A5
+is exact. Then so is the induced sequence
+0 −→cok α −→A3 −→ker β −→0 .
+Definition 3.2.3 Consider two sequences of groups and homomorphisms
+having the same index set:
+· · · −→A1 −→A2 −→· · ·
+· · · −→B1 −→B2 −→· · · .
+A homomorphism of the first sequence into the second sequence is a family of
+homomorphisms αi : Ai →Bi such that each square of maps
+Ai
+Ai+1
+Bi
+Bi+1
+αi
+αi+1
+commutes. It is an isomorphism of sequences if each αi is an isomorphism.
+For example, if a chain complex C is viewed as a sequence of groups Ci
+and homomorphisms ∂i, then a homomorphism of one such sequence C into
+another D is precisely what we have called a chain map of C into D.
+Definition 3.2.4 Consider a short exact sequence
+0 −→A1
+ϕ
+−→A2
+ψ
+−→A3 −→0 .
+The sequence is said to split if the group ϕ(A1) is a direct summand in A2.
+The property of being split means that A2 is the internal direct sum of
+ϕ(A1) and some other subgroup B. The group B is of course not uniquely
+determined. Thus the sequence becomes
+0 −→A1
+ϕ
+−→ϕ(A1) ⊕B
+ψ
+−→A3 −→0 ,
+where ϕ defines an isomorphism of A1 with ϕ(A1) and ψ defines an isomor-
+phism of B with A3. An equivalent formulation is to state that there is an
+isomorphism θ such that the following diagram commutes:
+0 −−−−→A1 −−−−→
+A2
+−−−−→A3 −−−−→0
+=
+θ
+=
+0 −−−−→A1 −−−−→
+i
+A1 ⊕A3 −−−−→
+π
+A3 −−−−→0 .

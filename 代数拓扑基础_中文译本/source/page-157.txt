@@ -1,0 +1,52 @@
+142
+Elements of Algebraic Topology
+If G is a free abelian group with basis e1, e2, . . . , en, and if ϕ : G →G is a
+homomorphism, then we define the trace of ϕ to be the number tr A, where A
+is the matrix of ϕ relative to the given basis. This number is independent of the
+choice of basis, since the matrix of ϕ relative to another basis equals B−1AB
+for some square matrix B, and tr(B−1(AB)) = tr((AB)B−1) = tr(A). The
+same argument shows that if i : G →G is an isomorphism, then tr(i◦ϕ◦i−1) =
+tr(ϕ).
+If K is a finite complex, and if ϕ : Cp(K) →Cp(K) is a chain map, then
+since Cp(K) is free abelian with finite rank, the trace of ϕ is defined. We denote
+it by tr(ϕ, Cp(K)). The group Hp(K) is not necessarily free abelian, but if
+Tp(K) is its torsion subgroup, then Hp(K)/Tp(K) is free abelian. Furthermore,
+ϕ∗induces a homomorphism of this group with itself. We use the notation
+tr(ϕ∗, Hp(K)/Tp(K)) to denote the trace of the induced homomorphism.
+There is no obvious relation between the two numbers tr(ϕ, Cp(K)) and
+tr(ϕ∗, Hp(K)/Tp(K)). As a result, the following formula is rather striking.
+Theorem 2.10.1 (Hopf trace theorem) Let K be a finite complex. Let
+ϕ : Cp(K) →Cp(K) be a chain map. Then
+
+p
+(−1)ptr(ϕ, Cp(K)) =
+
+p
+(−1)ptr(ϕ∗, Hp(K)/Tp(K)) .
+Proof: Step 1: Let G be free abelian of finite rank, let H be a subgroup
+(also automatically free abelian), and suppose that G/H is free abelian. Let
+ϕ : G →G be a homomorphism that carries H into itself. We show that
+tr(ϕ, G) = tr(ϕ′, G/H) + tr(ϕ′′, H) ,
+where ϕ′, ϕ′′ are the homomorphisms induced by ϕ.
+Let
+{α1 + H, α2 + H, . . . , αn + H}
+be a basis for G/H and let β1, β2, . . . , βp be a basis for H. If A and B are the
+matrices of ϕ′ and ϕ′′ relative to these respective bases, then
+ϕ′(αj + H) =
+
+i
+aij(αi + H) ,
+ϕ′′(βj) =
+
+i
+bijβi .
+Now it is easy to check that α1, . . . , αn, β1, . . . , βp is a basis for G. Fur-
+thermore, it follows from the preceding equations that
+ϕ(αj) =
+
+i
+aijαi + (something in H) ,
+ϕ(βj) =
+
+i
+bijβi .

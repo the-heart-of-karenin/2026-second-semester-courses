@@ -1,0 +1,55 @@
+288
+Elements of Algebraic Topology
+the intersection of Sn with the plane xn+1 = 0. Now the equivalence relation
+x ∼−x is the same in Sn−1 as it is in Sn. Therefore, Pn−1 ⊂Pn. In fact, Pn−1
+is a closed subspace of Pn. For if C is a subset of Pn−1, then p−1(C) is closed
+in Sn−1 if and only if it is closed in Sn. Hence C is closed in Pn−1 if and only
+if it is closed in Pn.
+Theorem 4.14.2 The space Pn is a CW complex having one cell in each
+dimension 0 ≤j ≤n. Its j-skeleton in Pj.
+Proof: The space P0 is obtained from the 2-point space S0 by identifying
+those two points. Thus P0 consists of a single point.
+We proceed by induction. Suppose we restrict the map p : Sn →Pn to
+the closed upper hemisphere En
++ of Sn. Because Sn is compact and Pn is
+Hausdorff, the map p′|En
++ is a quotient map, and it maps En
++ onto Pn because
+each equivalence class {x, −x} contains at least one point of En
++. Its restriction
+to the open upper hemisphere Int En
++ is also a quotient map. Being one-to-
+one, it is a homeomorphism of Int En
++ with Pn \ Pn−1. Thus Pn \ Pn−1 is an
+open n-cell. Call it en.
+Now the map p′ carries Bd En
++ = Sn−1 onto Pn−1, which by the induction
+hypothesis is the union of finitely many open cells of dimension less than n.
+Thus when we identify En
++ with Bn, the map p′ becomes a characteristic map
+for en, and the result follows.
+Note that P1, having one open 1-cell and one 0-cell, is homeomorphic to
+S1.
+Definition 4.14.3 Consider the increasing sequence P0 ⊂P1 ⊂. . . of pro-
+jective spaces. Their coherent union is denoted by P∞, and is called infinite-
+dimensional real projective space. Again, the designation “real” will often be
+dropped.
+Now we perform an analogous construction with the complex numbers
+replacing the real numbers. Let Cn be the space of all complex sequences
+z = (z1, z2, . . . ) such that zi = 0 for i > n. Then Cn ⊂Cn+1 for all n.
+There is an obvious homeomorphism ρ : Cn+1 →R2n+2, which we call the
+“realification operator,” defined by
+ρ(z1, z2, . . . ) = (Re z1, Im z1, Re z2, Im z2, . . . ) ,
+where Re zi and Im zi are the real and imaginary parts of zi, respectively. Let
+us define
+|z| = ∥ρ(z)∥=
+((Re zi)2 + (Im zi)2)
+1/2
+=
+zi zi
+1/2
+,
+where zi is the complex conjugate of zi The subspace of Cn+1 consisting of
+all points z with |z| = 1 is called the complex n-sphere. It corresponds to the
+sphere S2n+1 under the operator ρ, so we use the symbol S2n+1 to denote it,
+whether we consider it in Cn+1 or in R2n+2.

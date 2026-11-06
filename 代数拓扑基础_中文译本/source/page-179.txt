@@ -1,0 +1,37 @@
+164
+Elements of Algebraic Topology
+Exercise 2 asks you to prove the next result.1
+Lemma 3.3.9 (The serpent lemma) Given a homomorphism of short ex-
+act sequences of abelian groups
+0 −−−−→A −−−−→B −−−−→C −−−−→0
+α
+β
+γ
+0 −−−−→D −−−−→E −−−−→F −−−−→0 ,
+there is an exact sequence
+0 −→ker α −→ker β −→ker γ −→cok α −→cok β −→cok γ −→0 .
+Exercise 7 concerns the Bockstein homomorphism which we define next.
+Definition 3.3.10 Given a complex K and a short exact sequence of abelian
+groups
+0 −→G →G′ −→G′′ −→0 ,
+one has a short exact sequence of chain complexes
+0 −→Cp(K; G) −→Cp(K; G′) −→Cp(K; G′′) −→0 .
+That short exact sequence gives rise to a long exact sequence in homology.
+The zig-zag homomorphism in this sequence is commonly denoted by
+β∗: Hp(K; G′′) −→Hp−1(K; G)
+and is called the Bockstein homomorphism associated with the given coefficient
+sequence.
+EXERCISES
+1. Prove the existence and naturality of the exact homology sequence
+of a triple.
+2. Prove the serpent lemma. [Hint: Show how you can apply the zig-
+zag lemma.]
+3. (a) Prove the Steenrod five lemma.
+(b) Suppose we are given a commutative diagram of abelian groups
+as in the Steenrod five lemma. Consider the following eight
+hypotheses:
+fi is univalent for i = 1, 2, 4, 5 ,
+fi is surjective for i = 1, 2, 4, 5 ,
+Which of these hypotheses will suffice to prove that f3 is injec-
+tive? Which will suffice to prove that f3 is surjective?
+1The serpent lemma is sometimes called the snake lemma.

@@ -1,0 +1,43 @@
+268
+Elements of Algebraic Topology
+straightforwardly. Instead, we used geometric arguments—of a rather ad hoc
+nature—to reduce the computations to simpler ones.
+We now refine these ad hoc techniques into a systematic method for com-
+puting homology groups. This method will apply not only to simplicial homol-
+ogy, but to singular homology as well. We introduce in this section a notion of
+complex more general than that of the simplicial complex. It was invented by
+J. H. C. Whitehead and introduced in [Whi49]. It is called a “CW complex.”
+In the next section, we show how to assign to each CW complex a certain chain
+complex, called its “cellular chain complex,” which can be used to compute
+the homology of the underlying space. This chain complex is much simpler
+and easier to deal with than the singular or simplicial chain complexes. In a
+final section, we apply these methods to compute, among other things, the
+homology of real and complex projective spaces.
+Definition 4.12.1 Recall that a space is called a cell of dimension m if it
+is homeomorphic with Bm. It is called an open cell of dimension m if it is
+homeomorphic with Int Bn. In each case the integer m is uniquely determined
+by the space in question.
+Definition 4.12.2 A CW complex is a space X and a collection of disjoint
+open cells eα whose union is X such that:
+(1) X is Hausdorff.
+(2) For each open m-cell of the collection, there exists a continuous
+map fα : Bm →X that maps Int Bm homeomorphically onto eα and
+carries Bd Bm into a finite union of open cells, each of dimension
+less than m.
+(3) A set A is closed in X if A ∩eα is closed in eα for each α.
+The finiteness part of condition (2) was called “closure-finiteness” by J.
+H. C. Whitehead. Condition (3) expresses the fact that X has what he called
+the “weak topology” relative to the collection {eα}. These terms are the origin
+of the letters “C” and “W” in the phrase “CW complex.”
+We typically denote eα \ eα by ˙eα. We remark that conditions (1) and (2)
+imply that f carries Bm onto eα and Bd Bm onto ˙eα. To see these facts, note
+that because fα is continuous, it carries Bm, which is the closure of Int Bm,
+into the closure of fα(Int Bm), which is eα. Because fα(Bm) is compact, it is
+closed [since X is Hausdorff]. Because it contains eα it must contain eα. Thus
+we have fα(Bm) = eα. Finally, because fα(Bd Bm) is disjoint from eα it must
+equal ˙eα.
+We remark also that the converse of (3) holds trivially: If A is closed in
+X, then A ∩eα is closed in eα for each α.
+The map fα is called the “characteristic map” for the open cell eα. Note
+that the maps fα are not uniquely specified in the definition of a CW complex.
+Only the space X and the collection {eα} are specified. We customarily abuse

@@ -1,0 +1,62 @@
+310
+Elements of Algebraic Topology
+where ϵi = ±1 for each i. Then we have
+⟨δcp, τ⟩= ⟨cp, ∂τ⟩=
+p+1
+
+i=0
+ϵi⟨cp, σαi⟩=
+p+1
+
+i=0
+ϵigαi .
+Also, we have
+⟨gα (δσ∗
+α), τ⟩
+=
+gα⟨δσ∗
+α, τ⟩= gα⟨σ∗
+α, ∂τ⟩
+=
+
+ϵigαi
+if α = αi for i = 0, 1, . . . p + 1,
+0
+otherwise.
+Thus δcp and  gα(δσ∗
+α) have the same value on τ, so (∗∗) holds.
+By (∗∗), in order to compute δcp, it suffices to compute δσ∗for each
+oriented p-simplex σ. That we can compute by using the formula
+δσ∗=  ϵjτ ∗
+j ,
+where the summation extends over all (p + 1)-simplices τj having σ as a face,
+and ϵi = ±1 is the sign with which σ appears in the expression for ∂τj. One
+verifies this formula by simply evaluating both sides on the general (p + 1)-
+simplex τ.
+Now let us apply these facts to some examples. We make only a few compu-
+tations here, reserving the general problem of computing cohomology groups
+until a later section.
+v3
+v0
+v2
+v1
+e3
+e2
+e4
+e1
+e5
+σ2
+σ1
+Figure 5.3.1
+EXAMPLE 5.3.2 Consider the complex K pictured in Figure 5.3.1. Let
+us compute the coboundaries of a few cochains. Let {vi} denote the set of
+vertices, let {ei} denote the edges, oriented as indicated, and let {σi} denote
+the 2-simplices, oriented as indicated. We compute δe∗
+5. It has value 1 on σ1
+and value −1 on σ2, because e5 appears in ∂σ1 and ∂σ2 with signs +1 and
+−1, respectively. Thus
+δe∗
+5 = σ∗
+1 −σ∗
+2 .
+(†)

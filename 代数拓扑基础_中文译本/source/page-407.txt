@@ -1,0 +1,40 @@
+392
+Elements of Algebraic Topology
+define a homomorphism of short exact sequences, for ϕ commutes with i be-
+cause i is inclusion, and ϕ commutes with ∂0 because ϕ is a chain map. It
+follows that ϕ induces a homomorphism to the five-term exact sequence (∗)
+from the corresponding sequence for C′, and hence induces a homomorphism
+to the short exact sequence (∗∗) from the corresponding sequence for C′. It
+only remains to comment that the exact sequence (∗∗∗) is natural with respect
+to homomorphisms induced by chain maps, so the isomorphisms of ker ȷ p and
+cok ȷ p−1 with the appropriate Hom and Ext groups are natural as well.
+Step 5. To complete the proof, we show that the homomorphism
+Hom (Hp(C), G) ←−Hp(C; G)
+of our exact sequence equals the Kronecker map κ. Then the splitting of the
+sequence is a consequence of Lemma 5.6.12.
+The homomorphism in our exact sequence equals the composite (π)−1 ◦i∗
+of the following diagram:
+Hom(Zp, G) ⊃ker ȷ p
+Hp(C; G)
+Hom(Hp(C), G)
+i∗
+κ
+π ∼=
+where ȷ p is the dual of the inclusion map jp : Bp →Zp, i∗is induced by the
+incusion i : Zp →Cp, and π is the dual of the projection π : Zp →Hp(C). We
+need to show that the diagram commutes.
+Let {zp} be an element of Hp(C; G). We show that
+πκ({zp}) = i∗({zp}) = ı (zp) ,
+and the proof is complete. Let zp ∈Zp, and compute
+[πκ({zp})](zp) = [κ({zp}](π(zp)) = ⟨{zp}, {zp}⟩
+= ⟨zp, zp⟩= ⟨zp, i(zp)⟩= ⟨ı (zp), zp⟩.
+Corollary 7.3.2 Let (X, A) be a topological pair. There is an exact sequence
+0 ←−Hom (Hp(X, A), G) ←−Hp(X, A; G) ←−Ext (Hp−1(X, A), G) ←−0 ,
+which is natural with respect to homomorphisms induced by continuous maps.
+It splits, but not naturally.
+Corollary 7.3.3 Let C and D be free chain complexes. Let ϕ : C →D be a
+chain map. If ϕ∗: Hi(C) →Hi(D) is an isomorphism for i = p and i = p −1,
+then
+Hp(C; G) ϕ∗
+←−Hp(D; G)
+is an isomorphism.

@@ -1,0 +1,50 @@
+82
+Elements of Algebraic Topology
+Theorem 1.13.11 Let f, g : (K, K0) →(L, L0) be contiguous as maps of
+pairs. Then for all p there is a homomorphism
+D : Cp(K, K0) →Cp+1(L, L0)
+such that ∂D + D∂= g# −f#. It follows that f∗and g∗are equal as maps
+of relative homology groups.
+Proof: The chain homotopy D constructed in the preceding proof of Theo-
+rem 1.13.9 automatically maps Cp(K0) into Cp+1(L0). For if σ ∈K0, then the
+complex L(σ) is by definition a subcomplex of L0. Given σ, the chain Dσ is
+carried by L(σ); therefore, D maps Cp(K0) into Cp+1(L0). Then D induces
+the required homomorphism of the relative chain groups.
+EXERCISES
+1. Check the assertions made in Example 1.13.5.
+2. Consider the complex K indicated by the vertex labeling in Fig-
+ure 1.13.6, whose underlying space is the torus. Although this com-
+plex is slightly different from the one considered earlier, the com-
+putation of the homology of the torus remains the same. Let γ be
+the sum of all the 2-simplices of K, oriented counterclockwise; then
+γ generates H2(K). The cycles
+w1 = [a, b] + [b, c] + [c, a] and z1 = [a, d] + [d, e] + [e, a]
+generate H1(K).
+(a) Define the simplicial maps f, g, h, k of K with itself such that
+f : a →a
+g : a →a
+h : a →d
+k : a →p
+b →d
+b →c
+b →p
+b →q
+c →e
+c →b
+c →q
+c →d
+d →c
+d →d
+d →d
+d →u
+e →b
+e →e
+e →d
+e →b
+(b) Compute the values of f∗, g∗, h∗, k∗on the homology classes
+{w1}, {z1}, and {γ}.
+3. Use the complex in Figure 1.13.7 to represent the Klein bottle S.
+Let w1 = [a, b]+[b, c]+[c, a] and z1 = [a, d]+[d, e]+[e, a], as before.
+(a) Define a simplicial map f : S →S such that f∗({w1}) = {z1}.
+(b) Show there is no simplicial map g : S →S such that g∗({z1}) =
+{w1}.

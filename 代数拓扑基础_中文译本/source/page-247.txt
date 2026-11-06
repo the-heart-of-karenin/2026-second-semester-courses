@@ -1,0 +1,40 @@
+232
+Elements of Algebraic Topology
+Lemma 4.8.10 Let s be a simplex of the complex K. If x and y are points
+of Int s, then the local homology groups of |K| at x and y are isomorphic.
+Proof: It suffices to prove the theorem when x = s the barycenter of s.
+Let sd K be the first barycentric subdivision of K. Let K′ be a subdivision
+of K defined exactly as sd K was, except that y is used instead of s when
+“starring” the subdivision of Bd s from an interior point of s. There is a linear
+isomorphism of sd K with K′ that carries s to y, and carries each remaining
+vertex of sd K to itself. Then the pair (|K|, |K|\s) is homeomorphic with the
+pair (|K|, |K| \ y).
+Recall that a homeomorphism h : |K| →M is called a triangulation of M.
+Answering the general question of whether or not an arbitrary manifold can
+be triangulated took about a century of work by various mathematicians. The
+initial conjecture dates back to an 1899 paper by Poincar´e.1 But it was the
+1924 paper [Kne25] by Kneser that gave the problem the name the “Hauptver-
+mutung.” The succinct answer to the triangulation question is that all two-
+and three-dimensional topological manifolds can be triangulated, while for di-
+mensions four and higher there are topological manifolds that cannot be. A
+more detailed, but still short, discussion can be found in [Man14].
+Theorem 4.8.11 Let M be an m-manifold with boundary. Suppose K is a
+complex and h : |K| →M is a homeomorphism. Then h−1(Bd M) is the
+polytope of a subcomplex of K.
+Proof: If an open simplex Int s of K intersects the set h−1(Bd M), it lies in
+this set by the preceding lemma. Since this set is closed, it must contain s.
+Now we give a final application of local homology groups. We show that
+the dimension of a finite-dimensional simplicial complex K is a topological
+invariant of |K|. [A different proof, using the notion of “covering dimension,”
+was outlined in the exercises of Sections 2.4 and 2.7.]
+First we need two lemmas.
+Lemma 4.8.12 Let L be a complex, and let v ∗L be a cone over L. Then |L|
+is a deformation retract of |v ∗L| \ v.
+Proof: Consider the quotient map
+π : |L| × I →|v ∗L|
+defined by π(x, t) = (1 −t)x + tv. [See Corollary 2.8.8.] Since |L| × [0, 1) is
+open in |L| × I and is saturated with respect to π, the restriction of π,
+π′ : |L| × [0, 1) →|v ∗L| \ v ,
+1Poincar´e’s writings on topology appear in translation in [Poi10]. Pages 105–109 are
+relevant to triangulation. It is perhaps not surprising that the argument there does not
+meet modern standards of rigor.

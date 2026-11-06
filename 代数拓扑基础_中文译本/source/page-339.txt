@@ -1,0 +1,43 @@
+324
+Elements of Algebraic Topology
+commutes with δ. Such a homomorphism is called a cochain map. It carries
+cocycles to cocycles, and coboundaries to coboundaries, so it induces a homo-
+morphism of cohomology groups,
+Hp(C; G) ϕ∗
+←−Hp(C′; G) .
+The assignment
+C −→Hp(C; G)
+and
+ϕ −→ϕ∗
+satisfies the usual functorial properties. In fact, they hold already on the chain
+level.
+If C = {Cp, ϵ} and C′ = {C′
+p, ϵ′} are augmented chain complexes and if
+ϕ : C →C′ is an augmentation preserving chain map, then ϵ′ ◦ϕ = ϵ so that
+ϕ ◦ϵ ′ = ϵ holds. In this case, ϕ induces a homomorphism of reduced as well
+as ordinary cohomology.
+Suppose now that ϕ, ψ : C →C′ are chain maps, and that D is a chain
+homotopy between them, so that
+D∂+ ∂′D = ϕ −ψ .
+Then D : Cp+1(C′; G) →Cp(C; G) is a homomorphism satisfying the equation
+δ D + Dδ′ = ϕ −ψ .
+It is said to be a cochain homotopy between ϕ and ψ. If such a D exists, it
+follows at once that the induced cohomology homomorphisms ϕ∗and ψ∗are
+equal. For, given any cocycle zp, we have
+ϕ(zp) −ψ(zp) = δ Dzp + 0 .
+This observation has the following consequence.
+Theorem 5.5.2 Let C and C′ be chain complexes, and let ϕ : C →C′ be a
+chain equivalence. Then ϕ∗and ϕ∗are isomorphisms of homology and co-
+homology, respectively. If C and C′ are augmented and ϕ is augmentation-
+preserving, then ϕ∗and ϕ∗are isomorphisms of reduced homology and coho-
+mology, respectively.
+Proof: Since ϕ is a chain equivalence, there is a chain map ψ : C′ →C such
+that ϕ ◦ψ and ψ ◦ϕ are chain homotopic to identity maps. Then ψ ◦ϕ and
+ϕ ◦ψ are cochain homotopic to identity maps, so ψ∗◦ϕ∗and ϕ∗◦ψ∗equal
+the identity maps of Hp(C′) and Hp(C), respectively.
+The same argument holds for reduced cohomology.
+Finally, suppose that
+0 −→C
+ϕ
+−→D ψ
+−→E −→0

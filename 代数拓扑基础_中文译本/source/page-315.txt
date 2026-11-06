@@ -1,0 +1,25 @@
+300
+Elements of Algebraic Topology
+c1
+b1
+a1
+d1
+c2
+b2
+a2
+d2
+Figure 4.14.3
+ak
+dk
+ck
+bk
+a2k
+d2k
+c2k
+b2k
+Figure 4.14.4
+6. What is the relation between real projective n-space and complex
+projective n-space?
+7. Any object in n-dimensional Euclidean space has an image in real
+projective n-space. Explain this point. What is the image of the
+unit ball? What is the image of the unit cube?

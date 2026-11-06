@@ -1,0 +1,43 @@
+Topological Invariance of the Homology Groups
+117
+3. (a) Show that the inductive formula for the barycentric subdivision
+operator
+sd
+defines an augmentation-preserving chain map
+that is carried by Λ.
+(b) Compute sd σ for the case of a 1-simplex and the case of a
+2-simplex.
+4. Let K be a pentagonal region square [the 1-dimensional figure] and
+let K′ be the same pentagonal region split up by two diagonals.
+Answer 2(a), 2(b), and 2(c) for these two complexes.
+2.6
+Topological Invariance of the
+Homology Groups
+In this section we achieve the main goal of this chapter: to prove the topological
+invariance of the simplicial homology groups.
+Definition 2.6.1 Let K and L be simplicial complexes. Let h : |K| →|L| be
+a continuous map. Choose a subdivision K′ of K such that h has a simplicial
+approximation f : K′ →L. Let λ : C(K) →C(K′) be the subdivision operator.
+We define the homomorphism induced by h,
+h∗: Hp(K) →Hp(L) ,
+by the equation h∗= f∗◦λ∗.
+Note that, once K′ has been chosen, the homomorphism h∗is independent
+of the particular choice of the simplicial approximation f : K′ →L to h. For
+any two such simplicial approximations are contiguous.
+Observe also that if g : K′ →K is a simplicial approximation to the
+identity map i|K| of |K| with itself, then λ∗and g∗are inverse to each other.
+Therefore one could just as well define
+h∗= f∗◦(g∗)−1 .
+We use this fact to show that h∗is independent of the choice of the subdivision
+K′. Suppose that K′′ is another subdivision of K such that h has a simplicial
+approximation mapping of K′′ into L. We show that if h∗is defined using the
+subdivision K′′, the result is the same as if one uses the subdivision K′.
+The proof is especially easy in the case where the identity map of |K| has
+a simplicial approximation k : K′′ →K′ as in the following diagram.
+K′′
+K′
+K
+L
+k
+g
+f

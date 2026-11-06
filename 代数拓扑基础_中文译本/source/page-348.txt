@@ -1,0 +1,85 @@
+Cohomology
+333
+0
+Zp
+Cp
+Bp−1
+0
+0
+Z′
+p
+C′
+p
+B′
+p−1
+0
+β
+∂0
+ϕ
+α
+∂′
+0
+Because Bp−1 and B′
+p−1 are free, the sequences split. Choose subgroups Up
+and U ′
+p so that
+Cp = Zp ⊕Up
+and
+C′
+p = Z′
+p ⊕U ′
+p .
+Then ∂0 : Up →Bp−1 and ∂′
+0 : U ′
+p →B′
+p−1 are isomorphisms. We define
+ϕ : Cp →C′
+p by letting it equal β : Zp →Z′
+p on the summand Zp, and
+the map Up →U ′
+p induced by α on the summand Up. Then the first square
+commutes, automatically. The second square commutes for any element of Up,
+by definition. And it commutes for any element of Zp by exactness, for
+α(∂0zp) = α(0) = 0
+and
+∂′
+0ϕ(zp) = ∂′
+0(β(zp)) = 0 .
+Thus it commutes for any element of Cp.
+Now we show that ϕ is a chain map. Consider the diagram
+Cp
+Bp−1
+Zp−1
+Cp−1
+C′
+p
+B′
+p−1
+Z′
+p−1
+C′
+p−1
+∂0
+ϕ
+α
+β
+ϕ
+∂′
+0
+where the unlabeled maps are inclusions. The middle square commutes by the
+definition of α and β. The two end squares commute as we have just proved.
+Thus ϕ is a chain map.
+The fact that ϕ induces the original homology homomorphism γ follows
+from the definition of β.
+Corollary 5.6.3 Suppose that {C, ϵ} and {C′, ϵ′} are free augmented chain
+complexes. If γ : Hp(C) →Hp(C′) is a homomorphism defined for all p, then
+γ is induced by an augmentation-preserving chain map ϕ : C →C′.
+Proof: Consider the augmented chain complexes obtained from C and C′.
+They have Z as their (−1)-dimensional groups and ϵ, ϵ′, respectively, as the
+boundary operators from dimension 0 to dimension −1. We define β to equal
+the identity in dimension −1 [where the homology vanishes], and to be any
+homomorphism of the groups of cycles inducing γ in other dimensions. The
+preceding theorem applies. The resulting chain map ϕ will automatically pre-
+serve augmentation.
+Before we state and prove the second of our basic theorems, we consider a
+special case.

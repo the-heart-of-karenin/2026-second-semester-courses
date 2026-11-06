@@ -1,0 +1,38 @@
+314
+Elements of Algebraic Topology
+Conversely, let c0 be a cochain such that ⟨c0, v⟩−⟨c0, w⟩= 0 whenever v and
+w lie in the same component of |K|. Then, for each oriented 1-simplex of K,
+we have
+⟨δc0, σ⟩= ⟨c0, ∂σ⟩= 0 .
+We conclude that δc0 = 0. The theorem follows.
+The preceding theorem shows that in general H0(K) is isomorphic to a
+direct product of infinite cyclic groups, one for each component of |K|. On the
+other hand, the group H0(K) is isomorphic to the direct sum of this collection
+of groups. This is another case where the homology and cohomology groups
+differ.
+Definition 5.3.8 Given a complex K, we dualize the standard augmentation
+C1(K) ∂1
+−→C0(K)
+ϵ
+−→Z ,
+and obtain a homomorphism ϵ,
+C1(K; G)
+δ1
+←−C0(K; G)
+ϵ
+←−G ,
+called a coaugmentation. It is injective, and δ1 ◦ϵ = 0. We define the reduced
+cohomology of K by setting Hq(K; G) = Hq(K; G) if q > 0, and
+H0(K; G) = ker δ1/im ϵ .
+Theorem 5.3.9 If |K| is connected, then H0(K; G) = 0. More generally, for
+any complex K,
+H0(K; G) ∼= H0(K; G) ⊕G .
+Proof: If |K| is connected, then H0(K) vanishes, so
+C1(K) −→C0(K) −→Z −→0
+is exact. It follows that
+C1(K; G) ←−C0(K; G) ←−G ←−0
+is exact, so H0(K; G) vanishes. The rest of the theorem we leave as an exercise.
+EXERCISES
+1. Consider the complex K of Example 5.3.2. Find a basis for the
+cocycle group in each dimension. Show that the cohomology of K
+vanishes in positive dimensions.

@@ -1,0 +1,30 @@
+Duality in Manifolds
+533
+Proof: By Alexander duality, we know that ˇHn−1(M) ∼= H0(Sn \ h(M)).
+Since M is triangulable, its ˇCech and simplicial cohomology groups are iso-
+morphic. If M were non-orientable, we would have Hn−1(M) ∼= Z/2 although
+the group H0(Sn \ h(M)) is free abelian. We conclude that M is orientable.
+Hence Hn−1(M) ∼= Z and Sn \ h(M) has precisely two path components U
+and V .
+The proof that h(M) is the common boundary of U and V proceeds just
+as in the proof of the Jordan curve theorem [Theorem 4.9.5]. All one needs is
+the fact that if we delete the interior of a small open n −1 simplex s from M,
+then h(M \ Int s) does not separate Sn. And that follows from the fact that
+[letting M0 = h(M \ Int s)] we have
+H0(Sn \ M0) ∼= ˇHn−1(M0) ∼= Hn−1(M0) = 0 .
+An Overhand Knot
+Figure 8.14.1
+EXERCISES
+1. Let X be the closed topologist’s sine curve [see Definition 4.6.5]. If
+f : X →Sn is an imbedding, calculate Hi(Sn \ f(X)).
+2. Show that Alexander–Pontryagin duality does not hold if ˇCech co-
+homology is replaced by singular cohomology.
+3. Show that neither the Klein bottle nor the projective plane can be
+imbedded in R3. But they can be imbedded in R4. [Hint: If one
+removes an open disc from P2, what remains is a M¨obius band.]
+4. Let A and B be closed sets in Sn. Show that if A ≈B, then
+Hi(Sn \ A) ∼= Hi(Sn \ B)
+for all i. [Note: It does not follow that Sn \ A and Sn \ B are them-
+selves homeomorphic. Figure 8.14.1 pictures an imbedding of S1 in
+S3 called an overhand knot. Its complement C is not homeomorphic
+to the complement D of the standard imbedding of S1 in S3. For

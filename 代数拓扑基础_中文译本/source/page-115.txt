@@ -1,0 +1,48 @@
+100
+Elements of Algebraic Topology
+Now the complex Lp+1 depends on the choice of the point wσ. Often it is
+convenient to choose a canonical interior point of σ for starring purposes. The
+usual choice is the following:
+Definition 2.3.7 If σ = {v0, v1, . . . , vp} then the barycenter of σ is defined
+to be the point
+σ =
+1
+p + 1
+p
+
+i=0
+vi .
+It is the point of Int σ all of whose barycentric coordinates with respect to
+the vertices of σ are equal.
+If σ is a 1-simplex, then σ is its midpoint. If σ is a 0-simplex, then σ = σ.
+In general σ is the centroid of σ, but that fact will have no significance for us.
+Now we describe the general method for constructing subdivisions.
+Definition 2.3.8 Let K be a complex. We define a sequence of subdivisions
+of the skeletons of K as follows: Let L0 = K(0), the 0-skeleton of K. In general,
+if Lp is a subdivision of the p-skeleton of K, let Lp+1 be the subdivision of the
+(p + 1)-skeleton obtained by starring Lp from the barycenters of the (p + 1)
+simplices of K. By Lemma 2.3.5, the union of the complexes Lp is a subdivision
+of K. It is called the first barycentric subdivision of K, and denoted by sd K.
+Having formed a complex sd K, we can now construct its first barycentric
+subdivision sd(sd K), which we denote by sd2 K. This complex is called
+the second barycentric subdivision of K. Similarly one defines sdn K for n a
+positive integer.
+Sometimes it is useful to have an explicit description of the simplices of
+the first barycentric subdivision. Now we give such a description. Let us use
+the notation σ1 ≻σ2 to mean “σ2 is a proper face of σ1.”
+Lemma 2.3.9 The complex sd K equals the collection of all simplices of the
+form
+σ1σ2 . . . σn ,
+where σ1 ≻σ2 ≻· · · ≻σn.
+Proof: The proof is by induction. It is immediate that the simplices of sd K
+lying in the subdivision of K(0) are of this form. [Each such simplex is a vertex
+of K, and v = v for a vertex.]
+Suppose now that each simplex of sd K lying in |K(p)| is of this form. Let
+τ be a simplex of sd K lying in |K(p+1)| and not in |K(p)|. Then τ belongs to
+one of the complexes σ ∗Lσ, where σ is a (p + 1)-simplex of K and Lσ is the
+first barycentric subdivision of the complex consisting of the proper faces of
+σ. By the induction hypothesis, each simplex of Lσ is of the form σ1σ2 . . . σn,
+where σ1 ≻σ2 ≻· · · ≻σn and σi is a proper face of σ. Then τ must be of the
+form
+σσ1σ2 . . . σn
+which is the desired form.

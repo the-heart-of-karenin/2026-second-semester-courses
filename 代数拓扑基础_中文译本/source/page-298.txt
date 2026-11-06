@@ -1,0 +1,58 @@
+Singular Homology Theory
+283
+We now prove an addendum to this theorem in the case where X is trian-
+gulable.
+Theorem 4.13.9 Let X be filtered by the subspaces X0 ⊂X1 ⊂· · · . Suppose
+that X is the space of a simplicial complex K, and each subspace Xp is the
+space of a subcomplex of K of dimension at most p. Let Hi denote simplicial
+homology. Assume that Hi(Xp, Xp−1) = 0 for i̸ = p. Then Hp(Xp, Xp−1)
+equals a subgroup of Cp(X), and the isomorphism λ of the preceding theorem
+is induced by inclusion.
+Indeed, Hp(Xp, Xp−1) is the subgroup of Cp(K) consisting of all p-chains
+of K carried by Xp whose boundaries are carried by Xp−1.
+Proof: Any compact set in X lies in a finite subcomplex of K, so it lies in Xi
+for some i. Therefore, the hypotheses of the preceding theorem are satisfied.
+Since Xp contains no (p + 1)-simplices, the homology group Hp(Xp, Xp−1)
+equals the group of relative p-cycles, which is the kernel of the homomorphism
+Cp(Xp)
+Cp(Xp−1)
+∂
+−→
+Cp−1(Xp)
+Cp−1(Xp−1) .
+Because Xp−1 contains no p-simplices, the denominator on the left side is
+trivial. Thus Hp(Xp, Xp−1) equals the group of simplicial p-chains of K carried
+by Xp, whose boundaries are carried by Xp−1.
+We must check that the isomorphism λ of the preceding theorem is in-
+duced by inclusion. Examining the preceding proof, we see that λ is obtained
+by taking an element of ker ∂′
+∗and mapping it into Hp(X) according to the
+following diagram:
+Hp(Xp, Xp−2)
+ℓ∗
+−−−−→Hp(Xp+1, Xp−2)
+j∗
+←−−−−
+∼=
+Hp(Xp+1)
+i∗
+−−−−→
+∼=
+Hp(X)
+∼=
+k∗
+ker ∂′
+∗
+Since each map is induced by inclusion, our theorem follows.
+We now see how strong the analogy is between the homology of simpli-
+cial complexes and the homology of CW complexes. Let us introduce some
+terminology that will make the analogy even stronger.
+For each open p-cell eα of the CW complex X, the group Hp(eα, ˙eα) is
+infinite cyclic. The two generators of this group will be called the two orien-
+tations of eα. An oriented p-cell of X is an open p-cell eα together with an
+orientation of eα.
+The cellular chain group Dp(X) = Hp(Xp, Xp−1) is a free abelian group.
+One obtains a basis for it by orienting each open p-cell eα of X and passing
+to the corresponding element of Hp(Xp, Xp−1). [That is, by taking the image
+of the orientation under the homomorphism induced by inclusion
+Hp(eα, ˙eα) →Hp(Xp, Xp−1) .]

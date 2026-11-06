@@ -1,0 +1,57 @@
+382
+Elements of Algebraic Topology
+7.2
+The Ext Functor
+Associated with the functor Hom (A, B) is another functor of two variables
+called Ext (A, B). Like the Hom functor, it is contravariant in the first variable
+and covariant in the second variable. This means that, given homomorphisms
+γ : A →A′ and δ : B′ →B, there is a homomorphism
+Ext (γ, δ) : Ext (A′, B′) →Ext (A, B) ,
+and the usual functorial properties hold.
+Defining the functor Ext requires some preliminary work, but its crucial
+property is easy to remember. We express it in the form of a theorem.
+Theorem 7.2.1 There is a function that assigns to each free resolution [see
+Definition 5.6.1]
+0 −→R ϕ
+−→F
+ψ
+−→A −→0
+of the abelian group A and each abelian group B an exact sequence
+0 ←−Ext (A, B) π
+←−Hom (R, B)
+ϕ
+←−Hom (F, B)
+ψ
+←−Hom (A, B) ←−0 .
+This function is natural, in the sense that a homomorphism
+0
+R
+F
+A
+0
+0
+R′
+F ′
+A′
+0
+α
+β
+γ
+of free resolutions and a homomorphism δ : B′ →B of abelian groups gives
+rise to a homomorphism of exact sequences:
+0 ←−Ext (A, B)
+Hom (R, B)
+Hom (F, B)
+Hom (A, B) ←−0
+0 ←−Ext (A′, B′)
+Hom (R′, B′)
+Hom (F ′, B′)
+Hom (A′, B′) ←−0 .
+Ext (γ,δ)
+Hom (α,δ)
+Hom (β,δ)
+Hom (γ,δ)
+We shall prove this theorem shortly. It will then be used to derive the other
+properties of the Ext functor and to compute it.
+Before we define the Ext functor, we need a lemma.
+Lemma 7.2.2 Suppose one is given a homomorphism

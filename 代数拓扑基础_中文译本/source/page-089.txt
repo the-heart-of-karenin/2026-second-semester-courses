@@ -1,0 +1,38 @@
+74
+Elements of Algebraic Topology
+In a similar vein, we shall use the symbol ∂to denote the boundary oper-
+ators in both K and L, in order to keep the notation from becoming cumber-
+some. If it is necessary to distinguish them, we can use the notations ∂K and
+∂L.
+Lemma 1.13.2 The homomorphism f# commutes with ∂; therefore f# in-
+duces a homomorphism f∗: Hp(K) →Hp(L).
+Proof: We need to show that
+∂f#([v0, v1, . . . , vp]) = f#(∂[v0, v1, . . . , vp]) .
+(∗)
+Let τ be the simplex of L spanned by f(v0), f(v1), . . . , f(vp). We consider
+various cases.
+Case 1. dim τ = p. In this case, the vertices f(v0), f(v1), . . . , f(vp) are distinct
+and the result follows at once from the definitions of f# and ∂.
+Case 2. dim τ ≤p −2. In this case, the left-hand side of (∗) vanishes be-
+cause f(v0), f(v1), . . . , f(vp) are not distinct, and the right-hand side vanishes
+because for each i because at least two of the points f(v0), f(v1), . . . f(vi−1),
+f(vi+1), . . . , f(vp) are the same.
+Case 3. dim τ = p −1. In this case, we may assume the vertices are ordered
+so that f(v0) = f(v1), while f(v1), f(v2), . . . , f(vp) are distinct. Then the left-
+hand side of (∗) vanishes because f(v0), f(v1), . . . , f(vp) are not all distinct.
+Many of the terms on the right-hand side of (∗) are of the form
+(−1)i [f(v0), f(v1), . . . f(vi−1), f(vi+1), . . . , f(vp)] ,
+in which the simplex is of dimension p −2. The only two non-zero terms on
+the right-hand side are
+[f(v1), f(v2), . . . , f(vp)] −[f(v0), f(v2), . . . , f(vp)] ,
+and they cancel each other, as desired.
+The homomorphism f# carries cycles to cycles, since the equation ∂cp = 0
+implies that ∂f#(cp) = f#(∂cp) = 0. Also, f# carries boundaries to bound-
+aries, since the equation cp = ∂dp+1 implies that f#(cp) = f#(∂dp+1) =
+∂f#(dp+1). Thus f# induces a homomorphism f∗: Hp(K) →Hp(L) of ho-
+mology groups.
+Theorem 1.13.3
+(a) Let i : K →K be the identity simplicial map.
+Then i∗: Hp(K) →Hp(K) is the identity homomorphism.
+(b) Let f : K →L and g : L →M be simplicial maps. Then
+(g ◦f)∗= g∗◦f∗; that is, the following diagram commutes:

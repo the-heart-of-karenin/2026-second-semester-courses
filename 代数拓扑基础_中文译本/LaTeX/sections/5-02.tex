@@ -1,0 +1,136 @@
+\section{Hom 函子}
+\sourcepage{301--302}
+任意两个阿贝尔群 $A,G$ 都确定第三个阿贝尔群 $\operatorname{Hom}(A,G)$，即从 $A$ 到 $G$ 的所有同态组成的群。它将在上同调定义中起核心作用。本节研究其性质。
+
+\entry{定义}{5.2.1}对同态 $\varphi,\psi:A\to G$，按值相加定义 $(\varphi+\psi)(a)=\varphi(a)+\psi(a)$。这仍为同态，因为它将零映到零，且
+\[
+(\varphi+\psi)(a+b)=\varphi(a)+\psi(a)+\varphi(b)+\psi(b).
+\]
+所有同态在此加法下构成阿贝尔群 $\operatorname{Hom}(A,G)$。零元是零同态，$\varphi$ 的负元将 $a$ 映为 $-\varphi(a)$。可称其为同态群，通常简称 Hom。
+
+\entry{例}{5.2.2}映射 $I:\operatorname{Hom}(\Z,G)\to G$，$I(\varphi)=\varphi(1)$，为同构。若 $A$ 是以 $e_1,\ldots,e_n$ 为基的有限秩自由阿贝尔群，则 $\varphi\mapsto(\varphi(e_1),\ldots,\varphi(e_n))$ 给出 $\operatorname{Hom}(A,G)\cong G^n$。这一同构依赖基的选择，因此并非相对于 $A$ 的自然同构。若自由基为无限族 $\{e_\alpha\}_{\alpha\in J}$，相同映射得到的是直积 $\prod_{\alpha\in J}G$，而非直和（定义见第 1.5 节）。后面将把这些事实表述为定理。
+
+\entry{定义}{5.2.3}同态 $f:A\to B$ 诱导反方向的\textbf{对偶同态}
+\[
+\overline f:\operatorname{Hom}(B,G)\to\operatorname{Hom}(A,G),\qquad
+\overline f(\varphi)=\varphi\circ f.
+\]
+复合仍为同态，故映射有意义。而且
+\[
+[\overline f(\varphi+\psi)](a)=\varphi(f(a))+\psi(f(a))
+=[\overline f(\varphi)](a)+[\overline f(\psi)](a),
+\]
+所以 $\overline f$ 本身为群同态。\translatornote{原书在这里把“$\overline f$ 为同态”写成“$f\mapsto\overline f$ 为同态”，而所给计算验证的是前者。}
+
+\sourcepage{303}
+固定 $G$ 后，$A\mapsto\operatorname{Hom}(A,G)$、$f\mapsto\overline f$ 构成阿贝尔群范畴到自身的反变函子。恒等映射的对偶仍为恒等映射；若 $h=g\circ f$，则
+\[
+\overline h(\varphi)=\varphi\circ g\circ f=\overline f\,\overline g(\varphi),
+\]
+所以复合顺序反转。以下列出几个推论。
+
+\entry{定理}{5.2.4}设 $g:B\to C$ 为阿贝尔群同态。
+\begin{enumerate}[label=(\alph*)]
+\item 若 $g=0$，则 $\overline g=0$。
+\item 若 $g$ 为同构，则 $\overline g$ 为同构。
+\item 若 $g$ 满射，则 $\overline g$ 单射。因此 $B\xrightarrow{g}C\to0$ 正合蕴含 $\operatorname{Hom}(B,G)\xleftarrow{\overline g}\operatorname{Hom}(C,G)\leftarrow0$ 正合。
+\end{enumerate}
+\textbf{证明：}前两点直接成立。若 $\overline g(\psi)=\psi g=0$，则对每个 $b$，$\psi(g(b))=0$；由 $g$ 满射可知 $\psi=0$，证明 (c)。\hfill$\square$
+
+\entry{定理}{5.2.5}若 $A\xrightarrow{f}B\xrightarrow{g}C\to0$ 正合，则
+\[
+\operatorname{Hom}(A,G)\xleftarrow{\overline f}\operatorname{Hom}(B,G)
+\xleftarrow{\overline g}\operatorname{Hom}(C,G)\leftarrow0
+\]
+正合。若另外 $f$ 单射，且原短正合列分裂，则 $\overline f$ 满射，对偶短正合列也分裂。
+
+\sourcepage{304}
+\textbf{证明：}$\overline g$ 单射已证。由 $gf=0$，有 $\overline f\,\overline g=0$。反过来，若 $\overline f(\psi)=\psi f=0$，则 $\psi$ 在 $f(A)$ 上为零，故诱导 $\psi':B/f(A)\to G$。正合性使 $g$ 诱导同构 $g':B/f(A)\to C$。令 $\varphi=\psi'(g')^{-1}$，则 $\overline g(\varphi)=\psi$，得到正合性。
+
+若原列分裂，取 $\pi:B\to A$，使 $\pi f=\operatorname{id}_A$。于是 $\overline f\,\overline\pi=\operatorname{id}_{\operatorname{Hom}(A,G)}$，所以 $\overline f$ 满射，而 $\overline\pi$ 给出对偶列的分裂。\hfill$\square$
+
+一般的短正合列对偶后未必仍短正合。例如 $0\to\Z\xrightarrow{2}\Z\to\Z/2\to0$ 正合，但取 $G=\Z$，对偶映射把每个同态变为取值均为偶数的同态，故不满射。
+
+Hom 也可视为两个变量的函子，具有混合变性：对第一个变量反变，对第二个变量协变。
+
+\entry{定义}{5.2.6}给定 $\alpha:A\to A'$、$\beta:G'\to G$，定义
+\[
+\operatorname{Hom}(\alpha,\beta):\operatorname{Hom}(A',G')\to\operatorname{Hom}(A,G),\qquad
+\varphi'\mapsto\beta\circ\varphi'\circ\alpha.
+\]
+它确为群同态。恒等映射诱导恒等同态；若还有 $\alpha':A'\to A''$、$\beta':G''\to G'$，则
+\[
+\operatorname{Hom}(\alpha'\alpha,\beta\beta')=
+\operatorname{Hom}(\alpha,\beta)\circ\operatorname{Hom}(\alpha',\beta'),
+\]
+因为两边均将 $\varphi''$ 映到 $\beta\beta'\varphi''\alpha'\alpha$。原先的对偶同态就是 $\overline\alpha=\operatorname{Hom}(\alpha,i_G)$。只对第二变量考虑的协变函子留作习题。
+
+\sourcepage{305}
+\entry{定理}{5.2.7}
+\begin{enumerate}[label=(\alph*)]
+\item 存在同构
+\[
+\operatorname{Hom}(\bigoplus_{\alpha\in J}A_\alpha,G)\cong\prod_{\alpha\in J}\operatorname{Hom}(A_\alpha,G),\qquad
+\operatorname{Hom}(A,\prod_{\alpha\in J}G_\alpha)\cong\prod_{\alpha\in J}\operatorname{Hom}(A,G_\alpha).
+\]
+\item $\lambda:\operatorname{Hom}(\Z,G)\to G$，$\lambda(\varphi)=\varphi(1)$，是自然同构。
+\item 若 $f_m:\Z\to\Z$ 为乘以正整数 $m$，则 $\overline f_m$ 在 $\operatorname{Hom}(\Z,G)$ 上也是乘以 $m$。
+\item 若 $g_m:G\to G$ 为乘以 $m$，则 $\operatorname{Hom}(\Z/m,G)\cong\ker g_m$。
+\end{enumerate}
+\textbf{证明：}(a) 来自关于直和、直积同态的标准代数事实：第一式取各直和因子上的限制，第二式取各坐标分量。
+
+(b) 一个从 $\Z$ 出发的同态由 $1$ 的像唯一决定，该像可任取，且取值映射为同态，所以为同构。
+
+(c) 直接计算 $[\overline f_m(\varphi)](x)=\varphi(mx)=m\varphi(x)$。
+
+(d) 对正合列 $\Z\xrightarrow{f_m}\Z\to\Z/m\to0$ 应用定理 5.2.5，得 $\operatorname{Hom}(\Z/m,G)\cong\ker\overline f_m$。由 (b)、(c) 将它识别为 $\ker g_m$。\hfill$\square$
+
+\sourcepage{306}
+(a) 中的同构也自然。例如给定 $\varphi_\alpha:A_\alpha\to B_\alpha$、$\psi:H\to G$，第一个同构将 $\operatorname{Hom}(\bigoplus\varphi_\alpha,\psi)$ 与 $\prod\operatorname{Hom}(\varphi_\alpha,\psi)$ 对应，构成交换图；第二个同构同理。\translatornote{原书本段将定理编号误引为 5.2.4(a)，应为 5.2.7(a)。}
+
+因此，若 $A$ 有限生成，将它分解为循环群的有限直和，就能用 $\operatorname{Hom}(\Z,G)\cong G$ 和 $\operatorname{Hom}(\Z/m,G)\cong\ker g_m$ 计算 Hom。若 $G$ 也有限生成，可进一步写成循环群直和。需要下面的引理，证明留给读者。
+
+\entry{引理}{5.2.8}设 $m,n>0$，$d=\gcd(m,n)$，$h_m:\Z/n\to\Z/n$ 为乘以 $m$，则有正合列
+\[
+0\longrightarrow\Z/d\longrightarrow\Z/n\xrightarrow{h_m}\Z/n\longrightarrow\Z/d\longrightarrow0.
+\]
+
+\entry{定义}{5.2.9}若对每个 $x\in G$ 和每个正整数 $n$，都存在 $y\in G$ 使 $ny=x$，则称阿贝尔群 $G$ \textbf{可除}（divisible）。例如有理数加法群、实数加法群都可除。
+
+\entry{定义}{5.2.10}记 $S^1=\R/\Z$，称为\textbf{圆周群}（circle group）。它作为加法群同构于模为 $1$ 的复数乘法群，也是可除群。可除群将在后面多次出现。
+
+\sourcepage{307}
+\entry{定理}{5.2.11}若 $G$ 可除，则任意短正合列 $0\to A\to B\to C\to0$ 的对偶序列
+\[
+0\leftarrow\operatorname{Hom}(A,G)\leftarrow\operatorname{Hom}(B,G)\leftarrow\operatorname{Hom}(C,G)\leftarrow0
+\]
+也正合。证明留作习题 4。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $T$ 为 $G$ 的挠子群，证明 $\operatorname{Hom}(G,\Z)\cong\operatorname{Hom}(G/T,\Z)$。
+\item 固定 $G$，考虑协变函子 $A\mapsto\operatorname{Hom}(G,A)$、$f\mapsto\operatorname{Hom}(i_G,f)$。
+\begin{enumerate}[label=(\alph*)]
+\item 证明它保持 $0\to A\to B\to C$ 的正合性。
+\item 证明它保持分裂短正合列。
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 设 $d=\gcd(m,n)$，证明乘法同态 $h_m:\Z/n\to\Z/n$ 的核由 $\{n/d\}$ 生成。
+\item 证明循环群的商群仍循环。
+\item 证明引理 5.2.8。
+\end{enumerate}
+\item 按下列步骤证明定理 5.2.11。
+\begin{enumerate}[label=(\alph*)]
+\item 证明只需说明：若 $A\subset B$，则每个 $\varphi:A\to G$ 都可延拓为同态 $\psi:B\to G$。
+\item 当 $B$ 由 $A$ 及一个额外元素 $b$ 生成时证明这一点。
+\item 设 $\mathcal B$ 是 $B$ 的一族按包含关系全序的子群，对每个 $H\in\mathcal B$ 有同态 $\psi_H:H\to G$，任意两个在公共定义域上一致。证明这些子群的并仍为子群，且诸同态合成其上的同态。
+\item 用 Zorn 引理完成证明。〔不熟悉者可参考 [Mun00] 第 70 页。〕
+\end{enumerate}
+\item 设 $R$ 为有单位元的交换环，$A,B$ 为 $R$ 模（定义见第 5.9 节）。
+\begin{enumerate}[label=(\alph*)]
+\item 以 $\operatorname{Hom}_R(A,B)$ 表示 $R$ 模同态全体，证明它自然成为 $R$ 模；若 $f,g$ 为模同态，证明 $\operatorname{Hom}(f,g)$ 也为模同态。
+\item 陈述并证明定理 5.2.5、5.2.7 的 $R$ 模版本。
+\item 特别设 $R$ 为域 $F$。此时上述模都是向量空间。证明每个短正合列均分裂，故 $\operatorname{Hom}_F$ 保持正合列。
+\end{enumerate}
+\item 证明可除群的直积可除，可除群的商群也可除。
+\end{enumerate}

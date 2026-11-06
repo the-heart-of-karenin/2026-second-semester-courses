@@ -1,0 +1,42 @@
+456
+Elements of Algebraic Topology
+The vertex 
+abc is necessarily the largest vertex of any simplex of which it
+is a vertex. The only simplex with 
+abc as its smallest vertex is 
+abc itself.
+The vertex ab is the largest vertex of the 1-simplices ab a, ab b, and of the
+0-simplex ab itself. The vertex ab is the smallest vertex of the 1-simplex 
+abc ab
+and of the 0-simplex ab itself.
+Definition 8.4.3 Given a simplex σ of X, observe that the union of all open
+simplices of sd X of which σ is the largest vertex is just Int σ. On the other
+hand, we define D(σ) to be the union of all open simplices of sd X of which σ
+is the smallest vertex. This set is called the block dual to σ.
+The blocks D(σ) will play a role similar to that of the open cells of a
+CW complex. We call the closure D(σ) of D(σ) the closed block dual to σ. It
+equals the union of all simplices of sd X of which σ is the final vertex. It is
+the polytope of a subcomplex of sd X. We let ˙D(σ) = D(σ) −D(σ).
+X
+D(cd)
+D(acd)
+D(ab)
+a
+b
+c
+d
+e
+s
+Figure 8.4.1
+EXAMPLE 8.4.4 Let X be the 2-dimensional complex pictured in Fig-
+ure 8.4.1. The complex sd X is indicated by dotted lines. The block dual
+to any 2-simplex σ consists of its barycenter σ alone. The block D(ab) dual
+to the 1-simplex s = ab consists of its barycenter s and the two open line seg-
+ments joining s to the barycenters of the two triangles having ab as a face. The
+block dual to the vertex e is the shaded region indicated. The corresponding
+closed block consists of this region plus its boundary. Note the interesting fact
+that ˙D(e) is the union of the lower-dimensional blocks D(si) as si ranges over
+all 1-simplices and 2-simplices having e as a face. This situation will hold in
+general, as we shall soon see.
+EXAMPLE 8.4.5 Let X be the complex pictured in Figure 8.4.2. It is the
+join of the polygon c d e f c with the line segment ab. You can picture mentally

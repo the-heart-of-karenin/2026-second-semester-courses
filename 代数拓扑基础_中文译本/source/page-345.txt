@@ -1,0 +1,49 @@
+330
+Elements of Algebraic Topology
+support. Provided δ : Cp
+c (K; G) →Cp+1
+c
+(K; G) [see Exercise 4], the cohomol-
+ogy groups Hp
+c (K; G) exist and are called cohomology groups with compact
+support.
+Similarly, if h : X →Y is continuous, then the inverse image of a compact
+subset of Y , while closed, need not be compact. Again it may be convenient
+to restrict the class of functions.
+Definition 5.5.5 A map h : X →Y is said to be proper if for each compact
+subset D of Y , the set h−1(D) is a compact subset of X. A proper homotopy
+is a homotopy that is itself a proper map.
+EXERCISES
+1. If X is a path-connected space, show that H0(X) ∼= Z. Find a
+generating cocycle.
+2. State and prove a Mayer–Vietoris theorem in simplicial cohomology.
+Can you prove it for arbitrary coefficients?
+3. (a) Suppose A1, A2 ⊂X. Show that if {A1, A2} is an excisive cou-
+ple, then the inclusion
+S(A1) + S(A2) −→S(A1 ∪A2)
+induces an isomorphism in cohomology as well a homology.
+(b) State and prove a Mayer–Vietoris theorem in singular cohomol-
+ogy.
+4. (a) Show that if the complex K is locally finite, then δ maps Cp
+c to
+Cp+1
+c
+.
+(b) If K is the complex whose space is R and whose vertices are
+the integers, show that H1
+c (K) ∼= Z and H0
+c (K) = 0.
+(c) Show that if |K| is connected and non-compact, then H0
+c (K) =
+0.
+5. (a) Show that the assignment
+K −→Hp
+c (K; G)
+and
+h −→h∗
+defines a functor from the category of locally finite simplicial
+complexes and proper continuous maps of their polytopes to
+abelian groups and homomorphisms. [Hint: If h is proper, so is
+any simplicial approximation to h. If f and g are contiguous and
+proper, and D is the chain homotopy between them, show that
+D carries finite cochains to finite cochains. If λ : C(K) →C(K′)

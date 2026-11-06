@@ -1,0 +1,22 @@
+380
+Elements of Algebraic Topology
+This last result is the analogue for homology of Lemma 5.6.12 and Theo-
+rem 5.6.13. It will be generalized in the next chapter.
+EXERCISES
+1. If {C, ϵ} is an augmented chain complex, show that
+H0(C; G) ∼= H0(C; G) ⊕G .
+[Hint: The sequence 0 →ker ϵ →C0 →Z →0 splits.]
+2. Use the cellular chain complexes to compute the homology, with
+general coefficients G, of the following spaces:
+(a) T # T.
+(b) P2 # P2 # P2.
+(c) PN.
+(d) the k-fold dunce cap.
+3. Prove theorem 6.3.2.
+4. Let R be a commutative ring with unity. Let C be a chain complex.
+Show that Cp ⊗R can be given the structure of an R-module by
+defining
+α(cp ⊗β) = cp ⊗(αβ)
+for α, β ∈R. Show that Hp(C; R) has the structure of an R-module,
+and that chain maps induce R-module homomorphisms. Show that
+∂∗is an R-module homomorphism.

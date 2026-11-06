@@ -1,0 +1,50 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+167
+To check exactness at the middle term, note first that
+ψϕ(c) = m#(c) −m#(c) = 0 .
+Conversely, if ψ(d, e) = 0, then d = −e when considered as chains of K. Since
+d is carried by K0 and e is carried by K1, they must both be carried by
+K0 ∩K1 = A. Then (d, e) = (d, −d) = ϕ(d) as desired.
+The homology of the middle chain complex in dimension p equals
+ker ∂′
+im ∂′
+=
+ker ∂0 ⊕ker ∂1
+im ∂0 ⊕im ∂1
+∼=
+Hp(K0) ⊕Hp(K1) .
+The Mayer–Vietoris sequence now follows from the zig-zag lemma.
+In reduced homology, more work is needed to obtain the Mayer–Vietoris
+sequence. We replace the chain complexes considered earlier by the corre-
+sponding augmented chain complexes. Let ϵA, ϵ0, ϵ1, and ϵ denote the aug-
+mentation maps for C(A), C(K0), C(K1), and C(K) respectively. Consider the
+diagram
+0 −−−−→C0(A) −−−−→C0(K0) ⊕C0(K1) −−−−→C0(K) −−−−→0
+ϵA
+ϵ0 ⊕ϵ1
+ϵ
+0 −−−−→
+Z
+−−−−→
+ϕ
+Z ⊕Z
+−−−−→
+ψ
+Z
+−−−−→0 .
+Commutativity and exactness hold at the bottom level when we define
+ϕ(n) = (n, −n) and ψ(m, n) = m+n. Each map ϵA, ϵ0 ⊕ϵ1, and ϵ is surjective
+(since A is nonempty). Thus the homology of these respective chain complexes
+vanishes in dimension −1, and in dimension 0 equals the respective groups
+H0(A), H0(K0) ⊕H0(K1), and H0(K). We conclude the proof by applying
+the zig-zag lemma.
+Lemma 3.4.3 Let h : (K, K0, K1) →(L, L0, L1) be a simplicial map, where
+K = K0 ∪K1 and L = L0 ∪L1. Then h induces a homomorphism of Mayer–
+Vietoris sequences.
+Proof: One checks immediately that the chain maps h# induced by h com-
+mute with the chain maps ϕ and ψ defined in the preceding proof. Naturality
+then follows from Theorem 3.3.3.
+The following is an immediate consequence of this last lemma and the
+results of Chapter 2.
+Theorem 3.4.4 The preceding lemma holds for an arbitrary continuous map
+h : (|K|, |K0|, |K1|) →(|L|, |L0|, |L1|).

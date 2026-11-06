@@ -1,0 +1,42 @@
+Singular Homology Theory
+191
+Proof: If T : ∆0 →X is any singular 0-simplex of X, then the point x =
+T(∆0) is in some path component of X, say Xα. There must be a path f :
+[0, 1] →X from the point x to the point xα = Tα(∆0). Then f is a singular
+1-simplex and ∂f = Tα −T. We conclude that an arbitrary singular 0-chain
+of X is homologous to a chain of the form  nαTα.
+We show that no such 0-chain bounds. Suppose that  nαTα = ∂d for some
+d. Now each singular 1-simplex in the expression for d has a path connected
+image, so its image lies in precisely one of the path components Xα. Thus we
+can write d =  dα, where dα consists of those terms of d carried by Xα.
+Then ∂dα lies in Xα as well. It follows that nαTα = ∂dα for each α. Applying
+ϵ to both sides of this last equation, we conclude that nα = 0, and thus that
+d = 0.
+The computation of H0(X) proceeds as in the proof of Theorem 1.8.3.
+Still following the pattern of simplicial theory, we compute the homology
+of a cone-like space. Actually, it is more convenient here to deal with the
+analogous notion of a star-convex set. This notion was defined for sets in RN
+in Definition 1.2.5. Here we extend it, in the obvious way, to sets in EJ.
+Definition 4.2.6 A set X in EJ is said to be star convex relative to the point
+w of X if, for each x ∈X different from w, the line segment from x to w lies
+in X.
+Definition 4.2.7 Suppose X ⊂EJ is star convex relative to w. We define
+a bracket operation on singular chains of X. Let T : ∆p →X be a singular
+p-simplex of X. Define a singular (p + 1)-simplex [T, w] : ∆p+1 →X by
+letting it carry the line segment from x to ϵp+1, for x in ∆p, linearly onto the
+line segment from T(x) to w. See Figure 4.2.1. We extend the definition to
+arbitrary p-chains as follows: If c =  niTi is a singular p-chain on X, let
+[c, w] =
+
+i
+ni[Ti, w] .
+This operation is similar to the one we introduced in Section 1.9 for cones,
+except here we have put the vertex w last instead of first.
+Note that, when restricted to the face ∆p of ∆p+1, the map [T, w] equals
+the map T. Note also that, if T is the linear singular simplex ℓ(a0, a1, . . . , ap),
+then [T, w] equals the linear singular simplex ℓ(a0, a1, . . . , ap, w).
+We must show that the map [T, w] is continuous. First, we note that the
+map π : ∆p × I →∆p+1 defined by the equation π(x, t) = (1 −t)x + tϵp+1
+is a quotient map that collapses ∆p × 1 to the vertex ϵp+1 and is otherwise
+one-to-one. The continuous map
+f : ∆p × I →X

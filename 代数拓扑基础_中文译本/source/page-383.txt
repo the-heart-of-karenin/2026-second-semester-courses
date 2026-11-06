@@ -1,0 +1,40 @@
+368
+Elements of Algebraic Topology
+Later we will show how to compute tensor products. For the present, we
+merely note the following:
+Theorem 6.2.4 There is an isomorphism
+Z ⊗G ∼= G
+that maps n ⊗g to ng. It is natural with respect to homomorphisms of G.
+Proof: The function mapping Z × G to G that sends (n, g) to ng is bilinear,
+so it induces a homomorphism ϕ : Z ⊗G →G sending n ⊗g to ng.
+Let ψ : G →Z ⊗G be defined by the equation ψ(g) = 1 ⊗g. Then ψ is a
+homomorphism. For g ∈G, we have
+ϕψ(g) = ϕ(1 ⊗g) = g ,
+while on a typical generator n ⊗g of Z ⊗G, we have
+ψϕ(n ⊗g) = ψ(ng) = 1 ⊗(ng) = n ⊗g .
+Thus ψ is an inverse for ϕ.
+Naturality is a consequence of the commutativity of the following diagram:
+Z ⊗G
+G
+Z ⊗H
+H
+∼=
+iZ ⊗f
+f
+∼=
+Before we derive some general properties of tensor products, let us first
+note a common fallacy. Suppose A′ is a subgroup of A, and B′ is a subgroup of
+B. Then it is tempting to assume that A′ ⊗B′ can be considered a subgroup
+of A ⊗B, but this is not correct in general. While the inclusion mappings
+i : A′ →A and j : B′ →B do give rise to a homomorphism
+i ⊗j : A′ ⊗B′ →A ⊗B ,
+this homomorphism is not necessarily injective. As an example, let A = Q, the
+additive group of rational numbers, and let B = Z/2. Then A ⊗B = Q ⊗Z/2
+is in fact trivial, because in Q ⊗Z/2 we have
+a ⊗b = (a/2) ⊗2b = (a/2) ⊗0 = 0 .
+For the subgroups, we let A′ = Z and B′ = B = Z/2. Then A′ ⊗B′ = Z⊗Z/2
+which is non-trivial, so it cannot be a subgroup of the trivial group A ⊗B =
+Q ⊗Z/2.
+Although tensor products of injective maps are not in general injective,
+tensor products of surjective maps are always surjective. That is the substance
+of the following lemma.

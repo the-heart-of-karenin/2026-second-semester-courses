@@ -1,0 +1,113 @@
+\section{张量积}
+\sourcepage{366--367}
+对阿贝尔群 $A,B$，常考虑从直积 $A\times B$ 到第三个群的同态。但有时更重要的是\textbf{双线性映射}，即对每个变量分别为同态的映射。本节构造群 $A\otimes B$，使从它出发的同态自然对应于从 $A\times B$ 出发的双线性映射，将后者的研究化为熟悉的同态问题。
+
+\entry{定义}{6.2.1}令 $F(A,B)$ 为以集合 $A\times B$ 为自由基的阿贝尔群，令\textbf{关系子群} $R(A,B)$ 由所有
+\[
+(a+a',b)-(a,b)-(a',b),\qquad(a,b+b')-(a,b)-(a,b')
+\]
+生成。定义\textbf{张量积}（tensor product）$A\otimes B=F(A,B)/R(A,B)$，以 $a\otimes b$ 表示 $(a,b)$ 的陪集。
+
+任意集合映射 $A\times B\to C$ 唯一延拓为自由群上的同态；它双线性，当且仅当延拓在关系子群上为零。因此从张量积到 $C$ 的同态，与上述双线性映射一一对应。
+
+每个张量积元素都是有限个 $a\otimes b$ 的整数线性组合。注意一般元素未必是单个纯张量；纯张量是生成元。定义给出
+\[
+(a+a')\otimes b=a\otimes b+a'\otimes b,\qquad
+a\otimes(b+b')=a\otimes b+a\otimes b'.
+\]
+由 $a\otimes b=(0+a)\otimes b$ 可得 $0\otimes b=0$，同理 $a\otimes0=0$。进而
+\[
+(-a)\otimes b=-(a\otimes b)=a\otimes(-b),\qquad
+(na)\otimes b=n(a\otimes b)=a\otimes(nb)
+\]
+对所有整数 $n$ 成立。
+
+\entry{定义}{6.2.2}同态 $f:A\to A'$、$g:B\to B'$ 诱导唯一同态 $f\otimes g:A\otimes B\to A'\otimes B'$，使 $(f\otimes g)(a\otimes b)=f(a)\otimes g(b)$。它来自明显的双线性映射，称为两个同态的张量积。
+
+\entry{引理}{6.2.3}上述对象与态射的对应构成从成对阿贝尔群范畴到阿贝尔群范畴的协变函子。验证留给读者。
+
+\sourcepage{368}
+\entry{定理}{6.2.4}存在自然同构 $\Z\otimes G\cong G$，将 $n\otimes g$ 映为 $ng$。
+
+\textbf{证明：}整数作用是双线性映射，故诱导 $\varphi:\Z\otimes G\to G$。令 $\psi(g)=1\otimes g$，则 $\varphi\psi(g)=g$，且 $\psi\varphi(n\otimes g)=1\otimes ng=n\otimes g$，所以互逆。对 $f:G\to H$，两条路径都将 $n\otimes g$ 映为 $nf(g)$，证明自然性。\hfill$\square$
+
+须警惕：子群的张量积未必是原群张量积的子群。虽然包含映射诱导 $A'\otimes B'\to A\otimes B$，它可能不单射。例如 $\mathbb Q\otimes\Z/2=0$，因为 $a\otimes b=(a/2)\otimes2b=0$；但 $\Z\otimes\Z/2\cong\Z/2\ne0$。与单射不同，满射的张量积总满射。
+
+\sourcepage{369}
+\entry{引理}{6.2.5}若 $\varphi:B\to C$、$\varphi':B'\to C'$ 满射，则 $\varphi\otimes\varphi'$ 满射，其核由所有满足 $b\in\ker\varphi$ 或 $b'\in\ker\varphi'$ 的 $b\otimes b'$ 生成。
+
+\textbf{证明：}记所述子群为 $G$。映射在它上面为零，诱导 $\Phi:(B\otimes B')/G\to C\otimes C'$。给定 $c,c'$，选原像 $b,b'$，定义 $\psi(c,c')=b\otimes b'+G$。若另选 $b_0,b'_0$，差为
+\[
+(b-b_0)\otimes b'+b_0\otimes(b'-b'_0)\in G,
+\]
+故良定义。它双线性，诱导 $\Psi$，并在生成元上直接可见 $\Phi\Psi,\Psi\Phi$ 都为恒等，证明结论。\hfill$\square$
+
+\entry{定理}{6.2.6}若 $A\xrightarrow{\varphi}B\xrightarrow{\psi}C\to0$ 正合，则
+\[
+A\otimes G\xrightarrow{\varphi\otimes i_G}B\otimes G\xrightarrow{\psi\otimes i_G}C\otimes G\to0
+\]
+正合。若原列还在左侧单射且分裂，则张量后的列也单射且分裂。
+
+\textbf{证明：}上一引理说明第二个映射满射，其核由 $b\otimes g$（$b\in\ker\psi$）生成；第一个映射的像由 $\varphi(a)\otimes g$ 生成。因为 $\ker\psi=\operatorname{im}\varphi$，核像相等。若有 $p\varphi=i_A$，则 $(p\otimes i_G)(\varphi\otimes i_G)=i_{A\otimes G}$，给出单射与分裂。\hfill$\square$
+
+\sourcepage{370}
+\entry{推论}{6.2.7}存在自然同构 $\Z/m\otimes G\cong G/mG$。
+
+\textbf{证明：}对 $\Z\xrightarrow{m}\Z\to\Z/m\to0$ 张量 $G$，再用 $\Z\otimes G\cong G$，得 $G\xrightarrow{m}G\to\Z/m\otimes G\to0$，结论随即成立。\hfill$\square$
+
+\entry{定理}{6.2.8}存在自然同构：
+\begin{enumerate}[label=(\alph*)]
+\item $A\otimes B\cong B\otimes A$；
+\item $(\bigoplus A_\alpha)\otimes B\cong\bigoplus(A_\alpha\otimes B)$；
+\item $A\otimes(\bigoplus B_\alpha)\cong\bigoplus(A\otimes B_\alpha)$；
+\item $A\otimes(B\otimes C)\cong(A\otimes B)\otimes C$。
+\end{enumerate}
+\textbf{证明：}(a) 交换两个坐标诱导自由群同构，并把关系子群映为关系子群。
+
+(b) 取直和的包含 $j_\alpha$ 与投影 $\pi_\alpha$。张量后得到 $f_\alpha=j_\alpha\otimes i_B$、$g_\alpha=\pi_\alpha\otimes i_B$，满足 $g_\beta f_\alpha=0$（$\alpha\ne\beta$）、$g_\alpha f_\alpha=i$。任一生成元 $a\otimes b$ 中，$a$ 只有有限个直和分量，故它是诸 $f_\alpha$ 的像的有限和。引理 1.5.1 遂给出直和分解。
+
+\sourcepage{371}
+(c) 由 (a)、(b) 得到。
+
+(d) 从任一种结合方式的张量积到群 $G$ 的同态，都恰对应于 $A\times B\times C\to G$ 中对每个变量分别线性的映射，称为\textbf{多线性映射}。具体地，$a\otimes(b\otimes c)$ 与 $(a\otimes b)\otimes c$ 这两个多线性表达式分别诱导双向同态；复合在生成元上为恒等，故互逆。自然性留给读者验证。\hfill$\square$
+
+\entry{推论}{6.2.9}若 $0\to A\to B\to C\to0$ 正合且 $G$ 无挠，则张量 $G$ 后仍为短正合列。
+
+\textbf{证明：步骤 1。}若 $G$ 自由，因 $D\otimes\Z\cong D$，张量后序列是原正合列的若干份直和，故正合。
+
+\textbf{步骤 2。}先证有限性事实：若 $\sum a_i\otimes b_i=0$，则有有限生成子群 $A_0\subset A$、$B_0\subset B$，包含这些元素，使该和在 $A_0\otimes B_0$ 中已为零。因为自由群中 $\sum(a_i,b_i)$ 属于关系子群，它是有限个关系生成元的有限整数线性组合。把这些关系中出现的所有第一、第二坐标分别加入生成集，即得到所求 $A_0,B_0$。
+
+\sourcepage{372}
+\textbf{步骤 3。}由右正合性只需证明左侧单射。若 $\sum a_i\otimes g_i$ 映为零，则 $\sum\varphi(a_i)\otimes g_i=0$。由步骤 2，存在有限生成的 $B_0\subset B$、$G_0\subset G$，使它已在 $B_0\otimes G_0$ 中为零，因而在 $B\otimes G_0$ 中为零。群 $G_0$ 有限生成且无挠，故自由。由步骤 1，$A\otimes G_0\to B\otimes G_0$ 单射，所以原和在 $A\otimes G_0$ 中为零，进而在 $A\otimes G$ 中为零。\hfill$\square$
+
+\sourcepage{373}
+这些规则足以计算有限生成群的张量积：将它分解为循环群直和，再用 $\Z\otimes G\cong G$、$\Z/m\otimes G\cong G/mG$。特别地，自由阿贝尔群的张量积自由。
+
+\entry{定理}{6.2.10}若 $A,B$ 分别以 $\{a_i\},\{b_j\}$ 为自由基，则 $A\otimes B$ 以 $\{a_i\otimes b_j\}$ 为自由基。
+
+\textbf{证明：}将两群分为各基元生成的无限循环群的直和，张量积遂分为诸 $\langle a_i\rangle\otimes\langle b_j\rangle$ 的直和，每一项都以 $a_i\otimes b_j$ 为无限循环生成元。\hfill$\square$
+
+\subsection*{模的张量积}
+对交换含幺环 $R$ 及 $R$ 模 $A,B$，仍取以 $A\times B$ 为基的自由阿贝尔群，但在原关系外再加入
+\[
+(\alpha a,b)-(a,\alpha b),\qquad\alpha\in R.
+\]
+定义商群上的标量作用 $\alpha(a,b)=(\alpha a,b)$。它保持关系子群：加法关系的像仍为加法关系，平衡关系在乘以 $\beta$ 后成为 $(\alpha\beta a,b)-(\beta a,\alpha b)$，仍为关系。所得 $R$ 模记为 $A\otimes_RB$，称为\textbf{环 $R$ 上的张量积}，满足
+\[
+\alpha(a\otimes b)=(\alpha a)\otimes b=a\otimes(\alpha b).
+\]
+
+\sourcepage{374}
+对每个变量分别为模同态的映射 $A\times B\to C$，唯一诱导模同态 $A\otimes_RB\to C$。模张量积是整数张量积再模去所有平衡关系所得的商，因此一般更小。模同态 $f,g$ 也诱导 $f\otimes g$，将纯张量映到对应像的纯张量。本节定理有相应模版本，证明留作习题；本书主要使用域的情形。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $T$ 是 $G$ 的挠子群，$H$ 可除，证明 $G\otimes H\cong(G/T)\otimes H$。注意 $T$ 未必为直和项。
+\item 证明有理数加法群无挠但不自由。〔提示：计算 $\mathbb Q\otimes\Z/2$。〕
+\item 若 $A,B$ 为 $\Z$ 模，证明 $A\otimes_{\Z}B=A\otimes B$。
+\item 证明存在模同构 $R\otimes_RA\cong A$。
+\item 证明定理 6.2.6、6.2.8 的模张量积版本。
+\item 对域 $F$ 上的向量空间，证明 $\otimes_F$ 保持正合列；若两因子有基 $\{a_i\},\{b_j\}$，证明 $\{a_i\otimes b_j\}$ 为张量积的向量空间基。
+\item 若 $A,B$ 为有理向量空间，证明 $A\otimes_{\mathbb Q}B=A\otimes B$。
+\item 解释“张量积是双线性映射的泛对象”的含义。
+\end{enumerate}

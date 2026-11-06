@@ -1,0 +1,44 @@
+520
+Elements of Algebraic Topology
+the following diagram commutes:
+Gα
+Gγ
+Gβ
+fαγ
+fβγ
+fαβ
+Definition 8.13.5 Given a direct system of abelian groups and homomor-
+phisms, we define a group called the direct limit of this system as follows.
+Take the disjoint union of the groups Gα, and introduce an equivalence rela-
+tion by declaring gα ∼gβ [for gα ∈Gα and gβ ∈Gβ] if, for some upper bound
+δ of α and β, we have
+fαδ(gα) = fβδ(gβ) .
+The direct limit is the set of equivalence classes of ∼. It is denoted by
+dir lim α∈JGα .
+We make it into an abelian group by defining
+{gα} + {gβ} = {fαδ(gα) + fβδ(gβ)} ,
+where δ is some upper bound for α and β.
+It is easy to see that this operation is well defined and makes the direct
+limit into an abelian group. We note the following elementary facts:
+(1) If all the maps fαβ are isomorphisms, then dir lim Gα is isomorphic
+to any one of the groups Gα.
+(2) If all the maps fαβ are zero-homomorphisms, then dir lim Gα is the
+trivial group. More generally, if for each α there is a β such that
+α < β and fαβ is the zero homomorphism, then dir lim Gα is the
+trivial group.
+Definition 8.13.6 Let J and K be two directed sets. Let {Gα, fαβ} and
+{Hγ, gγδ} be associated direct systems of abelian groups and homomorphisms.
+A map Φ of direct systems is first, a set map ϕ : J →K that preserves the
+order relation, and second, for each α ∈J, a homomorphism
+ϕα : Gα →Hϕ(α) ,
+such that commutativity holds in the following diagram, where γ = ϕ(α) and
+δ = ϕ(β) and α < β:
+Gα
+fαβ
+−−−−→Gβ
+ϕα
+
+ϕβ
+Hγ
+gγδ
+−−−−→Hδ

@@ -1,0 +1,39 @@
+458
+Elements of Algebraic Topology
+(b) Given σ of dimension k, let σ′ be an n-simplex of X having σ as a face.
+There is a sequence of simplices of X
+σ′ = σn ≻σn−1 ≻· ≻σk = σ
+such that each simplex in the sequence has dimension one less than the pre-
+ceding simplex. Then the simplex σnσn−1 · · · σk of sd X has dimension n −k
+and lies in D(σ). Clearly, no simplex of sd X of larger dimension can have σk
+as its final vertex since X has no simplices of dimension greater than n.
+(c)–(d) Now D(σ) is the union of all simplices of sd X whose final vertex is
+σ. They are of the form
+σi1σi2 · · · σipσ .
+The intersection of such a simplex with ˙D(σ) consists of the face of this simplex
+obtained by deleting σ. Thus ˙D(σ) consists of all simplices of the form
+σi1σi2 · · · σip
+for which σip ≻σ. Now the interior of such a simplex is contained in D(σip).
+Conversely, any open simplex of sd X lying in D(σip) is of this form. It follows
+that ˙D(σ) is the union of the blocks D(σip) for σip ≻σ. It also follows that
+|D(σ)| = | ˙D(σ) ∗σ|.
+(e) If dim σ = n, then D(σ) consists of the single point σ, which is of course
+a 0-cell. Suppose that dim σ = k < n. In the complex sd X, the closed star
+St(σ, sd X) equals the union of all simplices of the form
+τ = σi1 · · · σipσip+1σiq ,
+where σip+1 = σ and σij ≻σij+1 for all j. The face of τ spanned by the
+vertices to the left of σ in this sequence is the typical simplex of ˙D(σ). The
+face spanned by σ and the vertices to its right in this sequence is the typical
+simplex of sd σ. We conclude that
+St(σ, sd X)
+=
+˙D(σ) ∗sd σ
+=
+˙D(σ) ∗σ ∗sd(Bd σ) .
+Now it is also true that
+St(σ, sd X) = σ ∗Lk(σ, sd X) .
+We conclude that
+Lk(σ, sd X) = ˙D(σ) ∗sd(Bd σ) .
+Since sd(Bd σ) is topologically a (k −1)-sphere (or is empty if k = 0), we
+see that
+Hi+k(Lk(σ, sd X) ∼= Hi( ˙D(σ)) .

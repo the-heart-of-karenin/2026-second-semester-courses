@@ -1,0 +1,39 @@
+176
+Elements of Algebraic Topology
+kβ : (|Lβ|, |Dβ|) →(Y, B) .
+The map h induces a map h′ : (|Kα|, |Cα|) →(|Lβ|, |Dβ|), which in turn gives
+rise to a homomorphism
+h′
+∗: Hp(Kα, Cα) →Hp(Lβ, Dβ)
+of simplicial homology groups. By passing to equivalence classes, this homo-
+morphism induces a well-defined homomorphism
+h∗: Hp(X, A) →Hp(Y, B) .
+In a similar fashion, the boundary homomorphism ∂∗: Hp(Kα, Cα) →
+Hp−1(Cα) induces a boundary homomorphism
+∂∗: Hp(X, A) →Hp−1(A) .
+We now have all the necessary pieces for a homology theory.
+First, we note that the class of triangulable pairs forms an admissible class
+of spaces for a homology theory. If (X, A) is triangulable, then so are (X, X),
+(X, ∅), (A, A), and (A, ∅). Of course any one-point space is triangulable. Fi-
+nally, if (X, A) is triangulable, then so is (X × I, A × I) by Lemma 2.7.3.
+Theorem 3.6.2 Simplicial homology theory on the class of triangulable pairs
+satisfies the Eilenberg–Steenrod axioms.
+Proof: Axioms 1–5 and 7 express familiar properties of the homology of
+simplicial complexes that carry over at once to the homology of triangulable
+pairs. Only Axioms 6 and 8, the excision axiom and the compact support
+axiom, require some thought.
+To check the compact support axiom, it suffices to show that it holds for
+simplicial complexes. Let α be an element of Hp(K, K0). Let c be a chain
+of K representing α. Its boundary is carried by K0. Since c is carried by a
+finite subcomplex L of K, it can be considered as a cycle of (L, L0), where
+L0 = K0 ∩L. If β is the homology class of c in Hp(L, L0), then j∗(β) = α,
+where j is inclusion of (L, L0) in (K, K0). Thus this axiom is verified.
+Checking the excision axiom involves a subtlety that may not at first be
+apparent. The problem is that even though both (X, A) and (X \ U, A \ U)
+may be triangulable, the two triangularizations may be entirely unrelated to
+one another. If this is not the case, then the excision axiom follows readily
+from Theorem 1.10.6, as we now show.
+Let U ⊂A ⊂X. Suppose that there is a triangulation
+h : (|K|, |K0|) →(X, A)
+of the pair (X, A) that induces a triangulation of the subspace X \ U. This
+means that X \ U = h(|L|) for some subcomplex L of K. Let L0 = L ∩K0.

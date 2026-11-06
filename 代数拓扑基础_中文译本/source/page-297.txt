@@ -1,0 +1,57 @@
+282
+Elements of Algebraic Topology
+Both end groups vanish for i ≤p −2, by hypothesis. Therefore, the middle
+homomorphism is an isomorphism.
+Step 3. We complete the proof of the theorem.
+Given a quadruple X ⊃A ⊃B ⊃C of spaces, one has four possible exact
+sequences of a triple associated with this quadruple. They can be conveniently
+arranged in the form of four overlapping curves, as in the diagram below. We
+consider the special case
+(X, A, B, C) = (Xp+1, Xp, Xp−1, Xp−2) .
+In this case, the groups in the upper-left and upper-right corners of the dia-
+gram, Hp(B, C) and Hp(X, A) vanish by hypothesis.
+0 = Hp(B, C)
+Hp(X, C)
+Hp(X, A) = 0
+Hp(A, C)
+Hp(X, B)
+ℓ∗
+∂′′
+∗
+k∗
+Hp+1(X, A)
+Hp(A, B)
+Hp−1(B, C)
+∂∗
+∂′
+∗
+Now k∗carries Hp(A, C) isomorphically onto ker ∂′
+∗. Furthermore, the map
+ℓ∗◦k−1
+∗
+carries ker ∂′
+∗onto Hp(X, C) [because ℓ∗is surjective]. The kernel of
+ℓ∗◦k−1
+∗
+is just im ∂∗[because the kernel of ℓ∗equals im ∂′′
+∗]. Thus ℓ∗◦k−1
+∗
+induces an isomorphism
+ker ∂′
+∗
+im ∂∗
+∼= Hp(X, C) = Hp(Xp+1, Xp−2) .
+[A more general result concerning this diagram was given in Exercise 1 of
+Section 3.5.]
+Combining this result with those of Steps 1 and 2, we obtain our desired
+isomorphism
+Hp(X) ∼= Hp(Xp+1) ∼= Hp(Xp+1, Xp−2) ∼= ker ∂′
+∗
+im ∂∗
+.
+The latter group equals Hp(D(X)).
+Naturality of the isomorphism is easy to check. If f : X →Y preserves fil-
+trations, the first two of the preceding isomorphisms obviously commute with
+f∗. Furthermore, f∗carries the diagram of Step 3 for X into the correspond-
+ing diagram for Y . It follows that the third isomorphism commutes with f∗
+as well.

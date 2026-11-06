@@ -1,0 +1,58 @@
+222
+Elements of Algebraic Topology
+and that ϵ′(v) = 1 for each vertex v. We now construct a chain map carrying
+C′
+p(K) to Sp(|K|) and prove that it induces an isomorphism in homology.
+Definition 4.7.1 Define θ : C′
+p(K) →Sp(|K|) by the equation
+θ((v0, v1, . . . , vp)) = ℓ(v0, v1, . . . , vp) .
+Then θ assigns, to the ordered simplex (v0, v1, . . . , vp) of K, the linear singular
+simplex mapping ∆p into |K| and carrying ϵi to vi for i = 0, 1, . . . , p.
+It is immediate from the definitions that θ is a chain map and that it
+preserves augmentation. If K0 is a subcomplex of K, then θ commutes with
+inclusion, so it maps C′
+p(K0) into Sp(|K0|), and thus induces a chain map
+θ : C′
+p(K, K0) →Sp(|K|, |K0|) .
+To show that θ∗is an isomorphism, the following lemma will be useful.
+Lemma 4.7.2 Let ψ : C →C′ be a chain map of augmented chain complexes.
+Then ψ∗is an isomorphism in reduced homology if and only if it is an iso-
+morphism in ordinary homology.
+Proof: We recall the proof that H0(C) ∼= H0(C) ⊕Z. [See the exercises of
+Section 1.8.] Begin with the exact sequences
+0 −−−−→ker ϵ −−−−→C0
+ϵ
+−−−−→Z −−−−→0
+ψ
+
+ψ
+
+=
+0 −−−−→ker ϵ′ −−−−→C′
+0
+ϵ′
+−−−−→Z −−−−→0 .
+Choose j : Z →C0 so that j ◦ϵ is the identity. Define j′ : Z →C′
+0 by setting
+j′ = ψ ◦j. Then j and j′ split the two sequences, so
+C0 = ker ϵ ⊕im j
+and
+C′
+0 = ker ϵ′ ⊕im j′ .
+Note that ψ defines an isomorphism of im j with im j′. Now we have
+H0(C) ∼= ker ϵ
+∂C1
+⊕im j
+and
+H0(C′) ∼= ker ϵ′
+∂′C′
+1
+⊕im j′ .
+It follows that ψ∗: H0(C) →H0(C′) is an isomorphism if and only if ψ induces
+an isomorphism of ker ϵ/∂C1 with ker ϵ′/∂′C′
+1.
+Lemma 4.7.3 Let K0 be a subcomplex of K. For all p, the chain map θ
+induces isomorphisms
+(1) θ∗: Hp(C′(K)) →Hp(|K|),
+(2) θ∗: Hp(C′(K)) →Hp(|K|),
+(3) θ∗: Hp(C′(K, K0)) →Hp(|K|, |K0|).

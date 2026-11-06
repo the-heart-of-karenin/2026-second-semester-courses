@@ -1,0 +1,38 @@
+454
+Elements of Algebraic Topology
+The basic fact that one needs is that there is a compact, triangulated 3-
+manifold M that is a homology 3-sphere, but whose fundamental group π1(M)
+does not vanish. The construction can be found in [ST80]. The fundamental
+group of M is the icosahedral group.
+Now we form the suspension S(M) = M ∗{w0, w1}. This space is a ho-
+mology 4-manifold. Since S(M)\{w0, w1} is homeomorphic to the 4-manifold
+M × (−1, 1), the local homology conditions are satisfied at all points except
+possibly at the suspension points. Since Lk w0 = Lk w1 = M, and M is a
+homology 3-sphere, the local homology conditions are also satisfied at w0 and
+w1.
+Then one needs a separate argument to show that in a triangulated topo-
+logical n-manifold, the link of each vertex, while it may not be topologically
+an (n −1)-sphere, must have the homotopy type of an (n −1)-sphere. Since
+π1(M)̸ = 0, M cannot have the homotopy type of a 3-sphere. Hence S(M)
+cannot be a topological 4-manifold.
+The proofs of the following theorem and corollary will be left to the exercises.
+Theorem 8.3.8 If (X, A) is a triangulated relative homology n-manifold with
+X \ A connected, then (X, A) is a relative pseudo n-manifold.
+Corollary 8.3.9 If (X, A) be a triangulated relative homology n-manifold,
+and if s is a complex of X not in A, then Lk s is a finite complex.
+EXERCISES
+Each of the first four exercises depends on the preceding ones.
+1. Let (X, A) be a triangulated pair. Suppose that for each k-simplex s
+of X that is not in A we have: (i) k ≤n, (ii) Hi(Lk s) ∼= Hi(Sn−k−1)
+if k < n. Show that (X, A) is a relative homology n-manifold.
+2. Let (X, A) be a triangulated relative homology n-manifold. If s is a
+k-simplex of X that is not in A, with k < n, then show that Lk s is a
+homology n−k−1 manifold. [Hint: Consider Lk s as a subcomplex
+of X. Then if t ∈Lk s, show that Lk(t, Lk(s, X)) = Lk(t ∗s, X).]
+3. Prove Theorem 8.3.8. [Hint: The result is trivial if n = 1. Now
+suppose it true for dimensions less than n. Define σ ∼σ′ if there is
+a sequence
+σ = σ0, σ1, . . . , σk = σ′
+of n-simplices of X not in A such that σi ∩σk+1 is an (n −1)-
+simplex not in A for each n. Let X1 be the union of the elements
+of one equivalence class. Let X2 be the union of the elements of the

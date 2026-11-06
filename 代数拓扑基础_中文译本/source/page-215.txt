@@ -1,0 +1,39 @@
+200
+Elements of Algebraic Topology
+X × I
+∆p × I
+∆p
+i
+j
+T × iI
+Figure 4.3.2
+Now we use naturality. By the induction hypothesis, we have commutativity
+in the following diagram:
+Sp−1(∆p)
+D∆p
+−−−−→Sp(∆p × I)
+T#
+(T × iI)#
+Sp−1(X)
+DX
+−−−−→Sp(X × I) .
+Therefore we have (T × iI)#D∆p(∂ip) = DXT#(∂ip), so (∗) equals
+j#(T) −i#(T) −DXT#(∂ip) ,
+as desired.
+Checking that (b) holds is easier. If f : X →Y , then we first note that
+(f ◦T)×iI = (f ×iI)◦(T ×iI). Using the definitions of DY and DX, we have
+DY (f#(T))
+=
+DY (f ◦T) = ((f ◦T) × iI)#D∆p(ip)
+=
+((f × iI) ◦(T × iI))#D∆p(ip) = (f × iI)#DXT .
+In the proof just given, we gave a direct construction for DX in the case
+p = 0. Only in the inductive step did we use the “model space” ∆p. Here is
+a proof for the case p = 0 that looks more like the inductive step. This is the
+proof we shall later generalize.
+Let p = 0. We define DXT first in the case where X = ∆0 and T = i0, the
+identity map from ∆0 to itself. We want the formula
+∂D∆0(i0) = ȷ #(i0) −ı #(i0)
+to hold. We note that the right-hand side of this formula is a 0-chain carried
+by ∆0 × I and when the augmentation map ϵ is applied to it the value is
+zero. Since the space ∆0 × I is convex, it is acyclic. Therefore, we can choose

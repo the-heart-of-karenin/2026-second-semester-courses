@@ -1,0 +1,37 @@
+522
+Elements of Algebraic Topology
+Proof: The axioms for a directed set are easy to check. Given α, β in J0, they
+have an upper bound in J, and hence an upper bound in J0. Let ϕ : J0 →J be
+the inclusion map, and for each α ∈J0, let ϕα : Gα →Gϕ(α) be the identity.
+Then one has an induced homomorphism
+Φ : dir lim α∈J0 Gα −→dir lim α∈J Gα .
+→
+It is surjective, since given gα, it is equivalent to some gδ for δ ∈J0. To show
+that its kernel vanishes, we suppose that α ∈J0 and gα ∼0β for some β ∈J.
+Then there is some element δ of J such that
+fαδ(gα) = fβδ(0β) = 0δ .
+Choose ϵ ∈J0 with δ < ϵ. Then
+fαϵ(gα) = fδϵ(0δ) = 0ϵ ,
+so gα ∼0ϵ, where ϵ ∈J0.
+Now we define the ˇCech cohomology groups.
+Definition 8.13.11 Let A be a collection of subsets of the space X. We
+define an abstract simplicial complex called the nerve of A, denoted by N(A).
+Its vertices are the elements of A and its simplices are the finite subcollections
+{A1, A2, . . . , An} of A such that
+A1 ∩A2 ∩· · · ∩An̸ = ∅.
+Now if B is a collection of sets refining A, then we can define a map
+g : B →A by choosing g(B) to be an element of A that contains B. If
+{B1, B2, . . . , Bn} is a simplex of N(B), then {g(B1), g(B2), . . . , g(Bn)} is a
+simplex of N(A), just because ∩Bi is nonempty and contained in ∩g(Bi).
+Thus the vertex map g induces a simplicial map
+g : N(B) →N(A) .
+There is some arbitrariness in the choice of g in the last definition, but any
+other choice g′ for g is contiguous to g, since
+∩Bi ⊂∩(g(Bi) ∩g′(Bi)) .
+Thus we can make the following definition:
+Definition 8.13.12 If B is a refinement of A, then we have uniquely defined
+homomorphisms
+g∗: Hk(N(B); G) →Hk(N(A); G) ,
+g∗: Hk(N(A); G) →Hk(N(B); G) ,
+induced by the simplicial map g satisfying the condition g(B) ⊃B for all
+B ∈B. We call them the homomorphisms induced by refinement.

@@ -1,0 +1,46 @@
+398
+Elements of Algebraic Topology
+0 −→ker(ϕ ⊗iB) −→R ⊗B
+ϕ ⊗iB
+F ⊗B
+ψ ⊗iB
+A ⊗B −→0
+0 −→ker(ϕ′ ⊗iB′) −→R′ ⊗B′ ϕ′ ⊗iB′
+F ′ ⊗B′ ψ′ ⊗iB′
+A′ ⊗B′ −→0
+ϵ
+α ⊗δ
+β ⊗δ
+γ ⊗δ
+The homomorphism ϵ is independent of the choice of α and β.
+Proof: Functoriality of ⊗shows that the two right-hand squares of the pre-
+ceding diagram commute. Therefore, α ⊗δ induces a homomorphism ϵ of
+kernels.
+The proof that ϵ is independent of the choice of α and β proceeds as in
+the proof of Lemma 7.2.2. Let {α′, β′, γ} be another choice. We treat {α, β, γ}
+and {α′, β′, γ} as chain maps of one chain complex A to another A′. There is
+a chain homotopy between the corresponding chain maps of A⊗B to A′ ⊗B′.
+Thus they induce the same homomorphism
+ϵ : H2(A; B) −→H2(A′; B′) ,
+and we recognize H2(A; B) = ker(ϕ ⊗iB) while H2(A′; B′) = ker(ϕ′ ⊗iB′).
+The homomorphism ϵ is said to be induced by γ and δ, relative to the free
+resolutions involved.
+Just as in Section 7.2, we see that ϵ depends functorially on γ and δ. That
+is, the composite of the homomorphisms induced by (γ, δ) and by (γ′, δ′) is
+the homomorphism induced by (γ◦γ′, δ◦δ′). Also the homomorphism induced
+by (iA, iB) is an isomorphism.
+Definition 7.4.3 Given A, let
+0 −→R(A) ϕ
+−→F(A) −→A −→0
+be the canonical free resolution of A. The group ker(ϕ ⊗iB) is denoted A ∗B,
+and is called the torsion product of A and B. If γ : A →A′ and δ : B →B′
+are homomorphisms, then we extend γ to a homomorphism of canonical free
+resolutions, and define
+γ ∗δ : A ∗B →A′ ∗B′
+to be the homomorphism induced by γ and δ relative to these free resolutions.
+The preceding remarks show that the torsion product is a functor of two
+variables, covariant in both.
+Proof of Theorem 7.4.1: In fact the proof is now straightforward. Given
+any free resolution
+0 −→R ϕ
+−→F −→A −→0 ,

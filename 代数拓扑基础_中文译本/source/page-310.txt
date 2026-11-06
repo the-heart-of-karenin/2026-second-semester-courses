@@ -1,0 +1,34 @@
+Singular Homology Theory
+295
+Definition 4.14.12 Let n and k be relatively prime positive integers. We
+construct the lens space L(n, k) as a quotient space of the ball B3 as follows:
+Write the general point of B3 in the form (z, t), where z is complex, t is real,
+and |z|2 + t2 ≤1. Let λ = exp(2πi/n). Define f : S2 →S2 by the equation
+f(x) = (λkz, −t) .
+Let us identify each point x = (z, t) of the lower hemisphere E2
+−of S2 = Bd B3
+with the point f(x) of the upper hemisphere E2
++. The resulting quotient space
+is called the lens space L(n, k).
+Note that the map z −→λz of C to itself is simply rotation through the
+angle 2π/n. Thus f equals a rotation of S2 about the vertical axis through the
+angle 2πk/n, followed by reflection in the horizontal plane. See Figure 4.14.1.
+f(x) = (λkz, −t)
+x = (z, t)
+α
+Figure 4.14.1
+Let p : B3 →L(n, k) be the quotient map. Each point of Int B3 is identified
+only with itself under p, and each point of Int E2
+−is identified with a point of
+Int E2
++. Since a point (z, 0) of the equator in S2 belongs to both E2
+−and E2
++,
+its equivalence class contains n points—namely, the points
+(λkz, 0), (λ2k, 0), . . . , (λnk, 0) = (z, 0) .
+Because k and n are relatively prime, these points are distinct and constitute
+a permutation of the points
+(λz, 0), (λ2, 0), . . . , (λn, 0) = (z, 0) ,
+which are evenly spaced about the equator S1.
+Theorem 4.14.13 The space L(n, k) is a CW complex with one cell in each
+dimension 0, 1, 2, and 3.

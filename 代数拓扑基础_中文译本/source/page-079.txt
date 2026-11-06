@@ -1,0 +1,38 @@
+64
+Elements of Algebraic Topology
+so x −kxm belongs to Bm−1. Then, by the induction hypothesis, we have
+x −kxm = k1x1 + k2x2 + · · · + km−1xm−1 .
+Hence, x1, x2, . . . , xm generate Bm.
+Second, for each m, we show the independence of the non-zero elements in
+the set {x1, x2, . . . , xm}. Again we use induction. The result is trivial when
+m = 1. Suppose it true for m −1. Then we show that if
+λ1x1 + λ2x2 + · · · + λmxm = 0 ,
+then it follows that for each i, λi = 0 whenever xi̸ = 0; once we have done
+that, independence follows.
+Applying the map πm, we obtain
+λmπm(xm) = 0 .
+From this equation, it follows that either λm = 0 or xm = 0. For if λm̸ = 0,
+then πm(xm) = 0 whence the subgroup πm(Bm) is trivial and xm = 0 by
+definition. We conclude two things:
+λm = 0 if xm̸ = 0 ,
+λ1x1 + λ2x2 + · · · + λm−1xm−1 = 0 .
+The induction hypothesis now applies to show that, for i < m,
+λi = 0 if xi̸ = 0 .
+For later use, we generalize this result to arbitrary free abelian groups:
+Lemma 1.12.2 If A is a free abelian group, any subgroup B of A is free.
+Proof: The proof given above for the finite case generalizes to the situation
+in which A has an infinite basis, as we now show. Using the well-ordering
+theorem [which is equivalent to the axiom of choice], we index the basis for A
+by a well-ordered set J having a largest element.
+We begin by assuming [without loss of generality] that A equals a direct
+sum of copies of Z; that is, A equals the subgroup of ZJ consisting of all tuples
+(nα)α∈J such that nα = 0 for all but finitely many α. Then we proceed as
+before. Since the process may be unfamiliar, we will give the details:
+Let B be a subgroup of A. For β ∈J, let Bβ consist of those elements x of
+B such that πα(x) = 0 for α > β. Consider the subgroup πβ(Bβ) of Z; if it is
+trivial then define xβ = 0, otherwise choose xβ ∈Bβ so the πβ(xβ) generates
+the subgroup.
+We show first that the set {xα : α ≤β} generates Bβ. This fact is trivial if
+β is the smallest element of J. We prove it in general by transfinite induction.
+Given x ∈Bβ, we have
+πβ(x) = kπβ(xβ)

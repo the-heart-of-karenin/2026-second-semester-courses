@@ -1,0 +1,27 @@
+516
+Elements of Algebraic Topology
+XU
+Bd U
+U
+D
+Figure 8.12.4
+Consider now the following diagram in singular theory:
+Hk(X, D) i∗
+←−Hk(X, U) k∗
+−→Hk(XU, Bd U) ⌢ΓU
+Hn−k(XU) ℓ∗
+−→Hn−k(X \ D) ,
+where i, k, and ℓare inclusions. The homomorphism k∗is an isomorphism
+because k is an excision map. The homomorphisms i∗and ℓ∗are isomorphisms
+because i : D →U and ℓ: (X \ U) →(X \ D) are homotopy equivalences.
+We denote the composite isomorphism for the present by
+λD,U : Hk(X, D) →Hn−k(X \ D) .
+Note that it does not depend on the specific triangulation involved, as did the
+Lefschetz isomorphism ϕ∗.
+Step 3: We check a version of naturality for the isomorphism λD,UA. Suppose
+that E is a polyhedron in (X, A) such that A ⊂E ⊂D, and suppose that V
+is a neighborhood of E chosen as in Step 2 such that V ⊂U. [Such a neigh-
+borhood of E always exists by the preceding lemma.] See Figure 8.12.5. Set
+XV = X\V . We show that λD,U and λE,V commute with the homomorphisms
+induced by inclusion.
+To prove this fact, we consider the following formidable diagram:

@@ -1,0 +1,65 @@
+\section{任意系数的同调}
+\sourcepage{375--376}
+现在用张量积给出任意系数同调的一般定义。处理次序仿照第 5.5 节：先讨论链复形，再讨论奇异理论，最后讨论单纯理论，并说明它与第 1.11 节的定义一致。
+
+\subsection*{链复形的同调}
+对 $\mathcal C=\{C_p,\partial\}$ 和阿贝尔群 $G$，定义链复形 $\mathcal C\otimes G$，其链群为 $C_p\otimes G$，边缘为 $\partial\otimes i_G$。其同调记为 $H_p(\mathcal C;G)$，称为 $\mathcal C$ 的 $G$ 系数同调。
+
+若有增广，则在负一维补上 $\Z\otimes G\cong G$，以 $\epsilon\otimes i_G$ 为边缘，得到\textbf{约化同调} $\widetilde H_p(\mathcal C;G)$。若整数约化零维同调为零，张量的右正合性说明 $G$ 系数版本也为零。一般地，$H_0(\mathcal C;G)\cong\widetilde H_0(\mathcal C;G)\oplus G$。当 $G=\Z$ 时，张量链复形自然同构于原复形，所以原来的同调就是整数系数同调。
+
+链映射 $\varphi$ 诱导链映射 $\varphi\otimes i_G$，其同调同态仍简记 $\varphi_*$。保持增广时也诱导约化同调同态。链同伦 $D$ 张量 $i_G$ 后仍为链同伦，所以同伦链映射对任意系数都诱导相同同态，链等价张量后仍为链等价。
+
+逐维分裂的链复形短正合列，张量后仍逐维正合。之字形引理于是给出自然长正合列
+\[
+\cdots\to H_p(\mathcal C;G)\to H_p(\mathcal D;G)\to H_p(\mathcal E;G)
+\xrightarrow{\partial_*}H_{p-1}(\mathcal C;G)\to\cdots,
+\]
+连接同态由 $\partial\otimes i_G$ 诱导。
+
+\subsection*{奇异同调}
+定义 $H_p(X,A;G)=H_p(\mathcal S(X,A);G)$，约化版本使用标准奇异增广。空相对子空间按通常惯例省略。
+
+\sourcepage{377}
+由于相对奇异链群自由，$S_p(X,A)\otimes G$ 是若干份 $G$ 的直和。选取所有像不完全包含于 $A$ 的奇异单形 $T_\alpha$ 为相对基，每条带系数链唯一表示为有限和 $\sum T_\alpha\otimes g_\alpha$。其最小载体是所有非零系数项的像集之并，仍为紧集。
+
+连续映射 $h$ 诱导 $h_\#\otimes i_G$，有时仍简记 $h_\#$。函子性质在链层次成立。相对链群自由，使绝对到相对的短正合列逐维分裂，故有自然长正合列。空间映射同伦产生链同伦，张量后仍同伦，故满足同伦公理。直接计算单点奇异链复形，得 $H_0(P;G)\cong G$，其余为零。有限链的紧载体也立即给出紧支集性质。
+
+只有切除需要额外注意。已知切除包含 $j:(X\setminus U,A\setminus U)\to(X,A)$ 在整数同调上为同构，需推广到任意系数。可以用定理 5.7.2：这些自由链复形在负维为零，所以 $j_\#$ 为链等价。也可使用下面与定理 5.6.6 类似的结论。
+
+\sourcepage{378}
+\entry{定理}{6.3.1}若自由链复形间的链映射 $\varphi:\mathcal C\to\mathcal D$ 在所有维数诱导同调同构，则 $\varphi\otimes i_G$ 对任意 $G$ 也诱导所有维数的同调同构。
+
+\textbf{证明：步骤 1。}先设 $\varphi$ 位于自由链复形的短正合列 $0\to\mathcal C\to\mathcal D\to\mathcal E\to0$ 中。由整数同调正合列，$\mathcal E$ 无环。如引理 5.6.4，写 $E_p=B_p\oplus U_p$，边缘在第一项上为零，将第二项同构地映到 $B_{p-1}$。张量后仍有同样的分解与同构，故 $H_p(\mathcal E;G)=0$。带系数长正合列即给出结论。
+
+\textbf{步骤 2。}一般情形用代数映射柱。引理 5.6.5 给出单射 $i,j$，使 $i\simeq j\varphi$，且各相关复形和商复形自由。$i,j$ 均诱导整数同调同构，由步骤 1，也诱导带系数同构，再由复合关系得 $\varphi$ 的结论。\hfill$\square$
+
+\subsection*{单纯同调}
+对单纯偶定义 $H_p(K,K_0;G)=H_p(\mathcal C(K,K_0);G)$，约化版本使用单纯增广。相对链群张量 $G$ 后，每个元素唯一写为 $\sum\sigma_\alpha\otimes g_\alpha$，边缘为 $\sum\partial\sigma_\alpha\otimes g_\alpha$。
+
+\sourcepage{379}
+第 1.11 节把相同链写作形式和 $\sum g_\alpha\sigma_\alpha$，边缘定义相同，因此两个链复形同构。此后采用张量记号。诱导同态、长正合列及各同调公理的验证均仿照第 5.5 节，不再赘述。
+
+\subsection*{单纯理论与奇异理论之间的同构}
+第 4.7 节的 $\eta:\mathcal C(K,K_0)\to\mathcal S(|K|,|K_0|)$ 诱导整数同调同构，由定理 6.3.1，也诱导任意系数同构。排序无关性、与连接同态及连续映射诱导同态的交换性，仿照定理 5.5.3 证明。
+
+\subsection*{CW 复形的同调}
+胞腔链复形与奇异链复形自由且同调同构，由定理 5.6.2，可选诱导此同构的链映射。再应用定理 6.3.1，得
+\[
+H_p(\mathcal D(X)\otimes G)\cong H_p(X;G).
+\]
+所以胞腔链复形也计算任意系数同调。可三角剖分时，此同构由胞腔链群到单纯链群的包含诱导。
+
+\entry{定理}{6.3.2}对自由链复形，有自然短正合列
+\[
+0\to H_p(\mathcal C)\otimes G\xrightarrow{\varphi}H_p(\mathcal C\otimes G)\to\operatorname{coker}\varphi\to0,
+\]
+其中 $\varphi$ 由闭链的包含诱导。它分裂，但分裂不自然。若所有整数同调群都自由，则 $\varphi$ 为同构。证明留作习题。这是引理 5.6.12、定理 5.6.13 的同调对应，下一章将推广。
+
+\sourcepage{380}
+\subsection*{习题}
+\begin{enumerate}
+\item 对增广链复形证明 $H_0(\mathcal C;G)\cong\widetilde H_0(\mathcal C;G)\oplus G$。〔提示：增广的核给出分裂短正合列。〕
+\item 用胞腔链复形计算下列空间的任意系数同调：$T\#T$、三个实射影平面的连通和、$P^N$、$k$ 重愚人帽。
+\item 证明定理 6.3.2。
+\item 若 $R$ 为交换含幺环，以 $\alpha(c_p\otimes\beta)=c_p\otimes\alpha\beta$ 定义模结构。证明 $H_p(\mathcal C;R)$ 为 $R$ 模，链映射及连接同态均诱导模同态。
+\end{enumerate}

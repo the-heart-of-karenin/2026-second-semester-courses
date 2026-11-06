@@ -1,0 +1,42 @@
+Singular Homology Theory
+213
+Definition 4.5.1 Let G and G′ be functors from C to A, and let X be an
+object of C. Let Gp(X) denote the p-dimensional group of the augmented
+chain complex G(X). Let M be a collection of objects of C, called models or
+model objects.
+(1) We say that the functor G′ is acyclic relative to the collection
+M if G′(X) is acyclic for each X ∈M.
+(2) We say that the functor G is free relative to the collection M if
+for each p ≥0 there are
+(a) An index set Jp.
+(b) An indexed family {Mα}α∈Jp of objects of M.
+(c) An indexed family {iα}α∈Jp, where iα ∈Gp(Mα) for each α.
+The following condition is to hold: Given X, the elements
+G(f)(iα) ∈Gp(X)
+are to be distinct and form a basis for Gp(X) as f ranges over all
+elements of hom(Mα, X) and α ranges over Jp.
+Since Gp(X) has a basis if the functor G is free, that implies that Gp(X)
+is a free group [as one would hope when the functor is said to be “free”]. Also,
+we shall be constructing functions by first doing the construction on the basis
+elements. If these basis elements were not distinct from each other, it might
+lead to two constructions producing unequal results for what turned out to
+be the same basis element.
+EXAMPLE 4.5.2 Consider the singular chain complex functor, from the
+topological category to A. Let M be the collection {∆p : p = 0, 1, . . . }. This
+functor is acyclic relative to M. We show it is free relative to M: For each p, let
+the index set Jp have only one element, let the corresponding family consist
+of ∆p alone, and let the corresponding element of Sp(∆p) be the identity
+singular simplex ip. It is immediate that, as T ranges over all continuous
+maps ∆p →X, the elements T#(ip) = T form a basis for Sp(X).
+EXAMPLE 4.5.3 Consider the following functor G, defined on the category
+of topological pairs:
+(X, Y ) →S(X × Y )
+and
+(f, g) →(f × g)# .
+Let M = {(∆p, ∆q) : p, q = 0, 1, . . . }. Then G is acyclic relative to M, since
+∆p × ∆q is contractible. We show it is free relative to M: For each index
+p, let Jp consist of a single element, let the corresponding family consist of
+(∆p, ∆p) alone, and let the corresponding element of Sp(∆p × ∆p) be the
+diagonal map dp(x) = (x, x). As f and g range over all maps from ∆p into X
+and Y , respectively, (f × g)#(dp) ranges over all maps ∆p →X × Y , that is,
+over a basis for Sp(X × Y ).

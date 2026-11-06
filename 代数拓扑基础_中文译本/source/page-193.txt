@@ -1,0 +1,44 @@
+178
+Elements of Algebraic Topology
+Thus X1 is triangulated by k and so is A1 = X1 ∩A. [Here is where we need
+the fact that U ⊂Int A.]
+It follows from the special case already proved that in the diagram of
+inclusions
+(X1, A1)
+(X, A)
+(X \ U, A \ U)
+j0
+j
+j1
+both j0 and j1 induce isomorphisms. Because the diagram commutes, j∗is
+also an isomorphism.
+We remark that in the preceding proof we did not need the full strength of
+the hypothesis of the excision axiom. We did not use the fact that U ⊂Int A,
+nor that U is open. Thus for simplicial theory on the class of triangulable
+pairs, the following stronger version of the excision axiom holds:
+Theorem 3.6.3 (Excision in simplicial theory) Let A be a subspace of
+X. Let U be a subset of X such that U ⊂Int A. If both of the pairs (X, A)
+and (X \ U, A \ U) are triangulable, then inclusion induces an isomorphism
+Hp(X \ U, A \ U) ∼= Hp(X, A) .
+The compact support axiom states, roughly speaking, that every homol-
+ogy class is compactly supported. It is also true that every homology relation
+between such classes is compactly supported. More precisely, one has the fol-
+lowing useful result, which we shall verify directly for simplicial theory. It may
+also be derived from the axioms. See the exercises below.
+Theorem 3.6.4 Let i : (X0, A0) →(X, A) be an inclusion of triangulable
+pairs, where (X0, A0) is a compact pair. If α ∈Hp(X0, A0) and i∗(α) = 0,
+then there are a compact triangulable pair (X1, A1) and inclusion maps
+(X0, A0)
+j
+−→(X1, A1)
+k
+−→(X, A)
+such that j∗(α) = 0.
+Proof: We may assume that (X, A) is the polytope of a simplicial pair (K, C).
+Because X0 is compact, it is contained in the polytope of a finite subcomplex
+K0 of K. Then A0 is contained in the polytope of C ∩K0 = C0. The theorem
+thus reduces to the case where
+i : (K0, C0) →(K, C)
+is an inclusion of subcomplexes and K0 is finite.
+Let α ∈Hp(K0, C0) and suppose that i∗(α) = 0. Let cp be a chain of K0
+representing α. Since i∗(α) = {i#(cp)} = 0, there is a chain dp+1 of K such

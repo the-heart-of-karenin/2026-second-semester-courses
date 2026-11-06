@@ -1,0 +1,48 @@
+Homology Groups of a Simplicial Complex
+49
+A
+A
+A
+A
+A
+A
+A
+A
+B
+B
+B
+B
+Figure 1.7.14
+Figure 1.7.15
+We prove the following theorem:
+Theorem 1.8.1 Let K be a complex. Then the group H0(K) is free abelian.
+If {vα} is a collection consisting of one vertex from each component of |K|,
+then the homology classes of the chains vα form a basis for H0(K).
+Proof:
+Step 1. If v and w are vertices of K, let us define v ∼w if there is
+a sequence
+a0, a1, . . . , an
+of vertices of K such that v = a0, w = an, and aiai+1 is a 1-simplex of K for
+each i. This relation is clearly an equivalence relation. Given v, define
+Cv = ∪{St w : w ∼v} .
+We will show that the sets Cv are the components of |K|.
+Note first that Cv is open because it is a union of open sets. Furthermore,
+Cv = Cv′ holds if v ∼v′.
+Second, we show that Cv is connected, in fact, path connected. Given v,
+let w ∼v and let x be a point of St w. Choose a sequence a0, a1, . . . , an
+of vertices of K, as before. Then the path of line segments with successive
+vertices a0, a1, . . . , an, x lies in Cv: We see this because ai ∼v by definition,
+so that St ai ⊂Cv, and in particular, the line segment aiai+1 lies in Cv.
+Similarly, the line segment anx lies in St an, which is contained in Cv. Hence
+Cv is path connected.
+Third, we show that distinct sets Cv and C′
+v are disjoint. Suppose x is a
+point of Cv ∩C′
+v. Then x ∈St w for some w equivalent to v, and x ∈St w′
+for some w′ equivalent to v′. Since x has positive barycentric coordinates with
+respect to both w and w′, some simplex of K has w and w′ as vertices. Then
+ww′ must be a 1-simplex of K, so w ∼w′. It follows that v ∼v′, so the two
+sets Cv and Cv′ are the same.
+Being connected, open, and disjoint, the sets Cv are necessarily the compo-
+nents of |K|. Note that each is the space of a subcomplex of K; each simplex
+of K [being connected] lies entirely in one component of |K|.

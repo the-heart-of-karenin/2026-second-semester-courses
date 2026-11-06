@@ -1,0 +1,46 @@
+Cohomology
+345
+z1
+w1
+g
+g
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+L
+S
+T
+w1
+z1
+Figure 5.8.1
+In the case of homology, finding simplicial cycles of X that generate the
+homology is not difficult. Let us represent T and S as quotient spaces of the
+rectangle L, as pictured in Figure 5.8.1. The chain d of L that is the sum of
+all the 2-simplices of L, oriented counterclockwise, is a fundamental cycle for
+(L, Bd L), so its image γ = g#(d) generates the cellular chain group D2(X).
+Similarly, the chains
+w1 = [a, b] + [b, c] + [c, a] ,
+z1 = [a, d] + [d, e] + [e, a] ,
+are a basis for the cellular chain group D1(X). As we know, these chains are
+cycles representing certain elements of the homology of D(X). Now because
+the isomorphism Hi(D(X)) ∼= Hi(X) is induced by the inclusion i : D(X) →
+C(X), these same chains, considered now as chains in C(X), represent elements
+of the simplicial homology of X.
+Cohomology is not so easy. What happens in this case? Of course, we
+can find generators for the cohomology of the cellular chain complex D(X).
+The homomorphism λ : D2(X) →Z that maps the fundamental cycle γ to 1
+generates Hom (D2(X), Z) ∼= Z. And the homomorphisms ϕ, ψ : D1(X) →Z
+defined by
+⟨ϕ, w1⟩= 1
+and
+⟨ϕ, z1⟩= 0,
+⟨ψ, w1⟩= 0
+and
+⟨ψ, z1⟩= 1,

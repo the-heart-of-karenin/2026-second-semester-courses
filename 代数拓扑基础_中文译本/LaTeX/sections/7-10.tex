@@ -1,0 +1,215 @@
+\section{*上同调的 Künneth 定理}
+\sourcepage{428--429}
+要计算乘积空间的上同调，总可以先用 Künneth 定理计算其同调，再应用上同调的泛系数定理。不过，我们也希望有一个直接适用于上同调的 Künneth 定理。本节将证明这样的定理；下一节将用它计算乘积空间的上同调环。
+
+先引入上同调的叉积运算。本节只给出定义，其性质留到下一节讨论。以下 $R$ 始终表示有单位元的交换环。
+
+设 $C,C'$ 是链复形。与 $C$ 对应的上链复形 $\operatorname{Hom}(C,R)$ 在 $p$ 维的群为 $\operatorname{Hom}(C_p,R)$。同样有 $\operatorname{Hom}(C',R)$。按照预期的方式，使它们的张量积成为上链复形：其 $m$ 维群为
+\[
+\bigoplus_{p+q=m}\operatorname{Hom}(C_p,R)\otimes\operatorname{Hom}(C'_q,R),
+\]
+上边缘算子由下式给定：
+\[
+\delta(\varphi^p\otimes\psi^q)=\delta\varphi^p\otimes\psi^q+(-1)^p\varphi^p\otimes\delta'\psi^q.
+\]
+这里先应用 $\operatorname{Hom}$ 函子，再取张量积。也可以颠倒次序，得到上链复形 $\operatorname{Hom}(C\otimes C',R)$，其 $m$ 维群是 $\operatorname{Hom}((C\otimes C')_m,R)$。其上边缘算子是 $\partial$ 的对偶，记为 $\overline\partial$。这两个复形之间有如下自然同态。
+
+\entry{定义}{7.10.1}设 $p+q=m$，定义
+\[
+\theta:\operatorname{Hom}(C_p,R)\otimes\operatorname{Hom}(C'_q,R)\longrightarrow\operatorname{Hom}((C\otimes C')_m,R)
+\]
+使得
+\[
+\langle\theta(\varphi^p\otimes\psi^q),c_r\otimes c'_s\rangle
+=\langle\varphi^p,c_r\rangle\langle\psi^q,c'_s\rangle.
+\]
+约定当 $p\ne r$ 时 $\langle\varphi^p,c_r\rangle=0$，对 $\psi^q$ 也作同样约定。换言之，把 $\operatorname{Hom}(C_p,R)$ 的元素自动延拓为 $\bigoplus C_r$ 上的同态，在其他直和分量上取零，且不改变记号。
+
+\entry{引理}{7.10.2}$\theta$ 是自然上链映射。
+
+\textbf{证明：}设 $\varphi\in\operatorname{Hom}(C_p,R)$，$\psi\in\operatorname{Hom}(C'_q,R)$，$p+q=m$，并设 $r+s=m+1$。计算得
+\begin{align*}
+\langle\theta\delta(\varphi\otimes\psi),c_r\otimes c'_s\rangle
+&=\langle\delta\varphi,c_r\rangle\langle\psi,c'_s\rangle
++(-1)^p\langle\varphi,c_r\rangle\langle\delta'\psi,c'_s\rangle,\\
+\langle\overline\partial\theta(\varphi\otimes\psi),c_r\otimes c'_s\rangle
+&=\langle\varphi,\partial c_r\rangle\langle\psi,c'_s\rangle
++(-1)^r\langle\varphi,c_r\rangle\langle\psi,\partial'c'_s\rangle.
+\end{align*}
+两式只有末项符号看似不同；若 $p=r$，符号相同；若 $p\ne r$，则 $\langle\varphi,c_r\rangle=0$，两个末项均为零。由定义还直接得到，对同态 $f:C_p\to D_p$、$g:C'_q\to D'_q$，
+\[
+\theta\circ(\overline f\otimes\overline g)=\overline{f\otimes g}\circ\theta.
+\]
+所以 $\theta$ 是自然的。\hfill$\square$
+
+现在定义上同调中的同态，与同调 Künneth 定理中的 $\Theta$ 对应。
+
+\entry{定义}{7.10.3}定义上同调的张量同态\translatornote{原文此处写作“同调的张量同态”，由定义的上下标及上下文可知指上同调。}
+\[
+\Theta:H^p(C;R)\otimes H^q(C';R)\longrightarrow H^m(C\otimes C';R),\qquad m=p+q,
+\]
+如下：若 $\varphi,\psi$ 分别是 $p,q$ 维上闭链，则令
+\[
+\Theta(\{\varphi\}\otimes\{\psi\})=\{\theta(\varphi\otimes\psi)\}.
+\]
+右端确为上闭链的类，因为
+\[
+\overline\partial\theta(\varphi\otimes\psi)
+=\theta(\delta\varphi\otimes\psi+(-1)^p\varphi\otimes\delta'\psi)=0.
+\]
+类似计算说明改变上闭链代表元不改变所得上同调类，故 $\Theta$ 定义良好。
+
+\sourcepage{430--431}
+\entry{定义}{7.10.4}设 $X,Y$ 是拓扑空间，$m=p+q$。定义\emph{上同调叉积}为复合同态
+\[
+H^p(X;R)\otimes H^q(Y;R)\xrightarrow{\Theta}
+H^m(\mathcal S(X)\otimes\mathcal S(Y);R)\xrightarrow{\nu^*}H^m(X\times Y;R),
+\]
+其中 $\nu$ 是定理 7.9.5 的 Eilenberg--Zilber 链等价。记此同态为 $\times$，并把 $\alpha^p\otimes\beta^q$ 的像记作 $\alpha^p\times\beta^q$。
+
+与杯积一样，$\Theta$ 也可以对其他系数定义。下面给出一种推广。
+
+\entry{定义}{7.10.5}设 $G$ 是阿贝尔群，$X,Y$ 是拓扑空间，$m=p+q$。定义叉积
+\[
+\times:H^p(X)\otimes H^q(Y;G)\longrightarrow H^m(X\times Y;G)
+\]
+为 $\nu^*\circ\Theta$；这里 $\Theta$ 由下列上链映射诱导：
+\[
+\langle\theta(\varphi^p\otimes\psi^q),c_r\otimes c'_s\rangle
+=\langle\varphi^p,c_r\rangle\langle\psi^q,c'_s\rangle,
+\quad \varphi^p\in\operatorname{Hom}(C_p,\Z),\quad
+\psi^q\in\operatorname{Hom}(C'_q,G).
+\]
+右端乘法表示整数对 $G$ 的作用。
+
+还应注意，$\operatorname{Hom}(C_p,R)$ 和 $\operatorname{Hom}(C'_q,R)$ 都是 $R$ 模，而且
+\[
+\theta(a\varphi\otimes\psi)=\theta(\varphi\otimes a\psi)=a\theta(\varphi\otimes\psi).
+\]
+因此 $\theta$ 诱导 $R$ 模同态
+\[
+\operatorname{Hom}(C_p,R)\otimes_R\operatorname{Hom}(C'_q,R)
+\longrightarrow\operatorname{Hom}((C\otimes C')_m,R).
+\]
+特别地，当 $R$ 是域 $F$ 时，这是向量空间的线性映射。上述两种情形都诱导上同调上的同态 $\Theta$ 及叉积：前者为 $\Z,G$ 系数的叉积，后者为 $R$ 模同态
+\[
+H^p(X;R)\otimes_R H^q(Y;R)\xrightarrow{\times}H^m(X\times Y;R).
+\]
+最一般的叉积可相对于任意系数配对 $A\otimes_R A'\to A''$（一个 $R$ 模同态）来定义，本书不需要这样的普遍性。
+
+\subsection*{整数系数上同调的 Künneth 定理}
+证明的想法是把 $\operatorname{Hom}(C_p,\Z)$ 重新编号，使上链复形成为链复形，然后应用已经证明的 Künneth 定理。困难之一是这些群通常并不自由，因此需要某些限制条件。另一困难是，计算 $C\otimes C'$ 上同调所用的 $\operatorname{Hom}(C\otimes C',\Z)$，与要应用 Künneth 定理的 $\operatorname{Hom}(C,\Z)\otimes\operatorname{Hom}(C',\Z)$ 不同。映射 $\theta$ 正是在这里发挥作用。
+
+\entry{引理}{7.10.6}设链复形 $C,C'$ 在某个维数以下为零。若 $C$ 自由且每维有限生成，则
+\[
+\theta:\bigoplus_{p+q=m}\operatorname{Hom}(C_p,\Z)\otimes\operatorname{Hom}(C'_q,\Z)
+\longrightarrow\operatorname{Hom}((C\otimes C')_m,\Z)
+\]
+是同构。
+
+\textbf{证明：}把 $\theta$ 分为两个映射的复合：先对各分量应用
+\[
+M:\operatorname{Hom}(C_p,\Z)\otimes\operatorname{Hom}(C'_q,\Z)
+\to\operatorname{Hom}(C_p\otimes C'_q,\Z),
+\]
+其中 $M(\varphi\otimes\psi)(c\otimes c')=\varphi(c)\psi(c')$；再应用
+\[
+e:\bigoplus_{p+q=m}\operatorname{Hom}(C_p\otimes C'_q,\Z)
+\to\operatorname{Hom}\left(\bigoplus_{p+q=m}C_p\otimes C'_q,\Z\right).
+\]
+对分量上的同态 $F$，$e(F)$ 在该分量上等于 $F$，在其他分量上为零。
+
+第一步：$M$ 是同构。取 $C_p$ 的有限基 $a_1,\ldots,a_k$ 及对偶基 $\overline a_1,\ldots,\overline a_k$。$M$ 的定义域是 $k$ 个 $\operatorname{Hom}(C'_q,\Z)$ 的直和，第 $i$ 个分量为
+$\langle\overline a_i\rangle\otimes\operatorname{Hom}(C'_q,\Z)$。
+另一方面，$C_p\otimes C'_q$ 是 $k$ 个 $C'_q$ 的直和，第 $i$ 个分量为 $\langle a_i\rangle\otimes C'_q$。其对偶也就是 $k$ 个 $\operatorname{Hom}(C'_q,\Z)$ 的直和，第 $i$ 个分量由在所有 $j\ne i$ 的分量上为零的同态组成。$M$ 把定义域的第 $i$ 个分量同构地映到这个分量上，所以是同构。
+
+第二步：$e$ 显然是单射。其像由那些只在有限多个直和分量上可能非零的同态组成。由于 $C,C'$ 在某维以下为零，固定 $m$ 后，$p+q=m$ 的非零分量只有有限多个，因此 $e$ 也是满射。\hfill$\square$
+
+\sourcepage{432--433}
+\entry{定理}{7.10.7（整数系数上同调的 Künneth 定理）}设 $C,C'$ 在某维以下为零。若 $C$ 自由且每维有限生成，则存在自然正合列
+\[
+\begin{split}
+0\longrightarrow\bigoplus_{p+q=m}H^p(C)\otimes H^q(C')
+\xrightarrow{\Theta}H^m(C\otimes C')\\
+\longrightarrow\bigoplus_{p+q=m}H^{p+1}(C)*H^q(C')\longrightarrow0.
+\end{split}
+\]
+若 $C'$ 也自由且每维有限生成，则此列分裂，但分裂不是自然的。
+
+\textbf{证明：}定义链复形 $E,E'$，令
+\[
+E_{-p}=\operatorname{Hom}(C_p,\Z),\qquad E'_{-p}=\operatorname{Hom}(C'_p,\Z),
+\]
+边缘算子分别为 $\delta,\delta'$。$E$ 自由，因而 Künneth 定理给出正合列
+\[
+\begin{split}
+0\to\bigoplus_{-p-q=-m}H_{-p}(E)\otimes H_{-q}(E')\to H_{-m}(E\otimes E')\\
+\to\bigoplus_{-p-q=-m}H_{-p-1}(E)*H_{-q}(E')\to0.
+\end{split}
+\]
+按定义 $H_{-p}(E)=H^p(C)$，$H_{-q}(E')=H^q(C')$。上一引理给出自然上链同构
+\[
+(E\otimes E')_{-m}=
+\bigl(\operatorname{Hom}(C,\Z)\otimes\operatorname{Hom}(C',\Z)\bigr)^m
+\xrightarrow{\theta}\operatorname{Hom}((C\otimes C')_m,\Z),
+\]
+从而诱导 $H_{-m}(E\otimes E')\cong H^m(C\otimes C')$。合并这些事实便得到所需正合列。其左端映射是包含映射与 $\theta$ 所诱导映射的复合，所以恰为 $\Theta$。若 $C'$ 也自由且每维有限生成，则 $E'$ 自由，正合列分裂。\hfill$\square$
+
+\entry{推论}{7.10.8}上一定理中“$C$ 每维有限生成”的条件可以换成“每个 $H_i(C)$ 有限生成”。同样，“$C'$ 每维有限生成”的条件可以换成“每个 $H_i(C')$ 有限生成”。
+
+\textbf{证明：}类似于定理 7.6.2。若 $C$ 自由、在某维以下为零，且每个 $H_i(C)$ 有限生成，则由引理 7.6.3，可以选取自由链复形 $D$，它在某维以下为零、每维有限生成，且 $H_i(D)\cong H_i(C)$。由定理 5.6.2，存在在所有维数诱导同调同构的链映射 $\varphi:C\to D$；由定理 5.7.2，它是链等价。因此
+\[
+\varphi\otimes i':C\otimes C'\to D\otimes C'
+\]
+也是链等价（见第 7.7 节习题）。Künneth 定理适用于 $D\otimes C'$，所以也适用于 $C\otimes C'$。正合列的自然性与定理 7.6.2 的证明相同。若每个 $H_i(C')$ 有限生成，也同样以每维有限生成且链等价的 $D'$ 代替 $C'$。\hfill$\square$
+
+由此又得到拓扑空间的 Künneth 定理。
+
+\entry{定理}{7.10.9（拓扑空间上同调的 Künneth 定理）}设 $X,Y$ 是拓扑空间。若每个 $H_i(X)$ 有限生成，则存在自然正合列
+\[
+\begin{split}
+0\to\bigoplus_{p+q=m}H^p(X)\otimes H^q(Y)\xrightarrow{\times}H^m(X\times Y)\\
+\to\bigoplus_{p+q=m}H^{p+1}(X)*H^q(Y)\to0.
+\end{split}
+\]
+若每个 $H_i(Y)$ 也有限生成，则此列分裂，但分裂不是自然的。
+
+\sourcepage{434--435}
+\subsection*{域系数上同调的 Künneth 定理}
+与同调的情形一样，系数取在域中时，Künneth 定理大为简化。
+
+\entry{定理}{7.10.10（域系数上同调的 Künneth 定理）}设 $F$ 是域，$C,C'$ 是在某维以下为零的链复形。若 $C$ 自由，且每个 $H_i(C)$ 有限生成，则存在自然同构
+\[
+\Theta:\bigoplus_{p+q=m}H^p(C;F)\otimes_F H^q(C';F)
+\longrightarrow H^m(C\otimes C';F).
+\]
+
+\textbf{证明：}按通常的论证，可以假设 $C$ 本身每维有限生成。令
+\[
+E_{-p}=\operatorname{Hom}(C_p,F),\qquad E'_{-q}=\operatorname{Hom}(C'_q,F).
+\]
+这是 $F$ 上的向量空间链复形。向量空间的 Künneth 定理（定理 7.8.9）给出自然线性同构
+\[
+\bigoplus_{p+q=m}H_{-p}(E)\otimes_F H_{-q}(E')\longrightarrow H_{-m}(E\otimes_F E').
+\]
+由于 $C,C'$ 在某维以下为零，且 $C$ 自由、每维有限生成，引理 7.10.6 的证明几乎原样适用，表明 $\theta$ 给出 $E\otimes_F E'$ 与 $\operatorname{Hom}(C\otimes C',F)$ 之间的线性同构，而且是上链映射。结论随即成立。\hfill$\square$
+
+\entry{推论}{7.10.11}设 $F$ 是域，$X,Y$ 是拓扑空间。若每个 $H_i(X)$ 有限生成，则存在自然线性同构
+\[
+\bigoplus_{p+q=m}H^p(X;F)\otimes_F H^q(Y;F)\xrightarrow{\times}H^m(X\times Y;F).
+\]
+
+\subsection*{习题}
+\begin{enumerate}
+\item 陈述并证明相对奇异上同调的 Künneth 定理。〔参见第 7.9 节习题 2。〕
+\item 计算下列空间的上同调群。可以使用 Künneth 定理，也可以对第 7.9 节习题 5 的结果应用泛系数定理。
+\begin{enumerate}[label=(\alph*)]
+\item $S^2\times P^5$；\item $P^3\times P^5$；\item $S^3\times L(n,k)$；
+\item $L(n,k)\times L(m,j)$；\item $S^1\times S^1\times S^3$；\item $\mathbb{CP}^2\times\mathbb{CP}^3$。
+\end{enumerate}
+\item 设 $M$ 是紧致连通 $n$ 维流形，且 $H_n(M)\cong\Z$。$M$ 的同调群与上同调群之间存在某些关系。把上一题的计算与第 7.9 节习题 5 中的计算比较，提出关于这些关系的猜想。
+\item 计算以下空间的上同调群：
+\begin{enumerate}[label=(\alph*)]
+\item $S^1\times P^3$；\item $P^2\times P^4$；\item $S^2\times L(n,k)$。
+\end{enumerate}
+\end{enumerate}

@@ -1,0 +1,35 @@
+Topological Invariance of the Homology Groups
+111
+The theorem follows. The complex K′ is defined to be the union of the
+complexes Lp. The function f(v) = Av from the vertices of K′ to A is defined
+to be the union of the functions fp. The function f satisfies the requirements
+of the theorem. For let v be a vertex of K′. Then v is a vertex of Lp for some
+p and
+St(v, Lp+k) ⊂fp+k(v) = f(v) = Av
+for all k ≥0. From this it follows that St(v, K′) ⊂Av.
+Theorem 2.4.9 (The general simplicial approximation theorem) Let
+K and L be complexes. Let h : |K| →|L| be a continuous map. There exists a
+subdivision K′ of K such that h has a simplicial approximation f : K′ →L.
+Proof: Let A be the covering of |K| by the open sets h−1(St(w, L)) as w
+ranges over the vertices of L. Choose a subdivision K′ of K whose closed
+stars refine A. Then h satisfies the star condition relative to K′ and L.
+EXERCISES
+1. (a) Using Theorem 2.4.2 show that if K and L are finite and
+dim K = m, then any continuous map h : |K| →|L| is ho-
+motopic to a map carrying K into L(m), where L(m) is the
+m-skeleton of L. [Hint: See Exercise 2 of Section 2.2.] We shall
+consider the non-finite case later.
+(b) Show that if h : Sm →Sn and m < n, then h is homotopic to a
+constant map. [Hint: Any map f : X →Sn \ {p} is homotopic
+to a constant.]
+2. Let h : |K| →|L| be a continuous map. Given ϵ > 0, show that
+there are subdivisions K′ and L′ of K and L respectively and a
+simplicial map f : K′ →L′ such that |f(x) −h(x)| < ϵ for all
+x ∈|K|.
+3. Show that if K is a complex of dimension m, then |K| has covering
+dimension at most m. [See the exercises of Section 2.3.]
+4. Provide examples to show that the result of Exercise 3 is sharp.
+2.5
+The Algebra of Subdivision
+Now we explore some of the algebraic consequences of subdivision, determining
+what subdivision does to the homology groups. We prove that if K is any

@@ -1,0 +1,58 @@
+Cohomology
+309
+If cp is a p-dimensional cochain, and cp is a p-dimensional chain, we com-
+monly use the dual pairing notation ⟨cp, cp⟩to denote the value of cp on cp,
+rather than the more familiar functional notation cp(cp). In this notation, the
+definition of the coboundary operator becomes
+⟨δcp, dp+1⟩= ⟨cp, ∂dp+1⟩.
+The definition of cohomology is, as promised, highly algebraic in nature.
+Is it at all possible to picture the groups involved geometrically? The answer
+is a qualified “yes,” as we now observe.
+Recall that the group Cp(K) of p-chains is free abelian. It has a standard
+basis obtained by orienting the p-simplices of K arbitrarily and using the
+corresponding elementary chains as a basis. Let {σα}α∈J be this collection
+of oriented simplices. Then the elements of Cp(K) are represented as finite
+linear combinations  nασα of elementary chains σα. Now an element cp of
+Hom (Cp(K), G) is determined by its value gα on each basis element σα, and
+these values may be assigned arbitrarily. There is no requirement that cp
+vanish on all but finitely many σα.
+Suppose we let σ∗
+α denote the elementary cochain, with Z coefficients,
+whose value is 1 on the basis element σα and 0 on all other basis elements.
+Then, for g ∈G, we let g σ∗
+α denote the cochain whose value is g on σα and 0
+on all other basis elements. Using this notation, we often represent Cp by the
+possibly infinite formal sum
+cp =  gα σ∗
+α .
+Why is this representation of cp reasonable? We justify it as follows.
+Suppose we let Cα denote the infinite cyclic subgroup of Cp(K) generated
+by σα. Then Cp(K) = 
+αCα, and as noted earlier in part (a) of Theo-
+rem 5.2.7,
+Cp(K; G) = Hom (
+αCα, G) ∼= 
+α Hom (Cα, G) .
+(∗)
+The latter group is a direct product of copies of G. Under the isomorphism (∗),
+the cochain cp corresponds to the element (gα σ∗
+α)α∈J of the direct product.
+Instead of using tuple notation to represent this element of the direct product,
+we shall use the formal sum notation.
+This notation is especially convenient when it comes to computing the
+coboundary operator δ. We claim that, if cp =  gα σ∗
+α, then
+δcp =
+
+gα(δσ∗
+α) ,
+(∗∗)
+just as if we had an honest sum—rather than a formal one. To verify this
+equation, let us orient each (p + 1)-simplex τ and show that the right-hand
+side of (∗∗) makes sense and that both sides of (∗∗) agree when evaluated on
+τ. Suppose that
+∂τ =
+p+1
+
+i=0
+ϵiσαi ,

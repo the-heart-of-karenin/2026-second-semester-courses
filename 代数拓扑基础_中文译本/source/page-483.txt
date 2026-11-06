@@ -1,0 +1,37 @@
+468
+Elements of Algebraic Topology
+2. Let X be a compact, triangulable, orientable manifold with ith
+betti number βi(X). Recall that Definition 2.10.2 gave the following
+equation for the Euler number of X:
+χ(X) =
+
+(−1)iβi(X)
+(a) Show that if dim X is odd, then χ(X) = 0.
+(b) If dim X equals 2k, then express χ(X) in terms of βi for i ≤k.
+(c) Give applications to tangent vector fields. [See Exercise 5 in
+Section 2.10.]
+3. Let X be a homology n-manifold (not necessarily compact) that is
+triangulated by a locally finite complex.
+(a) Prove Theorem 8.5.8(1).
+(b) Show that if X is connected, then X is a pseudo n-manifold.
+(c) Prove Theorem 8.5.8(2). Conclude that orientability of X de-
+pends only on the underlying topological space, not on the par-
+ticular triangulation.
+4. Show that the Klein bottle is not orientable.
+5. Look up the term “cross cap” in a topology text or on the Internet.
+Show that the cross cap is not orientable.
+8.6
+Cap Products
+To present our second proof of Poincar´e duality, we must first treat a topic
+that is purely algebraic in nature. What we shall describe here is a certain
+operation called the cap product of a cohomology class and a homology class.
+Its definition is formally similar to the definition of cup product that we dis-
+cussed in Section 5.9. Its usefulness, which lies in its connection with the
+duality theorems, will become apparent shortly.
+Throughout this section, let R be a commutative ring with unit element.
+Definition 8.6.1 Let X be a topological space. We define a map
+Sp(X; R) ⊗Sp+q(X; R) ⌢
+−→Sq(X; R)
+as follows: If T : ∆p+q →X is a singular simplex on X, and if α ∈R, then
+cp ⌢(T ⊗α) = T ◦I(ϵ0, . . . , ϵq) ⊗α · ⟨cp, T ◦I(ϵq, . . . , ϵp+q)⟩.
+This chain is called the cap product of the cochain cp and the chain T ⊗α.

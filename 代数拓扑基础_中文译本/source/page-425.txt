@@ -1,0 +1,47 @@
+410
+Elements of Algebraic Topology
+EXERCISE
+1. Prove Theorem 7.6.5.
+2. Is there a functorial version of Theorem 7.6.2? If so, can you prove
+it?
+7.7
+Tensor Products of Chain Complexes
+In this section, we introduce an algebraic device that will be used for studying
+the homology of a product space. We define the tensor product of two chain
+complexes, and show how to make it into a chain complex.
+Definition 7.7.1 Let C = {Cp, ∂} and C′ = {C′
+p, ∂′} be chain complexes. We
+define their tensor product C ⊗C′ to be the chain complex whose chain group
+in dimension M is defined by
+(C ⊗C′)m = 
+p+q=mCp ⊗C′
+q ,
+and whose boundary operator ¯∂is given by the equation
+¯∂(cp ⊗c′
+q) = ∂cp ⊗c′
+q + (−1)pcp ⊗∂′c′
+q .
+Formally, we define ¯∂as a function on the set Cp×C′
+q; then, since it is bilinear,
+it induces a homomorphism of the tensor product.
+It is straightforward to check that ¯∂2 = 0. It is also straightforward to
+check that if ϕ : C →D and ϕ′ : C′ →D′ are chain maps, then so is ϕ ⊗ϕ′.
+Note that if C and C′ are free chain complexes, then so is C ⊗C′. Indeed,
+if {ap
+α} is a basis for Cp and {bq
+β} is a basis for C′
+q, then the collection
+{ap
+α ⊗bq
+β : p + q = m}
+is a basis for the group (C ⊗C′)m.
+Definition 7.7.2 Let {C, ϵ} and {C′, ϵ′} be augmented chain complexes. We
+augment C ⊗C′ by the homomorphism ¯ϵ that is defined to be ϵ⊗ϵ′ followed by
+the isomorphism mapping Z ⊗Z to Z. Thus the following diagram commutes:
+C0 ⊗C′
+0
+Z
+Z ⊗Z
+ϵ ⊗ϵ′
+¯ϵ
+∼=

@@ -1,0 +1,153 @@
+viii
+Contents
+3.5
+The Eilenberg–Steenrod Axioms
+. . . . . . . . . . . . . . . .
+169
+3.6
+The Axioms for Simplicial Theory
+. . . . . . . . . . . . . . .
+174
+3.7
+∗Categories and Functors
+. . . . . . . . . . . . . . . . . . . .
+180
+4
+Singular Homology Theory
+187
+4.1
+Introduction
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+187
+4.2
+The Singular Homology Groups
+. . . . . . . . . . . . . . . .
+187
+4.3
+The Axioms for Singular Theory
+. . . . . . . . . . . . . . . .
+195
+4.4
+Excision in Singular Homology
+. . . . . . . . . . . . . . . . .
+203
+4.5
+∗Acyclic Models
+. . . . . . . . . . . . . . . . . . . . . . . . .
+211
+4.6
+Mayer–Vietoris Sequences . . . . . . . . . . . . . . . . . . . .
+217
+4.7
+The Isomorphism between Simplicial and Singular Homology
+221
+4.8
+∗Application: Local Homology Groups and Manifolds
+. . . .
+227
+4.9
+∗Application: The Jordan Curve Theorem . . . . . . . . . . .
+235
+4.10 The Fundamental Group
+. . . . . . . . . . . . . . . . . . . .
+244
+4.11 More on Quotient Spaces
+. . . . . . . . . . . . . . . . . . . .
+261
+4.12 CW Complexes
+. . . . . . . . . . . . . . . . . . . . . . . . .
+267
+4.13 The Homology of CW Complexes
+. . . . . . . . . . . . . . .
+276
+4.14 ∗Application: Projective Spaces and Lens Spaces . . . . . . .
+287
+5
+Cohomology
+301
+5.1
+Introduction
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+301
+5.2
+The Hom Functor
+. . . . . . . . . . . . . . . . . . . . . . . .
+301
+5.3
+Simplicial Cohomology Groups . . . . . . . . . . . . . . . . .
+308
+5.4
+Relative Cohomology
+. . . . . . . . . . . . . . . . . . . . . .
+315
+5.5
+Cohomology Theory . . . . . . . . . . . . . . . . . . . . . . .
+322
+5.6
+The Cohomology of Free Chain Complexes
+. . . . . . . . . .
+331
+5.7
+∗Chain Equivalences in Free Chain Complexes
+. . . . . . . .
+341
+5.8
+The Cohomology of CW Complexes
+. . . . . . . . . . . . . .
+343
+5.9
+Cup Products
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+349
+5.10 Cohomology Rings of Surfaces
+. . . . . . . . . . . . . . . . .
+356
+6
+Homology with Coefficients
+366
+6.1
+Introduction
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+366
+6.2
+Tensor Products
+. . . . . . . . . . . . . . . . . . . . . . . . .
+366
+6.3
+Homology with Arbitrary Coefficients
+. . . . . . . . . . . . .
+375
+7
+Homological Algebra
+381
+7.1
+Introduction
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+381
+7.2
+The Ext Functor
+. . . . . . . . . . . . . . . . . . . . . . . .
+382
+7.3
+The Universal Coefficient Theorem
+. . . . . . . . . . . . . .
+389
+7.4
+Torsion Products . . . . . . . . . . . . . . . . . . . . . . . . .
+397
+7.5
+The Universal Coefficient Theorem for Homology
+. . . . . .
+403
+7.6
+∗Other Universal Coefficient Theorems
+. . . . . . . . . . . .
+405
+7.7
+Tensor Products of Chain Complexes
+. . . . . . . . . . . . .
+410
+7.8
+The K¨unneth Theorem
+. . . . . . . . . . . . . . . . . . . . .
+414

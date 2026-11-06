@@ -1,0 +1,54 @@
+Duality in Manifolds
+467
+We now show that the torsion subgroup Tn−1(X) of Hn−1(X) is isomorphic
+to Z/2. Since Hn(X) = 0, it follows from the universal coefficient theorem
+that
+Hn−1(X) ∗G ∼= Hn(X; G) ∼= ker(ϕ2) .
+Hence
+Tn−1(X) ∗G ∼= ker(ϕ2) ∼= Z/2 ∗G .
+In particular,
+Tn−1(X) ∗Z/m ∼=
+
+0
+if
+m is odd ,
+Z/2
+if
+m is even .
+It follows that Tn−1 has no odd torsion coefficient 2p + 1 [set m = 2p + 1 in
+this expression to obtain a contradiction]. Also it has only one even torsion
+coefficient (set m = 2). And this torsion coefficient is not of the form 2k for
+k > 1 [set m = 2k]. Hence Tn−1(X) ∼= Z/2.
+Finally, it follows from the universal coefficient theorem for cohomology
+that
+Hn(X; G) ∼= Ext(Hn−1(X), G) ∼= G/2G .
+Definition 8.5.7 Let X be a homology n-manifold [not necessarily compact]
+that is triangulated by a locally finite complex. We say that X is orientable
+if it is possible to orient the n-simplices σi of X so that the [possibly infinite]
+chain  σi is a cycle.
+Theorem 8.5.8 (Poincar´e duality—the non-compact case) Let X be
+a homology n-manifold that is triangulated by a locally finite complex.
+(1) For all p, there are isomorphisms
+Hp
+c (X; Z/2) ∼= Hn−p(X; Z/2)
+and
+Hp(X; Z/2) ∼= H∞
+n−p(X; Z/2) ,
+where Hp
+c denotes cohomology with compact support [see Defini-
+tion 5.5.4] and H∞
+n−p denotes homology based on infinite chains [see
+Definition 1.6.14].
+(2) If X is orientable, then for all p there are isomorphisms
+Hp
+c (X; G) ∼= Hn−p(X; G)
+and
+Hp(X; G) ∼= H∞
+n−p(X; G) ,
+where G is an arbitrary coefficient group.
+EXERCISES
+1. Let M and N be compact, connected, triangulable n-manifolds,
+and let f : M →N. Show that if M is orientable and N is non-
+orientable, then
+f∗: Hn(M; Z/2) →Hn(N : Z/2)
+is trivial.

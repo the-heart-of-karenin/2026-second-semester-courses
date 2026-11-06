@@ -1,0 +1,39 @@
+496
+Elements of Algebraic Topology
+The condition stated in this theorem is in fact both necessary and suffi-
+cient for L(n, k) and L(n, ℓ) to have the same homotopy type. The sufficiency
+is a theorem of J. H. C. Whitehead. Thus the lens spaces are a rare class of
+spaces for which both the homeomorphism and the homotopy type classifica-
+tion problems have been solved. [See Theorem 4.14.15 and Remark 4.14.16.]
+At one time, there was a classical conjecture, due to Hurewicz, to the
+effect that two compact manifolds having the same homotopy type should be
+homeomorphic as well. This conjecture is certainly true for 2-manifolds. But
+the lens spaces L(7, k) provide a counterexample in dimension 3. The spaces
+L(7, 1) and L(7, 2) have the same homotopy type, since 2 ≡(3)2 · 1 (mod 7).
+But they are not homeomorphic [see Theorem 4.14.15 and Remark 4.14.16],
+since
+2̸ ≡±1 (mod 7)
+and
+2 · 1̸ ≡±1 (mod 7) .
+Exercise 3 below shows that the cohomology ring H∗(L(n, k); Z/n) is not
+by itself
+adequate to classify the lens spaces up to homotopy type. One
+needs also the Bockstein operation β∗. The Bockstein operation is a particular
+example of what is called a “cohomology operation.”
+Definition 8.9.8 A cohomology operation θ of type (p, q; G, G′) is a set map
+θ : Hp(X, A; G) →Hq(X, A; G; ) ,
+defined for all topological pairs (X, A) that is natural with respect to homo-
+morphisms induced by continuous maps.
+The existence of cohomology operations provides the cohomology of a space
+with a much richer structure than that of a ring. Frequently, as was the case
+with lens spaces, these operations give one valuable information about the
+spaces in question.
+EXERCISES
+1. Show that if f : L(n, k) →L(n, ℓ) is a map of degree d, then
+kd ≡±a2ℓ(mod n)
+for some integer a.
+2. Using the results stated here, Theorem 4.14.15, and Remark 4.14.16,
+classify up to homeomorphism and up to homotopy type the man-
+ifolds L(7, k) for k = 1, 2, . . . , 6 and the manifolds L(10, k) for k
+relatively prime to 10.
+3. Let X = L(n, k).

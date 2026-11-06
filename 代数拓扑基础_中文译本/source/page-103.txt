@@ -1,0 +1,38 @@
+88
+Elements of Algebraic Topology
+(b) There exists an augmentation-preserving chain map from C(K)
+to C(L) that is carried by Φ.
+Proof: Part (a) of the theorem is proved by copying the proof of Theo-
+rem 1.13.9; one simply replaces the subcomplex L(σ) by the subcomplex Φ(σ)
+throughout.
+To prove (b), we proceed as follows: For each vertex v of K, define ϕ(v)
+to be a 0-chain c of Φ(v) such that ϵ(c) = 1. This we can do because Φ(v) is
+nonempty, so ϵ : Φ(v) →Z is surjective. [In fact, we can simply choose ϕ(v)
+to be a vertex of Φ(v).] Then ϕ preserves augmentation, and
+∂ϕ(v) = 0 = ϕ(∂v) .
+Let σ = [v, w] be an oriented 1-simplex of K. The chain c = ϕ(∂σ) is
+well-defined because ∂σ is a 0-chain and ϕ has been defined in dimension 0.
+Furthermore, c is carried by Φ(σ); for ϕ(∂σ) is carried by Φ(v) and Φ(w),
+both of which are contained in Φ(σ) by (2). Finally,
+ϵ(c) = ϵϕ(∂σ) = ϵ(∂σ) = 0 ,
+because ϕ preserves augmentation. Hence c represents an element of H0(Φ(σ)).
+Because Φ(σ) is acyclic [by (1)], we can choose a 1-chain carried by Φ(σ) whose
+boundary is c. We denote this 1-chain by ϕ(σ); then
+∂ϕ(σ) = c = ϕ(∂σ) .
+For the induction step, let p > 1. Assume that if dim s < p, then ϕ(s) is defined
+and ∂ϕ(s) −ϕ∂(s). Let σ be an oriented simplex of dimension p; we seek to
+define ϕ(σ). The chain c = ϕ(∂σ) is a well-defined p −1 chain. It is carried
+by Φ(σ), since Φ(∂σ) is carried by the union of the complexes Φ(si), where si
+ranges over the p −1 faces of σ, and each of these complexes is contained in
+Φ(σ). Furthermore, c is a cycle since
+∂c = ∂ϕ(∂σ) = ϕ∂(∂σ) = 0 .
+Here we apply the induction hypothesis to the p −1 chain ∂σ. Since Φ(σ)
+is acyclic, we can choose ϕ(σ) to be a p-chain carried by Φ(σ) such that
+∂ϕ(σ) = c. Then ∂ϕ(σ) = ϕ∂(σ) as desired.
+The theorem follows by induction.
+With this proof as motivation, we now formulate an even more general
+version of this theorem. In this form, all geometry disappears and only algebra
+remains!
+Definition 1.14.11 Let C = {Cp, ∂p} be a chain complex. A subchain com-
+plex D of C is a chain complex whose pth chain group is a subgroup of Cp,
+and whose boundary operator in each dimension p is the restriction of ∂p.

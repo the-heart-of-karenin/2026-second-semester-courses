@@ -1,0 +1,96 @@
+Index of Notation
+547
+f∗: Hp(K) →Hp(L)
+homology homomorphism induced
+by simplicial map f
+74
+i : X →X or iX
+identity map (appears in many contexts)
+74
+D : Cp(K) →Cp+1(L)
+chain homotopy between simplicial maps
+78
+f# : Cp(K, K0) →Cp(L, L0)
+relative chain map induced by simplicial map f
+81
+f∗: Hp(K, K0) →Hp(L, L0)
+relative homology homomorphism induced
+by simplicial map f
+81
+D : Cp(K, K0) →Cp+1(L, L0)
+chain homotopy between simplicial maps of pairs
+82
+C = {Cp, ∂p}
+chain complex
+84
+Cp
+group in chain complex
+84
+∂p : Cp →Cp−1
+boundary operator in chain complex
+84
+Hp(C)
+homology group of chain complex
+84
+ϵ : C0 →Z
+augmentation for chain complex
+84
+Hi({C, ϵ})
+reduced homology group of chain complex
+84
+Hi(C)
+reduced homology group of chain complex
+84
+C(K, K0) = {Cp(K, K0), ∂p}
+oriented chain complex of simplicial pair
+85
+C(K)
+simplicial chain complex
+85
+Dp : Cp →C′
+p+1
+chain homotopy between chain maps
+85
+Φ
+simplicial acyclic carrier
+87
+(v0, v1, . . . , vp)
+ordered simplex with vertices v0, v1, . . . , vp
+89
+C′
+p(K)
+ordered chain group
+89
+∂′
+p : C′
+p(K) →C′
+p−1(K)
+boundary operator for ordered chain group
+89
+C′(K) = {C′
+p(K), ∂′
+p}
+ordered chain complex
+90
+Hi(C′(K))
+ordered homology group
+90
+Hi(C′(K, K0))
+relative ordered homology group
+90
+ϵ′ : C′
+0(K) →Z
+augmentation for ordered chain complex
+90
+Hi(C′(K))
+reduced ordered homology group
+90
+f ′
+# : C′(K) →C′(L) chain map of ordered chain complexes
+induced by simplicial map
+91
+f ′
+# : C′(K, K0) →C′(L, L0)
+chain map of ordered chain complexes
+induced by simplicial map of pairs
+91

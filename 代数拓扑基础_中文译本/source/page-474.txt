@@ -1,0 +1,40 @@
+Duality in Manifolds
+459
+Because the local homology of X at σ is infinite cyclic in dimension n and
+vanishes otherwise, we see that Lk(σ, sd X) is a homology (n −1)-sphere by
+Lemma 8.3.2. Therefore ˙D(σ) is a homology n −k −1 sphere.
+Since D(σ) is acyclic [being a cone], the long exact homology sequence
+gives us an isomorphism
+Hi(D(σ), ˙D(σ)) ∼= Hi−1( ˙D(σ)) .
+We conclude that (D(σ), ˙D(σ)) has the homology of an (n −k)-cell modulo
+its boundary.
+Definition 8.4.7 Let X be a locally finite complex that is a homology n-
+manifold.2 Then the preceding theorem applies to each simplex σ of X. The
+collection of dual blocks D(σ) will be called the dual block decomposition of
+X. The union of the blocks of dimension at most p will be denoted by Xp and
+called the dual p-skeleton of X. The dual chain complex D(X) of X is defined
+by letting its chain group in dimension p be the group
+Dp(X) = Hp(Xp, Xp−1) .
+Its boundary operator is the homomorphism ∂∗in the exact sequence of the
+triple (Xp, Xp−1, Xp−2).
+Being the polytope of a subcomplex of sd X, the dual p-skeleton Xp will
+sometimes be treated as a complex rather than as a space. In particular, we
+shall for convenience use simplicial homology in the definition of Dp(X).
+For all practical purposes, the dual chain complex will play the same role
+in computing homology and cohomology as the cellular chain complex did for
+a CW complex. Repeating the pattern of Section 4.13, we prove the following:
+Theorem 8.4.8 Let X be a locally finite complex that is a homology n-
+manifold. Let Xp be the dual p-skeleton of X. Let D(X) be the dual chain
+complex of X.
+(a) The group Hi(Xp, Xp−1) vanishes for i̸ = p and is a free abelian
+group for i = p. A basis when i = p is obtained by choosing genera-
+tors for the groups Hp(D(σ), ˙D(σ)) as D(σ) ranges over all p-blocks
+of X, and taking their images under the homomorphisms induced
+by inclusion in Hp(Xp, Xp−1).
+(b) The dual chain complex D(X) can be used to compute the ho-
+mology of X. Indeed, Dp(X) equals the subgroup of Cp(sd X) con-
+sisting of those chains carried by X and whose boundaries are also
+carried by Xp−1. The inclusion map Dp(X) →Cp(sd X) induces
+a homology isomorphism. Therefore it also induces homology and
+cohomology isomorphisms with arbitrary coefficients.
+2In fact every complex that is a homology n-manifold is locally finite.

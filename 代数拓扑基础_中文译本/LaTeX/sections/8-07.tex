@@ -1,0 +1,117 @@
+\section{Poincaré 对偶的第二种证明}
+\sourcepage{474}
+现在用帽积构造对偶同构，给出 Poincaré 对偶的第二种证明。这种方法有若干有趣推论，包括对偶同构的自然性，以及它不依赖于三角剖分的证明。
+
+\entry{定义}{8.7.1}设 $X$ 是紧致、可三角剖分的同调 $n$ 维流形，这里不指定具体剖分。设 $X_i$ 为其连通分支。若可定向，则 $H_n(X_i)$ 为无限循环群，称一个生成元 $\Gamma^{(i)}$ 为该分支的\emph{定向类}。这些类之和在包含诱导的同构
+\[\bigoplus_i H_n(X_i)\cong H_n(X)\]
+下的像称为 $X$ 的定向类，记为 $\Gamma$。若不要求可定向，取每个 $H_n(X_i;\Z/2)$ 中唯一的非零元，其和的像记作 $\Gamma_{(2)}$，称为 $\Z/2$ 上的定向类。
+
+若指定三角剖分，则 $\Gamma^{(i)}$ 由适当定向的该分支全部顶维单形之和代表；$\Gamma_{(2)}$ 则由所有顶维单形取系数 $[1]$ 的和代表。
+
+\entry{定理}{8.7.2（Poincaré 对偶——第二种形式）}设 $X$ 是紧致、可三角剖分的同调 $n$ 维流形。若可定向，$\Gamma\in H_n(X)$ 为定向类，则对任意 $G$，
+\[\frown\Gamma:H^p(X;G)\longrightarrow H_{n-p}(X;G)\]
+为同构。无论是否可定向，
+\[\frown\Gamma_{(2)}:H^p(X;\Z/2)\longrightarrow H_{n-p}(X;\Z/2)\]
+均为同构。
+
+\sourcepage{475}
+\textbf{证明：}思路仍是选取剖分、作对偶块分解，构造 $C^p(X)$ 与 $\mathcal D_{n-p}(X)$ 的同构，使之与上边缘、边缘对应。这次借助帽积公式构造。
+
+第一步：先证一个初等事实。若 $g:\operatorname{sd}K\to K$ 是恒等映射的单纯逼近，则对每个单形 $\sigma$，$\operatorname{sd}\sigma$ 中恰有一个与 $\sigma$ 同维的单形被映满 $\sigma$，其余都映到真面上。注意重心位于内部，所以 $g(\widehat\sigma)$ 必是 $\sigma$ 的一个顶点。
+
+按维数归纳。顶点情形显然。对边 $v_0v_1$，两个端点固定，重心映到其中一个端点，因此一条重分后边被压缩，另一条映满原边。一般设 $\sigma=v_0\cdots v_k$。归纳假设说明每个余维一面 $s_i$ 内恰有一个 $(k-1)$ 维单形 $t_i$ 映满 $s_i$。因此所有 $k$ 维小单形中，只有形如 $\widehat\sigma*t_i$ 的单形可能不被压缩。若 $g(\widehat\sigma)=v_i$，则 $\widehat\sigma*t_i$ 映满 $\sigma$，其他 $\widehat\sigma*t_j$ 则映入真面。结论得证。
+
+第二步：另一个初等事实是，重心重分链映射把有向 $p$ 维单形 $\sigma$ 映为其中全部 $p$ 维小单形适当定向后的和。零维时 $\operatorname{sd}(v)=v$。一般地，$\partial\sigma$ 是各余维一面的有向和，归纳假设说明 $\operatorname{sd}(\partial\sigma)$ 是边界中全部 $(p-1)$ 维小单形的有向和。因此
+\[\operatorname{sd}\sigma=[\widehat\sigma,\operatorname{sd}(\partial\sigma)]\]
+正是全部 $p$ 维小单形的有向和。
+
+第三步：给 $X$ 选定剖分，令 $\gamma$ 为代表 $\Gamma$ 的定向闭链。重分复形的顶点采用定义 8.4.1 的标准偏序，单形据此定向；原复形其他单形任意定向。由第二步，$\operatorname{sd}\gamma$ 为全部重分后 $n$ 维单形以系数 $\pm1$ 组成的闭链，所以是重分后的定向闭链。
+
+\sourcepage{476}
+选取恒等映射的单纯逼近 $g:\operatorname{sd}X\to X$。考虑复合
+\[
+C^p(X)\xrightarrow{g^\#}C^p(\operatorname{sd}X)
+\xrightarrow{\frown\operatorname{sd}\gamma}C_{n-p}(\operatorname{sd}X).
+\]
+将证明其像恰为子群 $\mathcal D_{n-p}(X)$，且给出同构，记为 $\psi$。此时包含 $j:\mathcal D(X)\to C(\operatorname{sd}X)$ 满足
+\[j\psi(c^p)=g^\#c^p\frown\operatorname{sd}\gamma.\]
+
+先证明：对有向 $p$ 维单形 $\sigma$，右端是其对偶块中全部 $(n-p)$ 维单形以系数 $\pm1$ 组成的和。由第一步，$\operatorname{sd}\sigma$ 中恰有一个 $p$ 维单形 $t$ 映满 $\sigma$。写
+\[t=[\widehat s_p,\ldots,\widehat s_0],\qquad s_p=\sigma,\quad\dim s_i=i.\]
+重分后的顶维单形形如
+\[\tau=[\widehat\sigma_n,\ldots,\widehat\sigma_0],\qquad\dim\sigma_i=i.\]
+帽积只读取 $\tau$ 的后 $p$ 维面。因此只有其后面等于 $t$ 时，$g^\#(\sigma^*)\frown\tau$ 才可能非零，此时结果差一个符号等于
+\[[\widehat\sigma_n,\ldots,\widehat\sigma_p],\qquad\sigma_p=\sigma.\]
+这些恰是对偶闭块的所有 $(n-p)$ 维单形。\translatornote{原文在此直接写 $g^\#(\sigma^*)=\pm t^*$；严格说只需在顶维单形的上述后面上成立，帽积计算只涉及这些面。}
+
+\sourcepage{477}
+再证明这个链是 $(\overline D(\sigma),\dot D(\sigma))$ 的基本闭链。它非零且所有非零系数为 $\pm1$，所以不是其他链的非平凡整数倍，只需证明边界承载于 $\dot D(\sigma)$。由边缘公式，
+\[
+\partial(g^\#\sigma^*\frown\operatorname{sd}\gamma)
+=(-1)^{n-p}g^\#(\delta\sigma^*)\frown\operatorname{sd}\gamma.
+\tag{*}
+\]
+而 $\delta\sigma^*$ 是以 $\sigma$ 为面的 $(p+1)$ 维单形的对偶上链的带符号和。由刚证明的结果，各对应帽积承载于这些单形的对偶块，均位于 $\dot D(\sigma)$，故结论成立。
+
+第四步：于是同构 $\psi:C^p(X)\to\mathcal D_{n-p}(X)$ 已构造出来，每个基元映到相应块的基本闭链。它与第一种证明的 $\varphi$ 相似，但仅在差一个符号的意义下交换：
+\[\partial\psi(c^p)=(-1)^{n-p}\psi(\delta c^p).\]
+符号不影响上闭链群与上边界群的对应，所以仍诱导 $H^p(X)\cong H_{n-p}(\mathcal D(X))$。事实上它与 $\varphi$ 仅差依赖于维数的符号，见习题 1。
+
+包含 $\mathcal D(X)\to C(\operatorname{sd}X)$ 诱导同调同构，因此复合
+\[H^p(X)\xrightarrow{g^*}H^p(\operatorname{sd}X)
+\xrightarrow{\frown\{\operatorname{sd}\gamma\}}H_{n-p}(\operatorname{sd}X)\]
+为同构。把重分前后的同调通过底层空间或奇异理论作标准等同，由于 $g$ 逼近恒等映射，其诱导同态为恒等，于是这一同构就是 $\frown\Gamma$。
+
+\sourcepage{478}
+第五步：任意系数时，复合
+\[C^p(X)\otimes G\cong C^p(X;G)\xrightarrow{g^\#}C^p(\operatorname{sd}X;G)
+\xrightarrow{\frown\operatorname{sd}\gamma}\mathcal D_{n-p}(X)\otimes G\]
+等于整数同构 $\psi$ 与 $i_G$ 的张量积，故仍为同构。
+
+第六步：若不要求可定向，把上述所有系数模 $2$ 即可。第一、二步不变；第三步给出对偶块模边界的唯一非零 $\Z/2$ 系数闭链；第四步因不涉及符号而更简单。\hfill$\square$
+
+证明虽始终使用单纯理论，但单纯与奇异理论之间的同构保持帽积，故结论也对奇异理论成立。特别地，同构 $\frown\Gamma$ 只依赖于同调类 $\Gamma$，与具体剖分无关。
+
+下一定理直接来自帽积的自然性，说明对偶同构在连续映射下的行为。
+
+\entry{定理}{8.7.3}设 $X,Y$ 是紧致连通、可三角剖分、可定向的同调 $n$ 维流形，定向类分别为 $\Gamma_X,\Gamma_Y$。对 $f:X\to Y$，令 $d\in\Z$ 满足 $f_*\Gamma_X=d\Gamma_Y$。则
+\[f_*(f^*\alpha\frown\Gamma_X)=\alpha\frown d\Gamma_Y.\]
+即下图交换：
+\[
+\begin{array}{ccc}
+H^p(X;G)&\xrightarrow{\frown\Gamma_X}&H_{n-p}(X;G)\\
+\uparrow f^*&&\downarrow f_*\\
+H^p(Y;G)&\xrightarrow{\frown d\Gamma_Y}&H_{n-p}(Y;G).
+\end{array}
+\]
+特别地，若 $d=\pm1$，则 $f^*$ 为单射、$f_*$ 为满射。对 $G=\Z/2$，不要求可定向也有相应结论。\translatornote{原文图中次数下标不统一，且 $f^*$ 的箭头方向误置；这里按帽积自然性写出。}
+
+\entry{定义}{8.7.4}整数 $d$ 称为 $f$ 相对于所选定向类的\emph{度}，记作 $d(f)$。因为定向类仅确定到符号，度也仅确定到符号。若 $X=Y$ 且两边选同一定向类，度就唯一确定。
+
+帽积形式的对偶远不只给出上述自然性。定理 8.7.2 的表述即使对不可三角剖分的空间也有意义，只要能够定义其定向类。这提示可以在奇异理论中用帽积，对任意紧致拓扑流形证明 Poincaré 对偶，而不假定可三角剖分。事实确实如此，读者可参阅 [Dol95]，或 [GH81]、[Vic94]、[Spa94]。
+
+\sourcepage{479--480}
+\subsection*{习题}
+\begin{enumerate}
+\item 给定定向闭链 $\gamma$，按定理 8.7.2 的证明构造 $\psi$。
+\begin{enumerate}[label=(\alph*)]
+\item 令 $\varphi(c^p)=(-1)^{a(p)}\psi(c^p)$，其中对所有整数 $k$，
+\[a(4k+n)=a(4k+n+1)=0,\qquad a(4k+n+2)=a(4k+n+3)=1.\]
+证明 $\varphi\delta=\partial\varphi$。
+\item 若顶维单形 $\sigma$ 按其在 $\gamma$ 中的定向取向，证明 $\psi(\sigma^*)=\widehat\sigma$。〔提示：
+\[\epsilon\psi(\sigma^*)=\epsilon g_\#\psi(\sigma^*)=\epsilon(\sigma^*\frown\gamma).\]〕
+\item 得出 (a) 中的同态与定理 8.5.2 证明中的同态相同。
+\end{enumerate}
+\item 设 $X,Y$ 是紧致连通、可三角剖分的同调 $n$ 维流形，$f:X\to Y$。
+\begin{enumerate}[label=(\alph*)]
+\item 若均可定向且 $f$ 的度非零，证明 $\beta_i(X)\ge\beta_i(Y)$。
+\item 若 $f_*:H_n(X;\Z/2)\to H_n(Y;\Z/2)$ 非零，对 $H_i(X;\Z/2)$ 与 $H_i(Y;\Z/2)$ 能得出什么结论？
+\end{enumerate}
+\item 令 $X_n$ 为 $n$ 个环面的连通和，$X_0=S^2$。证明存在非零度映射 $X_n\to X_m$，当且仅当 $n\ge m$。
+\item $X_n$ 如上，令 $Y_n$ 为 $n$ 个射影平面的连通和，$n\ge1$。考虑条件：$f_*$ 在 $\Z/2$ 系数的二维同调上非零。
+\begin{enumerate}[label=(\alph*)]
+\item 证明存在满足条件的 $Y_n\to Y_m$，当且仅当 $n\ge m$。
+\item 证明不存在满足条件的 $X_n\to Y_m$。
+\end{enumerate}
+反方向 $Y_m\to X_n$ 的映射将在下一节习题中讨论。
+\end{enumerate}

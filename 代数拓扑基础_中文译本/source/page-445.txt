@@ -1,0 +1,38 @@
+430
+Elements of Algebraic Topology
+Definition 7.10.4 Let X and Y be topological spaces. Suppose that m =
+p + q. We define the cohomology cross product
+× : Hp(X; R) ⊗Hq(Y ; R) →Hm(X × Y ; R)
+to be the composite
+Hp(X; R) ⊗Hq(Y ; R) Θ
+−→Hm(S(X) ⊗S(Y ); R) ν∗
+−→Hm(X × Y ; R) ,
+where ν is the Eilenberg–Zilber chain equivalence of Theorem 7.9.5. The image
+of αp ⊗βq under this homomorphism is denoted αp × βq.
+Let us note that, as was the case with the cup product, the homomorphism
+Θ can be defined for coefficients other than R. We give one such generalization
+in the following definition:
+Definition 7.10.5 Let X and Y be topological spaces, and let G be an
+abelian group. Suppose that m = p + q. A cohomology cross product
+× : Hp(X) ⊗Hq(Y ; G) →Hm(X × Y ; G)
+is defined as the composite ν∗◦Θ when Θ is induced by the chain map
+⟨θ(ϕp ⊗ψq), cr ⊗c′
+s⟩= ⟨ϕp, cr⟩· ⟨ψq, c′
+s⟩,
+where ϕp ∈Hom (Cp, Z) and ψq ∈Hom (Cq, G).
+One should also note that both Hom (Cp, R) and Hom (C′
+q, R) have R-
+module structures. From the definition of θ, it follows that
+θ(αϕ ⊗ψ) = θ(ϕ ⊗αψ) = αθ(ϕ ⊗ψ) .
+This tells us that θ induces a mapping
+θ : Hom (Cp, R) ⊗R Hom (C′
+q, R) →Hom ((C ⊗C′)m, R)
+that is a homomorphism of R-modules. The case of particular interest to us
+occurs when R is a field F. In this case, θ is a linear transformation of vector
+spaces.
+In both these cases, one has an induced homomorphism Θ on the coho-
+mology level, and thus a cohomology cross product operation as well. In one
+case, the cross product is a homomorphism
+× : Hp(X) ⊗Hq(Y ; G) →Hm(X × Y ; G) .
+In the other case, it is an R-module homomorphism
+× : Hp(X; R) ⊗R Hq(Y ; R) →Hm(X × Y ; R) .

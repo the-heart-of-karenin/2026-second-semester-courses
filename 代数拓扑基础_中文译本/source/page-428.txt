@@ -1,0 +1,41 @@
+Homological Algebra
+413
+where Zm−1 denotes ker ϵ if m = 1. We define ϕ(σp ⊗τ q) to be the unique
+fundamental cycle for the cell σ × τ such that
+∂ϕ(σp ⊗τ q) = cm−1 .
+Then we have ∂ϕ = ϕ¯∂, and our result is proved.
+EXERCISES
+1. (a) Show that ¯∂2 = 0.
+(b) Show that if C and C′ are augmented by ϵ and ϵ′, respectively,
+then C ⊗C′ is augmented by ¯ϵ as given in Definition 7.7.2.
+2. Let ϕ, ψ : C →D and ϕ′, ψ′ : C′ →D′ be chain maps.
+(a) Show that ϕ ⊗ϕ′ : C ⊗C′ →D ⊗D′ is a chain map.
+(b) Show that if D is a chain homotopy of ϕ to ψ, then D ⊗ϕ′ is
+a chain homotopy of ϕ ⊗ϕ′ to ψ ⊗ϕ′.
+(c) If D is a chain homotopy of ϕ′ to ψ′, find a chain homotopy of
+ψ ⊗ϕ′ to ψ ⊗ψ′.
+(d) Show that if ϕ and ϕ′ are chain equivalences, then so is ϕ ⊗ϕ′.
+3. Our formula for a boundary operator in C ⊗C′ may seem rather
+arbitrary. It is. There are other formulas that would do as well.
+Let K and L be complexes. Let ∂be a boundary operator for C(K)⊗
+C(L) such that the following hold:
+(i) If K0 and L0 are subcomplexes of K and L, respectively, then
+∂maps C(K0) ⊗C(L0) to itself.
+(ii) If v is a vertex of K and w is a vertex of L, then
+∂= ±∂K ⊗i
+on
+C1(K) ⊗C0(w) ,
+and
+∂= ±i ⊗∂L
+on
+C0(v) ⊗C1(L) .
+Assuming that X = |K| × |L| is triangulated as in Theorem 7.7.3,
+show that the chain complex {C(K) ⊗C(L), ∂} is isomorphic to the
+cellular chain complex D(X).
+4. Show that the formula
+∂(cp ⊗c′
+q) = (−1)q∂cp ⊗c′
+q + cp ⊗∂c′
+q
+defines a boundary operator for C⊗C′ that satisfies the requirements
+of Exercise 3.

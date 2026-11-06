@@ -1,0 +1,41 @@
+Duality in Manifolds
+465
+that carries ∂to the dual of δ [see Step 4 of Theorem 7.6.1], the result is an
+isomorphism
+Cp(X) ←Hom(Dn−p(X), Z)
+that commutes with δ and ∂.
+Corollary 8.5.3 Let X be a compact, triangulated homology n-manifold. If
+X is connected, then for any two n-simplices σ and σ′ of X, there is a sequence
+σ = σ0, σ1, . . . , σk = σ′
+of n-simplices of X such that σi ∩σi+1 is an (n −1) simplex of X for each i.
+Proof: Let us define σ ∼σ′ if there is such a sequence connecting them. This
+relation is clearly an equivalence relation. The sum σσi of the n-simplices in
+any one equivalence class is a cycle if its coefficient group is taken to be Z/2.
+This is because, given an (n −1)-simplex s of X, the two n-simplices of which
+it is a face are equivalent, so either both of them appear in this sum, or neither
+does. In any case, δ( σi) has coefficient [0] ∈Z/2 on s.
+We conclude that there is only one equivalence class, since otherwise X
+would have more than one non-trivial n-cycle over Z/2. This would contradict
+the fact that
+Hn(X; Z/2) ∼= H0(X; Z/2) ∼= Z/2 .
+Notice that this corollary shows that a compact connected triangulated
+homology manifold is a pseudo manifold. [See Corollary 8.3.4 and the comment
+following.]
+Corollary 8.5.4 Let X be a compact triangulated homology n-manifold. If
+X is connected, then Hn(X) ∼= Z for X orientable and Hn(X) = 0 for X
+non-orientable.
+Proof: If X is orientable, then Hn(X) ∼= H0(X) ∼= Z. Conversely, we show
+that if Hn(X)̸ = 0 then X is orientable. Orient the n-simplices of X arbitrarily.
+Suppose that z is a non-trivial n-cycle of X with integer coefficients. Now if
+σi and σi+1 are n-simplices of X with an n −1 face in common, and if z
+has coefficient m on σi, then it must have coefficient ±m on σi+1. In view of
+the preceding corollary, z must have the same coefficient, up to sign, on each
+n-simplex of X. Suppose this coefficient has absolute value m. Then dividing
+z by m gives us an orientation cycle for X.
+Corollary 8.5.5 Let X be a compact, triangulated homology n-manifold.
+Then X is orientable if and only if for each component Xi of X, we have
+Hn(Xi) ∼= Z.
+It follows that orientability of X does not depend on the triangulation of
+X.
+The following corollary depends on the universal coefficient theorems
+proved in the last chapter.

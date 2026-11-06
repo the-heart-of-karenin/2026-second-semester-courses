@@ -1,0 +1,94 @@
+Index of Notation
+549
+S(K)
+suspension of complex K
+168
+(X, A)
+pair of topological spaces
+170
+(X, A, B)
+triple of topological spaces
+173
+C
+category C
+180
+hom(X, Y )
+set of morphisms corresponding to pair
+of objects in category
+180
+g ◦f
+image of pair (f, g) under composition
+operation in category
+180
+1X ∈hom(X, X)
+identity morphism in category
+180
+1X
+identity morphism
+180
+f tr : L(W, R) →L(V, R)
+transpose of linear transformation f
+184
+R∞
+EJ, J positive integers
+188
+Z+
+positive integers
+188
+∆p
+standard p-simplex
+188
+ϵp
+pth standard basis element
+188
+T : ∆p →X
+singular simplex
+188
+Sp(X)
+singular chain group
+188
+ℓ(a0, a1, . . . , ap)
+linear singular simplex
+188
+ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp omit ϵi
+188
+∂: Sp(X) →Sp−1(X)
+singular boundary operator
+188
+S(X)
+singular chain complex
+189
+Hp(X)
+singular homology group
+189
+ϵ : S0(X) →Z
+singular augmentation
+190
+Hp(X)
+reduced singular homology groups
+190
+f# : Sp(X) →Sp(Y )
+induced singular chain map
+190
+f∗: Hp(X) →Hp(Y )
+induced singular homology homomorphism
+190
+[c, w]
+singular bracket operation
+191
+Sp(X, A)
+singular relative chain group
+195
+S(X, A)
+singular relative chain complex
+195
+Hp(X, A)
+relative singular homology group
+195
+f# : Sp(X, A) →Sp(Y, B)
+singular chain map induced by continuous map
+195
+f∗: Hp(X, A) →Hp(Y, B)
+singular homology homomorphism induced
+by continuous map
+195

@@ -1,0 +1,45 @@
+Homology Groups of a Simplicial Complex
+87
+because Dϵ(c0) = 0, and we have in dimension −1 the equation
+ϵ′(D(1)) = ϕ(1) −ψ(1)
+because both sides vanish. Thus D is a chain homotopy between the extended
+chain maps.
+Lemma 1.14.8 Let C and C′ be non-negative chain complexes. Let ϕ : C →C′
+be a chain equivalence with chain-homotopy inverse ϕ′. Suppose that C and C′
+are augmented by ϵ and ϵ′, respectively. If ϕ preserves augmentation, so does
+ϕ′. Furthermore, ϕ and ϕ′ are chain-homotopy inverses as maps of augmented
+complexes. Therefore they induce inverse isomorphisms in reduced homology.
+Proof: If D′ is a chain homotopy between ϕ ◦ϕ′ and the identity, then in
+dimension 0,
+∂′D′c′
+0 = ϕ ϕ′(c′
+0) −c′
+0 ,
+so
+0 = ϵ′(∂′D′c′
+0) = ϵ′(ϕ ϕ′(c′
+0)) −ϵ′(c0) = ϵ(ϕ′(c′
+0)) −ϵ′(c′
+0) .
+Thus ϕ′ preserves augmentation. The remainder of the statement follows from
+Lemma 1.14.7.
+These definitions set up the general algebraic framework into which the
+oriented simplicial chain groups fit as a special case. Now we seek to put
+into this general context the method by which in the preceding section we
+constructed a chain homotopy. As motivation, we first consider the case where
+the maps ϕ and ψ are general chain maps, but the chain groups are the familiar
+oriented simplicial chain groups. Later, we consider general chain complexes
+and general chain maps.
+Definition 1.14.9 Let K and L be simplicial complexes. An acyclic carrier
+from K to L is a function Φ that assigns to each simplex σ of K a subcomplex
+Φ(σ) of L such that:
+(1) Φ(σ) is nonempty and acyclic.
+(2) If s is a face of σ, then Φ(s) ⊂Φ(σ).
+If f : Cp(K) →Cq(L) is a homomorphism, we say that f is carried by Φ if for
+each oriented p-simplex σ of K, the chain f(σ) is carried by the subcomplex
+Φ(σ) of L.
+Theorem 1.14.10 (Acyclic carrier theorem, geometric version)
+Let Φ be an acyclic carrier from K to L.
+(a) If ϕ and ψ are two augmentation-preserving chain maps from
+C(K) to C(L) that are carried by Φ, then there exists a chain ho-
+motopy D of ϕ to ψ that is also carried by Φ.

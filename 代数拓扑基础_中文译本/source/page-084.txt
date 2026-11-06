@@ -1,0 +1,47 @@
+Homology Groups of a Simplicial Complex
+69
+the matrix is simply the rank of the free abelian group f(G) ⊂G′. And those
+numbers bi that are greater than 1 are the torsion coefficients t1, t2, . . . , tk of
+the torsion group G′/f(G).
+Applications of the Reduction Algorithm
+Now we prove the basic theorem concerning subgroups of free abelian
+groups that we stated in Section 1.5.
+Proof of Theorem 1.5.2: Given a free abelian group F of rank n, we know
+from Lemma 1.12.1 that any subgroup R is free of rank r ≤n. Consider the
+inclusion homomorphism j : R →F, and choose bases a1, a2, . . . , ar for R
+and e1, e2, . . . , en for F relative to which the matrix of j is in the normal form
+of the preceding Theorem 1.12.4. Because j is a monomorphism, this normal
+form has no zero columns. Thus, j(ai) = biei for i = 1, 2, . . . , r, where bi ≥1
+and b1 | b2 | . . . | br. Since j(ai) = ai, it follows that b1e1, b2e2, . . . , brer is a
+basis for R
+Now we introduce the notion of a chain complex and prove the standard
+basis theorem for free chain complexes.
+Definition 1.12.8 A chain complex C is a sequence
+. . . −→Cp+1
+∂p+1
+−−−−→Cp
+∂p
+−−−−→Cp−1 −→. . .
+of abelian groups Ci and homomorphisms ∂i, indexed by the integers, such
+that ∂p ◦∂p+1 = 0 for all p. The pth homology group of C is defined by
+Hp(C) = ker ∂p/im ∂p+1 .
+If Hp(C) is finitely generated, its betti number and torsion coefficients are
+called the betti number and torsion coefficients of C in dimension p.
+Theorem 1.12.9 (Standard bases for free chain complexes) Let {Cp, ∂p}
+be a chain complex; suppose each group Cp is free of finite rank. Then for each
+p there are subgroups Up, Vp, and Wp of Cp such that
+Cp = Up ⊕Vp ⊕Wp ,
+where ∂p(Up) ⊂Wp−1, ∂p(Vp) = 0, and ∂p(Wp) = 0. Furthermore, there are
+bases for Up and Wp−1 relative to which ∂p : Up →Wp−1 has a matrix of the
+form
+B =
+
+
+b1
+0
+...
+0
+bℓ
+
+,
+where bi ≥1 and b1 | b2 | · · · | bℓ.

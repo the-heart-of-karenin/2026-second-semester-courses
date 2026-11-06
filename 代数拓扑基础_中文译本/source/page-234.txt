@@ -1,0 +1,41 @@
+Singular Homology Theory
+219
+Definition 4.6.3 Let X be a space. We define the suspension of X to be the
+quotient space of X × [−1, 1] obtained by identifying the subset X × 1 to a
+point v and identifying the subset X × (−1) to a point w. The suspension of
+X is denoted S(X). The points v and w are called the suspension points of
+S(X).
+Just as in the case of simplicial theory, one can compute the homology
+of a suspension by using a Mayer–Vietoris sequence. One has the following
+theorem:
+Theorem 4.6.4 Let X be a space. For all p, there is an isomorphism
+Hp(S(X)) −→Hp−1(X) .
+Proof: Let π : X × [−1, 1] →S(X) be the quotient map. Let v = π(X × 1)
+and w = π(X × (−1)) be the suspension points. Let X1 = S(X) \ w and
+X2 = S(X) \ v. Since both X1 and X2 are open in S(X), the pair {X1, X2}
+is excisive. We will show that X1 and X2 are acyclic. The Mayer–Vietoris
+sequence then implies that there is an isomorphism
+Hp(S(X)) −→Hp−1(X1 ∩X2) .
+We will also show that there is a homotopy equivalence of X1 ∩X2 with X,
+so there is an isomorphism
+Hp(X1 ∩X2) −→Hp−1(X) .
+The theorem follows.
+Now X × (−1, 1] is open in X × [−1, 1] and is saturated with respect to π.
+Therefore, the restricted map
+π′ : X × (−1, 1] →X1
+is a quotient map. The map
+F : X × (−1, 1] × I →X × (−1, 1]
+given by
+F(x, s, t) = (x, (1 −t)s + t)
+is a deformation retraction of X × (−1, 1] onto X × 1. Since the map π′ ◦F
+in the following diagram
+X × (−1, 1] × I
+F
+−−−−→X × (−1, 1]
+π′ × iI
+
+π′
+X1 × I
+G
+−−−−→
+X1

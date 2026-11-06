@@ -1,0 +1,31 @@
+168
+Elements of Algebraic Topology
+To illustrate how the Mayer–Vietoris sequence is used in practice, we shall
+now compute the homology of the suspension of a complex. The suspension of
+a complex appeared earlier in Definition 1.9.8, but for convenience, we repeat
+it here.
+Definition 3.4.5 Let K be a complex. Let w0 ∗K and w1 ∗K be two cones
+on K whose polytopes intersect in |K| alone. Then
+S(K) = (w0 ∗K) ∪(w1 ∗K)
+is a complex. It is called a suspension of K. Given K, the complex S(K) is
+uniquely defined up to a simplicial isomorphism.
+Theorem 3.4.6 If K is a complex, then for all p there is an isomorphism
+Hp(S(K)) →Hp−1(K) .
+Proof: Let K0 = w0 ∗K and K1 = w1 ∗K. Then K0 ∪K1 = S(K) and
+K0 ∩K1 = K. In the reduced Mayer–Vietoris sequence,
+Hp(K0) ⊕Hp(K1) −→Hp(S(K)) −→Hp−1(K) −→Hp−1(K0) ⊕Hp−1(K1);
+both end terms vanish just because K0 and K1 are cones. Therefore the middle
+map is an isomorphism.
+Theorem 3.4.7 Let K be a complex. Let K0 and K1 be subcomplexes of K.
+Let L0 and L1 be subcomplexes of K0 and K1 respectively. There exists an
+exact sequence
+· · · −→Hi(K0 ∩K1, L0 ∩L1) −→Hi(K0, L0) ⊕Hi(K1, L1)
+Hi(K0 ∪K1, L0 ∪L1) −→· · · .
+Definition 3.4.8 The sequence in this last theorem is called the relative
+Mayer–Vietoris sequence.
+EXERCISES
+1. Let K be the union of the subcomplexes K0 and K1, where |K0|
+and |K1| are connected. What can you say about the homology of
+K in each of the following cases?
+(a) K0 ∩K1 is nonempty and acyclic.
+(b) |K0| ∩|K1| consists of two points.

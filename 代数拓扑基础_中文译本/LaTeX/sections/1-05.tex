@@ -1,0 +1,184 @@
+\section{阿贝尔群回顾}
+\sourcepage{23--24}
+本节复习后文要用到的一些代数结果，具体来说，是关于阿贝尔群的知识。
+
+对于阿贝尔群，采用加法记号：$0$ 表示单位元，$-g$ 表示 $g$ 的逆元。若 $n$ 是正整数，则 $ng$ 表示 $n$ 项和 $g+g+\cdots+g$，而 $(-n)g$ 表示 $n(-g)$。
+
+用 $\Z$ 表示整数群，$\mathbb Q$ 表示有理数，$\mathbb C$ 表示复数。
+
+\subsection*{同态}
+若 $f:G\to H$ 是同态，则 $f$ 的\textbf{核}是 $G$ 的子群 $f^{-1}(0)$，$f$ 的\textbf{像}是 $H$ 的子群 $f(G)$，$f$ 的\textbf{余核}（cokernel）是商群 $H/f(G)$，分别记为 $\ker f$、$\operatorname{im}f$ 和 $\operatorname{cok}f$。映射 $f$ 是单同态，当且仅当它的核只含单位元；通常也形象地说，它的核“消失”。映射 $f$ 是满同态，当且仅当它的余核消失；此时 $f$ 诱导同构 $G/\ker f\cong H$。
+
+\subsection*{自由阿贝尔群}
+若阿贝尔群 $G$ 有一组基，就称其为\textbf{自由的}。也就是说，存在一族元素 $\{g_\alpha\}_{\alpha\in J}$，使每个 $g\in G$ 都能唯一写成有限和
+\[
+g=\sum n_\alpha g_\alpha,
+\]
+其中每个 $n_\alpha$ 都是整数。唯一性蕴含每个元素 $g_\alpha$ 都具有无限阶，也就是说，$g_\alpha$ 生成 $G$ 的一个无限循环子群。
+
+更一般地，若每个 $g\in G$ 都能写成这样的有限和，但表示不一定唯一，则称族 $\{g_\alpha\}_{\alpha\in J}$ \textbf{生成} $G$。特别地，若该族有限，则称 $G$ \textbf{有限生成}。
+
+若 $G$ 自由，且有一组由 $n$ 个元素 $g_1,\ldots,g_n$ 组成的基，则它的每组基都恰好有 $n$ 个元素。为说明这一点，考察群 $G/2G$ 的元素个数与 $G$ 的基元素个数的关系。给定这组基，$G/2G$ 由所有形如
+\[
+\sum\epsilon_i g_i+2G,\qquad \epsilon_i=0\ \text{或}\ 1
+\]
+的陪集组成，因此恰有 $2^n$ 个元素。$G$ 的一组基中元素的个数称为 $G$ 的\textbf{秩}（rank）。
+
+更一般地，若 $G$ 有无限基，那么它的任意两组基具有相同的基数。本书不使用这个事实。
+
+自由阿贝尔群有如下关键性质：若 $G$ 有基 $\{g_\alpha\}_{\alpha\in J}$，则从集合 $\{g_\alpha\}_{\alpha\in J}$ 到阿贝尔群 $H$ 的任意函数 $f$，都能唯一扩张为从 $G$ 到 $H$ 的同态。
+
+构造自由阿贝尔群的一种具体方法如下。给定集合 $S$，定义\textbf{由 $S$ 生成的自由阿贝尔群} $G$ 为所有函数 $\varphi:S\to\Z$ 构成的集合，其中每个函数只在有限多个 $x$ 处非零。通过逐点相加定义两个函数的和。对于 $x\in S$，定义其特征函数
+\[
+\varphi_x(y)=\begin{cases}0,&y\ne x,\\1,&y=x.\end{cases}
+\]
+函数族 $\{\varphi_x:x\in S\}$ 构成 $G$ 的一组基，因为每个 $\varphi\in G$ 都能唯一写成有限和 $\sum n_x\varphi_x$，其中 $n_x=\varphi(x)$，对所有使 $\varphi(x)\ne0$ 的 $x$ 求和。我们常滥用记号，将元素 $x\in S$ 与其特征函数 $\varphi_x$ 等同。用此记号，$G$ 的一般元素能唯一写成 $S$ 中元素的有限“形式线性组合” $\sum n_\alpha x_\alpha$。
+
+\sourcepage{25--26}
+若存在正整数 $n$ 使 $ng=0$，则称阿贝尔群 $G$ 的元素 $g$ 具有\textbf{有限阶}。$G$ 中所有有限阶元素组成 $G$ 的一个子群 $T$，称为\textbf{挠子群}（torsion subgroup）。若 $T$ 消失，则称 $G$ \textbf{无挠}（torsion-free）。自由阿贝尔群必定无挠，但逆命题不成立。
+
+若 $T$ 只有有限多个元素，则其元素个数称为 $T$ 的\textbf{阶}。若 $T$ 具有有限阶，则其中每个元素都有有限阶，但逆命题仍不成立。
+
+\subsection*{内直和}
+设 $G$ 为阿贝尔群，$\{G_\alpha\}_{\alpha\in J}$ 为 $G$ 的一族子群，以某个指标集 $J$ 作一一对应的编号。若 $G$ 中每个元素 $g$ 都能唯一写成有限和 $g=\sum g_\alpha$，其中每个 $g_\alpha\in G_\alpha$，则称 $G$ 是这些群的\textbf{内直和}（internal direct sum），记为
+\[
+G=\bigoplus_{\alpha\in J}G_\alpha.
+\]
+若该族有限，例如为 $G_1,\ldots,G_n$，也记为 $G=G_1\oplus\cdots\oplus G_n$。
+
+若 $G$ 中每个 $g$ 都能写成有限和 $g=\sum g_\alpha$，但不一定唯一，则只称 $G$ 为这些群的\textbf{和}，记作 $G=\sum G_\alpha$；有限情形记作 $G=G_1+\cdots+G_n$。此时也称这些子群生成 $G$。
+
+若 $G=\sum G_\alpha$，则此和为直和，当且仅当等式 $0=\sum g_\alpha$ 蕴含对每个 $\alpha$ 都有 $g_\alpha=0$。进而，这只有在对每个固定的指标 $\alpha_0$，都有
+\[
+G_{\alpha_0}\cap\left(\sum_{\alpha\ne\alpha_0}G_\alpha\right)=\{0\}
+\]
+时才成立。特别地，若 $G=G_1+G_2$，则此和为直和，当且仅当 $G_1\cap G_2=\{0\}$。
+
+这与自由阿贝尔群非常相似。事实上，若 $G$ 自由且有基 $\{g_\alpha\}$，则 $G$ 是各子群 $G_\alpha$ 的直和，其中 $G_\alpha$ 是由 $g_\alpha$ 生成的无限循环群。反过来，若 $G$ 是无限循环子群的直和，则 $G$ 是自由阿贝尔群。
+
+若 $G$ 是各子群 $G_\alpha$ 的直和，且对于每个 $\alpha$，给定从 $G_\alpha$ 到阿贝尔群 $H$ 的同态 $f_\alpha$，则这些同态能唯一扩张为从 $G$ 到 $H$ 的同态。
+
+下面是证明 $G$ 为直和的一个有用判别准则。
+
+\entry{引理}{1.5.1}设 $G$ 为阿贝尔群。若 $G$ 是各子群 $G_\alpha$ 的直和，则存在同态
+\[
+j_\beta:G_\beta\to G,\qquad \pi_\beta:G\to G_\beta,
+\]
+使得当 $\alpha\ne\beta$ 时，$\pi_\beta\circ j_\alpha$ 为零同态；当 $\alpha=\beta$ 时，它为恒等同态。
+
+反过来，设 $\{G_\alpha\}$ 是一族阿贝尔群，且存在上述同态 $j_\beta,\pi_\beta$，则 $j_\beta$ 是单同态。此外，若各群 $j_\alpha(G_\alpha)$ 生成 $G$，则 $G$ 是它们的直和。
+
+\noindent\textbf{证明：}设 $G=\bigoplus_{\alpha\in J}G_\alpha$，定义 $j_\beta$ 为包含同态。为定义 $\pi_\beta$，将 $g$ 写成 $\sum g_\alpha$，其中 $g_\alpha\in G_\alpha$，然后令 $\pi_\beta(g)=g_\beta$。表示的唯一性说明 $\pi_\beta$ 是良定义的同态。
+
+再证逆命题。因为 $\pi_\alpha\circ j_\alpha$ 是 $G_\alpha$ 上的恒等映射，所以 $j_\alpha$ 是单射，$\pi_\alpha$ 是满射。若各群 $j_\alpha(G_\alpha)$ 生成 $G$，则 $G$ 的每个元素都能写成有限和 $\sum j_\alpha(g_\alpha)$。为证明唯一性，设
+\[
+\sum j_\alpha(g_\alpha)=\sum j_\alpha(g'_\alpha).
+\]
+在两边作用 $\pi_\beta$，即得 $g_\beta=g'_\beta$。\hfill$\square$
+
+\subsection*{直积与外直和}
+设 $\{G_\alpha\}_{\alpha\in J}$ 为一族带指标的阿贝尔群。其\textbf{直积} $\prod_{\alpha\in J}G_\alpha$ 是以各集合 $G_\alpha$ 的笛卡尔积为底集、以逐坐标相加为运算的群。其\textbf{外直和}（external direct sum）$G$ 是直积的如下子群：其中的元组 $(g_\alpha)_{\alpha\in J}$ 除有限多个坐标外，都满足 $g_\alpha=0_\alpha$；这里 $0_\alpha$ 是 $G_\alpha$ 的零元。群 $G$ 有时也称为各群 $G_\alpha$ 的\textbf{弱直积}。
+
+内直和与外直和的关系如下。设 $G$ 为各群 $G_\alpha$ 的外直和。对于每个 $\beta$，定义 $\pi_\beta:G\to G_\beta$ 为到第 $\beta$ 个因子的投影；定义 $j_\beta:G_\beta\to G$，把 $g\in G_\beta$ 映到如下元组：当 $\alpha\ne\beta$ 时，$g_\alpha=0_\alpha$，而 $g_\beta=g$。于是，当 $\alpha\ne\beta$ 时，$\pi_\beta\circ j_\alpha=0$，并且 $\pi_\alpha\circ j_\alpha$ 为恒等映射。因此 $G$ 等于各群 $G'_\alpha=j_\alpha(G_\alpha)$ 的内直和，且 $G'_\alpha\cong G_\alpha$。
+
+\sourcepage{27--28}
+所以，内直和与外直和的概念密切相关，主要区别在于记号。因此，通常都用
+\[
+G=G_1\oplus G_2\oplus\cdots\oplus G_n,\qquad
+G=\bigoplus_{\alpha\in J}G_\alpha
+\]
+表示内直和或外直和，依靠上下文说明含义，如果区分确实重要的话。例如，可以用 $G\cong\Z\oplus\Z\oplus\Z$ 表示 $G$ 是秩为 $3$ 的自由阿贝尔群。
+
+若 $G_1$ 是 $G$ 的子群，且存在 $G$ 的子群 $G_2$ 使 $G=G_1\oplus G_2$，则称 $G_1$ 是 $G$ 的\textbf{直和项}（direct summand）。此时，若 $H_i$ 是 $G_i$ 的子群（$i=1,2$），则和 $H_1+H_2$ 为直和，并且
+\[
+G/(H_1\oplus H_2)\cong(G_1/H_1)\oplus(G_2/H_2).
+\]
+特别地，若 $G=G_1\oplus G_2$，则 $G/G_1\cong G_2$。
+
+当然，即使 $G/G_1\cong G_2$，也不一定有 $G=G_1\oplus G_2$；也就是说，$G_1$ 可以是 $G$ 的子群而不是直和项。例如，整数群的子群 $n\Z$ 不是 $\Z$ 的直和项，否则对于 $\Z$ 的某个子群 $G_2$，就有
+\[
+\Z\cong n\Z\oplus G_2.
+\]
+于是 $G_2\cong\Z/n\Z$，具有有限阶，而 $\Z$ 没有有限阶子群。\translatornote{该例应取 $n>1$；而且最后一句应理解为 $\Z$ 没有非平凡的有限子群。原文未明说这些限定。}
+
+顺便说明，依照现行用法，模 $n$ 整数群 $\Z/n\Z$ 将简记为 $\Z/n$。
+
+\subsection*{有限生成阿贝尔群基本定理}
+实际上，有两个定理对我们很重要。第一个讨论自由阿贝尔群的子群，这里先陈述，在第 1.12 节给出证明。
+
+\entry{定理}{1.5.2}设 $F$ 为自由阿贝尔群，$R$ 为其子群，则 $R$ 也是自由阿贝尔群。若 $F$ 的秩为 $n$，则 $R$ 的秩为 $r\leq n$；此外，存在 $F$ 的一组基 $e_1,\ldots,e_n$ 以及整数 $t_1,\ldots,t_k$（$t_i>1$），使得：
+\begin{enumerate}[label=(\arabic*)]
+\item $t_1e_1,t_2e_2,\ldots,t_ke_k,e_{k+1},e_{k+2},\ldots,e_r$ 是 $R$ 的一组基。
+\item $t_1\mid t_2\mid\cdots\mid t_k$，即每个 $t_i$ 都整除 $t_{i+1}$。
+\end{enumerate}
+整数 $t_1,\ldots,t_k$ 由 $F$ 和 $R$ 唯一确定，尽管基 $e_1,\ldots,e_n$ 并不唯一。
+
+下面的定理是它的直接推论。
+
+\entry{定理}{1.5.3（有限生成阿贝尔群基本定理）}设 $G$ 为有限生成阿贝尔群，$T$ 为其挠子群。
+\begin{enumerate}[label=(\alph*)]
+\item $G$ 有一个有限秩 $\beta$ 的自由阿贝尔子群 $H$，使 $G=H\oplus T$。
+\item 存在有限循环群 $T_1,\ldots,T_k$，其中 $T_i$ 的阶为 $t_i>1$，使 $t_1\mid t_2\mid\cdots\mid t_k$，并且 $T=T_1\oplus\cdots\oplus T_k$。
+\item 数 $\beta$ 及 $t_1,\ldots,t_k$ 由 $G$ 唯一确定。
+\end{enumerate}
+数 $\beta$ 称为 $G$ 的 \textbf{Betti 数}，各数 $t_1,\ldots,t_k$ 称为 $G$ 的\textbf{挠系数}（torsion coefficients）。注意，$\beta$ 是自由阿贝尔群 $G/T\cong H$ 的秩。子群 $H$ 的秩与各子群 $T_i$ 的阶唯一确定，但这些子群本身不唯一。
+
+\noindent\textbf{证明：}取 $G$ 的有限生成集 $S=\{g_i\}$，设 $F$ 为集合 $S$ 上的自由阿贝尔群。将每个 $g_i$ 映到自身的映射扩张为从 $F$ 到 $G$ 的满同态。记其核为 $R$，则 $F/R\cong G$。按定理 1.5.2 为 $F$ 和 $R$ 选取基，得到
+\[
+F=F_1\oplus F_2\oplus\cdots\oplus F_n,
+\]
+其中 $F_i$ 是以 $e_i$ 为生成元的无限循环群，且
+\[
+R=t_1F_1\oplus\cdots\oplus t_kF_k\oplus F_{k+1}\oplus\cdots\oplus F_r.
+\]
+于是商群为
+\[
+F/R\cong(F_1/t_1F_1\oplus\cdots\oplus F_k/t_kF_k)
+\oplus(F_{r+1}\oplus\cdots\oplus F_n).
+\]
+\translatornote{原文商群公式中从第二个因子起，若干分子漏印下标，这里按前述直和分解补齐。}
+因此存在同构
+\[
+f:G\longrightarrow(\Z/t_1\oplus\cdots\oplus\Z/t_k)
+\oplus(\Z\oplus\cdots\oplus\Z).
+\]
+因为同构保持挠子群，$f$ 必须把 $G$ 的挠子群 $T$ 映到 $\Z/t_1\oplus\cdots\oplus\Z/t_k$ 上。由此得到 (a) 和 (b)。第 (c) 项留作习题。\hfill$\square$
+
+\sourcepage{29--30}
+这个定理表明，每个有限生成阿贝尔群 $G$ 都能写成有限个循环群的直和，即
+\[
+G\cong(\Z\oplus\cdots\oplus\Z)\oplus\Z/t_1\oplus\cdots\oplus\Z/t_k,
+\]
+其中 $t_i>1$ 且 $t_1\mid t_2\mid\cdots\mid t_k$。在某种意义下，这种表示是 $G$ 的一种“典范形式”。还有另一种典范形式，可以如下导出。
+
+先回顾：若正整数 $m,n$ 互素，则 $\Z/m\oplus\Z/n\cong\Z/mn$。因此，任意有限循环群都能写成阶为素数幂的循环群的直和。由定理 1.5.3，对于任意有限生成群 $G$，\translatornote{此处原文写“有限生成群”，按本节语境应理解为“有限生成阿贝尔群”。}有
+\[
+G\cong(\Z\oplus\cdots\oplus\Z)\oplus\Z/a_1\oplus\cdots\oplus\Z/a_s,
+\]
+其中每个 $a_i$ 都是某个素数的幂。这也是 $G$ 的一种典范形式，因为正如下面将要看到的，在相差排列的意义下，各数 $a_i$ 由 $G$ 唯一确定。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 证明：若 $G$ 为有限生成阿贝尔群，则其每个子群都有限生成。［这个结论对非阿贝尔群不成立。］
+\item \begin{enumerate}[label=(\alph*)]
+\item 证明：若 $G$ 自由，则 $G$ 无挠。
+\item 证明：若 $G$ 有限生成且无挠，则 $G$ 自由。
+\item 证明有理数加法群 $\mathbb Q$ 无挠但不自由。［提示：若 $\{g_\alpha\}$ 是 $\mathbb Q$ 的一组基，固定 $\beta$，把 $g_\beta/2$ 用这组基表示。］
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 证明：若 $m,n$ 互素，则 $\Z/m\oplus\Z/n$ 是阶为 $mn$ 的循环群。
+\item 若 $G\cong\Z/18\oplus\Z/36$，将 $G$ 表示为阶为素数幂的循环群的直和。
+\item 若 $G\cong\Z/2\oplus\Z/4\oplus\Z/3\oplus\Z/3\oplus\Z/9$，求 $G$ 的挠系数。
+\item 若 $G\cong\Z/15\oplus\Z/20\oplus\Z/18$，求 $G$ 的挠系数。
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 设 $p$ 为素数，$b_1,\ldots,b_k$ 为非负整数。证明：若
+\[
+G\cong(\Z/p)^{b_1}\oplus(\Z/p^2)^{b_2}\oplus\cdots\oplus(\Z/p^k)^{b_k},
+\]
+则各整数 $b_i$ 由 $G$ 唯一确定。［提示：考察同态 $f_i:G\to G$ 的核，其中 $f_i$ 是乘以 $p^i$ 的映射。证明 $f_1,f_2$ 确定 $b_1$，再类似地继续。］
+\item 设 $p_1,\ldots,p_N$ 为一列互异素数，将 (a) 推广到形如 $(\Z/(p_i)^k)^{b_{ik}}$（$b_{ik}\geq0$）的项的有限直和。
+\item 验证定理 1.5.3 的 (c)，即证明有限生成阿贝尔群 $G$ 的 Betti 数与挠系数由 $G$ 唯一确定。
+\item 证明定理 1.5.2 的结论中的各数 $t_i$ 由 $F$ 和 $R$ 唯一确定。
+\end{enumerate}
+\end{enumerate}

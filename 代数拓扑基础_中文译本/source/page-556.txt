@@ -1,0 +1,46 @@
+Bibliography
+[Ale24]
+James Waddell Alexander. An example of a simply connected surface
+bounding a region which is not simply connected. Proc. Nat. Acad.
+Sci. U.S.A., 10:8–10, 1924.
+[Bro60]
+Morton Brown. A proof of the generalized Schoenflies theorem. Bull.
+Amer. Math. Soc., 66:74–76, 1960.
+[Bro62]
+Morton Brown.
+Locally flat imbeddings of topological manifolds.
+Ann. of Math. (2), 75:331–341, 1962.
+[Can79] J. W. Cannon. Shrinking cell-like decompositions of manifolds. Codi-
+mension three. Ann. of Math. (2), 110(1):83–112, 1979.
+[CF77]
+Richard H. Crowell and Ralph H. Fox. Introduction to knot theory,
+volume No. 57 of Graduate Texts in Mathematics. Springer-Verlag,
+New York-Heidelberg, 1977. Reprint of the 1963 original.
+[Dol95]
+Albrecht Dold. Lectures on algebraic topology. Classics in Mathe-
+matics. Springer-Verlag, Berlin, 1995. Reprint of the 1972 edition.
+[EM53]
+Samuel Eilenberg and Saunders MacLane. Acyclic models. Amer.
+J. Math., 75:189–199, 1953.
+[ES52]
+Samuel Eilenberg and Norman Steenrod. Foundations of algebraic
+topology. Princeton University Press, Princeton, NJ, 1952.
+[EZ53]
+Samuel Eilenberg and J. A. Zilber. On products of complexes. Amer.
+J. Math., 75:200–204, 1953.
+[Fuc71]
+Martin Fuchs. A note on mapping cylinders. Michigan Math. J.,
+18:289–290, 1971.
+[GH81]
+Marvin J. Greenberg and John R. Harper. Algebraic topology: A first
+course. Mathematics Lecture Note Series. CRC Press, Boca Raton,
+FL, 1981.
+[Hil91]
+David Hilbert.
+Ueber die stetige Abbildung einer Line auf ein
+Fl¨achenst¨uck. Math. Ann., 38(3):459–460, 1891.
+[Hop28] Heinz Hopf.
+Eine Verallgemeinerung der Euler–Poincar´eschen
+Formel. Nachr. Akad. Wiss. G¨ottingen Math.-Phys. Kl. II, pages
+127–136, 1928.
+541

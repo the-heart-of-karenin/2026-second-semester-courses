@@ -1,0 +1,37 @@
+242
+Elements of Algebraic Topology
+U
+x
+S(x, ϵ)
+B(x, ϵ)
+f
+y
+W1
+W2
+Figure 4.9.5
+case, the theorem follows from the inverse function theorem of analysis. The
+true profundity of invariance of domain is that it has nothing to do with dif-
+ferentiability or Jacobians, but depends only on continuity and injectivity of
+the map f.
+Similarly, the Jordan curve theorem is much easier to prove in the case
+that the imbedding f : Sn−1 →Rn is a simplicial map of some complex whose
+space is homeomorphic to Sn−1, or is a differentiable map with Jacobian of
+maximal rank. The true difficulties appear only when one assumes no more
+than continuity and injectivity.
+EXERCISES
+1. Let M be an m-manifold with boundary, as defined in Section 4.8.
+Use invariance of domain to prove the following.
+(a) Show that if a point x of M maps to a point of Rm−1 ×0 under
+one coordinate patch about x, then it does so under every such
+coordinate patch.
+(b) Let U be open in Rm and let V be open in Rn. Show that if U
+and V are homeomorphic, then m = n.
+(c) Show that the number m is uniquely determined by M.
+2. (a) Let Y be the topologist’s sine curve [see Definition 4.2.11]. Show
+that if h : Y →Sn is an imbedding, then Sn \ h(Y ) is acyclic.
+(b) Let X be the closed topologist’s sine curve [see Definition 4.6.5].
+Show that if h : X →Sn is an imbedding, then Hi(Sn \ h(X))
+is infinite cyclic if i = n −2, and vanishes otherwise.
+(c) With X as in (b), show that if h : X →S2 is an imbedding,
+then S2 \ h(X) has precisely two components, of which h(X) is
+the common topological boundary.

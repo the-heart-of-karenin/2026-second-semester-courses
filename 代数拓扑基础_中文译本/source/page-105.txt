@@ -1,0 +1,63 @@
+90
+Elements of Algebraic Topology
+The hat over a term indicates that it is omitted. Then ∂′
+p is a well-defined
+homomorphism; and one checks as before that ∂′
+p ◦∂′
+p+1 = 0.
+The chain complex C′(K) = {C′
+p(K), ∂′
+p} is called the ordered chain com-
+plex of K. The resulting homology groups, Hi(C′(K)), give the ordered homol-
+ogy of K. There is also a relative version, Hi(C′(K, K0)). The ordered chain
+complex is augmented by defining ϵ′(v) = 1 for every vertex v of K. The
+reduced groups are of course denoted by Hi(C′(K)).
+Although the ordered chain complex is much too huge to be useful for com-
+putational purposes, it is sometimes quite convenient for theoretical purposes.
+Its homology is, surprisingly enough, isomorphic to the simplicial homology
+of K, in a natural way. We outline a proof of this fact, leaving the details to
+you.
+Lemma 1.14.14 If w∗K is a cone over the complex K, then w∗K is acyclic
+in ordered homology.
+Proof: Define
+D : C′
+p(w ∗K) →C′
+p+1(w ∗K)
+for p ≥0 by the equation
+D((v0, v1, . . . , vp)) = (w, v0, v1, . . . , vp) .
+Note that it is irrelevant here whether any of the vi are equal to w. Let
+cp ∈C′
+p(w ∗K). We compute
+∂′
+1Dc0
+=
+c0 −ϵ′(c0)w ,
+∂′
+p+1Dcp
+=
+cp −D∂′
+pcp
+if
+p > 0 .
+The lemma follows: If cp is a cycle and p > 0, then cp = ∂′
+p+1Dcp; if c0 is a
+0-chain lying in ker ϵ′, then c0 = ∂′
+1Dc0.
+Lemma 1.14.15 Let K be a complex. Then there exists a partial ordering of
+the vertices of K that induces a linear ordering on the vertices of each simplex
+of K.
+We leave the proof of the lemma to the exercises.
+Theorem 1.14.16 Choose a partial ordering of the vertices of K that induces
+a linear ordering on the vertices of each simplex of K. Define ϕ : Cp(K) →
+C′
+p(K) by letting
+ϕ([v0, v1, . . . , vp]) = (v0, v1, . . . , vp)
+if v0 < v1 < · · · < vp in the given ordering. Define ψ : C′
+p(K) →Cp(K) by
+the equation
+ψ((w0, w1, . . . , wp)) =
+
+[w0, w1, . . . , wp]
+if the wi are distinct,
+0
+otherwise.

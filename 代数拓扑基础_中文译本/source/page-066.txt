@@ -1,0 +1,35 @@
+Homology Groups of a Simplicial Complex
+51
+the chain bounds only if nα = 0 for all α. On the other hand, if c ∈ker ϵ, then
+ϵ(c) = ϵ(c′) = ϵ( nαvα) =  nα = 0.
+If |K| has one component, then c ∈ker ϵ implies c′ = 0. We conclude that
+H0(K) = 0. Theorem 1.8.1 tells us that H0(K) ∼= Z. Thus, (∗) is verified.
+If |K| has more than one component, then c ∈ker ϵ implies that c′ is a
+linear combination of the 0-chains vα −vα0, α̸ = α0. Again, Theorem 1.8.1
+verifies (∗).
+EXERCISE
+1. (a) Let G be an abelian group and let ϕ : G →Z be an epimor-
+phism. Show that G has an infinite cyclic subgroup H such
+that
+G = (ker ϕ) ⊕H .
+[Hint: Define a homomorphism ψ : Z →G such that ϕ ◦ψ is
+the identity; let H = im ψ.]
+(b) Show that if ϕ : C0 →Z is any epimorphism such that ϕ ◦∂1 =
+0, then
+H0(K) ∼= (ker ϕ)/(im ∂1) ⊕Z .
+1.9
+The Homology of a Cone
+Now we compute the homology of the n-simplex and its boundary. A conve-
+nient way of doing this is to introduce the notion of a cone.
+Definition 1.9.1 Suppose that K is a complex in EJ, and w is a point of EJ
+such that each ray emanating from w intersects |K| in at most one point. We
+define the cone on K with vertex w to be the collection of all simplices of the
+form wa0a1 . . . ap, where a0a1 . . . ap is a simplex of K, along with all faces of
+such simplices. We denote this collection by w ∗K. See Figure 1.9.1.
+We show that w ∗K is a well-defined complex, and it contains K as a
+subcomplex; K is often called the base of the cone.
+First we show that the set {wa0a1 . . . ap} is geometrically independent: If
+w were in the plane P determined by a0, a1, . . . , ap, we could consider the line
+segment joining w to an interior point x of σ = a0a1 . . . ap. The set Int σ,
+being open in P, would contain an interval of points on this line segment. But
+the ray from w through x intersects |K| in only one point, by hypothesis.

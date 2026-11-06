@@ -1,0 +1,96 @@
+\section{挠积}
+\sourcepage{397}
+如同 Ext 从 Hom 导出，张量积也有对应的导出函子，称为\textbf{挠积}（torsion product）。它与张量积一同出现在同调万有系数定理中。构造与 Ext 十分相似，因此部分细节简略处理。
+
+挠积将群对 $A,B$ 映为 $A*B$，将同态 $\gamma:A\to A'$、$\delta:B\to B'$ 映为 $\gamma*\delta:A*B\to A'*B'$，对两个变量都协变。
+
+\entry{定理}{7.4.1}每个自由消解 $0\to R\to F\to A\to0$ 及群 $B$，自然给出正合列
+\[
+0\to A*B\to R\otimes B\to F\otimes B\to A\otimes B\to0.
+\]
+消解间的同态与系数群同态诱导这些列之间的同态。先证明一个引理。
+
+\entry{引理}{7.4.2}若自由消解间同态为 $(\alpha,\beta,\gamma)$，另有 $\delta:B\to B'$，则存在唯一同态
+\[
+\epsilon:\ker(\varphi\otimes i_B)\to\ker(\varphi'\otimes i_{B'}),
+\]
+使它与 $\alpha\otimes\delta,\beta\otimes\delta,\gamma\otimes\delta$ 构成交换图。它与所选提升 $\alpha,\beta$ 无关。
+
+\sourcepage{398}
+\textbf{证明：}张量积函子性保证右侧两个方块交换，所以诱导核同态。为证选择无关性，如引理 7.2.2，将消解视为零、一、二维链复形，两个提升在零维相同，由引理 5.7.1 链同伦。张量并结合 $\delta$ 后仍链同伦，所以在二维同调上诱导相同同态，而该同调正是上述核。\hfill$\square$
+
+称 $\epsilon$ 为由 $\gamma,\delta$ 相对于给定消解诱导的同态。复合与恒等的性质同 Ext 的构造：诱导映射的复合由原同态复合诱导；两个恒等群同态在不同消解间诱导典范同构。
+
+\entry{定义}{7.4.3}对典范自由消解 $0\to R(A)\xrightarrow{\varphi}F(A)\to A\to0$，定义 $A*B=\ker(\varphi\otimes i_B)$。在典范消解间提升 $\gamma$，以诱导核同态定义 $\gamma*\delta$。上述论证保证良定义及双协变函子性。
+
+\textbf{定理 7.4.1 的证明：}任意自由消解张量后，在左端补上核即为正合列。通过恒等映射诱导的典范同构，将此核替换为 $A*B$。自然性仿照定理 7.2.1。\hfill$\square$
+
+\sourcepage{399}
+挠积具有 Ext 所不具备的交换性。先证如下引理。
+
+\entry{引理}{7.4.4}对短正合列 $0\to A\to B\to C\to0$ 及群 $D$，存在自然正合列
+\[
+\begin{split}
+0\to D*A\to D*B\to D*C\to D\otimes A\\
+\to D\otimes B\to D\otimes C\to0.
+\end{split}
+\]
+\textbf{证明：}取 $D$ 的自由消解 $0\to R\xrightarrow{\varphi}F\to D\to0$。因 $R,F$ 自由，分别与原短正合列张量仍正合。将所得两行以 $\varphi\otimes i$ 连接，应用蛇引理，得到三个核及三个余核组成的六项正合列。由定理 7.4.1，核分别是 $D*A,D*B,D*C$，余核分别是三个张量积。蛇引理及这些识别均自然，故整列自然。\hfill$\square$
+
+\sourcepage{400}
+\entry{定理}{7.4.5}
+\begin{enumerate}[label=(\alph*)]
+\item 存在自然同构 $A*B\cong B*A$。
+\item 挠积与直和可交换：$(\bigoplus A_\alpha)*B\cong\bigoplus(A_\alpha*B)$，另一变量同理。
+\item 若任一因子无挠，则 $A*B=0$。
+\item 存在正合列 $0\to(\Z/m)*B\to B\xrightarrow{m}B\to(\Z/m)\otimes B\to0$。
+\end{enumerate}
+\textbf{证明：}先观察：若第二因子无挠，对自由消解张量后保持左侧单射（推论 6.2.9），故挠积为零。
+
+(a) 对 $0\to R\to F\to A\to0$ 应用上一个引理，并固定第一因子为 $B$。因 $R,F$ 无挠，前两个挠积为零，余下正合列为 $0\to B*A\to B\otimes R\to B\otimes F\to B\otimes A\to0$。其右侧三项与定理 7.4.1 的列通过张量交换自然同构，因此核也自然同构。
+
+(b) 对每个 $A_\alpha$ 取自由消解，直和仍为 $\bigoplus A_\alpha$ 的自由消解。先分别张量再直和，与先直和再张量所得正合列的后三项自然对应，所以核也对应。第二变量由交换性得到。\translatornote{原书证明中一条直和正合列漏印了 $\bigoplus(F_\alpha\otimes B)$，并把末项误写成直积式；这里按完整的自由消解张量列论证。}
+
+\sourcepage{401}
+(c) 由证明开头的观察及交换性。
+
+(d) 对 $0\to\Z\xrightarrow{m}\Z\to\Z/m\to0$ 张量 $B$，再识别 $\Z\otimes B\cong B$。\hfill$\square$
+
+\entry{注}{7.4.6}本书只对阿贝尔群研究 Hom、Ext、张量积和挠积。若换成一般环上的模，也可考虑相应导出函子，这是同调代数的重要内容，见 [ML63]。
+
+从自由模满射 $F_0\to A$ 出发，困难在于核未必自由，因而不一定有长度一的自由消解。可再以自由模 $F_1$ 满射到核，依此继续，得到长自由消解
+\[
+\cdots\to F_k\xrightarrow{\varphi_k}F_{k-1}\to\cdots\to F_0\to A\to0.
+\]
+取模 Hom 后，对 $n\ge1$ 定义
+\[
+\operatorname{Ext}_R^n(A,G)=\ker\overline\varphi_{n+1}/\operatorname{im}\overline\varphi_n.
+\]
+当 $R=\Z$ 时，$n=1$ 为本书 Ext，高次均为零。类似地，张量产生 $\operatorname{Tor}_n^R(A,G)$。许多前述定理可推广，且有丰富的代数与拓扑应用。
+
+\sourcepage{402}
+总结有限生成群计算所需的规则：
+\[
+\begin{array}{c|cc}
+&\Z&\Z/m\\\hline
+(-)\otimes G&G&G/mG\\
+\operatorname{Hom}(-,G)&G&\ker(m:G\to G)\\
+(-)*G&0&\ker(m:G\to G)\\
+\operatorname{Ext}(-,G)&0&G/mG
+\end{array}
+\]
+特别地，若 $d=\gcd(m,n)$，则 $\Z/m\otimes\Z\cong\Z/m$、$\operatorname{Hom}(\Z/m,\Z)=0$、$\Z/m*\Z=0$、$\operatorname{Ext}(\Z/m,\Z)\cong\Z/m$，并且
+\[
+\Z/m\otimes\Z/n\cong\Z/m*\Z/n\cong\operatorname{Hom}(\Z/m,\Z/n)
+\cong\operatorname{Ext}(\Z/m,\Z/n)\cong\Z/d.
+\]
+
+\subsection*{习题}
+\begin{enumerate}
+\item 对 $A=\Z\oplus\Z/2\oplus\Z/4\oplus\Z/6$、$B=\Z\oplus\Z\oplus\Z/9\oplus\Z/12$，计算张量积与挠积。
+\item 若 $A$ 有限生成，以其 Betti 数与挠系数计算它与圆周群的张量积、挠积，再将圆周群换为 $\mathbb Q$ 重复计算。
+\item 若 $\varphi:A\to B$ 单射，证明 $\varphi*i_C$ 单射。推出子群的挠积自然为原群挠积的子群。
+\item 设 $T_A,T_B$ 为挠子群。用引理 7.4.4 证明包含诱导 $A*T_B\to A*B$ 为同构，进而 $A*B\cong T_A*T_B$。
+\item 证明挠积总是挠群。〔提示：考察 $0\to A*T_B\to R\otimes T_B\to F\otimes T_B\to A\otimes T_B\to0$。〕
+\item 证明定理 7.4.5(a)、(b) 的自然性。
+\end{enumerate}

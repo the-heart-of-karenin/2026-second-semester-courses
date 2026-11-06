@@ -1,0 +1,92 @@
+550
+Index of Notation
+∂∗: Hp(X, A) →Hp−1(A)
+induced singular homology boundary
+homomorphism
+195
+sdX : Sp(X) →Sp(X)
+singular barycentric subdivision operator
+203
+DX : Sp(X) →Sp+1(X)
+singular chain homotopy
+206
+SA
+p (X)
+A-small singular chain subgroup
+207
+SA
+p (X, B)
+A-small singular relative chain subgroup
+208
+M
+model objects in category
+212
+S(X)
+suspension of space X
+218
+η : C(K) →S(|K|) chain map that induces isomorphism from
+simplicial to singular homology
+225
+η∗: C(K) →S(|K|) isomorphism from simplicial to singular homology 226
+Hp(X, X \ x)
+local homology group
+227
+Hm
+euclidean half-space
+228
+R+
+positive real numbers
+230
+[γ]
+homotopy class of loop γ
+246
+[γ] · [η]
+product of [γ] and [η]
+246
+π1(X, x0) or π1(X) fundamental group of X with base point x0
+247
+1
+identity element in fundamental group
+247
+f∗: π1(X) →π1(Y ) function induced by continuous map f : X →Y
+248
+p1 ≃p2
+rel {a, b} p1 and p2 are homotopic with fixed
+endpoints p1(a) and p1(b)
+252
+{γ}
+homology class of loop γ
+254
+χ : π1(X, x0) →H1(X)
+map χ([γ]) = {γ}
+254
+X ∪f Y
+adjunction space determined by f
+263
+˙eα
+boundary of cell eα
+268
+Xp
+p-skeleton of CW complex X
+271
+Dp(X) = Hp(Xp, Xp−1)
+cellular chain group
+277
+∂: Dp(X) →Dp−1(X)
+cellular boundary operator
+277
+D(X) = {Dp(X), ∂}
+cellular chain complex
+277
+Pn
+n-dimensional projective space
+287
+P∞
+infinite-dimensional projective space
+288
+ρ(z1, z2, . . . )
+realification operator
+288
+|z|
+norm on Cn
+288

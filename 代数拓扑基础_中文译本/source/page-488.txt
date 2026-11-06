@@ -1,0 +1,46 @@
+Duality in Manifolds
+473
+The existence of these cap products is easy to demonstrate. Let cp ∈Sp(X)
+and dp+q ∈Sp+q(X). To obtain the first operation, we note simply that if
+dp+q is carried by B, then so is cp ⌢dp+q by definition. To check the second,
+we note that if cp vanishes on all chains carried by A, and if dp+q is carried
+by A, then cp ⌢dp+q = 0. The third one equals the second one followed by
+the projection Hq(X) →Hq(X, A).
+The boundary formula and the cup product formula hold as before. There-
+fore one has a natural bilinear map on the level of relative homology and
+cohomology. One has similar relative cap products in simplicial theory. One
+simply repeats the arguments already given for the absolute cap product.
+EXERCISES
+1. Verify the naturality formula of Theorem 8.6.2 by setting dp+q = T ⊗α
+and computing directly.
+2. Verify the boundary formula of Theorem 8.6.2 by setting cp+q = T ⊗α
+and adding the expressions for (−1)qδdp ⌢cp+q and dp ⌢∂cp+q.
+Most of the terms cancel; one has remaining the expression
+
+i≤q
+(−1)iT ◦ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵq) ⊗α · ⟨dp, T ◦ℓ(ϵq, . . . , ϵp+1)⟩,
+where the qth term is left over from (−1)qδdp ⌢cp+q and the terms
+for which i < q are left over from dp ⌢∂cp+q.
+3. Verify the cup product formula of Theorem 8.6.2 by setting cp+q+r =
+T ⊗α and computing directly.
+4. Let T denote the torus. Let α and β be the usual generators for
+H1(T). Let Γ and Λ generate H2(T) and H2(T) respectively. [See
+Example 5.10.5.]
+(a) Compute α ⌢Γ and β ⌣Γ. Draw pictures.
+(b) Compute Λ ⌢Γ.
+(c) Verify that α ⌢(β ⌢Γ) = (α ⌣β) ⌢Γ.
+5. Let P2 be the projective plane. Let Γ(2) denote the non-zero element
+of H2(P2; Z/2). Compute the values of the homomorphism ⌢Γ(2) on
+the groups Hi(P2; Z/2) for i = 1, 2.
+6. Let (X, A) be a triangulated pair. Let α ∈Hn(X, A). Then ∂∗α is an
+element of Hn−1(A). Consider the following diagram:
+Hp(X, A) −−−−−→
+Hp(X)
+−−−−−→
+Hp(A)
+−−−−−→Hp+1(X, A)
+⌢α
+⌢α
+⌢∂∗α
+⌢α
+Hn−p(X) −−−−−→Hn−p(X, A) −−−−−→Hn−p−1(A) −−−−−→Hn−p−1(X) .

@@ -1,0 +1,39 @@
+286
+Elements of Algebraic Topology
+EXAMPLE 4.13.11 Let Sn be an n-sphere. Assume n > 1 for convenience.
+We can make Sn into a CW complex having one open cell in dimension n
+and one cell in dimension 0. It follows that the cellular chain complex of Sn
+is infinite cyclic in dimensions n and 0, and vanishes otherwise. Therefore
+Hn(Sn) ∼= Z and H0(Sn) ∼= Z, while Hi(Sn) = 0 for i /∈{0, n}. A similar
+computation applies when n = 1.
+Exercise 4 will ask you to prove the following theorem. But it will also
+offer some guidance.
+Theorem 4.13.12 Let C = {Cp, ∂} be a non-negative free chain complex
+such that H0(C) is free and non-trivial. Then there is a CW complex X whose
+cellular chain complex is isomorphic to C.
+EXERCISES
+1. Recompute the homology of the n-fold connected sums
+T # T # · · · # T
+and
+P2 # P2 # · · · # P2
+by expressing them as triangulable CW complexes and finding the
+corresponding cellular chain complexes.
+2. Let A be a closed subset of X. Suppose that A is a deformation re-
+tract of an open set in X. If X/A is the space obtained by collapsing
+A to a point, show that
+Hp(X, A) ∼= Hp(X/A) .
+[Hint: Examine the proof of Lemma 4.13.3.]
+3. Let X be a CW complex. Let A be a subcomplex. Show that in-
+clusion induces a monomorphism Dp(A) →Dp(X). The quotient
+Dp(X)/Dp(A) is denoted Dp(X, A).
+(a) Show that if X is a triangulable CW complex, D(X, A) can be
+used to compute the simplicial homology of (X, A). [Hint: Use
+the long exact sequence to show that inclusion Dp(X, A) →
+Cp(X, A) induces a homology isomorphism.]
+(b) Show that in general D(X, A) can be used to compute the
+singular homology of (X, A). [Hint: Establish that D(X, A)
+is isomorphic to the chain complex with pth chain group
+Hp(Xp ∪A, Xp−1 ∪A) and with its boundary operator coming
+from the exact sequence of a triple. Let Xp = Xp ∪A for all in-
+tegers p. Repeat the proof of Theorem 4.13.8, replacing Hi(Xp)
+by Hi(Xp, A) and Hi(X) by Hi(X, A).]

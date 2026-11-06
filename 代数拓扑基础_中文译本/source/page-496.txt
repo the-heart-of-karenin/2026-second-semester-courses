@@ -1,0 +1,63 @@
+Duality in Manifolds
+481
+Choose a generator Λ of Hn(X). Then choose a generator Γ of Hn(X) by
+choosing its sign so that the isomorphism
+Hn(X)
+H0(X) ϵ∗
+−→Z
+⌢Γ
+(∗)
+maps Λ to 1. Then ϵ∗(Λ ⌢Γ) = 1.
+To prove the theorem, we shall find elements α1, . . . , αm of Hk(X) and
+β1, . . . , βm of Hn−k(X) such that
+αi ⌣βj = δijΛ
+for i, j = 1, . . . , m and such that their cosets modulo torsion, denoted by {αi}
+and {βj} respectively, form bases for Hk(X)/T k(X) and Hn−k(X)/T n−k(X),
+respectively.
+The idea of the proof is this. First, there is a geometric duality isomorphism
+⌢Γ : Hn−k(X) →Hk(X) ,
+obtained from the cap product with Γ. This isomorphism induces an isomor-
+phism of Hn−k(X)/T n−k(X) with Hk(X)/Tk(X).
+Second, there is an algebraic duality isomorphism κ∗obtained from the
+Kronecker map κ. It is obtained from the exact sequence
+0 ←−Hom(Hk(X), Z)
+κ
+←−Hk(X) ←−Ext(Hk−1(X), Z) ←−0 ,
+as follows: The left-hand group is isomorphic to Hom(Hk(X)/Tk(X), Z) and
+is thus free, while the right-hand group is a torsion group. Therefore there
+exists an induced isomorphism
+Hom
+Hk(X)
+Tk(X) , Z
+
+κ∗
+←−Hk(X)
+T k(X) .
+It is related to the cap product by the formula
+[κ∗{α}]{β} = [κ(α)](β) = ⟨α, β⟩= ϵ∗(α ⌢β) .
+Combining these two types of duality will give us our theorem.
+Consider now the sequence of isomorphisms
+Hn−k
+T n−k
+Hk
+Tk
+∼= Hom
+Hk
+Tk
+, Z
+
+Hk
+T k .
+⌢Γ
+∼=
+∼=
+κ∗
+[Here we delete X from the notation—just for convenience.] Choose a basis
+{β1}, {β2}, . . . , {βm} for Hn−k/T n−k. Let {γ1}, {γ2}, . . . , {γm} be the corre-
+sponding basis for Hk/Tk, defined by the equation βj ⌢Γ = γj for all j.
+Let γ∗
+1, γ∗
+2, . . . , γ∗
+m be the corresponding dual basis for Hom(Hk/Tk, Z), de-
+fined by the equation γ∗
+i ({γj}) = δij. Finally, let {α1}, {α2}, . . . , {αm} be the

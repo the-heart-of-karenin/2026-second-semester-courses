@@ -1,0 +1,35 @@
+180
+Elements of Algebraic Topology
+to find a compact X1 such that m∗(α) is in the image of
+∂∗: Hq+1(X1, X0 ∪A1) →Hq(X0 ∪A1, A1) .
+Now you should complete the proof.]
+3. Give three distinct examples of triangulable pairs.
+3.7
+∗Categories and Functors
+We have seen many references to “induced homomorphisms” and their “func-
+torial properties” and to the naturality of the way we assign one mathematical
+object to another. This leads us to suspect that there is some common idea
+underlying all this language. Indeed there is, and we study it in this last sec-
+tion of Chapter 3. It consists mostly of new terminology. The few proofs are
+elementary and are mostly left to the reader.
+Definition 3.7.1 A category C consists of three things:
+(1) A class of objects X.
+(2) For each ordered pair (X, Y ) of objects, a set hom(X, Y ) of
+morphisms f.
+(3) A function, called composition of morphisms,
+hom(X, Y ) × hom(Y, Z) →hom(X, Z) ,
+which is defined for every triple (X, Y, Z) of objects.
+The image of the pair (f, g) under the composition operation is denoted
+by g ◦f. The following two properties must be satisfied.
+Axiom 1 (Associativity): If f ∈hom(W, X) and g ∈hom(X, Y ) and h ∈
+hom(Y, Z), then h ◦(g ◦f) = (h ◦g) ◦f.
+Axiom 2 (Existence of identities): If X is an object, then there is an element
+1X ∈hom(X, X), the identity morphism, such that
+1X ◦f = f
+and
+g ◦1X = g
+for every f ∈hom(W, X) and every g ∈hom(X, Y ), where W and Y are
+arbitrary objects.
+One standard example of a category consists of topological spaces and
+continuous maps, with the usual composition of maps. This example illustrates
+why we speak of the objects in a category as forming a class rather than a

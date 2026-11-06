@@ -1,0 +1,44 @@
+Topological Invariance of the Homology Groups
+103
+Step 4: Let K have dimension n: let d be the maximum diameter of a simplex
+of K. The maximum diameter of a simplex in the Nth barycentric subdivision
+of K is (n/(n + 1))Nd. If N is sufficiently large then this number is less than
+ϵ.
+The next definition is used in Exercises 2 and 3.
+Definition 2.3.12
+(1) If A and B are collections of sets, we say that B refines A if for
+each B ∈B there is an A ∈A such that B ⊂A.
+(2) A space X is said to have finite covering dimension if there
+is an integer m satisfying the following condition: For every open
+covering A of X there is an open covering B of X that refines A
+and such that no point of X lies in more than m + 1 elements of B.
+(3) The covering dimension of such a space X is the least integer
+m for which the condition in (2) holds.
+Exercise 3 refers to the Cantor ternary set. For completeness we give a
+definition next. The resulting set is the usual “middle-thirds removed” set.
+Definition 2.3.13 For each positive integer m, set
+Cm =
+(3m−1)/2
+
+k=0
+ 2k
+3m , 2k + 1
+3m
+
+.
+The Cantor ternary set, C, is given by
+C =
+∞
+
+m=1
+Cm .
+EXERCISES
+1. Let K be a complex and let x0 ∈|K|.
+(a) Show that there is a subdivision of K whose vertex set contains
+x0.
+∗(b) Show that there is a subdivision of K whose vertex set consists
+of x0 and the vertices of K.
+2. (a) Show that a discrete set has covering dimension 0.
+(b) Show that [0, 1] has covering dimension 1.
+(c) Show that if X has covering dimension m, then any closed
+subspace A of X has covering dimension at most m.

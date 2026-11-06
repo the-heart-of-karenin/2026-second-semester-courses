@@ -1,0 +1,33 @@
+500
+Elements of Algebraic Topology
+A
+X∗
+Figure 8.10.1
+To obtain the second duality isomorphism, we recall that the group
+Hom(Ck(X, A), Z) is naturally isomorphic to the group Ck(X, A). [See Step
+4 of Theorem 7.6.1.] Since ϕ is an isomorphism, so is its dual
+Hom(Ck(X, A), Z)
+ϕ
+←−Hom(Dn−k(X∗), Z) .
+Therefore one has an isomorphism
+Hk(X, A)
+Hn−k(X∗) ∼= Hn−k(|X| \ |A|) .
+ϕ∗
+∼=
+The proof for arbitrary coefficients if (X, A) is orientable, or for Z/2 coef-
+ficients if (X, A) is not orientable, goes through without difficulty, just as in
+the proof of Poincar´e duality.
+Corollary 8.10.5 Let (X, A) be a compact, triangulated relative homology
+n-manifold with |X| \ |A| connected. If σ and σ′ are two n-simplices of X not
+in A, then there is a sequence
+σ = σ0, σ1, . . . , σk = σ′
+of n-simplices not in A such that σi ∩σi+1 is an (n −1)-simplex not in A for
+each i.
+Proof: We define two n-simplices of X not in A to be equivalent if there is
+such a sequence joining them. The sum of the members of any one equivalence
+class is a relative cycle of (X, A) with Z/2 coefficients. We conclude that there
+is only one equivalence class, since
+Hn(X, A; Z/2) ∼= H0(|X| \ |A|; Z/2) ∼= Z/2 .
+Corollary 8.10.6 Let (X, A) be a compact, triangulated relative homology
+n-manifold. Assume that |X| \ |A| is connected. Then Hn(X, A) ∼= Z if (X, A)
+is orientable and Hn(X, A) = 0 if (X, A) is non-orientable.

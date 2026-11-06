@@ -1,0 +1,42 @@
+Topological Invariance of the Homology Groups
+131
+B
+B
+A
+A
+X
+A
+B
+p
+Figure 2.8.1
+The separation axioms are not necessarily valid for quotient spaces. For
+example, a quotient space of a Hausdorff space need not be Hausdorff. All that
+one can say in general is the following: If p : X →Y is a quotient map, and
+if each p−1(y) is closed in X, then Y is T1. That is to say, if X is Hausdorff,
+then one-point sets in Y are closed. So if X∗is a partition of X into closed
+sets, then the quotient space X∗is a T1-space.
+We will treat separation axioms for quotient spaces in more detail later in
+the book. We now treat one final question: Under what circumstances is the
+cartesian product of two quotient maps a quotient map? We have two results
+that address this question.
+Theorem 2.8.2 Let p : X →Y be a quotient map. If C is a locally compact
+Hausdorff space, then
+p × iC : X × C →Y × C
+is a quotient map.
+Proof: Let π = p × iC. Let A be a subset of Y × C such that π−1(A) is open
+in X × C. We show that A is open in Y × C. That is, given (y0, c0) ∈A, we
+will find an open set containing (y0, c0) and lying in A. Choose x0 ∈X so that
+p(x0) = y0. Then π(x0, c0) = (y0, c0). Since π−1(A) is open, we can choose
+neighborhoods U1 of x0 and W of c0 such that U1 × W ⊂π−1(A). Because C
+is locally compact Hausdorff, we can choose a neighborhood V of c0 so that
+V is compact and V ⊂W. Then U1 × V is a neighborhood of (x0, c0) such
+that V is compact and
+U1 × V ⊂π−1(A) .
+In general, suppose that Ui is a neighborhood of x0 such that Ui × V ⊂
+π−1(A). Now p−1p(Ui) is not necessarily open in X, but it contains Ui. We
+construct an open set Ui+1 ⊂X such that
+p−1p(Ui) × V ⊂Ui+1 × V ⊂π−1(A)
+as follows: For each point x of p−1p(Ui), the space {x} × V lies in π−1(A).
+Using the compactness of V , we choose a neighborhood Wx of x such that
+Wx × V ⊂π−1(A). Let Ui+1 be the union of the open sets Wx. Then Ui+1 is
+the desired open subset of X. See Figure 2.8.2.

@@ -1,0 +1,37 @@
+106
+Elements of Algebraic Topology
+as σ ranges over all (p + 1)-simplices of K. Then Lp+1 is a subdivision of the
+(p + 1)-skeleton of K. The union of the complexes Lp is a subdivision of K.
+It is called the generalized barycentric subdivision of K corresponding to the
+function N(σ).
+The remainder of this section will show that this generalized barycentric
+subdivision is adequate to prove the general simplicial approximation theorem.
+Keep Figure 2.4.1 in mind as we compare the complex sd (K/K0) with
+the complex sd K in general.
+Lemma 2.4.6 Let K0 be a subcomplex of K.
+(a) If τ is a simplex of sd(K/K0), then τ is of the form
+τ = σ1σ2 · · · σqv0v1 · · · vp ,
+where s = v0v1 · · · vp is a simplex of K0 and σ1, σ2, · · · , σq are sim-
+plices of K not in K0 and σ1 ≻σ2 ≻· · · ≻σq ≻s.
+(b) Either v0v1 · · · vp or σ1σ2 · · · σq may be missing from this expres-
+sion. The simplex τ is disjoint from |K0| if and only if v0v1 · · · vp is
+missing. In this case τ is a simplex of sd K.
+Proof: (a) The result is true if τ is in J0. In general, let τ be a simplex of
+Jp+1, not in Jp. Then either τ belongs to K0, in which case τ is of the form
+v0v1 · · · vr, or τ belongs to one of the cones σ ∗Jσ. Now each simplex of Jσ
+has the form σ1σ2 · σqv0v2 · · · vr by the induction hypothesis, where σ ≻σ1.
+Then τ has the form σσ1σ2 · · · σqv0v2 · · · vr as desired.
+(b) Let τ = σ1σ2 · · · σqv0v2 · · · vr. If v0v1 · · · vp is not missing from this ex-
+pression, then τ intersects |K0| in v0v1 · · · vp at least. Conversely, if the set
+τ ∩|K0| is nonempty, then it contains a face of τ and hence a vertex of τ.
+Since none of the points σ1, σ2, . . . , σq is in |K0|, the term v0v1 · · · vp cannot
+be missing.
+To prove the general simplicial approximation theorem, we need to show
+that, given an arbitrary continuous map h : |K| →|L|, there is a subdivision
+K′ of K such that h satisfies the star condition relative to K′ and L. This is
+equivalent to the statement that if A is the open covering of K defined by
+A = {h−1(St(w, L)) : w is a vertex of L} ,
+then there is a subdivision of K′ of K such that the collection of open stars
+B = {St(v, K′) : v is a vertex of K′}
+refines A. [Recall that a collection B refines a collection A if, for each element
+B ∈B, there is an element A ∈A that contains B.]

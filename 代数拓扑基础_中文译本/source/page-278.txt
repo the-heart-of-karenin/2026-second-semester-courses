@@ -1,0 +1,39 @@
+Singular Homology Theory
+263
+Definition 4.11.2 Let X and Y be disjoint topological spaces, let A be a
+closed subset of X, and let f : A →Y be a continuous map. We define a
+certain quotient space as follows: Topologize X ∪Y as the topological sum.
+Form a quotient space by identifying the set
+{y} ∪f −1(y)
+(∗)
+to a point, for each y ∈Y . That is, partition X ∪Y into the sets in (∗) along
+with the one-point sets {x}, for x ∈X \ A. We denote this quotient space by
+X ∪f Y , and call it the adjunction space determined by f. See Figure 4.11.2.
+p
+f
+A
+Y
+X
+X ∪f Y
+Figure 4.11.2
+Let p : X ∪Y →X ∪f Y be the quotient map. We show first that p defines
+a homeomorphism of Y with a closed subspace of X ∪f Y . Obviously, p|Y
+is continuous and injective. Furthermore, if C is closed in Y , then f −1(C) is
+closed in X, because f : A →Y is continuous and A is closed in X. It follows
+that
+p−1p(C) = C ∪f −1(C)
+is closed in X ∪Y . Then p(C) is closed in X ∪f Y by definition of the quotient
+topology. Thus p|Y carries Y homeomorphically onto the closed subspace p(Y )
+of X ∪f Y . We normally abuse notation and identify Y with p(Y ).
+Now if X and Y are T1-spaces, then X ∪f Y is also a T1-space, since each
+of the equivalence classes is closed in X ∪Y . The preceding theorem does not
+apply to give us further separation properties, for p is not, in general, a closed
+map. Nonetheless, we can still prove the following.
+Theorem 4.11.3 If X and Y are normal, then the adjunction space X ∪f Y
+is normal.
+Proof: Let A be closed in X and let f : A →Y be continuous. Let B and C
+be disjoint closed sets in X ∪f Y . Let
+BX = p−1(B) ∩X,
+CX = p−1(C) ∩X,
+BY = p−1(B) ∩Y,
+CY = p−1(C) ∩Y.

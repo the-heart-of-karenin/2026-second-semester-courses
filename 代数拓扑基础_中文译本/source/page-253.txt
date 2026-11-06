@@ -1,0 +1,36 @@
+238
+Elements of Algebraic Topology
+h(Sk)
+h(Ek
+−)
+h(Sk−1)
+h(Ek
++)
+Figure 4.9.2
+Both X1 and X2 are acyclic by the preceding theorem; therefore, the middle
+map is an isomorphism. That is,
+Hi+1(Sn \ h(Sk−1)) ∼= Hi(Sn \ h(Sk))
+for all i. By the induction hypothesis, the group on the left is infinite cyclic
+for i + 1 = n −(k −1) −1 and vanishes otherwise. Hence the group on the
+right is infinite cyclic for i = n −k −1 and vanishes otherwise.
+Theorem 4.9.5 (The generalized Jordan curve theorem) Let n > 0.
+Let C be a subset of Sn homeomorphic to the n −1 sphere. Then Sn \ C has
+precisely two components, of which C is the common topological boundary.
+Proof: Applying the preceding theorem to the case k = n −1, we see that
+H0(Sn \ C) ∼= Z. Thus Sn \ C has precisely two path components [which are
+the same as its components, as noted just after Definition 4.9.1]. Let W1 and
+W2 be these path components. Because Sn is locally path connected, the Wi
+are open in Sn. Thus the topological boundary of Wi is the set W i \ Wi. We
+need to show that
+W 1 \ W1 = C = W 2 \ W2 .
+It suffices to prove the first of these equations.
+Since W2 is open, no point of W2 is a limit point of W1. Therefore we have
+W 1 ⊂Sn \W2 = W1 ∩C, so W 1 \W1 ⊂C. We still need to show containment
+in the other direction.
+Given x ∈C and a neighborhood U of x, it will suffice to show that U
+intersects the closed set W 1 \ W1. Since C is homeomorphic to Sn−1, we can
+write C as the union of two (n −1)-cells, C1 and C2, such that C1 is small
+enough to lie in U. Figure 4.9.3 illustrates the case n = 2.
+Now C2 does not separate Sn, so we can choose a path α in Sn \C2 joining
+a point p of W1 to a point q of W2. Now α must contain a point of W 1 \ W1,
+since otherwise α would lie in the union of the disjoint sets W1 and Sn \ W1

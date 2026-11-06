@@ -1,0 +1,60 @@
+418
+Elements of Algebraic Topology
+Step 4. We now show that the zig-zag homomorphism βm is induced by
+inclusion j : Bp →Zp. More precisely, we show that the following diagram
+commutes [recall that Dp+1 = Bp and that i′ denotes the identity map of C′]:
+Hm+1(D ⊗C′)
+Hm+1(Z ⊗C′)
+
+p+q=mDp+1 ⊗Hq(C′)
+
+p+q=mZp ⊗Hq(C′)
+βm+1
+j ⊗i′
+∗
+∼=
+∼=
+The map βm+1 is defined via the following zig-zag diagram:
+
+p+q=mCp+1 ⊗C′
+q
+
+p+q=mDp+1 ⊗C′
+q
+
+r+s=mZr ⊗C′
+s
+
+r+s=mCr ⊗C′
+s
+∂0 ⊗i′
+∂
+j ⊗i′
+One begins with an element of the group of (m + 1)-cycles of D ⊗C′. By the
+previous step, this group is
+
+p+q=mDp+1 ⊗Z′
+q .
+Since Dp+1 = Bp, a typical generator for this group has the form bp ⊗z′
+q,
+where bp ∈Bp, z′
+q ∈Zq, and p + q = m. Pulling back to C ⊗C′, one obtains
+an element cp+1 ⊗z′
+q, where ∂0cp+1 = bp. Applying ∂, we obtain the element
+∂(cp+1 ⊗z′
+q) = ∂cp+1 ⊗z′
+q ± cp+1 ⊗∂′z′
+q
+= bp ⊗z′
+q .
+Finally, we pull this back to Z ⊗C′, obtaining bp ⊗z′
+q, which is the same
+element with which we started, thus verifying that the map is induced by
+inclusion.
+Step 5. Now we can identify the kernel and cokernel of βm.
+Begin with the free resolution
+0 −→Bp −→Zp −→Hp(C) −→0 .
+Tensoring with Hq(C′), we obtain the sequence
+0 →Hp(C) ∗Hq(C′) →Bp ⊗Hq(C′) →Zp ⊗Hq(C′) →Hp(C) ⊗Hq(C′) →0 .
+The map in the middle is induced by inclusion. Summing over p + q = m and
+applying Step 4, we obtain the sequence

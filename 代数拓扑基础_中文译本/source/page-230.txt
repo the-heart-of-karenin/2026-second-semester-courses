@@ -1,0 +1,55 @@
+Singular Homology Theory
+215
+Proof: We apply the preceding theorem four times. Because G is free and
+G′ is acyclic, T exists. Because G′ is free and G is acyclic, there is a natural
+transformation S of G′ to G. Now S ◦T and the identity transformation are
+two natural transformations of G to G. Because G is free and acyclic, there
+is a natural chain homotopy of S ◦T to the identity. Similarly, because G′ is
+free and acyclic, there is a natural chain homotopy of T ◦S to the identity.
+EXERCISES
+1. Prove part (a) of the acyclic model theorem by following these
+steps:
+(a) Fix Mα ∈M and c ∈Gp(Mα), where p ≥0. Show that there
+is a chain d′ ∈Gp(Mα) such that if you let d′ = TMα(c), then
+ϵ′ ◦TMα(c)
+=
+ϵ(c),
+for p = 0,
+∂′ ◦TMα(c)
+=
+TMα ◦∂(c),
+for p > 0.
+Here ϵ′ denotes the augmentation in G′ and ϵ denotes the aug-
+mentation in G. Likewise, ∂′ denotes the boundary operator
+in G′ and ∂denotes the boundary operator in G. [Hint: Use
+induction on p.]
+(b) In part (a), you constructed a transformation T : G →G′ that
+operates on the model spaces Mα ∈M, but only on the model
+spaces. Because G is free, the formula
+TXG(f)(iα) = G′(f)TMα(iα), for all α ∈Jp, all f ∈hom(Mα, X),
+extends the transformation T : G →G′ to all X ∈C. Show
+that this transformation T : G →G′ is natural.
+(c) Show that the transformation T : G →G′ defined in part (b)
+satisfies
+ϵ′ ◦TX
+=
+ϵ,
+for p = 0,
+∂′ ◦TX
+=
+TX ◦∂,
+for p > 0.
+2. Prove part (b) of the acyclic model theorem by following these
+steps:
+(a) Fix Mα ∈M and c ∈Gp(Mα), where p ≥0. Show that there is
+a chain d′ ∈Gp+1(Mα) such that if you let d′ = DMα(c), then
+∂′ ◦DMα(c)
+=
+(TMα −SMα)(c),
+for p = 0,
+∂′ ◦DMα(c) + DMα(∂c)
+=
+(TMα −SMα)(c),
+for p > 0.
+Here ∂′ denotes the boundary operator in G′ and ∂denotes the
+boundary operator in G. [Hint: Use induction on p.]

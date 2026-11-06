@@ -1,0 +1,190 @@
+\section{之字形引理}
+\sourcepage{158--159}
+本节证明偶的同调序列正合。我们将其重新表述为链复形的定理，再在这个形式下证明。先作一个定义。
+
+\entry{定义}{3.3.1}设 $\mathcal C,\mathcal D,\mathcal E$ 为链复形，以 $0$ 表示各维群均为零的平凡链复形。若链映射组成的序列
+\[
+0\to\mathcal C\xrightarrow{\varphi}\mathcal D\xrightarrow{\psi}\mathcal E\to0
+\]
+在每个维数 $p$ 上都给出群的短正合列 $0\to C_p\xrightarrow{\varphi}D_p\xrightarrow{\psi}E_p\to0$，则称其为\textbf{链复形的短正合列}。
+
+例如，$0\to\mathcal C(K_0)\to\mathcal C(K)\to\mathcal C(K,K_0)\to0$ 正合，因为相对链群按定义就是商群。
+
+\entry{引理}{3.3.2（之字形引理）}设链复形 $\mathcal C=\{C_p,\partial_C\}$、$\mathcal D=\{D_p,\partial_D\}$、$\mathcal E=\{E_p,\partial_E\}$ 组成上述短正合列，则有长正合列
+\[
+\cdots\to H_p(\mathcal C)\xrightarrow{\varphi_*}H_p(\mathcal D)
+\xrightarrow{\psi_*}H_p(\mathcal E)\xrightarrow{\partial_*}H_{p-1}(\mathcal C)
+\xrightarrow{\varphi_*}H_{p-1}(\mathcal D)\to\cdots,
+\]
+其中 $\partial_*$ 由 $\mathcal D$ 的边界算子诱导。
+
+\noindent\textbf{证明：}这种证明通常称为“图表追踪”（diagram chasing）。以后大多数此类证明将留给读者。所用交换图由各维短正合列及竖直边界算子组成：
+\[
+\begin{array}{ccccccccc}
+0&\to&C_{p+1}&\xrightarrow{\varphi}&D_{p+1}&\xrightarrow{\psi}&E_{p+1}&\to&0\\
+&&\downarrow\scriptstyle\partial_C&&\downarrow\scriptstyle\partial_D&&\downarrow\scriptstyle\partial_E\\
+0&\to&C_p&\xrightarrow{\varphi}&D_p&\xrightarrow{\psi}&E_p&\to&0\\
+&&\downarrow\scriptstyle\partial_C&&\downarrow\scriptstyle\partial_D&&\downarrow\scriptstyle\partial_E\\
+0&\to&C_{p-1}&\xrightarrow{\varphi}&D_{p-1}&\xrightarrow{\psi}&E_{p-1}&\to&0.
+\end{array}
+\]
+\textbf{第一步。}定义 $\partial_*$。给定闭链 $e_p\in E_p$，由满射性选 $d_p\in D_p$ 使 $\psi(d_p)=e_p$。因为
+\[
+\psi(\partial_Dd_p)=\partial_E\psi(d_p)=\partial_Ee_p=0,
+\]
+所以 $\partial_Dd_p\in\ker\psi=\operatorname{im}\varphi$。存在唯一 $c_{p-1}$，使 $\varphi(c_{p-1})=\partial_Dd_p$。又有
+\[
+\varphi(\partial_Cc_{p-1})=\partial_D\varphi(c_{p-1})=\partial_D^2d_p=0.
+\]
+由 $\varphi$ 单射，$c_{p-1}$ 为闭链。定义 $\partial_*\{e_p\}=\{c_{p-1}\}$。
+
+\sourcepage{160}
+\textbf{第二步。}验证其为良定义同态。设闭链 $e_p,e'_p$ 分别提升为 $d_p,d'_p$，并相应得到 $c_{p-1},c'_{p-1}$。若 $e_p-e'_p=\partial_Ee_{p+1}$，选择 $d_{p+1}$ 使 $\psi(d_{p+1})=e_{p+1}$，则
+\[
+\psi(d_p-d'_p-\partial_Dd_{p+1})
+=e_p-e'_p-\partial_Ee_{p+1}=0.
+\]
+所以存在 $c_p$，使 $\varphi(c_p)=d_p-d'_p-\partial_Dd_{p+1}$。取边界得
+\[
+\varphi(\partial_Cc_p)=\partial_D(d_p-d'_p)
+=\varphi(c_{p-1}-c'_{p-1}).
+\]
+由单射性，$\partial_Cc_p=c_{p-1}-c'_{p-1}$，故同调类相同。又因为 $d_p+d'_p$ 可提升 $e_p+e'_p$，相应链为 $c_{p-1}+c'_{p-1}$，所以 $\partial_*$ 保持加法。
+
+\textbf{第三步。}证明在 $H_p(\mathcal D)$ 处正合。由 $\psi\varphi=0$，有 $\operatorname{im}\varphi_*\subset\ker\psi_*$。反过来，若 $\psi_*\{d_p\}=0$，则 $\psi(d_p)=\partial_Ee_{p+1}$。提升 $e_{p+1}$ 为 $d_{p+1}$，得到
+\[
+\psi(d_p-\partial_Dd_{p+1})=0,
+\]
+故 $d_p-\partial_Dd_{p+1}=\varphi(c_p)$。因 $d_p$ 为闭链，$\varphi(\partial_Cc_p)=0$，所以 $c_p$ 为闭链。而
+\[
+\varphi_*\{c_p\}=\{d_p-\partial_Dd_{p+1}\}=\{d_p\},
+\]
+得到反向包含。
+
+\sourcepage{161}
+\textbf{第四步。}证明在 $H_p(\mathcal E)$ 处正合。给定 $\alpha=\{e_p\}$，选取 $d_p,c_{p-1}$ 如第一步。若 $\alpha$ 属于 $\operatorname{im}\psi_*$，可选择 $d_p$ 为闭链，则 $\varphi(c_{p-1})=0$，故 $c_{p-1}=0$，$\partial_*\alpha=0$。
+
+反过来，若 $\partial_*\alpha=0$，则 $c_{p-1}=\partial_Cc_p$。链 $d_p-\varphi(c_p)$ 为闭链，因为
+\[
+\partial_D(d_p-\varphi(c_p))=\partial_Dd_p-\varphi(c_{p-1})=0.
+\]
+且 $\psi_*\{d_p-\varphi(c_p)\}=\{e_p\}=\alpha$，故 $\alpha\in\operatorname{im}\psi_*$。
+
+\textbf{第五步。}证明在 $H_{p-1}(\mathcal C)$ 处正合。若 $\beta\in\operatorname{im}\partial_*$，则可写成 $\beta=\{c_{p-1}\}$，且 $\varphi(c_{p-1})=\partial_Dd_p$，所以 $\varphi_*\beta=0$。反过来，若 $\varphi_*\{c_{p-1}\}=0$，则存在 $d_p$ 使 $\varphi(c_{p-1})=\partial_Dd_p$。令 $e_p=\psi(d_p)$，则
+\[
+\partial_Ee_p=\psi\partial_Dd_p=\psi\varphi(c_{p-1})=0,
+\]
+且按定义 $\partial_*\{e_p\}=\{c_{p-1}\}$，得到所需结论。\hfill$\square$
+
+整个证明没有假设链复形自由或非负，故其适用范围远超单纯链群。应用于 $\mathcal C(K_0),\mathcal C(K),\mathcal C(K,K_0)$，立即得到普通同调的定理 3.2.8。
+
+对约化同调，仍取 $\mathcal E=\mathcal C(K,K_0)$，将前两个复形增广。由于包含保持增广，在 $-1$ 维短正合列为 $0\to\Z\xrightarrow{i}\Z\to0\to0$，且与零维边界可交换。再用之字形引理，即得约化版本。
+
+从证明中还能提取自然性：给每个链复形短正合列指定同调长正合列，这一操作将短正合列同态变为相应长正合列同态。
+
+\sourcepage{162}
+\entry{定理}{3.3.3}设下图可交换，各横列为链复形短正合列，竖向为链映射：
+\[
+\begin{array}{ccccccccc}
+0&\to&\mathcal C&\xrightarrow{\varphi}&\mathcal D&\xrightarrow{\psi}&\mathcal E&\to&0\\
+&&\downarrow\scriptstyle\alpha&&\downarrow\scriptstyle\beta&&\downarrow\scriptstyle\gamma\\
+0&\to&\mathcal C'&\xrightarrow{\varphi'}&\mathcal D'&\xrightarrow{\psi'}&\mathcal E'&\to&0.
+\end{array}
+\]
+则相应同调长正合列之间由 $\alpha_*,\beta_*,\gamma_*$ 给出的图也可交换，特别地 $\partial'_*\gamma_*=\alpha_*\partial_*$。
+
+\noindent\textbf{证明：}涉及 $\varphi_*,\psi_*$ 的方块已在链层次可交换。对于连接同态，给定 $\{e_p\}$，选 $d_p$ 使 $\psi(d_p)=e_p$，选 $c_{p-1}$ 使 $\varphi(c_{p-1})=\partial_Dd_p$。于是 $\partial_*\{e_p\}=\{c_{p-1}\}$。令 $e'_p=\gamma(e_p)$。$\beta(d_p)$ 是它的一个提升，因为 $\psi'\beta(d_p)=\gamma\psi(d_p)=e'_p$。又
+\[
+\varphi'\alpha(c_{p-1})=\beta\varphi(c_{p-1})
+=\beta\partial_Dd_p=\partial'_D\beta(d_p).
+\]
+所以 $\partial'_*\{e'_p\}=\{\alpha(c_{p-1})\}=\alpha_*\partial_*\{e_p\}$。\hfill$\square$
+
+长正合列的自然性非常有用。下面给一个应用，需要下列引理，其图表追踪证明留给读者。
+
+\entry{引理}{3.3.4（Steenrod 五引理）}设阿贝尔群的交换图两行均正合：
+\[
+\begin{array}{ccccccccc}
+A_1&\to&A_2&\to&A_3&\to&A_4&\to&A_5\\
+\downarrow\scriptstyle f_1&&\downarrow\scriptstyle f_2&&\downarrow\scriptstyle f_3&&\downarrow\scriptstyle f_4&&\downarrow\scriptstyle f_5\\
+B_1&\to&B_2&\to&B_3&\to&B_4&\to&B_5.
+\end{array}
+\]
+若 $f_1,f_2,f_4,f_5$ 为同构，则 $f_3$ 也为同构。
+
+\sourcepage{163--164}
+\entry{引理}{3.3.5}设 $h:(K,K_0)\to(L,L_0)$ 为单纯映射。
+\begin{enumerate}[label=(\alph*)]
+\item 各诱导同态 $h_*$ 给出两个偶的同调正合列之间的序列同态。
+\item 若 $h_*:H_i(K)\to H_i(L)$ 与 $h_*:H_i(K_0)\to H_i(L_0)$ 在 $i=p,p-1$ 时均为同构，则 $h_*:H_p(K,K_0)\to H_p(L,L_0)$ 为同构。
+\item 将所有绝对同调换为约化同调，以上仍成立。
+\end{enumerate}
+\noindent\textbf{证明：}$h_\#$ 是链映射，且与包含、商投影可交换，所以给出链复形短正合列之间的同态，由定理得 (a)。对约化情形，$h_\#$ 保持增广，在 $-1$ 维定义为 $\Z$ 的恒等映射，即可应用增广后的结论。(b) 直接由五引理得到。\hfill$\square$
+
+\entry{定理}{3.3.6}前一引理对任意连续映射 $h:(|K|,|K_0|)\to(|L|,|L_0|)$ 也成立。
+
+这是前一引理与第二章结果的直接推论。偶的长正合列之外，还有三元组的长正合列，存在性留作习题 1。
+
+\entry{定义}{3.3.7}若 $X$ 为复形，$A$ 为其子复形，$B$ 为 $A$ 的子复形，则称 $(X,A,B)$ 为\textbf{单纯三元组}（simplicial triple），语境明确时简称三元组。
+
+\entry{定理}{3.3.8（三元组的同调正合列）}对于单纯三元组 $(X,A,B)$，存在自然的长正合列
+\[
+\cdots\to H_i(A,B)\to H_i(X,B)\to H_i(X,A)\to H_{i-1}(A,B)\to\cdots.
+\]
+下面的结果留作习题 2。
+
+\entry{引理}{3.3.9（蛇引理）}给定阿贝尔群短正合列之间的同态
+\[
+\begin{array}{ccccccccc}
+0&\to&A&\to&B&\to&C&\to&0\\
+&&\downarrow\scriptstyle\alpha&&\downarrow\scriptstyle\beta&&\downarrow\scriptstyle\gamma\\
+0&\to&D&\to&E&\to&F&\to&0,
+\end{array}
+\]
+则有正合列
+\[
+0\to\ker\alpha\to\ker\beta\to\ker\gamma\to
+\operatorname{cok}\alpha\to\operatorname{cok}\beta\to\operatorname{cok}\gamma\to0.
+\]
+原书以 serpent lemma 称呼它，脚注指出也称 snake lemma。
+
+习题 7 涉及 Bockstein 同态，定义如下。
+
+\entry{定义}{3.3.10}给定复形 $K$ 及阿贝尔群短正合列 $0\to G\to G'\to G''\to0$，得到系数链复形的短正合列
+\[
+0\to C_p(K;G)\to C_p(K;G')\to C_p(K;G'')\to0.
+\]
+它给出同调长正合列，其中的之字形同态通常记为
+\[
+\beta_*:H_p(K;G'')\to H_{p-1}(K;G),
+\]
+称为相应系数序列的 \textbf{Bockstein 同态}。
+
+\sourcepage{164--165}
+\subsection*{习题}
+\begin{enumerate}
+\item 证明三元组同调正合列的存在性与自然性。
+\item 证明蛇引理。［提示：应用之字形引理。］
+\item \begin{enumerate}[label=(\alph*)]
+\item 证明 Steenrod 五引理。
+\item 对五引理的交换图，考虑八个假设：$i=1,2,4,5$ 时 $f_i$ 分别为单射，以及分别为满射。哪些假设足以推出 $f_3$ 单射？哪些足以推出其满射？
+\end{enumerate}
+\item 举例说明，即使所有 $i$ 都有 $H_i(K_0)\cong H_i(L_0)$、$H_i(K)\cong H_i(L)$，相对同调也不一定同构。
+\item 对锥 $w*K$，证明 $H_i(w*K,K)\cong\widetilde H_{i-1}(K)$。
+\item 设 $K_0$ 为 $K$ 的子复形。
+\begin{enumerate}[label=(\alph*)]
+\item 若存在收缩映射 $r:|K|\to|K_0|$，证明 $H_p(K)\cong H_p(K,K_0)\oplus H_p(K_0)$。
+\item 若 $|K|$ 的恒等映射同伦于将 $|K|$ 映入 $|K_0|$ 的映射，证明 $H_p(K_0)\cong H_p(K)\oplus H_{p+1}(K,K_0)$。
+\item 若包含 $j:|K_0|\to|K|$ 同伦于常值映射，证明
+\[
+H_p(K,K_0)\cong\widetilde H_p(K)\oplus\widetilde H_{p-1}(K_0).
+\]
+［提示：证明 $j$ 扩张为 $f:|w*K_0|\to|K|$，见推论 2.8.8，再应用习题 5。］
+\item[\textasteriskcentered\,(d)] 举例说明：若只假设 $j_*$ 在约化同调中为零，(c) 的结论未必成立。
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 当 $|K|=P^2$ 时，分别计算系数序列 $0\to\Z\to\Z\to\Z/2\to0$ 和 $0\to\Z/2\to\Z/4\to\Z/2\to0$ 的 Bockstein 同态。
+\item 当 $|K|$ 为 Klein 瓶时，重复 (a)。
+\end{enumerate}
+\item 证明定理 3.3.6。
+\end{enumerate}

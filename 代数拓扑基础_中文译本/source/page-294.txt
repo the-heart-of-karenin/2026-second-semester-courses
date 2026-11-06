@@ -1,0 +1,49 @@
+Singular Homology Theory
+279
+Proof: The proof is similar to that of the preceding lemma. The restriction
+f ′ of f to the space
+Xp−1 ∪(Bα \ 0α) ,
+where 0α is the center of Bα, is a quotient map. Furthermore, there is a
+deformation retraction of this space onto Xp−1 ∪ Sα. This deformation
+retraction induces, via the quotient map f ′ × iI, a deformation retraction of
+Xp \ ∪eα onto Xp−1, where eα = f(0α). One has the following diagram:
+ Bα,  Sα
+
+−→
+ Bα, (Bα \ 0α)
+
+←−
+ Int Bα, ((Int Bα) \ 0α)
+
+(Xp, Xp−1)
+−→
+(Xp, Xp \ ∪eα)
+←−
+(∪eα, ∪(eα \ eα))
+f
+f
+f
+The map on the right-hand side is a homeomorphism, being a one-to-one
+quotient map. The horizontal maps are inclusions, and they induce homology
+isomorphisms for the same reasons as before.
+Theorem 4.13.5 The group Hi(Xp, Xp−1) vanishes for i̸ = p, and is free
+abelian for i = p. If γ generates Hp(Bp, Sp), then the elements (fα)∗(γ) form
+a basis for Hp(Xp, Xp−1), as fα ranges over a set of characteristic maps for
+the p-cells of X.
+Proof: The preceding lemma tells us that
+Hi(Xp, Xp−1) ∼= Hi( Bα,  Sα) ,
+where  Bα is a topological sum of p-balls and Sα = Bd Bα. Because the sets
+Bα are disjoint open sets in  Bα, this group is isomorphic to the direct sum
+⊕Hi(Bα, Sα). The theorem follows.
+Definition 4.13.6 Given a triple X ⊃A ⊃B of spaces, one has a short
+exact sequence of chain complexes
+0 −→Sp(A)
+Sp(B) −→Sp(X)
+Sp(B) −→Sp(X)
+Sp(A) −→0 .
+It gives rise to the following sequence, which is called the exact homology
+sequence of a triple:
+· · · −→Hp(A, B) −→Hp(X, B) −→Hp(X, A) −→Hp−1(A, B) −→· · · .
+The existence of the exact homology sequence of a triple was the content
+of Theorem 3.3.8. The existence of the exact homology sequence of a triple
+can also be proved from the axioms for homology theory [see the exercises of

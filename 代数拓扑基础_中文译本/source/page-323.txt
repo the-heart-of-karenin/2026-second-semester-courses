@@ -1,0 +1,39 @@
+308
+Elements of Algebraic Topology
+(d) Use a Zorn’s lemma argument to complete the proof. [See
+[Mun00], page 70, if you are not familiar with Zorn’s lemma.]
+5. Let R be a commutative ring with unity element 1. Let A and B be
+R-modules. [Look ahead into Section 5.9 if you have forgotten the
+definitions.]
+(a) Let HomR(A, B) denote the set of all R-module homomor-
+phisms of A into B. Show that it has the structure of an R-
+module in a natural way. Show that if f and g are R-module
+homomorphisms, then so is Hom (f, g).
+(b) State and prove the analogue of Theorem 5.2.5 for R-modules.
+Do the same for Theorem 5.2.7.
+(c) Consider the special case where R is a field F. Then A and
+B are vector spaces over F, and so is HomF (A, B). Show that
+in this case every exact sequence splits, so the functor HomF
+preserves exact sequences.
+6. Show that the product of divisible groups is divisible. Show that
+the quotient of divisible groups is divisible.
+5.3
+Simplicial Cohomology Groups
+In this section we define the cohomology groups of a simplicial complex, and
+we compute some elementary examples.
+Definition 5.3.1 Let K be a simplicial complex, and let G be an abelian
+group. The group of p-dimensional cochains of K, with coefficients in G, is
+the group
+Cp(K; G) = Hom (Cp(K), G) .
+The coboundary operator δ is defined to be the dual of the boundary operator
+∂: Cp+1(K) →Cp(K). Thus we have
+Cp+1(K; G)
+δ
+←−Cp(K; G) ,
+so that δ raises dimension by one. We define Zp(K; G) to be the kernel of this
+homomorphism, Bp+1(K; G) to be its image, and [noting that δ2 = 0, because
+∂2 = 0],
+Hp(K; G) = Zp(K; G)/Bp(K; G) .
+These groups are called the group of cocycles the group of coboundaries and
+the cohomology group respectively, of K with coefficients in G. We omit G
+from the notation when G equals the group of integers.

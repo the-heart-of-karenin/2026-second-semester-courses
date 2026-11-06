@@ -1,0 +1,56 @@
+Homology Groups of a Simplicial Complex
+3
+Given a set {a0, a1, . . . , an} of points of RN, this set is said to be geomet-
+rically independent if for any real scalars ti, the equations
+n
+
+i=0
+ti = 0 and
+n
+
+i=0
+tiai = 0
+imply that t0 = t1 = · · · = tn = 0.
+It is clear that a one-point set is always geometrically independent. Simple
+algebra shows that in general {a0, a1, . . . , an} is geometrically independent if
+and only if the vectors
+a1 −a0, a2 −a0, . . . , an −a0
+are linearly independent in the sense of linear algebra. Thus two distinct points
+in RN form a geometrically independent set, as do three non-collinear points,
+four non-coplanar points, and so on.
+Given a geometrically independent set of points {a0, a1, . . . , an}, we define
+the n-plane P spanned by these points to consist of all points x ∈RN such
+that
+x =
+n
+
+i=0
+tiai
+for some scalars ti with 
+i ti = 1. Since the ai are geometrically independent,
+the ti are uniquely determined by x. Note that each point ai itself belongs to
+the plane P.
+The plane P can also be described as the set of all points x such that
+x = a0 +
+n
+
+i=1
+ti(ai −a0)
+for some scalars t1, t2, . . . , tn; in this form we say P is “the plane through a0
+parallel to the vectors ai −a0.”
+It is elementary to check that, if {a0, a1, . . . , an} is geometrically in-
+dependent, and if w lies outside the plane that these points span, then
+{w, a0, a1, . . . , an} is geometrically independent.
+An affine transformation T of RN is a map that is a composition of trans-
+lations [i.e., maps of the form T(x) = x + p for fixed p], and non-singular
+linear transformations. If T is an affine transformation, it is immediate from
+the definitions that T preserves geometrically independent sets and that T
+carries the plane P spanned by {a0, a1, . . . , an} onto the plane spanned by
+{T(a0), T(a1), . . . , T(an)}.
+Now the translation T(x) = x −a0 carries P onto the vector subspace of
+RN having a1 −a0, a2 −a0, . . . , an −a0 as a basis. If we follow T by a linear
+transformation of RN carrying a1 −a0, a2 −a0, . . . , an −a0 to the first n unit
+basis vectors ϵ1, ϵ2, . . . , ϵn in RN, we obtain an affine transformation S of RN
+such that S(s0) = 0 and S(ai) = ϵi for i > 0. The map S carries P onto the
+plane Rn × 0 of the first n coordinates in RN. It is thus clear why we call P
+a “plane of dimension n” in RN.

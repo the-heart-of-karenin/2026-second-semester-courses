@@ -1,0 +1,41 @@
+Homology Groups of a Simplicial Complex
+53
+Proof: It follows at once from Lemma 1.2.7 that each ray emanating from
+w intersects |K| in precisely one point, and that U is the union of all line
+segments joining w to points of |K|.
+Given K, we note that any two cones w∗K and z∗K over K are isomorphic.
+The vertex map that carries each vertex of K to itself and carries w to z
+induces an isomorphism of w ∗K with z ∗K.
+Note also that for a complex K in RN, there may be no point w in
+RN such that the cone complex w ∗K can be formed. Nonetheless, we
+can always consider K as a complex in RN × 0 ⊂RN+1; then the point
+w = (0, 0, . . . , 0, 1) ∈RN+1 will do. A similar remark applies to a complex in
+EJ.
+Now we compute the homology of a cone and show that it vanishes in
+positive dimensions. For this purpose, we shall introduce a certain bracket
+operation that will also be useful later.
+Definition 1.9.5 Let w ∗K be a cone. If σ = [a0, a1, . . . , ap] is an ori-
+ented simplex of K, let [w, σ] denote the oriented simplex [w, a0, a1, . . . , ap]
+of w ∗K. This operation is well-defined; exchanging two vertices in
+the array [a0, a1, . . . , ap] results in exchanging two vertices in the array
+[w, a0, a1, . . . , ap]. More generally, if
+cp =  niσi
+is a p-chain of K, we define
+[w, cp] =  ni[w, σi] .
+This bracket operation is a homomorphism carrying Cp(K) into Cp+1(K),
+We compute readily from the boundary formula:
+∂[w, σ] =
+
+σ −w
+if
+dim σ = 0,
+σ −[w, ∂σ]
+if
+dim σ > 0.
+This leads to the following more general formulas:
+∂[w, c0] = c0 −ϵ(c0)w,
+∂[w, cp] = cp −[w, ∂cp] if p > 0.
+Theorem 1.9.6 If w ∗K is a cone, then for all p,
+Hp(w ∗K) = 0 .
+In general, a complex whose reduced homology vanishes in all dimensions is
+said to be acyclic.

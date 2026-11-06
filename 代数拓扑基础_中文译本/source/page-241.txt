@@ -1,0 +1,44 @@
+226
+Elements of Algebraic Topology
+The chain map η certainly depends on the chosen ordering of the vertices of
+K, but the homomorphism η∗does not. We see this because η∗= θ∗◦ϕ∗,
+where θ obviously does not depend on the ordering and ϕ∗does not depend
+on the ordering by Theorem 1.14.16.
+Finally, we note that since the chain map η commutes with inclusions, the
+naturality of the zig-zag lemma [Lemma 3.3.2] implies that η∗commutes with
+∂∗.
+We summarize this fact as follows:
+Theorem 4.7.5 The map η∗is a well-defined isomorphism of simplicial with
+singular homology that commutes with the boundary homomorphism ∂∗.
+Furthermore, one has the following naturality result:
+Theorem 4.7.6 The isomorphism η∗commutes with homomorphisms in-
+duced by simplicial maps.
+Proof: Let f : (K, K0) →(L, L0) be a simplicial map. We have already shown
+that f∗commutes with ϕ∗. [See Theorem 1.14.18.] We now show it commutes
+with θ∗. In fact, f# commutes with θ on the chain level.
+Recall that, in ordered homology, the chain map induced by f is defined
+by the equation
+f ′
+#((w0, w1, . . . , wp)) = (f(w0), f(w1), . . . , f(wp)) ,
+where (w0, w1, . . . , wp) is an ordered p-simplex of K. We compute directly
+that
+f#θ((w0, w1, . . . , wp)) = f ◦ℓ(w0, w1, . . . , wp) .
+This map equals the linear map of ∆p into |K| that carries ϵi to wi for each i,
+followed by the map f, which carries the simplex spanned by w0, w1, . . . , wp
+onto a simplex of L. Since the composite of linear maps is linear, this map
+equals
+ℓ(f(w0), f(w1), . . . , f(wp))
+=
+θ((f(w0), f(w1), . . . , f(wp)))
+=
+θf ′
+#((w0, w1, . . . , wp)) .
+It is possible to define the homomorphism of simplicial homology induced
+by a continuous map h as the composite η−1
+∗
+◦h∗◦η∗, where h∗denotes the
+induced homomorphism in singular homology. This would give us the same
+homomorphism of simplicial homology as we defined in Chapter 2 by use of
+simplicial approximations. We prove this result as follows:
+Theorem 4.7.7 The isomorphism η∗commutes with homomorphisms in-
+duced by continuous maps.

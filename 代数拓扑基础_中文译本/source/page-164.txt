@@ -1,0 +1,19 @@
+Topological Invariance of the Homology Groups
+149
+(b) Show that there are only five combinatorially regular collections
+B such that |B| is homeomorphic to S2. [Hint: Geometric con-
+siderations imply that k ≥3 and ℓ≥3.]
+(c) There are many combinatorially regular collections B such that
+|B| is homeomorphic to the torus. But there are only a limited
+number of possibilities for k (the number of edges) and ℓ(the
+number of faces). Say what these possibilities are.
+7. Let B ⊂RN be the open unit ball. Give an example of a map
+f : B →B which is continuous and which has no fixed point. Now
+give an example of the same which is one-to-one and onto.
+8. Let BN ⊂RN be the closed unit ball. Give an example of a map
+f : BN →BN which is discontinuous and has no fixed point.
+9. Let
+S = {(cos t, sin t, t) : 0 ≤t ≤4π} .
+Define
+E = {x ∈R3 : dist(x, S) ≤1/10} .
+Show that a continuous map f : E →E will have a fixed point.

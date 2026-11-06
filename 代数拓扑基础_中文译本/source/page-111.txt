@@ -1,0 +1,68 @@
+96
+Elements of Algebraic Topology
+a
+K′
+a
+K
+p
+p
+i
+i
+b
+c
+d
+e
+g
+s
+r
+q
+j
+m
+n
+o
+f
+h
+h
+Q′
+O′
+R′ = S′
+P ′
+A′ = B′
+M ′ = N ′
+C′ = D′
+G′ = J′
+E′
+I′
+A
+B
+C
+D
+E
+G
+I
+J
+M
+N
+O
+P
+Q
+R
+S
+L
+Figure 2.2.1
+Next we show that the identity map i : |K′| →|K| has a simplicial ap-
+proximation g : K′ →K which induces a homology isomorphism g∗. This step
+is algebraic in nature and is carried out in Section 2.5.
+The homomorphism h∗: Hp(K) →Hp(L) induced by h is then defined by
+the equation h∗= f∗◦g−1
+∗. We will see that the “functorial properties” also
+hold for this induced homomorphism. See Section 2.6.
+Application to Relative Homology
+The preceding results about simplicial approximation generalize to relative
+homology in a straightforward manner:
+Lemma 2.2.7 Let h : |K| →|L| satisfy the star condition relative to K and
+L. Suppose that h maps |K0| to |L0|, where K0 and L0 are subcomplexes.
+Then
+(a) Any simplicial approximation f : K →L to the map h also
+maps |K0| to |L0|. Also the restriction of f to K0 is a simplicial
+approximation to the restriction of h to |K0|.

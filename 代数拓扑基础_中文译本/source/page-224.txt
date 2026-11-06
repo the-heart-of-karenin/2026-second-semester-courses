@@ -1,0 +1,45 @@
+Singular Homology Theory
+209
+induced by inclusion. The second of these homomorphisms induces a homol-
+ogy isomorphism, by the preceding corollary. We show that the first is an
+isomorphism already on the chain level, and the proof is then complete.
+Note first that the map
+ϕ : Sp(X \ U) →SA
+p (X)/SA
+p (A)
+induced by inclusion is surjective. For if cp is a chain of SA
+p (X), then each
+term of cp has image set lying in either X \ U or in A. When we form the
+coset cp + SA
+p (A) we can discard those terms lying in A. Thus ϕ is surjective.
+The kernel of ϕ is
+Sp(X \ U) ∩SA
+p (A) = Sp((X \ U) ∩A) = Sp(A \ U) ,
+as desired.
+Note that this theorem is slightly stronger than the excision axiom proper
+[see Section 3.5]. In singular theory we do not need to assume U is an open
+subset of X.
+As an application, we compute the singular homology of the ball and the
+sphere.
+Theorem 4.4.11 Let n ≥0. The group Hi(Bn, Sn−1) is infinite cyclic for
+i = n and vanishes otherwise. The group Hi(Sn) is infinite cyclic for i = n
+and vanishes otherwise. The homomorphism of Hn(Sn) with itself induced by
+the reflection map
+ρ1(x1, x2, . . . , xn+1) = (−x1, x2, . . . , xn+1)
+equals multiplication by −1.
+Remark 4.4.12 Recalling Definition 2.9.1, we see that, for n ≥1, the theo-
+rem tells us that the reflection map has degree −1.
+Proof of the theorem: First we consider the case n = 0. Recall that B0
+is the one-point space. Also, we must have S−1 = ∅, since points of the unit
+sphere have norm 1. Theorem 4.3.3 then tells us that Hp(B0, ∅) is infinite
+cyclic for p = 0 and vanishes otherwise.
+It is easy to generalize the proof of Theorem 4.3.3 to a space consisting
+of two points, such as S0 = {−1, +1}. One shows that Hp(S0) = 0 for p > 0
+and that H0(S0) = Z⊕Z with generators T−1 and T+1. Consequently, H0(S0)
+is infinite cyclic with generator T+1 −T−1. The map ρ1 on S0 exchanges
+the two points −1 and +1, so the induced homomorphism of H0(S0) equals
+multiplication by −1.
+Now we use induction. Suppose the theorem is true in dimension n −1,
+where n ≥1. It follows from the long exact homology sequence of (Bn, Sn−1)
+that
+Hi(Bn, Sn−1) ∼= Hi−1(Sn−1) ,

@@ -1,0 +1,36 @@
+Duality in Manifolds
+519
+8.13
+ˇCech Cohomology
+Until now we have studied two homology and cohomology theories—namely,
+the simplicial theory and the singular theory. There are a number of oth-
+ers, most notably the ˇCech theory. This theory turns out to be particularly
+satisfactory in the case of cohomology. This is what we discuss now.
+We shall construct the ˇCech cohomology groups of a topological space and
+show that they agree with the simplicial groups when both are defined. We also
+construct a topological space for which the ˇCech and singular theories disagree.
+We shall use ˇCech cohomology in the next section to prove a generalized
+version of Alexander duality.
+We begin with the concept of a directed set.
+Definition 8.13.1 A directed set J is a set with a relation < such that
+(1) α < α for all α ∈J.
+(2) α < β and β < γ implies that α < γ.
+(3) Given α and β, there exists a δ such that α < δ and β < δ.
+The element δ is called an upper bound for α and β.
+EXAMPLE 8.13.2 Any simply-ordered set is a directed set under the rela-
+tion ≤.
+EXAMPLE 8.13.3 Consider the family whose elements are open coverings
+A of a topological space X. We make this family into a directed set by declaring
+A < B if B is a refinement of A. This means that for each element B of B,
+there is at least one element A of A containing it. Properties (1) and (2) are
+now immediate. To check (3), we note that given open coverings A and B of
+X, the collection
+D = {A ∩B : A ∈A and B ∈B}
+is an open covering of X that refines both A and B.
+Definition 8.13.4 A direct system of abelian groups and homomorphisms,
+corresponding to the directed set J, is an indexed family {Gα}α∈J of abelian
+groups, along with a family of homomorphisms
+fαβ : Gα →Gβ ,
+defined for every pair of indices such that α < β and such that:
+(1) fαα : Gα →Gα is the identity.
+(2) If α < β < γ, then fβγ ◦fαβ = fαγ. That is,

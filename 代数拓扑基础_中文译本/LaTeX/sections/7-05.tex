@@ -1,0 +1,35 @@
+\section{同调万有系数定理}
+\sourcepage{403--404}
+与上同调类似，带系数同调也可由整数同调的相邻两维群表示。区别是 Hom、Ext 换成张量积、挠积，箭头方向反转。
+
+\entry{定理}{7.5.1（同调万有系数定理）}设 $\mathcal C$ 自由，则有自然短正合列
+\[
+0\to H_p(\mathcal C)\otimes G\to H_p(\mathcal C;G)\to H_{p-1}(\mathcal C)*G\to0.
+\]
+它对链映射诱导的同态自然，且分裂，但分裂不自然。
+
+可以仿照上同调版本作直接证明；本书将在第 7.8 节由更一般的 Künneth 定理导出。
+
+\entry{推论}{7.5.2}空间偶也有相应的自然分裂短正合列
+\[
+0\to H_p(X,A)\otimes G\to H_p(X,A;G)\to H_{p-1}(X,A)*G\to0,
+\]
+分裂不自然。
+
+\entry{推论}{7.5.3}若自由链复形间的链映射在 $p,p-1$ 维诱导整数同调同构，则在 $p$ 维诱导任意系数同调同构。
+
+\textbf{证明：}由万有系数序列的自然性及 Steenrod 五引理。这也给出定理 6.3.1 的另一证明。\hfill$\square$
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $H_{p-1}(\mathcal C)$ 或 $G$ 无挠，证明 $H_p(\mathcal C)\otimes G\cong H_p(\mathcal C;G)$。
+\item 用本节定理计算 $T\#T$、三个实射影平面的连通和、$P^N$、$k$ 重愚人帽的任意系数同调，与第 6.3 节习题 2 比较。
+\item 若所有整数同调有限生成，以 Betti 数和挠系数计算一般 $G$ 系数同调，再分别取圆周群、有理数为系数。
+\item 证明若各维整数同调有限生成，则 $H_p(\mathcal C;\Z/n)\cong H^p(\mathcal C;\Z/n)$，但同构不自然。
+\item 证明有限复形的 $H_n(K)$ 由所有素数幂 $p^k$ 的系数同调 $H_i(K;\Z/p^k)$（$0\le i\le n$）唯一确定。
+\item 证明有限复形的 $H_p(K)$ 由圆周群系数的 $H_p(K;S^1)$、$H_{p+1}(K;S^1)$ 唯一确定。
+\item 若 $f:T\to S$，证明其模二二维同调诱导同态为零，其中 $T$ 为环面，$S$ 为 Klein 瓶。
+\item 举例说明推论 7.5.2 的分裂不自然。
+\item 〔*〕直接证明定理 7.5.1。〔提示：取定理 7.3.1 证明中的 $\mathcal Z,\mathcal C,\mathcal D$，使用它们张量后的长正合列，并证明连接同态由 $j_p:B_p\to Z_p$ 的包含诱导。〕
+\item 说明定理 7.5.1 的分裂为何不自然。
+\end{enumerate}

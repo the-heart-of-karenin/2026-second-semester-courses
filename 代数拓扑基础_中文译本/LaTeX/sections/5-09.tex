@@ -1,0 +1,128 @@
+\section{杯积}
+\sourcepage{349--350}
+第 5.6 节说明：同调群若不能区分两个空间，上同调群也不能。那为什么还研究上同调？有多个答案：它自然出现在映射的同伦分类中，也出现在流形上微分形式的积分中。本节给出另一个答案：上同调群还有额外的\emph{环结构}，这种结构能区分仅靠群无法区分的空间。
+
+我们用具体的上链公式定义乘法，这也是历史上最初的途径。公式由 Alexander、\v Cech、Whitney 约在 1936 年发现，当时显得很神秘，几何意义不清，也不明白为什么一般空间的上同调有乘法而同调没有。
+
+紧可定向流形的同调早已知道有称为\textbf{交积}的乘法，几何意义明确，但推广到一般空间的尝试未能成功。直到 1942 年 Lefschetz 给出新的上同调乘法定义，才说明一般空间为什么有上同调环而没有相应同调环。同时，Poincar\'e 对偶说明两种环在都存在时同构。第 7.11、8.9 节将回到这些问题。
+
+\subsection*{环、模和域的回顾}
+环 $R$ 是带乘法的加法阿贝尔群，乘法满足结合律与左右分配律；通常先乘后加。若乘法交换，称为交换环。若有元素 $1$ 满足 $1\alpha=\alpha1=\alpha$，称为单位元，它唯一，且 $(-1)\alpha=-\alpha$、$0\alpha=0$。若非零交换含幺环中每个非零元均有乘法逆，则称为域。
+
+\entry{例}{5.9.1}环的例子包括 $\Z$、$\Z/n$、整数系数方阵环、整数系数多项式环。域的例子包括素数 $p$ 对应的 $\Z/p$，以及 $\mathbb Q,\R,\mathbb C$。
+
+\sourcepage{351}
+若加法阿贝尔群 $A$ 配有标量乘法 $R\times A\to A$，满足
+\[
+\alpha(a+b)=\alpha a+\alpha b,\quad(\alpha+\beta)a=\alpha a+\beta a,\quad
+\alpha(\beta a)=(\alpha\beta)a,\quad1a=a,
+\]
+称为 $R$ 模。模同态是满足 $\varphi(\alpha a)=\alpha\varphi(a)$ 的群同态；核与余核自然也是模。若 $R=F$ 为域，则模称为 $F$ 上的向量空间，模同态称为线性变换。本书较少讨论一般模，主要使用环和向量空间。
+
+\entry{例}{5.9.2}$R$ 本身及 $R^n$ 自然为 $R$ 模，后者按坐标作标量乘法。
+
+\entry{例}{5.9.3}每个阿贝尔群都是自然的 $\Z$ 模，正整数作用为重复相加，其他整数按通常方式定义。
+
+\subsection*{杯积}
+本节及下一节始终假设 $R$ 为交换含幺环。
+
+\entry{定义}{5.9.4}记奇异上链群 $S^p(X;R)=\operatorname{Hom}(S_p(X),R)$。定义
+\[
+\smile:S^p(X;R)\times S^q(X;R)\to S^{p+q}(X;R),
+\]
+使对每个奇异 $(p+q)$ 维单形 $T$ 有
+\[
+\begin{split}
+\langle c^p\smile c^q,T\rangle
+={}&\langle c^p,T\circ\ell(\epsilon_0,\ldots,\epsilon_p)\rangle\\
+&\cdot\langle c^q,T\circ\ell(\epsilon_p,\ldots,\epsilon_{p+q})\rangle.
+\end{split}\tag{*}
+\]
+称为上链的\textbf{杯积}（cup product）。\translatornote{原书此处把 Hom 所定义的群称为奇异“链”群，应为上链群。}
+
+\sourcepage{352}
+第一个限制可称为 $T$ 的“前 $p$ 维面”，第二个为“后 $q$ 维面”；它们共用顶点 $\epsilon_p$。右端是系数环中的乘法。这个看似神秘的公式意味着什么，还有待说明。
+
+\entry{定理}{5.9.5}上链杯积双线性、结合。在每个零维奇异单形上取 $1$ 的上链 $z^0$ 是单位元，且
+\[
+\delta(c^p\smile c^q)=(\delta c^p)\smile c^q+(-1)^pc^p\smile\delta c^q.
+\]
+\textbf{证明：}双线性由系数环分配律立即得到。结合律可对一个 $(p+q+r)$ 维单形取值验证：两种结合方式都得到在依次三段面 $[0,\ldots,p]$、$[p,\ldots,p+q]$、$[p+q,\ldots,p+q+r]$ 上取值的乘积。单位元性质直接来自定义。
+
+验证上边缘公式，令 $r=p+q+1$，对 $T:\Delta_r\to X$ 取值。为缩短公式，记 $T[i_0,\ldots,i_s]=T\circ\ell(\epsilon_{i_0},\ldots,\epsilon_{i_s})$。第一项的值为
+\[
+\sum_{i=0}^{p+1}(-1)^i\langle c^p,T[0,\ldots,\widehat i,\ldots,p+1]\rangle
+\langle c^q,T[p+1,\ldots,r]\rangle;
+\]
+第二项的值为
+\[
+(-1)^p\sum_{i=0}^{q+1}(-1)^i\langle c^p,T[0,\ldots,p]\rangle
+\langle c^q,T[p,\ldots,\widehat{p+i},\ldots,r]\rangle.
+\]
+第一和的最后一项与第二和的第一项，除符号 $(-1)^{p+1}$、$(-1)^p$ 外完全相同，故抵消；其余恰是 $\langle c^p\smile c^q,\partial T\rangle$。\hfill$\square$
+
+\sourcepage{353}
+\entry{定理}{5.9.6}杯积诱导双线性、结合的运算 $H^p(X;R)\times H^q(X;R)\to H^{p+q}(X;R)$，以 $\{z^0\}$ 为单位元。
+
+\textbf{证明：}两个上闭链之积由上边缘公式仍上闭。改变代表后，
+\begin{align*}
+&(z^p+\delta d^{p-1})\smile(z^q+\delta d^{q-1})-z^p\smile z^q\\
+&\quad=(-1)^p\delta(z^p\smile d^{q-1})
++\delta(d^{p-1}\smile z^q)+\delta(d^{p-1}\smile\delta d^{q-1}),
+\end{align*}
+所以只改变一个上边缘，运算良定义。其余性质从上链层次继承。\hfill$\square$
+
+\entry{定理}{5.9.7}连续映射 $h:X\to Y$ 诱导的 $h^*$ 保持杯积。
+
+\textbf{证明：}实际上 $h^\#$ 已保持杯积。对 $T$ 取值，$h^\#(c^p\smile c^q)$ 是把杯积公式用于 $h\circ T$；而 $(h^\#c^p)\smile(h^\#c^q)$ 在两个面上的取值也是将 $h\circ T$ 限制到同样两面，所以相等。\hfill$\square$
+
+\entry{定义}{5.9.8}外直和 $H^*(X;R)=\bigoplus_iH^i(X;R)$ 连同杯积组成含幺环，称为 $X$ 的\textbf{上同调环}。杯积对每个变量还是 $R$ 模同态（习题 4），因而它是一个具有 $R$ 算子作用的环。若 $R=F$ 是域，则称为 $F$ 上的\textbf{代数}。
+
+连续映射诱导环同态，同伦等价诱导环同构。因此上同调环是拓扑不变量，事实上是同伦类型不变量。
+
+\sourcepage{354}
+\subsection*{交换性}
+上同调环一般不按通常意义交换，而满足\textbf{分次交换律}，原书亦称反交换性：
+\[
+\alpha^p\smile\beta^q=(-1)^{pq}\beta^q\smile\alpha^p.
+\]
+此时先不证明；后面给出杯积的另一种定义后，证明会容易得多。下一节将计算具体环结构，先给出几种推广。
+
+\subsection*{一般系数的杯积}
+若 $G$ 为任意阿贝尔群，同一公式可定义 $S^p(X)\times S^q(X;G)\to S^{p+q}(X;G)$，其中第一因子为整数系数，右端乘法解释为整数对 $G$ 的作用。它双线性；当三个因子的系数依次为 $\Z,\Z,G$ 时满足结合律。$z^0$ 是左单位元。上边缘公式、自然性及上同调层次的良定义性证明不变，因此有
+\[
+H^p(X)\times H^q(X;G)\to H^{p+q}(X;G).
+\]
+最一般的常见形式始于一个双线性\textbf{系数配对} $\alpha:G\times G'\to G''$，用它代替系数乘法，得到 $H^p(X;G)\times H^q(X;G')\to H^{p+q}(X;G'')$。本书不需要如此一般。
+
+\sourcepage{355}
+\subsection*{相对杯积}
+相同公式也定义
+\[
+H^p(X,A;R)\times H^q(X;R)\to H^{p+q}(X,A;R),
+\]
+以及两因子都相对 $A$ 的版本，后者是前者的限制。因为若第一因子在 $A$ 的单形上为零，乘积在 $A$ 的单形上也为零。上边缘公式仍成立，所以诱导上同调运算；双线性、结合性和自然性直接继承。第一种运算以绝对零维类 $\{z^0\}$ 为右单位元。
+
+更一般地，若 $\{A,B\}$ 为可切除对，可定义
+\[
+H^p(X,A;R)\times H^q(X,B;R)\to H^{p+q}(X,A\cup B;R),
+\]
+见习题。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 设 $A$ 为 $X$ 的一个道路分支，$B\ne\varnothing$ 为其余分支之并。令 $c^0$ 在像属于 $A$ 的零维单形上取 $1$，其余取 $0$。证明它上闭，并描述对一般 $\beta^p$ 的 $\{c^0\}\smile\beta^p$。
+\item 设 $i:A\to X$，$\eta\in H^q(X;R)$，记 $\eta|_A=i^*\eta$。证明将空间偶长正合列
+\[
+H^{p+1}(X,A)\leftarrow H^p(A)\leftarrow H^p(X)\leftarrow H^p(X,A)
+\]
+的各项分别右乘 $\eta$ 或 $\eta|_A$，得到映到相应升高 $q$ 维的长正合列的交换图。若全改为左乘，会怎样？
+\item 若 $\{A,B\}$ 可切除，证明杯积公式诱导上述最一般的相对杯积，并解释结合律在这里的含义。
+\item \begin{enumerate}[label=(\alph*)]
+\item 定义 $(\alpha\varphi)(g)=\alpha\varphi(g)$，证明 $\operatorname{Hom}(G,R)$ 自然为 $R$ 模；群同态的对偶为模同态。
+\item 依此给 $S^p(X;R)$ 赋模结构，证明 $\delta$ 为模同态，所以 $H^p(X;R)$ 也是模。
+\item 证明连续映射诱导的 $h^*$ 为模同态。
+\item 证明杯积对每个变量分别为模同态。因此 $H^*(X;R)$ 为带 $R$ 作用的环，域系数时为代数。
+\end{enumerate}
+\item 给出数学中自然出现的三个代数的例子。
+\end{enumerate}

@@ -1,0 +1,40 @@
+184
+Elements of Algebraic Topology
+We have until now been dealing with what we call covariant functors.
+There is also a notion of contravariant functor which differs only inasmuch as
+“all the arrows are reversed.” Formally, it is defined as follows:
+Definition 3.7.9 A contravariant functor G from a category C to a category
+D is a rule that assigns to each object X in C an object G(X) in D and to
+each morphism f : X →Y of C a morphism
+G(f) : G(Y ) →G(X)
+of D such that G(1X) = 1G(X). Also
+G(g ◦f) = G(f) ◦G(g) .
+A natural transformation between contravariant functors is defined in the
+obvious way.
+In our discussions here, we have not yet studied any contravariant functors;
+but we shall do so in the future. We close this section with an example taken
+from linear algebra.
+EXAMPLE 3.7.10 If V is a vector space over R, consider the space L(V, R)
+of linear functionals on V (i.e., linear transformations of V into R). It is often
+called the dual space to V . The space L(V, R) has the structure of a vector
+space, in the obvious fashion. Now if f : V →W is a linear transformation
+from V to another vector space W, then there is a linear transformation
+f tr : L(W, R) →L(V, R)
+which is often called the transpose (or adjoint) of f. It is defined as follows:
+If α : W →R is a linear functional on W, then f tr(α) : V →R is the linear
+functional on V which is the composition
+V
+f
+−→W
+α
+−→R .
+The assignment
+V →L(V, R)
+and
+f →f tr
+is a contravariant functor from the category of vector spaces and linear trans-
+formations to itself.
+EXERCISES
+1. Check that each class of objects and morphisms listed in Example
+3.7.4 is indeed a category, and that the equivalences are as stated
+[Only (c) and (i) require any particular attention.]

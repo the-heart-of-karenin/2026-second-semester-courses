@@ -1,0 +1,33 @@
+396
+Elements of Algebraic Topology
+this means that Hp(X, A; F) and Hp(X, A; F) are isomorphic as vector spaces
+[though not naturally].
+In differential geometry, it is common to deal with compact manifolds and
+to use the field of reals as coefficients. Because the cohomology and homology
+vector spaces are dual in this case, differential geometers sometimes treat
+homology and cohomology as if they were the same object. Unfortunately,
+this practice can lead to confusion.
+The next definition is used in Exercise 4.
+Definition 7.3.8 A homomorphism α : G →G′ gives rise to homomorphisms
+α∗: Hi(C; G) →Hi(C; G′) ,
+α∗: Hi(C; G) →Hi(C; G′) .
+They are called coefficient homomorphisms.
+EXERCISES
+1. Let C be a free chain complex. Show that if Hp−1(C) is free or if G
+is divisible [see Definition 5.2.9], then the Kronecker map κ is an
+isomorphism.
+2. Use the universal coefficient theorem to compute the cohomology
+with general coefficients G of T # T, P2 # P2 # P2, PN, and the k-
+fold dunce cap.
+3. Assume Hi(X) is finitely generated for all i.
+(a) Compute Hp(X; G) in terms of the betti numbers and torsion
+coefficients of X. Compare with Exercise 5 of Section 5.3.
+(b) Repeat (a) when G is the circle group S1 = R/Z.
+(c) Repeat (a) when G = Q.
+4. Show that the universal coefficient sequence for cohomology is nat-
+ural with respect to coefficient homomorphisms.
+5. Let (K, K0) be a relative pseudo n-manifold. [See Definition 5.4.5.]
+Let K be finite. Show that the torsion subgroup of Hn−1(K, K0)
+vanishes if (K, K0) is orientable, and has order 2 otherwise.
+6. Explain why the splitting in Theorem 7.3.1 is not natural.
+7. Explain why the splitting in Corollary 7.3.2 is not natural.

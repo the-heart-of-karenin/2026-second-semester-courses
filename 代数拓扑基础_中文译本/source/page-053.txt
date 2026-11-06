@@ -1,0 +1,28 @@
+38
+Elements of Algebraic Topology
+After one has defined an appropriate boundary operator [see Exercise 6]
+∂∞
+p : C∞
+p (K) →C∞
+p−1(K), the resulting groups
+H∞
+p (K) = ker ∂∞
+p /im ∂∞
+p+1
+are called the homology groups based on infinite chains.
+The next definition is used in Exercise 3.
+Definition 1.6.15 A 1-dimensional complex if called a tree if its 1-
+dimensional homology vanishes.
+EXERCISES
+1. Let S be the abstract complex consisting of the 1-simplices {v0, v1},
+{v1, v2}, . . . , {vn−1, vn}, {vn, v0}, and their vertices. If K is a geo-
+metric realization of S, compute Hi(K).
+M
+K1
+K2
+Figure 1.6.7
+Figure 1.6.8
+2. Consider the complex M pictured in Figure 1.6.7; it is the union of
+three triangles and a line segment. Compute the homology groups
+H1(M) and H2(M).
+3. Is either of the complexes pictured in Figure 1.6.8 a tree?

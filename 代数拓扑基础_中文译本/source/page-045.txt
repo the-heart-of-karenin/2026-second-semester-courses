@@ -1,0 +1,38 @@
+30
+Elements of Algebraic Topology
+then the integers bi are uniquely determined by G. [Hint: Con-
+sider the kernel of the homomorphism fi : G →G that is mul-
+tiplication by pi. Show that f1 and f2 determine b1. Proceed
+similarly.]
+(b) Let p1, p2, . . . , pN be a sequence of distinct primes. Generalize
+(a) to a finite direct sum of terms of the form (Z/(pi)k)bik,
+where bik ≥0.
+(c) Verify (c) of Theorem 1.5.3. That is, show that the betti num-
+ber and torsion coefficients of a finitely generated abelian group
+G are uniquely determined by G.
+(d) Show that the numbers ti appearing in the conclusion of The-
+orem 1.5.2 are uniquely determined by F and R.
+1.6
+Homology Groups
+Now we are ready to define the homology groups. First we must discuss the
+notion of “orientation.”
+Definition 1.6.1 Let σ be a simplex [either geometric or abstract]. Define
+two orderings of its vertex set to be equivalent if they differ from one another
+by an even permutation. If dim σ > 0, then the orderings of the vertices of σ
+fall into two equivalence classes. Each of these classes is called an orientation
+of σ. [If σ is a 0-simplex, then there is only one class and hence only one orien-
+tation of σ.] An oriented simplex is a simplex σ together with an orientation
+of σ.
+If the points v0, v1, . . . , vp are independent, we will use the symbol
+v0v1 . . . vp
+to denote the simplex they span, and we shall use the symbol
+[v0, v1, . . . , vp]
+to denote the oriented simplex consisting of the simplex v0v1 . . . vp and the
+equivalence class of the particular ordering (v0, v1, . . . , vp).
+Occasionally, when the context makes the meaning clear, we may use a
+single letter such as σ to denote either a simplex of an oriented simplex.
+EXAMPLE 1.6.2 We often picture an orientation of a 1-simplex by drawing
+an arrow on it. The oriented simplex [v0, v1] is pictured in Figure
+1.6.1;
+one draws an arrow pointing from v0 to v1. An orientation of a 2-simplex is
+pictured by a circular arrow. The oriented simplex [v0, v1, v2] is indicated in the

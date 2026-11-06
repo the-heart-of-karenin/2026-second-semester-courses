@@ -1,0 +1,73 @@
+Contents
+ix
+7.9
+The Eilenberg–Zilber Theorem
+. . . . . . . . . . . . . . . . .
+423
+7.10 ∗The K¨unneth Theorem for Cohomolgy
+. . . . . . . . . . . .
+428
+7.11 ∗Application: The Cohomology Ring of a Product Space
+. .
+435
+8
+Duality in Manifolds
+443
+8.1
+Introduction
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+443
+8.2
+The Join of Two Complexes
+. . . . . . . . . . . . . . . . . .
+444
+8.3
+Homology Manifolds . . . . . . . . . . . . . . . . . . . . . . .
+451
+8.4
+The Dual Block Complex
+. . . . . . . . . . . . . . . . . . . .
+455
+8.5
+Poincar´e Duality . . . . . . . . . . . . . . . . . . . . . . . . .
+461
+8.6
+Cap Products
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+468
+8.7
+A Second Proof of Poincar´e Duality
+. . . . . . . . . . . . . .
+474
+8.8
+∗Application: Cohomology Rings of Manifolds
+. . . . . . . .
+480
+8.9
+∗Application: Homotopy Classification of Lens Spaces
+. . . .
+489
+8.10 Lefschetz Duality
+. . . . . . . . . . . . . . . . . . . . . . . .
+497
+8.11 Alexander Duality
+. . . . . . . . . . . . . . . . . . . . . . . .
+508
+8.12 Natural Versions of Duality . . . . . . . . . . . . . . . . . . .
+511
+8.13 ˇCech Cohomology
+. . . . . . . . . . . . . . . . . . . . . . . .
+519
+8.14 Alexander–Pontryagin Duality
+. . . . . . . . . . . . . . . . .
+531
+Additional Reading
+535
+Biographical Information
+537
+Bibliography
+541
+Index of Notation
+545
+Index
+557

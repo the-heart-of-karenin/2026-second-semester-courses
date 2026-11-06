@@ -1,0 +1,24 @@
+Topological Invariance of the Homology Groups
+123
+(both are subspaces of EJ × R, being compact). Hence C ∩s is closed in s. It
+follows that C is closed in |M|.
+Conversely, if C is closed in |M|, then C ∩s is closed in s for each s ∈M.
+Because σ ×I is a finite union of simplices s of M, the set C ∩(σ ×I) is closed
+in σ × I. Thus σ is closed in |K| × I.
+EXAMPLE 2.7.4 If K is the complex consisting of a 1-simplex and its
+faces, then |K| × I is by the procedure of the preceding lemma subdivided
+into the complex depicted in Figure 2.7.2. In the case of a complex consisting
+of a 2-simplex and its faces, the procedure is illustrated in Figure 2.7.3. The
+top-left part of that figure shows |K| × I and the bottom-left part shows its
+subdivision. On the right-hand side of the figure we have shown the subdivided
+complex pushed apart from the point (σ, 1
+2) in the directions of the five faces
+of |K| × I.
+|K| × I
+M
+Figure 2.7.2
+(σ, 1
+2)
+|K| × I
+M
+Figure 2.7.3

@@ -1,0 +1,38 @@
+Topological Invariance of the Homology Groups
+133
+Definition 2.8.4 Suppose that E is a space that is the disjoint union of
+disjoint subspaces Eα, each of which is open (and closed) in E. Then we say
+that E is the topological sum of the Eα and we write E =  Eα. A set U is
+open in E if and only if U ∩Eα is open in Eα for each α.
+More generally, let {Xα}α∈J be a family of topological spaces, which may
+or may not be disjoint. Let E be the set that is the union of the disjoint spaces
+Eα = Xα × {α}
+for α ∈J. We topologize E by declaring U to be open in E if and only if
+U ∩Eα is open in Eα for each α. Then E is the topological sum of the disjoint
+spaces Eα. We have a natural map p : E →∪Xα which projects Xα × {α}
+onto Xα for each α. [We sometimes abuse terminology and speak of E as the
+topological sum of the spaces Xα in this situation.]
+In these circumstances, we have the following result. The proof is imme-
+diate.
+Lemma 2.8.5 Let X be a space which is the union of certain of its subspaces
+Xα. Let E be the topological sum of the Xα. Let p : E →X be the natural
+projection. Then the topology of X is coherent with the subspaces Xα if and
+only if p is a quotient map.
+In this circumstance we often say that X is coherent union of the spaces
+Xα.
+Theorem 2.8.6 If the topology of X is coherent with the subspaces Xα and
+if Y is a locally compact Hausdorff space, then X × Y is coherent with the
+subspaces Xα × Y .
+Proof: Define E = (Xα × {α}). Let p : E →X be the projection map.
+Because Y is locally compact Hausdorff, the map
+p × iY : E × Y →X × Y
+is also a quotient map. Because E is the topological sum of the subspaces
+Eα = Xα × {α}, we see that E × Y is the disjoint union of its subspaces
+Eα × Y , each of which is open in E × Y . Therefore E × Y is the topological
+sum of the spaces Eα × Y = Xα × {α} × Y . Since p × iY is a quotient map,
+the topology of X × Y is coherent with the subspaces Xα × Y .
+Corollary 2.8.7 The topology of |K|×I is coherent with the subspaces σ×I
+for σ ∈K.
+Proof: By definition, the topology of |K| is coherent with the subspaces σ,
+for σ ∈K. Since I is locally compact Hausdorff (in fact compact Hausdorff),
+the preceding theorem applies.

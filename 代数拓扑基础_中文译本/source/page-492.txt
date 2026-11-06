@@ -1,0 +1,44 @@
+Duality in Manifolds
+477
+for which σp = sp = σ. These are precisely the (n −p)-simplices of D(σ).
+Now we can prove our result. We show that g#(σ∗) ⌢sd γ is in fact a
+fundamental cycle for the block (D(σ), ˙D(σ)).
+We know that g#(σ∗) ⌢sd γ is a non-trivial (n−p)-chain carried by D(σ),
+and that it is not a multiple of any other chain [since its coefficients are all
+±1]. To show it is a fundamental cycle, it suffices to show that its boundary
+is carried by ˙D(σ). For this, we compute
+∂(g#(σ∗) ⌢sd γ) = (−1)n−pδg#(σ∗) ⌢sd γ + 0
+= (−1)n−pg#(δσ∗) ⌢sd γ .
+(∗)
+Now δσ∗is a sum of terms of the form ±σ∗
+p+1, where σp+1 is a (p+1)-simplex
+of X having σ as a face. By the result just proved, the chain g#(σ∗
+p+1) ⌢sd γ
+is carried by the block D(σp+1) dual to σp+1. Since σp+1 ≻σ, this block is
+contained in ˙D(σ). Thus g#(δσ∗) ⌢sd γ is carried by ˙D(r), as desired.
+Step 4: We have thus proved that the isomorphism
+ψ : Cp(X) →Dn−p(X)
+exists, and that it carries the basis element σ∗A to a fundamental cycle for the
+dual block to σ. Therefore ψ resembles the isomorphism ϕ of Theorem 8.5.2.
+The only remaining question is whether it commutes with δ and ∂. That it
+does, but only up to sign. Formula (∗) above gives us the equation
+∂ψ(cp) = (−1)n−pψ(δcp) .
+Now the sign of (−1)n−p does not affect the groups of cocycles and boundaries.
+It follows that ψ induces an isomorphism of Hp(X) with Hn−p(D(X)), just
+as ϕ did. [In fact, ψ differs from ϕ only by a sign. See Exercise 1 below.]
+Now since the inclusion D(X) →C(sd X) induces a homology isomor-
+phism, it follows that the composite map
+Hp(X)
+Hp(sd X)
+Hn−p(sd X)
+g∗
+⌢{sd γ}
+is an isomorphism. Then if we identify the homology of sd X with that of X,
+by passing to the homology of the triangulable space X, for instance, or to
+singular homology and cohomology, we see that since g∗is the identity map,
+this isomorphism can be expressed in the form
+Hp(X)
+Hn−p(X) .
+⌢Γ
+Step 5: To treat the case of arbitrary coefficients, one checks that the com-
+posite

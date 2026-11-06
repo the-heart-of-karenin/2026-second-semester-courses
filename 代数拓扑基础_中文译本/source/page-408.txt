@@ -1,0 +1,46 @@
+Homological Algebra
+393
+Proof: Apply naturality of the universal coefficient sequence and the Steenrod
+five lemma [Lemma 3.3.4].
+This last corollary provides an alternative proof of Theorem 5.6.6. In fact,
+it proves something more than is stated in that theorem, since we do not need
+to assume that ϕ∗is an isomorphism in all dimensions.
+The Universal Coefficient Theorem with Field Coefficients
+There is a second version of the universal coefficient theorem that is often
+useful. It concerns the case where the coefficient group is a field F. It relates
+cohomology with homology if both are taken with coefficients in F.
+We have already remarked that if C is a chain complex and F is a field,
+then both
+Hom (Cp, F)
+and
+Cp ⊗F
+have, in a natural way, the structure of vector spaces over F. Given α ∈F,
+and cp ∈Hom (Cp, F), and cp ∈Cp, one defines
+⟨αcp, cp⟩= α · ⟨cp, cp⟩,
+α(cp ⊗β) = cp ⊗(αβ) .
+[See the exercises of Section 5.9 and Section 6.3.] Both δ and ∂are vector
+space homomorphisms [i.e., linear transformations], so that
+Hp(C; F)
+and
+Hp(C; F)
+also have the structure of vector spaces over F. We show that they are in fact
+dual vector spaces.
+We recall that if A and B are vector spaces over F, then Hom F (A, B) is
+also a vector space over F. It is the set of linear transformations of A into B.
+If f : A →A′ and g : B′ →B are linear transformations, then Hom (f, g) is
+also a linear transformation. [See the exercises of Section 5.2.]
+We wish to reprove the universal coefficient theorem for cohomology in
+this context. One difficulty is that we have several possible contenders for the
+title of the space of cochains—namely,
+Hom (Cp, F) ,
+Hom (Cp ⊗F, F) ,
+Hom F (Cp ⊗F, F) .
+By definition, the first of these gives the cohomology Hp(C; F) of C with
+coefficients in F. We shall show that the third does, as well.
+Lemma 7.3.4 Let C be a chain complex. Let
+ω : Hom (Cp, F) →Hom F (Cp ⊗F, F)
+be defined by the equation
+⟨ω(f), cp ⊗α⟩= ⟨f, cp⟩· α ,
+(†)
+where f ∈Hom (Cp, F), and cp ∈Cp, and α ∈F. Then ω is a vector space
+isomorphism that commutes with δ.

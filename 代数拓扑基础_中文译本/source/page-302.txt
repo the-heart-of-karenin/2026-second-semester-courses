@@ -1,0 +1,37 @@
+Singular Homology Theory
+287
+4. ∗Follow the suggested steps to prove Theorem 4.13.12.
+Steps:
+(a) Show that if n ≥1, given an n-simplex σ and a homomorphism
+ϕ : Hn(σ, Bd σ) →Hn(Sn, x0) ,
+ϕ is the homomorphism induced by some continuous map. [See
+Exercise 3 of Section 3.4.]
+(b) Show that if X is a CW complex consisting of a collection
+of n-spheres with a point p in common [n > 0], and if α ∈
+Hn(X, p), then there is a map f : (Sn, x0) →(X, p) whose
+induced homomorphism carries a generator of Hn(Sn, x0) to α.
+(c) Show that for p > 0 one can write Cp = Up ⊕Zp, where Zp is
+the group of p-cycles, and for p = 0 one can write C0 = ∂U1⊕A,
+where A is non-trivial.
+(d) Complete the proof.
+5. Let G0, G1, . . . be a sequence of abelian groups with G0 free and
+non-trivial. Assuming Exercise 4, show that there is a CW complex
+X such that Hi(X) ∼= Gi for all i.
+4.14
+∗Application: Projective Spaces and Lens Spaces
+We now apply the theory of CW complexes to compute the homology of
+certain spaces that are of particular importance in topology and geometry—
+the projective spaces. We also study those classical 3-manifolds called the
+lens spaces. The results of this section will be used when we compute the
+cohomology rings of these spaces in Sections 8.8 and 8.9.
+Definition 4.14.1 Let us introduce an equivalence relation on the n-sphere
+Sn by defining x ∼−x for each x ∈Sn. The resulting quotient space is called
+real projective n-space and is denoted Pn. We will usually drop the designation
+“real,” when the context does not require it.
+We show that the quotient map p : Sn →Pn is a closed map. If A is closed
+in Sn, then the saturation p−1(p(A)) of A equals the set A ∪a(A), where
+a : Sn →Sn is the antipodal map. Because a is a homeomorphism, A ∪a(A)
+is closed in Sn, so [by the definition of a quotient space] the set p(A) is closed
+in Pn. Therefore, Pn is Hausdorff [in fact normal].
+If we consider Rn to be the set of all real sequences (x1, x2, . . . ) such that
+xi = 0 for i > n, then Rn ⊂Rn+1. As a result, Sn−1 ⊂Sn. In fact, Sn−1 is

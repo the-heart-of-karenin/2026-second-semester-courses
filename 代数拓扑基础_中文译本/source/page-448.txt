@@ -1,0 +1,38 @@
+Homological Algebra
+433
+It induces a natural isomorphism
+H−m(E ⊗E′) −→Hm(C ⊗C′) .
+Combining these facts, we obtain the K¨unneth sequence for cohomology. Be-
+cause the maps
+H−p(E) ⊗H−q(E′) −→H−m(E ⊗E′) −→Hm(C ⊗C′)
+are induced by inclusion and by θ, respectively, their composite equals Θ.
+If C′ is free and finitely generated in each dimension, then E′ is free and
+the sequence splits.
+Corollary 7.10.8 In the preceding theorem, the hypothesis that C is finitely
+generated in each dimension can be replaced by the hypothesis that Hi(C) is
+finitely generated for each i. Similarly, the hypothesis that C′ is finitely gener-
+ated in each dimension can be replaced by the hypothesis that Hi(C′) is finitely
+generated for each i.
+Proof: The proof is similar to that of Theorem 7.6.2. If C is free and vanishes
+below a certain dimension, and if Hi(C) is finitely generated for each i, then
+by Lemma 7.6.3 we can choose a free chain complex D that vanishes below a
+certain dimension, that is finitely generated in each dimension, and is such that
+Hi(D) ∼= Hi(C) for each i. By Theorem 5.6.2, there is a chain map ϕ : C →D
+that induces homology isomorphisms in all dimensions. By Theorem 5.7.2, the
+chain map ϕ is a chain equivalence. Then
+ϕ ⊗i′ : C ⊗C′ →D ⊗C′
+is also a chain equivalence. [See the exercises of Section 7.7.]
+Since the K¨unneth theorem holds for D ⊗C′, it holds for C ⊗C′ as well.
+Naturality of the sequence follows as in the proof of Theorem 7.6.2.
+One proceeds similarly if Hi(C′) is finitely generated for each i. One re-
+places C′ by a chain-equivalent chain complex D′ that is finitely generated in
+each dimension.
+Again we have a K¨unneth theorem for topological spaces.
+Theorem 7.10.9 (The K¨unneth theorem for the cohomology of topo-
+logical spaces) Let X and Y be topological spaces. If Hi(X) is finitely gen-
+erated for each i, then there is a natural exact sequence
+0 →
+p+q=mHp(X) ⊗Hq(Y ) ×
+−→Hm(X × Y )
+
+p+q=mHp+1(X) ∗Hq(Y ) →0 .

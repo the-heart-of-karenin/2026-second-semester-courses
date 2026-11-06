@@ -1,0 +1,32 @@
+Singular Homology Theory
+259
+finally back to the base point. Now, if we contract ∆2 down to (1, 0), then the
+effect is to contract σi down to σi(1, 0) = αi0(0). We conclude that
+βi ≃ζi1 · αi0 · α−1
+i1 · αi2 · ζ−1
+i1 ≃ζi1 · ζ−1
+i1 ≃x0 .
+That is, in the fundamental group [βi] = 1 holds. Consequently, we have
+
+[βi]ni = 1 .
+(‡)
+If we could collect terms in (‡) exactly as we did in (†), then we could
+conclude that γ ≃1. But because the fundamental group is not necessarily
+commutative, we cannot collect terms freely. On the other hand, in the quo-
+tient group π1(X)/C which is commutative, we are able to collect terms at
+will. Denoting the coset of [β] in π(X)/C by ⌈β⌉, we see from (‡) that
+
+⌈βj⌉nj = 1 ,
+and from (†) we see that
+
+⌈βj⌉nj = ⌈γ⌉.
+Since ⌈γ⌉= 1 in π1(X)/C, we conclude γ ∈C.
+Finally, conclusion (4) follows from (3).
+Figure 4.10.11: The figure 8 space.
+Proposition 4.10.17 Let X be the figure 8, illustrated in Figure 4.10.11.
+The fundamental group π1(X) is not abelian.
+Proof: We identify S1 with
+{z ∈C : |z| = 1} ,
+as in the proof of Proposition 4.10.8, so that we can then identify X with
+(S1 × 1) ∪(1 × S1) .
+We let the base point be x0 = (1, 1), the unique point in (S1 × 1) ∩(1 × S1).

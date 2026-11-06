@@ -1,0 +1,62 @@
+Homology Groups of a Simplicial Complex
+67
+Proof: Suppose that aij is a minimal entry of A that fails to divide some
+entry of A. If the entry aij fails to divide some entry akj in its column, then
+we use Euclid’s division lemma to write
+akj = q aij + r
+where the remainder r satisfies 0 < |r| < |aij|. Signs do not matter here; q
+and r may be either positive or negative. We then replace (row k) of A by
+(row i) −q (row k). The result is to replace the entry akj in the kth row and
+jth column of A by akj −qaij = r. The value of α for this new matrix is at
+most |r|, which is less than α(A).
+A similar argument applies if aij fails to divide some entry in its row.
+Finally, suppose aij divides each entry in its row and each entry in its
+column, but fails to divide the entry ast, where s̸ = i and t̸ = j. Consider the
+following four entries of A:
+aij
+. . .
+ait
+...
+...
+asj
+. . .
+ast
+Because aij divides asj, we can use an elementary row operation to bring the
+matrix to the form where the entries in these four places are as follows:
+aij
+. . .
+ait
+...
+...
+0
+. . .
+ast + ℓait
+We then replace (row i) of this matrix by (row i) + (row s), to obtain
+aij
+. . .
+ast + (ℓ+ 1)ait
+...
+...
+0
+. . .
+ast + ℓait
+Since aij divides ait, it does not divide ast + (ℓ+ 1)ait, and we are back in the
+situation where aij fails to divide some entry in its row.
+To prove the other direction, suppose that α(A) divides every entry of A.
+Any matrix B obtained by applying elementary operations to A will be non-
+zero and α(A) will also divide each entry of B. Choose any non-zero entry bij
+of B. Then α(A) divides bij, so |bij| ≥α(A).
+Main Step of the Algorithm. Suppose we are given a matrix
+
+
+b1
+0
+...
+0
+0
+bk
+0
+A
+
+
+(∗)

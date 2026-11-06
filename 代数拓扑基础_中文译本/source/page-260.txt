@@ -1,0 +1,27 @@
+Singular Homology Theory
+245
+Definition 4.10.1 Let X be a space. Fix a point x0 ∈X. This fixed point will
+serve as what is called the base point. Let γ1 : [0, 1] →X and γ2 : [0, 1] →X
+be two loops with
+γ1(0) = γ1(1) = γ2(0) = γ2(1) = x0 .
+We say that γ1 and γ2 are base-point homotopic, written γ1 ≃γ2, when there
+is a continuous function, called the homotopy function,
+Γ : [0, 1] × [0, 1] →X
+with these properties:
+(1) Γ(t, 0) = γ1(t), 0 ≤t ≤1;
+(2) Γ(t, 1) = γ2(t), 0 ≤t ≤1;
+(3) Γ(0, u) = x0, 0 ≤u ≤1;
+(4) Γ(1, u) = x0, 0 ≤u ≤1.
+Figure 4.10.3: A pair of homotopic loops.
+Figure 4.10.3 illustrates a pair of homotopic loops, and some of the in-
+termediate loops the deformation passes through. Figure 4.10.4 shows a pair
+of loops in an annular region that cannot be homotopic. [Of course, “looking
+like they cannot be homotopic” is not the same as proving that they are not
+homotopic.]
+Conditions (1) and (2) of the definition tell us that γ1 and γ2 are homo-
+topic functions, while conditions (3) and (4) demand that the base point x0
+be maintained throughout the homotopy. Thus Definition 4.10.1 requires more
+of the homotopy function Γ than is required by the earlier Definition 2.7.1.
+Nonetheless, we shall use the same notation γ1 ≃γ2, and rely on the context
+to make clear which definition applies. Further, we shall usually say simply
+that γ1 is homotopic to γ2 without mentioning that a base point is involved.

@@ -1,0 +1,50 @@
+Homology Groups of a Simplicial Complex
+37
+has value 0 on the oriented simplex e2. It also still has value 0 on e1, since e1
+does not appear in the expression for ∂2σ2. Now letting d denote the value of
+c2 on e3, one sees that
+c3 = c2 + ∂2(dσ3)
+has value 0 on e3 and on e2 and on e1. We have thus pushed c off all of e1,
+e2, and e3. Said differently, we have proved the following result:
+Given a 1-chain c, it is homologous to a chain c3 that is carried by the sub-
+complex of M that is pictured in Figure 1.6.5.
+Now if c happens to be a cycle, then c3 is also a cycle. It follows that the
+value of c3 on the simplex e4 must be 0, because otherwise ∂1c3 would have a
+non-zero value on the center vertex v. Thus every 1-cycle of M is homologous
+to a 1-cycle carried by the boundary of the square. By the same argument
+as used before in Example 1.6.11, such a cycle must be some multiple of
+the cycle e5 + e6 + e7 + e8. This last cycle bounds; indeed, it clearly equals
+∂2(σ1 + σ2 + σ3 + σ4). Thus we have H1(M) = 0, as expected.
+The fact that H2(M) = 0 is easy: One sees readily [as before] that  miσi
+is a cycle if and only if mi = 0 for all i.
+Note that the homology groups of M are the same as the homology groups
+of the complex L of Example 1.6.12. This fact lends some plausibility to our
+remark [yet to be proved] that the homology groups of a complex depend only
+on its underlying space.
+e5
+e6
+e7
+e8
+M
+e1
+e2
+e3
+e4
+σ4
+σ1
+σ2
+σ3
+e5
+e6
+e7
+e8
+e4
+v
+Figure 1.6.5
+Figure 1.6.6
+Definition 1.6.14 Let K be a complex. An infinite p-chain on K is a function
+c from the oriented p-simplices of K to the integers such that c(σ) = −c(σ′)
+if σ and σ′ are opposite orientations of the same simplex. We do not require
+that c(σ) = 0 for all but finitely many oriented simplices. Let C∞
+p (K) denote
+the group of infinite p-chains. It is abelian, but it will not in general be free.

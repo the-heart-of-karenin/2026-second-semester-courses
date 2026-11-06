@@ -1,0 +1,45 @@
+Homology Groups of a Simplicial Complex
+5
+Definition 1.2.3
+(a) Let σ be the simplex spanned by the geometrically independent
+points a0, a1, . . . , an. The points ai are called the vertices of σ and
+the number n is called the dimension of σ. One can denote σ by
+a0a1 . . . an.
+(b) Any simplex spanned by a subset of {a0, a1, . . . , an} is called a
+face of σ.
+(c) Let s be the face of σ spanned by a0, a1, . . . , ap [where p < n];
+and let t be the face spanned by ap+1, ap+2, . . . , an. Then t is called
+the face of σ opposite s. In particular, the face of σ spanned by
+a1, a2, . . . , an is called the face opposite a0.
+(d) The faces of σ different from σ itself are called the proper faces
+of σ.
+(e) The union of the proper faces of σ is called the boundary of σ
+and is denoted Bd σ.
+(f) The interior of σ, denoted Int σ is defined by the equation
+Int σ = σ \ Bd σ. It is important to note that the interior of a
+0-simplex is the 0-simplex itself—a fact that may be contrary to
+your intuition.
+(g) The set Int σ is sometimes called an open simplex.
+Let us recall some standard notation. The unit n-ball, Bn, is the set of all
+points x of Rn for which ∥x∥≤1, and the unit sphere, Sn−1, is the set of
+points for which ∥x∥= 1. The upper hemisphere En−1
++
+of Sn−1 consists of all
+points x of Sn−1 for which xn ≥0; while the lower hemisphere En−1
+−
+of Sn−1
+consists of all points x of Sn−1 for which xn ≤0.
+With these definitions, B0 is a one-point space, B1 equals the interval
+[−1, 1], and S0 is the two-point space {−1, 1}. The 2-ball is the unit disc in
+R2 centered at the origin, and S1 is the unit circle.
+Definition 1.2.4 A subset A of RN is said to be convex if, for each pair x, y
+of points in A, the line segment joining them lies in A.
+There is also a weaker definition that is sometimes useful:
+Definition 1.2.5 A subset A of RN is said to be star-convex relative to a
+point w ∈A if, for each point x in A different from w, the line segment
+joining x to w lies in A.
+We will now list some basic properties of simplices. The proofs are elemen-
+tary and are largely left to the exercises.
+Lemma 1.2.6 Let P be the n-plane determined by the points of the geomet-
+rically independent set {a0, a1, . . . , an}, and let σ be the n-simplex spanned by
+these points.

@@ -1,0 +1,39 @@
+Cohomology
+343
+EXERCISES
+1. Let X be a space. Let A be a collection of subsets of X whose
+interiors cover X. Show that the inclusion
+i : SA(X) →S(X)
+is a chain equivalence.
+2. Let η : C(K) →S(|K|) be the chain map of Section 4.7 that induces
+an isomorphism of simplicial and singular homology. Show η is a
+chain equivalence.
+3. Give a rigorous definition of chain equivalence.
+5.8
+The Cohomology of CW Complexes
+Now we can compute the cohomology groups of some familiar spaces, and we
+can find specific cocycles that generate these groups. The basic theorem we
+shall use in carrying out these computations is the following:
+Theorem 5.8.1 Let X be a CW complex. Let D(X) be its cellular chain
+complex. Then
+Hp(D(X); G) ∼= Hp(X; G)
+for all p and G. If X is a triangulable CW complex, triangulated by a complex
+K, then the isomorphism is induced by the inclusion D(X) →C(X).
+Proof: Both D(X) and S(X) are free chain complexes. Since their homology
+groups are isomorphic, so are their cohomology groups, by Corollary 5.6.7. In
+the case where X is triangulable, the inclusion map i : D(X) →C(X) induces
+the homology isomorphism in question. [See Theorem 4.13.9.] Then i induces
+a cohomology isomorphism as well.
+Corollary 5.8.2 Suppose n > 0. Then the following hold:
+Hi(Sn; G)
+∼=
+G for i = 0 and i = n,
+Hi(Bn, Sn−1; G)
+∼=
+G for i = n.
+These cohomology groups vanish for other values of i.
+Proof: The first statement follows from the fact that the cellular chain com-
+plex of Sn is infinite cyclic in dimensions 0 and n and vanishes otherwise, and
+all the boundary operators vanish. The second then follows from the long exact
+sequence in reduced cohomology, using the fact that the reduced cohomology
+of Bn vanishes, since it is contractible.

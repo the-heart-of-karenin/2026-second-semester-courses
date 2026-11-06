@@ -1,0 +1,26 @@
+60
+Elements of Algebraic Topology
+U
+L
+L0
+Figure 1.10.4
+for all p. Since the boundary operator is preserved under this isomorphism, it
+follows that Hp(L, L0) ∼= Hp(K, K0).
+This elementary fact has some useful consequences which we shall consider
+later.
+EXERCISES
+1. Let K be the complex pictured in Figure 1.10.2; let K1 be its outer
+edge. Compute Hi(K) and Hi(K, K1).
+2. Let K be a complex whose underlying space is the M¨obius band; let
+K0 be its edge. Compute Hi(K) and Hi(K, K1). [Hint: See Exam-
+ple 1.4.6. Here the edge consists of the line segments ab, bc, cd, de, ef,
+and fa.]
+3. Show that if K is a complex and v is a vertex of K, then Hi(K, v) ∼=
+Hi(K) for all i. [Hint: Care is needed when i = 1.]
+4. Describe H0(K, K0) in general.
+5. Let |K| be the torus, represented by a labeled rectangle in the usual
+way; let K0 be the subcomplex represented by the top edge of the
+rectangle. Compute Hi(K, K0). [See Figure 1.7.4; |K0| is the union
+of the line segments ab, bc, and ca.]
+6. Let K be a 2-dimensional complex; let σ be a 2-simplex of K; let K0
+be the subcomplex whose space is |K| \ Int σ. Compute Hi(K, K0).

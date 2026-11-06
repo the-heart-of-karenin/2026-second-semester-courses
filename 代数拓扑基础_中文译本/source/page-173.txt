@@ -1,0 +1,62 @@
+158
+Elements of Algebraic Topology
+2. (a) Suppose that
+A1
+α1
+−→B1
+β1
+−→C1
+and
+A2
+α2
+−→B2
+β2
+−→C2
+are exact. Show that
+A1 × A2
+α1 × α2
+−−−−−−→B1 × B2
+β1 × β2
+−−−−−−→C1 × C2
+is exact.
+(b) Generalize part (a) to arbitrary direct products.
+(c) Generalize part (a) to arbitrary direct sums.
+3. Show that if K0 is acyclic, then Hi(K, K0) ∼= Hi(K).
+4. Suppose that the inclusion |K0| →|K| is a homotopy equivalence.
+Show that Hp(K, K0) = 0 for all p.
+5. Let (K, K0) denote the M¨obius band and its edge, as in Example
+3.2.11. Show that the nonzero element of H1(K, K0) is represented
+by the chain D indicated in Figure 3.2.3.
+6. Let S denote the Klein bottle. Let A and C be the usual simple
+closed curves in S [see Exercise 2 in Section 2.6]. Compute the
+exact sequences of the pairs (S, A) and (S, C).
+7. Show that if
+A
+α
+−→B
+β
+−→C
+γ
+−→D
+is exact and D̸ = 0 then β need not be surjective.
+8. Show that if
+A
+α
+−→B
+β
+−→C
+γ
+−→D
+is exact and A̸ = 0 then β need not be injective.
+3.3
+The Zig-Zag Lemma
+In this section we prove the exactness of the homology sequence of a pair. We
+shall do so by reformulating this result as a theorem about chain complexes
+and proving it in that form. This first requires a definition.
+Definition 3.3.1 Let C, D, and E be chain complexes. Let 0 denote the trivial
+chain complex whose groups vanish in every dimension. Let ϕ : C →D and
+ψ : D →E be chain maps. We say that the sequence
+0 −→C
+ϕ
+−→D ψ
+−→E −→0

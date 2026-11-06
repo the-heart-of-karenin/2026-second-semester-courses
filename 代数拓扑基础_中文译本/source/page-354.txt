@@ -1,0 +1,37 @@
+Cohomology
+339
+Because the boundary operators in E vanish, λ(∂cp+1) = {∂cp+1} = 0, so the
+map λ : C →E is a chain map. The induced homomorphism in homology
+λ∗: Hp(C) →Hp(E) = Hp(C)
+is the identity map [and hence an isomorphism]. For if zp is a p-cycle, then
+λ∗({zp}) = λ(zp) = π(zp) = {zp} .
+The induced homomorphism in cohomology
+Hp(C; G) λ∗
+←−Hp(E; G) = Hom (Hp(C), G)
+is not in general an isomorphism.
+Now the composite κ ◦λ∗is the identity map of Hom (Hp(C), G), for if
+{zp} ∈Hp(C) and γ ∈Hom (Hp(C), G), then
+(κλ∗(γ))({zp})
+=
+⟨λ∗(γ), {zp}⟩= ⟨λ(γ), zp⟩
+=
+⟨γ, λ(zp)⟩= γ({zp}) .
+Theorem 5.6.13 Let C be a free chain complex. If Hp(C) is free for all p,
+then κ is an isomorphism for all p.
+Proof: Let λ : C →E be as in the preceding lemma. Since the homology
+of C is free, E is a free chain complex and Theorem 5.6.6 applies. Since the
+chain map λ : C →E induces homology isomorphisms λ∗in all dimensions,
+λ∗is an isomorphism. The fact that κ ◦λ∗is the identity implies that κ is an
+isomorphism as well.
+This last theorem says that if the homology of C is free in all dimensions,
+then the cohomology group Hp(C; G) can be considered in a natural way to
+be the dual group Hom (Hp(C), G) of the homology group Hp(C). We will
+generalize this theorem in Chapter 7. All one in fact needs is for the single
+group Hp−1(C) to be free.
+EXERCISES
+1. Check that the operator ∂′ defined in the proof of Lemma 5.6.5
+satisfies ∂′ ◦∂′ = 0.
+2. (a) Show that the Kronecker map κ is natural with respect to ho-
+momorphisms induced by chain maps. That is, show that if
+ϕ : C →D is a chain map, then the following diagram com-
+mutes:

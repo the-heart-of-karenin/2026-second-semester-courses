@@ -1,0 +1,36 @@
+442
+Elements of Algebraic Topology
+(b) Prove Theorem 7.11.4 and Corollary 7.11.5 for relative cup
+products.
+2. (a) Suppose that the cohomology cross product is defined as in this
+section, and that cup products are defined by the formula
+α ⌣β = d∗(α × β) ,
+where d is the diagonal map. Use properties of the cross product
+to show that ⌣is bilinear and associative, and that the class
+{z0} acts as a unity element.
+(b) Suppose that cup products are defined as in Section 5.9, and
+that cohomology cross products are defined by the formula
+α × β = π∗
+1(α) ⌣π∗
+2(β) ,
+where π1 : X×Y →X and π2 : X×Y →Y are the projections.
+Use properties of cup products to show that the cross product
+is bilinear and associative, and that
+π∗
+1(α) = α × 1Y
+and
+α ⌣β = d∗(α × β) .
+3. Compute the following cohomology rings:
+(a) H∗(S1 × S1 × S3).
+(b) H∗((T # T) × S3), where T is the torus.
+(c) H∗((S1 × S5) # (S2 × S4)).
+4. Let M be a compact, connected n-manifold with Hn(M) ∼= Z. Use
+the results of the preceding exercise to formulate a conjecture about
+the cup product operation
+Hk(M) ⊗Hn−k(M) →Hn(M) .
+5. Let S denote the Klein bottle and let T denote the torus. Compute
+the following cohomology rings:
+(a) H∗(T × S).
+(b) H∗(T × S; Z/2).
+6. Verify, in the proof of part (a) of Theorem 7.11.3, that ω is a chain
+map.

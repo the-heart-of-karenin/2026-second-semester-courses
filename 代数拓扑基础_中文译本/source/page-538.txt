@@ -1,0 +1,46 @@
+Duality in Manifolds
+523
+Definition 8.13.13 Let J be the directed set consisting of all open coverings
+of the space X, directed by letting A < B if B is a refinement of A. Construct
+a direct system by assigning to the element A of J the group
+Hk(N(A); G) ,
+and by assigning to the pair A < B the homomorphism
+fAB : Hk(N(A); G) →Hk(N(B); G) ,
+induced by refinement. We define the ˇCech cohomology group of X in dimen-
+sion k, with coefficients in G, by the equation
+ˇHk(X; G) = dir lim A∈JHk(N(A); G) .
+We define the reduced ˇCech cohomology of X,
+ˇHk(A), in a similar manner,
+as the direct limit of the reduced groups Hk(N(A); G).
+Since these groups depend only on the collection of open coverings of X,
+they are obviously topological invariants of X.
+In spite of the abstractness of this definition, it gives us nothing new in
+the case of a triangulable space, as we now show.
+Theorem 8.13.14 Let K be a simplicial complex. Then
+ˇHk(|K|; G) ∼= Hk(K; G) .
+The same is true for reduced cohomology.
+Proof: For any complex K, let A(K) be the covering of |K| by the open stars
+of its vertices. The vertex correspondence fK that assigns to the vertex v of
+K the vertex St v of N(A(K)) defines an isomorphism between the complex
+K and the abstract complex N(A(K)). For v0, v1, . . . , vn is a simplex of K if
+and only if
+St v0 ∩St v1 ∩· · · ∩St vn̸ = ∅.
+This is equivalent to the statement that {St v0, St v1, . . . , St vn} is a simplex
+of N(A(K)).
+If K′ is a subdivision of K, then there is a simplicial approximation to
+the identity h : K′ →K. It is induced by a vertex map h specified by the
+condition
+St(w, K′) ⊂St(h(w), K) .
+The same vertex correspondence can be used to define a simplicial map g :
+N(A(K′)) →N(A(K)). It assigns to the vertex St(w, K′) of N(A(K′)) the
+vertex St(h(w), K) of N(A(K)). Then the following diagram commutes:
+K′
+N(A(K′))
+K
+N(A(K))
+∼=
+fK′
+h
+g
+∼=
+fK

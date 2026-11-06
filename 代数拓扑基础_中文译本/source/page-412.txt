@@ -1,0 +1,47 @@
+Homological Algebra
+397
+7.4
+Torsion Products
+Associated with the functor Hom and derived from it is another functor, called
+Ext. Both were involved in the statement of the universal coefficient theorem
+for cohomology. Similarly, associated with the tensor product functor and
+derived from it is a second functor, which we call the torsion product. Both
+of these functors will be involved in the statement of the universal coefficient
+theorem for homology. Construction of the torsion product is so similar to
+construction of the Ext functor that we abbreviate some of the details.
+The torsion product is a functor that assigns to an ordered pair A, B of
+abelian groups an abelian group A ∗B, and to an ordered pair of homomor-
+phisms γ : A →A′ and δ : B →B′ a homomorphism
+γ ∗δ : A ∗B →A′ ∗B′ .
+Like the tensor product, it is covariant in both variables.
+The crucial property of the torsion product is expressed in the following
+theorem, the proof of which we shall give later:
+Theorem 7.4.1 There is a function that assigns to each free resolution
+0 −→R −→F −→A −→0
+of the abelian group A, and to each abelian group B, an exact sequence
+0 −→A ∗B −→R ⊗B −→F ⊗B −→A ⊗B −→0 .
+This function is natural, in the sense that a homomorphism of a free resolution
+of A to a free resolution of A′, and a homomorphism of B to B′, induce a
+homomorphism of the corresponding exact sequences.
+First we prove a lemma.
+Lemma 7.4.2 Given homomorphism of free resolutions
+0
+R
+F
+A
+0
+0
+R′
+F ′
+A′
+0
+ϕ
+α
+ψ
+β
+γ
+ϕ′
+ψ′
+and a homomorphism δ : B →B′, there exists a unique homomorphism
+ϵ : ker(ϕ ⊗iB) →ker(ϕ′ ⊗iB′
+making the following diagram commute:

@@ -1,0 +1,41 @@
+Duality in Manifolds
+513
+Conversely, if Int s ⊂UA, then some vertex σj of s is in A. It follows that σj
+lies in A and so does its face σk.
+It follows by symmetry that UC is the union of the interiors of those sim-
+plices s for which σk ⊂C. Therefore UA and UC are disjoint open sets in |X|.
+Step 2: We show now that if σk lies in neither A nor C, then s = σ1 . . . σk
+lies in U A \ UA and in U C \ UC. Thus (a) is proved.
+The simplex σk must have a vertex v in A and a vertex w in C. Then
+σ1 . . . σkv
+and
+σ1 . . . σk w
+are simplices of sd X whose interiors lie in UA and UC, respectively. Their
+common face s thus lies in U A \ UA and in U \ UC.
+Step 3: Let D = U A. By (a), D = X \ UC. We now show that D is the
+polytope of a full subcomplex of sd X and that
+St(D, sd X) = St(A, X) .
+First we show that D is full. If the interior of s = σ1 . . . σk lies in UC, then
+σk ⊂C so that σk̸ ∈D. It follows that if all the vertices of s lie in D, then s
+must lie in D.
+We show now that the vertex σ of sd X lies in D if and only if σ intersects
+A. Now a vertex σ of sd X lies in UC if and only if it lies in C, and this occurs
+if and only if σ ⊂C. Therefore σ lies in D if and only if σ does not lie in C,
+that is, if and only if σ intersects A.
+Now we prove that St(D, sd X) ⊂St(A, X). Suppose that s = σ1 . . . σk
+has a vertex σi in D. Then, as just proved, σi must intersect A so that σi has
+a vertex v in A. Since σ1 ≻σi ≻v, we must have
+Int s ⊂Int σ1 ⊂St(v, X) ⊂St(A, X) .
+To prove the reverse inclusion, let σ be a simplex of X having a vertex v
+in A. Then σ is in D. Now Int σ is the union of the interiors of those simplices
+of sd X whose largest vertex [recall Definition 8.4.1] is σ. Thus
+Int σ ⊂St(σ, sd X) ⊂St(D, sd X) .
+Step 4: We now prove (b). Consider the inclusions
+A
+i→UA
+j
+−→D
+k
+−→St(D, sd X) .
+Since A and D are polytopes of full subcomplexes of sd X, the maps i and k
+are homotopy equivalences. Because St(D, sd X) = St(A, X) and A is a full

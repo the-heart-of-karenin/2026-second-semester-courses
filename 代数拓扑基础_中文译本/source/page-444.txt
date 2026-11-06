@@ -1,0 +1,48 @@
+Homological Algebra
+429
+is defined by the equation
+⟨θ(ϕp ⊗ψq), cr ⊗c′
+s⟩= ⟨ϕp, cr⟩· ⟨ψq, c′
+s⟩.
+Here we make the convention that ⟨ϕp, cr⟩= 0 if p̸ = r, and likewise ⟨ψq, c′
+s⟩=
+0 if q̸ = s. Said differently, we agree that any element ϕp of Hom (Cp, R) is
+automatically extended, without change of notation, to a homomorphism of
+Cr into R, by letting it be zero on all summands other than Cp.
+Lemma 7.10.2 The homomorphism θ is a natural cochain map.
+Proof: Let ϕ ∈Hom (Cp, R) and ψ ∈Hom (C′
+q, R), where p + q = m. Let
+r + s = m + 1. We compute
+⟨θ(δ(ϕ ⊗ψ)), cr ⊗c′
+s⟩= ⟨θ(δϕ ⊗ψ + (−1)pϕ ⊗δ′ψ), cr ⊗c′
+s⟩
+= ⟨δϕ, cr⟩· ⟨ψ, cs⟩+ (−1)p⟨ϕ, cr⟩· ⟨δ′ψ, c′
+s⟩,
+(∗)
+and
+⟨∂θ(ϕ ⊗ψ), cr ⊗c′
+s⟩= ⟨θ(ϕ ⊗ψ), ∂(cr ⊗c′
+s)⟩
+= ⟨ϕ, ∂cr⟩· ⟨ψ, cs⟩+ (−1)r⟨ϕ, cr⟩· ⟨ψ, ∂′c′
+s⟩.
+(∗∗)
+The expressions in the lines (∗) and (∗∗) are equal except for the signs (−1)p
+and (−1)r on the final terms. In fact this is not a difficulty, because if p̸ = r,
+then ⟨ϕ, cr⟩= 0, and both these final terms vanish.
+It is apparent from its definition that if f : Cp →Dp and g : C′
+q →D′
+q are
+homomorphisms, then
+θ ◦( f ⊗g) = ( f ⊗g ) ◦θ
+holds. Thus θ is natural.
+Now we define a homomorphism in cohomology analogous to the map Θ
+that appeared in the homology version of the K¨unneth theorem.
+Definition 7.10.3 We define the tensor homomorphism for homology
+Θ : Hp(C; R) ⊗Hq(C′; R) →Hm(C ⊗C′; R) ,
+where m = p + q, as follows: Let ϕ and ψ be cocycles of dimensions p and q,
+respectively. Then define
+Θ({ϕ} ⊗{ψ}) = {θ(ϕ ⊗ψ)} .
+Note that θ(ϕ ⊗ψ) is a cocycle, because
+∂θ(ϕ ⊗ψ) = θ(δ(ϕ ⊗ψ)) = θ(δϕ ⊗ψ ± ϕ ⊗δ′ψ) ,
+which vanishes, because ϕ and ψ are cocycles. A similar computation shows
+that Θ is well-defined.

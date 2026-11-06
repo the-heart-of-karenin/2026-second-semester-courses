@@ -1,0 +1,36 @@
+Homology Groups of a Simplicial Complex
+29
+with ti > 1 and t1 | t2 | · · · | tk. This representation is in some sense a
+“canonical form” for G. There is another such canonical form, derived as
+follows:
+Recall first the fact that if m and n are relatively prime positive integers,
+then
+Z/m ⊕Z/n ∼= Z/mn .
+It follows that any finite cyclic group can be written as a direct sum of cyclic
+groups whose orders are powers of primes. Theorem 1.5.3 then implies that
+for any finitely generated group G,
+G ∼= (Z ⊕Z ⊕· · · ⊕Z) ⊕Z/a1 ⊕Z/a2 ⊕· · · Z/as ,
+where each ai is a power of a prime. This is another canonical form for G,
+since the numbers ai are uniquely determined by G up to rearrangement, as
+we shall see.
+EXERCISES
+1. Show that if G is a finitely generated abelian group, then every
+subgroup of G is finitely generated. [This result does not hold for
+non-abelian groups.]
+2. (a) Show that if G is free, then G is torsion-free.
+(b) Show that if G is finitely generated and torsion-free, then G is
+free.
+(c) Show that the additive group of rationals Q is torsion free but
+not free. [Hint: If {gα} is a basis for Q, let β be fixed and
+express gβ/2 in terms of this basis.]
+3. (a) Show that if m and n are relatively prime, then Z/m ⊕Z/n is
+cyclic of order mn.
+(b) If G ∼= Z/18 ⊕Z/36, then express G as a direct sum of cyclic
+groups of prime power order.
+(c) If G ∼= Z/2 ⊕Z/4 ⊕Z/3 ⊕Z/3 ⊕Z/9, then find the torsion
+coefficients of G.
+(d) If G ∼= Z/15 ⊕Z/20 ⊕Z/18, then find the torsion coefficients
+of G.
+4. (a) Let p be a prime; let b1, b2, . . . , bk be non-negative integers.
+Show that if
+G ∼= (Z/p)b1 ⊕(Z/p2)b2 ⊕· · · ⊕(Z/pk)bk ,

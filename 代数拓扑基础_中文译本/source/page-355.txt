@@ -1,0 +1,42 @@
+340
+Elements of Algebraic Topology
+Hom (Hp(C), G)
+Hp(C; G)
+Hom (Hp(D), G)
+Hp(D; G)
+κ
+ϕ∗
+κ
+ϕ∗
+(b) Naturality of the Kronecker index itself is awkward to formu-
+late, since it is covariant in one variable and contravariant
+in the other. Let ϕ : C →D be a chain map. Show that if
+α ∈Hp(D; G) and β ∈Hp(C), then
+⟨ϕ∗(α), β⟩= ⟨α, ϕ∗(β)⟩.
+3. Let X and Y be spaces such that Hn(X), Hn(X), Hn(Y ), and
+Hn(Y ) are infinite cyclic. Let f : X →Y be a continuous map.
+Show that if
+f∗: Hn(X) →Hn(Y )
+equals multiplication by d, then, up to sign, so does
+f ∗: Hn(Y ) →Hn(X) .
+[Hint: Show that κ is an isomorphism.]
+4. Since arbitrary choices are made in the definition of the homomor-
+phism λ : Cp →Hp(C) in the proof of Lemma 5.6.12, one would not
+expect the splitting homomorphism
+λ∗: Hom (Hp(C), G) →Hp(C; G)
+to be natural. Show that it is in fact not natural as follows:
+(a) Find free chain complexes C, D, and a chain map ϕ : C →
+D such that for no choices of λ does the following diagram
+commute:
+Hom (Hp(C), G)
+Hp(C; G)
+Hom (Hp(D), G)
+Hp(D; G)
+λ∗
+ϕ∗
+λ∗
+ϕ∗
+∗(b) Find spaces X and Y and a continuous map f : X →Y such
+that setting C = S(X), D = S(Y ), and ϕ = f# realizes the
+situation of (a).
+5. Find a free resolution of Z/n.

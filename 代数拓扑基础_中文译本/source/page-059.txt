@@ -1,0 +1,44 @@
+44
+Elements of Algebraic Topology
+Putting these facts together, we compute the homology of S as follows:
+Every 1-cycle of S is homologous to a 1-cycle of the form nw1 + mz1, by (1)
+and (3). If c = ∂d for some d, then d = pγ by (2), so (4) gives us ∂d = 2pz1.
+Thus nw1 + mz1 bounds if and only if m is even and n is zero. We conclude
+that
+H1(S) = Z ⊕Z/2 .
+The cycle z1 represents the torsion element, and w1 represents a generator of
+the infinite cyclic group H1(S)/T1(S).
+To compute H2(S), note that any 2-cycle d of S must be of the form pγ
+by (2). By (4), pγ is not a cycle, so we have H2(S) = 0.
+Theorem 1.7.5 Let P2 be the complex indicated by the labeled rectangle of
+Figure 1.7.7. [Recall from Example 1.4.10 that its underlying space is called
+the projective plane.] Then
+H1(P2) ∼= Z/2 and H2(P2) = 0 .
+d
+c
+b
+a
+a
+b
+c
+d
+e
+f
+f
+e
+L
+=
+D
+D
+Figure 1.7.7
+Proof: Let g : |L| →|P2| be the pasting map. Let A = g(Bd L), so A is
+homeomorphic to a circle. Let γ be as in the proofs of the preceding two
+theorems. Let
+z1 = [a, b] + [b, c] + [c, d] + [d, e] + [e, f] + [f, a] .
+The statements (1) and (2) of the proof of Theorem 1.7.3 hold as before. The
+additional results, which are easy to verify, are the following:
+(3) Every 1-cycle carried by A is a multiple of z1.
+(4) ∂γ = −2z1.
+From these facts, we conclude that
+H1(P2) ∼= Z/2 and H2(P2) = 0 .
+The non-zero element of H1 is represented by the cycle z1.

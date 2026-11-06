@@ -1,0 +1,49 @@
+Duality in Manifolds
+455
+remaining equivalence classes. Let s be a simplex of the complex X
+such that s̸ ∈A and s ⊂X1∩X2. If k = dim s, then k < n−1. Show
+that Lk s is a pseudo (n−k −1)-manifold. Conclude that every two
+n-simplices of St s are equivalent.]
+4. Prove Corollary 8.3.9. [Hint: If X is a pseudo m-manifold and
+Hm(X)̸ = 0, then X must be finite.]
+5. Can you give an example of a relative homology n-manifold in which
+the first entry X is a circle? Why or why not?
+6. Can you give an example of a relative homology n-manifold in which
+the first entry X is a 2-sphere? Why or why not?
+8.4
+The Dual Block Complex
+For simplicity we are going to restrict ourselves in the next few sections to the
+case of a homology n-manifold X. The techniques that we use will reappear
+later when we consider the case of a relative homology manifold.
+There is associated with the triangulated homology manifold X a certain
+partition of X into subsets that are [almost] open cells such that X becomes
+[almost] a regular cell complex. The subsets are not actual topological cells
+but only homological cells. Since we cannot call them “cells,” we shall instead
+call them “blocks.” And we shall call the collection of these blocks the dual
+block decomposition of X. Just as there was with cell complexes, there is a
+chain complex associated to this block complex that can be used to compute
+the homology and cohomology of X. We will call it the “dual chain complex.”
+It will be a crucial tool in proving our duality theorems.
+Recall from Section 2.3 that we use the notation σ1 ≻σ2 to mean σ2 is a
+proper face of σ1.
+Definition 8.4.1 Let X be a locally finite simplicial complex, and let sd X
+denote its first barycentric subdivision Lemma 2.3.9 tells us that the simplices
+of sd X are of the form
+σi1σi2 · · · σik ,
+(∗)
+where
+σi1 ≻σi2 ≻· · · ≻σik .
+(∗∗)
+The vertices of a simplex of sd X will be ordered as in (∗) so that (∗∗) is
+satisfied. So we can keep track of things we shall say that σi1 is the largest
+vertex of the simplex, and that σik is the smallest vertex of the simplex.
+EXAMPLE 8.4.2 Let X a triangular region in the plane with vertices a, b, c.
+Consider X as a 2-dimensional simplicial complex. The vertices of sd X are
+a = a,
+b = b,
+c = c,
+ab,
+bc,
+ca,
+
+abc.

@@ -1,0 +1,34 @@
+404
+Elements of Algebraic Topology
+One can give a direct proof of this theorem that is very similar to the proof
+of the universal coefficient theorem for cohomology. Instead, we shall derive
+the theorem from the more general K¨unneth theorem that we shall prove in
+Section 7.8.
+Corollary 7.5.2 Let (X, A) be a topological pair. Then there is an exact se-
+quence
+0 −→Hp(X, A) ⊗G −→Hp(X, A; G) −→Hp−1(X, A) ∗G −→0 ,
+that is natural with respect to homomorphisms induced by chain maps. It splits,
+but not naturally.
+Corollary 7.5.3 Let C and D be free chain complexes, and let ϕ : C →D be a
+chain map. If ϕ∗: Hi(C) →Hi(D) is an isomorphism for i = p and i = p −1,
+then
+ϕ∗: Hp(C; G) →Hp(D; G)
+is an isomorphism for arbitrary G.
+Proof: This result follows from naturality of the universal coefficient sequence
+and the Steenrod five lemma [Lemma 3.3.4].
+This last corollary provides an alternative proof of Theorem 6.3.1.
+EXERCISES
+1. Let C be a free chain complex. Show that if Hp−1(C) or G is torsion-
+free, then Hp(C) ⊗G ∼= Hp(C; G).
+2. Use the universal coefficient theorem to compute the homology, with
+general coefficients G, of the following spaces:
+(a) T # T.
+(b) P2 # P2 # P2.
+(b) PN.
+(c) the k-fold dunce cap.
+Compare with Exercise 2 of Section 6.3.
+3. Assume that Hi(X) is finitely generated for all i.
+(a) Compute Hp(X; G) in terms of the betti numbers and torsion
+coefficients of X.
+(b) Repeat (a) when G is the circle group S1.
+(c) Repeat (a) when G = Q.

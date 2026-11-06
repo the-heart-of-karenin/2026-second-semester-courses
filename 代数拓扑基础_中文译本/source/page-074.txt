@@ -1,0 +1,36 @@
+Homology Groups of a Simplicial Complex
+59
+K
+K0
+e0
+M
+K0
+e0
+Figure 1.10.2
+Figure 1.10.3
+A similar argument, using (ii) and (iii), shows that
+H2(K, K0) ∼= Z ,
+and the relative cycle γ represents a generator.
+Students often visualize the relative homology group Hp(K, K0) as repre-
+senting the homology of the quotient space X = |K|/|K0| obtained by col-
+lapsing |K0| to a point p, modulo that point. Assuming X is homeomorphic to
+a polyhedron [so its simplicial homology is defined] this is in fact correct, but
+the proof is not easy. [See Lemma 8.10.1 and the exercises of Section 4.13.]
+Roughly speaking, the relative homology group Hp(K, K0) depends only
+on the part of K lying outside of K0 or on the boundary of K0; it effectively
+ignores the part of K lying inside K0. We express this fact formally in the
+following theorem:
+Theorem 1.10.6 (Excision theorem) Let K be a complex; let K0 be a sub-
+complex. Let U be an open set contained in |K0|, such that |K|\U is the poly-
+tope of a subcomplex L of K. Let L0 be the subcomplex of K whose polytope
+is |K0| \ U. Then inclusion induces an isomorphism
+Hp(L, L0) ∼= Hp(K, K0) .
+We think of (|L|, |L0|) as having been formed by excising away the open
+set U from |K| and |K0|. See Figure 1.10.4.
+Proof: Consider the composite map ϕ given by
+Cp(L) →Cp(K) →Cp(K)/Cp(K0) ,
+which is inclusion followed by projection. Then ϕ is surjective, because a basis
+for Cp(K)/Cp(K0) consists of all cosets {σi} for σi not in K0, and L contains
+all such simplices σi. The kernel of ϕ is precisely Cp(L0). Thus ϕ induces an
+isomorphism
+Cp(L)/Cp(L0) ∼= Cp(K)/Cp(K0) ,

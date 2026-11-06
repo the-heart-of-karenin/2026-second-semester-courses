@@ -1,0 +1,215 @@
+\section{链复形与无环载体}
+\sourcepage{84--85}
+前面在单纯复形的背景下作出的许多定义和构造，也出现在更一般的情形中。这里暂作离题，讨论这种一般背景。后面将多次使用这些结果，部分证明留作习题。
+
+先定义链群的代数类似物，第 1.12 节已提到过它们。
+
+\entry{定义}{1.14.1}\textbf{链复形} $\mathcal C$ 是由整数编号的一族阿贝尔群 $C_p$ 及同态 $\partial_p:C_p\to C_{p-1}$，满足对所有 $p$ 有 $\partial_p\circ\partial_{p+1}=0$。
+
+若 $p<0$ 时 $C_p=0$，则称 $\mathcal C$ 为\textbf{非负链复形}。若每个 $C_p$ 都自由阿贝尔，则称它为\textbf{自由链复形}。群
+\[
+H_p(\mathcal C)=\ker\partial_p/\operatorname{im}\partial_{p+1}
+\]
+称为链复形的\textbf{第 $p$ 同调群}。
+
+若 $\mathcal C$ 非负，其一个\textbf{增广}是满足 $\epsilon\circ\partial_1=0$ 的满同态 $\epsilon:C_0\to\Z$。\textbf{增广链复形} $\{\mathcal C,\epsilon\}$ 是在 $\mathcal C$ 的 $-1$ 维添加群 $\Z$，并以 $\epsilon$ 作为零维边界算子而得到的链复形。其同调群称为原链复形相对于增广 $\epsilon$ 的\textbf{约化同调群}，记为 $H_i(\{\mathcal C,\epsilon\})$ 或 $\widetilde H_i(\mathcal C)$。容易得到，当 $p\ne0$ 时 $\widetilde H_p(\mathcal C)=H_p(\mathcal C)$，且
+\[
+H_0(\mathcal C)\cong\widetilde H_0(\mathcal C)\oplus\Z,
+\]
+见习题。
+
+若任意链复形 $\mathcal D$ 满足对所有 $i$ 有 $H_i(\mathcal D)=0$，称其\textbf{无环}。特别地，增广链复形 $\{\mathcal C,\epsilon\}$ 无环，表示对所有 $i$，$H_i(\{\mathcal C,\epsilon\})=\widetilde H_i(\mathcal C)=0$；等价地，$H_0(\mathcal C)\cong\Z$，且当 $i\ne0$ 时 $H_i(\mathcal C)=0$。
+
+\entry{定义}{1.14.2}设 $\mathcal C=\{C_p,\partial_p\}$、$\mathcal C'=\{C'_p,\partial'_p\}$ 为链复形。\textbf{链映射} $\varphi:\mathcal C\to\mathcal C'$ 是一族同态 $\varphi_p:C_p\to C'_p$，满足
+\[
+\partial'_p\circ\varphi_p=\varphi_{p-1}\circ\partial_p
+\]
+对所有 $p$ 成立。
+
+链映射给出诱导同态 $(\varphi_*)_p:H_p(\mathcal C)\to H_p(\mathcal C')$，并且：
+\begin{enumerate}[label=(\alph*)]
+\item $\mathcal C$ 的恒等映射 $i$ 为链映射，$(i_*)_p$ 为 $H_p(\mathcal C)$ 的恒等映射。
+\item 若 $\varphi:\mathcal C\to\mathcal C'$、$\psi:\mathcal C'\to\mathcal C''$ 为链映射，则 $\psi\circ\varphi$ 也是，且 $(\psi\circ\varphi)_*=\psi_*\circ\varphi_*$。
+\end{enumerate}
+若两链复形已增广，且 $\epsilon'\circ\varphi_0=\epsilon$，称 $\varphi$ \textbf{保持增广}。将它在 $-1$ 维上扩张为 $\Z$ 的恒等映射，就得到\textbf{增广链复形的链映射}。因此，保持增广的链映射诱导约化同调同态 $\varphi_*:\widetilde H_p(\mathcal C)\to\widetilde H_p(\mathcal C')$。
+
+\entry{例}{1.14.3}第 1.10 节定义的 $\mathcal C(K,K_0)=\{C_p(K,K_0),\partial_p\}$ 称为单纯偶 $(K,K_0)$ 的\textbf{定向链复形}。它自由且非负，但一般没有增广。例如，例 1.10.5 中 $C_0(K,K_0)=0$，不可能满射到 $\Z$。若 $K_0$ 为空，则 $\mathcal C(K,\varnothing)=\mathcal C(K)$ 有标准增广，对每个顶点 $v$ 定义 $\epsilon(v)=1$。
+
+\entry{例}{1.14.4}若 $f:K\to L$ 为单纯映射，则 $f_\#$ 是从 $\mathcal C(K)$ 到 $\mathcal C(L)$ 的保持增广的链映射。一般地，也存在并非由单纯映射诱导的保持增广链映射 $\varphi:\mathcal C(K)\to\mathcal C(L)$。
+
+\entry{定义}{1.14.5}设 $\varphi,\psi:\mathcal C\to\mathcal C'$ 为链映射。从 $\varphi$ 到 $\psi$ 的\textbf{链同伦}是一族同态 $D_p:C_p\to C'_{p+1}$，满足对所有 $p$ 有
+\[
+\partial'_{p+1}D_p+D_{p-1}\partial_p=\psi_p-\varphi_p.
+\]
+称 $\varphi,\psi$ \textbf{链同伦}。
+
+\sourcepage{86--87}
+今后通常省略边界算子、链映射和链同伦的下标。例如，上式写为更熟悉的 $\partial'D+D\partial=\psi-\varphi$。
+
+\entry{定义}{1.14.6}若链映射 $\varphi:\mathcal C\to\mathcal C'$ 存在链映射 $\varphi':\mathcal C'\to\mathcal C$，使 $\varphi'\circ\varphi$ 与 $\varphi\circ\varphi'$ 分别链同伦于 $\mathcal C$、$\mathcal C'$ 的恒等映射，则称 $\varphi$ 为\textbf{链等价}（chain equivalence），称 $\varphi'$ 为其\textbf{链同伦逆}。
+
+列出链同伦的几个性质，证明留作习题。
+\begin{enumerate}[label=(\arabic*)]
+\item 链同伦是从 $\mathcal C$ 到 $\mathcal C'$ 的链映射集上的等价关系。
+\item 链映射的复合诱导链同伦类之间良定义的复合运算。
+\item 若 $\varphi,\psi$ 链同伦，则它们诱导相同的同调同态。
+\item 若 $\varphi$ 为链等价，链同伦逆为 $\varphi'$，则 $\varphi_*,(\varphi')_*$ 是互逆的同调同构。
+\item 两个链等价的复合仍为链等价。
+\end{enumerate}
+现在研究增广链复形的特殊情形。
+
+\entry{引理}{1.14.7}设 $\mathcal C,\mathcal C'$ 为非负链复形，$\varphi,\psi:\mathcal C\to\mathcal C'$ 为链映射，$D$ 为两者之间的链同伦。设两复形分别由 $\epsilon,\epsilon'$ 增广。若 $\varphi$ 保持增广，则 $\psi$ 也保持增广。将 $\varphi,\psi$ 在 $-1$ 维扩张为恒等映射，将 $D$ 在 $-1$ 维扩张为零，则 $D$ 是扩张后的链映射之间的链同伦。
+
+\noindent\textbf{证明：}对 $c_0\in C_0$，因为 $\partial c_0=0$，有 $\partial'Dc_0=\psi(c_0)-\varphi(c_0)$。于是
+\[
+0=\epsilon'(\partial'Dc_0)=\epsilon'\psi(c_0)-\epsilon'\varphi(c_0)
+=\epsilon'\psi(c_0)-\epsilon(c_0),
+\]
+得到所需增广关系。\translatornote{原文此证明将 $\varphi-\psi$ 与前述定义中的 $\psi-\varphi$ 混用；这里统一按定义 1.14.5 的方向书写。}
+在增广后的零维上，因为 $D\epsilon(c_0)=0$，有 $D\epsilon(c_0)+\partial'D(c_0)=\psi(c_0)-\varphi(c_0)$。在 $-1$ 维上，$\epsilon'(D(1))=\psi(1)-\varphi(1)$，因为两边均为零。因此扩张后的 $D$ 仍为链同伦。\hfill$\square$
+
+\entry{引理}{1.14.8}设 $\mathcal C,\mathcal C'$ 为分别由 $\epsilon,\epsilon'$ 增广的非负链复形，$\varphi:\mathcal C\to\mathcal C'$ 为链等价，链同伦逆为 $\varphi'$。若 $\varphi$ 保持增广，则 $\varphi'$ 也保持增广。作为增广链复形的映射，两者仍为链同伦逆，因此诱导约化同调上的互逆同构。
+
+\noindent\textbf{证明：}取 $\varphi\circ\varphi'$ 与恒等映射之间的链同伦 $D'$，方向取为
+\[
+\partial'D'c'_0=\varphi\varphi'(c'_0)-c'_0.
+\]
+因此
+\[
+0=\epsilon'(\partial'D'c'_0)=\epsilon'\varphi\varphi'(c'_0)-\epsilon'(c'_0)
+=\epsilon\varphi'(c'_0)-\epsilon'(c'_0).
+\]
+故 $\varphi'$ 保持增广，其余由引理 1.14.7 得到。\hfill$\square$
+
+这些定义建立了一般代数框架，定向单纯链群只是其中的特例。现在把上一节构造链同伦的方法放入此框架。作为动机，先考察链映射任意、链群仍为熟悉的定向单纯链群的情形，再讨论一般链复形。
+
+\entry{定义}{1.14.9}从单纯复形 $K$ 到 $L$ 的\textbf{无环载体}（acyclic carrier）是函数 $\Phi$，为 $K$ 的每个单形 $\sigma$ 指定 $L$ 的子复形 $\Phi(\sigma)$，满足：
+\begin{enumerate}[label=(\arabic*)]
+\item $\Phi(\sigma)$ 非空且无环。
+\item 若 $s$ 为 $\sigma$ 的面，则 $\Phi(s)\subset\Phi(\sigma)$。
+\end{enumerate}
+若同态 $f:C_p(K)\to C_q(L)$ 对每个定向 $p$ 维单形 $\sigma$，使链 $f(\sigma)$ 由 $\Phi(\sigma)$ 承载，则称 $f$ \textbf{由 $\Phi$ 承载}。
+
+\entry{定理}{1.14.10（无环载体定理，几何形式）}设 $\Phi$ 为从 $K$ 到 $L$ 的无环载体。
+\begin{enumerate}[label=(\alph*)]
+\item 若 $\varphi,\psi:\mathcal C(K)\to\mathcal C(L)$ 为两个由 $\Phi$ 承载的保持增广链映射，则存在从 $\varphi$ 到 $\psi$ 的、也由 $\Phi$ 承载的链同伦 $D$。
+\item 存在由 $\Phi$ 承载的保持增广链映射 $\mathcal C(K)\to\mathcal C(L)$。
+\end{enumerate}
+
+\sourcepage{88}
+\noindent\textbf{证明：}(a) 直接仿照定理 1.13.9 的证明，将所有子复形 $L(\sigma)$ 换成 $\Phi(\sigma)$ 即可。
+
+为证 (b)，对 $K$ 的每个顶点 $v$，定义 $\varphi(v)$ 为 $\Phi(v)$ 中满足 $\epsilon(c)=1$ 的某条 $0$ 维链 $c$。因为 $\Phi(v)$ 非空，其零维链群的增广满射到 $\Z$，所以可作此选择；事实上，只需取 $\Phi(v)$ 的某个顶点。于是 $\varphi$ 保持增广，并有 $\partial\varphi(v)=0=\varphi(\partial v)$。
+
+设 $\sigma=[v,w]$ 是定向边。因为 $\varphi$ 已在零维定义，$c=\varphi(\partial\sigma)$ 良定义。它由 $\Phi(\sigma)$ 承载：其两项分别由 $\Phi(v),\Phi(w)$ 承载，后两者由 (2) 都包含于 $\Phi(\sigma)$。此外，$\epsilon(c)=\epsilon\varphi(\partial\sigma)=\epsilon(\partial\sigma)=0$，因为 $\varphi$ 保持增广。所以 $c$ 代表 $\widetilde H_0(\Phi(\sigma))$ 的元素。由 (1)，此群为零，故可选择由 $\Phi(\sigma)$ 承载、边界为 $c$ 的 $1$ 维链，记为 $\varphi(\sigma)$。于是 $\partial\varphi(\sigma)=c=\varphi(\partial\sigma)$。
+
+作归纳，设 $p>1$，对 $\dim s<p$ 已定义 $\varphi(s)$，并满足 $\partial\varphi(s)=\varphi\partial(s)$。\translatornote{原文这里的等号误印为减号。}给定定向 $p$ 维单形 $\sigma$，链 $c=\varphi(\partial\sigma)$ 是良定义的 $p-1$ 维链。它由 $\Phi(\sigma)$ 承载，因为各面 $s_i$ 的 $\Phi(s_i)$ 都包含于 $\Phi(\sigma)$。由归纳假设，
+\[
+\partial c=\partial\varphi(\partial\sigma)=\varphi\partial(\partial\sigma)=0.
+\]
+由于 $\Phi(\sigma)$ 无环，可选择由其承载的 $p$ 维链 $\varphi(\sigma)$，使 $\partial\varphi(\sigma)=c=\varphi\partial(\sigma)$。归纳即得定理。\hfill$\square$
+
+以此证明为动机，给出更一般的形式。在这个形式中，几何完全消失，只剩代数！
+
+\entry{定义}{1.14.11}链复形 $\mathcal C$ 的\textbf{子链复形} $\mathcal D$ 是这样一个链复形：其 $p$ 维链群为 $C_p$ 的子群，各维边界算子为 $\partial_p$ 的限制。
+
+\sourcepage{89}
+\entry{定义}{1.14.12}设 $\{\mathcal C,\epsilon\}=\{C_p,\partial_p,\epsilon\}$ 为自由增广链复形，给定 $C_p$ 的一组基 $\{\sigma_p^\alpha\}_{\alpha\in J_p}$。设 $\{\mathcal C',\epsilon'\}$ 为任意增广链复形。相对于给定基的\textbf{从 $\mathcal C$ 到 $\mathcal C'$ 的无环载体}，是为每个基元素 $\sigma_p^\alpha$ 指定 $\mathcal C'$ 的子链复形 $\Phi(\sigma_p^\alpha)$ 的函数，满足：
+\begin{enumerate}[label=(\arabic*)]
+\item $\Phi(\sigma_p^\alpha)$ 由 $\epsilon'$ 增广，且增广后无环。
+\item 若 $\sigma_{p-1}^\beta$ 出现在 $\partial_p\sigma_p^\alpha$ 关于给定基的表达式中，则 $\Phi(\sigma_{p-1}^\beta)$ 为 $\Phi(\sigma_p^\alpha)$ 的子链复形。
+\end{enumerate}
+若对每个 $\alpha$，$f(\sigma_p^\alpha)$ 属于 $\Phi(\sigma_p^\alpha)$ 的 $q$ 维群，则称同态 $f:C_p\to C'_q$ \textbf{由 $\Phi$ 承载}。
+
+\entry{定理}{1.14.13（无环载体定理，代数形式）}设 $\mathcal C,\mathcal C'$ 为增广链复形，$\mathcal C$ 自由。设 $\Phi$ 为相对于 $\mathcal C$ 的某组指定基的、从 $\mathcal C$ 到 $\mathcal C'$ 的无环载体。则存在由 $\Phi$ 承载的保持增广链映射 $\varphi:\mathcal C\to\mathcal C'$；任意两个这样的链映射链同伦，而且链同伦也由 $\Phi$ 承载。
+
+\noindent\textbf{证明：}这是定理 1.14.10 证明的加强版本。要求 $\epsilon'$ 的限制给出 $\Phi(\sigma_p^\alpha)$ 的增广，意味着它将该复形的零维群满射到 $\Z$，对应于几何形式中对每个 $\sigma$ 要求 $\Phi(\sigma)$ 非空。\hfill$\square$
+
+\subsection*{应用：有序单纯同调}
+无环载体定理的代数形式可能显得过于抽象，但确实有用。下面给一个后面研究奇异同调时要用到的应用：用有序单形代替定向单形，以另一种方式定义单纯同调群。
+
+设 $K$ 为单纯复形。$K$ 的\textbf{有序 $p$ 维单形}（ordered $p$-simplex）是由顶点构成的 $(p+1)$ 元组 $(v_0,v_1,\ldots,v_p)$，各 $v_i$ 是 $K$ 的某个单形的顶点，但不必互异。例如，若 $vw$ 为 $K$ 的边，则 $(v,w,w,v)$ 是有序 $3$ 维单形。
+
+令 $C'_p(K)$ 为由所有有序 $p$ 维单形生成的自由阿贝尔群，称为\textbf{有序 $p$ 维链群}。仍将有序单形与相应初等链等同，该链在此有序单形上为 $1$，在其他有序单形上为零。每个元素都能唯一写成有序 $p$ 维单形的有限整数线性组合。定义
+\[
+\partial'_p(v_0,v_1,\ldots,v_p)=\sum_{i=0}^p(-1)^i(v_0,\ldots,\widehat v_i,\ldots,v_p),
+\]
+帽号表示删去相应项。它是良定义的同态，像前面一样可验证 $\partial'_p\circ\partial'_{p+1}=0$。
+
+\sourcepage{90}
+链复形 $\mathcal C'(K)=\{C'_p(K),\partial'_p\}$ 称为 $K$ 的\textbf{有序链复形}，其同调 $H_i(\mathcal C'(K))$ 称为 $K$ 的\textbf{有序同调}。也有相对形式 $H_i(\mathcal C'(K,K_0))$。规定每个顶点满足 $\epsilon'(v)=1$，得到增广；约化群记为 $\widetilde H_i(\mathcal C'(K))$。
+
+有序链复形过于庞大，不适合计算，但有时很方便作理论研究。令人惊讶的是，其同调以自然的方式同构于 $K$ 的单纯同调。下面概述证明，细节留给读者。
+
+\entry{引理}{1.14.14}若 $w*K$ 为复形 $K$ 上的锥，则它在有序同调意义下无环。
+
+\noindent\textbf{证明：}对 $p\geq0$，定义 $D:C'_p(w*K)\to C'_{p+1}(w*K)$，使
+\[
+D((v_0,\ldots,v_p))=(w,v_0,\ldots,v_p).
+\]
+这里，是否有 $v_i=w$ 并不重要。对链 $c_p$，计算得
+\[
+\partial'_1Dc_0=c_0-\epsilon'(c_0)w,\qquad
+\partial'_{p+1}Dc_p=c_p-D\partial'_pc_p\quad(p>0).
+\]
+若 $p>0$ 且 $c_p$ 为闭链，则 $c_p=\partial'_{p+1}Dc_p$；若 $c_0\in\ker\epsilon'$，则 $c_0=\partial'_1Dc_0$。引理得证。\hfill$\square$
+
+\entry{引理}{1.14.15}对复形 $K$，存在其顶点集上的偏序，在每个单形的顶点集上诱导线性序。
+
+证明留作习题。
+
+\entry{定理}{1.14.16}选择 $K$ 顶点集上的偏序，使其在每个单形顶点集上诱导线性序。定义 $\varphi:C_p(K)\to C'_p(K)$，当给定序下 $v_0<v_1<\cdots<v_p$ 时，令
+\[
+\varphi([v_0,v_1,\ldots,v_p])=(v_0,v_1,\ldots,v_p).
+\]
+定义 $\psi:C'_p(K)\to C_p(K)$，使
+\[
+\psi((w_0,\ldots,w_p))=\begin{cases}
+[w_0,\ldots,w_p],&\text{若各 }w_i\text{ 互异},\\
+0,&\text{否则}.
+\end{cases}
+\]
+则 $\varphi,\psi$ 是保持增广的链映射，且互为链同伦逆。若 $K_0$ 为子复形，它们诱导的相对链复形映射也互为链同伦逆。
+
+证明是无环载体定理的应用，留作习题。
+
+\sourcepage{91--92}
+由此，有序同调与定向同调以相当“自然”的方式同构。为解释“自然性”的含义，需要考虑单纯映射对有序同调的作用。
+
+\entry{定义}{1.14.17}设 $f:K\to L$ 为单纯映射，按规则
+\[
+f'_\#((v_0,v_1,\ldots,v_p))=(f(v_0),f(v_1),\ldots,f(v_p))
+\]
+定义 $f'_\#:\mathcal C'(K)\to\mathcal C'(L)$。容易验证它是链映射，事实上比定向情形更容易，因为不必考虑顶点是否互异。它显然保持增广。若 $f$ 将 $K_0$ 映入 $L_0$，就诱导相对链映射 $f'_\#:\mathcal C'(K,K_0)\to\mathcal C'(L,L_0)$，以及相应的同调同态。
+
+\entry{定理}{1.14.18}设 $f:(K,K_0)\to(L,L_0)$ 为单纯映射，$\varphi,\psi$ 如定理 1.14.16，则下图可交换：
+\[
+\begin{array}{ccc}
+H_i(K,K_0)&\xrightarrow{f_*}&H_i(L,L_0)\\
+\uparrow\scriptstyle\psi_*&&\uparrow\scriptstyle\psi_*\\
+H_i(\mathcal C'(K,K_0))&\xrightarrow{f'_*}&H_i(\mathcal C'(L,L_0)).
+\end{array}
+\]
+同样，$\varphi_*\circ f_*=f'_*\circ\varphi_*$。
+
+\noindent\textbf{证明：}直接由定义检验 $f_\#\circ\psi=\psi\circ f'_\#$，因此此图在链层次上已可交换，在同调层次上当然也可交换。等式 $\varphi\circ f_\#=f'_\#\circ\varphi$ 一般不成立，因为 $\varphi$ 依赖于特定的顶点排序。不过，$\varphi_*$ 为 $\psi_*$ 的逆，故在同调层次上仍有 $\varphi_*\circ f_*=f'_*\circ\varphi_*$。\hfill$\square$
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $\{\mathcal C,\epsilon\}$ 为增广链复形，证明 $\widetilde H_{-1}(\mathcal C)=0$，且 $\widetilde H_0(\mathcal C)\oplus\Z\cong H_0(\mathcal C)$，见第 1.8 节习题。由此推出：增广复形无环，当且仅当 $p=0$ 时 $H_p(\mathcal C)$ 为无限循环群，$p\ne0$ 时为零。
+\item 验证链同伦的性质 (1)--(5)，其中仅 (2)、(5) 需要小心。
+\item 证明定理 1.14.10 的 (a)。
+\item 考虑例 1.13.5。虽然 $g,h$ 不邻接，仍可以如下证明 $g_\#,h_\#$ 之间存在链同伦：
+\begin{enumerate}[label=(\alph*)]
+\item 构造从 $K$ 到 $L$ 的无环载体 $\Phi$，同时承载 $g_\#,h_\#$。
+\item 定义由 $\Phi$ 承载的一个具体链同伦。
+\item 定义由 $\Phi$ 承载、但不由单纯映射诱导的链映射 $\varphi:\mathcal C(K)\to\mathcal C(L)$，并定义 $\varphi,h_\#$ 之间的链同伦。
+\end{enumerate}
+\item 验证定理 1.14.13 证明的细节。
+\item 证明引理 1.14.15。［提示：对复形的顶点个数归纳。］
+\item 如下证明定理 1.14.16：
+\begin{enumerate}[label=(\alph*)]
+\item 证明 $\varphi,\psi$ 为保持增广的链映射，并证明 $\psi\circ\varphi$ 等于 $\mathcal C(K)$ 的恒等映射。
+\item 构造从 $\mathcal C'(K)$ 到自身的无环载体，同时承载 $\varphi\circ\psi$ 与恒等映射。
+\end{enumerate}
+\end{enumerate}

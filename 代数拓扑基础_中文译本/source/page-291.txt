@@ -1,0 +1,35 @@
+276
+Elements of Algebraic Topology
+Sometimes one begins with a space X and seeks to give it the structure
+of a CW complex. This we did in Examples 4.12.4, 4.12.5, and 4.12.6. On
+the other hand, sometimes one seeks to construct new spaces that are CW
+complexes by the process of pasting balls together. This is what we did in
+Example 4.12.13. The general construction is described in the two theorems
+we just proved. This construction significantly enlarges the class of spaces
+about which algebraic topology has something interesting to say.
+EXERCISES
+1. Let X be a CW complex, and let A be a compact subset of X.
+(a) Show that A intersects only finitely many open cells of X.
+Where do you use “closure-finiteness” in the proof?
+(b) Show that A lies in a finite subcomplex of X.
+2. Let X be a CW complex. Suppose h : |K| →X is a triangulation
+of X that induces a triangulation of each skeleton Xp.
+(a) Show that h induces a triangulation of each set eα.
+(b) Show that if Kp is the subcomplex of K triangulating Xp, then
+Kp has dimension at most p. [Hint: Use local homology groups.]
+3. Let X be a CW complex. Show that the topology of X is compactly
+generated. [See Exercise 3 of Section 4.11.]
+4. Let X and Y be a CW complexes. Then X ×Y is the union of open
+cells eα × eβ, for eα a cell of X and eβ a cell of Y .
+(a) Show that if Y is locally compact, then X×Y is a CW complex.
+(b) Show that X ×C Y is a CW complex in general. [See Exercise 3
+of Section 4.11.]
+5. Verify that a regular cell complex can be triangulated so that each
+closed cell is the polytope of a subcomplex.
+6. Show that the n-dimensional torus is a CW-complex.
+7. Show that the solid torus in 3-dimensional space is a CW-complex.
+4.13
+The Homology of CW Complexes
+We now show how to compute the singular homology of a CW complex.
+Throughout this section, X will denote a CW complex with open cells eα
+and characteristic maps fα. The symbol Hp will denote singular homology

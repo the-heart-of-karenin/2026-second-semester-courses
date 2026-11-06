@@ -1,0 +1,37 @@
+146
+Elements of Algebraic Topology
+The combination of (∗∗) and (∗∗∗) contradicts (∗).
+Step 3: Now we compute Λ(h) by applying Theorem 2.10.1, the Hopf trace
+theorem.
+Let f : K′ →K be a simplicial approximation to h. Let λ : C(K) →C(K′)
+be the subdivision operator. Then h∗is induced by the chain map ϕ = f# ◦λ
+by definition.
+We compute the trace of ϕ. Let A be the matrix of ϕ relative to the usual
+basis for Cp(K), which consists of oriented p-simplices of K. Let σ be a typical
+basis element. The chain λ(σ) is a linear combination of oriented simplices s
+of K′ such that s ⊂σ. For any such simplex s, it follows from Step 2 that
+f(s)̸ = σ. We conclude that the chain ϕ(σ) = f#(λ(σ)) is a linear combination
+of oriented p-simplices of K different from σ. The matrix A thus has an entry
+0 in the row and column corresponding to σ. It follows that all the diagonal
+entries of A vanish, so that tr A = tr ϕ = 0.
+The Hopf trace theorem tells us now that
+Λ(h) =
+
+p
+(−1)ptr(ϕ, Cp(K)) .
+Since each of the terms in the summation vanishes, we conclude that Λ(h) = 0.
+In order to apply Lefschetz’s theorem, we need the following lemma:
+Lemma 2.10.6 Let K be a finite complex. Let h : |K| →|K| be a continuous
+map. If |K| is connected, then h∗: H0(K) →H0(K) is the identity.
+Proof: Let f : K′ →K′ be a simplicial approximation to h. If v is a vertex
+of K, then the subdivision operator λ carries v to a 0-chain carried by the
+subdivision of v, which is just v itself. Thus λ(v) is a multiple of v. Because λ
+preserves augmentation, λ(v) = v.
+Thus f#λ(v) = f#(v), which is a vertex of K. Because |K| is connected,
+f#(v) is homologous to v. Therefore h∗= f∗◦λ∗equals the identity on H0(K).
+Theorem 2.10.7 Let K be a finite complex. Let h : |K| →|K| be a contin-
+uous map. If |K| is acyclic, then h has a fixed point.
+Proof: The group H0(K) is infinite cyclic, and h∗is the identity on H0(K).
+Thus tr(h∗, H0(K)) = 1. Since all the higher dimensional homology groups
+vanish, we see that Λ(h) = 1, So h has a fixed point.
+Theorem 2.10.8 The antipodal map of Sn has degree (−1)n+1.

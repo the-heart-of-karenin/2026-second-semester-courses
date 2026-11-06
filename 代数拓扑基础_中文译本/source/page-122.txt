@@ -1,0 +1,49 @@
+Topological Invariance of the Homology Groups
+107
+To make the proof work, we actually have to prove something slightly
+stronger than this. We shall construct a division K′ of K fine enough that the
+collection {St(v, K′)} of closed stars in K′ refines the collection A.
+The following lemma gives the crux of the argument. It will enable us to
+carry out the inductive step of the proof.
+Lemma 2.4.7 Let K = p ∗B be a cone over the finite complex B. Let A be
+an open covering of |K|. Suppose that there is a function assigning to each
+vertex v of the complex B an element Av of A such that
+St(v, B) ⊂Av .
+Then there is an N such that the collection of closed stars of the subdivision
+sdN(K/B) refines A, and furthermore such that for each vertex v of B,
+St(v, sdN(K/B)) ⊂Av .
+Proof: We assume that |B| lies in Rm × {0} for some m. Let n = dim K. Set
+p = (0, 0, . . . , 0, 1) ∈Rm × R.
+Step 1: In general, as N increases, the maximum diameter of the simplices
+of sdN(K/B) does not go to 0. For if σ has a positive-dimensional face in
+B, that face never gets subdivided. However, it is true that, as N increases,
+the simplices that intersect the plane Rm × {0} lie closer and closer to this
+plane. More generally, we show that if K′ is any subdivision of K that keeps
+B fixed, and if the simplices of K′ that intersect Rm × {0} lie in the strip
+Rm × [0, ϵ], then any simplex τ of sd(K′/B) that intersects Rm × {0} lies in
+the strip Rm × [0, nϵ/(n + 1)].
+The simplex τ is of the form σ1σ2 · · · σqv0v1 · · · vp as in Lemma 2.5.5.
+Assuming that τ intersects Rm × {0} but does not lie in it, neither σ1σ2 · · · σq
+nor v0v1 · · · vp is missing from this expression. Each vertex vi lies in Rm ×{0}.
+Consider the vertex σj of τ. The simplex σj of K′ intersects Rm × {0} be-
+cause σj has v0v1 · · · vp as a face. Therefore σj ∈Rm×[0, ϵ]. Let w0, w1, . . . , wk
+be the vertices of σj, and let π : Rm × R →R be the projection on the last
+coordinate. Then |π(wj)| ≤ϵ for i = 0, . . . , k. And π(wi) = 0 for at least one
+index i. We compute
+π(σj) =
+k
+
+i=0
+1
+k + 1π(wi) ≤
+
+k
+k + 1
+
+ϵ .
+Thus each vertex of τ lies in the set Rm × [0, (n/(n + 1))ϵ]. Because this set is
+convex, all of τ lies in it.
+Step 2: For convenience, let KN denote the complex sdN(K/B). We show
+that there is an integer N0 such that if N ≥N0 then, for each vertex v of B,
+St(v, KN) ⊂Av .
+(∗)

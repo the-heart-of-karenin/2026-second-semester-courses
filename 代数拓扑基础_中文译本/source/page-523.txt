@@ -1,0 +1,36 @@
+508
+Elements of Algebraic Topology
+8.∗Generalize Lefschetz duality to the non-compact case.
+9. Let (X, A) be a triangulated, relative homology n-manifold, not
+compact. Show that if |X|\A is connected, then (X, A) is a relative
+pseudo n-manifold.
+10. Give two examples of compact, triangulable, relative homology n-
+manifolds in dimension 2, and specify orientation classes for each
+one.
+8.11
+Alexander Duality
+The Alexander duality theorem is almost as old as the Poincar´e duality theo-
+rem. It predates Lefschetz duality by some years. In its original form it dealt
+with the relationship between the betti numbers and torsion coefficients of a
+subcomplex A of the n-sphere Sn, and the betti numbers and torsion coeffi-
+cients of the complement Sn \ A. Nowadays the Alexander duality theorem is
+formulated in terms of cohomology and it is proved using Lefschetz duality.
+Theorem 8.11.1 Let A be a proper, nonempty subset of Sn. Suppose that
+(Sn, A) is triangulable. Then there is an isomorphism
+Hk(A) ∼= Hn−k−1(Sn \ A) .
+Proof: Assume that n > 0 to avoid triviality. Triangulate the pair (Sn, A).
+Step 1: We prove the theorem first in the case k̸ = n, n −1. Consider the
+exact sequence
+Hk+1(Sn) ←−Hk+1(Sn, A) δ∗
+←−Hk(A) ←−Hk(Sn) .
+Because the end groups vanish, δ∗is an isomorphism. Now since (Sn, A) is a
+relative n-manifold, we can apply Lefschetz duality to conclude that
+Hk+1(Sn, A) ∼= Hn−k−1(Sn \ A) = Hn−k−1(Sn \ A) .
+Combining this isomorphism with that given by δ∗gives us our desired iso-
+morphism.
+Step 2: We now show that the theorem holds in the case k = n −1. The
+preceding argument will need some modifications. As before, one has the exact
+sequence
+Hn(Sn) j∗
+←−Hn(Sn, A) δ∗
+←−Hn−1(A) ←−0 ,

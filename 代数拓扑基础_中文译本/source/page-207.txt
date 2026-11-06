@@ -1,0 +1,42 @@
+192
+Elements of Algebraic Topology
+T(x)
+T(x)
+w
+T
+[T, w]
+ϵp+1
+x
+x
+∆p
+∆p+1
+Figure 4.2.1
+defined by f(x, t) = (1−t)T(x)+tw is constant on ∆p; because π is a quotient
+map, it induces a continuous map of ∆p+1 into X. Since π maps the line
+segment x×I linearly onto the line segment from x to ϵp+1, and f maps x×I
+linearly onto the line segment from T(x) to w, this induced map equals the
+singular (p + 1)-simplex [T, w] defined previously. Thus [T, w] is continuous.
+We now compute how the bracket operation and the boundary operator
+interact.
+Lemma 4.2.8 Let X be star convex with respect to w, and let c be a singular
+p-chain of X. Then
+∂[c, w] =
+ [∂c, w] + (−1)p+1c
+if
+p > 0,
+ϵ(c)Tw −c
+if
+p = 0,
+where Tw is the singular 0-simplex mapping ∆0 to w.
+Proof: If T is a singular 0-simplex, then [T, w] maps the simplex ∆1 linearly
+onto the line segment from T(∆0) to w. Then we have ∂[T, w] = Tw −T, and
+the second formula follows.
+Suppose p > 0. It suffices to check the formula when c is a singular p-
+simplex T. The formula’s plausibility when p = 1 is illustrated in Figure 4.2.2.
+Using the definition of ∂, we compute
+∂[T, w] =
+p+1
+
+i=0
+(−1)i[T, w] ◦ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp+1) .
+(∗)

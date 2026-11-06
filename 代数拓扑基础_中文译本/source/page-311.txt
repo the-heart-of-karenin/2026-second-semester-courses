@@ -1,0 +1,40 @@
+296
+Elements of Algebraic Topology
+Proof: We first show that the quotient map p is closed, so that L(n, k) is
+Hausdorff [in fact normal]. Let A be closed in B3. The saturation p−1p(A) of
+A is the union of the set A, the following subsets of S2:
+f(E2
+−∩A)
+and
+f −1(E2
++ ∩A) ,
+and the following subsets of S1:
+f(A ∩S1), f 2(A ∩S1), . . . , f n−1(A ∩S1) .
+All these sets are compact, so they are closed in B3, and so is their union.
+Since p−1p(A) is closed, so is p(A). Thus p is a closed map.
+We give L(n, k) the structure of a CW complex as follows: First, choose
+the point a = (1, 0) on the equator, and let p(a) be the 0-cell e0 of L(n, k).
+Let A denote the smaller arc of S1 running from a to b = (λ, 0). Now p|A
+is a quotient map, since A is compact and L(n, k) is Hausdorff; p|A identifies
+a and b, but it is one-to-one on Int A. Thus p(Int A) is an open 1-cell; we take
+it to be the open 1-cell e1 of L(n, k). The map p|A is a characteristic map for
+e1. Note that the points of p−1p(a) break up the circle S1 into n open arcs,
+each of which is mapped homeomorphically by p onto e1. See Figure 4.14.2.
+α
+a
+b
+A
+g(A)
+f(a)
+f(A)
+Figure 4.14.2
+For similar reasons, the map p|E2
+−is a quotient map. The set p(Int E2
+−) is
+an open 2-cell that we take to be the open 2-cell e2 of L(n, k), and p|E2
+−is a
+characteristic map for e2. Finally, the set p(Int B3) is the open 3-cell e3, and
+p is its characteristic map.
+Note that p(S1) equals the 1-skeleton of L(n, k), and p(S2) equals the 2-
+skeleton.
+Now we compute the homology of this lens space.

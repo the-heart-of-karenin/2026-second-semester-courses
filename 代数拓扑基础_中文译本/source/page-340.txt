@@ -1,0 +1,45 @@
+Cohomology
+325
+is a short exact sequence of chain complexes that splits in each dimension.
+[For example, this occurs when E is free.] Then the dual sequence
+0 ←−Cp(C; G)
+ϕ
+←−Cp(D; G)
+ψ
+←−Cp(E; G) ←−0
+is exact. Applying the zig-zag lemma [Lemma 3.3.2], we obtain a long exact
+sequence in cohomology
+· · · ←−Hp(C; G) ϕ∗
+←−Hp(D; G) ψ∗
+←−Hp(E; G) δ∗
+←−Hp−1(C; G) ←−· · · ,
+where δ∗is induced in the usual manner by the coboundary operator. This
+sequence is natural in the sense that if f is a homomorphism of short exact se-
+quences of chain complexes, then f is a homomorphism of the dual sequences,
+and f ∗is a homomorphism of the corresponding long exact cohomology se-
+quences.
+The Axioms for Cohomology
+Now we state the cohomology versions of the Eilenberg–Steenrod axioms.
+Given an admissible class A of pairs of spaces (X, A) and an abelian group
+G, a cohomology theory on A, with coefficients in G, consists of the following:
+(1) A function defined for each integer p and each pair (X, A) in A
+whose value is an abelian group Hp(X, A; G).
+(2) A function that, for (X, A) and (Y, B) in A, assigns to each contin-
+uous map h : (X, A) →(Y, B) and each integer p a homomorphism
+Hp(X, A; G) h∗
+←−Hp(Y, B; G) .
+(3) A function that assigns to each pair (X, A) in A and each integer p
+a homomorphism
+Hp(X, A; G) δ∗
+←−Hp−1(A; G) .
+The following axioms are to be satisfied:
+Axiom 1. If i is the identity, then i∗is the identity.
+Axiom 2. (k ◦h)∗= h∗◦k∗.
+Axiom 3. δ∗is a natural transformation of functors.
+Axiom 4. [Exactness Axiom] The following sequence is exact, where i and j
+are inclusions:
+· · · ←−Hp(A; G)
+i∗
+←−Hp(X; G) j∗
+←−Hp(X, A; G) δ∗
+←−Hp−1(A; G) ←−· · · .

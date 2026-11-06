@@ -1,0 +1,40 @@
+350
+Elements of Algebraic Topology
+Alexander, ˇCech, and Whitney. At the time, it seemed very mysterious. Its
+geometric meaning was not at all clear. Furthermore, it was very puzzling why
+there was a multiplication operation in cohomology, but not in homology.
+In the case of a compact orientable manifold, it had been known for some
+time that its homology had a ring structure. The multiplication in this ring
+was called the intersection product, and it has a clear geometric meaning. But
+all attempts to generalize this multiplication to more general spaces failed. It
+was not until 1942, when Lefschetz gave a new definition of the multiplication
+operation in cohomology, that it became clear why, for general spaces, there
+exists a cohomology ring, but not a homology ring. It also became clear, about
+the same time, what the relationship was between the homology and coho-
+mology rings when both were defined: The Poincar´e duality theorem showed
+that the two rings were isomorphic. We shall return to these matters later in
+Sections 7.11 and 8.9.
+Review of Rings, Modules, and Fields
+We begin by reviewing some basic facts from algebra concerning rings and
+modules.
+A ring R is an abelian group, written additively, with a multiplication
+operation, denoted · , satisfying two axioms:
+(1) Associativity α · (β · γ) = (α · β) · γ.
+(2) Distributivity
+α · (β + γ) = α · β + α · γ,
+(α + β) · γ = α · γ + β · γ.
+[Absent parentheses, multiplications are performed before addi-
+tions.]
+If α · β = β · α for all α, β ∈R, then R is said to be commutative. If there is
+an element 1 in R such that α · 1 = 1 · α = α for all α ∈R, then 1 is called a
+unity element in R. If R has a unity element, then this element is easily seen
+to be unique. Furthermore, one has (−1) · α = −α and 0 · α = 0 for all α ∈R.
+If R is a commutative ring with unity, and if R satisfies the additional
+condition that for every α̸ = 0, there is a β such that α · β = 1, then R is
+called a field.
+EXAMPLE 5.9.1 Examples of rings include, among many others, the fol-
+lowing:
+(i) The integers Z.
+(ii) The set Z/n of integers modulo n.
+(iii) The set of n × n matrices with integer coefficients.
+(iv) The set of polynomials with integer coefficients.

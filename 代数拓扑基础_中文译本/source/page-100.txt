@@ -1,0 +1,43 @@
+Homology Groups of a Simplicial Complex
+85
+Definition 1.14.2 Let C = {Cp, ∂p} and C′ = {C′
+p, ∂′
+p} be chain complexes.
+A chain map ϕ : C →C′ is a family of homomorphisms
+ϕp : Cp →C′
+p
+such that ∂′
+p ◦ϕp = ϕp−1 ◦∂p for all p.
+A chain map ϕ : C →C′ gives rise to an induced homology homomorphism
+(ϕ∗)p : Hp(C) →Hp(C′) .
+Furthermore, the following hold:
+(a) The identity map i of C is a chain map, and (i∗)p is the identity
+map of Hp(C).
+(b) If ϕ : C →C′ and ψ : C′ →C′′ are chain maps, then ψ ◦ϕ is a
+chain map, and (ψ ◦ϕ)∗= ψ∗◦ϕ∗.
+If {C, ϵ} and {C′, ϵ′} are augmented chain complexes, then the chain map
+ϕ : C →C′ is said to be augmentation-preserving if ϵ′ ◦ϕ0 = ϵ. If we extend
+ϕ to the (−1)-dimensional groups by letting it equal the identity map of Z,
+then ϕ is called a chain map of augmented chain complexes. It follows that an
+augmentation-preserving chain map ϕ induces a homomorphism ϕ∗: Hp(C) →
+Hp(C′) of reduced homology groups.
+EXAMPLE 1.14.3 The chain complex
+C(K, K0) = {Cp(K, K0), ∂p}
+defined in Section 1.10 is called the oriented chain complex of the simplicial
+pair (K, K0). It is both free and non-negative, but in general, it does not have
+an augmentation. [For example, in Example 1.10.5 the entire group C0(K, K0)
+vanishes, so there can be no surjective map C0(K, K0) →Z.] If K0 is empty,
+then the complex C(K, ∅) = C(K) has a standard augmentation, defined by
+ϵ(v) = 1 for each vertex of K, as we have seen.
+EXAMPLE 1.14.4 If f : K →L is a simplicial map of simplicial complexes
+K and L, then f# is an augmentation-preserving chain map of C(K) into C(L).
+In general, there exist augmentation-preserving chain maps ϕ : C(K) →C(L)
+that are not induced by simplicial maps.
+Definition 1.14.5 If ϕ, ψ : C →C′ are chain maps, then a chain homotopy
+of ϕ to ψ is a family of homomorphisms
+Dp : Cp →C′
+p+1
+such that
+∂′
+p+1Dp + Dp−1∂p = ψp −ϕp
+for all p. We say ϕ and ψ are chain homotopic.

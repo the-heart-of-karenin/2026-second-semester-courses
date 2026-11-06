@@ -1,0 +1,35 @@
+Topological Invariance of the Homology Groups
+113
+σ
+τ
+τ
+σ
+K(στ)
+K(σ)
+K′(στ)
+K′(σ)
+Θ
+Ψ
+Φ
+Λ
+Figure 2.5.1
+To define Θ and Φ we proceed as follows. For each simplex τ ∈K′, let στ
+be the simplex of K of least dimension such that τ ⊂στ. Then, if t is a face of
+τ, we have σt ⊂στ. For since σt and στ both contain t, their intersection also
+contains t. Since σt has minimal dimension, it must equal this intersection.
+We define
+Θ(τ) = K(στ) ,
+Φ(τ) = K′(στ) .
+Both complexes are acyclic. The inclusion condition follows from the fact that
+if τ ≻t then σt ⊂στ. See Figure 2.5.1, which illustrates these carriers in the
+case that K′ = sd K.
+By Theorem 1.14.10, there exist chain maps λ and θ with
+λ
+θ
+Cp(K)
+Cp(K′)
+preserving augmentation and carried by Λ and Θ respectively.
+Now the identity map Cp(K) →Cp(K) is carried by Ψ (trivially). We show
+that θ ◦λ is also carried by Ψ. It follows then that θ ◦λ is chain homotopic to
+the identity. If σ is a simplex of K, then λ(σ) is a chain of K′(σ). Now each
+simplex τ in the subdivision K′(σ) of σ is contained in σ, hence στ equals

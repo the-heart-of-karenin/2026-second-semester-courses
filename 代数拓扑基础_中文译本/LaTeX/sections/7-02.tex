@@ -1,0 +1,92 @@
+\section{Ext 函子}
+\sourcepage{382}
+与 Hom 相联系的另一个二变量函子称为 $\operatorname{Ext}(A,B)$，同样对第一变量反变、第二变量协变。因此 $\gamma:A\to A'$、$\delta:B'\to B$ 诱导 $\operatorname{Ext}(\gamma,\delta):\operatorname{Ext}(A',B')\to\operatorname{Ext}(A,B)$，并满足函子性质。定义需要一些准备，但它的核心性质容易记住。
+
+\entry{定理}{7.2.1}对每个自由消解 $0\to R\xrightarrow{\varphi}F\xrightarrow{\psi}A\to0$ 及群 $B$，可自然指定正合列
+\[
+0\leftarrow\operatorname{Ext}(A,B)\xleftarrow{\pi}\operatorname{Hom}(R,B)
+\xleftarrow{\overline\varphi}\operatorname{Hom}(F,B)
+\xleftarrow{\overline\psi}\operatorname{Hom}(A,B)\leftarrow0.
+\]
+自然性的含义是：自由消解之间的同态族 $(\alpha,\beta,\gamma)$ 与 $\delta:B'\to B$，诱导这些正合列间的同态，各项依次为 $\operatorname{Ext}(\gamma,\delta)$、$\operatorname{Hom}(\alpha,\delta)$、$\operatorname{Hom}(\beta,\delta)$、$\operatorname{Hom}(\gamma,\delta)$。
+
+稍后证明此定理，再用它导出性质并作计算。定义 Ext 前先证一个引理。
+
+\sourcepage{383}
+\entry{引理}{7.2.2}给定上述自由消解间同态及 $\delta$，存在唯一同态 $\epsilon:\operatorname{coker}\overline\varphi'\to\operatorname{coker}\overline\varphi$，与由 Hom 构成的其余三项组成交换图。它与所选提升 $\alpha,\beta$ 无关。
+
+\textbf{证明：}Hom 的函子性保证右侧两个方块交换，因而 $\operatorname{Hom}(\alpha,\delta)$ 诱导余核同态。若另选 $\alpha',\beta'$，把两个自由消解视为非负链复形，将 $A,A'$ 放在零维，$F,F'$ 放在一维，$R,R'$ 放在二维。两个链映射零维相同，正维定义域链群自由，而值域同调为零。由引理 5.7.1，它们链同伦。对偶并结合系数映射 $\delta$ 后上链同伦，故在二维上同调，即上述余核上，诱导相同同态。\hfill$\square$
+
+\entry{定义}{7.2.3}称该 $\epsilon$ 为由 $\gamma,\delta$ 及所用自由消解\textbf{诱导的同态}。
+
+这些诱导同态满足函子性质。若还有 $\gamma':A'\to A''$、$\delta':B''\to B'$ 及提升，则 Hom 的复合公式说明：相应余核同态的复合由 $\gamma'\gamma,\delta\delta'$ 诱导。
+
+\sourcepage{384}
+若 $\gamma=i_A$、$\delta=i_B$，且两边使用同一自由消解，可选恒等提升，诱导余核恒等映射。若使用不同自由消解，则分别提升恒等映射的两个方向。两个复合由恒等映射诱导，且提升选择不影响结果，所以所得余核同态互逆。于是任一自由消解得到的余核，与其他自由消解所得群之间有典范同构。
+
+\entry{定义}{7.2.4}取典范自由消解 $0\to R(A)\xrightarrow{\varphi}F(A)\to A\to0$，定义
+\[
+\operatorname{Ext}(A,B)=\operatorname{Hom}(R(A),B)/\overline\varphi(\operatorname{Hom}(F(A),B)).
+\]
+它有时称为扩张群，术语解释见 [ML63] 第三章，本书简称 Ext。对 $\gamma,\delta$，在典范消解间提升 $\gamma$，取上述诱导余核同态作为 $\operatorname{Ext}(\gamma,\delta)$。前面的论证说明它良定义，并具有所需的混合变性。
+
+\sourcepage{385--386}
+\textbf{定理 7.2.1 的证明：}任意自由消解对偶后，在最左补上余核便得正合列。用恒等映射诱导的典范同构，将余核换为 Ext，得到所需列。
+
+要证自然性，将典范消解与给定消解按 $A$、$A'$ 分别比较，再在中间放给定的消解同态。三个余核诱导映射中，两端由恒等映射诱导，故为同构，中间由 $\gamma,\delta$ 诱导。复合按函子性正是典范消解之间的 $\operatorname{Ext}(\gamma,\delta)$，因此替换余核后整个图仍交换。\hfill$\square$
+
+\entry{定理}{7.2.5}
+\begin{enumerate}[label=(\alph*)]
+\item 存在自然同构
+\[
+\operatorname{Ext}(\bigoplus A_\alpha,B)\cong\prod\operatorname{Ext}(A_\alpha,B),\qquad
+\operatorname{Ext}(A,\prod B_\alpha)\cong\prod\operatorname{Ext}(A,B_\alpha).
+\]
+\item 若 $A$ 自由，则 $\operatorname{Ext}(A,B)=0$。
+\item 对正整数 $m$，存在正合列
+\[
+0\leftarrow\operatorname{Ext}(\Z/m,B)\leftarrow B\xleftarrow{m}B\leftarrow\operatorname{Hom}(\Z/m,B)\leftarrow0.
+\]
+\end{enumerate}
+
+\sourcepage{387}
+\textbf{证明：}(a) 对每个 $A_\alpha$ 选自由消解，取直和仍为 $\bigoplus A_\alpha$ 的自由消解。由定理 7.2.1，其 Hom--Ext 正合列，与各单独消解所给正合列的直积比较。Hom 的三个自然同构使右侧三项对应，故余核即 Ext 也自然对应。第二个公式类似：固定 $A$ 的一个自由消解，对各 $B_\alpha$ 的列取直积，与直接以 $\prod B_\alpha$ 为系数的列比较即可。这里用了正合列的直和、直积仍正合，以及自由群的直和自由；自由群的无限直积一般不自由。
+
+(b) $A$ 自由时自由消解分裂，其对偶也正合至最左端，所以余核为零。
+
+(c) 对 $0\to\Z\xrightarrow{m}\Z\to\Z/m\to0$ 应用定理 7.2.1，再认同 $\operatorname{Hom}(\Z,B)\cong B$，即得所述正合列。\hfill$\square$
+
+因此有限生成 $A$ 的 Ext 可由循环分解及 $\operatorname{Ext}(\Z,G)=0$、$\operatorname{Ext}(\Z/m,G)\cong G/mG$ 算出。Hom 作用于短正合列后可能不再正合；Ext 在某种意义上度量这种失效。
+
+\sourcepage{388}
+\entry{定理}{7.2.6}每个短正合列 $0\to A\to B\to C\to0$ 及群 $G$，自然给出两条正合列：
+\[
+\begin{split}
+0\leftarrow\operatorname{Ext}(A,G)\leftarrow\operatorname{Ext}(B,G)\leftarrow\operatorname{Ext}(C,G)\\
+\leftarrow\operatorname{Hom}(A,G)\leftarrow\operatorname{Hom}(B,G)\leftarrow\operatorname{Hom}(C,G)\leftarrow0,
+\end{split}
+\]
+\[
+\begin{split}
+0\to\operatorname{Hom}(G,A)\to\operatorname{Hom}(G,B)\to\operatorname{Hom}(G,C)\\
+\to\operatorname{Ext}(G,A)\to\operatorname{Ext}(G,B)\to\operatorname{Ext}(G,C)\to0.
+\end{split}
+\]
+习题 4 将引导证明，需要下一个定义。
+
+\entry{定义}{7.2.7}若正合列 $0\to G\to H\to K\to0$ 中 $H,K$ 都可除，则称为 $G$ 的\textbf{内射消解}（injective resolution）。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $B$ 可除，证明 $\operatorname{Ext}(A,B)=0$。
+\item 对 $A=\Z\oplus\Z/2\oplus\Z/4\oplus\Z/6$、$B=\Z\oplus\Z\oplus\Z/9\oplus\Z/12$，计算 Hom 与 Ext。
+\item 若 $A$ 有限生成，用其 Betti 数和挠系数分别计算 $\operatorname{Hom}(A,\R/\Z)$、$\operatorname{Ext}(A,\R/\Z)$，以及 $\operatorname{Hom}(A,\mathbb Q)$、$\operatorname{Ext}(A,\mathbb Q)$。
+\item 按下列步骤证明定理 7.2.6。
+\begin{enumerate}[label=(\alph*)]
+\item 为得到第二列，对 $G$ 取自由消解 $0\to R\to F\to G\to0$。把 $\operatorname{Hom}(F,-)$、$\operatorname{Hom}(R,-)$ 作用于 $0\to A\to B\to C\to0$ 所得两条短正合列排成交换图，应用蛇引理 3.3.9。
+\item 证明每个阿贝尔群有内射消解。〔提示：只需找到可除群 $H$，因为其商也可除。将 $G$ 写为 $F/R$，把自由群 $F$ 嵌入若干份 $\mathbb Q$ 的直和，再取适当商。〕
+\item 对内射消解，证明自然正合列 $0\to\operatorname{Hom}(A,G)\to\operatorname{Hom}(A,H)\to\operatorname{Hom}(A,K)\to\operatorname{Ext}(A,G)\to0$。
+\item 再用蛇引理导出第一条正合列。
+\end{enumerate}
+\item 参照习题 3，说明 $\R/\Z$ 确实可作为圆周模型，证明它交换但不有限生成。
+\end{enumerate}

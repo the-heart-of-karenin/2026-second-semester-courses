@@ -1,0 +1,44 @@
+Topological Invariance of the Homology Groups
+125
+Proof: The proof of Theorem 2.7.5 goes through directly. Both i and j carry
+|K0| into |K0| × I and so does the chain homotopy connecting i# to j#. Then
+i∗= j∗as maps of relative homology, and the proof proceeds as before.
+Here is another result which follows from our knowledge of the topology
+of |K| × I. We shall make use of it in what follows.
+Theorem 2.7.7 If f : K →L is a simplicial approximation to the continuous
+map h : |K| →|L|, then f is homotopic to h.
+Proof: For each x ∈|K| we know from Lemma 2.2.4 that f(x) and h(x) lie
+in a single simplex of L. Therefore the straight line homotopy given by
+F(x, t) = (1 −t)f(x) + th(x)
+maps |K|×I into |L|. If L is finite then F is automatically continuous because
+it is continuous as a map into Euclidean space, of which |L| is a subspace. To
+show that F is continuous in general, we show that its restriction to σ × I is
+continuous for each σ ∈K. Since the topology of |K| × I is coherent with the
+subspaces of σ × I, this will suffice.
+For each x ∈σ, let τx denote the simplex of L whose interior contains
+h(x). Because h(σ) is compact, the collection of simplices τx for x ∈σ is
+finite. Let Lσ be the subcomplex of L consisting of these simplices and their
+faces. By Lemma 2.2.4, the point f(x) lies in τx. Therefore F carries the set
+x × I into τx. Thus F maps σ × I into |Lσ|. Since Lσ is a finite complex, its
+space is a subspace of Euclidean space. Hence F : σ × I →|Lσ| is continuous.
+Because the inclusion |Lσ| →|L| is continuous, the map F : σ × I →|L| is
+also continuous, as desired.
+We know that if two spaces are homeomorphic then they have isomorphic
+homology groups. There is in fact a weaker relation than homeomorphism that
+implies the same result. It is the relation of “homotopy equivalence,” which
+we now introduce.
+Definition 2.7.8 Two spaces X and Y are said to be homotopy equivalent,
+or said to have the same homotopy type, if there are maps
+f : X →Y
+and
+g : Y →X
+such that g ◦f ≃iX and f ◦g ≃iY , where iX and iY are the identity maps on
+the spaces X and Y , respectively. The maps f and g are often called homotopy
+equivalences and g is called the homotopy inverse of f.
+Symmetry and reflexivity of this relation are trivial. Transitivity is left as
+an exercise. So homotopy equivalence is an equivalence relation.
+If X has the homotopy type of a single point then X is said to be con-
+tractible. This is equivalent to the statement that the identity map iX : X →X
+is homotopic to a constant map. For example, the unit ball is contractible be-
+cause the map F(x, t) = (1 −t)x is a homotopy between the identity and a
+constant.

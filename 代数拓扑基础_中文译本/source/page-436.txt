@@ -1,0 +1,42 @@
+Homological Algebra
+421
+All the boundary operators in C′ vanish. The chain complex C′ is not in general
+free, but the cycles do [trivially] form a direct summand in the chains, in each
+dimension.
+We compute
+(C ⊗C′)m = 
+p+q=mCp ⊗C′
+q = Cm ⊗G ,
+∂(cm ⊗g) = ∂cm ⊗g + 0 .
+Thus {C ⊗C′, ∂} equals the chain complex {C ⊗G, ∂⊗iG}. We now apply the
+K¨unneth theorem, and use the fact that H0(C′) = G, and that Hp(C′) = 0,
+for p̸ = 0. The universal coefficient theorem for homology is an immediate
+consequence.
+The K¨unneth Theorem with Field Coefficients
+Suppose that E and E′ are chain complexes whose chain groups are vector
+spaces over a field F, and whose boundary operators are linear transforma-
+tions. In this situation, we can form the chain complex E ⊗F E′, whose chain
+group in dimension m is
+
+p+q=m(Ep ⊗F E′
+q) .
+It is a vector space over F. [See Section 6.2.] The chain map ∂is a linear
+transformation, so its kernel and image are vector spaces.
+The K¨unneth theorem simplifies considerably in this case:
+Theorem 7.8.9 (The vector space K¨unneth theorem) If the chain com-
+plexes E and E′ are vector spaces over F, and the boundary operators are vector
+space homomorphisms, then Hp(E) and Hq(E′) are vector spaces over F, and
+there is a natural isomorphism of vector spaces
+
+p+q=mHp(E) ⊗F Hq(E′) −→Hm(E ⊗F E′) .
+Proof: If ⊗is replaced by ⊗F , then the proof of the K¨unneth theorem pro-
+ceeds through its first four steps unchanged. The first change appears in Step
+5, where we take the sequence
+0 −→Bp −→Zp −→Hp(E) −→0
+and tensor it with Hq(E′). Because we are in the context of vector spaces, we
+obtain the sequence
+0 −→Bp ⊗F Hq(E′)
+Zp ⊗F Hq(E′) −→Hp(E) ⊗F Hq(E′) −→0 .
+βm+1
+That is, no torsion product term appears. As a result, the homomorphism
+βm+1 has vanishing kernel for all m.

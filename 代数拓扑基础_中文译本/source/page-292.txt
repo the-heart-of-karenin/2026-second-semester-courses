@@ -1,0 +1,36 @@
+Singular Homology Theory
+277
+in general, but if it happens that X is a triangulable CW complex, then
+Hp can also be taken to denote simplicial homology, since there is a natural
+isomorphism between singular and simplicial theory.
+Definition 4.13.1 If X is a CW complex, let
+Dp(X) = Hp(Xp, Xp−1) .
+Let ∂: Dp(X) →Dp−1(X) be defined to be the composite
+Hp(Xp, Xp−1) ∂∗
+−→Hp−1(Xp−1) j∗
+−→Hp−1(Xp−1, Xp−2) ,
+where j is inclusion. The fact that ∂2 = 0 follows from the fact that
+Hp−1(Xp−1) j∗
+−→Hp−1(Xp−1, Xp−2) ∂∗
+−→Hp−2(Xp−2)
+is exact. The chain complex D(X) = {Dp(X), ∂} is called the cellular chain
+complex of X.
+EXAMPLE 4.13.2 Consider the case where X is the space of a simplicial
+complex K, and the open cells of X are the open simplices of K. Let Hp de-
+note ordinary simplicial homology. We compute Hp(Xp, Xp−1). The simplicial
+chain group Ci(K(p), K(p−1)) vanishes if i̸ = p, and it equals the chain group
+Cp(K(p)) = Cp(K) when i = p. Therefore, we have
+Hp(Xp, Xp−1) = Hp(K(p), K(p−1)) = Cp(K) .
+Furthermore, the boundary operator in the cellular chain complex is just the
+ordinary simplicial boundary operator of K. It follows that, in this case at
+least, the cellular chain complex can be used to compute the homology of X.
+Our goal is to prove in general that, if X is a CW complex, the cellular
+chain complex D(X) behaves very much like the simplicial chain complex
+C(K). In particular, we will show that the group Dp(X) is free abelian with
+a basis consisting of, roughly speaking, the oriented p-cells. And we will show
+that the chain complex D(X) can be used to compute the singular homology
+of X.
+We begin with a sequence of lemmas.
+Lemma 4.13.3 Given an open p-cell eα of X, any characteristic map for eα
+fα : (Bp, Sp−1) →(eα, ˙eα) ,
+induces an isomorphism in relative homology.

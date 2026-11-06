@@ -1,0 +1,48 @@
+280
+Elements of Algebraic Topology
+Section 3.5]. As you would expect, a continuous map f : (X, A, B) →(Y, C, D)
+induces a homomorphism of the corresponding exact homology sequences.
+In the case (X, A, B) = (Xp, Xp−1, Xp−2), the boundary operator ∂∗in the
+above sequence equals the boundary operator ∂of the cellular chain complex
+D(X). This follows from the fact that ∂∗commutes with the homomorphism
+j∗induced by inclusion:
+−−−−→Hp(Xp, Xp−1)
+∂∗
+−−−−→
+Hp−1(Xp−1, ∅)
+−−−−→
+=
+
+j∗
+−−−−→Hp(Xp, Xp−1)
+∂∗
+−−−−→Hp−1(Xp−1, Xp−2) −−−−→
+Using this fact, we now prove that the cellular chain complex of X can
+be used to compute the homology of X. For later purposes, we are going to
+prove this theorem in a somewhat more general form. We shall assume that
+we have a space X that is written as the union of a sequence of subspaces
+X0 ⊂X1 ⊂X2 ⊂· · · .
+Then we form the chain complex in which the p-dimensional chain group is
+Hp(Xp, Xp−1) and the boundary operator is the boundary homomorphism in
+the exact sequence of the triple (Xp, Xp−1, Xp−2). We shall show that under
+suitable hypotheses [which are satisfied in the case of a CW complex] this
+chain complex gives the homology of X.
+Definition 4.13.7 If X is a space, a filtration of X is a sequence X0 ⊂X1 ⊂
+· · · of subspaces of X whose union is X. We say that X is filtered by the
+sequence of subspaces, and X together with its filtration is called a filtered
+space. If X and Y are filtered spaces, a continuous map f : X →Y such that
+f(Xp) ⊂Yp for all p is said to be filtration preserving.
+Theorem 4.13.8 Let X be filtered by the subspaces X0 ⊂X1 ⊂· · · , and let
+Xi = ∅for i < 0. Assume that Hi(Xp, Xp−1) = 0 for i̸ = p. Suppose also that
+given any compact set C in X, there is an n such that C ⊂Xn. Let D(X) be
+the chain complex defined by setting Dp(X) = Hp(Xp, Xp−1) and letting the
+boundary operator be the boundary homomorphism ∂∗in the exact sequence
+of a triple. Then there is an isomorphism
+λ : Hp(D(X)) →Hp(X) .
+It is natural with respect to homomorphisms induced by filtration-preserving
+continuous maps.
+Proof: As motivation for the proof, let us consider the situation of Exam-
+ple 4.13.2, where Xp is the p-skeleton K(p) of a simplicial complex and Hp
+denotes simplicial homology. Then D(X) = C(K) in this case, and the theorem
+holds. It is also true in this case that
+Hp(X) = Hp(K(p+1), K(p−2)) ,

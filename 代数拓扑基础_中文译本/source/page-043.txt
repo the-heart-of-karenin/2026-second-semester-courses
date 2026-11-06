@@ -1,0 +1,34 @@
+28
+Elements of Algebraic Topology
+An immediate corollary of this theorem is the following:
+Theorem 1.5.3 (The fundamental theorem of finitely generated abe-
+lian groups) Let G be a finitely generated abelian group. Let T be its torsion
+subgroup.
+(a) There is a free abelian subgroup H of G having finite rank β
+such that G = H ⊕T.
+(b) There are finite cyclic groups T1, T2, . . . , Tk, where Ti has order
+ti > 1, such that t1 | t2 | · · · | tk and
+T = T1 ⊕T2 ⊕· · · ⊕Tk .
+(c) The numbers β and t1, t2, . . . , tk are uniquely determined by G.
+The number β is called the betti number of G. The numbers t1, t2, . . . , tk
+are called the torsion coefficients of G. Note that β is the rank of the free
+abelian group G/T ∼= H. The rank of the subgroup H and the orders of the
+subgroups Ti are uniquely determined, but the subgroups themselves are not.
+Proof: Let S be a finite set of generators {gi} for G, and let F be the free
+abelian group on the set S. The map carrying each gi to itself extends to a
+homomorphism carrying F onto G. Let R be the kernel of this homomorphism.
+Then F/R ∼= G. Choose bases for F and R as in Theorem 1.5.2. Then we have
+F = F1 ⊕F2 ⊕· · · ⊕Fn ,
+where Fi is infinite cyclic with generator ei, and
+R = t1F1 ⊕t2F2 ⊕· · · ⊕tkFk ⊕Fk+1 ⊕Fk+2 ⊕· · · ⊕Fr .
+We compute the quotient group as follows:
+F/R = (F1/t1F1 ⊕F/t2F2 ⊕· · · ⊕F/tkFk) ⊕(Fr+1 ⊕Fr+2 ⊕· · · ⊕Fn) .
+Thus there is an isomorphism
+f : G →(Z/t1 ⊕Z/t2 ⊕· · · Z/tk) ⊕(Z ⊕Z ⊕· · · ⊕Z) .
+The torsion subgroup T of G must be mapped to the subgroup
+Z/t1 ⊕Z/t2 ⊕· · · ⊕Z/tk
+by f, since any isomorphism preserves torsion subgroups. Parts (a) and (b)
+of the theorem follow. Part (c) is left for the exercises.
+This theorem shows that any finitely generated abelian group G can be
+written as a finite direct sum of cyclic groups, that is,
+G ∼= (Z ⊕Z ⊕· · · ⊕Z) ⊕Z/t1 ⊕Z/t2 ⊕· · · Z/tk .

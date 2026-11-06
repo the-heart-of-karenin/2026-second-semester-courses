@@ -1,0 +1,39 @@
+438
+Elements of Algebraic Topology
+The similarity of the cochain cross product formula to the formula for the
+cup product may make you suspect that there is some relation between the
+two. That relation is described in the next theorem.
+Theorem 7.11.4 If d : X →X × X is the diagonal map, given by d(x) =
+(x, x), then
+d∗(αp × βq) = αp ⌣βq
+holds, for both versions of the cohomology cross product.
+Proof: Let zp and zq be representative cocycles for αp and βq, respectively.
+If T : ∆p+q →X is a singular (p + q)-simplex, then we compute
+⟨d#(zp × zq), T⟩
+= ⟨zp × zq, d ◦T⟩
+= ⟨zp, π1 ◦(d ◦T) ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨zq, π2 ◦(d ◦T) ◦ℓ(ϵp, ϵp+1, . . . , ϵm)⟩
+= ⟨zp ⌣zq, T⟩,
+where we have used the fact that π1 ◦d = iX = π2 ◦d.
+This last theorem is due to Lefschetz. It shows why cohomology has a ring
+structure, but homology does not. Both homology and cohomology have cross
+products, but only in cohomology can one form the composite of the cross
+product with the homomorphism induced by the diagonal map. In homology
+one has the diagram
+Hp(X) ⊗Hq(X)
+Hp+q(X × X)
+Hp+q(X) ,
+×
+d∗
+and we see that the mapping d∗goes in the wrong direction!
+Corollary 7.11.5 Cup products are anticommutative in that
+αp ⌣βq = (−1)pgβq ⌣αp
+holds, for both versions of the cup product.
+Proof: Let d be the diagonal map as before, and let λ : X × X →X × X be
+the map that reverses coordinates. Then since λ ◦d = d, we compute
+αp ⌣βq = d∗(αp × βq) = (λ ◦d)∗(αp × βq)
+= d∗((−1)pqβq ⌣αp) = (−1)pgβq ⌣αp .
+Next we compute cup products in the cohomology of a product space.
+Theorem 7.11.6 In the cohomology ring H∗(X × Y ; R), the following for-
+mula holds:
+(α × β) ⌣(α′ × β′) = (−1)pq(α ⌣α′) × (β ⌣β′) ,
+where p = dim α′ and q = dim β.

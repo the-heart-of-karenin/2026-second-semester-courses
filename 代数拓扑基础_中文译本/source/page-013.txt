@@ -1,0 +1,31 @@
+xii
+Preface
+one-semester course, the first six chapters do provide a solid core that should
+be accessible to a broad cross-section of the profession—both students and
+senior mathematicians.
+For a two-semester course, the entire book may be appropriate. Of course,
+the instructor will have to exercise some discretion in designing a suitable
+course. Sections that are optional for the one-semester course (for example,
+Categories and Functors) may be necessary for the two-semester course. The
+last two chapters are independent of each other. So if it is necessary to cut
+some material as the second semester winds down, it can be done.
+Regarding the last two chapters, the seventh chapter deals with homologi-
+cal algebra, including the universal coefficient theorems and the K¨unneth theo-
+rems in various settings. The eighth chapter deals with manifolds—specifically,
+the duality theorems associated with the names of Poincar´e, Lefschetz, Alexan-
+der, and Pontryagin. ˇCech cohomology is introduced to study Pontryagin du-
+ality.
+If an instructor wishes to spend less time on the treatment of simplicial
+homology, then it is possible to omit Chapter 2. In that case, the topological
+invariance of the simplicial homology groups will not be shown directly, but
+instead must be obtained via the invariance of the singular homology groups
+and the isomorphism between simplicial and singular homology.
+Prerequisites
+We take it that the student has some familiarity with general topology. This
+includes compactness, connectedness, and quotient spaces. The Tietze exten-
+sion theorem for normal spaces will be used, and quotient spaces are very
+important. Quotient spaces are reviewed at appropriate times.
+We also would like the student to know some algebra. Notably some fa-
+miliarity with groups, factor groups, and homomorphisms as well as rings,
+fields, and vector spaces. No particularly deep theorems will be needed. As
+with quotient spaces, basic algebra results are reviewed at appropriate times.

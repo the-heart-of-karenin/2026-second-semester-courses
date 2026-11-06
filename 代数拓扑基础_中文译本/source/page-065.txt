@@ -1,0 +1,40 @@
+50
+Elements of Algebraic Topology
+Step 2. Now we prove the theorem. Let {vα} be a collection of vertices con-
+taining one vertex vα from each component Cα of |K|. Given a vertex w of
+K, it belongs to some component of |K|, say Cα. By hypothesis, w ∼vα, so
+there is a sequence a0, a1, . . . , an of vertices of K, as before, leading from vα
+to w. The 1-chain
+[a0, a1] + [a1, a2] + · · · + [an−1, an]
+has as its boundary the 0-chain an−a0 = w−vα. Thus the 0-chain w is homol-
+ogous to the 0-chain vα. We conclude that every 0-chain in K is homologous
+to a linear combination of the elementary 0-chains vα.
+To finish the proof, we show that no non-trivial 0-chain of the form c =
+ nαvα bounds. Suppose c = ∂d for some 1-chain d. Since each 1-simplex
+of K lies in a unique component of |K|, we can write d =  dα, where dα
+consists of those terms of d that are carried by Cα. Since ∂d =  ∂dα and
+∂dα is carried by Cα, we conclude that ∂dα = nαvα. It follows that nα = 0
+for each α. For let ϵ : C0(K) →Z be the homomorphism defined by setting
+ϵ(v) = 1 for each vertex v of K. Then ϵ(∂[v, w]) = ϵ(w −v) = 1 −1 = 0 for
+any elementary 1-chain [v, w]. As a result, ϵ(∂e) = 0 for every 1-chain e. In
+particular, 0 = ϵ(∂dα) = ϵ(nαvα) = nα.
+For some purposes, it is convenient to consider another version of 0-
+dimensional homology. We consider that situation now.
+Definition 1.8.2 Let ϵ : C0(K) →Z be the surjective homomorphism de-
+fined by ϵ(v) = 1 for each vertex v of K. Then, if c is a 0-chain, ϵ(c) equals
+the sum of the values of c on the vertices of K. The map ϵ is called an aug-
+mentation map for C0(K). We have noted in the last proof that ϵ(∂d) = 0
+if d is a 1-chain. We define the reduced homology group of K in dimension 0,
+denoted H0(K), by the equation
+H0(K) = ker ϵ/im ∂1 .
+[If p > 0, we let Hp(K) denote the usual group Hp(K).]
+The relation between reduced and ordinary homology is as follows:
+Theorem 1.8.3 The group H0(K) is free abelian, and
+H0(K) ⊕Z ∼= H0(K) .
+(∗)
+Thus H0(K) vanishes if |K| is connected. If |K| is not connected, let {vα}
+consist of one vertex from each component of |K|; let α0 be a fixed index.
+Then the homology classes of the chains vα −vα0, for α̸ = α0, form a basis
+for H0(K).
+Proof: As above, let {vα} consist of one vertex from each component of |K|.
+Given a 0-chain c, it is homologous to a 0-chain of the form c′ =  nαvα; and

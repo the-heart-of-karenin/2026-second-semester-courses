@@ -1,0 +1,40 @@
+378
+Elements of Algebraic Topology
+One way of doing this is to use Theorem 5.7.2, which implies that j# is a
+chain equivalence. [Note that the chain complexes involved are free and vanish
+below a certain dimension.] Alternatively, one can prove the following, which
+is an analogue of Theorem 5.6.6.
+Theorem 6.3.1 If C and D are free chain complexes, and if the chain map
+ϕ : C →D induces homology isomorphisms in all dimensions, then so does the
+chain map
+ϕ ⊗iG : C ⊗G →D ⊗G .
+Proof:
+Step 1. We first consider the case where we have a short exact
+sequence
+0 −→C −→D −→E −→0
+of free chain complexes. We know that Hp(E) = 0 for all p, and we wish to
+prove that Hp(E; G) = 0 for all p. As in the proof of Lemma 5.6.4, we can
+write Ep = Bp ⊕Up, where ∂maps Bp to zero and carries Up isomorphically
+onto Bp−1. Then we have
+Ep ⊗G ∼= (Bp ⊗G) ⊕(Up ⊗G) ,
+and ∂⊗iG maps Bp ⊗G to zero and carries Up ⊗G isomorphically onto
+Bp−1 ⊗G. It follows that Hp(E; G) = 0 for all p.
+Step 2. The general case now follows from Lemma 5.6.5. Given ϕ : C →D,
+there are a chain complex D′ and injective chain maps i : C →D′ and j : D →
+D′ such that j induces homology isomorphisms in all dimensions and j ◦ϕ is
+chain homotopic to i. Furthermore, D′, D′/im i, and D′/im j are free. If ϕ∗
+is an isomorphism in ordinary homology, so is i∗= j∗◦ϕ∗. Then by Step
+1, both i and j induce isomorphisms of homology with arbitrary coefficients.
+Hence ϕ does the same.
+Simplicial Homology
+Let (K, K0) be a simplicial pair, and let G be an abelian group. We define the
+simplicial homology of (K, K0) with coefficients in G by the equation
+Hp(K, K0; G) = Hp(C(K, K0); G) .
+We define the reduced groups by the equation
+Hp(K; G) = Hp({C(K), ϵ}; G) ,
+where ϵ is the usual augmentation for C(K).
+Now the group Cp(K, K0) ⊗G is the direct sum of copies of G, one copy
+for each p-simplex of K not in K0. Indeed, if we orient the p-simplices σα of K
+not in K0 arbitrarily, then each element of Cp(K, K0) ⊗G can be represented
+uniquely by a finite sum  σα ⊗gα. Its boundary is then represented by
+(∂σα) ⊗gα.

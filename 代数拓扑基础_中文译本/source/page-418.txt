@@ -1,0 +1,34 @@
+Homological Algebra
+403
+2. Let A be finitely generated.
+(a) If S1 is the circle group, compute A ⊗S1 and A ∗S1 in terms
+of the betti numbers and torsion coefficients of A.
+(b) Repeat (a) with S1 replaced by Q.
+3. Suppose that ϕ : A →B is a monomorphism. Show that
+A ∗C
+B ∗C
+ϕ ∗iC
+is also a monomorphism. Conclude that if A′ ⊂A and B′ ⊂B, then
+A′ ∗B′ can be naturally considered as a subgroup of A ∗B.
+4. Let TA and TB be the torsion subgroups of A and B, respectively.
+Use Lemma 7.4.4 to show that inclusion induces an isomorphism
+A ∗TB −→A ∗B .
+Conclude that A ∗B ∼= TA ∗TB.
+5. Show that, in general, A∗B is a torsion group. [Hint: Consider the
+sequence
+0 −→A ∗TB −→R ⊗TB −→F ⊗TB −→A ⊗TB −→0 .]
+6. Prove naturality in Theorem 7.4.5(a) and (b).
+7.5
+The Universal Coefficient Theorem for
+Homology
+As with the cohomology group Hp(X; G), there is a theorem expressing
+the homology group Hp(X; G) in terms of the homology groups Hp(X) and
+Hp−1(X). The statements of the two theorems are similar, except that here
+the tensor product and the torsion product replace the Hom and Ext functors,
+and the arrows are reversed.
+Theorem 7.5.1 (The universal coefficient theorem for homology)
+Let C be a free chain complex, and let G be an abelian group. There is an exact
+sequence
+0 −→Hp(C) ⊗G −→Hp(C; G) −→Hp−1(C) ∗G −→0 ,
+that is natural with respect to homomorphisms induced by chain maps. It splits,
+but not naturally.

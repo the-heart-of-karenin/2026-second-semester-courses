@@ -1,0 +1,46 @@
+316
+Elements of Algebraic Topology
+map and the long exact sequence in cohomology. As we shall see, in some
+respects, relative cohomology is similar to relative homology, while in other
+respects, it is rather different.
+Definition 5.4.1 Let K be a complex, let K0 be a subcomplex of K, and let
+G be an abelian group. We define the group of relative cochains in dimension
+p by setting
+Cp(K, K0; G) = Hom (Cp(K, K0); G) .
+The relative coboundary operator δ is defined to be the dual of the relative
+boundary operator. We define Zp(K, K0; G) to be the kernel of the homomor-
+phism
+δ : Cp(K, K0; G) →Cp+1(K, K0; G) ,
+Bp+1(K, K0; G) to be its image, and
+Hp(K, K0; G) = Zp(K, K0; G)/Bp(K, K0; G) .
+These groups are called the group of relative cocycles, the group of relative
+coboundaries, and the relative cohomology group, respectively.
+The examples in the preceding section have given us some idea of how
+to picture cochains and cocycles. How shall we picture a relative cochain or
+cocycle? Here the situation is rather different from the situation in homology.
+We explain the difference as follows:
+For chains, we had an exact sequence
+0 −→Cp(K0)
+i
+−→Cp(K)
+j
+−→Cp(K, K0) −→0 ,
+where Cp(K0) is a subgroup of Cp(K), and Cp(K, K0) is their quotient. The
+sequence splits because the relative chain group is free. Therefore the sequence
+0 ←−Cp(K0; G)
+ı
+←−Cp(K; G)
+ȷ
+←−Cp(K, K0; G) ←−0
+is exact and splits. This leads to the following surprising fact:
+It is natural to consider Cp(K, K0; G) as a subgroup of Cp(K; G), and to
+consider Cp(K0; G) as a quotient group of Cp(K; G).
+Let us examine this matter more closely. A relative cochain is a homo-
+morphism mapping Cp(K, K0) into G. The group of such homomorphisms
+corresponds precisely to the group of all homomorphisms of Cp(K) into G
+that vanish on the subgroup Cp(K0). This is just a subgroup of the group
+of all homomorphisms of Cp(K) into G. Thus Cp(K, K0; G) can be naturally
+considered to be the subgroup of Cp(K; G) consisting of those cochains that
+vanish on every oriented simplex of K0. In some sense, Cp(K, K0; G) is the
+group of those cochains of K that are “carried by” K \ K0. The coboundary
+operator maps this subgroup of Cp(K; G) into itself: Suppose that cp vanishes

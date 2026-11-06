@@ -1,0 +1,62 @@
+Singular Homology Theory
+297
+Theorem 4.14.14 If X = L(n, k), then the cellular chain complex of X has
+the form
+D3(X)
+0
+−→D2(X) n
+−→D1(X)
+0
+−→D0(X) ,
+where each group Di(X) is infinite cyclic. Therefore, the homology groups of
+X are
+H3(X) ∼= Z,
+H2(X) = 0,
+H1(X) ∼= Z/n,
+H0(X) ∼= Z.
+Thus the lens spaces L(n, k) and L(m, ℓ) cannot be homeomorphic, or even
+have the same homotopy type, unless n = m.
+Proof: First, though we leave the proof as an exercise, we observe that B3
+and L(n, k) can be triangulated so that the rotation-reflection map f and the
+quotient map p are simplicial.
+Let A be the arc of S1 having endpoints a = (1, 0) and b = (λ, 0), as in
+the proof of the preceding theorem. Let c1 be a cycle generating H1(A, Bd A),
+let c2 be a cycle generating H2(E2
+−, S1), and let c3 be a cycle generating
+H3(B3, S2). Their signs will be chosen shortly. The chains p#(c1), p#(c2), and
+p#(c3) generate the chain groups D1(X), D2(X), and D3(X), respectively.
+Choose the sign of c1 so the ∂c1 = b −a. The plan for choosing the signs
+of c2 and c3 is as follows: We shall show that the chain
+z1 = c1 + f#(c1) + f 2
+#(c1) + · · · + f n−1
+#
+(c1)
+(∗)
+generates H1(S1). Once that fact has been proved, we note that since ∂c2
+also generates H1(S1), we can choose the sign of c2 so that ∂c2 = z1. We shall
+then show that the chain
+z2 = c2 −f#(c2)
+(∗∗)
+generates H2(S2). Then, given this fact, we can choose the sign of c3 so that
+∂c3 = z2.
+First we consider z1. Let g be given by g(z, 0) = (λz, 0), so on S1 it equals
+rotation through angle 2π/n and agrees with f. Thus we have
+z1 = c1 + g#(c1) + g2
+#(c1) + · · · + gn−1
+#
+(c1) .
+Now ∂c1 = g#(a) −a. Therefore we have
+∂z1
+=
+[g#(a) −a] + [g2
+#(a) −g#(a)] + · · · + [gn
+#(a) −gn−1
+#
+(a)]
+=
+0 .
+Thus z1 is a cycle. Because its restriction to A equals c1, which is a fundamen-
+tal cycle for H1(A, Bd A), it is a fundamental cycle for S1. Thus z1 generates
+H1(S1), as we claimed, and we choose the sign of c2 so that ∂c2 = z1.
+Next, we consider z2 as in (∗∗). To show that z2 is a cycle, we compute
+∂z2 = ∂c2 −f#(∂c2) = z1 −f#(z1) .

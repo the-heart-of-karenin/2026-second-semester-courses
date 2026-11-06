@@ -1,0 +1,38 @@
+72
+Elements of Algebraic Topology
+(1) The rank of Zp equals the number of zero columns.
+(2) The rank of Wp−1 equals the number of non-zero rows.
+(3) There is an isomorphism
+Wp−1/Bp−1 ∼= Z/b1 ⊕Z/b2 ⊕· · · ⊕Z/bℓ.
+Thus the normal form for the matrix of ∂p : Cp(K) →Cp−1(K) gives us
+the torsion coefficients of K in dimension p −1; they are the entries of the
+matrix that are greater than 1. This normal form also gives us the rank of Zp.
+On the other hand, the normal form for ∂p+1 : Cp+1(K) →Cp(K) gives us
+the rank of Wp. The difference of these numbers is the rank of Zp/Wp—that
+is, the betti number of K in dimension p.
+EXERCISES
+1. Show that the reduction algorithm is not needed if one wishes
+merely to compute the betti numbers of a finite complex K; in-
+stead all that is needed is an algorithm for determining the rank of
+a matrix. Specifically, show that if Ap is the matrix of ∂p : Cp(K) →
+Cp−1(K) relative to some choice of basis, then
+βp(K) = rank Cp(K) −rank Ap −rank Ap+1 .
+2. Compute the homology groups of the quotient space indicated in
+Figure 1.12.1. [Hint: First check whether all the vertices are iden-
+tified.]
+A
+D
+B
+B
+C
+A
+B
+C
+C
+C
+D
+B
+D
+C
+A
+Figure 1.12.1

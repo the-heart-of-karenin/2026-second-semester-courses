@@ -1,0 +1,51 @@
+118
+Elements of Algebraic Topology
+Then, since g ◦k and f ◦k are simplicial approximations to the identity
+and to h, respectively, the homomorphism h∗, defined using the subdivision
+K′′, equals the composite
+(f ◦k)∗◦(g ◦k)−1
+∗
+= (f∗◦k∗) ◦(g∗◦k∗)−1 = f∗◦g−1
+∗
+.
+The result is thus the same as when h∗is defined using the subdivision K′.
+The general case is proved by choosing a subdivision K′′′ of K such that
+the identity map has the simplicial approximations
+k1 : K′′′ →K′
+and
+k2 : K′′′ →K′′ .
+Then using K′′′ to define h∗gives the same result as using K′ or K′′.
+We should remark that the homomorphism h∗depends not only on the
+spaces X = |K| and Y = |L| and the continuous map h : X →Y but also on
+the particular complexes K and L whose polytopes are X and Y respectively.
+If M and N are other complexes whose polytopes are X and Y , respectively,
+then h also induces a homomorphism
+h∗: Hp(M) →Hp(N) .
+One should really use a notation like (hK,L)∗or (hM,N)∗to distinguish be-
+tween these homomorphisms. We shall abuse terminology and use the simple
+notation h∗, relying on the context to make the meaning clear. We give further
+discussion of this point later, when we define the homology of a triangulable
+space (Section 3.6).
+Theorem 2.6.2 (Functorial properties) The identity map i : |K| →|K|
+induces the identity homomorphism i∗: Hp(K) →Hp(K). If h : |K| →|L|
+and k : |L| →|M| are continuous maps, then (k ◦h)∗= k∗◦h∗. The same
+result holds for reduced homology.
+Proof: That i∗is the identity is immediate from the definition. To check
+the second statement, choose f0 : L′ →M and g0 : L′ →L as simplicial
+approximations to k and i|L| respectively. Then choose f1 : K′ →L′ and
+g1 : K′ →K as simplicial approximations to h and i|K| respectively. We have
+the following diagram of continuous maps and simplicial maps:
+|K|
+K
+|L|
+L
+|M|
+M
+K′
+L′
+h
+k
+g1
+g0
+f1
+f0

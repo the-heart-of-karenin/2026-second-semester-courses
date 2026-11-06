@@ -1,0 +1,35 @@
+262
+Elements of Algebraic Topology
+Theorem 4.11.1 Let p : X →Y be a quotient map. If p is a closed map,
+and if X is normal, then Y is normal.
+Proof: If x is a point of X, then x is closed in X, so the one-point set p(x) is
+closed in Y [because p is a closed map]. Thus Y is a T1-space.
+Let A and B be disjoint closed sets in Y . Then p−1(A) and p−1(B) are
+disjoint closed sets in X. Choose disjoint open sets U and V in X about p−1(A)
+and p−1(B), respectively. The sets p(U) and p(V ) need not be disjoint nor
+open in Y . See Figure 4.11.1. Nonetheless, the sets C = X \U and D = X \V
+are closed in X, so p(C) and p(D) are closed in Y . Then we claim the sets
+Y \p(C) and Y \p(D) are disjoint open sets containing A and B, respectively.
+p
+A
+B
+X
+Y
+U
+V
+Figure 4.11.1
+To show that these sets are disjoint, recall that U and V are disjoint, so
+De Morgan’s law gives us
+C ∪D = (X \ U) ∪(X \ V ) = X \ (U ∩V ) = X .
+Thus we have p(C) ∪p(D) = Y . Applying De Morgan’s law again, we obtain
+∅= Y \ (p(C) ∪p(D)) = (Y \ p(C)) ∩(Y \ p(D))
+as desired.
+To show that these sets contain A and B, respectively, note first that
+because C is disjoint from p−1(A), the set p(C) is disjoint from A. Thus
+p(C) ⊂Y \A. Taking complements, we have Y \p(C) ⊃A. Similarly, Y \p(D)
+contains B.
+If X∗is a partition of X into closed sets, and if the quotient map p :
+X →X∗is closed, then X∗is called, classically, an upper semicontinuous
+decomposition of X. Specifically, this means that for each closed set A of X,
+the set p−1p(A), which is called the saturation of A, is also closed in X In
+such a case, normality of X implies normality of X∗.

@@ -1,0 +1,45 @@
+Homology Groups of a Simplicial Complex
+21
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+d
+e
+f
+g
+i
+j
+h
+Figure 1.4.7
+B
+B
+A
+A
+A
+B
+B
+B
+A
+Figure 1.4.8
+does not occur. We are particularly interested in situations similar to those
+of the preceding examples. We now state a lemma giving conditions under
+which the general “pasting map” g behaves like those in our examples. First,
+we need a definition.
+Definition 1.4.11 If L is a complex, a subcomplex L0 of L is said to be a
+full subcomplex of L provided each simplex of L whose vertices belong to L0
+belongs to L0 itself.
+For example, the boundary of the rectangle L pictured in Figure 1.4.5 is
+a full subcomplex of L, but the boundary of the rectangle pictured in Fig-
+ure 1.4.6 is not.
+Lemma 1.4.12 Let L be a complex; let f be a labeling of its vertices; let
+g : |L| →|K| be the associated pasting map. Let L0 be a full subcomplex of L.
+Suppose that whenever v and w are vertices of L having the same label:
+(1) v and w belong to L0.
+(2) St v and St w are disjoint.

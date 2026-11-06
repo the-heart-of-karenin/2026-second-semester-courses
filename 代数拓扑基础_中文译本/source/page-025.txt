@@ -1,0 +1,32 @@
+10
+Elements of Algebraic Topology
+A space that is the polytope of a simplicial complex will be called a poly-
+hedron. [We note that some topologists reserve this term for the polytope of
+a finite simplicial complex.]
+In general, the topology of |K| is finer [i.e., larger] than the topology |K|
+inherits as a subspace of RN. To see this, note that if A is closed in |K| in
+the subspace topology, then A = B ∩|K| for some closed set B in RN. Then
+B ∩σ is closed in σ for each simplex σ of K, so A ∩σ = B ∩|K| ∩σ = B ∩σ
+is closed in σ. By definition A is closed in the topology of |K|.
+The two topologies on |K|, the subspace topology and the topology of Def-
+inition 1.3.5, are different in general. [See Examples 1.3.6 and 1.3.7.] Nonethe-
+less, if K is finite, the two topologies are the same. For suppose K is finite
+and A is closed in |K|. Then A ∩σ is closed in σ and hence closed in RN.
+Because A is the union of the finitely many closed sets A ∩σ, the set A also
+is closed in RN.
+EXAMPLE 1.3.6 Let K be the collection of all 1-simplices in R of the form
+[m, m + 1], where m̸ = 0 is an integer, along with all simplices of the form
+[1/(n+1), 1/n] for n a positive integer, along with all faces of these simplices.
+Then K is a complex whose underlying space equals R as a set but not as a
+topological space. For instance, the set of points of the form 1/n, n > 0, is
+closed in |K| but not in R.
+EXAMPLE 1.3.7 Let K be the collection of 1-simplices σ1, σ2, . . . and their
+vertices, where σi is the 1-simplex in R2 having vertices 0 and (1, 1/i). See
+Figure 1.3.2. Then K is a simplicial complex. The intersection of |K| with the
+open parabolic arc {(x, x2) : x > 0} is closed in |K|, because its intersection
+with each simplex σi is a single point. It is not closed in the topology |K|
+derives from R2, because in that topology it has the origin as a limit point.
+Figure 1.3.2
+We prove some elementary topological properties of polyhedra.
+Lemma 1.3.8 If L is a subcomplex of K, then |L| is a closed subspace of |K|.
+In particular, if σ ∈K, then σ is a closed subspace of |K|.

@@ -1,0 +1,38 @@
+104
+Elements of Algebraic Topology
+(d) Show that if K is a finite complex of dimension m, then the
+covering dimension of |K| exists and is at most m. [We will see
+later that it is precisely m.]
+3. Calculate the covering dimension of the Cantor ternary set.
+2.4
+The Simplicial Approximation Theorem
+We now show that if h : |K| →|L| is a continuous map, then there is a
+subdivision K′ of K such that h has a simplicial approximation f : K′ →L.
+The proof when K is finite follows easily from the results of the preceding
+section; barycentric subdivision will suffice. The general case requires a slightly
+more sophisticated technique of subdivision, called “generalized barycentric
+subdivision,” that we will describe below in Definition 2.4.5.
+We will have need of the following lemma:
+Lemma 2.4.1 (Lebesgue’s covering lemma) For every open cover, A, of
+a compact metric space, there exists a positive real number λ such that every
+subset of diameter less than λ is contained in some element of A.
+The positive number λ is called a Lebesgue number for A.
+Proof: If there were no such λ, then one could choose a sequence Cn of sets,
+where Cn has diameter less than 1/n but does not lie in any element of A.
+Choose xn ∈Cn; by compactness, some subsequence xni converges to some
+element x. Now x ∈A for some A ∈A. Because A is open, it contains Cni for
+i sufficiently large, contrary to our construction.
+Theorem 2.4.2 (The finite simplicial approximation theorem) Let K
+and L be complexes, and assume that K is finite. Given a continuous map
+h : |K| →|L|, there is an N such that h has a simplicial approximation
+f : sdNK →L.
+Proof: Cover |K| by the open sets h−1(St w) as w ranges over the vertices of
+L. Now given this open covering A of the compact metric space |K|, we let λ
+be a Lebesgue number for A.
+Choose N so that each simplex in sdNK has diameter less than λ/2. Then
+each star of a vertex in sdNk has diameter less than λ, so it lies in one of
+the sets h−1(St w). Then h : |K| →|L| satisfies the star condition relative to
+sdNK and L, and the desired simplicial approximation exists.
+As a preliminary step toward our generalized version of barycentric sub-
+division, we show how to subdivide a complex K in a way that leaves a given
+subcomplex K0 unchanged.

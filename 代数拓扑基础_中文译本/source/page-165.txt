@@ -1,0 +1,32 @@
+3
+Relative Homology and the
+Eilenberg–Steenrod Axioms
+3.1
+Introduction
+Until now we have concentrated primarily on studying the “absolute” simpli-
+cial homology groups, though we have defined the relative groups and have
+proved their topological invariance. Now we shall study the relative groups
+in more detail. These groups have many uses. For one thing, they arise nat-
+urally in many of the applications of topology. A second point is that they
+are involved in an essential way in expressing those fundamental properties of
+homology that are called the Eilenberg–Steenrod axioms.
+One of the ways that relative homology groups can be useful is for giv-
+ing information about the absolute homology groups. There are relationships
+between the relative groups Hp(K, K0) and the absolute groups Hp(K) and
+Hp(K0). For example, the vanishing of Hp(K, K0) and Hp+1(K, K0) implies
+that Hp(K) and Hp(K0) are isomorphic. This fact is not obvious. Formulating
+this relationship in a precise and general manner is a subtle problem.
+In the early days of algebraic topology, the theorems described above were
+often awkward and wordy. There was a need for the right language to express
+the ideas. A remarkable algebraic idea due to Eilenberg clarified the matter
+notably. Really just a new and convenient notation, it is called an “exact
+sequence” (of groups, or rings, or some other algebraic structure). The useful-
+ness of this concept, in algebra as well as topology, is difficult to overestimate.
+Obscure algebraic arguments often become quite transparent once they are
+formulated in terms of exact sequences. Other arguments that were difficult
+even for professional algebraists become so straightforward that they can be
+safely left to the reader.
+If some terminology in this chapter regarding groups seems unfamiliar, the
+reader should refer to Section 1.5 for clarification.
+DOI: 10.1201/9781003621478-3
+150

@@ -1,0 +1,54 @@
+\section{Alexander 对偶}
+\sourcepage{508--509}
+Alexander 对偶几乎与 Poincaré 对偶同样古老，比 Lefschetz 对偶还早若干年。其原始形式描述 $n$ 维球面子复形的 Betti 数、挠系数与补空间对应不变量之间的关系。现代以上同调表述，并用 Lefschetz 对偶证明。
+
+\entry{定理}{8.11.1}设 $A$ 是 $S^n$ 的非空真子集，且偶 $(S^n,A)$ 可三角剖分，则
+\[\widetilde H^k(A)\cong\widetilde H_{n-k-1}(S^n\setminus A).\]
+
+\textbf{证明：}排除平凡情形，假设 $n>0$，并三角剖分此偶。
+
+第一步：设 $k\ne n,n-1$。考虑正合列
+\[\widetilde H^k(S^n)\to\widetilde H^k(A)\xrightarrow{\delta^*}H^{k+1}(S^n,A)
+\to\widetilde H^{k+1}(S^n).\]
+两端为零，故中间连接映射为同构。由 Lefschetz 对偶，
+\[H^{k+1}(S^n,A)\cong H_{n-k-1}(S^n\setminus A)
+=\widetilde H_{n-k-1}(S^n\setminus A),\]
+得到所需结论。
+
+第二步：设 $k=n-1$。此时正合列给出
+\[0\to\widetilde H^{n-1}(A)\xrightarrow{\delta^*}H^n(S^n,A)
+\xrightarrow{j^*}H^n(S^n),\]
+所以 $\widetilde H^{n-1}(A)\cong\ker j^*$。取球面的定向类 $\Gamma$，并记补空间包含为 $k:S^n\setminus A\to S^n$。Poincaré 对偶、Lefschetz 对偶以及帽积自然性给出相差符号地交换的图：上行为 $j^*$，下行为
+\[k_*:H_0(S^n\setminus A)\to H_0(S^n),\]
+竖直同构分别为 Lefschetz 对偶和 $\frown\Gamma$。因此 $\ker j^*\cong\ker k_*$。由正合列
+\[0\to\widetilde H_0(S^n\setminus A)\to H_0(S^n\setminus A)
+\xrightarrow{k_*}H_0(S^n)\to0,\]
+得到所需同构。这条正合列的证明留作习题。
+
+第三步：设 $k=n$。先证明包含 $i:A\to S^n$ 诱导的 $i^*:H^n(S^n)\to H^n(A)$ 为零。球面顶维上同调由任意有向顶维单形的基本对偶上链的类生成。因 $A$ 为真子复形，可选择该单形在 $A$ 之外，故其限制为零。再由正合列
+\[H^n(S^n)\xrightarrow{i^*}H^n(A)\xrightarrow{\delta^*}H^{n+1}(S^n,A)=0,\]
+得 $H^n(A)=0$。对应的补空间约化 $(-1)$ 维同调也为零，故仍同构。\hfill$\square$
+
+\sourcepage{510}
+\entry{推论}{8.11.2（多面体 Jordan 曲线定理）}设 $n>0$，$A\subset S^n$ 同胚于 $S^{n-1}$，且 $(S^n,A)$ 可三角剖分。则补空间恰有两个道路分支，$A$ 为其公共边界。
+
+\textbf{证明：}$S^{n-1}$ 与 $S^n$ 不同胚，故 $A$ 为真子集。由
+\[\widetilde H_0(S^n\setminus A)\cong\widetilde H^{n-1}(A)\cong\Z,\]
+补空间恰有两个道路分支 $C_1,C_2$。公共边界的论证与定理 4.9.5 相同：在足够细的剖分中取 $A$ 的一个 $(n-1)$ 维单形 $s$，令 $B=A\setminus\Int s$，则
+\[0=\widetilde H^{n-1}(B)\cong\widetilde H_0(S^n\setminus B).\]
+所以可以用只在 $\Int s$ 中穿过 $A$ 的道路连接两个分支的点，进而说明每个边界点都同时是两分支的极限点。\hfill$\square$
+
+\subsection*{习题}
+\begin{enumerate}
+\item 设 $A$ 是道路连通空间 $X$ 的非空子集。证明
+\[0\to\widetilde H_0(A)\to H_0(A)\to H_0(X)\to0\]
+正合，从而补全 Alexander 对偶的证明。
+\item 设 $A$ 为 $S^n$ 的非空真子集，且该偶可三角剖分。证明若 $A$ 无环，则其补空间也无环。
+\item 设 $A$ 为同调 $(n-1)$ 维流形。若它同胚于 $S^n$ 中子集 $B$，且 $(S^n,B)$ 可三角剖分，证明 $A$ 可定向。
+\item 证明另一版本：若 $(S^n,A)$ 可三角剖分，且 $A$ 非空、为真子集，则
+\[\widetilde H_k(A)\cong\widetilde H^{n-k-1}(S^n\setminus A).\]
+〔提示：找一个作为补空间形变收缩核的复形。〕
+\item 证明球版本：设 $A\subset B^n$ 非空、为真子集，$\partial A=A\cap\Bd B^n$，且 $(B^n,A)$ 可三角剖分，则
+\[H^k(A,\partial A)\cong\widetilde H_{n-k-1}(B^n\setminus A).\]
+〔提示：在 $\Bd(B^n\times I)$ 中考虑子集 $(A\times\{1\})\cup(\partial A\times I)\cup(B^n\times\{0\})$。〕
+\end{enumerate}

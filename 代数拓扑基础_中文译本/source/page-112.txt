@@ -1,0 +1,43 @@
+Topological Invariance of the Homology Groups
+97
+(b) Any two simplicial approximations f, g to h are contiguous as
+maps of pairs.
+Proof: Let f, g be simplicial approximations to h. Given σ ∈K0, choose
+x ∈Int σ and let τ be the simplex of L such that h(x) ∈Int τ. Because h
+maps |K0| to |L0|, the simplex τ must belong to L0. Since both f and g map
+σ onto faces of τ, they map K0 into L0 and are contiguous as maps of pairs.
+We now show that f|K0 is a simplicial approximation to the restriction
+of h to |K0|. Let v be a vertex of K0. Then St(v, K0) = St(v, K) ∩|K0|. In
+conclusion, we have
+h(St(v, K0))
+⊂
+h(St(v, K)) ∩h(|K0|)
+⊂
+St(f(v), L) ∩|L0|
+=
+St(f(v), L0) .
+This is the desired result.
+The next definition is used in Exercise 2. It will be seen again in Section 2.7.
+Definition 2.2.8 A homotopy between two maps f : X →Y and h : X →Y
+is a continuous map F : X ×I →Y , where I = [0, 1], such that F(x, 0) = f(x)
+and F(x, 1) = h(x) for all x ∈X.
+The particular homotopy defined in equation (∗) below is called the
+straight-line homotopy between f and h.
+EXERCISES
+1. Consider the map h : |K| →|L| in Example 2.2.6. Determine how
+many different simplicial approximations f : K′ →L to the map
+h there are. Let f and g be two such approximations. Choose a
+cycle g generating H1(K′). Find a chain d of L such that ∂d =
+f#(z) −g#(z).
+2. (a) For two maps f and h mapping X into RN, show that the
+formula
+F(x, t) = (1 −t)f(x) + th(x)
+(∗)
+defines a homotopy between them. This is the straight-line
+homotopy.
+(b) Let K and L be finite complexes in RN. Let f : K →L be
+a simplicial approximation to h : |K| →|L|. Show that (∗)
+defines a homotopy between f and h.
+∗(c) Discuss part (b) in the case where K and L are not finite.
+3. Let f, h be maps from R to R2 defined by f(x) = (x, x3) and
+h(x) = (x, ex). Prove that f and h are homotopic.

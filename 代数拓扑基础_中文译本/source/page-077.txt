@@ -1,0 +1,44 @@
+62
+Elements of Algebraic Topology
+and the Klein bottle using these coefficients. The argument for the torus given
+in Section 1.7 goes through essentially unchanged to show that
+H1(T; Z/2)
+∼=
+Z/2 ⊕Z/2 ,
+H2(T; Z/2)
+∼=
+Z/2 .
+For the Klein bottle S, the argument goes through, but with some changes.
+One has the results
+H1(S; Z/2)
+∼=
+Z/2 ⊕Z/2 ,
+H2(S; Z/2)
+∼=
+Z/2 .
+For Z/2 coefficients, the basic 2-chain γ, which is the sum of the 2-simplices
+of S, has boundary zero. [In the group Z/2, one has 2 = 1 + 1 = 0.]
+Note that homology with Z/2 coefficients is inadequate to distinguish be-
+tween T and S.
+EXAMPLE 1.11.2 Let us compute the homology of the torus and Klein
+bottle using the rational numbers Q as coefficients. The same arguments as
+before apply, but the end results are different. For the torus, one has
+H1(T; Q) ∼= Q ⊕Q ,
+H2(T; Q) ∼= Q .
+For the Klein bottle, one has
+H1(S; Q) ∼= Q ,
+H2(S; Q) = 0 .
+For Q coefficients, the cycle z1 bounds the chain 1/2 γ.
+EXERCISES
+1. Compute the homology of P2 with Z/2 coefficients and with Q co-
+efficients.
+2. Show that homology with Q coefficients suffices to distinguish
+among S2 and the connected sums P2 # P2 # · · · # P2 and
+T # T # · · · # T.
+3. Compute the homology of the Klein bottle S with Z/3 coefficients
+and with Z/4 coefficients.
+4. Compute the homology of the k-fold dunce cap with Z/n coefficients
+and with Q coefficients. [See Exercise 6 of Section 1.7.]
+5. Let (K, K0) be the pair consisting of the M¨obius band and its edge.
+Compute Hi(K, K0; Z/2) and Hi(K, K0; Q). [See Exercise 2 of Sec-
+tion 1.10.]

@@ -1,0 +1,43 @@
+484
+Elements of Algebraic Topology
+is carried to z1 under our combined geometric-algebraic duality isomorphism.
+This is just as expected, since {z1 ⌣w1} = Λ while z1 ⌣z1 = w1 ⌣w1 = 0.
+Now we apply these results to real projective space Pn. We know that Pn
+is triangulable [see Lemma 4.14.11], so Poincar´e duality applies. The cellular
+chain complex of Pn is infinite cyclic in each dimension k = 0, 1, . . . , n. And the
+boundary operator is either 0 or multiplication by 2. Therefore Hk(Pn; Z/2)
+is a vector space of dimension 1 for k = 0, 1, . . . , n. It remains to calculate cup
+products in the ring H∗(Pn; Z/2).
+In the next theorem and its proof, we will use the following notation for
+repeated cup products:
+un = u ⌣u ⌣· · · ⌣u
+
+
+
+n copies
+Theorem 8.8.5 If u is the non-zero element of H1(Pn, Z/2), then uk is the
+non-zero element of Hk(Pn; Z/2) for k = 2, . . . , n. Thus H∗(Pn; Z/2) is a
+truncated polynomial algebra over Z/2 with one generator u in dimension 1,
+truncated by setting un+1 = 0.
+Proof: We proceed by induction, beginning with n = 2. The vector space
+H1(P2; Z/2) has dimension 1. If u is its non-zero element, then by Theo-
+rem 8.8.3 we have that u2 = u ⌣u must be non-zero.
+Suppose that the theorem is true for dimension n −1. The inclusion map
+j : Pn−1 →Pn induces homology and cohomology isomorphisms [over Z/2]
+in dimensions less than n. Therefore, by the induction hypothesis, if u ∈
+H1(Pn; Z/2) is non-zero, then so are u2, . . . , un−1. [Recall that j∗is a ring
+homomorphism.] It remains to show that un̸ = 0.
+By Theorem 8.8.3, there is a basis α1 for H1(Pn; Z/2) and a basis β1 for
+Hn−1(Pn; Z/2) such that α1 ⌣β1 generates Hn(Pn; Z/2). Since u and un−1
+are the unique non-zero elements of these groups, respectively, we must have
+α1 = u and β1 = un−1. Thus un = u ⌣un−1̸ = 0 as desired.
+Corollary 8.8.6 We see that H∗(P∞; Z/2) is a polynomial algebra over Z/2
+with a single one-dimensional generator.
+Proof: This corollary follows from the fact that the inclusion j : Pn →P∞
+induces a cohomology isomorphism (over Z/2) in dimensions less than or equal
+to n, and the fact that j∗preserves cup products.
+We now apply this result to prove several classical theorems of topology.
+Definition 8.8.7 A map f : Sn →Sn is said to be antipode preserving if
+f(−x) = −f(x) for all x in Sn.
+Theorem 8.8.8 If f : Sn →Sm is continuous and antipode-preserving, then
+n ≤m.

@@ -1,0 +1,45 @@
+4
+Elements of Algebraic Topology
+Definition 1.2.1 Let {a0, a1, . . . , an} be a geometrically independent set in
+RN. We define the n-simplex σ spanned by a0, a1, . . . , an to be the set of all
+points x ∈RN such that
+x =
+n
+
+i=0
+tiai,
+where
+n
+
+i=0
+ti = 1 and ti ≥0 for all i .
+(∗)
+The numbers ti are uniquely determined by x and the condition (∗). They are
+called the barycentric coordinates of the point x with respect to a0, a1, . . . , an.
+EXAMPLE 1.2.2 In low dimensions, one can picture a simplex easily. A
+0-simplex is a point, of course. The 1-simplex spanned by a0 and a1 consists
+of all points of the form
+x = ta0 + (1 −t)a1
+with 0 ≤t ≤1, so it is simply the line segment joining a0 and a1. That line
+segment can be written a0a1.
+Similarly, the 2-simplex σ spanned by a0, a1, a2 equals the triangular region
+having these three points as vertices. This can be seen most easily as follows:
+Assume x̸ = a0. Then
+x =
+2
+
+i=0
+tiai = t0a0 + (1 −t0)[(t1/λ)a1 + (t2/λ)a2]
+where λ = 1 −t0. The expression in brackets represents a point p of the line
+segment joining a1 and a2, since (t1 + t2)/λ = 1 and ti/λ ≥0 for i = 1, 2.
+Thus x is a point of the line segment joining a0 and p. See Figure 1.2.1.
+Conversely, any point of such a line segment is in σ, as you can check. It
+follows that σ equals the union of all line segments joining a0 to points of
+a1a2. That is, σ is a triangular region. That triangular region can be written
+a0a1a2.
+a0
+a1
+p
+a2
+Figure 1.2.1
+A similar proof shows that a 3-simplex is a tetrahedron.

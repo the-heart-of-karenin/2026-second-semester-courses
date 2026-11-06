@@ -1,0 +1,62 @@
+34
+Elements of Algebraic Topology
+v0
+v1
+v0
+v1
+v2
+v0
+v3
+v1
+v2
+v0
+v1
+v2
+v0
+v3
+v1
+v2
+∂3
+∂2
+∂1
+=
+=
+=
+v1 −v0
+Figure 1.6.2
+The computation discussed in Example 1.6.8 illustrates a general fact:
+Lemma 1.6.9 For each integer p, it holds that ∂p−1 ◦∂p = 0.
+Proof: Assume 0 < p ≤dim K, since otherwise the result is trivial. Let
+[v0, v1, . . . , vp] be an oriented simplex in K. We compute
+∂p−1 ∂p[v0, v1, . . . , vp] = ∂p−1
+ p
+
+i=0
+(−1)i [v0, v1, . . . , vi, . . . , vp]
+
+=
+p
+
+i=0
+(−1)i ∂p−1[v0, v1, . . . , vi, . . . , vp]
+=
+p
+
+i=0
+p
+
+j<i
+(−1)i (−1)j [v0, v1, . . . , vj, . . . , vi, . . . , vp]
++
+p
+
+i=0
+p
+
+j>i
+(−1)i (−1)j−1 [v0, v1, . . . , vi, . . . , vj, . . . , vp] .
+The terms of these two summations cancel in pairs.
+Definition 1.6.10 The kernel of ∂p : Cp(K) →Cp−1(K) is called the group
+of p-cycles and is denoted Zp(K). [The “Z” comes from the German word
+“Zyklus,”—the letter “C” has already been used for chains.] The image of
+∂p+1 : Cp+1(K) →Cp(K) is called the group of p-boundaries and is denoted

@@ -1,0 +1,47 @@
+Duality in Manifolds
+495
+B
+d
+B
+z
+v
+rθ(v)
+Figure 8.9.2
+Figure 8.9.3
+apply. But this is not hard to do in such a way that the resulting carrier
+still intersects d in only one point. It then follows from Lemma 8.9.3 that
+{d} · {z} equals ±1 times our specified generator of H0. Since {d} = w and
+{z} = {−ke} = −kβ∗(w), our result is proved.
+Theorem 8.9.7 For X = L(n, k) and Y = L(n, ℓ) to have the same homo-
+topy type, it is necessary that
+k = ±a2ℓ(mod n)
+for some a.
+Proof: Let f : X →Y be a homotopy equivalence. Let Λ generate H3(X) and
+let Λ′ generate H3(Y ). Let u ∈H1(X; Z/n) and v ∈H1(Y ; Z/n) be chosen
+as in the preceding lemma in such a way that
+u ⌣β∗(u) = ± 1
+[k]Λ(n)
+and
+v ⌣β∗(v) = ± 1
+[ℓ]Λ′
+(n) .
+Now f ∗(v) = au for some integer a. Thus
+± 1
+[ℓ]f ∗(Λ′
+(n))
+=
+f ∗(v ⌣β∗(v))
+=
+f ∗(v) ⌣β∗(f ∗(v))
+=
+(au) ⌣β∗(au)
+=
+a2(u ⌣β∗(u)) = ± a2
+[k]Λ(n) .
+Now f is a homotopy equivalence and therefore f ∗maps Λ′ to ±Λ. So it maps
+Λ′
+(n) to ±Λ(n). We conclude that
+1
+[ℓ] = ± a2
+[k] .
+Thus the theorem is proved.

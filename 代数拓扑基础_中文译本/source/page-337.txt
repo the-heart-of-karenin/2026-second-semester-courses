@@ -1,0 +1,41 @@
+322
+Elements of Algebraic Topology
+(b) Use the long exact cohomology sequence of the pair (C, E) to
+compute Hi(C).
+3. Which of the following spaces are pseudo manifolds in their familiar
+triangulations?
+(a) S1
+(b) S2
+(c) The letter θ.
+(d) The union of S2 and a circle that intersects S2 in one point.
+(e) The union of two copies of S2 with a point in common.
+(f) S2 with the north and south poles identified.
+4. Show that the compact 2-manifolds, in their usual triangulations,
+are pseudo manifolds. [We will see later that any connected, trian-
+gulated n-manifold is a pseudo n-manifold.]
+5. Let (K, K0) be a relative pseudo n-manifold.
+(a) Given n-simplices σ̸ = σ′, neither in K0, show that there exists
+a sequence
+σ = σ0, σ1, . . . , σk = σ′ ,
+with no repetitions, such that σi ∩σi+1 is an (n −1)-simplex
+not in K0, for each i.
+(b) Show that, if K is finite, then
+Hn(K, K0) ∼= Z,
+Hn(K, K0) ∼= Z
+if (K, K0) is orientable,
+Hn(K, K0) = 0,
+Hn(K, K0) ∼= Z/2
+if (K, K0) is non-orientable.
+[Hint: If γ is the sum of all the n-simplices of K not in K0,
+oriented arbitrarily, then for each relative (n−1)-cochain cn−1,
+the number ⟨δcn−1, γ⟩is even. Therefore, σ∗does not cobound.]
+(c) Conclude that, in the finite case at least, orientability is inde-
+pendent of the choice of σ, and in fact depends only on the
+topological pair (|K|, |K0|), not on the particular triangulation
+involved.
+(d) Show that, if K is finite, then
+Hn(K, K0; Z/2) ∼= Z/2 ∼= Hn(K, K0; Z/2) .
+5.5
+Cohomology Theory
+Now that we have some feeling for what the simplicial cohomology groups
+look like, let us deal with cohomology theory more generally. We construct

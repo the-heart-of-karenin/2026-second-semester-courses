@@ -1,0 +1,40 @@
+Homology Groups of a Simplicial Complex
+79
+Definition 1.13.8 Given two simplicial maps f, g : K →L, these maps are
+said to be contiguous if for each simplex v0v1 . . . vp of K, the points
+f(v0), f(v1), . . . , f(vp), g(v0), g(v1), . . . , g(vp)
+span a simplex τ of L. [The simplex τ may be of any dimension from 0 to
+2p + 1, depending on how many of these points are distinct.]
+Roughly speaking, this condition says that f and g are fairly close, in the
+sense that one can move a simplex f(σ) to the simplex g(σ) by crossing some
+possibly larger simplex τ of which both are faces.
+Theorem 1.13.9 If f, g : K →L are contiguous maps, then there is a chain
+homotopy between f# and g#.
+Proof: The argument we give here is a standard one; you should master it.
+For each simplex σ = v0v1 . . . vp of K, let L(σ) denote the subcomplex of
+L consisting of the simplex whose vertex set is
+{f(v0), f(v1), . . . , f(vp), g(v0), g(v1), . . . , g(vp)} ,
+and its faces. We note the following facts:
+(1) L(σ) is nonempty, and
+Hi(L(σ)) = 0 for all i. (Recall Theo-
+rem 1.9.7.)
+(2) If s is a face of σ, then L(s) ⊂L(σ).
+(3) For each oriented simplex σ, the chains f#(σ) and g#(σ) are carried
+by L(σ).
+Applying these facts, we shall use induction on p to construct the required
+chain homotopy D : Cp(K) →Cp+1(L). For each σ, the chain Dσ will be
+carried by L(σ).
+Let p = 0; let v be a vertex of K. Because f# and g# preserve augmenta-
+tion, ϵ(g#(v) −f#(v)) = 1 −1 = 0. Thus g#(v) −f#(v) represents an element
+of the reduced homology group H0(L(v)). Because this group vanishes, we can
+choose a 1-chain Dv of L carried by the subcomplex L(v) such that
+∂(Dv) = g#(v) −f#(v) .
+Then ∂Dv + D∂v = ∂Dv + 0 = g#(v) −f#(v), as desired. Define D in this
+way for each vertex of K.
+Now suppose D is defined, in dimensions less than p, such that for each
+oriented simplex s of dimension less than p, the chain Ds is carried by L(s),
+and satisfies
+∂Ds + D∂s = g#(s) −f#(s) .
+Let σ be an oriented simplex of dimension p. We wish to define Dσ so that
+∂(Dσ) equals the chain
+c = g#(σ) −f#(σ) −D∂σ .

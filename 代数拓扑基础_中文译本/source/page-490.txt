@@ -1,0 +1,39 @@
+Duality in Manifolds
+475
+Proof: The idea of the proof is the same as before. We choose a triangulation
+of X, partition X into its dual blocks, and construct an isomorphism
+ϕ : Cp(X) →Dn−p(X)
+that commutes with δ and ∂. The difference is that we are going to construct
+ϕ by way of the cap product formula.
+Step 1: We first prove the following elementary fact: Let K be a complex.
+Let g : sd K →K be a simplicial approximation to the identity. Then, given
+σ ∈K, there is exactly one simplex t of sd σ that g maps onto σ. The others
+are mapped onto proper faces of σ.
+Recall that if σ ∈K then, since σ lies interior to σ, the map g must carry
+σ to one of the vertices of σ.
+We now proceed by induction on the dimension of σ. If σ is a vertex v, then
+g(v) = v and our result holds. If σ = v0v1, then g(v0) = v0 and g(v1) = v1,
+while g(σ) equals either v0 or v1. In either case, g collapses one of the simplices
+v0σ or v1σ to a point and maps the other onto v0v1.
+In general, let s be a k-simplex v0v1 . . . vk. By the induction hypothesis,
+each k −1 face si = v0v1 . . . vi . . . vk of σ contains exactly one k −1 simplex ti
+of sd K that is mapped by g onto si. Thus every k-simplex of sd σ is collapsed
+by g except possibly for k-simplices of the form σ ∗ti for i = 0, . . . , k. Now g
+carries σ to one of the vertices of σ. Suppose that g(σ) = vi. Since
+g(ti) = si = v0v1 . . . vi . . . vk ,
+the map g carries σ ∗tj onto σ. And for i̸ = j it collapses each simplex σ ∗ti
+onto si.
+Step 2: Here is another elementary fact: Let K be a complex. Let sd :
+Cp(K) →Cp(sd K) be the barycentric subdivision chain map defined in Sec-
+tion 2.5. If σ is an oriented p-simplex of K, then sd σ is the sum of all the
+p-simplices of sd K lying in σ and suitably oriented.
+We proceed now by induction. The formula sd(v) = v shows the result to
+be true in dimension 0. In general, let σ have dimension p. Now the chain ∂σ
+is the sum of the p −1 faces of σ, suitably oriented. Then sd(∂σ) is by the
+induction hypothesis the sum of all the p −1 simplices of sd K lying in Bd σ
+and suitably oriented. It follows that
+sd σ = [σ, sd (∂σ)]
+is the sum of all the p-simplices of sd K lying in σ and suitably oriented.
+Step 3: Now let X be the manifold of our theorem. Choose a specific trian-
+gulation of X. Let γ be the cycle representing Γ relative to this triangulation.
+In the complex sd X, we shall use the standard partial ordering of the vertices

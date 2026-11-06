@@ -1,0 +1,40 @@
+Homology Groups of a Simplicial Complex
+63
+1.12
+∗The Computability of Homology Groups
+We have computed the homology groups of some familiar spaces, such as the
+sphere and the torus and the Klein bottle. Now we ask the question whether
+one can in fact compute homology groups in general. For finite complexes,
+the answer is affirmative. In this section, we present an explicit algorithm for
+carrying out the computation.
+First, we prove a basic theorem giving a “normal form” for homomorphisms
+of finitely generated free abelian groups. The proof is constructive in nature.
+One corollary is the theorem about subgroups of free abelian groups that we
+stated earlier as Theorem 1.5.2. A second corollary is a theorem concerning
+standard bases for free chain complexes. A third corollary gives our desired
+algorithm for computing the homology groups of a finite complex.
+First, we need two lemmas with which you might already be familiar.
+Lemma 1.12.1 Let A be a free abelian group of rank n. If B is a subgroup
+of A, then B is free abelian of rank r ≤n.
+Proof: We may without loss of generality assume that B is a subgroup of the
+n-fold direct product Zn = Z × Z × · · · × Z. We construct a basis for B as
+follows:
+Let πi : Zn →Z denote projection on the ith coordinate. For each m ≤n,
+let Bm be the subgroup of B defined by the equation
+Bm = B ∩(Zm × 0) .
+That is, Bm consists of all x ∈B such that πi(x) = 0 for i > m. In particular,
+Bn = B. Now the homomorphism
+πm : Bm →Z
+carries Bm onto a subgroup of Z. If this subgroup is trivial let xm = 0;
+otherwise, choose xm ∈Bm so that its image πm(xm) generates this subgroup.
+We assert that the non-zero elements of the set {x1, x2, . . . , xn} form a basis
+for B.
+First, we show that, for each m, the elements x1, x2, . . . , xm generate Bm.
+[Then, in particular, the elements x1, x2, . . . , xn generate B.] We use induction
+on m. It is trivial that x1 generates B1; indeed, if d is the integer π1(x1), then
+x1 = (d, 0, 0, . . . , 0)
+and B1 consists of all multiples of this element. [Even if x1 = 0 and d = 0,
+B1 still consists of all multiples of x1.]
+For the induction step, assume that x1, x2, . . . , xm−1 generate Bm−1, and
+let x ∈Bm. Now πm(x) = kπm(xm) for some integer k. It follows that
+πm(x −kxm) = 0 ,

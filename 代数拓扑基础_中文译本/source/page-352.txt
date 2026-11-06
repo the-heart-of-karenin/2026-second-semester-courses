@@ -1,0 +1,37 @@
+Cohomology
+337
+Now we seek to imitate this construction algebraically. So let us suppose
+for convenience that Y ′ is triangulated in such a way that i(X) and j(Y ) are
+subcomplexes, and so is each set π(σ × I), for σ ∈X. Let us identify X with
+i(X), and Y with j(Y ), for simplicity of notation. Now C(X) plays the role
+of the chain complex C, C(Y ) plays the role of D, and C(Y ′) plays the role of
+D′. The map h# : C(X) →C(Y ) plays the role of the chain map ϕ.
+What does the chain complex D′ look like algebraically? Suppose we break
+Y ′ up into the cells of a CW complex. The open p-cells will consist of open
+p-simplices Int σp of X, the open p-simplices of Int τp of Y , and the open cells
+of the form π(Int σp−1 × Int I) that lie “between” X and Y . Then the pth
+chain group of Y ′ is essentially just
+Cp(X) ⊕Cp(Y ) ⊕Cp−1(X) ,
+since the group of “in between” cells is isomorphic to Cp−1(X). How does the
+boundary operator of Y ′ act on these chains? Clearly, it acts just like ∂X in
+X, and ∂Y in Y . What does it do to a cell of the third kind? In the space
+X × I, it is easy to see that
+∂(σ × I) = σ × 0 −σ × 1 ± (∂σ) × I .
+[One has to be careful with signs.] When X × 0 is pasted onto Y via h, this
+formula becomes
+∂′(Int σ × Int I) = h#(σ) −σ ± (∂σ) × I .
+Finally, when we identify the p-chains of Y ′ with the group Cp(X) ⊕Cp(Y ) ⊕
+Cp−1(X), this formula becomes
+∂′(0, 0, σp−1) = (−σp−1, h#(σp−1), ±∂σp−1) .
+[The last sign must in fact be −, in order to guarantee that ∂′ ◦∂′ = 0.] By
+now it should be quite clear what the connection is between the algebraic and
+topological mapping cylinders!
+Let us give one application of this theorem. It is a formula that relates
+cohomology with homology. It will be generalized in Chapter 7.
+Definition 5.6.9 If C = {Ci, ∂} is a chain complex, then there is a map
+Hom (Cp, G) × Cp →G
+that carries the pair (cp, cp) to the element ⟨cp, cp⟩of G. It is bilinear, and it
+is called the evaluation map. It induces a bilinear map
+Hp(C; G) × Hp(C) →G ,
+that we call the Kronecker index. The image of αp and βp under the map is
+also denoted by ⟨αp, βp⟩.

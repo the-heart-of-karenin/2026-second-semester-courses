@@ -1,0 +1,38 @@
+Duality in Manifolds
+447
+(in fact compact), the topology of |K| × τ × I is in turn coherent with the
+subspaces σ × τ × I for σ ∈K and τ ∈L. Thus A is closed in |K| × |L| × I if
+and only if its intersection with each space σ × τ × I is closed in that space.
+Now π is continuous as a map of σ×τ ×I onto σ∗τ by definition. [Both are
+subspaces of euclidean space.] And inclusion of σ ∗τ in |K ∗L| is continuous.
+Thus π|σ×τ ×I is continuous. Because the topology of |K|×|L|×I is coherent
+with these subspaces, we see that π is continuous.
+To show that π is a quotient map, suppose that π−1(C) is closed in |K| ×
+|L| × I. Then its intersection with σ × τ × I is closed and hence compact. We
+conclude that C ∩(σ ∗τ) is compact and therefore closed. Hence C is closed
+in K ∗L.
+The fact that π carries out precisely the indicated identifications follows
+from Lemma 8.2.2.
+Notation 8.2.4 Let X and Y be topological spaces. We shall write X ≈Y
+to indicate that X and Y are homeomorphic.
+Corollary 8.2.5 Suppose that K ∗L and M ∗N are defined, where K is
+locally finite. If |K| ≈|M| and |L| ≈|N|, then |K ∗L| ≈|M ∗N|.
+Proof: Since |K| is locally compact, so is |M|. Thus M is locally finite. If
+h : |K| →|M| and k : |L| →|N| are homeomorphisms, then h×k×iI induces,
+via the quotient maps indicated in the preceding lemma, a homeomorphism
+of |K ∗L| with |M ∗N| that equals h on |K| and k on |L|.
+Lemma 8.2.6 Let J, K, and L be complexes. Assume that J ∗K and (J ∗
+K) ∗L exist. Then J ∗K = K ∗J and (J ∗K) ∗L = J ∗(K ∗L).
+Proof: The symmetry of the definition shows that J ∗K = K ∗J. Similarly,
+if (J ∗K) ∗L is defined then for v0v1 . . . vm ∈J and w0w1 . . . wn ∈K and
+x0x1 . . . xp ∈L the points
+v0, v1, . . . , vm, w0, w1, . . . , wn, x0, x1, . . . , xp
+are independent and the collection of simplices they span, along with faces of
+such simplices, forms a complex. But this is just the complex J ∗(K ∗L).
+Theorem 8.2.7 Assume that K ∗L exists. If |L| ≈Sn−1, then for all i,
+Hi+n(K ∗L) ∼= Hi(K) .
+Proof: In the case n = 1, |L| consists of two points and the complex K ∗L
+is just the suspension of K. The existence of the isomorphism in question is a
+consequence of the Mayer-Vietoris sequence [see Theorem 3.4.6].
+In general, we suppose the theorem true in dimension n and prove induc-
+tively that it is true in dimension n + 1.

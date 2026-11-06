@@ -1,0 +1,37 @@
+Singular Homology Theory
+227
+Proof: Let
+h : (|K|, |K0|) →(|L|, |L0|)
+be a continuous map. Let
+f : (K′, K′
+0) →(L, L0)
+and
+g : (K′, K′
+0) →(K, K0)
+be simplicial approximations to h and to the identity, respectively. In simplicial
+homology, we have
+h∗= f∗◦(g∗)−1 ,
+by definition. Now, in singular homology, the map g∗equals the identity iso-
+morphism, because g is homotopic to the identity map [Theorem 2.7.7]. Sim-
+ilarly, f∗= h∗in singular homology, because f is homotopic to h. Thus in
+singular homology, we also have the equation h∗= f∗◦(g∗)−1.
+Our theorem now follows by applying the preceding theorem to the maps
+f and g.
+Although we have proved that the chain map η induces an isomorphism
+in homology, we have not found a chain-homotopy inverse λ for η. The fact
+that such a λ exists is a consequence of results that we will prove later. [See
+the exercises of Section 5.7.] A specific formula for λ can be derived using the
+theory of “regular neighborhoods.” [See [ES52].]
+EXERCISE
+1. Show that if K1 and K2 are subcomplexes of a complex K, then
+{|K1|, |K2} is an excisive couple in singular homology.
+2. Show that the result of Exercise 1 fails if K1 and K2 are not sub-
+complexes.
+4.8
+∗Application: Local Homology Groups and
+Manifolds
+In this section, we define the local homology groups of a space X at a point x of
+X, and we use these groups to prove several non-trivial facts about manifolds.
+Throughout this section, let X denote a Hausdorff space.
+This section will be assumed as background for Chapter 8. It is also used
+in treating one of the examples in Section 4.12.

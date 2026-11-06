@@ -1,0 +1,59 @@
+Homological Algebra
+383
+0
+R
+F
+A
+0
+0
+R′
+F ′
+A′
+0
+ϕ
+α
+β
+γ
+ϕ′
+of free resolutions of A and A′, respectively, and a homomorphism δ : B′ →B.
+Then there is a unique homomorphism ϵ : cok ϕ′ →cok ϕ making the following
+diagram of exact sequences commute:
+0
+cok ϕ
+Hom (R, B)
+Hom (F, B)
+Hom (A, B) ←−0
+0
+cok ϕ′
+Hom (R′, B′)
+Hom (F ′, B′)
+Hom (A′, B′) ←−0 .
+ϕ
+ϵ
+Hom (α,δ)
+ϕ′
+Hom (β,δ)
+Hom (γ,δ)
+The homomorphism ϵ is independent of the choice of α and β.
+Proof: Functoriality of Hom shows that the two right squares of the preced-
+ing diagram commute. Therefore, Hom (α, δ) induces a homomorphism ϵ of
+cokernels.
+What remains to be shown is that ϵ is independent of the choice of α
+and β. Suppose {α′, β′, γ} is another homomorphism of the two given free
+resolutions. Consider the free resolution of A as a chain complex A, indexed
+so that A is the 0-dimensional group. Do the same for A′, thus obtaining
+a chain complex A′. Then {α, β, γ} and {α′, β′, γ} are chain maps of A to
+A′. By exactness, the homology groups of A and A′ vanish. The cohomology
+groups need not vanish. Indeed, the group cok ϕ is just the 2-dimensional
+cohomology group H2(A; B), and similarly cok ϕ′ = H2(A′; B). The map ϵ is
+just the cohomology homomorphism induced by the chain map {α, β, γ}.
+We see that the hypotheses of Lemma 5.7.1 are satisfied by the chain com-
+plexes A and A′. Therefore there is a chain homotopy D between the chain
+map {α, β, γ} and the chain map {α′, β′, γ}. Then Hom (D, δ) is a cochain ho-
+motopy between the corresponding cochain maps. It follows that they induce
+the same homomorphism ϵ of 2-dimensional cohomology groups.
+Definition 7.2.3 The homomorphism ϵ constructed in the preceding lemma
+is said to be induced by γ and δ and the free resolutions involved.
+We show that a version of functoriality holds. First, we show that compos-
+ites behave correctly. Let α, β, γ, δ, and ϵ be as in Lemma 7.2.2, and suppose
+that

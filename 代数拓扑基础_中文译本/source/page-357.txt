@@ -1,0 +1,52 @@
+342
+Elements of Algebraic Topology
+We apply the preceding lemma to the chain complex E and any two chain
+maps f and g from E to itself. The chain complex E vanishes below a certain
+dimension [since C and D do]; we may as well take this dimension to be
+dimension 1. We know that Ep is free and Hp(E) = 0, for all p. Since any
+two chain maps agree trivially in dimension 0, they are chain homotopic. In
+particular there is a chain homotopy between the identity map and the zero
+chain map. That is, there is a homomorphism D : Ep →Ep+1 satisfying the
+equation
+∂D + D∂= identity .
+Hidden in this formula are all the chain maps and chain homotopies we need.
+Recalling that Ep ∼= Dp ⊕Cp−1, we define homomorphisms θ, ψ, λ, and µ
+by the equations
+D(dp, 0)
+=
+(θ(dp), ψ(dp))
+∈Dp+1 ⊕Cp ,
+D(0, cp−1)
+=
+(λ(cp−1), µ(cp−1)) ∈Dp+1 ⊕Cp .
+Then we do some computation. First, we compute
+D∂(dp, 0)
+=
+(θ(∂dp), ψ(∂dp)) ,
+∂D(dp, 0)
+=
+(∂θ(dp) + ϕψ(dp), −∂ψ(dp)) .
+Adding these two equations, we obtain the equations
+dp
+=
+θ(∂dp) + ∂θ(dp) + ϕψ(dp) ,
+0
+=
+ψ(∂dp) −∂ψ(dp) .
+The second equation says that ψ : Dp →Cp is a chain map, and the first
+says that θ : Dp →Dp+1 is a chain homotopy between ϕ ◦ψ and the identity.
+Second, we compute
+D∂(0, cp−1)
+=
+D(ϕ(cp−1), 0) −D(0, ∂cp−1)
+=
+(θϕ(cp−1), ψϕ(cp−1)) −(λ(∂cp−1), µ(∂cp−1)) ,
+∂D(0, cp−1)
+=
+∂(λ(cp−1), µ(cp−1))
+=
+(∂λ(cp−1) + ϕµ(cp−1), −∂µ(cp−1)) .
+Adding the second coordinates of these equations, we obtain the equation
+cp−1 = ψϕ(cp−1) −µ(∂cp−1) −∂µ(cp−1) ,
+which says that µ is a chain homotopy between ψ ◦ϕ and the identity.
+Thus our theorem is proved.

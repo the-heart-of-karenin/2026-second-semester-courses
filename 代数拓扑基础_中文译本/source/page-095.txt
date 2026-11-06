@@ -1,0 +1,50 @@
+80
+Elements of Algebraic Topology
+Note that c is a well-defined chain, since D∂σ is defined because ∂σ has
+dimension p −1. Furthermore, c is a cycle as we now check: Applying the
+induction hypothesis to the p −1 chain ∂σ and using the fact that ∂◦∂= 0,
+we compute
+∂c
+=
+∂g#(σ) −∂f#(σ) −∂D(∂σ)
+=
+∂g#(σ) −∂f#(σ) −
+
+g#(∂σ) −∂f#(∂σ) −D∂(∂σ)
+
+=
+∂g#(σ) −∂f#(σ) −g#(∂σ) + ∂f#(∂σ) = 0 .
+Finally, we check that c is carried by L(σ): Both g#(σ) and f#(σ) are
+carried by L(σ), by (3). To show that D∂σ is carried by L(σ), note that the
+chain ∂σ is a sum of oriented faces of σ. For each such face s, the chain Ds is
+carried by L(s), and L(s) ⊂L(σ) by (2). Thus D∂σ is carried by L(σ).
+Since c is a p-cycle carried by L(σ), and since Hp(L(σ)) = 0, we can choose
+a p + 1 chain Dσ carried by L(σ) such that
+∂Dσ = c = g#(σ) −f#(σ) −D∂σ .
+We then define D(−σ) = −D(σ). We repeat this process for each p-simplex
+σ of K; then we have the required chain homotopy D in dimension p. The
+theorem follows.
+Some students are bothered by the fact that constructing the chain ho-
+motopy D involves arbitrary choices. They would be happier if there were a
+definite formula for D. Unfortunately, there is no such neat formula. Basically,
+this is because there are many possible chain homotopies between f# and g#,
+and there is no reason for preferring one over the other.
+To illustrate this fact, let us consider the preceding proof in a particular
+case. At the first step of the proof, when v is a vertex, the chain Dv is in
+fact uniquely determined. Since Dv is to be a chain carried by L(v), then
+necessarily
+Dv = 0
+if f(v) = g(v),
+Dv = [f(v), g(v)]
+if f(v)̸ = g(v).
+In the first case, L(v) is a vertex; and in the second case, L(v) consists of a
+1-simplex and its faces.
+But at the very next step of the proof, choices can arise. Let σ = vw be
+a 1-simplex, and suppose the points f(v), f(w), g(v), g(w) are all distinct, so
+they span a 3-simplex τ, as indicated in Figure 1.13.4. The chains Dv and Dw
+are indicated in the figure. How shall we define Dσ? There are two obvious
+choices for a 2-chain Dσ whose boundary is the 1-chain g#(σ) −f#(σ) −D∂σ
+pictured in Figure 1.13.5. One choice would consist of the front two faces of
+τ, oriented as indicated; the other choice would consist of the back two faces,
+appropriately oriented. There is no reason to prefer one choice to the other;
+we must simply choose one arbitrarily.

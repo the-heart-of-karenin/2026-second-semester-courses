@@ -1,0 +1,51 @@
+22
+Elements of Algebraic Topology
+d
+c
+b
+a
+a
+b
+c
+d
+e
+f
+f
+e
+g
+h
+j
+k
+i
+L
+Figure 1.4.9
+Then dim g(σ) = dim σ for all σ ∈L. Furthermore, if g(σ1) = g(σ2), then σ1
+and σ2 must be disjoint simplices belonging to L0.
+The proof is easy and is left as an exercise. In the usual applications of this
+lemma, |L| is a polyhedral region in the plane or RN, and |L0| is the boundary
+of the region.
+EXERCISES
+1. (a) Show that P2 is homeomorphic to the space obtained from B2
+by identifying x with −x for each x ∈S1.
+(b) Show that the labeled complex L of Figure 1.4.9 determines a
+complex K whose space is homeomorphic to P2.
+(c) Describe the space determined by the labeled complex of Fig-
+ure 1.4.10.
+d
+c
+b
+a
+a
+b
+c
+d
+e
+f
+f
+e
+g
+h
+j
+k
+i
+Figure 1.4.10

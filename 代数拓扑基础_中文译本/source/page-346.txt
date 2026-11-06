@@ -1,0 +1,41 @@
+Cohomology
+331
+is the subdivision operator and if g : K′ →K is a simplicial
+approximation to the identity, show that the duals of λ and g#
+carry finite cochains to finite cochains. Prove the same for the
+dual of the chain homotopy between λ ◦g# and the identity.]
+(b) Show that if
+h, k : |K| →|L|
+are properly homotopic, then h∗= k∗as homomorphisms of
+cohomology with compact support. [Hint: Show that if D is the
+chain homotopy constructed in proving Theorem 2.7.5, then D
+carries finite cochains to finite cochains.]
+(c) Extend the results of (a) and (b) to relative cohomology. Does
+there exist a long exact sequence of cohomology with compact
+support? If so, is it natural with respect to induced homomor-
+phisms?
+(d) Is there an excision theorem for cohomology with compact sup-
+port?
+6.∗Repeat Exercise 5 for the homology groups based on infinite chains,
+that were introduced in the Exercises of Section 1.6.
+7. Refer to Exercise 5 for terminology. Give an example of a proper,
+continuous mapping of the open unit ball in 3-dimensional Eu-
+clidean space to itself which is not a homeomorphism.
+8. For subsets of Euclidean space, give a characterization of proper
+mappings in terms of sequences of points that converge to the
+boundary.
+5.6
+The Cohomology of Free Chain Complexes
+Until now, we have computed the cohomology groups only for a few simple
+spaces. We wish to compute them more generally. We shall prove that, for a
+CW complex X, the cellular chain complex D(X), which we know can be used
+to compute the homology of X, can be used to compute the cohomology as
+well. This we shall prove in Section 5.8. The proof depends on two theorems
+about free chain complexes that we prove in this section.
+The first theorem states that, for free chain complexes C and D, any ho-
+momorphism Hp(C) →Hp(D) of homology groups is induced by a chain map
+ϕ. The second theorem states that if a chain map ϕ : C →D of free chain com-
+plexes induces an isomorphism in homology, then it induces an isomorphism
+in cohomology as well. An independent proof of the second theorem will be
+given in Chapter 7, so you can simply assume this theorem for the time being
+if you wish.

@@ -1,0 +1,42 @@
+Topological Invariance of the Homology Groups
+101
+v0
+v1
+v2
+v3
+s
+σ
+K
+v0
+v1
+v2
+v3
+s
+σ
+sd K
+sd2K
+Figure 2.3.2
+EXAMPLE 2.3.10 Consider the complex K shown in Figure 2.3.2. Its first
+and second barycentric subdivisions are displayed. Note that each of the sim-
+plices of sd K is of the form described in Lemma 2.3.9. Note also how rapidly
+the simplices of sdnK decrease in size as n increases. This is a general fact,
+that we next prove.
+Theorem 2.3.11 Given a finite complex K, given a metric for |K|, and given
+ϵ > 0, there is a positive integer N such that each simplex of sdNK has
+diameter less than ϵ.
+Proof: Because K is finite, |K| is a subspace of the Euclidean space RJ in
+which it lies. Because |K| is compact, it is irrelevant which metric we use
+for |K|. [For if d1 and d2 are two metrics for |K|, then the identity map of
+(|K|, d1) to (|K|, d2) is uniformly continuous. Thus, given ϵ > 0, there is a
+δ > 0 such that any set with d1 diameter less then δ has d2 diameter less then
+ϵ.] Therefore we may as well use the metric of RJ, which is
+|x −y| = max
+α
+|xα −yα| .
+Step 1: We show that if σ = v0v1 . . . vp is a simplex, then the diameter of σ
+equals the number ℓ= max |vi −vj|, which is the maximum distance between
+the vertices of σ. Because vi, vj ∈σ, we know that diam σ ≥ℓ. Now we want
+to prove the reverse inequaity.
+We first show that |x −vi| ≤ℓfor every x ∈σ. Consider the closed
+neighborhood of vi of radius ℓin RJ defined by the equations
+C(vi; ℓ) = {x : |x −vi| ≤ℓ} .

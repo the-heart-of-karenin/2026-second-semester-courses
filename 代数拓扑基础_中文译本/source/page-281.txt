@@ -1,0 +1,37 @@
+266
+Elements of Algebraic Topology
+Theorem 4.11.6 Let X be a space that is the countable union of certain
+closed subspaces Xi. If the topology of X is coherent with the spaces Xi, and
+if each Xi is normal, then X is normal.
+Proof: If p is a point of X, then {p} ∩Xi is closed in Xi for each i, so {p} is
+closed in X. Thus X is a T1-space.
+Let A and B be disjoint closed sets in X. Define Y0 = A ∪B, and for
+n > 0, define
+Yn = X1 ∪X2 ∪· · · ∪Xn ∪A ∪B .
+We define a function f0 : Y0 →[0, 1] by letting f0 equal 0 on A and equal 1
+on B. Since A and B are disjoint and closed, this function f0 is continuous.
+Proceeding inductively, we will extend the continuous function fn : Yn →[0, 1]
+to a continuous function on Yn+1 that equals 0 on A and equals 1 on B. The
+space Xn+1 is normal and Yn ∩Xn+1 is closed in Xn+1, so we use the Tietze
+extension theorem to extend the function fn|(Yn ∩Xn+1) to a continuous
+function g : Xn+1 →[0, 1]. Because Yn and Xn+1 are closed subsets of Yn+1,
+the functions fn and g combine to define a continuous function fn+1 : Yn+1 →
+[0, 1] that extends fn. The functions f0, f1, . . . combine to define a function
+f : X →[0, 1] that equals 0 on A and equals 1 on B. Because X has the
+topology coherent with the subspaces Xn, the map f is continuous.
+The next definition is used in Exercise 3.
+Definition 4.11.7 A space is said to be compactly generated if its topology
+is coherent with the collection of its compact subspaces.
+EXERCISES
+1. Let X be a set which is the union of the topological spaces {Xα}.
+Suppose that each set Xα ∩Xβ inherits the same topology from
+each of Xα and Xβ.
+(a) Show that if Xα ∩Xβ is open in both Xα and Xβ, for each
+pair α, β, then there is a topology on X of which the Xα are
+subspaces.
+(b) Show that in general there is no topology on X of which each
+Xα is a subspace. [Hint: Let A and B be disjoint dense subsets
+of R, such that the complement of their union is also dense in
+R. Let A, B, X1 = R\A, and X2 = R\B be topologized as sub-
+spaces of R. Let X3 = A ∪B be topologized as the topological
+sum of A and B. Let X = X1 ∪X2 ∪X3. Compute A.]

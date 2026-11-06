@@ -1,0 +1,45 @@
+436
+Elements of Algebraic Topology
+The cochain cross product induces the cohomology cross product. We com-
+pute it as follows: For m = p + q, if T : ∆m →X × Y , then
+⟨cp × cq, T⟩= ⟨θ(cp ⊗cq), ν(T)⟩
+=
+m
+
+i=0
+⟨cp, π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵi)⟩· ⟨cq, π2 ◦T ◦ℓ(ϵi, ϵi+1, . . . , ϵm)⟩.
+The only non-zero term in the summation is the term for which i = p. Thus
+we have the following lemma:
+Lemma 7.11.2 The cochain cross product is given by the formula
+⟨cp × cq, T⟩= ⟨cp, π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, π2 ◦T ◦ℓ(ϵp, ϵp+1, . . . , ϵm)⟩.
+This last result holds for (Z, G) coefficients as well. It says that the value
+of cp × cq on T equals the value of cp on the front face of the first component
+of T times the value of cq on the back face of the second component of T.
+We now derive some properties of the cross products.
+Theorem 7.11.3
+(a) If λ : X×Y →Y ×X is the map that reverses
+coordinates, then
+λ∗(βq × αp) = (−1)pqαp × βq .
+(b) In H∗(X × Y × Z; R), we have the equation (α × β) × γ =
+α × (β × γ).
+(c) Let π1 : X × Y →X and π2 : X × Y →Y be the projection
+maps. Let 1X and 1Y be the unity elements of the rings H∗(X; R)
+and H∗(Y ; R), respectively. Then we have
+π∗
+1(αp) = αp × 1Y
+and
+π∗
+2(βq) = 1X × βq .
+Proof: (a) Consider the chain maps
+(S(X) ⊗S(Y ))m
+Sm(X × Y )
+(S(Y ) ⊗S(X))m
+Sm(Y × X)
+ω
+ν
+λ#
+ν
+where we define ω by the equation
+ω(cp ⊗cq) = (−1)pq(cq ⊗cp) .
+Then ω is a chain map, as you can check. [Without the (−1)pq it would not be a
+chain map.] We shall show that the diagram commutes up to chain homotopy.

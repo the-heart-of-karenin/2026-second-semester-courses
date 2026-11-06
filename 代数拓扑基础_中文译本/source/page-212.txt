@@ -1,0 +1,44 @@
+Singular Homology Theory
+197
+In dimension 2k −1, every chain is a boundary; while in dimension 2k > 0,
+no chain is a cycle. In dimension 0, every chain is a cycle and no chain is a
+boundary, so the homology is infinite cyclic.
+Theorem 4.3.4 Given α ∈Hp(X, A), there is a compact pair (X0, A0) ⊂
+(X, A), such that α is in the image of the homomorphism induced by inclusion
+i∗: Hp(X0, A0) →H(X, A) .
+Proof: If T : ∆p →X is a singular simplex, its minimal carrier is defined
+to be the image set T(∆p). The minimal carrier of a singular p-chain  niTi
+[where each ni̸ = 0] is the union of the minimal carriers of the Ti. Since the
+sum is finite, the minimal carrier of a p-chain is compact.
+Let cp be a chain is Sp(X) whose coset modulo Sp(A) represents α. Then
+∂cp is carried by A. Let X0 be the minimal carrier of cp and let A0 be the
+minimal carrier of ∂cp. Then cp can be taken to represent a homology class β
+in Hp(X0, A0) and i∗(β) = α.
+The preceding theorem shows that singular theory satisfies the compact
+support axiom. There is an addendum to this theorem, which we prove here. [It
+can also be derived directly from the axioms; see the exercises of Section 3.6.]
+Theorem 4.3.5 Let (X0, A0) be a compact pair, and let i : (X0, A0) →(X, A)
+be inclusion. If α ∈Hp(X0, A0) and i∗(α) = 0, then there are a compact pair
+(X1, A1) and inclusions
+(X0, A0)
+j
+−→(X1, A1)
+k
+−→(X, A)
+such that j∗(α) = 0.
+Proof: Let cp be a singular p-chain of X0 representing α. Then ∂cp is carried
+by A0. By hypothesis, there is a chain dp+1 of X such that cp −∂dp+1 is
+carried by A. Let X1 be the union of X0 and the minimal carrier of dp+1, and
+let A1 be the union of A0 and the minimal carrier of cp −∂dp+1.
+Thus far everything has been relatively easy. We have verified all the ax-
+ioms but the homotopy and excision axioms. These two require more work.
+We verify the homotopy axiom now, while we defer the excision axiom to the
+next section.
+In outline, the proof is similar to the proof of the homotopy axiom for
+simplicial theory [Theorem 2.7.5]. We consider the inclusion maps i, j : X →
+X × I defined by
+i(x) = (x, 0)
+and
+j(x) = (x, 1) ,
+and we construct a chain homotopy D between i# and j#. If F is a homotopy
+between f and g, then F#◦D is a chain homotopy between f# and g#, and the

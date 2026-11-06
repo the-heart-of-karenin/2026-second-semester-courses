@@ -1,0 +1,38 @@
+474
+Elements of Algebraic Topology
+Show that each of the squares commutes up to sign. What are the
+signs involved?
+7. Give a definition of the cap product using category theory.
+8.7
+A Second Proof of Poincar´e Duality
+Now we give a second proof of the Poincar´e duality theorem. This time we
+construct the duality isomorphism using cap products. There are several in-
+teresting consequences of this procedure, including a naturality formula for
+the duality isomorphism and a proof of its independence of the triangulation
+involved.
+Definition 8.7.1 Let X be a compact, triangulable homology n-manifold.
+[Note that no specific triangulation of X is assumed.] Let Xi be a connected
+component of X. If X is orientable, then Hn(Xi) is infinite cyclic. A generator
+Γ(i) of Hn(Xi) is called an orientation class for Xi. The image of the classes
+Γ(i) under the isomorphism induced by the inclusions
+⊗Hn(Xi) ∼= Hn(X)
+is called an orientation class for X and is denoted by Γ. Similarly, if X is
+not necessarily orientable, and if Γ(i)
+(2) is the unique non-trivial element of
+Hn(Xi; Z/2), then the image of these elements in Hn(X; Z/2) is denoted by
+Γ(2) and is called an orientation class for X over Z/2.
+If X is given a specific triangulation, then Γ(i) is represented by the sum of
+all the n-simplices of the connected component Xi suitably oriented. Similarly,
+Γ(2) is represented by the sum of the n-simplices of X, each with coefficient
+[1] ∈Z/2.
+Theorem 8.7.2 (Poincar´e duality—second version) Let X be a com-
+pact triangulable homology n-manifold. If X is orientable, and if Γ ∈Hn(X)
+is an orientation class for X, then
+Hp(X; G)
+Hn−p(X; G)
+⌢Γ
+is an isomorphism for arbitrary G. Whether X is orientable or not,
+Hp(X; Z/2)
+Hn−p(X; Z/2)
+⌢Γ(2)
+is an isomorphism.

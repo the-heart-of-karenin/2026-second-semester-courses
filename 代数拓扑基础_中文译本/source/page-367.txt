@@ -1,0 +1,43 @@
+352
+Elements of Algebraic Topology
+by the following equation: If T : ∆p+q →X is a singular (p+q)-simplex, then
+⟨cp ⌣cq, T⟩= ⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, T ◦ℓ(ϵp, ϵp+1, . . . , ϵp+q)⟩.
+(∗)
+The cochain cp ⌣cq is called the cup product of the cochains cp and cq.
+Recall that ℓ(w0, w1, . . . , wp) is the linear singular simplex mapping ϵi to
+wi for i = 0, 1, . . . , p. The map T ◦ℓ(ϵ0, ϵ1, . . . , ϵp) is simply the restriction
+of T to what we might call the “front p-face” ∆p of ∆p+q. It is a singular
+p-simplex on X. Similarly, T ◦ℓ(ϵp, ϵp+1, . . . , ϵp+q) is the restriction of T to
+the “back q-face” of ∆p+q. It is a singular q-simplex on X. The multiplication
+indicated on the right-hand side of (∗) is multiplication in the ring R.
+What this mysterious formula means remains to be seen.
+Theorem 5.9.5 The cup product of cochains is bilinear and associative. The
+cochain z0 whose value is 1 on each singular 0-simplex acts as a unity element.
+Furthermore, the following coboundary formula holds:
+δ(cp ⌣cq) = (δcp) ⌣cq + (−1)pcp ⌣(δcq)
+(∗∗) .
+Proof: Bilinearity is immediate, since two cochains are added by adding their
+values, and multiplication in R is distributive. Associativity is also easily ver-
+ified: Suppose T is a singular (p+ q + r)-simplex. The value of (cp ⌣cq) ⌣cr
+on T and cp ⌣(cq ⌣cr) on T both equal the product of
+⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩,
+⟨cq, T ◦ℓ(ϵp, ϵp+1, . . . , ϵp+q)⟩,
+and
+⟨cr, T ◦ℓ(ϵp+q, ϵp+q+1, . . . , ϵp+q+r)⟩.
+The fact that z0 ⌣cp = cp ⌣z0 = cp follows directly from the definition.
+To check the coboundary formula, we compute the value of both sides of
+(∗∗) on T : ∆r →X, where we let r = p + q + 1 for convenience. The cochain
+(δcp) ⌣cq evaluated on T equals
+p+1
+
+i=0
+(−1)i⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp+1)⟩· ⟨cq, T ◦ℓ(ϵp+1, ϵp+2, . . . , ϵr)⟩, (†)
+while (−1)p cp ⌣(δcq) evaluated on T equals
+(−1)p
+q+1
+
+i=0
+(−1)i⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, T ◦ℓ(ϵp, ϵp+1, . . . ,ϵp+i, . . . , ϵr)⟩.
+(‡)
+The last term in (†) equals
+(−1)p+1⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, T ◦ℓ(ϵp+1, ϵp+2, . . . , ϵr)⟩,

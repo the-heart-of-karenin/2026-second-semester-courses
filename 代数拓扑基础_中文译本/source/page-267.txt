@@ -1,0 +1,48 @@
+252
+Elements of Algebraic Topology
+things that can happen. In 1890, Guiseppe Peano constructed a space-filling
+curve.3 So it is possible that the image of γ as given might be all of S2.
+The good news is that, no matter how displeasing the behavior of γ as
+first given, we are free to modify it via a homotopy to ensure that it does lie
+in a set homeomorphic to a disc in the plane. This can be done. We leave the
+details for the exercises.
+Relation to Homology
+Recall from Section 4.2 that a singular p-simplex in a space X is a contin-
+uous map
+T : ∆p →X ,
+where ∆p is the standard p-simplex in R∞. The vertices of ∆p are
+ϵ0 = (0, 0, . . . , 0, . . . )
+and
+ϵ1, ϵ2, . . . , ϵp ,
+where ϵi has 1 as its ith coordinate and all other coordinates are 0.
+In this subsection, we will be dealing with singular p-simplices of dimension
+not exceeding 2. For this purpose, the generality above is unnecessary and
+inconvenient. Accordingly, we let ∆2 ⊂R2 be a 2-simplex with vertices (0, 0),
+(1, 0), and (1, 1), we let ∆1 = [0, 1] ⊂R, and we let ∆0 = 0. As before, a
+singular p-simplex is a continuous map Tp : ∆p →X, but now ∆p is a triangle,
+interval, or singleton. We define the boundary operator ∂on a singular p-
+simplex T as follows:
+∂T =
+
+
+
+
+
+0,
+if T is a 0-simplex,
+T(1) −T(0),
+if T is a 1-simplex,
+S0 −S1 + S2,
+if T is a 2-simplex,
+where
+S0(t) = T(1 −t, t),
+S1(t) = T(0, t),
+S2(t) = T(t, 0).
+You should check that the above definition is in accord with the definition of
+the boundary operator given in Section 4.2.
+We note here that a 1-simplex that has the constant value x is a cycle and
+it equals the boundary of the 2-simplex that has the constant value x .
+The notion of a homotopy can easily be applied to singular 1-simplices,
+indeed it can be applied to any path in X.
+3The original paper is [Pea90]. Hilbert provided some helpful figures in [Hil91]. See
+[Mun00], Section 44, for a description in English.

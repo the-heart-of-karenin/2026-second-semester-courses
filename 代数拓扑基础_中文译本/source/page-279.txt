@@ -1,0 +1,45 @@
+264
+Elements of Algebraic Topology
+See Figure 4.11.3. Applying Urysohn’s lemma, we can choose a continuous
+function g : Y →[0, 1] that maps BY to 0 and CY to 1. Then the function
+g ◦f : A →[0, 1] equals 0 on A ∩BX and 1 on A ∩CX. We define a function
+h : A ∪BX ∪CX →[0, 1]
+by letting it equal g ◦f on A, and 0 on BX, and 1 on CX. Since A, BX,
+and CX are closed in X, the map h is continuous. By the Tietze extension
+theorem, we can now extend h to a continuous function k defined on all of X.
+p
+BX
+BY
+f
+A
+f(A)
+CX
+CY
+Y
+X
+B
+C
+X ∪f Y
+Figure 4.11.3
+The function ℓ: X ∪Y →[0, 1] that agrees with k on X and agrees with g
+on Y is continuous. Note that ℓis constant on each equivalence class, because
+k(f −1(y)) = g(y) if y ∈f(A). Therefore ℓinduces a continuous map of X ∪f Y
+into [0, 1] that equals 0 on B and equals 1 on C.
+We have already defined what it means for the topology of a given space
+X to be coherent with a collection of subspaces of X. We wish to deal with
+the separation axioms in this context.
+First, we extend the notion of coherent topology slightly. We suppose that
+we have a collection of topological spaces {Xα} whose union X has no topol-
+ogy. We seek to find conditions under which there exists a topology on X,
+of which the Xα are subspaces, such that this topology is coherent with the
+subspaces Xα.
+Lemma 4.11.4 Let X be a set that is the union of the topological spaces
+{Xα}.
+(a) If there is a topological space XT having X as its underlying set,
+and each Xα is a subspace of XT , then X has a topology, of which
+the Xα are subspaces, that is coherent with the Xα. This topology
+is in general finer than the topology of XT .
+(b) If, for each pair α, β of indices, the set Xα∩Xβ is closed in both
+Xα and Xβ, and inherits the same subspace topology from each of
+them, then X has a topology coherent with the subspaces Xα. Each
+Xα is a closed set in this topology.

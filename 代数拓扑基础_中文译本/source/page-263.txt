@@ -1,0 +1,36 @@
+248
+Elements of Algebraic Topology
+Proof: Part (1) is easily proved as follows: If γ′ is another representative from
+the equivalence class [γ] (with homotopy Γ) and η′ is another representative
+from the equivalence class [η] (with homotopy Φ) then
+Π(t, u) =
+
+Γ(2t, u)
+if
+0 ≤t ≤1/2, 0 ≤u ≤1 ,
+Φ(2t −1, u)
+if
+1/2 ≤t ≤1, 0 ≤u ≤1/2 .
+is a homotopy from γ · η to γ′ · η′. See Figure 4.10.6.
+Parts (2), (3), and (4) are also easy, and we leave them as exercises.
+γ · η
+x0
+γ′ · η′
+x0
+x0
+u = 1
+u = 2/3
+u = 1/3
+u = 0
+u = 1
+u = 2/3
+u = 1/3
+u = 0
+Figure 4.10.6: Homotopy from γ · η to γ′ · η′.
+The lemma shows that we do in fact have a well-defined group operation
+on the set of homotopy classes. There are higher homotopy groups πk(X),
+but we shall not discuss them here. The important fact about π1 is that it is
+functorial. This notion is encapsulated in the following theorem.
+Theorem 4.10.6 Let X and Y be topological spaces. Let x0 be the homotopy
+base point in X and y0 be the homotopy base point in Y . Assume that f :
+X →Y is a continuous map such that f(x0) = y0. Then the induced function

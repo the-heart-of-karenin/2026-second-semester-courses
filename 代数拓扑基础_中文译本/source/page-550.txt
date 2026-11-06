@@ -1,0 +1,18 @@
+Additional Reading
+[Bou16] N. Bourbaki, Topologie Alg´ebrique, Springer, Heidelberg, 2016.
+[Ful95] William Fulton, Algebraic Topology: A First Course, Springer, New
+York, 1995.
+[GH81] Marvin J. Greenberg and John R. Harper, Algebraic Topology: A
+First Course, CRC Press, Boca Raton, FL, 1981.
+[Hat02] Allen Hatcher, Algebraic Topology, Cambridge University Press,
+Cambridge, 2001.
+[Spa94] Edwin H. Spanier, Algebraic Topology, Springer, New York, 1994.
+[Wei14] Steven
+H.
+Weintraub,
+Fundamentals
+of
+Algebraic
+Topology,
+Springer, New York, 2016.
+535

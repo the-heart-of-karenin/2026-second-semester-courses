@@ -1,0 +1,77 @@
+162
+Elements of Algebraic Topology
+sequence of their homology groups. Now we point out that this assignment
+is “natural” in the sense that a homomorphism of short exact sequences of
+chain complexes gives rise to a homomorphism of the corresponding long exact
+homology sequences.
+Theorem 3.3.3 Suppose one is given the commutative diagram
+0 −−−−→C
+ϕ
+−−−−→D
+ψ
+−−−−→E −−−−→0
+α
+β
+γ
+0 −−−−→C′
+ϕ′
+−−−−→D′
+ψ′
+−−−−→E′ −−−−→0 ,
+where the horizontal sequences are exact sequences of chain complexes and α,
+β, γ are chain maps. Then the following diagram commutes as well:
+−−−−→Hp(C)
+ϕ∗
+−−−−→Hp(D)
+ψ∗
+−−−−→Hp(E)
+∂∗
+−−−−→Hp−1(C) −−−−→
+α∗
+β∗
+γ∗
+α∗
+−−−−→Hp(C′)
+ϕ′
+∗
+−−−−→Hp(D′)
+ψ′
+∗
+−−−−→Hp(E′)
+∂′
+∗
+−−−−→Hp−1(C′) −−−−→.
+Proof: Commutativity of the first two squares is immediate, just because
+commutativity holds already on the chain level. Commutativity of the last
+square involves examining the definitions of ∂∗and ∂′
+∗.
+Given {ep} ∈Hp(E), choose dp so that ψ(dp) = ep; also choose cp−1 so that
+ϕ(cp−1) = ∂Ddp. Then ∂∗{ep} = {cp−1} by definition. Let e′
+p = γ(ep). We wish
+to show that ∂′
+∗{e′
+p} = α∗{cp−1}. Roughly speaking, this follows because each
+step in the definition of ∂∗commutes: The chain β(dp) is a suitable “pullback”
+for e′
+p since ψ′β(dp) = γψ(dp) = γ(ep) = e′
+p. Then the chain α(cp−1) is the
+pullback of ∂′
+Dβ(dp) since ϕ′α(cp−1) = βϕ(cp−1) = β(∂Ddp) = ∂′
+Dβ(dp). Thus
+∂′
+∗{e′
+p} = {α(cp−1)} by definition.
+Naturality of the long exact homology sequence is extremely useful. We
+give one application now. It makes use of the following lemma, whose proof is
+just diagram chasing. We leave the proof for you.
+Lemma 3.3.4 (The Steenrod five lemma) Suppose one is given a com-
+mmutative diagram of abelian groups and homomorphisms:
+A1 −−−−→A2 −−−−→A3 −−−−→A4 −−−−→A5
+f1
+f2
+f3
+f4
+f5
+B1 −−−−→B2 −−−−→B3 −−−−→B4 −−−−→B5
+where the horizontal sequences are exact. If f1, f2, f4, and f5 are isomor-
+phisms, then so is f3.

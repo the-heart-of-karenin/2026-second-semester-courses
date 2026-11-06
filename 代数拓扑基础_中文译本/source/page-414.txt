@@ -1,0 +1,46 @@
+Homological Algebra
+399
+the preceding remarks show that (iA, iB) induces an isomorphism of ker(ϕ⊗iB)
+with A∗B. Thus the exact sequence of the theorem exists. Naturality is proved
+as in the proof of Theorem 7.2.1.
+One property possessed by the torsion product that is not possessed by
+Ext is commutativity. To prove it, we need the following lemma.
+Lemma 7.4.4 There is a function assigning to each short exact sequence of
+abelian groups
+0 −→A −→B −→C −→0
+and each abelian group D, an exact sequence
+0 −→D ∗A −→D ∗B −→D ∗C −→D ⊗A −→D ⊗B −→D ⊗C −→0 .
+This function is natural with respect to homomorphisms of short exact se-
+quences and abelian groups.
+Proof: This result is analogous to Theorem 7.2.6. Let
+0 −→R ϕ
+−→F −→D −→0
+be a free resolution of D. Because R and F are free, we have horizontal
+exactness in the diagram
+0
+R ⊗A
+R ⊗B
+R ⊗C
+0
+0
+F ⊗A
+F ⊗B
+F ⊗C
+0
+ϕ ⊗iA
+ϕ ⊗iB
+ϕ ⊗iC
+[See Corollary 6.2.9.] Treating the diagram as a short exact sequence of chain
+complexes, we apply the zig-zag lemma [Lemma 3.3.2] to obtain an exact
+sequence in homology that has the form
+0 →ker(ϕ ⊗iA) →ker(ϕ ⊗iB) →ker(ϕ ⊗iC)
+cok(ϕ ⊗iA) →cok(ϕ ⊗iB) →cok(ϕ ⊗iC) →0 .
+[This result is an instance of the serpent lemma, Lemma 3.3.9.] Theorem 7.4.1
+enables us to identify these terms as follows:
+ker(ϕ ⊗iA) ∼= D ∗A
+and
+cok(ϕ ⊗iA) ∼= D ⊗A ,
+and similar results hold for B and C.
+The naturality of the zig-zag lemma [Lemma 3.3.2] and the naturality
+of the sequence in Theorem 7.4.1 together give us naturality of this exact
+sequence.

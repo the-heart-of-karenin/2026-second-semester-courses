@@ -1,0 +1,62 @@
+362
+Elements of Algebraic Topology
+a
+e
+d
+a
+a
+b
+c
+a
+d
+e
+c
+b
+i
+g
+j
+h
+ζ = z1
+ϵ = {w1}
+{
+}
+Figure 5.10.5
+The classes ϵ = {w1} and ζ = {z1} thus generate H1(P2 # P2; Z/2). The
+class Λ = {σ∗} generates H2(P2 # P2; Z/2) [where σ is any 2-simplex]. Direct
+computation shows that
+w1 ⌣z1
+=
+0 ,
+w1 ⌣w1
+=
+[a, c, j]∗,
+z1 ⌣z1
+=
+[a, e, g]∗.
+Thus H∗(P2 # P2; Z/2) has the multiplication table
+⌣
+ϵ
+ζ
+Λ
+ϵ
+Λ
+0
+0
+ζ
+0
+Λ
+0
+Λ
+0
+0
+0
+But we know that P2 # P2 is homeomorphic to the Klein bottle S. [See
+Figure 1.7.9.] Thus their cohomology rings are isomorphic, even though this
+multiplication table is quite unlike the one we computed in Example 5.10.6.
+We leave it to you to construct an isomorphism between these two rings.
+This example illustrates the following, perhaps unfortunate, but important
+fact: In general, examining the multiplication tables of two rings will not allow
+you to determine immediately whether or not the two rings are isomorphic.
+EXAMPLE 5.10.8 Consider the space X pictured in Figure 5.10.6. It is the
+union of two two topological circles and a topological 2-sphere, all three with
+a point in common. It is called the wedge product S1∨S1∨S2. The space X

@@ -1,0 +1,35 @@
+228
+Elements of Algebraic Topology
+Definition 4.8.1 If X is a space and if x ∈X, then the local homology groups
+of X at x are the singular homology groups
+Hp(X, X \ x) .
+The reason for the term “local” comes from the following lemma.
+Lemma 4.8.2 Let A ⊂X. If A contains a neighborhood of the point x, then
+Hp(X, X \ x) ∼= Hp(A, A \ x) .
+Therefore, if x ∈X and y ∈Y have neighborhoods U and V, respectively, such
+that (U, x) and (V, y) are homeomorphic, then the local homology groups of X
+at x and of Y at y are isomorphic.
+Proof: Let U denote the set X \ A. Because A contains a neighborhood of x,
+U ⊂X \ x = Int (X \ x) .
+It follows from the excision property that
+Hp(X, X \ x) ∼= Hp(X \ U, (X \ x) \ U) = Hp(A, A \ x) .
+Let us compute some local homology groups.
+EXAMPLE 4.8.3 If x ∈Rm, we show that Hi(Rm, Rm \x) is infinite cyclic
+for i = m and vanishes otherwise.
+Let B denote a ball of positive radius centered at x. By the preceding
+lemma,
+Hi(Rm, Rm \ x) ∼= Hi(B, B \ x) ∼= Hi(Bm, Bm \ 0) .
+Now Sm−1 is a deformation retract of Bm \ 0. See Figure 4.8.1. The formula
+for the deformation is given in the proof of Theorem 2.7.11. Therefore, we
+have
+Hi(Bm, Bm \ 0) ∼= Hi(Bm, Sm−1) .
+Theorem 4.4.11 tells us that the group Hi(Bm, Sm−1) is infinite cyclic for
+i = m and vanishes otherwise.
+EXAMPLE 4.8.4 Let Hm denote the euclidean half-space
+Hm = {(x1, x2, . . . , xm) : xm ≥0} .
+We have Bd Hm = Rm−1 × 0. If x ∈Bd Hm, then the group Hi(Hm, Hm \ x)
+vanishes for all i. If x ∈Hm \ Bd Hm, then Hi(Hm, Hm \ x) is infinite cyclic
+for i = m and vanishes otherwise. We prove these facts as follows.
+If x ∈Hm \Bd Hm, then this result follows from the previous example and
+Lemma 4.8.2, once we note that x has a neighborhood that is an open subset
+of Rm.

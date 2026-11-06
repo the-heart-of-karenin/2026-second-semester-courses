@@ -1,0 +1,52 @@
+\section{\texorpdfstring{$*$}{*}任意系数同调}
+\sourcepage{61--62}
+这里还要提到另一种同调，虽然要到第六章才详细研究它。这种同调通过引入任意阿贝尔群作为系数群而产生。
+
+设 $G$ 为阿贝尔群，$K$ 为单纯复形。$K$ 的\textbf{以 $G$ 为系数的 $p$ 维链}，是从 $K$ 的定向 $p$ 维单形集到 $G$ 的函数 $c_p$，它除在有限多个单形上外都为零，并且当 $\sigma',\sigma$ 为同一单形的相反定向时，满足 $c_p(\sigma')=-c_p(\sigma)$。通过逐点相加定义加法，所得群记为 $C_p(K;G)$。
+
+若 $\sigma$ 是定向单形，$g\in G$，用 $g\sigma$ 表示如下初等链：在 $\sigma$ 上取值 $g$，在其相反定向上取值 $-g$，在其他所有定向单形上取值 $0$。依此记号，$g(-\sigma)=(-g)\sigma$，其中 $-\sigma$ 仍表示相反定向。给 $K$ 的所有 $p$ 维单形定向后，每条链都能唯一写成初等链的有限和 $c_p=\sum g_i\sigma_i$。因此，$C_p(K;G)$ 是若干与 $G$ 同构的子群的直和，每个 $p$ 维单形对应一个直和项。
+
+边界算子 $\partial:C_p(K;G)\to C_{p-1}(K;G)$ 由公式
+\[
+\partial(g\sigma)=g(\partial\sigma)
+\]
+定义，其中 $\partial\sigma$ 是先前定义的普通边界。仍有 $\partial\circ\partial=0$。定义 $Z_p(K;G)$ 为该同态的核，$B_{p-1}(K;G)$ 为其像，并定义
+\[
+H_p(K;G)=Z_p(K;G)/B_p(K;G).
+\]
+这些群分别称为 $K$ 的\textbf{以 $G$ 为系数的闭链群、边界链群和同调群}。
+
+当然，也可以研究以 $G$ 为系数的相对同调，具体细节是清楚的，相应的群记为 $H_p(K,K_0;G)$。
+
+接下来一段时间不会深入研究一般系数同调，但应当及早知道它的存在，因为它有时很有用。
+
+\entry{例}{1.11.1}经常用作系数群的一个群是模 $2$ 整数群 $\Z/2$。用它计算环面与 Klein 瓶的同调。第 1.7 节关于环面的论证基本不变，得到
+\[
+H_1(T;\Z/2)\cong\Z/2\oplus\Z/2,\qquad H_2(T;\Z/2)\cong\Z/2.
+\]
+对于 Klein 瓶 $S$，论证仍适用，但有一些变化，结果为
+\[
+H_1(S;\Z/2)\cong\Z/2\oplus\Z/2,\qquad H_2(S;\Z/2)\cong\Z/2.
+\]
+以 $\Z/2$ 为系数时，由 $S$ 的所有 $2$ 维单形组成的基本 $2$ 维链 $\gamma$ 的边界为零，因为在 $\Z/2$ 中，$2=1+1=0$。
+
+注意，$\Z/2$ 系数同调不足以区分 $T$ 和 $S$。
+
+\entry{例}{1.11.2}用有理数 $\mathbb Q$ 作系数计算环面和 Klein 瓶的同调。前面的论证仍适用，但最终结果不同。对于环面，
+\[
+H_1(T;\mathbb Q)\cong\mathbb Q\oplus\mathbb Q,\qquad H_2(T;\mathbb Q)\cong\mathbb Q.
+\]
+对于 Klein 瓶，
+\[
+H_1(S;\mathbb Q)\cong\mathbb Q,\qquad H_2(S;\mathbb Q)=0.
+\]
+以 $\mathbb Q$ 为系数时，闭链 $z_1$ 是链 $\tfrac12\gamma$ 的边界。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 分别用 $\Z/2$ 和 $\mathbb Q$ 作系数，计算 $P^2$ 的同调。
+\item 证明 $\mathbb Q$ 系数同调足以区分 $S^2$、连通和 $P^2\mathbin{\#}\cdots\mathbin{\#}P^2$，以及 $T\mathbin{\#}\cdots\mathbin{\#}T$。
+\item 分别用 $\Z/3$ 和 $\Z/4$ 作系数，计算 Klein 瓶 $S$ 的同调。
+\item 分别用 $\Z/n$ 和 $\mathbb Q$ 作系数，计算 $k$ 重笨帽空间的同调，见第 1.7 节习题 6。
+\item 设 $(K,K_0)$ 为 Möbius 带及其边界组成的偶。计算 $H_i(K,K_0;\Z/2)$ 与 $H_i(K,K_0;\mathbb Q)$，见第 1.10 节习题 2。
+\end{enumerate}

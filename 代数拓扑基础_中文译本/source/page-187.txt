@@ -1,0 +1,66 @@
+172
+Elements of Algebraic Topology
+were originally invented, they share many formal properties with homology
+theory. In particular, they satisfy all the Eilenberg–Steenrod axioms except
+for the dimension axiom.
+Such a theory is nowadays called an extraordinary homology theory, or
+a generalized homology theory.
+It differs from ordinary homology in that a
+one-point space may have non-zero homology in many dimensions.
+This situation illustrates a phenomenon that occurs over and over again
+in mathematics: A theory formulated for one purpose turns out to have con-
+sequences far removed from what its originators envisaged.
+The next definition is used in Exercise 1.
+Definition 3.5.3 Consider the following commutative diagram of abelian
+groups and homomorphisms, which is called a braid.
+A
+B
+C
+D
+E
+F
+G
+H
+δ
+ϵ
+η
+θ
+κ
+λ
+µ
+ν
+π
+ρ
+σ
+τ
+ϕ
+I
+J
+K
+α
+β
+γ
+ψ
+ω
+This diagram contains the following four sequences, arranged in the form of
+overlapping sine curves.
+E −→A −→B −→G −→K ,
+E −→I −→J −→G −→C →D ,
+A −→F −→J −→K −→H →D ,
+
+
+
+
+
+
+
+(∗)
+I −→F −→B −→C −→H .
+If all four sequences are exact, this diagram is called an exact braid.
+Lemma 3.5.4 (The braid lemma) In Definition 3.5.3, if the sequences (∗)
+are exact and if the composite I →F →B is zero, then the braid is exact.
+The next definition is used in Exercise 3.
+Definition 3.5.5 Let X = X1 ∪X2. Let A = X1 ∩X2. We say that (X1, X2)
+is an excisive couple for the given homology theory if (X1, A) and (X, X2)
+are admissible and if the inclusion (X1, A) →(X, X2) induces a homology
+isomorphism.

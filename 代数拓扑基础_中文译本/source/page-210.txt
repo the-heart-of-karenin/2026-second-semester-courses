@@ -1,0 +1,37 @@
+Singular Homology Theory
+195
+(b) Show that if f is homotopic to a constant map, then f∗is the
+zero homomorphism in reduced homology. [Hint: Show that f
+extends to C.]
+(c) Show that if X is contractible, then X is acyclic.
+3. Calculate H1 of the unit disc in R2.
+4. Show that if U ⊂R2 is homeomorphic to the unit disc, then all its
+homology groups Hp for p > 0 are 0.
+4.3
+The Axioms for Singular Theory
+We now introduce the relative singular homology groups. Then we show, in
+this section and the next, that they satisfy the Eilenberg–Steenrod axioms on
+the class of all topological pairs.
+If X is a topological space and A is a subspace of X, then there is a natural
+inclusion Sp(A) →Sp(X). The group of relative singular chains is defined by
+Sp(X, A) = Sp(X)/Sp(A) .
+The boundary operator Sp(X) →Sp−1(X) restricts to the boundary operator
+of Sp(A); hence it induces a boundary operator
+∂: Sp(X, A) →Sp−1(X, A)
+on relative chains. The family of groups Sp(X, A) and homomorphisms ∂is
+called the singular chain complex of the pair (X, A) and is denoted S(X, A).
+The homology groups of this chain complex are called the singular homology
+groups of the pair (X, A) and are denoted Hp(X, A).
+Note that the chain complex S(X, A) is free. The group Sp(X, A) has as
+its basis all cosets of the form T + Sp(A), where T is a singular p-simplex
+whose image set does not lie in A.
+If f : (X, A) →(Y, B) is a continuous map, then the homomorphism
+f# : Sp(X) →Sp(Y ) carries chains of A into chains of B, so it induces a
+homomorphism [also denoted f#]
+f# : Sp(X, A) →Sp(Y, B) .
+This map commutes with ∂, so it in turn induces a homomorphism
+f∗: Hp(X, A) →Hp(Y, B) .
+The following theorem is immediate:
+Theorem 4.3.1 If i : (X, A) →(X, A) is the identity map, then i∗:
+Hp(X) →Hp(X) is the identity. If h : (X, A) →(Y, B) and k : (Y, B) →
+(Z, C) are continuous, then (k ◦h)∗= k∗◦h∗.

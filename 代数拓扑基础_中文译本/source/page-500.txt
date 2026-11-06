@@ -1,0 +1,37 @@
+Duality in Manifolds
+485
+Proof: Let an = (1, 0, . . . , 0) ∈Sn. We call this the “base point” of Sn. Let F
+denote the field Z/2.
+Step 1: Let πn : Sn →Pn be the usual quotient map. We prove that if
+α : I →Sn is any path from an to its antipode −an, then πn ◦α represents
+the non-zero element of H1(Pn; F). See Figure 8.8.3.
+α
+an
+Sn
+Pn
+πn ◦α
+πn
+Figure 8.8.3
+This conclusion is easy to prove if α is the standard path
+β(t)(cos πt, sin πt, 0, . . . , 0) .
+For then β is a homeomorphism of (I, Bd I) with (E1
++, S0), where D1
++ is the
+upper half of S1. And π1 maps (E1
++, S0) onto (P1, P0), collapsing S0 to a point.
+By our basic results about CW complexes, the image under (π1)∗of a gen-
+erator of H1(E1
++, S0) is a fundamental cycle for the 1-cell of Pn. The identity
+map, considered as a singular simplex i : ∆1 →I, generates H1(I, Bd I; F).
+Therefore the singular simplex π1 ◦β ◦i = π1 ◦β generates H1(Pn; F).
+To show the same result for a general path α, we proceed as follows.
+Consider the singular 1-chain α −β, where β is the standard path as before.
+It is a singular cycle of Sn since its boundary vanishes. In the case n > 1,
+H1(Sn) = 0, so that α −β must bound some 2-chain d. Thus
+πn ◦α −πn ◦β = ∂(πn ◦d) ,
+so πn ◦α and πn ◦β are homologous. Hence they are also homologous as cycles
+with F coefficients.
+If n = 1 then we use the fact that the map π1 : S1 →P1 has degree 2. Since
+α−β is a singular cycle of S1, the cycle π1◦α−π1◦β represents an even multi-
+ple of the generator of H1(P1). In particular, it represents the zero element of
+H1(P1; F). Then π1◦α and π1◦β are homologous as cycles with F coefficients.

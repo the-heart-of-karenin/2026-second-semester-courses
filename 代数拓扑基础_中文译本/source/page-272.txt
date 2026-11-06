@@ -1,0 +1,39 @@
+Singular Homology Theory
+257
+Because H1(X) is commutative, χ carries any generator of C to 0, so C ⊂
+ker χ.
+To show the reverse containment, suppose that χ(γ) bounds. That is,
+γ = ∂( niσi) ,
+where the σi are singular 2-simplices. Write each ∂σi as
+∂σi = αi0 −αi1 + αi2 ,
+where
+αi0(t) = σi(1 −t, t) ,
+αi1(t) = σi(0, t) ,
+αi2(t) = σi(t, 0) .
+We have
+γ =  ni(αi0 −αi1 + αi2) .
+(†)
+In the equation (†), γ is a singular 1-cycle and the right-hand side is a singular
+1-chain, and they are equal—not merely homologous. That tells us that, after
+collecting terms in (†), γ occurs with coefficient 1 and all other paths have
+coefficient 0.
+αi0
+αi1
+αi2
+ζi0
+ζi2
+ζi1
+x0
+σi
+Figure 4.10.8: The simplex σi, its edges αi0, αi1, αi2, and the paths
+ζi0, ζi1, ζi2 connecting the base point x0 to the vertices of σi.
+We need to label the vertices of each 2-simplex σi. Set
+xi0 = σi(0, 0) = αi1(0) = αi2(0) ,
+xi1 = σi(1, 0) = αi0(0) = αi2(1) ,
+xi2 = σi(0, 1) = αi0(1) = αi1(1) .
+We will use the paths ζx from (2) above that go from x0 to x, but to simplify
+the notation, we shall write ζij instead of ζxij, and ζ−1
+ij
+instead of ζ−1
+xij. See
+Figure 4.10.8.

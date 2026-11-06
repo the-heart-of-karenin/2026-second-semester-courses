@@ -1,0 +1,50 @@
+68
+Elements of Algebraic Topology
+where the following hold:
+(1) The [possibly empty] set {b1, b2, . . . , bk} of positive integers is such
+that b1 | b2 | · · · | bk.
+(2) The matrix A = (aij) has integer entries, not all zero, such that bk
+divides every entry of A.
+Note that applying an elementary operation to the matrix A is equivalent
+to applying that elementary operation to the corresponding row or column of
+the larger matrix (∗).
+Set A0 = A. Lemma 1.12.7 tells us that if α(A0) does not divide every
+entry of A0, then elementary operations can be applied to A0 to produce a
+matrix A1 with α(A1) < α(A0). Repeating this process [no more than α(A0)
+times] will yield a matrix Ar for which α(Ar) divides every element of Ar.
+We will apply further elementary operations to Ar, but for convenience of
+notation, we will continue to denote it by Ar.
+Apply elementary operations to bring a minimal entry of Ar to the upper
+left corner of the matrix and to make it positive. Because the minimal entry
+divides all entries in its row and column, we can apply elementary operations
+to make all the other entries in its row and column into zeros. Note that at
+the end of this process, the entry in the upper left corner of Ar divides all
+entries of the matrix. In particular, it divides all the entries of the submatrix
+A′ obtained by omitting the first row and first column from Ar. Let bk+1 be
+the entry in the upper left corner of Ar.
+Thus, we see that by applying elementary operations to A, or equivalently
+to the matrix (∗), we have brought the matrix to the following form:
+
+
+b1
+0
+0
+...
+0
+0
+bk
+0
+0
+0
+bk+1
+0
+A′
+
+
+where bi ≥1 and b1 | b2 | · · · | bk | bk+1, bk+1 divides every entry of A′, and A′
+has one less row and one less column than has A.
+Termination Condition. If A′ contains only zeros or is empty, then we have
+reached the desired normal form. Otherwise, we repeat the Main Step.
+Completion of the Proof of Theorem 1.12.4: It now follows immediately
+from Exercise 4 of Section 1.5 that the numbers b1, b2, . . . , bℓare uniquely
+determined by the homomorphism f. For the number ℓof non-zero entries in

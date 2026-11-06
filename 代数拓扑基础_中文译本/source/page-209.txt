@@ -1,0 +1,27 @@
+194
+Elements of Algebraic Topology
+Proof: To show that H0(X) = 0, let c be a singular 0-chain on X such that
+ϵ(c) = 0. Then, by the preceding lemma, we have
+∂[c, w] = ϵ(c)Tw −c = −c ,
+so c bounds a 1-chain.
+To show that Hp(X) = 0 for p > 0, let z be a singular p-cycle on X. By
+the preceding lemma, we have
+∂[z, w] = [∂z, w] + (−1)p+1z = (−1)p+1z ,
+so z bounds a (p + 1)-chain.
+Corollary 4.2.10 Any simplex is acyclic in singular homology.
+Definition 4.2.11 Figure 4.2.3 shows the topologist’s sine curve. It is the
+subspace of R2 consisting of all points (x, sin 1/x) for 0 < x ≤1, and all
+points (0, y) for −1 ≤y ≤1. It will be used in Exercise 1(b).
+Y
+The Topologist’s Sine Curve
+Figure 4.2.3
+EXERCISES
+1. (a) Suppose {Xα} is the set of path components of X. Show that
+Hp(X) ∼= 
+α Hp(Xα).
+(b) Compute the singular homology of the topologist’s sine curve,
+Y .
+2. Let X be a compact subspace of RN, and let f : X →Y .
+(a) Let w be the point (0, 0, . . . , 0, 1) in RN ×R. Let C be the union
+of all line segments joining points of X to w. Show that C is a
+quotient space of X × I.

@@ -1,0 +1,36 @@
+Singular Homology Theory
+281
+because only chains of dimensions p + 1, p, and p −1 are used in defining
+Hp(K). We shall show in Steps 1 and 2 below that an analogous result holds
+in the present situation.
+Step 1. We show that the homomorphism
+i∗: Hp(Xp+1) →Hp(X)
+induced by inclusion is an isomorphism. For this purpose, we first note that
+the homomorphisms
+Hp(Xp+1) −→Hp(Xp+2) −→Hp(Xp+3) −→· · ·
+induced by inclusion are isomorphisms. This follows by examining the exact
+sequence
+Hp+1(Xp+i+1, Xp+i) −→Hp(Xp+i) −→Hp(Xp+i+1) −→Hp(Xp+i+1, Xp+i)
+and noting that both end groups vanish if i ≥1, by hypothesis.
+We will now show that the fact that i∗is an isomorphism is a consequence
+of the compact support properties of homology. To show that i∗is surjective,
+let β be an element of Hp(X). Choose a compact set C in X such that β is in
+the image of Hp(C) →Hp(X) under the homomorphism induced by inclusion.
+Since C is compact, C ⊂Xp+k for some k. Then β is the image of an element
+of Hp(Xp+k) in the diagram
+Hp(Xp+1) −→Hp(Xp+k) −→Hp(X) .
+Because the first of these homomorphisms is an isomorphism, β is the image
+of an element of Hp(Xp+1), as desired.
+To show that i∗has kernel 0, suppose that β ∈Hp(Xp+1) maps to zero in
+Hp(X). There is a compact set C such that β maps to zero in Hp(C). Again,
+C lies in Xp+k for some k. Then
+Hp(Xp+1) −→Hp(Xp+k)
+carries β to zero. Because this map is an isomorphism, we have β = 0.
+Step 2. We now show that the homomorphism
+j∗: Hp(Xp+1) →Hp(Xp+1, Xp−2)
+induced by inclusion is an isomorphism.
+This result will follow once we show that the homomorphisms
+Hp(Xp+1, ∅) −→Hp(Xp+1, X0) −→· · · −→Hp(Xp+1, Xp−2)
+induced by inclusion are isomorphisms. To prove this fact, consider the exact
+sequence of the triple (Xp+1, Xi, Xi−1):
+Hp(Xi, Xi−1) −→Hp(Xp+1, Xi−1) −→Hp(Xp+1, Xi) −→Hp−1(Xi, Xi−1) .

@@ -1,0 +1,40 @@
+524
+Elements of Algebraic Topology
+All four of the induced maps in cohomology are isomorphisms.
+Now consider the family J0 of open coverings of |K| of the form A(K′)
+as K′ ranges over all subdivisions of K. The general simplicial approximation
+theorem implies that this family is cofinal in the family J of all open coverings
+of |K|. [If K is finite, then the finite simplicial approximation theorem will
+suffice.] Therefore
+ˇH(|K|; G) ∼= dir lim Hk(K′; G) ,
+where the direct system on the right is indexed by the family of all subdivi-
+sions of K. Each of the maps h∗in the latter direct system is an isomorphism,
+so the direct limit is isomorphic to Hk(K; G) as desired.
+This theorem shows that ˇCech cohomology agrees with simplicial cohomol-
+ogy when both are defined. But what does ˇCech cohomology look like for more
+general spaces? In order to make the required computations, we shall prove a
+basic “continuity property” of ˇCech cohomology. First we need a lemma.
+Lemma 8.13.15 Let Y be a compact subspace of the normal space X. Con-
+sider the directed set L consisting of coverings A of Y by sets that are open
+in X [rather than in Y ]. Then
+ˇHk(Y ; G) ∼= dir lim A∈LHk(N(A); G) .
+The same is true in reduced cohomology.
+Proof: Step 1: Let U1, U2, . . . , Un be an open covering of X. We show that
+there exists an open covering V1, V2, . . . , Vn of X such that V i ⊂Ui for each
+i.
+The set X \ (U2 ∪· · · ∪Un) is a closed subset of U1. By normal-
+ity, we can choose an open set V1 containing it so that V 1 ⊂U1. Then
+V1, U2, . . . , Un covers X. Apply the same construction to choose V2 containing
+X \ (V1 ∪U3 ∪· · · ∪Un) such that V 2 ⊂U2. Then V1, V2, U3, . . . , Un covers X.
+Continue this argument in a similar fashion.
+Step 2: Let C = {C1, C2, . . . , Cn} and D = {D1, D2, . . . , Dn} be two indexed
+families having the same index set. We say that their nerves are naturally
+isomorphic provided that
+Ci1 ∩· · · ∩Cip̸ = ∅⇐⇒Di1 ∩· · · ∩Dip̸ = ∅.
+This means that the vertex map Ci →Di induces a simplicial isomorphism
+N(C) →N(D).
+We prove the following. Let {C1, C2, . . . , Cn} be a collection of closed sets
+in X, and let {U1, U2, . . . , Un} be a collection of open sets in X, with Ci ⊂Ui
+for each i. Then there exists a collection {W1, W2, . . . , Wn} of open subsets
+of X such that Ci ⊂Wi and W i ⊂Ui for all i. And also the nerves of
+{C1, . . . , Cn} and {W 1, . . . , W n} are naturally isomorphic.

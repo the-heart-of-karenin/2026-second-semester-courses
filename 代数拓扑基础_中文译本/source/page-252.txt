@@ -1,0 +1,52 @@
+Singular Homology Theory
+237
+Now D1 is the k-cell that is the image under h of Ik−1 × [a1, b1] with
+b1 −a1 = 2−1. We repeat the process by writing D1 as the union of the two
+k-cells, again denoted B0 and B1, given by
+B0 = h(Ik−1 × [a1, b1 −2−2])
+and
+B1 = h(Ik−1 × [a1 + 2−2, b2]) .
+Arguing as in Step 1, we see that the image of α in either Hi(Sn \ B0) or
+Hi(Sn \ B1) is non-zero. In the former case, we set a2 = a1 and b2 = b1 −2−2
+and otherwise we set a2 = a1 +2−2 and b2 = b1. Then, setting D2 = h(Ik−1 ×
+[a2, b2]), we know that the image of α in Hi(Sn \ D2) is non-zero.
+Continuing similarly, we obtain a sequence of closed intervals [a1, b1] ⊃
+[a2, b2] ⊃· · · , with bm −am = 2−m, and k-cells Dm = h(Ik−1 ×[am, bm)] such
+that the image of α in Hi(Sn \ Dm) is non-zero.
+Let e be the unique point in ∩m[am, bm], and set E = h(Ik−1 × {e}).
+The set E is a (k −1)-cell in Sn that equals the intersection of the nested
+sequence of k-cells D1 ⊃D2 ⊃· · · . By the induction hypothesis, the group
+Hi(Sn \ E) vanishes. In particular, the image of α in this group vanishes. By
+Theorem 4.3.5, there is a compact subset A of Sn \ E such that the image of
+α in Hi(A) vanishes. Since Sn \ E is the union of the open sets
+Sn \ D1 ⊂Sn \ D2 ⊂· · · ,
+the set A lies in one of them, say in Sn \ Dm. But this means that the image
+of α in Hi(Sn \ Dm) vanishes, contrary to the construction.
+Theorem 4.9.4 Let n > k ≥0. Let h : Sk →Sn be an imbedding. Then
+Hi(Sn \ h(Sk)) =
+
+Z
+if i = n −k −1,
+0
+otherwise.
+Proof: Let n be fixed. We prove the theorem by induction on k. First consider
+the case k = 0. Then h(S0) consists of two points p and q. Since Sn \ {p, q} is
+homeomorphic to Rn \ 0, and Rn \ 0 has the homotopy type of Sn−1, we see
+that Hi(Sn \ {p, q}) is infinite cyclic for i = n −1 and vanishes otherwise.
+Now suppose the theorem is true in dimension k −1. Let h : Sk →Sn be
+an imbedding. We construct a certain Mayer–Vietoris sequence. Let X1 and
+X2 be the following open subsets of Sn:
+X1 = Sn \ h(Ek
++)
+and
+X2 = Sn \ h(Ek
+−) .
+See Figure 4.9.2. Then let
+X
+=
+X1 ∪X2 = Sn \ h(Sk−1) ,
+A
+=
+X1 ∩X2 = Sn \ h(Sk) .
+Since X1 and X2 are open in X, we have a Mayer–Vietoris sequence
+Hi+1(X1) ⊕Hi+1(X2) −→Hi+1(X) −→Hi(A) −→Hi(X1) ⊕Hi(X2) .

@@ -1,0 +1,48 @@
+42
+Elements of Algebraic Topology
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+L
+σ1
+σ2
+g
+T
+w1
+z1
+Figure 1.7.4
+(4) ∂γ = 0.
+The proof of (3) is easy, given the fact that A is simply the 1-dimensional
+complex pictured in Figure 1.7.5. The proof of (4) is similarly direct: It is clear
+that ∂γ has value 0 on every 1-simplex of T not in A. One checks directly that
+it also has value 0 on each 1-simplex in A: For instance, the elementary chain
+[a, b] appears in the expression for ∂σ1 with value −1 and in the expression
+for ∂σ2 with value +1, so that ∂γ has value 0 on [a, b]. [See Figure 1.7.4.] You
+can check that similar conclusions apply to the other oriented 1-simplices in
+w1 and z1.
+c
+b
+a
+e
+d
+A
+Figure 1.7.5
+Using the results of (1)–(4), we can compute the homology of T. Every
+1-cycle of T is homologous to a 1-cycle of the form nw1 + mz1, by (1) and
+(3). Such a cycle bounds only if it is trivial: For if c = ∂d for some d, then
+(2) applies to show that d = qγ. Since ∂γ = 0 by (4), we have c = ∂d = 0.
+We conclude that
+H1(T) ∼= Z ⊕Z ,
+and the (cosets of the) 1-cycles w1 and z1 form a basis for the 1-dimensional
+homology.
+To compute H2(T), note that by (2) any 2-cycle d of T must be of the
+form qγ for some q. Each such 2-chain is in fact a cycle, by (4), and there are

@@ -1,0 +1,41 @@
+450
+Elements of Algebraic Topology
+2. (a) Show that the maps
+i(x) = x × Y × 0
+and
+j(y) = X × y × 1
+define embeddings of X and Y respectively into X ∗Y .
+(b) Show that if X ≈X′ and Y ≈Y ′, then X ∗Y ≈X′ ∗Y ′.
+(c) Show that X ∗Y ≈Y ∗X.
+3.∗Show that there is a split short exact sequence
+0 →Hp+1(X ∗Y ) →Hp(X × Y ) →Hp(X) ⊕Hp(Y ) →0 .
+4.∗Show that (X ∗Y ) ∗Z ≈X ∗(Y ∗Z). [Hint: The obvious proof
+does not work. You can check that the quotient maps
+(X × Y × I1) × Z × I2 →(X ∗Y ) × Z × I2 →(X ∗Y ) ∗Z
+and
+X × (Y × Z × I2) × I1 →X × (Y ∗Z) × I1 →X ∗(Y ∗Z)
+carry out different identifications. Instead, in the space X × Y ×
+Z × ∆2, introduce the following relations:
+(x, y, z, w) ∼(x′, y, z, w)
+if
+w ∈ϵ1ϵ2 ,
+(x, y, z, w) ∼(x, y′, z, w)
+if
+w ∈ϵ0ϵ2 ,
+(x, y, z, w) ∼(x, y, z′, w)
+if
+w ∈ϵ0ϵ1 .
+Let W be the quotient space. Let π be the quotient map. Let f :
+I1 × I2 →∆2 map t × I2 linearly onto the line segment from t ∈
+ϵ0ϵ1 = [0, 1] to ϵ2. Show that
+X × Y × Z × I1 × I2
+X × Y × Z × ∆2
+π
+−→W
+id × f
+carries out the same identifications as the first of the preceding
+quotient maps. Conclude that W is homeomorphic to (X ∗Y ) ∗Z.
+Show that W is also homeomorphic to X ∗(Y ∗Z).]
+5. Let K be a triangle and L be a triangle. What is the join of K and
+L?
+6. Write a figure 8 as the join of two simplices.

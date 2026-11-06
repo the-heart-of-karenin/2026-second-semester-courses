@@ -1,0 +1,47 @@
+Cohomology
+315
+2. Check the computations of Examples 5.3.2, 5.3.3, and 5.3.4.
+3. (a) Suppose one is given homomorphisms
+C1
+ϕ
+−→C0
+ϵ
+−→Z ,
+where ϵ ◦ϕ = 0 and ϵ is an epimorphism. Consider the dual
+sequence
+Hom (C1, G)
+ϕ
+←−Hom (C0, G)
+ϵ
+←−Hom (Z, G) .
+Show that im ϵ is a direct summand in Hom (C0, G) and hence
+in ker ϕ. [Hint: See the exercises of Section 1.8.]
+(b) Conclude that
+ker ϕ ∼= ker ϕ
+im ϵ ⊕G ,
+so that in particular,
+H0(K; G) ∼= H0(K; G) ⊕G .
+4. Let K be the complex whose space is the real line and whose vertices
+are the integers. Let σn = [n, n+1]. Show that H1(K) = 0 by finding
+a specific cochain whose coboundary is
+∞
+
+i=−∞
+aiσ∗
+i .
+5.∗Let K be a finite complex.
+(a) Use the theorem on standard bases for chain complexes [Sec-
+tion 1.12] to express Hp(K) in terms of the betti numbers and
+torsion coefficients of K.
+(b) Express Hp(K; G) in terms of the betti numbers and torsion
+coefficients of K. The answer will involve the groups G, G/mG,
+and ker(G m
+−→G), the kernel of multiplication by m in G.
+(c) Compute Hp(X; G) if X is the torus, the Klein bottle, or pro-
+jective space.
+6. Calculate the cohomology of the 2-sphere. It is more difficult to
+calculate the cohomology of the higher-dimensional spheres. Why?
+5.4
+Relative Cohomology
+Continuing our discussion of simplicial cohomology, we define relative coho-
+mology groups. We also consider the homomorphism induced by a simplicial

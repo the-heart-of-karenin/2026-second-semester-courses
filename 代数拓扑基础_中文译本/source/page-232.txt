@@ -1,0 +1,47 @@
+Singular Homology Theory
+217
+5. Give an example of an acyclic functor.
+6. Give an example of a free functor.
+4.6
+Mayer–Vietoris Sequences
+If X is the union of two subspaces X1 and X2, under suitable hypotheses there
+is an exact sequence relating the homology of X with that of X1 and X2. It
+is called the Mayer–Vietoris sequence of the pair X1, X2. We constructed
+such a sequence in simplicial theory under the assumption that X1 and X2
+were polytopes of subcomplexes of a complex. In singular theory, we need an
+analogous condition:
+Definition 4.6.1 Let X = X1 ∪X2. Let A = {X1, X2}, and write
+S(X1) + S(X2) = SA(X) .
+The pth chain group of S(X1) + S(X2) is Sp(X1) + Sp(X2), which is not a
+direct sum unless X1 and X2 are disjoint. We say {X1, X2} is an excisive
+couple if the inclusion
+S(X1) + S(X2) −→S(X)
+induces an isomorphism in homology.
+For singular homology, this definition is equivalent to the one given in
+Exercise 3 of Section 3.5. The proof of this equivalence is left to Exercise 2.
+In view of Theorem 4.4.8, one situation in which {X1, X2} is excisive occurs
+when the sets Int X1 and Int X2 cover X.
+Theorem 4.6.2 Let X = X1 ∪X2. Suppose {X1, X2} is an excisive couple.
+Let A = X1 ∩X2. Then there is an exact sequence
+. . . −→Hp(A) ϕ∗
+−→Hp(X1) ⊕Hp(X2) ψ∗
+−→Hp−1(A) −→. . .
+called the Mayer–Vietoris sequence of {X1, X2}. The homomorphisms are de-
+fined by
+ϕ∗(a)
+=
+(i∗(a), −j∗(a)),
+ψ∗(x1, x2)
+=
+k∗(x1) + ℓ∗(x2),
+where the maps
+A
+i
+−−−−→X1
+j
+
+k
+
+X2
+ℓ
+−−−−→X

@@ -1,0 +1,37 @@
+336
+Elements of Algebraic Topology
+Corollary 5.6.7 Let C and D be free chain complexes. If Hp(C) ∼= Hp(D) for
+all p, then Hp(C; G) ∼= Hp(D; G) for all p and G.
+Remark 5.6.8 Let us explain the geometric motivation underlying the defi-
+nition of the chain complex D′.
+In homotopy theory, there is a standard construction for, roughly speaking,
+replacing an arbitrary continuous map h : X →Y by an imbedding of X in
+a space that is homotopy equivalent to Y . More precisely, there is a space Y ′
+and imbeddings i and j such that the diagram
+X
+Y
+Y ′
+h
+i
+j
+commutes up to homotopy, and such that j is a homotopy equivalence. It
+follows at once that h is a homotopy equivalence if and only if i is. In this
+way problems concerning the map h are reduced to problems concerning the
+imbedding i.
+This construction is called the mapping cylinder construction. We describe
+it here, and explain how the chain complex D′ is an algebraic analogue.
+Given h : X →Y , let us form a quotient space from the disjoint union of
+X × I and Y by identifying each point (x, 0) of X × 0 with the point h(x) of
+Y . The resulting adjunction space Y ′ is called the mapping cylinder of h. We
+picture it as looking something like a top hat. See Figure 5.6.1
+Y
+Y ′
+π
+X × I
+h
+Figure 5.6.1
+Let π : (X × I) ∪Y →Y ′ be the quotient map. The restriction of π to
+Y defines an imbedding j of Y in Y ′, and the map i(x) = π(x, 1) defines an
+imbedding of X in Y ′. Clearly j(Y ) is a deformation retract of Y ′: One simply
+pushes down the top hat onto j(Y ). Just as clearly, the map i : X →Y ′ is
+homotopic to the map j ◦h: again, one simply pushes i(X) down.

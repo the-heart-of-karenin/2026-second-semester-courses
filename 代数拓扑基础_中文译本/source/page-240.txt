@@ -1,0 +1,51 @@
+Singular Homology Theory
+225
+First, we show that θ∗is surjective. Given {z} ∈Hp(|K|), there is a com-
+pact subset A of |K| such that the chain z is carried by A. Let L be a finite
+subcomplex of K such that A is contained in |L|. Consider the commutative
+diagram
+Hp(C′(L))
+θ∗
+−−−−→
+∼
+=
+Hp(|L|)
+i∗
+
+j∗
+Hp(C′(K))
+θ∗
+−−−−→Hp(|K|)
+where the vertical maps are induced by inclusion. Then {z} lies in the image
+of j∗. The map θ∗on the top line is an isomorphism by Step 1. Hence {z} lies
+in the image of the map θ∗on the bottom line.
+We show that the kernel of θ∗is trivial. Suppose {z} ∈Hp(C′(K)) and
+θ∗({z}) = 0. Then θ(z) = ∂d for some singular (p + 1)-chain d of |K|. The
+chain d is carried by a compact subset of |K|. Choose a finite subcomplex L
+of K such that z is carried by L and d is carried by |L|. Consider the same
+commutative diagram as before, but with the new choice of L. Let α denote
+the homology class of z in Hp(C′(L)). Because θ(z) = ∂d, where d is carried
+by |L|, we see that θ∗: Hp(C′(K)) →Hp(|L|) carries α to zero. Because this
+map is an isomorphism, α = 0. Hence {z} = i∗(α) = 0 as well.
+The argument given in Step 2 of the last proof is of the general kind known
+as a “direct limit argument.” It is a standard way of carrying over results that
+hold for the homology of finite complexes to complexes in general.
+We now combine the results of Section 1.14 on ordered homology with the
+lemma just proved.
+Definition 4.7.4 Let K be a complex. We define
+η : C(K) →S(|K|)
+as follows: Choose a partial ordering of the vertices of K that induces a linear
+ordering on the vertices of each simplex of K. Orient the simplices of K by
+using this ordering and define
+η([v0, v1, . . . , vp]) = ℓ(v0, v1, . . . , vp) ,
+where v0 < v1 < · · · < vp in the given ordering. It is immediate that η
+is a chain map, that it preserves augmentation, and that it commutes with
+inclusions. Thus it induces a chain map on the relative level as well.
+In fact, η is the composite
+C(K) ϕ
+−→C′(K)
+θ
+−→S(|K|) ,
+where θ is the chain map of the preceding lemma and ϕ is the chain equivalence
+of Theorem 1.14.16. Since both ϕ and θ induce homology isomorphisms, so
+does η. This result holds for relative homology and reduced homology as well.

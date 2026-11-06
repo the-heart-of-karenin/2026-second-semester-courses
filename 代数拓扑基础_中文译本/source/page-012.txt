@@ -1,0 +1,34 @@
+Preface
+Algebraic topology is a cornerstone of modern mathematics. Every working
+mathematician should have at least an acquaintance with the subject. The
+book Elements of Algebraic Topology by James R. Munkres is a classic that
+provides such an introduction. It is now forty years old and needs to be brought
+up to date. This new edition is meant to fulfill that purpose.
+Of course, we have retained the essential features of the original book.
+Most of the notation is the same and most of the terminology is the same. We
+have retained all of the key topics from the first edition. But there are some
+useful additions and changes.
+Unlike the first edition, we do give an introduction to homotopy theory
+in a section on the fundamental group. The section on acyclic models has
+been completely revamped to make it more accessible to the reader. We have
+collected together at the end some very limited biographical information about
+each person mentioned in the text. There is also a short list of additional
+readings, mostly chosen from books published after the first edition. Another
+new feature is a very detailed Index of Notation. And the main Index for
+the book is now also very detailed. Finally, we have added quite a number of
+exercises. Most of these are in the nature of drill.
+Organization of this book
+The first two chapters are based on simplicial homology—the most concrete of
+homology theories—so they should be quite accessible to students. The third
+chapter introduces material that is more abstract, including the Eilenberg–
+Steenrod Axioms. The fourth chapter introduces the singular homology theory
+and many interesting applications. CW complexes appear as a computational
+tool. For a one-semester course, these first four chapters would be suitable.
+Sections marked with asterisks may be considered optional for this one-
+semester course. Of course, the applications seem to the authors to be of great
+interest, so while optional, the choice may well be to cover some or all of them.
+Cohomology theory is introduced in the fifth chapter, culminating with
+the cohomology ring. The sixth chapter introduces the tensor product and
+adds to the treatment of homology with arbitrary coefficients mentioned
+in an optional section in the first chapter. While likely too much for a
+xi

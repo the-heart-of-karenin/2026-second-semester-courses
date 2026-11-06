@@ -1,0 +1,57 @@
+102
+Elements of Algebraic Topology
+One can check that this set is convex. Therefore, since it contains all the
+vertices of σ, it must contain σ. Then |x −vi| ≤ℓfor x ∈σ.
+Next we show that |x −z| ≤ℓfor all x, z ∈σ so that diam σ ≤ℓ. Given
+x, consider the closed neighborhood C(x; ℓ). This set contains all the vertices
+of σ, by the result of the preceding paragraph. Being convex, it contains σ.
+Thus |x −z| ≤ℓfor all x, z ∈σ.
+Step 2: We show that if σ has dimension p, then for every z ∈σ,
+|σ −z| ≤
+p
+p + 1diam σ .
+For this purpose, we compute
+|v0 −σ|
+=
+v0 −
+p
+
+i=0
+1
+p + 1vi
+
+≤
+p
+
+i=0
+1
+p + 1|v0 −vi|
+≤
+p
+p + 1 max |v0 −vi| ≤
+p
+p + 1diam σ .
+A similar computation holds for |vj −σ|. Therefore the closed neighborhood of
+σ of radius p/(p+1)diam σ contains all vertices of σ. Being convex, it contains
+σ itself.
+Step 3: We show that if σ is a p-simplex and τ is a simplex in the first
+barycentric subdivision of σ, then
+diam τ ≤
+p
+p + 1diam σ .
+We proceed by induction. The result is trivial for p = 0. Suppose now that it
+is true in dimensions less than p. Let σ be a p-simplex. In view of Lemma 2.3.9
+and of Step 1 above, it suffices to show that if s and s′ are faces of σ such
+that s ≻s′, then
+|s −s ′| ≤
+p
+p + 1diam σ .
+If s equals σ itself, then this inequality follows from Step 2. If instead s is a
+proper face of σ of dimension q, then
+|s −s ′| ≤
+q
+q + 1diam s ≤
+p
+p + 1diam σ .
+The first inequality follows by the induction hypothesis, and the second from
+the fact that f(x) = x/(x + 1) is increasing for x > 0.

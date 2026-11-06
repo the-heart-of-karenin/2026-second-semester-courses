@@ -1,0 +1,43 @@
+Duality in Manifolds
+521
+Such a map Φ induces a homomorphism, called the direct limit of the homo-
+morphisms ϕα:
+Φ : dir lim α∈J Gα −→dir lim γ∈K Hγ .
+→
+It maps the equivalence class of gα ∈Gα to the equivalence class of ϕα(gα).
+EXAMPLE 8.13.7 Let {Gα, fαβ} be a direct system of abelian groups and
+homomorphisms. Let H be an abelian group. If, for each α, one has a homo-
+morphism ϕα : Gα →H and if ϕβ ◦fαβ = ϕα whenever α < β, then one has
+an induced homomorphism
+Φ : dir lim α∈J Gα −→H .
+→
+It is a special case of the preceding construction, in which the second direct
+system consists of the single group H.
+EXAMPLE 8.13.8 Suppose that one has a sequence of abelian groups and
+homomorphisms
+G1
+f1
+−→G2
+f2
+−→G3 −→· · · .
+It becomes a direct system with index set J = Z+, the positive integers, if we
+define
+fmn = fn−1 ◦fn−2 ◦· · · ◦fm
+whenever m < n.
+For example, let each group Gi equal the integers. Let µ : Z →Z be
+multiplication by 2. If each map fi equals µ, then one has the direct system
+Z µ
+−→Z µ
+−→· · · .
+Its direct limit is readily seen to be isomorphic to the group H of dyadic
+rationals [which is the additive group of all rationals of the form m/2n for m
+and n integers]. Define
+ϕn : Gn →H
+by the equation ϕn(m) = m/2n. Then one checks that ϕn ◦fn−1 = ϕn−1. It
+is easy to check that Φ→is both injective and surjective.
+Definition 8.13.9 If J is a directed set, then a subset J0 of J is said to be
+cofinal in J if for each α ∈J there exists a δ ∈J0 with α < δ.
+Lemma 8.13.10 Suppose that one is given a direct system {Gα, fαβ} of
+abelian groups and homomorphisms, indexed by the directed set J. If J0 is
+cofinal in J, then J0 is a directed set, and inclusion induces an isomorphism
+dir lim α∈J0Gα ∼= dir lim α∈JGα .

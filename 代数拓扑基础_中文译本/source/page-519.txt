@@ -1,0 +1,43 @@
+504
+Elements of Algebraic Topology
+M \ Bd M
+N
+M
+j
+are homotopy equivalences. Hence so is j.
+The first of the two isomorphisms stated in our theorem now follows from
+the naturality diagram of Theorem 8.10.10, setting A = Bd M.
+We now derive the other isomorphism. Let us triangulate (M, Bd M). The
+space Bd M is a union of simplices of M [by Theorem 4.8.11]. Being an n −1
+manifold, it is the union of (n −1)-simplices. Now we claim that each (n −1)-
+simplex s of Bd M is a face of exactly one n-simplex σ of M. It must be a
+face of at least one such simplex, because m is a union of n-simplices. And it
+cannot be a face of more than one, since by Lemma 8.3.2,
+Hn(M, M \ s ) ∼= H0(Lk(s, M)) ,
+and the former group vanishes because s is a point of Bd M.
+Suppose now that γ is an orientation cycle for (M, Bd M). Then γ is a
+sum of all the n-simplices of M. Since each (n −1)-simplex of Bd M is the
+face of exactly one n-simplex of M, the chain ∂γ has coefficient ±1 on each
+(n −1)-simplex of Bd M. Since ∂γ is a cycle, it must be an orientation cycle
+for Bd M.
+Let Γ = {γ}. Then the class ∂∗Γ = {∂γ} is an orientation class for Bd M.
+Consider the following diagram:
+Hk−1(BdM)→Hk(M, BdM) →Hk(M) →Hk(Bd M)→Hk+1(M, Bd M)
+Hn−k(BdM)→Hn−k(M)→Hn−k(M, BdM)→Hn−k−1(BdM)→Hn−k−1(M)
+⌢∂∗Γ
+⌢Γ
+⌢Γ
+⌢∂∗Γ
+⌢Γ
+where all the groups are assumed to have G coefficients. It is easy to check
+that this diagram commutes up to sign. The first and fourth vertical maps are
+isomorphisms by Poincar´e duality, and the second and fifth are isomorphisms
+by Poincar´e–Lefschetz duality. Therefore the third map is an isomorphism as
+well.
+The same argument applies if M is non-orientable provided one replaces
+G by Z/2 and Γ by Γ(2).
+As an application of Poincar´e–Lefschetz duality, we consider the following
+question: Given a compact n-manifold, under what conditions is it the bound-
+ary of a compact n + 1 manifold M? There is an entire theory that deals with
+this question. It is called cobordism theory. Here we prove just one elementary
+result.

@@ -1,0 +1,154 @@
+\section{帽积}
+\sourcepage{468--469}
+为给出 Poincaré 对偶的第二种证明，先讨论一个纯代数性质的运算，称为上同调类与同调类的\emph{帽积}（cap product）。其定义形式类似第 5.9 节的杯积。它与对偶定理的联系将很快表明其用途。以下 $R$ 为有单位元的交换环。
+
+\entry{定义}{8.6.1}设 $X$ 是拓扑空间。定义
+\[\mathcal S^p(X;R)\otimes\mathcal S_{p+q}(X;R)\xrightarrow{\frown}\mathcal S_q(X;R)\]
+如下：若 $T:\Delta_{p+q}\to X$ 为奇异单形，$a\in R$，令
+\[
+c^p\frown(T\otimes a)=T\ell(\epsilon_0,\ldots,\epsilon_q)
+\otimes a\langle c^p,T\ell(\epsilon_q,\ldots,\epsilon_{p+q})\rangle.
+\]
+所得链称为上链 $c^p$ 与链 $T\otimes a$ 的帽积。大致说，就是取 $T$ 在前 $q$ 维面上的限制，系数为 $a$ 乘以上链在后 $p$ 维面上的值。
+
+与杯积一样，也有其他系数版本，包括
+\[
+\mathcal S^p(X;G)\otimes\mathcal S_{p+q}(X;\Z)\to\mathcal S_q(X;G),\qquad
+\mathcal S^p(X;F)\otimes\mathcal S_{p+q}(X;F)\to\mathcal S_q(X;F),
+\]
+其中 $G$ 为阿贝尔群，$F$ 为域，均由同一公式给出，后面也会用到。
+
+\entry{定理}{8.6.2}帽积双线性，且相对于连续映射自然。它满足边缘公式
+\[\partial(d^p\frown c_{p+q})=(-1)^q\delta d^p\frown c_{p+q}+d^p\frown\partial c_{p+q},\]
+并与杯积满足关系
+\[c^p\frown(d^q\frown e_{p+q+r})=(c^p\smile d^q)\frown e_{p+q+r}.\]
+
+\textbf{证明：}双线性容易检验。自然性表述起来比证明更复杂。对连续映射 $f:X\to Y$、$c^p\in\mathcal S^p(Y)$ 和 $d_{p+q}\in\mathcal S_{p+q}(X)$，自然性指
+\[f_\#(f^\#c^p\frown d_{p+q})=c^p\frown f_\#d_{p+q},\]
+这里省略系数。由定义直接计算即可。边缘公式和杯积公式的验证直接但繁琐，细节留给读者。\hfill$\square$
+
+三种系数版本都满足这些公式。对于 $G\otimes\Z\to G$ 的系数配对，杯积公式还必须有意义：三个输入中两个取整数系数，另一个取 $G$ 系数即可。
+
+\entry{定理}{8.6.3}帽积诱导自然同态
+\[H^p(X;R)\otimes H_{p+q}(X;R)\xrightarrow{\frown}H_q(X;R),\]
+且满足
+\[\alpha^p\frown(\beta^q\frown\gamma_{p+q+r})=(\alpha^p\smile\beta^q)\frown\gamma_{p+q+r}.\]
+其他系数版本也有相同结论。
+
+\sourcepage{470}
+\textbf{证明：}若 $d^p$ 是上闭链、$c_{p+q}$ 是闭链，则由边缘公式，其帽积为闭链。还需证明投影
+\[Z^p(X;R)\otimes Z_{p+q}(X;R)\to H^p(X;R)\otimes H_{p+q}(X;R)\]
+的核映入 $B_q(X;R)$。该核由 $B^p\otimes Z_{p+q}$ 和 $Z^p\otimes B_{p+q}$ 的像生成，而边缘公式给出
+\[
+\delta d^{p-1}\frown z_{p+q}=(-1)^{q+1}\partial(d^{p-1}\frown z_{p+q}),\qquad
+z^p\frown\partial c_{p+q+1}=\partial(z^p\frown c_{p+q+1}).
+\]
+两式均为边界，所以运算定义良好。自然性和杯积公式随即得到。\hfill$\square$
+
+\subsection*{与 Kronecker 指数的关系}
+在同调、上同调层次，自然性表示为
+\[f_*(f^*\alpha\frown\gamma)=\alpha\frown f_*\gamma.\]
+它与 Kronecker 指数的自然性形式相似，二者确实有联系。回顾第 5.6 节，Kronecker 指数
+\[\langle\ ,\ \rangle:H^p(X;G)\otimes H_p(X)\to G\]
+由上链在链上的求值诱导。
+
+\entry{定理}{8.6.4}设 $\epsilon_*:H_0(X;G)\to G$ 是增广诱导的同态，$X$ 道路连通时它为同构。则 Kronecker 指数等于复合
+\[H^p(X;G)\otimes H_p(X)\xrightarrow{\frown}H_0(X;G)\xrightarrow{\epsilon_*}G.\]
+
+\sourcepage{471}
+\textbf{证明：}增广 $\epsilon:C_0\to\Z$ 诱导 $C_0\otimes G\to\Z\otimes G\cong G$，把边界映为零，所以诱导 $\epsilon_*$。对 $T:\Delta_p\to X$，
+\[
+\epsilon(c^p\frown T)=\epsilon\bigl(T\ell(\epsilon_0)\otimes
+\langle c^p,T\ell(\epsilon_0,\ldots,\epsilon_p)\rangle\bigr)=\langle c^p,T\rangle.
+\]
+结论得证。\hfill$\square$
+
+定义 Kronecker 映射 $\kappa:H^p(X;G)\to\operatorname{Hom}(H_p(X),G)$，把 $\alpha$ 映到 $\langle\alpha,\cdot\rangle$，可以更方便地表述自然性。帽积也有相应形式：把 $\gamma\in H_{p+q}(X;R)$ 映到同态 $\frown\gamma$，得到
+\[
+\begin{array}{ccc}
+H_{p+q}(X;R)&\longrightarrow&\operatorname{Hom}(H^p(X;R),H_q(X;R))\\
+\downarrow f_*&&\downarrow\operatorname{Hom}(f^*,f_*)\\
+H_{p+q}(Y;R)&\longrightarrow&\operatorname{Hom}(H^p(Y;R),H_q(Y;R)).
+\end{array}
+\]
+该图交换；右侧把 $u$ 映到 $f_*\circ u\circ f^*$。实际应用中常采用这一自然性表述。
+
+\subsection*{单纯帽积}
+与杯积一样，为便于计算，需要单纯理论中的公式。
+
+\entry{定义}{8.6.5}选取复形 $K$ 顶点集上的偏序，使每个单形的顶点被线性排序。定义\emph{单纯帽积}
+\[C^p(K;R)\otimes C_{p+q}(K;R)\to C_q(K;R)\]
+为
+\[
+c^p\frown([v_0,\ldots,v_{p+q}]\otimes a)
+=[v_0,\ldots,v_q]\otimes a\langle c^p,[v_q,\ldots,v_{p+q}]\rangle.
+\]
+
+\entry{定理}{8.6.6}单纯帽积满足定理 8.6.2 的边缘公式和杯积公式。它诱导的同态
+\[H^p(K;R)\otimes H_{p+q}(K;R)\to H_q(K;R)\]
+在单纯与奇异理论的标准同构下对应于奇异帽积。
+
+\sourcepage{472}
+\textbf{证明：}设 $\eta:C_p(K)\to\mathcal S_p(|K|)$ 为第 4.7 节的链映射，它诱导两种理论的同构。它是到一个直和分量上的单同态，因此对偶 $\overline\eta$ 为满射。给定 $c^p$，取 $d^p$ 使 $\overline\eta(d^p)=c^p$。我们先验证
+\[\eta(c^p\frown c_{p+q})=d^p\frown\eta(c_{p+q}).\]
+对 $v_0<\cdots<v_{p+q}$，直接计算：
+\begin{align*}
+\eta(c^p\frown([v_0,\ldots,v_{p+q}]\otimes a))
+&=\ell(v_0,\ldots,v_q)\otimes a\langle c^p,[v_q,\ldots,v_{p+q}]\rangle\\
+&=\ell(v_0,\ldots,v_q)\otimes a\langle d^p,\ell(v_q,\ldots,v_{p+q})\rangle\\
+&=d^p\frown\eta([v_0,\ldots,v_{p+q}]\otimes a).
+\end{align*}
+最后一步用到线性单形在前面上的限制公式。
+
+边缘与杯积公式既可直接计算，也可由奇异公式推导。例如对所需边缘公式的两边应用 $\eta$，就得到已知等式
+\[
+\partial(d^p\frown\eta(c_{p+q}))
+=(-1)^q\delta d^p\frown\eta(c_{p+q})+d^p\frown\partial\eta(c_{p+q}).
+\]
+因 $\eta$ 为单射，原公式成立。杯积公式同理，另需使用 $\overline\eta$ 与杯积交换。\hfill$\square$
+
+\subsection*{相对帽积}
+最一般的相对帽积是
+\[H^p(X,A)\otimes H_{p+q}(X,A\cup B)\longrightarrow H_q(X,B),\]
+当 $\{A,B\}$ 为切除偶时有定义。这里省略系数。我们只需 $A$ 或 $B$ 为空以及 $A=B$ 的情形，即
+\[
+\begin{array}{rcl}
+H^p(X)\otimes H_{p+q}(X,B)&\to&H_q(X,B),\\
+H^p(X,A)\otimes H_{p+q}(X,A)&\to&H_q(X),\\
+H^p(X,A)\otimes H_{p+q}(X,A)&\to&H_q(X,A).
+\end{array}
+\]
+\sourcepage{473--474}
+它们的存在容易证明。设 $c^p\in\mathcal S^p(X)$、$d_{p+q}\in\mathcal S_{p+q}(X)$。若 $d_{p+q}$ 承载于 $B$，其帽积也承载于 $B$，故得到第一种运算。若 $c^p$ 在所有承载于 $A$ 的链上为零，而 $d_{p+q}$ 承载于 $A$，则帽积为零，得到第二种运算。第三种是第二种再复合投影 $H_q(X)\to H_q(X,A)$。
+
+边缘公式和杯积公式仍然成立，所以在相对同调、上同调层次得到自然双线性映射。单纯理论也有相应相对帽积，只需重复绝对情形的论证。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 令 $d_{p+q}=T\otimes a$，直接计算验证定理 8.6.2 的自然性。
+\item 令 $c_{p+q}=T\otimes a$，将 $(-1)^q\delta d^p\frown c_{p+q}$ 与 $d^p\frown\partial c_{p+q}$ 相加，验证边缘公式。大多数项抵消，剩下
+\[
+\sum_{i=0}^{q}(-1)^i T\ell(\epsilon_0,\ldots,\widehat\epsilon_i,\ldots,\epsilon_q)
+\otimes a\langle d^p,T\ell(\epsilon_q,\ldots,\epsilon_{p+q})\rangle.
+\]
+其中 $i=q$ 项来自第一部分，$i<q$ 项来自第二部分。\translatornote{原文最后一个面中的末下标印作 $p+1$，按维数应为 $p+q$。}
+\item 令 $e_{p+q+r}=T\otimes a$，直接计算验证杯积公式。
+\item 设 $T$ 为环面，$\alpha,\beta$ 为 $H^1(T)$ 的通常生成元，$\Gamma,\Lambda$ 分别生成 $H_2(T),H^2(T)$（例 5.10.5）。
+\begin{enumerate}[label=(\alph*)]
+\item 计算 $\alpha\frown\Gamma$ 与 $\beta\frown\Gamma$，并画图。
+\item 计算 $\Lambda\frown\Gamma$。
+\item 验证 $\alpha\frown(\beta\frown\Gamma)=(\alpha\smile\beta)\frown\Gamma$。
+\end{enumerate}
+\translatornote{原文 (a) 的第二个运算符误印为杯积；由输入维数应为帽积。}
+\item 设 $P^2$ 为射影平面，$\Gamma_{(2)}$ 是 $H_2(P^2;\Z/2)$ 的非零元。计算同态 $\frown\Gamma_{(2)}$ 在 $H^i(P^2;\Z/2)$（$i=1,2$）上的值。
+\item 设 $(X,A)$ 已三角剖分，$\alpha\in H_n(X,A)$，故 $\partial_*\alpha\in H_{n-1}(A)$。考虑两条正合列中的对应四项
+\[
+\begin{array}{ccccccc}
+H^p(X,A)&\to&H^p(X)&\to&H^p(A)&\to&H^{p+1}(X,A)\\
+\downarrow\frown\alpha&&\downarrow\frown\alpha&&\downarrow\frown\partial_*\alpha&&\downarrow\frown\alpha\\
+H_{n-p}(X)&\to&H_{n-p}(X,A)&\to&H_{n-p-1}(A)&\to&H_{n-p-1}(X).
+\end{array}
+\]
+证明各方块在相差一个符号的意义下交换，并确定符号。
+\item 用范畴论给出帽积的定义。
+\end{enumerate}

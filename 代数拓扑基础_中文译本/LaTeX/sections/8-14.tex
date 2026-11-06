@@ -1,0 +1,37 @@
+\section{Alexander--Pontryagin 对偶}
+\sourcepage{531--532}
+现在证明推广的 Alexander 对偶。它适用于球面中任意闭子集，而不限于多面体。作为应用，得到比此前更一般的 Jordan 曲线定理。
+
+\entry{定理}{8.14.1（Alexander--Pontryagin 对偶）}若 $A$ 是 $S^n$ 的非空真闭子集，则
+\[\check{\widetilde H}^{\,k}(A)\cong\widetilde H_{n-k-1}(S^n\setminus A).\]
+左边为 Čech 上同调，右边为奇异同调。
+
+\textbf{证明：}选取球面剖分 $X$，细到不是每个单形都与 $A$ 相交。令 $A_m$ 为 $\operatorname{sd}^mX$ 中所有与 $A$ 相交的单形及其面组成的子复形。则 $|A_m|$ 为非空真多面体，递减且交为 $A$。
+
+自然 Alexander 对偶给出相容同构
+\[\alpha_m:\widetilde H^k(A_m;G)\to\widetilde H_{n-k-1}(X\setminus|A_m|;G),\]
+因而诱导两端直极限的同构。左端极限由定理 8.13.16 等于约化 Čech 上同调。右端由奇异同调的紧支集性质等于补空间的约化奇异同调：每个奇异闭链承载于紧集，故位于某个递增开集 $X\setminus|A_m|$；若两个闭链在整个补空间同调，连接它们的有限奇异链也承载于某个这样的开集。所以包含诱导的极限同态既满又单。\hfill$\square$
+
+\entry{推论}{8.14.2}设 $n>1$，$M$ 是紧致连通、可三角剖分的 $(n-1)$ 维流形，$h:M\to S^n$ 是嵌入。则 $M$ 可定向，补空间恰有两个道路分支，且 $h(M)$ 为其公共边界。
+
+\sourcepage{533--534}
+\textbf{证明：}由对偶，$\check H^{n-1}(M)\cong\widetilde H_0(S^n\setminus h(M))$。因 $M$ 可三角剖分，Čech 群与单纯群一致。若不可定向，左端为 $\Z/2$，但右端自由阿贝尔，矛盾。因此可定向，左端为 $\Z$，补空间有两个道路分支 $U,V$。
+
+公共边界的论证同 Jordan 定理：从 $M$ 删去小顶维单形的内部，所得 $M_0=h(M\setminus\Int s)$ 不分割球面，因为
+\[\widetilde H_0(S^n\setminus M_0)\cong\check H^{n-1}(M_0)
+\cong H^{n-1}(M_0)=0.\]
+因此可以经过任意小的这种缺口连接两侧，得到公共边界结论。\hfill$\square$
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.90\textwidth]{figures/8-14-1.pdf}
+\caption*{图 8.14.1：单结（overhand knot）}
+\end{figure}
+
+\subsection*{习题}
+\begin{enumerate}
+\item 设 $X$ 为闭拓扑学家正弦曲线，$f:X\to S^n$ 为嵌入。计算 $\widetilde H_i(S^n\setminus f(X))$。
+\item 证明若把 Čech 上同调换成奇异上同调，Alexander--Pontryagin 对偶不成立。
+\item 证明 Klein 瓶与射影平面均不能嵌入 $\R^3$，但都可嵌入 $\R^4$。〔提示：从射影平面删去一个开圆盘，剩余部分是什么？〕
+\item 若 $A,B$ 为 $S^n$ 的同胚闭子集，证明对所有 $i$，$H_i(S^n\setminus A)\cong H_i(S^n\setminus B)$。注意补空间本身不一定同胚。图 8.14.1 给出圆在三维球面中的一个嵌入，称为单结，其补空间与标准圆嵌入的补空间同调群相同，但基本群不同，故不同胚（见 [CF77] 第 6 章）。
+\item 说明推论 8.14.2 为何推广了 Jordan 曲线定理，并说明它为何不与 Alexander 角状球面矛盾（第 4.9 节）。
+\end{enumerate}

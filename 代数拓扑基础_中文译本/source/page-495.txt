@@ -1,0 +1,37 @@
+480
+Elements of Algebraic Topology
+(b) Show that there is no map f : Xn →Ym satisfying (∗).
+The case of maps f : Ym →Xn will be considered in the exercises
+of the next section.
+8.8
+∗Application: Cohomology Rings of Manifolds
+In this section, we assume familiarity with the projective spaces [Section 4.14].
+We also use the universal coefficient theorem for cohomology [Section 7.3].
+We now apply the Pioncar´e duality theorem to the problem of computing
+the cohomology ring of a manifold. While we cannot compute the cohomology
+ring of every compact manifold, the theorem we shall prove is strong enough to
+enable us to compute the cohomology rings of the real and complex projective
+spaces. This computation leads, in turn, to proofs of such classical theorems
+of topology as the Borsuk-Ulam theorem and the so-called “Ham-Sandwich
+Theorem.”
+Definition 8.8.1 Let A and B be free abelian groups of the same rank. Let
+C be an infinite cyclic group. We say that a homomorphism
+f : A ⊗B →C
+is a dual pairing if there are bases a1, . . . , am for A and b1, . . . , bm for B so
+that
+f(ai ⊗bj) = δijγ
+for all i, j = 1, . . . , m, where γ is a generator of C.
+Theorem 8.8.2 Let X be a compact, connected, triangulable, orientable ho-
+mology n-manifold. Let T k(X) denote the torsion subgroup of Hk(X). The
+cup product operation induces a homomorphism
+Hk(X)
+T k(X) ⊗Hn−k(X)
+T n−k(X) →Hn(X)
+that is a dual pairing.
+Proof: Let α ∈Hk(X) and β ∈Hn−k(X). If α is an element of finite order,
+then so is α ⌣β. Since Hp(X) is infinite cyclic, we see that α ⌣β = 0. A
+similar remark applies if β has finite order. Therefore [by Lemma 6.2.5], the
+cup product induces a homomorphism
+Hk(X)
+T k(X) ⊗Hn−k(X)
+T n−k(X) →Hn(X) .

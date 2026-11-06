@@ -1,0 +1,53 @@
+14
+Elements of Algebraic Topology
+The vertex map f from K(0) to L(0) determines the extension g from |K|
+to |L|. Of course the restriction of g to the vertices K(0) brings us back to the
+original map f. Sometimes we will use only g [or only f] for both maps when
+no confusion will result.
+Observe that, provided v0, v1, . . . , vn span a simplex of K, the formula for
+g remains valid even if the points v0, v1, . . . , vn are not distinct. It is essential
+that the ti be non-negative and that they sum to 1. One sees that this is true,
+again by collecting terms.
+The composition of simplicial maps g : |K| →|L| and h : |L| →|M|
+is again a simplicial map. We see that this is true as follows: Suppose σ is a
+simplex of K spanned by the vertices v0, v1, . . . , vn. By hypothesis, the vertices
+g(v0), g(v1), . . . , g(vn) span a simplex of L whether they are distinct or not.
+Likewise, the vertices h(g(v0)), h(g(v1)), . . . , h(g(vn)) span a simplex of M,
+again whether they are distinct or not. For x in σ, we have x =  tivi, where
+ti ≥0 and  ti = 1, so we use the formula for g to obtain
+h(g(x)) = h
+ n
+
+i=0
+tig(vi)
+
+=
+n
+
+i=0
+tih(g(vi)) .
+Lemma 1.3.18 Suppose that f : K(0) →L(0) is a bijective correspondence
+such that the vertices v0, v1, . . . , vn of K span a simplex of K if and only if
+f(v0), f(v1), . . . , f(vn) span a simplex of L. Then the induced simplicial map
+g : |K| →|L| is a homeomorphism.
+The map g is called a simplicial homeomorphism, or an isomorphism, of
+K with L.
+Proof: Each simplex σ of K is mapped by g onto a simplex τ of the same
+dimension as σ. We need only show that the linear map h : τ →σ induced by
+the vertex correspondence f −1 is the inverse of the map g : σ →τ. For that
+we note that if x =  tivi, then g(x) =  tif(vi) by definition, so
+h[ g(x) ] = h
+  tif(vi)
+
+=  tif −1[ f(vi) ] =  tivi = x.
+Corollary 1.3.19 Let ∆N denote the complex consisting of an N-simplex
+and its faces. If K is a finite complex, then K is isomorphic to a subcomplex
+of ∆N for some N.
+Proof: Let v0, v1, . . . , vN be the vertices of K. Choose a0, a1, . . . , aN to be
+geometrically independent points in RN, and let ∆N consist of the N-simplex
+they span, along with all its faces. The vertex map f(vi) = ai induces an
+isomorphism with a subcomplex of ∆N.
+General Simplicial Complexes
+Our insistence that a simplicial complex K must lie in RN for some N puts
+a limitation on the cardinality of K and on the dimension of the simplices of
+K. We now remove these restrictions.

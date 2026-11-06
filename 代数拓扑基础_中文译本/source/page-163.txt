@@ -1,0 +1,30 @@
+148
+Elements of Algebraic Topology
+C
+D
+E
+Figure 2.10.1
+(b) Let f and g be as in part (a). Show that if f ≃f ′ and g ≃g′,
+then f ′ and g′ have fixed points.
+(c) Find a map h : S →S that has no fixed points.
+5. If M is a compact, smooth surface in Rn, and if v(x) is a tangent
+vector field to M, then it is a standard result of differential geometry
+that for some ϵ > 0 there is a continuous map
+F : M × (−ϵ, ϵ) →M
+having the property that, for each x0, the curve
+t →F(x0, t)
+passes through the point x0 when t = 0 with velocity vector v(x0).
+Furthermore, if v(x)̸ = 0 for all x, then there is a δ > 0 such that
+F(x0, t)̸ = x0 for all 0 < |t| < δ.
+(a) Using these facts, show that if M has a non-zero tangent vector
+field, then χ(M) = 0.
+(b) Determine which compact surfaces have non-zero tangent vec-
+tor fields.
+6. Suppose that B is a finite collection of polygons in R3, each two of
+which intersect in at most a common edge or a common vertex, as
+in Definition 2.10.9.
+(a) Let |B| be the union of the elements of B. Show that the Euler
+number of B is given by
+χ(B) = (# faces) −(# edges) + (# vertices) .
+[Hint: Subdivide B into a simplicial complex by starring from
+an interior point of each face.]

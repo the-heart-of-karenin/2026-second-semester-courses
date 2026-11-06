@@ -1,0 +1,34 @@
+Singular Homology Theory
+239
+W1
+p
+q
+y
+x
+U
+C2
+Figure 4.9.3
+and contain a point of each of them, contrary to the fact that the image set
+of α is connected. Let y be a point of W 1 \ W1 lying on the path α. Then y
+lies in C. Since y does not lie in C2, it must lie in C1 and hence in U. Thus U
+intersects W 1 \ W1 in the point y, as desired.
+The equator in Sn is a homeomorphic copy of Sn−1. The two connected
+components of its compliment are homeomorphic to open balls and their clo-
+sures are n-cells. So under the hypotheses of the preceding theorem, one might
+conjecture that if W1 and W2 are the components of Sn \ C, where C is an
+n−1 sphere, then the sets W 1 and W 2 would be n-cells. This is true for n = 2,
+and is known as Schoenflies Theorem [a proof may be found in [New51]], but
+for n > 2 additional hypotheses are needed. The result for n ≥3 is known
+as the Generalized Schoenflies Theorem. It was proved independently by M.
+Brown and B. Mazur. The relevant papers are [Maz59], [Maz61], [Bro60], and
+[Mor60].
+The difficulty in dimensions 3 and higher was discovered by J. W. Alexan-
+der in 1924 [in [Ale24]]. He constructed a surface that later came to be known
+as the Alexander horned sphere. The construction starts by removing a section
+from a torus as shown at the top of Figure 4.9.4. The two holes are patched
+with discs, so that the surface is homeomorphic to a sphere. Alexander then
+took two smaller partial tori and attached one to each disc by putting a tube
+from a small hole in the disc to a hole in the small partial torus that is be-
+ing added. This process was then repeated infinitely often. The lower part of
+Figure 4.9.4 showing the smaller partial tori is from Alexander’s original pa-
+per. [The labels in Alexander’s figure have been masked to avoid clutter.] The

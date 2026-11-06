@@ -1,0 +1,47 @@
+206
+Elements of Algebraic Topology
+Theorem 4.4.5 Let A be a collection of subsets of X whose interiors cover
+X. Given T : ∆p →X, there is an m such that each term of sdm T is A-small.
+Proof: It follows from the preceding lemma that if L is a linear homeo-
+morphism of ∆p with the p-simplex σ, then each term of sdm L is a linear
+homeomorphism of ∆p with a simplex in the mth barycentric subdivision of
+σ.
+Let us cover ∆p by the open sets T −1(Int A), for A ∈A. Let λ be a
+Lebesgue number for this open cover [see Lemma 2.4.1]. Choose m so that
+each simplex in the mth barycentric subdivision of ∆p has diameter less than
+λ. By the preceding remark, each term of sdm ip is a linear singular simplex
+on ∆p whose image set has diameter less than λ. Then each term of sdm T =
+T#(sdm ip) is a singular simplex on X whose image set lies in an element of
+A.
+Having shown how to chop up singular chains so they are A-small, we now
+show that these A-small singular chains suffice to generate the homology of
+X. First, we need a lemma.
+Lemma 4.4.6 Let m be given. For each space X, there is a homomorphism
+DX : Sp(X) →Sp+1(X) such that for each singular p-simplex T of X,
+∂DXT + DX∂T = sdm T −T .
+(∗)
+Furthermore, DX is natural, that is, if f : X →Y then f# ◦DX = DY ◦f#.
+Proof: If T : ∆0 →X is a singular 0-simplex, define DXT = 0. Formula (∗)
+and naturality follow trivially. Now for p > 0 we assume that DX is defined,
+satisfying (∗) and naturality, for all spaces in all dimensions less than p. We
+proceed by a method similar to that used in the proof of Lemma 4.3.6, which
+will be formalized in the next section as the “method of acyclic models.”
+We first define DXT in the special case X = ∆p and T = ip, the identity
+map from ∆p to itself. Consider the singular p-chain, cp, on ∆p given by
+cp = sdm ip −ip −D∆p(∂ip) .
+By the usual computation and using the hypothesis that (∗) holds in dimen-
+sions less than p, we see that cp is a cycle. Since ∆p is acyclic in singular
+homology, we can choose D∆p ip to be an element of Sp+1 whose boundary
+equals cp. Then (∗) holds for X = ∆p and T = ip.
+Given an arbitrary singular p-simplex T : ∆p →X, we define
+DXT = T#(D∆p(ip)) .
+Formula (∗) is seen to hold for DX by the usual direct calculation:
+∂DX T
+=
+∂T#(D∆p(ip)) = T#(∂D∆p(ip))
+=
+T#(sdm ip −ip −D∆p(∂ip))
+=
+sdm T#(ip) −T#(ip) −DXT#(∂ip)
+=
+sdm T −T −DX ∂T ,

@@ -1,0 +1,47 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+163
+Lemma 3.3.5 Let h : (K, K0) →(L, L0) be a simplicial map.
+(a) The induced homology homomorphisms h∗give a homomor-
+phism of the exact homology sequence of (K, K0) with that of
+(L, L0).
+(b) If h∗: Hi(K) →Hi(L) and h∗: Hi(K0) →Hi(L0) are isomor-
+phisms for i = p and i = p −1, then
+h∗: Hp(K, K0) →Hp(L, L0)
+is an isomorphism.
+(c) Both these results hold if absolute homology is replaced through-
+out by reduced homology.
+Proof: We know that h# is a chain map, and the following diagram commutes:
+0 −−−−→Cp(K0)
+i#
+−−−−→Cp(K)
+π#
+−−−−→Cp(K)/Cp(K0) −−−−→0
+h#
+h#
+h#
+0 −−−−→Cp(L0)
+i#
+−−−−→Cp(L)
+π#
+−−−−→CP (L)/Cp(L0) −−−−→0 .
+Then (a) follows. To deal with the case of reduced homology, we recall that h#
+is augmentation-preserving, so it gives the desired chain map of the augmented
+chain complexes—provided we define h# : Z →Z as the identity on the chain
+groups in dimension −1. Thus (a) holds for reduced homology.
+Result (b) follows immediately from the Steenrod five lemma.
+The following is an immediate consequence of the last lemma and the
+results of Chapter 2.
+Theorem 3.3.6 The preceding lemma holds for an arbitrary continuous map
+h : (|K|, |K0|) →(|L|, |L0|).
+We described the exact homology sequence of a pair in Theorem 3.2.8,
+and we proved its existence in this section. There is also an exact homology
+sequence of a triple, as stated in the next theorem. Exercise 1 asks you to
+prove its existence.
+Definition 3.3.7 Let X be a complex. If A is a subcomplex of X and B is a
+subcomplex of A, then we call (X, A, B) a simplicial triple or simply a triple
+if the context makes the meaning clear.
+Theorem 3.3.8 (The exact homology sequence of a triple) Let X be
+a complex. Let A be a subcomplex of X. Let B be a subcomplex of A. The
+exact homology sequence of the triple is the following:
+· · · −→Hi(A, B) −→Hi(X, B) −→Hi(X, A) −→Hi−1(A, B) −→· · · .
+The sequence is natural.

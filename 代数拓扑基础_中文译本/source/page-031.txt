@@ -1,0 +1,38 @@
+16
+Elements of Algebraic Topology
+(b) Show that, in general, if a complex K is not locally finite, then
+the space |K| is not locally compact.
+4. Show that the polyhedron of Example 1.3.7 is not metrizable. [Hint:
+Show that the first countability axiom fails.]
+5. If g : |K| →|L| is a simplicial map carrying the vertices of σ onto
+the vertices of τ, show that g maps some face of σ homeomorphically
+onto τ.
+6. Check that the proofs of all eight lemmas of this section apply
+without change to complexes in EJ, if one simply replaces RN by
+EJ throughout.
+7. Let K be a complex. Show that |K| is metrizable if and only if K
+is locally finite. [Hint: The function
+d(x, y) = sup |tv(x) −tv(y)|
+is a metric for the topology of each finite subcomplex of K.]
+8. Let K be a complex. Show that |K| is normal. [Hint: If A is closed
+in |K| and if f : A →[0, 1] is continuous, extend f step-by-step to
+A ∪|K(p)|, using the Tietze extension theorem.]
+9. Let K be a complex in RN. Show that |K| is a subspace of RN
+if and only if each point x of |K| lies in an open set of RN that
+intersects only finitely many simplices of K. Generalize to EJ.
+10. Show that the collection of all simplices in R of the form [1/(n +
+1), 1/n] for n a positive integer, along with their vertices, is a com-
+plex whose polytope is the subspace (0, 1] of R.
+1.4
+Abstract Simplicial Complexes
+In practice, specifying a polyhedron X by giving a collection of simplices whose
+union is X is not a very convenient way of dealing with specific polyhedra. One
+quickly gets immersed in details of analytic geometry; it is messy to specify
+all the simplices and to make sure they intersect only when they should. It
+is much easier to specify X by means of an “abstract simplicial complex,” a
+notion we now introduce.
+Definition 1.4.1 An abstract simplicial complex is a collection S of finite
+nonempty sets, such that if A is an element of S, then so is every nonempty
+subset of A.
+The element A of S is called a simplex of S; its dimension is one less than
+the number of its elements. Each nonempty subset of A is called a face of A.

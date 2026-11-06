@@ -1,0 +1,37 @@
+124
+Elements of Algebraic Topology
+Theorem 2.7.5 If the maps h, k : |K| →|L| are homotopic, then the homo-
+morphisms h∗, k∗: Hp(K) →Hp(L) are equal. The same holds for reduced
+homology.
+Proof: Let K be a complex. Let M be a complex whose underlying space is
+|K| × I, such that for each σ ∈K, both σ × 0 and σ × 1 are simplices of M.
+Also suppose that σ × I is the polytope of a subcomplex of M.
+Let F : |K| × I →|L| be the homotopy of h to k. Let i, j : |K| →|K| × I
+be the maps i(x) = (x, 0) and j(x) = (x, 1), as shown in Figure 2.7.4. Then i
+and j are simplicial maps of K into the complex M. Furthermore,
+F ◦i = h
+and
+F ◦j = k .
+|K|
+|M|
+i
+j
+F
+|L|
+Figure 2.7.4
+We claim that the chain maps i# and j# induced by i and j are chain
+homotopies. Consider the function Φ assigning to each simplex σ of K the
+subcomplex of M whose polytope is σ × I. Now the space σ × I is acyclic
+because it is homeomorphic to a closed ball. And if σ ≻s, then s × I ⊂σ × I
+so Φ(s) is a subcomplex of Φ(σ). Hence Φ is an acyclic carrier from K to
+M. Furthermore, it carries both i# and j# because both i(σ) = σ × 0 and
+j(σ) = σ × 1 belong to Φ(σ). It follows from Theorem 1.14.10 that i# and j#
+are chain homotopic. We conclude that i∗= j∗. Thus
+h∗= F∗◦i∗= F∗◦j∗= k∗
+as desired.
+This result carries over directly to the relative homology groups. Given
+maps h, k : (|K|, |K0|) →(|L|, |L0|), we say that they are homotopic (as maps
+of pairs of spaces) if there is a homotopy H : |K| × I →|L| of h to k such
+that H maps |K0| × I into |L0|. Now we have the following theorem:
+Theorem 2.7.6 If h and k are homotopic as maps of pairs of spaces, then
+h∗= k∗as maps of relative homology groups.

@@ -1,0 +1,55 @@
+498
+Elements of Algebraic Topology
+lies in σ \ t, then
+x =
+n
+
+i=0
+αivi implies fσ(x) =
+p
+
+i=0
+αi
+λ vi ,
+where λ = p
+i=0 αi. See the proof of Lemma 8.2.2.]
+It is immediate that any two of the functions fσ agree on the common part
+of their domains. Therefore we can define a continuous function
+f : |X| \ |C| →|A|
+that retracts |X| \ |C| onto |A| by the equations
+f(x) =
+
+x
+if x ∈|A|
+fσ(x)
+if x ∈σ \ |C| and σ̸ ∈A .
+The function F(x, t) = (1 −t)x + tf(x) is then the required deformation
+retract.
+The preceding lemma holds without assuming X is finite, but in the infinite
+case it requires some care to show that F is continuous. The problem does
+not arise in the finite case.
+Definition 8.10.2 Let (X, A) be a compact triangulated relative homology
+n-manifold. We say that (X, A) is orientable if it is possible to orient all the
+n-simplices σi of X not in A so that their sum γ =  σi is a cycle of (X, A).
+Such a cycle γ will be called an orientation cycle for (X, A).
+Theorem 8.10.3 (Lefschetz duality) Let (X, A) be a compact, triangu-
+lated, relative homology n-manifold. If (X, A) is orientable, then there are
+isomorphisms
+Hk(X, A; G)
+∼=
+Hn−k(|X| \ |A|; G) ,
+Hk(X, A; G)
+∼=
+Hn−k(|X| \ |A|; G)
+for all G. If (X, A) is not orientable, then these isomorphisms exist for g = Z/2.
+Remark 8.10.4 In the statement of the theorem, the homology and coho-
+mology groups of |X| \ |A| should be interpreted as singular groups, since
+|X|\|A| is not the polytope of a subcomplex of X. [It is triangulable, but that
+we have not yet proved.]
+Proof of the Theorem: Let X∗denote the subcomplex of the first barycen-
+tric subdivision of X consisting of all simplices of sd X that are disjoint from
+|A|. Now |A| is the polytope of a full subcomplex of sd X. By the preceding
+lemma, |X∗| is a deformation retract of |X| \ |A|. Therefore we may replace
+|X| \ |A| by X∗in the statement of the theorem.
+We consider, as in the proof of Poincar´e duality, the collection of blocks
+D(σ) dual to the simplices of X. We shall prove the following:

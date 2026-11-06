@@ -1,0 +1,43 @@
+476
+Elements of Algebraic Topology
+[see Definition 8.4.1]. We orient the simplices of sd X by using this ordering.
+Orient the simplices of X arbitrarily.
+By Step 2, the chain sd γ is the sum of all the oriented n-simplices of sd X
+with signs ±1. Because it is a cycle, sd γ is an orientation cycle for sd X.
+Choose g : sd X →X to be a simplicial approximation to the identity.
+Consider the diagram
+Cp(X)
+Dn−p(X)
+Cp(sd X)
+Cn−p(sd X)
+ψ
+g#
+j
+⌢sd γ
+where j is inclusion of the dual chain complex of X into the simplicial chain
+complex of sd X. We shall prove that the composite of g# and ⌢sd γ carries
+Cp(X) isomorphically onto the subgroup Dn−p(X) of Cn−p(sd X). It follows
+that there is a unique isomorphism ψ making this diagram commute.
+First we prove the preliminary result that if σ is an oriented p-simplex of
+X, then g#(σ∗) ⌢sd γ equals the sum of all (n −p)-simplices of sd X lying
+in the block D(σ) with coefficients ±1.
+We prove this fact by direct computation. Given σ, there is by Step 1
+exactly one p-simplex t of sd X that is mapped onto σ by g. Then
+g#(σ∗) = ±t∗,
+the sign depending on the chosen orientation. Let us compute the cap product
+t∗⌢sd γ.
+Recall the formula for the simplicial cap product. Given an ordering of the
+vertices of a complex K, and given a cochain cp of K and a (p + q)-simplex τ
+of K, the chain Cp ⌢τ equals the “front q-face” of γ multiplied by the value
+of cp on the “back p-face” of τ.
+Now t is a p-simplex of sd X of the form
+t = [sp, . . . , s0] ,
+where sp = σ and si has dimension i for each i. Furthermore, sd γ is the sum
+of all the n-simplices of sd X. Each is of the form
+τ = [σn, . . . , σ0] ,
+where σi has dimension i for each i. The chain t∗⌢τ vanishes unless t equals
+the back face of τ. That is, unless
+t = [sp, . . . , s0] = [σp, . . . , σ0] .
+In this case, t∗⌢τ equals [σn, . . . , σp]. It follows that t∗⌢sd γ is the sum,
+with signs ±1, of all simplices of sd X of the form
+[σn, . . . , σp]

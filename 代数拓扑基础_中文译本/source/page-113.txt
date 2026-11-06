@@ -1,0 +1,41 @@
+98
+Elements of Algebraic Topology
+2.3
+Barycentric Subdivision
+We show here that a finite complex may be “subdivided” into simplices that
+are as small as we wish. We will use this result in our consideration of simplicial
+homology, and later on in our discussion of singular homology in Chapter 4.
+Definition 2.3.1 Let K be a geometric complex in EJ. A complex K′ is said
+to be a subdivision of K if
+(1) Each simplex of K′ is contained in a simplex of K.
+(2) Each simplex of K is the union of finitely many simplices of K′.
+These conditions imply that the union of the simplices of K′ equals the
+union of the simplices of K. That is, |K′| and |K| are equal as sets. The
+finiteness part of condition (2) guarantees that |K′| and |K| are equal as
+topological spaces. This is easy to check.
+Note that if K′′ is a subdivision of K′ and if K′ is a subdivision of K, then
+K′′ is a subdivision of K.
+Observe that if K′ is a subdivision of K, and if K0 is a subcomplex of K,
+then the collection of all simplices of K′ that lie in |K0| is automatically a
+subdivision of K0. We in fact call it the subdivision of K0 induced by K′.
+The following result will be useful in the sequel.
+Lemma 2.3.2 Let K′ be a subdivision of K. Then for each vertex w of K′
+there is a vertex v of K such that
+St(w, K′) ⊂St(v, K) .
+(∗)
+In fact, if σ is the simplex of K such that w ∈Int σ, then this inclusion holds
+precisely when v is a vertex of σ.
+Proof: If the inclusion (∗) holds, then since w belongs to St(w, K′), so w must
+lie in some open simplex of K that has v as a vertex.
+Conversely, suppose that w ∈Int σ and v is a vertex of σ. It suffices to
+show that
+|K| \ St(v, K) ⊂|K| \ St(w, K′) .
+The set on the left-hand side of this last inclusion is the union of all simplices of
+K that do not have v as a vertex. Hence it is also a union of simplices τ of K′.
+No such simplex τ can have w as a vertex, just because w ∈Int σ ⊂St(v, K).
+Thus any such simplex lies in |K| \ St(w, K′).
+EXAMPLE 2.3.3 Let K consist of the 1-simplex [0, 1] and it vertices. Let
+L consist of the 1-simplices [1/(n + 1), 1/n], n = 1, 2, . . . and their vertices,
+along with the vertex 0. Then |L| = |K| as sets but not as topological spaces.
+In fact L satisfies all the conditions for a subdivision except the finiteness part
+of condition (2).

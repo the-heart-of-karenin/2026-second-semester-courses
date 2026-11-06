@@ -1,0 +1,56 @@
+Duality in Manifolds
+505
+Theorem 8.10.13 Let M be a compact, triangulable manifold with bound-
+ary. Suppose that dim M = 2m+1. Assume that Bd M is nonempty and has a
+product neighborhood in M. Then the vector space Hm(Bd M; Z/2) has even
+dimension.
+Proof: Step 1: Consider an exact sequence of vector spaces and linear trans-
+formations
+· · · −→Ak−1
+Ak
+Ak+1 −→· · · ,
+ϕk−1
+ϕk
+where Ak and ϕk are defined for all integers k and dim Ak = 0 for |k| suffi-
+ciently large. We assert that
+rank ϕk
+=
+dim Ak −dim Ak−1 + dim Ak−2 −· · ·
+and
+rank ϕk−1
+=
+dim Ak −dim Ak+1 + dim Ak+2 −· · · .
+Exactness at Ai tells us that
+dim Ai = rank ϕi−1 + rank ϕi .
+Summation gives us the desired equations.
+Step 2: Using Z/2 coefficients, we have an exact sequence of vector spaces
+· · · →Hk(M; Z/2) µk
+−→Hk(Bd M; Z/2) νk
+−→Hk+1(M, Bd M; Z/2) −→· · · .
+Let
+βk
+=
+dim Hk(M; Z/2) ,
+γk
+=
+dim Hk(Bd M; Z/2) ,
+αk+1
+=
+dim Hk+1(M, Bd M; Z/2) .
+We apply Step 1 to this sequence. Beginning at the term Hk(Bd M) and
+summing first to the left and then to the right, we have
+rank νk =
+∞
+
+i=0
+(−1)i(γk−i −βk−i + αk−i) ,
+(∗)
+rank µk =
+∞
+
+i=0
+(−1)i(γk+i −αk+i+1 + βk+i+1) .
+(∗∗)
+Now Lefschetz duality and algebraic duality give us isomorphisms
+Hj(M, Bd M; Z/2) ∼= Hn−j(M; Z/2) ∼= Hn−j(M; Z/2) ,
+Hj(Bd M; Z/2) ∼= Hn−j−1(Bd M; Z/2) ∼= Hn−j−1(Bd M; Z/2) .

@@ -1,0 +1,75 @@
+196
+Elements of Algebraic Topology
+Theorem 4.3.2 There is a homomorphism ∂∗: Hp(X, A) →Hp−1(A), de-
+fined for A ⊂X and all p, such that the sequence
+· · · −→Hp(A)
+i∗
+−→Hp(X)
+π∗
+−→Hp(X, A)
+∂∗
+−→Hp−1(A) −→· · ·
+is exact, where i and π are inclusions. The same holds if reduced homology is
+used for X and A, provided A̸ = ∅.
+A continuous map f : (X, A) →(Y, B) induces a homomorphism of the
+corresponding exact sequences in singular homology, either ordinary or re-
+duced.
+Proof: For the existence of ∂∗and the exact sequence, we apply the “zig-zag
+lemma” [Lemma 3.3.2] to the short exact sequence of chain complexes
+0 −→Sp(A)
+i#
+−→Sp(X)
+π#
+−→Sp(X, A) −→0 ,
+where i : A →X and π : (X, ∅) →(X, A) are inclusions. The naturality of
+∂∗follows from Theorem 3.3.3, once we note that f# commutes with i# and
+π#. The results for reduced homology follow by the same methods used for
+simplicial theory in the proof of Lemma 3.3.5.
+Theorem 4.3.3 If P is a one-point space, then Hp(P) = 0 for p̸ = 0 and
+H0(P) = Z.
+Proof: This result follows from Theorem 4.2.9, once one notes that a one-
+point space in RN is star convex relative to the one and only point in the
+space.
+An explicit proof is the following: There is exactly one singular simplex
+T : ∆p →P in each non-negative dimension, so Sp(P) is infinite cyclic for
+p ≥0. Since
+Tp ◦ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp) = Tp−1 ,
+we have
+∂Tp =
+p
+
+i=0
+(−1)iTp−1 =
+
+0
+if p is odd,
+Tp−1
+if p is even.
+The chain complex S(P) is thus of the form
+∂
+−→S2k(P) ∂
+−→S2k−1(P) ∂
+−→S2k−2(P) ∂
+−→
+0
+−→
+Z
+∼=
+−→
+Z
+0
+−→
+Z
+∼=
+−→
+ending with
+∂
+−→S1(P) ∂
+−→S0(P) −→0
+∼=
+−→
+Z
+0
+−→
+Z
+−→0

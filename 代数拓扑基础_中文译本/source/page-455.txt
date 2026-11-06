@@ -1,0 +1,44 @@
+440
+Elements of Algebraic Topology
+Theorem 7.11.8 If Hi(X) is finitely generated for all i, then the cohomology
+cross product defines a monomorphism of rings
+× : H∗(X) ⊗H∗(Y ) →H∗(X × Y ) .
+If F is a field, then
+× : H∗(X; F) ⊗F H∗(Y ; F) →H∗(X × Y ; F)
+defines an isomorphism of algebras.
+EXAMPLE 7.11.9 Consider the cohomology ring of Sn×Sm, where n, m ≥
+1. Let αn ∈Hn(Sn) and βm ∈Hm(Sm) be generators. Then H∗(Sn × Sm) is
+free of rank 4, with basis 1 × 1, α × 1, 1 × β, and α × β. The only non-trivial
+product of positive dimensional elements is (α × 1) ⌣(1 × β) = α × β.
+In the special case n = m = 1, this space is the torus, and this is the
+cohomology ring we have already computed in Example 5.10.5. Let us picture
+these cohomology classes. Represent the torus by the usual diagram, as in
+Figure 7.11.1. If X denotes the subspace abca, then a generator α for its 1-
+dimensional cohomology is represented by the cocycle x1 = [b, c]∗. Since the
+projection map π1 is simplicial, the cocycle π#
+1 (x1) is the cocycle w1 of T, as
+pictured. This cocycle represents the cohomology class α × 1. Similarly, the
+cocycle z1 pictured in Figure 7.11.2 represents the cohomology class 1 × β,
+where β is represented by the cocycle [d, e]∗of the space Y = adea. We have
+(α × 1) ⌣(1 × β) = α × β, and this class generates H2(T).
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+w1
+a
+b
+c
+a
+π1
+Figure 7.11.1
+EXAMPLE 7.11.10 Consider the cohomology ring of P2 × P2, with Z/2
+coefficients. Let α ∈H1(P2; Z/2) be the nonzero element. Then α2 = α ⌣α

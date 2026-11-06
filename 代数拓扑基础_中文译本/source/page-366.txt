@@ -1,0 +1,49 @@
+Cohomology
+351
+Examples of fields include:
+(v) Z/p, where p is prime.
+(vi) The rationals Q.
+(vii) The real numbers R.
+(viii) The complex numbers C.
+Now suppose A is an additive group and R is a commutative ring with
+unity. We say that A has the structure of a module over R, or A is an R-module,
+if there is a binary operation R × A →A [written as scalar multiplication]
+such that for α, β ∈R and a, b ∈A we have
+(1) α(a + b) = αa + αb.
+(2) (α + β)a = αa + βa.
+(3) α(βa) = (α · β)a.
+(4) 1a = a.
+If A and B are R-modules, then a module homomorphism is a homomorphism
+ϕ : A →B such that ϕ(αa) = αϕ(a) holds, for α ∈R and a ∈A. The kernel
+and cokernel of such a homomorphism have natural R-module structures. In
+the special case where R is a field F, we call A a vector space over F, and we
+call the homomorphism ϕ a linear transformation.
+We shall not have much occasion to deal with modules in this book. Our
+primary concern will be with rings and vector spaces.
+EXAMPLE 5.9.2 Given R, it can always be considered as an R-module
+over itself. More generally, the cartesian product Rn becomes an R-module if
+we define
+α(β1, β2, . . . , βn) = (αβ1, αβ2, . . . , αβn) .
+EXAMPLE 5.9.3 If G is an abelian group, then G has a natural structure
+as a Z-module by defining ng to be the n-fold sum g + g + · · · + g
+
+
+
+n copies
+, as usual.
+Cup Products
+Throughout this section and the next, R will denote a commutative ring with
+unity element 1.
+Definition 5.9.4 Let
+X
+be
+a
+topological
+space.
+Let
+Sp(X; R)
+=
+Hom (Sp(X), R) denote the group of singular p-chains of X, with coefficients
+in R. We define a map
+Sp(X; R) × Sq(X; R) ⌣
+−→Sp+q(X; R)

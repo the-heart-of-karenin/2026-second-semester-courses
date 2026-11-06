@@ -1,0 +1,36 @@
+Singular Homology Theory
+235
+(b) Show that every simplex of K either has dimension m or is the
+face of a simplex of dimension m.
+(c) Show that an (m −1)-simplex s of K is a face of precisely one
+m-simplex of K if s ⊂h−1(Bd M), and it is a face of precisely
+two m-simplices of K otherwise.
+5. Use the fact that S3 is homeomorphic to Bd (B2 × B2) to write S3
+as the union of two solid tori T1, T2 that intersect in their common
+boundary. Compute the Mayer–Vietoris sequence of T1, T2.
+6. Let C be the Cantor ternary set [see Definition 2.3.13] in the real
+line. What is the dimension of C?
+7. Give an example of a set in R3 of dimension 1. How about a set of
+dimension 2?
+4.9
+∗Application: The Jordan Curve Theorem
+Using the basic properties of singular homology, we now prove several classical
+theorems of topology, including the generalized Jordan curve theorem and the
+Brouwer theorem on invariance of domain.
+Definition 4.9.1 If A is a subspace of X, we say that A separates X if the
+space X \ A is not connected.
+We are going to be concerned with the case where X is Rn or Sn, and A is
+closed in X. Since X \ A is then locally path connected, its components and
+path components are identical. In particular, the group H0(X \ A) vanishes if
+and only if X \ A is connected. In general, the rank of H0(X \ A) is one less
+than the number of components of X \ A. We will use this fact freely in what
+follows.
+Definition 4.9.2 A space homeomorphic to the unit k-ball Bk is called a
+k-cell.
+Theorem 4.9.3 Let B be a k-cell in Sn. Then Sn\B is acyclic. In particular,
+B does not separate in Sn
+Proof: Let n be fixed. We proceed by induction on k. First consider the case
+k = 0. Then B is a single point. The space Sn \ B is a single point if n = 0,
+while if n > 0, it is homeomorphic to Rn. In either case, Sn \ B is acyclic.
+We now suppose the theorem holds for a (k −1)-cell in Sn. Let B be a
+k-cell in Sn. Let h : Ik →B be a homeomorphism.

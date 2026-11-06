@@ -1,0 +1,43 @@
+490
+Elements of Algebraic Topology
+dimension. As a consequence, it seems hardly surprising that all efforts to
+extend the intersection product from manifolds to arbitrary polyhedra were
+unsuccessful.
+Nowadays we view the matter differently. We consider the cohomology
+ring as the natural object and view the existence of the homology intersection
+ring for manifolds as a happy accident resulting from the Poincar´e duality
+isomorphism.
+We are not going to study the homology intersection ring in any detail. We
+shall, however, prove one lemma interpreting the ring operation as a geometric
+intersection of cycles. This lemma will enable us to make computations in the
+cohomology rings of lens spaces.
+Notation 8.9.1 Throughout this section, X will denote a compact, con-
+nected, triangulable n-manifold.
+(a) In case X is orientable, we let Γ denote an orientation class for
+X, and we let R denote an arbitrary commutative ring with unity.
+(b) In case X is not orientable, we let Γ, denote the class Γ(2), and
+we let R denote Z/2.
+Definition 8.9.2 We define the intersection product of two homology classes
+of X as follows. Given αp ∈Hp(X; R) and βq ∈Hq(X; R), choose αn−p and
+βn−q so that
+αn−p ⌢Γ = αp
+and
+βn−q ⌢Γ = βq .
+Then define
+αp · βq = (αn−p ∪βn−q) ⌢Γ .
+Note that when X is orientable, the sign of the result depends on the
+orientation class Γ. Notice also that the product of αp and βq has dimension
+p+q−n. This fact makes the connection with geometric intersection plausible,
+for this is just the dimension of the intersection in Rn of a general plane of
+dimension p and a general plane of dimension q.
+Lemma 8.9.3 We use Notation 8.9.1. Let αp and βq be homology classes of
+X. Let p + q = n. Let αp be represented by a cycle cp of sd X that is carried
+by the dual p-skeleton of X. Let βq be represented by a cycle of dq of X.
+Suppose that the carriers of cp and dq meet in a single point, the barycenter
+of the q-simplex σ of X. If dq has coefficient ±a on the simplex σ, and cp has
+coefficient ±b on the dual cell D(σ), then αp · βq is represented [up to sign] by
+the 0-chain ab σ of sd X.
+Proof: Let αq and βp be cohomology classes such that
+αq ⌢Γ = αp
+and
+βp ⌢Γ = βq .

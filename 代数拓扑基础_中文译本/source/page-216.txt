@@ -1,0 +1,43 @@
+Singular Homology Theory
+201
+D∆0(i0) to be an element of S1(∆0 × I) whose boundary is ȷ #(i0) −ı #(i0).
+Then, for general X and T, we define
+DXT = (T × iI)#D∆0(i0) .
+Properties (a) and (b) are proved just as they were in the inductive step.
+Theorem 4.3.7 If f, g : (X, A) →(Y, B) are homotopic, then f∗= g∗. The
+same fact holds in reduced homology if A = B = ∅.
+Proof: Let F : (X ×I, A×I) →(Y, B) be the homotopy between f and g. Let
+i, j : (X, A) →(X × I, A × I) be given by i(x) = (x, 0) and j(x) = (x, 1). Let
+DX : Sp(X) →Sp+1(X × I) be the chain homotopy of the preceding lemma.
+Naturality of DX with respect to inclusion A →X shows that the restriction
+of DX to Sp(A) equals DA. Thus DX carries Sp(A) into Sp+1(A × I), and
+thus induces a chain homotopy
+DX,A : Sp(X, A) →Sp+1(X × I, A × I)
+on the relative level. Formula (a) of Lemma 4.3.6 holds because DX,A is
+induced by DX. Define D to be the composite of DX,A and the homomorphism
+F# : Sp+1(X × I, A × I) →Sp+1(Y, B) .
+Then we compute
+∂D
+=
+∂F#DX,A = F#∂DX,A
+=
+F#(j# −i# −DX,A∂)
+=
+(F ◦j)# −(F ◦i)# −F#DX,A∂
+=
+f# −g# −D∂.
+Definition 4.3.8 Let f : (X, A) →(Y, B). If there is a map g : (Y, B) →
+(X, A) such that f ◦g and g ◦f are homotopic to the appropriate identities
+as maps of pairs, then we call f a homotopy equivalence, and we call g a
+homotopy inverse for f.
+Theorem 4.3.9 Let f : (X, A) →(Y, B).
+(a) If f is a homotopy equivalence, then f∗is an isomorphism in
+relative homology.
+(b) More generally, if f : X →Y and f|A : A →B are homotopy
+equivalences, then f∗is an isomorphism in relative homology.
+Proof: Part (a) is immediate. To prove (b), we examine the long exact ho-
+mology sequences of (X, A) and of (Y, B), and the homomorphism f∗carrying
+one exact sequence to the other. The hypotheses of the theorem tell us that
+f∗: Hp(X) →Hp(Y )
+and
+(f|A)∗: Hp(A) →Hp(B)

@@ -1,0 +1,52 @@
+Homology Groups of a Simplicial Complex
+65
+for some integer k. Hence πβ(x −kxβ) = 0. Consider the set of those indices
+α for which πα(x −kxβ)̸ = 0. [If there are none, then x = kxβ and we are
+through.] All of these indices are less than β, because x and xβ belong to Bβ.
+Furthermore, this set of indices if finite, so it has a largest element γ, which is
+less than β. This means that x −kxβ belongs to Bγ, whence by the induction
+hypothesis, x −kxβ can be written as a linear combination of elements xα
+with each α ≤γ.
+Second, we show that the non-zero elements in the set {xα : α ≤β} are
+independent. Again, this fact is trivial if β is the smallest element of J. In
+general, suppose that
+λα1xα1 + λα2xα2 + · · · + λαkxαk + λβxβ = 0 ,
+where αi < β. Applying πβ, we see that
+λβπβ(xβ) = 0 .
+As before, it follows that either λβ = 0 or xβ = 0. We conclude that
+λβ = 0 if xβ̸ = 0 ,
+λα1xα1 + λα2xα2 + · · · + λαkxαk = 0 .
+The induction hypothesis now implies that λαi = 0 whenever xαi̸ = 0.
+We now prove our basic theorem. First we need a definition.
+Definition 1.12.3 Let G and G′
+be free abelian groups with bases
+a1, a2, . . . , an and a′
+1, a′
+2, . . . , a′
+m, respectively. If f : G →G′ is a homomor-
+phism, then
+f(aj) =
+m
+
+i=1
+λija′
+i
+for unique integers λij. The matrix (λij) is called the matrix of f relative to
+the given bases for G and G′.
+Theorem 1.12.4 Let G and G′ be free abelian groups of ranks n and m,
+respectively; let f : G →G′ be a homomorphism. Then there are bases for G
+and G′ such that, relative to these bases, the matrix of f has the form
+B =
+
+
+b1
+0
+...
+0
+0
+bℓ
+0
+0
+
+
+where bi ≥1 and b1 | b2 | · · · | bℓ.

@@ -1,0 +1,39 @@
+Singular Homology Theory
+299
+EXERCISES
+1. Show that Pn is homeomorphic to the quotient space of B3 obtained
+by identifying x with −x for each x ∈Sn−1.
+2. (a) Show that Pn is an n-manifold and CP n is a 2n-manifold.
+(b) Show more generally that if a finite-dimensional CW complex
+is homogeneous, then it is a manifold.
+3. Let A be a closed region in the plane bounded by a regular n-sided
+polygon. Let B be the suspension of A. Describe L(n, k) as a quo-
+tient space of B. Conclude that B3 and L(n, k) can be triangulated
+so that the quotient map is simplicial.
+4. Follow the suggested steps to prove Theorem 4.14.15.
+Steps:
+(a) Prove the case k ≡±ℓ(mod n) by considering the reflection
+map (z, t) −→(z, −t) in B3.
+(b) For convenience, suppose 1 ≤k < n. Consider n disjoint 3-
+simplices
+a1b1c1d1, a2b2c2d2, . . . , anbncndn ,
+indexed with the elements of Z/n. See Figure 4.14.3. Show that
+L(n, k) can be obtained from these simplices by first pasting
+aibidi
+to
+ai+1bi+1ci+1 ,
+for each i in Z/n, by a linear homeomorphism that preserves
+the order of vertices, and then pasting
+cidibi
+to
+ci+kdi+kai+k ,
+again by a linear homeomorphism that preserves the order of
+vertices.
+(c) Rewrite the simplices of Step (b) in the order
+akbkckdk, a2kb2kc2kd2k, . . . , ankbnkcnkdnk .
+See Figure 4.14.4. Carry out the second pasting operation of
+Step (b), and then carry out the first pasting operation of Step
+(b). Show that this gives a description of L(n, ℓ), where ℓis the
+integer between 1 and n such that kℓ≡1 (mod n).
+(d) Prove the theorem.
+5. Show that L(n, k) is a compact 3-manifold.

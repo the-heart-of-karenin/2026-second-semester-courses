@@ -1,0 +1,57 @@
+144
+Elements of Algebraic Topology
+Now Wp/Bp is a torsion group. Therefore k = n. We compute the trace of ϕ
+on Wp and Bp. Let
+ϕ(αj) =
+
+i
+aijαi
+and
+ϕ(mjαj) =
+
+i
+bij(miαi) ,
+where the summations extend from 1 to n. Then tr(ϕ, Wp) = 
+i aii and
+tr(ϕ, Bp) = 
+i bii by definition. Multiplying the first equation by mj, we
+conclude that mjaij = bijmi for all i and j. In particular, aii = bii for all i.
+Thus tr(ϕ, Wp) = tr(ϕ, Bp).
+Step 6: To complete the proof, we substitute formulas (ii), (iii), and (iv) into
+(i) to obtain the equation
+tr(ϕ, Cp) = tr(ϕ, Bp−1) + tr(ϕ∗, Hp/Tp) + tr(ϕ, Bp) .
+If we multiply this equation by (−1)p and sum over p, then the first and last
+terms on the right-hand side cancel out in pairs. The desired formula is the
+result.
+Definition 2.10.2 The Euler number of a finite complex K is defined, clas-
+sically, by the equation
+χ(K) =
+
+p
+(−1)prank(Cp(K)) .
+In words, the Euler number is the alternating sum of the number of simplices
+of K in each dimension.
+We next show that the Euler number of K is a topological invariant of
+|K|.
+Theorem 2.10.3 Let K be a finite complex. Let βp = rank(Hp(K)/Tp(K)).
+This is the betti number of K in dimension p. Then
+χ(K) =
+
+p
+(−1)pβp .
+Proof: If ϕ
+:
+Cp(K)
+→
+Cp(K) is the identity map, then the ma-
+trix of ϕ with respect to any basis is the identity matrix. We conclude
+that tr(ϕ, Cp)
+=
+rank(Cp). Similarly, because ϕ∗is the identity map,
+tr(ϕ∗, Hp/Tp) = rank(Hp/Tp) = βp. Our formula now follows from Theo-
+rem 2.10.1, the Hopf trace theorem.
+This last theorem has a number of consequences. For instance, the fact
+that χ(K) = 2 if |K| is the boundary of a convex, open region in R3 (since
+|K| is homeomorphic to S2) can be used to show that there are only five such
+complexes that are regular polyhedra. These give the five classical Platonic
+solids.

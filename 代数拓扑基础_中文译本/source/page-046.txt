@@ -1,0 +1,42 @@
+Homology Groups of a Simplicial Complex
+31
+figure by drawing an arrow in the direction from v0 to v1 to v2. You can check
+that [v1, v2, v0] and [v2, v0, v1] are indicated by the same clockwise arrow. An
+arrow in the counterclockwise direction would indicate the oppositely oriented
+simplex.
+Similarly, the oriented simplex [v0, v1, v2, v3] is pictured by drawing a spiral
+arrow, as in the figure. The arrow in this picture is called a “right-hand screw.”
+If one curls the fingers of the right hand in the direction from v0 to v1 to v2,
+then the thumb points toward v3. You can check that [v0, v2, v3, v1], and each
+of the other ten orderings equivalent to these two, also give rise to right-hand
+screws. A “left-hand screw” is used to picture the opposite orientation.
+v0
+v1
+v0
+v1
+v2
+v0
+v3
+v1
+v2
+Figure 1.6.1
+Definition 1.6.3 Let K be a simplicial complex. A p-chain on K is a function
+c from the set of oriented p-simplices of K to the integers such that:
+(1) c(σ) = −c(σ′) if σ and σ′ are opposite orientations of the same
+simplex,
+(2) c(σ) = 0 for all but finitely many oriented simplices of K.
+We add p-chains by adding their values; the resulting group is denoted Cp(K)
+and is called the group of oriented p-chains of K. If p < 0 or p > dim K, then
+we let Cp(K) denote the trivial group.
+If σ is an oriented simplex, then the elementary chain corresponding to σ
+is the function c defined by
+c(σ) = 1,
+c(σ′) = −1
+if σ′ is the opposite orientation of σ,
+c(τ) = 0
+for all other oriented simplices τ.
+By abuse of notation, we often use the symbol σ to denote not only a simplex,
+or an oriented simplex, but also to denote the elementary p-chain correspond-
+ing to the oriented simplex σ. With this convention, if σ and σ′ are opposite
+orientations of the same simplex, then we write σ′ = −σ, because this equation
+holds when σ and σ′ are interpreted as elementary chains.

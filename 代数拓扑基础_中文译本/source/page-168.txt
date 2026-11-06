@@ -1,0 +1,53 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+153
+In the present instance, ⊕denotes the external direct sum. Also, i is inclu-
+sion and π is projection. The map θ is defined by writing A2 = ϕ(A1) ⊕B
+and letting θ equal ϕ−1 on the first summand and equal to ψ on the second
+summand.
+Theorem 3.2.5 Let
+0 −→A1
+ϕ
+−→A2
+ψ
+−→A3 −→0
+be exact. Then the following are equivalent:
+(1) The sequence splits.
+(2) There is a map p : A2 →A1 such that p ◦ϕ = iA1.
+(3) There is a map j : A3 →A2 such that ψ ◦j = iA3. We have
+ψ
+j
+ϕ
+p
+A1
+A2
+A3
+0 .
+0
+Proof: We begin by showing that (1) implies (2) and (3). It is enough to
+prove (2) and (3) for the sequence
+0 −→A1
+i
+−→A1 ⊕A3
+π
+−→A3 −→0 .
+This is straightforward: We define p : A1 ⊕A3 →A1 as projection and we
+define j : A3 →A1 ⊕A3 as inclusion.
+(2) ⇒(1): We show that A2 = ϕ(A1) ⊕(ker p). First, for x ∈A2 we can write
+x = ϕp(x) + (x −ϕp(x)). The first term is obviously in ϕ(A1). The second
+term is in ker p because
+p(x −ϕp(x)) = p(x) −p(ϕp(x)) = p(x) −(pϕ)p(x) = 0 .
+Next, if x ∈ϕ(A1) ∩ker p, then x = ϕ(y) for some y. Hence p(x) = pϕ(y) = y.
+Since x ∈ker p, the element y vanishes, so x = ϕ(y) vanishes also.
+(3) ⇒(1): We show that A2 = (ker ψ) ⊕j(A3). Since ker ψ = im ϕ, this will
+suffice for our purposes. For x ∈A2, we can write x = (x −jψ(x)) + jψ(x).
+The first term is in ker ψ because ψ(x) −(ψj)(x)ψ(x) = ψ(x) −ψ(x) = 0.
+The second term is obviously in j(A3). Finally, if x ∈(ker ψ) ∩j(A3), then
+x = j(z) for some z, hence ψ(x) = ψj(z) = z. Since x ∈ker ψ, the element z
+vanishes so x = j(z) vanishes also.
+Corollary 3.2.6 Let
+0 −→A1
+ϕ
+−→A2
+ψ
+−→A3 −→0
+be an exact sequence. If A3 is free abelian, then the sequence splits.

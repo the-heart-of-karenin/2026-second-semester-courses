@@ -1,0 +1,41 @@
+Duality in Manifolds
+507
+3. Using the fact that CP n can be triangulated, show that the manifold
+CP 2m is not the boundary of any manifold.
+4. Which compact 2-manifolds bound?
+5. Let M be a compact, triangulable, orientable n-manifold with
+boundary. Show that the cup product defines a dual pairing
+Hk(M, Bd M)
+T k(M, Bd M) ⊗Hn−k(M)
+T n−k(M) →Hn(M, Bd M) ,
+where T i denotes the torsion subgroup of Hi.
+6. Let M be the torus with two open discs removed. See Figure 8.10.3.
+(a) Compute H1(M) and H1(M, Bd M). Draw generating cocycles.
+(b) Verify the existence of the dual pairing of Exercise 5.
+(c) Show that the cup product does not define a dual pairing:
+H1(M, Bd M)
+T 1(M, Bd M) ⊗H1(M, Bd M)
+T 1(M, Bd M) →H2(M, Bd M) .
+Figure 8.10.3
+7. Let X be a compact, triangulable homology n-manifold. Let A and
+B be polytopes of subcomplexes of a triangulation of X, with B ⊂
+A. Let G be arbitrary if X is orientable. Let G = Z/2 otherwise.
+Show that there are isomorphisms
+Hk(A, B; G) ∼= Hn−k(X \ B, X \ A; G) ,
+Hk(A, B; G) ∼= Hn−k(X \ B, X \ A; G) .
+[Hint: Triangulate X so that A and B are polytopes of full subcom-
+plexes. If C is a full subcomplex of X, let XC denote the collection
+of all simplices of sd X disjoint from C. Consider the following dia-
+gram and its dual:
+0
+Ck(A, B)
+Ck(X, B)
+Ck(X, A)
+0
+0
+Dn−k(XB, XA)
+Dn−k(XB)
+Dn−k(XA)
+0 .]
+ϕ
+ϕ

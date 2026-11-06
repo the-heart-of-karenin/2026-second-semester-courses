@@ -1,0 +1,39 @@
+354
+Elements of Algebraic Topology
+If h : X →Y is a continuous map, then h∗is a ring homomorphism. There-
+fore a homotopy equivalence induces a ring isomorphism. It follows that the
+cohomology ring is a topological invariant, in fact, a homotopy-type invariant.
+Commutativity
+We have not yet discussed whether or not the cohomology ring is commuta-
+tive. In fact it is not, in general. Instead, it has a property commonly called
+anticommutativity. Specifically, if αp ∈Hp(X; R) and βq ∈Hq(X; R), then
+αp ⌣βq = (−1)pq βq ⌣αp
+holds. We shall not prove this formula now, for the proof will become much
+easier when we give an alternative definition of the cup product later on.
+In the next section, we shall compute the cohomology ring in several spe-
+cific cases. But first, let us introduce several generalized versions of the cup
+product.
+Cup Products with General Coefficients
+Let G be an arbitrary abelian group. Then we note that the cup product
+formula makes sense if we interpret it as a function
+Sp(X) × Sq(X; G) ⌣
+−→Sp+q(X; G) .
+In this case, cp is a cochain with integral values, cq is a cochain with values in
+G, and the multiplication on the right-hand side of the formula (∗) is the usual
+product operation sending (n, g) to ng. Bilinearity is immediate. Associativity
+holds when it makes sense—that is, when it involves a map
+Sp(X) × Sq(X) × Sr(X; G) ⌣
+−→Sp+q+r(X; G) .
+The cochain z0 whose value is 1 on each 0-simplex T acts as a left unity ele-
+ment. The proof of the coboundary formula is unchanged, as is the proof that
+the homomorphism h∗induced by a continuous map preserves cup products.
+Therefore we have a well-defined cup product operation
+Hp(X) × Hq(X; G) ⌣
+−→Hp+q(X; G) .
+The most general cup product operation usually considered begins with
+a bilinear map α : G × G′ →G′′, called a “coefficient pairing.” Using this
+map to replace the multiplication operation in (∗), one has a well-defined cup
+product
+Hp(X; G) × Hq(X; G′) ⌣
+−→Hp+q(X; G′′) .
+We shall not need this degree of generality.

@@ -1,0 +1,43 @@
+Cohomology
+359
+H1(T). If we orient each 2-simplex counterclockwise, then Λ = {σ∗} generates
+H2(T) ∼= Z, where σ is any oriented 2-simplex of T. In general, if σ1, σ2, . . . , σk
+are oriented 2-simplices of T, then the cochain  niσ∗
+i is cohomologous to
+( ni)σ∗.
+Order the vertices of T alphabetically. Using this ordering, we compute the
+value of w1 ⌣z1 on each oriented 2-simplex σ. Note that ⟨w1 ⌣z1, σ⟩= 0
+unless a face of σ is in the carrier of w1 and a face of σ is also in the carrier of
+z1. Thus the only possible non-zero values occur when σ is one of the simplices
+[g, h, i] or [h, i, j]. We compute
+⟨w1 ⌣z1, [g, h, i]⟩= ⟨w1, [g, h]⟩· ⟨z1, [h, i]⟩= 1 · 1 = 1 ,
+⟨w1 ⌣z1, [h, i, j]⟩= ⟨w1, [h, i]⟩· ⟨z1, [i, j]⟩= (−1) · 0 = 0 .
+Thus we have w1 ⌣z1 = [g, h, i]∗. Now the orientation of [g, h, i] is clockwise.
+Therefore, in terms of our standard generators, α ⌣β = −Λ.
+A similar computation shows that
+⟨z1 ⌣w1, [g, h, i]⟩= ⟨z1, [g, h]⟩· ⟨w1, [h, i]⟩= 0 · (−1) = 0 ,
+⟨z1 ⌣w1, [h, i, j]⟩= ⟨z1, [h, i]⟩· ⟨w1, [i, j]⟩= 1 · 1 = 1 ,
+so that z1 ⌣w1 = [h, i, j]∗. Thus we have β ⌣α = Λ, as anticommutivity
+would have led us to expect.
+A similar direct computation shows that α ⌣α = 0 and β ⌣β = 0.
+Alternatively, we note that w1 is cohomologous to the cochain y1 pictured
+in Figure 5.10.2. Since no 2-simplex has one face in the carrier of w1 and
+another face in the carrier of y1, necessarily w1 ⌣y1 = 0. Hence α ⌣α = 0.
+A similar argument shows that β ⌣β = 0.
+a
+b
+c
+a
+a
+b
+c
+d
+e
+d
+e
+d
+y1
+Figure 5.10.2
+Another alternative computation proceeds by noting that anticommutivity
+implies that α ⌣α = −(α ⌣α). Since H2(T) has no elements of order 2,
+α ⌣α must vanish. A similar remark applies to β ⌣β.

@@ -1,0 +1,41 @@
+Cohomology
+355
+Relative Cup Products
+Sometimes one wishes to define a cup product operation on relative cohomol-
+ogy groups. One can use the same cup product formula (∗). The relative cup
+products we shall need are the following:
+Hp(X, A; R) × Hq(X; R) −→Hp+q(X, A; R) ,
+Hp(X, A; R) × Hq(X, A; R) −→Hp+q(X, A; R) .
+The second of these is in fact simply a restriction of the first. The existence
+of these cup products is easy to demonstrate. For if cp : Sp(X) →R vanishes
+on all singular p-simplices carried by A, then cp ⌣cq automatically vanishes
+on all (p + q)-simplices carried by A. The coboundary formula holds just as
+before, so one has an induced operation on the cohomology level. Bilinearity
+and associativity are immediate, as is the fact that the homomorphism induced
+by a continuous map preserves cup products. The class {z0} ∈H0(X; R) acts
+as a right unity element for the first of these operations.
+The most general relative cup product operation is a bilinear map
+Hp(X, A; R) × Hq(X, B; R) −→Hp+q(X, A ∪B; R) .
+It is defined whenever {A, B} is an excisive couple. See the exercises.
+EXERCISES
+1. Let A be a path component of X, let B be the union of the remaining
+path components of X, and assume B̸ = ∅. Let c0 be the cochain
+whose value is 1 on each T : ∆0 →A and 0 on each T : ∆0 →B.
+Show that c0 is a cocycle, and describe {c0} ⌣βp for a general
+cohomology class βp.
+2. Let A ⊂X, and let i : A →X be inclusion. Let η ∈Hq(X; R), and
+let η|A denote i∗(η) ∈Hq(A; R). Show that the following diagram
+commutes:
+Hp+1(X, A; R)
+Hp(A; R)
+Hp(X; R)
+Hp(X, A; R)
+Hp+q+1(X, A; R)
+Hp+q(A; R)
+Hp+q(X; R)
+Hp+q(X, A; R)
+⌣η
+⌣(η|A)
+⌣η
+⌣η
+What happens if you replace ⌣η with η ⌣throughout?

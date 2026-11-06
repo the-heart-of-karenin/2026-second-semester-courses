@@ -1,0 +1,36 @@
+510
+Elements of Algebraic Topology
+Corollary 8.11.2 (The polyhedral Jordan curve theorem) Let n > 0.
+If A is a subset of Sn that is homeomorphic to Sn−1, and if (Sn, A) is trian-
+gulable, then Sn \ A has precisely two path components, of which A is the
+common boundary.
+Proof: A is a proper subset of Sn since Sn−1 is not homeomorphic to Sn. The
+fact that Sn \ A has exactly two path components follows from the fact that
+Hn−1(A) is infinite cyclic because A ≈Sn−1 and from the fact that
+Hn−1(A) ∼= H0(Sn \ A) .
+The fact that A is the common boundary of the two path components C1
+and C2 follows, as in the proof of Theorem 4.9.5, from the fact that if s is an
+(n −1)-simplex in a [very fine] subdivision of A, then letting B = A \ Int s,
+we have
+0 = Hn−1(B) ∼= H0(Sn \ B) .
+Thus one can connect a point of C1 to a point of C2 by a path that intersects
+A in points of Int s.
+EXERCISES
+1. Let A be a nonempty subset of X. Show that if X is path connected,
+then
+0 →H0(A) →H0(A) →H0(X) →0
+is exact. This fact completes the proof of Alexander duality.
+2. Suppose that A is a proper nonempty subset of Sn and (Sn, A) is
+triangulable. Show that if A is acyclic, then Sn \ A is acyclic.
+3. Let A be a homology n−1 manifold. Show that if A is homeomorphic
+to a subset B of Sn and (Sn, B) is triangulable, then A is orientable.
+4. Prove the following version of Alexander duality: Let A be a proper
+nonempty subset of Sn. If (Sn, A) is triangulable, then
+Hk(A) ∼= Hn−k−1(Sn \ A) .
+[Hint: Find a complex C that is a deformation retract of Sn \ A.]
+5. Prove Alexander duality for the n-ball: Let A be a proper nonempty
+subset of Bn. Let ∂A = A ∩Bd Bn. If (Bn, A) is triangulable, show
+that
+Hk(A, ∂A) ∼= Hn−k−1(Bn \ A) .
+[Hint: Consider the subset (A × {1}) ∪(∂A × I) ∪(Bn × {0}) of
+Bd (Bn × I).]

@@ -1,0 +1,44 @@
+122
+Elements of Algebraic Topology
+The topology of the product space |K| × I is coherent with the subspaces
+σ × I for σ ∈K.
+The second concerns the fact that |K| × I is a polyhedron.
+Lemma 2.7.3 If K is a complex, then |K| × I is the polytope of a complex
+M such that each set σ × I is the polytope of a subcomplex of M, and the
+sets σ × 0 and σ × 1 are simplices of M, for each simplex σ of K.
+Proof: We have |K| ⊂EJ for some J. Then |K| × I ⊂EJ × R. We shall
+subdivide |K| × I into simplices by a variant of the starring procedure used
+in defining barycentric subdivision.
+For p ≥0 let us define
+Xp = (|K| × 0) ∪(|K| × 1) ∪(|K(p)| × I) .
+We proceed inductively to subdivide Xp into simplices. Consider first the case
+p = 0. The space (|K| × 0) ∪(|K| × 1) is the polytope of a complex consisting
+of all simplices of the form σ × 0 or σ × 1, for σ ∈K. The space |K(0)| × I is
+the polytope of the complex consisting of all 1-simplices of the form v × I for
+v ∈K(0) and their vertices. Their union is a complex M0 whose polytope is
+X0.
+In general, suppose that Mp−1 is a complex whose polytope is Xp−1 such
+that each set s × I, for s a simplex of K of dimension less than p, is the
+polytope of a subcomplex of Mp−1. Let dim σ = p and consider the set σ × I.
+Now let
+Bd(σ × I)
+=
+(σ × I) −(Int σ × Int I)
+=
+((Bd σ) × I) ∪(σ × 0) ∪(σ × 1) .
+Since Bd σ is the union of simplices s of K of dimension p −1, Bd(σ × I) is
+the polytope of a subcomplex Mσ of Mp−1. It is finite because Bd(σ × I) is
+compact. Let wσ denote the point (σ, 1/2) ∈σ × I. Then the cone wσ ∗Mσ is
+a complex whose polytope is σ × I. The intersection of |wσ ∗Mσ| and |Mp−1|
+is the polytope of a subcomplex of each of them.
+Define Mp to be the union of Mp−1 and the cones wσ ∗Mσ as σ ranges
+over all p-simplices of K. Finally, define M to be the union of the complexes
+Mp for all p.
+Now M is a complex whose underlying space consists precisely of the points
+of the space |K| × I. However, it is not at all obvious that the spaces |M| and
+|K| × I are equal as topological spaces. To prove that assertion, we need the
+fact about the topology of |K| × I that was just quoted.
+We know that the topology of |K|×I is coherent with the subspaces σ ×I
+for σ ∈K. On the other hand, the topology of |M| is coherent with the
+subspaces s for s ∈M. Now if C is closed in |K|×I, then C ∩(σ ×I) is closed
+in σ × I. If s is a simplex of M lying in σ × I, then s is a subspace of σ × I

@@ -1,0 +1,44 @@
+486
+Elements of Algebraic Topology
+Step 2: Let f : Sn →Sm be an antipode-preserving, continuous map. Choose
+a rotation of Sm, say ρ : Sm →Sm, that carries the point f(an) to the base
+point am of Sm. Then the map g = ρ◦f is continuous and antipode-preserving,
+and carries an to am. Via the quotient maps πn and πm, the map g induces a
+continuous map h : Pn →Pm:
+Sn
+g
+−−−−→Sm
+πn
+πm
+Pn
+h
+Pm .
+−−−−→
+We shall show that h∗: H1(Pn; F) →H1(Pm; F) is non-trivial.
+Let α be any path in Sn from an to −an. Since g preserves antipodes,
+g(−an) = −am so g ◦α is a path in Sm from am to −am. Now h# carries the
+cycle πn◦α to the cycle πm◦g◦α. Thus, by Step 1, the homomorphism h∗car-
+ries the non-zero element of H1(Pn; F) to the non-zero element of H1(Pm; F).
+Step 3: Now we prove the theorem. Using naturality of the isomorphism
+HomF (H1(Pk; F), F) κ∗
+←−H1(Pk; F)
+for k = m, n, it follows from Step 2 that the homomorphism h∗of cohomology
+H1(Pn; F) h∗
+←−H1(Pm; F)
+is non-trivial. Let u ∈H1(Pm; F) be non-trivial. Then h∗(u) ∈H1(Pn; F) is
+non-trivial. Because h∗is a ring homomorphism, h∗(un) = (h∗(u))n. By the
+preceding theorem, the latter element is non-trivial. Therefore un must be
+non-trivial. It follows that m ≥n.
+Theorem 8.8.9 (Borsuk–Ulam) If h : Sn →Rn is a continuous map, then
+h(x) = h(−x) for at least one x ∈Sn.
+Proof: If h(x)̸ = h(−x) for all x ∈Sn then the function f : Sn →Sn−1 given
+by
+f(x) =
+h(x) −h(−x)
+∥h(x) −h(−x)∥
+is continuous and antipode preserving. Such a function does not exist.
+Theorem 8.8.10 (Baby ham sandwich theorem) Let A1 and A2 be two
+bounded, measurable subsets of R2. There is a line in R2 that bisects both A1
+and A2.
+Remark 8.8.11 This result is not elementary. Try finding such a line even
+in the simple case where A1 and A2 are both triangular regions.

@@ -1,0 +1,99 @@
+Index of Notation
+555
+∂: Hom ((C ⊗C′)m, R) →Hom ((C ⊗C′)m+1, R)
+coboundary operator
+428
+Θ : Hp(C; R) ⊗Hq(C′; R) →Hm(C ⊗C′; R)
+tensor homomorphism for cohomology
+429
+αp × βq
+cohomology cross product of αp and βq
+430
+cp × cq
+cochain cross product of cp and cq
+435
+d : X →X × X
+diagonal map
+438
+(α ⊗β) ⌣(α′ ⊗β′) ring operation on H∗(X; R) ⊗R H∗(Y ; R)
+439
+K ∗L
+join of complexes K and L
+444
+X ≈Y
+X and Y are homeomorphic
+447
+St s
+star of simplex s
+448
+St s
+closed star of simplex s
+448
+Lk s
+link of simplex s
+448
+X ∗Y
+join of spaces X and Y
+449
+σ1 ≻σ2
+σ2 is proper face of σ1
+455
+D(σ)
+block dual to simplex σ
+456
+D(σ)
+closed block dual to simplex σ
+456
+˙D(σ)
+topological boundary of block dual to simplex σ
+456
+Xp
+dual p-skeleton of complex X
+459
+D(X)
+dual chain complex of complex X
+459
+Dp(X) = Hp(Xp, Xp−1)
+dual chain group of complex X
+459
+∂∗
+boundary operator in dual chain complex
+459
+γ
+orientation cycle for X
+461
+[1]
+equivalence class of 1 in Z/2
+464
+cp ⌢(T ⊗α)
+cap product of cochain cp and chain T ⊗α
+468
+κ : Hp(X; G) →Hom(Hp(X), G)
+Kronecker map
+471
+cp ⌢([v0, v1, . . . , vp+q] ⊗α)
+simplicial cap product of cochain cp and
+chain [v0, v1, . . . , vp+q] ⊗α
+471
+Γ(i)
+orientation class for Xi
+474
+Γ
+orientation class for X
+474
+Γ(i)
+(2)
+orientation class for Xi over Z/2
+474
+Γ(2)
+orientation class for X over Z/2
+474
+⌢Γ
+Poincar´e duality isomorphism in oriented case
+474
+⌢Γ(2)
+Poincar´e duality isomorphism in general case
+474
+d
+degree of f : X →Y
+478

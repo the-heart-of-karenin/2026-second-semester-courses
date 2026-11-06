@@ -1,0 +1,54 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+151
+3.2
+The Exact Homology Sequence
+The relationship between the absolute and relative homology groups is ex-
+pressed by what is called the “exact homology sequence of a pair.” In the
+present section, we shall study exact sequences of groups (usually abelian
+groups), and we shall define the exact homology sequence of a pair.
+Definition 3.2.1 Consider a sequence (finite or infinite) of groups and ho-
+momorphisms
+· · · −→A1
+ϕ1
+−→A2
+ϕ2
+−→A3 −→· · · .
+This sequence is said to be exact at A2 if
+image ϕ1 = kernel ϕ2 .
+If it is exact at each group then it is said simply to be an exact sequence. Of
+course exactness is not defined at the first group or the last group (if these
+exist).
+The items in the next lemma should all be quite familiar to you. Proofs
+are left as exercises. Because we are considering only abelian groups, we let 0
+denote the trivial (one-element) group.
+Lemma 3.2.2 The following facts hold for exact sequences:
+(1) A1
+ϕ→A2 →0 is exact if and only if ϕ is surjective.
+(2) 0 →A1
+ϕ→A2 is exact if and only if ϕ is injective.
+(3) Suppose that the sequence
+0 −→A1
+ϕ
+−→A2
+ψ
+−→A3 −→0
+is exact. Such a sequence is called a short exact sequence. Then
+A2/ϕ(A1) is isomorphic to A3. The isomorphism is induced by ψ.
+Conversely if ψ : A →B is surjective with kernel K, then the
+sequence
+0 −→K
+i
+−→A
+ψ
+−→B −→0
+is exact, where i denotes the inclusion map.
+(4) Suppose that the sequence
+A1
+α
+−→A2
+ϕ
+−→A3
+β
+−→A4
+is exact. Then the following are equivalent:
+(i) α is surjective;

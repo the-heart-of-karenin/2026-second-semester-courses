@@ -1,0 +1,51 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+171
+Axiom 2: (k ◦h)∗= k∗◦h∗.
+Axiom 3: If f : (X, A) →(Y, B), then the following diagram commutes:
+Hp(X, A)
+Hp(Y, B)
+Hp−1(A)
+Hp−1(B)
+f∗
+∂∗
+∂∗
+(f|A)∗
+Axiom 4: [Exactness Axiom]
+The sequence
+· · · −→Hp(A)
+i∗
+−→Hp(X)
+π∗
+−→Hp(X, A)
+∂∗
+−→Hp−1(A) −→· · ·
+is exact, where i : A →X and π : X →(X, A) are inclusion maps.
+Recall that two maps h, k : (X, A) →(Y, B) are said to be homotopic
+(written h ≃k) if there is a map
+F : (X × I, A × I) →(Y, B)
+such that F(x, 0) = h(x) and F(x, 1) = k(x) for all x ∈X.
+Axiom 5: [Homotopy Axiom]
+If h and k are homotopic, then h∗= k∗.
+Axiom 6: [Excision Axiom]
+Given (X, A), let U be an open subset of X
+such that U ⊂Int A. If (X \ U, A \ U) is admissible, then inclusion induces an
+isomorphism
+Hp(X \ U, A \ U) ∼= Hp(X, A) .
+Axiom 7: [Dimension Axiom] If P is a one-point space, then Hp(P) = 0 for
+p̸ = 0 and H0(P) = Z.
+Axiom 8:
+[Compact Support Axiom]
+If α ∈Hp(X, A), then there is an
+admissible pair (X0, A0) with X0 and A0 compact, such that α is in the image
+of the homomorphism Hp(X0, A0) →Hp(X, A) induced by inclusion.
+A pair (X0, A0) with both X0 and A0 compact is called a compact pair.
+Observe that one can modify Axiom 7 by writing H0(P) = G, where G is a
+fixed abelian group. What this produces is called “homology with coefficients
+in G.” We shall, for the moment, stick with integer coefficients.
+Of all the Eilenberg–Steenrod axioms, the dimension axiom seems to be
+the most innocuous and the least interesting. But in a certain sense quite the
+opposite is true. Since Eilenberg and Steenrod’s axioms were created, sev-
+eral new mathematical theories have been discovered that resemble homology
+theory. Cobordism theories in differential topology and K-theory in vector
+bundle theory are examples of such. Although these new theories were in-
+vented for purposes quite different from those for which the homology groups

@@ -1,0 +1,44 @@
+Singular Homology Theory
+247
+γ will be written [γ]. The collection of homotopy classes is the first homotopy
+space.
+Suppose that [γ] and [η] are two homotopy classes. Then we define the
+product of [γ] and [η], written [γ] · [η], to be the equivalence class of the loop
+γ · η [also called the product] given by
+γ · η(t) =
+
+γ(2t)
+if
+0 ≤t ≤1/2,
+η(2t −1)
+if
+1/2 < t ≤1.
+See Figure 4.10.5. We have [γ] · [η] = [γ · η]. Below we will show that the the
+first homotopy space with this operation forms a group; we call that group
+the first homotopy group of X, or the fundamental group of X. We denote the
+fundamental group of X with base point x0 by π1(X, x0) or simply π1(X).
+We consider π1(X) to be a multiplicative group, so the identity is denoted by
+1.
+γ
+t near 0
+t near 1
+γ · η
+t near 1
+t near 0
+t near 1/2
+η
+t near 1
+t near 0
+x0
+x0
+x0
+Figure 4.10.5: The product of γ and η.
+Of course we need to check that the multiplication defined above is well-
+defined, and that we really have a group. That is the content of the next
+lemma.
+Lemma 4.10.5 Let γ0 be the constant loop γ0(t) = x0 for 0 ≤t ≤1.
+(1) The operation [γ] · [η] is well-defined.
+(2) The operation of Definition 4.10.4 is associative.
+(3) If γ is a loop, then [γ] · [γ0] = [γ0] · [γ] = [γ]
+(4) If γ is a loop and η is defined by η(t) = γ(1 −t) for 0 ≤t ≤1,
+then [γ] · [η] = [η] · [γ] = [γ0].

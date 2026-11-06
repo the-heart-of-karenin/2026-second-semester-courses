@@ -1,0 +1,48 @@
+154
+Elements of Algebraic Topology
+Proof: We choose a basis for A3, and for each basis element e, we define the
+value of j : A3 →A2 on that basis element to be any element of the nonempty
+set ψ−1(e).
+Now that we have established some basic facts about exact sequences, we
+can describe the exact homology sequence of a pair.
+First we need to define a certain homomorphism
+∂∗: Hp(K, K0) →Hp−1(K0)
+that is induced by the boundary operator and is called the homology boundary
+homomorphism. We construct it as follows: Given a cycle z in Cp(K, K0), it
+is the coset modulo Cp(K0) of a chain d of K whose boundary is carried by
+K0. The chain ∂d is automatically a cycle of K0. We define ∂∗{z} = {∂d},
+where {
+} means “homology class of.” We will show later in the proof of
+Lemma 3.3.2 that ∂∗is a well-defined homomorphism.
+Algebraically, the construction of ∂∗can be described as follows: Consider
+the following diagram, where i : K0 →K and π : (K, ∅) →(K, K0) are
+inclusions:
+Cp(K)
+π#
+−−−−→Cp(K, K0)
+∂
+Cp−1(K0)
+i#
+−−−−→Cp−1(K)
+Now i# is inclusion and π# is projection of Cp(K) onto Cp(K)/Cp(K0). Given
+a cycle z of Cp(K, K0), the chain d of Cp(K) representing it is a chain such
+that π#(d) = z. We consider ∂d, and note that since it is carried by K0,
+it equals i#(c) for some p −1 chain c of K0. Now c is actually a cycle. Its
+homology class is defined to be ∂∗({z}). Thus ∂∗is defined by a certain “zig-
+zag” process: Pull back via π#; apply ∂; pull back via i#. This description of
+∂∗will be useful in the next section.
+Now we can state our basic result relating the homology of K, K0, and
+(K, K0).
+Definition 3.2.7 A long exact sequence is an exact sequence whose index set
+is the set of integers. That is to say, it is a sequence that is infinite in both
+directions. It may, however, end with an infinite string of trivial groups.
+Theorem 3.2.8 (The exact homology sequence of a pair)
+Let K be a complex. Let K0 be a subcomplex. Then there is a long exact
+sequence
+· · · −→Hp(K0)
+i∗
+−→Hp(K)
+π∗
+−→Hp(K, K0)
+∂∗
+−→Hp−1(K0) −→· · · ,

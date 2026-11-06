@@ -1,0 +1,33 @@
+Homological Algebra
+423
+EXAMPLE 7.8.11 If K and L are simplicial complexes, with K or L locally
+finite, then there is a vector space isomorphism
+
+p+q=mHp(K; F) ⊗F Hq(L; F) −→Hm(|K| × |L|; F) .
+We would like to use the preceding theorem. First recall that Theorem 7.7.3
+gives us
+Hi(C(K) ⊗C(L)) ∼= Hi(|K| × |L|)
+for all i. The same holds for arbitrary coefficients by Theorems 5.6.2 and 6.3.1.
+Now the preceding theorem applies.
+EXERCISES
+1. Show that the K¨unneth theorem fails in reduced homology.
+2. Let K and L be simplicial complexes, with K or L locally finite.
+Then |K| × |L| is triangulable, as usual. Let K0 and L0 be subcom-
+plexes of K and L, respectively. Show there is a chain map that
+induces homology isomorphisms
+C(K, K0) ⊗C(L, L0) −→D(K × L, (K0 × L) ∪(K × L0)) .
+Derive a K¨unneth sequence in relative simplicial homology.
+3. Let C be a free chain complex. Show there is a natural exact se-
+quence
+0 →
+p+q=mHp(C) ⊗Hq(C′; G) −→Hm(C ⊗C′; G)
+
+p+q=mHp−1(C) ∗Hq(C′; G) →0 .
+Show that this sequence splits provided C′ is free and either G is
+torsion-free or Hi(C′) is torsion-free for all i.
+4. Provide the details of the proof of Corollary 7.8.5.
+7.9
+The Eilenberg–Zilber Theorem
+Now we show that, for an arbitrary pair of topological spaces, the chain com-
+plex S(X) ⊗S(Y ) can be used to compute the singular homology of X × Y .
+The crucial tool for the proof is the acyclic model theorem.

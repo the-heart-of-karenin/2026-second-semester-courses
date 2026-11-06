@@ -1,0 +1,85 @@
+Index
+569
+tensor homomorphism for homology,
+414, 429
+tensor product, 366
+of abelian groups, 367
+of chain complexes, 410
+of homomorphisms, 367
+of modules, 374
+rules for computing, 402
+tensor product of R-module
+homomorphisms, 374
+tensor product over R, 374
+topological invariance of simplicial
+homology, 119
+topological sum, 133
+topologist’s sine curve, 194, 242
+closed, 220, 528
+torsion, 466
+torsion coefficients, 28, 39
+torsion of simplicial complex, 298
+torsion product, 397, 398
+rules for computing, 402
+torsion subgroup, 25
+torsion-free, 25
+torus, 19
+cellular chain complex, 285
+cohomology, 344, 346
+cohomology ring, 358, 440, 482
+homology, 41, 62, 285
+trace, 141
+transpose, 184
+tree, 38
+triangulable, 137
+triangulable CW complex, 272
+triangulable homology manifolds, 451
+triangulable pair, 175
+triangulable space, 175
+triangulation, 137
+of complex projective space, 488
+of CW complex, 272
+of lens space, 299
+of manifold, 232
+of pair, 174
+of product space, 122
+of projective space, 294
+of regular cell complex, 271
+of sphere, 137, 294
+triple, 173
+simplicial, 163
+trivial cohomology ring, 358
+underlying space of complex, 9
+unit ball, 5
+unit sphere, 5
+unity element in ring, 350
+universal coefficient theorem
+for cohomology, 390, 409, 443
+for homology, 403, 409, 420
+upper bound, 519
+upper hemisphere, 5
+upper semicontinuous decomposition,
+262
+vector space, 351
+vertex
+collection of polygons, 147
+of cone, 134
+of abstract complex, 17
+of complex, 9
+of cone, 51
+of simplex, 5
+vertex scheme, 17
+vertex set, 17
+Vietoris, L., 165
+weak boundaries, 70, 143
+weak direct product, 26
+weak topology, 268
+wedge product, 362
+wedge, of circles, 41
+Weyl, H., 443
+book on Riemann surfaces,
+443
+Whitehead, J. H. C., 268, 496
+Whitney, H., 350
+zig-zag lemma, 159
+Zilber, J. A., 214

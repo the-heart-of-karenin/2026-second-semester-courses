@@ -1,0 +1,71 @@
+Homology Groups of a Simplicial Complex
+83
+a
+e
+d
+a
+w
+r
+m
+b
+u
+p
+b
+x
+s
+n
+c
+v
+q
+c
+y
+t
+o
+a
+e
+d
+a
+Figure 1.13.6
+a
+e
+d
+a
+w
+r
+m
+b
+u
+p
+b
+x
+s
+n
+c
+v
+q
+c
+y
+t
+o
+a
+d
+e
+a
+Figure 1.13.7
+4. Let K be the torus, as in Exercise 2; let γ be the 2-cycle indicated
+there. Let L be the complex consisting of the proper faces of the
+3-simplex having vertices A, B, C, D; and let γ′ be the 2-cycle
+∂[A, B, C, D]. [See Figure 1.13.8.]
+(a) Show that any map of the vertices of K to the vertices of L
+induces a simplicial map of K to L.
+(b) Let f be the simplicial map carrying m and r to A, p to B , b
+and u to C, and all other vertices to D. Compute the induced
+homomorphism f∗: H2(K) →H2(L), in terms of γ and γ′.
+(c) Let g be the simplicial map agreeing with f on the vertices of
+K except that g(r) = C. Compute g∗.
+(d) Let h agree with g on the vertices of K except that h(u) = A.
+Compute h∗.
+5. Let f, g : (K, K0) →(L, L0) be simplicial maps. Show that if f and
+g are contiguous as maps of K into L, and if L0 is a full subcom-
+plex of L, then f and g are contiguous as maps of pairs. [Recall
+Definition 1.4.11.]

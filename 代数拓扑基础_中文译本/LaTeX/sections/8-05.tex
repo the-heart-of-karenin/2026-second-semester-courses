@@ -1,0 +1,154 @@
+\section{Poincaré 对偶}
+\sourcepage{461--462}
+Poincaré 对偶定理是整个拓扑学中最深刻的结果之一。它最初表述为：对紧致、可定向、已三角剖分的 $n$ 维流形，$k$ 维与 $(n-k)$ 维的 Betti 数相等，$k$ 维与 $(n-k-1)$ 维的挠系数相同。现代通常使用另一种等价表述：$k$ 维上同调群与 $(n-k)$ 维同调群同构。
+
+当空间不可定向或非紧时，也有相应版本，我们也将讨论。这里给出两种证明。本节的第一个证明直接而直观；第 8.7 节的第二个证明还将说明对偶同构在连续映射下的行为，并提供流形杯积的信息。
+
+\entry{定义}{8.5.1}设 $X$ 是紧致、已三角剖分的同调 $n$ 维流形。若能给所有 $n$ 维单形 $\sigma_i$ 定向，使其和 $\gamma=\sum\sigma_i$ 为闭链，则称 $X$ \emph{可定向}，并称 $\gamma$ 为\emph{定向闭链}。
+
+若 $X$ 非紧，但剖分复形局部有限，同样允许这个和为无限链。若无法这样选择定向，则称 $X$ \emph{不可定向}。
+
+若 $X$ 不连通，其每个分支仍是同调 $n$ 维流形。$X$ 可定向当且仅当各分支都可定向，各分支的定向闭链之和为 $X$ 的定向闭链。我们将证明可定向性不依赖于具体三角剖分（推论 8.5.5）。
+
+\entry{定理}{8.5.2（Poincaré 对偶——第一种形式）}设 $X$ 是紧致、已三角剖分的同调 $n$ 维流形。若 $X$ 可定向，则对任意系数群 $G$ 及所有 $p$，
+\[H^p(X;G)\cong H_{n-p}(X;G).\]
+若 $X$ 不可定向，则对所有 $p$，
+\[H^p(X;\Z/2)\cong H_{n-p}(X;\Z/2).\]
+
+\textbf{证明：}用单纯链复形计算上同调，用对偶链复形计算同调。$p$ 维单形与其 $(n-p)$ 维对偶块一一对应，所以自由阿贝尔群 $C^p(X)$ 与 $\mathcal D_{n-p}(X)$ 同构：把有向单形的对偶基元 $\sigma^*$ 映到 $H_{n-p}(\overline D(\sigma),\dot D(\sigma))$ 的一个生成元。若 $X$ 可定向，我们将选取这些生成元的符号，使同构 $\varphi$ 满足
+\[\partial\varphi=\varphi\delta:C^{p-1}(X)\longrightarrow\mathcal D_{n-p}(X).\]
+这就证明整数系数情形。
+
+先给所有 $n$ 维单形定向，使其和为定向闭链；其他维单形任意定向。从 $n$ 维开始，令
+\[\varphi:C^n(X)\to\mathcal D_0(X),\qquad\varphi(\sigma^*)=\widehat\sigma.\]
+因为重心生成 $H_0(\widehat\sigma)$，这是同构。
+
+\sourcepage{463}
+接着在 $n-1$ 维定义。设 $s$ 是有向 $(n-1)$ 维单形，它恰为两个 $n$ 维单形 $\sigma_0,\sigma_1$ 的面。定向闭链的边界为零，因此可编号使 $\partial\sigma_0$ 在 $s$ 上的系数为 $-1$，$\partial\sigma_1$ 的系数为 $1$。于是
+\[\delta s^*=\sigma_1^*-\sigma_0^*,\qquad
+\varphi(\delta s^*)=\widehat\sigma_1-\widehat\sigma_0.\]
+定义
+\[\varphi(s^*)=[\widehat\sigma_0,\widehat s]+[\widehat s,\widehat\sigma_1].\]
+这就是一维对偶块模边界的基本闭链，且 $\partial\varphi(s^*)=\varphi(\delta s^*)$。
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.85\textwidth]{figures/8-5-1.pdf}
+\caption*{图 8.5.1}
+\end{figure}
+
+一般地，设已在 $p+1<n$ 维及以上定义 $\varphi$，现在要使每个有向 $p$ 维单形满足同样的边缘关系。写
+\[\delta s^*=\sum\epsilon_i\sigma_i^*,\qquad
+\varphi(\delta s^*)=\sum\epsilon_i\varphi(\sigma_i^*),\]
+其中遍历所有以 $s$ 为面的 $(p+1)$ 维单形，$\epsilon_i=\pm1$ 是 $\partial\sigma_i$ 在 $s$ 上的系数。我们证明后一链是 $\dot D(s)$ 的基本闭链。
+
+\sourcepage{464}
+每个 $\varphi(\sigma_i^*)$ 是相应对偶块模其边界的基本闭链，且该块位于 $\dot D(s)$ 中。因此总和承载于 $\dot D(s)$；由归纳假设，
+\[\partial\varphi(\delta s^*)=\varphi(\delta\delta s^*)=0.\]
+而 $\dot D(s)$ 是同调 $(n-p-1)$ 维球面，其中 $n-p-1>0$。这个闭链非零，且不是另一个闭链的非平凡整数倍，因为把它限制到任一对应块，所得链（差一个符号）是该块模边界的基本闭链。因此它代表 $H_{n-p-1}(\dot D(s))$ 的生成元。
+
+考虑正合列
+\[0\to H_{n-p}(\overline D(s),\dot D(s))\xrightarrow{\partial_*}
+H_{n-p-1}(\dot D(s))\to0.\]
+由于维数原因，这里的同调群可以等同于相应闭链群。令 $\varphi(s^*)$ 为边界恰等于 $\varphi(\delta s^*)$ 的基本相对闭链，就完成了归纳定义。
+
+于是整数系数情形得证。对任意系数，使用同构
+\[
+\operatorname{Hom}(C_p(X),G)\cong\operatorname{Hom}(C_p(X),\Z)\otimes G
+\xrightarrow{\varphi\otimes i_G}\mathcal D_{n-p}(X)\otimes G.
+\]
+它们与 $\delta,\partial$ 交换，第一个同构已在定理 7.6.1 第二步证明。
+
+最后考虑不可定向情形。相同证明在 $\Z/2$ 上成立，归纳定义
+\[\operatorname{Hom}(C_p(X),\Z/2)\xrightarrow{\varphi}\mathcal D_{n-p}(X)\otimes\Z/2.\]
+对 $n$ 维单形，令 $\sigma^*$ 在该单形上取 $[1]$，其他单形上取零，并置 $\varphi(\sigma^*)=\widehat\sigma\otimes[1]$。对 $(n-1)$ 维单形令
+\[\varphi(s^*)=\bigl([\widehat\sigma_0,\widehat s]+[\widehat s,\widehat\sigma_1]\bigr)\otimes[1].\]
+系数为 $\Z/2$，符号无关紧要。其余证明不变，只需将“基本闭链”替换为“$\Z/2$ 系数的唯一非零闭链”。\translatornote{原文在零维起始定义中把 $\widehat\sigma$ 误印为 $\partial$，此处按构造写出。}\hfill$\square$
+
+这里选择单纯复形计算上同调、对偶复形计算同调，并无特殊必要，也可以反过来。$\varphi$ 为同构，所以其对偶同样是同构
+\[
+\operatorname{Hom}(\mathcal D_{n-p}(X),\Z)
+\xrightarrow{\overline\varphi}\operatorname{Hom}(\operatorname{Hom}(C_p(X),\Z),\Z).
+\]
+再使用自然双对偶同构 $C_p(X)\cong\operatorname{Hom}(\operatorname{Hom}(C_p(X),\Z),\Z)$，它把 $\partial$ 对应到 $\delta$ 的对偶（定理 7.6.1 第四步），就得到与边缘、上边缘交换的同构
+\[\operatorname{Hom}(\mathcal D_{n-p}(X),\Z)\cong C_p(X).\]
+
+\sourcepage{465}
+\entry{推论}{8.5.3}若 $X$ 是紧致连通、已三角剖分的同调 $n$ 维流形，则任意两个 $n$ 维单形之间都可用有限序列
+\[\sigma=\sigma_0,\sigma_1,\ldots,\sigma_k=\sigma'\]
+相连，其中相邻单形的交为 $(n-1)$ 维单形。
+
+\textbf{证明：}以存在上述序列定义等价关系。每个等价类中的全部 $n$ 维单形之和是 $\Z/2$ 系数闭链，因为任意 $(n-1)$ 维单形所邻接的两个顶维单形属于同一类，故在该和中同时出现或同时不出现。若有多个等价类，就有多个独立的非零顶维闭链，与
+\[H_n(X;\Z/2)\cong H^0(X;\Z/2)\cong\Z/2\]
+矛盾。\hfill$\square$
+
+结合推论 8.3.4，这也说明紧致连通、已三角剖分的同调流形是伪流形。
+
+\entry{推论}{8.5.4}若上述 $X$ 连通，则可定向时 $H_n(X)\cong\Z$，不可定向时 $H_n(X)=0$。
+
+\textbf{证明：}可定向时由对偶，$H_n(X)\cong H^0(X)\cong\Z$。反之，设有非零整数 $n$ 维闭链 $z$。任意给顶维单形定向，相邻单形在 $z$ 中的系数绝对值必相同，否则边界在公共面上不为零。由上一推论，所有顶维系数都具有同一绝对值 $m>0$。将 $z$ 除以 $m$ 就得到定向闭链。\hfill$\square$
+
+\entry{推论}{8.5.5}紧致、已三角剖分的同调 $n$ 维流形 $X$ 可定向，当且仅当每个分支 $X_i$ 都满足 $H_n(X_i)\cong\Z$。因此可定向性与三角剖分无关。
+
+下一个推论用到上一章的泛系数定理。
+
+\sourcepage{466--467}
+\entry{推论}{8.5.6}设 $X$ 是紧致连通、已三角剖分的同调 $n$ 维流形。
+\begin{enumerate}[label=(\alph*)]
+\item 若可定向，则 $H_{n-1}(X)$ 无挠，且对任意 $G$，
+\[H_n(X;G)\cong G\cong H^n(X;G).\]
+\item 若不可定向，则 $H_{n-1}(X)$ 的挠子群阶为 $2$，且
+\[H_n(X;G)\cong\ker\varphi_2,\qquad H^n(X;G)\cong G/2G,\]
+其中 $\varphi_2:G\to G$ 为乘以 $2$ 的同态。特别地，$H_n(X)=0$，$H^n(X)\cong\Z/2$。
+\end{enumerate}
+
+\textbf{证明：}(a) 由对偶，$H_n(X;G)\cong H^0(X;G)$，$H^n(X;G)\cong H_0(X;G)$；连通性使两个零维群都同构于 $G$。又由泛系数定理，
+\[H^n(X)\cong\operatorname{Hom}(H_n(X),\Z)\oplus\operatorname{Ext}(H_{n-1}(X),\Z).\]
+左端与第一项均为 $\Z$，而第二项同构于 $H_{n-1}(X)$ 的挠子群（定理 7.2.5），所以该挠子群为零。
+
+(b) 任意给顶维单形定向。若 $g\in G$ 满足 $2g=0$，则 $\sum g\sigma_i$ 为闭链，因为每个余维一面恰好邻接两个顶维单形。反之，若 $z$ 是非零 $G$ 系数顶维闭链，在某个顶维单形上的系数为 $g$，则相邻单形上的系数必为 $\pm g$。由推论 8.5.3，
+\[z=g\left(\sum\epsilon_i\sigma_i\right),\qquad\epsilon_i=\pm1.\]
+括号内的整数链不能是闭链，否则 $X$ 可定向。因此其边界在某个余维一面上的系数非零；该系数必为 $\pm2$。因 $z$ 是闭链，得到 $2g=0$。于是 $g=-g$，所以 $z=\sum g\sigma_i$。顶维没有边界链，因此 $H_n(X;G)\cong\ker\varphi_2$。
+
+令 $T_{n-1}(X)$ 为 $H_{n-1}(X)$ 的挠子群。由于 $H_n(X)=0$，同调泛系数定理给出
+\[T_{n-1}(X)*G\cong H_{n-1}(X)*G\cong\ker\varphi_2\cong(\Z/2)*G.\]
+特别地，
+\[T_{n-1}(X)*\Z/m\cong
+\begin{cases}0,&m\text{ 为奇数},\\\Z/2,&m\text{ 为偶数}.\end{cases}\]
+因此不存在奇挠系数（令 $m$ 等于该奇数），只能有一个偶挠系数（令 $m=2$），且该系数不可能大于 $2$（令 $m$ 等于该系数）。所以 $T_{n-1}(X)\cong\Z/2$。最后由上同调泛系数定理，
+\[H^n(X;G)\cong\operatorname{Ext}(H_{n-1}(X),G)\cong G/2G.\]
+\hfill$\square$
+
+\entry{定义}{8.5.7}设同调 $n$ 维流形 $X$ 不一定紧致，但有局部有限的三角剖分。若能给所有顶维单形定向，使可能无限的和 $\sum\sigma_i$ 成为闭链，则称其可定向。
+
+\entry{定理}{8.5.8（Poincaré 对偶——非紧情形）}设 $X$ 是由局部有限复形三角剖分的同调 $n$ 维流形。
+\begin{enumerate}[label=(\arabic*)]
+\item 对所有 $p$，都有
+\[H_c^p(X;\Z/2)\cong H_{n-p}(X;\Z/2),\qquad
+H^p(X;\Z/2)\cong H_{n-p}^{\infty}(X;\Z/2).\]
+这里 $H_c^p$ 是紧支集上同调（定义 5.5.4），$H_*^{\infty}$ 是无限链同调（定义 1.6.14）。
+\item 若 $X$ 可定向，则对任意 $G$ 及所有 $p$，
+\[H_c^p(X;G)\cong H_{n-p}(X;G),\qquad
+H^p(X;G)\cong H_{n-p}^{\infty}(X;G).\]
+\end{enumerate}
+
+\sourcepage{467--468}
+\subsection*{习题}
+\begin{enumerate}
+\item 设 $M,N$ 是紧致连通、可三角剖分的 $n$ 维流形，$f:M\to N$。证明若 $M$ 可定向、$N$ 不可定向，则
+\[f_*:H_n(M;\Z/2)\to H_n(N;\Z/2)\]
+为零同态。
+\item 设 $X$ 是紧致可定向、可三角剖分的流形，第 $i$ 个 Betti 数为 $\beta_i(X)$。回顾 Euler 数公式 $\chi(X)=\sum_i(-1)^i\beta_i(X)$。
+\begin{enumerate}[label=(\alph*)]
+\item 若 $\dim X$ 为奇数，证明 $\chi(X)=0$。
+\item 若 $\dim X=2k$，用 $i\le k$ 的 Betti 数表示 $\chi(X)$。
+\item 给出关于切向量场的应用（见第 2.10 节习题 5）。
+\end{enumerate}
+\item 设 $X$ 是有局部有限三角剖分的同调 $n$ 维流形，不一定紧致。
+\begin{enumerate}[label=(\alph*)]
+\item 证明定理 8.5.8(1)。
+\item 若 $X$ 连通，证明它是伪 $n$ 维流形。
+\item 证明定理 8.5.8(2)，并得出可定向性仅依赖于底层拓扑空间，而与具体剖分无关。
+\end{enumerate}
+\item 证明 Klein 瓶不可定向。
+\item 在拓扑教材或互联网上查阅“交叉帽”（cross cap），证明它不可定向。
+\end{enumerate}

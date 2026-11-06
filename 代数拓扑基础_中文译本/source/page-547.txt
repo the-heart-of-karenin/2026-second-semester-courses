@@ -1,0 +1,37 @@
+532
+Elements of Algebraic Topology
+Theorem 8.14.1 (Alexander–Pontryagin duality) Let A be a proper,
+non-empty, closed subset of Sn. Then
+ˇHk(A) ∼= Hn−k−1(Sn \ A) .
+Here the left-hand space is ˇCech cohomology and the right-hand space is
+singular homology.
+Proof: Choose a triangulation X of Sn fine enough that not every simplex
+of X intersects A. Consider the sequence sd X, sd2 X, . . . of successively finer
+subdivisions of X.
+Let Am denote the subcomplex of sdm X consisting of those simplices that
+intersect A, along with their faces. Then |Am| is a proper nonempty polyhe-
+dron in X and |Am+1| ⊂|Am| for all m. Furthermore, A is the intersection of
+the sets |Am|.
+The Alexander duality theorem gives us an isomorphism
+αm : Hk(Am; G) →Hn−k−1(X \ A; G) .
+Since this isomorphism is natural with respect to inclusions, it induces an
+isomorphism of the direct limits
+α : dir lim Hk(Am; G) →dir lim Hn−k−1(X \ Am; G) .
+The left-hand group is isomorphic to the reduced ˇCech cohomology group
+ˇHk(A; G) by Theorem 8.13.16. We show that the right-hand group is isomor-
+phic to the singular homology group ˇHn−k−1(X \ A; G). Then the theorem is
+proved.
+Consider the homomorphisms induced by inclusion
+Hn−k−1(X \ Am) →Hn−k−1(X \ A) .
+They induce a homomorphism of the direct limit
+dir lim Hn−k−1(X \ Am) →Hn−k−1(X \ A) .
+The fact that this homomorphism is an isomorphism follows from the compact
+support property of singular homology. Every singular simplex T : ∆p →X\A
+lies in a compact set and hence lies in one of the open sets X \Am. Thus every
+singular cycle of X \ A is carried by X \ Am for some m. Furthermore, any
+homology between two such singular cycles is carried by X \ Am+p for some
+p.
+Corollary 8.14.2 Let n > 1. Let M be a compact, connected, triangulable
+n −1 manifold. Suppose that h : M →Sn is an imbedding. Then M is
+orientable, and Sn \ h(M) has precisely two path components of which h(M)
+is the common boundary.

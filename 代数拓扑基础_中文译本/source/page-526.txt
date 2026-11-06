@@ -1,0 +1,31 @@
+Duality in Manifolds
+511
+8.12
+“Natural” Versions of Lefschetz and Alexander
+Duality
+The naturality property of the Lefschetz duality isomorphism
+Hk(X, A) ϕ∗
+−→Hn−k(X \ A)
+stated in Theorem 8.10.10 is rather unsatisfactory in general. It is not clear
+as it stands, for instance, that the isomorphism ϕ∗is independent of the
+triangulation of (X, A), or even that it is invariant under subdivision of X.
+This lack of naturality carries over to Alexander duality. It is reflected in
+the fact that we were able in the last section to prove only the polyhedral
+version of the Jordan curve theorem.
+In this section, we obtain more natural versions of the Lefschetz and
+Alexander isomorphisms. These will enable us, after we have introduced an-
+other version of cohomology due to Cˇech, to construct the Alexander duality
+isomorphism in the situation where A is an arbitrary closed subset of Sn.
+First, a definition and a lemma:
+Definition 8.12.1 Let A be the polytope of a subcomplex of the finite com-
+plex X. Define St(A, X) to be the union of all the sets St(σ, X) as σ ranges
+over all the simplices of X lying in A. It is called the star of A in X.
+A
+Figure 8.12.1
+If C is the collection of all simplices of X disjoint from A, then it is
+immediate that
+St(A, X) = |X| \ |C| .
+If A is the polytope of a full subcomplex of X, then it follows from
+Lemma 8.10.1 that A is a deformation retract of St(A, X). Note, however,
+that A need not be a deformation retract of the closed star St(A, X). See
+Figure 8.12.1.

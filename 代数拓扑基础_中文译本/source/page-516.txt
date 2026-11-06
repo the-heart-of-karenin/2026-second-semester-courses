@@ -1,0 +1,44 @@
+Duality in Manifolds
+501
+Proof: The proof follows the pattern of Corollary 8.5.4.
+Corollary 8.10.7 Let (X, A) be a compact, triangulated relative homology
+n manifold. Then (X, A) is orientable if and only if, for each component X of
+|X| \ |A|, one has Hn(Xi, Xi ∩A) ∼= Z.
+Remark 8.10.8 It follows that orientability of (X, A) does not depend on
+the triangulation of (X, A).
+Definition 8.10.9 Let (X, A) be a compact, triangulable relative homology
+n-manifold. Let X1, X2, . . . , Xk be the components of X \A. Let Ai = Xi ∩A.
+If (X, A) is orientable, then Hn(Xi, Ai) is infinite cyclic. A generator Γ(i) of
+this group is called an orientation class for (Xi, Ai). The image of the classes
+Γ(i) under the isomorphism
+Hn(Xi, Ai) ∼= Hn(X, A)
+induced by inclusion is called an orientation class for (X, A) and is denoted
+by Γ. Similarly, if (X, A) is not necessarily orientable, and if Γ(i)
+(2) is the unique
+non-trivial element of Hn(Xi, Ai; Z/2), then the image of these classes in
+Hn(X, A; Z/2) is denoted Γ(2) and is called an orientation class for (X, A)
+over Z/2.
+If (X, A) is given a specific triangulation, then Γ is represented by the sum
+γ of all n-simplices of X not in A, suitably oriented. And Γ(2) is represented
+by the sum of all these n-simplices, each with coefficient [1] ∈Z/2.
+A natural question to ask at this point is whether the second version
+of the proof of Poincar´e duality, which involves cap products, generalizes to
+the relative case. The answer is that it does not. Let us examine where the
+difficulty lies.
+We begin as in the proof of Theorem 8.7.2. Choose a map
+g : (sd X, sd A) →(X, A) ,
+which is a simplicial approximation to the identity. Let γ be an orientation
+cycle for (X, A). Consider the diagram
+Ck(X, A)
+Dn−k(X∗)
+Ck(sd X, sd X)
+Cn
+k(sd X) ,
+g#
+j
+⌢sd γ
+−
+ψ
+where j is inclusion as before. The proof of Theorem 8.7.2 goes through to show
+that the composite of g# and ⌢sd γ carries Ck(X, A) isomorphically onto
+the subgroup of Cn−k(sd X) which is the image of Dn−k(X∗) under j. Up to

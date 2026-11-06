@@ -1,0 +1,116 @@
+\section{上同调万有系数定理}
+\sourcepage{389--390}
+现在精确说明同调怎样决定上同调。引理 5.6.12 已给出以 Kronecker 映射为满射的自然分裂短正合列；只需识别它的核，说明该核仅依赖 $H_{p-1}(\mathcal C)$ 与系数群。
+
+\entry{定理}{7.3.1（上同调万有系数定理）}若 $\mathcal C$ 自由，则存在正合列
+\[
+0\leftarrow\operatorname{Hom}(H_p(\mathcal C),G)\xleftarrow{\kappa}H^p(\mathcal C;G)
+\leftarrow\operatorname{Ext}(H_{p-1}(\mathcal C),G)\leftarrow0.
+\]
+它对链映射诱导的同态自然，且分裂，但分裂不自然。
+
+\textbf{证明：步骤 1。}记链、闭链、边缘为 $C_p,Z_p,B_p$。因 $B_{p-1}$ 自由，$0\to Z_p\xrightarrow{i}C_p\xrightarrow{\partial_0}B_{p-1}\to0$ 分裂。将诸 $Z_p$ 组成零边缘链复形 $\mathcal Z$，令 $D_p=B_{p-1}$ 也取零边缘，便得到逐维分裂的链复形短正合列。对偶并应用之字形引理，考虑五项
+\[
+\begin{split}
+H^{p+1}(\mathcal D;G)\xleftarrow{\beta}H^p(\mathcal Z;G)\xleftarrow{i^*}H^p(\mathcal C;G)\\
+\xleftarrow{\partial_0^*}H^p(\mathcal D;G)\xleftarrow{\beta}H^{p-1}(\mathcal Z;G).
+\end{split}
+\]
+这里以 $\beta$ 表示连接同态，以免与其他上边缘记号混淆。
+
+\textbf{步骤 2。}因 $\mathcal Z,\mathcal D$ 边缘为零，左侧的 $\beta$ 可识别为 $\operatorname{Hom}(Z_p,G)\to\operatorname{Hom}(B_p,G)$。它就是包含 $j_p:B_p\to Z_p$ 的对偶，即限制同态。
+
+\sourcepage{391}
+事实上，对 $f:Z_p\to G$，先延拓为 $g:C_p\to G$，再取 $\delta g$。对 $c_{p+1}$，有 $\langle\delta g,c_{p+1}\rangle=f(\partial c_{p+1})$，而 $\overline{\partial_0}\,\overline j_p(f)$ 也取相同值。因此之字形过程得到的正是 $\overline j_p(f)$。
+
+\textbf{步骤 3。}五项正合列给出
+\[
+0\leftarrow\ker\overline j_p\leftarrow H^p(\mathcal C;G)
+\leftarrow\operatorname{coker}\overline j_{p-1}\leftarrow0.
+\]
+而 $0\to B_p\xrightarrow{j_p}Z_p\xrightarrow{\pi}H_p(\mathcal C)\to0$ 是自由消解，故由 Ext 的基本正合列，
+\[
+\ker\overline j_p\cong\operatorname{Hom}(H_p(\mathcal C),G),\qquad
+\operatorname{coker}\overline j_{p-1}\cong\operatorname{Ext}(H_{p-1}(\mathcal C),G).
+\]
+得到所求短正合列。
+
+\textbf{步骤 4。}链映射将链、闭链、边缘分别映到相应群，且与包含和边缘可交换，所以诱导步骤 1 的短正合列之间的同态。之字形引理自然性给出五项列及步骤 3 的短正合列之间的同态；Ext 正合列又自然，所以上述核、余核的识别也自然。
+
+\sourcepage{392}
+\textbf{步骤 5。}最后验证右向满射确为 $\kappa$。它是先将上闭链限制到 $Z_p$，再经 $\overline\pi^{-1}$ 视为定义在同调上的同态。对 $\{z^p\}$ 与闭链 $z_p$，其值就是 $\langle z^p,z_p\rangle$，正是 Kronecker 指标。因此引理 5.6.12 给出分裂，且其非自然性保留。\hfill$\square$
+
+\entry{推论}{7.3.2}对拓扑空间偶，存在自然分裂短正合列
+\[
+\begin{split}
+0\leftarrow\operatorname{Hom}(H_p(X,A),G)\leftarrow H^p(X,A;G)\\
+\leftarrow\operatorname{Ext}(H_{p-1}(X,A),G)\leftarrow0,
+\end{split}
+\]
+分裂本身不自然。
+
+\entry{推论}{7.3.3}若自由链复形间的链映射在 $p,p-1$ 两维诱导同调同构，则它在 $p$ 维诱导任意系数上同调同构。
+
+\textbf{证明：}对自然万有系数序列应用 Steenrod 五引理。\hfill$\square$
+
+这提供定理 5.6.6 的另一证明，并更强：无需假定所有维数都同构。
+
+\sourcepage{393}
+\subsection*{域系数的万有系数定理}
+若系数群是域 $F$，还有一个常用版本，直接联系同为 $F$ 系数的同调与上同调。群 $C_p\otimes F$ 与 $\operatorname{Hom}(C_p,F)$ 都自然为 $F$ 向量空间，边缘与上边缘线性，所以同调、上同调也都是向量空间。我们证明它们互为对偶。
+
+需要区分三种 Hom：$\operatorname{Hom}(C_p,F)$、$\operatorname{Hom}(C_p\otimes F,F)$、$\operatorname{Hom}_F(C_p\otimes F,F)$。第一种按定义计算上同调；下面说明第三种也计算它，第二种却未要求对标量线性。
+
+\entry{引理}{7.3.4}映射
+\[
+\omega:\operatorname{Hom}(C_p,F)\to\operatorname{Hom}_F(C_p\otimes F,F),\qquad
+\omega(f)(c\otimes\alpha)=f(c)\alpha
+\]
+是与上边缘可交换的向量空间同构。
+
+\entry{注}{7.3.5}严格说，上式先定义于 $C_p\times F$，验证双线性后才诱导张量积上的映射。这一步常被省略。
+
+\sourcepage{394}
+\textbf{证明：}由 $\alpha(c\otimes\beta)=c\otimes\alpha\beta$，立即可见 $\omega(f)$ 线性。若 $\omega(f)=0$，在 $c\otimes1$ 上取值，得 $f(c)=0$，故单射。
+
+对任意线性 $\varphi:C_p\otimes F\to F$，令 $f(c)=\varphi(c\otimes1)$。张量加法说明 $f$ 为群同态，线性性又说明 $\varphi(c\otimes\alpha)=\alpha\varphi(c\otimes1)=\omega(f)(c\otimes\alpha)$，故满射。最后
+\[
+\delta\omega(f)(c\otimes\alpha)=\omega(f)(\partial c\otimes\alpha)
+=f(\partial c)\alpha=\omega(\delta f)(c\otimes\alpha),
+\]
+证明与上边缘交换。\hfill$\square$
+
+\entry{定理}{7.3.6（域系数万有系数定理）}若 $\mathcal C$ 自由，$F$ 为域，则存在自然向量空间同构
+\[
+H^p(\mathcal C;F)\cong\operatorname{Hom}_F(H_p(\mathcal C;F),F).
+\]
+
+\sourcepage{395}
+\textbf{证明：}向量空间短正合列都分裂，所以线性 Hom 保持其正合性。令 $\mathcal E=\mathcal C\otimes F$，闭链、边缘仍记为 $Z_p,B_p$。对 $0\to Z_p\to E_p\to B_{p-1}\to0$ 应用线性 Hom，再像本节第一个定理那样使用之字形引理。由上一引理，中间上链复形就是计算 $H^p(\mathcal C;F)$ 的复形。因此得到
+\[
+0\leftarrow\ker\overline j_p\leftarrow H^p(\mathcal C;F)\leftarrow\operatorname{coker}\overline j_{p-1}\leftarrow0.
+\]
+但现在 $0\to B_p\to Z_p\to H_p(\mathcal E)\to0$ 是向量空间短正合列，其线性对偶完全正合，所以余核为零，核为 $\operatorname{Hom}_F(H_p(\mathcal E),F)$，即得结论。自然性同前。\hfill$\square$
+
+\entry{推论}{7.3.7}对空间偶 $(X,A)$，有自然同构 $H^p(X,A;F)\cong\operatorname{Hom}_F(H_p(X,A;F),F)$。
+
+若同调向量空间有限维，它与其对偶也同构，但这种同构不自然。微分几何中常用紧流形及实系数，因而有时把同调、上同调当作相同对象处理；这种习惯可能造成混淆。
+
+\sourcepage{396}
+\entry{定义}{7.3.8}系数群同态 $\alpha:G\to G'$ 诱导同调与上同调中的同向同态，分别记为 $\alpha_*$、$\alpha^*$，称为\textbf{系数同态}。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $H_{p-1}(\mathcal C)$ 自由，或 $G$ 可除，证明 $\kappa$ 为同构。
+\item 用万有系数定理计算 $T\#T$、三个实射影平面的连通和、$P^N$、$k$ 重愚人帽的任意系数上同调。
+\item 假设所有整数同调有限生成。
+\begin{enumerate}[label=(\alph*)]
+\item 以 Betti 数与挠系数表示 $H^p(X;G)$，与第 5.3 节习题 5 比较。
+\item 对圆周群系数重复计算。
+\item 对有理系数重复计算。
+\end{enumerate}
+\item 证明万有系数序列对系数同态也自然。
+\item 若有限单纯偶为相对 $n$ 维伪流形，证明可定向时 $H_{n-1}$ 的挠子群为零，不可定向时其阶为 $2$。
+\item 解释定理 7.3.1 的分裂为何不自然。
+\item 解释推论 7.3.2 的分裂为何不自然。
+\end{enumerate}

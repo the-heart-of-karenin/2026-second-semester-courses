@@ -1,0 +1,41 @@
+422
+Elements of Algebraic Topology
+Theorem 7.8.10 (The K¨unneth theorem with field coefficients)
+If C and C′ are free chain complexes, and if F is a field, then there is a natural
+isomorphism
+
+p+q=mHp(C; F) ⊗F Hq(C′; F) −→Hm(C ⊗F C′; F) .
+Proof: Applying the preceding theorem to the chain complexes E = C⊗F and
+E′ = C′ ⊗F, which are vector spaces over F, we obtain a natural isomorphism
+
+p+q=mHp(E) ⊗F Hq(E′) −→Hm(E ⊗F E′) .
+By definition, Hp(E) = Hp(C; F) and Hq(E′) = Hp(C′; F). It remains to show
+that there is a natural vector space isomorphism
+f : E ⊗F E′ →(C ⊗C′) ⊗F
+that is also a chain map. Once that is done our theorem will be proved.
+We begin constructing the isomorphism by defining
+f : Cp × F × C′
+q × F →Cp ⊗C′
+q ⊗F
+by the equation
+f(x, α, y, β) = (x ⊗y) ⊗αβ .
+This map is multilinear, so it induces a homomophism
+f ′ : (Cp ⊗F) ⊗(C′
+q ⊗F) →Cp ⊗C′
+q ⊗F .
+In fact, we claim f ′ is a vector space homomorphism in each variable sepa-
+rately. For instance, we examine what happens when an element of the first
+space is multiplied by γ ∈F. We have
+f ′(γ(x ⊗α) ⊗(y ⊗β)) = f ′((x ⊗γα) ⊗(y ⊗β))
+= x ⊗y ⊗(γα)β
+= γ(x ⊗y ⊗αβ) = γf ′((x ⊗α) ⊗(y ⊗β)) .
+Thus f ′ induces a homomorphism
+f ′′ : (Cp ⊗F) ⊗F (C′
+q ⊗F) →Cp ⊗C′
+q ⊗F .
+To show that f ′′ is an isomorphism, let {xα} be a basis for C and let {yβ}
+be a basis for C′. Then {xα ⊗yβ} is a basis for C ⊗C′. The elements {xα ⊗1}
+and {yβ⊗1} form a basis for C⊗F and C′⊗F, respectively. Hence the elements
+{(xα ⊗1) ⊗F (yβ ⊗1)} form a vector space basis for (C ⊗F) ⊗F (C′ ⊗F). The
+images under f ′′ of the basis elements {(xα ⊗1)⊗F (yβ ⊗1)} are the elements
+{(xα ⊗yβ) ⊗1}, which form a vector space basis for (C ⊗C′) ⊗F.

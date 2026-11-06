@@ -1,0 +1,66 @@
+Homological Algebra
+417
+The chain group of Z ⊗C′ in dimension m is
+(Z ⊗C′)m = 
+p+q=mZp ⊗C′
+q .
+To compute the cycles and boundaries of Z ⊗C′, we begin with the exact
+sequence
+0 −→Z′
+q
+C′
+q
+B′
+q−1 −→0 .
+j
+∂′
+0
+Since Zp is free, when we tensor with Zp, we have horizontal and vertical
+exactness in the following diagram:
+0 −→Zp ⊗Z′
+q −→Zp ⊗C′
+q
+Zp ⊗B′
+q−1 −→0 .
+i ⊗∂′
+0
+0
+Zp ⊗C′
+q−1
+i ⊗∂′
+It follows that the kernel of i ⊗∂′ is the subgroup Zp ⊗Z′
+q of Cp ⊗C′
+q, and
+the image is the subgroup Zp ⊗B′
+q−1 of Zp ⊗C′
+q−1. Hence the groups of cycles
+and boundaries of Z ⊗C′ in dimension m are the respective groups
+
+p+q=mZp ⊗Z′
+q
+and
+
+p+q=mZp ⊗B′
+q .
+Now consider the exact sequence
+0 −→B′
+q −→Z′
+q −→Hq(C′) −→0 .
+Tensoring and summing, we obtain the exact sequence
+0 −→
+p+q=mZp ⊗B′
+q −→
+p+q=mZp ⊗Z′
+q
+
+p+q=mZp ⊗Hq(C′) −→0 .
+Since the first two groups of this sequence are the m-boundaries and m-cycles
+of Z ⊗C′, the last group is isomorphic to Hm(Z ⊗C′), as claimed.
+Step 3. An entirely similar argument shows that the m-cycle group of D ⊗C′
+is the group
+
+p+q=mDp ⊗Z′
+q ,
+and that inclusion induces an isomorphism
+
+p+q=mDp ⊗Hq(C′) ∼= Hm(D ⊗C′) .

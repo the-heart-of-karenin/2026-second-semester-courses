@@ -1,0 +1,74 @@
+554
+Index of Notation
+Hp(X; G) = Hp({S(X), ϵ}; G)
+reduced singular homology groups with
+coefficients in G
+376
+h# ⊗iG : S(X, A) ⊗G →S(Y, B) ⊗G
+chain map induced by continuous
+map h : (X, A) →(Y, B)
+377
+h∗: Hp(X, A; G) →Hp(Y, B; G) ⊗G
+homology homomorphism induced by continuous
+map h : (X, A) →(Y, B)
+377
+Hp(K, K0; G)
+relative simplicial homology groups with
+coefficients in G
+378
+Hp(K; G)
+reduced simplicial homology groups with
+coefficients in G
+378
+Ext (A, B)
+group of extensions of B by A
+385
+Ext (γ, δ)
+homomorphism induced by γ : A →A′
+and δ : B′ →B
+385
+α∗: Hi(C; G) →Hi(C; G′)
+coefficient homomorphism induced by α : G →G′ 396
+α∗: Hi(C; G) →Hi(C; G′)
+coefficient homomorphism induced by α : G →G′ 396
+A ∗B
+torsion product of groups A and B
+398
+γ ∗δ : A ∗B →A′ ∗B′
+homomorphism induced by γ : A →A′
+and δ : B →B′
+398
+Extn
+R(A, G)
+groups of extensions of R-modules
+402
+C ⊗C′
+tensor product of chain complexes C and C′
+410
+¯∂: (C ⊗C′)m →(C ⊗C′)m−1
+boundary operator in tensor product of C and C′
+410
+¯ϵ : C0 ⊗C′
+0 →Z
+augmentation of tensor product of {C, ϵ}
+and {C′, ϵ′}
+410
+Θ : Hp(C) ⊗Hq(C′) →Hp+q(C ⊗C′)
+tensor homomorphism for homology
+414
+α × β
+homology cross product of α and β
+419
+ν : S(X × Y ) →S(X) ⊗S(Y )
+Eilenberg–Zilber chain map
+424
+µ : S(X) ⊗S(Y ) →S(X × Y )
+Eilenberg–Zilber chain map
+424
+Hom (C, R)
+cochain complex corresponding to chain
+complex C and ring R
+428
+δ : (Hom (C, R) ⊗Hom (C′, R))m →(Hom (C, R) ⊗Hom (C′, R))m+1
+coboundary operator
+428

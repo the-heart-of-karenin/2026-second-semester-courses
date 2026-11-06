@@ -1,0 +1,43 @@
+Homology Groups of a Simplicial Complex
+39
+4. Let K be the complex consisting of the proper faces of a 3-simplex.
+Compute H1(K) and H2(K).
+5. For what values of i is it true that
+Hi(K(p)) ∼= Hi(K) ?
+6. (a) Show that if K is locally finite, then one can define a boundary
+operator
+∂∞
+p : C∞
+p (K) →C∞
+p−1(K)
+by the formula used earlier, and Lemma 1.6.9 holds.
+(b) Let K be the complex whose space is R and whose vertices are
+the integers. Show that
+H1(K) = 0 and H∞
+1 (K) ∼= Z .
+1.7
+Homology Groups of Surfaces
+If K is a finite complex, then the chain group Cp(K) has finite rank, so the
+cycle group Zp(K) also has finite rank. Then Hp(K) is finitely generated, so
+that the fundamental theorem of abelian groups applies. The betti number
+and torsion coefficients of Hp(K) are called, classically, the betti number of K
+and the torsion coefficients of K in dimension p. The fact that these numbers
+are topological invariants of |K| will be proved in Chapter 2.
+In former times, much attention was paid to the numerical invariants,
+not only in topology, but also in algebra and other parts of mathematics.
+Nowadays, mathematicians are likely to feel that homology groups are the
+more important notion, and one is more likely to study properties of these
+groups than to compute their numerical invariants. Nevertheless, it is still
+important in many situations to compute the homology groups specifically—
+that is, to find the betti numbers and torsion coefficients for a given space.
+One of the greatest virtues of the simplicial homology groups is that it is
+in fact possible to do precisely this. In Section 1.12 we shall prove a theorem
+to the effect that, for a finite complex K, the homology groups are effectively
+computable. This means that there is a specific algorithm for finding the betti
+numbers and torsion coefficients of K.
+In the present section, we shall compute the betti numbers and torsion
+coefficients of the compact surfaces. The techniques we shall use may seem a
+bit awkward and ad hoc in nature. But, in fact, they are effective on a large
+class of spaces. In a later section, when we study CW complexes, we shall
+return to these techniques and show they are part of a systematic approach
+to computing homology groups.

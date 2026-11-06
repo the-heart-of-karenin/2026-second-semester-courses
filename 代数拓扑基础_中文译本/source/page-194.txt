@@ -1,0 +1,35 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+179
+that cp −∂dp+1 is carried by C. Choose a finite subcomplex of C carrying
+cp −∂dp+1. Let C1 be the union of this subcomplex and C0. Then choose a
+finite subcomplex of K carrying dp+1. Let K1 be the union of this subcomplex
+and K0 and C1. Then the homomorphism induced by the inclusion
+(K0, C0) →(K1, C1)
+carries α to 0.
+Theorem 3.6.5 Given a sequence G0, G1, . . . of finitely generated abelian
+groups with G0 free and non-trivial, there is a complex K such that Hi(K) ∼=
+Gi for each i.
+The proof of this last theorem is left to the exercises.
+EXERCISES
+1. Prove Theorem 3.6.5. [Hint: See Exercise 5 of Section 3.4.]
+2. Let A be either the class of triangulable pairs, or the class of all
+topological pairs. Prove Theorem 3.6.4, with the word “triangula-
+ble” replaced throughout by the word “admissible”—directly from
+the axioms.
+[Hint: Show that in the triangulable case one can assume that
+the triangulation of (X, A) triangulates X0 as well. Examine the
+diagram
+Hq(X, A0)
+Hq(X0, A0)
+Hq(A, A0)
+Hq(X, A)
+ℓ∗
+to find a compact A1 such that ℓ∗(α) is in the image of
+Hq(A1, A0) −→Hq(X, A0) .
+Then the inclusion (X0, A0) →(X, A1) induces a homomorphism
+carrying α to 0. Examine the diagram
+Hq(X0 ∪A1, A1)
+Hq(X0, A0)
+Hq+1(X, X0 ∪A1)
+Hq(X, A1)
+m∗

@@ -1,0 +1,33 @@
+134
+Elements of Algebraic Topology
+Corollary 2.8.8 Suppose w ∗K is a cone over the complex K. The map
+π : |K| × I →|w ∗K| defined by
+π(x, t) = (1 −t)x + tw
+is a quotient map. It collapses |K| × I to the point w and is otherwise one-to-
+one.
+Proof: If σ = vo · · · vn is a simplex of K, let w∗σ denote the simplex wv0 · · · vn
+of w ∗K. A set B is closed in |w ∗K| if its intersection with each simplex
+w ∗σ is closed in that simplex. A set A is closed in |K| × I if its intersection
+with each set σ × I is closed in σ × I. Therefore, for π to be a quotient map,
+it suffices to show that the map
+π′ : σ × I →w ∗σ ,
+obtained by restricting π, is a quotient map. But that fact is immediate since
+π′ is continuous and surjective, and the spaces involved are compact Hausdorff.
+The preceding corollary suggests a way to define a cone over an arbitrary
+topological space.
+Definition 2.8.9 Let X be a space. We define the cone over X to be the
+quotient space obtained from X × I by identifying the subset X × 1 to a
+point. This point is called the vertex of the cone. The cone itself is denoted
+by C(X). Formally, we define C(X) by partitioning X × I into the one-point
+sets {(x, t)} for t < 1 and the set X × 1, and passing to the resulting quotient
+space.
+The next definition is used in Exercise 2.
+Definition 2.8.10 The space obtained from two copies of R2, say R2 × {a}
+and R2 × {b}, by identifying (x, a) and (x, b) whenever x̸ = 0 is called the
+plane with two origins.
+EXERCISES
+1. Verify the results about quotient spaces that were stated without
+proof in this section.
+2. (a) Show that each point of the plane with two origins has a neigh-
+borhood homeomorphic to an open subset of R2.
+(b) Show that the plane with two origins is not Hausdorff.

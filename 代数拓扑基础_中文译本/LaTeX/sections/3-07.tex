@@ -1,0 +1,107 @@
+\section{\texorpdfstring{$*$}{*}范畴与函子}
+\sourcepage{180--181}
+前面多次提到诱导同态、函子性质，以及将一个数学对象赋给另一个对象的自然性。这些语言背后确有共同思想，本章最后一节研究它。主要是一些新术语，少数证明初等，大多留给读者。
+
+\entry{定义}{3.7.1}\textbf{范畴}（category）$\mathcal C$ 由三部分组成：
+\begin{enumerate}[label=(\arabic*)]
+\item 一个\textbf{对象}（object）类。
+\item 对每个对象有序对 $(X,Y)$，给出\textbf{态射}（morphism）的集合 $\operatorname{hom}(X,Y)$。
+\item 对每个对象三元组给出\textbf{复合}运算 $\operatorname{hom}(X,Y)\times\operatorname{hom}(Y,Z)\to\operatorname{hom}(X,Z)$，将 $(f,g)$ 的像记为 $g\circ f$。
+\end{enumerate}
+要求满足两条公理。
+
+\noindent\textbf{公理 1（结合律）：}若 $f:W\to X$、$g:X\to Y$、$h:Y\to Z$，则 $h\circ(g\circ f)=(h\circ g)\circ f$。
+
+\noindent\textbf{公理 2（恒等态射存在）：}对每个对象 $X$，存在 $1_X\in\operatorname{hom}(X,X)$，使对任意适当的 $f,g$，有 $1_X\circ f=f$、$g\circ1_X=g$。
+
+标准例子是拓扑空间与连续映射，使用通常复合。此例也说明为何说对象构成“类”而不是集合：谈论“所有拓扑空间的集合”或“所有集合的集合”会引出逻辑悖论，例如所有集合的集合是否属于自身？类比集合更大，不对它作通常的集合论运算，例如取所有子集。
+
+恒等态射唯一。若 $1_X,1'_X$ 都满足恒等性质，则 $1_X1'_X=1'_X$，同时 $1_X1'_X=1_X$，所以两者相同。
+
+\entry{定义}{3.7.2}若 $f:X\to Y$、$g,g':Y\to X$，且 $gf=1_X$，称 $g$ 为 $f$ 的\textbf{左逆}；若 $fg'=1_Y$，称 $g'$ 为其\textbf{右逆}。
+
+若同时有左逆、右逆，则由结合律 $g=(g f)g'=g'$，二者相等，称为 $f$ 的\textbf{逆}，并且唯一。有逆的态射称为此范畴中的\textbf{等价态射}（equivalence）。每个态射都可逆的范畴称为\textbf{群胚}（groupoid）。通常以 $f:X\to Y$ 表示 $f\in\operatorname{hom}(X,Y)$，称 $X,Y$ 分别为其定义域对象、值域对象。
+
+\entry{定义}{3.7.3}从范畴 $\mathcal C$ 到 $\mathcal D$ 的\textbf{协变函子}（covariant functor）$G$，给每个对象 $X$ 指定对象 $G(X)$，给每个态射 $f:X\to Y$ 指定态射 $G(f):G(X)\to G(Y)$，满足
+\[
+G(1_X)=1_{G(X)},\qquad G(g\circ f)=G(g)\circ G(f).
+\]
+即保持恒等态射与复合。显然，函子把等价态射映为等价态射。
+
+\sourcepage{182--183}
+\entry{例}{3.7.4}以下是不同范畴的例子。复合都是通常函数复合或由其诱导；某些等价态射有专名，列于括号中。
+\begin{enumerate}[label=(\alph*)]
+\item 集合与映射（双射）。
+\item 拓扑空间与连续映射（同胚）。
+\item 拓扑空间与映射的同伦类（同伦等价）。
+\item 单纯复形与单纯映射（单纯同胚）。
+\item 单纯复形与其多胞体之间的连续映射。
+\item 单纯复形与连续映射的同伦类。
+\item 群与同态（同构）。
+\item 链复形与链映射。
+\item 链复形与链映射的链同伦类（链等价）。
+\item 阿贝尔群短正合列与序列同态。
+\item 链复形短正合列与序列同态。
+\item 阿贝尔群长正合列与序列同态。
+\item 拓扑空间的有序对 $(X,Y)$ 与连续映射的有序对 $(f,g)$。
+\end{enumerate}
+
+\entry{例}{3.7.5}以下为函子实例。
+\begin{enumerate}[label=(\alph*)]
+\item 将 $(X,Y)$ 赋为 $X\times Y$，将 $(f,g)$ 赋为 $f\times g$，给出从空间对到空间的函子。
+\item 将拓扑空间赋为其底集，将连续映射赋为相同的集合映射，给出从空间到集合的\textbf{遗忘函子}（forgetful functor），它“忘掉”拓扑结构。
+\item $K\mapsto\mathcal C(K)$、$f\mapsto f_\#$ 是从单纯复形及单纯映射到链复形及链映射的函子。
+\item 给定同调理论，$X\mapsto H_p(X)$、$[h]\mapsto h_*$ 是从容许空间及映射同伦类到阿贝尔群及同态的函子。这正是前两条公理及同伦公理的内容。
+\item 之字形引理将链复形短正合列赋为同调长正合列。定理 3.3.3 的自然性正是说，此赋值是函子。
+\end{enumerate}
+
+\entry{定义}{3.7.6}设 $G,H:\mathcal C\to\mathcal D$ 为函子。从 $G$ 到 $H$ 的\textbf{自然变换}（natural transformation）$T$，为每个对象指定态射 $T_X:G(X)\to H(X)$，使对每个 $f:X\to Y$，有
+\[
+\begin{array}{ccc}
+G(X)&\xrightarrow{T_X}&H(X)\\
+\downarrow\scriptstyle G(f)&&\downarrow\scriptstyle H(f)\\
+G(Y)&\xrightarrow{T_Y}&H(Y).
+\end{array}
+\]
+若每个 $T_X$ 都是等价态射，称 $T$ 为函子的\textbf{自然等价}（natural equivalence）。
+
+\entry{例}{3.7.7}固定 $p$，对容许偶定义函子 $G(X,A)=H_p(X,A)$、$G(f)=f_*$，以及 $H(X,A)=H_{p-1}(A)$、$H(f)=(f|_A)_*$。边界与诱导同态的交换性表示 $\partial_*$ 是 $G\to H$ 的自然变换，这恰是第三条 Eilenberg--Steenrod 公理。
+
+\entry{例}{3.7.8}在空间有序对的范畴上，令 $G(X,Y)=X\times Y$、$G(f,g)=f\times g$，$H(X,Y)=Y\times X$、$H(f,g)=g\times f$。交换坐标的同胚 $T_{(X,Y)}$ 给出 $G,H$ 的自然等价。
+
+\sourcepage{184}
+至今讨论的是协变函子。还有反变函子，只是“箭头全部反向”。
+
+\entry{定义}{3.7.9}\textbf{反变函子}（contravariant functor）$G:\mathcal C\to\mathcal D$ 给每个对象 $X$ 指定 $G(X)$，给每个 $f:X\to Y$ 指定 $G(f):G(Y)\to G(X)$，满足
+\[
+G(1_X)=1_{G(X)},\qquad G(g\circ f)=G(f)\circ G(g).
+\]
+反变函子之间的自然变换按相应方式定义。此前尚未研究反变函子，后面将用到。以线性代数的例子结束本节。
+
+\entry{例}{3.7.10}对实向量空间 $V$，考虑线性泛函空间 $L(V,\R)$，称为 $V$ 的\textbf{对偶空间}。它自然成为向量空间。若 $f:V\to W$ 为线性变换，则有\textbf{转置}或\textbf{伴随}变换 $f^{\mathrm{tr}}:L(W,\R)\to L(V,\R)$：对泛函 $\alpha:W\to\R$，令 $f^{\mathrm{tr}}(\alpha)=\alpha\circ f$。赋值 $V\mapsto L(V,\R)$、$f\mapsto f^{\mathrm{tr}}$ 为向量空间与线性变换范畴到自身的反变函子。
+
+\sourcepage{184--186}
+\subsection*{习题}
+\begin{enumerate}
+\item 验证例 3.7.4 的对象与态射确实构成范畴，且等价态射如所述。［只有 (c)、(i) 需要特别注意。］
+\item 此前学过的数学中已出现许多函子，只是未必使用此名称。回顾以下例子。
+\begin{enumerate}[label=(\alph*)]
+\item 对复形与单纯映射等价类的范畴，其中等价关系由邻接关系生成，定义到链复形与链同伦类范畴的函子。
+\item 给出从抽象复形到几何复形的“几何实现函子”，并说明涉及的映射。
+\item 对固定指标集 $J$ 编号的阿贝尔群族，给出到阿贝尔群的“直积”与“直和”函子。
+\item 回顾或查阅代数中的“阿贝尔化函子” $G\mapsto G/[G,G]$。
+\item 回顾或查阅从完全正则空间到紧致 Hausdorff 空间的 Stone--Čech 紧化函子。不要只处理空间，还须处理映射。
+\end{enumerate}
+\item 设 $G,H$ 分别将复形赋为定向链复形、有序链复形，将单纯映射赋为诱导链映射。
+\begin{enumerate}[label=(\alph*)]
+\item $G\to H$ 或 $H\to G$ 中有一个方向存在自然变换，确定方向。
+\item 若值范畴改为链复形与链映射的链同伦类，证明两个方向都存在自然变换，而且都是自然等价。
+\end{enumerate}
+\item 考虑空间对 $(X,Y)$，其中两者及乘积均可三角剖分，态射为连续映射对。定义 $G(X,Y)=H_p(X\times Y)$、$G(f,g)=(f\times g)_*$，$H(X,Y)=H_p(X)\times H_p(Y)$、$H(f,g)=f_*\times g_*$。构造自然变换 $G\to H$，证明它不是自然等价。
+\item 此前的态射都是映射或映射等价类。以下例子供熟悉基本群的读者考虑。固定空间 $X$，以其点为对象，以从 $x_0$ 到 $x_1$ 的道路的道路同伦类组成 $\operatorname{hom}(x_1,x_0)$。道路复合 $(\beta,\alpha)\mapsto\alpha*\beta$ 诱导态射复合。
+\begin{enumerate}[label=(\alph*)]
+\item 验证它是群胚。
+\item 验证 $x_0\mapsto\pi_1(X,x_0)$、$[\alpha]\mapsto\widehat\alpha$ 为到群及同态范畴的反变函子，其中 $\widehat\alpha([f])=[\alpha*f*\overline\alpha]$，$\overline\alpha$ 为反向道路。［把 $[\alpha]$ 放在 $\operatorname{hom}(x_1,x_0)$ 而非相反方向，是因为道路复合把先走的道路写在左边，而函数复合把先作用的函数写在右边。］
+\end{enumerate}
+\item 举出一个在阿贝尔群背景中出现的反变函子。
+\end{enumerate}

@@ -1,0 +1,35 @@
+138
+Elements of Algebraic Topology
+It is easy to check that k carries S(K) homeomorphically onto Sn. The
+fact that ρ ◦k = k ◦r is immediate since
+r((1 −t)x + tw0) = (1 −t)x + tw1 .
+Step 2: In view of Step 1, it suffices to show that deg r = −1 to see that our
+lemma is true.
+Let z be an n-cycle of S(K). Then z is a chain of the form
+z = [w0, cm] + [w1, dm] ,
+where cm, dm are chains of K and m = n −1. Here we are using the bracket
+notation of Section 1.9.
+Assume that n > 1. Since z is a cycle,
+0 = ∂z = cm −[w0, ∂cm] + dm −[w1, ∂dm] .
+Restricting this chain to K, we obtain the equation cm + dm = 0. Hence
+z = [w0, cm] −[w1, cm] .
+Since r exchanges w0 and w1, we have
+r#(z) = [w1, cm] −[w0, cm] = −z
+as desired. A similar computation holds if n = 1.
+Theorem 2.9.8 For n ≥1, the degree of the antipodal map is (−1)n+1.
+Proof: We claim that any reflection map
+ρi(x1, x2, . . . , xi−1, xi, xi+1, . . . , xn+1) = (x1, x2, . . . , xi−1, −xi, xi+1, . . . , xn+1)
+has degree −1. To see this set ρi = h−1 ◦ρ ◦h where h is the homeomorphism
+of Rn+1 that exchanges xi and xn+1. Using Lemma 2.9.6 and (3) and (4) of
+Lemma 2.9.2, we see that
+deg ρi = (deg h−1)(deg ρ)(deg h) = deg(h−1 ◦h) deg ρ = deg ρ .
+Next we observe that the antipodal map a equals ρ1 ◦ρ2 ◦· ◦ρn+1, so we see
+that deg a = (−1)n+1.
+Theorem 2.9.9 If h : Sn →Sn has degree different from (−1)n+1, then h
+has a fixed point.
+Proof: We assume to the contrary that h has no fixed point. Below we will
+show that h ≃a from which Theorem 2.9.8 and (1) of Lemma 2.9.2 allow us
+to conclude that deg h = (−1)n+1.
+Intuitively, we construct the homotopy by simply moving the point h(x)
+to the point −x along the shorter great circular arc joining these two points.
+Because h(x) and −x are not antipodal, there is a unique such arc. So the

@@ -1,0 +1,63 @@
+160
+Elements of Algebraic Topology
+Hence there exists an element cp−1 in Cp−1 such that ϕ(cp−1) = ∂Ddp. This
+because ker ψ = im ϕ. This element is unique because ϕ is injective. Further-
+more, cp−1 is a cycle. For
+ϕ(∂Ccp−1) = ∂Dϕ(cp−1) = ∂D∂Ddp = 0 .
+Thus ∂Ccp−1 = 0 because ϕ is injective. Define
+∂∗{ep} = {cp−1} ,
+where { } means “homology class of.”
+Step 2: We now show that ∂∗is a well defined homomorphism. For notation,
+let ep and e′
+p be two elements in the kernel of ∂E : Ep →Ep−1. Choose dp
+and d′
+p so that ψ(dp) = ep and ψ(d′
+p) = e′
+p. Then choose cp−1 and c′
+p−1 so that
+ϕ(cp−1) = ∂Ddp and ϕ(c′
+p−1) = ∂Dd′
+p.
+To show that ∂∗is well defined, we suppose that ep and e′
+p are homologous
+and show that cp−1 and c′
+p−1 are homologous. So suppose that ep −e′
+p =
+∂Eep+1. Choose dp+1 so that ψ(dp+1) = ep+1. Then observe that
+ψ(dp −d′
+p −∂Ddp+1)
+=
+ep −e′
+p −∂Eψ(dp+1)
+=
+ep −e′
+p −∂Eep+1
+=
+0 .
+Therefore we can choose cp so that ϕ(cp) = dp −d′
+p −∂Ddp+1. Then
+ϕ(∂Ccp) = ∂Dϕ(cp) = ∂D(dp −d′
+p) −0 = ϕ(cp−1 −c′
+p−1) .
+Becuase ϕ is injective, we see that ∂Ccp = cp−1 −c′
+p−1 as desired.
+To show that ∂∗is a homomorphism, note that ψ(dp + d′
+p) = ep + e′
+p and
+ϕ(cp−1 +c′
+p−1) = ∂D(dp +d′
+p). Thus ∂∗{ep +e′
+p} = {cp−1 +c′
+p−1} by definition.
+The latter equals ∂∗{ep} + ∂∗{e′
+p}.
+Step 3: We prove exactness at Hp(D). Let γ ∈Hp(D). Because ψ ◦ϕ = 0, we
+have ψ∗◦ϕ∗= 0. Hence if γ ∈im ϕ∗, then ψ∗(γ) = 0.
+Conversely, let γ = {dp} and suppose ψ∗(γ) = 0. Then ψ(dp) = ∂Eep+1
+for some ep+1. Choose dp+1 so that ψ(dp+1) = ep+1. Then we have
+ψ(dp −∂Ddp+1) = ψ(dp) −∂Eψ(dp+1) = ψ(dp) −∂Eep+1 = 0 ,
+so dp −∂Ddp+1 = ϕ(cp) for some cp. Now, cp is a cycle, because
+ϕ(∂Ccp) = ∂Dϕ(cp) = ∂Ddp −0 = 0
+and ϕ is injective. Furthermore, we have
+ϕ∗{cp} = {ϕ(cp)} = {dp −∂Ddp+1} = {dp} ,
+so {dp} ∈im ϕ∗, as desired.

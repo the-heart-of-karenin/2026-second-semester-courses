@@ -1,0 +1,40 @@
+190
+Elements of Algebraic Topology
+Definition 4.2.2 The family of groups Sp(X) and homomorphisms ∂:
+Sp(X) →Sp−1(X) is called the singular chain complex of X, and is denoted
+S(X). The homology groups of this chain complex are called the singular
+homology groups of X, and are denoted Hp(X).
+If X is triangulable, this notation overlaps with that introduced in Sec-
+tion 3.6 for the simplicial homology of a triangulable space. We shall prove
+later in Section 4.7 that the simplicial and singular homology theories are
+naturally isomorphic, so there is in fact no real ambiguity involved.
+The chain complex S(X) is augmented by the homomorphism ϵ : S0(X) →
+Z defined by setting ϵ(T) = 1 for each 0-simplex T : ∆0 →X. It is immediate
+that, if T is a singular 1-simplex, then ϵ(∂T) = 0. The homology groups
+of {S(X), ϵ} are called the reduced singular homology groups of X, and are
+denoted Hp(X). If f : X →Y is a continuous map, then f# : Sp(X) →Sp(Y )
+is an augmentation-preserving chain map, since f#(T) is a singular 0-simplex
+if T is. Thus f# induces a homomorphism f∗in both ordinary and reduced
+singular homology.
+If the reduced homology of X vanishes in all dimensions, we say that X is
+acyclic [in singular homology].
+Theorem 4.2.3 If i : X →X is the identity, then i∗: Hp(X) →Hp(X)
+is the identity. If f : X →Y and g : Y →Z are continuous maps, then
+(g ◦f)∗= g∗◦f∗. The same facts hold in reduced homology.
+Proof: These equations hold on the chain level. We have i#(T) = i ◦T = T,
+and (g ◦f)#(T) = (g ◦f) ◦T = g ◦(f ◦T) = g#(f#(T)).
+The next corollary follows immediately.
+Corollary 4.2.4 (Topological invariance of singular homology groups)
+If h : X →Y is a homeomorphism, then h∗is an isomorphism.
+The reader will note how quickly we have proved that the singular homol-
+ogy groups are topological invariants. This is in sharp contrast to the simplicial
+theory for which it took us most of Chapter 2 to do the same thing.
+Following the pattern of simplicial theory, we next compute the zero-
+dimensional homology groups.
+Theorem 4.2.5 Let X be a topological space. Then H0(X) is free abelian. If
+{Xα} is the collection of path components of X, and if Tα is a singular 0-
+simplex with image in Xα, for each α, then the homology classes of the chains
+Tα form a basis for H0(X).
+The group H0(X) is free abelian; it vanishes if X is path connected. If X
+is not path connected, let α0 be a fixed index; then the homology classes of the
+chains Tα −Tα0, for α̸ = α0, form a basis for H0(X).

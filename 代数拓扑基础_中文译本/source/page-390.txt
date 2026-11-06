@@ -1,0 +1,36 @@
+Homology with Coefficients
+375
+3. Show that if A and B are Z-modules, then
+A ⊗Z B = A ⊗B .
+4. Let A be an R-module. Show that there is an R-module isomor-
+phism
+R ⊗R A ∼= A .
+5. Prove the analogues of Theorem 6.2.6 and Theorem 6.2.8 for ⊗R.
+6. Let A, B, and C be vector spaces over a field F.
+(a) Show that ⊗F preserves exact sequences of vector spaces.
+[Hint: Every such sequence splits.]
+(b) Show that if A and B have vector space bases {ai} and {bj},
+respectively, then {ai ⊗bj} is a vector space basis for A ⊗F B.
+7. If A and B are vector spaces over Q, show that
+A ⊗Q B = A ⊗B .
+8. The tensor product is a universal object for bilinear maps. Explain
+what this statement means.
+6.3
+Homology with Arbitrary Coefficients
+We now use the tensor product functor to give a general definition of homology
+groups with arbitrary coefficients. The treatment will follow the pattern of
+Section 5.5, where we dealt with cohomology theory with arbitrary coefficients.
+First, we work on the level of chain complexes. Then we specialize to
+singular theory, and finally to simplicial theory, at which point we show that
+the definition of homology with arbitrary coefficients we use here is equivalent
+to the one given in Section 1.11.
+Homology of a chain complex
+Let G be an abelian group. Let C = {Cp, ∂} be a chain complex. The chain
+complex C ⊗G consists of the chain groups with coefficients Cp ⊗G and the
+boundary operators ∂⊗iG. We denote the pth homology group of the chain
+complex C ⊗G by Hp(C; G), and we call it the pth homology group of C with
+coefficients in G.
+If {C, ϵ} is an augmented chain complex, then one has the corresponding
+chain complex obtained from C ⊗G by adjoining the group Z ⊗G ∼= G in
+dimension −1, and using ϵ⊗iG as the boundary operator from dimension 0 to
+dimension −1. Its homology groups are denoted Hp(C; G) and are called the

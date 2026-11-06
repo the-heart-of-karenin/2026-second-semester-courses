@@ -1,0 +1,56 @@
+Homological Algebra
+385
+is called the canonical free resolution of A. [The canonical free resolution was
+also defined earlier in Definition 5.6.1.] The group
+cok ϕ = Hom (R(A), B)/ϕ(Hom (F(A), B))
+is denoted Ext (A, B). This group is sometimes called the group of extensions
+of B by A [for an explanation of this terminology see Chapter 3 of [ML63],
+but we will simply call it Ext].
+If γ : A →A′ and δ : B′ →B are homomorphisms, then we extend γ to
+a homomorphism of the canonical free resolution of A with that of A′, and
+define
+Ext (γ, δ) : Ext (A′, B′) →Ext (A, B)
+to be the homomorphism induced by γ and δ relative to these free resolutions.
+The previous remarks show that Ext is a functor of two variables, con-
+travariant in the first variable and covariant in the second variable.
+Now we prove the basic theorem.
+Proof of Theorem 7.2.1: The exact sequence
+0 −→R ϕ
+−→F −→A −→0
+gives rise to the exact sequence
+0 ←−cok ϕ ←−Hom (R, B) ←−Hom (F, B) ←−Hom (A, B) ←−0 .
+In view of the preceding remarks, there is an isomorphism of cok ϕ with
+Ext (A, B) that is induced by (iA, iB). We use this isomorphism to replace
+cok ϕ by Ext (A, B) in this exact sequence.
+It remains to check naturality. Let α, β, γ define a homomorphism of free
+resolutions of A and A′, respectively, as in the statement of the theorem. Let
+δ : B′ →B. Consider the following diagram:
+0
+R(A)
+F(A)
+A
+0
+0
+R
+F
+A
+0
+0
+R′
+F ′
+A′
+0
+0
+R(A′)
+F(A′)
+A′
+0
+ϕ1
+iA
+ϕ2
+α
+β
+γ
+ϕ3
+iA′
+ϕ4

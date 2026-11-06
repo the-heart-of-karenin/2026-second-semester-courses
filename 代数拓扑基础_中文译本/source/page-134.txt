@@ -1,0 +1,46 @@
+Topological Invariance of the Homology Groups
+119
+Now f0 ◦f1 is a simplicial approximation to k ◦h. Therefore
+(k ◦h)∗= (f0 ◦f1)∗◦(g1)−1
+∗
+by definition. Since g0 ◦f1 is a simplicial approximation to h, we have
+h∗= (g0 ◦f1)∗◦(g1)−1
+∗
+and
+k∗= (f0)∗◦(g0)−1
+∗
+again by definition. Combining these equations and applying Theorem 1.13.3,
+we obtain the desired result:
+(k ◦h)∗= k∗◦h∗.
+Corollary 2.6.3 (The topological invariance of homology groups)
+If h : |K| →|L| is a homeomorphism, then h∗: Hp(K) →Hp(L) is an
+isomorphism, and the same result holds for reduced homology.
+Proof: Let k : |L| →|K| be the inverse of h. Then h∗◦k∗equals (i|L|)∗and
+k∗◦h∗equals (i|K|)∗. Thus h∗◦k∗and k∗◦h∗are isomorphisms, so h∗is an
+isomorphism.
+Application to Relative Homology
+We have proved the topological invariance of the (absolute) homology groups.
+We can also do the same for the relative homology groups. Everything we have
+done so far in this section goes through for relative homology. One simply
+replaces each occurrence of a complex by the appropriate pair consisting of a
+complex and a subcomplex and applies Theorem 1.13.11, Lemma 2.2.7, and
+Theorem 2.5.5. We restate Theorem 2.6.2 and Corollary 2.6.3 in the current
+context:
+Theorem 2.6.4
+(a) The identity map i of (|K|, |K0|) with itself induces the identity
+homomorphism in relative homology.
+(b) If
+(|K|, |K0|)
+h
+−→(|L|, |L0|)
+k
+−→(|M|, |M0|)
+are continuous maps, then (k ◦h)∗= k∗◦h∗in relative homology.
+(c) If h is a homeomorphism of |K| with |L| that maps |K0| onto
+|L0|, then h∗is an isomorphism in relative homology.
+The next definition isolates the often used notion of a retraction. It is the
+focus of the exercises. The idea will be strengthened in the next section in
+Definition 2.7.10.
+Definition 2.6.5 If A ⊂X, then a retraction r : X →A is a continuous map
+such that r(a) = a for all a ∈A. If there is a retraction of X onto A, then we
+say that A is a retract of X.

@@ -1,0 +1,35 @@
+234
+Elements of Algebraic Topology
+the barycenter of a simplex of K. Then x is a vertex of the complex L = sd K,
+and Lemma 4.8.13 applies. We have
+Hn(X, X \ x) ∼= Hp(St(x, L), Lk(x, L)) .
+(∗)
+The left-hand side of (∗) is a singular homology group, but the right-hand
+side can be considered in either singular or simplicial homology. Since L is a
+complex of dimension n, St(x, L) is the polytope of a complex of dimension
+at most n. Therefore, this group vanishes in simplicial homology for p > n, so
+it vanishes in singular homology as well.
+The next three definitions are used in the exercises.
+Definition 4.8.15 A space X is homogeneous if given x and y, there is a
+homeomorphism of X with itself carrying x to y.
+Definition 4.8.16 An n-dimensional homology sphere [respectively, homol-
+ogy ball ] is a space or complex having the same homology groups as Sn [re-
+spectively, Bn].
+Definition 4.8.17 A solid torus is a space homeomorphic to S1 ×B2. Thus a
+solid torus is a 3-manifold with boundary, and the boundary is homeomorphic
+to the torus.
+EXERCISES
+1. Check the details of Example 4.8.8
+2. Show that if M and N are manifolds with boundary of dimensions
+m and n, respectively, then M × N is a manifold with boundary of
+dimension m + n, and
+Bd (M × N) = (M × (Bd N)) ∪((Bd M) × N) .
+3. Show that a connected manifold is homogeneous. [Hint: Define x ∼
+y if there is a homeomorphism of X with itself carrying x to y. Show
+that ∼is an equivalence relation, and that the equivalence classes
+are open.]
+4. Let M be an m-manifold with boundary. Suppose h : |K| →M is
+a triangulation of M.
+(a) Show that if v is a vertex of K, then Lk v is an (m −1)-
+dimensional homology sphere or ball, according to whether
+h(v) ∈Int M or h(v) ∈Bd M.

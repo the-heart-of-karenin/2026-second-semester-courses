@@ -1,0 +1,36 @@
+Topological Invariance of the Homology Groups
+115
+sdM(L′)
+k
+sdNL
+f
+L′
+g
+L
+Now we note that g ◦f is a simplicial approximation to the identity, so
+that by Step 3, (g ◦f)∗= g∗◦f∗is an isomorphism. For the same reason, (f ◦
+k)∗= f∗◦k∗is an isomorphism. The first fact implies that f∗is injective and
+the second implies that f∗is surjective. Thus f∗is an isomorphism. Finally,
+because g∗◦f∗and f∗are isomorphisms, then so is g∗. Thus L′ is acyclic.
+Definition 2.5.4 In the special case when K′ is the first barycentric subdi-
+vision of K, we denote the subdivision operator λ by
+sd : Cp(K) →Cp(sd K) .
+We call it the barycentric subdivision operator. [Here we abuse notation, letting
+sd denote both the algebraic and the geometric subdivision operators.]
+There is an inductive formula for the operator sd. It is the following.
+sd(v) = v ,
+sd(σ) = [σ, sd(∂σ)] .
+Here the bracket notation has the same meaning that we gave it in Section 1.9.
+It is an exercise for the reader to check this last formula.
+Application to Relative Homology
+We can generalize the preceding result to relative homology with no trou-
+ble.
+Theorem 2.5.5 Let K0 be a subcomplex of K. Given the subdivision K′ of
+K, let K′
+0 denote the induced subdivision of K0. The subdivision operator λ
+induces a chain map
+λ : Cp(K, K0) →Cp(K′, K′
+0) .
+If g : (K′, K′
+0) →(K, K0) is any simplicial approximation to the identity, then
+λ and g# are chain-homotopy inverse to each other.

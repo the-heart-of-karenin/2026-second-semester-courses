@@ -1,0 +1,47 @@
+Homology Groups of a Simplicial Complex
+25
+The functions {ϕx : x ∈S} form a basis for G, for each function ϕ ∈G can
+be written uniquely as a finite sum
+nxϕx,
+where nx = ϕ(x) and the summation extends over all x for which ϕ(x)̸ = 0. We
+often abuse notation and identify the element x ∈S with its characteristic
+function ϕx. With this notation, the general element of G can be written
+uniquely as a finite “formal linear combination”
+nαxα,
+of elements of the set S.
+If G is an abelian group, an element g of G has finite order if ng = 0
+for some positive integer n. The set of all elements of finite order in G is
+a subgroup T of G, called the torsion subgroup. If T vanishes, we say G is
+torsion-free. A free abelian group is necessarily torsion-free, but the converse
+is not true.
+If T consists of only finitely many elements, then the number of elements
+in T is called the order of T. If T has finite order, then each element of T has
+finite order, but again the converse is not true.
+Internal Direct Sums
+Suppose G is an abelian group, and suppose {Gα}α∈J is a collection of
+subgroups of G, indexed bijectively by some index set J. Suppose that each
+g in G can be written uniquely as a finite sum g = gα, where gα ∈Gα for
+each α. Then G is said to be the internal direct sum of the groups Gα, and
+we write
+G = 
+α∈J Gα .
+If the collection {Gα} is finite, say {Gα} = {G1, G2, . . . , Gn}, we also write
+this direct sum in the form G = G1 ⊕G2 ⊕· · · ⊕Gn.
+If each g in G can be written as a finite sum g = gα, but not necessarily
+uniquely, we say simply that G is the sum of the groups {Gα}, and we write
+G = Gα, or, in the finite case, G = G1 + G2 + · · · + Gn. In this situation,
+we also say that the groups {Gα} generate G.
+If G = Gα, then this sum is direct if and only if the equation 0 = gα
+implies that gα = 0 for each α. This in turn occurs only if for each fixed index
+α0, one has
+Gα0 ∩
+
+
+α̸=α0
+Gα
+
+= {0} .
+In particular, if G = G1 + G2, then this sum is direct if and only if G1 ∩G2 =
+{0}.
+The resemblance to free abelian groups is strong. Indeed, if G is free with
+basis {gα}, then G is the direct sum of the subgroups {Gα}, where Gα is

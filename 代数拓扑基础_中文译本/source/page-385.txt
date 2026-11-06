@@ -1,0 +1,37 @@
+370
+Elements of Algebraic Topology
+of the form ϕ(a) ⊗g. Since the image of ϕ equals the kernel of ψ, we have
+D = E.
+Suppose that ϕ is injective and the sequence splits. Let p : B →A be a
+homomorphism such that p ◦ϕ = iA. Then we have
+(p ⊗iG) ◦(ϕ ⊗iG) = iA ⊗iG = iA⊗G ,
+so ϕ ⊗iG is injective and p ⊗iG splits the tensored sequence.
+Corollary 6.2.7 There is a natural isomorphism
+Z/m ⊗G ∼= G/mG .
+Proof: Let ϕm be multiplication by m [both in Z and in G, as the context
+dictates]. We take the sequence
+0 −→Z
+Z −→Z/m −→0
+ϕm
+and tensor it with G to obtain the exact sequence
+Z ⊗G
+Z ⊗G −→Z/m ⊗G −→0 .
+ϕm ⊗iG
+Applying Theorem 6.2.4, we have the exact sequence
+G
+G −→Z/m ⊗G −→0 ,
+ϕm
+and the corollary follows.
+Now we prove some additional properties of tensor products.
+Theorem 6.2.8 One has the following natural isomorphisms
+(a) A ⊗B ∼= B ⊗A.
+(b) (Aα) ⊗B = (Aα ⊗B),
+(c) A ⊗(Bα) = (A ⊗Bα),
+(d) A ⊗(B ⊗C) ∼= (A ⊗B) ⊗C.
+Proof: We construct the isomorphisms, and leave naturality for you to check.
+(a) The map A × B →B × A sending (a, b) to (b, a) induces an isomorphism
+of F(A, B) with F(B, A) that carries R(A, B) to R(B, A).
+(b) We apply Lemma 1.5.1. By hypothesis, there are homomorphisms
+jβ : Aβ →Aα
+and
+πβ : Aα →Aβ

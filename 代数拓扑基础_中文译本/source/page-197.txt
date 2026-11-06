@@ -1,0 +1,39 @@
+182
+Elements of Algebraic Topology
+(a) Sets and maps (bijective correpondences).
+(b) Topological spaces and continuous maps (homeomorphisms).
+(c) Topological spaces and homotopy classes of maps (homotopy
+equivalences).
+(d) Simplicial complexes and simplicial maps (simplicial homeomor-
+phisms).
+(e) Simplicial complexes and continuous maps of their polytopes.
+(f) Simplicial complexes and homotopy classes of continuous maps.
+(g) Groups and homomorphisms (isomorphisms).
+(h) Chain complexes and chain maps.
+(i) Chain complexes and chain-homotopy classes (chain equiva-
+lences).
+(j) Short exact sequences of abelian groups and homomorphisms of
+such.
+(k) Short exact sequences of chain complexes and homomorphisms
+of such.
+(l) Long exact sequences of abelian groups and homomorphisms of
+such.
+(m) Pairs (X, Y ) of topological spaces and pairs (f, g) of continuous
+maps.
+EXAMPLE 3.7.5 We list now several examples of functors.
+(a) The correspondence assigning to a pair (X, Y ) of spaces the
+space X ×Y , and to a pair (f, g) of continuous maps the map f ×g.
+This is a functor from pairs of spaces to spaces.
+(b) The correspondence assigning to a space X its underlying set,
+and to a continuous map the underlying set map. This is a functor
+from spaces to sets. It is called the forgetful functor—it “forgets”
+the topological structure involved.
+(c) The correspondence K →C(K) and f →f# is a functor from
+the category of simplicial complexes and simplicial maps to the
+category of chain complexes and chain maps.
+(d) Given a homology theory, the correspondence X →Hp(X)
+and [h] →h∗is a functor from the category of admissible spaces
+and homotopy classes of maps to the category of abelian groups and
+homomorphisms. [Here [h] denotes the homotopy class of h.] This is
+precisely the substance of the first two Eilenberg–Steenrod axioms
+and the homotopy axioms.

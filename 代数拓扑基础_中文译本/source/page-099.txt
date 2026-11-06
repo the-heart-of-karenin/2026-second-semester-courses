@@ -1,0 +1,37 @@
+84
+Elements of Algebraic Topology
+A
+B
+D
+C
+Figure 1.13.8
+1.14
+Chain Complexes and Acyclic Carriers
+Many of the definitions and constructions we have made within the context of
+simplicial complexes also occur in more general situations. We digress at this
+point to discuss this more general context. We shall use these results many
+times later on. Proofs are left as exercises.
+First we define the algebraic analogues to our chain groups. [We mentioned
+them earlier in Section 1.12.]
+Definition 1.14.1 A chain complex C is a family {Cp, ∂p} of abelian groups
+Cp and homomorphisms
+∂p : Cp →Cp−1 ,
+indexed by the integers, such that ∂p ◦∂p+1 = 0 for all p.
+If Cp = 0 for p < 0, then C is said to be a non-negative chain complex. If
+Cp is a free abelian group for each p, then C is called a free chain complex.
+The group
+Hp(C) = ker ∂p/im ∂p+1
+is called the pth homology group of the chain complex C.
+If C is a non-negative chain complex, an augmentation for C is an epimor-
+phism ϵ : C0 →Z such that ϵ ◦∂1 = 0. The augmented chain complex {C, ϵ} is
+the chain complex obtained from C by adjoining the group Z in dimension −1
+and using ϵ as the boundary operator in dimension 0. The homology groups
+of the augmented chain complex are called the reduced homology groups of the
+original chain complex C, relative to the augmentation ϵ. They are denoted
+either by Hi({C, ϵ}) or by Hi(C). It follows readily that Hp(C) = Hp(C) for
+p̸ = 0, and
+H0(C) ∼= H0(C) ⊕Z .
+[See the exercises.]
+An arbitrary chain complex D is said to be acyclic if Hi(D) = 0 for all i.
+In particular, the augmented chain complex {C, ϵ} is acyclic if Hi({C, ϵ}) =
+Hi(C) = 0 for all i or equivalently if H0(C) ∼= Z and Hi(C) = 0 for i̸ = 0.

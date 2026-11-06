@@ -1,0 +1,17 @@
+Cohomology
+365
+6. Compute the cohomology ring of the 3-fold dunce cap with Z/3
+coefficients.
+7. (a) Let (M, E) denote the M¨obius band and its edge. Compute the
+cup product operations
+H∗(M, E; Z/2) × H∗(M; Z/2) −→H∗(M, E; Z/2) .
+H∗(M, E; Z/2) × H∗(M, E; Z/2) −→H∗(M, E; Z/2) .
+(b) Repeat (a) when M is the cylinder S1 × I and E = S1 × Bd I.
+A
+B
+Figure 5.10.7
+8. Let A be the union of two once-linked circles in S3, and let B be
+the union of two unlinked circles in S3. See Figure 5.10.7. Show that
+the cohomology groups of S3 \A and S3 \B are isomorphic, but the
+cohomology rings are not.
+9. What can you say about homology in Exercise 8?

@@ -1,0 +1,44 @@
+\section{*自由链复形中的链等价}
+\sourcepage{341}
+本节结果将在第 7.6、7.10 节证明若干正合列的自然性时使用。我们证明定理 5.6.6 的另一版本：若自由链复形在某一维数以下均为零，则诱导所有维数同调同构的链映射，不仅诱导上同调同构，本身还是链等价。证明使用上一节的代数映射柱。先给出一个稍一般的初等引理，以备以后使用。
+
+\entry{引理}{5.7.1}设 $\mathcal E,\mathcal F$ 为非负链复形，$p>0$ 时 $E_p$ 自由且 $H_p(\mathcal F)=0$。则任意两个零维上相同的链映射 $f,g:\mathcal E\to\mathcal F$ 链同伦。
+
+\textbf{证明：}令 $D:E_0\to F_1$ 为零，则零维已满足 $\partial D+D\partial=g-f$。归纳地，若已在 $p-1$ 维定义 $D$，对 $E_p$ 的每个基元 $e$，表达式 $g(e)-f(e)-D\partial e$ 为闭链。因为 $H_p(\mathcal F)=0$，可选 $D(e)$，使其边缘为该闭链，再线性延拓。\hfill$\square$
+
+这个结果也可由无环载体定理导出，但需仔细处理，不值得为此费力。
+
+\entry{定理}{5.7.2}设自由链复形 $\mathcal C,\mathcal D$ 在某一维数以下均为零。若链映射 $\varphi:\mathcal C\to\mathcal D$ 在所有维数诱导同调同构，则它是链等价。
+
+\textbf{证明：}回到引理 5.6.5 的映射柱 $D'_p=C_p\oplus D_p\oplus C_{p-1}$。包含 $i$ 链同伦于 $j\varphi$，故它也诱导同调同构。于是商复形 $\mathcal E=\mathcal D'/\mathcal C$ 同调为零，且
+\[
+E_p=D_p\oplus C_{p-1},\qquad\partial(d,c)=(\partial d+\varphi c,-\partial c).
+\]
+\sourcepage{342}
+它自由并在某一维数以下为零，平移维数后可设零维及更低均为零。对其恒等与零映射应用上一个引理，得到收缩同伦 $D:E_p\to E_{p+1}$，满足 $\partial D+D\partial=\operatorname{id}$。所需链映射和同伦都藏在这个公式中。
+
+将其分量记为
+\[
+D(d,0)=(\theta d,\psi d),\qquad D(0,c)=(\lambda c,\mu c).
+\]
+在 $(d,0)$ 上展开收缩公式，得
+\[
+d=\theta\partial d+\partial\theta d+\varphi\psi d,\qquad
+0=\psi\partial d-\partial\psi d.
+\]
+第二式说明 $\psi:\mathcal D\to\mathcal C$ 为链映射，第一式说明 $\theta$ 是 $\varphi\psi$ 到恒等映射的链同伦。
+
+再对 $(0,c)$，计算
+\begin{align*}
+D\partial(0,c)&=(\theta\varphi c-\lambda\partial c,\psi\varphi c-\mu\partial c),\\
+\partial D(0,c)&=(\partial\lambda c+\varphi\mu c,-\partial\mu c).
+\end{align*}
+比较第二分量，得 $c=\psi\varphi c-\mu\partial c-\partial\mu c$，即 $\mu$ 是恒等映射与 $\psi\varphi$ 之间的链同伦。因此 $\psi$ 是链同伦逆。\hfill$\square$
+
+\sourcepage{343}
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $\mathcal A$ 是空间 $X$ 的子集族，其内部覆盖 $X$，证明包含 $\mathcal S^{\mathcal A}(X)\to\mathcal S(X)$ 是链等价。
+\item 证明第 4.7 节的链映射 $\eta:\mathcal C(K)\to\mathcal S(|K|)$ 是链等价。
+\item 给出链等价的严格定义。
+\end{enumerate}

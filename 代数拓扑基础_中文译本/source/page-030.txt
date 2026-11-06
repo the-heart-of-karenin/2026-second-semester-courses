@@ -1,0 +1,41 @@
+Homology Groups of a Simplicial Complex
+15
+Let J be an arbitrary index set, and let RJ denote the J-fold cartesian
+product of R with itself. An element of RJ is a function from J to R, ordinarily
+denoted using the “tuple notation” (xα)α∈J. The product RJ is of course a
+vector space with the usual component-wise addition and multiplication by
+scalars.
+Let EJ denote the subset of RJ consisting of all points (xα)α∈J such that
+xα = 0 for all but finitely many values of α. Note that EJ is a vector subspace
+of (xα)α∈J. If ϵα ∈EJ is the map of J into R whose value is 1 on the index α
+and is 0 on all other elements of J, then the set {ϵα : α ∈J} is a basis for EJ
+[but not for RJ, if J is infinite].
+We call EJ generalized euclidean space and topologize it by the metric
+|x −y| = max
+α∈J |xα −yα| .
+Everything we have done for complexes in RN generalizes to complexes in
+EJ. The space EJ is the union of certain of its finite-dimensional subspaces—
+namely, the subspaces spanned by finite subsets of the basis {ϵα : α ∈J}.
+Each such subspace is simply a copy of RN for some N. Any finite set
+{a0, a1, . . . , an} of points of EJ lies in such a subspace. If the points are geo-
+metrically independent, then the simplex they span lies in the same subspace.
+Furthermore, the metric on EJ gives the usual topology on each such sub-
+space. Therefore, any finite collection of simplices in EJ lies in a copy of RN
+for some N. All that we are really doing is to allow ourselves to deal with
+complexes for which the total collection of simplices cannot be fitted entirely
+into any one RN. Conceptually it may seem more complicated to work in EJ
+than in RN, but in practice, it causes no difficulty at all.
+We leave it to you to check that our results hold for complexes in EJ. We
+shall use these results freely henceforth.
+Let us make one further comment. If K is a complex in RN, then each
+simplex of K has dimension at most N. On the other hand, if K is a complex
+in EJ, there need be no upper bound on the dimensions of the simplices of K.
+We define the dimension of K, denoted dim K, to be the largest dimension
+of a simplex of K, if such a maximum exists; otherwise, we say that K has
+infinite dimension.
+EXERCISES
+1. Let K be a simplicial complex; let σ ∈K. When is Int σ open in
+|K|? When is σ open in |K|?
+2. Show that in general, St v and St v are path connected.
+3. (a) Show directly that the polyhedron of Example 1.3.7 is not lo-
+cally compact.

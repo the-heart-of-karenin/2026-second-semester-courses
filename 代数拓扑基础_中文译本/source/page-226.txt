@@ -1,0 +1,35 @@
+Singular Homology Theory
+211
+induction hypothesis, the homomorphism induced by ρ1 equals multiplication
+by −1 on Hn−1(Sn−1); therefore, it equals the same on Hn(Sn).
+The reader should note that, in the proof of the preceding theorem, the only
+homology groups that were computed directly were those for spaces consisting
+of one or two points.
+The next corollary follows immediately from Theorem 4.4.11.
+Corollary 4.4.13 If a : Sn →Sn is the antipodal map a(x) = −x, then a∗
+equals multiplication by (−1)n+1.
+EXERCISE
+1. Express the naturality provisions in Lemmas 4.4.3 and 4.4.6 by stat-
+ing that sd and DX are natural transformations of certain functors.
+2. Let X be the annulus {(x, y) : 1 < x2 +y2 < 4} in R2. Let A be the
+collection of open discs in the plane. Give an example of a singular
+simplex of X that is A-small.
+3. Repeat Exercise 2 with X being the unit sphere in R3 and A being
+the collection of open cubes with sides parallel to the axes.
+4.5
+∗Acyclic Models
+In this section, we assume familiarity with Section 3.7, Categories and Func-
+tors. The results of this section will be used when we prove the Eilenberg–
+Zilber theorem in Section 7.9.
+In the two preceding sections, we constructed certain natural chain homo-
+topies DX. The method was to define DX first for a particular singular simplex
+ip on a particular space ∆p. To do this, we needed the acyclicity of another
+space, either ∆p × I [in Section 4.3] or of ∆p itself [in Section 4.4]. This
+part of the construction involved an arbitrary choice; everything thereafter
+was forced by naturality. The resemblance to earlier constructions involving
+acyclic carriers was strong, but nevertheless, there were differences.
+Now we formalize this method for later use. In this section, we state a
+theorem, sufficiently strong for our purposes, that we shall call the acyclic
+model theorem. Its formulation is sufficiently abstract to bother some readers.
+To help you keep your feet on the ground, we will briefly review the meaning
+of various terms from category theory that we will be using.

@@ -1,0 +1,45 @@
+66
+Elements of Algebraic Topology
+This matrix is in fact uniquely determined by f [although the bases in-
+volved are not]. It is called the normal form for the matrix of f.
+Proof: We begin by choosing bases in G and G′ arbitrarily. Let A be the
+matrix of f relative to these bases. We shall give shortly a procedure for
+modifying these bases so as to bring the matrix into the normal form described
+in the theorem. The theorem will then follow.
+Definition 1.12.5 The elementary row operations on an integer matrix A
+are the following:
+(1) Exchange row i and row k.
+(2) Multiply row i by −1.
+(3) Replace row i by (row i) + q (row k), where q is an integer and
+k̸ = i.
+Each of these row operations corresponds to a change of basis in G′. The
+first corresponds to an exchange of a′
+i and a′
+k. The second corresponds to
+replacing a′
+i by −a′
+i. The third corresponds to replacing a′
+k by a′
+k −qa′
+i, as you
+can readily check.
+There are three similar elementary column operations on A that correspond
+to changes of basis in G.
+We will show how to apply these six elementary operations to an arbitrary
+integer matrix A so as to reduce it to our desired normal form. We assume A
+is not the zero matrix, since in that case the result is trivial.
+Before we begin the description of the reduction algorithm, we note the
+following fact:
+If c is an integer that divides every entry of the matrix A, and if B is
+obtained from A by applying any one of the elementary operations, then
+c also divides every entry of B.
+The Reduction Algorithm
+The reduction algorithm starts with a given matrix A = (aij) of integers,
+not all zero, and uses elementary operations to produce a matrix in reduced
+form as in Theorem 1.12.4.
+Definition 1.12.6 Given the matrix A = (aij) of integers, not all zero, we
+let α(A) denote the smallest non-zero element of the set of numbers |aij|. We
+call aij a minimal entry of A if |aij| = α(A).
+Lemma 1.12.7 Let A be a non-zero integer matrix. The number α(A) fails
+to divide some entry of A if and only if it is possible to decrease the value of
+α by applying elementary operations to A.

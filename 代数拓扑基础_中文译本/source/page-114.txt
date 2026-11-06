@@ -1,0 +1,35 @@
+Topological Invariance of the Homology Groups
+99
+w
+K
+w ∗K
+Figure 2.3.1
+EXAMPLE 2.3.4 Let Σ be the complex consisting of a 2-simplex σ and its
+faces. The subdivision K of Bd σ indicated in Figure 2.3.1 can be extended
+to a subdivision Σ′ of Σ by forming the cone w ∗K, where w is an interior
+point of Σ. The subdivision Σ is said to be obtained by “starring K from w.”
+This method of subdividing complexes will be useful in what follows.
+Next we describe the starring method for subdividing complexes in general.
+We shall need the following lemma, whose proof is left as an exercise.
+Lemma 2.3.5 If K is a complex, then the intersection of any collection of
+subcomplexes of K is also a subcomplex of K. Conversely, if {Kα} is a col-
+lection of complexes in EJ and if the intersection of every pair |Kα| ∩|Kβ| is
+the polytope of a complex that is a subcomplex of both Kα and Kβ, then the
+union ∪αKα is a complex.
+Our method for constructing subdivisions is step-by-step. We now describe
+one step in the process.
+Definition 2.3.6 Let K be a complex. Suppose that Lp is a subdivision of
+the p-skeleton of K. Let σ be a p + 1 simplex of K. The set Bd σ is the
+polytope of a subcomplex of the p-skeleton of K, and hence of a subcomplex
+of Lp. We denote the latter subcomplex by Lσ. If wσ is an interior point of
+σ, then the cone wσ ∗Lσ is a complex whose underlying space is σ. We define
+Lp+1 to be the union of Lp and the complexes wσ ∗Lσ as σ ranges over all
+(p + 1)-simplices of K. We show that Lp+1 is a complex. It is said to be the
+subdivision of Kp+1 obtained by starring Lp from the points wσ.
+To verify that Lp+1 is a complex, we note that
+|Wp ∗Lσ| ∩|Lp| = Bd σ ,
+which is the polytope of the subcomplex Lp of both Wσ ∗Lσ and Lp. Similarly,
+if τ is another (p + 1)-simplex of K, then the space |wσ ∗Lσ| and |wτ ∗Lτ|
+intersect in the simplex σ ∩τ of K, which is the polytope of a subcomplex of
+Lp and hence of both Lσ and Lτ. It follows from the preceding lemma that
+Lp+1 is a complex.

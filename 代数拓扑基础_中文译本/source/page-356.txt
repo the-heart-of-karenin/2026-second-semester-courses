@@ -1,0 +1,39 @@
+Cohomology
+341
+5.7
+∗Chain Equivalences in Free Chain Complexes
+Results of this section will be used in Section 7.6 and in Section 7.10 in proving
+the naturality of certain exact sequences.
+We now prove a second version of Theorem 5.6.6. Again we assume we are
+given a chain map ϕ : C →D of free chain complexes that induces homology
+isomorphisms in all dimensions. We show that if C and D satisfy the fairly
+mild additional condition that both vanish below a certain dimension, then
+it follows not only that ϕ∗is an isomorphism, but that the chain map ϕ is
+itself a chain equivalence. The proof involves the algebraic mapping cylinder
+constructed in the last section.
+First we need an elementary lemma, that for later use is stated in slightly
+greater generality than we presently need.
+Lemma 5.7.1 Let E and F be non-negative chain complexes. Suppose Ep is
+free for p > 0 and Hp(F) = 0 for p > 0. Then any two chain maps f, g : E →F
+that agree in dimension 0 are chain homotopic.
+Proof: Define D : E0 →F1 to be zero. Then the equation ∂D + D∂= g −f
+holds in dimension 0, because g = f in dimension 0. Suppose D is defined in
+dimension p−1, where p > 0. Choose a basis for Ep. If e is a basis element, then
+g(e)−f(e)−D(∂e) is well-defined, and it is a cycle [by the usual computation].
+Define D(e) to be an element of Fp+1 whose boundary equals this cycle.
+As you might suspect, one can derive this last result from the acyclic carrier
+theorem. But care must be exercised, so it is not worth the effort.
+Theorem 5.7.2 Let C and D be free chain complexes that vanish below a
+certain dimension. Let ϕ : C →D be a chain map. If ϕ induces homology
+isomorphisms in all dimensions, then ϕ is a chain equivalence.
+Proof: We return to the chain complex D′ defined in the proof of Lemma 5.6.5.
+The inclusion mapping
+i : Cp →D′
+p = Cp ⊕Dp ⊕Cp−1
+is chain homotopic to j ◦ϕ, where j : Dp →D′
+p is inclusion. Since j and ϕ
+induce homology isomorphisms, so does i. It follows that the chain complex
+E = D′/C has vanishing homology in all dimensions. Now we have
+Ep ∼= Dp ⊕Cp−1 .
+The induced boundary operator satisfies the formula
+∂(dp, cp−1) = (∂dp + ϕ(cp−1), −∂cp−1) .

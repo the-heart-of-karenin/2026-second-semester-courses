@@ -1,0 +1,33 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+165
+4. Show by example that one can have Hi(K0) ∼= Hi(L0) and Hi(K) ∼=
+Hi(L) for all i without having Hi(K, K0) ∼= Hi(L, L0).
+5. Let w ∗K be a cone over K. Show that
+Hi(w ∗K, K) ∼= Hi−1(K) .
+6. Let K0 be a subcomplex of K.
+(a) If there is a retraction r : |K| →|K0|, then show that
+Hp(K) ∼= Hp(K, K0) ⊕Hp(K0) .
+(b) If the identity map i : |K| →|K| is homotopic to a map carry-
+ing |K| into |K0|, then show that
+Hp(K0) ∼= Hp(K) ⊕Hp+1(K, K0) .
+(c) If the inclusion j : |K0| →|K| is homotopic to a constant, then
+show that
+Hp(K, K0) ∼= Hp(K) ⊕Hp−1(K0) .
+[Hint: Show that the map j extends to a map f : |w ∗K0| →
+|K|. See Corollary 2.8.8. Then apply Exercise 5 above.]
+∗(d) Show by example that the conclusion of (c) does not hold if
+one assumes only that j∗is the zero homomorphism in reduced
+homology.
+7. (a) Compute the Bockstein homomorphism, β∗, for the coefficient
+sequences
+0 −→Z −→Z −→Z/2 −→0 ,
+and
+0 −→Z/2 −→Z/4 −→Z/2 −→0 ,
+when |K| equals P2.
+(b) Repeat (a) when |K| is the Klein bottle.
+8. Prove Theorem 3.3.6.
+3.4
+The Mayer–Vietoris Sequence
+The exact homology sequence is one useful device for computing homology
+groups. Another is the Mayer–Vietoris sequence, which we now construct. It
+is another consequence of the zig-zag lemma.

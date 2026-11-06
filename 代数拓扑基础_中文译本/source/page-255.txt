@@ -1,0 +1,19 @@
+240
+Elements of Algebraic Topology
+Alexander Horned Sphere
+Figure 4.9.4
+surface resulting at the end of Alexander’s construction is homeomorphic to
+a 2-sphere. On the other hand, as it sits in space, the horned sphere behaves
+very differently from the familiar round sphere. If you run a loop through one
+of the apparent holes in one of the partial tori, unlike with an ordinary sphere,
+that loop cannot be contracted to a point without at some time intersecting
+the horned sphere.
+Classically, the Jordan curve theorem2 is usually stated for spheres imbed-
+ded in Rn rather than Sn. We prove that version of the theorem now.
+Corollary 4.9.6 Let n ≥2. Let C be a subset of Rn homeomorphic to Sn−1.
+Then Rn \ C has precisely two components, of which C is the common topo-
+logical boundary.
+2For many decades it has been said that Jordan did not successfully prove the theorem
+that bears his name. Jordan’s original presentation (in French, of course) is in [Jor14], pages
+587–594. The reader can study it, and form his or her own opinion regarding the validity of
+the argument.

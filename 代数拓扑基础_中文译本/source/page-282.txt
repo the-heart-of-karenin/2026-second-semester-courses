@@ -1,0 +1,42 @@
+Singular Homology Theory
+267
+2. Recall that R∞denotes the space EJ, with J equal to the set of
+positive integers. Each space Rn ×0 is a subspace of R∞. Show that
+the function f : R∞→R given by
+f(x) =
+∞
+
+i=1
+ixi
+is not continuous in the usual metric topology of R∞, but is con-
+tinuous in the topology coherent with the subspaces Rn × 0.
+3. Let X be a space. Let XC denote the set X in the topology coherent
+with the collection of compact subspaces of X.
+(a) Show that a subset B of X is compact in the topology it inherits
+from X if and only if it is compact in the topology it inherits
+from XC. [Hint: Show also that these two distinct subspace
+topologies on B are in fact the same topology.]
+(b) Show that XC is compactly generated. Conclude that (XC)C =
+XC.
+(c) Show that inclusion XC −→X induces an isomorphism in sin-
+gular homology.
+(d) In general, let X×CY denote the compactly generated topology
+(X × Y )C derived from X × Y . Show that if K and L are
+complexes, then the topology of |K| ×C |L| is coherent with
+the subspaces σ × τ, for σ ∈K and τ ∈L. Compare with
+Exercise 6 of Section 2.8. [Hint: If D ⊂X × Y is compact,
+then D ⊂A × B ⊂X × Y , where A and B are compact.]
+4. Show that Theorem 4.11.6 does not hold for uncountable collections.
+[Hint: Let X be an uncountable well-ordered set with a smallest
+element 0 and a largest element ω1, such that [0, α] = {x : 0 ≤x ≤
+α} is countable for each α < ω1. Then [0, ω1)×[0, ω1] is not normal.
+See [Mun00], Example 2 on page 203.]
+5. Find an additional hypothesis that will make Theorem 4.11.6 true
+for uncountable unions.
+4.12
+CW Complexes
+We have stated that one of the advantages of simplicial homology theory is
+its effective computability. On the other hand, the amount of labor involved
+in a straightforward calculation in all but the simplest cases is too large to
+carry out by hand. Even when we calculated the homology of such simple
+spaces as the torus and the Klein bottle, in Section 1.7, we did not proceed

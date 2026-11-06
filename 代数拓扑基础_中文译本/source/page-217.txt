@@ -1,0 +1,40 @@
+202
+Elements of Algebraic Topology
+are isomorphisms. The theorem then follows from the Steenrod five-lemma,
+Lemma 3.3.4.
+If f : (X, A) →(Y, B) is a homotopy equivalence, then so are f : X →Y
+and f|A : A →B. The converse does not hold, as the following example shows.
+EXAMPLE 4.3.10 Consider the inclusion map j : (Bn, Sn−1) →(Rn, Rn \
+0). Since Bn is a deformation retract of Rn and Sn−1 is a deformation retract
+of Rn \ 0, the map j∗is an isomorphism in relative homology. Suppose there
+existed a map g : (Rn, Rn \0) →(Bn, Sn−1) that served as a homotopy inverse
+for j. Then, since 0 is a limit point of Rn \ 0, the map g necessarily carries 0
+into Sn−1. Hence
+g ◦j : (Bn, Sn−1) →(Bn, Sn−1)
+carries all of Bn into Sn −1, so it induces the trivial homomorphism in homol-
+ogy. On the other hand, this map is by hypothesis homotopic to the identity,
+so it induces the identity homomorphism of Hn(Bn, Sn−1). We will shortly
+prove that this last group is non-trivial, so we have a contradiction.
+EXERCISES
+1. Construct the exact sequence of a triple in singular homology. [See
+Exercise 1 of Section 3.3 and Exercise 2 of Section 3.5.]
+2. Show that if f : X →Y is homotopic to a constant, then f∗is
+the zero homomorphism in reduced homology. Conclude that if X
+is contractible, then X is acyclic in singular homology.
+3. Suppose the inclusion j : A →X is a homotopy equivalence. Show
+that Hp(X, A) = 0.
+4. Give an example in which Hp(X, A)̸ ∼= Hp(Y, B), although X has
+the homotopy type of Y and A has the homotopy type of B. Com-
+pare with Theorem 4.3.9.
+5. In the proof of Lemma 4.3.6, one has some freedom in choosing the
+chain D∆pip. Show that the formula
+D∆pip =
+p
+
+i=0
+(−1)pℓ((ϵ0, 0), (ϵ1, 0), . . . , (ϵi, 0),
+(ϵi, 1), (ϵi+1, 1), . . . , (ϵp, 1))
+gives a (p + 1)-chain on ∆p × I that satisfies the requirements of
+the lemma. Draw a picture when p = 1 and when p = 2.
+6. Show that if f : (X, A) →(Y, B) is a homotopy equivalence, then
+both f : X →Y and f|A : A →B are homotopy equivalences.

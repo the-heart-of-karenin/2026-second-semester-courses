@@ -1,0 +1,42 @@
+Singular Homology Theory
+275
+dimension less than p], and the cells eα = f(Int Bα) [having dimension p].
+Since Int Bα is open in the topological sum Y ∪( Bα), and it is saturated
+relative to f, the restriction of f to Int Bα is a quotient map. Being one-to-
+one, it is a homeomorphism. Thus f maps Int Bα homeomorphically onto eα,
+so eα is an open p-cell, as desired.
+We check condition (2) for a CW complex. We have already noted that
+the map fα = f|Bα maps Int Bα homeomorphically onto the set eα. By
+construction, fα maps Bd Bα into Y , which is the union of cells of dimension
+less than p. Because Bd Bα is compact, the set f(Bd Bα) is a compact subset
+of Y . Because Y is a CW complex, it intersects only finitely many open cells
+of Y . Thus condition (2) is satisfied.
+Condition (3) follows readily. Suppose C is a subset of X and C ∩eα is
+closed in eα for each open cell eα. We show that f −1(C) is closed in Y ∪( Bα);
+from this it follows that C is closed in X.
+First note that f −1(C) ∩Y = C ∩Y . Because C ∩eβ is closed in eβ for
+each cell of dimension less than p, C ∩Y is closed in Y . Similarly, we have
+f −1(C) ∩Bα = f −1(C ∩eα) ∩Bα .
+We use here the fact that f(Bα) = eα. Now C∩eα is closed in eα by hypothesis,
+and hence closed in X. We apply continuity of f to see that f −1(C ∩eα)∩Bα
+is closed in Bα. Thus f −1(C) is closed, as desired.
+Theorem 4.12.15
+(a) Let X be a CW complex. Then Xp is a closed subspace of Xp+1
+for each p and X is the coherent union of the spaces X0 ⊂X1 ⊂
+· · · . It follows that X is normal.
+(b) Conversely, suppose that Xp is a CW complex for each p, and
+Xp equals the p-skeleton of Xp+1 for each p. If X is the coherent
+union of the spaces Xp, then X is a CW complex having Xp as its
+p-skeleton.
+Proof: (a) Suppose that C ∩Xp is closed in Xp for each p. Then C ∩eα is
+closed in eα for each cell eα of dimension at most p. Since p was arbitrary, we
+conclude that C is closed in X. Thus X has the topology coherent with the
+subspaces Xp. Normality follows from Theorem 4.11.6.
+(b) If p < q, then Xp ∩Xq = Xp is a closed subspace of both Xp and Xq.
+Therefore by (b) of Lemma 4.11.4, there is a topology on X coherent with the
+subspaces Xp, and each Xp is closed in X. By the preceding theorem, each
+space Xp is normal. Therefore, by Theorem 4.11.6, X is normal [consequently,
+Hausdorff]. Condition (2) for a CW complex is trivial. We next check con-
+dition (3). Suppose C ∩eα is closed in eα for each cell eα. Then C ∩Xp is
+closed in Xp, because Xp is a CW complex. Then C is closed in X because
+the topology of X is coherent with the spaces Xp.

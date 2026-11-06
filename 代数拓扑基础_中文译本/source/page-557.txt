@@ -1,0 +1,53 @@
+542
+Bibliography
+[Jor14]
+Camille Jordan. Cours d’analyse de l’´ecole polytechnique. Tome III.
+Cambridge Library Collection—Mathematics. Cambridge University
+Press, 2014. Calcul int´egral; ´equations differ´erentielles. [Integral cal-
+culus; differential equations], Reprint of the first (1887) edition.
+[Kne25] H. Kneser. Die Topologie der Mannigfaltigkeiten. Jahresber. Dtsch.
+Math.-Ver., 34:1–14, 1925.
+[Man14] Ciprian Manolescu.
+Triangulations of manifolds.
+ICCM Not.,
+2(2):21–23, 2014.
+[Mas91] William S. Massey. A basic course in algebraic topology, volume 127
+of Graduate Texts in Mathematics. Springer-Verlag, New York, 1991.
+[Maz59] Barry Mazur. On embeddings of spheres. Bull. Amer. Math. Soc.,
+65:59–65, 1959.
+[Maz61] B. C. Mazur.
+On embeddings of spheres.
+Acta Math., 105:1–17,
+1961.
+[ML63]
+Saunders Mac Lane. Homology, volume Band 114 of Die Grundlehren
+der mathematischen Wissenschaften.
+Springer-Verlag, Berlin-
+G¨ottingen-Heidelberg; Academic Press, Inc., Publishers, New York,
+1963.
+[Moi52]
+Edwin E. Moise. Affine structures in 3-manifolds. V. The triangula-
+tion theorem and Hauptvermutung. Ann. of Math. (2), 56:96–114,
+1952.
+[Mor60] Marston Morse. A reduction of the Schoenflies extension problem.
+Bull. Amer. Math. Soc., 66:113–115, 1960.
+[Mun00] James R. Munkres.
+Topology.
+Prentice Hall, Inc., Upper Saddle
+River, NJ, second edition, 2000.
+[New51] M. H. A. Newman. Elements of the topology of plane sets of points.
+Cambridge, at the University Press,, 1951. 2nd ed.
+[Pea90]
+G. Peano. Sur une courbe, qui remplit toute une aire plane. Math.
+Ann., 36(1):157–160, 1890.
+[Poi10]
+Henri Poincar´e. Papers on topology, volume 37 of History of Math-
+ematics. American Mathematical Society, Providence, RI; London
+Mathematical Society, London, 2010. Analysis situs and its five sup-
+plements, Translated and with an introduction by John Stillwell.
+[Rei35]
+Kurt Reidemeister. Homotopieringe und Linsenr¨aume. Abh. Math.
+Sem. Univ. Hamburg, 11(1):102–109, 1935.
+[Spa94]
+Edwin H. Spanier. Algebraic topology. Springer-Verlag, New York,
+[1994]. Reprint of the corrected 3rd edition.

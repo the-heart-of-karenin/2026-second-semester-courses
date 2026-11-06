@@ -1,0 +1,46 @@
+Homological Algebra
+409
+Let θ : C →D be a chain map, where C and D are free chain complexes
+vanishing below a certain dimension, and for which Hi(C) and Hi(D) are
+finitely generated for each i. We wish to show that θ induces homomorphisms
+of the universal coefficient sequences of our theorem.
+Here we are going to need to establish the fact that the chain maps we
+are considering have the stronger property of being chain equivalences: Let
+ϕ : C′ →C and ψ : D′ →D be chain maps that induce homology isomor-
+phisms in all dimensions, as in the preceding lemma. Here C′ and D′ are free,
+finitely generated in each dimension, and vanishing below a certain dimension.
+Theorem 5.7.2 tells us that there are chain-homotopy inverses λ : C →C′ and
+µ : D →D′ to ϕ and ψ, respectively.
+Now ϕ induces an isomorphism of the exact sequences for C with the exact
+sequences for C′. Indeed, this is how we obtained the exact sequences for C. A
+similar remark applies to ψ. Consider the diagram
+ϕ
+λ
+C′
+C
+ψ
+µ
+D′
+D .
+θ
+By the naturality property of Theorem 7.6.1, the composite µ ◦θ ◦ϕ induces
+homomorphisms of the exact sequences for C′ with those for D′. It follows that
+ψ ◦(µ ◦θ ◦ϕ) ◦λ induces homomorphisms of the exact sequences for C with
+those for D. But this map is chain homotopic to θ.
+Applying this result to the special case in which C = D and θ is the identity,
+we see that the exact sequences are independent of the choices of C′ and ϕ.
+Corollary 7.6.4 If (X, A) is a topological pair such that Hi(X, A) is finitely
+generated for each i, then there are natural exact sequences
+0 ←−Hom (Hp(X, A), G) ←−Hp(X, A; G) ←−Ext (Hp+1(X, A), G) ←−0 ,
+0 −→Hp(X, A) ⊗G −→Hp(X, A; G) −→Hp+1(X, A) ∗G −→0 .
+They split, but not naturally.
+The argument used to prove Lemma 7.6.3 might make one suspect that
+there is a functorial version of the result. Here is that formulation:
+Theorem 7.6.5 Let C be the category whose objects are free chain complexes
+C, each of which vanishes below some dimension, and is such that Hi(C) is
+finitely generated for each i. Let C′ be the subcategory of C whose objects are
+those objects of C whose chain groups are finitely generated in each dimension.
+The morphisms in both cases are chain-homotopy classes of chain maps.
+If J : C′ →C is the inclusion functor, then there is a functor G : C →C′
+such that G ◦J is the identity functor of C′ and J ◦G is naturally equivalent
+to the identity functor of C.

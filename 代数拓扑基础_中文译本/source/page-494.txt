@@ -1,0 +1,39 @@
+Duality in Manifolds
+479
+one means by an orientation preserving class for X. This fact suggests that
+by using cap products in singular theory one might obtain a proof of Poincar´e
+duality for an arbitrary compact topological manifold without assuming trian-
+gulability. This is in fact the case. The interested reader may consult [Dol95]
+[or alternatively, [GH81], [Vic94], or [Spa94]].
+EXERCISES
+1. Given the orientation cycle γ for X, let ψ be constructed as in the
+proof of Theorem 8.7.2.
+(a) Define ϕ by the rule
+ϕ(cp) = (−1)α(p)ψ(cp) ,
+where
+α(4k + n) = 0 ,
+α(4k + n + 2) = 1 ,
+α(4k + n + 1) = 0,
+α(4k + n + 3) = 1
+for all k. Show that ϕ satisfies the condition ϕδ = ∂ϕ.
+(b) Show that if σ is an n-simplex of X, oriented as it appears
+in the cycle γ, then ψ(σ∗) = σ. [Hint: Note that ϵ(ψ(σ∗)) =
+ϵ(g#(ψ(σ∗))) = ϵ(σ∗⌢γ).]
+(c) Conclude that the homomorphism ϕ of (a) is identical with
+that in the proof of Theorem 8.5.2.
+2. Let X and Y be compact, connected, triangulable homology n-
+manifolds. Let f : X →Y .
+(a) Show that if X and Y are orientable and if f has non-zero
+degree, then βi(X) ≥βi(Y ), where βi denotes the ith betti
+number.
+(b) If f∗: Hn(X; Z/2) →Hn(Y ; Z/2) is non-trivial, then what can
+you say about Hi(X; Z/2) and Hi(Y, Z/2)?
+3. Let X denote the n-fold connected sum of tori. Let X0 = S2. Show
+that there is a map f : Xn →Xm of non-zero degree if and only if
+n ≥m.
+4. Let Xn be as in Exercise 3. Let Yn be the n-fold connected sum of
+projective planes, with n ≥1. Given f, consider the condition
+f∗is non-trivial as a map of H2 with Z/2 coefficients.
+(∗)
+(a) Show that there is a map f : Yn →Ym satisfying (∗) if and
+only if n ≥m.

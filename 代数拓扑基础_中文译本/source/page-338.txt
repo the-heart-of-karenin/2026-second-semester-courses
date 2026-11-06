@@ -1,0 +1,39 @@
+Cohomology
+323
+both the simplicial and the singular cohomology theories, we show they are
+naturally isomorphic for triangulable spaces, and we verify the cohomology
+versions of the Eilenberg–Steenrod axioms.
+First, let us work on the level of chain complexes.
+The Cohomology of a Chain Complex
+Let C = {Cp, ∂} be a chain complex, and let G be an abelian group. We
+define the p-dimensional cochain group of C, with coefficients in G, by
+Cp(C; G) = Hom (Cp, G) .
+We define the coboundary operator δ to be the dual of the boundary operator.
+It follows that δ2 = 0. The family of groups and homomorphisms {Cp(C; G), δ}
+is called the cochain complex of C with coefficients in G. As usual, the kernel
+of the homomorphism
+δ : Cp(C; G) →Cp+1(C; G)
+is denoted Zp(C; G), its image is denoted Bp+1(C; G), and the cohomology
+group of C in dimension p, with coefficients in G, is defined by the equation
+Hp(C; G) = Zp(C; G)/Bp(C; G) .
+If {C, ϵ} is an augmented chain complex, then one has a corresponding
+cochain complex
+· · · ←−C1(C; G)
+δ1
+←−C0(C; G)
+ϵ
+←−Hom (Z, G) ,
+where ϵ is injective. We define the reduced cohomology groups of C by setting
+Hq(C; G) = Hq(C; G) if q > 0, and
+H0(C; G) = ker δ1/im ϵ .
+It is easy to see that if H0(C) vanishes, then H0(C; G) vanishes as well, for
+exactness of C1 −→C0 −→Z −→0 implies exactness of the dual sequence.
+In general [see the exercises of Section 5.3], we have the equation
+H0(C; G) ∼= H0(C; G) ⊕G .
+Definition 5.5.1 Suppose that C = {Cp, ∂} and C′ = {C′
+p, ∂′} are chain
+complexes. Suppose that ϕ : C →C′ is a chain map, so that ∂′ ◦ϕ = ϕ ◦∂.
+Then the dual homomorphism
+Cp(C; G)
+ϕ
+←−Cp(C′; G)

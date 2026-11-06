@@ -1,0 +1,58 @@
+\section{链复形的张量积}
+\sourcepage{410}
+本节定义链复形的张量积，作为研究乘积空间同调的代数工具。
+
+\entry{定义}{7.7.1}对链复形 $\mathcal C,\mathcal C'$，定义
+\[
+(\mathcal C\otimes\mathcal C')_m=\bigoplus_{p+q=m}C_p\otimes C'_q,
+\qquad
+\overline\partial(c_p\otimes c'_q)=\partial c_p\otimes c'_q+(-1)^pc_p\otimes\partial'c'_q.
+\]
+该式先定义双线性映射，再诱导张量积上的同态。可直接验证 $\overline\partial^2=0$，且两个链映射的张量积仍为链映射。若两复形自由，则张量复形自由：各维的一组基为所有 $a_\alpha^p\otimes b_\beta^q$，其中 $p+q=m$，两因子分别遍历各自自由基。
+
+\entry{定义}{7.7.2}对增广链复形，以 $\epsilon\otimes\epsilon'$ 后接 $\Z\otimes\Z\cong\Z$ 定义张量复形的增广 $\overline\epsilon$。它满射，并满足 $\overline\epsilon\,\overline\partial=0$，验证留给读者。
+
+\sourcepage{411}
+\entry{定理}{7.7.3}若 $|K|\times|L|$ 已三角剖分，使每个胞腔 $\sigma\times\tau$ 为子复形的多面体，则
+\[
+\mathcal C(K)\otimes\mathcal C(L)\cong\mathcal D(K\times L).
+\]
+因此前者可计算乘积空间的同调。
+
+\textbf{证明：}记底层单纯复形为 $M$。胞腔链群以各乘积胞腔的基本闭链为基，张量链群以 $\sigma^p\otimes\tau^q$（$p+q=m$）为基，所以逐维自由群同构。须协调选择基本闭链，使同构保持边缘。
+
+零维定义 $\varphi(v\otimes w)=v\times w$。两边增广在这些基元上均取 $1$，所以保持增广。设已在小于 $m$ 的维数定义 $\varphi$，与边缘可交换，且将每个基元映为相应胞腔的基本闭链。对 $p+q=m$，令
+\[
+c_{m-1}=\varphi\bigl(\overline\partial(\sigma^p\otimes\tau^q)\bigr).
+\]
+若 $m=1$，它增广为零；若 $m>1$，由归纳假设及 $\overline\partial^2=0$，它为闭链。
+
+\sourcepage{412}
+写 $\partial\sigma=\sum s_i$、$\partial\tau=\sum t_j$，面已吸收符号，则
+\[
+c_{m-1}=\sum_i\varphi(s_i\otimes\tau)+(-1)^p\sum_j\varphi(\sigma\otimes t_j),
+\]
+零维因子对应的求和省略。每项由乘积胞腔的边界面承载，所以整个闭链在 $\Bd(\sigma\times\tau)$ 内。这个边界同胚于 $(m-1)$ 维球面。
+
+至少一个因子维数为正。若 $p>0$，则闭链在某个 $s_i\times\tau$ 上的限制为该胞腔的基本闭链，所以非零且不是其他闭链的非平凡倍数，故生成边界球面的约化顶维同调。若 $q>0$ 则同理。
+
+乘积胞腔无环，故连接同态
+\[
+H_m(\sigma\times\tau,\Bd(\sigma\times\tau))\to\widetilde H_{m-1}(\Bd(\sigma\times\tau))
+\]
+为同构。这里同调群可直接视为相对顶维闭链群及边界顶维闭链群，所以存在唯一基本闭链，以 $c_{m-1}$ 为边缘。取它为 $\varphi(\sigma^p\otimes\tau^q)$，即保持边缘，归纳完成。\hfill$\square$
+
+\sourcepage{413}
+\subsection*{习题}
+\begin{enumerate}
+\item 验证张量边缘平方为零，并验证定义 7.7.2 的增广性质。
+\item 设 $\varphi,\psi:\mathcal C\to\mathcal D$，$\varphi',\psi':\mathcal C'\to\mathcal D'$ 为链映射。
+\begin{enumerate}[label=(\alph*)]
+\item 证明 $\varphi\otimes\varphi'$ 为链映射。
+\item 若 $D$ 为第一对之间的链同伦，证明 $D\otimes\varphi'$ 给出对应张量映射的链同伦。
+\item 若第二对链同伦，找出 $\psi\otimes\varphi'$ 与 $\psi\otimes\psi'$ 之间的链同伦。
+\item 推出链等价的张量积仍为链等价。
+\end{enumerate}
+\item 张量边缘公式不是唯一选择。若另一个边缘 $\widetilde\partial$ 保持所有子复形张量子群，并在 $C_1(K)\otimes C_0(w)$ 上等于 $\pm\partial_K\otimes i$，在 $C_0(v)\otimes C_1(L)$ 上等于 $\pm i\otimes\partial_L$，证明在定理 7.7.3 的三角剖分条件下，所得链复形仍同构于乘积胞腔链复形。
+\item 验证 $\widetilde\partial(c_p\otimes c'_q)=(-1)^q\partial c_p\otimes c'_q+c_p\otimes\partial'c'_q$ 给出满足上一题要求的边缘。
+\end{enumerate}

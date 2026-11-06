@@ -1,0 +1,42 @@
+140
+Elements of Algebraic Topology
+EXERCISES
+1. (a) Let K be the complex shown in Figure 2.9.2. Its space is the
+boundary of a square.
+a4
+a6
+a2
+a0
+K
+a4
+a5
+a6
+a7
+a2
+a3
+a0
+a1
+sd K
+Figure 2.9.2
+Let sd K be its first barycentric subdivision. Let f : sd K →K
+be the simplicial map specified by F(ai) = a2i, where the index
+2i is reduced modulo 8 if necessary. Show that the map f has
+degree 2.
+(b) Consider S1 as the set of complex numbers of unit modulus.
+Show that the map h : S1 →S1 given by h(z) = z2 has degree
+2. [Hint: By radial projection, h induces a map of |K| to itself
+that is homotopic to the simplicial map f of part (a).]
+(c) If n is any positive integer, show that the map k : S1 →S1
+given by k(z) = zn has degree n.
+2. Use the result of Exercise 1 to prove the fundamental theorem of
+algebra by the following steps:
+Let Sc be the circle |z| = c with center 0 and radius c in the complex
+plane. Suppose that the given polynomial has no root in the disc
+{z : |z| ≤c}. Let
+h : Sc →C \ {0}
+be given by
+h(z) = zn + an−1zn−1 + · · · + a1z + a0 .
+(a) Show that h∗is trivial.
+(b) Show that if c is sufficiently large, then h is homotopic to the
+map k : Sc →C \ {0} given by k(z) = zn. [Hint: Set F(z, t) =
+zn + t(an−1zn−1 + · · · + a0).]

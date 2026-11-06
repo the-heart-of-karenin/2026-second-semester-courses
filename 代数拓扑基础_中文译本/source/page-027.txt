@@ -1,0 +1,34 @@
+12
+Elements of Algebraic Topology
+Lemma 1.3.12 A polyhedron |K| is Hausdorff.
+Proof: Given two points of |K|, x0̸ = x1, there is at least one vertex v such
+that tv(x0)̸ = tv(x1). Choose r between these two numbers. Then the sets
+{x : tv(x) < r} and {x : tv(x) > r} are the required disjoint open sets each
+containing one of the two points.
+Lemma 1.3.13 If K is finite, then |K| is compact. Conversely, if a subset A
+of |K| is compact, then A ⊂|K0| for some finite subcomplex K0 of K.
+Proof: If K is finite, then |K| is a finite union of compact subspaces σ, and
+hence is compact.
+Now suppose that A ⊂|K| is compact and A does not lie in the polytope of
+any finite subcomplex of K. Choose a point xs ∈A ∩Int s whenever A ∩Int s
+is nonempty. Then the set B = {xs} is infinite. Furthermore, every subset of
+B is closed, since its intersection with any simplex σ is finite. Being closed and
+discrete, B has no limit point, contrary to the fact that every infinite subset
+of a compact space has a limit point.
+Three particular subspaces of |K| are often useful when studying local
+properties of |K|. We mention them here.
+Definition 1.3.14 If v is a vertex of K, the star of v in K, denoted by St v,
+or sometimes by St(v, K), is the union of the interiors of those simplices of K
+that have v as a vertex. Its closure, denoted St v, is called the closed star of
+v in K. It is the union of all simplices of K having v as a vertex, and is the
+polytope of a subcomplex of K. The set St v \ St v is called the link of v in
+K and is denoted Lk v. See Figure 1.3.3.
+Lk v0
+Lk v1
+Lk v2
+v0
+v1
+v2
+Figure 1.3.3
+The set St v is open in |K|, since it consists of all points x of |K| such
+that tv(x) > 0. Its complement is the union of all simplices of K that do not

@@ -1,0 +1,41 @@
+Singular Homology Theory
+193
+For convenience, we will use the notation ℓi to denote the linear singular
+simplex on the right-hand side of (∗), that is, we will write
+ℓi = ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp+1) .
+[T, w]
+∂[T, w] = [∂T, w] + T
+T(0)
+T(1)
+w
+T(0)
+T(1)
+w
+Figure 4.2.2
+Observe that ℓp+1 equals the inclusion map of ∆p into ∆p+1. Since the
+restriction of [T, w] to ∆p equals the map T, the last term of (∗) equals
+(−1)p+1T.
+To complete the proof, we consider the singular simplex [T, w] ◦ℓi for
+i < p+1. Now the map ℓi carries ∆p by a linear homeomorphism onto the ith
+face of ∆p+1; it carries ϵ0, ϵ1, . . . , ϵp to ϵ0, ϵ1, . . . , ϵi−1, ϵi+1, . . . , ϵp+1. Therefore
+the restriction of ℓi to ∆p−1 = ϵ0ϵ1 . . . ϵp−1 carries this simplex by a linear
+map onto the simplex spanned by ϵ0, ϵ1, . . . , ϵi−1, ϵi+1, . . . , ϵp. Thus we have
+ℓi|∆p−1 = ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp) .
+(∗∗)
+Now we can compute [T, w] ◦ℓi : ∆p →X. Let x be a general point of
+∆p−1. Since ℓi : ∆p →∆p+1 is a linear map, it carries the line segment from x
+to ϵp linearly onto the line segment from ℓi(x) to ϵp+1. Since ℓi(x) ∈∆p, the
+map [T, w] : ∆p+1 →X by definition carries this line segment linearly onto
+the line segment from T(ℓi(x)) to w. Therefore, by definition, we have
+[T, w] = [T ◦(ℓi|∆p−1), w] .
+Substituting this formula into (∗) and using (∗∗), we obtain the equation
+∂[T, w]
+=
+p
+
+i=0
+(−1)i[T ◦ℓ(ϵ0, ϵ1, . . . ,ϵi, . . . , ϵp), w] + (−1)p+1T
+=
+[∂T, w] + (−1)p+1T .
+Theorem 4.2.9 Let X be a subspace of EJ that is star convex relative to w.
+Then X is acyclic in singular homology.

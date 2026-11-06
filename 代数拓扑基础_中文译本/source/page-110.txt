@@ -1,0 +1,38 @@
+Topological Invariance of the Homology Groups
+95
+In some sense the simplicial approximation f is “close” to the map h. More
+precisely, if x ∈|K|, then there is a simplex L that contains both h(x) and
+f(x).
+Lemma 2.2.4 Let f : K →L be a simplicial approximation to h : |K| →|L|.
+If x ∈|K|, then there is a simplex τ of L such that h(x) ∈Int τ and f(x) ∈τ.
+Proof: This result is immediate from part (a) of Lemma 2.2.2.
+Theorem 2.2.5 Let h : |K| →|L| and k : |L| →|M| have simplicial approx-
+imations f : K →L and g : L →M respectively. Then g ◦f is a simplicial
+approximation to k ◦h.
+Proof: Certainly g ◦f is a simplicial map. If v is a vertex of K, then
+h(St v) ⊂St f(v)
+just because f is a simplicial approximation to h. Therefore
+k(h(St v)) ⊂k(St f(v)) ⊂St g(f(v))
+because g is a simplicial approximation to k.
+EXAMPLE 2.2.6 Let K and L be the complexes shown in Figure 2.2.1.
+Note that the underlying spaces are homeomorphic to the circle and the
+annulus respectively. Let K′ be the complex obtained from K by inserting
+vertices as shown. Let h be the indicated continuous map, where we denote
+h(a) by A, and similarly for the other vertices.
+Now h does not satisfy the star condition relative to K and L, but it
+does satisfy the star condition relative to K′ and L. Thus h has a simplicial
+approximation f : K′ →L. One such is shown in the figure. We denote f(a)
+by A′ and similarly for the other vertices.
+If h : |K| →|L| satisfies the star condition relative to K and L, then there
+is a well-defined homomorphism
+h∗: Hp(K) →Hp(L)
+obtained by setting h∗= f∗, where f is any simplicial approximation to h. It
+is straightforward to see that the “functorial properties” are satisfied.
+In general an arbitrary continuous map h : |K| →|L| will not satisfy
+the star condition relative to K and L. Hence we cannot obtain an induced
+homomorphism h∗as above. What can we do instead? Two ideas are needed.
+First we show that, given h : |K| →|L|, it is possible to “subdivide” K,
+forming a new complex K′, with the same underlying space as K, so that h
+does satisfy the star condition relative to K′ and L. [This is what we did in
+the preceding Example 2.2.6.] This step is geometric in nature, and is carried
+out in Sections 2.3 and 2.4.

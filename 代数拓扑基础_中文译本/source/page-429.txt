@@ -1,0 +1,55 @@
+414
+Elements of Algebraic Topology
+7.8
+The K¨unneth Theorem
+Now we prove a basic theorem that enables us to compute the homology of
+the tensor product of two chain complexes. As you might expect, the proof is
+highly algebraic.
+The first thing we show, under suitable hypotheses, is the existence of a
+natural monomorphism of the tensor product Hp(C) ⊗Hq(C′) into the group
+Hp+q(C ⊗C′).
+Definition 7.8.1 We define the tensor homomorphism for homology
+Θ : Hp(C) ⊗Hq(C′) →Hp+q(C ⊗C′)
+as follows: If zp is a p-cycle of C and z′
+q is a q-cycle of C′, let
+Θ
+
+{zp} ⊗{z′
+q}
+
+= {zp ⊗z′
+q} .
+Using the formula for the boundary operator ¯∂, we see that zp ⊗z′
+q is a
+cycle of C ⊗C′. To show that Θ is well-defined, one computes
+(zp + ∂dp+1) ⊗z′
+q = zp ⊗z′
+q + ¯∂(dp+1 ⊗z′
+q) .
+zp ⊗(z′
+q + ∂′d′
+q+1) = zp ⊗z′
+q + (−1)p ¯∂(zp ⊗d′
+q+1) .
+Because Θ is induced by the inclusion map Zp⊗Z′
+q →(C⊗C′)p+q, it is natural
+with respect to chain maps.
+Lemma 7.8.2 If C and C′ are chain complexes such that in each dimension
+the cycles form a direct summand in the chains, then
+Θ : 
+p+q=mHp(C) ⊗Hq(C′) →Hm(C ⊗C′)
+is a monomorphism, and its image is a direct summand.
+Remark 7.8.3 The hypothesis of the lemma is satisfied when C and C′ are
+free chain complexes.
+Proof of the Lemma: We shall define a homomorphism λ in the opposite
+direction to Θ, such that λ ◦Θ equals the identity. That suffices.
+Let Zp denote the group of p-cycles in C, and let Z′
+q denote the group
+of q-cycles in C′. We begin with the natural projections Zp →Hp(C) and
+Z′
+q →Hq(C′). Because the cycles form a direct summand in the chains, these
+maps can be extended to homomorphisms
+ϕ : Cp →Hp(C)
+and
+ϕ′ : C′
+q →Hq(C′) .

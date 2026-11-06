@@ -1,0 +1,37 @@
+Homological Algebra
+435
+2. Compute the cohomology groups of the following spaces. You may
+use either the K¨unneth theorem, or the universal coefficient theorem
+applied to the results of Exercise 5 of Section 7.9.
+(a) S2 × P5
+(b) P3 × P5
+(c) S3 × L(n, k)
+(d) L(n, k) × L(m, j)
+(e) S1 × S1 × S3
+(f) CP 2 × CP 3
+3. Suppose that M is a compact, connected n-manifold such that
+Hn(M) ∼= Z. There are relations between the homology and co-
+homology groups of M. Compare the computations of the preced-
+ing exercise with those you made in Exercise 5 of Section 7.9 to
+formulate a conjecture concerning these relations.
+4. Compute the cohomology groups of the following spaces.
+(a) S1 × P3
+(b) P2 × P4
+(c) S2 × L(n, k)
+7.11
+∗Application: The Cohomology Ring of a Product
+Space
+In the preceding section, we defined the cohomology cross product and used
+it in obtaining a K¨unneth theorem in cohomology. In this section, we explore
+some of its properties, and use it to obtain information about the ring structure
+of cohomology.
+We shall state our results first for the cross product with coefficients in
+the ring R [Definition 7.10.4], and then explain to what extent they hold for
+the cross product with (Z, G) coefficients [Definition 7.10.5].
+We let X and Y be topological spaces.
+Definition 7.11.1 The cross product is defined as the composite of the ho-
+momorphisms Θ and ν∗of cohomology. Because these homomorphisms are
+induced by the cochain maps θ and ν, respectively, the cross product is in-
+duced by the cochain map ν ◦θ. Accordingly, we define
+cp × cq = νθ(cp ⊗cq) ,
+and call it the cochain cross product.

@@ -1,0 +1,42 @@
+274
+Elements of Algebraic Topology
+a CW complex in this way, as we did in the preceding example. The following
+two theorems show how this is done.
+The dimension of a CW complex X is the largest dimension of a cell of
+X, if such a maximum exists, otherwise the dimension is said to be infinite.
+Theorem 4.12.14
+(a) Suppose X is a CW complex of dimension p. Then X is home-
+omorphic to an adjunction space formed from Xp−1 and a topo-
+logical sum  Bα of closed p-balls, by means of a continuous map
+g :  Bd Bα →Xp−1. It follows that X is normal.
+(b) Conversely, let Y
+be a CW complex of dimension at most
+p −1, let  Bα be a topological sum of closed p-balls, and let
+g :  Bd Bα →Y be a continuous map. Then the adjunction space
+X formed from Y and  Bα by means of g is a CW complex, and
+Y is its p −1 skeleton.
+Proof: (a) For each cell eα of X of dimension p one is given the characteristic
+map fα : Bp →eα. Let Bα = Bp × {α}, and let  Bα be the topological sum
+of these disjoint p-balls. Form the topological sum
+E = Xp−1 ∪( Bα) ,
+and define π : E →X by letting π equal inclusion on Xp−1 and the composite
+Bα = Bp × {α} −→Bp
+fα
+−→X
+on Bα. To prove (a), it will suffice to show that π is a quotient map.
+Obviously, π is continuous and surjective. Suppose C is a subset of X and
+π−1(C) is closed in E. Then
+(1) π−1(C) ∩Xp−1 = C ∩Xp−1 is closed in Xp−1.
+(2) π−1(C) ∩Bα is closed in Bα for each α.
+The first condition implies that C ∩eβ is closed in eβ whenever dim eβ < p.
+Since Bα is compact and π is continuous, the second condition implies that
+π(π−1(C) ∩Bα) = C ∩eα is compact. Since X is Hausdorff, C ∩eα is closed
+in X and hence closed in eα, whenever dim eα = p. Thus C is closed in X, so
+π is a quotient map, as desired.
+Normality of X follows from Theorem 4.11.3; one proceeds by induction
+on p.
+(b) Let f : Y ∪( Bα) →X be the hypothesized quotient map. Now Y is
+normal, by part (a), and  Bα is normal. It follows from Theorem 4.11.3 that
+X is normal [and consequently Hausdorff]. As usual, we consider Y to be a
+subspace of the adjunction space X; then f equals inclusion of Y , and f equals
+g on  Bd Bα. We define the open cells of X to be the cells {eβ} of Y [having

@@ -1,0 +1,52 @@
+Homological Algebra
+419
+0 →
+p+q=mHp(C) ⊗Hq(C′) →Hm+1(D ⊗C′) βm+1
+Hm(Z ⊗C′) →
+p+q=mHp(C) ∗Hq(C′) →0 ,
+The kernel and cokernel of βm+1 are now apparent. From this sequence and
+sequence (∗) of Step 1, the theorem follows. Because both sequences are
+natural, the K¨unneth sequence is also natural.
+Finally, we note that the map
+cok βm+1 →Hm(C ⊗C′)
+in sequence (∗) is induced by the inclusion Z ⊗C′ →C ⊗C′. Therefore the
+first map of the K¨unneth sequence is just the map Θ of Lemma 7.8.2.
+Corollary 7.8.5 Let C, C′, D, and D′ be chain complexes with C and D free.
+If ϕ : C →D and ϕ′ : C′ →D′ are chain maps that induce homology isomor-
+phisms in all dimensions, then ϕ ⊗ϕ′ : C ⊗C′ →D ⊗D′ induces homology
+isomorphisms in all dimensions.
+Proof: We apply naturality of the K¨unneth sequence and the Steenrod five
+lemma [Lemma 3.3.4].
+EXAMPLE 7.8.6 Let K and L be simplicial complexes, with either K or L
+locally finite. The results of the previous section show that the chain complex
+C(K) ⊗C(L) can be used to compute the homology of |K| × |L|. Since C(K)
+and C(L) are free, the K¨unneth theorem implies that
+Hm(|K| × |L|) ∼=
+
+p+q=m [Hp(K) ⊗Hq(L) ⊕Hp−1(K) ∗Hq(L)] .
+EXAMPLE 7.8.7 Applying the preceding example to the product Sr × Ss,
+we obtain
+Hm(Sr × Ss) ∼=
+
+p+q=mHp(Sr) ⊗Hq(Ss) .
+Hence we have
+Hk(Sr × Ss)
+∼=
+
+0
+if k /∈{0, r, s, r + s},
+Z
+if k ∈{0, r + s},
+Hr(Sr × Ss)
+∼=
+Hs(Sr × Ss)
+∼=
+
+Z ⊕Z
+if r = s,
+Z
+if r̸ = s,
+EXAMPLE 7.8.8 Given α ∈Hp(K) and β ∈Hq(L), it is geometrically
+clear that there should be a corresponding element in Hp+q(|K| × |L|). The
+image of α⊗β in Hp+q(|K|×|L|) under the natural monomorphism Θ is called
+the homology cross product of α and β, and is denoted α × β. In some sense,

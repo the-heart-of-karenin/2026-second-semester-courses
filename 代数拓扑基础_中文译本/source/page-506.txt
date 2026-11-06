@@ -1,0 +1,52 @@
+Duality in Manifolds
+491
+Then, by the definition of the homology intersection ring,
+αp · βq
+=
+(αq ⌣βp) ⌢Γ
+=
+αq ⌢(βp ⌢Γ)
+=
+αq ⌢βq .
+Because the homomorphism ϵ∗: H0(X; R) →R induced by the augmen-
+tation map ϵ is an isomorphism, to prove our result it suffices to show that
+±ab = ϵ∗(αp · βq) = ϵ∗(αq ⌢βq) = ⟨αq, βq⟩.
+We evaluate this Kronecker index by finding a representative cocycle for
+αq. Orient the simplices of X. Let γ be an n-cycle of X representing Γ. Let
+ψ : Cq(X) →Dp(X) be the isomorphism defined by the diagram
+Cq(X)
+ψ
+−−−−→
+Dp(X)
+g#
+j
+Cq(sd X)
+⌢sd γ
+Cp(sd X) ,
+−−−−−→
+where g is a simplicial approximation to the identity. If σi is an oriented q-
+simplex of X and σ∗
+i is the corresponding elementary cochain, then ψ(σ∗
+i ) is
+a fundamental cycle for the p-block D(σi) dual to σi—which we denote by zi.
+Now the cycle representing αp has the form
+cp = bjzj = bjψ(σ∗
+j ) .
+We assert that αq is represented by the cocycle defined by the equation
+cq = bjσ∗
+j .
+The fact that ∂ψ = ±ψδ implies that cq is a cocycle. And the fact that ψ
+induces the isomorphism ⌢Γ means that cq represents αq.
+Now the cycle dq has the form
+dq = aiσi .
+The dual cell D(σj) carrying the chain zj intersects the simplex σi only if
+i = j. In this case they intersect in the barycenter σi of σi. The carrier of
+cp consists of those dual cells D(σj) for which bj̸ = 0. But the carrier of dq
+consists of those simplices σi for which ai̸ = 0. Since these carriers intersect in
+only one point σ, it follows that the only index i for which both the coefficients
+bi and ai are non-zero is the index for which σi = σ. Our lemma follows:
+⟨αq, βq⟩= ⟨cq, dq⟩= bjai⟨σ∗
+j , σi⟩= biai = ±ba .
+To apply this result to the cohomology of lens spaces, we need a certain
+operation called the Bockstein, which we introduced for homology in Defini-
+tion 3.3.10.

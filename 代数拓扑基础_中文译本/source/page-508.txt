@@ -1,0 +1,35 @@
+Duality in Manifolds
+493
+cochain complex {Ci(X) ⊗G} can be used to compute β∗. Also {Di(X) ⊗G}
+can be used to compute β∗.
+The isomorphism induced by ϕ differs from that induced by ⌢Γ only by
+a sign, so that our lemma now follows.
+Now we apply these results to lens spaces. Recall that if n and k are rela-
+tively prime positive integers, then the lens space X = L(n, k) is a compact,
+connected, orientable, triangulable 3-manifold. Furthermore, X has the struc-
+ture of a CW complex. Its cellular chain complex D(X) is infinite cyclic in
+each dimension i = 0, 1, 2, 3. And the boundary operator is either 0 or multi-
+plication by n. It follows that
+Hi(X; Z/n) ∼= Z/n ∼= Hi(X; Z/n)
+for i = 1, 2, 3.
+Theorem 8.9.6 Let X = L(n, k). Let Λ generate the infinite cyclic group
+H3(X). Let Λ(n) denote its image in H3(X; Z/n) under the coefficient homo-
+morphism induced by Z →Z/n. Let
+β∗: H1(X; Z/n) →H2(X; Z/n)
+be the Bockstein homomorphism associated with the coefficient sequence
+0 −→Z/n ϕn
+−→Z/n2 −→Z/n −→0 ,
+where ϕn : Z/n →Z/n2 is multiplication by n. Consider the ring H∗(X; Z/n).
+There is a generator u for H1(X; Z/n) such that
+u ⌣β∗(u) = ± 1
+[k]Λ(n) ,
+where 1/[k] is the unique inverse to [k] in the ring Z/n.
+Proof: Let
+β∗: H2(X; Z/n) →H1(X; Z/n)
+be the homology Bockstein associated with the given coefficient sequence.
+Since the Bockstein homomorphisms commute with Poincar´e duality up to
+sign, it suffices to show that in homology there exists a generator w for
+H2(X; Z/n) such that
+w · β∗(w) = ±(1/[k])Λ(n) ⌢Γ .
+We know that Λ(n) ⌢Γ is a generator of H0(X; Z/n). Also it equals the
+homology class of v0 ⊗[1], where v0 is a vertex of X and [1] ∈Z/n.

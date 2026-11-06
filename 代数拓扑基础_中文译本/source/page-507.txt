@@ -1,0 +1,62 @@
+492
+Elements of Algebraic Topology
+Definition 8.9.4 Let C be a free chain complex. Given an exact sequence of
+abelian groups
+0 →G →G′ →G′′ →0 ,
+consider the associated short exact sequences
+0
+→
+Cp ⊗G →Cp ⊗G′ →Cp ⊗G′′ →0 ,
+0
+→
+Hom(Cp, G) →Hom(Cp, G′) →Hom(Cp, G′′) →0 .
+From the zig-zag lemma [Lemma 3.3.2], we obtain homomorphisms
+β∗: Hp(C; G′′) →Hp−1(C; G) ,
+β∗: Hp(C; G′′) →Hp+1(C; G)
+that are natural with respect to homomorphisms induced by continuous maps.
+They are called the Bockstein homomorphisms associated with the coefficient
+sequence in question.
+Lemma 8.9.5 We use Notation 8.9.1, and we assume that X is orientable.
+Then the Bockstein homomorphisms commute with the Poincar´e duality iso-
+morphism up to sign.
+Proof: Let ϕ : Ck(X) →Dn−k(X) be the Poincar´e duality isomorphism of
+Theorem 8.5.2. Consider the commutative diagram
+0
+Ck(X) ⊗G
+Ck(X) ⊗G′
+Ck(X) ⊗G′′
+0
+0
+Dn
+k(X)
+G
+Dn
+k(X)
+G′
+Dn
+k(X)
+G′′
+0
+−
+−
+−
+⊗
+⊗
+⊗
+where the vertical homomorphisms are induced by ϕ. Since ∂ϕ = ϕδ, one has
+an induced homomorphism of the corresponding exact homology sequences.
+In particular, the diagram
+Hk(X; G′′)
+β∗
+−−−−→
+Hk+1(X; G)
+∼=
+∼=
+Hn−k(X; G′′)
+β∗
+Hn−k−1(X; G)
+−−−−→
+commutes. Here we use the fact that one has a natural isomorphism
+Ci(X) ⊗G ∼= Hom(Ci(X), G)
+of cochain complexes. So we may use either to compute the cohomology of X.
+We also use the naturality of the zig-zag construction to conclude that the

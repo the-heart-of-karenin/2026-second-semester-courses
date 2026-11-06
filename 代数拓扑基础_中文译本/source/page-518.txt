@@ -1,0 +1,32 @@
+Duality in Manifolds
+503
+Definition 8.10.11 Let M be an n-manifold with boundary. We say that
+Bd M has a product neighborhood in M if there is a homeomorphism
+h : Bd M × [0, 1) →U
+whose image is an open set in M and such that h(x, 0) = x for each x ∈Bd M.
+It is in fact true that such a product neighborhood always exists, but the
+proof is decidedly non-trivial [see [Bro62]].
+Theorem 8.10.12 (Poincar´e–Lefschetz duality) Let M be a compact,
+triangulable n-manifold with boundary such that Bd M has a product neigh-
+borhood in M.
+If (M, Bd M) is orientable, let Γ ∈Hn(M, Bd M) be an orientation class
+for (M, Bd M). Then there are isomorphisms
+Hk(M, Bd M; G)
+Hn−k(M; G) ,
+Hk(M; G)
+Hn−k(M, Bd M; G)
+⌢Γ
+⌢Γ
+for arbitrary G. If (M, Bd M) is not orientable, then the same result holds if
+G is replaced by Z/2 and Γ is replaced by Γ(2).
+Bd M
+M
+N
+Figure 8.10.2
+Proof: We first prove that inclusion induces an isomorphism
+j∗: Hn−k(M \ Bd M; G) →Hn−k(M; G) .
+Let h : Bd M × [0, 1) →M be a product neighborhood of the boundary. Let
+N = M \ h(Bd M × [0, 1/2)) .
+See Figure 8.10.2. Now Bd M×[1/2, 1) is a deformation retract of both Bd M×
+[0, 1) and of Bd M × (0, 1). Hence N is a deformation retract of both M and
+M \ Bd M. Thus the left-hand inclusions in the diagram

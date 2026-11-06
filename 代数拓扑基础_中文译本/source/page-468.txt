@@ -1,0 +1,31 @@
+Duality in Manifolds
+453
+This theorem shows that a triangulated relative homology n-manifold
+(X, A) satisfies the first two conditions in the definition of a relative pseudo
+manifold [see Definition 5.4.5]. If the space X \ A is connected, then (X, A)
+satisfies the third condition as well. A proof of this last fact is outlined in the
+exercises at the end of the section. The result can also be derived from the
+duality theorems, as we shall see below.
+EXAMPLE 8.3.5 Let X be the disjoint union of a torus T and a two-
+sphere S2. Let S(X) be the suspension of X. Let A = {w0, w1} consist of the
+suspension points. See Figure 8.3.1. Then (S(X), A) is a relative homology
+3-manifold since S(X) \ A is homeomorphic to X × (−1, 1), which is a 3-
+manifold.
+The subspaces (S(T), A) and (S(S2), A) are also relative homology 3-
+manifolds. They are relative pseudo 3-manifolds as well. The space S(S2)
+is a homology 3-manifold but the space S(T) is not. For the link of w0 in
+S(T) is not a homology 2-sphere but is instead a torus.
+w1
+w0
+Figure 8.3.1
+EXAMPLE 8.3.6 The pictures that we usually draw of manifolds may lead
+you to conjecture the following: If M is a triangulated topological n-manifold,
+then the link of each k-simplex of M is a topological (n −k −1)-sphere.
+Certainly, this result is true for our usual triangulations of 2-manifolds—
+for instance, the links of 1-simplices are 0-spheres and the links of vertices are
+1-spheres. This conjecture was one of long standing until it was resolved by
+work of Robert D. Edwards and James W. Cannon. [See [Can79].] The details
+are complicated, and we omit them.
+EXAMPLE 8.3.7 There do exist homology n-manifolds that are not topo-
+logical manifolds. We outline the construction of one such, but the proof uses
+tools that we have not yet studied.

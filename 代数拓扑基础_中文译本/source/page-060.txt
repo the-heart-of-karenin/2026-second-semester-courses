@@ -1,0 +1,37 @@
+Homology Groups of a Simplicial Complex
+45
+Definition 1.7.6 The connected sum of two surfaces, S1 and S2, is defined to
+be the surface obtained by deleting a small open disc from each, and pasting
+together the pieces that remain, along their free edges. We denote this space
+by S1 # S2.
+Let T be the torus. The space T # T, the double torus is illustrated in
+Figure 1.7.8.
+Figure 1.7.8
+The space P2 # P2 can be represented as a quotient space of a rectangle
+obtained by pasting its edges together in the manner indicated in Figure 1.7.9.
+[Note that if you cut the rectangle along the dotted line C, you have two
+projective planes with an open disc removed from each, as indicated in the
+figure.]
+≈
+E
+D
+D
+E
+C
+C
+D
+D
+C
+E
+E
+Figure 1.7.9
+Theorem 1.7.7 Let P2 # P2 be the connected sum of two projective planes.
+Then
+H1(P2 # P2) ∼= Z ⊕Z/2 and H2(P2 # P2) = 0 .
+Proof: We represent P2 # P2 by the same rectangle L as before, labeling the
+vertices so as to be consistent with Figure 1.7.8. In this case, the complex
+A = g(|Bd L|) is again the wedge of two circles. Let w1 be the 1-cycle running
+right-to-left on the top edge of the rectangle as in Figure 1.7.9, and let z1 be
+the 1-cycle running top-to-bottom on the left edge of the rectangle as in the
+same figure. Statements (1) and (2) of the proof of Theorem 1.7.3 hold as
+before. We also have

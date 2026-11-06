@@ -1,0 +1,41 @@
+Duality in Manifolds
+463
+We next define ϕ in dimension n −1. Let s be an oriented (n −1)-simplex
+of X. We wish to define ϕ(s∗) so that
+∂ϕ(s∗) = ϕ(δs∗) .
+s
+σ0
+σ0
+s
+σ1
+σ1
+Figure 8.5.1
+Now s is a face of exactly two n-simplices σ0 and σ1 of X. Since γ is a
+cycle, they are oriented so that ∂σ0 + ∂σ1 has coefficient zero on s. Suppose
+the indexing to be chosen so that ∂σ0 has coefficient −1 on s and ∂σ1 has
+coefficient 1 on s. Then δs∗= σ∗
+1 −σ∗
+0 so that
+ϕ(δs∗) = σ1 −σ0
+by definition. The 1-block D(s) is the union of the line segments from s to σ0
+and σ1. We now define
+ϕ(s∗) = [σ0, s ] + [s, σ1] .
+See Figure 8.5.1. Then ϕ(s∗) is a fundamental cycle for the 1-cell (D(s), ˙D(s))
+as desired. Also
+∂ϕ(s∗) = σ1 −σ0 = ϕ(δs∗) .
+In general, suppose that ϕ is defined in dimension p + 1 < n. We wish to
+define it in dimension p in such a way that for each oriented p-simplex s we
+have
+∂ϕ(s∗) = ϕ(δs∗) .
+Given the oriented p-simplex s, we compute
+δs∗=
+
+ϵiσ∗
+i ,
+where the sum extends over all (p + 1)-simplices σi of which s is a face. Also
+ϵi = ±1 is the coefficient of s in the expression for ∂σi. Thus
+ϕ(δs∗) =
+
+ϵiϕ(σ∗
+i ) .
+We shall prove that ϕ(δs∗) is a fundamental cycle for ˙D(s).

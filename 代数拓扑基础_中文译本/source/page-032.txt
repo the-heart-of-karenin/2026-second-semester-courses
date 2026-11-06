@@ -1,0 +1,43 @@
+Homology Groups of a Simplicial Complex
+17
+The dimension of S is the largest dimension of one of its simplices or is infinite
+if there is no such largest dimension. The vertex set V of S is the union of
+the one-point elements of S; we shall make no distinction between the vertex
+v ∈V and the 0-simplex {v} ∈S. A subcollection of S that is itself a complex
+is called a subcomplex of S.
+Two abstract complexes S and T are said to be isomorphic if there is a
+bijective correspondence f mapping the vertex set of S to the vertex set of T
+such that {a0, a1, . . . , an} ∈S if and only if {f(a0), f(a1), . . . , f(an)} ∈T .
+Definition 1.4.2 If K is a simplicial complex, let V be the vertex set of
+K. Let K be the collection of all subsets {a0, a1, . . . , an} of V such that the
+vertices a0, a1, . . . , an span a simplex of K. The collection K is called the
+vertex scheme of K.
+The collection K is a particular example of an abstract simplicial complex.
+It is in fact the crucial example, as the following theorem shows.
+Theorem 1.4.3
+(a) Every abstract complex S is isomorphic to the vertex scheme of
+some simplicial complex K.
+(b) Two simplicial complexes are linearly isomorphic if and only
+if their vertex schemes are isomorphic as abstract simplicial com-
+plexes.
+Proof: Part (b) follows at once from Lemma 1.3.18. To prove (a), we proceed
+as follows: Given an index set J, let ∆J be the collection of all simplices in
+EJ spanned by finite subsets of the standard basis {ϵα}α∈J. It is easy to see
+that ∆J is a simplicial complex. If σ and τ are two simplices of ∆J, then their
+combined vertex set is geometrically independent and spans a simplex of ∆J.
+If J is an infinite set, then ∆J is an infinite dimensional simplex.
+Now let S be an abstract simplicial complex with vertex set V . Choose an
+index set J large enough that there is an injective function f : V →{ϵα}α∈J.
+[For instance, one could choose J = V .] We specify a subcomplex K of ∆J
+by the condition that for each [abstract] simplex {a0, a1, . . . , an} ∈S, the
+[geometric] simplex spanned by f(a0), f(a1), . . . , f(an) is to be in K. It is
+immediate that K is a simplicial complex and S is isomorphic to the vertex
+scheme of K; f is the required correspondence between their vertex sets.
+Definition 1.4.4 If the abstract simplicial complex S is isomorphic to the
+vertex scheme of the simplicial complex K, we call K a geometric realization of
+S. A geometric realization is uniquely determined up to a linear isomorphism.
+Let us illustrate how abstract complexes can be used to specify particular
+simplicial complexes.
+EXAMPLE 1.4.5 Suppose we wish to indicate a simplicial complex K
+whose underlying space is homeomorphic to the cylinder S1 × I. [Here I de-
+notes the closed unit interval [0, 1].] One way of doing so is to draw the picture

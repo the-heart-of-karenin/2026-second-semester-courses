@@ -1,0 +1,41 @@
+236
+Elements of Algebraic Topology
+Step 1. Let B0 and B1 be the two k-cells
+B0 = h(Ik−1 × [0, 1
+2])
+and
+B1 = h(Ik−1 × [ 1
+2, 1])
+in Sn. Let C be the (k −1)-cell h(Ik−1 ×( 1
+2)) in Sn. See Figure 4.9.1. We show
+that if α is a non-zero element of Hi(Sn \B), then its image is non-zero under
+at least one of the homomorphisms induced by the inclusion mappings
+i : (Sn \ B) →(Sn \ B0)
+and
+j : (Sn \ B) →(Sn \ B1) .
+To prove this fact, let X = Sn \ C. By the induction hypothesis, X is
+acyclic. We write X as the union of the two subspaces
+X0 = Sn \ B0
+and
+X1 = Sn \ B1 .
+Since X0 and X1 are open in Sn, they are open in X. Set
+A = X0 ∩X1 = (Sn \ B0) ∩(Sn \ B1) = Sn \ (B0 ∪B1) = Sn \ B .
+So we have an exact Mayer–Vietoris sequence
+Hi+1(X) −→Hi(A) −→Hi(X0) ⊕Hi(X1) −→Hi(X) .
+(∗)
+Since X is acyclic, the map in the middle of (∗) is an isomorphism. By
+Theorem 4.6.2, it carries α ∈Hi(A) to (i∗(α), −j∗(α)). Therefore, at least one
+of the elements i∗(α) and j∗(α) is non-trivial.
+Sn
+C
+B1
+B0
+Figure 4.9.1
+Step 2. We suppose there exists a non-zero element α in Hi(Sn \ B) and
+derive a contradiction.
+Let B0 and B1 be as in Step 1. Then the image of α in either Hi(Sn \ B0)
+or Hi(Sn \ B1) is non-zero. In the former case, we set a1 = 0 and b1 = 1
+2.
+Otherwise, we set a1 = 1
+2 and b1 = 1. Then, setting D1 = h(Ik−1 × [a1, b1]),
+we know that the image of α in Hi(Sn \ D1) is non-zero.

@@ -1,0 +1,37 @@
+110
+Elements of Algebraic Topology
+For since w is not in P, each simplex of KN having w as a vertex must lie in
+Q and hence must be a simplex pf sdM J. Therefore St(w, KN) has diameter
+less than λ, so it lies in an element of A.
+The combination of (∗), (∗∗), and (∗∗∗) proves the lemma.
+Theorem 2.4.8 Let K be a complex. Let A be an open covering of |K|. There
+exists a generalized barycentric subdivision K′ of K such that the collection
+of closed stars {St(w, K′)}, for w a vertex of K′, refines A.
+Proof: We proceed step by step. Initially we let L0 = K(0) and for each point
+v of K(0) we let Av denote an element of A that contains v.
+In general we assume that a subdivision Lp of K(p) is given and that a
+function fp is given assigning to each vertex v of Lp an element Av of A such
+that
+St(v, Lp) ⊂Av .
+We extend Lp to a subdivision Lp+1 of the (p+1)-skeleton of K and we extend
+fp to a function fp+1 as we now describe.
+For each (p + 1)-simplex σ of K, the space Bd σ is the polytope of a
+subcomplex Lσ of Lp. Consider the cone σ ∗Lσ. By the preceding lemma,
+there is an integer N(σ) such that if we set
+C(σ) = sdN(σ) (σ ∗Lσ/Lσ) ,
+then the following two conditions hold:
+For each vertex v of C(σ) belonging to Lσ,
+St(v, C(σ)) ⊂Av .
+For each vertex v of C(σ) not in Lσ there exists an element A of A such
+that
+St(w, C(σ)) ⊂A .
+We define Lp+1 to be the union of Lp and the complexes C(σ) as σ ranges
+over the (p + 1)-simplices of K.
+If v is a vertex of Lp, then St(v, Lp+1) is the union of the sets St(v, Lp)
+and St(v, C(σ)) as σ ranges over the (p + 1)-simplices of K containg v. Each
+of these sets lies in Av by construction.
+On the other hand, if w is a vertex of Lp+1 not in Lp, then w lies interior
+to some (p + 1)-simplex σ of K so that
+St(w, Lp+1) = St(w, C(σ)) .
+The latter set is contained in some element A of A. We define fp+1(w) to be
+such an element Aw of A. The inductive step is therefore complete.

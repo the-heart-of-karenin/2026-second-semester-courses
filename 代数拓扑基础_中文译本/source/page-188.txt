@@ -1,0 +1,59 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+173
+EXERCISES
+1. (a) If the braid in Definition 3.5.3 is exact, then there is an isomor-
+phism
+Λ : ker ω
+im ψ →ker β
+im α
+defined as follows. If ω(j) = 0, then choose f so that ρ(f) = j.
+Then define Λ(j) = {η(f)}.
+(b) Prove the braid lemma.
+2. Suppose that X is a topological space and X ⊃A ⊃B. We call
+(X, A, B) a triple of topological spaces, relying on the context of
+homology theory to imply the nestedness of the spaces. Using only
+the axioms for a homology theory, prove exactness of the homology
+sequence of a triple:
+· · · −→Hp(A, B)
+π
+−→Hp(X, B)
+η
+−→Hp(X, A)
+β
+−→Hp−1(A, B) −→· · ·
+where π and η are induced by inclusion. The map β is the compo-
+sition
+Hp(X, A) ∂∗
+−→Hp−1(A) i∗
+−→Hp−1(A, B) ,
+where ∂∗is given by the axioms and i is inclusion. Assume that
+the pairs involved are admissible. [Hint: Prove that Hp(A, A) = 0.
+Show that η ◦π = 0. Then apply Exercise 1.]
+3. Using only the axioms for a homology theory, derive the Mayer–
+Vietoris sequence in the following manner.
+(a) Consider the following diagram of inclusions, and the corre-
+sponding homomorphism of long exact homology sequences:
+A
+i
+−−−−→X1
+α
+−−−−→(X1, A)
+j
+
+k
+
+γ
+X2 −−−−→
+ℓ
+X −−−−→
+β
+(X, X2) .
+Given that (X1, X2) is excisive, define a sequence
+· · · →Hp(A) ϕ
+−→Hp(X1)⊕Hp(X2) ψ
+−→Hp(X)
+θ
+−→Hp−1(A) →· · ·
+by letting
+ϕ(a) = (i∗(a), −j∗(a)) ,
+ψ(x1, x2) = k∗(x1) + ℓ∗(x2) ,

@@ -1,0 +1,38 @@
+Homology with Coefficients
+367
+and call it the tensor product of A and B. The coset of the pair (a, b) is denoted
+by a ⊗b.
+Any function f from the set A × B to the abelian group C determines a
+unique homomorphism of F(A, B) into C, because the elements of A × B are
+the basis elements for F(A, B). This function f is bilinear if and only if it
+maps the subgroup R(A, B) to zero. Thus every homomorphism of A⊗B into
+C gives rise to a bilinear function from A × B into C, and conversely.
+Note that any element of F(A, B) is a finite linear combination of pairs
+(a, b), so any element of A ⊗B is a finite linear combination of elements of
+the form a ⊗b. Note that this does not tell us that a ⊗b is a typical element
+of A ⊗B. Rather, it tells us that a ⊗b is a typical generator of A ⊗B.
+Now we observe a few properties of the tensor product. By the definition,
+we have
+(a + a′) ⊗b = a ⊗b + a′ ⊗b ,
+a ⊗(b + b′) = a ⊗b + a ⊗b′ ,
+for a, a′ ∈A and b, b′ ∈B. Since
+a ⊗b = (0 + a) ⊗b = 0 ⊗b + a ⊗b
+holds, we conclude that 0 ⊗b = 0, for all b ∈B. Similarly, we have a ⊗0 = 0,
+for all a ∈A. It follows that
+(−a) ⊗b = −(a ⊗b) = a ⊗(−b) ,
+since by adding a ⊗b to each expression we obtain zero. An immediate con-
+sequence is that the relation
+(na) ⊗b = n(a ⊗b) = a ⊗(nb)
+holds, for any integer n.
+Definition 6.2.2 Let f : A →A′ and g : B →B′ be homomorphisms. There
+is a unique homomorphism
+f ⊗g : A ⊗B →A′ ⊗B′
+defined by the property that (f ⊗g)(a ⊗b) = f(a) ⊗g(b), for all a ∈A and
+b ∈B. This homomorphism is called the tensor product of f and g.
+This fact is an immediate consequence of the fact that the function from
+A × B into A′ ⊗B′ carrying (a, b) to f(a) ⊗g(b) is bilinear, as you can check.
+We also leave it to you to check the following:
+Lemma 6.2.3 The function mapping (A, B) to A⊗B [objects to objects] and
+mapping (f, g) to f ⊗g [morphisms to morphisms] is a covariant functor from
+the category of pairs of abelian groups and homomorphisms to the category of
+abelian groups and homomorphisms.

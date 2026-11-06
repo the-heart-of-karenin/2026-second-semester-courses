@@ -1,0 +1,25 @@
+92
+Elements of Algebraic Topology
+[See the exercises of Section 1.8.] Conclude that {C, ϵ} is acyclic if
+and only if Hp(C) is infinite cyclic for p = 0 and vanishes for p̸ = 0.
+2. Check the properties (1)–(5) of chain homotopies. Only (2) and
+(5) require care.
+3. Prove (a) of Theorem 1.14.10.
+4. Consider Example 1.13.5. Show that although the maps g and h are
+not contiguous, there is nevertheless a chain homotopy between g#
+and h#, as follows:
+(a) Define an acyclic carrier Φ from K to L carrying both g# and
+h#.
+(b) Define a specific chain homotopy between g# and h# that is
+carried by Φ.
+(c) Define a chain map ϕ : C(K) →C(L) carried by Φ that is not
+induced by a simplicial map; define a chain homotopy between
+ϕ and h#.
+5. Check the details of the proof of Theorem 1.14.13.
+6. Prove Lemma 1.14.15. [Hint: Use induction on the number of ver-
+tices in the complex.]
+7. Prove Theorem 1.14.16 as follows:
+(a) Show ϕ and ψ are augmentation-preserving chain maps, and
+show that ψ ◦ϕ equals the identity map of C(K)
+(b) Define an acyclic carrier from C′(K) to C′(K) that carries both
+ϕ ◦ψ and the identity map.

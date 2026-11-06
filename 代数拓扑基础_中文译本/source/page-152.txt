@@ -1,0 +1,43 @@
+Topological Invariance of the Homology Groups
+137
+Definition 2.9.7 A triangulation of a space X is a complex L and a home-
+omorphism h : |L| →X. If such a triangulation exists, then X is said to be
+triangulable.
+Proof: Step 1: We shall construct a triangulation of Sn by an n-dimensional
+complex such that the reflection map ρ induces a simplicial map of this com-
+plex to itself.
+For K a finite complex in RN × {0} ⊂RN+1, let w0 = (0, 0, . . . , 0, 1) and
+w1 = (0, 0, . . . , 0, −1) in RN+1 and let
+S(K) = (w0 ∗K) ∪(w1 ∗K) .
+Then S(K) is called a suspension of K. Let r : S(K) →S(K) be the simplicial
+map that exchanges w0 and w1 and maps each vertex of K to itself. We show
+that there exists a complex K of dimension n −1 and a triangulation
+k : |S(K)| →Sn
+such that the following diagram commutes:
+S(K)
+Sn
+S(K)
+Sn
+k
+r
+ρ
+k
+(2.1)
+Once this is done, Step 1 will have been accomplished.
+Let h : |K| →Sn−1 be any triangulation of Sn−1 by a complex of dimension
+n −1. Let y ∈|S(K)|. If y = (1 −t)x + tw0 for some x ∈|K|, define
+k(y) = (
+
+1 −t2h(x), t) .
+If y = (1 −t)x + tw1, define
+k(y) = (
+
+1 −t2h(x), −t) .
+See Figure 2.9.1.
+x
+w0
+k
+Sn
+h(x)
+S(K)
+Figure 2.9.1

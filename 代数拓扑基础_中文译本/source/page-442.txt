@@ -1,0 +1,38 @@
+Homological Algebra
+427
+These terms cancel in pairs.
+It then follows from the proof of the Eilenberg–Zilber theorem that ν is a
+chain equivalence.
+The original proof of the Eilenberg–Zilber theorem did not use acyclic
+models. Instead, it used the chain map ν of the last theorem, and a chain map
+µ defined by a similar formula. One wrote down formulas to show that both
+ν ◦µ and µ ◦ν were chain homotopic to identity maps.
+EXERCISES
+1. Show that there is a non-natural isomorphism
+Hm(X × Y ) ∼=
+
+p+q=mHp(X; Hq(Y )) .
+2. (a) Let A ⊂X and B ⊂Y . Use the Eilenberg–Zilber theorem to
+show that there is a natural chain equivalence
+S(X, A) ⊗S(Y, B) −→
+S(X × Y )
+S(X × B) + S(A × Y ) .
+(b) State and prove a K¨unneth theorem in relative singular homol-
+ogy, assuming {X × B, A × Y } is excisive.
+3. Let ν be the chain map defined in Theorem 7.9.5. Show that it is
+natural and preserves augmentation. Check that ν is a chain map.
+4. (a) Let X and Y be CW complexes. Show that the tensor product
+D(X) ⊗D(Y ) of their cellular chain complexes can be used to
+compute the homology of X × Y .
+∗(b) Show that in fact D(X) ⊗D(Y ) and S(X) ⊗S(Y ) are chain
+equivalent.
+(c) Compute the homology of P2 × P3 by computing the groups
+and boundary operators in the chain complex D(P2) ⊗D(P3).
+(d) Check the results of (c) by using the K¨unneth theorem.
+5. Compute the homology of the following spaces:
+(a) S2 × P5
+(b) P3 × P5
+(c) S3 × L(n, k)
+(d) L(n, k) × L(m, j)
+(e) S1 × S1 × S3
+(f) CP 2 × CP 3

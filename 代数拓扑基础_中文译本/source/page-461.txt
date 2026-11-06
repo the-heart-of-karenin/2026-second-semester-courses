@@ -1,0 +1,65 @@
+446
+Elements of Algebraic Topology
+Because K ∗L is a complex, these six open simplices are disjoint if s̸ = s′
+and t̸ = t′, whence xy and x′y′ are disjoint. If s = s′ and t̸ = t′, then they
+intersect only in the set Int s, so the line segments intersect in at most the
+endpoints x, x′. If s̸ = s′ and t = t′, then it follows from Step 1 that the line
+segments intersect in at most a common endpoint.
+Step
+3:
+We
+now
+prove
+part
+(b)
+of
+the
+Lemma.
+First
+we
+show
+that
+if
+v0v1 . . . vm
+∈
+K
+and
+w0w1 . . . wn
+∈
+L,
+then
+the
+points
+v0, v1, . . . , vm, w0, w1, . . . , wn are linearly independent. Consider the linear sin-
+gular simplex
+ℓ= ℓ(v0, v1, . . . , vm, w0, w1, . . . , wn) ,
+mapping ∆m+n+1 into EJ. This map carries each line segment joining a point
+of ϵ0ϵ1 . . . ϵm to a point of ϵm+1 . . . ϵm+n+1 linearly onto a line segment join-
+ing a point of v0v1 . . . vm to a point of w0w1 . . . wn. Then, by hypothesis, ℓ
+is injective. As a result, the plane spanned by these points must have dimen-
+sion m + n + 1. Otherwise, the linear map ℓcould not be injective. Hence
+v0, v1, . . . , vm, w0, w1, . . . , wn are independent.
+It follows that K ∗L exists. For if two simplices of K ∗L have interiors that
+intersect, then one of them must be of the form s∗t. Each point of Int s∗t lies
+on an open line segment joining a point of |K| to a point of |L|. If Int s∗t and
+Int s′ ∗t′ intersect, then two such open line segments must intersect. If Int s∗t
+and Int s′ intersect in a point y, then y lies interior to one such line segment
+and is also the endpoint of another. Similarly if Int s ∗t and Int t′ intersect.
+Each of these situations is contrary to our hypotheses.
+Now suppose that K and L are complete, but they are not situated in
+euclidean space in such a way that K ∗L is defined. Then one can find com-
+plexes K0 and L0 isomorphic to K and L, respectively, such that K0 ∗L0 is
+defined. For instance, one can take K0 and L0 to be disjoint subcomplexes of
+the standard simplex ∆J for some index J.
+Lemma 8.2.3 Suppose that K∗L exists, and suppose that K is locally finite.
+Then the map
+π : |K| × |L| × I →|K ∗L|
+defined by
+π(x, y, t) = (1 −t)x + ty
+is a quotient map. For each x ∈|K| and y ∈|L|, it collapses x × |L| × 0 to a
+point and |K| × y × 1 to a point. Otherwise, it is one-to-one.
+Proof: The topology of |K|×|L|×I is coherent with the subspaces σ×τ ×I for
+σ ∈K and τ ∈L. To prove this assertion, we apply the results of Section 2.8.
+The topology of |L|×I is coherent with the subspaces τ ×I for τ ∈L. Because
+|K| is locally compact Hausdorff, the topology of |K|×|L|×I is thus coherent
+with the subspaces |K| × τ × I. Because τ × I is locally compact Hausdorff

@@ -1,0 +1,77 @@
+\section{Eilenberg--Zilber 定理}
+\sourcepage{423--424}
+本节证明，对任意拓扑空间 $X,Y$，$\mathcal S(X)\otimes\mathcal S(Y)$ 都能计算 $X\times Y$ 的奇异同调。证明的关键是无环模型定理。
+
+\entry{引理}{7.9.1}若两个增广链复形无环，且第一因子自由，则其张量复形无环。
+
+\textbf{证明：}由 Künneth 序列，两因子的同调仅在零维为 $\Z$，所有挠积项均为零，所以张量复形的同调只在零维为 $\Z\otimes\Z\cong\Z$，其余为零。这说明任意增广下其约化同调为零。\hfill$\square$
+
+\entry{定理}{7.9.2（Eilenberg--Zilber 定理）}对每对拓扑空间，存在自然链映射
+\[
+\mu:\mathcal S(X)\otimes\mathcal S(Y)\to\mathcal S(X\times Y),\qquad
+\nu:\mathcal S(X\times Y)\to\mathcal S(X)\otimes\mathcal S(Y),
+\]
+它们互为链同伦逆。
+
+\textbf{证明：}在成对拓扑空间范畴上定义增广链复形函子 $G(X,Y)=\mathcal S(X)\otimes\mathcal S(Y)$、$G'(X,Y)=\mathcal S(X\times Y)$，态射分别为 $f_\#\otimes g_\#$、$(f\times g)_\#$。取模型族 $\{(\Delta_p,\Delta_q)\}$。
+
+两函子在每个模型上无环：乘积单形可缩，另一个由上一引理。还需证明自由性，然后可直接应用无环模型定理，得到双向自然变换及复合到恒等的自然链同伦。
+
+\sourcepage{425}
+对 $G'$，每维 $m$ 只需模型 $(\Delta_m,\Delta_m)$ 及对角奇异单形 $d(x)=(x,x)$。其在 $(f,g)$ 下的像为 $x\mapsto(f(x),g(x))$，每个乘积空间奇异单形均唯一如此表示，故构成自由基。
+
+对 $G$，$m$ 维模型取所有 $p+q=m$ 的 $(\Delta_p,\Delta_q)$，模型元素为 $i_p\otimes i_q$。它在 $(f,g)$ 下的像为 $f\otimes g$。因为每个奇异链群以所有奇异单形为自由基，定理 6.2.10 说明这些元素恰构成总张量链群的自由基。\hfill$\square$
+
+\entry{定理}{7.9.3（拓扑空间的 Künneth 定理）}任意空间 $X,Y$ 有自然正合列
+\[
+\begin{split}
+0\to\bigoplus_{p+q=m}H_p(X)\otimes H_q(Y)\to H_m(X\times Y)\\
+\to\bigoplus_{p+q=m}H_{p-1}(X)*H_q(Y)\to0.
+\end{split}
+\]
+它分裂，但分裂不自然。左侧映射为同调叉积，等于张量同态 $\Theta$ 后接 Eilenberg--Zilber 等价的 $\mu_*$。后面将更常用上同调中的类似叉积。
+
+\sourcepage{426}
+\entry{定理}{7.9.4}域 $F$ 系数下，有自然同构
+\[
+\bigoplus_{p+q=m}H_p(X;F)\otimes_FH_q(Y;F)\cong H_m(X\times Y;F).
+\]
+\translatornote{原书这里的张量积省略了下标 $F$；域系数版本应在 $F$ 上取张量积。}
+
+为了以后应用，给出一个具体链等价公式。
+
+\entry{定理}{7.9.5}令 $\pi_1,\pi_2$ 为乘积投影，定义
+\[
+\nu(T)=\sum_{i=0}^m[\pi_1\circ T\circ\ell(\epsilon_0,\ldots,\epsilon_i)]
+\otimes[\pi_2\circ T\circ\ell(\epsilon_i,\ldots,\epsilon_m)].
+\]
+则 $\nu$ 是保持增广的自然链等价。
+
+\textbf{证明：}自然性及保持增广留作习题。链映射性质需要繁琐但直接的计算。简记 $T_1[i_0,\ldots,i_k]=\pi_1T\ell(\epsilon_{i_0},\ldots,\epsilon_{i_k})$，$T_2$ 类似。展开后 $\overline\partial\nu(T)-\nu(\partial T)$ 等于
+\[
+\sum_{i=1}^{m}(-1)^iT_1[0,\ldots,i-1]\otimes T_2[i,\ldots,m]
++\sum_{i=0}^{m-1}(-1)^iT_1[0,\ldots,i]\otimes T_2[i+1,\ldots,m],
+\]
+两和逐项抵消。\translatornote{原书第二和的起点印为 $1$，遗漏 $i=0$ 项；否则不能与第一和完全抵消。}由 Eilenberg--Zilber 定理证明中的无环模型唯一性，这个自然、保持增广的链映射就是链等价。\hfill$\square$
+
+\sourcepage{427}
+原始证明不使用无环模型，而是给出 $\nu$ 及类似的 $\mu$ 的公式，再直接构造两个复合与恒等之间的链同伦。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 证明存在非自然同构 $H_m(X\times Y)\cong\bigoplus_{p+q=m}H_p(X;H_q(Y))$。
+\item \begin{enumerate}[label=(\alph*)]
+\item 对 $A\subset X,B\subset Y$，证明存在自然链等价，从 $\mathcal S(X,A)\otimes\mathcal S(Y,B)$ 到 $\mathcal S(X\times Y)/(\mathcal S(X\times B)+\mathcal S(A\times Y))$。
+\item 若 $\{X\times B,A\times Y\}$ 可切除，陈述并证明相对奇异同调 Künneth 定理。
+\end{enumerate}
+\item 验证定理 7.9.5 的自然性、增广及链映射性质。
+\item \begin{enumerate}[label=(\alph*)]
+\item 对 CW 复形 $X,Y$，证明胞腔链复形的张量积可计算乘积空间同调。
+\item 〔*〕证明它与 $\mathcal S(X)\otimes\mathcal S(Y)$ 实际上链等价。
+\item 直接用 $\mathcal D(P^2)\otimes\mathcal D(P^3)$ 的群与边缘计算 $P^2\times P^3$ 的同调。
+\item 用 Künneth 定理核对结果。
+\end{enumerate}
+\item 计算 $S^2\times P^5$、$P^3\times P^5$、$S^3\times L(n,k)$、$L(n,k)\times L(m,j)$、$S^1\times S^1\times S^3$、$\mathbb CP^2\times\mathbb CP^3$ 的同调。
+\item 若紧连通 $n$ 维流形满足 $H_n(M)\cong\Z$，其 Betti 数、挠系数之间存在关系。利用上一题的结果提出猜想。
+\item 验证定理 7.9.2 证明中两个函子的函子性质。
+\end{enumerate}

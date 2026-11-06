@@ -1,0 +1,49 @@
+Singular Homology Theory
+199
+Proof: We proceed by induction on p. Suppose p = 0. Given T : ∆0 →X, let
+x0 denote the point T(∆0), and define DXT : ∆1 →X × I by the equation
+DXT(t, 0, 0, . . . ) = (x0, t)
+for
+0 ≤t ≤1.
+[Recall that ∆1 = ϵ0ϵ1 consists of the points (t, 0, 0, . . . ) of R∞with 0 ≤t ≤1.]
+Properties (a) and (b) follow easily.
+Now suppose that p > 0 and that DX has been defined in dimensions less
+than p for all spaces X so that properties (a) and (b) hold. We define DXT
+in dimension p by first defining it in the case where X = ∆p and T = ip, the
+identity map from ∆p to itself. This is the heart of the technique: We deal
+first with a very special space, called the “model space,” and a very special
+singular simplex on that space.
+Let ı , ȷ : ∆p →∆p × I map x to (x, 0) and (x, 1), respectively. Let cp be
+the singular chain on ∆p × I defined by the equation
+cp = ȷ #(ip) −ı #(ip) −D∆p(∂ip) .
+The induction hypothesis guarantees that the far-right term of the last equa-
+tion is well-defined. To see this, note that ip is a singular simplex on ∆p, so
+ip belongs to Sp(∆p) and ∂ip belongs to Sp−1(∆p).
+We use the induction hypothesis again to show that cp is a cycle by com-
+puting
+∂cp
+=
+∂ȷ #(ip) −∂ı #(ip) −∂D∆p(∂ip)
+=
+∂ȷ #(ip) −∂ı #(ip) −[ȷ (∂ip) −ı (∂ip) −D∆p∂∂ip] = 0 .
+Since ∆p×I is convex, it is acyclic by Theorem 4.2.9. Therefore we can choose
+an element of Sp+1(∆p×I) whose boundary equals cp. We denote this element
+by D∆p(ip). Then (a) holds because
+∂D∆p(ip) = cp = ȷ #(ip) −ı #(ip) −D∆p(∂ip) .
+Having dealt with the special case of the singular simplex ip on the space
+∆p, we now consider an arbitrary space X and an arbitrary singular p-simplex
+T : ∆p →X. In this case, we define
+DXT = (T × iI)#(D∆pip) .
+See Figure 4.3.2. Intuitively, D∆pip is a singular (p + 1)-chain filling up the
+entire prism ∆p × I, and its boundary is, roughly speaking, the boundary of
+the prism. The map (T × iI)# carries this chain over to a singular chain on
+X × I.
+To check that (a) holds, we compute
+∂DXT
+=
+(T × iI)#∂D∆pip
+=
+(T × iI)#(ȷ #(ip) −ı #(ip) −D∆p∂ip)
+=
+j#(T) −i#(T) −(T × iI)#D∆p(∂ip) .
+(∗)

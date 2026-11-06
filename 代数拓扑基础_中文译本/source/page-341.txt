@@ -1,0 +1,36 @@
+326
+Elements of Algebraic Topology
+Axiom 5. [Homotopy Axiom] If h ≃k, then h∗= k∗.
+Axiom 6. [Excision Axiom] Given (X, A), let U be an open set in X such
+that U ⊂Int A. If (X \ U, A \ U) is admissible, then the inclusion j induces a
+cohomology isomorphism
+Hp(X \ U, A \ U; G) j∗
+←−Hp(X, A; G) .
+Axiom 7. [Dimension Axiom] If P is a one-point space, then Hp(P; G) = 0
+for p̸ = 0 and
+H0(P; G) ∼= G .
+The axiom of compact support has no counterpart in cohomology theory.
+Singular Cohomology Theory
+Now we consider singular theory and show that it satisfies the axioms.
+The singular cohomology groups of a topological pair (X, A), with coeffi-
+cients in the abelian group G, are defined by the equation
+Hp(X, A; G) = Hp(S(X, A); G) ,
+where S(X, A) is the singular chain complex of (X, A). As usual, we delete A
+from the notation if A = ∅, and we delete G if it equals the group of integers.
+The reduced cohomology groups are defined by the equation
+Hp(X; G) = Hp(S(X); G) ,
+relative to the standard augmentation for S(X).
+Given a continuous map h : (X, A) →(Y, B), there is a chain map
+h# : Sp(X, A) →Sp(Y, B) ,
+defined by h#(T) = h ◦T. We customarily denote the dual chain map by h#
+[so h# is the induced cochain map]. It induces a homomorphism
+Hp(X, A; G) h∗
+←−Hp(Y, B; G) .
+[The same holds in reduced cohomology if A and B are empty, since h# is
+augmentation-preserving.] The functorial properties [Axioms 1 and 2] hold
+even on the cochain level. The short exact sequence of chain complexes
+0 −→Sp(A) −→Sp(X) −→Sp(X, A) −→0
+splits because Sp(X, A) is free. Therefore the zig-zag lemma gives us an exact
+sequence
+· · · ←−Hp(A; G)←−Hp(X; G)←−Hp(X, A; G) δ∗
+←−Hp−1(A; G) ←−· · · .

@@ -1,0 +1,23 @@
+270
+Elements of Algebraic Topology
+cell in dimension 0, and n open cells in dimension 1. Finally, the k-fold dunce
+cap can be expressed as a CW complex with one open cell in each dimension
+0, 1, and 2.
+EXAMPLE 4.12.5 The quotient space formed from Bn by collapsing Bd Bn
+to a point is homeomorphic to Sn. [We leave the proof to you.] Therefore, Sn
+can be expressed as a CW complex having one open n-cell, one 0-cell, and no
+other cells at all. See Figure 4.12.2.
+B2
+S2
+Figure 4.12.2
+EXAMPLE 4.12.6 Condition (2) does not require that fα(Bd Bm) = ˙eα
+equal the union of a collection of open cells of lower dimension. For example,
+the space X pictured in Figure 4.12.3 is a CW complex having one open cell
+in each dimension 0, 1, 2. If e2 is the open 2-cell, then ˙e2 lies in, but does not
+equal, the union of open cells of lower dimensions.
+Figure 4.12.3
+EXAMPLE 4.12.7 Let K and L be simplicial complexes and suppose that
+K is locally finite. The space X = |K|×|L| can be expressed as a CW complex
+by taking the sets (Int σ) × (Int τ) as its cells, for σ ∈K and τ ∈L. In this
+case, the characteristic maps
+fα : Bm →σ × τ

@@ -1,0 +1,41 @@
+306
+Elements of Algebraic Topology
+is exact. Thus Hom (Z/m, G) is isomorphic to the kernel of fm : Hom (Z, G) →
+Hom (Z, G). By (c), fm is multiplication by m in Hom (Z, G). Using the iso-
+morphism λ from (b), we see that the kernel of fm is isomorphic to the kernel
+of gm.
+We remark that the isomorphisms given in (a) of Theorem 5.2.4 are nat-
+ural. Specifically, suppose one is given homomorphisms ϕα : Aα →Bα and
+ψ : H →G, then it follows immediately from the definition of the isomorphism
+that the diagram
+Hom (Aα, G)
+ Hom (Aα, G)
+Hom (Bα, H)
+ Hom (Bα, H)
+∼=
+∼=
+Hom (ϕα, ψ)
+ Hom (ϕα, ψ)
+commutes. A similar comment applies to the other isomorphism in (a).
+The preceding theorem enables us to compute Hom (A, G) whenever A is
+finitely generated, for Hom (A, G) equals a direct sum of terms of the form
+Hom (Z, G) and Hom (Z/m, G), which we compute by applying the rules
+Hom (Z, G) ∼= G,
+Hom (Z/m) ∼= ker(gm)
+[gm is multiplication by m in G].
+When G is also finitely generated, these groups can be written as direct sums
+of cyclic groups. One needs the following lemma, the proof of which is left to
+the reader.
+Lemma 5.2.8 Let m and n be positive integers. Suppose that d = gcd(m, n)
+and hm : Z/n →Z/n is multiplication by m; then there is an exact sequence
+0 −→Z/d −→Z/n hm
+−→Z/n −→Z/d −→0 .
+Definition 5.2.9 The abelian group G is said to be divisible if, for each x ∈G
+and each positive integer n, there exists y ∈G such that ny = x.
+For example, the rational numbers and the real numbers form divisible
+groups under addition. The next definition gives another example of a divisible
+group.
+Definition 5.2.10 Let S1 denote the additive group R/Z. It is isomorphic
+to the multiplicative group of complex numbers of unit modulus and is often
+called the circle group.
+The notion of a divisible group will come up a number of times.

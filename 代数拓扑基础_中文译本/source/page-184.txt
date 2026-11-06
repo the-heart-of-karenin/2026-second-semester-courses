@@ -1,0 +1,41 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+169
+(c) K0 ∩K1 has the homology of Sn, where n > 0.
+(d) K0 and K1 are acyclic.
+2. Prove the existence of the relative Mayer–Vietoris sequence as given
+in Theorem 3.4.7.
+3. Show that if d is an integer, and if n ≥1, then there is a map h :
+Sn →Sn of degree d. [Hint: Proceed by induction, using naturality
+of the Mayer–Vietoris sequence. The case n = 1 was considered in
+Exercise 1 of Section 2.9.]
+4. Let ϕ : Cp(K) →Cp+1(S(K)) be the homomorphism defined in Ex-
+ercise 1 of Section 1.9. Show that the isomorphism of Theorem 3.4.6
+is inverse to ϕ∗.
+5. Given a sequence G0, G1, . . . , Gn of finitely generated abelian
+groups, with G0 and Gn free and G0 nontrivial, show that there
+is a finite complex K of dimension n such that Hi(K) ∼= Gi for
+i = 0, 1, . . . , n. [Hint: See Exercise 8 of Section 1.7.]
+6. We shall study the homology of X×Y in Chapter 7. For the present,
+prove the following—assuming that all the spaces involved are poly-
+hedra.
+(a) Show that if p ∈Sn, then
+Hq(X × Sn, X × p) ∼= Hq−n(X) .
+[Hint: Write Sn as the union of its upper and lower hemi-
+spheres, and proceed by induction on n.]
+(b) Show that if p ∈Y , then the homology exact sequence of
+(X × Y, X × p)
+breaks up into short exact sequences that split.
+(c) Prove that
+Hq(X × Sn) ∼= Hq−n(X) ⊕Hq(X) .
+(d) Compute the homology of Sn × Sm.
+7. Do Exercise 3 with Sn replaced by an n-dimensional torus
+Tn = S1 × S1 × · · · × S1
+
+
+
+n copies
+.
+3.5
+The Eilenberg–Steenrod Axioms
+We have defined homology groups for a particular class of spaces—namely,
+the polyhedra. Historically these were the first homology groups to be defined.

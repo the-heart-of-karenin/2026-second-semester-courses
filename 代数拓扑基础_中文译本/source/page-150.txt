@@ -1,0 +1,40 @@
+Topological Invariance of the Homology Groups
+135
+3. (a) Show that if p : X →Y is an open quotient map and A is open
+in X, then p|A : A →P(A) is an open quotient map.
+(b) Repeat (a) with “open” replaced by “closed.”
+4. Show that if p : A →B and q : C →D are open quotient maps,
+then so is p × q.
+5. Let X be the coherent union of the subspaces {Xα}. Show that if
+Y is a subspace of X that is either open or closed in X, then Y is
+the coherent union of its subspaces {Xα ∩Y }.
+6. Let K and L be complexes. Show that if K is locally finite, then
+the topology of |K| × |L| is coherent with the subspaces σ × τ, for
+σ ∈K and τ ∈L.
+7. Show that the direct sum of quotient maps is a quotient map.
+2.9
+∗Application: Maps of Spheres
+In this section we present several applications of homology theory to classical
+problems of geometry and topology. The theorems that we prove here will
+be generalized in the next section. That is when we will treat the celebrated
+Lefschetz fixed point theorem.
+Definition 2.9.1 Let n ≥1. Let f : Sn →Sn be a continuous map. If α is
+one of the two generators of the infinite cyclic group Hn(Sn), then f∗(α) = dα
+for some integer d. The integer d is independent of the choice of generator
+since f∗(−α) = d(−α). It is called the degree of the map f and is denoted
+deg f
+Lemma 2.9.2 The degree has the following properties:
+(1) If f ≃g, then deg f = deg g.
+(2) If f extends to a continuous map f : Bn+1 →Sn, then deg f = 0.
+(3) The identity map has degree 1.
+(4) deg(f ◦g) = (deg f) · (deg g).
+Proof: Property (1) follows from Theorem 2.7.5. Property (2) is true because
+f∗: Hn(Sn) →Hn(Sn) equals the composition
+Hn(Sn)
+j∗
+−→Hn(Bn+1)
+h∗
+−→Hn(Sn) ,
+where j is inclusion. Since Bn+1 is acyclic, this composition is the zero ho-
+momorphism. Properties (3) and (4) are immediate consequences of Theo-
+rem 2.6.2.

@@ -1,0 +1,51 @@
+Homology Groups of a Simplicial Complex
+43
+no 3-chains for it to bound. We conclude that
+H2(T) ∼= Z ,
+and this group has as generator the 2-cycle γ.
+Theorem 1.7.4 Let S denote the complex represented by the labeled rectangle
+of Figure 1.7.6; its underlying space is the Klein bottle. Then
+H1(S) ∼= Z ⊕Z/2 and H2(S) = 0 .
+The torsion element of H1(S) is represented by the chain z1, and a generator
+for the group H1(S) modulo torsion is represented by w1, where
+w1
+=
+[a, b] + [b, c] + [c, a]
+z1
+=
+[a, d] + [d, e] + [e, a] .
+S
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+d
+e
+L
+σ1
+σ3
+σ2
+σ4
+g
+z1
+w1
+Figure 1.7.6
+Proof: As in the proof of Theorem 1.7.3, let g : |L| →|S| be the pasting map,
+and let A = g(|Bd L|). As before, A is the wedge of two circles. Orient the 2-
+simplices of S counterclockwise, and let γ be their sum. Orient the 1-simplices
+of S arbitrarily. The statements (1) and (2) of the proof of Theorem 1.7.3
+hold in this case too, since neither involves the particular identification on the
+boundary. Because A is the wedge of two circles, (3) holds as well. The final
+condition (4) is different; instead one has
+(4) ∂γ = 2z1.
+To see that (4) holds, one does a direct computation. For example, [a, b]
+appears in ∂σ1 with coefficient −1 and in ∂σ2 with coefficient +1. On the
+other hand, [a, d] appears in both ∂σ3 and ∂σ4 with coefficient +1. You can
+check that similar conclusions apply to the other oriented 1-simplices in w1
+and z1.

@@ -1,0 +1,49 @@
+250
+Elements of Algebraic Topology
+For each n ∈Z, define the loop ρn by setting
+ρn(t) = ϕ(nt) = e2πint .
+We see that if n is non-zero, then ρn wraps around the circle n times, in the
+counterclockwise direction if n > 0 and in the clockwise direction if n < 0. Of
+course, ρ0 stays fixed at the base point.
+We claim that every loop σ is homotopic to one of the loops ρn. The idea
+we would like to pursue is creating a function σ′ : I →R such that
+σ = ϕ ◦σ′ .
+Since σ(1) = 1, we must have σ′(1) = n for some n ∈Z. We see then that
+Γ(t, u) = ϕ[(1 −u)σ′(t) + unt]
+is a homotopy function from σ to ρn.
+The function σ′ is called a lifting of σ. It makes the following diagram
+commutative, and the diagram itself is suggestive of the name:
+R
+I
+S1
+ϕ
+σ
+σ′
+We have seen how useful a lifting σ′ would be, but we still need to construct
+one. The equation we are after is
+σ(t) = exp[2πiσ′(t)] ,
+so if we proceed naively, σ′(t) = (2πi)−1 log[σ(t)] seems to be what we want.
+Of course, the logarithm causes trouble, since we expect most loops to go all
+the way around the circle. We are going to need a trick to be able to restrict
+ourselves to a single-valued branch.
+The “trick” is to observe that ϕ maps the interval (−1
+2, 1
+2) homeomorphi-
+cally onto S1 \ {−1}. Thus we have a well-defined function ϕ−1 : S1 \ {−1} →
+(−1
+2, 1
+2). Next we observe that, since ϕ is a continuous function on the com-
+pact space I, ϕ is uniformly continuous. Thus we can choose ϵ > 0 such
+that if |t −t′| < ϵ holds, then |σ(t) −σ(t′)| < 1. That in turn tells us that
+σ(t)/σ(t′)̸ = −1, so ϕ−1[σ(t)/σ(t′)] is defined.
+Now choose K so that 1/K < ϵ holds, and set pi = i/K, for i = 0, 1, . . . , K.
+We define σ′ by setting
+σ′(t) =
+K−1
+
+i=0
+ϕ−1
+σ(tpi+1)
+σ(tpi)
+
+.

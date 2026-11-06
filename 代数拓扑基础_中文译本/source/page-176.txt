@@ -1,0 +1,48 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+161
+Step 4: Next, we prove exactness at Hp(E). For notation, let α = {ep} be an
+element of Hp(E). Choose dp so that ψ(dp) = ep. Then choose cp−1 so that
+ϕ(cp−1) = ∂Ddp. Then ∂∗α = {cp−1} by definition.
+If α ∈im ψ∗, then α = {ψ(dp)}, where dp is a cycle of D. Then ϕ(cp−1) = 0
+hence cp−1 = 0. Therefore ∂∗α = 0.
+Conversely, suppose that ∂∗α = 0. Then cp−1 = ∂Ccp for some cp. We claim
+that dp −ϕ(cp) is a cycle and that α = ψ∗{dp −ϕ(cp)}. Hence α ∈im ψ∗. By
+direct computation, we have
+∂D(dp −ϕ(cp)) = ∂Ddp −ϕ(∂Ccp) = ∂Ddp −ϕ(cp−1) = 0
+and
+ψ∗{dp −ϕ(cp)} = {ψ(dp) −0} = {ep} = α .
+Step 5: Finally, we prove exactness at Hp−1(C). Let β ∈Hp−1(C). If β ∈im ∂∗,
+then β = {cp−1}, where ϕ(cp−1) = ∂Ddp for some dp by definition. Thus we
+have
+ϕ∗(β) = {ϕ(cp−1)} = {∂Ddp} = 0 .
+Conversely, suppose that ϕ∗(β) = 0. Let β = {cp−1}. Then {ϕ(cp−1)} = 0
+so that ϕ(cp−1) = ∂Ddp for some dp. Define ep = ψ(dp). Then ep is a cycle
+because ∂Eep = ψ(∂Ddp) = ψϕ(cp−1) = 0. And β = ∂∗{ep} by definition.
+Thus β ∈im ∂∗.
+Note that nowhere in the proof of this lemma did we assume that the chain
+complexes involved were free or that they were non-negative. This lemma thus
+has a much broader range of application than just to chain groups or simplicial
+complexes. However, when applied to the simplicial chain groups C(K0) and
+C(K) and C(K, K0), we obtain Theorem 3.2.8 for non-reduced homology as
+an immediate consequence.
+To obtain the theorem for reduced homology, we let E = C(K, K0) as
+before. But we replace C and D by the augmented chain complexes {C, ϵ} and
+{D, ϵ}, respectively. Note that exactness and commutativity hold in dimension
+−1 since the inclusion C0(K0) →C0(K) preserves augmentation:
+0 −−−−→C0(K0) −−−−→C0(K) −−−−→C0(K, K0) −−−−→0
+ϵ
+ϵ
+
+0 −−−−→
+Z
+−−−−→
+iZ
+Z
+−−−−→
+0
+−−−−→0 .
+Application of the zig-zag lemma now gives us Theorem 3.2.8 for reduced
+homology.
+Before considering further applications, let us extract some additional in-
+formation from the proof of the zig-zag lemma. We have constructed a func-
+tion assigning to each short exact sequence of chain complexes a long exact

@@ -1,0 +1,112 @@
+[
+  {
+    "figure": "3-6-ex-a",
+    "source_pdf_page": 194,
+    "clip": [
+      108,
+      395,
+      354,
+      460
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-2-1",
+    "source_pdf_page": 207,
+    "clip": [
+      68,
+      56,
+      370,
+      246
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-3-1",
+    "source_pdf_page": 213,
+    "clip": [
+      46,
+      166,
+      392,
+      316
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-3-2",
+    "source_pdf_page": 215,
+    "clip": [
+      44,
+      56,
+      394,
+      184
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-9-3",
+    "source_pdf_page": 254,
+    "clip": [
+      108,
+      56,
+      331,
+      259
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-9-4",
+    "source_pdf_page": 255,
+    "clip": [
+      35,
+      56,
+      407,
+      358
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-10-6",
+    "source_pdf_page": 263,
+    "clip": [
+      81,
+      230,
+      395,
+      462
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-10-2",
+    "source_pdf_page": 259,
+    "clip": [
+      54,
+      437,
+      384,
+      578
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-11-2",
+    "source_pdf_page": 278,
+    "clip": [
+      44,
+      192,
+      395,
+      282
+    ],
+    "vector_preserved": true
+  },
+  {
+    "figure": "4-11-3",
+    "source_pdf_page": 279,
+    "clip": [
+      47,
+      169,
+      391,
+      267
+    ],
+    "vector_preserved": true
+  }
+]

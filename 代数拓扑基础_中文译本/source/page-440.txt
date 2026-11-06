@@ -1,0 +1,38 @@
+Homological Algebra
+425
+The augmented chain complex {S(∆p ×∆q), ϵ} is acyclic because ∆p ×∆q
+is a contractible space. The chain complex {S(∆p) ⊗S(∆q), ϵ} is acyclic by
+the preceding lemma.
+We show that G′ is free: Given a non-negative integer m let the indexed
+family of objects from M corresponding to this integer consist of the single
+pair (∆m, ∆m), and let the corresponding element of Sm(∆m, ∆m) be the
+diagonal map d : ∆m →∆m × ∆m. We shall show that, as (f, g) ranges over
+all pairs of continuous maps,
+(f, g) : (∆m, ∆m) →(X, Y ) ,
+the elements
+[G′(f, g)](d) = (f × g)#(d) = (f × g) ◦d
+are distinct and range over a basis for the group Sm(X × Y ). Observe that
+(f × g) ◦d : ∆m →X × Y
+is just the map T given in coordinates by T(z) = (f(z), g(z)). For each pair
+(f, g) of maps, we have a different singular simplex T, and every singular
+simplex on X × Y is of this form. Thus these elements do form a basis for
+Sm(∆m, ∆m).
+Now we show that G is free. Given a non-negative integer m, let the indexed
+family of objects from M corresponding to this integer be the family
+{(∆p, ∆q) : p + q = m} .
+The index set in this case consists of all pairs (p, q) of non-negative integers
+for which p + q = m. Let the element of (S(∆p) ⊗S(∆q))m, corresponding
+to the index (p, q) be the element ip ⊗iq, where ik : ∆k →∆k denotes the
+identity singular simplex on the space ∆k. We need to show that, as (p, q)
+ranges over its index set and (f, g) ranges over all maps
+(f, g) : (∆p, ∆q) →(X, Y ) , ,
+the elements
+[G(f, g)](ip ⊗iq) = (f# ⊗g#)(ip ⊗iq) = f ⊗g
+are distinct and form a basis for the group (S(X) ⊗S(Y ))m. We know that
+Sp(X) is free with the set of all singular simplices f : ∆p →X as a basis,
+and similarly, Sq(Y ) has as basis the set of all singular simplices g : ∆q →Y .
+By Theorem 6.2.10, Sp(X) ⊗q (Y ) has the elements f ⊗g as a basis, and the
+proof is now complete.
+As a corollaries we have the next two theorems.
+Theorem 7.9.3 (The K¨unneth theorem for topological spaces)
+Given topological spaces X and Y , there is an exact sequence

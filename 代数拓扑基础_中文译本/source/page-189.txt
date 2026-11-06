@@ -1,0 +1,41 @@
+174
+Elements of Algebraic Topology
+θ(x) = ∂∗(γ∗)−1β∗(x) .
+Here ∂∗is the boundary homomorphism in the homology exact
+sequence of (X1, A). Show that this sequence is exact and is
+natural with respect to homomorphisms induced by continuous
+maps. [Hint: The proof is by diagram chasing. One begins with
+a homomorphism of one long exact sequence to another, where
+every third homomorphism is an isomorphism.]
+(b) Show that if X is the polytope of a complex K, and if X1
+and X2 are polytopes of subcomplexes of K, then (X1, X2) is
+excisive for simplicial theory, and this sequence is the same as
+the Mayer–Vietoris sequence of Theorem 3.4.1.
+(c) Suppose that (X1, A) and (X, X2) are admissible. Show that
+if Int X1 and Int X2 cover X and if X1 is closed in X, then
+(X1, X2) is excisive for any homology theory satisfying the ax-
+ioms.
+3.6
+The Axioms for Simplicial Theory
+Before showing that simplicial homology theory satisfies the Eilenberg–
+Steenrod axioms, we must treat several points of the theory with more care
+than we have shown so far. The axioms involve homology groups that are de-
+fined on an admissible class of spaces. Strictly speaking, we have not defined
+homology groups for spaces, but only for simplicial complexes. Given a polyhe-
+dron X, there are many different simplicial complexes whose polytopes equal
+X. Their homology groups are isomorphic to one another in a natural way, but
+they are nevertheless distinct groups. Similarly, if h : X →Y is a continuous
+map where X = |K| and Y = |L|, we have defined an induced homomorphism
+h∗: Hp(K) →Hp(L). Of course if X = |M| and Y = |N|, then we also have
+an induced homomorphism Hp(M) →Hp(N), which we also denote by h∗.
+We have noted this notational ambiguity in an earlier discussion.
+The way out of this difficulty is to introduce a new level of abstraction:
+Given a polyhedron X, we can consider the class of all simplicial complexes
+whose polytopes equal X, and we can identify their homology groups in a
+natural way. The resulting groups can be called the homology groups of the
+polyhedron X.
+More generally, we can perform this same construction for any space that
+is homeomorphic to a polyhedron. We give the details in what follows.
+Definition 3.6.1 Let A be a subspace of the space X. A triangulation of the
+pair (X, A) is a complex K, a subcomplex K0 of K, and a homeomorphism
+h : (|K|, |K0|) →(X, A) .

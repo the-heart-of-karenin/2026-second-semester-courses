@@ -1,0 +1,40 @@
+466
+Elements of Algebraic Topology
+Corollary 8.5.6 Let X be a compact triangulated homology n-manifold. As-
+sume that X is connected.
+(a) If X is orientable, then Hn−1(X) has no torsion. And, for all G,
+Hn(X; G) ∼= G ∼= Hn(X; G) .
+(b) If X is non-orientable, then the torsion subgroup of Hn−1(X)
+has order 2. Also, for all G,
+Hn(X; G) ∼= ker(ϕ2)
+and
+Hn(X; G) ∼= G/2G ,
+where ϕ2 : G →G is multiplication by 2. In particular, Hn(X) = 0
+and Hn(X) ∼= Z/2.
+Proof: (a) The computation when X is orientable is immediate, since
+Hn(X; G) ∼= H0(X; G)
+and
+Hn(X; G) ∼= H0(X; G)
+by Poincar´e duality. Each of the 0-dimensional groups is isomorphic to G be-
+cause X is connected. It follows that Hn−1(X) has no torsion. This is because
+Hn(X) ∼= Hom(Hn(X), Z) ⊕Ext(Hn−1(X), Z) .
+Since Ext(Hn−1(X), Z) is isomorphic to the torsion subgroup of Hn−1(X) [by
+Theorem 7.2.5], this torsion subgroup must vanish.
+(b) Now suppose that X is non-orientable. We shall compute Hn(X; G). Let
+ σi the sum of all the n-simplices of X, oriented arbitrarily. If g ∈G has
+order 2, then  gσi is clearly a cycle of X since each (n −1)-simplex is a face
+of exactly two n-simplices. Conversely, let z be a non-trivial n-cycle of X with
+G coefficients. If z has coefficient g on the oriented n-simplex σ of X, then z
+must have coefficient ±g on each n-simplex having an (n−1)-face in common
+with σ. Otherwise, z would not be a cycle. Application of Corollary 8.5.3
+shows that z has coefficient ±g on every n-simplex of X. Thus z = g( ϵiσi)
+where ϵi = ±1 and the sum extends over all n-simplices of X. Now the chain
+ ϵiσi cannot be a cycle since that would imply that X is orientable. Hence
+∂( ϵiσi) has a non-zero coefficient on at least one (n −1)-simplex s of X.
+This coefficient is ±2 since s is a face of exactly two n-simplices of X. We
+conclude that ∂z has coefficient ±2g on s which means [since z is a cycle] that
+g has order 2. In particular, g = −g so that z = g( ϵiσi) =  gσi.
+Thus the n-cycles of X consist of all chains of the form  gσi where g
+is 0 or has order 2. Since the group of cycles equals the homology group in
+dimension n, it follows that
+Hn(X; G) ∼= ker(ϕ2) .

@@ -1,0 +1,29 @@
+220
+Elements of Algebraic Topology
+is constant on X × 1 × I, it induces a continuous map G that is a deformation
+retraction of X1 to the point v. [Here we use the fact that π′ ×iI is a quotient
+map, which follows from Theorem 2.8.2.] Thus X1 is acyclic. A similar proof
+shows that X2 is acyclic.
+Finally, we note that the restricted map
+π′′ : X × (−1, 1) →X1 ∩X2
+is a one-to-one quotient map, hence a homeomorphism. Since X × 0 is a
+deformation retract of X ×(−1, 1), there is a homotopy equivalence of X with
+X1 ∩X2.
+Definition 4.6.5 Figure 4.6.1 shows the closed topologist’s sine curve. It is
+the union of the topologist’s sine curve [see Definition 4.2.11] and an arc that
+intersects the topologist’s sine curve only in the points (0, −1) and (1, sin 1).
+It will be used in Exercise 1.
+X
+The Closed Topologist’s Sine Curve
+Figure 4.6.1
+EXERCISES
+1. Compute the singular homology of the closed topologist’s since
+curve, X, using a suitable Mayer–Vietoris sequence.
+2. Show that {X1, X2} is an excisive couple in singular theory if and
+only if the inclusion (X1, X1 ∩X2) −→(X, X2) induces an isomor-
+phism in singular homology. [Hint: Construct an exact sequence
+0 −→S(X2) −→S(X1) + S(X2) −→S(X1)/S(X1 ∩X2) −→0 .
+Compare its derived homology sequence with the homology se-
+quence of S(X, X2).]
+3. Show that Sn is homeomorphic to S(Sn−1) for n ≥1. Use this fact
+to compute the singular homology of Sn.

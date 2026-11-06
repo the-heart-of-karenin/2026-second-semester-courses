@@ -1,0 +1,54 @@
+Duality in Manifolds
+527
+Then, as we noted in the proof of Theorem 8.13.14, one has a simplicial isomor-
+phism fn : Kn →N(A′
+n) defined by fn(v) = St(v, Kn). The same argument
+as was used there can be applied to pass to an isomorphism of the cohomology
+direct limits, as we now show.
+Let h : Kn+1 →Kn be a simplicial approximation to the inclusion map
+|Kn+1| →|Kn|. We then define g : A′
+n+1 →A′
+n by the equation
+g(St(w, Kn+1)) = St(h(w), Kn) .
+The map g induces a simplicial map g : N(A′
+n+1) →N(A′
+n) such that the
+following diagram commutes
+Kn+1
+N(A′
+n+1)
+Kn
+N(A′
+n)
+∼=
+fn+1
+h
+g
+=
+fn
+∼
+We conclude that
+dir lim Hk(Kn) ∼= dir lim Hk(N(A′
+n)) ,
+just as before. Note that in this case we cannot identify the left-hand group
+with a particular simplicial cohomology group, since h∗need not be an iso-
+morphism.
+Step 2: Given n, consider the covering of Dn defined by
+An = {St(v, Xn) : v ∈Kn} .
+This is a covering of Dn by sets open in X, whereas the collection A′
+n was a
+covering of Dn by sets open in Dn. The collection An+1 is a refinement of An
+because the inclusion |Xn+1| →|Xn| satisfies the star condition.
+We now show that the nerves of An and A′
+n are naturally isomorphic with
+the vertex map in question carrying St(v, Kn) to St(v, Xn) for each v ∈Kn.
+Since St(v, Kn) ⊂St(v, Xn), it is immediate that
+∩St(vi, Kn)̸ = ∅⇒∩St(vi, Xn)̸ = ∅.
+We next prove the reverse implication. If ∩St (vi, Xn)̸ = ∅, then the vertices
+vi span a simplex σ of Xn. Because the vi are vertices of Kn and Kn is full,
+σ must belong to Kn. Then ∩St(vi, Kn)̸ = ∅as desired.
+It follows at once that
+dir lim Hk(N(A′
+n)) ∼= dir lim Hk(N(An)) .
+Step 3: We now show that the family of coverings {A1, A2, . . . } of Y is cofinal
+in the family L of all coverings B of Y by sets open in X.

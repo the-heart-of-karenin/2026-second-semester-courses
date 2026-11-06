@@ -1,0 +1,98 @@
+Index of Notation
+Notation
+Name
+Page
+RN
+euclidean space
+2
+0
+origin in euclidean space
+2
+∥x∥
+norm on RN
+2
+Bd σ
+boundary of simplex σ
+5
+Int σ
+interior of simplex σ
+5
+Bn
+closed unit ball in Rn
+5
+Sn
+unit sphere in Rn
+5
+En−1
++
+upper unit hemisphere in Rn
+5
+En−1
+−
+lower unit hemisphere in Rn
+5
+A
+topological closure
+6
+Int A
+topological interior
+6
+Bd A
+topological boundary
+6
+K(p)
+p-skeleton of simplicial complex K
+9
+|K|
+polytope of simplicial complex K
+9
+tv(x)
+barycentric coordinate
+of x with respect to vertex v
+11
+St v
+star of vertex v
+12
+St v
+closed star of vertex v
+12
+Lk v
+link of vertex v
+12
+EJ
+generalized euclidean space
+15
+|x −y|
+metric on EJ
+15
+dim K
+dimension of simplicial complex K
+15
+P2
+projective plane
+20
+0
+identity element in abelian group
+23
+Z
+integers
+23
+Q
+rationals
+23
+C
+complex numbers
+23
+ker f
+kernel of homomorphism f
+24
+im f
+image of homomorphism f
+24
+cok f
+cokernel of homomorphism f
+24
+∼=
+isomorphic
+24
+545

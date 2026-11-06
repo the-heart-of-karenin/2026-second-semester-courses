@@ -1,0 +1,81 @@
+Singular Homology Theory
+293
+Choose generators α and β as in Step 1. We wish to compute j∗p∗(β). The
+map
+p ◦i : (En
++, Sn−1) →(Pn, Pn−1)
+is a characteristic map for the n-cell of the CW complex Pn, so it induces an
+isomorphism in homology. Thus p∗i∗(α) is a generator of Hn(Pn, Pn−1). We
+compute
+j∗p∗(β)
+=
+p∗k∗(β) = p∗(i∗(α) + (−1)n−1a∗i∗(α))
+=
+[1 + (−1)n−1]p∗i∗(α) .
+Here we use the fact that p ◦a = p. The lemma follows.
+Theorem 4.14.9 The homomorphism
+∂∗: Hn+1(Pn+1, Pn) →Hn(Pn, Pn−1)
+is zero if n is even, and carries a generator to twice a generator if n is odd.
+Proof: The map p′ : (En+1
++
+, Sn) →(Pn+1, Pn) is a characteristic map for
+the open (n + 1)-cell of Pn+1; therefore it induces a homology isomorphism.
+Consider the commutative diagram
+Hn+1(En+1
++
+, Sn)
+∂∗
+−−−−→
+∼=
+Hn(Sn)
+∼=
+p′
+∗
+p∗
+Hn+1(Pn+1, Pn)
+∂∗
+−−−−→Hn(Pn)
+j∗
+−−−−→Hn(Pn, Pn−1)
+The map ∂∗at the top of the diagram is an isomorphism, by the long exact
+reduced homology sequence of (En+1
++
+, Sn). By the preceding lemma, (j ◦p)∗
+is zero if n is even, and multiplication by 2 if n is odd. The theorem follows.
+Theorem 4.14.10 The homology of projective space is as follows:
+Hi(P2n+1)
+∼=
+
+
+
+Z/2
+if i is odd and 0 < i < 2n + 1,
+Z
+if i = 2n + 1,
+0
+otherwise.
+Hi(P2n)
+∼=
+
+Z/2
+if i is odd and 0 < i < 2n,
+0
+otherwise.
+Hi(P∞)
+∼=
+
+Z/2
+if i is odd and 0 < i,
+0
+otherwise.
+Proof: The cellular chain group Di(P∞) is infinite cyclic for i ≥0, and the
+augmented chain complex has the form
+· · · −→D2i(P∞)
+2
+−→D2i−1(P∞)
+0
+−→· · ·
+0
+−→D0(P∞)
+1
+−→Z .

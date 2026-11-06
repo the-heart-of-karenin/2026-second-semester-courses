@@ -1,0 +1,44 @@
+116
+Elements of Algebraic Topology
+Proof: We check that each of the acyclic carriers defined in Step 1 of the
+preceding proof preserves the subcomplexes involved. Certainly if σ ∈K0 then
+Ψ(σ) = K(σ) and Λ(σ) = K′(σ) are subcomplexes of K0 and K′
+0, respectively.
+On the other hand, if τ ∈K′
+0, then τ is contained in some simplex σ of K0.
+It follows that the simplex στ of K of least dimension containing τ must
+belong to K0. Thus if τ ∈K′
+0, then Θ(τ) = K(στ) and Φ(τ) = K′(στ) are
+subcomplexes of K0 and K′
+0 respectively.
+It follows that the chain maps λ and θ carried by Λ and Θ, respectively,
+induce chain maps on the relative level, and that the chain homotopies of
+θ ◦λ and λ◦θ to the respecitve identity maps induce chain homotopies on the
+relative level as well. Since one choice for θ is the map g#, it follows that g#
+and λ are chain-homotopy inverses on the relative level.
+EXERCISES
+1. Let K′ be a subdivision of K. Let λ : Cp(K) →Cp(K′) be the
+subdivision operator. Let g : K′ →K be a simplicial approximation
+to the identity. Show that g# ◦λ equals the identity map of Cp(K).
+2. Let K and K′ be the complexes shown in Figure 2.5.2. Their com-
+mon underlying space is a square region.
+(a) Find a formula for the subdivision operator λ : Cp(K) →
+Cp(K′).
+(b) Find two different simplicial approximations g, g′ : K′ →K to
+the identity. Conclude that the chain equivalence θ constructed
+in the proof of the algebraic subdivision theorem is not unique.
+(c) Check that λ ◦g# does not equal the identity on the chains of
+K′.
+c
+a
+d
+b
+K
+c
+a
+d
+b
+e
+f
+K′
+Figure 2.5.2

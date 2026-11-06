@@ -1,0 +1,64 @@
+318
+Elements of Algebraic Topology
+Proof: This theorem follows from applying the zig-zag lemma [Lemma 3.3.2]
+to the diagram
+0 ←−Cp+1(K0; G)
+ı
+←−−−−Cp+1(K; G)
+ȷ
+←−−−−
+Cp+1(K, K0; G) ←−0
+δ
+δ
+δ
+0 ←−Cp(K0; G)
+ı
+←−−−−
+Cp(K; G)
+ȷ
+←−−−−
+Cp(K, K0; G) ←−0 .
+Since i and j commute with ∂, the dual maps ı and ȷ commute with δ. The
+fact that δ∗raises dimension by 1 follows from the proof of the zig-zag lemma.
+[If you turn the page upside down, the arrows look like those in the proof of
+the zig-zag lemma.]
+The sequence in reduced cohomology is derived similarly, once one adjoins
+the sequence at the bottom of the diagram.
+0 ←−−−−C0(K0; G) ←−−−−C0(K; G) ←−−−−C0(K, K0; G) ←−−−−0
+ϵ
+ϵ
+
+0 ←−−−−
+G
+←−−−−
+G
+←−−−−
+0
+←−−−−0
+Since ϵ is injective, no nontrivial cohomology groups appear in dimension −1.
+Now let us compute cohomology groups in a few examples, using this
+sequence.
+v3
+v0
+v2
+v1
+e3
+e2
+e4
+e1
+e5
+σ2
+σ1
+Figure 5.4.1
+EXAMPLE 5.4.3 Consider the case of a 2-dimensional square region K
+modulo its boundary K0 as pictured in Figure 5.4.1. We treat the group of
+relative cochains as those cochains of K that are carried by K \ K0. Both σ∗
+1
+and σ∗
+2 are such cochains, and each is a cocycle [trivially]. There is only one
+cochain e∗
+5 in dimension 1 carried by K \ K0, and its coboundary is
+δe∗
+5 = σ∗
+1 −σ∗
+2 .

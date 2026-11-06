@@ -1,0 +1,64 @@
+358
+Elements of Algebraic Topology
+Note that in general, if f : K →L is a simplicial map, the cochain map
+f # need not preserve cup products on the chain level. That is because the
+simplicial cup product is defined using a particular ordering of the vertices,
+and the simplicial map f need not preserve the ordering of vertices in K and L.
+This would be a serious problem if one wanted to work entirely within oriented
+simplicial theory. It would be difficult to prove naturality of the cohomology
+cup product.
+We remark that the more general cup products
+Hp(K) × Hq(K; G) ⌣
+−→Hp+q(K; G)
+and
+Hp(K, A; R) × Hq(K, B; R) ⌣
+−→Hp+q(K, A ∪B; R)
+exist in simplicial theory just as they do in singular theory. The relative cup
+product is in fact easier to define in simplicial theory than in singular theory,
+for if cp vanishes on Cp(A) and cq vanishes on Cq(B), then cp ⌣cq automat-
+ically vanishes on Cp+q, because a simplex of A ∪B must lie in either A or
+B. [Of course, {A, B} is excisive in this case, so the singular cup product is
+defined as well. See the exercises of Section 4.7.]
+We need some terminology, and then we shall compute some examples.
+Definition 5.10.4 Since the cohomology ring has a unity element in dimen-
+sion 0, multiplication by this element is never trivial. It can happen though
+that every product of positive-dimensional cohomology classes vanishes. In
+that case, we say that the cohomology ring is the trivial ring.
+Here are some cohomology rings that are not trivial.
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+i
+g
+j
+h
+α = {w1}
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+i
+g
+j
+h
+β = {z1}
+Figure 5.10.1
+EXAMPLE 5.10.5 Consider the torus T. Let w1 and z1 denote the cocyles
+pictured in Figure 5.10.1. We know that α = {w1} and β = {z1} generate

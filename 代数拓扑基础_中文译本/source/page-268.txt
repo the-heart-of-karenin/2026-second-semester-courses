@@ -1,0 +1,38 @@
+Singular Homology Theory
+253
+Definition 4.10.11 Suppose that a < b ∈R. Let p1, p2 : [a, b] →X be
+paths in X with p1(a) = p2(a) and p1(b) = p2(b). We say that p1 and p2 are
+homotopic with fixed endpoints, written
+p1 ≃p2
+rel {a, b} ,
+if there is a homotopy function
+F : [a, b] × [0, 1] →X
+with these properties:
+(1) F(t, 0) = p1(t), a ≤t ≤b;
+(2) F(t, 1) = p2(t), a ≤t ≤b;
+(3) F(a, u) = p1(a) = p2(a), 0 ≤u ≤1;
+(4) F(b, u) = p1(b) = p2(b), 0 ≤u ≤1.
+Lemma 4.10.12 Let x, y ∈X.
+(1) If p is a singular 1-simplex in X with ∂p = y −x and p−1 is
+given by p−1(t) = p(1 −t), then p + p−1 bounds.
+(2) Suppose that p1 and p2 are singular 1-simplices in X with ∂pi =
+y −x. If p1 and p2 are homotopic with fixed endpoints, then p1 and
+p2 are homologous.
+Proof: (1) Define the singular 2-simplex T by setting T(t, u) = p(1 −t) for
+(t, u) ∈∆2. We compute ∂T = S0 −S1 + S2, where
+S0(t) = T(1 −t, t) = p(t) ,
+S1(t) = T(0, t) ≡y ,
+S2(t) = T(t, 0) = p(1 −t) .
+Since a constant 1-simplex y is the boundary of the constant 2-simplex, we
+see that p + p−1 bounds.
+(2) Suppose that F is a homotopy from p1 to p2 as in Definition 4.10.11. To
+show that p1 is homologous to p2, we shall define two singular 2-simplices, T
+and T ′, such that ∂(T + T ′) = p2 −p1 + S, where S is a boundary.
+Setting
+T(t, u) = F(t, u) ,
+for (t, u) ∈∆2, we compute ∂T = S0 −S1 + S2, where
+S0(t) = F(1 −t, t) ,
+S1(t) = F(0, t) ≡x ,
+S2(t) = F(t, 0) = p1(t) .
+Setting
+T ′(t, u) = F(t + u, 1 −t)

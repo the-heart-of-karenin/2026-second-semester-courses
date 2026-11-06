@@ -1,0 +1,84 @@
+Index of Notation
+551
+z
+complex conjugate
+288
+CP n
+n-dimensional complex projective space
+289
+CP ∞
+infinite-dimensional complex projective space
+290
+L(n, k)
+lens space
+295
+Hom (A, G)
+group of homomorphisms of A into G
+301
+f : Hom (B, G) →Hom (A, G)
+homomorphism dual to f : A →B
+302
+Hom (α, β) : Hom (A′, G′) →Hom (A, G)
+homomorphism induced by α : A →A′
+and β : G′ →G
+304
+1
+unity element in commutative ring
+307
+HomR(A, B)
+R-module of R-module homomorphisms
+of A into B
+308
+Cp(K; G) = Hom (Cp(K), G)
+simplicial cochains on complex K
+with coefficients in G
+308
+δ : Cp(K; G) →Cp+1(K; G)
+coboundary operator
+308
+Zp(K; G)
+group of cocycles of complex K
+with coefficients in G
+308
+Bp(K; G)
+group of coboundaries of complex K
+with coefficients in G
+308
+Hp(K; G)
+simplicial cohomology group of complex K
+with coefficients in G
+308
+⟨cp, cp⟩
+dual pairing giving value of cp on cp
+308
+σ∗
+α
+elementary cochain with Z coefficients dual to σα 309
+ϵ : G →C0(K; G)
+coaugmentation for complex K
+with coefficients in G
+314
+Hq(K; G)
+reduced simplicial cohomology group
+with coefficients in G
+314
+Cp(K, K0; G)
+relative simplicial cochain group of
+simplicial pair (K, K0) with coefficients in G
+316
+Zp(K, K0; G)
+relative simplicial cocycle group of
+simplicial pair (K, K0) with coefficients in G
+316
+Bp(K, K0; G)
+relative simplicial coboundary group of
+simplicial pair (K, K0) with coefficients in G
+316
+Hp(K, K0; G)
+relative simplicial cohomology group of
+simplicial pair (K, K0) with coefficients in G
+316
+f # : Cp(L, L0; G) →Cp(K, K0; G)
+simplicial cochain map induced by simplicial
+map f : (K, K0) →(L, L0)
+317

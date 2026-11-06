@@ -1,0 +1,47 @@
+2
+Elements of Algebraic Topology
+paper [Hop28] in which he generalized the Euler–Poincar´e formula. Early on
+the homology groups presented the difficulty that they were not obviously a
+topological invariant. Once that was shown, then those groups could also be
+used to tackle homeomorphism problems.
+We shall begin our discussion of algebraic topology by studying the ho-
+mology groups. Later on, we shall deal with other topological invariants, such
+as the cohomology groups and the cohomology ring. We shall also give a brief
+treatment of the homotopy groups.
+There are several different ways of defining homology groups, all of which
+lead to the same results for spaces that are sufficiently nice. The two that
+we shall consider in detail are the simplicial and the singular groups. We
+begin with the simplicial homology groups, which came first historically. Both
+conceptually and computationally, they are concrete and down-to-earth. They
+are defined, however, only for particularly nice spaces [i.e., polyhedra], and it is
+hard work to prove their topological invariance. After that, we shall treat the
+singular homology groups, which were introduced as a generalization of the
+simplicial groups. They are defined for arbitrary spaces, and it is immediate
+from their definition that they are topological invariants. Furthermore, they
+are much more convenient for theoretical purposes than the simplicial groups.
+They are not as readily computable as the simplicial groups, but they agree
+with the simplicial homology groups when both are defined.
+A third way of defining homology groups for arbitrary spaces is due to
+Eduard ˇCech. The ˇCech homology theory is still not completely satisfactory,
+but ˇCech cohomology theory is both important and useful. It will appear near
+the end of this book.
+1.2
+Simplices
+Before defining simplicial homology groups, we must discuss the class of spaces
+for which they are defined, which is the class of all polyhedra. A polyhedron is
+a space that can be built from such building blocks as line segments, triangles,
+tetrahedra, and their higher-dimensional analogues, by gluing them together
+along their faces. In this section, we shall discuss these basic building blocks,
+and in the next, we shall use them to construct polyhedra.
+First, we need to study a bit of the analytic geometry of euclidean space.
+We denote the N-dimensional euclidean space by RN. The origin in euclidean
+space will be denoted by 0. For x = (x1, x2, . . . , xN) ∈RN, the norm of x is
+defined by the equation
+∥x∥=
+ N
+
+i=1
+(xi)2
+ 1
+2
+.

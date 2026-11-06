@@ -1,0 +1,37 @@
+Duality in Manifolds
+461
+(c) Define
+ϕ : C0(T) →D2(T)
+by letting ϕ(v∗) equal a fundamental cycle of (D(V ), ˙D(v)).
+Show that if the 2-cell D(v) is oriented counterclockwise then
+∂ϕ(v∗) = ϕ(δv∗) .
+(d) Conclude that Hp(T) ∼= H2−p(T) for all p [which we knew
+already].
+This exercise indicates how Poincar´e duality is proved.
+2. Repeat Exercise 1 for the Klein bottle, using Z/2 coefficients for
+both homology and cohomology. Note that the proof is easier, since
+no signs are involved.
+3. What can you say if the torus and the Klein bottle in Exercises 1
+and 2 are replaced by the sphere?
+4. What can you say if the objects of Exercises 1 and 2 are replaced
+by a double torus [with two holes rather than one]?
+8.5
+Poincar´e Duality
+The Poincar´e duality theorem is one of the most profound results in all of
+topology. In its original form, it stated that for a compact, orientable, trian-
+gulated n-manifold X, the betti numbers in dimensions k and n−k were equal
+and the torsion numbers in dimensions k and n −k −1 were equal. Nowa-
+days, it is stated in a different but equivalent formulation. Today we state
+that the homology and cohomology groups of X in dimensions k and n −k
+are isomorphic.
+There are also versions of Poincar´e duality that hold when X is not ori-
+entable, or when X is not compact. We shall discuss these too.
+We shall give two proofs of Poincar´e duality. The first of these, which we
+give in the present section, is rather straightforward and intuitive. The second,
+which we will consider in Section 8.7, will provide valuable information on how
+the duality isomorphism behaves with respect to continuous maps. It also gives
+information about cup products on manifolds.
+Definition 8.5.1 Let X be a compact triangulated homology n-manifold.
+We say that X is orientable if it is possible to orient all the n-simplices σi
+of X so that their sum γ =  σi is a cycle. Such a cycle γ will be called an
+orientation cycle for X.

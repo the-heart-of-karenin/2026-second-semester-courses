@@ -1,0 +1,56 @@
+390
+Elements of Algebraic Topology
+[See Lemma 5.6.12.] We now identify the group ker κ, and show that it depends
+only on the groups Hp−1(C) and G.
+Theorem 7.3.1 (The universal coefficient theorem for cohomology)
+Let C be a free chain complex, and let G be an abelian group. There is an exact
+sequence
+0 ←−Hom (Hp(C), G) κ
+←−Hp(C; G) ←−Ext (Hp−1(C), G) ←−0 ,
+that is natural with respect to homomorphisms induced by chain maps. It splits,
+but not naturally.
+Proof: Step 1. Let Cp, Zp, and Bp denote the groups of p-chains, p-cycles,
+and p-boundaries of C, respectively. Consider the exact sequence
+0 −→Zp
+i
+−→Cp
+∂0
+−→Bp−1 −→0 .
+It splits because Bp−1 is free. Define a chain complex Z by letting its p-
+dimensional group be Zp and letting its boundary operator be the restriction
+of ∂. Then all the boundary operators in Z vanish. Similarly, define a chain
+complex D by letting Dp = Bp−1 and by letting its boundary operator be the
+restriction of ∂, so all boundary operators in D vanish.
+We then have a [split] short exact sequence of chain complexes
+0 −→Zp
+i
+−→Cp
+∂0
+−→Dp −→0 .
+The map i is a chain map by definition, and the map ∂0 is a chain map trivially
+[since ∂◦∂= 0].
+Applying the Hom functor, we obtain a short exact sequence of cochain
+complexes and hence a long exact cohomology sequence, of which we consider
+five terms:
+Hp+1(D; G)
+β
+←−Hp(Z; G) i∗
+←−Hp(C; G) ∂∗
+0
+←−Hp(D; G)
+β
+←−Hp−1(Z; G) .
+(∗)
+To avoid confusion, we use β instead of δ∗to denote the zig-zag homomor-
+phism [see Lemma 3.3.2].
+Step 2. We now identify the terms of this sequence and the homomorphism
+β. Since the chain complex D has trivial boundary operators, so does the
+corresponding cochain complex. Therefore, the group Hp+1(D; G) equals the
+cochain group Hom (Dp+1, G) = Hom (Bp, G). For similar reasons, we have
+Hp(Z; G) = Hom (Zp, G).
+Thus β is a map
+Hom (Bp, G)
+β
+←−Hom (Zp, G) .
+We show that it is simply the dual ȷ p of the inclusion map jp : Bp →Zp.
+One obtains the zig-zag homomorphism β by tracing through the diagram

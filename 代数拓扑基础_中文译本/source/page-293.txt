@@ -1,0 +1,39 @@
+278
+Elements of Algebraic Topology
+Proof: If p = 0, the result is trivial. Let p > 0. The point 0 is the center of
+Bp. Let eα denote fα(0). Note that, because fα is a quotient map, so is its
+restriction
+f ′
+α : (Bp \ 0) →(eα \ eα)
+to the saturated open set Bp \ 0. Now Sp−1 is a deformation retract of Bp \ 0,
+so this deformation retraction induces, via the quotient map
+f ′
+α × iI : (Bp \ 0) × I →(eα \ eα) × I ,
+a deformation retraction of eα \ eα onto ˙eα. See Figure 4.13.1.
+Bp
+fα
+¯eα
+˙eα
+eα
+Figure 4.13.1
+By Theorem 4.3.9, it follows that the horizontal inclusion maps on the
+left-hand side of the following diagram induce isomorphisms in homology:
+(Bp, Sp−1) −−−−→(Bp, Bp \ 0) ←−−−−(Int Bp, Int Bp \ 0)
+fα
+fα
+fα
+(eα, ˙eα)
+−−−−→(eα, eα \ eα) ←−−−−
+(eα, eα \ eα
+Since the horizontal inclusion maps on the right-hand side of the diagram are
+excision maps, they also induce homology isomorphisms. [On the top line,
+one excises Sp−1, while on the bottom line one excises ˙eα.] Now the map
+fα : Int Bp →eα is a homeomorphism that carries 0 to eα. Therefore the
+vertical map fα on the right-hand side of the diagram induces a homology
+isomorphism. Our result follows.
+Lemma 4.13.4 Let the map
+f : Xp−1 ∪Bα →Xp
+express Xp as the adjunction space obtained from Xp−1 and a topological sum
+of p-balls Bα via a map g : Sα →Xp−1, where Sα = Bd Bα. Then f
+induces a homology isomorphism
+Hi(Bα, Sα) ∼= Hi(Xp, Xp−1) .

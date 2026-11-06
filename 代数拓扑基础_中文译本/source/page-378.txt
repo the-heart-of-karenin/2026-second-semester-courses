@@ -1,0 +1,35 @@
+Cohomology
+363
+d
+c
+e
+b
+a
+h
+g
+f
+Figure 5.10.6
+can be represented as a CW complex with one cell in dimension 0, one cell in
+dimension 2, and two cells in dimension 1. When we write fundamental cycles
+w1 = [a, b] + [b, c] + [c, a] ,
+z1 = [a, d] + [d, e] + [e, a] ,
+z2 = ∂[a, f, g, h]
+for these cells, we see that the boundary operators in the cellular chain complex
+all vanish. Therefore, the cellular chain complex D(X) of X is isomorphic to
+the cellular chain complex D(T) of the torus T.
+It follows that the homology groups and cohomology groups of X are
+isomorphic to those of T. On the other hand, their cohomology rings are not
+isomorphic. For it is easy to see that the cohomology ring of X is trivial, as
+we now show.
+Consider the cocycles
+w1 = [b, c]∗
+and
+z1 = [d, e]∗.
+Since the cycles w1 and z1 are a basis for the chain group D1(X), the cocycles
+w1 and z1 give the dual basis for the cochain group Hom (D1(X), Z). All the
+cup products w1 ⌣z1, w1 ⌣w1, and z1 ⌣z1 vanish, because no 2-simplex
+has a face in the carriers of either w1 or z1.
+The preceding examples should convince you that, as a rule, cup products
+are not easy to compute. The difficulty is that one must go down to the
+simplicial level and find specific representative cocycles, in order to use the
+cup product formula.

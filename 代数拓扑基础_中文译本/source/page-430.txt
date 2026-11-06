@@ -1,0 +1,52 @@
+Homological Algebra
+415
+Let E be the chain complex whose pth group is Hp(C), and whose boundary
+operators vanish. Similarly, let E′ be the chain complex whose qth group is
+Hq(C′), and whose boundary operators vanish. Then ϕ : C →E and ϕ′ : C′ →
+E′ are chain maps, as you can check. Since
+ϕ ⊗ϕ′ : C ⊗C′ →E ⊗E′
+is a chain map, it induces a homomorphism
+λ : Hm(C ⊗C′) →Hm(E ⊗E′) .
+Since the boundary operator in E ⊗E′ vanishes, Hm(E ⊗E′) equals the m-
+dimensional chain group
+(E ⊗E′)m = 
+p+q=mHp(C) ⊗Hq(C′) .
+It is trivial to check that λ ◦Θ is the identity, because we have
+λΘ
+
+{zp} ⊗{z′
+q}
+
+= λ{zp ⊗z′
+q}
+= ϕ(zp) ⊗ϕ′(z′
+q) = {zp} ⊗{z′
+q} .
+Now we prove our main theorem, which identifies the group cok Θ.
+Theorem 7.8.4 (The K¨unneth theorem for chain complexes)
+If C is a free chain complex and C′ is a chain complex, then there is an exact
+sequence
+0 →
+p+q=mHp(C) ⊗Hq(C′) Θ
+−→Hm(C ⊗C′)
+
+p+q=mHp−1(C) ∗Hq(C′) →0 ,
+which is natural with respect to homomorphisms induced by chain maps. If the
+cycles of C′ are a direct summand in the chains, then the sequence splits, but
+not naturally.
+Proof: Let Bp, Zp, and Cp be the p-boundaries, p-cycles, and p-chains, re-
+spectively, of C. Define B′
+p, Z′
+p, and C′
+p similarly for C′.
+Step 1. We begin with the exact sequence
+0
+Zp
+Cp
+Bp−1
+0 ,
+j
+∂0
+which splits because Bp−1 is free. Let Z be the chain complex whose p-
+dimensional group is Zp, and whose boundary operators vanish. Let D be
+the chain complex whose p-dimensional group Dp equals Bp−1, and whose

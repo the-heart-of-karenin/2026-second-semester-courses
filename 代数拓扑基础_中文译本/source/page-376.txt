@@ -1,0 +1,55 @@
+Cohomology
+361
+a
+b
+c
+a
+a
+b
+c
+d
+e
+d
+e
+d
+y1
+Figure 5.10.4
+⌣
+α
+β
+Λ
+α
+0
+Λ
+0
+β
+Λ
+Λ
+0
+Λ
+0
+0
+0
+EXAMPLE 5.10.7 Consider the connected sum P2 # P2. We compute its
+cohomology ring with Z/2 coefficients. Let us express P2 # P2 as a CW com-
+plex X having one cell in dimension 0, one cell in dimension 2, and two cells
+in dimension 1. See Figure 5.10.5. Fundamental cycles for the 1-cells are
+w1 = [a, b] + [b, c] + [c, a]
+and
+z1 = [a, d] + [d, e] + [e, a] .
+A fundamental cycle γ for the 2-cell is the sum of all the 2-simplices, ori-
+ented counterclockwise. By direct computation, ∂w1 = ∂x1 = 0, and ∂γ =
+−2w1 −2z1. When we pass to the dual cochain complex Hom (D(X), Z/2),
+all coboundary operators vanish [since we are using Z/2 coefficients]. Thus, in
+singular cohomology, we have
+H1(P2 # P2; Z/2) ∼= Z/2 ⊕Z/2 ,
+H2(P2 # P2; Z/2) ∼= Z/2 .
+Passing now to simplicial cohomology, we see that the cocycles w1
+and z1 pictured in the figure, restricted to D1(X), serve as a basis for
+Hom (D1(X), Z/2), since
+⟨w1, w1⟩= 1
+and
+⟨w1, z1⟩= 0 ,
+⟨z1, w1⟩= 0
+and
+⟨z1, z1⟩= 1 .

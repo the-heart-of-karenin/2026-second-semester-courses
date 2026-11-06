@@ -1,0 +1,32 @@
+120
+Elements of Algebraic Topology
+EXERCISES
+1. (a) If r : X →A is a retraction and X is Hausdorff, then show that
+A is closed in X.
+(b) Let r : |K| →|K0| be a retraction, where K0 is a subcomplex
+of K. Show that r∗: Hp(K) →Hp(K0) is surjective and the
+homomorphism j∗induced by the inclusion j : |K0| →|K| is
+injective.
+(c) Show that there is no retraction r : Bn →Sn−1.
+2. (a) Show that there is a retraction of the Klein bottle S onto the
+embedded circle A pictured in Figure 2.6.1. But there is no
+retraction of S onto the circle C.
+(b) Show that there is no retraction of the projective plane onto
+the embedded circle C pictured in Figure 2.6.2.
+3. Determine whether there are retractions of the torus onto the tube
+A depicted in Figure 2.6.3. Also onto the disc B and the circle C.
+4. Determine all the spaces X such that there is a retraction from the
+circle C onto X.
+C
+A
+S
+C
+P2
+A
+A
+Figure 2.6.1
+Figure 2.6.2
+A
+B
+C
+Figure 2.6.3

@@ -1,0 +1,38 @@
+128
+Elements of Algebraic Topology
+The situation in the last example is more general than is immediately
+apparent. It is an interesting fact that every homotopy equivalence can be
+expressed in terms of deformation retractions. Specifically, there is a theorem
+to the effect that two spaces X and Y have the same homotopy type if and
+only if there is a space Z and embeddings h : X →Z and k : Y →Z such
+that both h(X) and k(Y ) are homotopy retracts of Z. See [Whi78], [Fuc71].
+This fact helps in visualizing what the notion of homotopy equivalence means
+geometrically.
+Homotopy equivalences are a powerful tool for computing homology
+groups. Given a complex K, it is often much easier to show that its space
+is homotopy equivalent to a space whose homology is known than it is to
+calculate the homology of K directly. The exercises below will illustrate this
+idea.
+EXERCISES
+1. Show that if A is a collection of spaces then homotopy equivalence
+is an equivalence relation on A.
+2. Show that if A is a deformation retract of X and B is a deformation
+retract of A then B is a deformation retract of X.
+3. Group the following spaces into homotopy equivalence classes. As-
+suming that they are all polytopes of complexes, calculate their
+homology groups.
+(a) The M¨obius band.
+(b) The torus.
+(c) The solid torus B1 × S1.
+(d) The torus minus one point.
+(e) The torus minus two points.
+(f) The Klein bottle minus a point.
+(g) R3 with the z-axis removed.
+(h) R3 with the circle {x2 + y2 = 1, z = 0} removed.
+(i) The intersection of the spaces in (g) and (h).
+(j) S3 with two linked circles removed.
+(k) S3 with two unlinked circles removed.
+4. Prove that if K is a complex of dimension n, then |K| has covering
+dimension at least n.
+5. Prove Theorem 2.7.5 without using the fact that |K|×I is the space
+of a complex, as follows:

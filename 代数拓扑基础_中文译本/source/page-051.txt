@@ -1,0 +1,39 @@
+36
+Elements of Algebraic Topology
+e1
+e2
+e3
+e4
+e5
+L
+σ2
+σ1
+Figure 1.6.4
+These examples may begin to give you a feeling for what the homology
+groups mean geometrically. Only by computing many more examples can one
+begin to “see” what a homology class is. Our hope is that after you get a
+feeling for what homology means geometrically, you will begin to believe what
+is at the moment far from clear—that the homology groups of a complex K
+actually depend only on the underlying space |K|.
+Now let us consider another example. It involves a complex having more
+simplices than those in the preceding examples. In general, as the number of
+simplices increases, calculating the group of cycles Zp and the group of bound-
+aries Bp becomes more tedious. We can short-cut some of these calculations
+by avoiding calculating these groups and proceeding directly to a calculation
+of the homology groups Hp.
+We deal here only with the groups Hp(K) for p > 0, postponing discussion
+of the group H0(K) to Section 1.8.
+We need some terminology. We shall say that a chain c is carried by a
+subcomplex L of K if c has value 0 on every simplex that is not in L. We say
+that two p-chains c and c′ are homologous if c −c′ = ∂p+1d for some (p + 1)-
+chain d. In particular, if c = ∂p+1d, we say that c is homologous to zero, or
+simply that c bounds.
+EXAMPLE 1.6.13 Consider the complex M indicated in Figure 1.6.5,
+whose underlying space is a square region. Instead of computing the group
+of 1-cycles specifically, we reason as follows: Given a 1-chain c, let a be the
+value of c on e1. Then by direct computation, the chain
+c1 = c + ∂2(aσ1)
+has value 0 on the oriented simplex e1. Intuitively speaking, by modifying c
+by a boundary, we have “pushed it off e1.” We then push c1 off e2 in a similar
+manner, as follows: Let b be the value of c1 on e2, then the chain
+c2 = c1 + ∂2(bσ2)

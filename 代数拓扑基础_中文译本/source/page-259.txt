@@ -1,0 +1,21 @@
+244
+Elements of Algebraic Topology
+Figure 4.10.1: Different types of holes.
+4. A version of the Jordan curve theorem in dimension 3 is true if one
+assumes some smoothness of the boundary surface. This is a famous
+result of Mazur and Brown. Discuss the possibilities here.
+4.10
+The Fundamental Group
+In this section we will give a brief introduction to homotopy theory, and look
+particularly at the fundamental group of a space. One of the motivations for
+homotopy theory is identifying and classifying the “holes” in a topological
+space. The annulus has a hole in its center, and so does the unit sphere. See
+Figure 4.10.1. But one has a sense that these two holes are different in nature.
+They are, perhaps, holes of different dimensions. Homotopy theory helps us
+to sort out these ideas.
+The basis for homotopy theory is to consider the set of all loops in a given
+topological space X. Here, a loop means a continuous function γ : [0, 1] →X
+such that γ(0) = γ(1). See Figure 4.10.2
+γ(0) = γ(1) = x0
+X
+Figure 4.10.2: A loop in X.

@@ -1,0 +1,45 @@
+Homology Groups of a Simplicial Complex
+27
+Thus the notions of internal and external direct sums are closely related.
+The difference is mainly one of notation. For this reason, we customarily use
+the notations
+G = G1 ⊕G2 ⊕· · · ⊕Gn
+and
+G =
+α∈J Gα
+to denote either internal or external direct sums, relying on the context to
+make clear which is meant [if indeed, it is important]. With this notation, one
+can for instance express the fact that G is free abelian of rank 3 by writing
+G ∼= Z ⊕Z ⊕Z.
+If G1 is a subgroup of G, we say that G1 is a direct summand in G if there
+is a subgroup G2 of G such that G = G1 ⊕G2. In this case, if Hi is a subgroup
+of Gi, for i = 1, 2, then the sum H1 + H2 is direct, and furthermore,
+G
+H1 ⊕H2
+∼= G1
+H1
+⊕G2
+H2
+.
+In particular, if G = G1 ⊕G2, then G/G1 ∼= G2.
+Of course, one can have G/G1 ∼= G2 without its following that G = G1 ⊕
+G2, that is, G1 may be a subgroup of G without being a direct summand in
+G. For instance, the subgroup nZ of the integers is not a direct summand in
+Z, for that would mean that would mean that
+Z ∼= nZ ⊕G2
+for some subgroup G2 of Z. But then G2 is isomorphic to Z/nZ, which is a
+group of finite order, while no subgroup of Z has finite order.
+Incidentally, we shall denote the group Z/nZ of integers modulo n simply
+by Z/n, in accordance with current usage.
+The Fundamental Theorem of Finitely Generated Abelian Groups
+There are actually two theorems that are important to us. The first is a
+theorem about subgroups of free abelian groups. We state it here, and give a
+proof in Section 1.12:
+Theorem 1.5.2 Let F be a free abelian group. If R is a subgroup of F, then
+R is also a free abelian group. If F has rank n, then R has rank r ≤n;
+furthermore, there is a basis e1, e2, . . . , en for F and integers t1, t2, . . . , tk with
+ti > 1 such that
+(1) t1e1, t2e2, . . . , tkek, ek+1, ek+2, . . . , er is a basis for R,
+(2) t1 | t2 | · · · | tk, that is, ti divides ti+1 for all i.
+The integers t1, t2, . . . , tk are uniquely determined by F and R, although the
+basis e1, e2, . . . , en is not.

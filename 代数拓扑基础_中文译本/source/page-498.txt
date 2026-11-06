@@ -1,0 +1,54 @@
+Duality in Manifolds
+483
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+i
+g
+j
+h
+w1
+σ
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+i
+g
+j
+h
+z1
+Figure 8.8.1
+If one begins with the cocycle w1, then the geometric [Poincar´e] duality map
+ψ carries it to the cycle c1 pictured in Figure 8.8.2. [We know that the cycle
+“dual” to w1 is carried by the blocks dual to the simplices appearing in the
+carrier of w1. To check that ψ carries w1 to c, rather than to −c, requires some
+care.] The cycle c1 is homologous to one represented by the cell B along the
+side edge of the rectangle. Under the algebraic duality κ∗, this cycle B in turn
+corresponds to a cocycle whose value is 1 on B and 0 on the cycle A going
+around the torus the other way. The cocycle z1 is such a cocycle. Thus w1
+∼
+B
+w1
+z1
+c1
+ψ
+κ
+Figure 8.8.2

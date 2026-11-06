@@ -1,0 +1,49 @@
+Cohomology
+305
+You can check that Hom (α, β) is indeed a homomorphism. Functoriality
+follows easily: The map Hom (iA, iG) is the identity. Also, if α′ : A′ →A′′ and
+β′ : G′′ →G′, then
+Hom (α′ ◦α, β ◦β′) = Hom (α, β) ◦Hom (α′, β′) ,
+since both sides carry ϕ′′ : A′′ →G′′ to β ◦β′ ◦ϕ′′ ◦α′ ◦α.
+In this notation, what we have called the dual homomorphism α, obtained
+when we consider Hom as a functor of the first variable alone, is the map
+Hom (α, iG).
+One can also consider Hom as a functor of the second variable alone. This
+case we leave to the exercises.
+Now we prove some properties of the Hom functor.
+Theorem 5.2.7
+(a) One has the following isomorphisms
+Hom (
+α∈JAα, G)
+∼=
+
+α∈J Hom (Aα, G) ,
+Hom
+
+A, 
+α∈J Gα
+
+∼=
+
+α∈J Hom (A, Gα) .
+(b) There is a natural isomorphism λ of Hom (Z, G) with G.
+(c) Let m be a positive integer, and let fm : Z →Z be multiplication
+by m. Then fm equals multiplication by m in Hom (Z, G).
+(d) Let m be a positive integer, and let gm : G →G be multiplication
+by m. Then Hom (Z/m, G) ∼= ker(gm).
+Proof: Property (a) follows immediately from standard facts of algebra con-
+cerning homomorphisms of products.
+(b) Define λ : Hom (Z, G) →G by assigning to ϕ ∈Hom (Z, G) the value
+of ϕ at 1. It is easy to see that λ is a homomorphism. Since ϕ is entirely
+determined by its value at 1, and since this value can be chosen arbitrarily, λ
+is an isomorphism of Hom (Z, G) with G.
+(c) We compute
+fm(ϕ)(x) = ϕ(fm(x)) = ϕ(mx) = mϕ(x) ,
+so fm(ϕ) = mϕ. Thus fm equals multiplication by m in Hom (Z, G).
+(d) Let fm be as in (c). Begin with the exact sequence
+Z fm
+−→Z −→Z/m −→0 .
+By Theorem 5.2.5, the sequence
+Hom (Z, G)
+fm
+←−Hom (Z, G)←−Hom (Z/m, G) ←−0 .

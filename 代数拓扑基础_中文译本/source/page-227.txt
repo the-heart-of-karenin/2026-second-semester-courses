@@ -1,0 +1,59 @@
+212
+Elements of Algebraic Topology
+Throughout this section, let C denote an arbitrary category with objects
+X, Y, . . . and morphisms f, g, . . . , and let A denote the category of augmented
+chain complexes and chain maps of such. For most of the applications we
+have in mind, C will be either the topological category [whose objects are
+topological spaces and whose morphisms are continuous maps] or the category
+of pairs of spaces and pairs of continuous maps. So you may think only of those
+categories if you wish.
+We will be dealing with functors [see Definition 3.7.3] G and G′ from C to
+A. Recall that if X is an element of C, then the functors assign to X objects
+G(X) and G′(X) in A. Thus both G(X) and G′(X) are augmented chain
+complexes. For each p ≥0, Gp(X) and G′
+p(X) are chain groups. If Y is another
+element of C, then we have two more chain complexes G(Y ) and G′(Y ), and
+for each p ≥0, the corresponding chain groups Gp(Y ) and G′
+p(Y ). The two
+elements X and Y of C also bring into play the set of morphisms hom(X, Y )
+in C. The functors G and G′ act on morphisms of C, so for f ∈hom(X, Y ),
+the functors assign to f morphisms G(f) and G′(f) in A. In this case, the
+morphisms G(f) : G(X) →G(Y ) and G′(f) : G′(X) →G′(Y ) are chain maps
+of augmented chain complexes [see Definition 1.14.2].
+Since we are considering two functors, we can also consider a natural trans-
+formation [see Definition 3.7.6] T from G to G′. Such a natural transformation
+assigns to each X ∈C a morphism [in A that means a chain map of aug-
+mented chain complexes] TX : G(X) →G′(X). The requirement of naturality
+is that the following diagram be commutative when X and Y are two elements
+of C and f ∈hom(X, Y ):
+Gp(X)
+TX
+−−−−→G′
+p(X)
+G(f)
+
+G′(f)
+Gp(Y )
+TY
+−−−−→G′
+p(Y )
+Because A is a category of augmented chain complexes, it also makes sense
+to consider a pair of natural transformations S and T of G to G′ and a related
+natural transformation, called a natural chain homotopy, between S and T. A
+natural chain homotopy D between S and T assigns to X in C the morphism
+DX : Gp(X) →G′
+p+1(X) such that
+∂′DX + DX∂= TX −SX .
+The requirement of naturality is that the following diagram be commutative
+when X and Y are two elements of C and f ∈hom(X, Y ):
+Gp(X)
+DX
+−−−−→G′
+p+1(X)
+G(f)
+
+G′(f)
+Gp(Y )
+DY
+−−−−→G′
+p+1(Y )

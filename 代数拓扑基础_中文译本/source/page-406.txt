@@ -1,0 +1,69 @@
+Homological Algebra
+391
+Hom (Cp+1, G)
+Hom (Bp, G)
+Hom (Zp, G)
+Hom (Cp, G)
+∂0
+δ
+ı
+from left to right, as follows: Let f be an element of Hom (Zp, G). Note that
+δf = 0, because all coboundary operations in Z vanish. Pull f back via ı to an
+element g of Hom (Cp, G). [That is, extend f to a homomorphism g : Cp →G.]
+Form δg, and pull it back via ∂0 to an element of Hom (Bp, G). We show that
+ȷ p(f) is such a pull-back of δg. That is, we show that ∂0ȷ p(f) = δg. Then
+our result is proved.
+We compute
+⟨δg, cp+1⟩= ⟨g, ∂cp+1⟩= ⟨f, ∂cp+1⟩,
+the last equation holding because ∂cp+1 is in Zp. Similarly, we have
+⟨∂0ȷ (f), cp+1⟩= ⟨f, jp(∂0cp+1)⟩= ⟨f, ∂cp+1⟩.
+Step 3. We now prove the existence of the exact sequence of the theorem.
+The five term exact sequence (∗) gives rise to the short exact sequence
+0 ←−ker ȷ p ←−Hp(C; G) ←−cok ȷ p−1 ←−0 .
+(∗∗)
+We need to identify the kernel and the cokernel of the map
+Hom (Bp, G)
+ȷ p
+←−Hom (Zp, G) .
+Now the sequence
+0 −→Bp
+jp
+−→Zp
+π
+−→Hp(C) −→0
+is a free resolution of Hp(C). Therefore, the sequence
+0 ←Ext(Hp(C), G) ←Hom(Bp, G)
+ȷ p
+←−Hom(Zp, G)
+π
+←−Hom(Hp(C), G) ←0
+(∗∗∗)
+is exact. The kernel and cokernel of ȷ p are now apparent. The existence of
+the exact sequence of our theorem is thus established.
+Step 4. We check naturality of the sequence. Let ϕ : C →C′ be a chain map.
+Let C′
+p, Z′
+p, and B′
+p denote the groups of p-chains, p-cycles, and p-boundaries
+of C′, respectively. The chain maps
+0
+Zp
+Cp
+Bp−1
+0
+0
+Z′
+p
+C′
+p
+B′
+p−1
+0
+i
+ϕ
+∂0
+ϕ
+ϕ
+i′
+∂′
+0

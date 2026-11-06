@@ -1,0 +1,33 @@
+8
+Duality in Manifolds
+8.1
+Introduction
+As we have mentioned before, manifolds are among the most familiar and im-
+portant geometric objects in mathematics. It took quite some time for math-
+ematicians to produce a rigorous definition of the manifold concept. It was
+Hermann Weyl, in his book on Riemann surfaces,1 who finally nailed down
+the idea.
+Any theorems that we can prove about manifolds are likely to be useful,
+not only in topology, but also in differential geometry and other branches of
+mathematics. The duality theorems are examples of such theorems.
+We already know one relationship that holds between the homology and
+cohomology groups of an arbitrary topological space; it is expressed by the
+universal coefficient theorem for cohomology. For manifolds, there is a sec-
+ond such relationship. It is expressed in the famous Poincar´e duality theorem.
+If we think of the universal coefficient theorem as expressing a sort of alge-
+braic duality between cohomology and homology, then Poincar´e duality can
+be thought of as fundamentally geometric in nature. This duality does not
+hold for an arbitrary space, but depends specifically on properties possessed
+by manifolds.
+There is a certain amount of interplay between these geometric and alge-
+braic types of duality. This interplay has some interesting applications—we
+shall apply it to the problem of computing the cohomology ring of a manifold.
+There are further duality theorems. They bear the names of Lefschetz,
+Alexander, and Pontryagin. We shall study them in due course. All are con-
+cerned with algebraic-topological properties of manifolds.
+Throughout this discussion, we assume familiarity with local homology
+groups [Section 4.8].
+1Die Idee der Riemannschen Fl¨ache, [Teubner, Leipzig-Berlin, 1913]. An English trans-
+lation of the third edition is available in [Wey64].
+DOI: 10.1201/9781003621478-8
+443

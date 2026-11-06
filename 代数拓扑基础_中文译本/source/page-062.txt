@@ -1,0 +1,35 @@
+Homology Groups of a Simplicial Complex
+47
+A
+A
+A
+Figure 1.7.11
+Theorem 1.7.9 (Classification theorem for compact surfaces)
+Every compact surface is homeomorphic to a sphere, a connected sum of n
+tori, or a connected sum of m projective planes.
+We will not prove this theorem here, but the topic is covered in Chapter
+12 of [Mun00].
+In light of the classification theorem and the examples we have worked,
+you should be able to compute the homology groups of the general compact
+surface. We leave this computation to the exercises.
+EXERCISES
+1. Let w1 and z1 be the cycles on the Klein bottle pictured in Fig-
+ure 1.7.6. Show that w1 + z1 represents a generator of the infinite
+cyclic group H1(S)/T1(S).
+2. The connected sum T # T of two tori can be represented as a
+quotient space of an octagonal region in the plane by making iden-
+tifications on the boundary as indicated in Figure 1.7.12. [Splitting
+this octagon along the dotted line gives two tori with open discs
+deleted.]
+(a) Construct a complex K whose underlying space is T # T by
+an appropriate vertex-labeling of the complex L pictured in
+Figure 1.7.13.
+(b) Compute the homology of T # T by following the pattern of
+Theorem 1.7.3. Specifically, let A be the image of Bd L under
+the quotient map; then A is a wedge of four circles. Orient each
+2-simplex of L counterclockwise; let γ be the sum of the cor-
+respondingly oriented simplices of K. Show that every 1-cycle
+of K is homologous to one carried by A. Then show that every
+2-chain of K whose boundary is carried by A is a multiple of
+γ. Complete the computation by analyzing the 1-cycles carried
+by A, and by computing ∂γ.

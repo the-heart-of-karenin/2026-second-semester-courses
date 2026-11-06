@@ -1,0 +1,37 @@
+Elements of Algebraic 
+Topology
+This classic text appears here in a new edition for the first time in four decades. The new 
+edition, with the aid of two new authors, brings it up to date for a new generation of math-
+ematicians and mathematics students.
+Elements of Algebraic Topology provides the most concrete approach to the subject. With 
+coverage of homology and cohomology theory, universal coefficient theorems, Kunneth 
+theorem, duality in manifolds, and applications to classical theorems of point-set topol-
+ogy, this book is perfect for communicating complex topics and the fun nature of algebraic 
+topology for beginners.
+This second edition retains the essential features of the original book. Most of the notation 
+and terminology are the same. There are some useful additions. There is a new introduction 
+to homotopy theory. A new Index of Notation is included. Many new exercises are added.
+Algebraic topology is a cornerstone of modern mathematics. Every working mathemati-
+cian should have at least an acquaintance with the subject. This book, which is based 
+largely on the theory of triangulations, provides such an introduction. It should be acces-
+sible to a broad cross-section of the profession—both students and senior mathemati-
+cians. Students should have some familiarity with general topology.
+James R. Munkres served on the MIT Mathematics Faculty from 1960-2000 and continues 
+as a senior lecturer. He earned a PhD in mathematics from the University of Michigan under 
+the supervision of Edwin Moise in 1956. Prof. Munkres is a differential topologist and is 
+also responsible for the Munkres Assignment Algorithm. He authored numerous texts. His 
+distinctions include the MIT School of Science Teaching Prize for Undergraduate Education 
+in 1984, and an Honorary Doctorate from Nebraska Wesleyan University in 1989. 
+Steven G. Krantz is a professor at Washington University in St. Louis where he teaches 
+mathematics. He earned his PhD from Princeton University and since then has taught at 
+UCLA, Princeton University, and Pennsylvania State University. Dr. Krantz has written 
+over 175 scholarly papers and more than 65 books. He is the founding editor of the Journal 
+of Geometric Analysis. He was named a fellow of the American Mathematical Society and 
+has received the Chauvenet Prize, Beckenbach Book Award, and Kemper Prize. 
+Harold R. Parks earned his PhD in mathematics from Princeton University. He was a 
+J.D. Tamarkin Instructor at Brown University. He then assumed a tenure-track position 
+at Oregon State University. He was promoted to professor in 1989. He spent the academic 
+year 1982-1983 at Indiana University as a visiting associate professor. During his time in 
+the Mathematics Department of Oregon State, he served at various times as Assistant 
+Department Chair, Associate Department Chair, and Department Chair. He has written 
+8 books and 42 scholarly papers, edits 2 journals, and is an AMS Fellow. 

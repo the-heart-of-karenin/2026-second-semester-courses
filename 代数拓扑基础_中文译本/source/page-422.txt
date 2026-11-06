@@ -1,0 +1,37 @@
+Homological Algebra
+407
+ai ⊗g, for g ∈G. The group Hom (A, G) is also a direct sum of k copies of G.
+In this case, the ith copy consists of all homomorphisms that vanish on aj for
+j̸ = i. These two copies of G are isomorphic under Φ, since Φ(ai ⊗g) is the
+homomorphism of A into G that maps ai to g and maps aj to 0 for j̸ = i.
+Step 3. To prove (∗), we recall that E−p = Hom (Cp, Z) and apply Step 2
+to obtain an isomorphism
+E−p ⊗G ∼= Hom (Cp, G) .
+The naturality of the isomorphism means that ∂E ⊗iG corresponds to δ. Thus
+we have H−p(E; G) ∼= Hp(C; G), as desired.
+Step 4. We show that, if A is free of finite rank, then there is a natural
+isomorphism
+e : A →Hom (Hom (A, Z), Z) ,
+defined by the equation
+[e(a)](ϕ) = ϕ(a) ,
+where a ∈A and ϕ ∈Hom (A, Z).
+First, we leave it to you to check that e(a) is a homomorphism of
+Hom (A, Z) into Z, and then to check that e itself is a homomorphism. To
+prove that e is an isomorphism, choose a basis a1, a2, . . . , ak for A, and let
+a1, a2, . . . , ak be the dual basis for Hom (A, Z), as above in Step 2. Let the
+corresponding dual basis for Hom (Hom (A, Z), Z) be a1, a2, . . . , ak. All the
+groups involved are free abelian of rank k. The homomorphism e carries ai to
+ai, since for all j, we have
+[e(ai)](aj) = aj(ai) = δij = ai(aj) .
+Step 5. To prove (∗∗), we apply Step 4, then Step 2, to define natural
+isomorphisms
+A ⊗G −→Hom (Hom (A, Z), Z) ⊗G −→Hom (Hom (A, Z), G) .
+Setting A = Cp, we have a natural isomorphism
+Cp ⊗G −→Hom (Hom (Cp, Z), G) = Hom (E−p, G) .
+By naturality, the boundary operator ∂⊗iG corresponds to the coboundary
+operator ∂E, so one has a natural isomorphism
+Hp(C; G) ∼= H−p(E; G) ,
+as desired.
+The preceding theorem applies to the homology of a finite simplicial com-
+plex or a finite CW complex, but one can obtain the following more general
+theorem with a bit more effort.

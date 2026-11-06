@@ -1,0 +1,131 @@
+\section{上同调理论}
+\sourcepage{322--323}
+对单纯上同调已有一些直观认识后，现在讨论一般理论：构造单纯与奇异上同调，证明它们在可三角剖分空间上自然同构，并验证 Eilenberg--Steenrod 公理的上同调版本。先在链复形层次进行。
+
+\subsection*{链复形的上同调}
+设 $\mathcal C=\{C_p,\partial\}$ 为链复形，$G$ 为阿贝尔群。定义 $C^p(\mathcal C;G)=\operatorname{Hom}(C_p,G)$，上边缘 $\delta$ 为边缘的对偶，故 $\delta^2=0$。这些群与同态组成以 $G$ 为系数的\textbf{上链复形}。令 $Z^p$ 为核、$B^{p+1}$ 为像，定义 $H^p(\mathcal C;G)=Z^p/B^p$。
+
+若链复形有增广，则上链复形可补上 $\operatorname{Hom}(\Z,G)\cong G$ 及单射余增广 $\overline\epsilon$。正维约化上同调与普通上同调相同，而 $\widetilde H^0=\ker\delta^1/\operatorname{im}\overline\epsilon$。若 $\widetilde H_0(\mathcal C)=0$，由增广序列及其对偶的正合性，可知 $\widetilde H^0(\mathcal C;G)=0$。一般地，$H^0(\mathcal C;G)\cong\widetilde H^0(\mathcal C;G)\oplus G$，见第 5.3 节习题。
+
+\entry{定义}{5.5.1}链映射 $\varphi:\mathcal C\to\mathcal C'$ 的对偶 $\overline\varphi:C^p(\mathcal C';G)\to C^p(\mathcal C;G)$ 与上边缘可交换，称为上链映射，诱导 $\varphi^*:H^p(\mathcal C';G)\to H^p(\mathcal C;G)$。它具有反变函子性质，且这些性质在上链层次就成立。若 $\varphi$ 保持增广，则 $\overline\varphi\,\overline\epsilon'=\overline\epsilon$，也诱导约化上同调同态。
+
+\sourcepage{324}
+若 $D$ 是 $\varphi,\psi:\mathcal C\to\mathcal C'$ 间的链同伦，满足 $D\partial+\partial'D=\varphi-\psi$，则对偶 $\overline D$ 满足
+\[
+\delta\overline D+\overline D\delta'=\overline\varphi-\overline\psi.
+\]
+称其为\textbf{上链同伦}（cochain homotopy）。对上闭链 $z^p$，两映射像之差为 $\delta\overline Dz^p$，因此 $\varphi^*=\psi^*$。
+
+\entry{定理}{5.5.2}链等价 $\varphi:\mathcal C\to\mathcal C'$ 在同调及上同调上均诱导同构。若增广存在且被保持，约化版本也成立。
+
+\textbf{证明：}取链同伦逆 $\psi$，则两个复合链同伦于恒等。对偶后两个复合上链同伦于恒等，所以 $\varphi^*,\psi^*$ 互逆。同调及约化情形用相同论证。\hfill$\square$
+
+若链复形短正合列 $0\to\mathcal C\xrightarrow{\varphi}\mathcal D\xrightarrow{\psi}\mathcal E\to0$ 在每一维分裂（例如 $\mathcal E$ 自由），对偶后的上链列逐维正合。之字形引理给出自然长正合列
+\[
+\cdots\leftarrow H^p(\mathcal C;G)\xleftarrow{\varphi^*}H^p(\mathcal D;G)
+\xleftarrow{\psi^*}H^p(\mathcal E;G)\xleftarrow{\delta^*}H^{p-1}(\mathcal C;G)\leftarrow\cdots.
+\]
+连接同态按通常方法由上边缘诱导；短正合列间的链映射诱导对偶列及长正合列间的同态。
+
+\sourcepage{325}
+\subsection*{上同调公理}
+给定可容许空间偶类 $\mathcal A$ 与系数群 $G$，其上的上同调理论包含：对每个整数 $p$、每个空间偶指定阿贝尔群 $H^p(X,A;G)$；给每个连续映射 $h:(X,A)\to(Y,B)$ 指定反向同态 $h^*:H^p(Y,B;G)\to H^p(X,A;G)$；并指定连接同态 $\delta^*:H^{p-1}(A;G)\to H^p(X,A;G)$。要求满足：
+\begin{enumerate}[label=公理 \arabic*.]
+\item 恒等映射诱导恒等同态。
+\item $(k\circ h)^*=h^*k^*$。
+\item $\delta^*$ 是函子间的自然变换。
+\item \textbf{正合性：}包含映射给出长正合列
+\[
+\cdots\leftarrow H^p(A;G)\leftarrow H^p(X;G)\leftarrow H^p(X,A;G)
+\xleftarrow{\delta^*}H^{p-1}(A;G)\leftarrow\cdots.
+\]
+\item \textbf{同伦公理：}若 $h\simeq k$，则 $h^*=k^*$。
+\item \textbf{切除公理：}若开集 $U\subset X$ 满足 $\overline U\subset\Int A$，且删去后的空间偶可容许，则包含映射诱导同构 $H^p(X,A;G)\to H^p(X\setminus U,A\setminus U;G)$。
+\item \textbf{维数公理：}单点空间 $P$ 的 $H^0(P;G)\cong G$，其他维上同调为零。
+\end{enumerate}
+同调中的紧支集公理在上同调理论中没有对应公理。
+
+\sourcepage{326}
+\subsection*{奇异上同调理论}
+定义空间偶的\textbf{奇异上同调}
+\[
+H^p(X,A;G)=H^p(\mathcal S(X,A);G),\qquad
+\widetilde H^p(X;G)=\widetilde H^p(\mathcal S(X);G).
+\]
+空相对子空间及整数系数按通常惯例省略。连续映射 $h$ 的奇异链映射 $h_\#T=h\circ T$ 的对偶记为 $h^\#$，诱导 $h^*$。保持增广还给出约化版本。函子公理在上链层次成立。
+
+奇异相对链群自由，所以 $0\to S_p(A)\to S_p(X)\to S_p(X,A)\to0$ 逐维分裂。对偶及之字形引理给出长正合列，且由其自然性，公理 3、4 成立；非空子空间的约化版本也同样成立。
+
+\sourcepage{327}
+若 $h,k$ 同伦，定理 4.3.7 给出链同伦，对偶后为上链同伦，故同伦公理成立。单点空间的奇异链复形在 $\Z$ 之间交替使用零与同构，取 Hom 后，上链复形在 $G$ 之间交替使用零与同构。因此零维上同调为 $G$，其余为零，维数公理成立。
+
+切除性质不能直接照搬同调证明。此前只证明切除映射 $j_\#$ 诱导同调同构，没有证明它是链等价；若已知链等价，对偶即可解决。现在需要下一节将证明的事实：\emph{自由链复形之间的链映射，若在所有维数诱导同调同构，则对所有系数群也诱导上同调同构。}
+
+切除涉及的两个奇异链复形均自由，故由同调切除及此事实，上同调切除随即成立。与奇异同调一样，只需 $\overline U\subset\Int A$，不要求 $U$ 本身开，因而结论略强于公理表述。
+
+\sourcepage{328}
+\subsection*{单纯上同调理论}
+第 5.4 节已定义单纯偶的上同调及单纯映射诱导的同态。对任意连续映射的处理，仿照第 2.2--2.6 节。
+
+同一连续映射的两个单纯逼近相邻，其诱导链映射链同伦，对偶后上链同伦，因而诱导的上同调同态相同。若 $K'$ 为重分，$g:(K',K'_0)\to(K,K_0)$ 逼近恒等映射，则 $g_\#$ 为链等价，故 $g^*$ 为同构。
+
+给定 $h:(|K|,|K_0|)\to(|L|,|L_0|)$，选其单纯逼近 $f:(K',K'_0)\to(L,L_0)$ 及上述 $g$，定义
+\[
+h^*=(g^*)^{-1}f^*.
+\]
+选择无关性及函子性质的证明与第 2.6 节完全类似，甚至可使用相同交换图，只把所有诱导箭头反向，细节留给读者。
+
+长正合列已建立，其自然性归结为单纯映射情形。同伦公理、单纯版本的切除公理及维数公理的验证，与奇异上同调类似。由此立即得到单纯上同调的拓扑不变性，事实上还得到同伦类型不变性。
+
+\subsection*{单纯上同调与奇异上同调之间的同构}
+第 4.7 节构造了链映射 $\eta:\mathcal C(K)\to\mathcal S(|K|)$，诱导同调同构。链映射依赖顶点偏序，但诱导同调同态不依赖。它与子复形包含可交换，相对版本也诱导同构。上同调中有同样结论。
+
+\sourcepage{329}
+\entry{定理}{5.5.3}对单纯偶 $(K,K_0)$，$\eta$ 诱导同构
+\[
+\eta^*:H^p(\mathcal S(|K|,|K_0|);G)\to H^p(\mathcal C(K,K_0);G),
+\]
+不依赖顶点偏序，并与连接同态 $\delta^*$ 及连续映射诱导的同态可交换。
+
+\textbf{证明：}在选定顺序下，$\eta$ 将 $[v_0,\ldots,v_p]$ 映为 $\ell(v_0,\ldots,v_p)$。两个链复形自由，且 $\eta$ 诱导同调同构，由下一节的结果，它也诱导上同调同构。它与包含映射可交换，所以诱导相对同态，并由之字形引理自然性与 $\delta^*$ 可交换。五引理还给出相对同构。
+
+为证选择无关性，回忆 $\eta=\theta\varphi$，其中 $\varphi$ 把按序有向单形映为对应有序单形，$\theta(w_0,\ldots,w_p)=\ell(w_0,\ldots,w_p)$。第 1.14 节的链同伦逆为
+\[
+\psi(w_0,\ldots,w_p)=\begin{cases}[w_0,\ldots,w_p],&\text{顶点互异},\\0,&\text{否则}.\end{cases}
+\]
+虽然 $\varphi$ 依赖排序，$\psi,\theta$ 都不依赖，所以 $\eta^*=(\psi^*)^{-1}\theta^*$ 与排序无关。
+
+对于单纯映射 $f$，定理 1.14.18 的证明说明它与 $\psi$ 可交换，定理 4.7.6 的证明说明它与 $\theta$ 可交换；对偶后仍如此，因此 $f^*$ 与 $\eta^*$ 可交换。一般连续映射情形仿照定理 4.7.7。\hfill$\square$
+
+非紧空间上常需研究紧支集对象。
+
+\entry{定义}{5.5.4}以 $C_c^p(K;G)$ 表示仅在有限个有向单形上可能非零的上链，称为\textbf{紧支集上链}（cochains with compact support）。若 $\delta C_c^p\subset C_c^{p+1}$（见习题 4），便可定义其\textbf{紧支集上同调} $H_c^p(K;G)$。
+
+\sourcepage{330}
+连续映射下紧集的原像未必紧，因此还需限制映射类别。
+
+\entry{定义}{5.5.5}若每个紧集 $D\subset Y$ 的原像 $h^{-1}(D)$ 都在 $X$ 中紧，则称 $h:X\to Y$ 为\textbf{固有映射}（proper map）。本身是固有映射的同伦称为\textbf{固有同伦}。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 若 $X$ 道路连通，证明 $H^0(X)\cong\Z$，并找一个生成上闭链。
+\item 陈述并证明单纯上同调的 Mayer--Vietoris 定理。对任意系数能否证明？
+\item \begin{enumerate}[label=(\alph*)]
+\item 若 $\{A_1,A_2\}$ 可切除，证明包含 $\mathcal S(A_1)+\mathcal S(A_2)\to\mathcal S(A_1\cup A_2)$ 不仅诱导同调同构，也诱导上同调同构。
+\item 陈述并证明奇异上同调的 Mayer--Vietoris 定理。
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 若 $K$ 局部有限，证明 $\delta C_c^p\subset C_c^{p+1}$。
+\item 对以整数为顶点的实数轴复形，证明 $H_c^1(K)\cong\Z$、$H_c^0(K)=0$。
+\item 若 $|K|$ 连通且非紧，证明 $H_c^0(K)=0$。
+\end{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 证明紧支集上同调及固有连续映射诱导的同态定义了从局部有限复形及其多面体的固有映射范畴到阿贝尔群的反变函子。〔提示：固有映射的单纯逼近也固有。若 $f,g$ 相邻且固有，证明它们间链同伦的对偶将有限上链映到有限上链。重分算子 $\lambda$、恒等逼近 $g_\#$，以及 $\lambda g_\#$ 到恒等的链同伦，其对偶也都保持有限上链。〕
+\item 若 $h,k:|K|\to|L|$ 固有同伦，证明它们在紧支集上同调上诱导相同同态。〔提示：证明定理 2.7.5 中链同伦的对偶保持有限上链。〕
+\item 推广到相对上同调。是否存在紧支集上同调的长正合列？若存在，是否自然？
+\item 紧支集上同调是否有切除定理？
+\end{enumerate}
+\item 〔*〕对第 1.6 节习题中由无限链定义的同调，重复习题 5。
+\item 给出三维欧氏空间单位开球到自身的固有连续映射，它不是同胚。
+\item 对欧氏空间的子集，用趋向边界的点列刻画固有映射。
+\end{enumerate}

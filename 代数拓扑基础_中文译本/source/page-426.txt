@@ -1,0 +1,41 @@
+Homological Algebra
+411
+You can check that ¯ϵ is surjective, and that ¯ϵ ◦¯∂= 0.
+The next theorem describes the geometric motivation underlying our def-
+inition of C ⊗C′.
+Theorem 7.7.3 If K and L are simplicial complexes, and if |K| × |L| is
+triangulated so that each cell σ × τ is the polytope of a subcomplex, then
+C(K) ⊗C(L) ∼= D(K × L) .
+Thus C(K) ⊗C(L) can be used to compute the homology of |K| × |L|.
+Proof: Let D(K × L) denote the cellular chain complex of the CW complex
+X = |K| × |L|, and let M denote the underlying simplicial complex of X.
+Because X is triangulated, we can use simplicial homology in the definition
+of the chain group Dm(K × L). This chain group is a free abelian group, with
+one basis element of each cell σp × τ q for which p + q = m. This basis element
+is a fundamental cycle for σp × τ q.
+When we orient the simplices of K and L, they form bases for C(K) and
+C(L), respectively. A basis for the m-dimensional chain group of C(K) ⊗C(L)
+consists of all the elements σp ⊗τ q for which p + q = m.
+It follows that the groups
+(C(K) ⊗C(L))m
+and
+Dm(K × L)
+are isomorphic, for they are both free abelian and there is a one-to-one corre-
+spondence ϕ between their bases. That correspondence ϕ assigns to the basis
+element σp ⊗τ q of (C(K) ⊗C(L))m a fundamental cycle for the (p + q)-cell
+σ × τ. We need to show that this isomorphism can be chosen so that it pre-
+serves boundary operators, and thus is an isomorphism of chain complexes as
+well.
+We now proceed by induction. A basis element for (C(K)⊗C(L))0 is of the
+form v ⊗w, where v is a vertex of K and w is a vertex of L. Define ϕ(v ⊗w)
+to be a fundamental 0-cycle for v × w, that is, ϕ(v ⊗w) = v × w.
+The augmentation ¯ϵ for C(K) ⊗C(L) satisfies the equation ¯ϵ(v ⊗w) = 1
+whenever v is a vertex of K and w is a vertex of L. On the other hand, the
+chain complex D(K × L) is augmented as a subchain complex of C(M), so
+ϵ(v × w) = 1. Thus the map ϕ is augmentation-preserving, since ϵ ◦ϕ = ¯ϵ
+holds for 0-chains.
+For the induction step, we assume that
+ϕ : (C(K) ⊗C(L))i →Di(K × L)
+is defined in dimensions i less than m, where m ≥1, and that ϕ ◦¯∂= ∂◦ϕ in
+those dimensions. We suppose further that for p+q < m, the chain ϕ(σp ⊗τ q)
+is a fundamental cycle for the cell σp × τ q.

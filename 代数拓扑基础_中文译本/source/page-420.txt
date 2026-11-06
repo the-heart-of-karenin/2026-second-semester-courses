@@ -1,0 +1,39 @@
+Homological Algebra
+405
+4. Let C be a free chain complex. Show that if Hi(C) is finitely gener-
+ated for all i, then
+Hp(C; Z/n) ∼= Hp(C; Z/n) .
+[The isomorphism is not natural.]
+5. Show that if K is a finite complex, then the homology group Hn(K)
+is uniquely determined by the groups Hi(K; Z/pk), as pk ranges over
+all prime powers and i ranges from 0 to n.
+6. Show that if K is a finite complex, then the homology group Hp(K)
+is uniquely determined by the groups Hp(K; S1) and Hp+1(K; S1).
+7. Show that if T is the torus and S is the Klein bottle, and if f : T →
+S, then
+f∗: H2(T; Z/2) →H2(S; Z/2)
+is trivial.
+8. Show by example that the splitting of the sequence in Corol-
+lary 7.5.2 is not natural.
+∗9. Prove Theorem 7.5.1. [Hint: Let Z, C, and D be as in the proof of
+Theorem 7.3.1. One has the exact sequence
+· · · −→Hp+1(D; G)
+β
+−→Hp(Z; G) −→Hp(C; G) −→Hp(D; G) −→· · · .
+Show that β is induced by the inclusion jp : Bp →Zp.]
+10. Show that the splitting in Theorem 7.5.1 is not natural.
+7.6
+∗Other Universal Coefficient Theorems
+We have stated two universal coefficient theorems that express the homology
+and cohomology groups with arbitrary coefficients in terms of homology with
+integer coefficients. One might ask whether for this purpose cohomology and
+homology are symmetric in some sense—that is, whether these same groups
+can be expressed in terms of cohomology with integer coefficients. In fact,
+there are two short exact sequences that do this. They do not hold in complete
+generality, but apply only if the homology groups Hi(C) are finitely generated.
+We consider these theorems now. We will be using the results of Section 5.7.
+The exact sequences in question are derived by reindexing the groups of the
+cochain complex {Hom (Ci, Z), δ} so as to make it into a chain complex, and
+then applying the universal coefficient theorems we have already considered.
+The difficulty with this approach is that the group Hom (Ci, Z) is not in general
+free, so some restrictive hypotheses are needed.

@@ -1,0 +1,38 @@
+Topological Invariance of the Homology Groups
+109
+p
+Q
+P
+B
+v
+w = σ
+Figure 2.4.3
+Figure 2.4.4
+We prove the following: If N ≥N0 + 1, then for each vertex w of KN lying in
+P but not in |B|, there is an element A of A such that
+St(w, KN) ⊂A .
+(∗∗)
+We prove (∗∗) first in the case N = N0 + 1. Now P is the polytope of a
+subcomplex of KN0+1 by definition. If w is a vertex of KN0+1 lying in P but
+not in B, then w = σ for some simplex σ of KN0 that intersects B but does
+not lie in B, by Lemma 2.4.6. See Figure 2.4.4. Let v be a vertex of σ lying
+in B. Because w lies in Int σ, we have
+St(w, KN0+1) ⊂St(v, KN0)
+by Lemma 2.3.2. Then
+St(w, KN0+1) ⊂St(v, KN0) ⊂Av
+by (∗) of Step 2.
+Now we prove (∗∗) in the case N > N0 + 1. If w′ is a vertex of KN lying
+in P, then w′ ∈St(w, KN0+1) for some vertex w of KN0+1 lying in P. Hence
+St(w′, KN) ⊂St(w, KN0+1) by Lemma 2.3.2. Therefore (∗∗) follows from the
+result of the preceding paragraph.
+Step 4: We now complete the proof. Let λ be a Lebesgue number for the
+open covering A of |K|. Consider the space Q. It is the polytope of a sub-
+complex J of KN0+1. In forming the subdivision KN0+2, each simplex of J is
+subdivided barycentrically—by the preceding lemma. Thus KN0+2 has sd J
+as a subcomplex. Repeating the argument, we see that in general KN0+1+M
+has sdM J as a subcomplex.
+Choose M large enough that each simplex of sdM J has diameter less than
+λ/2. Then if N ≥N0 + 1 + M and if w is a vertex of KN not in P, we show
+that there is an element A of A such that
+St(w, KN) ⊂A .
+(∗∗∗)

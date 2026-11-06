@@ -1,0 +1,36 @@
+56
+Elements of Algebraic Topology
+(b) Using the bracket notation, define ϕ : Cp(K) →Cp+1(S(K))
+by the equation
+ϕ(cp) = [w0, cp] −[w1, cp] .
+Show that ϕ induces a homomorphism
+ϕ∗: Hp(K) →Hp+1(S(K)) .
+(c) Show that ϕ∗is an isomorphism when K consists of the proper
+faces of a 2-simplex.
+We will see later that ϕ∗is an isomorphism in general [see
+Section 3.4].
+1.10
+Relative Homology
+Suppose that K0 is a subcomplex of the complex K. In many of the appli-
+cations of topology, it is convenient to consider what are called the relative
+homology groups of K modulo K0. We introduce them briefly here and com-
+pute some examples, postponing a more complete discussion to Chapter 3.
+If K0 is a subcomplex of the complex K, then the chain group Cp(K0) can
+be considered to be a subgroup of the chain group Cp(K) in the natural way.
+Formally, if cp is a chain on K0 [that is, a function on the oriented simplices of
+K0], one extends it to a chain on K by letting its value be zero on each oriented
+p-simplex of K not in K0. When we write cp as a linear combination of oriented
+p-simplices of K0, we need merely consider these simplices as belonging to K
+in order to consider cp as a chain of K.
+Definition 1.10.1 If K0 is a subcomplex of K, then we call (K, K0) a simpli-
+cial pair or simply a pair if the context makes the meaning clear. The quotient
+group
+Cp(K)/Cp(K0)
+is called the group of relative chains of K modulo K0, and is denoted by
+Cp(K, K0).
+Note that the group Cp(K, K0) is free abelian. Indeed, if we orient the
+p-simplices of K so as to obtain a basis for Cp(K), then the subcollection
+consisting of the oriented p-simplices of K0 is a basis for Cp(K0). Then the
+quotient Cp(K)/Cp(K0) is free, for it has as basis all cosets of the form
+{σi} = σi + Cp(K0) ,
+where σi is a p-simplex of K that is not in K0.

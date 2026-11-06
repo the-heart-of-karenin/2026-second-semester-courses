@@ -1,0 +1,101 @@
+\section{Mayer--Vietoris 序列}
+\sourcepage{165--166}
+同调正合列是计算同调群的有用工具，另一个工具是下面构造的 Mayer--Vietoris 序列。它也是之字形引理的推论。
+
+\entry{定理}{3.4.1}设 $K=K_0\cup K_1$，其中 $K_0,K_1$ 为子复形，令 $A=K_0\cap K_1$。则存在正合列
+\[
+\cdots\to H_p(A)\to H_p(K_0)\oplus H_p(K_1)\to H_p(K)\to H_{p-1}(A)\to\cdots.
+\]
+若 $A$ 非空，约化同调中也有类似正合列。
+
+\entry{定义}{3.4.2}此序列称为 $(K_0,K_1)$ 的 \textbf{Mayer--Vietoris 序列}。
+
+\noindent\textbf{证明：}构造链复形短正合列
+\[
+0\to\mathcal C(A)\xrightarrow{\varphi}\mathcal C(K_0)\oplus\mathcal C(K_1)
+\xrightarrow{\psi}\mathcal C(K)\to0,
+\]
+再应用之字形引理。中间复形的 $p$ 维群为 $C_p(K_0)\oplus C_p(K_1)$，边界为 $\partial'(d,e)=(\partial_0d,\partial_1e)$。
+
+以 $i:A\to K_0$、$j:A\to K_1$、$k:K_0\to K$、$\ell:K_1\to K$ 表示包含，$m:A\to K$ 表示共同复合。定义
+\[
+\varphi(c)=(i_\#c,-j_\#c),\qquad
+\psi(d,e)=k_\#d+\ell_\#e.
+\]
+它们显然为链映射。$\varphi$ 单射，因为 $i_\#$ 为包含。$\psi$ 满射：将链 $d$ 写成定向单形之和，取由 $K_0$ 承载的全部项为 $d_0$，则 $d-d_0$ 由 $K_1$ 承载，且 $\psi(d_0,d-d_0)=d$。
+
+\sourcepage{167}
+在中间项，先有 $\psi\varphi(c)=m_\#c-m_\#c=0$。反过来，若 $\psi(d,e)=0$，把两者看作 $K$ 的链，则 $d=-e$。由于分别由 $K_0,K_1$ 承载，两者均由 $A$ 承载，故 $(d,e)=(d,-d)=\varphi(d)$，证明正合。
+
+中间复形的同调为
+\[
+\frac{\ker\partial'}{\operatorname{im}\partial'}
+=\frac{\ker\partial_0\oplus\ker\partial_1}{\operatorname{im}\partial_0\oplus\operatorname{im}\partial_1}
+\cong H_p(K_0)\oplus H_p(K_1).
+\]
+由之字形引理即得普通版本。
+
+约化版本需要进一步处理。将各复形换为增广复形，零维增广映射分别为 $\epsilon_A$、$\epsilon_0\oplus\epsilon_1$ 和 $\epsilon$。在 $-1$ 维定义
+\[
+0\to\Z\xrightarrow{\varphi}\Z\oplus\Z\xrightarrow{\psi}\Z\to0,
+\qquad\varphi(n)=(n,-n),\quad\psi(m,n)=m+n.
+\]
+此列正合，并与增广映射可交换。因为 $A$ 非空，各增广都满射，所以这些复形的 $-1$ 维同调为零，零维同调分别为 $\widetilde H_0(A)$、$\widetilde H_0(K_0)\oplus\widetilde H_0(K_1)$ 和 $\widetilde H_0(K)$。再用之字形引理完成证明。\hfill$\square$
+
+\entry{引理}{3.4.3}若 $h:(K,K_0,K_1)\to(L,L_0,L_1)$ 为单纯映射，且 $K=K_0\cup K_1$、$L=L_0\cup L_1$，则 $h$ 诱导相应 Mayer--Vietoris 序列之间的同态。
+
+\noindent\textbf{证明：}$h_\#$ 与前面定义的 $\varphi,\psi$ 可交换，自然性由定理 3.3.3 得到。\hfill$\square$
+
+\entry{定理}{3.4.4}前一引理也适用于任意连续映射 $h:(|K|,|K_0|,|K_1|)\to(|L|,|L_0|,|L_1|)$。
+
+这是前一引理与第二章结果的直接推论。
+
+\sourcepage{168--169}
+为说明序列的实际用途，计算复形悬挂的同调。悬挂已在定义 1.9.8 出现，为方便重述。
+
+\entry{定义}{3.4.5}若两个锥 $w_0*K,w_1*K$ 的多胞体仅在 $|K|$ 相交，则 $S(K)=(w_0*K)\cup(w_1*K)$ 为复形，称为 $K$ 的\textbf{悬挂}。给定 $K$，悬挂在相差单纯同构的意义下唯一确定。
+
+\entry{定理}{3.4.6}对所有 $p$，有同构 $\widetilde H_p(S(K))\to\widetilde H_{p-1}(K)$。
+
+\noindent\textbf{证明：}令 $K_0=w_0*K$、$K_1=w_1*K$。两者的并为悬挂，交为 $K$。约化 Mayer--Vietoris 序列的片段为
+\[
+\begin{aligned}
+\widetilde H_p(K_0)\oplus\widetilde H_p(K_1)&\to\widetilde H_p(S(K))\\
+&\to\widetilde H_{p-1}(K)\to\widetilde H_{p-1}(K_0)\oplus\widetilde H_{p-1}(K_1).
+\end{aligned}
+\]
+两端为零，因为都是锥，故中间映射为同构。\hfill$\square$
+
+\entry{定理}{3.4.7}设 $K_0,K_1$ 为 $K$ 的子复形，$L_0,L_1$ 分别为它们的子复形，则存在正合列
+\[
+\begin{aligned}
+\cdots\to H_i(K_0\cap K_1,L_0\cap L_1)
+&\to H_i(K_0,L_0)\oplus H_i(K_1,L_1)\\
+&\to H_i(K_0\cup K_1,L_0\cup L_1)\\
+&\to H_{i-1}(K_0\cap K_1,L_0\cap L_1)\to\cdots.
+\end{aligned}
+\]
+\entry{定义}{3.4.8}此序列称为\textbf{相对 Mayer--Vietoris 序列}。
+
+\subsection*{习题}
+\begin{enumerate}
+\item 设 $K=K_0\cup K_1$，$|K_0|,|K_1|$ 连通。下列各情形中，能对 $K$ 的同调说些什么？
+\begin{enumerate}[label=(\alph*)]
+\item $K_0\cap K_1$ 非空且无环。
+\item $|K_0|\cap|K_1|$ 恰有两点。
+\item $K_0\cap K_1$ 具有 $S^n$ 的同调，其中 $n>0$。
+\item $K_0,K_1$ 均无环。
+\end{enumerate}
+\item 证明定理 3.4.7 的相对序列存在。
+\item 给定整数 $d$、$n\geq1$，证明存在度为 $d$ 的映射 $h:S^n\to S^n$。［提示：用序列的自然性归纳；$n=1$ 见第 2.9 节习题 1。］
+\item 对第 1.9 节习题 1 的同态 $\varphi:C_p(K)\to C_{p+1}(S(K))$，证明定理 3.4.6 的同构为 $\varphi_*$ 的逆。
+\item 给定有限生成阿贝尔群列 $G_0,\ldots,G_n$，其中 $G_0,G_n$ 自由，且 $G_0\ne0$，证明存在 $n$ 维有限复形 $K$，使 $H_i(K)\cong G_i$（$i=0,\ldots,n$）。［提示：第 1.7 节习题 8。］
+\item 第七章将研究乘积的同调。现在假设涉及的空间均为多面体，证明：
+\begin{enumerate}[label=(\alph*)]
+\item 若 $p\in S^n$，则 $H_q(X\times S^n,X\times\{p\})\cong H_{q-n}(X)$。［提示：把球面写成上下半球面的并，对 $n$ 归纳。］
+\item 若 $p\in Y$，偶 $(X\times Y,X\times\{p\})$ 的同调正合列分解为分裂短正合列。
+\item $H_q(X\times S^n)\cong H_{q-n}(X)\oplus H_q(X)$。
+\item 计算 $S^n\times S^m$ 的同调。
+\end{enumerate}
+\item 将习题 3 的 $S^n$ 换为 $n$ 维环面 $T^n=\underbrace{S^1\times\cdots\times S^1}_{n\text{ 个因子}}$。
+\end{enumerate}

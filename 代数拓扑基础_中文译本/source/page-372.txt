@@ -1,0 +1,40 @@
+Cohomology
+357
+by the formula
+⟨cp ⌣cq, [v0, v1, . . . , vp+q]⟩= ⟨cp, [v0, v1, . . . , vp]⟩· ⟨cq, [vp, vp+1, . . . , vp+q]⟩
+if v0 < v1 < · · · < vp+q in the given ordering.
+The similarity of this last formula to the corresponding formula in singular
+theory is very strong.
+Theorem 5.10.2 Given an ordering of the vertices of the complex K, the cor-
+responding simplicial cup product is bilinear and associative. The cochain z0
+whose value is 1 on each vertex of K acts as a unity element. The coboundary
+formula
+δ(cp ⌣cq) = (δcp) ⌣cq + (−1)pcp ⌣(δcq)
+of Theorem 5.9.5 holds also for the simplicial cup product.
+If η : Cp(K) →Sp(|K|) is the chain map of Section 4.7, determined by the
+given ordering, then its dual η carries the singular cup product to the simplicial
+cup product.
+Proof: The proofs are straightforward. Only the coboundary formula requires
+comment. One can prove it by using the same computations used in proving
+Theorem 5.9.5; only small changes of notation are needed.
+As an alternative argument, one can use the fact that η carries basis el-
+ements to basis elements, η is injective, and its image is a direct summand
+in Sp(|K|). Hence its dual η is surjective. Given simplicial cochains cp and
+cq, they can thus be pulled back to singular cochains of |K|, say c p and cq.
+We know that the coboundary formula holds in singular theory for c p ⌣cq.
+Since η preserves both cup products and coboundaries, the same coboundary
+formula must hold in simplicial theory for cp ⌣cq.
+Theorem 5.10.3 The simplicial cup product induces an operation
+Hp(K; R) × Hq(K; R) ⌣
+−→Hp+q(K; R)
+that is bilinear and associative. It is independent of the ordering of the vertices
+of K. The cohomology class {z0} acts as a unity element. If h : |K| →|L| is
+a continuous map, then h∗preserves cup products.
+Proof: The existence of ⌣as an operation on cohomology follows from the
+coboundary formula as before. [See the proof of Theorem 5.9.6.] The chain
+map η induces an isomorphism η∗of singular and simplicial cohomology that
+preserves cup products. Since η∗is independent of the chosen ordering in K,
+so is the cup product in simplicial cohomology.
+Because h∗preserves cup products in singular cohomology, and η∗com-
+mutes with h∗, the homomorphism h∗in simplicial theory necessarily preserves
+cup products.

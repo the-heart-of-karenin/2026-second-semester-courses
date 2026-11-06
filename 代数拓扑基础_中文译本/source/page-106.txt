@@ -1,0 +1,52 @@
+Homology Groups of a Simplicial Complex
+91
+Then ϕ and ψ are augmentation-preserving chain maps that are chain-
+homotopy inverses.
+If K0 is a subcomplex of K, then ϕ and ψ induce chain maps of the relative
+chain complexes that are chain-homotopy inverses.
+The proof is an application of the acyclic carrier theorem; it is left as an
+exercise.
+It follows from this theorem that oriented and ordered homology are iso-
+morphic in a rather “natural” way. To explain what we mean by “naturality,”
+we need to consider how a simplicial map acts in ordered homology.
+Definition 1.14.17 Let f : K →L be a simplicial map. Define
+f ′
+# :
+C′(K) →C′(L) by the rule
+f ′
+#((v0, v1, . . . , vp)) = (f(v0), f(v1), . . . , f(vp)) .
+It is easy to check that f ′
+# is a chain map, easier in fact than in the oriented
+case, for we need not worry whether or not vertices are distinct. Clearly f ′
+#
+preserves augmentation. If f maps K0 to L0, then f ′
+# induces a chain map
+f ′
+# : C′(K, K0) →C′(L, L0) ,
+and a corresponding homomorphism in homology.
+Theorem 1.14.18 Let f : (K, K0) →(L, L0) be a simplicial map. Let ϕ
+and ψ be as in the preceding Theorem 1.14.16. Then the following diagram
+commutes:
+Hi(K, K0)
+f∗
+−−−−→
+Hi(L, L0)
+ψ∗
+ψ∗
+Hi(C′(K, K0))
+f ′
+∗
+−−−−→Hi(C′(L, L0)) .
+Similarly, ϕ∗◦f∗= f ′
+∗◦ϕ∗holds.
+Proof: One checks directly from the definition that f# ◦ψ = ψ ◦f ′
+#. Thus
+the diagram already commutes on the chain level, so it commutes on the
+homology level as well. It is not true that ϕ ◦f# = f ′
+# ◦ϕ, because ϕ depends
+on a particular ordering of vertices. Nonetheless, because ϕ∗is the inverse of
+ψ∗, it is true that ϕ∗◦f∗= f ′
+∗◦ϕ∗.
+EXERCISES
+1. If {C, ϵ} is an augmented chain complex, show that H−1(C) = 0 and
+H0(C) ⊕Z ∼= H0(C) .

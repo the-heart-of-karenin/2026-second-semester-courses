@@ -1,0 +1,54 @@
+20
+Elements of Algebraic Topology
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+f
+g
+i
+j
+h
+L
+a
+d
+a
+b
+e
+b
+c
+f
+c
+a
+d
+a
+Figure 1.4.5
+Figure 1.4.6
+obtained from the rectangle by pasting the edges together as indicated in Fig-
+ure 1.4.8. The resulting space cannot be imbedded in R3, but one can picture
+it in R3 by letting it “pass through itself.”
+EXAMPLE 1.4.10 The projective plane P2 is defined as the space obtained
+from the 2-sphere S2 by identifying x with −x for each x ∈S2. Exercise 2(b)
+asks you to show that Figure 1.4.9 determines a complex whose space is home-
+omorphic to P2.
+We now describe more carefully the process indicated in the preceding ex-
+amples: Given a finite complex L, a labeling of the vertices of L is a surjective
+function f mapping the vertex set of L to a set called the set of labels. Corre-
+sponding to this labeling is an abstract complex S whose vertices are the labels
+and whose simplices consist of all sets of the form {f(v0), f(v1), . . . , f(vn)},
+where v0, v1, . . . , vn span a simplex of L. Let K be a geometric realization of
+S. Then the vertex map of L(0) onto K(0) derived from f extends to a surjec-
+tive simplicial map g : |L| →|K|. We say that K is the complex derived from
+the labeled complex and we call g the associated pasting map.
+Because |L| is compact and |K| is Hausdorff, g maps closed sets to closed
+sets. Thus g is a closed quotient map. Of course, g can in general map a
+simplex of L onto a simplex of K of lower dimension. For instance, g might
+collapse all of L to a single point. We are more interested in cases where this

@@ -1,0 +1,29 @@
+272
+Elements of Algebraic Topology
+It follows that Y has the topology specified by condition (3). It also follows
+that if B is closed in Y , then B is closed in X. In particular, Y itself is closed
+in X.
+The finiteness part of condition (2) is crucial for what we have just proved,
+as the following example shows.
+EXAMPLE 4.12.11 Let X be a 2-simplex σ in the plane, with its usual
+topology. Break X up into a single open 2-cell Int σ, and infinitely many
+open 1-cells and 0-cells, as indicated in Figure 4.12.4. Then X satisfies all the
+conditions for a CW complex except the finiteness part of (2). [Condition (3)
+is trivial, since the closure of Int σ equals X.] Let Y be the union of the 1-cells
+and 0-cells of X, topologized by declaring C to be closed in Y if C ∩eα is
+closed in eα for each 1-cell and 0-cell eα. Then Y is a CW complex, but it is
+not a subspace of X. For the subspace Bd σ of X is compact, and Y is not.
+Figure 4.12.4
+Definition 4.12.12 If a CW complex X can be triangulated by a complex K
+in such a way that each skeleton Xp of X is triangulated by a subcomplex of
+K of dimension at most p, then we say that X is a triangulable CW complex.4
+Each of the CW complexes mentioned in the earlier examples is a trian-
+gulable CW complex. We now give an example of one that is not. The proof
+uses results about local homology groups from Section 4.8.
+EXAMPLE 4.12.13 Let A be a subspace of R3 that is the union of a square
+and a triangle, such that one of the edges of the triangle coincides with the
+diagonal D of the square. See Figure 4.12.5. Then A is the space of a complex
+consisting of three triangles with an edge in common. Now draw a wiggly 1-cell
+C in the square, intersecting the diagonal in an infinite, totally disconnected
+set. [An x sin(1/x) curve will do.] Take the 3-ball B3 and attach it to A by
+4The dimensional condition is in fact redundant. See Exercise 2.

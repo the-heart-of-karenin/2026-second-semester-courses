@@ -1,0 +1,56 @@
+Cohomology
+303
+Note that, for fixed G, the assignment
+A →Hom (A, G)
+and
+f →f
+defines a contravariant functor from the category of abelian groups and ho-
+momorphisms to itself. For if iA : A →A is the identity homomorphism, then
+ı A(ϕ) = ϕ ◦iA = ϕ, so ı A is the identity map of Hom (A, G), Furthermore, if
+the left-hand diagram below commutes, then so does the right-hand diagram:
+A
+C
+B
+h
+f
+g
+Hom (A, G)
+Hom (C, G)
+Hom (B, G)
+h
+g
+f
+For h(ϕ) = ϕ ◦h = ϕ ◦(g ◦f), while f(g(ϕ)) = f(ϕ ◦g) = (ϕ ◦g) ◦f, by
+definition.
+We list some consequences of this fact:
+Theorem 5.2.4 Let B and C be abelian groups, and let g : B →C be a
+homomorphism. Let g be the dual homomorphism.
+(a) If g is the zero homomorphism, then so is g.
+(b) If g is an isomorphism, then so is g.
+(c) If g is surjective, then g is injective. That is, exactness of
+B
+g
+−→C −→0
+implies exactness of
+Hom (B, G)
+g
+←−Hom (C, G) ←−0 .
+Proof: Conclusions (a) and (b) are immediate. To prove (c), assume that g
+is surjective. Let ψ ∈Hom (C, G) and suppose that g(ψ) = 0 = ψ ◦g. Then
+ψ(g(b)) = 0 for every b ∈B. As b ranges over B, the element g(b) ranges over
+all elements of C. Thus ψ(c) = 0 for every c ∈C.
+More generally, we have the following result concerning the dual of an
+exact sequence.
+Theorem 5.2.5 If the sequence
+A f
+−→B
+g
+−→C −→0
+is exact, then the dual sequence
+Hom (A, G)
+f
+←−Hom (B, G)
+g
+←−Hom (C, G) ←−0 .
+is exact. Furthermore, if f is injective and the first sequence splits [see Defi-
+nition 3.2.4], then f is surjective and the second sequence splits.

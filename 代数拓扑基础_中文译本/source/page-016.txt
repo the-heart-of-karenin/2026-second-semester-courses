@@ -1,0 +1,39 @@
+1
+Homology Groups of a Simplicial Complex
+1.1
+Introduction
+A fundamental problem of topology is that of determining, for two spaces,
+whether or not they are homeomorphic. To show two spaces are homeomor-
+phic, one needs to construct a continuous bijective map, with a continuous
+inverse, mapping one space to the other. To show two spaces are not homeo-
+morphic involves showing that such a map does not exist. To do that is often
+harder. The usual way of proceeding is to find some topological property [i.e.,
+some property invariant under homeomorphisms] that is satisfied by one space
+but not the other. For example, the closed unit disc in R2 cannot be homeo-
+morphic with the plane R2, because the closed disc is compact and the plane
+is not. Nor can the real line R be homeomorphic with R2, because deleting
+a point from R leaves a disconnected space remaining, while deleting a point
+from R2 does not.
+Such elementary properties do not carry one very far in tackling homeo-
+morphism problems. Classifying all compact surfaces up to homeomorphism,
+for instance, demands more sophisticated topological invariants than these.
+So does the problem of showing that, in general, Rn and Rm are not homeo-
+morphic if n̸ = m.
+Algebraic topology originated in the attempts by such mathematicians
+as Henri Poincar´e and Enrico Betti to construct such topological invariants.
+Poincar´e introduced a certain group, called the fundamental group of a topo-
+logical space; it is, by its definition, a topological invariant. One can show fairly
+readily that a number of familiar spaces, such as the sphere, torus, and Klein
+bottle, have fundamental groups that are different, so these spaces cannot be
+homeomorphic [see [Mun00], Section 60]. In fact, one can classify all compact
+surfaces using the fundamental group [see [Mas91], Chapter 4, Section 5].
+The transition from focusing on the numerical invariants of a space to
+studying the homology groups of a space was hastened by the algebraist
+Emmy Noether. This happened because in the mid-1920s Paul Alexandroff
+and Heinz Hopf were visitors at G¨ottingen where Noether was a member of
+the department. She recognized that the betti numbers and torsion coefficients
+that Alexandroff and Hopf were discussing were in fact invariants associated
+with abelian groups: specifically the homology groups. Indeed, Hopf explic-
+itly credited the influence of Noether in the introductory section of his 1928
+DOI: 10.1201/9781003621478-1
+1

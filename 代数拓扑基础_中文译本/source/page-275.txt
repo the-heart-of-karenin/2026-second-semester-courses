@@ -1,0 +1,48 @@
+260
+Elements of Algebraic Topology
+Our mental picture of the figure 8 now lies in the cartesian product of two
+planes: There is a circle in each plane, and they intersect only at (1, 1).
+Let γ, η : I →X be given by
+γ(t) = (e2πit, 1)
+and
+η(t) = (1, e2πit) .
+So we see γ−1, η−1 : I →X are given by
+γ−1(t) = (e2πi(1−t), 1)
+and
+η−1(t) = (1, e2πi(1−t)) .
+For convenience, let us denote the loop γ · η · γ−1 · η−1 by ζ. We see that ζ
+starts at x0, goes once around the first circle in the counterclockwise direction,
+once around the second circle in the counterclockwise direction, once around
+the first circle in the clockwise direction, and finally once around the second
+circle in the clockwise direction, ending at x0.
+Arguing by contradiction, we suppose that π1(X, x0) is commutative,
+which would imply that [γ · η · γ−1 · η−1] = 1. In π1(X, x0), the identity
+1 is the homotopy class of the constant loop that maps each point of I to
+x0 = (1, 1). Thus there exists a homotopy function F : I × I →X with
+F(t, u) =
+
+(1, 1)
+if u = 0, t = 0, or t = 1,
+(γ · η · γ−1 · η−1)(t)
+if u = 1.
+Motivated by the proof of Proposition 4.10.8, we define ϕ : (R × Z) ∪(Z ×
+R) →X by
+ϕ(w, z) = (e2πiw, e2πiz) .
+Arguing as in the proof of Proposition 4.10.8, we lift ζ to ζ′ : I →(R × Z) ∪
+(Z × R) and we lift F to F ′ : I × I →(R × Z) ∪(Z × R). So we have ζ = ϕ ◦ζ′
+and F = ϕ ◦F ′. Since ζ has been explicitly defined, we know precisely what
+its lifting to (R × Z) ∪(Z × R) is, namely, the loop that maps the interval
+I = [0, 1] once counterclockwise around the boundary of I × I.
+Now we also define ψ : (R × Z) ∪(Z × R) →Bd (I × I) by the mapping
+(x, y) ψ
+−→Bd (I × I) ∩{(1 −t)(x, y) + t( 1
+2, 1
+2) : 0 ≤t ≤1} .
+[See Figure 4.10.12.] Clearly, ψ is the identity on Bd (I × I). So ψ ◦ζ′ : I →
+Bd (I ×I) is the loop in Bd (I ×I) that goes once around counterclockwise. Of
+course, Bd (I × I) is homeomorphic to S1, so we know from Theorem 4.10.8
+that the loop ψ ◦ζ′ is homotopically nontrivial. But ψ ◦F ′ is a homotopy
+between ψ ◦ζ′ and the constant loop always equal to (0, 0).
+Exercises
+1. Prove that the relation ≃of Definition 4.10.1 is reflexive and sym-
+metric.

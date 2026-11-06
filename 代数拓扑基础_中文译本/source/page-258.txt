@@ -1,0 +1,33 @@
+Singular Homology Theory
+243
+B1
+A
+B2
+B3
+A
+B1
+B2
+Figure 4.9.6
+Figure 4.9.7
+3. (a) Consider S3 as R3 with a point at infinity adjoined. Let A,
+B1, B2, and B3 be the simple closed curves in S3 pictured in
+Figure 4.9.6. The map
+H1(Bi) −→H1(S3 \ A)
+induced by inclusion is a homomorphism of infinite cyclic
+groups, so it equals multiplication by di, where di is well-defined
+up to sign. The integer di measures how many times Bi links
+A. What is it in each case? Similarly, determine the integer
+corresponding to the homomorphism
+H1(A) −→H1(S3 \ Bi)
+induced by inclusion. Can you formulate a conjecture?
+(b) Let A consist of two points of S2, and let B1 and B2 be two
+simple closed curves in S2, as pictured in Figure 4.9.7. What
+are the homomorphisms
+H0(A) −→H0(S2 \ Bi)
+and
+H1(Bi) −→H1(S2 \ A)
+induced by inclusion? Formulate a conjecture.
+(c) Formulate a conjecture concerning disjoint imbeddings of Sp
+and Sq in Sp+q+1.
+We shall return to this conjecture later on, after we prove the
+Alexander duality theorem. [See the exercises of Section 8.12.]

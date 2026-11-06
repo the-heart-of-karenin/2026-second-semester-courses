@@ -1,0 +1,64 @@
+332
+Elements of Algebraic Topology
+Definition 5.6.1 A short exact sequence of abelian groups,
+0 −→A −→B −→C −→0 ,
+where A and B are free, is called a free resolution of C. Any abelian group C
+has a free resolution: one can take B to be the free abelian group generated
+by the elements of C, and take A to be the kernel of the natural projection
+B −→C. This last construction gives what is known as the canonical free
+resolution of C.
+Free resolutions have the following useful property: Suppose one is given
+the diagram
+0
+A
+B
+C
+0
+0
+A′
+B′
+C′
+0
+ϕ
+ψ
+γ
+ϕ′
+ψ′
+where the horizontal sequences are exact and A and B are free. In this situa-
+tion, there exist homomorphisms α : A →A′ and β : B →B′ that make this
+diagram commute.
+The proof is straightforward. Choose a basis for B. If b is a basis element,
+let β map b into any element of the set (ψ′)−1(γ(ψ(B))), which is non-empty
+because ψ′ is surjective. A bit of diagram chasing shows that β carries im ϕ into
+im ϕ′. Because ϕ′ is a monomorphism, β induces a homomorphism α : A →A′.
+Now we state and prove the first of our basic theorems.
+Theorem 5.6.2 Let C and C′ be free chain complexes. If γ : Hp(C) →Hp(C′)
+is a homomorphism defined for all p, then there is a chain map ϕ : C →C′
+that induces γ.
+Indeed, if β : Zp →Z′
+p is any homomorphism of groups of cycles inducing
+γ, then β extends to a chain map.
+Proof: Let Zp denote the p-cycles, and Bp the p-boundaries, in the chain
+complex C. Similarly, let Z′
+p and B′
+p be the p-cycles and p-boundaries of C′.
+Since these groups are free abelian, there exist, for all p, homomorphisms α, β
+making the following diagram commute:
+0
+Bp
+Zp
+Hp(C)
+0
+0
+B′
+p
+Z′
+p
+Hp(C′)
+0
+α
+β
+γ
+We seek to extend β to a chain map ϕ of Cp into C′
+p. For that purpose,
+consider the short exact sequences

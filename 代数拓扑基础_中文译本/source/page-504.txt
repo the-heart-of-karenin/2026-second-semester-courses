@@ -1,0 +1,39 @@
+Duality in Manifolds
+489
+8. Let X be a compact, orientable, triangulable homology manifold of
+dimension 4n + 2. Show that it cannot be true that H2n+1(X) ∼= Z.
+9. Let X0 = S2. Let Xn be the n-fold connected sum of the torus, T,
+with itself. Let Yn be the n-fold connected sum of P2 with itself.
+Given f, consider the condition:
+f∗is a non-trivial homomorphism of H2 with Z/2 coefficients. (∗)
+(a) Show that there is no map f : Y2n →Xn satisfying (∗). [Hint:
+If ϕ : A →B is a homomorphism, where A and B are free and
+rank A > rank B, then ker ϕ has positive rank and is a direct
+summand in A. Choose a basis β1, . . . , β2n for H1(Xn) such
+that f ∗(β1) = 0. Pass to Z/2 coefficients. Apply the proof of
+Theorem 8.8.3.]
+(b) Show that there is a map f : Y2n+1 →Xn satisfying (∗). [Hint:
+First show that Y3 ≈T # P2.]
+(c) Show that there is a map f : Ym →Xn satisfying (∗) if and
+only if m ≥2n + 1.
+10. Give an example of a continuous map f : S2 →S2 that is not
+antipode preserving. Is there such an example in every dimension?
+11. Formulate a suitable ham sandwich theorem in four-dimensional
+space. Can you prove it?
+8.9
+∗Application: Homotopy Classification of
+Lens Spaces
+In this section, we assume familiarity with lens spaces [Section 4.14].
+Given the ring structure in cohomology, defined by the cup product, the
+Poincar´e duality isomorphism
+H∗(X; R)
+H∗(X; R)
+⌢Γ
+gives us an induced ring structure in homology called the homology inter-
+section ring. This ring was known well before cohomology was discovered.
+The intersection product α · β of two homology classes was defined, roughly
+speaking, as the geometric intersection of two cycles that represent α and β.
+Defining the homology intersection ring in this way, and deriving its proper-
+ties, involved a good deal of work. Furthermore, although one proved that the
+multiplication operation was a topological invariant, one found that in general
+it was not preserved by continuous maps, even between manifolds of the same

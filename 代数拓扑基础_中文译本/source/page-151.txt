@@ -1,0 +1,39 @@
+136
+Elements of Algebraic Topology
+Theorem 2.9.3 There is no retraction r : Bn+1 →Sn.
+Proof: Property (3) of Lemma 2.9.2 tells us that the identity map i : Sn →Sn
+has degree 1. If a retraction r : Bn+1 →Sn existed, then it would be an
+extension of the identity map to Bn+1. Property (2) of Lemma 2.9.2 would
+then tell us that the degree of i is 0, a contradiction.
+Theorem 2.9.4 (Brouwer fixed point theorem) If ϕ : Bn →Bn is a con-
+tinuous map, then ϕ has a fixed point, that is, there exists x ∈Bn such that
+ϕ(x) = x.
+Proof: If ϕ has no fixed point, then we can define a map h : Bn →Sn−1 by
+h(x) =
+x −ϕ(x)
+∥x −ϕ(x)∥
+because x −ϕ(x)̸ = 0. Let f : Sn−1 →Sn−1 be the restriction of h to Sn−1.
+Then by (2) of Lemma 2.9.2 f has degree 0.
+On the other hand, we will now show that f has degree 1. That gives a
+contradiction. Define a homotopy H : Sn−1 × I →Sn−1 by
+H(u, t) =
+u −tϕ(u)
+∥u −tϕ(u)∥.
+The denominator is non-zero for t = 1 since u̸ = ϕ(u). It is also non-zero
+for t < 1 because ∥u∥= 1 while ∥tϕ(u)∥= t∥ϕ(u)∥≤t < 1. The map H
+is a homotopy between the identity map of Sn−1 and the map f. Therefore
+deg f = 1.
+Definition 2.9.5 The antipodal map a : Sn →Sn is the map a(x) = −x.
+For our further applications, we need to show that the degree of the an-
+tipodal map from Sn to Sn equals (−1)n+1. Below we shall give a direct proof
+of the result. In the next section we give an alternative proof. Yet another
+proof is given in Section 4.4.
+The key result that we need here is the following lemma:
+Lemma 2.9.6 The reflection map
+ρ(x1, x2, . . . , xn, xn+1) = (x1, x2, . . . , xn, −xn+1)
+from Sn to Sn has degree −1.
+It may be intuitively clear that the reflection map reverses the orientation of
+the tangent plane at each point of the sphere. Nonetheless, we will need to
+give a proof in the context of Definition 2.9.1 that deg ρ = −1.
+In the proof of the lemma, we shall need the notion of a “triangulation.”
+We give that definition next.

@@ -1,0 +1,51 @@
+218
+Elements of Algebraic Topology
+are inclusions. A similar sequence exists in reduced homology if A is nonempty.
+Both sequences are natural with respect to homomorphisms induced by contin-
+uous maps.
+Proof: We define a short exact sequence of chain complexes
+0 −→Sp(A) ϕ
+−→Sp(X1) ⊕Sp(X2) ψ
+−→Sp(X1) + Sp(X2) −→0
+(∗)
+by the equations
+ϕ(c)
+=
+(i#(c), −j#(c)),
+ψ(c1, c2)
+=
+k#(c1) + ℓ#(c2).
+The map ϕ is injective, while ψ is surjective and its kernel consists of all chains
+of the form (c, −c), where c ∈Sp(X1) and −c ∈Sp(X2). Exactness follows.
+From the zig-zag lemma [Lemma 3.3.2], we obtain a long exact sequence in
+homology. Since the hypotheses of the theorem guarantee that
+Hp(S(X1) + S(X2)) ∼= Hp(X) ,
+(∗∗)
+the proof is complete. Exactness of the Mayer–Vietoris sequence in reduced
+homology when A̸ = ∅follows by a similar argument.
+Now suppose that f : (X, X1, X2) →(Y, Y1, Y2) is a continuous map; where
+X = X1 ∪X2 and Y = Y1 ∪Y2 and both {X1, X2} and {Y1, Y2} are excisive
+couples. Since f# commutes with inclusions, it commutes with the chain maps
+ϕ and ψ. Thus f# gives a homomorphism of short exact sequences of chain
+complexes, so that f∗is a homomorphism of the corresponding homology
+sequences. Finally, we note that the isomorphism (∗∗) commutes with f∗,
+since it is induced by inclusion. The naturality of the Mayer–Vietoris sequence
+follows.
+The Mayer–Vietoris sequence has many applications. We give one here, as
+an illustration.
+Recall that if K is a complex and if w0 ∗K and w1 ∗K are cones on K
+whose polytopes intersect in |K| alone, then their union is a complex denoted
+S(K) and called a suspension of K. [See Section 3.4.] It is easy to show that
+the map
+π : |K| × [−1, 1] →|S(K)|
+defined by
+π(x, t) =
+
+(1 −t)x + tw0
+if t ≥0,
+(1 + t)x + tw1
+if t ≤0,
+is a quotient map that collapses |K| × 1 to the point w0, |K| × (−1) to w1,
+and is otherwise one-to-one. The proof is similar to the corresponding result
+for cones [see Corollary 2.8.8]. This fact motivates the definition of suspension
+for an arbitrary topological space.

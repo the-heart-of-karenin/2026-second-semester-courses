@@ -1,0 +1,49 @@
+126
+Elements of Algebraic Topology
+Theorem 2.7.9 If f : |K| →|L| is a homotopy equivalence, then f∗is an
+isomorphism. In particular, if |K| is contractible, then K is acyclic.
+Proof: The proof is immediate. If g is an inverse for f, then g∗is an inverse
+for f∗.
+Homotopy equivalences are difficult to visualize in general. There is a spe-
+cial type of homotopy equivalence that is geometrically easier to understand.
+Definition 2.7.10 A deformation retraction of X onto A is a continuous map
+F : X × I →X such that
+F(x, 0) = x
+for x ∈X;
+F(x, 1) ∈A
+for x ∈X;
+F(a, t) = a
+for a ∈A .
+If such an F exists, then A is called a deformation retract of X.
+If F is a deformation retraction of X onto A, then the map r(x) = F(x, 1)
+is a retraction of X onto A. The latter fact is equivalent to the statement that
+the composite
+A
+j
+−→X
+r
+−→A
+(where j is inclusion) is the identity map iA. On the other hand, the map F
+is a homotopy between the map iX and the composite
+X
+r
+−→A
+j
+−→X .
+In fact each point of A remains fixed during the homotopy. It follows that r
+and j are homotopy inverse to each other.
+One can visualize a deformation retraction as a gradual collapsing of the
+space X onto the subspace A, such that each point of A remains fixed during
+the process of collapse. This type of homotopy equivalence can thus be visu-
+alized geometrically. It is intuitively clear that if A is a deformation retract of
+X and B is a deformation retract of A, then B is a deformation retract of X.
+This is also easy to prove.
+Now we look at some special cases:
+Theorem 2.7.11 The unit sphere Sn−1 is a deformation retract of the punc-
+tured euclidean space Rn \ {0}.
+Proof: Let X = Rn \ {0}. We define F : X × I →X by
+F(x, t) = (1 −t)x + t ·
+x
+∥x∥.
+Clearly the map F shrinks each open ray from the origin to the point that it
+intersects on the unit sphere. Thus it does the job.

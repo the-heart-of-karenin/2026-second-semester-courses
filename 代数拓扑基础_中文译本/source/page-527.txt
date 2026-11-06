@@ -1,0 +1,35 @@
+512
+Elements of Algebraic Topology
+Lemma 8.12.2 Let X be a finite complex. Let A be the polytope of a full
+subcomplex of X. Let C be the union of all simplices of X disjoint from A.
+Let sd X be the first barycentric subdivision of X.
+(a) The space |X| is the disjoint union of the three sets
+UA
+=
+St(A, sd X) ,
+UC
+=
+St(C, sd X) ,
+B
+=
+U A \ UA = U C \ UC .
+(b) The following inclusions are homotopy equivalences:
+A →UA →U A →St(A, X) ,
+C →UC →U C →St(C, X) .
+Proof: The sets UA and UC are pictured in Figures 8.12.2 and 8.12.3. Let
+s = σ1, . . . , σk
+denote the general simplex of sd X, where σ1 ≻· · · ≻σk.
+A
+C
+UC
+UA
+Figure 8.12.2
+A
+UA
+C
+UC
+Figure 8.12.3
+Step 1: We show that UA is the union of the interiors of those simplices
+s = σ1 . . . σk for which σk ⊂A. If σk ⊂A, then σk ∈A, so that by definition
+we have
+Int s ⊂St(σk, sd X) ⊂UA .

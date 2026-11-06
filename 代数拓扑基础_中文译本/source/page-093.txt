@@ -1,0 +1,37 @@
+78
+Elements of Algebraic Topology
+Definition 1.13.6 Let f, g : K →L be simplicial maps. Suppose that, for
+each p, one has a homomorphism
+D : Cp(K) →Cp+1(L)
+satisfying the equation
+∂D + D∂= g# −f# .
+Then D is said to be chain homotopy between f# and g#.
+We have omitted dimensional subscripts in the above formula; the following
+diagram may make the maps involved more clear:
+Cp−1(K)
+∂p
+Cp(K)
+Cp(L)
+∂p+1
+Cp+1(L)
+(f#)p
+(g#)p
+Dp
+Dp−1
+With subscripts, the formula becomes
+∂p+1Dp + Dp−1∂p = (g#)p −(f#)p .
+This formula is more precise, but messier. We shall customarily omit dimen-
+sional subscripts.
+The importance of chain homotopies comes from the following theorem:
+Theorem 1.13.7 If there is a chain homotopy between f# and g#, then the
+induced homomorphisms f∗and g∗, for both reduced and ordinary homology,
+are equal.
+Proof: Let z be a p-cycle of K. Then
+g#(z) −f#(z) = ∂Dz + D∂z = ∂Dz + 0 ,
+so g#(z) and f#(z) are in the same homology class. Thus g∗({z}) = f∗({z}),
+as desired.
+We still want to find conditions on two simplicial maps f and g under
+which the induced homomorphisms f∗and g∗are equal. We have reduced this
+problem to the problem of finding conditions under which one can construct
+a chain homotopy between f# and g#. Here is one set of conditions under
+which this is possible:

@@ -1,0 +1,36 @@
+7
+Homological Algebra
+7.1
+Introduction
+We have already seen, in Chapter 5, that two spaces with isomorphic homol-
+ogy groups have isomorphic cohomology groups as well. This fact leads one to
+suspect that the cohomology groups of a space are in some way determined by
+the homology groups. In this chapter this suspicion is confirmed. We show pre-
+cisely how the cohomology groups with arbitrary coefficients are determined by
+the homology groups with integer coefficients. The theorem involved is called
+the Universal Coefficient Theorem for Cohomology. Its statement involves not
+only the Hom functor introduced in Section 5.2, but also a new functor called
+“Ext” that we shall introduce in the next section.
+Similarly, we know that if two spaces have isomorphic integral homology
+groups, then the same is true for homology with arbitrary coefficients. Just
+as with the cohomology groups, it turns out that the homology groups with
+arbitrary coefficients are determined by the homology groups with integer
+coefficients. The theorem involved is called the Universal Coefficient Theorem
+for Homology. It involves not only the tensor product functor introduced in
+Section 6.2, but also a new functor called the “torsion product” that we shall
+introduce in Section 7.4.
+The functors mentioned above form part of a general subject called homo-
+logical algebra. Although its origins are topological in nature, it has come to
+have an independent existence nowadays within the field of algebra, having
+applications to many problems that are purely algebraic. Our interest in it is
+confined to its connections with topology.
+These functors also play a role when one comes to study the homology of a
+product space X × Y . It turns out that the homology of X × Y is determined
+by the homology of X and of Y . The relationship is expressed in the form of
+an exact sequence called the K¨unneth sequence. It involves both the tensor
+and torsion functors.
+There is a similar sequence for cohomology that holds if the homology
+is finitely generated. It has applications to cup products in general, and to
+computing the cohomology ring of X × Y in particular.
+DOI: 10.1201/9781003621478-7
+381

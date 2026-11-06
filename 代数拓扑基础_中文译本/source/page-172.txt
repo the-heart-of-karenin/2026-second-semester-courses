@@ -1,0 +1,45 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+157
+C
+K0
+C
+D
+K0
+Figure 3.2.3
+EXAMPLE 3.2.11 The next two examples we will consider together. Let
+(K, K0) denote either the cylinder and its top edge or the M¨obius band to-
+gether with its single edge. In each case |K0| is a circle. Furthermore, |K| has
+the homotopy type of a circle. The central circle C shown in Figure 3.2.3 is
+a deformation retract of |K|.
+Thus we know the homology of K and K0. We compute the homology of
+(K, K0) from the exact homology sequence, a portion of which is as shown:
+H2(K) −→H2(K, K0) −→H1(K0)
+i∗
+−→H1(K) −→H1(K, K0) −→H0(K0)
+0
+−→
+?
+−→
+Z
+−→
+Z
+−→
+?
+−→
+0 .
+Everything depends on computing the homomorphism i∗. Since the retraction
+r : |K| →C is a homotopy equivalence, it suffices to compute the homomor-
+phism induced by the composite map r ◦i : |K0| →C, which collapses the
+edge |K0| to the central circle C. In the case of the cylinder, this map has
+degree 1. But in the case of the M¨obius band, the induced homomorphism
+clearly equals multiplication by 2.
+Thus H2(K, K0) = H1(K, K0) = 0 in the case of the cylinder. In the case
+of the M¨obius band we have
+H2(K, K0) = 0
+and
+H1(K, K0) ∼= Z/2 .
+The central circle C represents the non-zero element of H1(K, K0) in this case.
+So also does the chain D, which you may prove as an exercise.
+EXERCISES
+1. Verify statements (1)–(5) of Lemma 3.2.2 concerning the properties
+of exact sequences.

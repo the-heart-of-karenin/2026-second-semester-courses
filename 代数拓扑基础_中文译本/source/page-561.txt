@@ -1,0 +1,113 @@
+546
+Index of Notation
+
+α∈J Gα
+direct sum of groups Gα
+25
+
+α∈J Gα
+direct product of groups Gα
+26
+Z/n
+integers modulo n
+27
+v0v1 . . . vp
+simplex with vertices v0, v1, . . . , vp
+30
+[v0, v1, . . . , vp]
+oriented simplex with vertices v0, v1, . . . , vp
+30
+Cp(K)
+simplicial chain group
+31
+∂p : Cp(K) →Cp−1(K)
+simplicial boundary operator
+32
+Zp(K)
+simplicial cycle group
+34
+Bp(K)
+group of simplicial boundaries
+34
+Hp(K)
+simplicial homology group
+35
+C∞
+p (K)
+chain group based on infinite chains
+37
+∂∞
+p : C∞
+p (K) →C∞
+p−1(K)
+boundary operator on infinite chains
+38
+H∞
+p (K)
+homology group based on infinite chains
+38
+∂
+boundary operator omitting dimension notation
+40
+S1 # S2
+connected sum of surfaces
+44
+ϵ : C0(K) →Z
+simplicial augmentation
+50
+Hp(K)
+reduced simplicial homology group
+50
+w ∗K
+cone on simplicial complex K with vertex w
+51
+[w, cp]
+simplicial bracket operation
+53
+S(K)
+suspension of simplicial complex K
+55
+(K, K0)
+simplicial pair
+56
+Cp(K, K0)
+relative simplicial chain group
+56
+Zp(K, K0)
+relative simplicial cycle group
+57
+Bp(K, K0)
+group of relative simplicial boundaries
+57
+Hp(K, K0)
+relative simplicial homology group
+57
+Cp(K; G)
+simplicial chain group with coefficients in G
+61
+Zp(K; G)
+simplicial cycle group with coefficients in G
+61
+Bp(K; G)
+group of simplicial boundaries
+with coefficients in G
+61
+Hp(K; G)
+simplicial homology group with coefficients in G
+61
+Hp(K, K0; G)
+relative simplicial homology group
+with coefficients in G
+61
+Hp(C)
+homology group of chain complex C
+69
+Wp
+subgroup of weak boundaries in Cp
+69
+Tp(C)
+torsion subgroup of Hp(C)
+70
+f# : Cp(K) →Cp(L)
+chain map induced by simplicial map f
+73

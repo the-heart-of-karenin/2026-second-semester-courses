@@ -1,0 +1,38 @@
+Cohomology
+349
+EXERCISES
+1. Compute the cohomology of Pn and P∞with integer coefficients,
+with Z/2 coefficients, and with rational coefficients.
+2. Compute the cohomology of CP n and CP ∞.
+3. Compute Hi(T # T). Find simplicial cocyles that generate the co-
+homology, if T # T is triangulated as in the exercises of Section 1.7.
+4. Compute the cohomology for P2 # P2 # P2 # P2, with Z/2 coeffi-
+cients. Find simplicial cocycles that generate the cohomology.
+5. Compute the cohomology of the Klein bottle S with Z/6 coefficients.
+Find representative cocycles as in Examples 5.8.5 and 5.8.6.
+6. Compute the cohomology of the 5-fold dunce cap X with Z and
+Z/5 coefficients. [See Exercise 6 of Section 1.7.] Triangulate X and
+find cocycles that generate the cohomology.
+7. Compute the cohomology of the lens space L(n, k) with Z and Z/n
+coefficients.
+8. Triangulate S2 and the torus T. Let f : T →S2 be a simplicial map.
+Show that if f∗: H2(T) →H2(S2) equals multiplication by d, then
+so does f ∗: H2(S2) →H2(T), by comparing the values of f# and
+f # on generators. Compare with Exercise 3 of Section 5.6.
+9. Compute the cohomology of the torus with Z/6 coefficients.
+5.9
+Cup Products
+The results of Section 5.6 tell us that, if the homology groups fail to distinguish
+between two spaces, then the cohomology groups will fail as well. One might
+be tempted to ask, “Why bother with cohomology? What possible use can it
+be?”
+There are several answers to this question. One answer is that cohomology
+appears naturally when one studies the problem of classifying, up to homo-
+topy, maps of one space into another. Another answer is that cohomology is
+involved when one integrates differential forms on manifolds. Yet another an-
+swer is the one given in this section. We show that the cohomology groups
+have an additional algebraic structure—that of a ring—and that this ring will
+distinguish between spaces when the groups themselves will not.
+We shall define the ring structure of cohomology by giving a specific
+cochain formula for the multiplication operation. Historically, this is how the
+ring structure was first obtained. The formula was discovered about 1936 by

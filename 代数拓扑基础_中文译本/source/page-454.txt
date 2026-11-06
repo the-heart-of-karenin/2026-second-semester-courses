@@ -1,0 +1,44 @@
+Homological Algebra
+439
+Proof: Let π1 : X × Y →X and π2 : X × Y →Y be the projection maps.
+Step 1. First, we prove the formula when β and α′ are the unity elements of
+their respective cohomology rings.
+Let zp be a cocycle representing α, and let zq be a cocycle representing β′.
+Then α × β′ is represented by zp × zq. We compute
+⟨zp × zq, T⟩= ⟨zp, π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨zq, π2 ◦T ◦ℓ(ϵp, ϵp+1, . . . , ϵm)⟩
+= ⟨π#
+1 (zp), T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨π#
+2 (zq), T ◦ℓ(ϵp, ϵp+1, . . . , ϵm)⟩
+= ⟨π#
+1 (zp) ⌣π#
+2 (zq), T⟩.
+Thus we have the desired formula
+α × β′ = π∗
+1(α) ⌣π∗
+2(β′) = (α × 1Y ) ⌣(1X × β′) .
+Step 2. Next, we prove the formula when β and β′ both equal the unity
+element of their cohomology ring.
+By naturality of cup products, we have
+π∗
+1(α) ⌣π∗
+1(α′) = π∗
+1(α ⌣α′) .
+This last formula tells us that
+(α × 1Y ) ⌣(α′ × 1Y ) = (α ⌣α′) × 1Y .
+Step 3. Finally, we prove the general case.
+We compute
+(α × β) ⌣(α′ × β′) = (α × 1Y ) ⌣(1X × β) ⌣(α′ × 1Y ) ⌣(1X × β′)
+= (−1)pq(α × 1Y ) ⌣(α′ × 1Y ) ⌣(1X × β) ⌣(1X × β′)
+= (−1)pq(α ⌣α′) × (β ⌣β′) .
+The preceding theorem enables us to compute the cup product of certain
+elements of the cohomology ring H∗(X × Y ; R) in terms of the cup product
+operations in H∗(X) and H∗(Y ). In the case where the K¨unneth theorem for
+cohomology holds, we can state this fact more formally, as we do in Theo-
+rem 7.11.8 below.
+Definition 7.11.7 Given X and Y , we give the tensor product
+H∗(X; R) ⊗R H∗(Y ; R)
+the structure of a ring by defining
+(α ⊗β) ⌣(α′ ⊗β′) = (−1)pq(α ⌣α′) ⊗(β ⌣β′) ,
+if β ∈Hp(Y ; R) and α′ ∈Hq(X; R).
+You can check that this operation is well-defined, and satisfies the axioms
+for a ring. In particular, the signs come out right for associativity.

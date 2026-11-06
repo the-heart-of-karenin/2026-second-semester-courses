@@ -1,0 +1,43 @@
+412
+Elements of Algebraic Topology
+We need to prove that we can indeed define ϕ in dimension m so that ϕ
+maps a basis element σp ⊗τ q, where p + q = m, to a fundamental cycle for
+the p + q cell σp × τ q.
+Consider such a basis element σp ⊗τ q, where p + q = m. Let
+cm−1 = ϕ(¯∂(σp ⊗τ q)) .
+Then cm−1 is an (m −1)-chain of the simplicial complex M underlying X.
+First, we note that if m = 1, then c0 ∈ker ϵ, for
+ϵ(c0) = ϵϕ(¯∂c1) = ¯ϵ(¯∂c1) = 0
+holds. Second, we note that if m > 1, then cm−1 is a cycle. For, by the
+induction hypothesis, we have
+∂cm−1 = ∂ϕ(¯∂(σp ⊗τ q)) = ϕ¯∂(¯∂(σp ⊗τ q)) = 0 .
+Now we show that cm−1 is carried by Bd (σ × τ). Let us write ∂σ =  si
+if dim σ > 0, where the si are oriented simplices of dimension p −1. Similarly,
+we write ∂τ =  tj if dim τ > 0. Then we have the formula
+cm−1 =
+
+i
+ϕ(si ⊗τ) + (−1)p 
+j
+ϕ(σ ⊗tj) ,
+if dim σ > 0 and dim τ > 0 hold. If dim σ = 0, then the first summation is
+missing from this last formula, while if dim τ = 0, then the second summation
+is missing. Since the chain ϕ(si⊗τ) is carried by si×τ, and ϕ(σ⊗tj) is carried
+by σ × tj, we see that the cycle cm−1 is carried by Bd (σ × τ).
+Now Bd (σ ×τ) is topologically an m−1 sphere. We shall show that cm−1
+is a fundamental cycle for this m −1 sphere. That is, it generates the group
+Hm−1(Bd (σ×τ)), which is infinite cyclic and equals the group of m−1 cycles
+if m > 1, and the group ker ϵ if m = 1.
+We have either dim σ > 0 or dim τ > 0. We assume the former. Then
+∂σ =  si holds, and the restriction of cm−1 to the cell si ×τ equals ϕ(si ⊗τ),
+which by hypothesis, is a fundamental cycle for this cell. It follows that cm−1
+is not zero, and that it is not a multiple of another cycle. Thus cm−1 is a
+generator of the infinite cyclic group Hm−1(Bd (σ × τ)).
+Now consider the exact homology sequence of the pair (σ × τ, Bd (σ × τ)).
+Because σ × τ is acyclic, both Hm(σ × τ) and Hm−1(σ × τ) vanish. So the
+relevant part of the sequence reduces to
+0 −→Hm(σ × τ, Bd (σ × τ)) ∂∗
+−→Hm−1(Bd (σ × τ)) −→0 .
+Because homology groups equal the groups of cycles in this instance, the
+sequence is actually
+0 −→Zm(σ × τ, Bd (σ × τ))−→Zm−1(Bd (σ × τ)) −→0 ,

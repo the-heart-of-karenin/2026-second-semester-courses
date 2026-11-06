@@ -1,0 +1,39 @@
+400
+Elements of Algebraic Topology
+Theorem 7.4.5
+(a) There is a natural isomorphism
+A ∗B ∼= B ∗A .
+(b) There are natural isomorphisms
+(Aα) ∗B ∼=
+(Aα ∗B) ,
+A ∗(Bα) ∼=
+(A ∗Bα) .
+(c) A ∗B = 0 if A or B is torsion-free.
+(d) Given B, there is an exact sequence
+0 −→(Z/m) ∗B −→B
+B −→(Z/m) ⊗B −→0 ,
+ϕm
+where ϕm is multiplication by m.
+Proof: Note first that if B is torsion-free, then when one tensors a free reso-
+lution of A with B, exactness is preserved, by Corollary 6.2.9. It follows that
+A ∗B = 0.
+(a) By applying the preceding lemma to the free resolution
+0 −→R −→F −→A −→0 ,
+one obtains a six-term exact sequence. The first terms
+0 −→B ∗R −→B ∗F
+vanish because R and F are torsion-free. What remains is the exact sequence
+0 −→B ∗A −→B ⊗R −→B ⊗F −→B ⊗A −→0 .
+In its last three terms, this sequence is naturally isomorphic to the sequence
+of Theorem 7.4.1,
+0 −→A ∗B −→R ⊗B −→F ⊗B −→A ⊗B −→0 .
+Therefore, the first terms are isomorphic as well. Naturality is straightforward.
+(b) Let
+0 −→Rα −→Fα −→Aα −→0
+(∗)
+be a free resolution of Aα. Then
+0 −→Rα −→Fα −→Aα −→0
+(∗∗)
+is a free resolution of  Aα. We tensor the sequence in (∗) with B and sum
+to obtain
+0 −→(Aα ∗B) −→(Rα ⊗B) −→(Aα × B) −→0 .
+(†)

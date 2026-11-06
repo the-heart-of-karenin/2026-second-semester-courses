@@ -1,0 +1,50 @@
+Singular Homology Theory
+223
+Proof: We assume that K0̸ = K, since otherwise (3) is trivial.
+Step 1. We prove the lemma first when K is finite, by induction on the
+number n of simplices in K. If n = 1, then K consists of a single vertex
+v. In each dimension p, there is exactly one ordered p-simplex (v, v, . . . , v)
+of K and exactly one singular p-simplex T : ∆p →v of |K|. Furthermore,
+we have θ(v, v, . . . , v) = ℓ(v, v, . . . , v) = T. Then θ : C′(K) →S(|K|) is an
+isomorphism already on the chain level. Hence (1), (2), and (3) hold.
+Now suppose the lemma holds for any complex having fewer than n sim-
+plices. Let K have n simplices. We note that it suffices to prove (1) for K, for
+then (2) follows by Lemma 4.7.2. Also, since θ∗: Hp(C′(K0)) →Hp(|K0|) is
+an isomorphism by the induction hypothesis, (3) follows from the long exact
+homology sequence and the Steenrod five-lemma [Lemma 3.3.4].
+To prove (1), let σ be a simplex of K of maximal dimension. Then σ is
+not a face of any other simplex, so that the collection of all simplices of K
+different from σ is a subcomplex K1 of K having n−1 simplices. Let Σ denote
+the complex consisting of σ and its faces. Let Bd Σ be the collection of proper
+faces of σ. Consider the following commutative diagram, where i and j are
+inclusions:
+Hp(C′(K))
+θ∗
+−−−−→
+Hp(|K|)
+i∗
+i∗
+Hp(C′(K, Σ))
+θ∗
+−−−−→
+Hp(|K|, σ)
+j∗
+j∗
+Hp(C′(K1, Bd Σ))
+θ∗
+−−−−→Hp(|K1|, Bd σ) .
+[If dim σ = 0, then Bd Σ and Bd σ are empty.] It follows from the induction
+hypothesis that the map θ∗on the bottom line of the diagram is an isomor-
+phism. We will show that the vertical maps are isomorphisms. It then follows
+that the map θ∗on the top line is an isomorphism and that will complete the
+proof.
+First we consider the homomorphisms i∗. Because σ is acyclic in singular
+homology, the long exact homology sequence of (|K|, σ) shows that the right-
+hand map i∗is an isomorphism. The same argument applies to the map i∗
+in ordered simplicial homology, since Σ is acyclic in ordered homology, by
+Lemma 1.14.14.
+The map j∗is an isomorphism in ordered simplicial homology, because j#
+is an isomorphism already on the chain level; the inclusion map
+C′(K1) −→C′(K) −→C′(K)/C′(Σ)
+is surjective and carries to zero precisely those chains carried by K1 ∩Σ =
+Bd Σ. [In fact, j is just an excision map.]

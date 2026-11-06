@@ -1,0 +1,34 @@
+Singular Homology Theory
+233
+is a quotient map; being one-to-one, it is a homeomorphism. Since |L| × 0 is
+a deformation retract of |L| × [0, 1), the space L is a deformation retract of
+|v ∗L| \ v.
+Recall the if v is a vertex of K, then St v is the union of the interiors of
+all simplices that have v as vertex and Lk v = St v \ St v.
+Lemma 4.8.13 Let v be a vertex of the simplicial complex K. Then
+Hi(|K|, |K| \ v) ∼= Hi(St v, Lk v) .
+Proof: The set St v contains a neighborhood of v. Therefore, it follows from
+Lemma 4.8.2 that
+Hi(|K|, |K| \ v) ∼= Hi(St v, St v \ v) .
+Let L denote the subcomplex of K whose polytope is Lk v. Then St v is the
+polytope of the cone v ∗L, by Lemma 1.9.4. See Figure 4.8.4. The preceding
+lemma tells us that Lk v is a deformation retract of St v \ v, so our proof is
+complete.
+v
+Lk v = |L|
+Figure 4.8.4
+Theorem 4.8.14 Let K be a complex of dimension n, and let X = |K|. For
+p > n the local homology groups Hp(X, X \ x) vanish, while for p = n one of
+the groups Hn(X, X \ x) is non-trivial for some choice of x.
+Proof: Let σ be an n-simplex of K. Then σ is a face of no other simplex of
+K, so the set Int σ is in fact an open set of |K|. [Its complement is the union
+of all simplices of K different from σ.] If x is the barycenter σ of σ, it follows
+from Lemma 4.8.2 that
+Hn(X, X \ x)
+∼=
+Hn(σ, σ −σ)
+∼=
+Hn(Bn, Bn \ 0) .
+By Example 4.8.3, this group is infinite cyclic.
+Now let x be an arbitrary point of X. We wish to show that Hp(X, X\x) =
+0 for p > n. In view of Lemma 4.8.10, it suffices to consider the case where x is

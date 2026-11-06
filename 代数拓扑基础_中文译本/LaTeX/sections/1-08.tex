@@ -1,0 +1,72 @@
+\section{零维同调}
+\sourcepage{48--49}
+我们还没有计算过零维同调群。本节将说明，这个群有简单的拓扑解释，因此计算起来十分容易。
+
+\entry{定理}{1.8.1}设 $K$ 为复形，则 $H_0(K)$ 是自由阿贝尔群。若顶点族 $\{v_\alpha\}$ 在 $|K|$ 的每个连通分支中恰好选取一个顶点，则各链 $v_\alpha$ 的同调类构成 $H_0(K)$ 的一组基。
+
+\noindent\textbf{证明：}
+\textbf{第一步。}对于 $K$ 的顶点 $v,w$，若存在一列顶点 $a_0,a_1,\ldots,a_n$，使 $v=a_0,w=a_n$，且每个 $a_i a_{i+1}$ 都是 $K$ 的一个 $1$ 维单形，则定义 $v\sim w$。这显然是等价关系。给定 $v$，令
+\[
+C_v=\bigcup\{\operatorname{St}w:w\sim v\}.
+\]
+下面证明，这些集合就是 $|K|$ 的连通分支。
+
+首先，$C_v$ 是开集，因为它是开集的并。而且，若 $v\sim v'$，则 $C_v=C_{v'}$。
+
+其次，$C_v$ 连通，实际上它道路连通。设 $w\sim v$，$x\in\operatorname{St}w$，像前面一样选择顶点列 $a_0,\ldots,a_n$。依次连接 $a_0,a_1,\ldots,a_n,x$ 的折线路径位于 $C_v$ 中：根据定义，$a_i\sim v$，所以 $\operatorname{St}a_i\subset C_v$，特别地，线段 $a_i a_{i+1}$ 位于 $C_v$。同样，线段 $a_nx$ 位于 $\operatorname{St}a_n\subset C_v$。因此 $C_v$ 道路连通。
+
+第三，证明不同的集合 $C_v,C_{v'}$ 不相交。若 $x\in C_v\cap C_{v'}$，则存在 $w\sim v$、$w'\sim v'$，使 $x\in\operatorname{St}w\cap\operatorname{St}w'$。由于 $x$ 关于 $w,w'$ 的重心坐标均为正，$K$ 的某个单形以 $w,w'$ 为顶点。于是 $ww'$ 是 $K$ 的 $1$ 维单形，故 $w\sim w'$。所以 $v\sim v'$，两集合相同。
+
+这些集合连通、开且两两不相交，必是 $|K|$ 的连通分支。注意，每个分支都是 $K$ 的某个子复形的底空间：$K$ 的每个单形由于连通，都完全位于某一个分支中。
+
+\sourcepage{50}
+\textbf{第二步。}现在证明定理。设 $\{v_\alpha\}$ 从每个连通分支 $C_\alpha$ 中选取一个顶点。给定 $K$ 的顶点 $w$，设它位于 $C_\alpha$。根据假设，$w\sim v_\alpha$，因此存在从 $v_\alpha$ 到 $w$ 的顶点列 $a_0,\ldots,a_n$。$1$ 维链
+\[
+[a_0,a_1]+[a_1,a_2]+\cdots+[a_{n-1},a_n]
+\]
+的边界为 $a_n-a_0=w-v_\alpha$。所以 $0$ 维链 $w$ 同调于 $v_\alpha$。由此，$K$ 中每条 $0$ 维链都同调于初等 $0$ 维链 $v_\alpha$ 的某个线性组合。
+
+最后证明，形如 $c=\sum n_\alpha v_\alpha$ 的非零 $0$ 维链不可能是边界。设 $c=\partial d$，其中 $d$ 为 $1$ 维链。由于 $K$ 的每个 $1$ 维单形只位于 $|K|$ 的一个分支中，可以写成 $d=\sum d_\alpha$，其中 $d_\alpha$ 由 $d$ 中那些由 $C_\alpha$ 承载的项组成。因 $\partial d=\sum\partial d_\alpha$，且每个 $\partial d_\alpha$ 由 $C_\alpha$ 承载，所以 $\partial d_\alpha=n_\alpha v_\alpha$。于是每个 $n_\alpha=0$。具体地，定义同态 $\epsilon:C_0(K)\to\Z$，使对每个顶点 $v$ 有 $\epsilon(v)=1$。则
+\[
+\epsilon(\partial[v,w])=\epsilon(w-v)=1-1=0.
+\]
+所以对每条 $1$ 维链 $e$，都有 $\epsilon(\partial e)=0$。特别地，
+\[
+0=\epsilon(\partial d_\alpha)=\epsilon(n_\alpha v_\alpha)=n_\alpha.
+\]\hfill$\square$
+
+在某些问题中，使用零维同调的另一种形式更加方便，下面讨论这种形式。
+
+\entry{定义}{1.8.2}令满同态 $\epsilon:C_0(K)\to\Z$ 由每个顶点上的取值 $\epsilon(v)=1$ 定义。若 $c$ 为 $0$ 维链，则 $\epsilon(c)$ 等于 $c$ 在各顶点上取值的总和。$\epsilon$ 称为 $C_0(K)$ 的\textbf{增广映射}（augmentation map）。上一个证明已说明，若 $d$ 为 $1$ 维链，则 $\epsilon(\partial d)=0$。定义 $K$ 的\textbf{零维约化同调群}（reduced homology group）为
+\[
+\widetilde H_0(K)=\ker\epsilon/\operatorname{im}\partial_1.
+\]
+若 $p>0$，则令 $\widetilde H_p(K)$ 表示通常的 $H_p(K)$。
+
+约化同调与普通同调的关系如下。
+
+\entry{定理}{1.8.3}群 $\widetilde H_0(K)$ 是自由阿贝尔群，且
+\[
+\widetilde H_0(K)\oplus\Z\cong H_0(K).\tag{$*$}
+\]
+因此，若 $|K|$ 连通，则 $\widetilde H_0(K)=0$。若 $|K|$ 不连通，从其每个分支选取一个顶点，组成族 $\{v_\alpha\}$，并固定指标 $\alpha_0$，则各链 $v_\alpha-v_{\alpha_0}$（$\alpha\ne\alpha_0$）的同调类构成 $\widetilde H_0(K)$ 的一组基。
+
+\noindent\textbf{证明：}同前，在每个分支中选取顶点 $v_\alpha$。给定 $0$ 维链 $c$，它同调于形如 $c'=\sum n_\alpha v_\alpha$ 的链，且后者只有在所有 $n_\alpha=0$ 时才为边界。另一方面，若 $c\in\ker\epsilon$，则
+\[
+\epsilon(c)=\epsilon(c')=\epsilon\left(\sum n_\alpha v_\alpha\right)=\sum n_\alpha=0.
+\]
+若 $|K|$ 只有一个分支，则 $c\in\ker\epsilon$ 蕴含 $c'=0$，故 $\widetilde H_0(K)=0$。由定理 1.8.1，$H_0(K)\cong\Z$，从而验证了 $(*)$。
+
+\sourcepage{51}
+若 $|K|$ 有多于一个分支，则 $c\in\ker\epsilon$ 蕴含 $c'$ 是 $v_\alpha-v_{\alpha_0}$（$\alpha\ne\alpha_0$）的线性组合。再次应用定理 1.8.1 即得 $(*)$。\hfill$\square$
+
+\subsection*{习题}
+\begin{enumerate}
+\item \begin{enumerate}[label=(\alph*)]
+\item 设 $G$ 为阿贝尔群，$\varphi:G\to\Z$ 为满同态。证明 $G$ 有一个无限循环子群 $H$，使 $G=(\ker\varphi)\oplus H$。［提示：构造同态 $\psi:\Z\to G$，使 $\varphi\circ\psi$ 为恒等映射，令 $H=\operatorname{im}\psi$。］
+\item 证明：若 $\varphi:C_0\to\Z$ 是任意满足 $\varphi\circ\partial_1=0$ 的满同态，则
+\[
+H_0(K)\cong(\ker\varphi)/(\operatorname{im}\partial_1)\oplus\Z.
+\]
+\end{enumerate}
+\end{enumerate}

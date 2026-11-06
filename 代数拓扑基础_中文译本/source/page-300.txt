@@ -1,0 +1,45 @@
+Singular Homology Theory
+285
+inspection a cycle of (L, Bd L). Because d is a multiple of no other cycle,
+it is a fundamental cycle for (L, Bd L). By Lemma 4.13.3, λ = g#(d) is a
+fundamental cycle for (e2, ˙e2).
+Let c1 be the sum of the 1-simplices along the top of L oriented as indicated
+in Figure 4.13.3. Let c2, c3, and c4 denote chains along the other edges of L, as
+indicated. Now w1 = g#(c1) is a fundamental cycle for (e1, ˙e1). So is g#(c3), of
+course. Similarly, z1 = g#(c2) is a fundamental cycle for (e′
+1, ˙e′
+1), as is g#(c4).
+c4
+c2
+c1
+c3
+v2
+v3
+v1
+v4
+Figure 4.13.3
+In terms of these basis elements, it is easy to compute the boundary oper-
+ator in the cellular chain complex D(X). We first compute ∂in the complex
+L as follows:
+∂c1 = v4 −v1,
+∂c2 = v2 −v1,
+∂d = −c1 + c2 + c3 −c4.
+Applying g#, we see that ∂w1 = g#(∂c1) = 0 and ∂z1 = g#(∂c2) = 0 for both
+the torus and the Klein bottle. In the case of the torus, ∂γ = g#(∂d) = 0
+because g#(c1) = g#(c3) and g#(c2) = g#(c4). In the case of the Klein bottle,
+∂γ = g#(∂d) = 2g#(c2) = 2z1
+because g#(c1) = g#(c3) and g#(c2) = −g#(c4).
+Thus the homology of the cellular chain complex D(X) when X is the
+torus is
+H2(X) ∼= Z,
+H1(X) ∼= Z ⊕Z,
+H0(X) ∼= Z,
+while in the case of the Klein bottle, it is
+H2(X) = 0,
+H1(X) ∼= Z ⊕Z/2,
+H0(X) ∼= Z.
+Of course, we have carried out these same computations before. But now
+their justification comes from our general theorems about CW complexes,
+rather than from the ad hoc arguments we used back in Section 1.7. It is in
+this sense that our results about CW complexes make systematic the ad hoc
+computational methods we studied there.

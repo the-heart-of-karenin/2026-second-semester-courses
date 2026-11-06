@@ -1,0 +1,37 @@
+Singular Homology Theory
+229
+Bm
+Sm−1
+Sm−1 ∩Hm = Em−1
++
+Bm ∩Hm = Dm
+Figure 4.8.1
+Figure 4.8.2
+Suppose x ∈Bd Hm. Without loss of generality, we may assume that x = 0.
+Let Bm be the unit ball in Rm centered at 0. The set BM ∩Hm contains a
+neighborhood of 0 in Hm. Letting Dm denote the half-ball Bm ∩Hm, we have
+Hi(Hm, Hm \ 0) ∼= Hi(Dm, Dm \ 0) .
+See Figure 4.8.2. Now there is a deformation retraction of Bm \ 0 onto Sm−1.
+That deformation retraction restricts to a deformation retraction of the punc-
+tured half-ball Dm \ 0 onto the set
+Sm−1 ∩Hm = Em−1
++
+.
+Now Dm is acyclic, being a convex set in Rm, and Em−1
++
+is acyclic, since it is
+homeomorphic to Bm−1. The long exact exact homology sequence shows that
+their relative homology vanishes.
+Definition 4.8.5 A nonempty Hausdorff space X is called an m-manifold if
+each point of X has a neighborhood homeomorphic with an open subset of
+euclidean space Rm. It is called an m-manifold with boundary if each point of
+X has a neighborhood homeomorphic with an open subset of the euclidean
+half-space Hm.
+Note that an m-manifold is automatically an m-manifold with boundary.
+For if x has a neighborhood homeomorphic with an open set in Rm, it has a
+neighborhood U homeomorphic with an open ball in Rm. Then U is homeo-
+morphic with the open unit ball in Rm centered at (0, 0, . . . , 0, 1), which is an
+open set of Hm.
+One often includes in the definition of a manifold the requirement that X
+have a countable basis, or at least that X be metrizable. We shall not make
+either assumption.

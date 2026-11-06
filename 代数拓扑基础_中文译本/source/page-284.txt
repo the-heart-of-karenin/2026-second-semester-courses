@@ -1,0 +1,44 @@
+Singular Homology Theory
+269
+notation and use the symbol X to refer to both the CW complex and to the
+underlying space.
+A finite CW complex X is a CW complex for which the collection of open
+cells is finite. If X has only finitely many open cells, then the finiteness part
+of (2) is automatic, and condition (3) is implied by the other conditions: If
+the set A ∩eα is closed in eα, then it is closed in X; thus since A is a finite
+union of such sets, A is also closed in X.
+A finite CW complex is of course compact. Conversely, any compact subset
+A of a CW complex X can intersect only finitely many open cells of X. We
+leave the proof to the exercises. One needs the finiteness part of condition (2)
+in the proof.
+The following lemma is an immediate consequence of our general results
+about coherent topologies [see Section 2.8].
+Lemma 4.12.3 Let X be a CW complex with the open cells eα. A function
+f : X →Y is continuous if and only if f|eα is continuous for each α. A
+function F : X × I →Y is continuous if and only if F|(eα × I) is continuous
+for each α.
+EXAMPLE 4.12.4 Consider the torus as a quotient space of a rectangle, as
+usual. See Figure 4.12.1. We can express T as a CW complex having a single
+open 2-cell [the image under π of the interior of the rectangle], two open 1-
+cells [the images of the open edges], and one 0-cell [the image of the vertices].
+Conditions (1), (2), and (3) hold at once.
+v
+v
+v
+v
+B
+B
+A
+A
+π
+T
+Figure 4.12.1
+Similarly, one can express the Klein bottle as a CW complex having the
+same number of cells in each dimension as the torus. The projective plane can
+be expressed as a CW complex having one open cell in each dimension 0, 1,
+and 2.
+More generally, the discussion in the exercises of Section 1.7 shows how
+one can express the n-fold connected sum T # T # · · · # T as a CW complex
+having one open cell in dimension 2, one cell in dimension 0, and 2n open
+cells in dimension 1. Likewise, the n-fold connected sum P2 # P2 # · · · # P2,
+can be expressed as a CW complex having one open cell in dimension 2, one

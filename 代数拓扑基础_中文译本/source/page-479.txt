@@ -1,0 +1,49 @@
+464
+Elements of Algebraic Topology
+The chain ϕ(σ∗
+i ) is by hypothesis a fundamental cycle for the block D(σi)
+dual to σi. This block lies in ˙D(s) since σi ≻s. Thus ϕ(σ∗
+i ) is carried by ˙D(s)
+for each i. Then the chain ϕ(δs∗) is carried by ˙D(s) also. In addition, ϕ(δs∗)
+is a cycle, since ∂ϕ(δs∗) = ϕδδs∗by the induction hypothesis. Now ˙D(s) is a
+homology n−p−1 sphere, where n−p−1 > 0. The cycle ϕ(δs∗) is non-trivial,
+and it is not a multiple of another cycle. This is because its restriction to the
+block D(σi) equals ϕ(σ∗
+i ), which is a fundamental cycle for this block modulo
+˙D(σi). Hence ϕ(δs∗) represents a generator of Hn−p−1( ˙D(s)) as asserted.
+Consider the exact sequence
+0 →Hn−p(D(s), ˙D(s)) ∂∗
+−→Hn−p−1( ˙D(s)) →0 .
+For dimensional reasons, homology groups equal the groups of cycles. Define
+ϕ(s∗) to be the fundamental cycle for (D(s), ˙D(s)) whose boundary equals the
+generator ϕ(δs∗). Then ϕ is defined for dimension p and ∂ϕ(s∗) = ϕ(δs∗) as
+desired.
+The theorem is thus proved for the case of integer coefficients. To prove it
+for arbitrary coefficients, we note that the isomorphisms
+Hom(Cp(X), G) ∼= Hom(Cp(X), Z) ⊗G
+Dn−p(X) ⊗G
+ϕ ⊗iG
+commute with δ and ∂. [The first of these isomorphisms was proved in Step 2
+of Theorem 7.6.1.]
+Finally, we consider the non-orientable case. Roughly speaking, the same
+proof goes through. One defines an isomorphism
+Hom(Cp(X), Z/2) ϕ
+−→Dn−p(X) ⊗Z/2
+by induction. If σ is an n-simplex, then we let σ∗denote the cochain whose
+value is [1] ∈Z/2 on σ and 0 on all other simplices. We then define ϕ(σ∗) =
+∂⊗[1]. If s is an n −1 simplex that is a face of the n-simplices σ0 and σ1,
+then we define ϕ(s∗) = ([σ0, s ] + [s, σ1] ⊗[1]. Signs do not matter because the
+coefficient group is Z/2. The rest of the proof goes through without change,
+with the phrase “fundamental cycle” replaced by “unique non-trivial cycle
+with Z/2 coefficients.”
+Let us note that there was nothing special in this proof about using the
+simplicial chain complex to compute the cohomology of X and the dual chain
+complex to compute the homology of X. One could just as well have done
+it the other way. For since ϕ is an isomorphism, then the dual of ϕ is an
+isomorphism:
+Hom(Hom(Cp(X), Z), Z)
+ϕ
+−→Hom(Dn−p(X), Z)
+that carries the operator δ in D(X) to the dual of δ in C(X). Since there is a
+natural isomorphism
+Cp(X) ∼= Hom(Hom(Cp(X), Z), Z)

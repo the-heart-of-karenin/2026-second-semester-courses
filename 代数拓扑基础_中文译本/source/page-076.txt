@@ -1,0 +1,38 @@
+Homology Groups of a Simplicial Complex
+61
+1.11
+∗Homology with Arbitrary Coefficients
+There is one further version of homology that we shall mention here, although
+we shall not study it in detail until Chapter 6. It arises when one introduces
+an arbitrary abelian group as the coefficient group.
+Let G be an abelian group. Let K be a simplicial complex. A p-chain of K
+with coefficients in G is a function cp from the oriented p-simplices of K to G
+that vanishes on all but finitely many p-simplices and is such that
+cp(σ′) = −cp(σ)
+if σ′ and σ are opposite orientations of the same simplex. Two chains are
+added by adding their values. The resulting group is denoted Cp(K; G).
+If σ is an oriented simplex and if g ∈G, we use gσ to denote the elementary
+chain whose value is g on σ, −g on the opposite orientation of σ, and 0 on all
+other oriented simplices. In this notation, g(−σ) = (−g)σ, where −σ as usual
+denotes σ with the opposite orientation. If one orients all the p-simplices of
+K, then each chain cp can be written uniquely as a finite sum
+cp =  giσi
+of elementary chains. Thus Cp(K; G) is the direct sum of subgroups isomorphic
+to G, one for each p-simplex of K.
+The boundary operator ∂: Cp(K; G) →Cp−1(K; G) is defined easily by
+the formula
+∂(gσ) = g(∂σ)
+where ∂σ is the ordinary boundary, defined earlier. As before, ∂◦∂= 0 holds.
+We define Zp(K; G) to be the kernel of the homomorphism
+∂: Cp(K; G) →Cp−1(K; G) ,
+Bp−1(K; G) to be its image, and
+Hp(K; G) = Zp(K; G)/Bp(K; G) .
+These groups are called, respectively, the cycles, boundaries, and homology of
+K with coefficients in G.
+Of course, one can also study relative homology with coefficients in G. The
+details are clear. The groups in question are denoted by Hp(K, K0; G).
+We are not going to do much concerning homology with general coefficients
+for some time to come. But you should be aware of its existence at an early
+stage, for it is sometimes useful.
+EXAMPLE 1.11.1 One group that is frequently used as a coefficient group
+is the group Z/2 of integers mod 2. Let us calculate the homology of the torus

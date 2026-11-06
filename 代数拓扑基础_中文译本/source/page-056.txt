@@ -1,0 +1,37 @@
+Homology Groups of a Simplicial Complex
+41
+Then one shows that c1 is in turn homologous to a 1-chain c2 carried by the
+subcomplex of Figure 1.7.3. Finally, one notes that in the case where the
+original chain c is a cycle, then the chain c2 is also a cycle. It follows that c2
+must be carried by Bd L, for otherwise c2 would have a non-zero coefficient
+on one or more of the vertices v1, v2, v3, v4, v5.
+v1
+v2
+v5
+v3
+v4
+Figure 1.7.2
+Figure 1.7.3
+Theorem 1.7.3 Let T denote the complex represented by the labeled rectangle
+L of Figure 1.7.4; its underlying space is the torus. Then
+H1(T) ∼= Z ⊕Z and H2(T) ∼= Z .
+Orient each 2 simplex of L counterclockwise; use the induced orientation of
+the 2-simplices of T; let γ denote their sum. Let
+w1
+=
+[a, b] + [b, c] + [c, a]
+z1
+=
+[a, d] + [d, e] + [e, a] .
+Then γ generates H2(T) and w1 and z1 represent a basis for H1(T).
+Proof: Let g : |L| →|T| be the pasting map; let A = g(|Bd L|). Then A is
+homeomorphic to a space that is the union of two circles with a point in com-
+mon. [Such a space is called the wedge of two circles.] Orient the 1-simplices of
+T arbitrarily. Because g makes identifications only among simplices of Bd L,
+the arguments we gave earlier in proving Lemma 1.7.2 apply verbatim to prove
+the following:
+(1) Every 1-cycle of T is homologous to a 1-cycle carried by A.
+(2) If d is a 2-chain of T and if ∂d is carried by A, then d is a multiple
+of γ.
+We show that, in the complex T, two further results hold:
+(3) If c is a 1-cycle of T carried by A, then c is of the form nw1 + mz1.

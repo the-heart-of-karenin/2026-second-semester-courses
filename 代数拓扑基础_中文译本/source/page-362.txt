@@ -1,0 +1,62 @@
+Cohomology
+347
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+w1
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+e
+d
+z1
+Figure 5.8.2
+a cocycle. It generates H1(S). Also, the cochain σ∗represents the non-zero
+element of H2(S). [More generally, if all 2-simplices of T are oriented counter-
+clockwise, then the cochain  niσ∗
+i represents the non-zero element of H2(S)
+if and only if  ni is odd.]
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+d
+e
+w1
+Figure 5.8.3
+EXAMPLE 5.8.6 Generators for the cohomology of the Klein bottle, with
+Z/2 coefficients. Recall from Example 5.8.3 that the cohomology groups are
+given by
+H2(S; Z/2) ∼= Z/2 ,
+H1(S; Z/2) ∼= Z/2 ⊕Z/2 ,
+H0(S) ∼= Z/2 .
+The pattern of the preceding argument applies to show that the cochains
+w1 and z1 of Figure 5.8.4 generate the 1-dimensional cohomology. Notice
+that the arrows that were shown in Figures 5.8.2 and 5.8.3 have been erased,
+because in the group Z/2 we have 1 = −1. The cochain σ∗[or more generally
+σ∗
+1 + σ∗
+2 + · · · + σ∗
+k, where k is odd] generates H2(S; Z/2).

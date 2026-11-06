@@ -1,0 +1,44 @@
+Duality in Manifolds
+469
+Roughly speaking, cp ⌢(T ⊗α) equals the restriction of T to the front
+q-face of ∆p+q with coefficient the product of α and the value of cp on the
+back p-face of T.
+As with the cup product, there are alternative versions of the cap product.
+Among these are maps
+Sp(X; G) ⊗Sp+q(X; Z) ⌢
+−→Sq(X; G) ,
+Sp(X; F) ⊗Sp+q(X; F) ⌢
+−→Sq(X; F) ,
+where G is an abelian group and F is a field. These are all given by the
+preceding cap product formula. These additional versions of the cap product
+will also be of use to us in what follows.
+Theorem 8.6.2 The cap product is bilinear and is natural with respect to
+continuous maps. It satisfies the boundary formula
+∂(dp ⌢cp+q) = (−1)q(δdp ⌢cp+q) + dp ⌢∂cp+q ,
+and is related to the cup product by the formula
+cp ⌢(dq ⌢ep+q+r) = (cp ⌣dq) ⌢ep+q+r .
+Proof: The bilinear property is easy to check. The naturality property is
+harder to formulate than to prove. Given a continuous map f : X →Y ,
+consider the following diagram:
+Sp(X) ⊗Sp+q(X)
+Sq(X)
+Sp(Y ) ⊗Sp+q(Y )
+Sq(Y )
+⌢
+⌢
+f #
+f #
+f#
+[We omit the coefficients for convenience.] Naturality states that if cp ∈Sp(Y )
+and dp+q ∈Sp+q(X), then
+f#(f #(cp) ⌢dp+q) = cp ⌢f#(dp+q) .
+One checks this formula easily by direct computation. The proofs of the
+coboundary and cup product formulas are straightforward but messy. We
+leave the details for the reader.
+These formulas in fact hold for all three versions of the cap product. In the
+case of the coefficient pairing G ⊗Z →G, one must add the proviso that the
+cup product formula makes sense. This will occur if two of cp, dq, and ep+q+r
+have coefficients in Z and the other has coefficients in G.
+Theorem 8.6.3 The cap product induces a homomorphism
+Hp(X; R) ⊗Hp+q(X; R) ⌢
+−→Hq(X; R) .

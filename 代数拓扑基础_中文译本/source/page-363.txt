@@ -1,0 +1,50 @@
+348
+Elements of Algebraic Topology
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+d
+e
+w1
+a
+b
+c
+a
+a
+b
+c
+a
+e
+d
+d
+e
+z1
+Figure 5.8.4
+EXAMPLE 5.8.7 The cohomology of P2 with Z/2 coefficients. One has
+Hi(P2; Z/2) ∼= Z/2
+for i = 0, 1, 2.
+If σ is a 2-simplex, then the cochain σ∗generates the 2-dimensional group.
+Also, the cocycle pictured in Figure 5.8.5 generates H1(P2; Z/2), for its value
+is 1 on the cycle
+[a, b] + [b, c] + [c, d] + [d, e] + [e, f] + [f, a]
+that generates D1(X).
+d
+c
+b
+a
+a
+b
+c
+d
+e
+f
+f
+e
+Figure 5.8.5

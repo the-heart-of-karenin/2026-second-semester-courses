@@ -1,0 +1,35 @@
+Topological Invariance of the Homology Groups
+147
+Proof: Let h : Sn →Sn be a map of degree d. We compute Λ(h). Now h∗
+is the identity on 0-dimensional homology. On n-dimensional homology, its
+matrix is a one-by-one matrix with a single entry d = degree f. Therefore
+Λ(h) = 1 + (−1)nd .
+(†)
+The antipodal map a has no fixed point, so Theorem 2.10.5, the Lefschetz
+fixed point theorem, tells us that Λ(a) = 0. Applying (†), we obtain
+0 = Λ(a) = 1 + (−1)n deg a .
+It follows that the degree of a is (−1)n+1.
+The next definition is used in Exercise 6.
+Definition 2.10.9 Suppose that B is a finite collection of polygons in R3,
+each two of which intersect in at most a common edge or a common vertex.
+Each of these polygons is called a face of B. Its edges are called edges of B,
+and its vertices are called vertices of B.
+We say that B is combinatorially regular if all the faces of B have the same
+number (say k) of edges, if each edge of B belongs to exactly two faces of B,
+and if each vertex of B belongs to the same number (say ℓ) of faces of B.
+The triangles making up the boundary of a tetrahedron and the squares
+making up the boundary of a cube are examples of combinatorially regular
+collections of polygons.
+EXERCISES
+1. Show that every map f : P2 →P2 has a fixed point.
+2. It is not true that each continuous map of S0 to S0 (the space
+with two points) has a fixed point. It is also not true that every
+continuous map of S1 to S1 (the circle) has a fixed point. Verify
+these assertions. What can you say about continuous maps of S2 to
+S2?
+3. Let K be a finite complex. Show that if h : |K| →|K| is homotopic
+to a constant map, then h has a fixed point.
+4. (a) Show that there is a map of the Klein bottle S to itself that
+carries the curve C shown in Figure 2.10.1 homeomorphically
+onto the curve D, and a map g that carries C into the shaded
+region E.

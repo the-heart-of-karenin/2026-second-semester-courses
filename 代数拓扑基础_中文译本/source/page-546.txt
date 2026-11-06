@@ -1,0 +1,32 @@
+Duality in Manifolds
+531
+4. Verify the extended Lebesgue number lemma quoted in the proof
+of Theorem 8.13.16.
+5. Let X denote the solid torus B2 × S1 and let f : X →X be the
+imbedding pictured in Figure 8.13.3. Let X0 = X and let X1 =
+f(X0). In general, let Xn+1 = f(Xn). Let S = ∩Xn. The space S
+is often called a solenoid.
+(a) Describe the space X2.
+(b) Compute ˇH1(S).
+X
+X
+f
+Figure 8.13.3
+6. Given X, let C be the collection of compact subspaces of X, directed
+by letting C < D if C ⊂D. Show that C is a directed set. Define a
+direct system by the rules
+GC = Hi(C) ,
+FC,D = i∗: Hi(C) →Hi(D) ,
+where i is inclusion and Hi denotes singular homology. Show that
+H1(X) ∼= dir lim Hi(C) .
+[This is just another way of expressing the compact support prop-
+erty of singular homology.]
+7. Let X be any set. Let S be the collection of all subsets of X [that
+is, S is the power set of X]. Explain how to turn S into a directed
+set.
+8.14
+Alexander–Pontryagin Duality
+Now we prove a generalized version of the Alexander duality theorem. This
+version applies to an arbitrary closed subspace of Sn, not just to a polyhedron
+in Sn. As an application, we derive a version of the Jordan curve theorem
+more general than any we have seen up until now.

@@ -1,0 +1,40 @@
+Homology with Coefficients
+377
+As usual, we delete A from the notation if A is empty. We define reduced
+homology groups by the equation
+Hp(X; G) = Hp({S(X), ϵ}; G) ,
+where ϵ is the usual augmentation for S(X).
+Since Sp(X, A) is free abelian, the group Sp(X, A) ⊗G is a direct sum
+of copies of G. Indeed, if {Tα} is the family consisting of those singular p-
+simplices of X whose image sets do not lie in A, then the cosets modulo Sp(A)
+of the singular simplices Tα form a basis for Sp(X, A). Therefore each element
+of Sp(X, A) ⊗G can be represented uniquely by a finite sum  Tα ⊗gα. This
+last sum is our usual way of representing a singular p-chain with coefficients in
+G. The minimal carrier of such a chain is the union of the sets Tα(∆p), where
+the union is taken over those α for which gα̸ = 0. It is of course a compact
+set.
+A continuous map h : (X, A) →(Y, B) gives rise to a chain map
+h# ⊗iG : S(X, A) ⊗G →S(Y, B) ⊗G .
+We sometimes denote this map simply by h#, and the induced homology
+homomorphism by h∗. Functoriality is immediate; in fact, it holds on the
+chain level.
+The short exact sequence of chain complexes
+0 −→Sp(A) −→Sp(X) −→Sp(X, A) −→0
+splits because Sp(X, A) is free. Therefore, one has a long exact homology se-
+quence with coefficients in G. This long exact sequence is natural with respect
+to homomorphisms induced by continuous maps.
+If the maps h, k : (X, A) →(Y, B) are homotopic, then by the proof of
+Theorem 4.3.7 there is a chain homotopy between h# and k#. Then h# ⊗iG
+and k# ⊗iG are chain homotopic, so h∗and k∗are equal as maps of homology
+with coefficients in G.
+Direct consideration of the singular chain complex of a one-point space P
+leads to the result that Hi(P; G) = 0 for i̸ = 0 and H0(P; G) ∼= G.
+The compact support property of singular homology carries over at once
+to the same property for singular homology with arbitrary coefficients.
+The only property of singular homology that requires extra care is the
+excision property.
+Let (X, A) be a topological pair, and let U be a subset of X such that
+U ⊂Int A. We know that the inclusion
+j : (X \ U, A \ U) →(X, A)
+induces an isomorphism in ordinary homology. We wish to show it induces an
+isomorphism in homology with arbitrary coefficients as well.

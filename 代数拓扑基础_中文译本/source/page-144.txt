@@ -1,0 +1,37 @@
+Topological Invariance of the Homology Groups
+129
+(a) Let K and L be finite; let h : |K| →|L|. Show there is ϵ > 0
+such that if k : |K| →|L| and |h(x) −k(x)| < ϵ for all x, then
+h∗= k∗. [Hint: Choose K′ so that h(St(v, K′)) ⊂St(w, L) for
+some w. If ϵ is small, this same inclusion holds with h replaced
+by k.]
+(b) Prove the theorem when K and L are finite.
+(c) Prove the theorem in general. [Hint: Each cycle of K is carried
+by a finite subcomplex of K.]
+2.8
+Review of Quotient Spaces
+In this section we review some of the basic ideas concerning quotient spaces.
+A surjective map p : X →Y is called a quotient map provided that a
+subset U ⊂Y is open if and only if p−1(U) ⊂X is open. This condition is
+equivalent to requiring that E ⊂Y be closed if and only if p−1(E) ⊂X is
+closed.
+A subset C of X is saturated with respect to p if it equals the complete
+inverse image set p−1(A) for some subset A ⊂Y . To say that p is a quotient
+map is to say that p is continuous and p maps saturated open subsets of X
+to open subsets of Y (or, equivalently, saturated closed subsets of X to closed
+subsets of Y ).
+Let p : X →Y be a surjective, continuous map. If p is either an open
+map or a closed map (that is, p either maps open sets to open sets or closed
+sets to closed sets), then p is a quotient map. In particular, if X is compact
+and Y is Hausdorff, then p is a closed map and hence a quotient map.
+First we list some elementary facts about quotient maps. Their proofs are
+straightforward and we leave them to the reader.
+• A one-to-one quotient map is a homeomorphism.
+• The composition of quotient maps is a quotient map.
+• The restriction of a quotient map can sometimes be a quotient map. If
+p : X →Y is a quotient map, and if A ⊂X is a saturated subspace that is
+either open or closed, then p restricted to A is a quotient map.
+Continuous maps and quotient maps are related as follows: If p : X →Y
+is a quotient map and f : X →Z is a continuous map that is constant on
+each set p−1(y), then there is a unique continuous map g : Y →Z such that
+g ◦p = f. We say that g is induced by f. See the diagram.

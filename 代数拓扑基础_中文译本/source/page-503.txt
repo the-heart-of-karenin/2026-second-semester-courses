@@ -1,0 +1,47 @@
+488
+Elements of Algebraic Topology
+EXERCISES
+1. Let T be as in Example 8.8.4. Let g : sd T →T be a simplicial
+approximation to the identity. Check that if sd γ is the sum of all the
+n-simplices of sd T, oriented counterclockwise, then g#(w1) ⌢sd γ
+is the cycle c1 pictured in Figure 8.8.2.
+2. (a) If ϕ : R →R′ is a homomorphism of commutative rings with
+unity, then show that the induced homomorphism
+H∗(X; R) →H∗(X; R′)
+is a ring homomorphism.
+(b) Use the coefficient homomorphism Z →Z/2 to compute the
+cohomology rings of P2k, of P2k+1, and of P∞.
+3. Show that at any given point in time there are antipodal points on
+the surface of the earth at which the temperature and barometric
+pressure are equal.
+4. Compute the cohomology rings of the following:
+(a) S3 × P5 with Z and Z/2 coefficients.
+(b) P2 × P3 with Z/2 coefficients.
+5. Assume that CP n can be triangulated [and indeed it can be].
+(a) Compute the cohomology rings H∗(CP n) and H∗(CP ∞).
+(b) Show that if f : CP n →CP n, then the degree of f equals an
+for some integer a.
+(c) Show that every map f : CP 2n →CP 2n has a fixed point.
+(d) Show that there exists no map f : CP 2n →CP 2n of degree −1.
+(e) If f : CP 2n+1 →CP 2n+1 has no fixed point, then what is the
+degree of f?
+6.∗Suppose we form a manifold M by taking two copies of CP 2, delet-
+ing a small open 4-ball from each, and pasting the two remaining
+spaces together along their boundary 3-spheres. Discuss the coho-
+mology ring of M. Compare with the cohomology ring of S2 × S2.
+7. Let X be a connected, triangulable homology 7-manifold. Suppose
+that
+H7(X)
+∼=
+Z ,
+H6(X)
+∼=
+Z ,
+H5(X)
+∼=
+Z/2 ,
+H4(X)
+∼=
+Z ⊕Z/3 .
+Give all the information you can about the cohomology groups of
+X and of the cohomology ring H∗(X).

@@ -1,0 +1,47 @@
+482
+Elements of Algebraic Topology
+corresponding basis for Hk/T k, defined by the equation κ∗({αi}) = γ∗
+i for all
+i.
+To show that αi ⌣βj = δijΛ, it suffices [applying the isomorphism of
+Hn(X) with Z given by (∗)] to see that
+ϵ∗((αi ⌣βj) ⌢Γ) = δijϵ∗(Λ ⌢Γ) = δij .
+We compute as follows:
+δij = γ∗
+i ({γj})
+= [κ∗{αi}]({βj} ⌢Γ)
+= ⟨αi, βj ⌢Γ⟩
+= ϵ∗(αi ⌢(βj ⌢Γ))
+= ϵ∗((αi ⌣βj) ⌢Γ) .
+A similar theorem holds if the coefficients form a field.
+Theorem 8.8.3 Let X be a compact, connected, triangulable homology n-
+manifold. Let F be a field. Assume that F equals Z/2 if X is non-orientable.
+Let Λ generate Hn(X; F). There are (vector space) bases α1, . . . , αm for
+Hk(X; F) and β1, . . . , βm for Hn−k(X; F) such that, for i, j = 1, . . . , m,
+αi ⌣βj = δijΛ .
+Proof: In the orientable case, choose Γ so that the isomorphism
+Hn(X; F)
+H0(X; F)
+F
+⌢Γ
+ϵ∗
+carries Λ to 1 ∈F. In the non-orientable case, Γ(2) is unique. Then proceed
+as before using the following diagram, in which Γ′ denotes either Γ or Γ(2)
+depending on the case:
+Hn−k(X; F)
+Hk(X; F) ∼= Hom (Hk(X; F), F)
+Hk(X; F) .
+⌢Γ′
+∼=
+∼=
+κ∗
+EXAMPLE 8.8.4 Let us consider the torus once again. By Theorem 8.8.2,
+there is a basis α1, α2 for H1(T) and a basis β1, β2 for H1(T) such that
+αi ⌣βj = δijΛ where Λ is a generator of H2(T). The two “picket fence”
+cocycles w1 and z1 pictured in Figure 8.8.1 give us a basis for H1(T) and
+the indicated cocycle σ∗generates H2(T). Recall that z1 ⌣w1 = σ∗. The
+conclusion of the theorem holds if we let α1 and α2 be the cohomology classes
+of z1 and w1 respectively. And we let β1 and β2 be the cohomology classes
+of w1 and −z1 respectively. Further, we let Λ be the cohomology class of σ∗.
+These computations were carried out in Example 5.10.5.
+The proof of the theorem tells us that this is the way things ought to work.

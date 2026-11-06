@@ -1,0 +1,41 @@
+Singular Homology Theory
+271
+can be taken to be homeomorphisms. Furthermore, in this case, Bd(σ × τ)
+equals a union of open cells of lower dimension. Condition (3) is a consequence
+of Exercise 6 of Section 2.8. It depends on the local finiteness of K.
+The preceding example showed us that |K| × |L| is a special kind of CW
+complex for which we now give a formal definition.
+Definition 4.12.8 A CW complex X for which the maps fα can be taken
+to be homeomorphisms, and for which each set ˙eα equals the union of finitely
+many open sells of X is called a regular cell complex. A regular cell complex
+X can always be triangulated so each closed cell of X is the polytope of a
+subcomplex. The proof is similar to the one we gave for |K|×I in Lemma 2.7.3.
+EXAMPLE 4.12.9 Many of the constructions used in topology for forming
+new spaces from old ones, when applied to CW complexes, give rise to CW
+complexes. For instance, the product X × Y of two CW complexes is a CW
+complex, provided Y is locally compact. Often adjunction spaces can be made
+into CW complexes. If A is a subcomplex of X, a cellular map f : A →Y
+is a map carrying each p-cell of A into the union of the open cells of Y of
+dimension at most p. In this case, one can show that the adjunction space
+X ∪f Y is a CW complex.
+Definition 4.12.10 Let X be a CW complex. Let Y be a subspace of X that
+equals a union of open cells of X. Suppose that for each open cell eα of X
+contained in Y , its closure is also contained in Y . Then we shall show that Y
+is a closed set in X and that Y is a CW complex in its own right. It is called
+a subcomplex of X. In particular, the subspace Xp of X that is the union of
+the open cells of X of dimension at most p satisfies these conditions. It is thus
+a subcomplex of X, that is called the p-skeleton of X.
+We now show that Y is indeed a CW complex. First, Y is clearly Hausdorff.
+If eα is an open m-cell of X contained in Y , then its characteristic map
+fα : Bm →X carries Bm onto eα, which is contained in Y by hypothesis. The
+open cells of X that intersect fα(Bd Bm) = ˙eα must lie in Y ; thus fα carries
+Bd Bm into the union of finitely many open cells of Y . It only remains to show
+that Y has the topology specified by (3).
+Let B ⊂Y . Suppose B ∩eα is closed in eα for each eα contained in Y .
+If eβ is a cell of X not contained in Y , then eβ is disjoint from Y . Hence
+Y ∩eβ ⊂˙eβ, so Y ∩eβ lies in the union of finitely many open cells of Y , say
+e1, e2, . . . , ek. Then
+B ∩eβ = [(B ∩e1) ∪(B ∩e2) ∪· · · ∪(B ∩ek)] ∩eβ .
+By hypothesis, B ∩ei is closed in ei and hence in X. Therefore, B ∩eβ is
+closed in X, and in particular is closed in eβ. Since β was arbitrary, it follows
+that B is closed in X, and in particular, is closed in Y , as desired.

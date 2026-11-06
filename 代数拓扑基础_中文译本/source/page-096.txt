@@ -1,0 +1,32 @@
+Homology Groups of a Simplicial Complex
+81
+v
+σ
+w
+f(v)
+f(w)
+g(v)
+g(w)
+Dv
+Dw
+f#(σ)
+g#(σ)
+Figure 1.13.4
+Figure 1.13.5
+Application to Relative Homology
+Let K0 be a subcomplex of K, and let L0 be a subcomplex of L. Let
+f : K →L be a simplicial map that carries each simplex of K0 into a simplex
+of L0. We often express this by the phrase
+“f : (K, K0) →(L, L0) is a simplicial map.”
+In this case, it is immediate that f# maps Cp(K0) into Cp(L0), so that one
+has an induced map [also denoted by f#]
+f# : Cp(K, K0) →Cp(L, L0) .
+This map commutes with ∂and thus induces a homomorphism
+f∗: Hp(K, K0) →Hp(L, L0) .
+The functorial properties stated in Theorem 1.13.3 carry over immediately
+to relative homology.
+Definition 1.13.10 Let f, g : (K, K0) →(L, L0) be two simplicial maps. We
+say f and g are contiguous as maps of pairs if for each simplex σ = v0v1 . . . vp
+of K, the points
+f(v0), f(v1), . . . , f(vp), g(v0), g(v1), . . . , g(vp)
+span a simplex of L, and if σ ∈K0, they span a simplex of L0.

@@ -1,0 +1,42 @@
+230
+Elements of Algebraic Topology
+Manifolds and manifolds with boundary are among the most familiar and
+important geometric objects. They are the main objects of study in differential
+geometry and differential topology.
+If X is a manifold with boundary and if h : U →V is a homeomorphism
+of an open set U in X onto an open set V in Hm, then h is called a coordi-
+nate patch on X. A point x of X may be mapped by h either into the upper
+half space Rm−1 × R+ of Hm or onto the “edge” Rm−1 × 0. The local ho-
+mology groups distinguish between these two possibilities. For it follows from
+Example 4.8.4 that if x is mapped into the open upper half space of Hm,
+then Hm(X, X \ x) is infinite cyclic, while if x is mapped into Bd Hm, then
+Hm(X, X \ x) vanishes. This fact leads to the following definition:
+Definition 4.8.6 Let X be an m-manifold with boundary. If the point x of
+X maps to a point of Bd Hm under one coordinate patch about x, it maps
+to a point of Bd Hm under every coordinate patch. Such a point is called a
+boundary point of X. The set of all such points is called the boundary of X,
+and is denoted Bd X. The space X \ Bd X is called the interior of X and is
+denoted Int X.
+Note that there is nothing in the definition requiring that X have any
+boundary points. If it does not then Bd X is empty and X is an m-manifold.
+While Bd X may be empty, the set Int X cannot be. For if h : U →V is
+a coordinate patch about a point x of X, then V is open in Hm and hence
+contains at least one point of the open upper half space. The corresponding
+point y of X lies in Int X by definition.
+We remark that the space Hm is itself an m-manifold with boundary, and
+its boundary is precisely the set Rm−1 × 0, which we have already denoted by
+Bd Hm. Similarly, Rm is itself an m-manifold.
+Definition 4.8.7 Let X be an m-manifold with boundary. It follows from
+Example 4.8.4 that m is uniquely determined by X, for it is the unique integer
+such that the group Hm(X, X \ x) is non-trivial for at least one x in X. The
+number m is called [of course] the dimension of the manifold with boundary
+X.
+EXAMPLE 4.8.8 The unit ball Bn in Rn is an n-manifold with boundary,
+and Bd Bn = Sn−1. We prove these facts as follows.
+If p ∈Bn \ Sn−1, then the set of all x with ∥x∥< 1 is an open set of Rn
+that contains p. Thus there is a coordinate patch about p.
+Now suppose p ∈Sn−1. We will find a coordinate patch about p. Some
+coordinate of p = (p1, p2, . . . , pn) is non-zero. Suppose for convenience that
+pn < 0. Let U be the open set in Bn consisting of all points x of Bn with
+xn < 0. Define h : U →Hn by the equation
+h(x) = (x1, x2, . . . , xn−1, xn + f(x)) ,

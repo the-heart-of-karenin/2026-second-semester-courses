@@ -1,0 +1,41 @@
+112
+Elements of Algebraic Topology
+complex and K′ is any subdivision of K, then there is a uniquely defined
+chain map λ : Cp(K) →Cp(K′) called the subdivision operator that induces
+an isomorphism of homology groups. Furthermore, if g : K′ →K is any
+simplicial approximation to the identity of |K|, then λ and g# are chain-
+homotopy inverse to each other, so g# is also an isomorphism.
+Lemma 2.5.1 Let K′ be a subdivision of K. Then the identity map
+i : |K| →|K| has a simplicial approximation
+g : K′ →K .
+Let τ be a simplex of K′ and let σ be a simplex of K. If τ ⊂σ then g(τ) ⊂σ.
+Proof: By Lemma 2.3.2, the map i has a simplicial approximation g. Given
+τ ⊂σ, let w be a vertex of τ. Then w lies interior to σ or to a face of σ. Then
+g maps w to a vertex of σ by Lemma 2.2.2.
+Definition 2.5.2 Let K′ be a subdivision of K. If σ is a simplex of K, let
+K(σ) denote the subcomplex of K consisting of σ and its faces. Let K′(σ)
+denote the subcomplex of K′ whose polytope is σ.
+Theorem 2.5.3 (The algebraic subdivision theorem) Let K′ be a sub-
+division of K. There is a unique augmentation-preserving chain map
+λ : C(K) →C(K′)
+such that λ(σ) is carried by K′(σ) for each σ. If g : K′ →K is a simplicial
+approximation to the identity, then λ and g# are chain-homotopy inverses.
+Hence λ∗and g∗are isomorphisms.
+We call λ the subdivision operator.
+Proof: Step 1: We show first that if K′ satisfies the condition that for each
+σ ∈K the induced subdivision K′(σ) of σ is acyclic: We shall use Theo-
+rem 1.14.10, the geometric version of the acyclic carrier theorem. We define
+acyclic carriers as follows:
+Λ
+Θ
+K
+K′
+Φ
+Ψ
+The carriers Ψ and Λ are easy to define. We set
+Ψ(σ) = K(σ) ,
+Λ(σ) = K′(σ)
+for each σ ∈K. The complex K(σ) is acyclic because it consists of a simplex
+and its faces. The complex K′(σ) is acyclic by hypothesis. The inclusion con-
+dition for an acyclic carrier is immediate. If σ ≻s then K(s) ⊂K(σ) and
+K′(s) ⊂K′(σ).

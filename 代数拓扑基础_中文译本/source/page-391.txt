@@ -1,0 +1,36 @@
+376
+Elements of Algebraic Topology
+reduced homology groups of C with coefficients in G. If H0(C) vanishes, then so
+does H0(C; G), since exactness of the sequence C1 −→C0 −→Z −→0 implies
+exactness of
+C1 ⊗G −→C0 ⊗G −→Z ⊗G −→0 .
+In general, we have the equation
+H0(C; G) ∼= H0(C; G) ⊕G .
+Note that if G is the group of integers, then C ⊗G is naturally isomorphic
+with C. Thus the usual homology of C can be thought of as “homology with
+coefficients in Z.”
+If ϕ : C →D is a chain map, then so is ϕ ⊗iG : C ⊗G →D ⊗G. For
+convenience, the induced homology homomorphism is denoted by
+ϕ∗: Hp(C; G) →Hp(D; G) ,
+rather than by (ϕ ⊗iG)∗. If C and D are augmented and ϕ is augmentation-
+preserving, then ϕ⊗iG induces a homomorphism of reduced as well as ordinary
+homology.
+If ϕ, ψ : C →C′ are chain maps, and if D is a chain homotopy between
+them, then D⊗iG is a chain homotopy between ϕ⊗iG and ψ⊗iG. If follows that
+if ϕ and ψ are chain homotopic, then ϕ∗and ψ∗are equal as homomorphisms
+of homology with arbitrary coefficients. It also follows that if ϕ is a chain
+equivalence, then so is ϕ ⊗iG.
+Finally, suppose one has a short exact sequence
+0 −→C −→D −→E −→0
+of chain complexes that splits in each dimension. Then the tensored sequence
+0 −→Cp ⊗G −→Dp ⊗G −→Ep ⊗G −→0
+is exact. Applying the zig-zag lemma [Lemma 3.3.2], one obtains the long
+exact sequence
+· · · −→Hp(C; G) −→Hp(D; G) −→Hp(E; G) ∂∗
+−→Hp−1(C; G) −→· · · ,
+where ∂∗is induced by ∂⊗iG. This sequence is natural with respect to ho-
+momorphisms induced by chain maps.
+Singular Homology
+We define the singular homology groups of a topological pair (X, A) with coef-
+ficients in G, by the equation
+Hp(X, A; G) = Hp(S(X, A); G) .

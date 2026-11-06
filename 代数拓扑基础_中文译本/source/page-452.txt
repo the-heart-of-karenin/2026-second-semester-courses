@@ -1,0 +1,51 @@
+Homological Algebra
+437
+The chain maps λ# and ν are known to preserve augmentation, and they
+are natural with respect to homomorphisms induced by continuous maps. One
+checks readily that ω has the same properties. Consider the functors
+G(X, Y ) = S(X × Y ) ,
+G′(X, Y ) = S(Y ) ⊗S(X) ,
+G(f, g) = (f × g)# ,
+G′(f, g) = g# ⊗f# .
+We have already shown that these functors are free and acyclic relative to
+the collection of model objects M = {∆p, ∆q}. Therefore, any two natural
+transformations of G to G′ are naturally chain homotopic. The chain maps
+ω ◦ν and ν ◦λ# are two such natural transformations, as we noted. Therefore
+they are chain homotopic.
+Consider the dual diagram
+Sp(X; R) ⊗Sq(Y ; R)
+Hom ((S(X) ⊗S(Y ))m, R)
+Sm(X × Y ; R)
+Sq(Y ; R) ⊗Sp(X; R)
+Hom ((S(Y ) ⊗S(X))m, R)
+Sm(Y × X; R)
+θ
+ν
+η
+θ
+ν
+ω
+λ#
+where we define η by the equation
+η(cq ⊗cp) = (−1)pqcp ⊗cq .
+The first square of this diagram commutes, as you can check. The second
+square commutes up to cochain homotopy. Therefore, the induced cohomology
+diagram actually commutes. Then (a) follows.
+(b) & (c) While it is possible to prove (b) and (c) using acyclic model
+arguments, it is easier to use the cochain product formula of Lemma 7.11.2.
+In particular, the proof of (b) is trivial if one uses this formula.
+To verify (c), let zp be a cocycle of X that represents the element αp
+of Hp(X; R). Then αp × 1Y is represented by the cochain zp × z0, where
+z0 is the cocycle of Y whose value is 1 on each singular 0-simplex of Y . If
+T : ∆p →X × Y is a singular p-simplex, we compute
+⟨zp × z0, T⟩= ⟨zp, π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨z0, π2 ◦T ◦ℓ(ϵp)⟩
+= ⟨zp, π1 ◦T⟩· 1 = ⟨π#
+1 (zp), T⟩.
+Therefore αp × 1Y = π∗
+1(αp), as claimed. The proof for 1X × βq is similar.
+We note that all three of these properties, suitably interpreted, hold for the
+other version of the cross product. Anticommutativity (a) holds if one uses
+(Z, G) coefficients on the right. Associativity (b) holds if two of the coefficients
+groups are Z and one is G. The first statement in (c) holds if iY ∈H0(Y )
+and αp ∈Hp(X; G), since then αp × 1Y ∈Hp(X × Y ; G) and the statement
+makes sense. A similar remark applies to 1X × βq.

@@ -1,0 +1,62 @@
+556
+Index of Notation
+⌢Γ : Hn−k(X) →Hk(X)
+geometric duality isomorphism
+481
+κ∗
+algebraic duality isomorphism
+481
+αp · βq
+intersection product of αp and βq
+490
+β∗: Hp(C; G′′) →Hp−1(C; G)
+Bockstein homomorphism
+492
+β∗: Hp(C; G′′) →Hp+1(C; G)
+Bockstein homomorphism
+492
+γ
+orientation cycle for (X, A)
+498
+Γ(i)
+orientation class for (Xi, Ai)
+501
+Γ
+orientation class for (X, A)
+501
+Γ(i)
+(2)
+orientation class for (Xi, Ai) over Z/2
+501
+Γ(2)
+orientation class for (X, A) over Z/2
+501
+St(A, X)
+star of subcomplex A in X
+511
+St(A, X)
+closed star of subcomplex A in X
+511
+dir lim α∈JGα
+direct limit of groups
+520
+Φ
+→
+direct limit of homomorphisms
+521
+N(A)
+nerve of A
+522
+g∗: Hk(N(B); G) →Hk(N(A); G)
+homomorphism induced by refinement
+522
+g∗: Hk(N(A); G) →Hk(N(B); G)
+homomorphism induced by refinement
+522
+ˇHk(X; G)
+ˇCech cohomology group of X with coefficients
+in G
+523
+ˇHk(A)
+reduced ˇCech cohomology group of A
+523

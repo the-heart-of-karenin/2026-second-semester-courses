@@ -1,0 +1,43 @@
+290
+Elements of Algebraic Topology
+(z1, z2, . . . , zn+1, 0, . . . ) of S2n+1 \ S2n−1. Then |z| = 1 and zn+1̸ = 0. Using
+the polar representation of complex numbers, we write zn+1 = r eiθ, where
+r > 0. Set λ = e−iθ. Then we have
+λz = (λz1, λz2, . . . , λzn, r, 0 . . . ) ∈E2n
++ .
+Now |λ| = 1, so p(λz) = p(z). Thus we have p(z) ∈p(Int E2n
++ ).
+Next we show that the map p′ : Int E2n
++ →e2n is injective. Suppose that
+p(z) = p(w), where z and w are in Int E2n
++ . Then w = λz with |λ| = 1. In
+particular, wn+1 = λzn+1. Since wn+1 and zn+1 are real and positive, so is λ.
+Since |λ| = 1, we conclude that λ = 1. Thus w = z, as desired.
+We have noted that CP 0 is a single point. The space CP 1 is obtained by
+attaching a 2-cell to CP 0; therefore, CP 1 is homeomorphic to S2.
+Definition 4.14.6 Consider the increasing sequence CP 0 ⊂CP 1 ⊂. . . of
+projective spaces. Their coherent union is denoted by CP ∞, and is called
+infinite-dimensional complex projective space . By Theorem 4.12.15, it is a
+CW complex with one cell in each non-negative even dimension, and CP n is
+its 2n-skeleton.
+The homology of complex projective space is exceedingly easy to compute:
+Theorem 4.14.7 The group Hi(CP n) is infinite cyclic if i is even and 0 ≤
+i ≤2n, and it vanishes otherwise. The group Hi(CP ∞) is infinite cyclic if i
+is even and i ≥0, and it vanishes otherwise.
+Proof: The cellular chain group Di(CP n) is infinite cyclic if i is even and
+0 ≤i ≤2n, and otherwise it vanishes. Therefore, every chain of this chain
+complex is a cycle, and no chain bounds. A similar computation applies to
+CP ∞.
+The computation of the homology of real projective space is much more
+difficult. The cellular chain group Dk(Pn) is infinite cyclic for 0 ≤k ≤n, so we
+cannot avoid a detailed examination of the boundary operator in the cellular
+complex. Since the open k-cell ek of Pn equals Pk \ Pk−1, and ˙ek = Pk−1, we
+have Dk(Pn) = Hk(Pk, Pk−1). Thus we must compute the boundary operator
+∂∗: Hk+1(Pk+1, Pk) →Hk(Pk, Pk−1) .
+First we prove a lemma.
+Lemma 4.14.8 Let p : Sn →Pn be the quotient map, where n ≥1. Let
+j : Pn →(Pn, Pn−1) be inclusion. The composite homomorphism
+Hn(Sn) p∗
+−→Hn(Pn) j∗
+−→Hn(Pn, Pn−1)
+is zero if n is even, and multiplication by 2 if n is odd.

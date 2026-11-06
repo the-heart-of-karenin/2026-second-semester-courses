@@ -1,0 +1,52 @@
+416
+Elements of Algebraic Topology
+boundary operators vanish. Then the preceding sequence becomes a short
+exact sequence of chain complexes.
+Now tensor with C′
+q and sum over p+q = m. Exactness is retained, because
+the original sequence splits and direct sums of exact sequences are exact. One
+obtains the exact sequence
+0 −→(Zp ⊗C′
+q)
+(Cp ⊗C′
+q)
+(Dp ⊗C′
+q) −→0 ,
+j ⊗i′
+∂0 ⊗i′
+where we use i′ instead of iC′ to denote the identity map of C′. Since the maps
+involved are chain maps, this is a short exact sequence of chain complexes
+0
+(Z ⊗C′)m
+(C ⊗C′)m
+(D ⊗C′)m
+0 .
+The boundary operator in C ⊗C′ is denoted as usual by ∂. The boundary
+operators in the end groups have the form ±i⊗∂′, where i is the identity map
+in C. For instance, in Z ⊗C′, one computes
+∂(zp ⊗c′
+q) = (−1)pzp ⊗∂′c′
+q ,
+since ∂zp = 0. A similar remark applies to D ⊗C′.
+We obtain from this short exact sequence of chain complexes a long exact
+homology sequence, of which we consider five terms:
+Hm(Z ⊗C′) −→Hm(C ⊗C′)
+βm+1
+Hm+1(D ⊗C′)
+Hm(D ⊗C′) βm
+−→Hm−1(Z ⊗C′) ,
+where βm denotes the zig-zag homomorphism [see Lemma 3.3.2]. This se-
+quence is natural with respect to homomorphisms induced by chain maps.
+Consider the induced sequence
+0 −→cok βm+1 −→Hm(C ⊗C′) −→ker βm −→0 .
+(∗)
+It is also natural. We identify the terms of this short exact sequence.
+Before proceeding, let us recall that if B is a subgroup of C, and if A is
+free, then the map
+A ⊗B −→A ⊗C
+induced by inclusion is injective. Hence in this case, we can consider A ⊗B
+as a subgroup of A ⊗C. We shall use this fact freely in what follows.
+Step 2. We compute the group Hm(Z ⊗C′).
+We show that there is an isomorphism, induced by inclusion and given by
+
+p+q=mZp ⊗Hq(C′) ∼= Hm(Z ⊗C′) .

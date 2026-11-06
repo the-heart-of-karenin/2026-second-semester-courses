@@ -1,0 +1,52 @@
+Topological Invariance of the Homology Groups
+141
+(c) Derive a contradiction.
+3. Show that the map k defined in Step 1 of the proof of Theorem 2.9.8
+is a homeomorphism by following steps:
+(a) Show that the maps
+p : |K| × [−1, 1]
+→
+|S(K)|
+q : |K| × [−1, 1]
+→
+Sn ,
+given by the equations
+p(x, t) =
+
+(1 −t)x + tw0
+if
+t ≥0 ,
+(1 + t)x −tw1
+if
+t < 0
+and
+q(x, t) = (
+
+1 −t2h(x), t)
+are quotient maps.
+(b) Show that the quotient maps p, q induce the homeomorphism
+k.
+4. Refer to Exercise 1(c). Show that the result is true for integers
+n ≤0.
+5. Refer to Exercise 1(b). Let m be any complex constant. Show that
+the function f(z) = (z + m)2 has degree 2. [Hint: Use a homotopy
+argument to answer this question.]
+2.10
+∗The Lefschetz Fixed Point Theorem
+The fixed point theorems proved earlier concern maps of spheres and balls to
+themselves. There is a far-reaching generalization due to Solomon Lefschetz
+that applies to more arbitrary topological spaces. We shall prove it in this
+section.
+We begin by reviewing some ideas from algebra.
+If A = (aij) is an n × n square matrix, then the trace of A, denoted tr A,
+is defined by
+tr A =
+n
+
+j=1
+ajj .
+If A and B are n × n matrices, then
+tr AB =
+
+i,j
+aijbji = tr BA .

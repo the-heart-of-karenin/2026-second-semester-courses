@@ -1,0 +1,18 @@
+186
+Elements of Algebraic Topology
+points of X. And let hom(x1, x0) consist of path homotopy classes
+[α] of paths α from x0 to x1. The composition operation
+hom(x2, x1) × hom(x1, x0) →hom(x2, x0)
+is induced by the usual composition of paths (β, α) →α ∗β.
+(a) Check that C is a category in which every morphism is an
+equivalence, i.e., C is a groupoid.
+(b) Check that the assignment x0 →π1(X, x0) and [α] →α is a
+contravariant functor from C to the category of groups and
+homomorphisms. [Here α([f]) = [α ∗f ∗α], where α is the
+reverse path to α. [Note: The reason we must let [α] represent
+an element of hom(x1, x0) rather than hom(x0, x1) arises from
+the awkward fact that when we compose paths we put the first
+path on the left, while when we compose maps we put the first
+function on the right.]
+6. Give an example of a contravariant functor that arises in the context
+of abelian groups.

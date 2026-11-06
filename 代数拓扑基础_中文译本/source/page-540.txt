@@ -1,0 +1,44 @@
+Duality in Manifolds
+525
+Consider the collection E of all subsets of X of the form
+Ei1,i2,...,ip = Ci1 ∩Ci2 ∩· · · ∩Cip .
+Let E be the union of all such sets that do not intersect C1. Then E is closed
+in X and disjoint from C1. Choose W1 to be an open subset of X containing
+C1 whose closure is disjoint from E and lies in U1. We show that the nerves
+of {W 1, C2, . . . , Cn} and {C1, C2, . . . , Cn} are naturally isomorphic. For this
+purpose, it suffices to show that
+W 1 ∩Ci1 ∩Ci2 ∩· · · ∩Cip̸ = ∅⇐⇒C1 ∩Ci1 ∩Ci2 · · · ∩cip̸ = ∅.
+The implication ⇐is trivial since C1 ⊂W 1. We prove the other implication.
+If the right-hand set is empty, then the set Ci1 ∩Ci2 ∩· · · ∩Cip is disjoint
+from C1. Thus it is contained in E by definition. Then it is disjoint from W 1
+by definition of W1. Hence the left-hand set is empty as well.
+Apply this construction a second time to choose W2 so that C2 ⊂W2 and
+W 2 ⊂U2 and the nerves of
+{W 1, W 2, C3, C4, . . . , Cn}
+and
+{W 1, C2, C3, C4, . . . , Cn}
+are naturally isomorphic. Continue this argument in a similar fashion.
+Step 3: A covering W = {W1, W2, . . . , Wn} of Y by sets open in X is said
+to be adapted to Y if the nerves of {W1, W2, . . . , Wn} and {W1 ∩Y, W2 ∩
+Y, . . . , Wn ∩Y } are naturally isomorphic. Let L be the family of all coverings
+of Y by sets open in X. Let L0 be the subfamily consisting of those coverings
+that are adapted to Y . We show that L0 is cofinal in L.
+Let A be a covering of Y by sets open in X. Pass to a finite subcollection
+{U1, U2, . . . , Un} covering Y . Consider the covering
+{U1 ∩Y, U2 ∩Y, . . . , Un ∩Y }
+of Y by sets open in Y . Applying Step 1 to the normal space Y , choose
+a collection {V1, V2, . . . , Vn} of sets open in Y that cover Y and such that
+V i ⊂(Ui ∩Y ) for each i. Let Ci = V i and apply Step 2 to find a collection of
+open sets W = {W1, W2 . . . , Wn} of X such that Ci ⊂Wi and W i ⊂Ui and
+such that the nerves of {C1, C2, . . . , Cn} and {W 1, W2, . . . , W n} are naturally
+isomorphic.
+Now W refines A and W covers Y . The fact that W is adapted to Y follows
+from the implication
+Ci1 ∩Ci2 ∩· · · ∩Cip̸ = ∅
+⇐⇒
+W i1 ∩W i2 ∩· · · ∩W ip̸ = ∅
+⇓
+⇑
+Wi1 ∩Wi2 ∩· · · ∩Wip ∩Y̸ = ∅
+=⇒
+Wi1 ∩Wi2 ∩· · · ∩Wip̸ = ∅

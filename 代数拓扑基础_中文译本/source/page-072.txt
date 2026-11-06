@@ -1,0 +1,47 @@
+Homology Groups of a Simplicial Complex
+57
+The boundary operator ∂: Cp(K0) →Cp−1(K0) is simply the restriction
+of the boundary operator on Cp(K). We use the same symbol to denote both
+these homomorphisms, when no confusion will result. This homomorphism
+induces a homomorphism
+Cp(K, K0) →Cp−1(K, K0)
+of the relative chain groups, which we also denote by ∂. As before, it satisfies
+the equation ∂◦∂= 0. We let
+Zp(K, K0)
+=
+ker ∂: Cp(K, K0) →Cp−1(K, K0) ,
+Bp(K, K0)
+=
+im ∂: Cp+1(K, K0) →Cp(K, K0) ,
+Hp(K, K0)
+=
+Zp(K, K0)/Bp(K, K0) .
+These groups are called, respectively, the group of relative p-cycles, the group
+of relative p-boundaries, and the relative homology group in dimension p, of
+K modulo K0.
+Note that a relative p-chain, which is a coset cp+Cp(K0), is a relative cycle
+if and only if ∂cp is carried by K0. Furthermore, it is a relative boundary if
+and only if there is a p + 1 chain dp+1 of K such that cp −∂dp+1 is carried by
+K0.
+EXAMPLE 1.10.2 Let K consist of an n-simplex and its faces; let K0 be
+the proper faces of K. Then the group Cp(K, K0) vanishes except when p = n,
+in which case it is infinite cyclic. It follows that
+Hi(K, K0)
+=
+0 for i̸ = n ,
+Hn(K, K0)
+∼=
+Z .
+EXAMPLE 1.10.3 Let K be a complex and let K0 consist of a single vertex
+v of K. Using the results of Section 1.8, one sees readily that H0(K, v) is free
+abelian; one obtains a basis for H0(K, v) by choosing one vertex from each
+component of |K| other than the component containing v. Then H0(K, v) ∼=
+H0(K).
+It is not hard to show that Hp(K, v) ∼= Hp(K) for p > 0; see the exercises.
+EXAMPLE 1.10.4 Let K be the complex indicated in Figure 1.10.1, whose
+underlying space is a square. Let K0 be the subcomplex whose space is the
+boundary of the square. It is easy to see that the 2-chain  miσi represents
+a relative cycle of K modulo K0 if and only if m1 = m2 = m3 = m4. Since
+there are no boundaries in dimension 2,
+H2(K, K0) ∼= Z
+and the chain γ =  σi represents a generator.

@@ -1,0 +1,41 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+175
+If such a triangulation exists, then we say that (X, A) is a triangulable pair.
+If A is empty, then consistent with Definition 2.9.7, we say simply that X is
+a triangulable space.
+Now let (X, A) be a triangulable pair. We define the simplicial homology
+Hp(X, A) of this pair as follows. Consider the collection of all triangulations
+of (X, A). They are of the form
+hα : (|Kα|, |Cα|) →(X, A) ,
+where Cα is a subcomplex of Kα.
+Now there is some set-theoretic difficulty with the concept of the “set of
+all triangulations of a pair,” as there is with the “set of all sets.” We avoid
+these problems by assuming that each Kα lies in some fixed space EJ. This is
+justified by noting that if J is large enough, then each Kα has an isomorphic
+copy lying in EJ. [For instance, we can let J have the cardinality of X itself.]
+Once we know that all the sets Kα are confined to a fixed EJ, then we can
+find a large enough index set for Kα.
+For fixed p, consider the groups Hp(Kα, Cα). We make sure they are dis-
+joint as sets by forming Hp(Kα, Cα) × {α}. Then in the disjoint union
+
+α
+Hp(Kα, Cα) × {α} ,
+(∗)
+we introduce an equivalence relation. We define
+(x, α) ∈Hp(Kα, Cα) × {α}
+(y, β) ∈Hp(Kβ, Cβ) × {β}
+to be equivalent if (h−1
+β hα)∗(x) = y. We define
+Hp(X, A)
+to be the set of equivalence classes in (∗).
+Now each equivalence class contains exactly one element from each group
+Hp(Kα, Cα) × {α}. Thus the map
+Hp(Kα, Cα) × {α} →Hp(X, A)
+that carries each element to its equivalence class is bijective. We make
+Hp(X, A) into a group by requiring this map to be an isomorphism. This
+group structure is unambiguous because (h−1
+β hα)∗is an isomorphism for each
+pair of indices α and β.
+A continuous map h : (X, A) →(Y, B) induces a homomorphism in ho-
+mology as follows: Take any pair of triangulations
+hα : (|Kα|, |Cα|) →(X, A) ,

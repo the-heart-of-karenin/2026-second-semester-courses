@@ -1,0 +1,45 @@
+334
+Elements of Algebraic Topology
+Lemma 5.6.4 Let
+0 −→C
+ϕ
+−→D −→E −→0
+be an exact sequence of free chain complexes. If ϕ induces homology isomor-
+phisms in all dimensions, then it induces cohomology isomorphisms as well.
+Proof: The existence of the long exact sequence in homology and the fact
+that ϕ∗is an isomorphism imply that Hp(E) = 0 for all p.
+Let Bp ⊂Zp ⊂Ep denote the boundaries, cycles, and chains of E, respec-
+tively, in dimension p. The short exact sequence
+0 −→Zp −→Ep
+∂
+−→Bp−1 −→0
+splits because Bp−1 is free. Furthermore, Zp = Bp because the homology of
+E vanishes. Therefore, we can write Ep = Bp ⊕Up, where ∂maps Bp to zero
+and carries Up isomorphically onto Bp−1. Now
+Hom (Ep, G) ∼= Hom (Bp, G) ⊕Hom (Up, G) .
+You can check that δ induces a homomorphism that carries Hom (Bp, G)
+isomorphically onto Hom (Up+1, G) and carries Hom (Up, G) to zero. Then
+Hom (Up, G) represents the cocycle group of E and it equals the image of δ.
+Thus we have Hp(E; G) = 0.
+The above special case of our theorem is all we actually used in the pre-
+ceding section. Later, we shall need the general version. The general case is
+reduced to the special case by means of the following lemma.
+Lemma 5.6.5 Let C and D be free chain complexes. Let ϕ : C →D be a
+chain map. There is a free chain complex D′ along with injective chain maps
+i : C →D′ and j : D →D′ such that j induces homology isomorphisms in all
+dimensions, and the diagram
+C
+D
+D′
+ϕ
+i
+j
+commutes up to chain homotopy. Furthermore, the quotients D′/im i and
+D′/im j are free.
+Proof: The definition of D′ is one that we simply “pull out of a hat.” Later,
+we shall explain its geometric motivation. It is sometimes called the “algebraic
+mapping cylinder” of ϕ.
+Define D′ to be the chain complex whose chain group in dimension p is
+given by
+D′
+p = Cp ⊕Dp ⊕Cp−1 .

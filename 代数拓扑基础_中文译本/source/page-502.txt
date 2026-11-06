@@ -1,0 +1,30 @@
+Duality in Manifolds
+487
+R2 × 1
+A1
+A2
+¯u
+P(¯u)
+Figure 8.8.4
+Proof of the Theorem: Suppose that A1 and A2 both lie in the plane
+R2 × {1} in R3. For each unit vector −→u in R3, consider the plane P(−→u )
+through the origin perpendicular to −→u . Let fi(−→u ) equal the measure of the
+part of Ai that lies on the same side of P(−→u ) as does the vector −→u . See
+Figure 8.8.4. Note that
+fi(−→u ) + fi(−−→u ) = measure Ai .
+Now the function
+−→u →(f1(−→u ), f2(−→u ))
+is a continuous map of S2 into R2. By the Borsuk-Ulam theorem,
+(f1(−→a ), f2(−→a )) = (f1(−−→a ), f2(−−→a ))
+for some −→a ∈S2. Then
+fi(−→a ) = 1
+2(measure Ai)
+for i = 1, 2. The line in which the plane P(−→a ) intersects the plane R2 × {1}
+is thus the desired line that bisects each of A1 and A2.
+The proof of this last theorem generalizes to prove the ham sandwich
+theorem, that is, to show that for n bounded measurable sets in Rn, there is
+an n −1 plane in Rn that bisects them all. The motivation for the name of
+the ham sandwich theorem is the following: One thinks of a ham sandwich
+as consisting of two slices of bread and a slice of ham, so in case n = 3, the
+theorem says that one can bisect each slice of bread and the slice of ham with
+a single whack of the knife.

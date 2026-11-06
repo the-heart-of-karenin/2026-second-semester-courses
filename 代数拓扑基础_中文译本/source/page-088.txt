@@ -1,0 +1,49 @@
+Homology Groups of a Simplicial Complex
+73
+3. Reduce the following matrix to normal form
+
+
+2
+6
+4
+4
+−7
+4
+4
+8
+4
+
+.
+1.13
+Homomorphisms Induced by
+Simplicial Maps
+If f is a simplicial map of |K| into |L|, then f maps each p-simplex σi of
+K onto a simplex τi of L of the same or lower dimension. We shall define
+a homomorphism of p-chains that carries a formal sum miσi of oriented
+p-simplices of K onto a formal sum miτi of their images. [We delete from
+the latter sum those simplices τi whose dimension is less than p.] This map in
+turn induces a homomorphism of homology groups, as we shall see.
+As a general convention, we shall use the phrase
+f : K →L is a simplicial map
+to mean that f is a continuous map of |K| into |L| that maps each simplex of
+K linearly onto a simplex of L. Thus f maps each vertex of K to a vertex of
+L, and it equals the simplicial map induced by this vertex map, as defined in
+Section 1.3.
+Definition 1.13.1 Let f : K →L be a simplicial map. If v0v1 . . . vp is a
+simplex of K, then the points f(v0), f(v1), . . . , f(vp) span a simplex of L.
+We define a homomorphism f# : Cp(K) →Cp(L) by defining it on oriented
+simplices as follows:
+f#([v0, v1, . . . , vp]) =
+
+[f(v0), f(v1), . . . , f(vp)]
+if f(v0), f(v1), . . . , f(vp) are distinct,
+0
+otherwise.
+This map is clearly well-defined; exchanging two vertices in the expression
+[v0, v1, . . . , vp] changes the sign of the right side of the equation. The family of
+homomorphisms {f#}, one in each dimension, is called the chain map induced
+by the simplicial map f.
+Properly speaking, one should use dimensional subscripts to distinguish
+these homomorphisms, denoting the map in dimension p by (f#)p : Cp(K) →
+Cp(L). Normally, we shall omit the subscript, relying on the context to make
+the situation clear, just as we do with the boundary operator.

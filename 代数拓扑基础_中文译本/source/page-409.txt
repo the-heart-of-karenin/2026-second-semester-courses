@@ -1,0 +1,34 @@
+394
+Elements of Algebraic Topology
+Remark 7.3.5 Strictly speaking, the formula (†) defines ω(f) as a function
+on the cartesian product Cp × F. One then observes that the function is
+bilinear, thus it does define a function on Cp ⊗F. Often this step is not
+mentioned.
+Proof: To check that ω(f) is a linear transformation, we compute
+⟨ω(f), α(cp ⊗β)⟩= ⟨ω(f), cp ⊗αβ⟩= ⟨f, cp⟩· (αβ)
+= α · (⟨f, cp⟩· β) = α · ⟨ω(f), cp ⊗β⟩.
+We show that the map ω is injective. Suppose ω(f) is the zero linear trans-
+formation. Then in particular
+⟨ω(f), cp ⊗1⟩= 0 = ⟨f, cp⟩· 1
+for all cp ∈Cp. This implies that f is the zero homomorphism.
+We show that the map ω is surjective. Let ϕ : Cp ⊗F →F be a linear
+transformation. Let us define f : Cp →F by the equation f(cp) = ϕ(cp ⊗1).
+It follows that f is a homomorphism of abelian groups, because f(0) = 0 and
+f(cp + dp) = ϕ((cp + dp) ⊗1)
+= ϕ(cp ⊗1 + dp ⊗1) = f(cp) + f(dp) .
+Furthermore, ω(f) = ϕ holds, since
+⟨ω(f), cp ⊗α⟩= ⟨f, cp⟩· α = α · ϕ(cp ⊗1) ,
+ϕ(cp ⊗α) = ϕ(α · (cp ⊗1)) = α · ϕ(cp ⊗1) .
+This last equation holds because ϕ is a linear transformation, not just a ho-
+momorphism of abelian groups.
+We show the map ω commutes with δ. We compute
+⟨δω(f), cp+1 ⊗α⟩= ⟨ω(f), (∂⊗iF )(cp+1 ⊗α)⟩
+= ⟨f, ∂cp+1⟩· α = ⟨δf, cp+1⟩· α
+= ⟨ω(δf), cp+1 ⊗α⟩.
+Theorem 7.3.6 (Universal coefficient theorem with field coefficients)
+Let C be a free chain complex, and let F be a field. Then there is a natural
+vector space isomorphism
+HomF (Hp(C; F), F) ←−Hp(C; F) .
+Proof: We imitate the proof of the universal coefficient theorem. First, we
+note that if
+0 −→A −→B −→C −→0

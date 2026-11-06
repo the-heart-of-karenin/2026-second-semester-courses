@@ -1,0 +1,50 @@
+Singular Homology Theory
+289
+Definition 4.14.4 Let us introduce an equivalence relation in the complex
+n-sphere S2n+1 ⊂Cn+1 by defining
+(z1, z2, . . . , zn+1, 0, . . . ) ∼(λz1, λz2, . . . , λzn+1, 0, . . . )
+for each complex number λ with |λ| = 1. The resulting quotient space is called
+complex projective n-space and is denoted CP n.
+We show that the quotient map p : S2n+1 →CP n is a closed map. If A is
+a closed set in S2n+1, then p−1p(A) is the image of S1 × A under the scalar
+multiplication map (λ, z) →λ z. Since this map is continuous and S1 × A is
+compact, its image is compact and therefore closed in S2n+1. Then p(A) is
+closed in CP n, by definition.
+It follows that CP n is Hausdorff [in fact normal].
+As in the real case, Cn ⊂Cn+1 for all n, so that S2n−1 ⊂S2n+1. Then,
+passing to quotient spaces, we have CP n−1 ⊂CP n. In fact, CP n−1 is a closed
+subspace of CP n, by the same argument as before.
+Said differently, the elements of CP n are equivalence classes of sequences
+(z1, z2, . . . ) of complex numbers such that zi = 0 for i > n+1. If one sequence
+in an equivalence class satisfies the equation zn+1 = 0, so does every mem-
+ber of the equivalence class, and the class in question belongs to CP n−1, by
+definition.
+Theorem 4.14.5 The space CP n is a CW complex of dimension 2n. It has
+one open cell in each even dimension 2j for 0 ≤2j ≤2n, and CP j is its
+2j-skeleton.
+Proof: The space CP 0 is a single point. In general, we show that CP n\CP n−1
+is an open 2n-cell, which we denote e2n. Consider the subset S2n+1 consisting
+of all points z = (z1, z2, . . . , zn+1, 0, . . . ) with zn+1 real. Under the realification
+operator ρ, this corresponds to the set of all points of R2n+2 of the form
+(x1, y1, x2, y2, . . . , xn, yn, xn+1, 0, 0, . . . )
+having euclidean norm 1. This is simply the unit sphere S2n in R2n+1, and it
+is the equator of S2n+1. If we further restrict the set by requiring zn+1 to be
+real and non-negative, then xn+1 ≥0 and we obtain the upper hemisphere
+E2n
++ of this equatorial sphere. The restriction p′ of p to E2n
++ is, of course, a
+quotient map, because the domain is compact and the range is Hausdorff. The
+boundary of E2n
++ is the sphere S2n−1 obtained by setting zn+1 = 0. The map
+p′ carries S2n−1 onto CP n−1. We shall show that p′ maps Int E2n
++ bijectively
+onto e2n = CP n \ CP n−1. Then, since it is a one-to-one quotient map, it
+is a homeomorphism. It follows that e2n is an open 2n-cell, and that p′ is a
+characteristic map for e2n.
+First we show that the map p′ : Int E2n
++
+→e2n is surjective. Given
+a point of e2n
+=
+CP n \ CP n−1, it equals p(z) for some point z
+=

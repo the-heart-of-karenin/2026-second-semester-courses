@@ -1,0 +1,53 @@
+402
+Elements of Algebraic Topology
+· · ·
+Fk
+Fk−1
+· · ·
+F0 −→A −→0 ,
+ϕk+1
+ϕk
+ϕk−1
+ϕ1
+where each Fi is free. Such a sequence is called a free resolution of the R-
+module A. Applying the functor HomR, one obtains the sequence
+· · ·
+HomR(F1, G)
+HomR(F0, G) ←−HomR(A, G) ←−0 .
+ϕ2
+ϕ1
+Exactness holds for the two right-hand terms. For n ≥1, we define
+Extn
+R(A, G) = ker ϕn+1/im ϕn .
+Thus we obtain a sequence of Ext groups. If R = Z, then Extn
+R vanishes for
+n > 1 and equals Ext for n = 1.
+A similar construction, using ⊗R, gives one a sequence of groups
+TorR
+n (A, G). Many of the theorems we have proved for Ext and the torsion
+product generalize to statements about these new groups. There are numerous
+applications to both topology and algebra.
+The theorems of this section enable us to compute tensor and torsion
+products when the groups are finitely generated. Below we summarize the
+rules for these products, as well as those for Hom and Ext [as usual ϕm denotes
+multiplication by m]:
+Z ⊗G ∼= G
+Hom (Z, G) ∼= G
+Z/m ⊗G ∼= G/mG
+Hom (Z/m, G) ∼= ker(G ϕm
+−→G)
+Z ∗G = 0
+Ext (Z, G) = 0
+Z/m ∗G ∼= ker(G ϕm
+−→G)
+Ext (Z/m, G) ∼= G/mG
+The above rules imply the following special cases, where d = gcd(m, n):
+Z/m ⊗Z ∼= Z/m
+Hom (Z/m, Z) = 0
+Z/m ∗Z = 0
+Ext (Z/m, Z) ∼= Z/m
+Z/m ⊗Z/n ∼= Z/m ∗Z/n ∼= Hom (Z/m, Z/n) ∼= Ext (Z/m, Z/n) ∼= Z/d
+EXERCISES
+1. Compute A ⊗B and A ∗B if
+A = Z ⊕Z/2 ⊕Z/4 ⊕Z/6 ,
+B = Z ⊕Z ⊕Z/9 ⊕Z/12 .

@@ -1,0 +1,41 @@
+198
+Elements of Algebraic Topology
+theorem follows. To construct D in simplicial theory, we used acyclic carriers,
+but here we need something more general. It is a special case of what we shall
+later call the “method of acyclic models.”
+It is plausible that a chain homotopy D between i# and j# should exist.
+For example, if T is the singular 1-simplex pictured in Figure 4.3.1, and if
+∂T = T1 −T0, we can take DT1 and DT0 to be the “vertical” singular 1-
+simplices pictured. Then we can take DT to be a 2-chain that covers the
+shaded region in the figure, having as boundary j#(T) −DT1 −i#(T) + DT0.
+i
+j
+F
+T
+Y
+f#T
+g#T
+X
+X × I
+DT0
+DT1
+Figure 4.3.1
+We state the existence of D as a separate lemma:
+Lemma 4.3.6 For each space X and each non-negative integer p, there exists
+a homomorphism
+DX : Sp(X) →Sp+1(X × I)
+having the following properties:
+(a) If T : ∆p →X is a singular simplex, then
+∂DXT + DX∂T = j#(T) −i#(T) .
+Here the map i : X →X × I carries x to (x, 0) and the map
+j : X →X × I carries x to (x, 1).
+(b) The homomorphism DX is natural, that is, if f : X →Y is a
+continuous map, then the following diagram commutes:
+Sp(X)
+DX
+−−−−→Sp+1(X × I)
+f#
+(f × iI)#
+Sp(Y )
+DY
+−−−−→Sp+1(Y × I) .

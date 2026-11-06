@@ -1,0 +1,42 @@
+132
+Elements of Algebraic Topology
+x
+C
+X
+V
+π−1(A)
+X × C
+Ui+1
+Ui
+p−1(p(Ui))
+{x} × V
+(x0, c0)
+Figure 2.8.2
+Finally let U be the union of the open sets U1 ⊂U2 ⊂· · · . Then U × V is
+a neighborhood of (x0, c0) and U × V ⊂π−1(A). In addition, U is saturated
+with respect to p, for
+U ⊂p−1p(U) =
+∞
+
+i=1
+p−1p(Ui) =
+∞
+
+i=1
+Ui+1 = U .
+Hence p(U) is open in Y . Thus
+p(U) × V = π(U × V ) ⊂A
+is a neighborhood of (y0, c0) lying in A as desired.
+Corollary 2.8.3 If p : A →B and q : C →D are quotient maps, and if the
+domain of p and the range of q are locally compact Hausdorff spaces, then
+p × q : A × C →B × D
+is a quotient map.
+Proof: We can write p × q as the composition
+A × C
+iA×q
+−→A × D
+p×iD
+−→B × D .
+Since each of these maps is a quotient map, then so is p × q.
+There is a close relationship between coherent topologies and quotient
+maps, which can be described as follows.

@@ -1,0 +1,37 @@
+Singular Homology Theory
+273
+a map f : Bd B3 →C that maps each great circle arc in S2 from the south
+pole to the north pole homeomorphically onto the 1-cell C. The resulting
+adjunction space X is easily seen to be a CW complex; one takes the open
+simplices of A as the open cells of dimensions 0, 1, and 2, and Int B3 as the
+open 3-cell e3. We show that the space X cannot be triangulated; hence, in
+particular, it is not a triangulable CW complex.
+A
+D
+C
+f
+B3
+Figure 4.12.5
+Suppose h : |K| →X is a triangulation. First we write X as the disjoint
+union
+X = (A \ C) ∪C ∪e3 .
+Now if x ∈e3, then H3(X, X \ x) is infinite cyclic, because x has a neigh-
+borhood homeomorphic to an open 3-ball. On the other hand, notice that if
+x ∈A \ C, then H3(X, X \ x) vanishes, because x has a neighborhood lying
+entirely in the 2-dimensional complex A. [See Theorem 4.8.14.] It follows from
+Lemma 4.8.10 that if σ is a simplex of K, then h(Int σ) cannot intersect both
+A \ C and e3. It follows that h(σ) lies either in A or in e3. Thus A and e3 are
+triangulated by h, and thus so is A ∩e3 = C.
+On the other hand, we next give similar reasoning that shows that D is
+triangulated by h. Consider the local homology groups Hi(A, A \ x) of A. At
+each point x interior to D, H2(A, A \ x) ∼= Z ⊕Z. [For A can be expressed as
+a cone with vertex x and base homeomorphic to a curve with a shape similar
+to the letter θ, a curve that we denote by θ. So by the long exact homology
+sequence, H2(A, A\x) ∼= H1(θ) ∼= Z⊕Z.] At each point x of A not in D, either
+H2(A, A \ x) ∼= Z [if x is interior to one of the triangles] or H2(A, A \ x) = 0.
+We conclude that if h(Int σ) intersects the interior of D, then it lies in D.
+Thus D is triangulated by h.
+It follows that C ∩D is triangulated by h. This is impossible, since C ∩D
+has infinitely many components and K is a finite complex.
+It is often helpful to view a CW complex as a space built up from a col-
+lection of closed balls by forming appropriate quotient spaces or to construct

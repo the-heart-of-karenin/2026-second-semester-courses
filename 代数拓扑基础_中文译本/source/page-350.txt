@@ -1,0 +1,57 @@
+Cohomology
+335
+Let the boundary operator in D′ be defined by the equations
+∂′(cp, 0, 0)
+=
+(∂cp, 0, 0) ,
+∂′(0, dp, 0)
+=
+(0, ∂dp, 0) ,
+∂′(0, 0, cp−1)
+=
+(−cp−1, ϕ(cp−1), −∂cp−1) .
+You can check without difficulty that ∂′ ◦∂′ = 0. It is clear from the definition
+that the natural inclusions i : Cp →D′
+p and j : Dp →D′
+p are chain maps. It
+is also clear that D′
+p and the quotients D′
+p/im i and D′
+p/im j are free.
+We define the chain homotopy D : Cp →D′
+p+1 by the equation
+D(cp) = (0, 0, cp) .
+You can check that it satisfies the equation
+∂′D + D∂= j ◦ϕ −i .
+Finally, we show that j induces an isomorphism in homology. For that
+purpose, it suffices to show that the homology of the chain complex D′/D
+vanishes. The pth chain group of D′/D is isomorphic to Cp ⊕Cp−1, and the
+induced boundary operator ∂′′ is given by the equation
+∂′′(cp, cp−1) = (∂cp −cp−1, −∂cp−1) .
+If (cp, cp−1) is a cycle of this chain complex, then it follows in particular that
+∂cp −cp−1 = 0. We compute directly that
+(cp, cp−1) = (cp, ∂cp) = −∂′′(0, cp) .
+Thus (cp, cp−1) is a boundary.
+Theorem 5.6.6 Let C and D be free chain complexes. Let ϕ : C →D be a
+chain map. If ϕ induces homology isomorphisms in all dimensions, then ϕ
+induces cohomology isomorphisms in all dimensions.
+Proof: Given ϕ, let i : C →D′ and j : D →D′ be as in the preceding lemma.
+One has exact sequences of free chain complexes
+0
+C
+D′
+D′/C
+0 ,
+0
+D
+D′
+D′/D
+0 .
+i
+j
+The map j induces a homology isomorphism by the preceding lemma, while
+i induces a homology isomorphism because both j and ϕ do and i is chain
+homotopic to j ◦ϕ. Therefore, by Lemma 5.6.4, i and j induce cohomology
+isomorphisms i∗and j∗, respectively, in all dimensions. Since i is chain homo-
+topic to j ◦ϕ, we have i∗= ϕ∗◦j∗. Therefore, ϕ∗is a cohomology isomorphism
+as well.

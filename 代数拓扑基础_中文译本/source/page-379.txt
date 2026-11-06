@@ -1,0 +1,42 @@
+364
+Elements of Algebraic Topology
+As a consequence, any theorem that tells us something about cup products
+in general is likely to be a useful theorem. We shall prove two such theorems
+in later chapters. One will tell us something about the cohomology ring of
+a product space X × Y . The other will give us information about the coho-
+mology ring of a manifold, which will in particular enable us to compute the
+cohomology rings of projective spaces.
+EXERCISES
+Throughout these exercises, let T denote the torus, and let S denote the Klein
+bottle.
+1. Let f : S2 →T be continuous. Show that f ∗: H2(T) →H2(S2) is
+trivial, and conclude that f∗: H2(S2) →H2(T) is trivial. What can
+you say about a continuous map g : T →S2?
+2. If f : X →Y , show that
+f ∗: H2(Y ; Z/2) →H2(X; Z/2)
+is trivial in the following cases:
+(a) X = S2 and Y = S.
+(b) X = S and Y = T.
+(c) X = T and Y = S.
+3. Give multiplication tables for the following cohomology rings:
+(a) H∗( T # T # · · · # T
+
+
+
+n copies
+).
+(b) H∗(P2; Z/2).
+(c) H∗( P2 # P2 # · · · # P2
+
+
+
+n copies
+; Z/2).
+4. Define an isomorphism between the ring of Example 5.10.5 and the
+ring of Example 5.10.6.
+5. Consider the cohomology rings of the Klein bottle S and the space
+P2 ∨S1.
+(a) Show that these rings are isomorphic with integer coefficients.
+(b) Show that these rings are not isomorphic with Z/2 coefficients.
+[Note: It does not suffice to show that they have different mul-
+tiplication tables.]

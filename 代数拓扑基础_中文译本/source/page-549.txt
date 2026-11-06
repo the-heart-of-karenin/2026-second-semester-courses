@@ -1,0 +1,7 @@
+534
+Elements of Algebraic Topology
+although the homology groups of C and D are isomorphic, their
+fundamental groups are different. See [CF77], Chapter 6.]
+5. Explain why Corollary 8.14.2 is a generalization of the Jordan
+curve theorem. Explain why this result is not inconsistent with the
+Alexander horned sphere. [See Section 4.9.]

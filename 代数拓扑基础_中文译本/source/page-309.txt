@@ -1,0 +1,46 @@
+294
+Elements of Algebraic Topology
+There are no cycles in even dimensions. In odd dimensions, every element is
+a cycle, and even multiples of the generator bound. Thus Hi(P∞) is of order
+2 if i is positive and odd, and vanishes otherwise.
+The computations for P2n and P2n+1 are similar.
+Now we prove the lemma we used in the earlier chain-level proof.
+Lemma 4.14.11 The spaces Sn and Pn can be triangulated so that the an-
+tipodal map a : Sn →Sn and the projection map p : Sn →Pn are simplicial.
+Proof:
+Step 1. We show first that there is a complex L in Rn+1 such that
+each reflection map
+ρi(x1, x2, . . . , xi, . . . , xn+1) = (x1, x2, . . . , −xi, . . . , xn+1)
+induces a linear isomorphism of L with itself, and we show that there is a
+triangulation k : |L| →Sn that commutes with each map ρi.
+The result is trivial for n = 0. Assume that K is a complex in Rn and
+h : |K| →Sn−1 is a triangulation satisfying our hypotheses. Let w0 =
+(0, 0, . . . , 0, 1) and w1 = (0, 0, . . . , 0, −1) in Rn+1. Let L = (w0 ∗K)∪(w1 ∗K).
+Then ρi induces a linear isomorphism of L with itself, for i = 1, 2, . . . , n + 1.
+The triangulation defined by
+k(y) = (
+
+1 −t2 h(x), t)
+if y = (1 −t)x + tw0, and
+k(y) = (
+
+1 −t2 h(x), −t)
+if y = (1 −t)x + tw1, commutes with each ρi. [This is the same triangulation
+we used in the proof of Theorem 2.9.8.]
+Step 2. Let k : |L| →Sn be the triangulation of Step 1. The antipodal map
+commutes with k, and induces a linear isomorphism of L with itself. It also
+induces a linear isomorphism of sdN L with itself, for any fixed N.
+Let us choose N large enough that for any vertex v of sdN L, the closed
+stars of v and a(v) are disjoint. Then we can use the “vertex-labeling” device
+of Section 1.4 to construct a complex whose underlying space is homeomorphic
+to Pn as follows: Let us label the vertices of sdN L, giving v and a(v) the same
+label for each vertex v. Let g : |sdN L| →|M| be the quotient map obtained
+from this labeling. Then the map g will identify x and a(x) for each x ∈|L|,
+and will identify x with no other point of |L|. Because the homeomorphism
+k commutes with a, it induces a homeomorphism of |M| with Pn that is our
+desired triangulation of Pn.
+As a further application of these techniques, we now define a certain class of
+3-dimensional manifolds called the “lens spaces” and compute their homology.
+It is of interest that they form one of the few classes of spaces that have been
+completely classified up to homeomorphism and up to homotopy type. We
+discuss this classification later.

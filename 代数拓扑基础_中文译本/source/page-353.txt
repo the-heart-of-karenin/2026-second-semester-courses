@@ -1,0 +1,34 @@
+338
+Elements of Algebraic Topology
+Lemma 5.6.10 The Kronecker index is well-defined.
+Proof: Let zp and zp be a p-cycle and a p-cocycle, respectively. Let dp+1 and
+dp−1 be a (p + 1)-chain and a (p −1)-cochain, respectively. Then we have
+⟨zp + δdp−1, zp + ∂dp+1⟩
+= ⟨zp, zp⟩+ ⟨δdp−1, zp⟩+ ⟨zp, ∂dp+1⟩+ ⟨δdp−1, ∂dp+1⟩
+= ⟨zp, zp⟩+ ⟨dp−1, ∂zp⟩+ ⟨δzp, dp+1⟩+ ⟨dp−1, ∂2dp+1⟩= ⟨zp, zp⟩.
+Definition 5.6.11 It is convenient to define the Kronecker map
+κ : Hp(C; G) →Hom (Hp(C), G)
+to be the map that sends α to the homomorphism ⟨α, · ⟩. Formally, we define
+(καp)(βp) = ⟨αp, βp⟩.
+The map κ is a homomorphism because the Kronecker index is linear in the
+first variable. We leave it to you to check that κ is natural. [See Exercise 2.]
+The following lemma is elementary. Its proof makes no use of the theorems
+of this section.
+Lemma 5.6.12 Let C be a free chain complex. Then there is a natural exact
+sequence
+0 ←−Hom (Hp(C), G) κ
+←−Hp(C; G) ←−ker κ ←−0 .
+It splits, but not naturally.
+Proof: We shall construct a homomorphism
+λ∗: Hom (Hp(C), G) →Hp(C; G)
+such that κ ◦λ∗is the identity. It follows that κ is surjective and that the
+sequence splits.
+Let Bp, Zp, and Cp denote the boundaries, cycles, and chains, respectively,
+in C. We begin with the projection homomorphism
+π : Zp →Zp/Bp = Hp(C) .
+The exact sequence 0 →Zp →Cp →Bp−1 →0 shows that Zp is a direct
+summand in Cp. Therefore, π extends to a homomorphism λ : Cp →Hp(C).
+Define a chain complex E by letting Ep = Hp(C) and letting all boundary
+operators in E vanish. Then
+Hp(E) = Ep = Hp(C) ,
+Hp(E; G) = Hom (Ep, G) = Hom (Hp(C), G) .

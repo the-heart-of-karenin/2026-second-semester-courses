@@ -1,0 +1,74 @@
+256
+Elements of Algebraic Topology
+Let z = niσi be a singular 1-cycle, where each σi is a singular 1-simplex.
+For each i, we form a loop γi by setting
+γi(t) =
+
+
+
+
+
+
+
+ζσi(0)(3t)
+if 0 ≤t ≤1
+3 ,
+σi((3t −1)ϵ1)
+if
+1
+3 ≤t ≤2
+3 ,
+ζ−1
+σi(1)(3t −2)
+if
+2
+3 ≤t ≤1 .
+We claim that χ (
+i γni
+i ) is homologous to z.
+By (1) , we have
+χ
+
+i
+γni
+i
+
+=
+
+ni{γi} .
+By Lemma 4.10.16, we know that γi is homologous to
+= ζσi(0) + σi + ζ−1
+σi(1) ,
+and ζ−1
+σi(1) is homologous to −ζσi(1), so we have
+χ
+
+i
+γni
+i
+
+=
+
+ni(ζσi(0) −ζσi(1)) +
+
+niσi .
+Thus we need to show that
+0 =
+
+ni(ζσi(0) −ζσi(1)) .
+(∗)
+Because niσi is a cycle, we have
+0 =
+
+ni(σi(1) −σi(0)) .
+(∗∗)
+Now we compare equations (∗) and (∗∗). Consider any point x that occurs
+among the various points σi(1) and σi(0). Equation (∗∗) tells us that the
+sum of the coefficients of that point add to zero, but the very same sum of
+coefficients applies to the terms ζσi(1) and ζσi(0) in equation (∗). Thus the sum
+in (∗) does also equal zero.
+(3) Assuming that X is path connected, show that the kernel of χ
+is a commutator subgroup. The commutator subgroup, C, is generated
+by elements of the form γ−1 · η−1 · γ · η. If the multiplication is commutative,
+then the commutator subgroup is obviously trivial, but the fact we need and
+shall use is that the quotient group π1/C is commutative.

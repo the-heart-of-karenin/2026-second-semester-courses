@@ -1,0 +1,42 @@
+214
+Elements of Algebraic Topology
+EXAMPLE 4.5.4 Let G be the functor
+X →S(X × I)
+and
+f →(f × iI)# .
+Let M be the collection {∆p : p = 0, 1, . . . }. Then G is acyclic relative to
+M. It is also true that G is free relative to M, but the proof is not as simple
+as in the previous two examples. Here we let Jp be the set of all continuous
+functions α : ∆p →I. Let the family {Mα}α∈J be defined by setting Mα = ∆p
+for each α. For each α, let iα ∈Sp(Mα × I) be the singular simplex
+iα : ∆p →∆p × I
+defined by
+iα(x) = (x, α(x)) .
+As f ranges over all maps of ∆p into X and α ranges over the set Jp, the
+element (f × iI)#(iα) ranges over a basis for Sp(X × I).
+Note that if G is free relative to a collection M, then it is automatically
+free relative to any larger collection. On the other hand, if G is acyclic relative
+to M, then it is automatically acyclic relative to any smaller collection. Thus,
+if we wish G to be both free and acyclic relative to M, then we must choose
+M to be just the right size, neither too large nor too small.
+Theorem 4.5.5 (Acyclic model theorem) Let G and G′ be functors from
+the category C to the category A of augmented chain complexes and chain
+maps of augmented chain complexes. Let M be a collection of objects of C.
+If G is free relative to M and G′ is acyclic relative to M, then the following
+hold:
+(a) There is a natural transformation T of G to G′.
+(b) Given two natural transformations S and T of G to G′, then
+there is a natural chain homotopy D between S and T.
+The proof is sketched in Exercises 1 and 2. If Exercise 1 causes too much
+difficulty, you might switch your attention to Exercise 2. Then you might take
+some inspiration from the proof of Lemma 4.3.6 and the remarks after that
+proof regarding the case p = 0. Once Exercise 2 is understood, return to
+Exercise 1.
+The method of acyclic models was first formalized by Eilenberg and
+MacLane in [EM53]. In the immediately following paper in the same issue
+of the American Journal of Mathematics, it was applied by Eilenberg and
+Zilber in [EZ53].
+Corollary 4.5.6 Let C be a category, and let G and G′ be functors from C to
+A. If G and G′ are free and acyclic relative to the collection M of objects of C,
+then there is a natural transformation T : G →G′; any such transformation
+is a natural equivalence.

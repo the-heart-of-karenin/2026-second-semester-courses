@@ -1,0 +1,47 @@
+298
+Elements of Algebraic Topology
+Using the formula (∗), we see that f#(z1) = z1, so we conclude that ∂z2 = 0.
+Because the restriction of z2 to E2
+−is a fundamental cycle for (E2
+−, S1), the
+chain z2 is a fundamental cycle for S2, so it generates H2(S2). We now choose
+the sign of c3 so that ∂c3 = z2.
+Now we are ready to compute the boundary operators in the cellular chain
+complex of X. First, we have
+∂p#(c1) = p#(b) −p#(a) = 0 ,
+so the boundary operator D1(X) →D0(X) is trivial. Second, we have
+∂p#(c2)
+=
+p#(∂c2) = p#(z1) = p#(c1 + f#(c1) + f 2
+#(c1) + · · · + f n−1
+#
+(c1))
+=
+np#(c1) ,
+because p(f j(x)) = p(x) for all x ∈S1 and all j. Thus the map D2(X) →
+D1(X) is multiplication by n. Third, we have
+∂p#(c3) = p#(∂c3) = p#(z2) = p#(c2 −f#(c2)) = 0 ,
+because p(f(x)) = p(x) for x in E2
+−. Thus D3(X) →D2(X) is trivial.
+Exercise 4 will ask you to prove the following theorem. But it will also
+offer some guidance.
+Theorem 4.14.15 The lens spaces L(n, k) and L(n, ℓ) are homeomorphic if
+either
+k ≡±ℓ(mod n)
+or
+kℓ≡±1 (mod n) .
+Remark 4.14.16 The converse of Theorem 4.14.15 is true, but the proof is
+very difficult.
+In a 1935 paper [see [Rei35]], Kurt Reidemeister defined a number associ-
+ated with a simplicial complex called its torsion. The torsion is a combinatorial
+invariant, which means that two complexes that have isomorphic subdivisions
+necessarily have the same torsion. By computing the torsion for lens spaces,
+Reidemeister showed that if the simplicial complexes L(n, k) and L(n, ℓ) have
+isomorphic subdivisions, then either k ≡±ℓ(mod n) or kℓ≡±1 (mod n).
+To complete the proof of the converse, we need to appeal to work of E. E.
+Moise from the 1950s. Moise wrote a series of papers concerning “affine struc-
+tures in 3-manifolds.” In the fifth of these [see [Moi52]], he proved that two
+triangulated 3-manifolds that are homeomorphic necessarily have subdivisions
+that are isomorphic.
+The homeomorphism classification of lens spaces is thus known. We shall
+discuss their homotopy-type classification in Section 8.9.

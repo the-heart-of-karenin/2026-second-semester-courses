@@ -1,0 +1,37 @@
+406
+Elements of Algebraic Topology
+Theorem 7.6.1 Let C be a free chain complex, and let G be an abelian group.
+If C is finitely generated in each dimension, then there are exact sequences
+0 ←−Hom (Hp(C), G) ←−Hp(C; G) ←−Ext (Hp+1(C), G) ←−0 ,
+0 −→Hp(C) ⊗G −→Hp(C; G) −→Hp+1(C) ∗G −→0 ,
+that are natural with respect to homomorphisms induced by chain maps. They
+split, but not naturally.
+Proof: Step 1. Since Cp is free and finitely generated, the cochain complex
+{Hom (Cp, Z), δ} is free. We define a chain complex E by letting
+Ep = Hom (C−p, Z)
+and taking as the boundary operator ∂E in E the usual coboundary operator
+δ of C. One then has the universal coefficient sequences
+0 ←−Hom (H−p(E), G) ←−H−p(E; G) ←−Ext (H−p−1(E), G) ←−0 ,
+0 −→H−p(E) ⊗G −→H−p(E; G) −→H−p−1(E) ∗G −→0 ,
+where for convenience we have replaced p by −p throughout. It is immediate
+from the definition that H−p(E) = Hp(C). We shall show that there are natural
+isomorphisms
+H−p(E; G) ∼= Hp(C; G) ,
+(∗)
+H−p(E; G) ∼= Hp(C; G) ,
+(∗∗)
+from which the theorem follows.
+Step 2. First we show that, if A is free of finite rank, then there is a natural
+isomorphism
+Φ : Hom (A, Z) ⊗G →Hom (A, G) .
+Initially, we define Φ on pairs (ϕ, g) in the cartesian product of Hom (A, Z)
+and G by the equation
+[Φ(ϕ, g)](a) = ϕ(a) · g .
+After observing that Φ(ϕ, g) is indeed an element of Hom (A, G), we then note
+that Φ is bilinear. Thus Φ can be considered a homomorphism of Hom (A, Z)⊗
+G into Hom (A, G).
+Now, let a1, a2, . . . , ak be a basis for A, and let a1, a2, . . . , ak be the dual
+basis for Hom (A, Z) defined by
+ai(aj) = δij ,
+where δij is the Kronecker delta function. The group Hom (A, Z) ⊗G is a
+direct sum of k copies of G, the ith copy consisting of all elements of the form

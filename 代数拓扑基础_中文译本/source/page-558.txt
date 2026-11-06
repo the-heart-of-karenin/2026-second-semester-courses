@@ -1,0 +1,26 @@
+Bibliography
+543
+[ST80]
+Herbert Seifert and William Threlfall.
+Seifert and Threlfall: a
+textbook of topology, volume 89 of Pure and Applied Mathematics.
+Academic Press, Inc. [Harcourt Brace Jovanovich, Publishers], New
+York-London, German edition, 1980. With a preface by Joan S. Bir-
+man, With “Topology of 3-dimensional fibered spaces” by Seifert,
+Translated from the German by Wolfgang Heil.
+[Vic73]
+James W. Vick. Homology theory, volume Vol. 53 of Pure and Ap-
+plied Mathematics. Academic Press, New York-London, 1973. An
+introduction to algebraic topology.
+[Vic94]
+James W. Vick. Homology theory, volume 145 of Graduate Texts in
+Mathematics. Springer-Verlag, New York, second edition, 1994. An
+introduction to algebraic topology.
+[Wey64] Hermann Weyl. The concept of a Riemann surface. ADIWES In-
+ternational Series in Mathematics. Addison-Wesley Publishing Co.,
+Inc., Reading, Mass.-London, german edition, 1964.
+[Whi49] J. H. C. Whitehead. Combinatorial homotopy. I. Bull. Amer. Math.
+Soc., 55:213–245, 1949.
+[Whi78] George W. Whitehead. Elements of homotopy theory, volume 61 of
+Graduate Texts in Mathematics. Springer-Verlag, New York-Berlin,
+1978.

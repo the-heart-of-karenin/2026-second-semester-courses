@@ -1,0 +1,32 @@
+94
+Elements of Algebraic Topology
+Definition 2.2.1 Let h : |K| →|L| be a continuous map. We say that h
+satisfies the star condition with respect to K and L if, for each vertex v of K,
+there is a vertex w of L such that
+h(St v) ⊂St w .
+Lemma 2.2.2 Let h : |K| →|L| satisfy the star condition with respect to K
+and L. Choose f : K(0) →L(0) so that, for each vertex v of K,
+h(St v) ⊂St f(v) .
+Then
+(a) Given σ ∈K, choose x ∈Int σ and choose τ so that h(x) ∈Int τ.
+Then f maps each vertex of σ to a vertex of τ.
+(b) The function f may be extended to a simplicial map of K into
+L. We also denote this extended map by f.
+(c) If g : K →L is another simplicial map such that h(St v) ⊂
+St g(v) for each vertex v of K, then f and g are contiguous.
+Proof: (a) Let σ = v0v1 . . . vp. Then x ∈St vi for each i hence
+h(x) ⊂h(St vi) ⊂St f(vi) .
+This means that h(x) has a positive barycentric coordinate with respect to
+each of the vertices f(vi), i = 0, 1, . . . , p. These vertices must therefore form
+a subset of the vertex set of τ.
+(b) Because f carries the vertices of σ to vertices of a simplex of L, it may
+be extended to a simplicial map f : K →L.
+(c) Let σ, x, and τ be as above. Since
+h(x) ∈h(St vi) ⊂St g(vi)
+for i = 0, 1, . . . , p, the vertices g(vi) must also be vertices of τ. Therefore
+f(v0), f(v1), . . . , f(vp) and g(v0), g(v1), . . . , g(vp) span a face of τ. Thus f and
+g are contiguous.
+Definition 2.2.3 Let h : |K| →|L| be a continuous map. If f : K →L is a
+simplicial map such that
+h(St v) ⊂St f(v)
+for all vertices v of K, then f is called a simplicial approximation to h.

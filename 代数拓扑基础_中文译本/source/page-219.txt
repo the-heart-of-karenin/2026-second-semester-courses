@@ -1,0 +1,27 @@
+204
+Elements of Algebraic Topology
+The definition makes sense since ∆p is star convex relative to ∆p.
+If T : ∆p →X is an arbitrary singular p simplex on X, we define
+sdXT = T#(sd∆pip) .
+See Figure 4.4.1. We call sdX the barycentric subdivision operator in singular
+theory.
+sd∆pip
+T
+X
+T
+X
+Figure 4.4.1
+Lemma 4.4.3 The homomorphism sdX is an augmentation-preserving chain
+map, and it is natural in the sense that for any continuous map f : X →Y
+we have
+f# ◦sdX = sdY ◦f# .
+Proof: The map sdX preserves augmentation because it is the identity in
+dimension 0. Naturality holds in dimension 0 for the same reason. Naturality
+holds in positive dimensions by direct computation:
+f#(sdXT)
+=
+f#T#(sd∆pip)
+=
+sdY (f ◦T) = sdY (f#(T)) .
+Henceforth we shall normally omit the subscript on the operator sdX, relying
+on the context to make the meaning clear.

@@ -1,0 +1,36 @@
+Cohomology
+353
+and the first term in (‡) equals
+(−1)p⟨cp, T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, T ◦ℓ(ϵp+1, ϵp+2 . . . , ϵr)⟩.
+When we add together (†) and (‡), the last term of (†) cancels the first term
+of (‡), and what remains is precisely the formula for ⟨cp ⌣cq, ∂T⟩.
+Theorem 5.9.6 The cochain cup product induces a cohomology operation
+Hp(X; R) × Hq(X; R) ⌣
+−→Hp+q(X; R)
+that is bilinear and associative. The cohomology class {z0} acts as a unity
+element.
+Proof: If zp and zq are cocycles, then their cup product is a cocycle as well,
+since
+δ(zp ⌣zq) = δzp ⌣zq + (−1)pzp ⌣δzq = 0 .
+The cohomology class of this product depends only on the cohomology classes
+of zp and zq, since
+(zp + δdp−1) ⌣(zq + δdq−1)
+= zp ⌣zq + zp ⌣δdq−1 + δdp−1 ⌣zq + δdp−1 ⌣δdq−1
+= zp ⌣zq + (−1)p δ(zp ⌣dq−1) + δ(dp−1 ⌣zq) + δ(dp−1 ⌣δdq−1) .
+Finally, {z0} is a unity element, since z0 is already a unity element at the
+cochain level.
+Theorem 5.9.7 If h : X →Y is a continuous map, then h∗preserves cup
+products.
+Proof: In fact, the cochain map h# preserves cup products of cochains. We
+see this as follows: If T is a singular (p + q)-simplex, then we have
+⟨h#(cp ⌣cq), T⟩= ⟨cp ⌣cq, h#(T)⟩
+= ⟨cp, h ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨cq, h ◦T ◦ℓ(ϵp, ϵp+1, . . . , ϵp+q)⟩
+= ⟨h#(cp), T ◦ℓ(ϵ0, ϵ1, . . . , ϵp)⟩· ⟨h#(cq), T ◦ℓ(ϵp, ϵp+1, . . . , ϵp+q)⟩
+= ⟨h#(cp) ⌣h#(cq), T⟩.
+Definition 5.9.8 Let H∗(X; R) denote the external direct sum Hi(X; R).
+The cup product operation makes this group into a ring with a unity element.
+It is called the cohomology ring of X with coefficients in R.
+In Exercise 4, you will be asked to show that the cup product, as a function
+of each variable separately, is an R-module homomorphism. This means that
+H∗(X; R) is what is sometimes called a ring with operators R. In the special
+case where R is a field F, it is called an algebra over F.

@@ -1,0 +1,61 @@
+292
+Elements of Algebraic Topology
+where i, k, ℓ, and m are inclusions and a is the antipodal map. Let α be a
+generator of Hn(En
++, Sn−1). Consider the element
+γ = i∗(α) + (−1)n−1a∗i∗(α)
+of Hn(En
++, Sn−1). We will show that there is a generator β of Hn(Sn) such
+that k∗(β) = γ.
+First, we show that γ = k∗(β) for some β. Note that
+∂∗γ = ∂∗i∗(α) + (−1)n−1(a|Sn−1)∗(∂∗i∗(α))
+because ∂∗is natural. This homology class vanishes, because (a|Sn−1)∗
+equals multiplication by (−1)n. By horizontal exactness, there exists some
+β ∈Hn(Sn) such that k∗(β) = γ.
+Second, we show that β generates Hn(Sn). Now m∗is an isomorphism,
+by the long exact reduced homology sequence. [Recall n ≥1.] Therefore, it
+suffices to show that m∗(β) generates Hn(Sn, En
+−). Since m∗(β) = ℓ∗(γ), we
+shall compute
+ℓ∗(γ) = ℓ∗i∗(α) + (−1)n−1ℓ∗a∗i∗(α) .
+For this purpose, we note first that ℓ∗i∗(α) generates Hn(Sn, En
+−), because
+the inclusion map ℓ◦i induces a homology isomorphism. [See the proof of
+Theorem 4.4.11.] Then we note that ℓ∗a∗i∗(α) is trivial. This fact is a conse-
+quence of the following commutative diagram, where the unlabeled maps are
+inclusions:
+(En
++, Sn−1)
+i
+−−−−→(Sn, Sn−1)
+a|En
++
+a
+(En
+−, Sn−1) −−−−→(Sn, Sn−1)
+
+ℓ
+(En
+−, En
+−)
+−−−−→
+(Sn, En
+−)
+It follows that ℓ∗(γ) generates Hn(Sn, En
+−), as desired.
+Step 2. We now prove the lemma. Consider the following commutative dia-
+gram:
+α ∈Hn(En
++, Sn−1)
+β ∈Hn(Sn)
+Hn(Sn, Sn−1)
+Hn(Sn, Sn−1)
+Hn(Pn)
+Hn(Pn, Pn−1)
+i∗
+k∗
+p∗
+a∗
+p∗
+p∗
+j∗

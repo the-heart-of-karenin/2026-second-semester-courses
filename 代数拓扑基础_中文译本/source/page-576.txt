@@ -1,0 +1,90 @@
+Index
+561
+dual chain complex, 455, 459
+dual homomorphism, 302
+dual pairing, 480
+dual skeleton, 459
+dual vector space, 184, 395
+duality
+Alexander–Pontryagin, 532
+Lefschetz, 498, 515
+Poincar´e, 462, 467, 474
+Poincar´e–Lefschetz, 503
+duality isomorphism, 461
+duality theorems, 443
+dunce cap, 46, 48
+dyadic rationals, 521
+edge, in collection of polygons, 147
+Eilenberg, S., 150, 170, 171, 214
+Eilenberg–Steenrod axioms, 530
+for cohomology, 325
+for simplicial cohomology, 328
+for singular cohomology, 326
+for homology, 170
+for simplicial homology, 176
+for singular homology, 195
+Eilenberg–Zilber chain equivalence,
+424
+Eilenberg–Zilber chain equivalence ν,
+426
+Eilenberg–Zilber theorem, 424
+elementary chain, 31
+elementary cochain, 309
+elementary column operations, 66
+elementary row operations, 66
+equivalence, in category, 181
+equivalent simplices, 500
+euclidean space
+half-space, 228
+Euler number, 144, 148, 468
+evaluation map, 337
+exact at, 151
+exact braid, 172
+exact cohomology sequence,
+317, 325
+exact homology sequence
+of triple, 279
+of pair, 154
+of triple, 163, 173
+exact sequence, 151
+long, 154
+short, 151
+split, 152
+exactness axiom
+for cohomology, 325
+for homology, 171
+excision axiom
+for cohomology, 326
+for homology, 171
+excision in cohomology
+simplicial theory, 328
+singular theory, 327
+excision in homology
+simplicial theory, 59, 178
+singular theory, 208
+excisive couple, 172, 217, 472
+existence of identities axiom, 180
+Ext, rules for computing, 402
+external direct sum, 26
+extraordinary homology theory, 172
+face
+in collection of polygons, 147
+of abstract simplex, 16
+of simplex, 5
+proper, 5
+field, 350
+filtered, 280
+filtered space, 280
+filtration, 280
+filtration preserving, 280
+finite CW complex, 269
+finite order, 25
+finite simplicial approximation
+theorem, 104
+finitely generated group, 24
+first homology
+is abelianization of first
+homotopy, 254
+first homotopy group, 247
+first homotopy space, 247
+five lemma, 162

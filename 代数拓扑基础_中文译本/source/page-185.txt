@@ -1,0 +1,38 @@
+170
+Elements of Algebraic Topology
+Later various generalized definitions of homology were formulated that applied
+to more general spaces. These various homology theories had many features
+in common, and they all gave the same results as simplicial homology theory
+on the class of polyhedra.
+This plethora of homology theories led Eilenberg and Steenrod to ax-
+iomatize the notion of a homology theory. They formulated certain crucial
+properties these theories have in common, and showed that these properties
+characterize the homology groups completely on the class of polyhedra.
+We shall not try to reproduce the axiomatic approach at this point, nor
+shall we prove that the axioms characterize homology for polyhedra. For this,
+the reader is referred to Eilenberg and Steenrod’s book [ES52]. We shall simply
+list the seven axioms here, together with an additional axiom that is needed
+when one deals with non-compact spaces. In the next section, we verify that
+simplicial homology theory satisfies the axioms.
+Definition 3.5.1 Let A be a class of pairs (X, A) of topological spaces, X ⊃
+A, such that
+(1) If (X, A) belongs to A, then so do (X, X), (X, ∅), (A, A), and
+(A, ∅).
+(2) If (X, A) belongs to A, then so does (X × I, A × I).
+(3) There is a one-point space P such that (P, ∅) is in A.
+Then we shall call A an admissible class of spaces for a homology theory.
+Definition 3.5.2 If A is admissible, a homology theory on A consists of three
+functions:
+(1) A function Hp defined for each integer p and each pair (X, A)
+in A whose value is an abelian group.
+(2) A function that, for each integer p and continuous map
+h : (X, A) →(Y, B), assigns a homomorphism
+(h∗)p : Hp(X, A) →Hp(Y, B) .
+(3) A function that, for each integer p and pair (X, A) in A, assigns
+a homomorphism
+(∂∗)p : Hp(X, A) →Hp−1(A) .
+Here A denotes the pair (A, ∅).
+These functions are to satisfy the following axioms, where all pairs of spaces
+are in A. As usual, we shall simplify notation and delete the dimensional
+subscripts on h∗and ∂∗.
+Axiom 1: If i is the identity, then i∗is the identity.

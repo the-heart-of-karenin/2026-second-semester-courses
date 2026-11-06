@@ -1,0 +1,44 @@
+448
+Elements of Algebraic Topology
+In view of Corollary 8.2.5, it suffices to prove the theorem for any particular
+complex L whose space is homeomorphic to Sn. Choose a complex J such that
+|J| = Sn−1 and let L = j ∗{w0, w2} be a suspension of J. Then it is easy to
+see that |L| ≈Sn. Now
+Hi(K)
+∼=
+Hi+n(K ∗J)
+∼=
+Hi+n+1((K ∗J) ∗[w0, w1])
+∼=
+Hi+n+1(K ∗L) .
+Here the first equivalence is by the inductive hypothesis, the second is as noted
+earlier, and the third is by Lemma 8.2.6.
+Now we apply these results to study local properties of arbitrary simplicial
+complexes.
+Definition 8.2.8 Let s be a simplex of the complex K. The star of s in K,
+denoted by St s, is the union of the interiors of all simplices of K having s as
+a face. The closure of St s is denoted by St s. It is the union of all simplices
+of K having s as a face and is called the closed star of s in K. The link of s
+in K, denoted by Lk s, is the union of all simplices of K lying in St s that are
+disjoint from s.
+We have already given these definitions when s is a vertex. See Section 1.3.
+In general, if s = v0v1 . . . vn, then St s is the open subset of K consist-
+ing of those points x for which the barycentric coordinate of x on each of
+v0, v1, . . . , vn is positive. That is,
+St s = St v0 ∩St v1 ∩· · · ∩St vn .
+Observe that St s consists of all simplices of K of the form s ∗t. Also the
+link of s equals the union of all the faces t of such simplices. The sets St s and
+Lk s are thus polytopes of subcomplexes of K. We often use the notation St s
+and Lk s to denote these complexes as well as their polytopes.
+EXAMPLE 8.2.9 In the two-dimensional complex pictured in Figure 8.2.1,
+the link of the vertex g consists of the hexagon a b c d e f a and the vertex h.
+The link of the 1-simplex ag consists of the two vertices b and f. The link of
+the vertex h is the vertex g.
+In the 3-dimensional complex pictured in Figure 8.2.2, the link of the 1-
+simplex fg is the pentagon F = a b c d e a and the link of the vertex f is the
+cone P ∗g. The link of the 1-simplex ab is the 1-simplex f g. And the link of
+the vertex a is the union of the 2-simplices b f g and e f g.
+Keep the preceding example in mind as we prove the following lemma:
+Lemma 8.2.10 Let K be a complex. Let s be a simplex of K. Then
+St s = s ∗Lk s ,
+St s −St s = Bd s ∗Lk s .

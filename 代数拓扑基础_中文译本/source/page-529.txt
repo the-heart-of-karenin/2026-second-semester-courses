@@ -1,0 +1,43 @@
+514
+Elements of Algebraic Topology
+subcomplex of X, the map k ◦j ◦i is a homotopy equivalence. It follows that
+j is a homotopy equivalence.
+By symmetry, the inclusions
+C →UC →U C →St(C, X)
+are also homotopy equivalences.
+Definition 8.12.3 Let (X, A) be a triangulable pair. If D ⊂X, then we say
+that D is a polyhedron in (X, A) if there is some triangulation of the pair
+(X, A) relative to which D is the polytope of a subcomplex. If A = ∅, then we
+say simply that D is a polyhedron in X.
+Note that if C and D are polyhedra in X, it does not follow that there is
+a single triangulation of X relative to which both C and D are polytopes of
+subcomplexes. For example, both the x-axis C and the set
+D = (0, 0) ∪{(x, x sin(1/x)) : x̸ = 0}
+are polyhedra in R2, but there is no triangulation of R2 relative to which both
+are polytopes of subcomplexes.
+Lemma 8.12.4 Let D be a polyhedron in the compact triangulable space X.
+Then there are arbitrarily small neighborhoods U of D such that
+(a) U and X \ U are polyhedra in X.
+(b) The following inclusions are homotopy equivalences:
+D →U →U
+and
+(X \ U) →(X \ U) →(X \ D) .
+Remark 8.12.5 In fact, if X is triangulated so that D is the polytope of a
+full subcomplex of X, then U = St(D, sdN X) satisfies these conditions for all
+n ≥1.
+Proof: It suffices to show that if D is the polytope of a full subcomplex of X,
+then U = St(D, sd X) satisfies the requirements of the lemma.
+The preceding lemma shows that the inclusions D →U →U are homo-
+topy equivalences. To consider the other inclusions, let A be the union of all
+simplices of X disjoint from D. Then one has the following diagram:
+A −−−−→St(A, sd X) −−−−→St(A, sd X) −−−−→St(A, X)
+
+
+
+(X \ U)
+−−−−→
+(X \ U)
+−−−−→(X \ D)
+where the first two equalities follow from (a) of the preceding lemma, and
+the third by definition. By the preceding lemma, the inclusion maps of this
+diagram are homotopy equivalences.

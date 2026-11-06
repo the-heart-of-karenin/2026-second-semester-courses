@@ -1,0 +1,43 @@
+452
+Elements of Algebraic Topology
+From basic results about convex sets we know that |s| = |s ∗Bd s|. From
+Lemma 8.2.10 it then follows that
+|St s| = |s ∗Lk s| = |s ∗Bd s ∗Lk s| .
+By the previously discussed convention, these equations hold even if Bd s is
+empty.
+It follows now that |St s| is acyclic, being as it is a cone with vertex s.
+Now if we delete the vertex of a cone, what is left can be collapsed onto the
+base of the cone by a deformation retract. [See Lemma 4.8.12.] In particular,
+|Bd s ∗Lk , s| is a deformation retract of St s −s. We conclude that
+Hi(|K|, |K| −s )
+∼=
+Hi(St s, St s −s )
+∼=
+Hi−1(St s −s )
+∼=
+Hi−1(Bd s ∗Lk s)
+∼=
+Hi−k−1(Lk s) .
+The last isomorphism is an equality if Bd s = ∅, in which case k = 0. Oth-
+erwise, it holds by Theorem 8.2.7 since Bd s is topologically a k −1 sphere.
+Theorem 8.3.3 Let (X, A) be a triangulated relative homology n-manifold.
+Let s be a k-simplex of X that is not in A. If Lk s is empty, then k = n. If
+Lk s is non-empty, then it has the homology of an n −k −1 sphere, where
+n −k −1 ≥0. In either case, k ≤n.
+Proof: Since s is not in A, its barycenter s lies in X \ A. Therefore the local
+homology of X at s is infinite cyclic in dimension n, and vanishes otherwise.
+If Lk s is empty, then by the preceding lemma, Hn(s, Bd s) ∼= Hn(X, X\s ),
+which is nontrivial. Hence dim s = n. If Lk s is nonempty, then its reduced
+homology is infinite cyclic in dimension n−k −1 and vanishes otherwise. This
+implies in particular that n −k −1 ≥0 or that k < n.
+Corollary 8.3.4 Let (X, A) be a triangulated relative homology n-manifold.
+(a) The closure of X \ A equals a union of n-simplices.
+(b) Every n−1 simplex s of X which is not in A is a face of precisely
+two n-simplices of X.
+Proof: (a) Let s be a k-simplex of X which is not in A. The preceding theorem
+shows that k ≤n. If k < n then Lk s is a homology n −k −1 sphere, so it
+contains an n −k −1 simplex t. Then s is in fact a face of the n-simplex s ∗t.
+(b) If s is an (n −1)-simplex of X that is not in A, then Lk s is a homology
+0-sphere. Since St s has dimension n and St s = s ∗Lk s, the complex Lk s
+must have dimension 0. This means that Lk s consists of precisely two points.
+Hence (b) holds.

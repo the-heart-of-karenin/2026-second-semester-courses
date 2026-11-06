@@ -1,0 +1,46 @@
+Homological Algebra
+387
+is a free resolution of 
+α∈J Aα. Both of the sequences
+0 ←−Ext (Aα, B) ←−Hom (Rα, B) ←−Hom (Fα, B) ←−Hom (Aα, B) ←−0 ,
+0 ←Ext (⊕Aα, B) ←Hom (⊕Rα, B) ←Hom (⊕Fα, B) ←Hom (⊕Aα, B) ←0 ,
+are exact by Theorem 7.2.1. The direct product of sequences of the first type
+gives a sequence that is naturally isomorphic with the second sequence in its
+three right-hand terms. Therefore there is an isomorphism between the left-
+hand terms as well. This isomorphism Ext (⊕Aα, B) →
+Ext (Aα, B) is in
+fact natural, by a standard argument.
+Similarly, if
+0 −→R −→F −→A −→0
+is a free resolution of A, then the sequences
+0 ←−Ext (A, Bα) ←−Hom (R, Bα) ←−Hom (F, Bα) ←−Hom (A, Bα) ←−0 ,
+0 ←Ext (A,
+Bα) ←Hom (R,
+Bα) ←Hom (F,
+Bα) ←Hom (A,
+Bα) ←0 ,
+are exact. Since the direct product of sequences of the first type agrees with
+the second in the three right-hand terms [the isomorphisms in question being
+natural], these sequences agree in the left-hand terms as well. Again, the
+isomorphism is natural.
+(b) To check (b), we recall that a free resolution of A splits if A is free. Then
+the dual sequence is exact, so Ext (A, B) vanishes.
+(c) To prove (c), one begins with the free resolution
+0 −→Z
+Z −→Z/m −→0 .
+ϕm
+Applying Theorem 7.2.1, we obtain the exact sequence
+0 ←Ext (Z/m, B) ←Hom (Z, B)
+Hom (Z, B) ←Hom (Z/m, B) ←0 ,
+ϕm
+from which (c) follows.
+This last theorem enables us to compute Ext (A, B) when A is finitely
+generated. Such computations utilize the fact that Ext commutes with finite
+direct sums, and the rules
+Ext (Z, G) = 0
+and
+Ext (Z/m, G) ∼= G/mG .
+If we apply the Hom functor to a short exact sequence with a group G
+[either on the left or the right], the resulting sequence may fail to be exact.
+In some sense, the Ext functor measures the extent to which exactness fails.
+One has the following theorem:

@@ -1,0 +1,42 @@
+254
+Elements of Algebraic Topology
+for (t, u) ∈∆2, we compute ∂T ′ = S′
+0 −S′
+1 + S′
+2, where
+S′
+0(t) = T ′(t, 1 −t) ≡y ,
+S′
+1(t) = T ′(0, t) = F(t, 1) = p2(t) ,
+S′
+2(t) = T ′(t, 0) = F(t, 1 −t) .
+We have ∂(T + T ′) = p1 −p2 + y −x + p + p−1, where p(t) = F(1 −t, t) for
+t ∈[0, 1].
+Definition 4.10.13
+(1) A loop is a map γ : [0, 1] →X, so it can be considered a
+singular 1-simplex in X. Treating γ as a 1-simplex, we see that ∂γ =
+x0 −x0 = 0. So γ is a singular 1-cycle, and as such it determines a
+homology class. We will denote the homology class of γ by {γ}.
+(2) The map
+χ : π1(X, x0) →H1(X)
+is defined by χ([γ]) = {γ}.
+The lemma tells us that χ is a well-defined mapping, so after giving one
+more definition, we will be prepared to state our key result relating homology
+and homotopy.
+Definition 4.10.14 Let G be a multiplicative group. For a, b ∈G, the ele-
+ment a−1b−1ab is called the commutator of a and b. The subgroup generated
+by the commutators of G is called the commutator subgroup of G.
+Theorem 4.10.15 Let X be a topological space and x0 ∈X a base point for
+homotopy.
+(1) The map χ : π1(X, x0) →H1(X) is a homomorphism of groups.
+(2) If X is path-connected, then χ is surjective.
+(3) If X is path-connected, then the kernel of the homomorphism is
+the commutator subgroup of π1(X, x0).
+(4) If X is path-connected, then χ is an isomorphism if and only if
+the fundamental group of X is commutative.
+Of course, it is immediate from the theorem that if C is the kernel of the
+homomorphism [i.e., the commutator subgroup], then π1/C ∼= H1. It is in this
+sense that the first homology group is the abelianization of the first homotopy
+group.
+We will find the following lemma helpful. It allows us to break a singular
+1-simplex into smaller pieces.

@@ -1,0 +1,41 @@
+Homology Groups of a Simplicial Complex
+77
+u
+v
+w
+g
+f
+f(u)
+f(v)
+g(u)
+g(v)
+g(w)
+f(w)
+L
+Figure 1.13.2
+sum of the oriented edges of K, the chain Dz will be the sum of the oriented
+2-simplices of L, just as before, and ∂Dz = g#(z) −f#(z), as desired.
+One can ask what sort of formula holds for ∂Dc when c is an arbitrary
+chain. The answer is clear from the definition. Given the oriented simplex σ, we
+compute ∂Dσ = g#(σ) −Dv −f#(σ) + Dw; see Figure 1.13.3 for verification.
+That is,
+∂(Dσ) = g#(σ) −f#(σ) −D(∂σ) .
+(∗∗)
+This same formula holds for the other simplices of K, as you can check.
+v
+w
+σ
+g
+f
+f(v)
+g(v)
+g(w)
+f(w)
+f#σ
+g#σ
+Dv
+Dw
+Figure 1.13.3
+This formula expresses the crucial algebraic property of the homomorphism
+D. It is the formula at which we were aiming; we make it part of the following
+definition.

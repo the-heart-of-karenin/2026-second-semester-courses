@@ -1,0 +1,40 @@
+460
+Elements of Algebraic Topology
+Proof: The proof of (a) follows the pattern of Lemma 4.13.4, but is easier.
+Because D(σ) is a cone with vertex σ, its base ˙D(σ) is a deformation retract
+of D(σ)\σ for each σ. These deformation retractions induce a deformation re-
+traction of Xp\∪pσ onto Xp−1. Here ∪pσ denotes the union of the barycenters
+of all simplices σ of X of dimension n −p.
+If Σp(D(σ), ˙D(σ)) denotes the topological sum of the p-blocks of X, we
+have the commutative diagram
+Σp(D(σ), ˙D(σ)) −−−−→Σp(D(σ), D(σ) \ σ) ←−−−−Σp(D(σ), D(σ) \ σ)
+
+
+=
+(Xp, Xp−1)
+−−−−→
+(Xp, Xp \ ∪pσ)
+←−−−−
+∪(D(σ, D(σ) \ σ)
+where the horizontal maps induce homology isomorphisms in singular homol-
+ogy and the vertical maps are inclusions. Statement (a) follows for singular
+theory and hence for simplicial theory.
+Statement (b) is an immediate consequence of Theorem 4.13.9.
+We now have the basic tools that we shall use to prove the Poincar´e duality
+theorem.
+EXERCISES
+1. Consider the usual triangulation of the torus T.
+(a) Sketch the blocks of the dual block decomposition of T. Note
+that they actually make T into a regular cell complex.
+(b) Let C(T) denote the simplicial chain complex of T and let D(T)
+denote the dual chain complex. Orient the 2-simplices σ of T
+counterclockwise. Orient the 1-simplices e arbitrarily. Define an
+isomorphism
+ϕ : C2(T) →D0(T)
+by setting
+ϕ(σ∗) = D(σ) = σ
+for each oriented 2-simplex σ. Define an isomorphism
+ϕ : C1(T) →D1(T)
+by letting ϕ(e∗) equal a fundamental cycle for (D(e), ˙D(e)) for
+each oriented 1-simplex e. Show that ϕ may be so chosen that
+∂ϕ(e∗) = ϕ(δe∗) .

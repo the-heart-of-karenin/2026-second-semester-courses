@@ -1,0 +1,48 @@
+Duality in Manifolds
+515
+Theorem 8.12.6 (Lefschetz duality, natural version) Let (X, A) be a
+compact, triangulable relative homology n-manifold. There is a function as-
+signing to each polyhedron D in (X, A) that contains A an isomorphism
+λD : Hk(X, D; G) →Hn−k(X \ D; G) .
+This assignment is natural with respect to inclusions of polyhedra. The group
+G is arbitrary if (X, A) is orientable, and G = Z/2 otherwise.
+Proof: Let Γ be an orientation class for (X, A) in the orientable case. Let it
+denote an orientation class over Z/2 otherwise.
+Step 1: If U is any neighborhood of A such that U is a polyhedron in (X, A),
+let XU = X \ U. Then XU is also a polyhedron in (X, A). Let ΓU denote the
+image of Γ under the homomorphism
+Hn(X, A)
+Hn(X, U)
+Hn(XU, Bd U) .
+m∗
+k−1
+∗
+∼=
+[Here m and k are inclusion maps, and Bd U = U \ U.] We show that ΓU
+is an orientation class for the relative homology manifold (XU, Bd U) in the
+orientable case, and an orientation class over Z/2 in the non-orientable case.
+Triangulate (X, A) so that U is the polytope of a subcomplex. Then Γ is
+represented by the sum of all n-simplices of X not in A, suitably oriented. Its
+image under k−1
+∗
+◦m∗is represented by the sum of those simplices not in U.
+It is automatically a cycle of (XU, Bd U).
+We think of ΓU as the “restriction” of Γ to XU.
+Step 2: Let D be a polyhedron in (X, A) containing A. Let U be any neigh-
+borhood of D satisfying the conditions of the preceding lemma, such that
+A, D, and U are all polytopes of subcomplexes of a triangulation of X. See
+Figure 8.12.4. The following diagram commutes up to sign:
+Hk(XU, Bd U)
+Hn−k(XU \ Bd U)
+Hn
+k(XU) .
+ϕ∗
+∼=
+⌢ΓU
+j∗
+−
+Here ϕ∗is the Lefschetz duality isomorphism for the triangulated relative
+homology manifold (XU, Bd U). We omit G from the notation for simplicity.
+Now XU = X \ U and XU \ Bd U = X \ U. Therefore the inclusion j is a
+homotopy equivalence. It follows that ⌢ΓU is an isomorphism in simplicial
+theory. Thus it is also an isomorphism in singular theory.

@@ -1,0 +1,45 @@
+Topological Invariance of the Homology Groups
+143
+Therefore the matrix of ϕ relative to this basis for G has the form
+C =
+
+A
+0
+∗
+B
+
+.
+Obviously, tr C = tr A + tr B and our result follows.
+Step 2: As usual let Cp denote the chain group Cp(K). Let Zp denote the
+p-cycles, Bp the p-boundaries. Let Wp denote the group of weak p-boundaries
+which are those p-chains some multiple of which is a boundary. Then
+Bp ⊂Wp ⊂Zp ⊂Cp .
+Since ϕ is a chain map, it carries each of these groups into itself. We shall
+show that the quotient groups Cp/Zp and Zp/Wp are free. It will follow then
+from Step 1 that
+tr(ϕ, Cp) = tr(ϕ, Cp/Zp) + tr(ϕ, Zp/Wp) + tr(ϕ, Wp) .
+(i)
+[Here we abandon the use of primes to distinguish among the various induced
+homomorphisms.] We now compute each of these terms.
+Step 3: Consider the group Cp/Zp. The homomorphism ∂0 : Cp →Bp−1
+obtained by restricting the range of ∂is surjective and has kernel equal to
+Zp. Therefore it induces an isomorphism of Cp/Zp with Bp−1. Hence Cp/Zp is
+free. Also, because ϕ commutes with ∂, it commutes with this isomorphism.
+Hence
+tr(ϕ, Cp/Zp) = tr(ϕ, Bp−1) .
+(ii)
+Step 4: Consider the group Zp/Wp. Consider the projection mappings
+Zp →Zp/Bp = Hp →Hp/Tp .
+This composition is surjective and has kernel Wp. Therefore it induces an
+isomorphism
+Zp/Wp →Hp/Tp .
+We conclude that Zp/Wp is free. Because the projections commute with ϕ, so
+does this isomorphism. Thus
+tr(ϕ, Zp/Wp) = tr(ϕ∗, Hp/Tp) .
+(iii)
+Step 5: Consider the group Wp. We show that
+tr(ϕ, Wp) = tr(ϕ, Bp) .
+(iv)
+Recall that Bp is a subgroup of Wp. Applying the basic theorem of free
+abelian groups, we can choose a basis α1, . . . , αn of Wp such that, for some
+integers m1, . . . , mk ≥1, the elements m1α1, . . . , mkαk form a basis for Bp.

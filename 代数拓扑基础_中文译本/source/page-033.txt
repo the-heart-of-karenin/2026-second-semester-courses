@@ -1,0 +1,43 @@
+18
+Elements of Algebraic Topology
+in Figure 1.4.1, which specifies K as a collection consisting of six 2-simplices
+and their faces. Another way of picturing this same complex K is to draw the
+diagram in Figure 1.4.2. This diagram consists of two things: first, a complex
+L whose underlying space is a rectangle, and second, a particular labeling of
+the vertices of L [some vertices being given the same label]. We shall con-
+sider this diagram to be a short-hand way of denoting the abstract complex
+S whose vertex set consists of the letters a, b, c, d, e, and f, and whose sim-
+plices are the sets {a, f, d}, {a, b, d}, {b, c, d}, {c, d, e}, {a, c, e}, {a, e, f}, along
+with their nonempty subsets. Of course, this abstract complex is isomorphic
+to the vertex scheme of the complex K pictured earlier, so it specifies pre-
+cisely the same complex [up to linear isomorphism]. That is, the complex K
+of Figure 1.4.1 is a geometric realization of S.
+c
+e
+f
+a
+b
+d
+K
+a
+f
+b
+d
+c
+e
+a
+f
+L
+Figure 1.4.1
+Figure 1.4.2
+Let f : L(0) →K(0) be the map that assigns to each vertex of L the
+corresponding labeled vertex of K. Then f extends to a simplicial map g :
+|L| →|K|. Because the spaces are compact Hausdorff, g is a quotient map, or
+“pasting map.” It identifies the right edge of |L| linearly with the left edge of
+L. And of course this is the usual way one forms a cylinder from a rectangular
+piece of paper—one bends it around and pastes the right edge to the left edge!
+EXAMPLE 1.4.6 Now suppose we begin with a complex L and a labeling
+of its vertices. Consider for instance the same complex L with a different la-
+beling of the vertices, as in Figure 1.4.3. Just as before, this diagram indicates
+a certain abstract complex S, whose simplices one can list. Let K be a geo-
+metric realization of S. As before, the vertices of K correspond to the letters

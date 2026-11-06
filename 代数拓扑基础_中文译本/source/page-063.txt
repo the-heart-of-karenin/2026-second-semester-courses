@@ -1,0 +1,38 @@
+48
+Elements of Algebraic Topology
+C
+D
+A
+B
+A
+D
+B
+C
+L
+Figure 1.7.12
+Figure 1.7.13
+3. Represent the 4-fold connected sum P2 # P2 # P2 # P2 by an
+appropriate labeling of the complex L of Figure 1.7.12. Compute
+its homology in dimensions 1 and 2.
+4. (a) Define the n-fold connected sum Xn = T # T# · · · # T of
+tori, and compute its homology in dimensions 1 and 2.
+(b) Define the n-fold connected sum Yn = P2 # P2 # · · · # P2 of
+projective planes, and compute its homology in dimensions 1
+and 2.
+5. Compute the homology of T # P2. To which of the surfaces listed
+in Exercise 4 must it be homeomorphic? Can you construct the
+homeomorphism?
+6. (a) Compute the homology in dimensions 1 and 2 of the quotient
+space indicated in Figure 1.7.14. We call this space the “5-fold
+dunce cap.”
+(b) Define analogously the “k-fold dunce cap” and compute its ho-
+mology.
+7. Compute the homology of the space indicated in Figure 1.7.15.
+8. Given finitely generated abelian groups G1 and G2 with G2 free,
+show there is a finite 2-dimensional complex K such that |K| is
+connected, H1(K) ∼= G1, and H2(K) ∼= G2.
+1.8
+Zero-Dimensional Homology
+We have not yet computed any zero-dimensional homology group. In this
+section, we shall show that this group has a simple topological interpretation
+that makes its computation trivial.

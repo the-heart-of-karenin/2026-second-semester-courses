@@ -1,0 +1,39 @@
+32
+Elements of Algebraic Topology
+Lemma 1.6.4 The group Cp(K) is free abelian. A basis for Cp(K) can be
+obtained by orienting each p simplex and using the corresponding elementary
+chains as a basis.
+Proof: The proof is straightforward. Once all the p-simplices of K are
+oriented—each arbitrarily with no need to reference any other p-simplex—
+then each p-chain, c, can be written uniquely as a finite linear combination
+c =  niσi
+of the corresponding elementary chains σi. The chain c assigns the value ni to
+the oriented p-simplex σi, the value −ni to the opposite orientation of σi, and
+the value 0 to all the oriented p-simplices not appearing in the summation.
+The group C0(K) differs from the others in that it has a natural basis,
+because each 0-simplex has only one orientation. The group Cp(K) has no
+“natural” basis if p > 0, since one must orient the p-simplices of K in some
+arbitrary fashion in order to obtain a basis.
+Corollary 1.6.5 Any function f from the oriented p-simplices of K to an
+abelian group G, extends uniquely to a homomorphism Cp(K) →G, provided
+that f(−σ) = −f(σ) for all oriented p-simplices.
+Definition 1.6.6 We now define a homomorphism
+∂p : Cp(K) →Cp−1(K)
+called the boundary operator. If σ = [v0, v1, . . . , vp] is an oriented simplex with
+p > 0, then we define
+∂pσ = ∂p[v0, v1, . . . , vp] =
+p
+
+i=0
+(−1)p [v0, v1, . . . , vi, . . . , vp] ,
+(∗)
+where the symbol vi means that the vertex is to be deleted from the array.
+Since Cp(K) is the trivial group for p < 0, the operator ∂p is the trivial
+homomorphism for p ≤0.
+We must check that ∂p is well-defined. Specifically, we must show that
+∂p(−σ) = −∂p(σ). For this purpose, it suffices to show that the right-hand
+side of (∗) changes sign if we exchange two adjacent vertices in the array
+[v0, v1, . . . , vp]. So let us compare
+∂pσ = ∂p[v0, v1, . . . , vj, vj+1, . . . , vp]
+and
+∂p(−σ) = ∂p[v0, v1, . . . , vj+1, vj, . . . , vp] .

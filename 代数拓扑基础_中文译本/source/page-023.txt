@@ -1,0 +1,36 @@
+8
+Elements of Algebraic Topology
+(b) Show that a0 lies in no open line segment contained in σ, by
+showing that if a0 = tx+(1−t)y, where x, y ∈σ and 0 < t < 1,
+then x = y = a0.
+3. Verify Lemma 1.2.6(5).
+4. Generalize Lemma 1.2.6(2) as follows: Let σ be spanned by
+a0, a1, . . . , an. Let s be the face of σ spanned by a0, a1, . . . , ap [where
+p < n], and let t be the face opposite s.
+(a) Show that σ is the union of all line segments joining points of
+s to points of t, and two of these line segments intersect in at
+most a common end point.
+(b) Show that Int σ is the union of all open line segments joining
+points of Int s to points of Int t.
+5. Let U be a bounded open set in Rn. Suppose that U is star-convex
+relative to the origin:
+(a) Show that a ray from 0 may intersect Bd U in more than one
+point.
+∗(b) Show by example that U need not be homeomorphic to Bn.
+1.3
+Simplicial Complexes and Simplicial Maps
+Definition 1.3.1 A simplicial complex K in RN is a collection of simplices
+in RN such that
+(1) Every face of a simplex of K is in K.
+(2) The intersection of any two simplices of K is a face of each of
+them.
+EXAMPLE 1.3.2 The collection K1 pictured in Figure 1.3.1, of a 2-simplex
+and its faces, is a simplicial complex. The collection K2, consisting of two
+2-simplices with an edge in common, along with their faces, is a simplicial
+complex; while the collection K3 is not. What about K4?
+The following lemma is sometimes useful in verifying that a collection of
+simplices is a simplicial complex:
+Lemma 1.3.3 A collection K of simplices is a simplicial complex if and only
+if the following hold:
+(1) Every face of a simplex of K is in K.
+(2′) Every pair of distinct simplices of K have disjoint interiors.

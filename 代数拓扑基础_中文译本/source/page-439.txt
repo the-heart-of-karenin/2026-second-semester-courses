@@ -1,0 +1,41 @@
+424
+Elements of Algebraic Topology
+Lemma 7.9.1 If {C, ϵ} and {C′, ϵ′} are acyclic augmented chain complexes,
+and if C is free, then {C ⊗C′, ϵ} is acyclic.
+Proof: We shall show that Hm(C ⊗C′) is infinite cyclic if m = 0, and vanishes
+otherwise. This will prove that C ⊗C′ is acyclic relative to any augmentation.
+Since C is free, we can apply the K¨unneth theorem for chain complexes
+[Theorem 7.8.4] to obtain the exact sequence
+0 →
+p+q=mHp(C) ⊗Hq(C′) −→Hm(C ⊗C′)
+
+p+q=mHp−1(C) ∗Hq(C′) →0 .
+For all p and q, we have
+Hp(C) ∗Hq(C′) = 0 ,
+because each group either vanishes or is infinite cyclic. Therefore we have
+Hm(C ⊗C′) ∼=
+
+p+q=mHp(C) ⊗Hq(C′) .
+For each positive m, at least one of the groups Hp(C) or Hq(C′) vanishes, so
+Hm(C ⊗C′) = 0. For m = 0, we have
+Hm(C ⊗C′) ∼= H0(C) ⊗H0(C′) ∼= Z ⊗Z ∼= Z .
+Theorem 7.9.2 (The Eilenberg–Zilber theorem) For every pair X, Y
+of topological spaces, there are chain maps
+µ
+ν
+S(X) ⊗S(Y )
+S(X × Y )
+that are chain-homotopy inverse to each other. The maps are natural with
+respect to chain maps induced by continuous maps.
+Proof: Consider the category of pairs of topological spaces and pairs of con-
+tinuous maps. We define two functors from this category to the category of
+augmented chain complexes as follows:
+G(X, Y ) = S(X) ⊗S(Y ) ,
+G′(X, Y ) = S(X × Y ) ,
+G(f, g) = f# ⊗g# ,
+G′(f, g) = (f × g)# .
+It is easy to check the functorial properties.
+Let M be the collection of all pairs (∆p, ∆q), where ∆k denotes the stan-
+dard k-simplex. We show that G and G′ are both acyclic and free relative to
+the collection of models M. Then the theorem follows immediately from the
+acyclic model theorem [Theorem 4.5.5].

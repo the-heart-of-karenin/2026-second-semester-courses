@@ -1,0 +1,43 @@
+528
+Elements of Algebraic Topology
+First, we note the following: If D is a compact subset of the metric space
+X, and if B is a covering of D by sets open in X, then there is a δ > 0 such
+that any set of diameter less than δ that intersects D necessarily lies in an
+element of B. This is an extension of the Lebesgue number lemma of general
+topology [see Lemma 2.4.1]. Its proof is left as an exercise for the reader.
+Now let B be an arbitrary covering of Y by sets open in X. First we show
+that B covers Dn = |Kn| for some n, say n = N. For if not then we can choose
+for each n a point xn ∈Dn such that xn is not in any element of B. Some
+subsequence xni converges, necessarily to a point of Y (since Y = ∩Dn). But
+B covers a neighborhood of Y , so it must cover the point xni for i sufficiently
+large.
+We now apply the extended Lebesgue number lemma. Choose δ > 0 so
+that any set of diameter less than δ that intersects DN necessarily lies in an
+element of B. Then choose m > N large enough so that 1/m < δ/2. It follows
+that Am refines B. For, given a vertex v of Km, we have
+diam St(v, Xm) ≤2/m < δ .
+Since v ∈|Km| ⊂|KN|, the set St(v, Km) intersects |KN| so that it lies in an
+element of B.
+Step 4: We now prove the theorem. We have
+dir lim Hk(Dn) ∼= dir lim Hk(Kn)
+∼= dir lim Hk(N(A′
+n))
+by Step 1 ,
+∼= dir lim Hk(N(An))
+by Step 2 ,
+∼= dir lim B∈LHk(N(B))
+by Step 3 .
+The latter group is isomorphic to ˇHk(Y ) by the preceding lemma.
+We use this theorem to compute the ˇCech cohomology of the following
+non-triangulable space.
+Corollary 8.13.17 Let X be the closed topologist’s sine curve [see Defini-
+tion 4.6.5]. Then
+H1(X) = 0
+(singular cohomology) ,
+ˇH1(X) ∼= Z
+(ˇCech cohomology) .
+Proof: For convenience, we express X as the union of line segments in the
+plane, as shown in Figure 8.13.1.
+Step 1: First we compute the singular homology and cohomology of X.
+Let U be the intersection of X with the set of all points (x, y) of R2 for which
+y > 1/8, and let V be the intersection of X with those (x, y) for which y < 3/8.

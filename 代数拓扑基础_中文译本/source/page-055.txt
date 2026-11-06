@@ -1,0 +1,34 @@
+40
+Elements of Algebraic Topology
+For the record, we define what we mean by a surface.
+Definition 1.7.1 By a surface we mean a nonempty, connected Hausdorff
+space, X, with a countable basis, such that each point of X has a neighborhood
+homeomorphic with an open subset of R2.
+In Section 4.8 we will define the notion of an m-manifold. According to
+that definition, every surface is a 2-manifold, but because we require a surface
+to be connected and have a countable basis, not every 2-manifold is a surface.
+Convention. For convenience in notation, we shall henceforth delete the di-
+mensional subscript p on the boundary operator ∂p, and rely on the context
+to make clear which of these operators is intended.
+We shall compute the homology of the torus, the Klein bottle, and several
+other surfaces that can be constructed from a rectangle L by identifying its
+edges appropriately. Thus we begin by proving certain facts about L itself.
+Lemma 1.7.2 Let L be the complex of Figure 1.7.1, whose underlying space
+is a rectangle. Let Bd L denote the complex whose space is the boundary of the
+rectangle. Orient each 2-simplex σi of L by a counterclockwise arrow. Orient
+the 1-simplices arbitrarily. Then:
+e
+L
+σi
+σj
+Figure 1.7.1
+(1) Every 1-cycle of L is homologous to a 1-cycle carried by Bd L.
+(2) If d is a 2-chain of L and if ∂d is carried by Bd L, then d is a
+multiple of the chain  σi.
+Proof: The proof of (2) is easy. If σi and σj have an edge e in common, then
+∂d must have value 0 on e. It follows that d must have the same value on σi
+as it does on σj. Continuing this process, we see that d has the same value on
+every oriented 2-simplex.
+To prove (1), we proceed as in Example 1.6.13. Given a 1-chain c of L,
+one pushes it off the 1-simplices, one step at a time. First, one shows that c is
+homologous to a 1-chain c1 carried by the subcomplex pictured in Figure 1.7.2.

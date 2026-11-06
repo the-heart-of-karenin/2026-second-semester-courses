@@ -1,0 +1,51 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+181
+set, for one cannot speak of the “set of all topological spaces” or “the set of
+all sets” without becoming involved in logical paradoxes. [For example, is the
+set of all sets a member of itself?] A class is something larger than a set, to
+which we do not apply the usual set-theoretic operations [such as taking the
+set of all subsets].
+Let us note the following: The identity morphism 1X is unique. For suppose
+instead that
+1X ◦f = f
+and
+g = g ◦1′
+X
+for every f ∈hom(W, X) and g ∈hom(X, Y ). Then setting f = 1′
+X and
+g = 1X we find that
+1X ◦1′
+X = 1′
+X
+and
+1X = 1X ◦1′
+X ,
+hence 1′
+X = 1X.
+Definition 3.7.2 Let f ∈hom(X, Y ) and g, g′ ∈hom(Y, X). If g ◦f = 1X,
+then we call g a left inverse for f. If f ◦g′ = 1Y , then we call g; a right inverse
+for f.
+Note the following: If f has a left inverse g and a right inverse g′ then
+g = g′. For we have
+(g ◦f) ◦g′ = 1x ◦g′ = g′ ,
+g ◦(f ◦g′) = g ◦1Y = g ,
+hence g = g′. In this case, the map g = g′ is called an inverse to f. It is
+unique.
+If f has an inverse, then f is called an equivalence in the category in
+question. A category in which every morphism is an equivalence is called a
+groupoid.
+In general, we write f : X →Y to mean f ∈hom(X, Y ). We call X the
+domain object of f, and we call Y the range object of f.
+Definition 3.7.3 A (covariant) functor G from a category C to a category
+D is a function assigning to each object X of C an object G(X) of D and to
+each morphism f : X →Y of C a morphism G(f) : G(X) →G(Y ) of D. The
+following two conditions must be satisfied:
+G(1X) = 1G(X)
+for all X ,
+G(g ◦f) = G(g) ◦G(f) .
+That is, a functor must preserve composition and identities. It is immediate
+that if f is an equivalence in C, then G(f) is an equivalence in D.
+EXAMPLE 3.7.4 We list here a number of different categories. In all these
+examples, composition is either the usual composition of functions or is in-
+duced by said composition. Equivalences in some of these categories are given
+special names. In such cases, the name is listed in parentheses.

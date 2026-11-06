@@ -1,0 +1,55 @@
+Cohomology
+327
+A continuous map h : (X, A) →(Y, B) induces a homomorphism of long
+exact cohomology sequences by the naturality property of the zig-zag lemma.
+[A similar result holds for reduced cohomology if A is non-empty.] Thus axioms
+3 and 4 hold.
+If h, k : (X, A) →(Y, B) are homotopic, then h# and k# are chain homo-
+topic, as we proved in Theorem 4.3.7. Then h# and k# are cochain homotopic,
+so that h∗= k∗.
+To compute the cohomology of a one-point space P, we recall [see Theo-
+rem 4.3.3] that the singular chain complex of P has the form
+· · ·
+∼=
+−→Z
+0
+−→Z
+∼=
+−→Z
+0
+−→Z −→0 .
+The cochain complex of P then has the form
+· · ·
+∼=
+←−G
+0
+←−G
+∼=
+←−G
+0
+←−G ←−0 .
+It follows that Hi(P; G) is isomorphic to G if i = 0, and vanishes otherwise.
+Finally, we come to the excision property of singular cohomology. Here
+is a point where the arguments we gave for homology do not go through
+automatically for cohomology. Suppose that
+j : (X \ U, A \ U) →(X, A)
+is an excision map. If we had shown that j# is a chain equivalence, then there
+would be no difficulty, for j# would be a cochain equivalence, and it would
+follow that j∗is an isomorphism. But we proved only the weaker result that
+j∗is an isomorphism. [See Theorem 4.4.10.] So we have some work to do to
+carry this result over to cohomology.
+What we need is the following fact, which will be proved in the next section:
+Let C and D be free chain complexes, and let ϕ : C →D be a chain map
+that induces a homology isomorphism in all dimensions. Then ϕ induces a
+cohomology isomorphism in all dimensions, for all coefficient groups G.
+The excision property of singular cohomology is an immediate conse-
+quence: Given U ⊂A ⊂X, with U ⊂Int A, consider the inclusion map
+j : (X \ U, A \ U) →(X, A) .
+Since the chain complexes involved are free, and since j# induces an isomor-
+phism in homology, it induces an isomorphism in cohomology as well.
+Note that singular cohomology, like singular homology, satisfies an excision
+property slightly stronger than that stated in the axiom. One needs to have
+U ⊂Int A, but one does not need U to be open, in order for excision to hold.
+Simplicial Cohomology Theory
+We have already dealt with some aspects of simplicial cohomology in Sec-
+tion 5.4. We have defined the cohomology groups of a simplicial pair (K, K0),

@@ -1,0 +1,40 @@
+Cohomology
+317
+on every simplex of K0. If τ is a (p + 1)-simplex of K0, then ∂τ is carried by
+K0, so
+⟨δcp, τ⟩= ⟨cp, ∂τ⟩= 0 .
+Thus the map ȷ can be interpreted as an inclusion map. To interpret ı , we
+note that it carries the cochain cp of K to the cochain cp ◦i, which is simply
+the restriction of cp to Cp(K0). We summarize these results as follows:
+If we begin with the sequence
+0 −→Cp(K0)
+i
+−→Cp(K)
+j
+−→Cp(K, K0) −→0 ,
+then the dual of the projection map j is an inclusion map ȷ , and the dual of
+the inclusion map i is a restriction map ı .
+Let us now consider the homomorphism of cohomology induced by a sim-
+plicial map.
+Recall that if f : (K, K0) →(L, L0) is a simplicial map, then one has a
+corresponding chain map
+f# : Cp(K, K0) →Cp(L, L0) .
+The dual of f# maps cochains to cochains; we usually denote it by f #. Because
+f# commutes with ∂, the map f # commutes with δ. The dual of the equation
+f# ◦∂= ∂◦f# is the equation δ ◦f # = f # ◦δ. Hence, f # carries cocycles to
+cocycles and coboundaries to coboundaries. It is called a cochain map, and it
+induces a homomorphism of cohomology groups
+Hp(K, K0; G) f ∗
+←−Hp(L, L0; G) .
+Functoriality holds, even on the cochain level. For if i is the identity map,
+then i# is the identity and so is i#. Similarly, the equation (g ◦f)# = g# ◦f#,
+when dualized, gives the equation (g ◦f)# = f # ◦g#.
+Just as in the case of homology, one has a long exact sequence in cohomol-
+ogy involving the relative groups. But again, there are a few differences.
+Theorem 5.4.2 Let K be a complex, and let K0 be a subcomplex. There exists
+an exact sequence
+· · · ←−Hp(K0; G) ←−Hp(K; G) ←−Hp(K, K0; G) δ∗
+←−Hp−1(K0; G) ←−· · · .
+A similar sequence exists in reduced cohomology if K0 is not empty. A sim-
+plicial map f : (K, K0) →(L, L0) induces a homomorphism of long exact
+cohomology sequences.

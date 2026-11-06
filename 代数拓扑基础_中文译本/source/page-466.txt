@@ -1,0 +1,46 @@
+Duality in Manifolds
+451
+8.3
+Homology Manifolds
+In this section we shall define homology manifolds and obtain some of their
+local properties. The class of homology manifolds includes all topological man-
+ifolds, so it is a broad and important collection of spaces. The triangulable
+homology manifolds will be the basic objects involved in the various duality
+theorems.
+For convenience, we shall deal with the case of relative homology manifolds
+in the present section, even though we shall not actually prove the duality
+theorems in the relative case until Section 8.10.
+We begin now by recording a convention. We shall be dealing with tri-
+angulable spaces. If X is such a space with a specific triangulation, then we
+shall frequently abuse notation and make no notational distinction between
+the space and the complex triangulating it. For instance, we may refer to a
+point of [the space] X or to a simplex of [the complex] X. The meaning in
+each instance will be made clear from context.
+Definition 8.3.1 A topological pair (X, A) is called a relative homology n-
+manifold if for each point x of X not in A, the local homology group Hi(X, X\
+x) vanishes if i̸ = n and is infinite cyclic if i = n. In the case where A is empty,
+we refer to X simply as a homology n-manifold.
+If M is an n-manifold with boundary, then the pair (M, Bd M) is a rela-
+tive homology n-manifold (see Section 4.8). More generally, if (X, A) is any
+pair such that X \ A is an n-manifold, then (X, A) is a relative homology
+n-manifold.
+Now if (X, A) is a relative homology n-manifold that is triangulated, then
+the local homology properties of X are reflected in the homology groups of the
+links of simplices of X. The connection is presented in the following lemma.
+Lemma 8.3.2 Let s be a k-simplex of the complex K. Let s be its barycenter.
+Then
+Hi(|K|, |K| \ s ) ∼=
+ Hi−k−1(Lk s)
+if
+Lk s̸ = ∅,
+Hi(s, Bd s)
+if
+Lk s = ∅.
+Proof: If Lk s = ∅, then s is a face of no other simplex of K. Hence Int s is
+open in |K|. It follows that
+Hi(|K|, |K| \ s ) ∼= Hi(s, s −s ) ∼= Hi(s, Bd s) .
+The first isomorphism holds by excision. The second holds because Bd s is a
+deformation retract of s −s.
+Now suppose that Lk s̸ = ∅. Since the barycenter of s lies in the open set
+St s, we may excise the complement of St s to obtain an isomorphism
+Hi(|K|, |K| \ s ) ∼= Hi(St s, St s −s ) .

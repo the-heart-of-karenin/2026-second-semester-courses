@@ -1,0 +1,18 @@
+Topological Invariance of the Homology Groups
+127
+Corollary 2.7.12 The Euclidean spaces Rn and Rm are not homeomorphic
+if n̸ = m.
+Proof: Suppose to the contrary that h is a homeomorphism of Rn with Rm.
+Then, by restriction, h is a homeomorphism of Rn \ {0} with Rm \ {p} for
+p = h(0) ∈Rm. The latter space is of course homeomorphic with Rm \ {0}. It
+now follows from the preceding theorem that Sn−1 and Sm−1 are homotopy
+equivalent. This cannot be true if n̸ = m because Hn−1(Sn−1) = Z while
+Hn−1(Sm−1) = 0.
+EXAMPLE 2.7.13 The wedge of two circles has the same homotopy type
+as the letter θ. Let X be a doubly punctured elliptical region in the plane as
+shown in Figure 2.7.5.
+Figure 2.7.5
+The sequence of arrows on the left side of this figure indicates how one
+can collapse X to the wedge of two circles. The arrows on the right side show
+how one can collapse X to the letter θ. Since each of these spaces is homotopy
+equivalent to X, they are therefore homotopy equivalent to each other.

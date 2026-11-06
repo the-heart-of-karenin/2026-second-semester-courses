@@ -1,0 +1,43 @@
+Homology Groups of a Simplicial Complex
+19
+a
+d
+b
+e
+c
+f
+d
+a
+L
+g
+K
+Figure 1.4.3
+a, b, . . . , f. We consider the linear simplicial map g : |L| →|K| that assigns
+to each vertex of L the correspondingly labeled vertex of K. Again, g is a
+quotient map; in this case, it identifies the left edge of |L| linearly with the
+right edge of |L|, but with a twist. The space |K| is the one we call the M¨obius
+band. The M¨obius band can be pictured in R3 as the familiar space indicated
+in Figure 1.4.3.
+B
+B
+A
+A
+A
+B
+A
+B
+B
+Figure 1.4.4
+EXAMPLE 1.4.7 The torus is often defined as the quotient space obtained
+from a rectangle by making the identifications pictured in Figure 1.4.4. If we
+wish to construct a complex whose underlying space is homeomorphic to the
+torus, we can thus obtain it by using the diagram in Figure 1.4.5. You can
+check that the resulting quotient map of L onto the geometric realization of
+this diagram carries out precisely the identifications needed to form the torus.
+EXAMPLE 1.4.8 Some care is required in general to make sure that the
+quotient map g does not carry out more identifications than one wishes. For
+instance, you may think that the diagram in Figure 1.4.6 determines the torus,
+but it does not. The quotient map in this case does more than paste opposite
+edges together, as you will see if you examine the diagram more closely.
+EXAMPLE 1.4.9 The diagram in Figure 1.4.7 indicates an abstract com-
+plex whose underlying space is called the Klein bottle. It is the quotient space

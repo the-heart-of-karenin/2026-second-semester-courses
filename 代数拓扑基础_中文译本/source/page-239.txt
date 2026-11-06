@@ -1,0 +1,30 @@
+224
+Elements of Algebraic Topology
+It is tempting to assert that j is also an excision map for singular homology,
+but this is not true. The domain of j is formed by “excising away” from |K|
+and σ the set U = Int σ. Since U = σ, Theorem 4.4.10 does not apply; we
+are excising away something too large. Nonetheless, we can excise something
+smaller—namely, the barycenter σ of σ. This we now do.
+Consider the diagram
+Hp(|K|, σ)
+Hp(|K| \ σ, σ \ σ)
+Hp(|K1|, Bd σ)
+ℓ∗
+k∗
+j∗
+where k and ℓare inclusions. The map ℓis an acceptable excision map, since σ
+is closed and is contained in Int σ. [Note that Int σ is open in |K|, because |K1|
+is closed. Thus the interior of σ in |K|, in the sense of point-set topology, equals
+the “open simplex” Int σ.] Therefore, ℓ∗is an isomorphism. Why is k∗an
+isomorphism? If dim σ = 0, then σ\σ and Bd σ are empty, and |K|\σ = |K1|.
+So the map k is the identity in this case. If dim σ > 0, then we use the fact that
+Bd σ is a deformation retract of σ \ σ. This deformation retraction extends to
+a deformation retraction Ft of |K|\σ onto |K1| defined by letting Ft equal the
+identity on |K1|. See Figure 4.7.1. We conclude from Theorem 4.3.9 that k∗is
+an isomorphism. Then j∗is an isomorphism in singular homology, as desired.
+σ
+K1
+Figure 4.7.1
+Step 2. Having proved the lemma when K is finite, we prove it in general.
+As before, it suffices to prove (1) for all K. For then (2) follows from the
+preceding lemma and (3) follows from (2) and the Steenrod five-lemma.

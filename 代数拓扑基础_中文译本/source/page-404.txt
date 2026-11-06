@@ -1,0 +1,43 @@
+Homological Algebra
+389
+4. Follow the suggested steps to prove Theorem 7.2.6.
+Steps:
+(a) To obtain the second sequence, let
+0 −→R −→F −→G −→0
+be a free resolution of G, and apply the serpent lemma
+[Lemma 3.3.9] to the diagram
+0
+Hom (F, A)
+Hom (F, B)
+Hom (F, C)
+0
+0
+Hom (R, A)
+Hom (R, B)
+Hom (R, C)
+0 .
+(b) Given an abelian group G, show that there is an injective res-
+olution of G. [Hint: It suffices to find H, since a quotient of
+a divisible group is divisible. Write G = F/R, where F is free,
+and construct a monomorphism into a direct sum of copies of
+Q.]
+(c) Show that there is a functor assigning to each injective resolu-
+tion
+0 −→G −→H −→K −→0
+of G, and each abelian group A, an exact sequence
+0 →Hom (A, G) →Hom (A, H) →Hom (A, K) →Ext (A, G) →0 .
+(d) Use the serpent lemma, Lemma 3.3.9, to derive the first se-
+quence of the theorem.
+5. Refer to Exercise 3. Show that S1 really does model a circle. Show
+that this group is commutative. Show that it is not finitely gener-
+ated.
+7.3
+The Universal Coefficient Theorem for
+Cohomology
+We now show how the homology groups of a space determine the cohomology
+groups. The answer is expressed in the form of a short exact sequence involving
+the groups Hp, Hp, and Hp−1, and the functors Hom and Ext.
+We already know that if C is a free chain complex, then there is a natural
+exact sequence
+0 ←−Hom (Hp(C), G) κ
+←−Hp(C; G) ←−ker κ ←−0 .

@@ -1,0 +1,50 @@
+302
+Elements of Algebraic Topology
+Definition 5.2.1 If A and G are abelian groups, then the set Hom (A, G)
+of all homomorphisms of A into G becomes an abelian group if we add two
+homomorphisms by adding their values in G.
+That is, for ϕ, ψ ∈Hom (A, G), we define ϕ + ψ ∈Hom (A, G) by setting
+(ϕ + ψ)(a) = ϕ(a) + ψ(a), for a ∈A. The map ϕ + ψ is a homomorphism,
+because (ϕ + ψ)(0) = 0 and
+(ϕ + ψ)(a + b)
+=
+ϕ(a + b) + ψ(a + b)
+=
+ϕ(a) + ψ(a) + ϕ(b) + ψ(b) = (ϕ + ψ)(a) + (ϕ + ψ)(b) .
+The identity element of Hom (A, G) is the function mapping A to the identity
+element of G. The additive inverse of the homomorphism ϕ is the homomor-
+phism that maps each a ∈A to −ϕ(a). Thus we may refer to Hom as the
+group of homomorphisms, but usually we will simply call it Hom.
+EXAMPLE 5.2.2 The group Hom (Z, G) is isomorphic with G itself. Let-
+ting I denote the isomorphism, we define I by setting I(ϕ) = ϕ(1), for all
+ϕ ∈Hom (Z, G).
+In general, if A is a free abelian group of finite rank with basis e1, e2, . . . , en,
+then Hom (A, G) is isomorphic with the direct sum G ⊕G ⊕· · · ⊕G of n
+copies of G. Again, letting I denote the isomorphism, we define I by setting
+I(ϕ) = (ϕ(e1), ϕ(e2), . . . , ϕ(en)). This isomorphism depends on the choice of
+basis, so it is not “natural.” Note that if A is free abelian, but with a non-finite
+basis {eα}α∈J, then the mapping ϕ →(ϕ(eα))α∈J carries ϕ to an element of
+the direct product 
+α∈J Gα, not to an element of the direct sum 
+α∈JGα.
+[See Section 1.5 for definitions.]
+We will state these facts formally as a theorem later on.
+Definition 5.2.3 Let A, B, and G be abelian groups. The homomorphism
+f : A →B gives rise to a dual homomorphism
+Hom (A, G)
+f
+←−Hom (B, G)
+going in the reverse direction. The map f assigns to the homomorphism ϕ :
+B →G the composite
+A f
+−→B
+ϕ
+−→G .
+That is, f(ϕ) = ϕ◦f. The composition of homomorphisms yields a homomor-
+phism, so f(ϕ) is an element of Hom (A, G), as claimed.
+The mapping f →f is also a homomorphism, since f(0) = 0 and
+[ f(ϕ + ψ)](a)
+=
+(ϕ + ψ)(f(a)) = ϕ(f(a)) + ψ(f(a))
+=
+[ f(ϕ)](a) + [ f(ψ)](a) .

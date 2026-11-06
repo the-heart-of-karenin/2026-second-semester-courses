@@ -1,0 +1,39 @@
+518
+Elements of Algebraic Topology
+We define λD = λD,U. Naturality of λD with respect to inclusions E →D
+now follows from Step 3.
+Corollary 8.12.7 (Alexander duality) Let n be fixed. There is a function
+assigning to each proper nonempty polyhedron A in Sn an isomorphism
+αA : Hk(A) →Hn−k−1(Sn \ A) .
+This assignment is natural with respect to inclusions.
+Proof: The case k < n −1 follows by noting that αA may be defined as the
+composite of the isomorphisms
+Hk(a) δ∗
+−→Hk+1(Sn, A) λA
+−→Hn−k−1(Sn \ A) ,
+both of which are natural. The case k = n−1 follows similarly from naturality
+of the diagrams used in defining the Alexander isomorphism. The case k = n
+is trivial.
+EXERCISES
+1. Let D be a polyhedron in Sn that is the union of two disjoint sets
+A and B, with
+A ≈Sk
+and
+B ≈Sn−k−1 ,
+where 0 ≤k ≤n −1. Inclusion maps induce homomorphisms
+ϕ : Hk(A) →Hk(Sn \ B) ,
+ψ : Hn−k−1(B) →Hn−k−1(Sn \ A) .
+Alexander duality implies that these groups are all infinite cyclic.
+Show that, up to sign, ϕ and ψ both equal multiplication by the
+same integer m. [See Exercise 3 of Section 4.9.] This integer, the
+linking number, measures how many times A links B. [Hint: Trian-
+gulate Sn so that A and B are polytopes of full subcomplex, and no
+simplex intersects both A and B. Let C be the union of all simplices
+that are disjoint from A. Begin with the following diagram:
+Hn−k−1(C) −−−−→
+Hn−k−1(B)
+αC
+αB
+Hk(Sn \ C) −−−−→Hk(Sn \ B)] .
+2. Explain why Figures 8.12.2 and 8.12.3 are each actually the star of
+some ordered pair.

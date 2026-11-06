@@ -1,0 +1,41 @@
+444
+Elements of Algebraic Topology
+8.2
+The Join of Two Complexes
+In this section we introduce the notion of the join of two complexes, and
+consider some of it properties.
+Definition 8.2.1 Let K and L be nonempty complexes in some euclidean
+space EJ. Let s = v0v1 . . . vm be the general simplex of K and let t =
+w0w1 . . . wn be the general simplex of L. Suppose that, whenever s ∈K and
+t ∈L, then the points v0, v1, . . . , vm, w0, w1, . . . , wn are independent. Then we
+let
+s ∗t = v0v1 . . . vm w0w1 . . . wn
+denote the simplex that they span. If the collection consisting of all the sim-
+plices s ∗t and their faces is a simplicial complex, then this complex is called
+the join of K and L and is denoted by K ∗L.
+If K consists of a single vertex v, then v ∗L is the cone over L, as already
+defined. If K consists of two points, then K ∗L is the suspension of L and is
+denoted S(L). Conditions under which K ∗L exists in general are given in the
+following lemma.
+Lemma 8.2.2 Let K and L be disjoint nonempty complexes in EJ.
+(a) If K ∗L exists, then its polytope equals the union of all line seg-
+ments joining points of |K| to points of |L|. Two such line segments
+intersect in at most a common endpoint.
+(b) Conversely, if every pair of line segments joining points of |K|
+to points of |L| intersect in at most a common endpoint, then K ∗L
+exists.
+Proof:
+Step 1: We will prove the following: Let σ = v0v1 . . . vmw0w1 . . . wn be a
+simplex in EJ. Then σ equals the union of all line segments joining points of
+s = v0v1 . . . vm to points of t = w0w1 . . . wn. Two such line segments intersect
+in at most a common endpoint. Furthermore, Int σ equals the union of all
+open line segments joining points of Int s to points of Int t. This result was
+given as an exercise in Section 1.2. We now give a proof.
+Let us now prove the statement about Int σ first. Suppose that p = λx + (1 −
+λ)y, where 0 < λ < 1 and x ∈Int s and y ∈Int t. Then x =  αivi and
+y =  βjwj with αi > 0 and βj > 0 and  αi =  βj = 1. Thus
+p =
+
+(λαi)vi +
+
+(1 −λ)βjwj ,

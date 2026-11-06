@@ -1,0 +1,38 @@
+434
+Elements of Algebraic Topology
+If Hi(Y ) is finitely generated for each i, then the sequence splits—but not
+naturally.
+The K¨unneth Theorem for Cohomology with Field Coefficients
+Just as with homology, the K¨unneth theorem simplifies considerably if the
+cohomology groups have their coefficients in a field.
+Theorem 7.10.10 The K¨unneth theorem for cohomology with coef-
+ficients in a field) Let F be a field. If C and C′ are chain complexes that
+vanish below a certain dimension, if C is free, and if Hi(C) is finitely generated
+in each dimension, then there is a natural isomorphism
+Θ : 
+p+q=m(Hp(C; F) ⊗F Hq(C′; F)) →Hm(C ⊗C′; F) .
+Proof: By the usual argument, we may assume that C itself is finitely gener-
+ated in each dimension. The chain complexes E and E′ defined by
+E−p = Hom (Cp, F)
+and
+E′
+−q = Hom (C′
+q, F)
+are vector spaces over F. By the vector space K¨unneth theorem, Theo-
+rem 7.8.9, there exists a natural vector space isomorphism
+
+p+q=mH−p(E) ⊗F H−q(E′) →H−m(E ⊗F E′) .
+Since C and C′ vanish below a certain dimension and C is free and finitely
+generated in each dimension, the proof of Lemma 7.10.6 goes through essen-
+tially unchanged to show that the map θ defines a vector space isomorphism
+of E ⊗F E′ with Hom (C ⊗C′, F) that is a cochain map. The theorem follows.
+We also have the following corollary:
+Corollary 7.10.11 Let F be a field. If X and Y are topological spaces, and
+if Hi(X) is finitely generated for each i, then there is a natural vector space
+isomorphism
+
+p+q=mHp(X; F) ⊗F Hq(Y ; F) ×
+−→Hm(X × Y ; F) .
+EXERCISES
+1. State and prove a K¨unneth theorem in relative singular cohomology.
+[See Exercise 2 of Section 7.9.]

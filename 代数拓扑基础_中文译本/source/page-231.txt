@@ -1,0 +1,57 @@
+216
+Elements of Algebraic Topology
+(b) In part (a), you constructed a transformation D : G →G′ that
+operates as a chain homotopy on the model spaces Mα ∈M,
+but only on the model spaces. Because G is free, the formula
+DXG(f)(iα) = G′(f)DMα(iα), for all α ∈Jp,
+all f ∈hom(Mα, X),
+extends the transformation D : G →G′ to all X ∈C. Show
+that this transformation D : G →G′ is natural.
+(d) Show that the transformation D : G →G′ defined in part (b)
+satisfies
+∂′ ◦DX
+=
+TX −SMα,
+for p = 0,
+∂′ ◦DX + DX ◦∂
+=
+TX −SX,
+for p > 0,
+and thus is a natural chain homotopy between S and T.
+3. Consider the following functors from the topological category to A:
+G : X →S(X)
+and
+f →f# ,
+G′ : X →S(X × I)
+and
+f →(f × iI)# .
+(a) Let i, j : X →X ×I be given by i(x) = (x, 0) and j(x) = (x, 1).
+Show that the maps TX, T ′
+X : Sp(X) →Sp(X × I) given by
+TX(T) = i#(T) and T ′
+X(T) = j#(T) define natural transfor-
+mations T and T ′. Derive Lemma 4.3.6 as a consequence of the
+acyclic model theorem.
+(b) Derive Lemma 4.4.6 from the acyclic model theorem by showing
+that sdm and (iX)# are natural transformations of the functor
+G to itself.
+4. Let K and L be simplicial complexes. Suppose Φ is an acyclic carrier
+from K to L.
+Consider the category C whose objects are subcomplexes of K and
+whose morphisms are inclusion maps j of subcomplexes of K. If K0
+is a subcomplex of K, let Φ(K0) be the union of the subcomplexes
+Φ(σ) of L, as σ ranges over all simplices of K0.
+(a) If K0 and K1 are subcomplexes of K and j : K0 →K1 is
+inclusion, consider the functors from C to A given by
+G : K0 →C(K0)
+and
+j →j# ,
+G′ : K0 →C(Φ(K0))
+and
+j →ℓ# ,
+where ℓ: Φ(K0) →Φ(K1) is the inclusion map. Show that G
+and G′ are indeed functors.
+(b) Derive Theorem 1.14.10, the acyclic carrier theorem (geometric
+version), from the acyclic model theorem. [Hint: Let M consist
+of those subcomplexes of K whose polytopes are simplices of
+K.]

@@ -1,0 +1,44 @@
+Homology Groups of a Simplicial Complex
+11
+Proof: Suppose A is closed in |L|. If σ is a simplex of K, then σ ∩|L| is the
+union of those faces si of σ that belong to L. Since A is closed in |L|, the set
+A ∩si is closed in si and hence closed in σ. Since A ∩σ is a finite union of the
+sets A ∩si, it is closed in σ. We conclude that A is closed in |K|.
+Conversely, if B is closed in |K|, then B ∩σ is closed in σ for each σ ∈K,
+and in particular for each σ ∈L. Hence B ∩|L| is closed in |L|.
+Lemma 1.3.9 A map f : |K| →X is continuous if and only if f|σ is con-
+tinuous for each σ ∈K.
+Proof: If f is continuous, so is f|σ since σ is a subspace of |K|. Conversely,
+suppose each map f|σ is continuous. If C is a closed set of X, then f −1(C∩σ) =
+(f|σ)−1(C), which is closed in σ by the continuity of f|σ. Thus f −1(C) is
+closed in |K| by definition.
+Definition 1.3.10 If X is a space and if C is a collection of subspaces of X
+whose union is X, then the topology of X is said to be coherent with the
+collection C, provided a set A is closed in X if and only if A ∩C is closed in
+C for each C ∈C. It is equivalent to require that U be open in X if and only
+if U ∩C is open in C for each C ∈C.
+In particular, the topology of |K| is coherent with the collection of sub-
+spaces σ, for σ ∈K.
+The analogue of Lemma 1.3.9 holds for coherent topologies in general: a
+map f : X →Y is continuous if and only if f|C is continuous for each C ∈C.
+In the next definition, we extend the barycentric coordinates of Defini-
+tion 1.2.1 to a family of functions defined on a polyhedron.
+Definition 1.3.11 Let v be an arbitrary vertex of the simplicial complex K.
+The barycentric coordinate tv : |K| →[0, 1] is defined as follows: A point
+x ∈|K| is interior to precisely one simplex of K, whose vertices are, say,
+a0, a1, . . . , an. Then there are positive numbers t0, t1, . . . , tn such that
+x =
+n
+
+i=0
+tiai and
+n
+
+i=0
+ti = 1 .
+If v is not one of the vertices ai, set tv(x) = 0. If v is one of the vertices ai,
+say, v = ai′, then set tv(x) = ti′.
+For fixed v the function tv(x) is continuous when restricted to a fixed sim-
+plex σ of K, since either it is identically zero on σ or it equals the barycentric
+coordinate of x with respect to the vertex v of σ in the sense formerly defined.
+Therefore, tv(x) is continuous on |K|, by Lemma 1.3.9.

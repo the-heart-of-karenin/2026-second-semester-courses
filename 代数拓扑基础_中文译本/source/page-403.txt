@@ -1,0 +1,37 @@
+388
+Elements of Algebraic Topology
+Theorem 7.2.6 There are functors assigning to each short exact sequence of
+abelian groups
+0 −→A −→B −→C −→0 ,
+and each abelian group G, two exact sequences:
+0 ←Ext(A, G) ←Ext(B, G) ←Ext(C, G)
+Hom(A, G) ←Hom(B, G) ←Hom(C, G) ←0 ,
+0 →Hom(G, A) →Hom(G, B) →Hom(G, C)
+Ext(G, A) →Ext(G, B) →Ext(G, C) →0 .
+Exercise 4 should guide you through a proof of this theorem. The next defi-
+nition is used in that proof:
+Definition 7.2.7 Let G be an abelian group. An exact sequence
+0 −→G −→H −→K −→0 ,
+where H and K are divisible [see Definition 5.2.9], is called an injective reso-
+lution of G.
+EXERCISES
+1. Show that if B is divisible [see Definition 5.2.9] , then Ext (A, B) =
+0.
+2. Compute Hom (A, B) and Ext (A, B) if
+A = Z ⊕Z/2 ⊕Z/4 ⊕Z/6 ,
+B = Z ⊕Z ⊕Z/9 ⊕Z/12 .
+3. (a) If
+A
+is
+finitely
+generated,
+compute
+Hom (A, R/Z)
+and
+Ext (A, R/Z) in terms of the betti number and the torsion co-
+efficients of A. [Recall from Definition 5.2.10 that the additive
+group R/Z is called the circle group, because it is isomorphic to
+the multiplicative group of complex numbers of unit modulus.]
+(b) Again assume A is finitely generated. Compute Hom (A, Q) and
+Ext (A, Q) in terms of the betti number and the torsion coeffi-
+cients of A.

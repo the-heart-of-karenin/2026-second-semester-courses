@@ -1,0 +1,90 @@
+562
+Index
+fixed point theorem
+Brouwer, 136
+for acyclic space, 146
+for ball, 136
+for complex projective space,
+488
+for projective plane, 147
+for sphere, 138
+Lefschetz, 145
+forgetful functor, 182
+free abelian group, 24
+basis, 24
+free chain complex, 84
+free functor, 213
+free resolution
+canonical, 385
+of R-module, 402
+of abelian group, 332
+of module, 402
+full subcomplex, 21, 497
+functor
+acyclic, 213
+contravariant, 184
+covariant, 181
+forgetful, 182
+free, 213
+properties, 75, 118
+functorial properties of homology,
+118
+fundamental cycle, 284
+fundamental group, 1, 247, 248
+fundamental group of figure eight,
+259
+fundamental theorem
+of algebra, 139
+of finitely generated abelian
+groups, 28
+general simplicial approximation
+theorem, 111
+generalized barycentric subdivision,
+106
+generalized euclidean space, 15
+generalized homology theory,
+172
+generalized Jordan curve theorem,
+238
+generalized Schoenflies theorem, 239
+generating free abelian group, 24
+generating groups, 25
+generator for group, 24
+geometric realization, 17
+geometrically independent, 3
+group
+finitely generated, 24
+homology, 35
+of boundaries, 35
+relative, 57
+of cycles, 34
+relative, 57
+group of extensions, 385
+rules for computing, 402
+group of homomorphisms, 302
+rules for computing, 402
+groupoid, 181
+half-space, 228
+ham sandwich theorem, 486, 487
+Hauptvermutung, 232
+hemisphere, 5
+Hilbert, D., 252
+hole, 244
+Hom, rules for computing, 402
+homogeneous space, 234
+homologous, 36
+homologous to zero, 36
+homology
+functorial properties of, 118
+product of spheres, 419
+homology ball, 234
+homology sphere, 234
+homology k-sphere, 459
+homology boundary homomorphism,
+154
+homology cross product, 419, 426
+homology group, 1, 35
+axioms, 170
+computability of, 71
+local, 228
+of chain complex, 69, 84, 375

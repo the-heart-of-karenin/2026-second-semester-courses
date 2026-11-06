@@ -1,0 +1,56 @@
+Singular Homology Theory
+205
+To check that sd is a chain map, we proceed by induction on p. The fact
+that sd ◦∂= ∂◦sd holds in dimension 0 is trivial. Assuming the result true
+in dimensions less than p, we apply Lemma 4.2.8 to compute
+∂sd ip
+=
+(−1)p∂[sd ∂ip, ∆p]
+=
+
+(−1)p[∂sd ∂ip, ∆p] + sd ∂ip
+if p > 1,
+−ϵ(sd ∂i1)T0 + sd ∂i1
+if p = 1,
+where T0 is the 0-simplex whose image point is ∆1. Now if p > 1, we have
+∂sd ∂ip = sd ∂∂ip = 0 by the induction hypothesis. If p = 1, we have
+ϵ(∂sd i1) = ϵ(∂i1) = 0, because sd preserves augmentation. Hence in either
+case, we have ∂sd ip = sd ∂ip. In general, we compute
+∂sd T
+=
+∂T#(sd ip)
+by definition,
+=
+T#(∂sd ip)
+because T# is a chain map,
+=
+T#(sd ∂ip)
+by the formula just proved,
+=
+sd T#(∂ip)
+because sd is natural,
+=
+sd ∂(T#(ip))
+because T# is a chain map,
+=
+sd ∂T .
+Lemma 4.4.4 Let T : ∆p →σ be a linear homeomorphism of ∆p with the
+p-simplex σ. Then each term of sd T is a linear homeomorphism of ∆p with
+a simplex in the first barycentric subdivision of σ.
+Proof: The lemma is trivial for p = 0. Now suppose the lemma is true in
+dimensions less than p. First we consider the identity linear homeomorphism
+ip : ∆p →∆p. We have
+sd ip = [sd ∂ip, ∆p] .
+Each term in ∂ip is a linear homeomorphism of ∆p−1 with a simplex in Bd ∆p.
+By the induction hypotheses, sd (∂ip) =  ± Ti, where Ti is a linear homeo-
+morphism of ∆p−1 with a simplex s1 . . . sp in the first barycentric subdivision
+of Bd ∆p. Then [Ti, ∆p] is by definition a linear homeomorphism of ∆p with
+the simplex ∆ps1 . . . sp, which belongs to the first barycentric subdivision of
+∆p.
+Now consider a general linear homeomorphism T : ∆p →σ. Note that T
+defines a linear isomorphism of the first barycentric subdivision of ∆p with
+the first barycentric subdivision of σ, because it carries the barycenter of ∆p
+to the barycenter of σ. By definition, we have sd T = T#(sd ip). Since the
+composition of linear homeomorphisms is a linear homeomorphism, each term
+in sd T is a linear homeomorphism of ∆p with a simplex in the first barycentric
+subdivision of σ.

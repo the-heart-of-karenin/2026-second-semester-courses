@@ -1,0 +1,42 @@
+428
+Elements of Algebraic Topology
+6. Suppose that M is a compact, connected n-manifold such that
+Hn(M) ∼= Z. There are relations among the betti numbers and
+torsion coefficients of M. Use the results of the preceding exercise
+to formulate a conjecture concerning these relations.
+7. Verify the functorial properties of the functors at the beginning of
+the proof of Theorem 7.9.2.
+7.10
+∗The K¨unneth Theorem for Cohomolgy
+One can always compute the cohomology of a product space by first computing
+its homology from the K¨unneth theorem, and then applying the universal
+coefficient theorem for cohomology. But one might hope for a version of the
+K¨unneth theorem that applies directly to cohomology. We shall prove such a
+theorem in this section. It has applications to computing the cohomology ring
+of a product space, which we shall study in the next section.
+First we introduce the cross product operation in cohomology. We give
+only the definition here. Discussion of its properties will be postponed to the
+next section.
+Throughout this section, let R be a commutative ring with unity element.
+Let C and C′ be chain complexes. Corresponding to the chain complex C,
+there is a cochain complex Hom (C, R) with p-dimensional group Hom (Cp, R).
+Similarly, one has the cochain complex Hom (C′, R). We make the tensor prod-
+uct of these cochain complexes into a cochain complex in the way one might
+expect: The m-dimensional cochain group of Hom (C, R) ⊗Hom (C′, R) is the
+group
+
+p+q=mHom (Cp, R) ⊗Hom (C′
+q, R) .
+The coboundary operator is given by the rule
+δ(ϕp ⊗ψq) = δϕp ⊗ψq + (−1)pϕp ⊗δ′ψq .
+Put simply, this cochain complex is obtained by first applying the Hom
+functor, then forming a tensor product. One could reverse the order of opera-
+tions and obtain the cochain complex Hom ((C⊗C′), R). Its group in dimension
+m is
+Hom ((C ⊗C′)m, R) .
+Its coboundary operator is the dual of ∂, so we denote it by ∂.
+There is a natural homomorphism of the first of these chain complexes to
+the second, described as follows:
+Definition 7.10.1 Let p + q = m. The homomorphism
+θ : Hom (Cp, R) ⊗Hom (C′
+q, R) →Hom ((C ⊗C′)m, R)

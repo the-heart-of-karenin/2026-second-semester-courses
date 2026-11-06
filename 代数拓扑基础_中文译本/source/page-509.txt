@@ -1,0 +1,37 @@
+494
+Elements of Algebraic Topology
+First, we define w. Let v, e, and c denote fundamental cycles for the cells
+of X in dimensions 0, 1, 2, respectively—as indicated in Figure 8.9.1. As we
+showed in the proof of Theorem 4.14.14, ∂c = ne. When c is considered as a
+chain with Z/n coefficients, then c is a cycle. Let w be the homology class of
+c. It generates H2(X; Z/n).
+B
+e
+v
+c
+Figure 8.9.1
+We now compute β∗(w). We may use the cellular chain complex of X to
+compute β∗. Applying the zig-zag lemma, we begin with c, which is a cycle
+with Z/n coefficients. Then we consider it as a chain with Z/n2 coeffcients.
+Next we take its boundary [which is still ne] and finally we divide by n. Thus
+β∗(w) = {e}, where e is considered to be a cycle with Z/n coefficients.
+Finally, we compute the intersection product w · β∗(w) = {c} · {e}. Un-
+fortunately, we are not in a position to compute this product directly, for the
+carrier of e intersects the carrier of c in much more than a single point. We
+shall thus replace c and e by homologous cycles in order to carry out the
+computation.
+Note first that c is homologous to the cycle d pictured in Figure 8.9.2.
+Indeed, the boundary of the solid upper half of the figure, suitably oriented,
+equals the chain c −d.
+Second, let z be the cycle that runs from the top of the polyhedron B to
+the bottom, as pictured in Figure 8.9.3. We assert that, when considered in
+X, it is homologous to the cycle −ke. For there are k copies of the 1-cell e
+lying between the vertex v and its image rθ(v) under rotation through the
+angle θ = 2πk/n. Then, computed in B, the boundary of the shaded 2-chain
+in the figure equals the chain ke + z + s1 + s2, where s1 and s2 are the two
+slanted 1-chains pictured. These slanted 1-chains cancel each other after the
+identifications made in forming X. Thus the boundary of the shaded 2-chain
+equals ke + z when computed in L(n, k).
+Now the intersection product of {d} and {z} is easy to compute, because
+their carriers intersect in a single point. Actually, we must triangulate X
+and push z off onto the dual 1-skeleton in order for the preceding lemma to

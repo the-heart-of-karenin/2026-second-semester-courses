@@ -1,0 +1,35 @@
+Relative Homology and the Eilenberg–Steenrod Axioms
+177
+A
+A1
+X
+X1
+X −U
+A −U
+(K, K0)
+h
+k
+j0
+j1
+(M, M0)
+Figure 3.6.1
+Then A\U = h(L0). [It follows that U is open and A is closed.] Theorem 1.10.6
+states that inclusion induces an isomorphism
+Hp(L, L0) ∼= Hp(K, K0) .
+Thus our result is proved.
+Now we shall prove excision in the general case. Let U ⊂Int A. Let
+h : (K, K0) →(X, A)
+k : (M, M0) →(X \ U, A \ U)
+be triangulations of these respective pairs of spaces. Let X1 denote the closure
+of X \A and let A1 = X1 ∩A. We assert that the pair (X1, A1) is triangulated
+by both h and k. Refer to Figure 3.6.1, where the maps j0 and j1 both denote
+inclusions.
+To verify this assertion, note that the space |K| \ |K0| is the union of all
+open simplices Int σ such that σ ∈K and σ̸ ∈K0. Then its closure C is the
+polytope of the subcomplex of K consisting of all simplices σ of K that are
+not in K0, and their faces. The image of the set C under the homeomorphism
+h equals the closure of X \ A, which is X1. Therefore X1 is triangulated by
+h. Since both X1 and A are triangulated by h, so is A1 = X1 ∩A. Similarly,
+the closure of |M| \ |M0| is the polytope of a subcomplex of M, and its image
+under k equals the closure of
+(X \ U) \ (A \ U) = X \ A .

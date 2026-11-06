@@ -1,0 +1,50 @@
+426
+Elements of Algebraic Topology
+0 →
+p+q=mHp(X) ⊗Hq(Y ) −→Hm(X × Y )
+
+p+q=mHp−1(X) ∗Hq(Y ) →0 .
+The sequence is natural with respect to homomorphisms induced by continuous
+maps. It splits but not naturally.
+The monomorphism
+Hp(X) ⊗Hq(Y ) −→Hm(X × Y )
+of the preceding theorem is called the homology cross product. It equals the
+composite
+Hp(X) ⊗Hq(Y ) Θ
+−→Hm(S(X) ⊗S(Y )) µ∗
+−→Hm(X × Y ) ,
+where Θ is induced by inclusion and µ is the Eilenberg–Zilber chain equiva-
+lence. We shall not have much occasion to use the homology cross product,
+but a similar cross product in cohomology will prove to be quite important,
+as we shall see in the next two sections.
+Theorem 7.9.4 Let X and Y be topological spaces, and let F be a field. There
+is a natural isomorphism
+
+p+q=mHp(X; F) ⊗Hq(Y ; F) →Hm(X × Y ; F) .
+For later applications, it will be convenient to have a specific formula for
+one of the Eilenberg–Zilber chain equivalences. Here is such a formula:
+Theorem 7.9.5 (The Eilenberg–Zilber chain equivalence ν.)
+Let π1 : X × Y →X and π2 : X × Y →Y be projections. Define
+ν : Sm(X × Y ) →
+p+q=mSp(X) ⊗Sq(Y )
+by the equation
+ν(T) =
+m
+
+i=0
+[π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵi)] ⊗[π2 ◦T ◦ℓ(ϵi, ϵi+1, . . . , ϵm)] .
+Then ν is a natural chain equivalence that preserves augmentation.
+Proof: That ν is natural and augmentation-preserving is left to the exercises.
+The fact that ν is a chain map follows from a messy, but straightforward,
+computation that is also left to the exercises. One finds that
+∂ν(T) −ν(∂T)
+=
+m
+
+i=1
+(−1)i[π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . ,ϵi)] ⊗[π2 ◦T ◦ℓ(ϵi, ϵi+1, . . . , ϵm)]
++
+m−1
+
+i=1
+(−1)i[π1 ◦T ◦ℓ(ϵ0, ϵ1, . . . , ϵi)] ⊗[π2 ◦T ◦ℓ(ϵi, ϵi+1, . . . , ϵm)] .

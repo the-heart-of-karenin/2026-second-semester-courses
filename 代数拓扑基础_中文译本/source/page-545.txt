@@ -1,0 +1,42 @@
+530
+Elements of Algebraic Topology
+Furthermore, Dn+1 is readily seen to be a deformation retract of Dn so that
+the inclusion i induces an isomorphism
+H1(Dn+1)
+i∗
+←−H1(Dn) .
+It follows that ˇH(X) ∼= Z.
+(0, 1)
+(0, 1
+2)
+Dn
+(0, 0)
+(1, 1)
+(1, 0)
+( 1
+2, 1
+2)
+( 1
+n, 1
+2)
+( 1
+2, 1)
+( 1
+n, 1)
+Figure 8.13.2
+We have only touched on the subject of ˇCech cohomology. For a full-scale
+development one needs to define the homomorphism induced by a continuous
+map [which is easy], extend the definition to the cohomology of a pair (X, A),
+and verify the Eilenberg–Steenrod axioms [which requires some work]. The
+interested reader is referred to Chapters 9 and 10 of [ES52].
+EXERCISES
+1. Check the details of Example 8.13.8.
+2. For each n, let µn : Z →Z be multiplication by n. The direct limit
+of the system
+Z ϕ2
+−→Z ϕ3
+−→Z ϕ4
+−→Z −→· · ·
+is a familiar group. What is it?
+3. Check that the system of groups and homomorphisms used in defin-
+ing ˇCech cohomology is a direct system.

@@ -1,0 +1,40 @@
+Singular Homology Theory
+203
+7. Consider the category C whose objects are chain complexes. A mor-
+phism of C of degree d mapping C to C′ is a family of homomor-
+phisms ϕp : Cp →C′
+p+d. Consider the following functors from the
+topological category to C:
+G(X) = S(X);
+G(f) = f#;
+H(X) = S(X × I);
+H(f) = (f × iI)#.
+Show that the chain homotopy of Lemma 4.3.6 is a natural trans-
+formation of G to H.
+8. Verify properties (a) and (b) of Lemma 4.3.6 are satisfied when
+p = 0.
+9. Show that if X consists of n points with the discrete topology, then
+Hp(X) = 0 for p̸ = 0 and H0(X) ∼= Zn.
+10. Give an example of a space X with H1(X) = Z.
+11. Give an example of a space Y with H1(Y ) = Z × Z.
+4.4
+Excision in Singular Homology
+In this section we verify the excision axiom for singular homology. The tech-
+niques involved in the proof will be useful later in other situations.
+One of the facts we proved about simplicial complexes was that we could
+chop up a finite complex barycentrically into simplices that were as small as
+desired. We need a similar result for singular chains. To make this precise, we
+shall use the following definition:
+Definition 4.4.1 Suppose one is given a space X and a collection A of subsets
+of X whose interiors cover X. A singular simplex of X is said to be A-small
+if its image set lies in an element of A.
+Given a singular chain on X, we shall show how to “chop it up” so that
+all its simplices are A-small. Not surprisingly, what we do is to introduce
+something like barycentric subdivision in order to accomplish this. We give
+the details now.
+Definition 4.4.2 Let X be a topological space. We define a homomorphism
+sdX : Sp(X) →Sp(X) by induction. If T : ∆0 →X is a singular 0-simplex,
+we define sdXT = T. Now suppose sdX is defined in dimensions less than p. If
+ip : ∆p →∆p is the identity map, let ∆p denote the barycenter of ∆p; then,
+using the bracket operation of Section 4.2, we define
+sd∆pip = (−1)p[sd∆p(∂ip), ∆p] .

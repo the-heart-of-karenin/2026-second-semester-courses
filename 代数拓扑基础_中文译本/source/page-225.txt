@@ -1,0 +1,67 @@
+210
+Elements of Algebraic Topology
+q
+Sn
+Sn−1
+En
+−
+En
++
+Figure 4.4.2
+since Bn is contractible. Thus Hi(Bn, Sn−1) is infinite cyclic for i = n and
+vanishes otherwise.
+To compute Hi(Sn), consider the following homomorphisms,
+Hi(En
++, Sn−1)
+∂∗
+−−−−→Hi−1(Sn−1)
+k∗
+
+Hi(Sn \ q, En
+−\ q)
+j∗
+
+Hi(Sn)
+i∗
+−−−−→Hi(Sn, En
+−)
+where i, j, k are inclusions and q = (0, 0, . . . , 0, −1) is the “south pole” of
+Sn. The plan is to show all the homomorphisms i∗, j∗, k∗, and ∂∗to be
+isomorphisms, and consequently to conclude that Hi(Sn) ∼= Hi−1(Sn−1).
+Recall that En
++ and En
+−are the upper and lower hemispheres of Sn, respec-
+tively, and Sn−1 = En
++∩En
+−is the “equator” of Sn. See Figure 4.4.2. Now both
+En
++ and En
+−are n-balls; in fact, the projection of Rn+1 onto Rn ×0 carries En
++
+and En
+−homeomorphically onto Bn. [It also carries En
+−\q onto Bn \0.] In par-
+ticular, En
+−is contractible, so the long exact homology sequence of (Sn, En
+−)
+shows that i∗is an isomorphism. The excision property shows that j∗is an
+isomorphism, since q ∈Int En
+−. The map k∗is an isomorphism because Sn−1
+is a deformation retract of En
+−\ q, and En
++ is a deformation retract of Sn \ q.
+[Since the pair (En
+−\q, Sn−1) is homeomorphic to the pair (Bn\0, Sn−1), there
+is a deformation retraction Ft of En
+−\q onto Sn−1. It extends to a deformation
+retraction of Sn \ q onto En
++, by letting Ft equal the identity on En
++, for each
+t.] The fact that ∂∗is an isomorphism follows from the contractibility of En
++.
+It follows from the induction hypothesis that Hi(Sn) is infinite cyclic for
+i = n and vanishes otherwise.
+Now the reflection map ρ1 induces a homomorphism of the preceding di-
+agram with itself, since it maps each of q, En
+−, En
++ and Sn into itself. By the

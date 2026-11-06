@@ -1,0 +1,61 @@
+Duality in Manifolds
+445
+where the coefficients are positive and their sum is 1. Thus p is in Int σ.
+Conversely, suppose that p ∈Int σ so that
+p =
+
+γivi +
+
+δjwj ,
+where γi > 0 and δj > 0 and  γi +  δj = 1. Set λ =  γi. Set αi = γi/λ
+and set βj = δj/(1 −λ), then
+p = λ
+
+αivi + (1 −λ)
+
+βjwj .
+Thus p lies interior to a line segment joining a point of Int s and a point of
+Int t.
+Next we will prove the statement about σ. Since σ is convex, it contains
+all line segments joining points of s to points of t. Conversely, suppose that
+x ∈σ and x is in neither s nor t. Then x lies interior to a face σ′ of σ that
+has vertices in common with both s and t. By the result of the preceding
+paragraph, x lies on an open line segment joining a point of σ′ ∩s with a
+point of σ′ ∩t.
+Finally, we show that any two of these line segments intersect in at most a
+common endpoint. Suppose that p is a point lying on two such line segments—
+that is to say, p equals
+λ
+
+αivi + (1 −λ)
+
+βjwj = λ′ 
+α′
+ivi + (1 −λ′)
+
+β′
+jwj ,
+where 0 ≤λ, λ′ ≤1 and αi ≥0, βj ≥0, α′
+i ≥0, β′
+j ≥0, and  αi =  βj =
+ α′
+i =  β′
+j = 1. Since the sum of the coefficients on either side of this
+equation is 1, we conclude from the independence of the vertices of σ that
+λαi = λ′α′
+i
+and
+(1 −λ)βj = (1 −λ′)β′
+j .
+Summing the first of these, we see that λ = λ′. If λ = 0 or λ = 1, then p is
+an endpoint of each line segment. Otherwise, these two equations imply that
+αi = α′
+i and βj = β′
+j and thus the two line segments coincide.
+Step 2: Now we prove part (a) of the lemma. Consider the distinct line
+segments xy and x′y′, where
+x ∈Int s and x′ ∈Int s′ with s, s′ ∈K ,
+y ∈Int t and y′ ∈Int t′ with t, t′ ∈L .
+Since the interior of the line segment xy lies in Int (s∗t), we have the inclusions
+xy ⊂(Int s) ∪(Int(s ∗t)) ∪(Int t) ,
+x′y′ ⊂(Int s′) ∪(Int(s′ ∗t′)) ∪(Int t′) .

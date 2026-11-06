@@ -1,0 +1,35 @@
+Topological Invariance of the Homology Groups
+121
+2.7
+Homomorphisms Induced by Homotopic Maps
+We now study the important concept of homotopy. Throughout this discus-
+sion, I will denote the closed unit interval [0, 1].
+Definition 2.7.1 Let X and Y be topological spaces. Two continuous maps
+h : X →Y and k : X →Y are said to be homotopic if there is a continuous
+map
+f : X × I →Y
+such that F(x, 0) = h(x) and F(x, 1) = k(x) for all x ∈X. If h and k are
+homotopic then we write h ≃k. The map F is called a homotopy of h with k.
+We think of F as a means of “deforming” h continuously to k as t varies
+from 0 to 1.
+We shall prove that if h, k : |K| →|L| are homotopic then the homology
+homomorphisms h∗and k∗that they induce are the same. This leads us to
+the important result that the homology groups are invariants of the homotopy
+type of a space.
+EXAMPLE 2.7.2 Let X = S1. Then H1(X) is infinite cyclic. Choose the
+cycle z generating H1(X) indicated by the arrow in Figure 2.7.1.
+X
+k
+h
+T
+Figure 2.7.1
+Let T be the torus. Let h, k : X →T be the maps shown in Figure 2.7.1.
+These maps are clearly homotopic, for one can “push h around the ring” until
+it coincides with k. It is also geometrically clear that the cycles h#(z) and
+k#(z) are homologous. Indeed, the 2-chain d obtained by chopping the right
+half of the torus into triangles and orienting them appropriately satisfies the
+equation ∂d = h#(z) −k#(z). Since z represents a generator of H1(X), it
+follows that in this case h∗= k∗.
+We now prove in general that if h ≃k, then h∗= k∗. We need two
+preliminary results. The first is a basic fact about the topology of |K| × I,
+which we shall prove in the next section [see Corollary 2.8.7].

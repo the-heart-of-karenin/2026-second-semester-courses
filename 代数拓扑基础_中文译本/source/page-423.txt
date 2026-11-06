@@ -1,0 +1,65 @@
+408
+Elements of Algebraic Topology
+Theorem 7.6.2 Let C be a free chain complex, and let G be an abelian group.
+If C vanishes below a certain dimension and if the homology of C is finitely
+generated in each dimension, then there are exact sequences
+0 ←−Hom (Hp(C), G) ←−Hp(C; G) ←−Ext (Hp+1(C), G) ←−0 ,
+0 −→Hp(C) ⊗G −→Hp(C; G) −→Hp+1(C) ∗G −→0 ,
+that are natural with respect to homomorphisms induced by chain maps. They
+split, but not naturally.
+We need the following lemma:
+Lemma 7.6.3 If C is a free chain complex such that Hi(C) is finitely gener-
+ated for each i, then there is a free chain complex C′ that is finitely generated in
+each dimension, and that has homology isomorphic to that of C. If C vanishes
+below a certain dimension, then so does C′.
+Proof: Let βp be the betti number of Hp(C), and let t(p)
+1 , t(p)
+2 , . . . , t(p)
+kp be its
+torsion coefficients. Let Up, Vp, and Wp be free abelian groups, where Up has
+rank kp−1, Vp has rank βp, and Wp has rank kp. Set
+C′
+p = Up ⊕Vp ⊕Wp .
+Let ∂′ : C′
+p+1 →C′
+p vanish on Vp+1 ⊕Wp+1. Choose bases for Up+1 and Wp,
+and define ∂′ : Up+1 →Wp to be the homomorphism whose matrix relative to
+these bases is
+
+
+t(p)
+1
+0
+· · ·
+0
+0
+t(p)
+2
+· · ·
+0
+...
+...
+...
+...
+0
+0
+· · ·
+t(p)
+kp
+
+
+.
+Then ∂′ satisfies the requirements of the lemma.
+Proof of Theorem 7.6.2: Choose a chain complex C′ as in the preceding
+lemma. In view of Theorem 5.6.2, we can choose a chain map ϕ : C′ →C in-
+ducing the given isomorphism Hi(C′) −→Hi(C). It follows from the universal
+coefficient theorems already stated [or from Theorems 5.6.6 and 6.3.1] that ϕ
+also induces isomorphisms
+Hi(C′; G) ∼= Hi(C; G)
+and
+Hi(C′; G) ∼= Hi(C; G)
+for all i and G. Now the universal coefficient sequences in question hold for C′.
+Using the isomorphisms induced by ϕ, we can replace C′ by C in these exact
+sequences.
+It is a consequence of naturality that the resulting exact sequences for C
+are independent of the choices of C′ and ϕ; a fact that we now prove.

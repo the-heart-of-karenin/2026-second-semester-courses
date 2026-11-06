@@ -1,0 +1,34 @@
+5
+Cohomology
+5.1
+Introduction
+With each topological space X we have associated a sequence of abelian groups
+called its homology groups. Now we associate with X another sequence of
+abelian groups, called its cohomology groups. These groups were not defined
+until long after the homology groups. The reason is not hard to understand,
+for they are geometrically much less natural than the homology groups. Their
+origins lie in algebra rather than geometry. In a certain algebraic sense [to
+be made precise later], they are “dual” to the homology groups. In the past,
+topologists have used such terms as “pseudo-cycle” for representatives of these
+group elements, implying a certain skepticism as to their legitimacy as objects
+of study. Eventually, it became clear that these groups are both important in
+theory and useful in practice. The cohomology groups are more subtle than
+the homology groups, and much more profound and powerful. We shall learn
+about them in this chapter.
+The duality theorems for manifolds, the connections between topology and
+differential geometry [de Rham’s theorem] and between topology and analysis
+[cohomology with sheaf coefficients]—all these results are formulated in terms
+of cohomology. Even such purely topological problems as classifying spaces
+up to homeomorphism, or maps up to homotopy, are problems about which
+cohomology has a good deal to say. We will return to some of these problems
+later.
+Throughout this chapter we assume familiarity with the language of cate-
+gories and functors [Section 3.7].
+5.2
+The Hom Functor
+Associated with any pair of abelian groups A and G is a third abelian group,
+the group Hom (A, G) of all homomorphisms of A into G. This group will be
+involved in an essential way in the definition of the cohomology groups. In
+this section we study some of its properties.
+DOI: 10.1201/9781003621478-5
+301

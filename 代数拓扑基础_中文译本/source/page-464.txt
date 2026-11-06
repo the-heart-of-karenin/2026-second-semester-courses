@@ -1,0 +1,37 @@
+Duality in Manifolds
+449
+a
+b
+c
+d
+e
+f
+g
+h
+a
+b
+c
+d
+e
+f
+g
+Figure 8.2.1
+Figure 8.2.2
+Note that here we are considering s and Bd s and Lk s not only as subspaces
+of |K| but also as subcomplexes of K. In order that these equations should hold
+even if Lk s or Bd s is empty, we make the convention that K ∗∅= ∅∗K = K
+for all K.
+Proof: The first equation is immediate from the definitions. Also St s is the
+union of all simplices of K of the form s ∗t. And Lk s is the union of all the
+faces t of such simplices.
+On the other hand, if a simplex of K lies in St s but not in St s, then it
+must be a face of s ∗t of the form s′ ∗t′, where s′ is a proper face of s and t′
+is a face of t. Since t lies in Lk s, so does t′. Hence s′ ∗t′ lies in Bd s ∗Lk s.
+Conversely, every simplex of this form lies in St s but not in St s.
+The next definition extends Definition 8.2.1. It will be used in Exercise 2.
+Definition 8.2.11 If X and Y are topological spaces then let us define X ∗Y
+to be the quotient space of X ×Y ×I obtained by identifying each set x×Y ×0
+to a point and each set X × y × 1 to a point.
+EXERCISES
+1. Let s denote the simplex fg in Figure 8.2.2. Describe s ∗Lk s and
+s ∗Bd s and Bd s ∗Lk s.

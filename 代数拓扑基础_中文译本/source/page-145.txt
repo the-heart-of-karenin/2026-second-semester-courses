@@ -1,0 +1,43 @@
+130
+Elements of Algebraic Topology
+X
+Y
+Z
+p
+f
+g
+We define the notion of a quotient space as follows: Let X∗be a partition
+of X into disjoint subsets whose union is X. Let π : X →X∗map each point
+to the subset that contains it. Let us topologize X∗by declaring a set U ⊂X∗
+to be open if π−1(U) ⊂X is open. Then π is a quotient map and we say that
+X∗is a quotient space of X. We often say that this quotient is obtained by
+identifying each element of the partition to a point.
+If p : X →Y is a quotient map, then we can consider Y to be a quotient
+space of X in the following manner: Given p, let X∗be the partition of X
+into the disjoint sets p−1(y) for y ∈Y . Then X∗is homeomorphic to Y . We
+now apply the preceding remark twice to obtain continuous maps g : X∗→Y
+and h : Y →X∗as shown in the next diagram:
+g
+h
+X∗
+Y
+X
+π
+p
+These maps g and h are readily seen to be inverse to each other.
+EXAMPLE 2.8.1 Let X be the subspace of R3 obtained by rotating the unit
+circle in the x-z plane with center (2, 0, 0) about the z-axis. Using cylindrical
+coordinates (r, θ, z) in R3, we can express X as the set of points satisfying
+the equation (r −2)2 + z2 = 1. Letting I2 = I × I, we define p : I2 →X by
+setting, for (s, t) ∈I2,
+r −2 = cos 2πt
+,
+z = sin 2πt
+,
+θ = 2πs .
+You can check that p maps I2 onto X, and is a closed quotient map.
+By use of this map, we can consider X to be the quotient space obtained
+from I2 by identifying (s, 0) with (s, 1) and (0, t) with (1, t) for s, t ∈I.
+Refer to Figure 2.8.1. This is the topological version of the method by which
+we constructed the torus in Section 1.4 by pasting together the edges of a
+rectangle.

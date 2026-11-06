@@ -1,0 +1,38 @@
+Homology Groups of a Simplicial Complex
+9
+K1
+K2
+K3
+K4
+Figure 1.3.1
+Proof: First, assume K is a simplicial complex. Given two simplices σ and τ
+of K we show that if there exists x ∈Int σ ∩Int τ, then σ = τ. Let s = σ ∩τ.
+If s were a proper face of σ, then x would belong to Bd σ, which it does not.
+Therefore, s = σ. Similarly, s is not a proper face of τ, so s = τ. We conclude
+that σ = s = τ.
+To prove the converse, we assume (1) and (2′) hold. Let two simplices σ
+and τ of K be given. Suppose that σ ∩τ is non-empty. We will show that
+σ ∩τ is a face σ′ of σ. Specifically, σ′ is the face of σ spanned by the vertices
+b0, b1, . . . , bm of σ that lie in τ. First, σ′ is contained in σ ∩τ because σ ∩τ
+is convex and contains b0, b1, . . . , bm. To prove the reverse inclusion, suppose
+that x ∈σ ∩τ. Then x ∈Int s ∩Int t, for some face s of σ and some face t of
+τ. It follows from (2′) that s = t. Hence the vertices of s lie in τ so that by
+definition they are elements of the set {b0, b1, . . . , bm}. Then s is a face of σ′,
+as desired. Similarly, we can show that σ ∩τ is a face τ ′ of τ. Thus we have
+shown that (2) holds.
+It follows from that last lemma that if σ is a simplex, then the collection
+consisting of σ and its proper faces is a simplicial complex: Condition (1) is
+immediate, and condition (2′) holds because for each point x ∈σ, there is
+exactly one face s of σ such that x ∈Int s.
+Definition 1.3.4 If L is a subcollection of K that contains all faces of its
+elements, then L is a simplicial complex in its own right, called a subcomplex
+of K. One subcomplex of K is the collection of all simplices of K of dimension
+at most p; it is called the p-skeleton of K and is denoted K(p). The points of
+the collection K(0) are called the vertices of K.
+Definition 1.3.5 Let |K| be the subset of RN that is the union of the sim-
+plices of K. Giving each simplex its natural topology as a subspace of RN, we
+then topologize |K| by declaring a subset A of |K| to be closed in |K| if and
+only if A ∩σ is closed in σ, for each σ in K. It is easy to see that this defines
+a topology on |K|, for this collection of sets is closed under finite unions and
+arbitrary intersections. The space |K| is called the underlying space of K, or
+the polytope of K.

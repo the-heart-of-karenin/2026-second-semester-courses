@@ -1,0 +1,34 @@
+Cohomology
+321
+(1) The closure of |K| \ |K0| equals a union of n-simplices.
+(2) Each (n −1)-simplex of K that is not in K0 is a face of exactly
+two n-simplices of K.
+(3) Given two n-simplices σ and σ′ of K that are not in K0, there
+is a sequence of n-simplices of K, not in K0,
+σ = σ0, σ1, . . . , σk = σ′
+such that σi ∩σi+1 is an (n −1)-simplex not in K0, for each i.
+If K0 = ∅, then we call K a pseudo n-manifold.
+In Section 1.6 in which we defined the homology groups, we required that
+the simplices of a complex be oriented, but the orientation of one simplex
+need not have any effect on the choice of orientation for any other simplex. In
+fact, it is useful to know whether or not the top dimensional simplices can be
+coherently oriented.
+Definition 5.4.6 Let (K, K0) be a relative pseudo n-manifold.
+(1) Suppose that σ̸ = σ′ are n-simplices of K, not in K0, and the
+sequence of n-simplices of K, not in K0,
+σ = σ0, σ1, . . . , σk = σ′
+such that σi ∩σi+1 is an (n −1)-simplex not in K0, for each i,
+has no repetitions. [Exercise 5(a) asks you to show such a sequence
+exists.] Once σ is oriented, there are unique orientations of each σi
+such that ∂σi−1 + ∂σi has coefficient 0 on σi−1 ∩σi for each i. The
+resulting orientation of σk = σ′ is said to be induced by the given
+orientation of σ relative to the given sequence.
+(2) Let σ be an n-simplex of K that is not in K0. Fix an orientation
+for σ. If, for every σ′̸ = σ, the orientation of σ′ induced by that of
+σ is independent of the sequence joining them, then (K, K0) is said
+to be orientable. Otherwise, (K, K0) is said to be non-orientable.
+EXERCISES
+1. Let M denote the M¨obius band as in Example 5.4.4. Find a cocycle
+generating H1(M).
+2. Consider the cylinder C modulo one edge E.
+(a) Compute Hi(C, E).

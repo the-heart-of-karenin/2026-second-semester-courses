@@ -1,0 +1,50 @@
+Homology Groups of a Simplicial Complex
+33
+We will compute both in detail and compare the results:
+∂pσ =
+
+i<j
+(−1)i[v0, . . . , vi, . . . , vj−1, vj, vj+1, vj+2, . . . , vp]
+(a)
++
+
+j+1<i
+(−1)i[v0, . . . , vj−1, vj, vj+1, vj+2, . . . , vi, . . . , vp]
+(b)
++ (−1)j[v0, . . . , vj−1, vj+1, vj+2, . . . , vp]
+(c)
++ (−1)j+1[v0, . . . , vj−1, vj, vj+2, . . . , vp] .
+(d)
+∂p(−σ) =
+
+i<j
+(−1)i[v0, . . . , vi, . . . , vj−1, vj+1, vj, vj+2, . . . , vp]
+(a′)
++
+
+j+1<i
+(−1)i[v0, . . . , vj−1, vj+1, vj, vj+2, . . . , vi, . . . , vp]
+(b′)
++ (−1)j[v0, . . . , vj−1, vj, vj+2, . . . , vp]
+(c′)
++ (−1)j+1[v0, . . . , vj−1, vj+1, vj+2, . . . , vp] .
+(d′)
+The right-hand side of line (a′) is the negative of the right-hand side of
+line (a), because vj and vj+1 are interchanged, while all other vertices are in
+their same positions. Likewise, line (b′) is the negative of line (b). Line (c′)
+is the negative of line (d), because the exponent on −1 differs by 1, while all
+vertices are in their same positions. Likewise (d′) is the negative of line (c).
+Thus we have confirmed that ∂p(−σ) = −∂p(σ).
+EXAMPLE 1.6.7 For a 1-simplex, we compute ∂1[v0, v1] = v1 −v0. For a
+2-simplex, one has
+∂2[v0, v1, v2] = [v1, v2] −[v0, v2] + [v0, v1] .
+For a 3-simplex, one has the formula
+∂3[v0, v1, v2, v3] = [v1, v2, v3] −[v0, v2, v3] + [v0, v1, v3] −[v0, v1, v2] .
+The geometric content of these formulas is pictured in Figure 1.6.2. If you re-
+member the versions of Green’s, Stokes’, and Gauss’ theorem that you studied
+in calculus, these pictures should look rather familiar.
+EXAMPLE 1.6.8 Consider the 1 chain ∂2[v0, v1, v2] pictured in Fig-
+ure 1.6.2. If you apply the operator ∂1 to this 1-chain, you get zero; everything
+cancels out because each vertex appears as the initial point of one edge and
+as the end point of another edge. You can check that a similar cancellation
+occurs when you compute ∂2∂3[v0, v1, v2, v3].

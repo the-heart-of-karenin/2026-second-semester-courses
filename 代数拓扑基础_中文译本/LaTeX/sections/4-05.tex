@@ -1,0 +1,130 @@
+\section{\texorpdfstring{*无环模型}{*无环模型}}
+\sourcepage{211}
+本节假定读者熟悉第 3.7 节“范畴与函子”。这里的结果将在第 7.9 节证明 Eilenberg--Zilber 定理时使用。
+
+前两节构造了某些自然链同伦 $D_X$。方法是先在特殊空间 $\Delta_p$ 的特殊奇异单形 $i_p$ 上定义它。为此，需要另一个空间的无环性：第 4.3 节中是 $\Delta_p\times I$，第 4.4 节中则是 $\Delta_p$。这一步涉及任意选择，此后的构造却都由自然性所迫定。这与早先使用无环载体的构造十分相似，但也有区别。
+
+现在把这种方法形式化，以备以后使用。我们将陈述一个足以满足需要的定理，称为无环模型定理。其表述相当抽象，可能令某些读者感到困难。为便于理解，先简要回顾所用的范畴论术语。
+
+\sourcepage{212}
+本节始终以 $\mathcal C$ 表示任意范畴，对象记为 $X,Y,\ldots$，态射记为 $f,g,\ldots$；以 $\mathcal A$ 表示增广链复形及其链映射组成的范畴。大多数应用中，$\mathcal C$ 是拓扑范畴，或以有序的两个拓扑空间为对象、以成对连续映射为态射的范畴。读者愿意的话，只考虑这些范畴即可。
+
+我们讨论从 $\mathcal C$ 到 $\mathcal A$ 的函子 $G,G'$（定义 3.7.3）。它们把对象 $X$ 分别映为增广链复形 $G(X),G'(X)$，其 $p$ 维链群为 $G_p(X),G'_p(X)$。另一个对象 $Y$ 同样给出两套链群。对于态射 $f\in\operatorname{hom}(X,Y)$，函子给出增广链复形的链映射
+\[
+G(f):G(X)\to G(Y),\qquad G'(f):G'(X)\to G'(Y).
+\]
+这里链映射的含义见定义 1.14.2。
+
+从 $G$ 到 $G'$ 的自然变换 $T$（定义 3.7.6）给每个对象 $X$ 指定一个增广链复形的链映射 $T_X:G(X)\to G'(X)$，并要求对每个 $f:X\to Y$，下图交换：
+\[
+\begin{array}{ccc}
+G_p(X)&\xrightarrow{T_X}&G'_p(X)\\
+\downarrow\scriptstyle G(f)&&\downarrow\scriptstyle G'(f)\\
+G_p(Y)&\xrightarrow{T_Y}&G'_p(Y).
+\end{array}
+\]
+对于两个自然变换 $S,T:G\to G'$，还可考虑它们之间的\textbf{自然链同伦}（natural chain homotopy）$D$。它给每个 $X$ 指定一族同态 $D_X:G_p(X)\to G'_{p+1}(X)$，满足
+\[
+\partial'D_X+D_X\partial=T_X-S_X,
+\]
+且对每个 $f:X\to Y$，下图交换：
+\[
+\begin{array}{ccc}
+G_p(X)&\xrightarrow{D_X}&G'_{p+1}(X)\\
+\downarrow\scriptstyle G(f)&&\downarrow\scriptstyle G'(f)\\
+G_p(Y)&\xrightarrow{D_Y}&G'_{p+1}(Y).
+\end{array}
+\]
+
+\sourcepage{213}
+\entry{定义}{4.5.1}设 $G,G':\mathcal C\to\mathcal A$ 为函子，$\mathcal M$ 是 $\mathcal C$ 中一族对象，称为\textbf{模型}或\textbf{模型对象}（models, model objects）。
+\begin{enumerate}[label=(\arabic*)]
+\item 若每个 $M\in\mathcal M$ 都使 $G'(M)$ 无环，则称 $G'$ \textbf{相对于 $\mathcal M$ 无环}。
+\item 若对每个 $p\ge0$，存在指标集 $J_p$、模型对象族 $\{M_\alpha\}_{\alpha\in J_p}$ 以及元素族 $i_\alpha\in G_p(M_\alpha)$，满足下述条件，则称 $G$ \textbf{相对于 $\mathcal M$ 自由}：对于每个 $X$，当 $\alpha$ 遍历 $J_p$、$f$ 遍历 $\operatorname{hom}(M_\alpha,X)$ 时，诸元素 $G(f)(i_\alpha)\in G_p(X)$ 彼此不同，并构成 $G_p(X)$ 的一组基。
+\end{enumerate}
+因此，自由函子所给出的每个 $G_p(X)$ 都是自由阿贝尔群。我们将先在基元上构造映射；要求这些基元彼此不同，是为了避免不同构造给同一个基元指定不相等的像。
+
+\entry{例}{4.5.2}考虑拓扑范畴到 $\mathcal A$ 的奇异链复形函子。取 $\mathcal M=\{\Delta_p:p=0,1,\ldots\}$，它相对于 $\mathcal M$ 无环。它也相对自由：对每个 $p$，令 $J_p$ 只有一个元素，相应模型为 $\Delta_p$，相应基元为恒等奇异单形 $i_p\in S_p(\Delta_p)$。当 $T$ 遍历所有连续映射 $\Delta_p\to X$ 时，$T_\#i_p=T$ 恰遍历 $S_p(X)$ 的一组基。
+
+\entry{例}{4.5.3}考虑定义在成对拓扑空间范畴上的函子
+\[
+G(X,Y)=\mathcal S(X\times Y),\qquad G(f,g)=(f\times g)_\#.
+\]
+令 $\mathcal M=\{(\Delta_p,\Delta_q):p,q\ge0\}$。因为 $\Delta_p\times\Delta_q$ 可缩，$G$ 相对于 $\mathcal M$ 无环。为证明相对自由，对每个 $p$ 令 $J_p$ 只有一个元素，模型为 $(\Delta_p,\Delta_p)$，相应奇异单形为对角映射 $d_p(x)=(x,x)$。当 $f:\Delta_p\to X$、$g:\Delta_p\to Y$ 遍历所有连续映射时，$(f\times g)_\#d_p$ 恰遍历所有 $\Delta_p\to X\times Y$ 的连续映射，且表示唯一，故构成一组基。
+
+\sourcepage{214}
+\entry{例}{4.5.4}设 $G(X)=\mathcal S(X\times I)$，$G(f)=(f\times i_I)_\#$。对于 $\mathcal M=\{\Delta_p:p\ge0\}$，$G$ 相对无环。它也相对自由，但证明稍复杂。令 $J_p$ 为所有连续函数 $\alpha:\Delta_p\to I$ 构成的集合；对每个 $\alpha$，令 $M_\alpha=\Delta_p$，并取
+\[
+i_\alpha:\Delta_p\to\Delta_p\times I,\qquad i_\alpha(x)=(x,\alpha(x)).
+\]
+当 $f$ 遍历所有 $\Delta_p\to X$ 的连续映射、$\alpha$ 遍历 $J_p$ 时，$(f\times i_I)_\#i_\alpha$ 恰遍历 $S_p(X\times I)$ 的一组基。
+
+若 $G$ 相对于 $\mathcal M$ 自由，它也相对于任何更大的模型族自由；若它相对于 $\mathcal M$ 无环，它也相对于任何更小的模型族无环。因此，要同时满足两者，模型族的大小必须选得适当。
+
+\entry{定理}{4.5.5（无环模型定理）}设 $G,G'$ 是从范畴 $\mathcal C$ 到增广链复形及其链映射范畴 $\mathcal A$ 的函子，$\mathcal M$ 是一族模型对象。若 $G$ 相对于 $\mathcal M$ 自由，$G'$ 相对于 $\mathcal M$ 无环，则：
+\begin{enumerate}[label=(\alph*)]
+\item 存在自然变换 $T:G\to G'$。
+\item 对任意两个自然变换 $S,T:G\to G'$，存在它们之间的自然链同伦 $D$。
+\end{enumerate}
+习题 1、2 给出了证明步骤。若习题 1 太困难，可以先做习题 2，并参考引理 4.3.6 的证明及其后关于零维情形的说明；理解习题 2 后再返回习题 1。
+
+无环模型法最先由 Eilenberg 与 MacLane 在 [EM53] 中形式化。在同一期《美国数学杂志》紧接着的一篇论文 [EZ53] 中，Eilenberg 与 Zilber 应用了这一方法。
+
+\entry{推论}{4.5.6}若 $G,G':\mathcal C\to\mathcal A$ 都相对于 $\mathcal M$ 自由且无环，则存在自然变换 $T:G\to G'$；任何这样的变换都是自然链同伦等价。\translatornote{原书称为“自然等价”；本证明所给出的是链同伦意义下的等价，并非各链群上都有严格逆的自然同构。}
+
+\sourcepage{215}
+\textbf{证明：}四次应用上一定理。由 $G$ 自由、$G'$ 无环，得 $T$；由 $G'$ 自由、$G$ 无环，得 $S:G'\to G$。于是 $S\circ T$ 与恒等变换是从 $G$ 到自身的两个自然变换。因 $G$ 自由且无环，它们之间有自然链同伦。同理由 $G'$ 自由且无环，$T\circ S$ 也自然链同伦于恒等变换。\hfill$\square$
+
+\subsection*{习题}
+\begin{enumerate}
+\item 按下列步骤证明无环模型定理的 (a)。
+\begin{enumerate}[label=(\alph*)]
+\item 固定 $M_\alpha\in\mathcal M$、$c\in G_p(M_\alpha)$，$p\ge0$。证明可选链 $d'\in G'_p(M_\alpha)$，令 $T_{M_\alpha}(c)=d'$，使
+\[
+\epsilon'T_{M_\alpha}(c)=\epsilon(c)\ (p=0),\qquad
+\partial'T_{M_\alpha}(c)=T_{M_\alpha}\partial c\ (p>0).
+\]
+其中 $\epsilon',\partial'$ 是 $G'$ 的增广和边缘，$\epsilon,\partial$ 是 $G$ 的增广和边缘。〔提示：对 $p$ 归纳。〕\translatornote{原书将 $d'$ 所在群漏印为 $G_p(M_\alpha)$；应为 $G'_p(M_\alpha)$。}
+\item (a) 中只在模型对象上构造了 $T$。由自由性，公式
+\[
+T_XG(f)(i_\alpha)=G'(f)T_{M_\alpha}(i_\alpha),\qquad
+\alpha\in J_p,\ f\in\operatorname{hom}(M_\alpha,X),
+\]
+把它延拓到所有 $X\in\mathcal C$。证明这个变换自然。
+\item 证明 (b) 所定义的变换满足 $\epsilon'T_X=\epsilon$（$p=0$），以及 $\partial'T_X=T_X\partial$（$p>0$）。
+\end{enumerate}
+\item 按下列步骤证明无环模型定理的 (b)。
+\begin{enumerate}[label=(\alph*)]
+\item 固定 $M_\alpha\in\mathcal M$、$c\in G_p(M_\alpha)$。证明可选 $d'\in G'_{p+1}(M_\alpha)$，令 $D_{M_\alpha}(c)=d'$，使
+\begin{gather*}
+\partial'D_{M_\alpha}(c)=(T_{M_\alpha}-S_{M_\alpha})(c),\qquad p=0,\\
+\partial'D_{M_\alpha}(c)+D_{M_\alpha}(\partial c)=(T_{M_\alpha}-S_{M_\alpha})(c),\qquad p>0.
+\end{gather*}
+〔提示：对 $p$ 归纳。〕\translatornote{原书同样在 $d'$ 所在群漏印了撇号。}
+\item 由 $G$ 的自由性，用公式
+\[
+D_XG(f)(i_\alpha)=G'(f)D_{M_\alpha}(i_\alpha),\qquad
+\alpha\in J_p,\ f\in\operatorname{hom}(M_\alpha,X),
+\]
+把模型上的链同伦延拓到所有对象。证明它自然。
+\item[(d)] 证明上述变换满足
+\[
+\partial'D_X=T_X-S_X\ (p=0),\qquad
+\partial'D_X+D_X\partial=T_X-S_X\ (p>0),
+\]
+因此是 $S,T$ 之间的自然链同伦。\translatornote{保留原书跳过 (c) 的题号。原书零维公式右端误作 $T_X-S_{M_\alpha}$，已按定义改为 $T_X-S_X$。}
+\end{enumerate}
+\sourcepage{216--217}
+\item 考虑拓扑范畴到 $\mathcal A$ 的函子 $G(X)=\mathcal S(X)$、$G(f)=f_\#$，以及 $G'(X)=\mathcal S(X\times I)$、$G'(f)=(f\times i_I)_\#$。
+\begin{enumerate}[label=(\alph*)]
+\item 令 $i(x)=(x,0)$、$j(x)=(x,1)$。证明 $T_X(T)=i_\#T$、$T'_X(T)=j_\#T$ 定义自然变换，并由无环模型定理推出引理 4.3.6。
+\item 证明 $\operatorname{sd}^m$ 与 $(i_X)_\#$ 是 $G$ 到自身的自然变换，从而由无环模型定理推出引理 4.4.6。
+\end{enumerate}
+\item 设 $K,L$ 是单纯复形，$\Phi$ 是从 $K$ 到 $L$ 的无环载体。以 $K$ 的子复形为对象、包含映射为态射组成范畴 $\mathcal C$。对于子复形 $K_0$，令 $\Phi(K_0)$ 为所有 $\Phi(\sigma)$（$\sigma$ 遍历 $K_0$ 的单形）之并。
+\begin{enumerate}[label=(\alph*)]
+\item 对包含映射 $j:K_0\to K_1$，考虑 $G(K_0)=\mathcal C(K_0)$、$G(j)=j_\#$，以及 $G'(K_0)=\mathcal C(\Phi(K_0))$、$G'(j)=\ell_\#$，其中 $\ell:\Phi(K_0)\to\Phi(K_1)$ 是包含映射。证明这确实定义了函子。
+\item 由无环模型定理推出定理 1.14.10，即几何形式的无环载体定理。〔提示：取 $\mathcal M$ 为所有其多面体是 $K$ 中某个单形的子复形。〕
+\end{enumerate}
+\item 给出一个无环函子的例子。
+\item 给出一个自由函子的例子。
+\end{enumerate}

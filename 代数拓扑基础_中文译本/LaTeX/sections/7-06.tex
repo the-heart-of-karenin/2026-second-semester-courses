@@ -1,0 +1,72 @@
+\section{*其他万有系数定理}
+\sourcepage{405--406}
+前面两个定理用整数同调表示任意系数同调、上同调。能否反过来用整数上同调表示它们？在同调逐维有限生成的条件下，确有两条短正合列。本节使用第 5.7 节的结果。
+
+方法是把整数上链复形反向编号为链复形，再应用已有的万有系数定理。困难在于 $\operatorname{Hom}(C_i,\Z)$ 一般不自由，所以需要限制条件。
+
+\entry{定理}{7.6.1}若自由链复形 $\mathcal C$ 逐维有限生成，则有自然正合列
+\[
+0\leftarrow\operatorname{Hom}(H^p(\mathcal C),G)\leftarrow H_p(\mathcal C;G)
+\leftarrow\operatorname{Ext}(H^{p+1}(\mathcal C),G)\leftarrow0,
+\]
+\[
+0\to H^p(\mathcal C)\otimes G\to H^p(\mathcal C;G)\to H^{p+1}(\mathcal C)*G\to0.
+\]
+它们分裂，但分裂不自然。
+
+\textbf{证明：步骤 1。}令 $E_p=\operatorname{Hom}(C_{-p},\Z)$，以原上边缘为新边缘，则 $\mathcal E$ 自由。应用已有的两个万有系数序列，并把指标写为 $-p$。有 $H_{-p}(\mathcal E)=H^p(\mathcal C)$；只需证明自然同构
+\[
+H_{-p}(\mathcal E;G)\cong H^p(\mathcal C;G),\qquad
+H^{-p}(\mathcal E;G)\cong H_p(\mathcal C;G).
+\]
+
+\textbf{步骤 2。}对有限秩自由群 $A$，定义
+\[
+\Phi:\operatorname{Hom}(A,\Z)\otimes G\to\operatorname{Hom}(A,G),\qquad
+\Phi(\varphi\otimes g)(a)=\varphi(a)g.
+\]
+该式先为双线性映射，故诱导同态。取基 $a_1,\ldots,a_k$ 及对偶基 $\overline a_i$，定义域、值域都是 $k$ 份 $G$ 的直和，$\overline a_i\otimes g$ 恰映到只在 $a_i$ 上取 $g$ 的同态，所以是同构。定义不依赖基，且自然。
+
+\sourcepage{407}
+\textbf{步骤 3。}取 $A=C_p$，得到 $E_{-p}\otimes G\cong\operatorname{Hom}(C_p,G)$。自然性说明边缘对应于上边缘，故得到第一个所需同构。
+
+\textbf{步骤 4。}有限秩自由群自然同构于其整数双对偶：$e:A\to\operatorname{Hom}(\operatorname{Hom}(A,\Z),\Z)$，$e(a)(\varphi)=\varphi(a)$。它把任一基映到相应的双对偶基，故为同构。
+
+\textbf{步骤 5。}先用双对偶，再用步骤 2，得
+\[
+A\otimes G\cong\operatorname{Hom}(\operatorname{Hom}(A,\Z),G).
+\]
+令 $A=C_p$，自然性保证 $\partial\otimes i_G$ 与 $\mathcal E$ 的上边缘对应，所以 $H_p(\mathcal C;G)\cong H^{-p}(\mathcal E;G)$。代回步骤 1 的两个序列，完成证明。\hfill$\square$
+
+本定理适用于有限单纯复形及有限 CW 复形。再作一些工作，可推广如下。
+
+\sourcepage{408}
+\entry{定理}{7.6.2}若自由链复形在某一维数以下为零，且整数同调逐维有限生成，则定理 7.6.1 的两条自然分裂短正合列仍成立。
+
+\entry{引理}{7.6.3}若自由链复形的同调逐维有限生成，则存在逐维有限生成的自由链复形 $\mathcal C'$，具有同构的同调。若原复形在某维以下为零，新复形也可如此。
+
+\textbf{证明：}设 $H_p(\mathcal C)$ 的 Betti 数为 $\beta_p$，挠系数为 $t_1^{(p)},\ldots,t_{k_p}^{(p)}$。取自由群 $U_p,V_p,W_p$，秩分别为 $k_{p-1},\beta_p,k_p$，令 $C'_p=U_p\oplus V_p\oplus W_p$。边缘在 $V_{p+1}\oplus W_{p+1}$ 上为零，在 $U_{p+1}\to W_p$ 上取对角矩阵 $\operatorname{diag}(t_1^{(p)},\ldots,t_{k_p}^{(p)})$，则同调正是所需群。\hfill$\square$
+
+\textbf{定理 7.6.2 的证明：}选上述 $\mathcal C'$，由定理 5.6.2 选诱导同调同构的 $\varphi:\mathcal C'\to\mathcal C$。它也诱导任意系数同调、上同调同构，所以可将 $\mathcal C'$ 的两条正合列运输到 $\mathcal C$。
+
+\sourcepage{409}
+还需说明自然性及选择无关性。给定 $\theta:\mathcal C\to\mathcal D$，分别取有限生成模型 $\varphi:\mathcal C'\to\mathcal C$、$\psi:\mathcal D'\to\mathcal D$。由定理 5.7.2，它们为链等价，有逆 $\lambda,\mu$。复合 $\mu\theta\varphi$ 在有限生成模型间诱导正合列同态，再经 $\psi$、$\lambda$ 运输，所对应链映射为 $\psi\mu\theta\varphi\lambda$，链同伦于 $\theta$，故同样诱导所需同态。取 $\mathcal C=\mathcal D$、$\theta$ 为恒等，便说明不同模型和映射所得序列一致。\hfill$\square$
+
+\entry{推论}{7.6.4}若空间偶各维整数同调有限生成，则有自然分裂短正合列
+\[
+0\leftarrow\operatorname{Hom}(H^p(X,A),G)\leftarrow H_p(X,A;G)
+\leftarrow\operatorname{Ext}(H^{p+1}(X,A),G)\leftarrow0,
+\]
+\[
+0\to H^p(X,A)\otimes G\to H^p(X,A;G)\to H^{p+1}(X,A)*G\to0,
+\]
+分裂不自然。
+
+\entry{定理}{7.6.5}令 $\mathcal C$ 的对象为下有界自由链复形，且同调逐维有限生成；令子范畴 $\mathcal C'$ 的对象还要求链群逐维有限生成。两者态射均为链映射的链同伦类。若 $J:\mathcal C'\to\mathcal C$ 为包含函子，则存在 $G:\mathcal C\to\mathcal C'$，使 $GJ$ 为恒等函子，而 $JG$ 自然等价于 $\mathcal C$ 的恒等函子。
+
+\sourcepage{410}
+\subsection*{习题}
+\begin{enumerate}
+\item 证明定理 7.6.5。
+\item 定理 7.6.2 是否有函子形式？若有，能否证明？
+\end{enumerate}

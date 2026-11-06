@@ -1,0 +1,32 @@
+Singular Homology Theory
+261
+(0, 0)
+(1, 0)
+(0, 1)
+(1, 1)
+ψ(x, 2)
+(x, 2)
+( 1
+2, 1
+2)
+Figure 4.10.12: The map ψ.
+2. Prove parts (2), (3), and (4) of Lemma 4.10.5.
+3. Referring to the proof of Proposition 4.10.8, verify the equation
+[ρm] · [ρn] = [ρm+n].
+4. (a) Prove that any loop in Rn, n ≥2, is homotopic to a loop
+contained in a finite union of lines.
+(b) Prove that any loop in Sn, n ≥2, is homotopic to a loop con-
+tained in a finite union of great circles. This result justifies the
+assertions made in Example 4.10.9.
+5. Let X = U ∪V where U and V are simply connected open sets.
+Show that if U ∩V is path connected, then X is simply connected.
+4.11
+More on Quotient Spaces
+We reviewed some aspects of the theory of quotient spaces in Section 2.8. We
+now discuss the topic further. In particular, we consider separation axioms for
+quotient spaces.
+We have already noted that the separation axioms do not behave well
+for quotient spaces. In general, it is difficult to ensure that a quotient space
+satisfies any stronger separation axiom than the T1-axiom. Even the Hausdorff
+axiom is often hard to verify. We give here three situations in which we can
+be sure that the quotient space is Hausdorff, indeed, normal.

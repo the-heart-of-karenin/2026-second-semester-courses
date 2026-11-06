@@ -1,0 +1,43 @@
+Singular Homology Theory
+241
+Proof: Step 1. First, we show for n ≥2 that if U is a connected open set in
+Sn, then no point of U separates U.
+Let p be a point of U. We will suppose that U \ p is not connected, and
+derive a contradiction. Let B(p, ϵ) be the open ball centered at p with radius
+ϵ > 0 chosen small enough that B(p, ϵ) ⊂U. Since B(p, ϵ)\p is homeomorphic
+to Rn \ 0, we have that B(p, ϵ) \ p is connected. Hence B(p, ϵ) \ p lies entirely
+in one component D of U \ p. Let E be the union of the other components of
+U \ p. There are other components of U \ p, so E is not empty. Now p is not a
+limit point of E, since B(p, ϵ) is a neighborhood of p disjoint from E. Hence
+the two sets D ∪{p} and E are nonempty disjoint open sets whose union is
+U, contrary to the hypothesis that U is connected.
+Step 2. We prove the theorem. Without loss of generality, we can replace Rn
+in the statement of the theorem by Sn \ p, where p is the north pole of Sn.
+We then have C a homeomorphic image of Sn−1 with C ⊂Sn \ p. Now, by
+the preceding theorem, Sn \ C has two components W1 and W2. Renaming
+the components if necessary, we suppose that p ∈W1. By the result of Step 1,
+W1 \ p is connected. Then W1 \ p and W2 are the components of (Sn \ p) \ C
+and C equals the boundary of W2 and W1.
+Theorem 4.9.7 (Invariance of domain) Let U be an open set in Rn and
+let f : U →Rn be continuous and one-to-one. Then f(U) is open in Rn and
+f : U →f(U) is a homeomorphism.
+Proof: Without loss of generality, we can replace Rn by Sn.
+Step 1. Given a point y of f(U), we show that f(U) contains a neighborhood
+of y. This will prove that f(U) is open in Sn.
+Let x be the point of U such that f(x) = y. Choose an open ball B(x, ϵ)
+centered at x with radius ϵ > 0 chosen small enough that the closure of the ball,
+B(x, ϵ), lies in U. Set S(x, ϵ) = B(x, ϵ)\B(x, ϵ). See Figure 4.9.5. Now the set
+f(S(x, ϵ)) is homeomorphic to Sn−1. By Theorem 4.9.5, f(S(x, ϵ)) separates
+Sn into two components W1 and W2, each open in Sn. The set f(B(x, ϵ)) is
+connected and disjoint from f(S(x, ϵ)). Therefore, it lies in either W1 or W2.
+Renaming if necessary, we may assume it lies in W1. Now it must equal all of
+W1, for otherwise the set
+Sn \ [f(B(x, ϵ)) ∪f(S(x, ϵ))] = Sn \ f(B(x, ϵ))
+would consist of all of W2 along with points of W1 as well, contradicting
+Theorem 4.9.3 which tells us that the cell f(B(x, ϵ)) does not separate Sn.
+Therefore, f(B(x, ϵ)) = W1. We conclude that f(U) contains the neighbor-
+hood W1 of y, as desired.
+Step 2. In view of Step 1, f carries any set open in U to a set that is open in
+Sn and hence open in f(U). Thus f is a homeomorphism of U with f(U).
+The theorem on invariance of domain is much easier to prove if one as-
+sumes that f is continuously differentiable with non-singular Jacobian. In this

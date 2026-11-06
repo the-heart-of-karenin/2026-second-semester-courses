@@ -1,0 +1,46 @@
+526
+Elements of Algebraic Topology
+Step 4: In general, if A = {A1, A2, . . . , An} is a covering of Y by sets open
+in X, we let A ∩Y denote the covering {A1 ∩Y, A2 ∩Y, . . . , An ∩Y } of Y by
+sets open in Y . Consider the following four directed sets:
+L
+=
+{A : A is a covering of Y by sets open in X} ,
+L0
+=
+{W : W ∈L and W is adapted to Y } ,
+J
+=
+{B : B is a covering of Y by sets open in Y } ,
+J0
+=
+{W ∩Y : W ∈L0} .
+Note that every element B of J equals A ∩Y for some A in L.
+We have shown that L0 is cofinal in L. It follows at once that J0 is cofinal
+in J. Given B ∈J, it equals A ∩Y for some A ∈L. Then if W is an element
+of L0 that refines A, it follows that W ∩Y refines A ∩Y = B.
+The lemma follows, because
+ˇH(Y ; G) = dir lim JHk(N(B); G)
+by definition,
+∼= dir lim J0Hk(N(W ∩Y ); G)
+since J0 is cofinal in J,
+∼= dir lim L0Hk(N(W); G)
+since N(W) ∼= N(W ∩Y ),
+∼= dir lim LHk(N(A); G)
+since L0 is cofinal in L.
+Theorem 8.13.16 Let X be a compact, triangulable space. Let D1 ⊃D2 ⊃
+· · · be a sequence of polyhedra in X whose intersection is Y . Then
+ˇHk(Y ; G) ∼= dir lim Hk(Dn; G) .
+The same result holds in reduced cohomology.
+Proof: We shall omit G from the notation for simplicity. The direct limit in
+the conclusion of the theorem does not depend on the particular triangulations
+of the spaces Dn. Let Xn be a triangulation of X chosen so that Dn is the
+polytope of a full subcomplex of Xn, and so that the maximum diameter of
+a simplex of Xn is less than 1/n. And so that the inclusion map |Xn+1| →
+|Xn| satisfies the star condition. Let us denote the subcomplex of Xn whose
+polytope is Dn by Kn. Then the isomorphism
+dir lim Hk(Dn) ∼= dir lim Hk(Kn)
+holds trivially.
+Step 1: Given n, consider the covering of Dn by sets open in Dn defined by
+A′
+n = {St(v, Kn) : v ∈Kn} .

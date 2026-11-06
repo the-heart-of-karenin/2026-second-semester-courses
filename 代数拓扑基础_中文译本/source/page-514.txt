@@ -1,0 +1,31 @@
+Duality in Manifolds
+499
+The space |X∗| equals the union of all those blocks D(σ) dual to simplices
+σ of X that are not in A.
+To prove this fact, let s = σ1σ2 . . . σk be a simplex of sd X, where σ1 ≻
+σ2 ≻· · · ≻σk. Then s lies in the dual block D(σk). If s is disjoint from
+|A|, then the vertex σk is, in particular, not in |A|. Hence the simplex σk
+does not belong to A. Conversely, if σk does not belong to A, then neither do
+the simplices σ1, σ2, . . . , σk−1, since they have σk as a face. Hence s does not
+intersect |A|. See Figure 8.10.1.
+A
+X∗
+Figure 8.10.1
+Now for each block D(σ) for which σ is not in A, the point σ is in |X|\|A|,
+so that Hi(|X|, |X| \ σ) is infinite cyclic for i = n and vanishes otherwise. It
+follows that (D(σ), ˙D(σ)) is a homological cell of dimension n −dim σ. Let
+D(X∗) denote the dual chain complex of X∗. The group Dp(X∗) is generated
+by fundamental cycles for the homological cells (D(σ), ˙D(σ)) of dimension
+p. Just as before, the inclusion D(X∗) →C(X∗) induces an isomorphism in
+cohomology and homology. [See Theorem 8.4.8.]
+Now we consider the case where (X, A) is orientable. Recall that the rela-
+tive cohomology group Ck(X, A) can be naturally considered as the subgroup
+of Ck(X) consisting of all cochains of X that vanish on simplices of A. It is
+therefore free abelian with a basis consisting of the cochains σ∗, as σ ranges
+over all k-simplices of X not in A. The argument used in the first proof of
+Poincar´e duality goes through with no change to give us an isomorphism
+Ck(X, A) ϕ
+−→Dn−k(X∗) ,
+having the property that ϕδ = ∂ϕ. The existence of an isomorphism
+Hk(X, A) ∼= Hn−k(X∗) ∼= Hn−k(|X| \ |A|)
+follows at once. This is the first of our duality isomorphisms.
