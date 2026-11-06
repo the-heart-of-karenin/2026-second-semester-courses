@@ -1,0 +1,48 @@
+\section{向量丛的平凡性}
+\sourcepage{228}
+本节证明非紧黎曼曲面上的每个全纯向量丛均平凡，下一节据此解决Riemann--Hilbert问题。
+\entry{30.1}{定理}
+设$E$秩为$n$，图册$(h_i)$的转移上闭链为$(g_{ij})$。以下等价：(i)$E$全纯平凡；(ii)存在$n$个整体全纯截面$F_1,\ldots,F_n$，每个纤维中取值线性无关；(iii)上闭链可分裂，即存在$g_i\in\operatorname{GL}(n,\OO(U_i))$使$g_{ij}=g_ig_j^{-1}$。
+\begin{proof}
+(i)推出(ii)：在整体平凡化下取常标准基向量的原像。
+(ii)推出(iii)：令$g_i$的各列为$F_\nu$在$h_i$下的局部表示。逐纤维独立保证矩阵可逆，截面关系给$g_i=g_{ij}g_j$。
+(iii)推出(i)：若$h_i(v)=(x,t)$，定义$h(v):=(x,g_i^{-1}t)$。在另一坐标中$t=g_{ij}t'=g_ig_j^{-1}t'$，故定义无关选择，且$h$与所有$h_i$全纯相容，是整体平凡化。
+\end{proof}
+\entry{30.2}{引理}
+非紧曲面上的全纯向量丛若有非零整体亚纯截面，则有处处非零的整体全纯截面。
+\sourcepage{229}
+\begin{proof}
+设$f$为亚纯截面，$A$为其零点、极点的离散集。在$a\in A$附近将$f$表示为$(f_1,\ldots,f_n)$，令$k(a):=\min_i\operatorname{ord}_af_i$。由Weierstrass定理，取亚纯$\varphi$在$a$处阶数$-k(a)$，在$X\setminus A$全纯非零。则$F=\varphi f$全纯且无零点。
+\end{proof}
+\entry{30.3}{定理}
+非紧黎曼曲面上的每个全纯线丛均全纯平凡。
+\begin{proof}
+取非空Runge穷竭$Y_0\Subset Y_1\Subset\cdots$。由(29.16)、(30.2)，每个$Y_n$上有无零点全纯截面，故丛在其上平凡。由Runge定理，$Y_n$上的截面可在紧集上由$Y_{n+1}$上的截面逼近。选$f_0$在某$a\in Y_0$非零，逐次逼近使$f_n$在每个$Y_\nu$上收敛，且$f_n(a)$的极限非零。得到非恒零整体全纯截面，再用(30.2)、(30.1)得整体平凡。
+\end{proof}
+\entry{30.4}{定理}
+非紧黎曼曲面上的每个全纯向量丛均全纯平凡。
+\begin{proof}
+对秩$n$归纳，$n=1$已证，设秩$n-1$时成立。
+
+(a)先假设存在处处非零全纯截面$F_n$。局部补成标架，以列向量$F^i$表示其余$n-1$个截面。在交集上
+\begin{equation}F^i=G_{ij}F^j+a_{ij}F_n,\tag{1}\end{equation}
+其中$G_{ij}\in\operatorname{GL}(n-1,\OO(U_i\cap U_j))$，$a_{ij}$为$n-1$行列向量。由标架关系$G_{ij}G_{jk}=G_{ik}$。
+\sourcepage{230}
+由归纳假设，$G_{ij}=G_iG_j^{-1}$。令$\widetilde F^i=G_i^{-1}F^i$，则
+\begin{equation}\widetilde F^i=\widetilde F^j+b_{ij}F_n.\tag{2}\end{equation}
+系数满足$b_{ij}+b_{jk}=b_{ik}$。由$H^1(X,\OO)=0$，取$b_i$使$b_{ij}=b_i-b_j$。于是$\widetilde F^i-b_iF_n$在交集上相同，拼成$n-1$个整体截面，与$F_n$逐纤维独立，故丛平凡。
+
+(b)还需构造无零点截面。由(29.16)、(30.2)，在任意相对紧区域上存在这样的截面，由(a)丛在那里平凡。与(30.3)一样，用Runge逼近及穷竭构造非恒零整体全纯截面，再由(30.2)消去其零点。
+\end{proof}
+\entry{30.5}{推论}
+若$X$非紧，则$H^1(X,\operatorname{GL}(n,\OO))=0$，特别地$H^1(X,\OO^*)=0$。
+\begin{proof}
+这里第一上同调为零表示每个开覆盖上的每个矩阵上闭链均可分裂，由(30.1)恰等价于全纯向量丛平凡。
+\end{proof}
+\subsection*{习题（第30节）}
+\entry{30.1}{}
+证明任意黎曼曲面，无论紧与否，均有$H^1(X,\MM^*)=0$。［提示：用习题16.4的正合序列。］
+\entry{30.2}{}
+$U\mapsto\operatorname{SL}(n,\OO(U))$配限制为群层。
+\sourcepage{231}
+证明非紧曲面上$H^1(X,\operatorname{SL}(n,\OO))=0$，即每个该群层上闭链均可写为$g_{ij}=g_ig_j^{-1}$，且各$g_i$行列式为1。

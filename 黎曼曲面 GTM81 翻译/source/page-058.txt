@@ -1,0 +1,43 @@
+8 Algebraic Functions 
+49 
+X' EX, then one gets the same functions c 1, ... , cn • Thus these functions 
+piece together to give global meromorphic functions c l , ... , Cn E u#(X), 
+which we call the elementary symmetric functions off with respect to the 
+covering Y ~ X. 
+8.2. Theorem. Suppose X and Yare Riemann surfaces and n: Y ~ X is an 
+n-sheeted branched holomorphic covering map. Suppose A c X is a closed 
+discrete subset which contains all the critical values ofn and let B = n-1(A}. 
+Suppose f is a holomorphic (resp. meromorphic) function on Y\B and 
+cl , ... , Cn E 0(X\A) (resp. E j/(X\A)) are the elementary symmetricjimctions 
+of f Then f may be continued holomorphically (resp. meromorphically) to Y 
+precisely if all the 
+Cv may be continued holomorphically (resp. mero-
+morphically) to X. 
+The Theorem ensures that the elementary symmetric functions of a func-
+tionf E U#(Y) are also defined when the map Y -> X is a branched holomor-
+phic covering. 
+PROOF. Suppose a E A and bb"" bm are the preimages of a. Suppose (U, z) is 
+a relatively compact coordinate neighborhood of a with z(a) = 0 and 
+UnA = {a}. Then V:=n-l(U) is a relatively compact neighborhood of 
+each of the bfl' 
+1. First consider the case f E (1:( Y\B). 
+(a) Assume f may be continued holomorphically to all the points bfl' 
+Thenfis bounded on V\{bt. ... , bm}. This implies that all the Cv are bounded 
+on U\{a}. By Riemann's Removable Singularities Theorem they may all be 
+continued holomorphically to a. 
+(b) Suppose all the Cv may be continued holomorphically to a. Then all 
+the Cv are bounded on U\{a}. But this impliesfis bounded on V\{b 1, .•• , bm}, 
+for, if y E V\{bb ... , bm} and x = n(y), then 
+f(yt + Cl (x)f(yt- l + ... + cn(x) = O. 
+Again Riemann's Removable Singularities Theorem implies that f may be 
+continued holomorphically to every point bfl' 
+2. Now suppose f E jt( y\B). 
+(a) Assume f may be continued meromorphically to all points bfl' The 
+function cp:= n*z E 0(V) vanishes at all the points bl" Thus cp"f may be 
+continued hoiomorphically to all the points bl1 if k is sufficiently large. The 
+elementary symmetric functions of cp"f are Zkvcv and by the first part of the 
+proof they may be continued holomorphically to a. Thus all the C v may be 
+continued meromorphically to a. 
+(b) Suppose all the Cv may be continued meromorphically to a. U sing the 
+above notation one has: For k sufficiently large all the Zkvcv admit holo-
+morphic continuations to a. Thus cpkf admits a holomorphic continuation to 

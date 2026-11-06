@@ -1,0 +1,97 @@
+\section{线丛与向量丛}
+\sourcepage{219}
+流形分析中常把每个点$x$与一个随$x$连续、或全纯变化的向量空间$E_x$联系起来，由此得到向量丛概念。
+\entry{29.1}{定义}
+设$p:E\to X$连续，各纤维$E_x=p^{-1}(x)$为$n$维复向量空间。若每点$a$有开邻域$U$及同胚$h:E_U:=p^{-1}(U)\to U\times\C^n$，满足(i)保纤维，即$\operatorname{pr}_1h=p$；(ii)在每个纤维上为线性同构，则称$p$为秩$n$的\textbf{向量丛}。$h$称\textbf{局部平凡化}或\textbf{线性坐标卡}。覆盖$(U_i)$上的局部平凡化族$(h_i)$称为图册。
+\entry{29.2}{定义}
+若有整体线性平凡化$h:E\to X\times\C^n$，称丛\textbf{平凡}。向量丛总局部平凡，概念的作用在于整体问题。
+\entry{29.3}{定义}
+秩1向量丛称为\textbf{线丛}。
+\entry{29.4}{定理}
+给定图册$h_i$，存在唯一连续映射$g_{ij}:U_i\cap U_j\to\operatorname{GL}(n,\C)$，使
+\sourcepage{220}
+$h_i h_j^{-1}(x,t)=(x,g_{ij}(x)t)$，且在三重交上$g_{ij}g_{jk}=g_{ik}$。这些$g_{ij}$称\textbf{转移函数}，其族为图册的上闭链。
+\begin{proof}
+$h_ih_j^{-1}$保纤维且逐纤维线性可逆，故唯一确定矩阵$g_{ij}(x)$；同胚连续性给矩阵连续。复合的恒等式直接给上闭链关系。
+\end{proof}
+\entry{29.5}{定义}
+黎曼曲面上的向量丛图册，若所有转移函数全纯，称为\textbf{全纯图册}。两个图册若并集仍为全纯图册，称全纯相容。它是等价关系，其等价类称\textbf{全纯线性结构}。带此结构的向量丛称\textbf{全纯向量丛}。若结构中有只含一张整体坐标卡的图册，称\textbf{全纯平凡}。
+\entry{29.6}{上闭链}
+$U\mapsto\operatorname{GL}(n,\OO(U))$配限制构成群层，$n\ge2$时非阿贝尔。对覆盖$\mathfrak U$，
+\sourcepage{221}
+$Z^1(\mathfrak U,\operatorname{GL}(n,\OO))$表示满足$g_{ij}g_{jk}=g_{ik}$的矩阵族。$n\ge2$时，逐项相乘一般不使此集合成为群。全纯丛的转移函数构成这样的上闭链；反之也可由上闭链构造丛。
+\entry{29.7}{定理}
+每个$(g_{ij})\in Z^1(\mathfrak U,\operatorname{GL}(n,\OO))$均为某秩$n$全纯向量丛的一组全纯坐标卡的转移函数。
+\begin{proof}
+令$E':=\coprod_iU_i\times\C^n\times\{i\}$，用$X\times\C^n\times I$的诱导拓扑，$I$离散。定义$(x,t,i)\sim(x',t',j)$当且仅当$x=x'$且$t=g_{ij}(x)t'$。上闭链关系保证等价性。令$E=E'/\sim$，取商拓扑与商映射$\kappa$。投影诱导连续$p:E\to X$，各纤维自然为$n$维空间。$\kappa|_{U_i\times\C^n\times\{i\}}$为到$E_{U_i}$的同胚，取逆并省略$i$坐标得到$h_i$。按构造转移函数恰为$g_{ij}$。
+\end{proof}
+\entry{29.8}{定义}
+$U\subset X$上的\textbf{截面}是连续$f:U\to E$，满足$p\circ f=\mathrm{id}_U$。
+\sourcepage{222}
+即$f(x)\in E_x$。在坐标卡$h_i$中有唯一连续表示$f_i:U_i\cap U\to\C^n$，满足$h_i(f(x))=(x,f_i(x))$。
+\entry{29.9}{定义}
+若各局部表示$f_i$全纯，称截面全纯；与所选全纯图册无关。全纯截面空间记$\OO_E(U)$，配限制构成层$\OO_E$。各表示满足
+\begin{equation}f_i=g_{ij}f_j\quad\text{于 }U_i\cap U_j\cap U.\tag{*}\end{equation}
+反过来，每个满足(*)的全纯$n$元函数族都定义截面。因此局部$\OO_E|_{U_i}\cong\OO^n|_{U_i}$；若丛整体全纯平凡，则$\OO_E\cong\OO^n$。
+\entry{29.10}{全纯余切丛}
+取坐标覆盖$(U_i,z_i)$，转移函数$g_{ij}:=dz_j/dz_i$全纯非零，满足上闭链关系，确定线丛$T^*(X)$，称\textbf{全纯余切丛}或\textbf{典范线丛}。其全纯截面层同构于$\Omega$：局部$\omega=f_i dz_i$的系数满足$f_i=(dz_j/dz_i)f_j$，恰为截面关系；反过来由系数拼成1形式。
+\sourcepage{223}
+\entry{29.11}{除子的线丛}
+对除子$D$，选覆盖及亚纯$\psi_i$使$(\psi_i)=D|_{U_i}$。令$g_{ij}:=\psi_i/\psi_j\in\OO^*(U_i\cap U_j)$，定义线丛$E_D$。若$f\in\OO_D(U)$，则$f_i:=\psi_if$全纯且$f_i=g_{ij}f_j$，给出$E_D$截面；反之，满足此关系的$f_i$使$f_i/\psi_i$拼成$\OO_D(U)$中的亚纯函数。故$\OO_{E_D}\cong\OO_D$。
+
+下面用不同于第14节的方法研究向量丛全纯截面层的上同调。
+\entry{29.12}{引理}
+设$Y\Subset X$开，$E$为全纯向量丛。对每个开集$Y_0\subset Y$，限制$H^1(Y,\OO_E)\to H^1(Y_0,\OO_E)$满射。
+\begin{proof}
+用有限个丛平凡化且双全纯于平面开集的$U_i$覆盖$Y$。对$V\subset U_i$，由(26.1)，$H^1(V,\OO_E)\cong H^1(V,\OO)^n=0$。令$Y_k:=Y_0\cup\bigcup_{i\le k}U_i$，只须逐步证明$H^1(Y_k)\to H^1(Y_{k-1})$满射。
+\sourcepage{224}
+令$V_i=U_i\cap Y_{k-1}$，$V_i'=V_i$（$i\ne k$），$V_k'=U_k$。两族分别为$Y_{k-1},Y_k$的Leray覆盖，且不同指标的交集不变。因此两个1上闭链集合相同，诱导的上同调映射满射。
+\end{proof}
+\entry{29.13}{定理}
+若$Y\Subset X$开，则$H^1(Y,\OO_E)$有限维。
+\begin{proof}
+选$Y\Subset Y'\Subset X$及有限开集$V_i\Subset U_i$，分别覆盖$Y,Y'$；各$U_i$为平面开集且丛在其上全纯平凡。两覆盖$\mathfrak U,\mathfrak V$为Leray覆盖，由(29.12)限制在$H^1$上满射，故
+\[
+\varphi:C^0(\mathfrak V,\OO_E)\times Z^1(\mathfrak U,\OO_E)\to Z^1(\mathfrak V,\OO_E),\quad
+(\eta,\xi)\mapsto\delta\eta+\beta\xi
+\]
+满射，其中$\beta$为限制。各局部截面空间用紧集上一致收敛拓扑成为Fréchet空间，上链取乘积拓扑，上闭链为闭子空间，故上述空间均为Fréchet。$\delta,\beta$连续；由Montel定理及相对紧性，$\beta$还是紧算子。
+
+令$\psi(\eta,\xi):=\beta\xi$，则$\psi$紧。\translatornote{原文此处写作$\beta(\eta)$，但$\beta$的定义域是1上闭链空间，故应为$\beta(\xi)$。}由L.~Schwartz定理（附录B.11），满射减紧算子$\varphi-\psi$的像余维有限。
+\sourcepage{225}
+该像恰为$B^1(\mathfrak V,\OO_E)$，所以商$H^1(Y,\OO_E)$有限维。
+\end{proof}
+\entry{29.14}{推论}
+紧黎曼曲面上的全纯向量丛满足$\dim H^1(X,\OO_E)<\infty$。
+\entry{29.15}{亚纯截面}
+局部平凡化下，穿孔邻域上的全纯截面由全纯$n$元函数表示。若各分量在$a$至多有$m$阶极点或可去奇点，且至少一项恰有$m$阶极点，称截面在$a$有$m$阶极点；定义与线性坐标无关。
+
+开集$Y$上的\textbf{亚纯截面}，是$Y'\subset Y$上的全纯截面，其中$Y\setminus Y'$离散，且在所有缺失点均有极点。类似(14.12)可证明：
+\entry{29.16}{定理}
+对$Y\Subset X$及$a\in Y$，存在$Y$上的亚纯截面，在$a$有极点且在其他点全纯。
+\entry{29.17}{推论}
+紧曲面上的每个全纯向量丛都有非恒零的整体亚纯截面。
+\entry{29.18}{线丛与除子}
+若线丛$E$有非零整体亚纯截面$\psi$，其局部表示在各点的阶数定义除子$D$，与坐标无关。则$\OO_E\cong\OO_D$：若$(f)\ge-D$，$f\psi$全纯；反之，全纯截面$\varphi$的商$f=\varphi/\psi$为亚纯函数，满足该阶数条件。这可视为(29.11)的逆构造。
+\sourcepage{226}
+下面把紧曲面的Picard群解释为上同调群。
+\entry{29.19}{定理}
+自然有群同构$H^1(X,\OO^*)\cong\operatorname{Pic}(X)$。
+\begin{proof}
+(a)若$\xi$由$(g_{ij})$表示，取对应线丛$E$，由(29.17)有非零亚纯截面$f$，局部表示$f_i$满足$f_i=g_{ij}f_j$。它的除子$D(x)=\operatorname{ord}_xf_i$良定义，定义$\alpha(\xi):=D\bmod\operatorname{Div}_p$。
+
+若同一上闭链也写为$g_{ij}=\widetilde f_i/\widetilde f_j$，则$f_i/\widetilde f_i$拼成整体非零亚纯$\varphi$，故两除子相差主除子$(\varphi)$。与代表上闭链选择无关的验证留给读者。容易看出$\alpha$为群同态。
+
+(b)由(29.11)满射。若$D$为主除子，取亚纯$\varphi$使$(\varphi)=D$，
+\sourcepage{227}
+则$g_i:=f_i/\varphi\in\OO^*(U_i)$，$g_{ij}=g_i/g_j$，故上闭链为上边缘，得到单射。
+\end{proof}
+\subsection*{习题（第29节）}
+\entry{29.1}{}
+秩$n$全纯向量丛的\textbf{秩$k$全纯子丛}$F\subset E$，是局部可用全纯平凡化写成$h(F_U)=U\times(\C^k\times0)$的子集。
+(a)若$f$为处处非零的全纯截面，令$F_x=\C f(x)$，证明$\bigcup_xF_x$为秩1子丛。
+(b)若$f$为亚纯截面，证明存在唯一秩1子丛使$f$为其亚纯截面。\translatornote{本小问题意需要$f$非恒零；零截面一般不能确定唯一线子丛。}
+\entry{29.2}{}
+紧曲面上线丛的次数定义为非零亚纯截面除子的次数。
+(a)证明此定义与截面选择无关。
+(b)在球面上取$U_1=\{|z|<1+\varepsilon\}$、$U_2=\{|z|>1-\varepsilon\}$（包含$\infty$），$0<\varepsilon<1$。若线丛由转移函数$g_{12}\in\OO^*(U_1\cap U_2)$给出，证明$\deg L=(2\pi i)^{-1}\int_{|z|=1}g'_{12}(z)/g_{12}(z)dz$。［提示：先考虑$g_{12}(z)=z^k$。］

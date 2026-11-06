@@ -1,0 +1,56 @@
+11 Linear Differential Equations 
+83 
+Define an n x n matrix B = (bij ) which is holomorphic in 1 z 1 < r by letting 
+N ( 
+Z) -1 N 
+OCJ 
+z\' 
+(5) bij(z):=- .1--
+=- L -;: for all i,j. 
+r 
+r 
+r \.=0 r 
+Let Wo = (w lO , ... , wnO) and K:= max( 1 
+WlO I,···, 1 
+WnO I). Now we can find a 
+solution of the differential equation 
+u'(z) = B(z )u(z) 
+in the disk 1 z 1 < r which satisfies the initial condition v(O) = (K, ... , K). By 
+(a) the solution is unique and is given by 
+v(z) = (tjJ(z), ... , tjJ(z)), 
+where 
+( 
+) -nN 
+tjJ(z)=K 1-; 
+The function tjJ is a solution because 
+KnN( 
+z)-nN-1 
+N( 
+Z)· -1 
+tjJ'(z)=-r-
+1-~ 
+=n--;. 
+1-~ 
+tjJ(Z). 
+On the other hand, the differential equation u' = Bu can be solved using 
+power series. If 
+00 
+B(z) = L B,z', 
+v=o 
+and 
+if) 
+u(z) = L Y,.z', 
+,=0 
+are the appropriate power series, then analogous to (a) one has 
+(6) (k + 1)Yk+l = L~=o Bk -, y,. 
+Then from (4) and (5), it follows that 
+1 aij" 1 ~ bij" 
+for every i, j, v. 
+Since 1 Cio 1 = 
+1 Wio 1 ~ K = Yio for i = 1, ... , n, comparison of (3) and (6) and 
+induction on k implies 
+1 cij 1 ~ Yik 
+for every k E rJ and i = 1, ... , n. 
+Since the series Lk Yik Zk = tjJ(z) converges for Iz 1 < r, one has that 
+Lk Ck Zk = w(z) converges as well. 
+Since r < R is arbitrary, the series converges on all of D = {I z 1 < R}. o 

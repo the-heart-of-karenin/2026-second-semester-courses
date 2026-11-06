@@ -1,0 +1,134 @@
+\section{一个有限性定理}
+\sourcepage{109}
+本节证明：对紧黎曼曲面$X$，$H^1(X,\OO)$为有限维复向量空间，其维数称为$X$的亏格。由此可推出每个紧黎曼曲面上存在非常值亚纯函数。为供第三章应用，我们同时研究任意黎曼曲面的相对紧开子集。
+\entry{14.1}{全纯函数的$L^2$范数}
+设$D\subset\C$开，定义$\|f\|_{L^2(D)}:=(\iint_D|f(x+iy)|^2dxdy)^{1/2}$，允许为$\infty$。若有限，则称$f$平方可积，全体这类全纯函数记为$L^2(D,\OO)$。若$\operatorname{Vol}(D):=\iint_Ddxdy<\infty$，则对有界全纯函数有$\|f\|_{L^2(D)}\le\sqrt{\operatorname{Vol}(D)}\|f\|_D$。
+
+对$f,g\in L^2(D,\OO)$定义内积$\langle f,g\rangle:=\iint_Df\bar g\,dxdy$，它由$|f\bar g|\le\tfrac12(|f|^2+|g|^2)$而存在。此内积使空间成为酉空间。对圆盘$B(a,r)$，单项式$\psi_n(z):=(z-a)^n$正交，极坐标计算得$\|\psi_n\|_{L^2(B)}=\sqrt\pi r^{n+1}/\sqrt{n+1}$。
+\sourcepage{110}
+若$f=\sum_{n=0}^\infty c_n(z-a)^n$，由勾股定理得
+\begin{equation}\|f\|_{L^2(B(a,r))}^2=\sum_{n=0}^\infty\frac{\pi r^{2n+2}}{n+1}|c_n|^2.\tag{*}\end{equation}
+\entry{14.2}{定理}
+设$D_r:=\{z:B(z,r)\subset D\}$，即到边界距离至少为$r$的点集。则$\|f\|_{D_r}\le(\sqrt\pi r)^{-1}\|f\|_{L^2(D)}$。
+\begin{proof}
+对$a\in D_r$，由(*)有$|f(a)|=|c_0|\le(\sqrt\pi r)^{-1}\|f\|_{L^2(B(a,r))}\le(\sqrt\pi r)^{-1}\|f\|_{L^2(D)}$，取上确界即得。
+\end{proof}
+特别地，$L^2$中的Cauchy列在各紧子集上一致收敛，极限全纯，因此$L^2(D,\OO)$完备，是Hilbert空间。下一引理可视为Schwarz引理的推广。
+\entry{14.3}{引理}
+若$D'\Subset D$开，则对每个$\varepsilon>0$，存在有限余维闭子空间$A\subset L^2(D,\OO)$，使对$f\in A$有$\|f\|_{L^2(D')}\le\varepsilon\|f\|_{L^2(D)}$。
+\begin{proof}
+取$r>0$及$a_1,\ldots,a_k\in D$使$B(a_j,r)\subset D$，而$D'\subset\bigcup_jB(a_j,r/2)$。选$n$使$k2^{-n-1}\le\varepsilon$，令$A$为在所有$a_j$处至少$n$阶消失的函数之集，闭且余维$\le kn$。
+\sourcepage{111}
+对$f\in A$，展开$f=\sum_{\nu=n}^\infty c_\nu(z-a_j)^\nu$。由(*)，对$\rho\le r$有$\|f\|_{L^2(B(a_j,\rho))}^2=\sum_{\nu=n}^\infty\pi\rho^{2\nu+2}|c_\nu|^2/(\nu+1)$，故$\|f\|_{L^2(B(a_j,r/2))}\le2^{-n-1}\|f\|_{L^2(B(a_j,r))}$。再由覆盖，
+\[
+\|f\|_{L^2(D')}\le\sum_j\|f\|_{L^2(B(a_j,r/2))}\le k2^{-n-1}\|f\|_{L^2(D)}\le\varepsilon\|f\|_{L^2(D)}.
+\]
+\end{proof}
+\entry{14.4}{平方可积上链}
+在$X$上取有限坐标卡族$(U_i^*,z_i)$，使各$z_i(U_i^*)$为圆盘；不要求$\mathfrak U^*=(U_i^*)$覆盖$X$。取开子集$U_i\subset U_i^*$，令$\mathfrak U=(U_i)$，$|\mathfrak U|:=\bigcup_iU_i$。定义
+\[
+\|(f_i)\|_{L^2(\mathfrak U)}^2:=\sum_i\|f_i\|_{L^2(U_i)}^2,\qquad
+\|(f_{ij})\|_{L^2(\mathfrak U)}^2:=\sum_{i,j}\|f_{ij}\|_{L^2(U_i\cap U_j)}^2,
+\]
+各项用第$i$张坐标计算，即$\|f_i\|_{L^2(U_i)}=\|f_i\circ z_i^{-1}\|_{L^2(z_i(U_i))}$，$f_{ij}$也类似。
+\sourcepage{112}
+有限范数上链构成子空间$C^q_{L^2}(\mathfrak U,\OO)$（$q=0,1$），为Hilbert空间；其中上闭链形成闭子空间$Z^1_{L^2}(\mathfrak U,\OO)$。
+\entry{14.5}{}
+若各$V_i\Subset U_i$，记$\mathfrak V\Subset\mathfrak U$。对任意$\xi\in C^q(\mathfrak U,\OO)$，其限制在$\mathfrak V$上的范数有限。由(14.3)，对任意$\varepsilon>0$，存在$Z^1_{L^2}(\mathfrak U,\OO)$的有限余维闭子空间$A$，使$\|\xi\|_{L^2(\mathfrak V)}\le\varepsilon\|\xi\|_{L^2(\mathfrak U)}$对$\xi\in A$成立。
+\entry{14.6}{引理}
+设固定缩小族$\mathfrak W\Subset\mathfrak V\Subset\mathfrak U\Subset\mathfrak U^*$。则存在$C>0$，对每个$\xi\in Z^1_{L^2}(\mathfrak V,\OO)$，存在$\zeta\in Z^1_{L^2}(\mathfrak U,\OO)$、$\eta\in C^0_{L^2}(\mathfrak W,\OO)$，满足$\zeta=\xi+\delta\eta$于$\mathfrak W$，且$\max(\|\zeta\|_{L^2(\mathfrak U)},\|\eta\|_{L^2(\mathfrak W)})\le C\|\xi\|_{L^2(\mathfrak V)}$。
+\begin{proof}
+(a) 先不管估计。设$\xi=(f_{ij})$，由(12.6)取可微0上链$(g_i)$使$f_{ij}=g_j-g_i$。于是$d''g_i$拼成$|\mathfrak V|$上的形式$\omega$。取$\psi\in\mathcal E(X)$使$\operatorname{Supp}\psi\subset|\mathfrak V|$且在$|\mathfrak W|$上恒为1，将$\psi\omega$在外部延为零。由(13.2)，各$U_i^*$上有$h_i$满足$d''h_i=\psi\omega$，故$F_{ij}:=h_j-h_i$全纯。令$\zeta:=(F_{ij})|_{\mathfrak U}$，由相对紧性，其范数有限。在$W_i$上$h_i-g_i$全纯且有界，故$\eta:=(h_i-g_i)|_{\mathfrak W}$也平方可积。
+\sourcepage{113}
+由$F_{ij}-f_{ij}=(h_j-g_j)-(h_i-g_i)$得$\zeta-\xi=\delta\eta$。
+
+(b) 考虑Hilbert空间
+\[
+H:=Z^1_{L^2}(\mathfrak U,\OO)\times Z^1_{L^2}(\mathfrak V,\OO)\times C^0_{L^2}(\mathfrak W,\OO),
+\]
+取三个范数平方和的平方根为范数。闭子空间$L:=\{(\zeta,\xi,\eta):\zeta=\xi+\delta\eta\text{于}\mathfrak W\}$仍为Hilbert空间。由(a)，连续线性投影$L\to Z^1_{L^2}(\mathfrak V,\OO)$，$(\zeta,\xi,\eta)\mapsto\xi$满射。由Banach开映射定理（附录B.6、7），存在$C$使每个$\xi$有原像的范数$\le C\|\xi\|$，便得所需估计。
+\end{proof}
+\entry{14.7}{引理}
+在(14.6)的假设下，存在有限维子空间$S\subset Z^1(\mathfrak U,\OO)$，使每个$\xi\in Z^1(\mathfrak U,\OO)$都有$\sigma\in S$、$\eta\in C^0(\mathfrak W,\OO)$满足$\sigma=\xi+\delta\eta$于$\mathfrak W$。
+
+\textbf{注记。}即限制映射$H^1(\mathfrak U,\OO)\to H^1(\mathfrak W,\OO)$的像有限维。
+\begin{proof}
+令$\varepsilon:=1/(2C)$。由(14.5)取有限余维闭子空间$A$，使$\|\xi\|_{L^2(\mathfrak V)}\le\varepsilon\|\xi\|_{L^2(\mathfrak U)}$对$\xi\in A$成立。取正交补$S=A^\perp$。给定$\xi$，令$M:=\|\xi\|_{L^2(\mathfrak V)}<\infty$。由(14.6)取$\zeta_0,\eta_0$使$\zeta_0=\xi+\delta\eta_0$，两范数均$\le CM$。
+\sourcepage{114}
+作正交分解$\zeta_0=\xi_0+\sigma_0$，$\xi_0\in A$、$\sigma_0\in S$。归纳构造
+\[
+\zeta_\nu=\xi_{\nu-1}+\delta\eta_\nu\text{于}\mathfrak W,\qquad
+\zeta_\nu=\xi_\nu+\sigma_\nu,
+\]
+使$\|\zeta_\nu\|_{L^2(\mathfrak U)},\|\eta_\nu\|_{L^2(\mathfrak W)}\le2^{-\nu}CM$。事实上，正交性给$\|\xi_\nu\|_{L^2(\mathfrak U)}\le2^{-\nu}CM$，所以$\|\xi_\nu\|_{L^2(\mathfrak V)}\le2^{-\nu}\varepsilon CM=2^{-\nu-1}M$；再次用(14.6)并正交分解即完成归纳。
+
+逐式相加得
+\[
+\xi_k+\sum_{\nu=0}^k\sigma_\nu=\xi+\delta\left(\sum_{\nu=0}^k\eta_\nu\right)\quad\text{于}\mathfrak W.
+\]
+各$\|\xi_\nu\|,\|\sigma_\nu\|,\|\eta_\nu\|\le2^{-\nu}CM$，故$\xi_k\to0$，级数$\sigma:=\sum\sigma_\nu\in S$、$\eta:=\sum\eta_\nu\in C^0_{L^2}(\mathfrak W,\OO)$均收敛，取极限得结论。
+\end{proof}
+\sourcepage{115}
+\textbf{注记。}用更强的泛函分析工具可以缩短证明，参见(29.13)。
+\entry{14.8}{}
+若$Y\subset X$开，$\mathcal F$为阿贝尔群层，则各覆盖上的限制$Z^1(\mathfrak U,\mathcal F)\to Z^1(\mathfrak U\cap Y,\mathcal F)$诱导同态$H^1(X,\mathcal F)\to H^1(Y,\mathcal F)$。若$Y\subset Y'\subset X$均开，则此同态等于先限制到$Y'$再限制到$Y$的复合。
+\entry{14.9}{定理}
+若$Y_1\Subset Y_2\subset X$开，则$H^1(Y_2,\OO)\to H^1(Y_1,\OO)$的像有限维。
+\begin{proof}
+选有限坐标卡$(U_i^*,z_i)$及$W_i\Subset V_i\Subset U_i\Subset U_i^*$，使
+$Y_1\subset Y':=\bigcup_iW_i\Subset Y'':=\bigcup_iU_i\subset Y_2$，并使$z_i(U_i^*)$、$z_i(U_i)$、$z_i(W_i)$均为圆盘。由(14.7)，$H^1(\mathfrak U,\OO)\to H^1(\mathfrak W,\OO)$像有限维。由(13.4)及Leray定理，这等同于$H^1(Y'',\OO)\to H^1(Y',\OO)$。所求映射分解为
+\[
+H^1(Y_2,\OO)\to H^1(Y'',\OO)\to H^1(Y',\OO)\to H^1(Y_1,\OO),
+\]
+因此像有限维。
+\end{proof}
+\entry{14.10}{推论}
+若$X$紧，则$\dim H^1(X,\OO)<\infty$。
+\begin{proof}在(14.9)取$Y_1=Y_2=X$。\end{proof}
+\entry{14.11}{定义}
+紧黎曼曲面的\textbf{亏格}（genus）为$g:=\dim H^1(X,\OO)$。由(13.5)，黎曼球面的亏格为零。
+\sourcepage{116}
+\entry{14.12}{定理}
+若$Y\Subset X$开，则对每个$a\in Y$，存在$f\in\MM(Y)$在$a$处有极点，在$Y\setminus\{a\}$上全纯。
+\begin{proof}
+令$k:=\dim\operatorname{im}(H^1(X,\OO)\to H^1(Y,\OO))<\infty$。取$a$的坐标邻域$(U_1,z)$使$z(a)=0$，令$U_2:=X\setminus\{a\}$。函数$z^{-j}$在$U_1\cap U_2$全纯，代表上闭链$\zeta_j$（$j=1,\ldots,k+1$）。它们在$Y$上的限制模上边缘线性相关，故存在不全为零的$c_j$及0上链$(f_1,f_2)$使$\sum_jc_jz^{-j}=f_2-f_1$于交集与$Y$之交上成立。于是$f_1+\sum_jc_jz^{-j}$与$f_2$拼成所求亚纯函数。
+\end{proof}
+\entry{14.13}{推论}
+若$X$紧，$a_1,\ldots,a_n$互异，则任给$c_1,\ldots,c_n\in\C$，存在$f\in\MM(X)$使$f(a_i)=c_i$。
+\begin{proof}
+对$i\ne j$，由(14.12)取$f_{ij}$在$a_i$有极点而在$a_j$全纯。选$\lambda_{ij}\ne0$使所有$f_{ij}(a_k)\ne f_{ij}(a_j)-\lambda_{ij}$。则
+\[
+g_{ij}:=\frac{f_{ij}-f_{ij}(a_j)}{f_{ij}-f_{ij}(a_j)+\lambda_{ij}}
+\]
+在所有$a_k$全纯，并满足$g_{ij}(a_i)=1$、$g_{ij}(a_j)=0$。令$h_i:=\prod_{j\ne i}g_{ij}$，
+\sourcepage{117}
+则$h_i(a_k)=\delta_{ik}$，所求函数为$f:=\sum_ic_ih_i$。
+\end{proof}
+下面记录非紧情形的推论；只关心紧曲面的读者可以略过。
+\entry{14.14}{推论}
+若$X$非紧，$Y\Subset X$开，则存在$f\in\OO(Y)$在$Y$的每个连通分支上均非常值。
+\begin{proof}
+取区域$Y_1$使$Y\Subset Y_1\Subset X$，并取$a\in Y_1\setminus\overline Y$。由$X$非紧且连通，此处可选$a$。对$Y_1,a$应用(14.12)，再限制到$Y$。
+\end{proof}
+\entry{14.15}{定理}
+若$X$非紧，$Y\Subset Y'\subset X$开，则$\operatorname{im}(H^1(Y',\OO)\to H^1(Y,\OO))=0$。
+\begin{proof}
+由(14.9)，像$L$有限维。取$\xi_1,\ldots,\xi_n\in H^1(Y',\OO)$使其限制张成$L$。由(14.14)取$f\in\OO(Y')$在各分支均非常值；必要时先把$Y'$缩为仍包含$\overline Y$的相对紧邻域。上同调自然为$\OO(Y')$模，因此存在常数$c_{\nu\mu}$使
+\begin{equation}f\xi_\nu=\sum_\mu c_{\nu\mu}\xi_\mu\quad\text{于 }Y.\tag{1}\end{equation}
+令$F:=\det(f\delta_{\nu\mu}-c_{\nu\mu})$，它在各分支上均不恒零，且由(1)有$F\xi_\nu|_Y=0$。
+
+任一$\zeta\in H^1(Y',\OO)$可用覆盖$\mathfrak U=(U_i)$上的$(f_{ij})$表示，并可选覆盖使$F$的每个零点至多属于一个$U_i$。
+\sourcepage{118}
+于是$i\ne j$时$F$在$U_i\cap U_j$无零点，故$f_{ij}=Fg_{ij}$，$(g_{ij})$为全纯上闭链。令其类为$\xi$，则$\zeta=F\xi$，从而$\zeta|_Y=F\xi|_Y=0$。
+\end{proof}
+\entry{14.16}{推论}
+若$X$非紧，$Y\Subset Y'\subset X$开，则对每个$\omega\in\mathcal E^{0,1}(Y')$，存在$f\in\mathcal E(Y)$使$d''f=\omega|_Y$。
+\begin{proof}
+由(13.2)局部可解，取开覆盖$(U_i)$及$f_i$使$d''f_i=\omega$。差$f_i-f_j$全纯，构成上闭链。由(14.15)，它在$Y$上为上边缘，故存在$g_i\in\OO(U_i\cap Y)$使$f_i-f_j=g_i-g_j$。于是各$f_i-g_i$拼成所求$f$。
+\end{proof}
+\textbf{注记。}(25.6)、(26.1)将推广(14.15)、(14.16)。
+\subsection*{习题（第14节）}
+\entry{14.1}{}
+设$X=\{z:r<|z|<R\}$，$0<r<R<\infty$。求$L^2(X,\OO)$中由$\varphi_n(z)=c_nz^n$（$n\in\Z$）组成的规范正交基。
+\entry{14.2}{}
+设$X\subset\C$为有界开集，$p_1,\ldots,p_k\in X$，$X':=X\setminus\{p_1,\ldots,p_k\}$。证明限制映射$L^2(X,\OO)\to L^2(X',\OO)$为同构。

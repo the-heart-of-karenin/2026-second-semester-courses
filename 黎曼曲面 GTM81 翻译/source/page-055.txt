@@ -1,0 +1,41 @@
+46 
+1 Covering Spaces 
+analytic continuation along every curve us' Then the analytic continuations of 
+<p along Uo and Ul yield the same function germ t/l E (! b' 
+PROOF. Apply Theorem (4.10) to the local homeomorphism I f) I ...... X, 
+noting that I cr I is Hausdorff by Theorem (6.10). 
+0 
+7.4. Corollary. Suppose X is a simply connected Riemann surface, a E X and 
+(P E fa is a function germ which admits an analytic continuation along every 
+curve starting at a. Then there exists a globally defined holomorphic junction 
+f E (( (X) such that Pa(f) = <po 
+Remark. Because of the Identity Theorem, f is uniquely determined. 
+PROOF. For any x E X let t/lx E fx be the function germ which results from the 
+analytical continuation of <p along any curve from a to x. Since X is simply 
+connected, t/l x is independent of which curve is chosen. Set .t{x) := t/l x(x). 
+Thenfis a holomorphic function on X such that PaC!) = (p. 
+0 
+7.5. In general, even if the analytic continuation of some function germ is 
+possible along two curves with the same initial and end points, then the 
+resulting germs at the end point may be different. Thus if we consider all the 
+germs arising by analytic continuation from the given function germ we get a 
+multi-valued function. Our next task is to look at this situation and to make 
+the details precise. 
+Suppose X and Yare Riemann surfaces and (!/x and (7)y are the sheaves of 
+holomorphic functions on them. Suppose p: Y ...... X is an unbranched holo-
+morphic map. Since p is locally biholomorphic, for each y E Y it induces an 
+isomorphism p*: ((x. p(y) ...... (( Y.),' Let 
+p*: (Jy.}' ...... ((x. p(y) 
+be the in verse of p*. 
+7.6. Definition. Suppose X is a Riemann surface, a E X is a point and <p E (!a 
+is a function germ. A quadrupel (Y, p,/, b) is called an analytic continuation 
+of <p if: 
+(i) Y is a Riemann surface and p: Y ...... X is an unbranched holomorphic 
+map. 
+(ii) f is a holomorphic function on Y. 
+(iii) b is a point of Y such that p(b) = a and 
+P*(Pb(f)) = <po 
+An analytic continuation (Y, p, j; b) of <p is said to be maximal if it has the 
+following universal property. If (Z, q, g, c) is any other analytic continuation 
+of <p, then there exists a fiber-preserving holomorphic mapping F: Z ...... Y 
+such that F(c) = band F*(f) = g. 

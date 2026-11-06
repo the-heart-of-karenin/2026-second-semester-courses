@@ -1,0 +1,52 @@
+66 
+1 Covering Spaces 
+9.13. Exterior Differentiation of Forms. We now define derivations d, d', 
+d": C(1)(U) --+ C(2)(U), where U is an open subset of a Riemann surface. 
+Locally a differentiable I-form may be written as a finite sum 
+w = I.Jk dgk , 
+where the fk and gk are differentiable functions, e.g., w = f1 dz + f2 dz where 
+z is a local coordinate. Set 
+dw:= I dfk /\ dg k , 
+d'w := I d'fk /\ dg b 
+d"w := I d''fk /\ dgk· 
+Now one has to show that this definition is independent of the representa-
+tion w = Lfk dgk. We will do this for the operator d, the other cases being 
+similar. 
+Suppose w = Lfk dgk = Lh dgj. Choose a particular coordinate neigh-
+borhood (U, z), where z = x + iy. One has to show that L dft/\ dgk = 
+I d]j /\ dgj • Because 
+Ogk 
+Ogk 
+dgk = ox dx + oy dy, 
+with a corresponding expression for dgi , one has by assumption 
+'\'j' Ogk = '\'J:. ogj 
+L... k ox 
+L... J ox ' 
+Lf Ogk = IT ogj 
+k oy 
+J oy . 
+Taking appropriate partial derivatives with respect to x and y and sub-
+tracting yields 
+I (Ofk Ogk _ Ofk 09k) = I (olj ogj _ olj O?/j) 
+oy ox 
+ox oy 
+oy ox 
+ox oy . 
+On the other hand 
+'\' d'l' 
+d = '\' (Ofk Ogk _ oft 09k) d 
+d 
+L... 
+'.Ik /\ gk 
+L... ox oy 
+oy ox 
+X /\ y, 
+with a corresponding formula for L dh /\ dgj . The result follows 
+immediately. 
+9.14. Elementary Properties. Suppose U is an open subset of a Riemann 
+surface,f E C( U) and w E C(1)( U). Then 
+(i) ddf = d'd'f = d"d''f = O. 
+(ii) dw = d'w + d"w, 
+(iii) d(fw) = df /\ W + f dw with similar rules for d' and d". 
+These rules are straightforward consequences of the definitions; e.g., 
+ddf= d(l' df) = dl/\df= O. 

@@ -1,0 +1,37 @@
+200 
+3 Non-compact Riemann Surfaces 
+for every WE go. l(X) with Supp(w) ~ X\K. Because of (2) it must be the 
+case that (j I X\(K u L) = O. Every connected component of X\A(K) is not 
+relatively compact and hence meets X\(K u L). Thus by the Identity 
+Theorem (j I X\A(K) = 0, i.e. 
+(3) S[w] = 0 for every W Ego. I(X) with Supp(w) ~ X\A(K). 
+Now suppose fE 0(Y). We have to show T[J] = O. Since Y is Runge, 
+A(K) c Y. Hence there is a function 9 E g(X) withf = 9 in a neighborhood 
+ofA(K) and Supp(g) ~ Y. Then T[J] = T[g I Y] by (1) and T[g I Y] = S[d"g] 
+by the definition of S. Since 9 is holomorphic on a neighborhood of A(K), 
+one has Supp(d"g) ~ X\A(K) and thus S[d"g] = 0 by (3). Collecting these 
+statements together we have T[J] = 0 for every f E 0(Y). 
+0 
+25.5. The Runge Approximation Theorem. Suppose X is a non-compact 
+Riemann surface and Y is an open subset whose complement contains no com-
+pact connected component. Then every holomorphic function on Y can be 
+approximated uniformly on every compact subset of Y by holomorphic func-
+tions on X. 
+PROOF. It suffices to consider the case when Y is relatively compact in X. 
+Suppose f E 0( Y), a compact subset KeY and t: > 0 are given. By (23.9) 
+there exists an exhaustion Y1 ~ Y2 ~ • •• of X by Runge domains with 
+Yo := Y ~ Yl. By Theorem (25.4) there is a holomorphic functionfl E 0{Yl) 
+with 
+where II 
+11K denotes the supremum norm on K. 
+Now using Theorem (25.4) and induction one gets a sequence of functions 
+In E 0(y") with 
+II f. - In-I IIYn-2 < 2- nB for every n ~ 2. 
+For every n E N the sequence (1.)v>. converges uniformly on Y". Hence 
+there exists a function F E (!)(X), holomorphic on all of X, which on each y" 
+is the limit of the sequence (fv)v>.' Thus, by construction, IIF - filK < B. o 
+25.6. Theorem. Suppose X is a non-compact Riemann surface. Then given a 
+I-form W Ego. 1 (X) there exists a function f E g(X) with d''f = w. 
+PROOF. For every relatively compact open subset Y ~ X there exists by 
+(14.16) a function g E g(y) with d"g = W I Y. Now the proof is similar to the 
+proof of Theorem (13.2), namely one uses an exhaustion process. 

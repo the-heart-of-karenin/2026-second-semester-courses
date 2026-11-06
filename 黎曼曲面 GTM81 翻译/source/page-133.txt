@@ -1,0 +1,45 @@
+124 
+2 Compact Riemann Surfaces 
+PROOF 
+(a) The exactness at HO(X, J) and HO(X, '§) follow from Lemma (15.8). 
+(b) 1m [30 c Ker J*. Suppose 9 E HO(X, ~} and h:= [30(g). In the con-
+struction of J*h described in (15.11) one can choose gi = gl Vi' But then 
+fij = 0 and thus J*h = O. 
+(c) Ker J* elm [30. Suppose h E Ker J*. Using the notation of (15.11) 
+one can represent J*h by the cocycle U;J E Zl(U, .:F). Since J*h = 0 there 
+exists a cochain (/;) E CO(U, J) such that k = jj - J; on Vi n V j . Set 
+9i := gi - exU;). Then 9i = 9j on Vi n Vj because ext!;j) = Yj - Yi' Thus the?'li 
+are restrictions of some global element 9 E HO(X, ~). On Vi one has [3(g) = 
+[3(gJ = [3(gi - exC!;)) = [3(g;) = h, i.e., hElm [30. 
+(d) 1m J* c Ker ex 1 . This follows from condition (2) in (15.11). 
+(e) Ker ex 1 c 1m b*. Suppose ~ E Ker ex 1 is represented by the cocycle 
+U;J E Zl(U, .~). Since ex 1(() = 0, there exists a cochain (g;) E CO(U, ~) such 
+thatex( r..) = y. -
+g. on V· n V" This implies 
+j iJ 
+J' 
+l 
+l 
+] 
+Hence there exists h E .Yf(X) = HO(X, £) such that hi Vi = [3(gJ The con-
+struction given in (15.11) now shows that J*h = ~. 
+(f) 1m ex1 c Ker [31. This follows from the fact that 
+is exact by (15.8). 
+(g) Ker pi c 1m ex 1. Suppose I] E Ker [31 is represented by the co cycle 
+(YiJ E Zl (U, '§), where U = (VJi E [. Then there is a cochain (h;) E CO(U, £) 
+such that [3(gij) = hj - hi' For every x E X choose rx E I such that x E V n
+. 
+Since [3x: '§ x -> .Yf x is surjective, there is an open neighborhood Vx c V rx of x 
+and an element gx E '§(Vx) such that [3(g,.) = hrx 1 Vx' Let 'B = (V,.),.. x and 
+gxy = grx. ry 1 Vx n Vy. Then (9XY) E Zl(l.B, '§) is a cocycle which also repre-
+sents the cohomology class 1]. Let t/lXY:= 9xy - gy + gx· The cocycle (t/lXY) is 
+cohomologous to (9XY) and [3(t/lXY) = O. Thus there exists j~y E ff(Vx n 
+~.) 
+such that exU~y) = t/I xy' Since 
+is Injective by (15.6), 
+U~y) E ZI(I.B, ff). Thus the cohomology class 
+~ E H1(X, .?') of (fXY) satisfies ex l (';) = 1]. This completes the proof. 
+D 
+15.13. Theorem. Suppose 0 -> .? ~ 
+~fj !!... .Yf -> 0 is an exact sequence of 
+sheaves on the topological space X such that H1(X, '§) = O. Then 

@@ -1,0 +1,42 @@
+27 The Riemann Mapping Theorem 
+we may assume that for some point a E X one has eel") = f(a). Now 
+d(fe-g) = (df)e- g - fe-9j"-l df = 0 
+and thus fe - 9 is constan t1 y equal to 1. Hence e9 = f 
+Taking h := e912 one has h2 = f 
+207 
+(ii) By Theorem (19.4) there is a holomorphic I-form WE Q(X) with 
+du = Re(w). Since Q(X) = dl!J(X), one has du = Re(dg) for some g E l!J(X). 
+Thus u = Re(g) + const. 
+0 
+27.3. Theorem. Suppose X is a non-compact Riemann surface and Y ~ X is a 
+domain with Rh~(Y) = O. Suppose also that the boundary of Y is regular with 
+respect to solving the Dirichlet problem. Then there exists a biholomorphic 
+mapping of Y onto the unit disk D. 
+PROOF. Choose a point a E Y. By Weierstrass' Theorem (26.5) there exists a 
+holomorphic function g on X which has a zero of first order at a and does 
+not vanish on X\a. By Theorem (22.17) there exists a function u: Y -+~, 
+continuous on Y and harmonic on Y, with 
+u(y) = 10glg(y)1 
+for every y E ay. 
+(*) 
+By Lemma (27.2.ii) u is the real part of a holomorphic function hE l!J(Y). Set 
+f:= e-hg E l!J(Y). 
+Now we claim that f maps Y biholomorphically onto the unit disk D. 
+First we will show f(Y) c: D. For y E y\a one has 
+If(y) I = le-h(Y)llg(y)1 = elog! g(y)!-u(y). 
+Hence the function I f I which is defined on Y can be continued to a contin-
+uous function cp: Y -+ ~ which because of (*) is identically equal to Ion ay. 
+Then the Maximum Principle implies I f(y) I < 1 for every y E Y, i.e., 
+f(Y) c: D. 
+Now we will show that the mapping f: Y -+ D is proper. To do this, it 
+suffices to show that for every r < 1 the preimage y. of the disk {z E IC: 
+I z I ~ r} is compact in Y. But 
+y. = {y E Y: I f(y) I ~ r} = {y E Y: cp(y) ~ r} 
+and thus y. is a closed subset of the compact set Y and so is compact. 
+Since f: Y -+ D is proper, each value is attained equally often (Theorem 
+4.24). But the value zero is taken exactly once. Thusf: Y -+ D is bijective and 
+hence biholomorphic. 
+0 
+27.4. The general Riemann Mapping Theorem can be derived from 
+Theorem (27.3) by using an exhaustion process. To do this we require a few 
+additional tools. 

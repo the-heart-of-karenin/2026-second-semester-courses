@@ -1,0 +1,48 @@
+3 Homotopy of Curves. The Fundamental Group 
+13 
+2.13. Theorem. Every doubly periodic holomorphic junction f: C -> C is 
+constant. Every non-constant doubly periodic meromorphic junctionf: C -> [pI 
+attains every value c E [p I . 
+EXERCISES (§2) 
+2. L Let r c C be a lattice. The Weierstrass j·}-function with respcct to r is defined 
+by 
+1 
+(I 
+I ) 
+Pr(z)=z+I 
+---2-2' 
+z 
+wel\O (z -
+OJ) 
+(0 
+(a) Prove that PI' is a doubly periodic meromorphic function with respect to r 
+which has poles at the points of r. [Hint: First consider the derivative 
+Pdz) = -2 I __ ~.I 
+(,) E r (z - co) J 
+(b) Let f E j((C) be a doubly periodic function with respect to r which has its 
+poles at the points of r and which has the following Laurent expansion 
+about the origin 
+00 
+f{z) = I 
+Ck Z\ 
+where C-2 = I, C-l = Co = O. 
+k= - 2 
+Provethatf= PI' 
+2.2. Suppose X is a Riemann surface and f: X -> C is a non-constant holomorphic 
+function. Show that Re(f) does not attain its maximum. 
+2.3. Suppose f: IC -> IC is a holomorphic function, whose real part is bounded from 
+above. Then f is constant. 
+2.4. Suppose f: X -> Y is a non-constant holomorphic map and 
+f*: ((( Y) -> f (X), 
+f*(qJ) ,= <P f 
+Show thatf* is a ring monomorphism. 
+2.5. Suppose Pb ... , Pn are points on the compact Riemann surface X and 
+X' ,= X\{Pb ... , Pn}. Suppose 
+f: X' -> IC 
+is a non-constant holomorphic function. Show that the image off comes arbi-
+trarily close to every C E C. 
+§3. Homotopy of Curves. The Fundamental Group 
+In this section we present some of the topological results connected with the 
+notion of homotopy of curves. 
+By a curve in a topological space X we mean a continuous mapping 
+u: I -> X, where 1'= [0, 1] c IR is the unit interval. The point a := u(O) is 

@@ -1,0 +1,40 @@
+100 
+2 Compact Riemann Surfaces 
+From Lemma (12.4) it follows that for any open covering of X the canoni-
+cal mapping 
+Hl(U, ff) ---> Hl(X, ,~) 
+is lllJective, In particular this implies that HI (X, ff) = ° 
+precisely if 
+Hl(U, ff) = 0 for every open covering U of K 
+12.6. Theorem. Suppose X is a Riemann surface and g is the sheaf of difJeren-
+tiablefunctions on X. Then Hl(X, g) = 0. 
+PROOF. _We give the proof under the assumption that X has a countable 
+topology. However this assumption is always valid, see §23. 
+Suppose U = (V;)i El is an arbitrary open covering of X. Then there is a 
+partition of unity subordinate to 11, i.e. a family (!fJ;)i E f of functions 
+ljIi E g(X) with the following properties (cf. the Appendix): 
+(i) Supp(ljI;) C Vi' 
+(ii) Every point of X has a neighborhood meeting only finitely many of 
+the sets Supp(ljI;). 
+(iii) Li El ljIi = l. 
+We will show that Hl(U, g) = 0, i.e., every cocyc1e U;J E ZI(U, g) splits. 
+The function IjIj fij, which is defined on Vi n Vj , may be differentiably 
+extended to all of Vi by assigning it the value zero outside its support. Thus 
+it may be considered as an element of g(V;). Set 
+gj:= L IjIdij' 
+jEl 
+Because of (ii), in a neighborhood of any point in Vi' this sum has only 
+finitely many terms which are not zero and thus defines an element 
+gi E g(V;). For i,J E I 
+gj - gj = L I/Ik .hk - L I/Idjk = L I/IkU;k - jjk) 
+kEf 
+kEf 
+k 
+on Vi n Vj and thus (/;J is a coboundary. 
+o 
+Remark. In exactly the same way one can show that on a Riemann surface 
+X the 1st cohomology groups with coefficients in the sheaves g(I), gl. 0, go. 1 
+and g(2) also vanish. 
+12.7. Theorem. Suppose X is a simply connected Riemann surface. Then 
+(a) Hl(X, C) = 0, 
+(b) Hl(X, Z) = 0. 

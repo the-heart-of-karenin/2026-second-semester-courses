@@ -1,0 +1,39 @@
+8 Algebraic Functions 
+55 
+Lni = n. Using the elementary symmetric functions of F I 1'; one gets poly-
+nomials Pi(T) E A(X)[T] of degree ni such that 
+P(T) = PI (T)P 2(T) ... Pk(T). 
+But this contradicts the assumption that P(T) is irreducible. 
+Uniqueness. Suppose (Z, r, G) is another algebraic function defined by the 
+polynomial P(T). Let B c Z be the union of the poles of G and the branch 
+points of r and let A' := r(B). Let 
+X" :=X'\A', 
+Define a fiber-preserving mapping (J": Z" --> Y" in the following way. Let 
+z E Z", ,(z) = x and cP E ((x be the function germ cP := '* Gz . Then P(cp) = O. 
+By the construction of Y' one sees that cp is a point of Y' over x and thus 
+cP E Y". Set O""(z) = cp. From the definition it follows directly that 0"" is con-
+tinuous. Since 0"" is fiber-preserving, (J" is thus holomorphic. Moreover, 0"" is 
+proper since n I Y" --> X" is continuous and r I Z" --> X" is proper. Hence 0"" is 
+surjective. Because Y" --> X" and Z" --> X" have the same number of sheets, 
+0"": Z" --> Y" is biholomorphic. Also from the definition of 0"" one gets 
+G I Z" = (O"")*(F I Y"). By Theorem (8.5) 0"" can be extended to a fiber-
+preserving biholomorphic mapping 0": Z --> Y for which one then has 
+G = (J* F. The mapping (J is in fact uniquely determined by the property 
+G = O"*F. For, otherwise there would exist a covering transformation 
+1:(: Y --> Y different from the identity such that 1:(* F = F. But this is not 
+possible since F assumes distinct values on the fiber n- \x) over every point 
+XEX'. 
+0 
+8.10. Example. Suppose J(z) = (z - ad ... (z - an) is a polynomial with 
+distinct roots ai' ... , an E C. Consider J as a meromorphic function on the 
+Riemann sphere [pl. The polynomial P(T) = T2 - J is irreducible over 
+.4t([pI) and defines an algebraic function which is usually denoted by JJ(z). 
+Its Riemann surface n: Y --> [pI may be described using the above construc-
+tion as follows. Let 
+X' := [pI \A and Y':= n- I (X'). Then n: Y' --> X' is an unbranched holo-
+morphic two-sheeted covering. This implies that every function germ cp E (9 x' 
+where x E X', such that cp2 = Jean be analytically continued along every curve 
+lying in X'. Now consider the covering over neighborhoods of the excep-
+tional points. 
+(a) For each j E {I, ... , n} choose rj > 0 sufficiently small that no other 
+point of A lies in the disk 

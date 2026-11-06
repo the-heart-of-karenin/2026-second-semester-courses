@@ -1,0 +1,36 @@
+5 The Universal Covering and Covering Transformations 
+31 
+4.3. Let X and Y be Hausdorff spaces and p: Y --> X be a covering map. Let Z be a 
+connected, locally arcwise connected topological space and f: Z -> X a contin-
+uous map. Let c E Z, Q '=j{c) and bEY such that p(b) = Q. Prove that there 
+exists a lifting 1: Z --+ Y of fwith j(c) = b if and only if f.nj (Z, c) c p.nj (Y, b). 
+4.4. (a) Show that 
+tan: e --> [p 1 
+is a local homeomorphism. 
+(b) Show that tan(e) = [pl\{±i} and 
+tan: e --> [pl\{ ±i} 
+is a covering map. 
+(c) Let X = (:I{it: t E lit I t I ::,. I}. Show that for every k E 1l. there exists a 
+unique holomorphic function arctank: X --> e with 
+tan 
+arctank = id x 
+and 
+(the kth branch of arctan). 
+4.5. Determine the ramification points of the map 
+§5. The Universal Covering and Covering 
+Transformations 
+Amongst all the covering spaces of a manifold X, there is one which deserves 
+to be called the" largest," namely, the universal covering. All other covering 
+spaces can be obtained from this one as quotients, and what happens to the 
+universal covering when it is acted on by the group of "covering trans-
+formations" is closely related to the fundamental group of X. An investiga-
+tion of these ideas is the focus of attention in this section. 
+5.1. Definition. Suppose X and Yare connected topological spaces and 
+p: Y -> X is a covering map. p: Y -> X is called the universal covering of X if 
+it satisfies the following universal property. For every covering map 
+q: Z -> X, with Z connected, and every choice of points Yo E Y, Zo E Z with 
+p(Yo) = q(zo) there exists exactly one continuous fiber-preserving mapping 
+f: Y -> Z such thatj{yo) = Zo· 
+A connected topological space X has up to isomorphism at most one 
+qniversal covering. For, with the above notation, suppose q: Z -> X is also a 
+universal covering. Then there exists a fiber-preserving continuous mapping 

@@ -1,0 +1,28 @@
+9 Differential Forms 
+61 
+is called the cotangent space of X at the point a. If U is an open neighbor-
+hood of a and f E C( U), then the differential da fETal) off at a is the element 
+daf:= (f - f(a))mod lll;. 
+Note that the functionf - f(a) vanishes at the point a and thus represents an 
+element of llla. By definition its equivalence class modulo lll; is da f 
+9.4. Theorem. Suppose X is a Riemann surface, a E X and (U, z) is a coordin-
+ate neighborhood of a, where z = x + iy is the decomposition of z into its real 
+and imaginary parts. Then the elements dax and daY form a basis of the 
+cotangent space Tal). As well (daz, da z) is a basis of Tal). Iffis afunction which 
+is differentiable in a neighborhood of a, then 
+PROOF 
+(a) First we will show that dax and daY span Tal). Let t E T~l) and sup-
+pose cp E Illa is a representative of t. Expanding cp in a Taylor series about a 
+yields 
+cp = CI(X - x(a)) + C2(y - y(a)) + .p, 
+where cl , C2 E IC and.p E Ill; . Taking equivalence classes modulo m;, we get 
+(b) Now we claim dax and daY are linearly independent. For, CI dax + 
+C2 daY = 0 implies 
+Then taking partial derivatives with respect to x and y, one has CI = C2 = o. 
+(c) Suppose f is differentiable in a neighborhood of a. Then 
+of 
+of 
+f - f(a) = ox (a)(x - x(a)) + oy (a)(y - y(a)) + g, 
+where g vanishes at a to second order. Thus 
+Similarly, one can prove the corresponding results for (daz, daz). 
+0 

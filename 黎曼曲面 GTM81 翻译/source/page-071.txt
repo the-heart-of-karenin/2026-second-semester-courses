@@ -1,0 +1,40 @@
+62 
+1 Covering Spaces 
+9.5. Cotangent Vectors of Type (1, 0) and (0, 1). Suppose (U, z) and (U', z') 
+are two coordinate neighborhoods of a E X. Then 
+oz' 
+cz (a)='c E C*, 
+iF" 
+a~ (a) = c, 
+and 
+a.,.' 
+iF" 
+a~(a)= a: (a)=O. 
+This implies da Z' = C da Z and da Z' = C da Z. 
+Thus the one-dimensional vector subspaces of ral " which are spanned by 
+da Z and da ::, are independent of the choice oflocal coordinate (U, z) about a. 
+Introduce the following notation: 
+By construction T~l) = T~' 0 E8 r,;. I. The elements of T~' 0 (resp. T~' 1) are 
+called cotangent vectors of type (1,0) (resp. (0, 1». 
+If f is differentiable in a neighborhood of a, define d~ f and d; fby 
+Then 
+d~f = % 
+(a) d"z, 
+d~'f = % 
+(a) dC/z. 
+9.6. Definition. Suppose Y is an open subset of the Riemann surface X. By a 
+differential form of degree one, or simply a 110rm, on Y we mean a mapping 
+w: Y -> U T~l) 
+aE Y 
+with w(a) E nl) for every a E Y. If w(a) E T~' 0 (resp. w(a) E T~' 1) for every 
+a E Y, then w is said to be of type (1,0) (resp. of type (0, i». 
+9.7. Examples 
+(a) Suppose f E g( Y). Then the mappings df, d'j, d''j, which are defined by 
+(d"f)(a) ,= d~ f, 
+for every a E Y, are i-forms. Clearly a functionfis holomorphic precisely if 
+d'f = 0. 
+(b) Suppose w is a i-form on Y and f: Y -> C is a function. Then the 
+mappingfw defined by (fw)(a) ,= f(a)w(a) is also a i-form on Y. 
+Remark. If (U, z) is a complex chart with z = x + iy, then every I-form on 
+U may be written 
+w = f dx + g dy = qJ dz + tjJ dz, 

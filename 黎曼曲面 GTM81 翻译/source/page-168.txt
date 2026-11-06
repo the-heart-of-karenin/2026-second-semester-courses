@@ -1,0 +1,41 @@
+20 Abel's Theorem 
+159 
+§20. Abel's Theorem 
+In this section we investigate when there exist meromorphic functions with 
+prescribed zeros and poles on a compact Riemann surface X. Clearly it is 
+necessary that the total order of the zeros equal the total order of the poles. 
+However on Riemann surfaces of genus g ~ 1 this condition is not sufficient. 
+Abel's Theorem gives a necessary and sufficient condition for the existence of 
+such functions. 
+20.1 Functions with Prescribed Divisors. Suppose X is a Riemann sur-
+face and D is a divisor on X. A meromorphic function! E M,(X) is said to 
+be a solution of D if (f) = D. Thus the function! has precisely the zeros 
+and poles prescribed by the divisor D. If X is compact, then it is possible 
+for D to have a solution only if deg D = o. 
+We also need the notion of a weak solution of D. Let 
+X D :={x E X: D(x) ~ o}. 
+By a weak solution of D we mean a function f E C(X D) with the following 
+property. For every point a E X there exists a coordinate neighborhood 
+(U, z) with z(a) = 0 and a function t/J E C(U) with I/t(a) =1= 0, such that 
+!= t/JZk 
+on U (] X D , 
+where k = D(a). 
+(*) 
+Clearly a weak solutionfis a proper, i.e., meromorphic, solution precisely iff 
+is holomorphic on X D. Two weak solutions f and g of D differ by a factor 
+cP E C(X) which never vanishes. 
+Iffl (resp·f2) is a weak solution of DI (resp. D2~ thenf:=fd2 is a weak 
+solution of the divisor D :=DI + D2. At those points a E X where 
+D(a) ~ 0, 
+but DI(a) < 0 or D2(a) < 0, 
+the product !d2 is not defi~ed, but using continuity it may be extended to 
+such points. Similarly fllf2 is a weak solution of the divisor DI - D2. 
+20.2. Logarithmic Differentiation. Supposefis a weak solution of the divisor 
+D. Then the logarithmic derivative dflfis a smooth I-form on the comple-
+ment of 
+Supp(D) = {x E X: D(x) =1= o}. 
+If a E Supp(D) and k = D(a), then using (*) one has the representation 
+df = k dz 
+dt/J 
+f 
+z +--;r. 

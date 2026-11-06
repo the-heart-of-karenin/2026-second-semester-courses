@@ -1,0 +1,41 @@
+202 
+3 Non-compact Riemann Surfaces 
+26.1. Theorem. Suppose X is a non-compact Riemann surface. Then 
+Hl(X, e::') = o. 
+PROOF. 
+By the DolbeauIt Theorem (15.14) one has Hl(X, ((;) ~ 
+gO, 1 (X)/d"g(x). But by Theorem (25.6) 8,0. l(X) = d"8'(X) and thus 
+Hl(X, (l:i) = O. 
+0 
+Remark. Theorem (26.1) is a special case of Theorem B of Cartan-Serre 
+which is valid on arbitrary n-dimensional Stein manifolds, c.f. [32], [34]. 
+26.2. We now recall the notion of a Mi ttag-Leffler distribution, c.f. (18.1). 
+Suppose U = (U;)i E I is an open covering of a Riemann surface X. A family 
+f1 = (h)i E I of meromorphic functions j; E jf(U;) is called a Mittag-Leffler 
+distribution if the differences h - jj are holomorphic on U i n Uj , i.e., the 
+functions have the same principal parts. By a solution of f1 one means a 
+global meromorphic function f E j{(X) such that for each i E I the differ-
+ence .f - h is holomorphic on Ui . The family of differences j;j:= jj -
+hE(((Uin Uj ) defines a co cycle (hj)EZ1(U, (D). We proved in (18.1) that 
+f1 has a solution precisely if this cocycle is a coboundary, I.e., 
+(hj)EBl(U, 6). Thus by Theorem (26.1) we have the following. 
+26.3. Theorem. On a non-compact Riemann surface every Mittag-Lejjler dis-
+tribution has a solution. 
+We now turn to the analogue of the Weierstrass Product Theorem. Given 
+a divisor D: X -4 1L. on a Riemann surface X one would like to find a mero-
+morphic function f E ,$I*(X) which has the same zeros and poles, counting 
+multiplicities, as D, i.e., (f) = D, c.f. definitions (16.1) and (16.2). Recall that 
+the notion of a weak solution was defined in (20.1). 
+26.4. Lemma. Every divisor D on a non-compact Riemann surface X has a 
+weak solution. 
+PROOF 
+(a) Choose a sequence K I, K 2 , ..• of compact subsets of X with the 
+following properties: 
+(i) K j = A(KJ for every j 2:: 1, 
+(ii) Kj C Kj + 1 
+for every j 2:: 1, 
+(iii) Uj20: 1 Kj = X. 
+This is possible by (23.6). 
+(b) We claim that given ao E X\Kj and a divisor Ao with Ao(ao) = 1 and 
+Ao{x) = 0 for x # ao, then there exists a weak solution cp of Ao with 
+cpIKj=1. 

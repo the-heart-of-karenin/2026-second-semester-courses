@@ -1,0 +1,41 @@
+23 Countable Topology 
+189 
+PROOF 
+(a) Suppose Y;, i E I, are the connected components of Y. Since Y is open 
+and X is a manifold, all the Y; are open. Let A := X\ Y be the complement of 
+Y. The connected components A k , k E K, of A are by assumption closed but 
+not compact. 
+(b) We claim that 17 n A+-0 for every i E I. Otherwise Y; c Y. Since 
+Y; n U lj = 0, 
+j*i 
+it would then follow that Y; = Y;. But this contradicts the connectivity of X. 
+(c) Next we claim that C n A+-0 for every connected component C of 
+X\ Y;. Otherwise there would be a j +- i such that C n Yj +- 0. Since C is 
+closed and lj is connected, it would then follow that 1'; c C. By (b) this 
+would imply C n A +- 0. 
+(d) Finally suppose C is a connected component of X\Y;. Then C meets 
+at least one Ak by (c) and thus in fact C ~ Ak. Since Ak is not compact, Cis 
+also not compact. Hence Y; is Runge. 
+0 
+23.9. Theorem. Suppose X is a non-compact Riemann surface. Then there 
+exists a sequence Yo 11= Y1 11= Yz 11= ••• of relatively compact Runge domains with 
+u Y,. = X and so that every Y,. has a regular boundary with respect to solving 
+the Dirichlet Problem. 
+PROOF. The result will follow if we show that for every compact set KeY 
+there exists a Runge domain Y 11= X which has a regular boundary and 
+contains K. 
+Given K, we can find a connected compact set K 1 ~ K and a compact set 
+K z with K 1 c K2 • By Lemma (23.7) there is a Runge open set Y1 with 
+K 1 c Y1 C A(K2) and a regular boundary. Let Y be the connected compon-
+ent of Y1 which contains K l' By (23.8) Y is also Runge and by the Remark in 
+(22.14) it has a regular boundary. 
+0 
+EXERCISES (§23) 
+23.1. Suppose X is a Riemann surface and X -> X is its universal covering. Show that 
+Deck(X/X) is countable. 
+23.2. Let Y c C be open and K a compact connected component ofq Y. Let (fvL E " 
+be a sequence of polynomials which converges uniformly on every compact 
+subset of Y. Show that (f,.) converges uniformly on K. 
+23.3. Suppose Y c C is an open subset such that every holomorphic function 
+f E (i:!(Y) can be approximated uniformly on every compact subset of Y by 
+polynomials. Conclude that Y = Ac(Y). 

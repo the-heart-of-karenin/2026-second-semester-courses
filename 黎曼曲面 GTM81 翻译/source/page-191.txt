@@ -1,0 +1,38 @@
+182 
+3 Non-compact Riemann Surfaces 
+Denote by ~ f the set of all functions u E ~(Y) with 
+(i) u I Y sub harmonic, 
+(ii)ulays;f, 
+uS;K. 
+~ 
+f is called the Perron class off By the lemma 
+u* :=sup{u: U E ~f} 
+is harmonic on Y. For this to be a solution of the boundary value problem it 
+must satisfy 
+lim u*(y) = f(x) 
+for every point x E ay. Under certain conditions this will be the case, but not 
+in general. 
+22.14. Definition. A point x E a Y is called regular if there is an open 
+neighborhood U of x and a function {3 E ~ IIi(Y n U) with the following 
+properties: 
+(i) {31 Y n U is subharmonic 
+(ii) {3(x) = 0 and {3(y) < 0 for every y E Y n U\{x}. 
+The function {3 is called a barrier at x. 
+Remark. Suppose x E a Y is a regular boundary point of Y and Y1 is an 
+open subset of Y with x E a Y 1. Then x is a regular boundary point of Y1. 
+This follows directly from tlie definition. Hence, as a consequence, if Y has a 
+regular boundary (i.e., every boundary point is regular), then every con-
+nected component of Y also has a regular boundary. 
+22.15. Lemma. Suppose x E ay is a regular boundary point, V is a neighbor-
+hood of x and m and c are real constants with m :5: c. Then there exists a 
+function v E 't&' IIi(Y) with the following properties: 
+(i) v I Y is subharmonic, 
+(ii) v(x) = c, 
+v I Y n V S; c, 
+(iii) vi Y\V = m. 
+PROOF. Without loss of generality we may assume c = O. Suppose U is an 
+open neighborhood of x and {3 E ~ 1Ii( Y n U) is a barrier at x. By shrinking 
+V if necessary, we may assume V ~ U. Then 
+sup{{3(y): Y E av n Y} < o. 
+Thus there exists a constant k > 0 such that 
+k{3lav n Y < m. 

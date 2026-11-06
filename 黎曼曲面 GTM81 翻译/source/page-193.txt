@@ -1,0 +1,35 @@
+184 
+3 Non-compact Riemann Surfaces 
+Applying the Maximum Principle to the function u + w, which is subhar-
+monic on Y n V, one has 
+u + w :s; 8 
+on Y n V. 
+Thus 
+u I Y n V:S; 8 - wi Y n V 
+for every u E 'l3 f . 
+Hence 
+lim sup u*(y) :s; 8 -
+w(x) = f(x) + 8. 
+From (a) and (b) one has the result. 
+o 
+22.17. Theorem. Suppose Y is an open subset ofa Riemann surface X such that 
+all the boundary points of Yare regular. Then for every continuous bounded 
+fimction f: cJ Y --> IR the Dirichlet Problem on Y can be solved. 
+This follows directly from Lemma (22.16). 
+We now point out a simple geometric condition which ensures that a 
+boundary point is regular. Since regularity is a local condition which is 
+invariant under biholomorphic mappings, it suffices to formulate this condi-
+tion for Y c C. 
+22.18. Theorem. Suppose Y is an open subset ofe and a E ay. Suppose there 
+exists a disk 
+D = {z E C: I z - m I < r}, 
+where m E C, r > 0, 
+such that a E DD and jj n Y = 0. Then a is a regular boundary point of Y. 
+PROOF. Set c := (a + m)/2, see Fig. 6. Then 
+r 
+P(z):= log -
+- log I z - c I 
+2 
+defines a barrier at a. Thus a is a regular boundary point. 
+Figure 6 
+o 

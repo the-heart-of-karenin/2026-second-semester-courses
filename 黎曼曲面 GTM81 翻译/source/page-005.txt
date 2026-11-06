@@ -1,0 +1,54 @@
+Otto Forster 
+Mathematisches Institut 
+Univeritiit Miinchen 
+Theresienstrasse 39 
+W-8000 Miinchen 2 
+Federal Republic of Germany 
+Editorial Board 
+S. Axler 
+Mathematics Department 
+San Francisco State University 
+San Francisco, CA 94132 
+USA 
+K.A. Ribet 
+Department of Mathematics 
+University of California at Berkeley 
+Berkeley, CA 94720-3840 
+USA 
+Bruce Gilligan (Translator) 
+Department of Mathematics 
+University of Regina 
+Regina, Saskatschewan 
+Canada S4S 0A4 
+F.W. Gehring 
+Mathematics Department 
+East Hall 
+University of Michigan 
+Ann Arbor, MI 48109 
+USA 
+Mathematics Subject Classification (1991): 30-01, 30 Fxx 
+Library of Congress Cataloging in Publication Data 
+Forster, Otto, 1937-
+Lectures on Riemann surfaces. 
+(Graduate texts in mathematics; 81) 
+Translation of: Riemannsche Fliichen. 
+Bibliography: p. 
+Includes indexes. 
+1. Riemann surfaces. 
+1. Title. 
+I!. Series. 
+QA333.F6713 
+515'.223 
+81-9054 
+AACR2 
+Title of the Original German Edition: Riemannsche Fliichen, Heidelberger 
+Taschenbiicher 184, Springer-Verlag, Heidelberg, 1977 
+© 1981 by Springer-Verlag New York Inc. 
+Sottcover reprint of the hardcover 1st edition 1981 
+All rights reserved. No part of this book may be translated or reproduced in any form 
+without written permission from Springer-Verlag, 175 Fifth Avenue, New York, 
+New York 10010, U.s.A. 
+9 8 7 6 5 4 (Corrected fourth printing, 1999) 
+ISBN-13: 978-1-4612-5963-3 
+001: 10.1007/978-1-4612-5961-9 
+e-ISBN-13: 978-1-4612-5961-9 

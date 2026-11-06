@@ -1,0 +1,40 @@
+42 
+1 Covering Spaces 
+the equivalence classes by means of the operation defined on representatives, 
+is also an abelian group (resp. vector space, ring). 
+For any open neighborhood U of a, let 
+Pa: ff(U) -- ll'a 
+be the mapping which assigns to each elementf E ff(U) its equivalence class 
+modulo 72. One calls Pa(f) the germ off at a. As an example consider the 
+sheaf (!J of holomorphic functions on a domain X c IC. Let a EX. A germ of 
+a holomorphic function cp E ~Ja is represented by a hoi om orphic function in an 
+open neighborhood of a and thus has a Taylor series expansion L:'=o 
+cv(z - a)Y with a positive radius of convergence. Two holomorphic functions 
+on neighborhoods of a determine the same germ at a precisely if they have 
+the same Taylor series expansion about a. Thus there is an isomorphism 
+between the stalk (0 0 and the ring C{Z - a} of all convergent power series in 
+z - a with complex coefficients. In an analogous way, the ring J{ a of germs 
+of meromorphic functions at a is isomorphic to the ring of all convergent 
+Laurent series 
+00 
+Ldz - a)'·, 
+k E 71., 
+C,. E C, 
+y=k 
+which have finite principal parts. 
+For any germ of a function cP E (!)a the value of the function, cp(a) E C, is 
+well-defined, i.e., is independent of the choice of representative. 
+6.6. Lemma. Suppose ff' is a sheaf of abelian groups on the topological space 
+X and U c X is an open subset. Then an element f E ff'( U) is zero precisely if 
+all germs Px(f) E ffx, x E U, vanish. 
+This follows directly from Sheaf Axiom (I). 
+6.7. The Topological Space Associated to a Presheaf. Suppose X is a topolo-
+gical space and ff' is a presheaf on X. Let 
+1ff'1 := U ff'x 
+xeX 
+be the disjoint union of all the stalks. Denote by 
+p: Iffl--X 
+the mapping which assigns to each element cp E ff' x the point x. Now intro-
+duce a topology on I ff' I as follows: For any open subset U c X and an 
+element f E ff'( U), let 
+[U,j]:= {Px(f): x E U} c I ff' I· 

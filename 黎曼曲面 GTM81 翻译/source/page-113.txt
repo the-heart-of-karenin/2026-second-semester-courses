@@ -1,0 +1,36 @@
+104 
+2 Compact Riemann Surfaces 
+12.3. (a) Let X be a compact Riemann surface. Prove that the map 
+Hl(X, Z) -> Hl(X, C), 
+induced by the inclusion Z c C, is injective. 
+(b) Let X be a compact Riemann surface. Show that Hl(X, .I) is a finitely 
+generated free .I-module. 
+[Hint: Show first, as in Ex. 12.2.c), that Hl(X, Z) is finitely generated and then 
+use 12.3.a) to prove that Hl(X, .I) is free.] 
+§13. Dolbeault's Lemma 
+In this section we solve the inhomogeneous Cauchy-Riemann differential 
+equation (oj/a?) = g, where g is a given differentiable function on the disk X. 
+This is then used to show that the cohomology group Hl(X, (9) vanishes. 
+13.1. Lemma. Suppose g E S(C) has compact support. Then there exists a 
+Junction J E S(C) such that 
+oj 
+o'Z = g. 
+PROOF. Define the function J: C --> IC by 
+J(O:=~ II g(z) dz/\d'Z. 
+2m 
+z - C 
+c 
+Since the integrand has a singularity when z = C, one has to show that the 
+integral exists and depends differentiably on C. The simplest way to do this is 
+to change variables by translation and then introduce polar coordinates r, e, 
+namely let 
+z = C + reiO• 
+With regard to the integration C is a constant and one has 
+dz /\ d'Z = - 2i dx /\ dy = - 2ir dr /\ de. 
+Thus 
+Since g has compact support, one has only to' integrate over a rectangle 
+o ~ r ~ R, 0 ~ e ~ 2n, provided R is chosen sufficiently large. One may 
+differentiate under the integral sign, i.e., J E S(IC) and 
+:f (C) = - ~ If og(C ~ re
+iO
+) e- iO dr de. 

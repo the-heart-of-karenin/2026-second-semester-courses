@@ -1,0 +1,41 @@
+28 
+I Covering Spaces 
+As a special case suppose X is a simply connected domain in I[: * and 
+j: X -+ 1[:* is the canonical injection, i.e., j(Z) = z. Then every lifting ofj with 
+respect to exp is nothing more than a branch of the function log on X. 
+Analogously one can construct various roots of a nowhere vanishing holo-
+morphic function f: X -+ C * on any simply connected Riemann surface X. 
+To do this one uses the covering in Example (4.12.b). 
+4.19. Theorem. Suppose X is a manifold, Y is a Hausdorffspace and p: Y -+ X 
+is a local homeomorphism with the curve lifting property. Then p is a covering 
+map. 
+PROOF. Suppose Xo E X is an arbitrary point and Yj,j E J, are the preimages 
+of Xo with respect to p. Take U to be an open neighborhood of Xo which is 
+homeomorphic to a ball and let f: U -+ X be the canonical injection. From 
+the remark in Theorem (4.17) it follows that for every j E J there is a lifting 
+k U -+ Y off such that J:.(xo) = Yj. Let Vi '=.~(U). Now one can easily 
+convince oneself that 
+je.l 
+that the Vi are pairwise disjoint open sets and that every mapping p I Vi -+ U 
+is a homeomorphism. 
+0 
+4.20. Proper Mappings. Recall that a locally compact topological space is a 
+Hausdorff space such that every point has a compact neighborhood. A 
+continuous mappingf: X -+ Y between two locally compact spaces is called 
+proper if the preimage of every compact set is compact. For example this is 
+always so if X is compact. A proper mapping is closed, i.e., the image of 
+every closed set is closed. This follows from the fact that in a locally compact 
+space a subset is closed precisely if its intersection with every compact set is 
+compact. 
+4.21. Lemma. Suppose X and Yare locally compact spaces and p: Y -+ X is a 
+proper, discrete map. Then the following hold: 
+(a) For every point x E X the set p-l(X) is finite. 
+(b) If x E X and V is a neighborhood of p - 1 (x), then there exists a neigh-
+borhood U of x with p-l(U) c V. 
+PROOF 
+(a) This follows from the fact that p-l(X) is a compact discrete subset of 
+Y. 
+(b) We may assume that V is open and thus Y\ V is closed. Then 
+p( Y\ V) =, A is also closed and x ¢ A. Thus U ,= X\A is an open neighbor-
+hood of x such that p-l(U) c V. 
+0 

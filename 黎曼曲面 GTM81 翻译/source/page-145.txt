@@ -1,0 +1,43 @@
+136 
+2 Compact Riemann Surfaces 
+is a Mittag-Leffler distribution with Res(wl]) = 1. One has 61] E Zl(U, (l:D)' 
+Let 
+~ = [61]] E Hl(X, 
+(liD) 
+be the cohomology class of 61]. 
+Since 
+w~ = W' [61]] = [6(wl])], it follows from Theorem (17.3) that 
+(w, 0 = Res(w~) = Res([6(wl])]) = Res(wl]) = 1. 
+0 
+17.7. Suppose D, D' E Div(X) are two divisors on the compact Riemann 
+surface X with D' :s:; D. Then by (16.8) the inclusion 0 -> (l:D' -> (!)D induces an 
+epimorphism 
+Hl(X, ("v')-> Hl(X, (lD)-->O. 
+This then induces a monomorphism of the duals 
+0--> Hl(X, C"D)* ~ 
+Hl(X, (10)*' 
+One can easily check that the diagram 
+0-> Hl(X, ("0)* ~ 
+Hl(X, (lD')* 
+1", 
+1", 
+0--> HO(X, ~L 0) ----t HO(X, ~L D') 
+commutes, where the vertical arrows are the maps defined in (17.5). 
+Lemma. Vsing the same notation as above suppose A E HI{X, (lD)* and 
+(j) E HO(X, Q-D') satisfy 
+ig,(I,) = ID'(W), 
+Then (j) is also contained in HO(X, Q-D) and A = ID{W), 
+PROOF. Suppose, to the contrary, that W is not an element of HO(X, Q- D)' 
+Then there is a point a E X such that orda(W) < D(a). Let (V 0, z) be a 
+coordinate neighborhood of a with z(a) = O. On Vo one may write W as 
+w = f dz, where f E ./I({( V 0)' We may suppose Vo is sufficiently small so that 
+(i) DI Vo\{a} =0, 
+D'IVo\{a}=O. 
+(ii) fhas no zeros or poles in Vo\{aJ. 
+Set VI = X\{a} and U = (Vo, UI)' Let I] = (fo, fd E CO(U, ,/tI), where 
+fo = (zft I andt~ = O. Because orda(w) < D(a), one even has I] E CO(U, (l)D)' 
+Thus 
+61] E Zl(U, (I;) = Zl(U, (liO) = Zl(U, (liD')' 
+Denote the cohomology class of 61] in Hl(X, (Iv') by ~' and in HI(X, (I: D) by 
+~. Note that ~ = O. By assumption 
+(w, c;') = ig,().)(~') = Jc(C;) = O. 

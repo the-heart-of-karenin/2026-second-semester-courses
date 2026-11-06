@@ -1,0 +1,42 @@
+12 Cohomology Groups 
+99 
+12.4. Lemma. The mapping 
+t~: Hl(U, ff) -+ HI('!J, ff) 
+is injecti ve. 
+PROOF. Suppose (hj) E ZI(U, ff) is a cocycle whose image in ZI('!J, ff) 
+splits. One has to show that (hj) itself splits. 
+Now suppose Irk, rl = gk - gl on Ytc n V;, where gk E ff(Vk). Then on 
+Vi n Vk n V; one has 
+gk - gl = .irk, rl = .irk, i + h. tl = h, rl - h, rk' 
+and thus J:, rk + gk =.h. rl + gl . Applying sheaf axiom II (see Definition (6.3)) 
+to the family of open sets (Vi n Vk)k E K, one obtains hi E ff( V;) such that 
+hi = J;, rk + gk 
+on Vi n Ytc. 
+With the elements hi found in this way, on Vi n Vj n Vk one has 
+hj = h. rk + irk. j = h, rk + gk - fj. rk -
+gk = hi - hj . 
+Since k is arbitrary, it follows from sheaf axiom I that this equation is valid 
+over Vi n V j, i.e., the cocycle (hj) splits with respect to the covering U. 
+o 
+12.5. The definition of Hl(X, 31'). If one has three open coverings such that 
+!ill < '!J < U, then 
+'ll 
+U 
+u 
+tw 0 t'8 = tw . 
+Thus one can define the following equivalence relation '" on the disjoint 
+union of the Hl(U, 31'), where U runs through all open coverings of X. Two 
+cohomology classes ~ E HI(U, 31') and 1'/ E Hl(U', 31') are defined to be 
+equivalent, denoted ~ ~ 1'/, if there exists an open covering '!J with '!J < U 
+and '!J < U' such that tg(~) = tg'(1'/). The set of equivalence classes is the 
+so-called inductive limit of the cohomology groups Hl(U, 31') and is called 
+the 1 st cohomology group of X with coefficients in the sheaf 'je. In symbols 
+Hl(X, 31') = li~ HI(U, 31') = (y HI(U, 31')) / - . 
+Addition in HI(X, 31') is defined by means of representatives as follows. 
+Suppose the elements x, y E Hl(X, ,~) are represented by ~ E Hl(U, 31') 
+resp. 1'/ E Hl(U', 3f'). Let '!J be a common refinement of U and U'. Then 
+x + Y E HI(X, 3f') is defined to be the equivalence class of t~(~) + 
+tg'(1'/) E HI('!J, 3f'). One can easily check that this definition is independent 
+of the various choices made and makes HI(X, 3f') into an abelian group. If 
+3f' is a sheaf of vector spaces, then in a natural way HI(U, 3f') and HI(X, ,'F) 
+are also vector spaces. 

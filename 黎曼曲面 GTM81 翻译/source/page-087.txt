@@ -1,0 +1,34 @@
+78 
+1 Covering Spaces 
+Then J;, co is a differential form with Supp(J;, co) (£: Uk and 
+Define 
+Here the right-hand side is defined by (a). Again it is straightforward to 
+check that the definition is independent of the choice of charts and functions 
+k 
+10.19. Later on we want to use a special case of Stokes' Theorem in the 
+plane. Suppose U c C is open and A c U is a compact subset with smooth 
+boundary oA. Then for every differential form co E 6"(1)(U) 
+rr dco = r co. 
+"'.4' 
+·rA 
+Here the boundary is oriented so that the outward pointing normal of A and 
+the tangent vector to oA in this order determine a positively oriented basis of 
+the plane. 
+We will need the theorem only in the case that A is a disk or an annulus 
+A = {z E C: c ~ Izi ~ R}, 
+O<c<R. 
+In the second case, oA consists of the positively oriented circle I z I = Rand 
+the negatively oriented circle I z I = c. Then Stokes' Theorem for 
+co = f dx + g dy says 
+We would now like to prove this fotmula directly by introducing polar 
+coordinates z = rei6, i.e., 
+x = r cos e, 
+y = r sin e. 
+First we look at the case co = g dy. Thus dco = (og/ox) dx 1\ dy. Noting that 
+o 
+0 
+sin e 0 
+-
+= cos e-
+ox 
+or - - -r-oe' 

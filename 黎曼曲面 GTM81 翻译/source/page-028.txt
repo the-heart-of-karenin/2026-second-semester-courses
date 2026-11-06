@@ -1,0 +1,36 @@
+3 Homotopy of Curves. The Fundamental Group 
+19 
+Then the curves u and v are called free homotopic as closed curves, if there 
+exists a continuous mapping A: [ x [ --+ X with the following properties: 
+(i) A(t, 0) = u(t) 
+(ii) A(t, 1) = v(t) 
+(iii) A(O, s) = A(I, s) 
+for every t E [, 
+for every tEl, 
+for every s E I. 
+Remark. If one sets us(t):= A(t, s), then each Us is a closed curve in X and 
+Uo = u, U 1 = v. The family of curves us, ° ::; s ::; 1, gives a deformation of the 
+curve u into the curve v. Let w(t):= A (0, t), 0::; t s 1. Then w is a curve 
+which joins a:= u(O) = u(l) to b:= v(O) = v(I). Note that for each s the point 
+w(s) is the initial and end point of the curve Us' It is easy to see (cf. Fig. 4) 
+that u is homotopic, while keeping the initial and end point a fixed, to the 
+curve w . v . w - . 
+Figure 4 
+3.14. Theorem. A pathwise connected topological space X is simply connected 
+if and only if any two closed curves in X are free homotopic as closed curves. 
+The proof is simple and is left to the reader. 
+3.15. Functorial Behavior. Suppose f: X --+ Y is a continuous mapping be-
+tween the topological spaces X and Y. If u: I --+ X is a curve in X, then 
+f 0 u: I --+ Y is a curve in Y. If u, u': I --+ X are homotopic, thenf a u,f 0 u' are 
+also homotopic. Hence f induces a mapping 
+f",: 1tl(X, a) --+ 1tl(Y,j{a)) 
+of the fundamental groups. This mapping is a group homomorphism, since 
+fa (u . v) = (f au) . (f a v). If g: Y --+ Z is another continuous mapping, 
+then (g 0 f)", = g", a f", . 
+EXERCISES (§3) 
+3.1. (a) Suppose X is a manifold and U b U 2 c X are two open, connected and 
+simply connected subsets such that VI n V 2 is connected. Show that 
+VI u V 2 is simply connected. 
+(b) Using (a) show that S' for n ~ 2 is simply connected. 
+3.2. Suppose X and Yare arcwise connected topological spaces. Prove 
+ltdX x Y) ~ ltdX) X It\(Y). 

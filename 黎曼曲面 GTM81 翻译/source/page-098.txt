@@ -1,0 +1,39 @@
+11 Linear Differential Equations 
+89 
+PROOF. Suppose .p E GL(n, 0(.\")) is a fundamental system of solutions of 
+w' = Aw and 
+(T.p = .pT, where T E GL(n, C). 
+By (11.10) one can find .po = exp(B log) E GL(n, 0(.\")) such that 
+(T.po = .po T. 
+Then for 'I' := .p.po lone has (T\f = '1'. 
+o 
+11.12. By Theorem (11.11) any fundamental system of solutions of a differen-
+tial equation w' = Aw on the punctured disk X = {O < 1 Z 1 < R} may be 
+represented as the product of a very special kind of multi-valued function 
+.po = exp(B log) and a single-valued (matrix-valued) function '1'. Now this 
+function 'I' can be expanded in a Laurent series on X. The origin is called a 
+regular singular point or a singularity of Fuchsian type of the differential 
+equation w' = Aw if \f has at most a pole at the origin, i.e., if only finitely 
+many terms with negative exponent occur in the Laurent series. 
+11.13. Theorem. Let X:={ZEC: 0< Izi <R}. If the matrix AE 
+M(n x n, 0(X)) has at most a pole of first order at the origin, then the origin 
+is a regular singular point of the differential equation w' = Aw. 
+PROOF. The proof requires two lemmas. 
+(1) Suppose K;?: a is a constant and F: ]0, r 0] -> IRt is a continuously 
+d(fferentiable positive-valued function, whose derivative satisfies the inequality 
+1F'(r)1 ::;; ~F(r) for every r E ]0, ro]. 
+r 
+Then 
+F(r)::;; F(ro)(~) -K for every r E ]0, ro]. 
+Proof of (1). From the assumption one gets 
+!!.-Iog F(r) = F'(r) > _ K. 
+dr 
+F(r) -
+r 
+By integrating over the interval [r, ro], one obtains 
+F(ro) 
+ro 
+log --;?: - K log -. 
+F(r) 
+r 
+Thus 

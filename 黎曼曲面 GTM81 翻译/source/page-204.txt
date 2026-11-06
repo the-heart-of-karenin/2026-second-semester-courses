@@ -1,0 +1,38 @@
+24 Weyl's Lemma 
+195 
+PROOF. Suppose e > 0 is arbitrary. For z E Ul<l the function (r--+ p,(( - z) has 
+compact support in U. Hence 
+h(z) ,= 1([p,(( - z)] 
+is defined. By (24.5) the function zr--+ h(z) belongs to 6'( Ulr.)). Obviously it is 
+enough to prove that for every functionf E .0J(C) with Supp(.f) c 
+Ule) one 
+has 
+T[f] = JJ h(z)J(z) dx dy. 
+U(,) 
+The function sm, J has compact support in U and by (24.6) one has 
+T[smJ] = 1( l [f p,(( - z)J(z) dx dy j 
+= JJ h(z)J(z) dx dy. 
+U(E) 
+(1) 
+(2) 
+By (13.3) there exists a function I/J E 6'(lC) with tlI/J = f The function I/J is 
+harmonic on V ,= qSupp(f). Thus by (24.8.b) 
+I/J = sm,I/J 
+on Vl<l. 
+Hence <p ,= I/J - sm, I/J has compact support in U and by (24.8.a) satisfies 
+tl<p = tl(I/J - sm,I/J) = tlI/J - sm, tlI/J =f- sm,f 
+Since tl T = 0, one has T[ tlq>] = O. Thus 
+T[f] = T[ sm, J + tl<p] = T[ sm, f]' 
+Combining this with (2) then yields (1). 
+o 
+24.10. Corollary. Suppose T is a distribution on the open set U c C with 
+(aTjaz) = O. Then T is a holomorphic Junction on U. 
+PROOF. Since (aTjaz) = 0, 
+tlT = 4~(~ T) = O. 
+az az 
+Thus T E 0"(U) by (24.9). Because (aT/ai) = 0, Tis holomorphic. 
+0 
+Remark. The proof given here for Weyl's Lemma in the plane carries over 
+almost word for word for harmonic functions on [R1". But Weyl's Lemma is 
+only a special case of a general regularity theorem for elliptic differential 
+operators on differentiable manifolds, cf. [35], [43]. 

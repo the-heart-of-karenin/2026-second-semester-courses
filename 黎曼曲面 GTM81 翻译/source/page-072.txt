@@ -1,0 +1,38 @@
+9 Differential Forms 
+63 
+where the functions.f, g, cp, !/J: U -> C are not necessarily continuous in 
+general. 
+9.S. Definition. Suppose Y is an open subset of a Riemann surface X. A 
+I-form OJ on Y is called differentiable (resp. holomorphic) if, with respect to 
+every chart (U, z), OJ may be written 
+OJ =fdz + 9 dz on Un Y, 
+wheref, 9 E aO(U n Y), 
+resp. 
+w =fdz on Uri Y, 
+wherefE 0(U n Y). 
+Notation. For any open subset U of a Riemann surface X we will denote 
+by ao(l)(U) the vector space of differentiable I-forms on U, by ,.g1, O(U) (resp. 
+gO, l(U)) the subspace of g(1)(U) of differential forms of type (1,0) (resp. 
+(0,1)) and by n(U) the vector space of hoI om orphic 1-forms. Together with 
+the natural restriction mappings 6,(1), 1,"1, 0, gO. 1 and n are sheaves of vector 
+spaces over X. 
+9.9. The Residue. Suppose Y is an open subset of a Riemann surface, a E Y 
+and w is a holomorphic I-form on y\{a}. Let (U, z) be a coordinate neigh-
+borhood of a such that U c Y and z(a) = O. Then on U\{a} one may write 
+OJ =fdz, wherefE (i";(U\{a}). Let 
+rz= -
+00 
+be the Laurent series expansion off about a with respect to the coordinate z. 
+If Cn = 0 for every n < 0, then OJ may be holomorphically continued to all of 
+Y. In this case a is called a removable singularity of w. If there exists k < 0 
+such that Ck =1= 0 and Cn = 0 for every n < k, then OJ has a pole of kth order at 
+a. If there are infinitely many n < 0 with Cn =1= 0, then w has an essential 
+singularity at a. 
+The coefficient c 
+1 is called the residue of OJ at a and is denoted by 
+C - 1 = Resa(OJ). 
+The next lemma shows that this definition makes sense. 
+Lemma. The residue is independent of the choice of chart (U, z). 
+PROOF. Suppose V is an open neighborhood of a, 
+Claim (a) If 9 is holomorphic on V\{a}, then the residue of dg at a equals 
+zero and is thus independent of the choice of chart. 

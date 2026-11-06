@@ -1,0 +1,36 @@
+98 
+2 Compact Riemann Surfaces 
+is called the 1 st cohomology group with coefficients in :¥ with respect to the 
+covering U. Its elements are called cohomology classes and two cocycles 
+which belong to the same cohomology class are called cohomologous. Thus 
+two cocycles are cohomologous precisely if their difference is a coboundary. 
+The groups Hl(U, '?J') depend on the covering U. In order to have coho-
+mology groups which depend only on X and :¥, one has to use finer and 
+finer coverings and then take a limit. We shall now make this idea precise. 
+An open covering 'iJ = (~)kE K is called finer than the covering 
+U = (VJi E I, denoted \D < U, if every l'~ is contained in at least one Vi' Thus 
+there is a mapping r: K -> I such that 
+v;. C U,k 
+for every k E K. 
+By means of the mapping r we can define a mapping 
+t~: Zl(U, .?") -> Zl(\D, :¥) 
+in the following way. For Chj) E Zl(U, :¥) let t~((;;J) = (gkl) where 
+gkl := hk. "I ~ n v-; 
+for every k, I E K. 
+This mapping takes coboundaries into coboundaries and thus induces a 
+homomorphism of the cohomology groups Hl(U, :¥) -> Hl(\D, :¥), which 
+we also denote by t~. 
+12.3. Lemma. The mapping 
+t~: Hl(U, 9') -> Hl(\D, :¥) 
+is independent of the choice of the refining mapping r: K -> I. 
+PROOF. Suppose i: K -> I is another mapping such that ~ c U lk for every 
+k E K. Suppose (k) E Zl(U, .?") and let 
+We have to show that the cocycles (gkl) and (ilk!) are cohomologous. Since 
+~ c U,k n U1b one can define 
+On Vk n v-; one has 
+gkl -
+fAI = hk. d - flk. 1I 
+= ik,,, + /',. lk - hi. lk - frk. 1I 
+= /'k. lk - hi. 1I = hk - hi' 
+Thus the cocycle (gkl) - (iJkl) is a coboundary. 
+o 

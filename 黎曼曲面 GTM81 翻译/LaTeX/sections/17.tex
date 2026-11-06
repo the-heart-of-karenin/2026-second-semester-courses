@@ -1,0 +1,169 @@
+\section{Serre对偶定理}
+\sourcepage{132}
+Serre对偶定理用微分形式解释$H^1(X,\OO_D)$：其维数等于作为除子$D$的倍数的线性无关亚纯1形式的最大数目。由此得到Riemann--Hurwitz公式，可从叶数与分歧阶数计算覆盖曲面的亏格；还得到$\deg D>2g-2$时$H^1(X,\OO_D)=0$的消灭定理。我们将用它证明紧黎曼曲面到射影空间的嵌入定理。
+\entry{17.1}{线性泛函$\operatorname{Res}:H^1(X,\Omega)\to\C$}
+设$X$紧。由(15.14)，$H^1(X,\Omega)\cong\mathcal E^{(2)}(X)/d\mathcal E^{1,0}(X)$。若$\tau$代表$\xi$，定义$\operatorname{Res}(\xi):=(2\pi i)^{-1}\iint_X\tau$。由(10.20)，与代表元选择无关。
+\sourcepage{133}
+\entry{17.2}{微分形式的Mittag--Leffler分布}
+对开覆盖$\mathfrak U=(U_i)$，若$\mu=(\omega_i)\in C^0(\mathfrak U,\MM^{(1)})$满足$\omega_j-\omega_i$在交集上全纯，即$\delta\mu\in Z^1(\mathfrak U,\Omega)$，则称$\mu$为\textbf{Mittag--Leffler分布}。其上同调类记$[\delta\mu]$。对$a\in U_i$定义$\operatorname{Res}_a\mu:=\operatorname{Res}_a\omega_i$；因差全纯，与$i$无关。$X$紧时只有有限多个非零留数，故可定义$\operatorname{Res}\mu:=\sum_a\operatorname{Res}_a\mu$。
+\entry{17.3}{定理}
+$\operatorname{Res}\mu=\operatorname{Res}([\delta\mu])$。
+\begin{proof}
+由$H^1(X,\mathcal E^{1,0})=0$，取$\sigma_i\in\mathcal E^{1,0}(U_i)$使$\omega_j-\omega_i=\sigma_j-\sigma_i$。则$d\sigma_i$拼成整体2形式$\tau$，代表$[\delta\mu]$，故其留数泛函值为$(2\pi i)^{-1}\iint_X\tau$。
+
+设$a_1,\ldots,a_n$为分布的全部极点，$X':=X\setminus\{a_k\}$。各$\sigma_i-\omega_i$拼成$\sigma\in\mathcal E^{1,0}(X')$，且$d\sigma=\tau$。对每个$a_k$选$i(k)$及两两不交坐标邻域$V_k\subset U_{i(k)}$，坐标$z_k(a_k)=0$，像为圆盘。
+\sourcepage{134}
+选截断函数$f_k$支集于$V_k$，在$a_k$附近恒为1。令$g:=1-\sum_kf_k$。把$g\sigma$在$a_k$处延为零，则为整体可微1形式，故其外微分积分为零。$d(f_k\sigma)$也可光滑延拓，因为在$a_k$附近等于$d\sigma_{i(k)}$。因此
+\[
+\iint_X\tau=\sum_k\iint_{V_k}d(f_k\sigma)
+=\sum_k\iint_{V_k}d(f_k\sigma_{i(k)}-f_k\omega_{i(k)}).
+\]
+前项由(10.20)积分为零；如(10.21)，后项积分为$-2\pi i\operatorname{Res}_{a_k}\omega_{i(k)}$。合并即得结论。
+\end{proof}
+\entry{17.4}{层$\Omega_D$}
+令$\Omega_D$为作为$-D$的倍数的亚纯1形式层，即局部截面满足$\operatorname{ord}_x\omega\ge-D(x)$；$\Omega_0=\Omega$。取非零亚纯形式$\omega$，例如非常值亚纯函数的微分，令$K=(\omega)$。乘以$\omega$给出同构$\OO_{D+K}\xrightarrow{\sim}\Omega_D$。
+\sourcepage{135}
+\textbf{引理。}存在$k_0\in\Z$使所有除子均满足$\dim H^0(X,\Omega_D)\ge\deg D+k_0$。
+\begin{proof}
+令$k_0:=1-g+\deg K$。由Riemann--Roch，$h^0(\Omega_D)=h^0(\OO_{D+K})=h^1(\OO_{D+K})+1-g+\deg(D+K)\ge\deg D+k_0$。
+\end{proof}
+\entry{17.5}{对偶配对的定义}
+乘法$(\omega,f)\mapsto\omega f$从$\Omega_{-D}\times\OO_D$取值于$\Omega$，诱导$H^0(X,\Omega_{-D})\times H^1(X,\OO_D)\to H^1(X,\Omega)$。复合留数泛函，定义双线性配对$\langle\omega,\xi\rangle:=\operatorname{Res}(\omega\xi)$，以及
+\[
+\iota_D:H^0(X,\Omega_{-D})\longrightarrow H^1(X,\OO_D)^*.
+\]
+Serre对偶定理断言它为同构，以下分两步证明。
+\entry{17.6}{定理}
+$\iota_D$为单射。
+\begin{proof}
+给定非零$\omega$，选$D(a)=0$的点$a$及坐标邻域$(U_0,z)$，使$z(a)=0$、$D|_{U_0}=0$。写$\omega=f\,dz$，缩小使$f$在$U_0\setminus\{a\}$上无零点。令$U_1=X\setminus\{a\}$，$\eta=((zf)^{-1},0)$。则$\omega\eta=(dz/z,0)$为留数1的Mittag--Leffler分布。
+\sourcepage{136}
+有$\delta\eta\in Z^1(\mathfrak U,\OO_D)$，令$\xi=[\delta\eta]$。由(17.3)，$\langle\omega,\xi\rangle=\operatorname{Res}([\delta(\omega\eta)])=1$，故单射。
+\end{proof}
+\entry{17.7}{}
+若$D'\le D$，包含诱导满射$H^1(\OO_{D'})\to H^1(\OO_D)$及其对偶单射$i_{D'}^D:H^1(\OO_D)^*\to H^1(\OO_{D'})^*$。它与$H^0(\Omega_{-D})\subset H^0(\Omega_{-D'})$及$\iota_D,\iota_{D'}$组成交换图。
+
+\textbf{引理。}若$\lambda\in H^1(\OO_D)^*$、$\omega\in H^0(\Omega_{-D'})$满足$i_{D'}^D(\lambda)=\iota_{D'}(\omega)$，则$\omega\in H^0(\Omega_{-D})$且$\lambda=\iota_D(\omega)$。
+\begin{proof}
+反设某$a$处$\operatorname{ord}_a\omega<D(a)$。取$z(a)=0$的坐标邻域$U_0$，使$D,D'$在穿孔邻域上为零，写$\omega=f\,dz$且$f$在那里无零极点。令$U_1=X\setminus\{a\}$、$\eta=((zf)^{-1},0)$。由阶数条件，$\eta\in C^0(\mathfrak U,\OO_D)$，而$\delta\eta\in Z^1(\mathfrak U,\OO)=Z^1(\mathfrak U,\OO_{D'})$。令其在$\OO_{D'}$、$\OO_D$中的类为$\xi',\xi$，则$\xi=0$。故$\langle\omega,\xi'\rangle=i_{D'}^D(\lambda)(\xi')=\lambda(\xi)=0$。
+\sourcepage{137}
+但$\omega\eta=(dz/z,0)$，由(17.3)该配对等于1，矛盾。故$\omega$属于所需空间；再由$i_{D'}^D$单射得$\lambda=\iota_D(\omega)$。
+\end{proof}
+\entry{17.8}{}
+对$\psi\in H^0(X,\OO_B)$，乘法$\OO_{D-B}\xrightarrow\psi\OO_D$诱导对偶映射，仍记为$\psi$，满足$(\psi\lambda)(\xi)=\lambda(\psi\xi)$。它与形式乘法$\omega\mapsto\psi\omega$及$\iota$组成交换图，因为$\langle\psi\omega,\xi\rangle=\langle\omega,\psi\xi\rangle$。
+
+\textbf{引理。}若$\psi\ne0$，则$\psi:H^1(\OO_D)^*\to H^1(\OO_{D-B})^*$为单射。
+\begin{proof}
+令$A:=(\psi)\ge-B$。原乘法分解为$\OO_{D-B}\hookrightarrow\OO_{D+A}\xrightarrow\psi\OO_D$，末箭头为同构。前箭头由(16.8)在$H^1$上满射，故乘法在$H^1$上满射，其对偶单射。
+\end{proof}
+\sourcepage{138}
+\entry{17.9}{Serre对偶定理}
+对紧黎曼曲面上的每个除子$D$，$\iota_D:H^0(X,\Omega_{-D})\to H^1(X,\OO_D)^*$为同构。
+\begin{proof}
+只须证满射。取非零$\lambda$及次数1的点除子$P$，令$D_n:=D-nP$。在$H^1(\OO_{D_n})^*$中，令$A$为所有$\psi\lambda$（$\psi\in H^0(\OO_{nP})$）组成的子空间。由(17.8)，$A\cong H^0(\OO_{nP})$，故$\dim A\ge1-g+n$。由(17.4)、(17.6)，$\dim\operatorname{im}\iota_{D_n}=h^0(\Omega_{-D_n})\ge n+k_0-\deg D$。
+
+当$n>\deg D$，由(16.5)及Riemann--Roch，$\dim H^1(\OO_{D_n})^*=n+g-1-\deg D$。因此$n$充分大时，前两子空间维数之和超过此数，有非零交集。于是存在非零$\psi\in H^0(\OO_{nP})$及$\omega\in H^0(\Omega_{-D_n})$使$\psi\lambda=\iota_{D_n}(\omega)$。
+
+令$A_\psi:=(\psi)$、$D':=D_n-A_\psi\le D$。乘以$1/\psi$并用(17.8)交换性，得到$i_{D'}^D(\lambda)=\iota_{D'}(\omega/\psi)$。由(17.7)，$\omega_0:=\omega/\psi\in H^0(\Omega_{-D})$，且$\lambda=\iota_D(\omega_0)$。
+\end{proof}
+\entry{17.10}{注记}
+常只使用维数相等：$h^1(\OO_D)=h^0(\Omega_{-D})$。特别地$g=h^1(\OO)=h^0(\Omega)$。
+\sourcepage{139}
+因此亏格等于线性无关全纯1形式的最大数目。Riemann--Roch亦可表述为
+\[
+h^0(\OO_{-D})-h^0(\Omega_D)=1-g-\deg D,
+\]
+即$D$的亚纯函数倍数的最大线性无关个数，减去$-D$的亚纯1形式倍数的最大线性无关个数，等于右端。
+\entry{17.11}{定理}
+$\dim H^1(X,\Omega_D)=\dim H^0(X,\OO_{-D})$。
+\begin{proof}
+取非零亚纯形式及其除子$K$。由$\Omega_D\cong\OO_{D+K}$、$\OO_{-D}\cong\Omega_{-D-K}$，应用Serre对偶。
+\end{proof}
+\textbf{推论。}$\dim H^1(X,\Omega)=1$，故非零泛函$\operatorname{Res}:H^1(X,\Omega)\to\C$为同构。
+\entry{17.12}{定理}
+非零亚纯1形式满足$\deg(\omega)=2g-2$。
+\begin{proof}
+令$K=(\omega)$，由Riemann--Roch及$\OO_K\cong\Omega$，$1-g+\deg K=h^0(\Omega)-h^1(\Omega)=g-1$。
+\end{proof}
+\entry{17.13}{推论}
+每个复环面的亏格为1。
+\begin{proof}$dz$在环面上诱导无零点、极点的形式，故$2g-2=0$。\end{proof}
+\entry{17.14}{Riemann--Hurwitz公式}
+设$f:X\to Y$为紧黎曼曲面间的非常值全纯映射。
+\sourcepage{140}
+令$b(f,x):=\nu(f,x)-1$为$x$处\textbf{分歧阶数}；它为零当且仅当该处无分歧。只有有限点非零，故总分歧阶数$b(f):=\sum_xb(f,x)$良定义。
+
+\textbf{定理。}若$f$为$n$叶覆盖，$X,Y$的亏格分别为$g,g'$，总分歧阶数为$b$，则$g=b/2+n(g'-1)+1$。
+\begin{proof}
+取$Y$上非零亚纯1形式$\omega$，其次数为$2g'-2$，而$f^*\omega$次数为$2g-2$。在$x$及$y=f(x)$附近选坐标$z,w$使$w=z^k$，$k=\nu(f,x)$。若$\omega=\psi(w)dw$，则$f^*\omega=kz^{k-1}\psi(z^k)dz$，故
+\[
+\operatorname{ord}_x(f^*\omega)=b(f,x)+\nu(f,x)\operatorname{ord}_y\omega.
+\]
+对每个纤维求和，用$\sum_{x\in f^{-1}(y)}\nu(f,x)=n$，再对$y$求和，得$\deg(f^*\omega)=b+n\deg\omega$，即$2g-2=b+n(2g'-2)$。
+\end{proof}
+\sourcepage{141}
+\entry{17.15}{黎曼球面的覆盖}
+对$n$叶覆盖$\pi:X\to\PP^1$，公式成为$g=b/2-n+1$。2叶情形$b$等于分歧点数，$g=b/2-1$。亏格$>1$且有球面2叶覆盖的紧曲面称为\textbf{超椭圆曲面}。
+
+例如$\sqrt{P(z)}$的黎曼曲面，其中$P(z)=\prod_{j=1}^k(z-a_j)$、根互异。由$b$为偶数，恰在$k$奇时于$\infty$上方分歧，亦如(8.10)已证。亏格$g=\lfloor(k-1)/2\rfloor$，全纯1形式的一组显式基为
+\[
+\omega_j:=\frac{z^{j-1}dz}{\sqrt{P(z)}},\qquad1\le j\le g.
+\]
+此处$z$也表示亚纯函数$\pi$。在临界点处用局部坐标容易验证它们全纯，线性无关显然。
+\entry{17.16}{定理}
+若$\deg D>2g-2$，则$H^1(X,\OO_D)=0$。
+\begin{proof}
+典范除子$K$次数为$2g-2$。由对偶$H^1(\OO_D)^*\cong H^0(\Omega_{-D})\cong H^0(\OO_{K-D})$；后者由负次数及(16.5)为零。
+\end{proof}
+\entry{17.17}{推论}
+紧曲面上的亚纯函数层满足$H^1(X,\MM)=0$。
+\begin{proof}
+任一类由亚纯上闭链表示，必要时加细覆盖，使全部系数总共只有有限多个极点。可选$\deg D>2g-2$使此上闭链属于$Z^1(\mathfrak U,\OO_D)$。由(17.16)，它在$\OO_D$中、从而在$\MM$中可分裂。
+\end{proof}
+\sourcepage{142}
+\textbf{注记。}乘以固定非零亚纯1形式给出$\MM\cong\MM^{(1)}$，故$H^1(X,\MM^{(1)})=0$。因此留数映射也可不用积分定义：每个$\Omega$上闭链都可在$\MM^{(1)}$中分裂为Mittag--Leffler分布$\mu$，由(17.3)，$\operatorname{Res}\xi=\operatorname{Res}\mu$。
+\entry{17.18}{}
+若对每个$x\in X$都存在$f\in H^0(X,\OO_D)$使$\OO_{D,x}=\OO_xf$，则称$\OO_D$\textbf{整体生成}。此条件等价于$\operatorname{ord}_xf=-D(x)$。
+\entry{17.19}{定理}
+若$\deg D\ge2g$，则$\OO_D$整体生成。
+\begin{proof}
+固定$x$，令$D'=D-x$。两者次数均$>2g-2$，故由(17.16)第一上同调为零。Riemann--Roch给$h^0(\OO_D)>h^0(\OO_{D'})$，取差集中的$f$即得所需阶数。
+\end{proof}
+\entry{17.20}{到射影空间的嵌入}
+$N$维射影空间定义为$\PP^N=(\C^{N+1}\setminus\{0\})/\sim$，其中$z\sim z'$当且仅当存在$\lambda\in\C^*$使所有$z_\nu=\lambda z'_\nu$。
+\sourcepage{143}
+等价类记$(z_0:\cdots:z_N)$。商拓扑使它成为紧Hausdorff空间。开集$U_j:=\{z_j\ne0\}$覆盖它，映射
+\[
+\varphi_j:U_j\to\C^N,\quad(z_0:\cdots:z_N)\mapsto(z_0/z_j,\ldots,\widehat{z_j/z_j},\ldots,z_N/z_j)
+\]
+为同胚。设$F:X\to\PP^N$连续，令$W_j:=F^{-1}(U_j)$及$F_j:=\varphi_j\circ F$。若各分量函数$F_{j\nu}$全纯，称$F$全纯；若还对每个$x$至少有一个分量的微分在$x$不为零，称$F$为\textbf{浸入}；单射全纯浸入称为\textbf{嵌入}。
+\entry{17.21}{}
+可用不恒零的亚纯函数$f_0,\ldots,f_N$构造$F=(f_0:\cdots:f_N)$。在$x$的坐标邻域中令$z(x)=0$、$k:=\min_j\operatorname{ord}_xf_j$，写$f_j=z^kg_j$，各$g_j$全纯且至少一项在$x$非零。定义$F(x):=(g_0(x):\cdots:g_N(x))$。
+\sourcepage{144}
+它不依赖坐标。若$g_j(x)\ne0$，局部$F_j=(g_0/g_j,\ldots,\widehat{g_j/g_j},\ldots,g_N/g_j)$，故$F$全纯。
+\entry{17.22}{定理}
+设$\deg D\ge2g+1$，$f_0,\ldots,f_N$为$H^0(X,\OO_D)$的基。则$F=(f_0:\cdots:f_N):X\to\PP^N$为嵌入。
+\begin{proof}
+(a)单射性。取$x_1\ne x_2$，令$D':=D-x_2$。由$\deg D'\ge2g$及(17.19)，存在$f\in H^0(\OO_{D'})$使$\operatorname{ord}_{x_1}f=-D(x_1)$，而$\operatorname{ord}_{x_2}f\ge-D(x_2)+1$。写$f=\sum_j\lambda_jf_j$。在各$x_\mu$附近选坐标$z_\mu$，令$k_\mu:=\min_j\operatorname{ord}_{x_\mu}f_j=-D(x_\mu)$，写$f_j=z_\mu^{k_\mu}g_{\mu j}$、$f=z_\mu^{k_\mu}g_\mu$。则$F(x_\mu)=(g_{\mu0}(x_\mu):\cdots:g_{\mu N}(x_\mu))$，而$\sum_j\lambda_jg_{\mu j}(x_\mu)=g_\mu(x_\mu)$在$\mu=1$时非零，在$\mu=2$时为零，故两像不同。
+
+(b)浸入性。固定$x_0$，令$D':=D-x_0$。
+\sourcepage{145}
+由整体生成，存在$f\in H^0(\OO_{D'})$使$\operatorname{ord}_{x_0}f=-D(x_0)+1$。写$f=\sum_j\lambda_jf_j$，在局部令$k=-D(x_0)$、$g_j:=z^{-k}f_j$、$g:=z^{-k}f$。可假设$g_0(x_0)\ne0$。则$F_0=(g_1/g_0,\ldots,g_N/g_0)$，且$\lambda_0+\sum_{j=1}^N\lambda_jF_{0j}=g/g_0$，所以$\sum_j\lambda_jdF_{0j}=d(g/g_0)$。因$g$有一阶零点而$g_0$非零，右端在$x_0$非零，故至少一个$dF_{0j}(x_0)\ne0$。
+\end{proof}
+\textbf{注记。}还能证明，当$\deg D\ge2g+1$时可选4个截面使$X\to\PP^3$为嵌入。因此每个紧黎曼曲面都可嵌入$\PP^3$。
+\subsection*{习题（第17节）}
+\entry{17.1}{}
+设$X\to\PP^1$为$P(T)=T^n+z^n-1$所定义代数函数$\sqrt[n]{1-z^n}$的黎曼曲面。证明其亏格为$(n-1)(n-2)/2$。
+\entry{17.2}{}
+令$\mathcal A(X)$为紧曲面上各点留数均零的亚纯1形式空间。用习题15.3证明$H^1(X,\C)\cong\mathcal A(X)/d\MM(X)$。
+\sourcepage{146}
+\entry{17.3}{}
+对环面$X=\C/\Gamma$，证明$dz$、$\wp_\Gamma dz$的类构成$\mathcal A(X)/d\MM(X)$的基。
+\entry{17.4}{}
+证明$h^0(\OO_D)$满足：$\deg D\le-1$时为0；$-1\le\deg D\le g-1$时介于0与$1+\deg D$之间；$g-1\le\deg D\le2g-1$时介于$1-g+\deg D$与$g$之间；$\deg D\ge2g-1$时等于$1-g+\deg D$。
+\entry{17.5}{}
+设$g>0$，$K$为典范除子，$D\ge K$且$\deg D=\deg K+1$。证明$\OO_K$整体生成，而$\OO_D$不整体生成。
+\entry{17.6}{}
+把$\wp_\Gamma,\wp'_\Gamma$视为环面上的亚纯函数。证明$(1:\wp_\Gamma:\wp'_\Gamma):\C/\Gamma\to\PP^2$为嵌入。
+\entry{17.7}{}
+设$X$亏格为2，$\omega_1,\omega_2$为全纯1形式空间的一组基，以$\omega_1=f\omega_2$定义$f\in\MM(X)$。证明$f:X\to\PP^1$为2叶分歧覆盖。

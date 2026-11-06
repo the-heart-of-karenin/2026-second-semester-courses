@@ -1,0 +1,39 @@
+44 
+I Covering Spaces 
+EXERCISES (§6) 
+6.1. Suppose X is a Riemann surface. For U c X open, let .~( U) be the vector space 
+of all bounded holomorphic functionsJ: U -> C. For V c U let gat U) -> Jl(V) be 
+the usual restriction map. Show that Jl is a presheaf which satisfies sheaf axiom 
+(I) but not sheaf axiom (II). 
+6.2. Suppose X is a Riemann surface. For U c X open, let 
+Show that .17 with the usual restriction maps is a presheaf which does not satisfy 
+sheaf axiom (I). 
+6.3. Suppose § 
+is a presheaf on the topological space X and p: I § I -> X is the 
+associated covering space. For U c X open, let §-( U) be the space of all sections 
+of p over U, i.e., the space of all continuous maps 
+J: U ---> 1·cJ'" I 
+with p f = idu . Prove the following: 
+(a) .F together with the natural restriction maps is a sheaf, 
+(b) There is a natural isomorphism of the stalks 
+§7. Analytic Continuation 
+Next we consider the construction of Riemann surfaces which arise from the 
+analytic continuation of germs of functions. 
+7.1. Definition. Suppose X is a Riemann surface. u: [0,1] --> X is a curve and 
+a:= u(O), b := u(I). The holomorphic function germ !/J E (l/b is said to result 
+from the analytic continuation along the curve u of the holomorphic function 
+germ <P E (0 ~ if the following holds. There exists a family <P, E (I/'U(I) , t E [0, 1] 
+of function germs with <Po = <P and <Pl = !/J with the property that for every 
+T E [0, 1] there exists a neighborhood T c [0, 1] of T, an open set V c X 
+with u( T) c V and a function J E (':( V) such that 
+PU(t)(f) = <P, 
+for every t E T. 
+Here PU(t)(f) is the germ ofJat the point u(t). Because of the compactness of 
+[0, 1] this condition is equivalent to the following (see Fig. 5). There exist a 
+partition ° 
+= to < t1 < ... < tn - 1 < tn = 1 of the interval [0, 1], domains 
+Vi c X with U([ti- 1o t;]) c Vi and holomorphic functions I; E l'9( V;) for 
+i = 1, ... , n such that: 
+(i) cp is the germ off1 at the point a and !/J is the germ offn at the point b. 
+(ii) 1; I J-i = 1;+ 1 I J-i for i = 1, ... , n - 1, where J-i denotes the connected 
+component of Vi II Ui+ 1 containing the point u(tJ 

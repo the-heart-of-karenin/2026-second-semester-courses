@@ -1,0 +1,37 @@
+1l Linear Differential Equations 
+81 
+PROOF. The differential form w := dflfis holomorphic except at the zeros and 
+poles off If a E X is a zero (resp. pole) of mth order off, then Resa{w) = m 
+(resp. Resa{w) = - m). Hence the result follows from the Residue Theorem. o 
+Remark. We already proved this Corollary in (4.25) using coverings. 
+EXERCISES (§1O) 
+10.1. Let X be a Riemann surface and w be a holomorphic i-form on X. Suppose cp 
+is a primitive of w on a neighborhood of a point a E X and (Y, p, f, b) is a 
+maximal analytic continuation of cpo Prove 
+(a) p: Y ~ X is a covering map 
+(b) Jis a primitive of p*w 
+(c) The covering p: Y ~ X is Galois and Deck(Y/X) is abelian. 
+iO.2. Let X = c/r be a torus. Given any homomorphism 
+a: nl(X)~ C 
+show that there exists a closed I-form WE ,g>(I)(X) whose period homo-
+morphism is equal to a. 
+10.3. Suppose X is a Riemann surface and W E .,/((l)(X) is a meromorphic i-form on 
+X which has residue zero at every pole. Show that there is a covering p: Y ~ X 
+and a meromorphic function F E "/((X) such that dF = p*w. 
+10.4. Let r c C be a lattice. Use the Residue Theorem to show that there is no 
+meromorphic functionJE .,/((C/r) having a single pole of order 1. 
+§11. Linear Differential Equations 
+In this section we consider linear differential equations of the form 
+w' = A{z)w, where A{z) is a given n x n matrix which depends holo-
+morphically on z. A vector-valued function w = w{z) is sought which 
+satisfies the differential equation. Locally, for any given initial condition 
+w(zo) = wo, there always exists a unique holomorphic solution. This solu-
+tion may be continued along every curve in the domain of definition of A. 
+However this continuation is, in general, no longer a single-valued function. 
+It turns out that closer consideration of this multi-valued behavior gives a 
+good insight into the structure of the solutions. 
+11.1. Notation. Denote by M{n x m, iC) the vector space of all n x m 
+matrices with coefficients in IC and by GL(n, IC) the group of all invertible 
+n x n matrices with complex coefficients. If X is a Riemann surface, then a 
+mapping 
+A: X --> M{n x m, IC) 

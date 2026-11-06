@@ -1,0 +1,34 @@
+References 
+245 
+(e) Special Topics 
+50. Ahlfors, L. V.: The complex analytic structure of the space of closed Riemann 
+surfaces, in Analytic Functions. Princeton NJ, University Press, 1960, 45-66. 
+51. Behnke, H., and Stein, K.: Entwicklungen analytischer Funktionen auf 
+Riemannschen Fllichen. Math. Ann. 120 (1948) 430-461. 
+52. Bieberbach, L.: Theorie der gewohnlichen Differentialgleichungen auf funktionen-
+theoretischer Grundlage dargestellt. 2nd Ed. Berlin-Heidelberg-New York: 
+Springer-Verlag, 1965. 
+53. Cartan, H.: Varietes analytiques complexes et cohomologie. Colloque sur les 
+fonctions de plusieurs variables, CBRM: Bruxelles, 1953,41-55. 
+54. Florack, Herta: Reguliire und meromorphe Funktionen auf nicht geschlossenen 
+Riemannschen Fliichen. Schriftenreihe Math. [nst. Univ. Munster, 1 (1948). 
+55. Malgrange, B.: Existence et approximation des solutions des equations aux der-
+ivees partielles a convolution. Annales de rInst. Fourier 6 (1955/56) 271-355. 
+56. Meis, T.: Die minimale Bliitterzahl der Konkretisierungen einer kompakten 
+Riemannschen Fliiche. Schriftenreihe Math. Inst. Univ. Munster 16 (1960). 
+57. Rohrl, H.: Das Riemann-Hilbertsche Problem der Theorie der linearen Differen-
+tialgleichungen. Math. Ann. 133 (1957) 1-25. 
+58. Ross, S. L.: Differential Equations. New York: Blaisdell, 1964. 
+59. Serre, J-P.: Applications de la theorie generale a divers problemes globaux. 
+Seminaire H. Cartan, E.N.S. Paris 1951/52, Expose 20. Reprinted Benjamin, 1967. 
+60. -: Deux theoremes sur les applications completement continues. Seminaire H. 
+Cartan, E.N.S. Paris 1953/54, Expose 16. Reprinted Benjamin, 1967. 
+61. -: Quelques problemes globaux relatifs aux varietes de Stein. Colloque sur les 
+fonctions de plusieurs variables, CBRM: Bruxelles, 1953, 57-68. 
+62. Stein, K.: Analytische Funktionen mehrerer komplexer Veriinderlichen zu vor-
+gegebenen Periodizitiitsmodulin und das zweite Cousinsche Problem. Math. 
+Ann. 123, (1951) 201-222. 
+63. Thimm, W.: Der Weierstrapsche Satz der algebraischen Abhiingigkeit von Abel-
+schen Funktionen und seine Verallgemeinerungen. in Festschrift zur Gedachtnis-
+feier fur Karl Weierstrass 1815-1965 (Hrsg. H. Behnke, K. Kopfermann). Koln 
+and Opladen: Westdeutscher Verlag, 1966. 

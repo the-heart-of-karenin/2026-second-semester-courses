@@ -1,0 +1,47 @@
+12 Cohomology Groups 
+101 
+Here C (resp. Z) denotes the sheaf of locally constant functions with values 
+in the complex numbers (resp. integers), cf. (6.4.e). 
+PROOF 
+(a) Suppose U is an open covering of X and (cij) E Zl(U, C). Since 
+Zl(U, C) C Zl(U, 8) 
+and 
+Hl(U, 8) = 0, 
+there 
+exists 
+a 
+cochain 
+(/;) E CO(U, 6") such that 
+Cij = /; - lj on Vi n V j . 
+But dCij = 0 implies d/; = dlj on Vi n V j, and thus there exists a global 
+differential form OJ E 8(1)(X) such that OJ I Vi = d/;. Since dd/; = 0, it follows 
+that OJ is closed. Because X is simply connected, by (10.7) there exists 
+f E 8(X) such that df = OJ. Set 
+Ci ,= /; - f I Vi' 
+Since dCi = d/; - df = OJ -
+OJ = 0 on Vj, Ci 
+IS locally constant, l.e., 
+(cJ E CO(U, C). On Vi n Vj one has 
+cij = j; - jj = (/; - f) - (lj -f) = Ci -
+cj ' 
+and thus the cocycle (CiJ splits. 
+(b) Suppose (ajk) E Zl(U, Z). By (a) there exists a cochain (cj) E CO(U, C) 
+such that 
+ajk=Cj-Ck onVjnUk· 
+Since exp(2niajk) = 1, one has exp(2nicj) = exp(2nick) on the intersection 
+Vj n Vk' Since X is connected, there exists a constant b E C* such that 
+b = exp(2nicj) for every j E I. 
+Choose C E C such that exp(2nic) = b and let 
+Since exp(2niaJ = exp(2nicJexp( -2nic) = 1, it follows that aj is an integer, 
+i.e., (a j ) E CO(U, Z). Moreover 
+ajk = cj -
+Ck = (Cj - c) - (c k - c) = aj - ab 
+i.e., the cocycle (ajk) lies in Bl(U, Z). 
+o 
+The next theorem shows that in certain cases one can calculate Hl(X, ff) 
+using only a single covering of X. 
+12.8 Theorem (Leray). Suppose ';if is a sheaf of abelian groups on the topologi-
+cal space X and U = (V,)jEl is an open covering of X such that 
+Hl(U j, .~) = o for every i E I. Then 
+Hl(X, .~) ~ Hl(U, ff). 
+Such a U is called a Leray covering (of 1st order) for the sheaf ff. 

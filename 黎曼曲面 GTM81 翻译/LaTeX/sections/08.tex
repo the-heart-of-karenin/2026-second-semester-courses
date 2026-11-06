@@ -1,0 +1,166 @@
+\section{代数函数}
+\sourcepage{48}
+复分析中最早遇到的多值函数例子之一是平方根$w=\sqrt z$。这是代数函数的特例；所谓代数函数，是满足代数方程$w^n+a_1(z)w^{n-1}+\cdots+a_n(z)=0$的函数$w=w(z)$，其中系数$a_\nu$为给定亚纯函数。本节构造代数函数的黎曼曲面。它们是固有覆盖，叶数等于代数方程的次数。
+\entry{8.1}{初等对称函数}
+设$\pi:Y\to X$为$n$叶无分歧全纯覆盖，$f\in\MM(Y)$。每个$x\in X$都有开邻域$U$使$\pi^{-1}(U)$为开集$V_1,\ldots,V_n$的不交并，且$\pi|_{V_\nu}:V_\nu\to U$双全纯。令$\tau_\nu:U\to V_\nu$为逆映射，$f_\nu:=\tau_\nu^*f=f\circ\tau_\nu$。对不定元$T$，写
+\[
+\prod_{\nu=1}^n(T-f_\nu)=T^n+c_1T^{n-1}+\cdots+c_n.
+\]
+则$c_\nu$是$U$上的亚纯函数，且$c_\nu=(-1)^\nu S_\nu(f_1,\ldots,f_n)$，其中$S_\nu$为$n$个变量的第$\nu$个初等对称函数。
+\sourcepage{49}
+在另一点的邻域中作同样构造，所得函数在重叠处相同，因而拼成整体亚纯函数$c_1,\ldots,c_n\in\MM(X)$，称为$f$关于覆盖$Y\to X$的初等对称函数。
+\entry{8.2}{定理}
+设$\pi:Y\to X$为$n$叶分歧全纯覆盖，$A\subset X$为包含$\pi$的所有临界值的闭离散集，$B=\pi^{-1}(A)$。设$f$为$Y\setminus B$上的全纯（亚纯）函数，$c_1,\ldots,c_n\in\OO(X\setminus A)$（相应地属于$\MM(X\setminus A)$）为其初等对称函数。则$f$可全纯（亚纯）延拓到$Y$，当且仅当所有$c_\nu$均可全纯（亚纯）延拓到$X$。
+
+因此，当覆盖有分歧时，$f\in\MM(Y)$的初等对称函数仍可定义。
+\begin{proof}
+设$a\in A$，$b_1,\ldots,b_m$为其原像。取$a$的相对紧坐标邻域$(U,z)$，满足$z(a)=0$、$U\cap A=\{a\}$。则$V:=\pi^{-1}(U)$是各$b_\mu$的相对紧邻域。
+
+1. 先设$f\in\OO(Y\setminus B)$。
+(a) 若$f$可全纯延拓到各$b_\mu$，则它在$V\setminus\{b_1,\ldots,b_m\}$上有界，因而各$c_\nu$在$U\setminus\{a\}$上有界。由可去奇点定理，它们均可全纯延拓到$a$。
+
+(b) 若各$c_\nu$可全纯延拓到$a$，则它们在$U\setminus\{a\}$上有界。这说明$f$在$V\setminus\{b_1,\ldots,b_m\}$上有界，因为若$x=\pi(y)$，则$f(y)^n+c_1(x)f(y)^{n-1}+\cdots+c_n(x)=0$。再次由可去奇点定理，$f$可全纯延拓到各$b_\mu$。
+
+2. 设$f\in\MM(Y\setminus B)$。
+(a) 若$f$可亚纯延拓到各$b_\mu$，令$\phi:=\pi^*z\in\OO(V)$，它在各$b_\mu$处为零。因此$k$足够大时$\phi^kf$可全纯延拓到各$b_\mu$。其初等对称函数为$z^{k\nu}c_\nu$，由第一部分可全纯延拓到$a$，故$c_\nu$可亚纯延拓到$a$。
+
+(b) 反之，若各$c_\nu$可亚纯延拓到$a$，则$k$足够大时所有$z^{k\nu}c_\nu$均可全纯延拓到$a$。由第一部分，$\phi^kf$可全纯延拓到各$b_\mu$，故$f$可亚纯延拓到各$b_\mu$。
+\end{proof}
+\sourcepage{50}
+为后面使用，注意此证明未用$Y$连通；因此$Y$为有限多个黎曼曲面的不交并时结论仍成立。
+
+若$\pi:Y\to X$非常值全纯，则对每个$f\in\MM(X)$，$\pi^*f:=f\circ\pi$是$Y$上的亚纯函数。因此$\pi^*:\MM(X)\to\MM(Y)$为域的单同态。
+\entry{8.3}{定理}
+设$\pi:Y\to X$为$n$叶分歧全纯覆盖，$f\in\MM(Y)$，$c_1,\ldots,c_n$为其初等对称函数。则
+\[
+f^n+(\pi^*c_1)f^{n-1}+\cdots+(\pi^*c_{n-1})f+\pi^*c_n=0.
+\]
+域扩张$\pi^*:\MM(X)\to\MM(Y)$为次数$\le n$的代数扩张。此外，若存在$f\in\MM(Y)$及$x\in X$，其原像$y_1,\ldots,y_n$处的函数值$f(y_\nu)$两两不同，则此扩张次数为$n$。
+
+\textbf{注记。}后面(14.13)、(26.6)将看到，最后一个条件总能满足。
+\begin{proof}
+上述方程直接由初等对称函数的定义得到。令$L:=\MM(Y)$、$K:=\pi^*\MM(X)$。则每个$f\in L$均在$K$上代数，极小多项式次数不超过$n$。选极小多项式次数$n_0$最大的元素$f_0$。断言$L=K(f_0)$。任取$f\in L$，由本原元定理，存在$g\in L$使$K(f_0,f)=K(g)$。由$n_0$的定义，$\dim_KK(g)\le n_0$；另一方面$\dim_KK(f_0,f)\ge\dim_KK(f_0)=n_0$。故$K(f_0)=K(f_0,f)$，$f\in K(f_0)$。
+
+最后，若$f$的极小多项式次数为$m<n$，则$f$在每个$x\in X$上方至多取$m$个不同值，因此若有题述$f,x$，扩张次数必须为$n$。
+\end{proof}
+\sourcepage{51}
+\entry{8.4}{定理}
+设$X$为黎曼曲面，$A\subset X$为闭离散集，$X':=X\setminus A$，$Y'$为另一黎曼曲面，$\pi':Y'\to X'$为固有无分歧全纯覆盖。则它可延拓为$X$的分歧覆盖：存在黎曼曲面$Y$、固有全纯映射$\pi:Y\to X$，以及保纤维双全纯映射$\varphi:Y\setminus\pi^{-1}(A)\to Y'$。
+\begin{proof}
+对各$a\in A$选坐标邻域$(U_a,z_a)$，使$z_a(a)=0$，$z_a(U_a)=D$为单位圆盘，不同$U_a$互不相交。令$U_a^*:=U_a\setminus\{a\}$。由$\pi'$固有，$\pi'^{-1}(U_a^*)$只有有限多个连通分支$V_{a\nu}^*$（$\nu=1,\ldots,n(a)$）。每个$\pi'|_{V_{a\nu}^*}:V_{a\nu}^*\to U_a^*$为无分歧覆盖，设叶数为$k_{a\nu}$。由(5.10)，存在双全纯映射$\zeta_{a\nu}:V_{a\nu}^*\to D^*$，满足$z_a\circ\pi'=\pi_{a\nu}\circ\zeta_{a\nu}$，其中$\pi_{a\nu}(\zeta)=\zeta^{k_{a\nu}}$。
+
+选两两不同且不属于$Y'$的“理想点”$P_{a\nu}$。在$Y:=Y'\cup\{P_{a\nu}:a\in A,\ \nu=1,\ldots,n(a)\}$上恰有一个拓扑满足：若$W_i$为$a$的邻域基，则$\{P_{a\nu}\}\cup(\pi'^{-1}(W_i)\cap V_{a\nu}^*)$为$P_{a\nu}$的邻域基，且在$Y'$上诱导原拓扑。这使$Y$成为Hausdorff空间。定义$\pi|_{Y'}=\pi'$、$\pi(P_{a\nu})=a$，容易验证$\pi$固有。
+
+令$V_{a\nu}:=V_{a\nu}^*\cup\{P_{a\nu}\}$，并定义$\zeta_{a\nu}(P_{a\nu})=0$，把原映射延拓为$\zeta_{a\nu}:V_{a\nu}\to D$。把这些坐标卡加入$Y'$的图册。因原$\zeta_{a\nu}$双全纯，新旧坐标卡全纯相容，于是$Y$成为黎曼曲面，$\pi$全纯。按构造$Y\setminus\pi^{-1}(A)=Y'$，故取$\varphi$为恒等映射即得结论。
+\end{proof}
+\sourcepage{52}
+下面说明此延拓在同构意义下唯一。
+\entry{8.5}{定理}
+设$\pi:Y\to X$、$\tau:Z\to X$为黎曼曲面之间的固有全纯覆盖，$A\subset X$为闭离散集，令$X':=X\setminus A$、$Y':=\pi^{-1}(X')$、$Z':=\tau^{-1}(X')$。则每个保纤维双全纯映射$\sigma':Y'\to Z'$均可延拓为保纤维双全纯映射$\sigma:Y\to Z$。特别地，每个覆盖变换$\sigma'\in\operatorname{Deck}(Y'/X')$均可延拓为$\sigma\in\operatorname{Deck}(Y/X)$。
+\begin{proof}
+取$a\in A$的坐标邻域$(U,z)$，$z(a)=0$、$z(U)=D$。令$U^*:=U\setminus\{a\}$，可缩小$U$使$\pi,\tau$在$U^*$上均无分歧。设$V_1,\ldots,V_n$、$W_1,\ldots,W_m$分别为$\pi^{-1}(U)$、$\tau^{-1}(U)$的连通分支。去掉$a$的原像得到$V_\nu^*,W_\mu^*$，它们是相应穿孔原像的连通分支。
+
+由于$\sigma'$在穿孔原像之间双全纯，$n=m$；重新编号可使$\sigma'(V_\nu^*)=W_\nu^*$。由(5.11)，$V_\nu\cap\pi^{-1}(a)$、$W_\nu\cap\tau^{-1}(a)$各恰有一点$b_\nu,c_\nu$。令$b_\nu\mapsto c_\nu$即可把$\sigma'$延拓为两个完整原像之间的双射。由$\pi|_{V_\nu}$、$\tau|_{W_\nu}$固有，延拓为同胚，再由可去奇点定理为双全纯映射；这里由(5.11)，$V_\nu,W_\nu$均同构于圆盘，所以可用该定理。对每个$a\in A$如此处理，便得所需$\sigma$。
+\end{proof}
+\entry{8.6}{定义}
+设$\pi:Y\to X$为分歧全纯覆盖，$A$为临界值集，$X':=X\setminus A$、$Y':=\pi^{-1}(X')$。若$Y'\to X'$为Galois覆盖，则称$Y\to X$为Galois覆盖。定理(8.5)保证此定义与(5.5)相容。
+\entry{8.7}{引理}
+设$c_1,\ldots,c_n$在$D(R):=\{z:|z|<R\}$（$R>0$）上全纯，$w_0$为多项式$w^n+c_1(0)w^{n-1}+\cdots+c_n(0)$的单零点。
+\sourcepage{53}
+则存在$0<r\le R$及$D(r)$上的全纯函数$\varphi$，使$\varphi(0)=w_0$且$\varphi^n+c_1\varphi^{n-1}+\cdots+c_n=0$。
+\begin{proof}
+令$F(z,w):=w^n+c_1(z)w^{n-1}+\cdots+c_n(z)$。存在$\varepsilon>0$使$F(0,\cdot)$在闭圆盘$|w-w_0|\le\varepsilon$内只有单零点$w_0$。由连续性，存在$0<r\le R$使$F$在$|z|<r$、$|w-w_0|=\varepsilon$上无零点。对固定$z\in D(r)$，
+\[
+n(z):=\frac1{2\pi i}\int_{|w-w_0|=\varepsilon}\frac{F_w(z,w)}{F(z,w)}\,dw
+\]
+给出$F(z,\cdot)$在圆内的零点数。由$n(0)=1$及连续性，所有$z$均有$n(z)=1$。由留数定理，此唯一零点为
+\[
+\varphi(z)=\frac1{2\pi i}\int_{|w-w_0|=\varepsilon}w\frac{F_w(z,w)}{F(z,w)}\,dw.
+\]
+积分全纯依赖$z$，故$\varphi$全纯且$F(z,\varphi(z))=0$。
+\end{proof}
+\entry{8.8}{推论}
+设$\OO_x$为黎曼曲面一点$x$处的全纯函数芽环，$P(T)=T^n+c_1T^{n-1}+\cdots+c_n\in\OO_x[T]$。若$p(T):=T^n+c_1(x)T^{n-1}+\cdots+c_n(x)$有$n$个互异零点$w_1,\ldots,w_n$，则存在$\varphi_\nu\in\OO_x$满足$\varphi_\nu(x)=w_\nu$及$P(T)=\prod_{\nu=1}^n(T-\varphi_\nu)$。
+\entry{8.9}{定理}
+设$X$为黎曼曲面，$P(T)=T^n+c_1T^{n-1}+\cdots+c_n\in\MM(X)[T]$为$n$次不可约多项式。则存在黎曼曲面$Y$、$n$叶分歧全纯覆盖$\pi:Y\to X$及亚纯函数$F\in\MM(Y)$，使$(\pi^*P)(F)=0$。
+\sourcepage{54}
+三元组$(Y,\pi,F)$在如下意义下唯一：若$(Z,\tau,G)$有对应性质，则恰有一个保纤维双全纯映射$\sigma:Z\to Y$使$G=\sigma^*F$。
+
+为简化术语，称$(Y,\pi,F)$为多项式$P(T)$定义的\textbf{代数函数}。
+
+\textbf{注记。}经典情形为$X=\PP^1$。由(2.9)，此时系数$c_\nu$为一变量有理函数。由$\PP^1$紧及$\pi$固有，$Y$也紧。
+\begin{proof}
+令$\Delta\in\MM(X)$为$P$的判别式，即系数的某个多项式。它不恒为零，否则$P$可约。可取闭离散集$A$使在每个$x\in X':=X\setminus A$处，各$c_\nu$全纯且$\Delta(x)\ne0$。故$p_x(T):=T^n+c_1(x)T^{n-1}+\cdots+c_n(x)$有$n$个互异零点。
+
+使用(6.7)的伴随空间$|\OO|\to X$。令$Y'\subset|\OO|$为所有满足$P(\varphi)=0$的芽$\varphi\in\OO_x$（$x\in X'$）之集，$\pi':Y'\to X'$为典范投影。由(8.8)，每个$x$都有开邻域$U\subset X'$及$f_1,\ldots,f_n\in\OO(U)$使$P(T)=\prod_{\nu=1}^n(T-f_\nu)$。于是$\pi'^{-1}(U)=\bigcup_{\nu=1}^n[U,f_\nu]$为不交并，每个$\pi'|_{[U,f_\nu]}$为到$U$的同胚，故$\pi'$为覆盖。$Y'$的连通分支为覆盖$X'$的黎曼曲面。
+
+定义$f:Y'\to\C$，$f(\varphi):=\varphi(\pi'(\varphi))$。则$f$全纯，且对所有$y\in Y'$有$f(y)^n+c_1(\pi'(y))f(y)^{n-1}+\cdots+c_n(\pi'(y))=0$。由(8.4)，覆盖延拓为固有全纯覆盖$\pi:Y\to X$，其中将$Y'$等同于$\pi^{-1}(X')$。由(8.2)，$f$延拓为$F\in\MM(Y)$，且$(\pi^*P)(F)=0$。
+
+须证$Y$连通。否则，它有有限多个连通分支$Y_1,\ldots,Y_k$，每个$\pi|_{Y_i}$为$n_i$叶固有全纯覆盖，$\sum_i n_i=n$。
+\sourcepage{55}
+利用$F|_{Y_i}$的初等对称函数得到$n_i$次多项式$P_i\in\MM(X)[T]$，使$P=P_1\cdots P_k$，与不可约性矛盾。
+
+唯一性：设$(Z,\tau,G)$为另一个由$P$定义的代数函数。令$B\subset Z$为$G$的极点集与$\tau$的分歧点集之并，$A':=\tau(B)$，并令$X'':=X'\setminus A'$、$Y'':=\pi^{-1}(X'')$、$Z'':=\tau^{-1}(X'')$。对$z\in Z''$、$x=\tau(z)$，利用$\tau$局部双全纯把$G$在$z$处的芽送到$\varphi\in\OO_x$。则$P(\varphi)=0$，由$Y'$的构造，$\varphi$为$x$上的唯一相应点。定义$\sigma''(z):=\varphi$。
+
+按定义$\sigma''$连续且保纤维，因而全纯。又由$\pi|_{Y''}$连续及$\tau|_{Z''}$固有，$\sigma''$固有，从而满射。因为$Y''\to X''$与$Z''\to X''$叶数相同，$\sigma''$双全纯，且$G|_{Z''}=(\sigma'')^*(F|_{Y''})$。由(8.5)，它延拓为保纤维双全纯映射$\sigma:Z\to Y$，满足$G=\sigma^*F$。
+
+若这样的$\sigma$不唯一，则存在非恒等覆盖变换$\alpha:Y\to Y$使$\alpha^*F=F$。但$F$在每个$x\in X'$的纤维上取互异值，因此不可能。唯一性得证。
+\end{proof}
+\entry{8.10}{例}
+设$f(z)=(z-a_1)\cdots(z-a_n)$，各$a_j$互异。把$f$看作$\PP^1$上的亚纯函数。多项式$P(T)=T^2-f$在$\MM(\PP^1)$上不可约，定义通常记为$\sqrt{f(z)}$的代数函数。其黎曼曲面$\pi:Y\to\PP^1$可按上述构造描述。令$A:=\{a_1,\ldots,a_n,\infty\}$、$X':=\PP^1\setminus A$、$Y':=\pi^{-1}(X')$，则$Y'\to X'$为无分歧2叶覆盖。因此，任一满足$\varphi^2=f$的芽$\varphi\in\OO_x$（$x\in X'$）均可沿$X'$内每条曲线延拓。再看例外点的邻域。
+
+(a) 对各$j$选$r_j>0$足够小，使圆盘$U_j:=\{z:|z-a_j|<r_j\}$不含$A$的其他点。
+\sourcepage{56}
+函数$g(z)=\prod_{k\ne j}(z-a_k)$在单连通$U_j$中无零点，故存在全纯$h$使$h^2=g$，从而$f(z)=(z-a_j)h(z)^2$。设$0<\rho<r_j$、$\theta\in\R$、$\zeta=a_j+\rho e^{i\theta}$。由(8.7)，存在芽$\varphi_\zeta$使$\varphi_\zeta^2=f$且$\varphi_\zeta(\zeta)=\sqrt\rho e^{i\theta/2}h(\zeta)$。沿闭曲线$\zeta=a_j+\rho e^{i\theta}$、$0\le\theta\le2\pi$延拓，得到原芽的负值。令$U_j^*=U_j\setminus\{a_j\}$、$V_j^*=\pi^{-1}(U_j^*)$。则$V_j^*\to U_j^*$为(5.10.ii)中$k=2$的连通2叶覆盖；否则它分裂为两个单叶覆盖，沿该闭曲线延拓必返回原芽。因此$Y$在$a_j$之上恰有一点。
+
+(b) 取$r>\max_j|a_j|$，令$U^*:=\{z\in\C:|z|>r\}$、$U:=U^*\cup\{\infty\}$。则$U$同构于圆盘，除$\infty$外不含$A$中点。在$U$上可写$f=z^nF$，其中$F$全纯且无零点。
+(i) 若$n$奇，则存在$U$上的亚纯函数$h$使$f(z)=zh(z)^2$；
+(ii) 若$n$偶，则存在亚纯$h$使$f(z)=h(z)^2$。
+令$V^*:=\pi^{-1}(U^*)$。与(a)同样，(i)时$V^*\to U^*$为连通2叶覆盖，故$Y$在$\infty$上恰有一点；(ii)时分裂为两个单叶覆盖，故$Y$在$\infty$上有两点。
+\entry{8.11}{}
+若$\pi:Y\to X$为分歧全纯覆盖，则$\operatorname{Deck}(Y/X)$在域$\MM(Y)$的自同构群中有如下表示：对覆盖变换$\sigma$，定义$\sigma f:=f\circ\sigma^{-1}$。显然$f\mapsto\sigma f$为域自同构，且
+\[
+(\sigma\tau)f=f\circ\tau^{-1}\circ\sigma^{-1}=\sigma(\tau f),
+\]
+故$\operatorname{Deck}(Y/X)\to\operatorname{Aut}(\MM(Y))$为群同态。
+\sourcepage{57}
+每个此类自同构都固定子域$\pi^*\MM(X)$中的函数，因此属于Galois群
+\[\operatorname{Aut}(\MM(Y)/\pi^*\MM(X)).\]
+\entry{8.12}{定理}
+设$K:=\MM(X)$，$P\in K[T]$为$n$次首一不可约多项式，$(Y,\pi,F)$为其定义的代数函数，$L:=\MM(Y)$。借助$\pi^*$把$K$视为$L$的子域，则$L:K$为$n$次扩张，且$L\cong K[T]/(P)$。覆盖变换$\sigma$诱导固定$K$的域自同构$f\mapsto\sigma f=f\circ\sigma^{-1}$，所定义的映射$\operatorname{Deck}(Y/X)\to\operatorname{Aut}(L/K)$为群同构。覆盖为Galois覆盖，当且仅当域扩张$L:K$为Galois扩张。
+\begin{proof}
+扩张次数为$n$由(8.3)末句得到。由$P(F)=0$有同态$K[T]/(P)\to L$，两域在$K$上次数均为$n$，故为同构。
+
+群映射单射，因为非恒等覆盖变换$\sigma$满足$\sigma F\ne F$。为证满射，取$\alpha\in\operatorname{Aut}(L/K)$，则$(Y,\pi,\alpha F)$也为$P$定义的代数函数。由(8.9)唯一性，存在覆盖变换$\tau$使$\alpha F=\tau^*F$。令$\sigma:=\tau^{-1}$，则$\sigma F=F\circ\sigma^{-1}=F\circ\tau=\alpha F$。由于$L=K(F)$，$f\mapsto\sigma f$即为$\alpha$。
+
+最后，$Y/X$为Galois覆盖当且仅当覆盖变换群有$n$个元素；$L/K$为Galois扩张当且仅当自同构群有$n$个元素。因此最后断言成立。
+\end{proof}
+\entry{8.13}{Puiseux展开}
+以$\C\{\{z\}\}$表示在某穿孔圆盘$0<|z|<r$内收敛、主部有限的Laurent级数$\varphi(z)=\sum_{\nu=k}^\infty c_\nu z^\nu$所成的域，$r>0$可随元素而异。它同构于复平面上亚纯函数层在0处的茎$\MM_0$，也是$\C\{z\}$的分式域。
+
+考虑$\C\{\{z\}\}$上的$n$次不可约多项式$F(z,w)=w^n+a_1(z)w^{n-1}+\cdots+a_n(z)$。
+\sourcepage{58}
+对某$r>0$，各$a_\nu$均为$D(r)$上的亚纯函数，故$F\in\MM(D(r))[w]$，且显然在此域上仍不可约。取$r$足够小，使每个$a\in D(r)\setminus\{0\}$处$F(a,w)$均无重根。令$(Y,\pi,f)$为(8.9)意义下$F$定义的代数函数。则$\pi:Y\to D(r)$是仅可能在原点上方分歧的$n$叶固有全纯映射。由(5.11)，存在同构$\alpha:D(\rho)\to Y$，$\rho=\sqrt[n]r$，满足$\pi(\alpha(\zeta))=\zeta^n$。由$F(\pi,f)=0$得$F(\zeta^n,\varphi(\zeta))=0$，其中$\varphi:=f\circ\alpha$。这证明了下一定理。
+\entry{8.14}{定理（Puiseux）}
+设$F(z,w)=w^n+a_1(z)w^{n-1}+\cdots+a_n(z)\in\C\{\{z\}\}[w]$为$n$次不可约多项式。则存在Laurent级数$\varphi(\zeta)=\sum_{\nu=k}^\infty c_\nu\zeta^\nu\in\C\{\{\zeta\}\}$，使$F(\zeta^n,\varphi(\zeta))=0$在$\C\{\{\zeta\}\}$中成立。
+
+\textbf{注记。}
+(1) 若各系数$a_\nu$全纯，即属于$\C\{z\}$，则$\varphi\in\C\{\zeta\}$。因为此时(8.13)的$f$在$Y$上全纯。
+
+(2) 定理也可表述为方程$F(z,w)=0$可由Puiseux级数
+\sourcepage{59}
+\[
+w=\varphi(\sqrt[n]z)=\sum_{\nu=k}^\infty c_\nu z^{\nu/n}
+\]
+求解。
+
+(3) 代数解释如下：通过映射$\C\{\{z\}\}\to\C\{\{\zeta\}\}$、$z\mapsto\zeta^n$，后者成为前者的$n$次扩张，以$1,\zeta,\ldots,\zeta^{n-1}$为基。级数$\varphi(\zeta)$为$F$在此扩张中的一个根。令$\varepsilon$为$n$次本原单位根，例如$e^{2\pi i/n}$。对$k=0,\ldots,n-1$有$(\varepsilon^k\zeta)^n=\zeta^n$，故$F(\zeta^n,\varphi(\varepsilon^k\zeta))=0$。这些级数互异，因而$\C\{\{\zeta\}\}$为$F$的分裂域。
+\subsection*{习题（第8节）}
+\entry{8.1}{}
+设$X,Y$为紧黎曼曲面，且$\MM(X),\MM(Y)$作为$\C$代数同构。证明$X,Y$同构。［提示：把$X,Y$表示为同一个不可约多项式$P\in\MM(\PP^1)[T]$所定义的代数函数的黎曼曲面。还可利用推论(14.13)将证明的事实：紧黎曼曲面上的亚纯函数分离点。］
+\entry{8.2}{}
+设$X,Y$为紧黎曼曲面，$a_1,\ldots,a_n\in X$、$b_1,\ldots,b_m\in Y$，$X':=X\setminus\{a_1,\ldots,a_n\}$、$Y':=Y\setminus\{b_1,\ldots,b_m\}$。证明每个同构$f:X'\to Y'$均可延拓为同构$\widetilde f:X\to Y$。
+\entry{8.3}{}
+令$F(z,w):=w^2-z^3w+z\in\C\{\{z\}\}[w]$。
+(a)证明$F$在$\C\{\{z\}\}$上不可约。
+(b)求由$F(z,w)=0$定义的代数函数的Puiseux展开$w=\sum_{\nu=0}^\infty c_\nu z^{\nu/2}$。

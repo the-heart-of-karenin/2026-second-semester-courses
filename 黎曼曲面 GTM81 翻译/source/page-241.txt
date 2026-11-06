@@ -1,0 +1,43 @@
+232 
+3 Non-compact Riemann Surfaces 
+PROOF 
+(a) There exist an open covering U = (V;); E [ of X and G-charts 
+C{J; = (p, t/;): p-l(V;)--+ V; x G, 
+cf. (28.3). Now define on Yj := p-I(Uj ) functions '1';: Y; -
+GL(n, C) by 
+'I';(y):= T",(yj-l 
+for every y E Y;. 
+Since '1'; is locally constant, in particular it is holomorphic. 
+(b) Suppose y E Y; and a E G. Then 
+a'l';(y) = 'I';(a- 1 y) = 
+T~j("-l y)-l = T~,(y)-l" 
+= T"i(y)- 1 T" = 'I';(y)T". 
+Thus the functions 'IIi exhibit the desired automorphic behavior on Y;. 
+(c) By (b) the products Fij:= 'IIi'll; 1 E GL(n, llJ(Y; II 1))) are invariant 
+under covering transformations. Thus they may be considered as elements 
+FijEGL(n, lD(U;1I Uj)) and so define a cocycle (Fij)EZl(U, GL(n, lD)). 
+Since Hl(X, GL(n, llJ) = 0 by (30.5), this cocycle is a coboundary. Thus 
+there exist elements F; E GL(n, lD(V;) with 
+Fij = F;F; 1 
+on V; n V j . 
+Now consider the Fi as elements of GL(n, llJ(Y;)) which are invariant under 
+covering transformations and set 
+<l>i := F;- I'll; E GL(n, llJ(Yi). 
+Then a<l>; = F;-la'l'i = Fi- I'll; T" = <1>; 7;, for every a E G. On any intersec-
+tion Y; n 1), 
+<I>;l<l>j = Wj-IF;Fj-IWj = W;IF;jWj = W;lWjWj-IWj = 1, 
+i.e., <1>; = <l>j. Thus the <1>; piece together to give a global function 
+<I> E GL(n, lD(Y») with a<l> = <l>Ta for every a E G. 
+D 
+31.3. Corollary. Suppose X is a non-compact Riemann surface and 
+T: 1tl(X)--+GL(n, IC}, 
+a~ Ta , 
+is a group homomorphism. Then there exists a matrix A E M(n x n, Q(X)) and 
+a fundamental system of solutions of the differential equation dw = Aw on the 
+universal covering of X which has the T" as factors of automorphy. 
+PROOF. By (11.6) one only has to apply Theorem (31.2) to the universal 
+covering p: X ...... X of X. 
+D 
+31.4. Suppose X is a non-compact Riemann surface, SeX is a closed 
+discrete subset and X' := X\S. Then, in particular, one can apply Corollary 
+(31.3) to X'. But we would like to sharpen the result of the corollary so that 

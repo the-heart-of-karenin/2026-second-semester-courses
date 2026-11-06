@@ -1,0 +1,41 @@
+9 Differential Forms 
+59 
+can be solved by a Puiseux series 
+'" 
+w = <p(ifz) = L c"z,,/n. 
+,,=k 
+(3) We can interpret the Theorem of Puiseux in the following algebraic 
+way. By means of the map 
+C{{z}} -> C{{m, 
+C{{m becomes an extension field of q{z}} of degree n. A basis of C{{m over 
+C{{z}} is given by 1, (, ... , (n-1. The series <p(n is a root of F in this extension 
+field. Let c be a primitive nth root of unity, e.g. e = e2TCi/n. Then for k = 0, 
+1, ... , n - 1 we have (ekn" = (" and hence 
+F((n, <p(ekO) = 0. 
+Thus <p(ekn E C{{m is also a root of the polynomial F. It is easy to see that 
+the series <p(eko. k = 0, 1, ... , n -
+1, are distinct. Thus qg}} is a splitting 
+field of the polynomial F E C{{z}}[w]. 
+EXERCISES (§8) 
+8.1. Suppose X and Yare compact Riemann surfaces such that J/(X) and A(Y) are 
+isomorphic as C-algebras. Prove that X and Yare isomorphic. 
+[H int: Represent X and Y as the Riemann surfaces of algebraic functions defined 
+by one and the same irreducible polynomial P E A(lP'l )[T]. Also use the fact 
+(proved in Corollary {14.13}} that on a compact Riemann surface the mero-
+morphic functions separate points.] 
+8.2. Let X and Y be compact Riemann surfaces, at. ... , an EX, bt. ... , bm E Yand 
+X' ,=X\{at. ... , an}, 
+Y' ,= Y\{bt. ... , bm}. Show that every isomorphism 
+J: X' -+ Y' extends to an isomorphism]: X -+ Y. 
+8.3. Let F(z, w) '=w 2 -
+Z3 W + z E C{{z}}[w]. 
+(a) Show that F is irreducible over C{{z}}. 
+(b) Determine the Puiseux expansion 
+00 
+w = L c v Z,·/2 
+v-""O 
+of the algebraic function defined by F(z, w} = O. 
+§9. Differential Forms 
+In this section we introduce the notion of differential forms on Riemann 
+surfaces. It is important to consider not only holomorphic and meromorphic 
+forms but also forms which are only differentiable in the real sense. 

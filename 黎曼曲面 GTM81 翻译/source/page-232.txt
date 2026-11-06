@@ -1,0 +1,43 @@
+29 Line and Vector Bundles 
+223 
+29.11. The Line Bundle of a Divisor. Suppose D is a divisor on the Riemann 
+surface X. To D we can associate a holomorphic line bundle En such that the 
+sheaf of holomorphic sections of En is isomorphic to the sheaf (!)D of mero-
+morphic multiples of - D (cf. 16.4). There exists an open covering 
+U = (UJiEI of X and meromorphic functions l/1i E Jt(U;) with (1/1;) = Don 
+Ui' Then 
+1/1. 
+gij:= 1/1~ E (!;*(Ui II UJ, 
+since 1/1 i and 1/1 j have the same zeros and poles on U i II U j' The family 9 ij 
+forms a cocycle (gij)EZ1(U, (1)*). Let En be the holomorphic line bundle 
+corresponding to this cocycle (cf. Theorem (29.7)). 
+Suppose U is open in X andf E (1) D( U), i.e. (f) z - Don U. Then there are 
+holomorphic functionsj; E (!)( Ui II U) such thatf = .[;/1/1 ion Ui II U. Hence 
+on any intersection Ui II Uj II U one has 
+j; 
+jj 
+l/1i = I/1j andthus!;=gijJj. 
+Hence the family (!;) defines a holomorphic section of En over U. Con-
+versely any holomorphic section of En over U is given by a family (i) of 
+holomorphic functions!; E (1)(Ui II U) withj; = gijjj· Then!;Ni =J}Njon 
+Ui II Uj II U. Thus there is a meromorphic function f E Jt(U) with 
+f=!;Ni on Ui II U for every i E I. ThereforefE (1)n(U). 
+We will now prove several facts about cohomology with values in the 
+sheaf of holomorphic sections of vector bundles, which are analogous to 
+what we did in §14 for the sheaf (1). For the sake of variety we will use 
+different methods this time. 
+29.12. Lemma. Suppose X is a Riemann surface, E is a holomorphic vector 
+bundle on X and Y is a relatively compact open subset of X. Then for every 
+open subset Yo c Y the restriction mapping Hl(y, (1)E)---H 1(yo, (1)E) is 
+surjective. 
+PROOF. There are finitely many open sets Ui c X, i = 1, ... , r, which are 
+biholomorphic to open sets in e, with Y = U 1 U ... u U r and for which 
+there exist holomorphic linear charts hi: Eu, --- Ui X en. For every open 
+subset V c Ui one then has 
+cf. Theorem (26.1). Set 
+Hl(V, (OE) ~ Hl(V, 0)n = 0, 
+k 
+Yk := Yo U U U i 
+i= 1 
+Clearly it suffices to show that the mappings 
+Hl(Yk' (1)d --- Hl(Yk_l' (1)E) 

@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-02",
+  "source_pages": 137,
+  "output_pages": 118,
+  "removed_pdf_pages": [
+    119,
+    137
+  ],
+  "retained_pages_text_and_render_match": true,
+  "original_unchanged": true
+}

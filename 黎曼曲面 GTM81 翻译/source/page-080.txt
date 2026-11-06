@@ -1,0 +1,46 @@
+10 The Integration of Differential Forms 
+Since 
+og 
+ox 
+one then has 
+of and dd f(tx, ty) = Of (tx, ty)x + °olf (tx, ty)y, 
+oy 
+1 
+uX 
+Y 
+OF~~ y) = (( t :t f(tx, ty) + f(tx, ty )) dt 
+1 d 
+= f -d (tf(tx, ty)) dt = f(x, y) . 
+• 0 
+t 
+Similarly, (oF/oy) = g. This proves that dF = w. 
+71 
+In the special case that w is holomorphic, the proof of the existence of a 
+primitive on the disk U is much easier. Namely, in this case one has 
+w = f dz withf E @(U). 
+Let 
+00 
+f(z) = ~::Cnzn 
+n=O 
+be the Taylor series expansion off Then defining 
+00 
+c 
+F(z):= L _n_zn+l 
+n=O n + 1 
+gives us a function FE @(U) such that dF = w. 
+Globally a primitive of a closed differential form exists in general only as 
+a multi-valued function. This is made precise in the next theorem. 
+10.5. Theorem. Suppose X is a Riemann surface and w E C(1)(X) is a closed 
+differential form. Then there exist a covering map p: X -+ X with X connected, 
+and a primitive F E C(X) of the differential form p*w. 
+PROOF. Let ff' be the sheaf of primitives of w. This is defined as follows. For 
+an open set U c X let ff'( U) consist of all functions f E C( U) such that 
+df = w on U. The sheaf ff' satisfies the Identity Theorem (cf. Definition 
+(6.9)), since any two elementsflJ2 E ff'(U), where U is a domain in X, differ 
+by a constant. Consider the associated space p: I ff' I -+ X. By Theorem 
+(6.10) the space 1ff'1 is Hausdorff. Now we will show that p: I ff' I -+ X is a 
+covering map. For every point a E X there exist by (10.4) a connected open 
+neighborhood U and a primitivef E ff'(U) of w. Thenf + c, for c E C, are all 
+the primitives of w on U. Hence 
+p-l(U) = U [U,J + c]. 
+C E <C 

@@ -1,0 +1,34 @@
+126 
+2 Compact Riemann Surfaces 
+deRham's Theorem. Let X be a Riemann surface. Then 
+This follows from (15.13) applied to the exact sequence in (15.9.b). 
+Theorem (12.7.a) is a special case of deRham's Theorem. 
+Remark. The theorems of deRham and Dolbeault are proved here only 
+for Riemann surfaces. But they are also valid in a more general form on 
+differentiable (resp. complex) manifolds of arbitrary dimension. More details 
+can be found in any book on several complex variables, e.g., [30], [31], [32], 
+[33], [34], [35]. In §§6, 12 and 15 we have considered only the most basic 
+ideas about sheaves and sheaf cohomology. A systematic introduction can 
+be found in [41]. 
+EXERCISES (§15) 
+15.1. Let X be a Riemann surface and .tt' be the sheaf of harmonic functions on X. 
+Verify that the sequence 
+is exact 
+15.2. Show that on any Riemann surface the sequence 
+o -----> C * -----> (( * ~ 
+n -----> 0 
+is exact, where (d log)f'=j-1 df 
+15.3. On a Riemann surface X let i2 c .It(l) be the sheaf of meromorphic I-forms 
+which have residue 0 at every point. Show that the sequence 
+is exact. 
+15.4. Let X = c/r be a torus. Prove that 
+H1(X, C) ~ Rh1(X) ~ C 2 
+and that the classes of dz and dz form a basis of Rh l(X). 
+[Hint: Let OJ E (,'(l)(X) be a closed I-form. Show that for suitable C10 C2 E C all 
+the periods of OJ -
+C1 dz -
+C2 dz vanish.] 
+§16. The Riemann-Roch Theorem 
+The Riemann-Roch Theorem is central in the theory of compact Riemann 
+surfaces. Roughly speaking it tells us how many linearly independent mero-
+morphic functions there are having certain restrictions on their poles. 

@@ -1,0 +1,28 @@
+2 
+1 Covering Spaces 
+n-dimensional manifold is a Hausdorff topological space X such that every 
+point a E X has an open neighborhood which is homeomorphic to an open 
+subset of IW. 
+1.1. Definition. Let X be a two-dimensional manifold. A complex chart on X 
+is a homeomorphism cP: U -> V of an open subset U c X onto an open 
+subset V c C. Two complex charts CPi: Ui -> V;, i = 1,2 are said to be holo-
+morphically compatible if the map 
+CP2 c CPl 1 : CPI(UI n U2)->CP2(U I n U2 ) 
+is biholomorphic (see Fig. 1). 
+Figure! 
+A complex atlas on X is a system 12( = {CPi: Ui -> V;, i E l} of charts which 
+are holomorphically compatible and which cover X, i.e., UiE/ U i = X. 
+Two complex atlases 121 and 121' on X are called analytically equivalent if 
+every chart of 12( is holomorphically compatible with every chart of 12('. 
+1.2. Remarks 
+(a) If cP: U -> V is a complex chart, U I is open in U and VI := cp( U d, then 
+cP I U I -> VI is a chart which is holomorphically compatible with cP: U -> V. 
+(b) Since the composition of biholomorphic mappings is again biholo-
+morphic, one easily sees that the notion of analytic equivalence of complex 
+atlases is an equivalence relation. 
+1.3. Definition. By a complex structure on a two-dimensional manifold X we 
+mean an equivalence class of analytically equivalent atlases on X. 
+Thus a complex structure on X can be given by the choice of a complex 
+atlas. Every complex structure L on X contains a unique maximal atlas 11(*. 
+If 11( is an arbitrary atlas in L, then I1l* consists of all complex charts on X 
+which are holomorphically compatible with every chart of \H. 

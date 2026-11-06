@@ -1,0 +1,38 @@
+15 The Exact Cohomology Sequence 
+123 
+This mapping takes cocycles to cocycles and coboundaries to co boundaries 
+and thus induces a homomorphism 
+lXu: Hl(U, g;-) ---+ Hl(U, <§). 
+The collection of au, where U runs over all open coverings of X, then induces 
+the homomorphism a 1. 
+15.11. The Connecting Homomorphism. Suppose 
+is an exact sequence of sheaves on the topological space X. A "connecting 
+homomorphism" 
+15*: HO(X, X) ---+ Hl(X, g;-) 
+is defined as follows. Suppose 
+h E HO(X, X) = X(X). 
+Since all the homomorphisms Px: <§x ---+ Xx are surjective, there exists an 
+open covering U = (V;}i EI of X and a cochain (g;) E CO(U, <§) such that 
+P(g;) = h I Vi 
+for every i E I. 
+(1) 
+Hence P(gj - g;} = 0 on Vi n V j. By Lemma (15.8) there exists 
+fij E g;-(Vi n Vj ) such that 
+(2) 
+On Vi n Vj n Vk one has a(fij + Jjk - fit) = 0 and thus by (15.6) 
+fij + Jjk = fit, i.e., 
+(k) E ZI(U, g;-). 
+Now let !5*h E Hl(X, g;-) be the cohomology class represented by (fij). One 
+can easily check that this definition is independent of the various choices 
+made. 
+15.12. Theorem. Suppose X is a topological space and 
+is a short exact sequence of sheaves on X. Then the induced sequence of 
+cohomology groups 
+is exact. 
+o -- HO(X, g;-) ~ 
+HO(X, <§) ~ 
+HO(X, X) ~ 
+~ 
+Hl(X, g;-) ~ 
+Hl(X, <§) ~ 
+Hl(X, X) 

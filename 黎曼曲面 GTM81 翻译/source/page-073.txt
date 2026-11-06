@@ -1,0 +1,54 @@
+64 
+1 Covering Spaces 
+PROOF. Let (U, z) be any coordinate neighborhood of a with z(a) = 0 and 
+suppose 
+L 
+g = I cnzn 
+n:::; -
+00 
+is the Laurent series expansion of g about a. Then 
+and thus the coefficient of Z-1 dz is zero. 
+Claim (b) If ip is a holomorphic function on V which has a zero of first 
+order at a, then Resa( ip - 1 dip) = 1 and is thus independent of the choice of 
+chart. 
+PROOF. Suppose (U, z) is a chart at a with z(a) = o. Then ip = zh, where h is 
+holomorphic at a and does not vanish there. Thus dip = h dz + z dh and 
+dip 
+ip 
+h dz + z dh 
+zh 
+dz 
+dh 
+=- +-h . 
+z 
+Since h(a) =F 0, the differential form h- 1 dh is holomorphic at a and thus has 
+residue zero. This implies 
+(dip) 
+(dZ) 
+Resa .--;;; = Resa z = 1. 
+Now using (a) and (b) one can easily finish the proof. With respect to a 
+chart (U, z) with z(a) = 0 let OJ = f dz, where 
+w 
+f= I cnzn. 
+n= -
+'Xl 
+Let 
+-2 
+C 
+eX) 
+C 
+g:= I 
+_n_zn+l + I 
+_--"_zn+l 
+n~_OC!n+I 
+n=on+I 
+Then OJ = dg + c 
+1 Z - 1 dz. From (a) and (b) one has Resa(OJ) = C _ [, which 
+is independent of the chart. 
+0 
+9.10. Meromorphic Differential Forms. A I-form OJ on an open subset Y of a 
+Riemann surface is said to be a meromorphic differential form on Y if there 
+exists an open subset Y' c Y such that the following hold: 
+(i) OJ is a holomorphic I-form on Y', 
+(ii) Y\ Y' consists of only isolated points, 
+(iii) OJ has a pole at every point a E Y\ Y'. 

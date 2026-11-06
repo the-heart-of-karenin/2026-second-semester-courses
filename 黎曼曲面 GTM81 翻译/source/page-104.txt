@@ -1,0 +1,12 @@
+11 Linear Differential Equations 
+95 
+11.3. Let X = {Z E C: 0 < Izi < R}, p: X --+ X be its universal covering and a be a 
+generator of Deck(X/X). Find a holomorphic map 
+such that 
+11>: X --+ GL(3, C) 
+( 
+i 
+1 
+all> = 11>. 0 
+i 
+o 0 

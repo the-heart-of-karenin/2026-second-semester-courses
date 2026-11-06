@@ -1,0 +1,41 @@
+1 The Definition of Riemann Surfaces 
+5 
+The complex structure on c/r is defined in the following way. Let V c C 
+be an open set such that no two points in V are equivalent under r. Then 
+V ,= n( V) is open and n I V --+ V is a homeomorphism. Its inverse qJ: V -> V 
+is a complex chart on c/r. Let 'll be the set of all charts obtained in this 
+fashion. We have to show that any two charts qJi: Vi --+ V;, i = 1,2, belong-
+ing to '2l are holomorphically compatible. Consider the map 
+1jJ'=qJ2 
+qJll: qJI(V I n V 2 )--+qJ2(V I n V 2 ). 
+For every ZEqJl(V l n V 2 ) one has n(ljJ(z)) = qJl l (z) = n(z) and thus 
+ljJ(z) -
+Z E r. Since r is discrete and IjJ is continuous, this implies that 
+ljJ(z) - z is constant on every connected component of qJI(V 1 n V 2)' Thus IjJ 
+is holomorphic. Similarly IjJ - I is also holomorphic. 
+Now let c/r have the complex structure defined by the complex atlas'll. 
+Remark. Let Sl = {z E C: I z I = 1} be the unit circle. The map which 
+associates to the point of c/r represented by A.WI + flW2, (i., f1 E IR), the 
+point 
+is a homeomorphism of c/r onto the torus Sl x Sl. 
+1.6. Definition. Let X be a Riemann surface and Y c X an open subset. A 
+function f: Y --+ C is called hoLomorphic, if for every chart 1jJ: V --+ V on X the 
+function 
+f 
+IjJ - I: 1jJ( V n Y) --+ C 
+is holomorphic in the usual sense on the open set 1jJ( V n Y) c C. The set of 
+all functions holomorphic on Y will be denoted by (I)(Y). 
+1.7. Remarks 
+(a) The sum and product of holomorphic functions are again holomor-
+phic. Also constant functions are holomorphic. Thus ((i(Y) is a C-algebra. 
+(b) Of course the condition in the definition does not have to be verified 
+for all charts in a maximal atlas on X, just for any family of charts covering 
+Y. Then it is automatically fulfilled for all other charts. 
+(c) Every chart 1jJ: V --+ Von X is, in particular, a complex-valued func-
+tion on V. Trivially it is holomorphic. One also calls IjJ a local coordinate or 
+a uniformizing parameter and (V, 1jJ) a coordinate neighborhood of any point 
+a E V. In this context one generally uses the letter Z instead of 1jJ. 
+1.8. Theorem (Riemann's Removable Singularities Theorem). Let V be an 
+open subset of a Riemann surface and let a E V. Suppose the function 
+f E (I(V\{a}) is bounded in some neighborhood of a. Then f can be extended 
+uniquely to a function J E 0( V). 

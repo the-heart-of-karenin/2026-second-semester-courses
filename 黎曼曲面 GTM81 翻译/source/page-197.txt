@@ -1,0 +1,45 @@
+188 
+3 Non-compact Riemann Surfaces 
+Since Cj is a connected component of X\ Y, this would imply Cj = Lj . Thus 
+Cj would be both open and closed. But this contradicts the fact that X is 
+connected. 
+Claim (b). Only finitely many Cj meet a u. This follows from the fact that 
+au is compact and is covered by the disjoint, open Cj • 
+The assertion (ii) is now easily proved. Let Cj,j E Jo , be the relatively 
+compact connected components of X\ Y and suppose C ii' ... , C jm are those 
+which meet au. Then by (a) all the others are contained in U. Thus 
+It( Y) c U u C. U··· U C. 
+) 1 
+)m 
+is relatively compact and hence by (i) is in fact compact. 
+o 
+23.6. Corollary. Suppose X is a non-compact Riemann surface. Then there is a 
+sequence K j' j EN, of compact subsets of X with the following properties: 
+(i) K j = /i(Kj) for every j, 
+(ii) Kj - 1 C Kj 
+for every j ~ 1, 
+(iii) U.T~o K j = X. 
+PROOF. Since X has a countable topology, there exists a sequence of compact 
+subsets K~ C K'l C 
+K~ C ... of X which cover X. We will construct the 
+sequence K j by induction. Let Ko :=/i(K~). Now suppose Kb ... , Km with 
+properties (i) and (ii) have already been constructed. There exists a compact 
+set M with K~ u Km c M. Set K m+ 1 :=A(M). Then the sequence Kj,j EN 
+satisfies (i), (ii) and (iii). 
+0 
+23.7. Lemma. Suppose KI and K2 are compact subsets ofa Riemann surface 
+X with Kl C](2 and A(K2) = K 2. Then there exists an open subset Y of X 
+which is Runge and satisfies KI eYe K 2 . Moreover one may choose Y so 
+·that its boundary is regular in the sense of solving the Dirichlet Problem. 
+PROOF. Given .x E aK2 there is a coordinate neighborhood U of.x which 
+does not meet K I. In U choose a compact disk D containing x in its interior. 
+Then finitely many such disks, say D1 , ••. , Dk , cover aK 2 . Set 
+Y:= K z \(D 1 U ... U Dk). 
+Then Y is open and Kl eYe K 2 . Let Cj,j E J, be the connected compon-
+ents of X\K 2 . By assumption they are not relatively compact. Every Dj is 
+connected and meets at least one C j. Hence no connected component of 
+X\ Y is relatively compact, i.e., Y = A(Y). Finally, by Theorem (22.18) all the 
+boundary points of Yare regular. 
+0 
+23.8. Theorem. Suppose Y is a Runge open subset of a Riemann surface X. 
+Then every connected component of Y is also Runge. 

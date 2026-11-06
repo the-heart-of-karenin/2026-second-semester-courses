@@ -1,0 +1,45 @@
+76 
+1 Covering Spaces 
+such that F = p*f Then this function is a primitive of w, since p*w = dF = 
+d(p*f) = p*(df) implies w = df 
+0 
+Remark. If all the periods of w vanish, then by Theorem (10.2) one gets a 
+special primitive of w from the integral 
+f(x):= rX w . 
+• Xo 
+Here Xo E X is a fixed arbitrary point and the integral is along any curve 
+from Xo to x (the integral is in this case independent of the choice of curve). 
+10.16. Corollary. Suppose X is a compact Riemann surface and WI' Wz E Q(X) 
+are two holomorphic differential forms which define the same period homo-
+morphism 7r I(X) -+ IC. Then WI = W2. 
+PROOF. The difference W := WI -
+Wz has zero periods and thus has a primi-
+tive f E 0(X). Since X is compact,j is constant and thus w = df = O. 
+0 
+B. Differential 2-Forms 
+10.17. Next we look at integration of differential 2-forms in the complex 
+plane. Suppose U c C is open and w E 6"(2)( U). Then w may be written 
+i 
+w = f dx /\ dy = 2. f dz /\ dz, 
+where f E 6"( U). 
+Assume that f vanishes outside of a compact subset of U. Then define 
+JJ w:= jJf(x, y) dx dy, 
+u 
+u 
+where the right-hand side is the usual double integral. 
+Now suppose V is another open subset of C and cp: V ---> U is a biholo-
+morphic mapping. If cp = u + iv is the splitting of cp into its real and imagin-
+ary parts, then by the Cauchy-Riemann equations the Jacobian determinant 
+of the mapping cp is 
+a(u, u) _ au au 
+au au _ 1 '12 
+----- --- -
+cp 
+a(x, y) 
+axay 
+ayax 
+. 
+Thus the transformation formula for the integral becomes 
+JJfdX dy = JJ (J 0 cp)1 cp' 12 dx dy. 
+u 
+v 

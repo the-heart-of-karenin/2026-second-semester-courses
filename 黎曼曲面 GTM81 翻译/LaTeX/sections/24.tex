@@ -1,0 +1,74 @@
+\section{Weyl引理}
+\sourcepage{190}
+本节引入广义函数——分布。分布总可求导，因而可以考虑分布意义下的微分方程解。Weyl引理断言，Laplace方程的分布解与通常解相同：每个调和分布均为光滑调和函数。
+\entry{24.1}{}
+对开集$X\subset\C$，令$\mathcal D(X):=\{f\in\mathcal E(X):\operatorname{Supp}f\text{在}X\text{中紧}\}$。定义$f_\nu\xrightarrow{\mathcal D}f$，如果(i)所有支集都包含于同一紧集$K\subset X$；(ii)对每个多重指标$\alpha=(\alpha_1,\alpha_2)\in\mathbb N^2$，$D^\alpha f_\nu$在$K$上一致趋于$D^\alpha f$，其中$D^\alpha:=\partial_x^{\alpha_1}\partial_y^{\alpha_2}$。这比逐点或一致收敛都强得多。
+\entry{24.2}{定义}
+\textbf{分布}是连续线性映射$T:\mathcal D(X)\to\C$。连续是指上述收敛蕴含$T[f_\nu]\to T[f]$。所有分布记为$\mathcal D'(X)$。
+\entry{24.3}{例}
+(a)连续函数$h$定义$T_h[f]:=\iint_Xh(z)f(z)dxdy$。
+\sourcepage{191}
+此映射线性连续，且若两连续函数给出相同分布，则两者相同。因此可把连续函数等同于其分布。
+(b)点$a$定义Dirac分布$\delta_a[f]:=f(a)$，它不能由连续函数表示。
+\entry{24.4}{分布的微分}
+对光滑$h$及紧支集$f$，分部积分$|\alpha|=\alpha_1+\alpha_2$次得$\iint hD^\alpha f=(-1)^{|\alpha|}\iint fD^\alpha h$，无边界项。因此$T_{D^\alpha h}[f]=(-1)^{|\alpha|}T_h[D^\alpha f]$。一般定义
+\[
+(D^\alpha T)[f]:=(-1)^{|\alpha|}T[D^\alpha f].
+\]
+由求导保持$\mathcal D$收敛，此式仍定义分布；与通常导数相容。
+\entry{24.5}{引理}
+若$g:X\times I\to\C$光滑，$I\subset\R$开区间，$\operatorname{Supp}g\subset K\times I$且$K\Subset X$紧，则$t\mapsto T_z[g(z,t)]$光滑，且
+\begin{equation}\frac d{dt}T_z[g(z,t)]=T_z[g_t(z,t)].\tag{*}\end{equation}
+下标表示分布作用于$z$，将$t$视为参数。
+\sourcepage{192}
+\begin{proof}
+只须证(*)，再反复应用。差商$f_h(z):=(g(z,t+h)-g(z,t))/h$在$\mathcal D(X)$中趋于$g_t(\cdot,t)$，故由$T$线性连续，差商经$T$作用后趋于右端。
+\end{proof}
+\entry{24.6}{引理}
+若$g:X\times Y\to\C$光滑，支集于$K\times L$，其中$K\Subset X$、$L\Subset Y$紧，则
+\[
+T_z\left[\iint_Yg(z,\zeta)d\xi d\eta\right]=\iint_YT_z[g(z,\zeta)]d\xi d\eta,
+\quad\zeta=\xi+i\eta.
+\]
+\begin{proof}
+右端由(24.5)有定义。取含$L$的轴平行矩形$R$，将函数在外部延零。把两边各等分为$n$份，取子矩形代表点$\zeta_{n\nu}$，令$F$为$R$面积，则Riemann和$G_n(z):=(F/n^2)\sum_{\nu=1}^{n^2}g(z,\zeta_{n\nu})$在$\mathcal D(X)$中趋于左端括号中的积分。
+\sourcepage{193}
+由$T$连续，$T[G_n]$趋于左端，而同一Riemann和也趋于右端，故相等。
+\end{proof}
+\entry{24.7}{函数的光滑化}
+选$\rho\in\mathcal D(\C)$，支集于单位圆盘，旋转不变，且$\iint\rho\,dxdy=1$。令$\rho_\varepsilon(z):=\varepsilon^{-2}\rho(z/\varepsilon)$，则支集于$|z|<\varepsilon$且积分仍为1。对开集$U$，令$U^{(\varepsilon)}:=\{z\in U:\overline{D(z,\varepsilon)}\subset U\}$，仍为开集。对连续$f$定义
+\[
+(\operatorname{sm}_\varepsilon f)(z):=\iint_U\rho_\varepsilon(z-\zeta)f(\zeta)d\xi d\eta.
+\]
+它在$U^{(\varepsilon)}$光滑，因为可积分号下求导，称为$f$的\textbf{光滑化}。定义当然依赖$\rho$的选择。
+\entry{24.8}{引理}
+对$f\in\mathcal E(U)$，(a)$D^\alpha\operatorname{sm}_\varepsilon f=\operatorname{sm}_\varepsilon(D^\alpha f)$；(b)若$f$在$D(z,\varepsilon)$调和，则$(\operatorname{sm}_\varepsilon f)(z)=f(z)$。
+\sourcepage{194}
+\begin{proof}
+(a)平移变量写$\operatorname{sm}_\varepsilon f(z)=\iint_{|\zeta|<\varepsilon}\rho_\varepsilon(\zeta)f(z+\zeta)d\xi d\eta$，求导后再换回变量即得。
+(b)调和函数满足圆周均值性质。由旋转不变性，极坐标积分给
+\[
+\operatorname{sm}_\varepsilon f(z)=\int_0^\varepsilon\rho_\varepsilon(r)r\left(\int_0^{2\pi}f(z+re^{i\theta})d\theta\right)dr
+=2\pi f(z)\int_0^\varepsilon\rho_\varepsilon(r)rdr=f(z).
+\]
+\end{proof}
+\entry{24.9}{定理（Weyl引理）}
+若$T\in\mathcal D'(U)$且$\Delta T=0$，则$T$为光滑调和函数。即存在$h\in\mathcal E(U)$，$\Delta h=0$，使$T[f]=\iint_Uh f\,dxdy$对所有测试函数成立。
+\sourcepage{195}
+\begin{proof}
+固定$\varepsilon>0$，对$z\in U^{(\varepsilon)}$令$h(z):=T_\zeta[\rho_\varepsilon(\zeta-z)]$。由(24.5)光滑，只须证明对支集于$U^{(\varepsilon)}$的$f$有$T[f]=\iint h f$。由(24.6)，
+\[
+T[\operatorname{sm}_\varepsilon f]=\iint_{U^{(\varepsilon)}}h(z)f(z)dxdy.
+\]
+由(13.3)存在整体光滑$\psi$满足$\Delta\psi=f$。在$V:=\C\setminus\operatorname{Supp}f$上$\psi$调和，故由(24.8.b)，$\psi=\operatorname{sm}_\varepsilon\psi$于$V^{(\varepsilon)}$。因此$\varphi:=\psi-\operatorname{sm}_\varepsilon\psi$有紧支集于$U$，且$\Delta\varphi=f-\operatorname{sm}_\varepsilon f$。由$\Delta T=0$，$T[\Delta\varphi]=0$，所以$T[f]=T[\operatorname{sm}_\varepsilon f]$，得证。
+\end{proof}
+\entry{24.10}{推论}
+若$\partial T/\partial\bar z=0$，则$T$为全纯函数。
+\begin{proof}$\Delta T=4\partial_z\partial_{\bar z}T=0$，由Weyl引理光滑，再由Cauchy--Riemann方程全纯。\end{proof}
+\textbf{注记。}此证明几乎逐字适用于$\R^n$上的调和函数。Weyl引理是可微流形上椭圆微分算子一般正则性定理的特例，参见[35]、[43]。
+\sourcepage{196}
+\subsection*{习题（第24节）}
+\entry{24.1}{}
+定义分布列$T_\nu\to T$，若对每个$\varphi\in\mathcal D(X)$有$T_\nu[\varphi]\to T[\varphi]$。证明此时对每个$D^\alpha$都有$D^\alpha T_\nu\to D^\alpha T$。
+\entry{24.2}{}
+若连续函数列$f_\nu$满足对每个测试函数$\varphi$，$\iint f_\nu\varphi\to\iint f\varphi$，称其\textbf{弱收敛}于连续$f$。证明若各$f_\nu$调和（全纯），则极限$f$也调和（全纯）。

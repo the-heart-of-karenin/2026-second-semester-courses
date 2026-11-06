@@ -1,0 +1,39 @@
+9 Differential Forms 
+From (i) and (ii) one gets 
+d'dNf = - dN d'f, 
+since 0 = (d' + dN)(d' + dN)f= d'dNf + dNd'! 
+With respect to a local chart (U, z), where z = x + iy, one has 
+, N 
+alf 
+_ 
+1 (alf 
+alf) 
+dd'f= azaz dz l\dz=2i OXl + ayl dXl\dy. 
+67 
+Hence a differentiable function f, defined on an open subset of a Riemann 
+surface, is called harmonic if d'd''f = O. 
+9.15. Definition. Suppose Y is an open subset of a Riemann surface. A differ-
+entiable I-form OJ E (S(l)(y) is called closed if dOJ = 0 and exact if there exists 
+f E 6'(Y) such that OJ = df 
+Remark. Because ddf = 0, every exact form is closed. However the con-
+verse is not true in general. We shall look at this question in more detail in 
+the next section. 
+9.16. Theorem. Suppose Y is an open subset of a Riemann surface. Then the 
+following hold: 
+(a) Every holomorphic l:form OJ E Q(Y) is closed. 
+(b) Every closed l~rorm OJ E 0"1. O(Y) is holomorphic. 
+PROOF. Suppose OJ is a differentiable I-form of type (1,0). With respect to a 
+coordinate neighborhood (U, z) one may write OJ = f dz for some differen-
+tiable function f Then 
+dOJ = df 1\ dz = (Z dz + ~ dZ) 1\ dz = - ~ dz 1\ dz. 
+Thus dOJ = 0 is equivalent to (afjaz) = 0 and the results follow. 
+0 
+Consequence. If u is a harmonic function, then d'u is a holomorphic 
+I-form. For, dd'u = dNd'u = O. 
+9.17. The Pull-Back of Differential Forms. Suppose F: X --+ Y is a holo-
+morphic mapping between two Riemann surfaces. For every open set 
+U c Y the map F induces a homomorphism 
+F*(f) := f 0 F. 
+Generalizing this one can define corresponding mappings for differential 
+forms 
+k = 1,2. 

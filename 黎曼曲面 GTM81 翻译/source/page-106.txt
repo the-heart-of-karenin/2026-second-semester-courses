@@ -1,0 +1,48 @@
+12 Cohomology Groups 
+97 
+The elements of Cq(U, ff) are called q-cochains. Thus a q-cochain is a family 
+(/;O.iq)iU ... "iqElq.J 
+such that /;o .. iq E .'JF( Vio " ... " V iq ) 
+for all (io, ... , iq) E Iq + I. The addition of two cochains is defined 
+component-wise. Now define coboundary operators 
+0: CO(U, ff) --> C1(U, ff) 
+0: C1(U, .?")--> C 2(U, .?") 
+as follows: 
+(i) For (/;)iEl E CO(U, .~) let O((/;)iEl) = (giJi,jEl where 
+gij:= jj - /; E ,?"(Vi n UJ 
+Here it is understood that one restricts/; andjj to the intersection Ui " 
+Uj 
+and then takes their difference. 
+(ii) For (/;j)i.jEl E C1(U, ff) let o((/;J) = (gijd where 
+gij;. :=jjk - /;k + /;j E .y(Vi " 
+Uj
+" 
+Uk)' 
+Again the terms on the right are restricted to their common domain of 
+definition Ui " 
+Uj
+" 
+Uk' 
+These coboundary operators are group homomorphisms. Let 
+ZI(U, ff):= Ker(C1(U, ff) ~ C 2(U, ff)), 
+BI(U, ff):= Im(CO(U, .?") ~ C1(U, .?")). 
+The elements of ZI(U,.?") are called l-cocycles. Thus by definition a l-cochain 
+(/;J E C1(U, ff) is a cocycle precisely if 
+/;k = /;j + jjk 
+on Vi " Uj " 
+Uk 
+(*) 
+for all i, j, k E I. One calls (*) the co cycle relation and it implies 
+/;i = 0, 
+/;j = - jji . 
+One obtains these from (*) by letting i = j = k for the first and i = k for the 
+second. 
+The elements of BI (U, ff) are called l-coboundaries. In particular every 
+coboundary is a cocycle. A coboundary is also called a splitting cocycle. 
+Thus a l-cocycle (k) E ZI(U, ff) splits if and only if there is a O-cochain 
+(gJ E CO(U, ff) such that 
+k = gi -
+gj on Ui "Uj 
+for every i, j E I. 
+12.2. Definition. The quotient group 
+HI(U, .?"):= ZI(U, ff)/BI(U, ff) 

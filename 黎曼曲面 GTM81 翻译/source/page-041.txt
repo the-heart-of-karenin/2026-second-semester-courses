@@ -1,0 +1,46 @@
+32 
+1 Covering Spaces 
+g: Z ~ Y such that g(zo) = Yo. The composItIOns g c f: Y ~ Y and 
+fog: Z ~ Z 
+are 
+continuous 
+fiber-preserving 
+mappings 
+such 
+that 
+g ", j{yo) = Yo and f ') g(zo) = Zo . Because of the universality condition there 
+can exist only one continuous fiber-preserving mapping in each case which 
+satisfies these conditions. Thus g. f = id y and f c g = idz . Hence f: Y ~ Z is 
+a fiber-preserving homeomorphism. 
+5.2. Theorem. Suppose X and Yare connected manifolds, Y is simply con-
+nected and p: Y ~ X is a covering map. Then p is the universal covering of X. 
+PROOF. This follows directly from the definition and Theorem (4.17). 
+0 
+5.3. Theorem. Suppose X is a connected manifold. Then there exists a con-
+nected, simply connected manifold X and a covering map p: X ~ x. 
+By Theorem (5.2) X ~ X is the universal covering of X. 
+PROOF. Pick a point Xo E X. For x E X let n(xo, x) denote the set of 
+homotopy classes of curves having initial point Xo and end point x. Let 
+X :={(x, c.<): x E X, 
+c.< E n(xo, x)}. 
+Define the mapping p: X ---> X by p(x, (X):= x. We will now define a topology 
+on X so that X becomes a connected, simply connected Hausdorff manifold 
+and p: X ~ X is a covering map. 
+Suppose (x, (X) E X and U c X is an open, connected, simply connected 
+neighborhood of x. Define a subset [U, (X] c X as follows: [U, C(] consists of 
+all points (y, fJ) E X such that y E U and fJ = cl(u . v), where u is a curve 
+from Xo to x such that (X = c1(u) and v is a curve from x to y which lies 
+completely in U. (Since U is simply connected, fJ is independent of the choice 
+of the curve v.) Now let 'B be the system of all such sets [U, (Xl 
+Claim (a) m is the basis for a topology on X. 
+Proof 
+(i) Clearly every point of X lies in at least one [U, 4 
+(ii) Suppose (z, y) E [U, (X] n [V, fJ]. Then z E Un V and there exists an 
+open, connected and simply connected neighborhood We U n V of z. 
+Then, as one can easily check, 
+(z, y) E [W, y] c [U, c.<] n [V, fJ]. 
+From (i) and (ii) the claim follows. 
+Claim (b) The mapping p: X ---> X is a local homeomorphism and in 
+particular is continuous. This follows from the fact that for every [U, (X] E 'B 
+the mapping pi [U, (X] ---> U is a homeomorphism. 
+Claim (c) X is Hausdorff. 

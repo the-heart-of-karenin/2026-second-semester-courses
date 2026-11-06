@@ -1,0 +1,37 @@
+190 
+3 Non-compact Riemann Surfaces 
+§24. Weyl's Lemma 
+In this section we introduce the notion of distributions. These are gener-
+alized functions. In the class of distributions differentiation is possible with-
+out any restrictions. Hence it is possible to consider solutions of differential 
+equations in the sense of distributions. Now Weyl's Lemma asserts that for 
+Laplace's equation du = 0 both kinds of solutions are the same, i.e., every 
+harmonic distribution is a smooth function in the usual sense which satisfies 
+Laplace's equation. 
+24.1. Suppose X is an open subset of the complex plane. Recall that o"(X) 
+denotes the vector space of all the infinitely differentiable (with respect to the 
+real coordinates) functions f: X -> C. By the support, denoted Supp(f), of 
+such a function is meant the closure (in X) of the set {x E X:I(x) =1= O}. Set 
+,@(X):={fE 6"(X): Supp(f) is compact in X}. 
+Introduce the following notion of convergence in the vector space 9(X). A 
+sequence (f,.)v E c" of functions in .<2l(X) converges to a function I E ~(X), 
+denoted Iv "?t 1, if: 
+(i) There exists a compact subset K c X such that Supp(f) c K and 
+Supp(J.) c K for every v E r\j. 
+(ii) For every IX = (lXb 1Xz) E r\j2 the sequence D"fv converges uniformly on 
+K to Da1, where D' denotes the differential operator 
+Thus convergence in .s0(X) is a much stronger condition than either point-
+wise or uniform convergence of sequences of functions. 
+24.2. Definition. Suppose X c I[: is open. A distribution on X is a continuous 
+linear mapping 
+T: g(X) -> 1[:, 
+If--> T[f). 
+Saying that T is continuous means that if Iv ;t 1, then T[fJ -> T[f], where 
+this latter convergence is that of a sequence of complex numbers. Denote by 
+9'(X) the vector space of all distributions on X. 
+24.3. Examples 
+(a) To every continuous function h E '6'(X) is associated a distribution 
+T" E .@'(X) as follows. For I E 9(X) let 
+T,,[f]:= II h(z)I(z) dx dy, 
+where z = x + iy. 
+x 

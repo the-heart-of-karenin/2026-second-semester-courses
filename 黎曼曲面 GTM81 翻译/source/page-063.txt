@@ -1,0 +1,42 @@
+54 
+1 Covering Spaces 
+function FE ,4f(Y) such that (n*P)(F) = O. The triple (Y, n, F) is uniquely 
+determined in thefollowing sense. If(Z, r, G) has the corresponding properties, 
+then there exists exactly one fiber-preserving biholomorphic mapping a: Z ---> Y 
+such that G = a* F. 
+To simplify the terminology (Y, n, F) is called the algebraic function defined 
+by the polynomial P(T). 
+Remark. The classical case is when X is the Riemann sphere [pl. Then by 
+(2.9) the coefficients Cv of the polynomial P(T) are rational functions in one 
+variable. Since [pI is compact and n: Y ---> [pI is proper, Y is also compact. 
+PROOF. Let L1 E .11(X) be the discriminant of the polynomial P(T). (L1 is a 
+certain polynomial in the coefficients of P.) The discriminant can not vanish 
+identically, for otherwise P would be reducible. There exists a closed discrete 
+subset A c X such that at every point x E X' := X\A all the functions c1, •.. , 
+Cn are holomorphic and L1(x) f O. Then for every x E X' the polynomial 
+pAT):= T" + c1(X)T"-1 + ... + cn(x) E qT] 
+has n distinct zeros. Now we will use the topological space I ( I ---> X asso-
+ciated to the sheaf (I, cf. (6.7). Let Y' c I (I' I be the set of all the function 
+germs cp E (I}x, 
+X E X', which satisfy the equation P( cp) = 0 and let 
+n' : Y' ---> X' be the canonical projection. By Corollary (8.8) for every point 
+x E X' there exist an open neighborhood U c X' and holomorphic func-
+tions fl> ... ,In E (i;'( U) such that 
+n 
+P(T) = TI (T - JJ 
+on U. 
+\'= 1 
+Then n'-l( U) = U~= 1 [U,J]' The [U,JJ are disjoint and n' I [U,fJ ---> U is a 
+homeomorphism. This shows that Y' ---> X' is a covering map. The connected 
+components of Y' are Riemann surfaces which also admit covering maps 
+over X'. Letf: Y' --> C be defined by f(cp):= cp(n'(cp)). Thenfis holomorphic 
+and by construction 
+f(y)" + c l (n'(y))f(y)"-1 + ... + cn(n'(y)) = 0 
+for every y E Y'. By Theorem (8.4) the covering n': Y' --> X' may be continued 
+to a proper hoiomorphic covering n: Y ---> X, where we identify Y' with 
+n-I(X'). By Theorem (8.2) f may be extended to a meromorphic function 
+FE A(Y), for which 
+(n*P)(F) = F" + (n*cdF"-1 + ... + n*cn = O. 
+Now we will show that Y is connected and thus a Riemann surface. Suppose 
+this is not the case. Then Y has finitely many connected components 
+Y1 , ••• , Yk and n I Y; ---> X is a proper holomorphic ni-sheeted covering, where 

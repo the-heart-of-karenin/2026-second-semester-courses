@@ -1,0 +1,40 @@
+56 
+1 Covering Spaces 
+Since the function g(z) = Ok*j (z - Uk) ha~ no zeros in Vj and Vj is simply 
+connected, there exists a holomorphic function h: Vj --+ iC such that h2 = g. 
+Thus 
+J(z) = (z - aj )h(z)2 
+on Vj . Suppose 0 < p < rj, e E IR and let ( = aj + peiO• By Lemma (8.7) 
+there exists a function germ CPr; E (!r; such that CPt = J and 
+cp,(n = JP eiO/ 2h(n· 
+If one continues this function germ along the closed curve ( = aj + peiO, 
+o ::; e ::; 2n, then one obtains the negative of the original germ. Let 
+Vj:=Vj\{aj} and Vj:=n-1(Vj). Then n: Vj--+ Vj is a connected two-
+sheeted covering as in Theorem (5.l0.ii) with k = 2. For otherwise 
+n: Vj --+ Vj would split into two single-sheeted coverings and the analytic 
+continuation of the function germ CPr; along the curve (= aj + peiO, 
+o ::; e ::; 2n, would lead back to the same function germ. Hence the Riemann 
+surface Y has exactly one point over the point aj. 
+(b) Suppose r> max{ la11, ... , lanl} and let 
+V* :={z E iC: Izl > r}. 
+Then V:= V* U {oo} is a neighborhood of 00, which is isomorphic to a disk, 
+and which contains no other points of A. On V one can writeJ = z"F, where 
+F is a holomorphic function having no zeros in V. Now we distinguish two 
+cases: 
+(i) n odd. Then there exists a meromorphic function h on V such that 
+J(z) = zh(zf· 
+(ii) n even. Then there exists a meromorphic function h on V such that 
+J(z) = h(Z)2. 
+Let V*:= n- 1(V*). Now one shows, the same as above, that in case (i) 
+n: V* ---+ V* is a connected two-sheeted covering and thus Y has precisely 
+one point over 00. But in case (ii) n: V* ---+ V* splits into two single-sheeted 
+coverings and thus when n is even Y has two points over 00. 
+8.11. If X and Yare Riemann surfaces and n: Y --+ X is a branched holo-
+morphic covering map, then Deck(YjX) has a representation into the auto-
+morphism group of the field A(Y) defined in the following way. For 
+a E Deck(YjX) let aJ:=J 0 a-I. Clearly the correspondence Jl-+aJ is an 
+automorphism of A(Y). The mapping 
+Deck(YjX) ---+ Aut(.$t(Y)) 
+is a group homomorphism. For suppose a, ' E Deck(YjX). Then for every 
+JE A(Y) 
+(a,)J=Jo (a,r 1 =J0 ,-1 c a-I = a(fc ,-1) = a('J). 

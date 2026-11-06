@@ -1,0 +1,38 @@
+24 Weyl's Lemma 
+193 
+Thus from the continuity of T it follows that 
+~ [If g(z, 0 d~ d1J 1 = l~m T[Gn] = If ~[g(z, OJ d~ d1J. 
+0 
+y 
+J 
+n 
+00 
+y 
+24.7. The Smoothing of Functions. Choose a function p E 9)(1[) with the 
+following properties: 
+(i) Supp(p) c {z E C: Izl < 1}. 
+(ii) p is invariant under rotations, i.e., p(z) = p( I z I ) for every z E C. 
+(iii) He p(x + iy) dx dy = 1. 
+For e > 0 and z E C set 
+p,(z):= e\ p(~). 
+Then Supp(p,) c {z E C: I z I < e} and 
+If p,(x + iy) dx dy = 1. 
+c 
+Denote by D(z, e) the open disk with center z and radius e and by D(z, e) its 
+closure. 
+If V c C is an open set, then 
+V(') := {z E V: D(z, c) c V} 
+is also open. 
+Given a continuous function f: V ~ C, define a new function 
+sm, f: V(f.) ~ C by 
+(sm, J)(z) := If p,(z - OJ(O d~ d1J, 
+( = ~ + i1J. 
+u 
+Clearly sm, J E C(V('), since one can differentiate under the integral. The 
+function sm, J is called a smoothing off 
+Remark. Naturally the definition depends on the choice ofthe function p. 
+24.S. Lemma. Suppose V c C is open, J E C( V) and e > O. 
+(a) For every rx E N 2 
+D~(smr. 1) = sm,(Dj'"). 
+(b) IJ z E V(') and J is harmonic on D(z, e), then 
+(sm, J)(z) = J(z). 

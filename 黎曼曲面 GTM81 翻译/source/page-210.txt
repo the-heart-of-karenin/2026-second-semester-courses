@@ -1,0 +1,38 @@
+26 The Theorems of Mittag-Lerner and Weierstrass 
+201 
+Suppose Yo ct:: Y1 ct:: Y2 ct:: ••• is an exhaustion of X by Runge domains 
+(23.9). By induction on n we will construct functions In E 6"(y") such that 
+(i) d'j" = wi Y", 
+(ii) 11f,,+1 - f" IIYn-l:S; rn. 
+To begin choose any function f~ E 6"(Yo) which is a solution of the differen-
+tial equation d"lo = w I Yo· Now suppose 10, ... , In have been constructed. 
+There exists gn+ 1 E 6"(Y,,+ d with d"gn+ 1 = wi Y,,+ l' On Yn one has 
+d"gn+ 1 = d'fn and thus gn+ 1 - f" is holomorphic on Yn. By the Runge 
+Approximation Theorem there exists h E (17( Yn+ 1) such that 
+II(gn+l - f,,) - hll yn_1 :s; rn. 
+Setln+l '=gn+l - h. Then d'fn+l = d"gn+ 1 = wi y"+1 and 
+Ilf~+1 - f"IIYn-l:S; 2- n. 
+As in the proof of (13.2) it now follows that the functionsf~ converge to a 
+solution I E 6"(X) of the differential equation d'f = w. 
+0 
+EXERCISES (§25) 
+25.1. Let X be a Riemann surface and S: g(2)(X) -> I[ a continuous linear functional 
+such that S[d'd"g] = 0 for every g E 8(X). Prove that there is a harmonic 
+function h E 6"(X) such that 
+S[w] = rr hw 
+for every w E 6"(2)(X) with compact support. 
+y 
+25.2. Let Y c I[ be open. Given any g E sty) show that there exists an! E a'( Y) such 
+that 
+4{=g. 
+§26. The Theorems of Mittag-Leffler and 
+Weierstrass 
+We now consider the problem of constructing meromorphic functions on 
+non-compact Riemann surfaces having prescribed principal parts, resp. 
+having zeros and poles of given orders. These are analogues of the Theorems 
+of Mittag-Leffler and Weierstrass in the complex plane. For compact 
+Riemann surfaces the comparable problems were looked at in sections 18 
+and 20. While in the compact case there are particular conditions which are 
+necessary in order for a solution to exist (Theorems 18.2 and 20.7), it turns 
+out that in the non-compact case the analogues of the Theorems of Mittag-
+Leffler and Weierstrass hold without any restriction. 

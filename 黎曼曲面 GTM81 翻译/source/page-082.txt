@@ -1,0 +1,51 @@
+10 The Integration of Differential Forms 
+73 
+such that v = (J 0 u. Since p 0 (J = p, one has (J*(p*w) = p*w. Thus (J* F is 
+also a primitive of p*w and so (J* F - F = const. Hence 
+F(v(l)) - F(v(O)) = (J*F(u(l)) - (J*F(u(O)) = F(u(l)) - F(u(O)) 
+and thus the value of the integral is the same for both liftings. 
+10.10. Theorem. Suppose X is a Riemann surface and W E t&'(1)(X) is a closed 
+differential form. 
+(a) If a, b E X are two points and u, v: [0, 1] ~ X are two homotopic curves 
+from a to b, then 
+J w = J w. 
+u 
+v 
+(b) If u, v: [0, 1] ~ X are two closed curves which are free homotopic, then 
+J 
+w = J w. 
+u 
+v 
+PROOF 
+(a) Let p: g ~ X be the universal covering and suppose u, v: [0, 1] ~ g 
+are liftings of u and v resp. with the same initial point. By Theorem (4.10) u 
+and v also have the same end point. Hence the result follows from Theorem 
+(10.8). 
+(b) Suppose the curve u has initial and end point Xo and the curve v has 
+initial and end point x l' Then there exists a curve w from Xo to x 1 such that u 
+is homotopic to w . V· w-, cf. (3.13). Hence by (a) one has 
+J w = J 
+w = f w + J w - J w = J w. 
+u 
+W·V·W-
+w 
+v 
+w 
+v 
+o 
+10.11. Periods. Suppose X is a Riemann surface and w E t&'(l)(X) is a closed 
+differential form. Then by Theorem (10.10) one can define the integral 
+a :=J' W 
+u 
+, 
+u 
+by choosing any curve representing the homotopy class (J and integrating 
+along that curve. These integrals are called the periods of w. Clearly 
+J w = J w + J 
+w for (J, T E 1tl(X), 
+tf· t 
+(J 
+t 
+Thus one gets a homomorphism 1t 1 (X) ~ C of the fundamental group of X 
+into the additive group C. This homomorphism is called the period homo-
+morphism associated to the closed differential form w. 

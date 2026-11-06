@@ -1,0 +1,42 @@
+25 The Runge Approximation Theorem 
+197 
+is the appropriate differential operator relative to the coordinates 
+Zj = Xj + iYj. These countably many semi-norms Pj, define a topology on 
+g(y). A neighborhood basis of zero is given by finite intersections of sets of 
+the form 
+°ll(pjv, 8) := {f E g(y): Pjv(f) < s}, 
+8> 0. 
+Then convergence f" --> f with respect to this topology means uniform con-
+vergence of the functions and all of their derivatives on every K j. With this 
+topology g(y) is a Frechet space. One can easily check that this topology is 
+independent of the choice of K j and (Uj , zJ On the vector subspace 
+(i7(Y) c g(y) the induced topology coincides with the topology of uniform 
+convergence on compact subsets. For, in the case of holomorphic functions 
+uniform convergence on compact subsets implies the uniform convergence 
+on compact subsets of all the derivatives. Analogously one can introduce the 
+structure of a Frechet space on the vector space g0. 1 (Y) of (0, 1 )-forms on Y 
+with differentiable coefficients. An element WE ICo. l(y) may be written 
+W = jj dZj on Uj , where jj E IC( Uj n Y). Set 
+Pjv(w):= sup IDj,fj(a)l· 
+Then the Frechet structure is obtained as above from the semi-norms Pjv. 
+25.2. Lemma. Suppose Y is an open subset of a Riemann surface X. Then 
+every continuous linear map T: 6"(Y) --> C has compact support, i.e., there 
+exists a compact subset KeY such that 
+T(f] = ° 
+for every f E 6"(Y) 
+with Supp(f) c y\K. 
+An analogous result is also true for go. 1 (Y). 
+PROOF. Since T is continuous, there exists a neighborhood Oll of zero in IC( Y) 
+such that I T(f] I < 1 for every f E Cill. By the definition of the topology on 
+g(y) there exist elementsjl,' .. ,jm E J, V1, ... , Vm E f\)2 and 8 > 0, where the 
+notation is the same as in (25.1), such that 
+°ll(Phvl' 8) n ... n Olf(Pjmvm' 8) cOli. 
+Let K := Kh U ... U Kim' We now show that iff E 0"( Y) with Supp(f) c 
+y\K, then T(f] = 0. Namely for arbitrary A. > 0, 
+PhVl(),f) = ... = PjmvjAf) = 0. 
+Thus Af E Olf and 111 Af] I < 1. But this implies I T(f] I < 1/ A for every A > ° 
+and this is possible only if T[f] = 0. 
+0 
+25.3. Lemma. Suppose Z is an open subset of a Riemann surface X and 
+S: go. l(X) --> C is a continuous linear mapping with S[d"g] = ° 
+for every 

@@ -1,0 +1,40 @@
+102 
+2 Compact Riemann Surfaces 
+PROOF. It suffices to show that, for every open covering m = (v,,)~ EA, with 
+m < U, the mapping ~: Hl(U, ff) -+ Hl(m, ff) is an isomorphism. From 
+(12.4) this mapping is injective. 
+Suppose r: A -+ I is a refining mapping with v:. c 
+Vt~ for every IX E A. To 
+prove the surjectivity of tM, we must show that given any cocycle 
+(f~p) E ZI(m, ff), there exists a cocycle (Fij) E ZI(U, ff) such that the 
+cocycle 
+is cohomologous to zero relative to the covering m. Now the family 
+(Vi n. V~)aeA is an open covering of Vi which we denote by Vi n m. By 
+assumption Hl(Vi n m, ff) = 0, i.e., there exist gi~ E ff(Vi n v,,) such that 
+hp = gi~ - giP 
+on Vi n v" n Vp. 
+Now on the intersection Vi n Vj n Vx n Vp one has 
+gj. - gi. = gjp - giP 
+and thus by sheaf axiom II there exist elements Fij E ff(Vi n V j) such that 
+Fij = gj. - gi. 
+on Vi n Vj n Vx. 
+Clearly, (Fij) satisfies the cocycle relation and thus lies in Zl(U, ff). Let 
+h. := guo a I v" E ff(Vx)· Then on Vx n Vp one has 
+Ft~, t{J - fa(J = (gt{J,~ -
+gt~,~) - (gt{J,. - gTP,p) 
+= gtP,p -
+gt~,. = hp - h., 
+and thus (Fla, tp) - (f.p) splits. 
+12.9. Example. As an application of Leray's Theorem, we will show 
+o 
+Let VI :=C*\IlL and V 2 :=C*\IR+, where IR+ and IR_ denote the positive 
+and negative real axes respectively. Then U = (V 1> V 2) is an open covering 
+of C*. By (12.7) Hl(V;, Z) = 0 since V; is star-shaped and thus simply 
+connected. Thus H 1(C*, Z) = Hl(U, Z). 
+Since any cocycle (aij) E ZI(U, Z) is alternating, i.e., a;; = 0 and 
+aij = -aji' it is completely determined by a12 and thus Zl(U, Z) ~ 
+Z( VI n V 2)' But the intersection VI n V 2 has two connected components, 
+namely the upper and lower half planes, and thus Z(V 1 n V 2) ~ Z x Z. 
+Since Vi is connected, Z(V;) ~ Z and hence CO(U, Z) ~ Z x Z. The coboun-
+dary operator J: CO(U, Z) -+ Zl(U, Z) is given with respect to these isomor-
+phisms by 

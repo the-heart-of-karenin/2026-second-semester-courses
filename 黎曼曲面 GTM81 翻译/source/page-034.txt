@@ -1,0 +1,41 @@
+4 Branched and Unbranched Coverings 
+25 
+Then Pk is a covering map. For, suppose a E C* is arbitrary and choose 
+bE C* with Pk(b) = a. Since Pk is a local homeomorphism, there are open 
+neighborhoods Vo of band U of a such that Pk I Vo -> U is a homeomorphism. 
+Then 
+p;l(U) = Vo u wVo u ... U Wk-1VO , 
+where w is a kth primitive root of unity, say w = exp(2ni/k). It is clear that 
+the sets V;:= wjVo, j = 0, ... , k -
+1, are pairwise disjoint and each 
+Pk I Vi -> U is a homeomorphism. 
+(c) The mapping exp: C -> C* is a covering map. 
+PROOF. Suppose a E C* and bE C with exp(b) = a. Since exp is a local homeo-
+morphism, there exist open neighborhoods Vo of band U of a such that 
+exp I Vo -> U is a homeomorphism. Then 
+exp -l( U) = U v" , where v,,:= 2nin + Vo. 
+Clearly the v" are pairwise disjoint and each map exp I v" -> U IS a 
+homeomorphism. 
+(d) Suppose r c C is a lattice and n: C -> c/r is the canonical quotient 
+mapping. In the same way as in example (c) one can show that n is a 
+covering map. 
+4.13. Definition. A continuous map p: Y -> X is said to have the curve lifting 
+property if the following condition holds. For every curve u: [0, 1] -> X and 
+every point Yo E Y with p(Yo) = u(o) there exists a lifting u: [0, 1] -> Y of u 
+such that u(o) = Yo. 
+4.14. Theorem. Every covering map p: Y -> X of topological spaces X and Y 
+has the curve lifting property. 
+PROOF. Suppose u: [0, 1] -> X is a curve and Yo E Y with p(yo) = u(O). Because 
+of the compactness of [0, 1] there exists a partition 
+0= to < t 1 < ... < tn = 1 
+and open sets Uk c X, k = 1, ... , n, with the following properties: 
+(i) u([tk-t> tkD c Uk, 
+(ii) P-1(Uk ) = UjElk Vkj ' 
+where the Vij C Yare open sets such that p I Vij -> Uk are homeomorphisms. 
+Now we shall prove by induction on k = 0, 1, ... , n the existence of a lifting 
+u I [0, t k] -> X with u(o) = Yo. For k = ° 
+this is trivial. So suppose k z 1 and 
+u I [0, tk - d -> X is already constructed and let U(tk -
+1 ) =: Yk-l' Since 
+P(Yk-l)=U(tk-dE Ub 
+there exists jEJk such that Yk-l E J!;.j. Let 

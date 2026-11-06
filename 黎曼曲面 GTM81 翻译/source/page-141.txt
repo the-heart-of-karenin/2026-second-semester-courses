@@ -1,0 +1,41 @@
+132 
+2 Compact Riemann Surfaces 
+such that for every compact set K c U there are only finitely many x E K 
+with D(x) of O. Show that 1) together with the natural restriction mor-
+phisms is actually a sheaf and that 
+H'(X, 1)) = O. 
+[Hint: Imitate the proof of Theorem (12.6), using a (discontinuous) integer-
+valued partition of unity.] 
+(b) Let f3: .It* ~ 1) be the map which assigns to every meromorphic function 
+fE .It*(U) its divisor (f) E 1)(U) and let cc IV* ~ Jt* be the natural inclu-
+sion map. Show that 
+o ~ (9* .=.. Jt* 1. 1) ~ 0 
+is an exact sequence of sheaves and thus that there is an exact sequence of 
+groups 
+o ~ HO(X, (9*) ~ HO(X, . .4{*) --. Div(X) 
+~ H'(X, (9*) ~ H'(X, .It*) --> O. 
+§17. The Serre Duality Theorem 
+The Serre Duality Theorem allows a simpler interpretation of the cohomo-
+logy groups Hl(X, (DD) in terms of differential forms. In fact, dim Hl(X, (DD) 
+is equal to the maximum number of linearly independent meromorphic 
+1-forms which are multiples of the divisor D. One consequence is the 
+Riemann-Hurwitz formula, which allows one to calculate the genus of a 
+covering from the number of sheets it has and its branching order. Another 
+consequence is a vanishing theorem which asserts that Hl(X, (DD) = 0, if 
+deg D > 2g - 2. This vanishing theorem itself has interesting applications 
+and we will use it to prove an embedding theorem for compact Riemann 
+surfaces into [piN. 
+17.1. Definition ofa Linear Form Res: Hl(X, Q) --+ Co Suppose X is a com-
+pact Riemann surface. By (15.14) the exact sequence 
+induces 
+an 
+isomorphism 
+Hl(X, 
+Q) ~ cff(2)(X)/dcff" O(X). 
+Suppose 
+~ E Hl(X, Q) and W E @"(2)(X) is a representative of ~ via this isomorphism. 
+Set 
+Res(~) :=~ II w. 
+2m x 
+Because of Theorem (10.20) this definition is independent of the choice of the 
+representative w. 

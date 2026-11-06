@@ -1,0 +1,38 @@
+158 
+2 Compact Riemann Surfaces 
+the first Betti number of X, is a topological invariant. From (19.14) one has 
+where 9 is the genus of X. Thus the genus is a topological invariant. 
+There is a topological classification of connected orientable compact two-
+dimensional manifolds (Riemann surfaces are orientable), which depends 
+only on the first Betti number. Every such surface X with b 1 (X) = 2g is 
+homeomorphic to a sphere with 9 handles (cf. Seifert-Threlfall [46] or [42]). 
+It should also be noted that for every genus 2: 1, there are Riemann 
+surfaces which are homeomorphic but which are not holomorphically equi-
+valent. The holomorphic equivalence classes of Riemann surfaces of genus 9 
+depend on one complex parameter when 9 = 1 and on 3g ~ 3 complex 
+parameters when 9 2 2. 
+This Teichmiiller theory will not be dealt with here; for this see [50]. 
+EXERCISES (§19) 
+19.1. Let X be a compact Riemann surface. Prove 
+(a) MO. 1(X) = d'd"!,'(X) c g(2)(X). 
+(b) Let yt' be the sheaf of harmonic functions on X. Then 
+(c) Let W E od2)(X). Prove that there exists a functionj'E 6'(X) such that 
+d'd"j' = w 
+if and only if 
+r r w = O. 
+X" 
+19.2. Let X = c/r be a torus. For a functionj' E ,ff(X) define its mean value M(f) by 
+M(f) ,= (IJ f dz A dZ) (JJ dz A dz )-1 
+X 
+X 
+For w = j' dz + 9 dz E ,ff(1I(X) let M(w) ,= M(f) dz + M(g) dz. Show 
+(a) If 
+w E ,;Z'(X) ,= Ker(,ff(1)(X) ..'!., o,,(2)(X)), 
+then 
+wand 
+M(w) 
+are 
+cohomologous. 
+(b) The mapping 
+M: .:2"(X)---> Harm1(X) 
+induces an isomorphism 

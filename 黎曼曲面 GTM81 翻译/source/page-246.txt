@@ -1,0 +1,38 @@
+238 
+Appendix 
+and its inverse are both infinitely differentiable. Now one can define differen-
+tiable manifolds in an analogous way to Riemann surfaces (cf. §1), but replac-
+ing biholomorphic compatibility by differentiable compatibility. In 
+particular Riemann surfaces are special 2-dimensional differentiable 
+manifolds. 
+On a differentiable manifold one has the notion of a differentiable func-
+tion, i.e., a function which is Coo with respect to every chart. 
+A.3. Definition. Suppose X is a differentiable manifold and U = (Vi)iEI is 
+an open covering of X. Then by a differentiable partition of unity subordinate 
+to U one means a family (g;}jEI of differentiable functions gj: X -> IR with 
+the following properties: 
+(i) 0::; gj ::; 1 for every i E I. 
+(ii) Supp(g;) c V j 
+for every i E I. 
+(iii) The family of supports SUPP(9j), i E I, is locally finite, i.e., every point 
+a E X has a neighborhood V such that 
+V n Supp(g;) =fo 0 for only finitely many i E I. 
+(iv) Li El gj = 1. 
+(Because of (iii) the sum in (iv) is well-defined.) 
+A.4. Theorem. Suppose X is a differentiable manifold which has a countable 
+topology. Then for every open covering U of X there exists a differentiable 
+partition of unity subordinate to U. 
+A.5. Corollary. Suppose X is a differentiable manifold, K is a compact subset 
+of X and V is an open neighborhood of K. Then there exists a differentiable 
+function f: X -> IR such that Supp(f) ~ V and f I K = 1. 
+PROOF. We may assume that X has a countable topology. Otherwise, just 
+replace X by some relatively compact open neighborhood of K. Now sup-
+pose Viis a relatively compact open neighborhood of K which is contained 
+in V and let V 2 := X\K. There exists a differentiable partition of unity 
+(gb g2) subordinate to the covering U = (VI' V 2)' Then f := 91 is the 
+desired function. 
+0 
+B. Topological Vector Spaces 
+We now present the notions and facts from functional analysis which we 
+have used. Further details and the proofs may be found, for example, in [44), 
+[47). 

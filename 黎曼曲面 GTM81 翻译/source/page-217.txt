@@ -1,0 +1,56 @@
+208 
+3 Non-compact Riemann Surfaces 
+Notation. For r E ]0, 00] let 
+D(r) :={z E C: Izi < r}. 
+In particular D(1) = D is the unit disk and D( 00) = C is the complex plane. 
+The following observation is a simple consequence of Cauchy's Integral 
+Formula. Suppose f: D(r) ...... D(r') is a holomorphic mapping. Then 
+11'(0)1 
+r' 
+s: -. 
+r 
+27.5. Lemma. Suppose G c C is a domain such that C \G has interior points 
+and suppose Wo E G. Then the set 
+{IE 0(D):f(D)c G and f(O)=wo} 
+is a compact subset of c'j(D) with respect to the topology of uniform convergence 
+on compact subsets. 
+PROOF. Suppose a is an interior point of C\G. Then the mapping 
+Z ~ 1I(z -
+a) takes the domain G biholomorphically onto a subdomain of 
+some disk D(r) with r < 00. Hence the result follows from Montel's 
+Theorem. 
+0 
+27.6. Theorem. The set :f of all schlicht (= injective) holomorphic functions 
+f: D ...... C with f(O) = 0 and 1'(0) = 1 is compact in (!:'(D). 
+PROOF 
+(a) Suppose (In}nE r. is a sequence of functions in /1'. It suffices to show 
+that there is a subsequence which converges to a function fEY. 
+Denote by rn the maximum radius such that D(rn) cf..(D). Then rn s: 1 
+since the inverse <Pn of.r. maps D(rn) into D and hence 1 = <p~(0) s: l/r •. 
+Choose a point an E aD(rn) with an ¢fn(D) and set gn :=f../an. Then 
+Dc gn(D) 
+and 1 f gn(D). 
+(b) Since gn(D) is homeomorphic to D and thus is simply connected, there 
+exists 
+a 
+holomorphic function 
+t/J: gn(D) ...... C* 
+with 
+t/J(O) = i 
+and 
+t/J(zf = z - 1 for every Z E gn(D). Set hn:= t/J 
+gn' Thus h~ = gn -
+1. 
+We claim that WE hn(D) implies -w ¢ hn(D}. For, otherwise we would 
+have w = hn(zd and -w = hn(zz) for Z1> Z2 ED. But then WZ = (_w)Z im-
+plies gn(zd = gn(ZZ) and since gn is injective, ZI = Z2' Hence w = -wand 
+thus 
+w = hn(z) = O. 
+However this implies 
+gn(Z 1) = 1, 
+which is a 
+con tradiction. 
+(c) Because Dcgn(D), one has U:=t/J(D)chn(D). Thus (-U)n 
+hn(D) = 0. By Lemma (27.5) the sequence (hn) has a convergent sub-
+sequence. Since f.. = an(1 + h;) and 
+1 an 1 s: 1 for every n, the sequence (In) 

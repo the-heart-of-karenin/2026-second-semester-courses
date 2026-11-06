@@ -1,0 +1,36 @@
+82 
+1 Covering Spaces 
+is called holomorphic if all the coefficients a i/ X ~ e are holomorphic. The 
+set of all holomorphic mappings A: X -> M(n x m, e) will be denoted by 
+M(n x m, m(X)). One can define GL(n, m(X)) similarly. 
+11.2. Theorem. Suppose A E M(n x n, m(D)) is a holomorphic n x n-matrix 
+on the disk 
+D :={z E C: Izl < R}, 
+where 0 < R.::;; 00. 
+Then for every Wo E en there exists precisely one holomorphic function 
+w: D -> en such that 
+(1) w'(z) = A(z)w(z) for every ZED, 
+(2) w(O) = wo. 
+(Here we are identifying en with the space M(n x 1, e) of column vectors.) 
+PROOF 
+(a) The matrix A can be expanded in a Taylor series 
+\.'=0 
+in D. (This is to be understood as a system of n2 equations for the entries of 
+A(z).) Now suppose that the solution w has the form 
+00 
+w(z) = L c,"z'", 
+\,=0 
+If this series converges in D, then (1) is equivalent to 
+I.e., 
+(3) (k + I)Ck+l = L~=o Ak-vcv for every kEN. 
+The initial condition (2) is equivalent to Co = Wo. Hence by (3) one can 
+recursively compute all the coefficients Ck. This shows the uniqueness of the 
+solution. 
+(b) In order to prove the existence of a solution we have to show that the 
+series for w, having the coefficients computed in (3), does in fact converge in 
+D. To do this we will use the majorant method of Cauchy. 
+For an arbitrary r with 0 < r < R the series 
+00 L 1 ajivl rV 
+v=o 
+converges. Hence there exists N E N such that 
+(4) lajivl.::;;Nr-v-l foreveryvEN and l.::;;i,j.::;;n. 

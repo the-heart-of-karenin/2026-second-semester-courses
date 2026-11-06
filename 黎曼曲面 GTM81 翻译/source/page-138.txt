@@ -1,0 +1,36 @@
+16 The Riemann-Roch Theorem 
+129 
+16.7. Now suppose D is an arbitrary divisor on X. For P E X denote by the 
+same letter P the divisor which takes the value 1 at P and is zero otherwise. 
+Then D :::; D + P and there is a natural inclusion map (0 D --+ (0 D + P • Let (V, z) 
+be a local coordinate on X about P such that z(P) = O. Define a sheaf 
+homomorphism 
+13: 0 D + P --+C p 
+as follows. Suppose U c X is an open set. If P ¢ U, then f3u is the zero 
+homomorphism. If P E U and f E 0 D + p( U), then the function f admits a 
+Laurent series expansion about P, with respect to the local coordinate z, 
+f= L cnz", 
+n=-k-J 
+where k = D(P). Set 
+f3U(f):=Ck-l EC =Cp(U). 
+Obviously 13 is a sheaf epimorphism and 
+is a short exact sequence. By Theorem (15.12) this induces an exact sequence 
+0--+ HO(X, 0 D ) --+ HO(X, 0 D + P ) --+ C 
+(*) 
+16.8. Corollary. Let D :::; D' be divisors on a compact Riemann surface X. 
+Then the inclusion map (YD --+ (YD' induces an epimorphism 
+HI(X, (YD) --+ HI(X, (YD') --+ O. 
+PROOF. If D' = D + P, where P is the divisor given by a single point, then the 
+assertion follows from (16.7). In general D' = D + PI + ... + Pm with 
+P j E X and the assertion follows by induction. 
+0 
+16.9. The Riemann-Roch Theorem. Suppose D is a divisor on a compact 
+Riemann su~face X of genus g. Then HO(X, 0 D) and HI(X, (YD) are finite 
+dimensional vector spaces and 
+dim HO(X, (YD) - dim Hl(X, (YD) = 1 - g + deg D. 
+PROOF 
+(a) First the result holds for the divisor D = O. For, HO(X, 0) = 0(X) 
+consists of only constant functions and thus dim HO(X, (Y) = 1. As well dim 
+HI(X, (0) = 9 by definition. 
+(b) Keeping the same notation as in 16.7, suppose D is a divisor, P E X 
+and D' = D + P. Suppose that the result holds for one of the divisors D, D'. 

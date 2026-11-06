@@ -1,0 +1,46 @@
+166 
+2 Compact Riemann Surfaces 
+20.3. Let X be a compact Riemann surface of genus g. Show that there exist closed 
+curves lXI, ... , 1X29 on X such that 
+Harml(X) = I CO"I' 
+j~l 
+20.4. Let r c C be a lattice. A theta function with respect to r is a holomorphic 
+function 
+F: C~C 
+satisfying 
+F(z + y) = el,,(ZIF(z) 
+for every z E C and }' E r, 
+where L).(z) = a) z + by is an affine linear function depending on y. 
+(a) The Weierstrass O'-function a: C ~ C is defined by 
+( 
+Z)' 
+(Z 
+Z2) 
+O'(z) ,= z fl 
+1 - -, exp - + -2 ' 
+) E no 
+Y 
+Y 
+2}' 
+Show that 0' is a theta function with zeros of first order precisely at the 
+points of r. 
+(b) Show that every doubly periodic meromorphic function with respect to r is 
+the quotient of two theta functions. 
+§21. The Jacobi Inversion Problem 
+Abel's Theorem tells us when a divisor of degree zero on a compact Riemann 
+surface has a solution which is a meromorphic function, i.e., when a divisor 
+is a principal divisor. In this section we will be concerned with a more 
+detailed study of the quotient group of divisors of degree zero modulo the 
+subgroup of principal divisors. It turns out that this group is isomorphic to a 
+complex g-dimensional torus, where g is the genus of the Riemann surface. 
+21.1. Lattices. Suppose V is an N-dimensional vector space over R An 
+additive subgroup reV is called a lattice if there exist N vectors Y 1> .•• , 
+fN E V, which are linearly independent over [R, such that 
+r = .zYl + ... + .zYN· 
+Theorem. A subgroup reV is a lattice precisely if both or the following 
+conditions hold: 
+(i) r is discrete, i.e., there exists a neighborhood U of zero such that 
+r n U = (0). 
+(ii) r is contained in no proper vector subspace of V. 
+Remark. Every real N-dimensional vector space V has a unique topology 
+such that every isomorphism V ~ [RN is a homeomorphism. 

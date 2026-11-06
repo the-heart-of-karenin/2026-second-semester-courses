@@ -1,0 +1,39 @@
+240 
+Appendix 
+then d: E x E --> IR is a metric on E which induces the same topology as the 
+semi-norms Pn, n EN. 
+A closed vector subspace FeE of a Frechet space is also a Frechet space. 
+If E;, i E J, is a countable family of Frechet spaces, then Il; E I E; with the 
+product topology is also a Frechet space. 
+B.4. A typical example of a Frechet space is the vector space 0(X) of holo-
+morphic functions on an open set X c C with the topology of uniform 
+convergence on compact subsets. This topology is induced by the semi-
+norms P K, where 
+PK(f):= sup I J(x) I, 
+XEK 
+as K runs through the compact subsets of X. This topology is also defined by 
+countably many semi-norms PK , where Kn, n EN, is any sequence of com-
+pact subsets of X with UnEr, It: = x. 
+B.S. Banach Spaces, Hilbert Spaces. A complete normed vector space is 
+called a Banach space. Thus a Banach space is a Frechet space whose 
+topology is defined by a single norm. This is usually denoted II II. 
+A Hilbert space E is a Banach space whose norm is derived from a scalar 
+product 
+( , ): E x E --> C, 
+i.e., IIxil = .J (x, x). 
+If A is a vector subspace of a Hilbert space E, then its orthogonal 
+complement 
+A~ :={y E E: (y, x) = 0 for every x E A} 
+is a closed vector subspace of E. If A itself is closed, then E = A EB A~. 
+B.6. Theorem of Banach. Suppose E and Fare Frixhet spaces andJ: E --> F is 
+a continuous linear surjective mapping. Then J is open. 
+B.7. Corollary. Suppose E and F are Banach spaces andf: E --> F is a contin-
+uous linear surjective mapping. Then there exists a constant C > 0 such that 
+Jor every y E F there is an x E E with 
+J(x) = y 
+and IIxil ~ CilYII· 
+PROOF. Let U:= {x E E: IIxil < I}. Since by the Theorem of BanachJis open, 
+there exists an r. > 0 such that 
+J(U) =:J V:={y E F: IIyll < s}. 
+Let C := 2/B. Now suppose y E F is given. If y = 0, choose x = O. Otherwise, 
+A.:= IIYII > O. The element Y1 := (l/A.C)y lies in V and thus there exists Xl E U 

@@ -1,0 +1,52 @@
+\section{具有指定自守加项的函数}
+\sourcepage{214}
+第10节中，微分形式积分产生加法自守函数，其加项确定周期同态$\pi_1(X)\to\C$。Behnke--Stein[51]证明：非紧曲面上任意这样的同态都可由全纯1形式的周期实现。本节证明此结论，同时讨论非常值自守加项。
+\entry{28.1}{群的上同调}
+设$G$为乘法群，$A$为$G$模，即加法阿贝尔群配作用$G\times A\to A$，满足$\sigma(a+b)=\sigma a+\sigma b$、$\sigma(\tau a)=(\sigma\tau)a$、$\varepsilon a=a$，其中$\varepsilon$为单位元。映射$\sigma\mapsto a_\sigma$称为\textbf{交叉同态}，如果$a_{\sigma\tau}=a_\sigma+\sigma a_\tau$。作用平凡时就是通常群同态。
+\sourcepage{215}
+交叉同态在逐项加法下构成群$Z^1(G,A)$。固定$f\in A$，令$a_\sigma=f-\sigma f$，则
+\[
+a_{\sigma\tau}=f-\sigma\tau f=(f-\sigma f)+\sigma(f-\tau f)=a_\sigma+\sigma a_\tau.
+\]
+如此得到的交叉同态称为上边缘，组成子群$B^1(G,A)$。定义第一群上同调$H^1(G,A):=Z^1(G,A)/B^1(G,A)$。
+\entry{28.2}{自守加项}
+设$p:Y\to X$为无分歧全纯覆盖，$G=\operatorname{Deck}(Y/X)$。令$\sigma f=f\circ\sigma^{-1}$，使$\OO(Y)$成为$G$模。差$a_\sigma:=f-\sigma f$称为$f$的自守加项，并构成交叉同态。若覆盖Galois且加项全零，则$f$属于$p^*\OO(X)$，可视为$X$上的函数。对亚纯、可微函数也可作相同定义。
+\entry{28.3}{Galois覆盖}
+每个$x$有连通开邻域$U$使$p^{-1}(U)=\coprod_{\lambda\in A}V_\lambda$，各限制为到$U$的同胚。固定$\lambda_0$，每个$\lambda$对应唯一$\sigma\in G$使$\sigma(V_{\lambda_0})=V_\lambda$。
+\sourcepage{216}
+对$y\in V_\lambda$令$\varphi(y):=(p(y),\sigma)$，得到保纤维同胚$p^{-1}(U)\to U\times G$，$G$取离散拓扑。它与群作用相容：$\varphi(y)=(x,\sigma)$则$\varphi(\tau y)=(x,\tau\sigma)$。这种同胚称为\textbf{$G$坐标卡}。写$\varphi=(p,\eta)$，则$\eta(\tau y)=\tau\eta(y)$。
+\entry{28.4}{定理}
+若$X,Y$非紧且$p:Y\to X$为无分歧全纯Galois覆盖，则每个交叉同态$G\to\OO(Y)$，$\sigma\mapsto a_\sigma$，均为某全纯函数$f$的自守加项。
+
+\textbf{注记。}即$H^1(G,\OO(Y))=0$。对任意Stein流形亦成立，见Stein[62]、Serre[59]。
+\begin{proof}
+(a)取开覆盖$(U_i)$及$G$坐标卡$\varphi_i=(p,\eta_i)$。在$Y_i=p^{-1}(U_i)$上定义$f_i(y):=a_{\eta_i(y)}(y)$，显然全纯。
+(b)断言$f_i-\sigma f_i=a_\sigma$。事实上，$(\sigma f_i)(y)=a_{\sigma^{-1}\eta_i(y)}(\sigma^{-1}y)$。
+\sourcepage{217}
+在交叉同态公式中取$\tau=\sigma^{-1}\eta_i(y)$，得$a_\sigma(y)=a_{\eta_i(y)}(y)-a_{\sigma^{-1}\eta_i(y)}(\sigma^{-1}y)$，即断言。
+
+(c)差$g_{ij}:=f_i-f_j$在覆盖变换下不变，故下降为$U_i\cap U_j$上的全纯函数，满足上闭链关系。由$H^1(X,\OO)=0$，可写$g_{ij}=g_i-g_j$。把$g_i$拉回$Y_i$，则$\widetilde f_i:=f_i-g_i$仍有指定加项，且在交集上相同，因而拼成整体所求$f$。
+\end{proof}
+\entry{28.5}{定理}
+对任意黎曼曲面的无分歧全纯Galois覆盖，每个交叉同态$G\to\mathcal E(Y)$均为某可微函数的自守加项。
+\begin{proof}
+同上，将$\OO$换为$\mathcal E$；任意曲面上$H^1(X,\mathcal E)=0$，无需非紧假设。
+\end{proof}
+\entry{28.6}{Behnke--Stein定理}
+若$X$非紧，任给同态$\pi_1(X)\to\C$，$\sigma\mapsto a_\sigma$，存在$\omega\in\Omega(X)$使$\int_\sigma\omega=a_\sigma$。
+\sourcepage{218}
+\begin{proof}
+在万有覆盖上，由(28.4)取有指定常加项的全纯函数$F$。由(10.13)，$dF$下降为具有这些周期的全纯1形式。
+\end{proof}
+\entry{28.7}{定理}
+若$X$紧，则每个同态$\pi_1(X)\to\C$均由唯一调和1形式的周期实现。
+\begin{proof}
+由(28.5)如上构造闭1形式$\widetilde\omega$。由(19.12)，$\widetilde\omega=\omega+df$，其中$\omega$调和，周期不变。唯一性由(19.8)。
+\end{proof}
+\subsection*{习题（第28节）}
+\entry{28.1}{}
+证明任意黎曼曲面上$H^1(X,\C)\cong\operatorname{Hom}(\pi_1(X),\C)$。
+\entry{28.2}{}
+若$X$非紧，令$\operatorname{Rh}_{\mathrm{hol}}^1(X)=\Omega(X)/d\OO(X)$，证明$H^1(X,\C)\cong\operatorname{Rh}_{\mathrm{hol}}^1(X)$。
+\entry{28.3}{}
+任给整函数$g$，证明存在整函数$f$满足$f(z+1)=f(z)+g(z)$。［提示：考虑Galois覆盖$\mathrm{ex}(z)=e^{2\pi iz}$，构造合适交叉同态$\Z\to\OO(\C)$。］

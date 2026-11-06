@@ -1,0 +1,54 @@
+90 
+1 Covering Spaces 
+(2) Suppose f is a holomorphic function on X. Then 
+I :r If Izi s 21 f II r I· 
+Here (DjDr) denotes the radial derivative with respect to polar coordinates 
+z = re iO . 
+Proof of (2). Since f is complex differentiable, 
+r = df = ~c- cj and thus I ~r I = I r I· 
+dz 
+e,e ar 
+cr 
+Moreover 
+al = (Df) 
+ar 
+ar 
+laII 
+and thus ar = 1f'1· 
+This implies 
+I ~ Iflzl = Il af + fall s 2Ifllf'l· 
+ar 
+ar 
+or 
+Now the actual proof of Theorem 11.13! By (11.11) there exists a fundamen-
+tal system of solutions of w' = Aw which may be written <I> = 'P<I>o, where 
+'P E GL{n, 6{X)) and <1>0 = exp{B log) with BE M(n x n, C). Then 
+1 
+<1>' = A<I> = 'P'<I>o + 'P<I>~ = 'P'<I>o + 'P . - B!l>o . 
+z 
+Multiplication by <Do 1 on the right yields A'P = 'P' + (l/z)'PB, i.e., 
+, 
+1 
+'P =A'P--'PB. 
+(*) 
+Since the matrix A has at most a pole of first order at 0, there exists a matrix 
+A 1 which is holomorphic on the whole disk I z I < R such that A = (l/z)A l' 
+Define the norm of a matrix C = (cjk ) by 
+IICII:= L Icjkl2 
+'. 
+( 
+)
+1 'z 
+]. k 
+Then from (*) it follows that given any ro E ]0, R[ there exists a constant 
+M ~ ° 
+such that 
+M 
+1I'P'(z)1I s -
+II 'P(z) II 
+for ° 
+< I z I = r S ro· 
+r 
+Suppose I/!jk are the components of the matrix 'P. For fixed (} E IR let 
+F(r):= 1I'P(reiO)IIZ = L Il/!jk(reioW· 
+j. k 

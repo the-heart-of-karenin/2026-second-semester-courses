@@ -1,0 +1,38 @@
+24 
+1 Covering Spaces 
+There are neighborhoods V of y and U of x such that p / V --+ U is a homeo-
+morphism. Let qJ: U --+ V be the inverse. Since A is continuous, there exists 
+E > 0 such that A(llr) x I,(a)) c U, where 
+1,(0 = {tEl: / t -
+~ / < e}. 
+In particular uAIlr)) c U and thus 
+u,,/I,(r) = qJ 0 u,,/I,(r). 
+Choose t1 E I,(r) with t1 < r. Then 
+A(t1' a) = uAt1) E V. 
+Since A is continuous at (t1> a), there exists b > 0, b :$; e, such that 
+A(t1' s) = us(td E V for every s E 16(a). 
+Because of the uniqueness of liftings it now follows that for every s E I.,{a) 
+us/I,(r) = qJ 0 us/IF.(r). 
+Thus A = qJ 0 A on le(r) x 16(a). But this contradicts the definition of (r, a). 
+Thus A is continuous on I x I. 
+Since A = P 0 A and A({l} x I) = {b}, it follows that A({l} x I) c p-1(b). 
+Since p-1(b) is discrete and {I} x I is connected, A({l} x I) consists of a 
+single point. This implies that the curves Uo and u1 have the same end point 
+and, by means of A, they are homotopic. 
+0 
+Covering Maps. We would now like to give a condition which will ensure 
+that the lifting of curves is always possible. 
+4.11. Definition. Suppose X and Yare topological spaces. A mapping 
+p: Y -+ X is called a covering map if the following holds. 
+Every point x E X has an open neighborhood U such that its preimage 
+p-1(U) can be represented as 
+p-1(U)= Ul-j, 
+jeJ 
+where the Vj, j E J, are disjoint open subsets of Y, and all the mappings 
+p / Vj -+ U are homeomorphisms. In particular, p is a local homeomorphism. 
+4.12. Examples 
+(a) Let D = {z E C: / z / < I} be the unit disk in the complex plane and let 
+p: D -+ C be the canonical injection. Then p is a local homeomorphism, but 
+not a covering map. For, no point a E C with / a / = 1 has a neighborhood U 
+with the property required in the definition. 
+(b) Let k be a natural number z 2 and let 

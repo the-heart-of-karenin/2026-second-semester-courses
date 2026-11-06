@@ -1,0 +1,41 @@
+20 Abel's Theorem 
+163 
+for every closed differential form W E g(1)(X). The productf:= fl ... fn then 
+satisfies the conditions of the lemma. 
+0 
+20.6. Corollary. Suppose X is a compact Riemann surface. Then given any 
+closed curve IX on X there exists a unique harmonic differential form 
+(1~ E Harml(X) such that 
+for every closed differential form W E g(1)(X). 
+PROOF. Suppose f is a weak solution of the divisor orx = 0 which satisfies the 
+conditions of Lemma (20.5). Since f does not vanish, dflfis differentiable and 
+closed on all of X. By Theorem (19.12) there exists a differential form 
+(fa E Harml(X) and a function g E g(X) such that 
+1 df 
+2ni 7 = (1a + dg. 
+If WE g(l)(X) is closed, then dg 1\ W = d(gw) and thus by Theorem (10.20) 
+J W = f If dflf 1\ W = J J (1 a 1\ w. 
+~ 
+nl X 
+X 
+To prove the uniqueness, suppose (1' E Harml(X) is a second solution of 
+the problem. Then for the difference T := (fa -
+(1' one has 
+JJ T 1\ W = 0 for every closed W E g(l)(X). 
+X 
+In particular one can choose w = *T and thus <T, T) = 0, i.e., T = (1a -
+~=Q 
+0 
+20.7. Abel's Theorem. Suppose D is a divisor on a compact Riemann surface X 
+with deg D = O. Then D has a solution if and only if there exists a I-chain 
+c E C 1 (X) with oc = D such that 
+J W = 0 for every W E Q(X). 
+(*) 
+c 
+Remark. Clearly the condition Se W = ° 
+only has to be checked for a basis 
+of Q(X). If Y Eel (X) is an arbitrary I-chain with oy = D, then the condition 
+may be formulated as follows. There exists a cycle rx E Z 1 (X), namely 
+IX = Y - c, such that 
+j = 1, ... , g, 
+where WI> ... , Wg is a basis of Q(X). 

@@ -1,0 +1,36 @@
+40 
+1 Covering Spaces 
+§6. Sheaves 
+In complex analysis one frequently has to deal with functions which have 
+various domains of definition. The notion of a sheaf gives a suitable formal 
+setting to handle this situation. 
+6.1. Definition. Suppose X is a topological space and :1: is the system of open 
+sets in X. A presheaf of abelian groups on X is a pair (ff, p) consisting of 
+(i) a family.'#' = (,'#'(V))UE 1 of abelian groups, 
+(ii) a family p = (p~)u, V E 1, V cU of group homomorphisms 
+p~: ff(V) -+ ff(V), where V is open in V, 
+with the following properties: 
+p~ = id$'"(u) 
+for every V E :1:, 
+pt;, , p~ = p~ for We V c V. 
+Remark. Generally one just writes ff instead of (ff, p), The homo-
+morphisms p~ are called restriction homomorphisms. Instead of p~(f) for 
+f E ff(V) one writes just f I v. Analogous to presheaves of abelian groups 
+one can also define presheaves of vector spaces, rings, sets, etc. 
+6.2. Example. Suppose X is an arbitrary topological space. For any open 
+subset V c X let '/&'( V) be the vector space of all continuous functions 
+f: V -+ C. For V c V let p~: '/&'( V) -+ '/&'( V) be the usual restriction mapping. 
+Then ('/&', p) is a pre sheaf of vector spaces on X, 
+6.3. Definitio~. A pre sheaf ff on a topological space X is called a sheafiffor 
+every open set V c X and every family of open subsets Vi c V, i E I, such 
+that V = Ui E I Vi the following conditions, which we will call the Sheaf 
+Axioms, are satisfied: 
+(I) Iff, 9 E ff( V) are elements such that f I Vi = 9 I Vi for every i E I, 
+thenf= g. 
+(II) Given elements.t; E ff( Vi), i E I, such that 
+.t;IVin Vj=.f}IVin Vj foralli,jEI, 
+then there exists an f E ff( V) such that f I Vi = .t; for every i E I. 
+Remark. The element f, whose existence is assured by (II), is by (I) 
+uniquely determined. 
+Applying (I) and (II) to the case V = 0 = Ui E 121 Vi implies ff(0) con-
+sists of exactly one element. 

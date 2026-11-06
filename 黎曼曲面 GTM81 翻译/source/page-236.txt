@@ -1,0 +1,41 @@
+29 Line and Vector Bundles 
+227 
+Indeed, let qJ E ..H*(X) be a meromorphic function having the same divisor 
+as the family (fai E l' Then 
+gi :=!j E (9*(U;) 
+qJ 
+and gij = 9i/gj. Hence (9ij)E Bl(U, (9*). 
+EXERCISES (§29) 
+o 
+29.1. Let X be a Riemann surface and n: E --+ X be a holomorphic vector bundle of 
+rank n on X. A holomorphic sub bundle FeE of rank k is a subset such that 
+the following holds. For every x E X there exists a holomorphic local 
+trivialization 
+h: Eu --+ U x cn, 
+of E with x E U such that 
+h(Fu) = U x (C k X 0) 
+where Fu = Eu n F. 
+(a) Let f: X --+ E be a holomorphic section of E which never vanishes. For 
+x E X define F% :=C . f(x) c Ex. Show that 
+F:= U F% C E 
+XEX 
+is a holomorphic subbundle of E of rank 1. 
+(b) Let f be a meromorphic section of E over X. Show that there exists a 
+unique subbundle FeE of rank 1 such that f is a meromorphic section 
+of F. 
+29.2. Let L --+ X be a line bundle on a compact Riemann surface X. The degree of Lis 
+defined as deg(L):= deg(Dt where D is the divisor of a meromorphic section s 
+of L over X. 
+(a) Show that deg L is well-defined, i.e., it is independent of the choice of the 
+meromorphic section s. 
+(b) On !p 1 let U = (UJ, U 2 ) be the covering given by 
+U 1 := {Z E C: I Z I < 1 + e}, 
+U 2 := {z E p1: I Z I > 1 - e}, 
+0 < e < 1. 
+Let L be the hoI om orphic line bundle on p1 defined by some given transition 
+function 
+Prove that 
+deg L :=~ f 
+9'u(Z) dz. 
+2m Izl=1 912(Z) 
+[Hint: First consider the special case 912(Z) = Zk.] 

@@ -1,0 +1,47 @@
+6 Sheaves 
+41 
+6.4. Examples 
+(a) For every topological space X the presheaf C(i defined in (6.2) is a 
+sheaf. Both Sheaf Axioms (I) and (II) are trivially fulfilled. 
+(b) Suppose X is a Riemann surface and C0( V) is the ring of holomorphic 
+functions defined on the open set VeX. Taking the usual restriction map-
+ping C0( V) -+ (o( V) for V c V one gets the sheaf (0 of holomorphic functions 
+on X. The sheaf uK of meromorphic functions on X is defined analogously. 
+(c) For an open subset V of a Riemann surface X let (r:*(V) be the 
+multiplicative group of all holomorphic maps f: U -+ C*. With the usual 
+restriction maps (0* is a sheaf of (multiplicative) abelian groups. The sheaf 
+uK* is defined analogously: For any open set U c X, ,-4t*(V) consists of all 
+meromorphic functions f E j{(V) which do not vanish identically on any 
+connected component of V. 
+(d) Suppose X is an arbitrary topological space and G is an abelian 
+group. Define a presheaf'!J on X as follows : For any non-empty open subset 
+V c X let '!J( V) := G and let '!J(0) := O. As for the restriction mappings, let 
+p~ = idG if V =f 0 and let p~ be the zero homomorphism. If G contains at 
+least two distinct elements 910 92 and if X has two disjoint non-empty open 
+subsets V I, U 2, then '!J is not a sheaf. This is because Sheaf Axion (II) does 
+not hold. For, since 
+VI n vz = 0, one has 911 VI n V 2 = 0 = 
+921 U 1 n V z but there is no f E '!J( U 1 U V 2) = G such thatf I VI = 91 and 
+fIU 2 =92' 
+(e) One can easily modify the previous example to obtain a sheaf. For 
+any open set U, let @(V) be the abelian group of all locally constant map-
+pings 9: V -+ G. Then if V is a non-empty connected open set, one has 
+@(U) = G. For V c V let @(U)-+ @(V) be the usual restriction. Then @ is a 
+sheaf on X which is called the sheaf of locally constant functions with values 
+in G. Often it is just denoted by G. 
+6.5. The Stalk of a Presheaf. Suppose :F is a presheaf of sets on a topological 
+space X and a E X is a point. On the disjoint union 
+U ,o/'(V), 
+V3a 
+where the union is taken over all the open neighborhoods V of a, introduce 
+an equivalence relation 71 as follows: Two elementsf E :F(V) and 9 E .~(V) 
+are related f '"a 9 precisely if there exists an open set W with a EWe U n V 
+such that f I W = 9 I w. One can easily check that this really is an equi-
+valence relation. The set '~a of all equivalence classes, the so-called inductive 
+limit of ff(V), is given by 
+'~a:= lim :F(U):= ( U ,o/'(V)) / ;; , 
+U3. 
+V3a 
+I 
+and is called the stalk of,~ at the point a. If ff is a presheaf of abelian groups 
+(resp. vector spaces, rings), then the stalk :Fa with the operation defined on 

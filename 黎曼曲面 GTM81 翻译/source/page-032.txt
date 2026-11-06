@@ -1,0 +1,40 @@
+4 Branched and Unbranched Coverings 
+23 
+4.9. Theorem. Suppose X, Y and Z are Riemann surfaces, p: Y ---> X is an 
+unbranched holomorphic map and f: Z ---> X is any holomorphic map. Then 
+every lifting g: Z ---> Y off is holomorphic. 
+PROOF. Suppose c E Z is an arbitrary point and let b := g( c) and a := p(b) = 
+fic). There exist open neighborhoods V of band U of a such that p I V ---> U is 
+biholomorphic. Suppose cp: U ---> V is the inverse map. Since g is continuous, 
+there is an open neighborhood W of c such that g( W) c V. But f = p. g 
+implies g I W = cp c (f I W) and thus g is holomorphic at the point c. 
+0 
+Consequence. Suppose X, Y and Z are Riemann surfaces and p: Y ---> X 
+and q: Z ---> X are unbranched holomorphic maps. Then every continuous 
+fiber-preserving map f: Y ---> Z is holomorphic. For f is a lifting of p with 
+respect to q. 
+Lifting of Curves. Suppose X and Yare Hausdorff spaces and p: Y ---> X is 
+a local homeomorphism. We are particularly interested in the lifting of 
+curves u: [0,1] ---> X. By Theorem (4.8) a lifting u: [0,1] ---> Y ofu, ifit exists 
+at all, is uniquely determined once the lifting of the initial point is specified. 
+In the following we again let I := [0, 1]. 
+4.10. Theorem (Lifting of Homotopic Curves). Suppose X and Yare Haus-
+dorff spaces and p: Y ---> X is a local homeomorphism. Suppose a, b E X and 
+a E Y is a point such that p(a) = a. Further suppose a continuous mapping 
+A: I x I ---> X is given such that A(O, s) = a and A(l, s) = bfor every S E I. Set 
+u,(t) := A(t, s). 
+If every curve Us can be Wted to a curve Us with initial point a, then Uo and UI 
+have the same end point and are homotopic. 
+PROOF. Define a mapping A: I x 1---> Y by A(t, s):= us(t). 
+Claim (a) There exists f;O > 0 such that A is continuous on [0, I:o[ x I. 
+Proof There are neighborhoods V of a and U of a such that p I V ---> U is a 
+homeomorphism. Let cp: U ---> V be the inverse map. Since A(O x I) = {a} 
+and A is continuous, there exists 1:0 > 0 such that A([O, 1'0] x I) c U. Be-
+cause of the uniqueness of the lifting of curves, one has 
+usl [0,1:0] = cp " usl [0, f;O] 
+for every s E I. 
+Thus A = cpo A on [0,1'0] x I and this implies A is continuous on [0, £o[ x I. 
+Claim (b) The mapping A is continuous on all of I x I. 
+Proof Suppose to the contrary that there is a point (to, <J) E I x I at which A 
+is not continuous. Let, be the infinum of all those t such that A is not 
+continuous at (t, <J). By (a),:;:. 1:0' Let x :=A(" 0") and y:=A(" IT) = £l".(,). 

@@ -1,0 +1,40 @@
+172 
+2 Compact Riemann Surfaces 
+be the composition of the mappings 1/1: xg ~ Pico(X) and j: Pico(X) ~ 
+Jac(X). Recalling the various definitions, one sees that 
+( 
+9 
+Xj 
+) 
+J(XI' ... , Xg) = 
+j~1 {j Wi 1 :5 i :5gmod Per(wj, ... , w g). 
+One has a sharper version of (21.7). 
+21.9. Theorem. With the same notation as above, the mapping 
+J: xg ~ Jac(X) 
+is surjective. 
+PROOF. It suffices to show that 1/1: X g ..... Pico(X) is surjective. But this is the 
+same as saying that every divisor D E Divo(X) is equivalent modulo Divp(X) 
+to a divisor of the form 
+9 L (Dxj - Da), 
+j=1 
+One sees this as follows. Let 
+D"=D+Dal +···+Dag • 
+Then deg D' = 9 and by the Riemann-Roch Theorem (16.9) one has 
+dim HO(X, (JD') ~ 1. Thus there exists a meromorphic function f #- 0 on X 
+with (f) ~ - D', i.e. 
+D" ,= (f) + D' ~ O. 
+Since deg D" = g, there are points Xj, ... , Xg E X such that 
+Thus 
+9 L (Dxj - Da) = D + (f). 
+o 
+j=l 
+Remark. It follows directly from the definition of the mapping J: xg ..... 
+Jac(X) that J(x j, ... , Xg) remains invariant under any permutation of x I, ... , 
+x g • Hence J induces a mapping S9X ..... Jac(X) of the g-fold symmetric pro-
+duct of X into the Jacobi variety. One can define on sgx, as well as on 
+Jac(X), the structure of a compact complex g-dimensional manifold. Then 
+the mapping sgx ..... Jac(X) is holomorphic. Note that it is not bijective, but 
+one can show that it is bimeromorphic, i.e. induces an isomorphism between 
+the fields of meromorphic functions of Jac(X) and sgx. For details, see [16]. 
+21.10. Theorem. For every compact Riemann surface X of genus 1 the map-
+ping J: X ..... Jac(X) is an isomorphism. 

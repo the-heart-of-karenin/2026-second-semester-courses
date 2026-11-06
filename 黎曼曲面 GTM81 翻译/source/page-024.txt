@@ -1,0 +1,44 @@
+3 Homotopy of Curves. The Fundamental Group 
+15 
+show that 14 ~ w. By assumption there exist continuous mappings A, 
+B: I x I --+ X such that for every t, s E I the following hold: 
+Define C: I x I --+ X by 
+A(t, 0) = u(t), 
+A(t, 1) = B(t, 0) = v(t), 
+B(t, 1) = w(t), 
+A(O, s) = B(O, s) = a, 
+A(I, s) = B(I, s) = b. 
+C(t s):={A(t,2S) 
+forO~s~1, 
+, 
+B(t, 2s - 1) for 1 ~ s ~ 1. 
+Then C is continuous and is a homotopy from u to w. 
+o 
+3.3. Lemma. Suppose u: I --+ X is a curve in the topological space X and 
+cp: I --+ I is a continuous mapping such that cp(O) = ° 
+and cp( 1) = 1. Then the 
+curves 14 and u c cp are homotopic. 
+PROOF. Define A: I x I --+ X by 
+A(t, s) := 14((1 - s)t + scp(t)). 
+Then A is continuous and 
+A(t, 0) = u(t), 
+A(O, s) = u(O) 
+A (t, 1) = (u c cp)( t) 
+A(1, s) = 14(1) 
+for every t, s E I. Thus 14 and u c cp are homotopic. 
+o 
+3.4. Definition. Suppose a, band c are three points in a topological space X, 
+u: I -> X is a curve from a to b and v: I -> X is a curve from b to c. 
+(i) The product curve 14 . v: I --+ X from a to c is defined by 
+(u . v)(t):= {U(2t) 
+for 0 ~ t ~ 1, 
+v(2t - 1) for 1 ~ t ~ 1. 
+(ii) The inverse curve 14- : I -> X from a to b is defined by 
+u- (t):= 14(1 - t) 
+for every tEl. 
+The product curve u . v first traces the points of the curve u and then those of 
+the curve v but at twice the speed. The inverse curve u- passes along the 
+same points as u but in the opposite direction. 
+One can easily check that if u 1, U 2: I --+ X are homotopic curves from a to 
+b and Vb v2 : I -> X are homotopic curves from b to c, then UI • VI ~ U2 . V2 
+and 141 ~ U2' 

@@ -1,0 +1,40 @@
+5 The Universal Covering and Covering Transformations 
+35 
+Suppose (J E Deck(X/X) and v is a curve in X from Yo to (J(Yo). Assume 
+$((J) = E, i.e., p 0 v is null-homotopic. Since v is a lifting of p 0 v, it follows 
+from (4.10) that the end point (J(Yo) of v is the same as the initial point Yo. 
+This implies (J = id x. 
+(iii) $ is surjective. 
+Suppose oc E n 1 (X, xo) and u is a curve representing oc. Let v be a lifting of u 
+to X with initial point Yo and suppose the end point of v is Yl. Then there 
+exists (J E Deck(X/X) such that (J(Yo) = Yt. From the definition of $ one has 
+$((J) = oc. This completes the proof. 
+D 
+5.7. Examples 
+(a) exp: C ~ C* is the universal covering of C*, since C is simply con-
+nected. For nEll. let 'n: C ~ C be translation by 2nin. Then exp('n(z)) = 
+exp(z + 2nin) = exp(z) for every z E C and thus 'n is a covering 
+transformation. If (J is any covering transformation, then exp((J(O)) = 
+exp(O) = 1 and thus there exists n E 7l. such that (J(O) = 2nin. Since 'n(O) = 
+2nin as well, (J = 'n. Thus 
+Deck(C ~ 
+C*) = {'.: n E ll.}. 
+Since the last group is isomorphic to 7l., 
+(b) Let 
+H = {z E C: Re(z} < O} 
+be the left half plane and 
+D* = {z E C: 0 < I z I < I}. 
+Then exp: H ~ D* is the universal covering of the punctured unit disk. As in 
+Example (a) one can show that the group of covering transformations con-
+sists of all translations by integral multiples of 2ni and that nl(D*) ~ ll.. 
+(c) Suppose r = ll.YI + 7l.Y2 is a lattice in C. Then the canonical quotient 
+mapping C ..... c/r is the universal covering of the torus c/r. For Y E r 
+denote by 'y: C ~ C translation by y. Analogous to Example (a) one can 
+show that Deck(C ~ C/r) ~ fry: )' E n. Thus 
+nl(C/r) ~ r ~ ll. x ll.. 
+Consequence. There does not exist any meromorphic function on C doubly-
+periodic with respect to r which mod r has a single pole of first order. 
+PROOF. Such a function would define a holomorphic mappingf: c/r ..... pI 
+which takes the value 00 only once. By (4.24) and (2.5}fwould be biholo-
+morphic and in particular n I (C/r) ~ n I (P I) = 0, a contradiction! 
+D 

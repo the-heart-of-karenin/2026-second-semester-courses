@@ -1,0 +1,77 @@
+\section{Dolbeault引理}
+\sourcepage{104}
+本节求解非齐次Cauchy--Riemann方程$\partial f/\partial\bar z=g$，其中$g$为圆盘$X$上的给定可微函数，再用它证明$H^1(X,\OO)=0$。
+\entry{13.1}{引理}
+若$g\in\mathcal E(\C)$有紧支集，则存在$f\in\mathcal E(\C)$使$\partial f/\partial\bar z=g$。
+\begin{proof}
+定义
+\[
+f(\zeta):=\frac1{2\pi i}\iint_\C\frac{g(z)}{z-\zeta}\,dz\wedge d\bar z.
+\]
+被积函数在$z=\zeta$处有奇性，须证明积分存在并可微依赖$\zeta$。作平移后用极坐标$z=\zeta+re^{i\theta}$，积分时视$\zeta$为常数，则$dz\wedge d\bar z=-2ir\,dr\wedge d\theta$，因此
+\[
+f(\zeta)=-\frac1\pi\int_0^\infty\int_0^{2\pi}g(\zeta+re^{i\theta})e^{-i\theta}\,d\theta\,dr.
+\]
+由$g$有紧支集，局部地只需在$0\le r\le R$、$0\le\theta\le2\pi$的矩形上积分。因此可在积分号下求导，$f\in\mathcal E(\C)$，且
+\[
+f_{\bar\zeta}(\zeta)=-\frac1\pi\iint g_{\bar\zeta}(\zeta+re^{i\theta})e^{-i\theta}\,dr\,d\theta.
+\]
+\sourcepage{105}
+换回原坐标，令$B_\varepsilon:=\{z:\varepsilon\le|z|\le R\}$，则
+\[
+f_{\bar\zeta}(\zeta)=\frac1{2\pi i}\lim_{\varepsilon\to0}\iint_{B_\varepsilon}g_{\bar\zeta}(\zeta+z)\frac1z\,dz\wedge d\bar z.
+\]
+对$z\ne0$，$g_{\bar\zeta}(\zeta+z)/z=\partial_{\bar z}(g(\zeta+z)/z)$。令$\omega(z):=\frac1{2\pi i}\frac{g(\zeta+z)}z dz$，由Stokes定理，
+\[
+f_{\bar\zeta}(\zeta)=-\lim_{\varepsilon\to0}\iint_{B_\varepsilon}d\omega
+=-\lim_{\varepsilon\to0}\int_{\partial B_\varepsilon}\omega
+=\lim_{\varepsilon\to0}\int_{|z|=\varepsilon}\omega.
+\]
+参数化$z=\varepsilon e^{i\theta}$得$f_{\bar\zeta}(\zeta)=\lim_{\varepsilon\to0}\frac1{2\pi}\int_0^{2\pi}g(\zeta+\varepsilon e^{i\theta})d\theta$。右端为圆周平均值，由连续性趋于$g(\zeta)$。
+\end{proof}
+下面去掉紧支集假设。
+\entry{13.2}{定理}
+设$X=\{z:|z|<R\}$，$0<R\le\infty$。对每个$g\in\mathcal E(X)$，存在$f\in\mathcal E(X)$使$f_{\bar z}=g$。这是多复变Dolbeault引理的特殊情形，参见[32]。
+\sourcepage{106}
+\begin{proof}
+一般不能直接用(13.1)的积分，因为未必收敛。采用穷竭方法。取$0<R_0<R_1<\cdots\to R$，令$X_n:=\{|z|<R_n\}$。选$\psi_n\in\mathcal E(X)$，紧支集包含于$X_{n+1}$，且$\psi_n|_{X_n}=1$。将$\psi_ng$在外部延拓为零，成为$\C$上的紧支集函数。由(13.1)，存在$f_n\in\mathcal E(X)$使$\bar\partial f_n=\psi_ng$，其中$\bar\partial:=\partial/\partial\bar z$。
+
+归纳把$f_n$改为$\widetilde f_n$，对$n\ge1$满足(i)$\bar\partial\widetilde f_n=g$于$X_n$；(ii)$\|\widetilde f_{n+1}-\widetilde f_n\|_{X_{n-1}}\le2^{-n}$，这里$\|h\|_K:=\sup_K|h|$。令$\widetilde f_1=f_1$。若已构造到$n$，则$f_{n+1}-\widetilde f_n$在$X_n$上全纯。可取多项式$P$（例如Taylor级数的有限部分）使$\|f_{n+1}-\widetilde f_n-P\|_{X_{n-1}}\le2^{-n}$。令$\widetilde f_{n+1}:=f_{n+1}-P$，两条件均成立。
+
+每点属于几乎所有$X_n$，故$f(z):=\lim_n\widetilde f_n(z)$存在。在$X_n$上写
+\[
+f=\widetilde f_n+F_n,\qquad F_n:=\sum_{k=n}^\infty(\widetilde f_{k+1}-\widetilde f_k).
+\]
+各求和项在$X_n$上全纯，且由(ii)局部一致收敛，故$F_n$全纯。
+\sourcepage{107}
+因此$f$在各$X_n$上无限次可微，且$\bar\partial f=\bar\partial\widetilde f_n=g$，从而在整个$X$成立。
+\end{proof}
+\textbf{注记。}解仅在相差任意全纯函数的意义下唯一。
+\entry{13.3}{推论}
+在上述圆盘上，对每个$g\in\mathcal E(X)$，存在$f\in\mathcal E(X)$使$\Delta f=g$，其中$\Delta:=\partial_x^2+\partial_y^2=4\partial_z\partial_{\bar z}$为Laplace算子。
+\begin{proof}
+取$f_1$使$\bar\partial f_1=g$，再取$f_2$使$\bar\partial f_2=\bar f_1$。则$f:=\tfrac14\bar f_2$满足
+\[
+\Delta f=\partial_z\partial_{\bar z}\bar f_2
+=\partial_{\bar z}(\overline{\bar\partial f_2})=\bar\partial f_1=g.
+\]
+\end{proof}
+\entry{13.4}{定理}
+对$X=\{|z|<R\}$，$H^1(X,\OO)=0$。
+\begin{proof}
+取开覆盖$\mathfrak U=(U_i)$及$(f_{ij})\in Z^1(\mathfrak U,\OO)$。由$H^1(X,\mathcal E)=0$，存在$g_i\in\mathcal E(U_i)$使$f_{ij}=g_i-g_j$。由$\bar\partial f_{ij}=0$，各$\bar\partial g_i$拼成整体函数$h\in\mathcal E(X)$。由(13.2)取$g$使$\bar\partial g=h$，令$f_i:=g_i-g$，则$f_i$全纯且$f_i-f_j=f_{ij}$，故上闭链可分裂。
+\end{proof}
+\entry{13.5}{定理}
+黎曼球面满足$H^1(\PP^1,\OO)=0$。
+\sourcepage{108}
+\begin{proof}
+取$U_1:=\PP^1\setminus\{\infty\}$、$U_2:=\PP^1\setminus\{0\}$，两者均双全纯于$\C$，由(13.4)各第一上同调为零，故为Leray覆盖。只须分裂上闭链$f_{12}\in\OO(\C^*)$。写Laurent展开$f_{12}=\sum_{n=-\infty}^\infty c_nz^n$，令$f_1:=\sum_{n=0}^\infty c_nz^n$、$f_2:=-\sum_{n=-\infty}^{-1}c_nz^n$，则$f_i\in\OO(U_i)$且$f_{12}=f_1-f_2$。
+\end{proof}
+\subsection*{习题（第13节）}
+\entry{13.1}{}
+设$X=\{|z|<R\}$，以$\mathcal H$表示调和函数层，即对开集$U$，$\mathcal H(U):=\{f:U\to\C:f\text{调和}\}$。证明$H^1(X,\mathcal H)=0$。
+\entry{13.2}{}
+(a)证明$(\PP^1\setminus\{\infty\},\PP^1\setminus\{0\})$为全纯1形式层$\Omega$的Leray覆盖。
+(b)证明$H^1(\PP^1,\Omega)\cong\C$，且$dz/z\in\Omega(U_1\cap U_2)\cong Z^1(\mathfrak U,\Omega)$的上同调类为其一组基。
+\entry{13.3}{}
+设$g\in\mathcal E(\C)$有紧支集。证明方程$f_{\bar z}=g$存在紧支集解$f\in\mathcal E(\C)$，当且仅当对每个$n\in\mathbb N$有$\iint_\C z^ng(z)dz\wedge d\bar z=0$。

@@ -1,0 +1,35 @@
+138 
+2 Compact Riemann Surfaces 
+17.9. The Duality Theorem of Serre. For any divisor D on a compact Riemann 
+surface X the mapping 
+In: HO(X, !Ln) -> H1(X, @n)* 
+defined in (17.5) is an isomorphism. 
+PROOF. Because of (17.6) only the surjectivity of In remains to be proved. 
+Suppose A. E H1(X, @n)* with A. =1= o. We want to show that ). lies in the 
+image of Iv. 
+Suppose P is a divisor with deg P = 1. For any natural number n let 
+Dn '=D - nP. 
+Denote by A c Hl(X, 0vJ* the vector subspace of all linear forms of the 
+form t/JA., where t/J E HO(X, 
+(~)nP). By Lemma (17.8) A is isomorphic to 
+HO(X, (1)nP). It thus follows from the Riemann-Roch Theorem that 
+dim A 2 1 - 9 + n, 
+where 9 denotes the genus of X. By Lemma (17.4) the vector subspace 
+Im(lvJ c Hl(X, 0nJ* satisfies 
+dim Im(lnJ = dim HO(X, !LvJ 2 n + ko - deg D. 
+For n > deg D one has deg Dn < 0 and thus HO(X, @v.) = O. The Riemann-
+Roch Theorem implies 
+dim Hl(X, 0 vJ* = 9 - 1 - deg Dn = n + (g - 1 - deg D). 
+If one chooses n sufficiently large, then 
+dim A + dim Im(lvJ > dim Hl(X, 6vJ*. 
+This implies A n Im(lnJ =1= O. Thus there exists t/J E HO(X, 0 np ), t/J =1= 0, and 
+WE HO(X, !LvJ with t/JA. = Iv.(W). Let A ,= (t/J) be the divisor of t/J, i.e., 
+IN E HO(X, (1) A), and let D' ,= Dn - A. Then 
+IE/v-) = ~ (t/JA) = ~IDn(W) = lD' (~W). 
+From Lemma (17.7) one gets Wo '=(I/t/J)W E HO(X, fLv) and A = Iv(WO). 
+D 
+17.10. Remark. Frequently one only uses the Serre Duality Theorem to 
+obtain equality of the dimensions 
+dim Hl(X, ((In) = dim HO(X, !Lv). 
+In particular for D = 0 one has 
+9 = dim Hl(X, 0i ) = dim HO(X, n). 

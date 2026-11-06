@@ -1,0 +1,29 @@
+Preface 
+This book grew out of lectures on Riemann surfaces which the author gave 
+at the universities of Munich, Regensburg and Munster. Its aim is to give 
+an introduction to this rich and beautiful subject, while presenting methods 
+from the theory of complex manifolds which, in the special case of one 
+complex variable, turn out to be particularly elementary and transparent. 
+The book is divided into three chapters. In the first chapter we consider 
+Riemann surfaces as covering spaces and develop a few basics from topology 
+which are needed for this. Then we construct the Riemann surfaces which 
+arise via analytic continuation of function germs. In particular this includes 
+the Riemann surfaces of algebraic functions. As well we look more closely at 
+analytic functions which display a special multi-valued behavior. Examples 
+of this are the primitives of holomorphic i-forms and the solutions of linear 
+differential equations. 
+The second chapter is devoted to compact Riemann surfaces. The main 
+classical results, like the Riemann-Roch Theorem, Abel's Theorem and the 
+Jacobi inversion problem, are presented. Sheaf cohomology is an important 
+technical tool. But only the first cohomology groups are used and these are 
+comparatively easy to handle. The main theorems are all derived, following 
+Serre, from the finite dimensionality of the first cohomology group with 
+coefficients in the sheaf of holomorphic functions. And the proof of this is 
+based on the fact that one can locally solve inhomogeneous Cauchy-
+Riemann equations and on Schwarz' Lemma. 
+In the third chapter we prove the Riemann Mapping Theorem for simply 
+connected Riemann surfaces (or Uniformization Theorem) as well as the 
+main theorems of Behnke-Stein for non-compact Riemann surfaces, i.e., the 
+Runge Approximation Theorem and the Theorems of Mittag-Leffler and 
+Weierstrass. This is done using Perron's solution of the Dirichlet problem 
+Vll 

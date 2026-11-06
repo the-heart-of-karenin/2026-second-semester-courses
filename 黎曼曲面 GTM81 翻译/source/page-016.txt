@@ -1,0 +1,39 @@
+[ The Definition of Riemann Surfaces 
+7 
+are holomorphic. Since U n G f 0, the Identity Theorem for holomorphic 
+functions on domains in C implies gl and g2 are identically equal. Thus 
+fl I U = f21 U. Hence h E G and thus G is closed. Now since X is connected 
+either G = 0 or G = X. But the first case is excluded since a E G (using the 
+Identity Theorem in the plane again). Hence j~ andf2 coincide on all of X. 
+o 
+1.12. Definition. Let X be a Riemann surface and Y be an open subset of X. 
+By a meromorphicfunction on Y we mean a holomorphic functionf: Y' -> C, 
+where Y' c Y is an open subset, such that the following hold: 
+(i) Y\ Y' contains only isolated points. 
+(ii) For every point p E y\ Y' one has 
+Iimlj{x)1 = 00. 
+x-p 
+The points of y\ Y' are called the poles of f The set of all meromorphic 
+functions on Y is denoted by . If( Y). 
+1.13. Remarks 
+(a) Let (U, z) be a coordinate neighborhood ofa pole p offwith z(p) = O. 
+Then f may be expanded in a Laurent series 
+,,:::; - k 
+in a neighborhood of p. 
+(b) .11( Y) has the natural structure of a C-algebra. First of all the sum 
+and the product of two meromorphic functions/, g E .if( Y) are holomorphic 
+functions at those points where both f and 9 are holomorphic. Then one 
+holomorphically extends, 
+using Riemann's Removable Singularities 
+Theorem, f + 9 (resp. /g) across any singularities which are removable. 
+1.14. Example. Suppose n 2:: 1 and let 
+F(z) = z" + CIZ"-I + ... + en, 
+be a polynomial. Then F defines a holomorphic mapping F: C -> C. If one 
+thinks ofC as a subset of /pI, then limz_ooIF(z)1 = 00. Thus FE.:lt(/P I ). 
+We now interpret meromorphic functions as holomorphic mappings into 
+the Riemann sphere. 
+1.15. Theorem. Suppose X is a Riemann surface andfE .J((X). For each pole 
+p off, definef{p):= 00. Thenf: X -> /pI is a holomorphic mapping. Conversely, 
+iff: X -> /pI is a holomorphic mapping, thenfis either identically equal to 00 or 
+elsef- I( (0) consists of isolated points andf: X\f- l( 00) -> C is a meromorphic 
+function on X. 

@@ -1,0 +1,38 @@
+31 The Riemann-Hilbert Problem 
+231 
+natural restriction maps this defines a sheaf SL(n, (9) on X. Prove that on a 
+non-compact Riemann surface X 
+Hl(X, SL(n, (9)) = 0, 
+i.e., for every cocyc1e (gij) E Zl(U, SL(n, (9)) there exists a cochain 
+(g;) E CO(U, SL(n, (9)) such that 
+§31. The Riemann-Hilbert Problem 
+In §11 we saw that the automorphic behavior of a fundamental system of 
+solutions of a linear differential equation on a Riemann surface X gives rise 
+to a homomorphism T: 1C 1 (X) --+ GL(n, IC). This homomorphism associates 
+to each (T E 1Cl(X) the factor of automorphy 7;. by which the fundamental 
+system is multiplied when it is analytically continued along (T. Conversely 
+one may ask if given any homomorphism T: 1Cl(X) --+ GL(n, IC), there exists 
+a linear differential equation on X such that the automorphic behavior of a 
+fundamental system of solutions is exactly given by the homomorphism T. 
+This is called the Riemann-Hilbert problem. In this section we present the 
+solution of the Riemann-Hilbert problem on non-compact Riemann sur-
+faces using the method of H. Rohrl [57]. 
+31.1. Factors of Automorphy. Suppose p: Y --+ X is a holomorphic un-
+branched covering mapping between Riemann surfaces and G := Deck(YjX) 
+is its group of covering transformations. A holomorphic mapping «1>: Y--+ 
+GL(n, IC) is called multiplicatively automorphic with constant factors of 
+automorphy T" E GL(n, IC), (T E G, if 
+(T«I> = «I>T" 
+for every (T E G. 
+In this case one can easily show that the correspondence (TI-+ T" is a group 
+homomorphism G --+ GL(n, IC), cf. (11.6). The following theorem is analo-
+gous to Theorem (28.4). 
+31.2. Theorem. Suppose X and Yare non-compact Riemann surfaces, 
+p: Y --+ X 
+is 
+a holomorphic unbranched Galois covering map and 
+G:= Deck(YjX) is its group of covering transformations. Then given any 
+homomorphism 
+T: G --+ GL(n, IC), 
+there exists a holomorphic mapping «1>: Y --+ G L( n, IC) with the factors of auto-
+morphy T", i.e., (T«I> = «I>T"for every (T E G. 

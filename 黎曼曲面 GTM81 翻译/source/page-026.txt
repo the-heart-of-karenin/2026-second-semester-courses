@@ -1,0 +1,37 @@
+3 Homotopy of Curves. The Fundamental Group 
+17 
+3.7. Definition. A curve u: I -> X in a topological space X is called closed if 
+u(O) = u( 1). A closed curve u: I -> X with initial and end point a is said to be 
+null-homotopic if it is homotopic to the constant curve at a. 
+3.8. Theorem and Definition. Suppose X is a topological space and a E X is a 
+point. The set 1t t (X, a) of homotopy classes of closed curves in X with initial 
+and end point a forms a group under the operation induced by the product of 
+curves. This group is called the fundamental group of X with base point a. 
+Notation. For any closed curve u denote by cl(u) its homotopy class. Thus 
+the group operation in 1tt(X, a) is by definition cl(u) cl(v) = cl(u' v). 
+PROOF. The fact that the group operation is well-defined follows from the 
+remark at the end of Definition (3.4). Theorem (3.6) implies that the opera-
+tion is associative and the class of null homotopic curves is the identity 
+element. Inverses satisfy 
+o 
+3.9. Dependence on the Base Point. Suppose X is a topological space and a, 
+bE X are points which are joined by a curve w. Then a mapping 
+can be defined as follows: 
+j(cl(u)) :=cl(w- . U . w). 
+One easily sees that this mapping is an isomorphism. Thus for an arcwise 
+connected space X the fundamental group is essentially independent of the 
+base point and we often just write 1t1 (X) instead of 1t1 (X, a). Note however 
+that the isomorphism 1t1 (X, a) -> 1tt(X, b) depends in general on the curve w 
+joining a to b used in its construction. If W t is another curve from a to band 
+fl: 1tt(X, a)->1tI(X, b) is defined by 
+ft(cl(u» :=cl(wl . U· wd, 
+then the automorphism 
+F:=flt of: 1tt(X, a)->1tI(X, a) 
+satisfies F(cl(u» = cl(wt . w- . u . W· wl), i.e., 
+F(IX) = I' . IX • 1'-1 
+for every IX E 1tt(X, a), 
+where I' denotes the homotopy class of the closed curve W t . W-. Thus if 
+1t t (X, a) is abelian, then this shows that 1tt(X, a) and 1tt(X, b) are canon-
+ically isomorphic. 
+3.10. Definition. An arcwise connected topological space X is called simply 
+connected if 1t I (X) = O. 

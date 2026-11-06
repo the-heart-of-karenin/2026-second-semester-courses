@@ -1,0 +1,79 @@
+\section{层}
+\sourcepage{40}
+复分析中经常需要处理定义域各不相同的函数。层的概念为处理这种情形提供了适当的形式框架。
+\entry{6.1}{定义}
+设$X$是拓扑空间，$\mathfrak T$为$X$的开集族。$X$上的一个\textbf{阿贝尔群预层}（presheaf）是二元组$(\mathcal F,\rho)$，由(i)阿贝尔群族$\mathcal F=(\mathcal F(U))_{U\in\mathfrak T}$及(ii)群同态族$\rho=(\rho_V^U)_{U,V\in\mathfrak T,V\subset U}$组成，其中
+\[
+\rho_V^U:\mathcal F(U)\to\mathcal F(V),\qquad
+\rho_U^U=\mathrm{id}_{\mathcal F(U)},\quad
+\rho_W^V\circ\rho_V^U=\rho_W^U\quad(W\subset V\subset U).
+\]
+\textbf{注记。}通常只写$\mathcal F$。同态$\rho_V^U$称为限制同态；$f\in\mathcal F(U)$的$\rho_V^U(f)$简记为$f|_V$。类似地可以定义向量空间、环、集合等的预层。
+\entry{6.2}{例}
+对任意拓扑空间$X$的开集$U$，令$\mathcal C(U)$为所有连续函数$f:U\to\C$组成的向量空间。对$V\subset U$取通常的限制映射$\rho_V^U$，便得到$X$上的向量空间预层$(\mathcal C,\rho)$。
+\entry{6.3}{定义}
+若$X$上的预层$\mathcal F$满足以下\textbf{层公理}，则称为\textbf{层}（sheaf）：对每个开集$U\subset X$及其任意开覆盖$U=\bigcup_{i\in I}U_i$，
+
+(I) 若$f,g\in\mathcal F(U)$且对每个$i$有$f|_{U_i}=g|_{U_i}$，则$f=g$。
+
+(II) 若给定$f_i\in\mathcal F(U_i)$满足对所有$i,j\in I$有$f_i|_{U_i\cap U_j}=f_j|_{U_i\cap U_j}$，则存在$f\in\mathcal F(U)$使$f|_{U_i}=f_i$。
+
+\textbf{注记。}由(I)，(II)中的$f$唯一。对$U=\varnothing=\bigcup_{i\in\varnothing}U_i$应用(I)、(II)，可知$\mathcal F(\varnothing)$恰有一个元素。
+\sourcepage{41}
+\entry{6.4}{例}
+(a) (6.2)中的预层$\mathcal C$为层，两个层公理显然成立。
+
+(b) 对黎曼曲面$X$的开集$U$，令$\OO(U)$为$U$上的全纯函数环，并取通常的限制映射，得到$X$上的全纯函数层$\OO$。亚纯函数层$\MM$类似定义。
+
+(c) 令$\OO^*(U)$为所有全纯映射$f:U\to\C^*$构成的乘法群，取通常限制，得到（乘法）阿贝尔群层$\OO^*$。类似定义$\MM^*$：$\MM^*(U)$为$\MM(U)$中在$U$的任一连通分支上均不恒为零的函数之集。
+
+(d) 设$G$为阿贝尔群。在任意拓扑空间$X$上定义预层$\mathcal G$：对非空开集$U$令$\mathcal G(U):=G$，并令$\mathcal G(\varnothing):=0$。当$V\ne\varnothing$时取限制为$\mathrm{id}_G$，到空集的限制取零同态。若$G$含两个不同元素$g_1,g_2$，且$X$有两个不交非空开集$U_1,U_2$，则$\mathcal G$不是层，因为公理(II)不成立：虽然$g_1|_{U_1\cap U_2}=0=g_2|_{U_1\cap U_2}$，但不存在$f\in\mathcal G(U_1\cup U_2)=G$满足$f|_{U_1}=g_1$、$f|_{U_2}=g_2$。
+
+(e) 稍改上例即可得到层：令$\underline G(U)$为所有局部常值映射$g:U\to G$构成的阿贝尔群，取通常限制。若$U$非空且连通，则$\underline G(U)=G$。于是$\underline G$是$X$上的层，称为取值于$G$的局部常值函数层，通常简记为$G$。
+\entry{6.5}{预层的茎}
+设$\mathcal F$为$X$上的集合预层，$a\in X$。在不交并$\coprod_{U\ni a}\mathcal F(U)$上引入等价关系：$f\in\mathcal F(U)$与$g\in\mathcal F(V)$满足$f\sim_a g$，当且仅当存在$a$的开邻域$W\subset U\cap V$使$f|_W=g|_W$。容易验证这确为等价关系。所有等价类之集
+\[
+\mathcal F_a:=\varinjlim_{U\ni a}\mathcal F(U):=
+\left(\coprod_{U\ni a}\mathcal F(U)\right)\big/\sim_a
+\]
+称为$\mathcal F$在$a$处的\textbf{茎}（stalk），即$\mathcal F(U)$的归纳极限。若$\mathcal F$为阿贝尔群（向量空间、环）预层，则利用代表元的运算在等价类上定义运算，茎也成为阿贝尔群（向量空间、环）。
+\sourcepage{42}
+对$a$的每个开邻域$U$，令$\rho_a:\mathcal F(U)\to\mathcal F_a$把$f$映到其等价类，称$\rho_a(f)$为$f$在$a$处的\textbf{芽}（germ）。例如，对区域$X\subset\C$上的全纯函数层$\OO$，芽$\varphi\in\OO_a$由$a$某开邻域上的全纯函数代表，因此有收敛半径为正的Taylor展开$\sum_{\nu=0}^\infty c_\nu(z-a)^\nu$。两个函数在$a$处确定相同芽，当且仅当它们在$a$处的Taylor展开相同。故$\OO_a$同构于复系数收敛幂级数环$\C\{z-a\}$。类似地，亚纯函数芽环$\MM_a$同构于所有主部有限的收敛Laurent级数$\sum_{\nu=k}^\infty c_\nu(z-a)^\nu$（$k\in\Z$）构成的环。
+
+对每个函数芽$\varphi\in\OO_a$，函数值$\varphi(a)\in\C$良定义，即与代表元的选择无关。
+\entry{6.6}{引理}
+设$\mathcal F$为拓扑空间$X$上的阿贝尔群层，$U\subset X$开。则$f\in\mathcal F(U)$为零，当且仅当所有芽$\rho_x(f)\in\mathcal F_x$（$x\in U$）均为零。
+
+这直接由层公理(I)得到。
+\entry{6.7}{预层的伴随拓扑空间}
+设$\mathcal F$为拓扑空间$X$上的预层。令$|\mathcal F|:=\coprod_{x\in X}\mathcal F_x$为各茎的不交并，令$p:|\mathcal F|\to X$把$\varphi\in\mathcal F_x$映到$x$。如下引入拓扑：对开集$U\subset X$及$f\in\mathcal F(U)$，令
+\[
+[U,f]:=\{\rho_x(f):x\in U\}\subset|\mathcal F|.
+\]
+\sourcepage{43}
+\entry{6.8}{定理}
+所有$[U,f]$组成的族$\mathfrak B$是$|\mathcal F|$上某拓扑的基，投影$p:|\mathcal F|\to X$为局部同胚。
+\begin{proof}
+(a) 须验证：(i)每个$\varphi\in|\mathcal F|$至少属于一个$[U,f]$，这显然；(ii)若$\varphi\in[U,f]\cap[V,g]$，则存在$[W,h]\in\mathfrak B$使$\varphi\in[W,h]\subset[U,f]\cap[V,g]$。事实上，令$x=p(\varphi)$，则$x\in U\cap V$且$\varphi=\rho_x(f)=\rho_x(g)$，故存在$x$的开邻域$W\subset U\cap V$使$f|_W=g|_W=:h$，这给出所需包含关系。
+
+(b) 给定$\varphi$且$p(\varphi)=x$，选含$\varphi$的$[U,f]$。则$[U,f]$是$\varphi$的开邻域，$U$是$x$的开邻域，$p|_{[U,f]}$为双射。由拓扑定义，它也连续且开，故为同胚。
+\end{proof}
+\entry{6.9}{定义}
+称预层$\mathcal F$满足\textbf{恒等定理}，如果：每当$Y\subset X$为区域，$f,g\in\mathcal F(Y)$的芽在某点$a\in Y$处相同，就有$f=g$。
+
+例如，黎曼曲面上的全纯函数层$\OO$、亚纯函数层$\MM$都满足此条件。
+\entry{6.10}{定理}
+设$X$为局部连通Hausdorff空间，$\mathcal F$为满足恒等定理的预层。则$|\mathcal F|$是Hausdorff空间。
+\begin{proof}
+设$\varphi_1\ne\varphi_2$。若$x:=p(\varphi_1)\ne p(\varphi_2)=:y$，则$x,y$有不交邻域$U,V$，其原像为$\varphi_1,\varphi_2$的不交邻域。
+
+若$p(\varphi_1)=p(\varphi_2)=x$，设$\varphi_i$由$x$的开邻域$U_i$上的$f_i$代表。取连通开邻域$U\subset U_1\cap U_2$。则$[U,f_i|_U]$为$\varphi_i$的开邻域。若交集含$\psi$，令$y=p(\psi)$，则$\rho_y(f_1)=\rho_y(f_2)$。由恒等定理，$f_1|_U=f_2|_U$，从而$\varphi_1=\varphi_2$，矛盾。因此两个邻域不交。
+\end{proof}
+\sourcepage{44}
+\subsection*{习题（第6节）}
+\entry{6.1}{}
+设$X$为黎曼曲面。对开集$U\subset X$，令$\mathcal B(U)$为所有有界全纯函数$f:U\to\C$构成的向量空间。对$V\subset U$取通常限制映射。证明$\mathcal B$为预层，满足公理(I)而不满足公理(II)。
+\entry{6.2}{}
+设$X$为黎曼曲面，对开集$U$令$\mathcal F(U)=\OO^*(U)/\exp\OO(U)$。证明$\mathcal F$配通常限制映射为不满足层公理(I)的预层。
+\entry{6.3}{}
+设$\mathcal F$为拓扑空间$X$上的预层，$p:|\mathcal F|\to X$为伴随覆盖空间。对开集$U$，令$\widetilde{\mathcal F}(U)$为$p$在$U$上的全体\textbf{截面}之空间，即所有满足$p\circ f=\mathrm{id}_U$的连续映射$f:U\to|\mathcal F|$。证明：(a)$\widetilde{\mathcal F}$配自然限制映射为层；(b)对每个$x\in X$，茎之间存在自然同构$\mathcal F_x\xrightarrow{\sim}\widetilde{\mathcal F}_x$。

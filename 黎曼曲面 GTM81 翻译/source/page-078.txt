@@ -1,0 +1,29 @@
+10 The Integration of Differential Forms 
+69 
+where the integration takes place along a curve with fixed initial point and 
+variable end point, is a well-defined function on X. In general the integration 
+of closed forms yields multi-valued functions. But these functions display a 
+very special kind of multi-valued behavior. This will be looked at more 
+closely in this section. As well we consider the integration' of 2-forms. This 
+will be useful in transforming line integrals into surface integrals and will 
+also be needed to prove the Residue Theorem. 
+A. Differential 1-Forms 
+10.1. Suppose X is a Riemann surface and WE 0,(1)(X). Further suppose that 
+a piece-wise continuously differentiable curve in X is given. This means there 
+is a continuous mapping 
+c: [0, 1]--> X 
+for which there exists a partition 
+° = to < t 1 < ... < tn = 1 
+of the interval [0, 1] and charts (Uk' Zk)' Zk = Xk + iYk, k = 1, ... , n, such 
+that c([tk_ 1> tk]) c Uk and the functions 
+have continuous first order derivatives. The integral of W along the curve c is 
+defined in the following way. On Uk one may write W as W = j~ dX k + gk dh, 
+where the functions h, gk are differentiable. Set 
+One can easily check that this definition is independent of the choice of 
+partition and charts. 
+10.2. Theorem. Suppose X is a Riemann surface, c: [0, 1] --> X is a piece-wise 
+continuously differentiable curve and F E g(X). Then 
+r dF = F(c(l)) - F(c(O)). 
+'c 
+PROOF. Choose a partition ° = to < t I < ... < tn = 1 and charts ( Uk, Zk) as 
+above. On Uk one has 

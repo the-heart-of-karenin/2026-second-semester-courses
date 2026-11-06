@@ -1,0 +1,48 @@
+22 The Dirichlet Boundary Value Problem 
+177 
+Then P(z, n = Re F(z, n. Thus (*) may be written as 
+1 f 
+2" 
+u(z) = -
+P(z, ReiO)f(Rei6 ) dO 
+2n ° 
+= ReUn (" F(z, Re(9)f(Rei9 ) dO) 
+= Re(-2
+1 . J F(z, nf(n ~(). 
+1[1 1t;I=R 
+~ 
+Since F(z, n is holomorphic as a function of z, it follows that u is the real 
+part of a holomorphic function on D(R) and thus is harmonic. 
+The remaining point is to verify the continuity at the boundary. Using the 
+Residue Theorem, one has 
+~f2"p(Z' Re(6 ) dO = Re(~f 
+(+ z . d() = 1. 
+2n ° 
+2m 11;1 =R ( -
+Z 
+( 
+Hence for (0 E oD(R), z E D(R) and letting ( = Re ifl one has 
+1 f 
+2" 
+u(z) - f((o) = 2n ° P(z, n(f(() - f((o)) dO. 
+Suppose e > 0 is given. Since f is continuous, there exists 15o > 0 such that 
+1 f(n - f('o) 1 ::;; e/2 for I' - '01 ::;; 150, Also there is a constant M > 0 such 
+that 1 f(O 1 ::;; M for every ( E oD(R). Now split the interval [0, 2n] up into 
+two subsets. Namely let IX be the subset of all those 0 E [0, 2n] such that 
+IRe iO -
+(01 ::;; 60 and let fJ be the rest. Then 
+e 
+M r 
+jJJ 
+::;; -2 + -
+P(z, Re ) dO. 
+n . p 
+If Iz - (01 =:15::;; 150/2, then for 0 E P one has 
+IRe i8 - zl ~ 1 Rei8 - (01 - Iz - '01 ~ 150/2 
+and 
+Thus 
+e 
+16RM 
+lu(z)-f((o)1 <2 +~b~E, 
+whenever 1 z - (01 is chosen sufficiently small. 
+o 

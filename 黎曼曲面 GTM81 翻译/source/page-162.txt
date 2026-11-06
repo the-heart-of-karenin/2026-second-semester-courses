@@ -1,0 +1,36 @@
+19 Harmonic Differential Forms 
+153 
+of all Mittag-Lerner distributions ft ~ -D on X, i.e. the set of all Mittag-
+Lerner distributions lying in CO(U, (!J D) for some open covering U of X. Define a 
+linear map 
+by 
+Prove 
+§19. Harmonic Differential Forms 
+With the help of the results obtained so far it is now easy to derive the most 
+important results about harmonic differential forms on compact Riemann 
+surfaces X. In particular every closed differential form on X may be uniquely 
+written as the sum of a harmonic and an exact differential form. This implies 
+that the 1st deRham group of X is isomorphic to the vector space of har-
+monic differential forms on X. Using this one can show that the genus is a 
+topological invariant. 
+19.1. Complex Conjugation. For any I-form w E g(l)(X) on a Riemann sur-
+face X, the complex conjugation of functions induces a conjugate complex 
+differential I-form ill E g(1)(X). For, locally w = L jj dgj , where the func-
+tions jj and gj are differentiable. Thus ill = L]j dgj • A I-form W E g(1)(X) is 
+said to be real if W = W. In general the real part of a differential form w is 
+defined by 
+Re(w) = !(w + ill). 
+Clearly w is real if and only if w = Re(w). If c is a curve on X, then 
+J w 
+= J ro, 
+and thus Re(J w) = J Re(w). 
+C 
+C 
+c 
+c 
+(If w is not closed, then we assume that c is piecewise continuously differen-
+tiable.) If w E Q(X) is a holomorphic I-form, then ill is called anti-
+holomorphic. We denote the vector space of all anti-holomorphic I-forms on 
+X by O(X). 
+19.2. The *-operator. Any I-form WE g(l)(X) may be uniquely decomposed 
+as 

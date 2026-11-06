@@ -1,0 +1,58 @@
+11 Linear Differential Equations 
+93 
+Here p is an arbitrary complex number. By Theorem (11.14) the equation 
+has at least one solution of the form 
+00 
+<p(z) = zP L cnzn, 
+P E C, 
+Co =1= o. 
+(2) 
+n=O 
+Differentiation of the series gives 
+.,," 
+4>' (z) = zP L (p + n)c n zn - 1, 
+11=0 
+00 
+<p"(z) = z" L (p + n)(p + n - l)cn zn- 2. 
+n=O 
+Substituting this into the differential equation and collecting together the 
+resulting coefficient of zp+n-2, one sees that the differential equation is 
+satisfied precisely if 
+(i) (p2 - p2)CO = 0, 
+(ii) ((p + 1)2 - pZ)c1 = 0, 
+(iii) ((p + n)2 - p2)Cn + Cn-2 = 0 
+for every n.2 2. 
+Since Co =1= 0, (i) implies p = ±p. For n = 2k even, (iii) becomes 
+(iii)' 22k(p + k)c Zk + C2k- 2 = o. 
+We now distinguish two cases. 
+Case 1. p EO qZ. A solution to the system of equations (i)-(iii) is given by 
+c2k + 1 =0 
+c 
+-
+( 
+1 )k(.l)Zk 
+Co 
+2k -
+-
+2 
+k ! (p + 1) ... (f;-+ k) 
+for every kEN and arbitrary co. Since 
+r(p + k + 1) = (p + k )(p + k - 1) ... (p + 1 )r(p + 1), 
+for the special choice Co = l/r(p + 1) this gives 
+c 
+- ( 
+1 )k(.l)2k 
+1 
+2 k -
+-
+2 
+r( k +-I-C-)r=-(c-p-+-k -+---C-1 )" 
+The Bessel function of order p is defined to be 
+(Z)POO 
+(-It 
+(Z)2k 
+Jp(z):= :2 
+k~O r(k + l)r(p + k + 1):2 
+. 
+What we have done shows that J p and J _ p are two linearly independent 
+solutions of the differential equation (1). 

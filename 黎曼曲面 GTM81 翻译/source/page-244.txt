@@ -1,0 +1,9 @@
+31 The Riemann-Hilbert Problem 
+Prove that there exists a holomorphic matrix fII: Y ..... GL(n, C) such that 
+aa = fII(uflltl for every uEG. 
+235 
+31.2. Let g: C -+ GL(n, C) be a holomorphic invertible matrix. Show that there exists 
+a holomorphic matrix!: C -+ GL(n, C) such that 
+J(z + 1) = J(z)g(z) for every ZEC. 
+[Hint: Consider the Galois covering ex: C -> C*, ex(z) ,= elniz, and apply Ex. 
+31.1.] 

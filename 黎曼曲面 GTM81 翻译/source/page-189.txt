@@ -1,0 +1,38 @@
+180 
+3 Non-compact Riemann Surfaces 
+PROOF. Let u(xo) =: C and 
+S:={XE Y:u(x)=c}. 
+If S =1= Y, then there exists a point a E as n Y. Since u is continuous, 
+u(a) = c. In every neighborhood of a there is a point x with u{x) < c. Hence 
+there is some open neighborhood D E Reg(Y) of a such that u I aD is not 
+constantly equal to c. Moreover we may assume that u is subharmonic on 
+some neighborhood of D. Thus 
+u:::; PDu =:v. 
+The function v is harmonic in D. Because 
+vlaD = ulaD:::; c, 
+the Maximum Principle for harmonic functions implies v :::; c on D. Since 
+c = u(a) :::; v(a), v attains its maximum at a and thus is constantly equal to c. 
+But this contradicts the choice of D. Thus S = Y. 
+0 
+22.10. Corollary. If u: Y -+ ~ is locally subharmonic, then u is subharmonic. 
+PROOF. Suppose D E Reg( Y) is arbitrary. Since P D u is harmonic on D, 
+v:=u - PDu 
+is locally subharmonic on D. Since v I aD = 0, the Maximum Principle im-
+plies v:::; 0 on D. Thus PDu ~ U. 
+0 
+22.11. Lemma. Ifu: Y -+ ~ is subharmonic and B E Reg(Y), then PRu is also 
+subharmonic. 
+PROOF. Set v:= PBu and suppose DE Reg(Y) is arbitrary. We have to show 
+that P D v ~ v. On y\D one has P D V = v and on Y\B, because v ~ u, one has 
+PDV~PDU~U=V. 
+Thus v - PDv:::; 0 on Y\(B n D). Since v - PDv is harmonic on B n D, it 
+follows that 
+v - PDv:::; 0 on B n D. 
+Hence PD v ~ v on all of Y. 
+o 
+22.12. Lemma (Perron). Suppose M c ct' IR( Y) is a non-empty set of subhar-
+monic jUnctions on Y with the following properties: 
+(i) u, v EM=> sup{u, v) E M. 
+(ii) u EM, D E Reg(Y)=>PDu E M. 
+(iii) There exists a constant K E ~ such that 
+u :s:; K for every u E M. 

@@ -1,0 +1,44 @@
+186 
+3 Non-compact Riemann Surfaces 
+23.2. Lemma (Poincare-Volterra). Suppose X is a connected manifold, Y is a 
+Hausdorff space with countable topology and f: X -+ Y is a continuous, 
+discrete mapping. Then X has a countable topology. 
+PROOF. Suppose U is a countable basis for the topology on Y. Denote by m 
+the collection of all open subsets V of X with the following properties: 
+(i) V has a countable topology, 
+(ii) V is the connected component of a setf-I(U) with U E U. 
+(a) We claim that m is a basis for the topology on X. Suppose D is an 
+open subset of X with XED. We have to show that there exists V Em with 
+x EVe D. Since f is discrete, there is a relatively compact open neighbor-
+hood WeD of x so that aw does not meet the fiberf-I(f(x)). Now f(aW) 
+is compact and thus closed and does not contain the pointf(x). Hence there 
+exists a U E U withf(x) E U and U II f(aW) = 0. Let V be the connected 
+component off-I(U) which contains the point x. Since V II aw = 0, one 
+has V c Wand hence V has a countable topology, i.e., V E m. This verifies 
+claim (a). 
+(b) Next we claim that for every Vo E m there exist at most countably 
+many V E m with Vo II V 'i- 0. For every U E U the connected compon-
+ents off-I(U) are disjoint. Since Vo has countable topology it can only meet 
+countably many of these connected components. Since U is also countable, 
+the result follows. 
+(c) Now we show that m is countable. Fix V* E m and define for n EN 
+the set mn c m as follows: mn consists of all V E m such that there are Vo , 
+VI' ... , v" Em with 
+Vo = V*, 
+v,. = V and Vk-I II Vk +- 0 
+for k = 1, ... , n. 
+Since X is connected, Un e I\J mn = m. Thus it suffices to show that each mn 
+is countable. We do this by induction. Clearly mo = {V*} is countable. 
+Suppose we already know that mn is countable. Then it follows directly from 
+(b) that mn + 1 is also countable. 
+This then proves that X has a countable topology. 
+0 
+23.3. Theorem (Rad6). Every Riemann surface X has a countable topology. 
+PROOF. Suppose U is a coordinate neighborhood on X. Choose two disjoint 
+compact disks Ko, K leU and set Y:= X\(Ko u K d. Since the boundary 
+ay = aKo u aKI satisfies the regularity condition of Theorem (22.18), there 
+is a continuous function u: Y -+~, which is harmonic on Y, and which 
+satisfies the boundary conditions 
+ulaKo = 0 and uiaK I = 1. 
+Hence w:= d'u is a non-trivial holomorphic I-form on Y. Let f be any 
+holomorphic primitive for p*w on the universal covering p: Y -+ Y. Since f is 

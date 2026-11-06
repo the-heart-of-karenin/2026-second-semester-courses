@@ -1,0 +1,40 @@
+34 
+1 Covering Spaces 
+with p(Yo) = P(Yl) there exists a covering transformationf: Y -+ Y such that 
+j{yo) = Yt· 
+Remark. By Theorem (4.8) there exists at most one covering trans-
+formationf: Y -+ Y withj{yo) = Yl' for fis a lifting of p: Y -+ X. 
+Example. The mapping p: I[: * -+ I[: *, Z f--+ Zk, is a covering map. It is Galois 
+since for any Z1> Z2 E 1[:* with p(zd = P(Z2), one has Z2 = WZI where W is a 
+kth root of unity and the mapping Z f--+ WZ is a covering transformation. 
+There is a connection between Galois coverings and Galois field exten-
+sions, cf. (8.12). 
+5.6. Theorem. Suppose X is a connected manifold and p: X -+ X is its univer-
+sal covering. Then p is Galois and Deck(X/X) is isomorphic to thefundamental 
+group 7rl(X), 
+PROOF 
+(a) Suppose Yo, Yl E X with p(Yo) = P(Yl)' By the definition of the 
+universal covering there exists a continuous fiber-preserving mapping 
+f: X -+ X withj{yo) = Yl' We have to show thatfis a homeomorphism. This 
+can be seen as follows. As above there exists a continuous fiber-preserving 
+mapping g: X -+ X with g(Yd = Yo. But thenf 0 g and go fare continuous 
+fiber-preserving mappings of X into itself such that f 0 g(yd = Yl and 
+g C ,t(Yo) = Yo. Again from the definition of the universal covering it follows 
+that f ,'. g and g c f are both the identity map of X. Thus f is a homeo-
+morphism and hence a covering transformation. This shows the covering 
+X --> X is Galois. 
+(b) Suppose Xo E X and Yo E X is a point with p(Yo) = Xo. Define a 
+mapping 
+<1>: Deck(X/X) --> 7rt(X, xo) 
+as follows: Suppose a E Deck(X/X) and v is a curve in X with initial point 
+Yo and end point a(yo). (The homotopy class of v is uniquely determined 
+since X is simply connected.) The curve p c v in X has initial and end point 
+Xo. Let <I>(a) be the homotopy class of po v. 
+(i) <I> is a group homomorphism. Suppose a, r E Deck(X;X) and v (resp. 
+w) is a curve in X with initial point Yo and end point a(yo) (resp. r(yo)). Then 
+a c w is a curve with initial point a(yo) and end point ar(yo). Also 
+p c (a 0 w) = pow. The product curve v . (a c w) has initial point Yo and 
+end point ar(yo). Thus 
+<I>(ar) = cl(p 0 (v· (ac w)) = cl(p 0 v)cl(p 0 (a c w)) 
+= cl(p 0 v)cl(p c w) = <I>(a)<I>(r). 
+(ii) <I> is injective. 

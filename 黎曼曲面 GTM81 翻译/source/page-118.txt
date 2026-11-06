@@ -1,0 +1,39 @@
+14 A Finiteness Theorem 
+109 
+§14. A Finiteness Theorem 
+In this section we prove that for any compact Riemann surface X the coho-
+mology group Hl(X, lD) is a finite dimensional complex vector space. Its 
+dimension is called the genus of X. One of the consequences of the finiteness 
+theorem is the existence of non-constant meromorphic functions on every 
+compact Riemann surface. With regard to further applications in Chapter 3 
+we will do everything not only for compact Riemann surfaces but also for 
+relatively compact subsets of arbitrary Riemann surfaces. 
+14.1. The L2-Norm for Holomorphic Functions. Suppose Dee is an open 
+set. Given a holomorphic function f E 0(D) define its L2-norm by 
+( 
+)
+1'2 
+IlfIIO(D):= JJ I f(x + iy) 12 dx dy , 
+D 
+Then II f Ib(D) E IR + U {oo}. If II f II O(D) < 00, then f is called square in te-
+grable. We denote by L2(D, 0) the vector space of all square integrable 
+holomorphic functions on D. If 
+Vol(D):= Jf dx dy < 00, 
+D 
+then for every bounded function f E lD(D) one has 
+Ilflb(D) 5 JVol(D)llfIID' 
+where Ilflln :=sup{lf(z)l: zED} denotes the supremum norm. 
+For J, g E L2(D, lD) one can define an inner product <J, g) E C by 
+<J, g):= fJ fli dx dy. 
+v 
+The integral exists because for every ZED 
+I f(z)g(z) I 51(lf(z)12 + Ig(z)l2). 
+With this inner product L2(D, 0) is a unitary vector space and in particular 
+has a well-defined notion of orthogonality. Now suppose B = B(a, r) := 
+{z E c: I z - a I < r} is the disk with center a and radius r > O. Then the 
+monomials (1/1.). E " given by 
+I/I.(z):= (z - a)· 
+form an orthogonal system in L2(B, 0) and one can easily check using polar 
+coordinates that 
+Jnr"+l 
+111/1.11[.2(8) = jn+l for every n E N. 

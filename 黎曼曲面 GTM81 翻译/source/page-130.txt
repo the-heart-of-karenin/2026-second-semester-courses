@@ -1,0 +1,38 @@
+15 The Exact Cohomology Sequence 
+121 
+PROOF. Suppose f E ,?( U) and exu(f) = O. Since ex,,: JF x -+ C§" is injective for 
+every x E X, every x E U has an open neighborhood Vx c U such that 
+f 1 V" = O. From sheaf axiom I it follows thatf = O. 
+0 
+15.7. Remark. If ex: JF -+ C§ is a sheaf epimorphism, it is not necessarily true 
+that for every open set U the mapping exu: ,?( U) ---+ q}( U) is surjective. This 
+is illustrated by the example ex: 0 ---+ ~'* in (15.4). For every x the map 
+ex: (I)" -+ (I): is surjective, since every non-vanishing function locally has a 
+logarithm, But ex: 0(1[:*) -+ 0*(1[:*) is not surjective. 
+15.8. Lemma. Suppose 0 -+ JF ~ q} .!!... :It' is an exact sequence of sheaves on 
+the topological space X. Thenfor every open set U c X the sequence 
+0-+ JF( U) -.:. q}( U) ~ :It'( U) 
+is exact, 
+PROOF 
+(a) The exactness of 0 -+ JF(U) -.:. q}(U) was proved in (15.6), 
+(b) 1m ex c Ker f3. Suppose f E JF( U) and g := ex(f). Since the sequence of 
+stalks JF x -+ ~§" -+ :It' x is exact for every x E U, it follows that each point 
+x E U has a neighborhood Vx c U such that f3(g) 1 V" = O. Hence by sheaf 
+axiom lone has f3(g) = 0, 
+(c) To prove the inclusion Ker f3 c 1m ex suppose g E C§(U) with f3(g) = 0, 
+Since for every x E U one has Ker f3x = 1m exx, there is an open covering 
+(...-;L I of U and elements/; E JF("'-;) such that ex(/;) = g 1...-; for every i E /, On 
+the intersection ...-; n lj one then has ex(/; - jj) = O. Hence by (15,6) it fol-
+lows that /; = jj on ...-; n lj. Now by sheaf axiom II there exists anf E JF( U) 
+with f 1...-; = jj for every i E /, Since ex(f) 1...-; = ex(f 1...-;) = g 1 V;, it follows 
+from sheaf axiom I, applied to the sheaf C§, that ex(f) = g. 
+0 
+15.9. Examples. We now give several examples of short exact sequences of 
+sheaves 
+o -+ ,? -+ C§ -+ :It' -+ 0 
+on a Riemann surface X, 
+d" 
+(a) 0 -+ (I) -+ g -+ go. 1 -+ 0, 
+Here 0 -+ g is the natural inclusion. The exactness follows from the 001-
+beault Lemma (13.2), 
+(b) Let 

@@ -1,0 +1,39 @@
+130 
+2 Compact Riemann Surfaces 
+The exact cohomology sequence (*) in (16.7) can be split into two short 
+exact sequences. For, let 
+V:= Im(HO(X, (f)n') --> C) 
+W:=C;V. 
+Then dim V + dim W = 1 = deg D' - deg D and the sequences 
+0--> HO(X, &n) --> HO(X, (Un') --> V --> 0, 
+0--> W-->HI(X, (f)n)--> HI(X, (f)n')--> 0 
+are exact. Thus all the vector spaces occurring are finite dimensional and one 
+has the following equations relating the various dimensions 
+dim HO(X, (f)n') = dim HO(X, (9n) + dim V 
+dim HI(X, (9n) = dim HI(X, (C'n') + dim W. 
+Adding one gets 
+dim HO(X, (9n') - dim HI(X, (On') - deg D' 
+= dim HO(X, (Dn) - dim HI(X, (Dn) - deg D. 
+This implies that if the Riemann-Roch formula holds for one of the two 
+divisors, then it also holds for the other. Thus by (a) the Theorem holds for 
+every divisor D' ~ O. 
+(c) An arbitrary divisor D on X may be written 
+D = PI + ... + Pm - Pm+ 1 -
+... -
+Pn, 
+where the Pj E X are points. Starting with the zero divisor and using (b) one 
+now proves by induction that the Riemann-Roch Theorem holds for the 
+divisor D. 
+D 
+16.10. The Index of Speciality. One calls 
+i(D):= dim HI(X, (Dn) 
+the index of speciality of the divisor D. Thus the Riemann-Roch Theorem 
+may be written in the form 
+dim HO(X, (9n) = 1 - 9 + deg D + i(D). 
+In (17.16) we will show that i(D) = 0 whenever deg D > 2g - 2. In any case 
+i(D) ~ 0 and thus dim HO(X, (f)n) is bounded from below. From Theorem 
+(16.5) it follows that 
+i(D) = 9 - 1 - deg D if deg D < O. 
+16.11. Theorem. Suppose X is a compact Riemann surface of genus 9 and a is a 
+point of X. Then there is a non-constant meromorphic jitnction f on X which 
+has a pole of order ::; 9 + 1 at a and is otherwise holomorphic. 

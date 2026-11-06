@@ -1,0 +1,40 @@
+14 A Finiteness Theorem 
+Now Fij - fij = (hj - gJ - (hi - g;) on W; !l Wi and thus 
+( - e = 811 
+on 213. 
+113 
+(b) In order to get the desired estimate on the norms, we consider the 
+Hilbert space 
+with the norm 
+11((, e, 11)IIH:= (Wli2(u) + Ilelli2('ll) + 1111lli2(w»)1/2. 
+Let L c H be the subspace 
+L :={((, e, 11) E H: (= e + 811 
+on 213}. 
+Since L is closed in H, it is also a Hilbert space. From part (a) the continuous 
+linear mapping 
+is surjective. By the Theorem of Banach (cf. Appendix B. 6, 7) the mapping n 
+is open. Thus there exists a constant C > 0 such that for every e E zlz(m, lD) 
+there exists x = ((, e, 11) E L with n(x) = e and IlxliH s C/lello('ll)' This con-
+stant then satisfies the desired conditions. 
+0 
+14.7. Lemma. Under the same assumptions as in Lemma (14.6), there exists a 
+finite dimensional vector subspace S c Zl(U, lD) with the following property. 
+For every e E Zl(U, lD) there exist elements (J E Sand 11 E CO(213, lD) such that 
+(J = e + 811 
+on 213. 
+Remark. The lemma says that the natural restriction mapping 
+Hl(U, 6) -+ Hl(213, lD) 
+has a finite dimensional image. 
+PROOF. Suppose C is the constant in Lemma (14.6) and set s:= (1/2C). By 
+(14.5) there exists a finite codimensional closed vector subspace 
+A c zUU, lD) such that 
+IleIIL2('ll) s sllello(u) for every e E A. 
+Let S be the orthogonal complement of A in 
+Zlz(U, lD), 
+i.e., 
+A $ S = ZUU, lD). 
+Now suppose e E Zl(U, lD) is arbitrary. Because m ~ u, 
+II eII Ll(!!!) =:M < 00. 
+By (14.6) there exist (0 E ZUU, lD) and 110 E C22(213, lD) such that 
+(0 = e + 8110 
+on 213 

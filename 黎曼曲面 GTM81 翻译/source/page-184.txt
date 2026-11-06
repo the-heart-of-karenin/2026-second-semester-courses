@@ -1,0 +1,25 @@
+CHAPTER 3 
+Non-compact Riemann Surfaces 
+In many respects, function theory on non-compact Riemann surfaces is 
+similar to function theory on domains in the complex plane. Thus for non-
+compact Riemann surfaces one has analogues of the Mittag-Leffler 
+Theorem and the Weierstrass Theorem as well as the Riemann Mapping 
+Theorem. 
+In this chapter we will first consider the Dirichlet Boundary Value Prob-
+lem for harmonic functions on Riemann surfaces. This will then serve as a 
+tool in proving that every Riemann surface has a countable topology. Also it 
+will be needed later in the proof of the Riemann Mapping Theorem. With 
+the help of Weyl's Lemma we will prove Runge's Approximation Theorem. 
+And then from Runge's Approximation Theorem we easily derive the 
+Theorems of Mittag-Leffler and Weierstrass. Also in this chapter we com-
+plete the discussion, begun in §§10 and 11, concerning the existence of holo-
+morphic functions with prescribed summands of automorphy. We also look 
+at the Riemann-Hilbert problem. 
+§22. The Dirichlet Boundary Value Problem 
+The existence theorems for holomorphic and meromorphic functions on 
+Riemann surfaces which we have so far considered are all essentially depen-
+dent on Dolbeault's Lemma (13.2) and the Finiteness Theorem (14.9). We 
+now prove another existence theorem on Riemann surfaces which is entirely 
+independent of these previous results, namely the solution of the Dirichlet 
+Problem for harmonic functions using Perron's method. 
+175 

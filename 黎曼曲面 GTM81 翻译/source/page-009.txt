@@ -1,0 +1,39 @@
+Vlll 
+Preface 
+and Malgrange's method of proof, based on Weyl's Lemma, of the Runge 
+Approximation Theorem. In this chapter we also complete the discussion of 
+Stein's Theorem, begun in Chapter 1, concerning the existence of holomor-
+phic functions with prescribed summands of automorphy and present 
+Rbhrl's solution of the Riemann-Hilbert problem on non-compact Riemann 
+surfaces. 
+We have tried to keep the prerequisites to a bare minimum and to 
+develop the necessary tools as we go along. However the reader is assumed 
+to be familiar with what would generally be covered in one semester courses 
+on one complex variable, on general topology and on algebra. Besides these 
+basics, a few facts from differential topology and functional analysis have 
+been used in Chapters 2 and 3 and these are gathered together in the 
+appendix. Lebesgue integration is not needed, as only holomorphic or differ-
+entiable functions (resp. differential forms) are integrated. We have also 
+avoided using, without proof, any theorems on the topology of surfaces. 
+The material presented corresponds roughly to three semesters of lec-
+tures. However, Chapters 2 and 3 presuppose only parts of the preceding 
+chapters. Thus, after §§1, 6 and 9 (the definitions of Riemann surfaces, 
+sheaves and differential forms) the reader could go directly to Chapter 2. 
+And from here, only §§ 12-14 are needed in Chapter 3 to be able to handle 
+the main theorems on non-compact Riemann surfaces. 
+The English edition includes exercises which have been added at the end 
+of every section and some additional paragraphs in §§8, 17 and 29. As well, 
+the terminology concerning coverings has been changed. Thanks are due to 
+the many attentive readers of the German edition who helped to eliminate 
+several errors; in particular to G. Elencwajg, who also proposed some of 
+the exercises. Last but not least we would like to thank the translator, 
+B. Gilligan, for his dedicated efforts. 
+Munster 
+May, 1981 
+Addendum to Fourth Corrected Printing 
+O. FORSTER 
+For the second and fourth printing a number of misprints and errors have 
+been corrected. I wish to thank B. Gilligan, B. Elsner and O. Hien for pre-
+paring lists of errata. 
+April 1999 
+O. FORSTER 

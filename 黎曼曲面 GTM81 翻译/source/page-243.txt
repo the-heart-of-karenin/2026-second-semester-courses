@@ -1,0 +1,47 @@
+234 
+3 Non-compact Riemann Surfaces 
+is given. Then there exists a differential equation dw = A w, where 
+A E M(n x n, n(X/)), which has a regular singular point at every a E S, and a 
+fundamental system of solutions <I> E GL(n, (!)(Y)) of dw = Aw on the universal 
+covering p: Y --+ X' of x' with the factors of automorphy T". 
+PROOF. Suppose S = {aj: i E I}. For every i choose a coordinate neighbor-
+hood (U;, Zj) of ai satisfying conditions (i) and (ii) of Lemma (31.4). We may 
+assume 0 rt I. Let J:= I u {O} and set Uo := X'. Then U := (Uj)jEJ is an 
+open covering of X. For i =1= j one has Uj (] Uj C X'. Further let Yo := Yand 
+Y; := p-l(Ui \aJ for every i E I. 
+By Theorem (31.2) there exists a function 'Po E GL(n, (!)(Yo)) such that 
+cr'Po = 'Po T:r for every cr E "1(X/). For every i E I there exist, by Theorem 
+(11.10), elements 'Pi E GL(n, (!)(Y;)) which have regular singular points and 
+display the same automorphic behavior as 'Pol Y;. Hence for i, j E I, i =1= j, 
+Fij:='Pi'Pj- 1 E GL(n, (!)(Y; (] lj)) 
+is invariant under covering transformations and thus may be considered as 
+an 
+element 
+Fij E GL(n, (!)(Ui (] UJ). 
+For 
+every 
+j E J, 
+let 
+Fjj := 1 E GL(n, (!)(UJ). Then 
+(Fij) E ZI(U, GL(n, (!))) 
+is a cocycle. Because Hl(X, GL(n, (!))) = 0, this cocycle is a co boundary. 
+Thus there exist Fi E GL(n, (!)(UJ) such that 
+Fij = FiF;1 on U j n Uj • 
+Now, for every j E J, define 
+<l>j := F j- l'Pj E GL(n, (!)( Yj)). 
+As in (31.2) the <l>j piece together to form a global function <I> E GL(n, (!)(Y)) 
+which satisfies cr<l> = <l>T" for every cr E "1 (X). On Ui \ai one has <I> = Fi- l'Pi. 
+Since 'Pi has regular singular points and F i- 1 is holomorphic on all of Ui , it 
+follows that <I> also has regular singular points. As well <I> is a fundamental 
+system of solutions of the differential equation dw = Aw, where 
+A := d<l> . <1>-1 may be considered as an element A E M(n x n, n(X)), since 
+it is invariant under covering transformations. This completes the proof of 
+the theorem 
+0 
+EXERCISES (§31) 
+31.1. Let X and Ybe non-compact Riemann surfaces, p: Y -> X be an unbranched 
+holomorphic Galois covering and G := Deck( Y / X). Let 
+a: G --+ GL(n, (1)(Y)), 
+be a crossed homomorphism, i.e. a map satisfying 
+a"T = a,,(O"aT ) 
+for every 0", 1" E G. 

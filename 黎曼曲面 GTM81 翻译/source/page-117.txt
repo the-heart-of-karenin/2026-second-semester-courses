@@ -1,0 +1,42 @@
+108 
+2 Compact Riemann Surfaces 
+PROOF. Set VI := /pl\OO and V 2 := /pI \0. Since VI = C and V 2 is biholomor-
+phic to C, it follows from (13.4) that HI(Uj, l!J) = O. Thus U = (U b U 2) is a 
+Leray covering of /pI and HI(/pI, l!J) = Hl(U, l!J) by (12.8). Thus the proof is 
+complete once one shows that every cocycle (/;J E ZI(U, l!J) splits. In order 
+to do this, it is clearly enough to find functions/; E l!J(Ui ) such that 
+112 = II - 12 on U I n U 2 = C *. 
+Let 
+00 
+Idz) = L c.z· 
+n= -
+00 
+be the Laurent expansion of 112 on C *. Set 
+00 
+-I 
+II(z):= Lc.z· and 12{z):=- L c.z·. 
+n=O 
+11=-00 
+Then /; E l!J( U;) and II - 12 = 112 . 
+0 
+EXERCISES (§13) 
+13.1. Let X = {z E C: I z I < R}, where 0 < R :::; 00. Denote by .J't' the sheaf of har-
+monic functions on X, i.e . 
+.J't'( U) = {f: U -+ C : f is harmonic} 
+for U c X open. Prove 
+HI(X, .J't') = o. 
+13.2. (a) Show that U = ([p>1\00, [p>l\O) is a Leray covering for the sheaf Q of holo-
+morphic 1-forms on [p>1. 
+(b) Prove that 
+and that the cohomology class of 
+dz 
+-EQ(U 1 n U2)~Zl(U,Q) 
+z 
+is a basis of HI ([P> I, Q). 
+13.3. Suppose 9 E G"(C) is a function with compact support. Prove that there is a 
+solution f E C(C) of the equation 
+of 
+j)Z = 9 
+having compact support if and only if 
+If z·g(z) dz A dz = 0 for every n E /'\J. 
+IC 

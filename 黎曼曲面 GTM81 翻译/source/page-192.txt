@@ -1,0 +1,43 @@
+22 The Dirichlet Boundary Value Problem 
+Define 
+v:= {smup(m, kfJ) on Y n V 
+on Y\v. 
+183 
+Then v is continuous on Y, locally sub harmonic on Y, thus subharmonic, 
+and also satisfies conditions (ii) and (iii). 
+0 
+22.16. Lemma. Suppose Y is an open subset of a Riemann surface,!: a Y --+ IH is 
+a continuous bounded function and 
+u* = sup{u: u E I.J3f }, 
+where 1.J3, is the Perron class off Then for every regular boundary point 
+x EOY 
+lim u*(y) = f(x). 
+Y .... x 
+YE Y 
+PROOF. Suppose E > 0 is given. Then there exists a relatively compact open 
+neighborhood V of x with 
+f(x) -
+E ::;;f(y) ::;;f(x) + E for every y E oY n V. 
+Suppose k and K are real constants such that 
+k ::;;f(y) ::;; K 
+for every Y E oY. 
+(a) Using Lemma (22.15) choose a function v E I/&'~(Y) which is subhar-
+monic on Y and satisfies 
+v(x) =f(x) -
+E 
+vlYn V::;;f(X)-E 
+vi Y\V = k -
+E. 
+Then vloY::;;f Thus v E 1.J3, and hence v::;; u*. Then 
+lim inf u*(y) ~ v(x) = f(x) -
+E. 
+Y .... x 
+(b) Again using Lemma (22.15) there exists a function WEI/&' ~(Y) which is 
+subharmonic on Y and satisfies 
+w(x) = -f(x) 
+wIYnV::;;-f(x) 
+wIY\V= -K. 
+For every u E I.J3f and y E ay n V one has u(y) ::;;f(x) + R. Thus 
+u(y) + w(y) ::;; E for y E oY n V. 
+As well 
+u(z) + w(z) ::;; K - K = 0 for every Z E Y n av. 

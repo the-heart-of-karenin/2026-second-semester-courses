@@ -1,0 +1,37 @@
+38 
+1 Covering Spaces 
+5.11. Theorem. Suppose X is a Riemann surface, D is the unit disk and 
+.f: X ~ D is a proper non-constant holomorphic map which is unbranched over 
+D* = D\{O}. Then there exists a natural number k 2: 1 and a hiholomorphic 
+mapping q>: X ~ D such that the diagram 
+\) 
+(*) 
+D 
+is commutative, where Pk(Z) := Zk. 
+PROOF. Let X*:=J-l(D*). Then f/X*--.D* is an unbranched proper 
+holomorphic covering map. By the previous Theorem there is a commuta-
+tive diagram 
+X*~D* 
+\J. 
+D* 
+for some biholomorphic mapping (p: X* ~ D*. We claim thatf-l(O) con-
+sists of only one point. To the contrary suppose J - 1(0) consists of n points 
+b[, ... , bn where n 2: 2. Then there exist disjoint open neighborhoods V; of bi 
+and a disk D(r) = {z E IC: / z / < r}, 0 < r ::; 1, such that 
+(**) 
+Let D*(r) = D(r)\{O}. Since f-l(D*(r» is homeomorphic to Pi: I(D*(r» = 
+D*(Vr), it is connected. Since every point bi is an accumulation point of 
+.r I(D*(r», f-l(D(r» is also connected. But this contradicts (**). Thus 
+.r 1(0) consists of a single point hEX. Hence by defining q>(b) :=0 one can 
+continue the mapping q>: X* ~ D* to a biholomorphic mapping q>: X ~ D 
+which makes the diagram (*) commutative. 
+0 
+EXERCISES (§5) 
+5.1. Let X=C\{±I}, and Y=C\{(n/2)+kn: kEel} (cf. Ex. 4.1.). Prove that 
+Deck(Y ~ 
+X) consists of the following transformations 
+(i) fk(Z) = Z + 2kn, 
+k EO l 
+(ii) gk(Z) = -z + (2k + I)n, 
+k EO l. 
+Calculate the products fk .r;, fk ... g/, g/ J.., {h ' g/. 

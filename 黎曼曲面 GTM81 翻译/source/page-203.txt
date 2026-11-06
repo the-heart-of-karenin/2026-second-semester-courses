@@ -1,0 +1,38 @@
+194 
+3 Non-compact Riemann Surfaces 
+PROOF 
+(a) For z E VIE) translation of the integration variable gives 
+Thus 
+D'(sm, f)(z) = JJ pJODj(z + 0 d~ dry 
+1,1 <, 
+= II p,(z - OD'{(O d~ dry = sm,(D'f)(z). 
+u 
+(b) Iff is harmonic on D(z, /0). then for every r E [0, F.[ it satisfies the 
+Mean Value Principle (22.4) 
+Thus 
+smce 
+I .2" 
+. 
+1(z) = - I f(Z + re'O) dB. 
+2n '0 
+(smJ)(z) = JJ p,(Of(z + 0 d~ dry 
+I~I <, 
+JJ p,(r)f(z + reiO)r dr de 
+o 5:r~E 
+0::58.:5 2rr 
+. , 
+= I p,(r)r dr' 2nl(z) = f(z), 
+• 0 
+1 = rr p,(~ + iry) d~ dll = 2n (pk)r dr. 
+•• 
+'0 
+~ 
+o 
+24.9. Theorem (Weyl's Lemma). Suppose V is an open set in C and T is a 
+distribution on V with ~ T = O. Then T is a smooth function. 
+In other words, if T: Q'( V) -> C is a linear functional such that T[ ~r.p] = 0 
+for every r.p E £1( U), then there exists a function h E tS( V) with ~h = ° 
+and 
+T[f] = JJ h(z)f(z) dx dy 
+for every fE f/(V). 
+U 

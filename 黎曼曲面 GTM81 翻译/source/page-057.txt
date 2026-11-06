@@ -1,0 +1,39 @@
+48 
+1 Covering Spaces 
+Remark. The analytic continuation of meromorphic function germs can 
+be handled by using the techniques employed in this section for holo-
+morphic function germs. One just looks at the map I j{ I -+ x. So far we 
+have disregarded branch points but in the next section we will also consider 
+these for the special case of algebraic functions. 
+EXERCISES (§7) 
+7.1. Suppose X and Yare Riemann surfaces, p: Y -> X is a holomorphic (un-
+branched) covering map and f: Y -> C is a holomorphic function. Let bEY, 
+u ,= p(b) and qJ ,= P*(Pb(f)) E cr Q' Prove that (Y, P, f, b) is a maximal analytic 
+continuation of qJ if and only if the following condition is satisfied: For any two 
+distinct points bj, b2 E P- I(a) the germs qJ1 ,= P*(PbJf)) and qJ2 ,= P*(Pb,(f)) 
+are differen t. 
+7.2. Suppose X is a Riemann surface and a E X. Suppose rp E fa admits an analytic 
+continuation along every curve in X which starts at a. Let (Y, p, f, b) be the 
+maximal analytic continuation of qJ. Prove that p: Y -> X is a covering map. 
+§8. Algebraic Functions 
+One of the first examples of a multi-valued function which one encounters in 
+complex analysis is the square root w = Jz. This is a particular case of an 
+algebraic function, i.e., a function w = w(z) which satisfies an algebraic equa-
+tion wn + al (Z)w"-l + ... + an(z) = 0, where the coefficients av are given 
+meromorphic functions of z. In this section we present the construction of 
+the Riemann surfaces of algebraic functions. It turns out that they are proper 
+coverings such that the number of sheets equals the degree of the algebraic 
+equation. 
+8.1. The E1~mentary Symmetric Functions. Suppose X and Yare Riemann 
+surfaces, n: Y -+ X is an n-sheeted unbranched holomorphic covering map 
+and f is a meromorphic function on Y. Every point x E X has an open 
+neighborhood V such that n - 1 (V) is the disjoint union of open sets 
+VI' ... , V. and n: V. -+ V is biholomorphic for v = 1, ... , n. Let Tv: V -+ V, 
+be the inverse mapping of n I Vv -+ V and let/.. ,= T~ f = f 
+Tv' Suppose Tis 
+an indeterminate and consider 
+n TI (T - jJ = P + C1 p-l + .. , + Cn • 
+v=1 
+Then the Cv are merom orphic functions in V and 
+where Sv denotes the 11th elementary symmetric function in n variables. If one 
+carries out this same construction in a neighborhood V' of another point 

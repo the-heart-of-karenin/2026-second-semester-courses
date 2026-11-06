@@ -1,0 +1,42 @@
+118 
+2 Compact Riemann Surfaces 
+F 1 Vi II Vj E (1:)*( Vi II VJ Hence there exists a cocycle (gij) E Zl(U, (1:) 
+such thatj;j = Fgij . Let ~ E Hl(Y', (D) be the cohomology class of (gij). Then 
+(= F~. Hence from (2) one gets (I y= F~I y = O. 
+0 
+14.16. Corollary. Suppose X 
+is a non-compact Riemann surface and 
+y if Y' c X are open subsets. Then for every differential form W EgO. 1(Y') 
+there exists a function f E g( Y) such that d"f = wi Y. 
+PROOF. By Theorem (13.2) the problem has a solution locally. Thus there 
+exist an open covering U = (Vi)i El of Y' and functions}; E g(V;) such that 
+d"j; == w I Vi' The differences}; -./j are holomorphic on Vi II Vj and thus 
+define a cocycle in Zl(U, (I)). By (14.15) this co cycle is cohomologous to zero 
+on Yand thus there exist holomorphic functions gi E (()(Vj II Y) such that 
+.r; -jj = gi -
+gj on Vi II Vj II Y. 
+Hence there exists a function f E g(y) such that 
+f='/; - gj 
+on Vi n Y, 
+for every i E I. 
+But then the function f satisfies the equation d"f = wi Y. 
+o 
+Remark. Theorems (25.6) and (26.1) will extend the results of (14.15) and 
+(14.16). 
+EXERCISES (914) 
+14.1. Let X = {z E c: r < I z I < R}, where 0 < r < R < 00. Determine an orthonor-
+mal basis of L2(X, (1') consisting of functions of the form 
+<Pn(z) = cnzn, 
+n E Z. 
+14.2. Let X c C be a bounded open subset, Ph ... , Pk E X and X' ,= X\{PIo ... , pd. 
+Show that the restriction map 
+is an isomorphism. 
+§15. The Exact Cohomology Sequence 
+In this section we consider sheaf homomorphisms, exact sequences of 
+sheaves and the long exact cohomology sequence. These tools prove useful 
+in calculating various cohomology groups. 
+15.1. Definition. Suppose :F and (fj are sheaves of abelian groups on the 
+topological space X. A sheaf homomorphism a: .F ---> '1J is a family of group 
+homomorphisms 
+au: .F(V) ---> '§(V), 
+V open in X, 

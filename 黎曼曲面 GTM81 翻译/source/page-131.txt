@@ -1,0 +1,29 @@
+122 
+2 Compact Riemann Surfaces 
+be the sheaf of closed differential forms. The sequence 
+is exact. That d: g --> :!Z is an epimorphism follows from the fact that locally 
+every closed differential form is exact, see (10.4). 
+(c) O-->C-->(c~Q-->O. 
+This exact sequence is the holomorphic analogue of (b). 
+(d) Since 
+Q = Ker ( g!' ° ~ 6"(2} 
+in order to prove the exactness of 
+one has only to show that d: gl, ° 
+--> 6"(2) is onto. With respect to a local 
+chart (U, z), one has 
+d(f dz) = ~ dz 1\ dz, 
+Thus for every open set V c U such that z( V) c C is a disk one sees by using 
+the Dolbeault Lemma that d: 10,,1, 0(V) --> g(2)(V) is surjective, Hence 
+d: g~. ° 
+--> g~2) is surjective for every point a E X. 
+(e) The exactness of the sequence 
+follows from (15,3,c) and the remark (15,7). 
+15.10. Any homomorphism a: g; --> ~§ of sheaves on the topological space X 
+induces homomorphisms 
+aO: HO(X, g;) --> HO(X, ~), 
+a1 : Hl(X, g;)-->Hl(X, ~). 
+The homomorphism aO is nothing but the mapping ax: g;(X) --> ~(X), The 
+homomorphism a 1 is constructed as follows, Let U = (Ui)i E I be an open 
+covering of X. Consider the mapping 
+au: C 1(U, .?') --> C 1(U, ~) 
+which assigns to each cochain ¢ = (hj) E C1(U, ,?') the cochain 

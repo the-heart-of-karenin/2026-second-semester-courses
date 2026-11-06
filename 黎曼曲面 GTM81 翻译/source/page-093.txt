@@ -1,0 +1,42 @@
+84 
+I Covering Spaces 
+11.3. On a Riemann surface X a linear differential equation for an unknown 
+holomorphic function w: X -> en may be written in the form 
+dw = Aw, 
+where A = (aij) E M(n x n, Q(X)) is a given n x n matrix of holomorphic 
+I-forms aij E Q(X). For any local chart (V, z) on X one has A = F dz, where 
+FE M(n x n, 0(V)) and the differential equation becomes 
+dw 
+dz = F· w. 
+But this is just the form of equation studied in (11.2). 
+11.4. Theorem. Suppose X 
+is a simply connected Riemann surface, 
+A E M(n x n, Q(X)) and Xo E X. Then for every c E en there exists a unique 
+solution w E 0(Xt of the differential equation 
+dw= Aw 
+satisfying w(xo) = c. 
+PROOF 
+(a) By Theorem (11.2) there exists a connected open neighborhood V 0 of 
+Xo and a solution fE £D(Vot of the differential equation df= Af with 
+f(xo) = c. Now we will show thatfmay be analytically continued along any 
+curve oe: [0, 1] -> X having initial point Xo. Then by Corollary (7.4) these 
+continuations will piece together to form a global function w E (IJ(x)n which, 
+because of the Identity Theorem, satisfies the differential equation dw = Aw 
+on all of X. 
+(b) By Theorem (11.2) there exists a partition 
+° = to < t I < ... < tk = 1 
+of the interval [0, 1] and domains V j ' j = 1, ... , k -
+1, with the following 
+properties: 
+(i) oe([tj' tj+ I]) c Vj for j = 0, ... , k - 1, where Vo is the neighborhood 
+of Xo mentioned above. 
+(ii) For any initial value Cj E en there existsfi E £D(Vj)" with dfi = Afiand 
+fi(oe(tJ) = cj,j = 1, ... , k -
+1. 
+Now, starting with the solution fo := f on V 0 found in (a) and using 
+induction on j one can construct solutions./.i on Vj satisfying 
+fi(oe(tj)) = fi-I(oe(tj))' 
+From the uniqueness proved in Theorem (11.2) and the Identity Theorem it 
+follows that fi-I and fi agree on the connected component of V j - I n Vj 
+containing oe(tj). This proves thatf can be analytically continued along oe. 
+D 

@@ -1,0 +1,49 @@
+16 
+1 Covering Spaces 
+3.5. Definition. Suppose X is a topological space and a E X. By the constant 
+curve at a is meant the constant mapping uo: I ~ X, i.e., uo(t) = a for every 
+t E /. 
+3.6. Theorem. Suppose X is a topological space and a, h, c EX. Suppose u, I" 
+w: I ~ X are curves in X such that 
+u(O) = a, 
+u(l) = b = v(O), 
+v(1) = c = w(O), 
+w(l) = d. 
+Further let Uo be the constant curve at a, 1'0 the constant curt:e at b. Then the 
+following homotopies exist: 
+(i) Uo . u ~ u ~ U . 1'0' 
+(ii)u'u-~uo, 
+(iii) (u . v) . w ~ U . (v' w). 
+PROOF 
+(i) By the definition of the product of curves 
+(uo ' u)(t) = Juo(2t) = u(O) 
+for 0 ::s; t::s; 1, 
+\u(2t-l) 
+for1::s;t::s;1. 
+Thus Uo . u = u .," !/J, where !/J: I ~ I is the parameter transformation defined 
+by !/J(t) = 0 for 0 ::s; t ::s; 1, !/J(t) = 2t - 1 for -! ::s; t ::s; 1. Thus it follows from 
+Lemma (3.3) that Uo . u ~ u. Similarly u . Vo ~ u. 
+(ii) By definition 
+(u . u- )(t) = i~gt~ 2t) 
+Now define A: I x I ~ X by 
+A(t s)'- Ju(2t(1 - s)) 
+, 
+.- \u(2(1 - t)(1 - s)) 
+for 0 ::s; t::s; !, 
+for 1 ::s; t::s; I. 
+for 0 ::s; t ::s; 1, 
+for 1 ::s; t ::s; 1. 
+Then A is a homotopy from U . u- to the point curve uo . 
+(iii) One can easily check that 
+(u . v) . w = (u . (v . w)) 
+!/J, 
+where !/J: I ~ I is the parameter transformation given by: 
+(a) !/J(O) = 0, !/J(t) =~, !/J(~) = i, !/J(l) = 1 
+(b) !/J is affine linear on each of the intervals [0, n [t, H [~, 1 J. 
+Hence the result follows from Lemma (3.3). 
+o 
+Remark. Analogous to (iii) is the following fact. If ul , ... , Un arc curves in 
+X such that the initial point of each Uk+ I equals the end point of Uk, then 
+bracketing the product U l . U2 ..... Un in various ways corresponds to 
+taking various parameter transformations !/J: I ~ I such that !/J(O) = 0 and 
+!/J( 1) = 1. In particular all such bracketings are homotopic. 

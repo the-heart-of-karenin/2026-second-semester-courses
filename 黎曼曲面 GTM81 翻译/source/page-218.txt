@@ -1,0 +1,52 @@
+27 The Riemann Mapping Theorem 
+209 
+also has a convergent subsequence (fnJ which converges to some function 
+f: D -+ rc. Clearly,f(O) = 0 andf'(O) = 1, so f is not constant. 
+(d) The remaining point is to show thatfis schlicht. If this were not the 
+case, then there would exist an a E C such thatf - a would have at least two 
+zeros in D. Then one could find an r < 1 such that f - a has, counting 
+multiplicities, at least k ;;::: 2 zeros in D(r) and does not vanish on oD(r). Then 
+k = _1 r 
+f'(z) 
+dz. 
+2rri 
+. 
+{(z) - a 
+Izl =r . 
+Thus every function sufficiently close to f also takes the value a k times, 
+contradicting the fact that every.tn, is schlicht. 
+0 
+27.7. Lemma. Suppose R E ]0, C1J] and Y is a proper subdomain ()( D(R) with 
+o E Y and Rhk(Y) = O. Then there exists an r < R and a holomorphic map 
+f: Y -+ D(r) withf(O) = 0 andf'(O) = 1. 
+PROOF. First consider the case R < 00. Without loss of generality we may 
+assume R = 1 and thus Y c D. By assumption there is a point a E D\ Y. 
+Define a biholomorphic map cp: D -+ D by 
+z-a 
+cp(z)'=-_-- . 
+I - az 
+Then 0 ¢ cp(Y) and thus by Lemma (27.2) there exists g E (i,(y) with 
+g2 = cp I Y. Clearly g(Y) c D. Set 
+z-b 
+I/t(z):=--
+whereb:=g(O). 
+1 - Eiz' 
+The mapping h := I/t c g: Y -+ D satisfies h(O) = 0 and 
+y :=h'(O) = 1/t'(b)g'(O) = I/t'(b) cp'(O) 
+2g(0) 
+1 + I b 12 
+2b 
+1 
+l-Iall 
+l-Ibf 
+2b 
+since bl = 
+- a. Thus I y I > 1. Now letting r ,= 1/ I}' I and f:= hh', the map 
+f: Y -+ D(r) has the desired properties. 
+The case R = 00 is handled similarly. 
+D 
+27.8. Lemma. Suppose X is a non-compact Riemann surface with Rh~(X) = 0 
+and Y c X is a Runge domain. Then Rhk(Y) = 0 as well. 
+PROOF. Suppose WE Q(Y) is an arbitrary holomorphic I-form on Y. We 
+have to show that W has a primitive. By Corollary (26.6) choose a holomor-
+phic I-form Wo on X which has no zeros. Then w = fwo for some f E (1)( Y). 

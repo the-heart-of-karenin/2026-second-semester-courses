@@ -1,0 +1,56 @@
+{
+  "scope": "§3—§12",
+  "checks": "原编号连续性、习题数量、输入文件与图片依赖存在性；不检查成品PDF",
+  "sections": [
+    {
+      "section": 3,
+      "numbered_entries": 15,
+      "exercises": 3
+    },
+    {
+      "section": 4,
+      "numbered_entries": 26,
+      "exercises": 5
+    },
+    {
+      "section": 5,
+      "numbered_entries": 11,
+      "exercises": 7
+    },
+    {
+      "section": 6,
+      "numbered_entries": 10,
+      "exercises": 3
+    },
+    {
+      "section": 7,
+      "numbered_entries": 8,
+      "exercises": 2
+    },
+    {
+      "section": 8,
+      "numbered_entries": 14,
+      "exercises": 3
+    },
+    {
+      "section": 9,
+      "numbered_entries": 17,
+      "exercises": 3
+    },
+    {
+      "section": 10,
+      "numbered_entries": 22,
+      "exercises": 4
+    },
+    {
+      "section": 11,
+      "numbered_entries": 15,
+      "exercises": 3
+    },
+    {
+      "section": 12,
+      "numbered_entries": 10,
+      "exercises": 3
+    }
+  ]
+}

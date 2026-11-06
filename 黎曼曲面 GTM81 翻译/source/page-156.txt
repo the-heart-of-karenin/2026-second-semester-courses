@@ -1,0 +1,43 @@
+18 Functions and Differential Forms with Prescribed Principal Parts 
+147 
+Theorem. A Mittag-Leffler distribution J1 has a solution if and only if[oJ1] = o. 
+PROOF 
+(a) Suppose f E ..II(X) is a solution of J1 = (1;). Set gj:= /; - f E (9(UJ 
+Then on U j n Uj one has 
+fj - /; = gj - gj. 
+This means that the cocycle bJ1 = (fj - /;) is contained in B1(U, (9), i.e., 
+[DJ1] =0. 
+(b) Suppose [bJ1] = 0 and thus 0J1 E B1(U, (9). Then there exists a co chain 
+(gj) E CO(U, (9) such that 
+fj - /; = gj - gj 
+on Uj n Uj . 
+This implies/; - gj = fj - gj on Uj n Uj. Thus the/; - gj piece together to 
+form 
+a global meromorphic function f E ..II(X). 
+Since f I U j -
+/; 
+= -9j E (9(U j ),fis a solution of J1. 
+0 
+Remark. By (17.17) on every compact Riemann surface H1(X, ..II) = O. 
+This implies that given any cohomology class ~ E H1(X, (9) there exists a 
+Mittag-Leffler distribution J1 E CO(U, ..II) such that ~ = [0J1], for a suitably 
+chosen covering U. Thus on every compact Riemann surface of genus;:::: 1 
+there are Mittag-Leffler problems which have no solution. But on the 
+Riemann sphere H1(!P'1, (9) = 0 and every Mittag-Leftler distribution has a 
+solution. This is also easy to see directly. 
+18.2. Now suppose X is a compact Riemann surface and J1 E CO(U, ..II) is a 
+Mittag-Leftler distribution of meromorphic functions on X. Then for every 
+holomorphic I-form ro E Q(X) the product roJ1 E CO(U, ..11(1») is a Mittag-
+Leftler distribution of I-forms and thus by (17.2) the residue Res(roJ1) is 
+defined. This allows us to formulate the criterion alluded to above which 
+tells us when J1 has a solution. 
+Theorem. Suppose J1 E CO(U, ..II) is a Mittag-Leffler distribution of merom or-
+phic functions on the compact Riemann surface X. Then J1 has a solution if and 
+only if 
+Res(roJ1) = 0 for every ro E Q(X). 
+PROOF. Now [0J1] E H1(X, (9) vanishes if and only if A([OJ1]) = 0 for every 
+A. E Hl(X, (9)*. By the Serre Duality Theorem this is the case exactly if 
+(ro, [0J1]) = 0 for every ro E Q(X). 
+By Theorem (17.3) one has (ro, [Oil]) = Res(ro[b/l]) = Res(ro/l). Thus the 
+result follows from Theorem (18.1). 
+0 

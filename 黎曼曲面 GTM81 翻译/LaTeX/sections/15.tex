@@ -1,0 +1,110 @@
+\section{上同调正合序列}
+\sourcepage{118--119}
+本节讨论层同态、层的正合序列及上同调长正合序列。这些工具可用来计算各种上同调群。
+\entry{15.1}{定义}
+设$\mathcal F,\mathcal G$为$X$上的阿贝尔群层。\textbf{层同态}$\alpha:\mathcal F\to\mathcal G$是群同态族$\alpha_U:\mathcal F(U)\to\mathcal G(U)$，与限制同态相容，即对$V\subset U$有$\rho_V^U\alpha_U=\alpha_V\rho_V^U$。若每个$\alpha_U$均为同构，则称$\alpha$为同构。向量空间层的同态类似定义，常省略下标$U$。
+\entry{15.2}{例}
+(a) 外微分诱导层同态$d:\mathcal E\to\mathcal E^{(1)}$、$d:\mathcal E^{(1)}\to\mathcal E^{(2)}$；$d',d''$也类似。
+(b) 自然包含$\OO\to\mathcal E$、$\C\to\mathcal E$、$\Z\to\OO$、$\Omega\to\mathcal E^{1,0}$等均为层同态。
+(c) 定义$\mathrm{ex}:\OO\to\OO^*$，$\mathrm{ex}_U(f):=\exp(2\pi if)$。
+\entry{15.3}{层同态的核}
+定义$\mathcal K(U):=\ker(\mathcal F(U)\xrightarrow\alpha\mathcal G(U))$。配诱导限制，它仍为层，称为$\alpha$的核，记$\ker\alpha$。例如在黎曼曲面上：
+\[
+\OO=\ker(\mathcal E\xrightarrow{d''}\mathcal E^{0,1}),\quad
+\Omega=\ker(\mathcal E^{1,0}\xrightarrow d\mathcal E^{(2)}),\quad
+\Z=\ker(\OO\xrightarrow{\mathrm{ex}}\OO^*).
+\]
+\sourcepage{120}
+\entry{15.4}{注记}
+若定义$\mathcal I(U):=\operatorname{im}(\mathcal F(U)\xrightarrow\alpha\mathcal G(U))$，一般只得预层，不满足层公理(II)。例如$X=\C^*$上$\mathrm{ex}:\OO\to\OO^*$。令$U_1=\C^*\setminus\R_-$、$U_2=\C^*\setminus\R_+$，在各$U_k$上取$f_k(z)=z$。由单连通性，$f_k$均在$\mathrm{ex}$的像中，且在交集上相等；但它们不能拼成像中的整体元素，因为$z$在$\C^*$上没有单值对数。
+\entry{15.5}{正合序列}
+层同态$\alpha$诱导各茎的同态$\alpha_x:\mathcal F_x\to\mathcal G_x$。若每个$x$处序列$\mathcal F_x\xrightarrow{\alpha_x}\mathcal G_x\xrightarrow{\beta_x}\mathcal H_x$正合，即$\ker\beta_x=\operatorname{im}\alpha_x$，则称层序列$\mathcal F\xrightarrow\alpha\mathcal G\xrightarrow\beta\mathcal H$正合。较长序列在每个中间位置均满足此条件时称为正合。
+
+若$0\to\mathcal F\xrightarrow\alpha\mathcal G$正合，称$\alpha$为\textbf{单同态}；若$\mathcal F\xrightarrow\alpha\mathcal G\to0$正合，称为\textbf{满同态}。$0\to\mathcal F\to\mathcal G\to\mathcal H\to0$称为\textbf{短正合序列}。
+\entry{15.6}{引理}
+若$\alpha$为层单同态，则对每个开集$U$，$\alpha_U$为单射。
+\sourcepage{121}
+\begin{proof}
+若$\alpha_U(f)=0$，由各$\alpha_x$单射，每个$x\in U$有开邻域$V_x$使$f|_{V_x}=0$。由层公理(I)，$f=0$。
+\end{proof}
+\entry{15.7}{注记}
+层满同态未必在每个开集上满射。例如上述$\mathrm{ex}$在每个茎上满射，因为非零全纯函数局部有对数，但在$\C^*$的整体截面上不满射。
+\entry{15.8}{引理}
+若$0\to\mathcal F\xrightarrow\alpha\mathcal G\xrightarrow\beta\mathcal H$正合，则对每个开集$U$，$0\to\mathcal F(U)\xrightarrow\alpha\mathcal G(U)\xrightarrow\beta\mathcal H(U)$正合。
+\begin{proof}
+(a)起点处由(15.6)。
+(b)若$g=\alpha(f)$，茎上的正合性说明$\beta(g)$局部为零，由公理(I)整体为零。
+(c)若$\beta(g)=0$，由茎上正合性，存在开覆盖$(V_i)$及$f_i\in\mathcal F(V_i)$使$\alpha(f_i)=g|_{V_i}$。在交集上$\alpha(f_i-f_j)=0$，由(15.6)得$f_i=f_j$。由公理(II)拼成$f\in\mathcal F(U)$，再由公理(I)有$\alpha(f)=g$。
+\end{proof}
+\entry{15.9}{例}
+黎曼曲面上有以下短正合序列：
+\[
+\text{(a) }0\to\OO\to\mathcal E\xrightarrow{d''}\mathcal E^{0,1}\to0.
+\]
+由Dolbeault引理正合。
+\sourcepage{122}
+(b)令$\mathcal Z:=\ker(\mathcal E^{(1)}\xrightarrow d\mathcal E^{(2)})$为闭形式层，则$0\to\C\to\mathcal E\xrightarrow d\mathcal Z\to0$正合，因为闭形式局部恰当。
+
+(c)$0\to\C\to\OO\xrightarrow d\Omega\to0$，为(b)的全纯对应物。
+
+(d)$0\to\Omega\to\mathcal E^{1,0}\xrightarrow d\mathcal E^{(2)}\to0$。核由(9.16)给出；满同态性可在局部坐标中把$d(fdz)=-f_{\bar z}dz\wedge d\bar z$的求解归于Dolbeault引理。\translatornote{原书此处显示式的正号与(9.16)相反；这里按外积次序写负号，不影响局部满射性。}
+
+(e)$0\to\Z\to\OO\xrightarrow{\mathrm{ex}}\OO^*\to0$，由(15.3.c)、(15.7)正合。
+\entry{15.10}{}
+层同态$\alpha:\mathcal F\to\mathcal G$诱导$\alpha^q:H^q(X,\mathcal F)\to H^q(X,\mathcal G)$（$q=0,1$）。$\alpha^0$就是整体截面上的$\alpha_X$。对$\alpha^1$，先把上链$(f_{ij})$逐项映为$(\alpha(f_{ij}))$；此操作保持上闭链与上边缘，
+\sourcepage{123}
+故诱导各覆盖的上同调同态，再取归纳极限即可。
+\entry{15.11}{连接同态}
+给定短正合序列$0\to\mathcal F\xrightarrow\alpha\mathcal G\xrightarrow\beta\mathcal H\to0$，定义$\delta^*:H^0(X,\mathcal H)\to H^1(X,\mathcal F)$如下。对$h\in\mathcal H(X)$，由$\beta_x$满射，选开覆盖$(U_i)$及$g_i\in\mathcal G(U_i)$使$\beta(g_i)=h|_{U_i}$。在交集上$\beta(g_j-g_i)=0$，由(15.8)存在唯一$f_{ij}\in\mathcal F(U_i\cap U_j)$使$\alpha(f_{ij})=g_j-g_i$。由单射性，$f_{ij}+f_{jk}=f_{ik}$，故为上闭链。令$\delta^*h$为其类。容易验证与各种选择无关。
+\entry{15.12}{定理}
+上述短正合序列诱导正合序列
+\[
+\begin{aligned}
+0\to H^0(X,\mathcal F)&\xrightarrow{\alpha^0}H^0(X,\mathcal G)\xrightarrow{\beta^0}H^0(X,\mathcal H)\xrightarrow{\delta^*}\\
+& H^1(X,\mathcal F)\xrightarrow{\alpha^1}H^1(X,\mathcal G)\xrightarrow{\beta^1}H^1(X,\mathcal H).
+\end{aligned}
+\]
+\sourcepage{124}
+\begin{proof}
+(a)$H^0(\mathcal F)$、$H^0(\mathcal G)$处由(15.8)。
+(b)若$h=\beta^0(g)$，构造连接同态时取$g_i=g|_{U_i}$，则$f_{ij}=0$，故$\operatorname{im}\beta^0\subset\ker\delta^*$。
+(c)若$\delta^*h=0$，沿用(15.11)并写$f_{ij}=f_j-f_i$。令$\widetilde g_i:=g_i-\alpha(f_i)$，则各$\widetilde g_i$在重叠处相同，拼成整体$g$，满足$\beta(g)=h$。故反向包含也成立。
+(d)由$\alpha(f_{ij})=g_j-g_i$，立即有$\operatorname{im}\delta^*\subset\ker\alpha^1$。
+(e)若$\xi\in\ker\alpha^1$由$(f_{ij})$表示，则可取$g_i$使$\alpha(f_{ij})=g_j-g_i$，于是$\beta(g_i)$在交集上相同，拼成$h\in\mathcal H(X)$；按定义$\delta^*h=\xi$。
+(f)由(15.8)中$\mathcal F(U)\to\mathcal G(U)\to\mathcal H(U)$正合，得$\operatorname{im}\alpha^1\subset\ker\beta^1$。
+(g)若$\eta\in\ker\beta^1$由$(g_{ij})\in Z^1(\mathfrak U,\mathcal G)$表示，则存在$h_i$使$\beta(g_{ij})=h_j-h_i$。对每个$x$选$\tau x$使$x\in U_{\tau x}$，再取$V_x\subset U_{\tau x}$及$g_x\in\mathcal G(V_x)$使$\beta(g_x)=h_{\tau x}|_{V_x}$。在加细覆盖$(V_x)$上令$\widetilde g_{xy}:=g_{\tau x,\tau y}|_{V_x\cap V_y}$，仍代表$\eta$。令$\psi_{xy}:=\widetilde g_{xy}-g_y+g_x$，它与原上闭链上同调且$\beta(\psi_{xy})=0$。由(15.8)取$f_{xy}$使$\alpha(f_{xy})=\psi_{xy}$。由$\alpha$单射，$(f_{xy})$满足上闭链关系，其类$\xi$满足$\alpha^1(\xi)=\eta$。
+\end{proof}
+\entry{15.13}{定理}
+若上述短正合序列满足$H^1(X,\mathcal G)=0$，则
+\sourcepage{125}
+\[
+H^1(X,\mathcal F)\cong H^0(X,\mathcal H)/\beta H^0(X,\mathcal G).
+\]
+\begin{proof}由(15.12)，$H^0(\mathcal G)\xrightarrow\beta H^0(\mathcal H)\xrightarrow{\delta^*}H^1(\mathcal F)\to0$正合，故结论显然。\end{proof}
+应用中常需显式说明此同构。由(15.8)可把$\mathcal F$看作$\ker\beta$，$\alpha$取包含。若$\xi$由$(f_{ij})$表示，由$H^1(\mathfrak U,\mathcal G)=0$可写$f_{ij}=g_j-g_i$。则$\beta(g_i)$拼成$h\in\mathcal H(X)$，$\xi$对应于$h\bmod\beta\mathcal G(X)$。这正是连接同态诱导同构的逆，见上证(e)。
+\entry{15.14}{Dolbeault定理}
+每个黎曼曲面都有自然同构
+\[
+\text{(a) }H^1(X,\OO)\cong\mathcal E^{0,1}(X)/d''\mathcal E(X),\qquad
+\text{(b) }H^1(X,\Omega)\cong\mathcal E^{(2)}(X)/d\mathcal E^{1,0}(X).
+\]
+由$H^1(X,\mathcal E)=H^1(X,\mathcal E^{1,0})=0$，分别对(15.9.a)、(15.9.d)应用(15.13)即得。定理(13.4)为其特例。
+\entry{15.15}{de Rham群}
+闭1形式模恰当1形式的商
+\[
+\operatorname{Rh}^1(X):=\frac{\ker(\mathcal E^{(1)}(X)\xrightarrow d\mathcal E^{(2)}(X))}{\operatorname{im}(\mathcal E(X)\xrightarrow d\mathcal E^{(1)}(X))}
+\]
+称为第一de Rham群。差为恰当形式的两个闭形式称为上同调的。此群为零当且仅当每个闭1形式均有原函数；单连通时由(10.7)为零。
+\sourcepage{126}
+\textbf{de Rham定理。}$H^1(X,\C)\cong\operatorname{Rh}^1(X)$。对(15.9.b)应用(15.13)即得；(12.7.a)为其特例。
+
+\textbf{注记。}这里仅对黎曼曲面证明de Rham及Dolbeault定理；它们对任意维的可微、复流形均有更一般形式，参见[30]—[35]。第6、12、15节只介绍层及层上同调的基本概念，系统介绍见[41]。
+\subsection*{习题（第15节）}
+\entry{15.1}{}
+设$\mathcal H$为调和函数层。验证$0\to\mathcal H\to\mathcal E\xrightarrow\Delta\mathcal E\to0$正合。
+\entry{15.2}{}
+证明任意黎曼曲面上的$0\to\C^*\to\OO^*\xrightarrow{d\log}\Omega\to0$正合，其中$(d\log)f:=f^{-1}df$。
+\entry{15.3}{}
+设$\widetilde\Omega\subset\MM^{(1)}$为各点留数均为零的亚纯1形式层。证明$0\to\C\to\MM\xrightarrow d\widetilde\Omega\to0$正合。
+\entry{15.4}{}
+设$X=\C/\Gamma$为环面。证明$H^1(X,\C)\cong\operatorname{Rh}^1(X)\cong\C^2$，且$dz,d\bar z$的类为其基。［提示：对任意闭形式$\omega$，选$c_1,c_2$使$\omega-c_1dz-c_2d\bar z$的所有周期为零。］

@@ -1,0 +1,35 @@
+30 
+1 Covering Spaces 
+Remark. A proper non-constant holomorphic map will be called an n-
+sheeted holomorphic covering map, where n is the integer found in the 
+previous Theorem. Note that holomorphic covering maps are allowed to 
+have branch points. If we wish to emphasize that there are none, then we will 
+specifically say that the map is unbranched. If we speak of a topological 
+covering map or if there is no complex structure, then we mean a covering 
+map in the sense of (4.11). 
+4.25. Corollary. On any compact Riemann surface X every non-constant 
+meromorphic junction f: X -t pI has as many zeros as poles, where each is 
+counted according to multiplicities. 
+PROOF. The mapping/: X -t pI is proper. 
+o 
+4.26. Corollary. Any polynomial of nth degree 
+j(z) = zn + alZn- 1 + ... + an EO C[z] 
+has, counting multiplicities, exactly n zero. 
+PROOF. By (2.3) we may consider f as a holomorphic mapping/: pI -t pI 
+which, counting multiplicities, takes the value (fJ exactly n times. 
+0 
+EXERCISES (§4) 
+4.1. Let X '=C\{±1), Y'=C\{(nj2) + kn, k E z). Show that 
+sin: Y -> X 
+is a topological covering map. Consider the foHowing curves in X. 
+u: [0, 1] -> X, u(t) ,= 1 - eZrrit 
+v: [0, 1] -> X, v(t) ,= -1 + e2 • it• 
+Let WI: [0, 1] -> Y be the lifting of u . v with WI(O) = 0 and W2: [0, 1] -> Y be the 
+lifting of v . u with W2(0) = 0. Show that 
+WI (1) = 2n 
+w2(1) = -2n. 
+Conclude that nl(X) is not abelian. 
+4.2. Let X and Y be arcwise connected Hausdorff topological spaces and f: Y -> X 
+be a covering map. Show that the induced map 
+f*: nl(Y) -> ndX) 
+is injective. 

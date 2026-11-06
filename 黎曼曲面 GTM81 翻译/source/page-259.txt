@@ -1,0 +1,130 @@
+Author and Subject Index 
+Rank of a vector bundle 219 
+Refining map 98 
+Regular 
+boundary point 
+182 
+covering 
+33 
+singular point 89 
+Removable singularity 63 
+Removable Singularities Theorem, 
+Riemann's 
+5 
+Residue 63, 132 
+of a Mittag-Leffler distribution 
+133 
+Residue Theorem 80 
+Restriction homomorphism 40 
+deRham, Georges (b. 1903) 
+deRham group 
+125 
+holomorphic deRham group 206 
+Theorem of 126 
+Theorem of deRham-Hodge 
+157 
+Riemann, Bernhard (1826-1866) 
+Riemann-Hilbert problem 
+231ff. 
+Riemann-Hurwitz formula 
+140 
+Riemann Mapping Theorem 
+206ff., 
+210 
+Riemann's Removable Singularities 
+Theorem 
+5 
+Sheaf axioms 40 
+Sheaf homomorphism 
+118 
+Short exact sequence 
+120 
+Simply connected 
+17 
+Singularity 
+essen tial 63 
+of Fuchsian type 
+89 
+removable 63 
+Skyscraper sheaf 128 
+Solution 
+of a divisor 
+159 
+253 
+of a Mittag-Leffler distribution 
+146, 202ff. 
+Solutions, fundamental system of 85 
+Sphere, Riemann 
+3 
+Square integrable 
+cochain 
+111 
+function 
+109 
+Stalk 40 
+Star-operator 
+153 
+Star-shaped 
+18 
+Stein, Karl (b. 1913) 
+196,205, 214, 
+216, 217 
+Stokes, George Gabriel (1819-1903) 
+Theorem 78 
+Riemann-Roch Theorem 
+126ff., 129 
+Subharmonic function 
+179 
+Riemann sphere 3 
+Riemann surface 3 
+Roch, Gustav (1839-1866) 
+Riemann-Roch Theorem 
+126ff., 129 
+Rohrl, Helmut (b. 1927) 
+231 
+Roots 
+28 
+Runge, Carl (1856-1927) 
+Runge Approximation Theorem 
+196ft'., 200 
+Runge subset 
+187 
+Schlicht function 
+208 
+Schwartz, Laurent (b. 1915) 
+Theorem of 241 
+Section 221 
+holomorphic 222 
+merom orphic 225 
+Semi-norm 
+239 
+Sequence, exact 
+120 
+Serre, lean-Pierre (b. 1926) 
+Serre Duality Theorem 
+132ft'., 138 
+Sheaf 40ft'. 
+Summand of automorphy 74,215 
+Support 
+of a differentiable form 
+77 
+of a function 
+77, 190, 237 
+Theta function 
+166 
+Topological vector space 
+238ft'. 
+Torus 4 
+Total branching order 140 
+Transition functions 
+220 
+Triviality of vector bundles 219, 228ft'. 
+Type (1, 0) resp. (0, 1), cotangent 
+vectors of 62 
+Unbranched holomorphic map 
+21 
+Uniformizing parameter 5 
+Universal covering 
+31 ff. 
+Vector bundle 219ft'. 
+holomorphic 220 

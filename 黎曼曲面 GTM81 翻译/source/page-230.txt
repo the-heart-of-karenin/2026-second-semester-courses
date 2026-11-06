@@ -1,0 +1,40 @@
+29 Line and Vector Bundles 
+221 
+Zl(U, GL(n, lD)) denote the set of a1l1-cocycles with values in GL(n, lD) with 
+respect to U, i.e., all families (giJi. j EI with 
+gij E GL(n, lD(Vi n V j)) 
+and 
+gijgjk = gik 
+on Vi n Vj n Vk 
+for every i, j, k E I. Note that for n ~ 2 the set Zl( U, GL(n, 0)) is not a 
+group with respect to component-wise multiplication. 
+If 21 is a holomorphic atlas of a vector bundle on X, then the family of 
+transition functions of III is a co cycle with values in GL(n, 0). Conversely 
+given such a co cycle one can construct a holomorphic vector bundle. We 
+now prove this. 
+29.7. Theorem. Suppose X is a Riemann surface, U = (Vi)iEI is an open 
+covering of X and (gij)EZ1(U, GL(n, 0)). Then there exists a holomorphic 
+vector bundle p: E -+ X of rank n and a holomorphic atlas 
+{hi: Eu,-+ Vi xC, i E I} 
+of E, whose transition functions are the given gij. 
+PROOF. Let 
+E' := U Vi X en x {i} c: X X en x I. 
+iel 
+Give E' the topology induced from X x C x I, where I has the discrete 
+topology. On E' introduce the following equivalence relation: 
+(x, t, i) '" (x', t', j)-=- x = x' and t = giix )t'. 
+Because of the cocycle relation gij g jk = gik, it is easy to check that this really 
+is an equivalence relation. Let E:= E'I '" , together with the quotient topo-
+logy, and let K: E' -+ E be the canonical quotient map. Since the equivalence 
+relation is compatible with the projection E' -+ X, the induced mapping 
+p: E-+X is continuous. The fibers p-l(X) have a natural structure of an 
+n-dimensional vector space over C. As well 
+Eu, = p-l(V;) = K(Vi X C x {i}) 
+and K I Vi X en x {i} -+ EUi is a homeomorphism. Local trivializations 
+hi: EUi -+ Ui X en can now be defined as the inverses of these home-
+omorphisms followed by the identifications Vi x C x {i} ~ U i x C. By 
+construction the transition functions of the atlas (hi) are the given gij. 
+0 
+29.8. Definition. Suppose p: E -+ X is a vector bundle on a topological space 
+X and V is a subset of X. A section of E over V is a continuous mapping 
+f: V -+ E with p 0 f = idu . 

@@ -1,0 +1,49 @@
+30 The Triviality of Vector Bundles 
+229 
+PROOF. Suppose f is a non-trivial meromorphic section of E over X and 
+A c X is the discrete subset consisting of its zeros and poles. Suppose a E A 
+and h: Eu -+ U x en is a holomorphic linear chart of E on an open neigh-
+borhood U of a. Relative to the chart h we may represent f as (ft> ... ,f,,) 
+E A(u)n. Let k(a) be the minimum of the orders of the functions J., at the 
+point a. By Weierstrass' Theorem (26.5) there exists a meromorphic function 
+qJ E A(X) which at each point a E A has order - k(a) and is holomorphic 
+and non-zero on X\A. Then F := qJf is a holomorphic section of E which has 
+no zeros. 
+0 
+30.3. Theorem. Every holomorphic line bundle E on a non-compact Riemann 
+surface X is holomorphically trivial. 
+PROOF. Suppose 0 1= Yo ~ Y1 ~ Y2 ~ ••• is a sequence of relatively compact 
+Runge domains in X with U Y" = X. By Theorem (29.16) over every Y" 
+there is a meromorphic section. Thus by (30.2) there is also a holomorphic 
+section which does not vanish. Hence E is trivial over each Y" by Theorem 
+(30.1). It then follows from the Runge Approximation Theorem that every 
+holomorphic section of E over Y" can be approximated uniformly on com-
+pact subsets by holomorphic sections of E over y" + l' Let fo E (9 E( Yo) be a 
+section which is not zero at some point a E Yo. One can now construct a 
+sequence J., E (9E(y"), v 2 1, such that lim .... oo J.,(a) =F 0 and such that for 
+each v E N the sequence (fill YV)Il>' converges in (9E(y"). Then the limit ofthe 
+sequence (J.,) is a section f E (9dX) which does not vanish identically. As 
+above this implies that E is trivial over X. 
+0 
+30.4. Theorem. Every holomorphic vector bundle E on a non-compact Riemann 
+surface X is holomorphically trivial. 
+PROOF. The theorem will be proved by induction on n, the rank of E. 
+Theorem (30.3) is the case n = 1. Now assume the result has been proved for 
+all bundles of rank n - 1 and suppose E is a bundle of rank n. 
+(a) First we assume that there exists a section Fn E (9E(X) which does not 
+vanish anywhere. Since E is locally trivial, there exists an open covering 
+U = (UJi E I of X with the property that for every i E I there are sections F~, 
+... , F~-1 E (9E(Uj ) such that F~(x), ... , F~_1(X), Fn(x) are linearly indepen-
+dent for every x E Ui • On any intersection Uj n Uj these systems are related 
+to each other in the following way: 
+(1) 
+where Fi denotes the column vector with entries F~, ... , F~_ h the matrix Gij is 
+an element of GL(n - 1, (9(Ui n Uj )) and d j is a column vector with n - 1 
+rows 
+having 
+coefficients 
+in 
+(9(Ui n Uj)' 
+Then 
+GijGik = Gik 
+on 

@@ -1,0 +1,33 @@
+17 The Serre Duality Theorem 
+135 
+Lemma. There is a constant ko E 7L such that 
+for every D E Div(X). 
+PROOF. Suppose wand K are as above and g is the genus of X. Set ko := 1 -
+g + deg K. Then by Riemann-Roch 
+dim HO(X, QD) = dim HO(X, (!;D+K) 
+= dim Hl(X, ((]D+K) + 1 - g + deg(D + K) 
+~ deg D + ko . 
+o 
+17.5. Definition of a Dual Pairing. Suppose X is a compact Riemann surface 
+and D E Div(X) is a divisor. The product 
+(w,j) I--> wf, 
+induces a mapping 
+HO(X, Q-D) x Hl(X, (l}D) -+ Hl(X, Q). 
+The composition of this mapping with Res: Hl(X, Q) -+ C produces a bilin-
+ear mappmg 
+< , ): HO(X, Q-D) x Hl(X, ((]D) -+ C, 
+<w, 0:= Res(wO· 
+Hence this mapping induces a linear mapping 
+ID: HO(X, Q-D) -+ Hl(X, (fJD)* 
+of HO(X, Q-D) into the dual of Hl(X, (0D ). The Serre Duality Theorem 
+asserts that < , ) is a dual pairing, i.e., lD is an isomorphism. This will be 
+proved in (17.6) and (17.9). 
+17.6. Theorem. The mapping lD is injective. 
+PROOF. We have to show that for any non-zero w E HO(X, Q-D) there exists 
+~ E Hl(X, (l}D) such that <w, 0 
+-=1= O. Let a E X be a point such that D(a) = 0 
+and (Vo, z) be a coordinate neighborhood of a with z(a) = 0 and D I Vo = o. 
+On V o one can write was w =fdz wherefE (I}(Vo). We may assume Va is 
+so small thatfhas no zeros in Vo \{a}. Set u 1 = X\{a} and U = (u 0, U d. Let 
+rJ = (fO,fI) E CO(U, "'t), wherefo = (zft I andj~ = O. Then 
+WrJ = (d: ,0) E CO(U, ,4{(1)) 

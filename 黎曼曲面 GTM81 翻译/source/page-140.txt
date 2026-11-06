@@ -1,0 +1,35 @@
+16 The Riemann-Roch Theorem 
+131 
+PROOF. Let D: X -+ 7l. be the divisor with D(a) = g + 1 and D(x) = 0 for 
+x =1= a. By the Riemann-Roch Theorem 
+Thus there exists a non-constant function f E HO(X, (!)D) and clearly this 
+function fulfills the requirements of the theorem. 
+0 
+16.12. Corollary. Suppose X is a Riemann surface of genus g. Then there exists 
+a holomorphic covering mapping f: X -+ [pI with at most g + 1 sheets. 
+PROOF. The functionffound in Theorem (16.11) is by Theorem (4.24) such a 
+covering mapping since the value 00 is assumed with multiplicity S g + 1. 
+o 
+16.13. Corollary. Every Riemann surface of genus zero is isomorphic to the 
+Riemann sphere. 
+This follows from the fact that a one-sheeted covermg map is a 
+biholomorphism. 
+EXERCISES (§16) 
+16.1. Let D be a divisor on the Riemann sphere [pl. Prove 
+(a) dim HO([P\ (VD) = max(O, 1 + deg D) 
+(b) dim HI([pI, tiD) = max(O, -1 - deg D). 
+16.2. Let X = c/r be a torus, Xo E X a point and P the divisor 
+Show 
+p(X)={1 ifx=xo, 
+o if x f Xo. 
+,0 for n < 0, 
+dim HO(X, (l)np) = 
+'I' 1 for n = 0, 
+n for n ::::: 1. 
+[Hint: Use the Weierstrass S;Lfunction (Ex. 2.1).] 
+16.3. Let X be a compact Riemann surface, D a divisor on X and U = (Vi) an open 
+covering of X such that every Vi is isomorphic to a disk. Show that U is a Leray 
+covering for the sheaf (!) D, cf. (12.8). 
+16.4. (a) On a Riemann surface X let n be the sheaf of divisors, i.e., for V c: X open 
+n(V) consists of all maps 
+D: V--+7L 

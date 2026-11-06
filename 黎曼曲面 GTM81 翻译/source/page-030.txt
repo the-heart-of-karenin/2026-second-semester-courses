@@ -1,0 +1,45 @@
+4 Branched and Unbranched Coverings 
+21 
+As an example, suppose Y = C, X = C* and p = exp: C --> C*. Then the 
+identity mapping id: C --> C corresponds to the multi-valued logarithm on 
+C*. For, the set exp-l(b), where bE C*, consists of exactly the various 
+values of the logarithm of b. The following diagram illustrates this. 
+C 
+id 
+• C 
+'" 
+"'j 
+log 
+C* 
+4.3 Definition. Suppose X and Yare Riemann surfaces and p: Y ~ X is a 
+non-constant holomorphic map. A point y E Y is called a branch point or 
+ramification point of p, if there is no neighborhood V of y such that p I V is 
+injective. The map p is called an unbranched holomorphic map if it has no 
+branch points. 
+4.4. Theorem. Suppose X and Yare Riemann surfaces. A non-constant holo-
+morphic map p: Y --> X has no branch points if and only ifp is a local homeo-
+morphism, i.e., every point y E Y has an open neighborhood V which is mapped 
+homeomorphically by p onto an open set U in X. 
+PROOF. Suppose p: Y --> X has no branch points and y E Yis arbitrary. Since 
+y is not a branch point, there exists an open neighborhood V of y such that 
+p I V is injective. Since p is continuous and open, p maps the set V homeo-
+morphically onto the open set U ;= p(V). 
+Conversely, assume p: Y --> X is a local homeomorphism. Then for any 
+y E Y there exists an open neighborhood V of y which is mapped homeo-
+morphically by p onto an open set in X. In particular, pi V is injective 
+and y is not a branch point of p. 
+0 
+4.5. Examples 
+(a) Suppose k is a natural number :2: 2 and let Pk: C --> C be the mapping 
+defined by Pk(Z) ;= Zk. Then 0 E C is a branch point of Pk and the mapping 
+Pk I C* --> C is unbranched. 
+(b) Suppose p: Y --> X is a non-constant holomorphic map, y E Y and 
+x ;= p(y). Then y is a branch point of p precisely if the mapping p takes the 
+value x at the point y with multiplicity :2: 2, cf. (2.2). By Theorem (2.1) the 
+local behavior of p near y is just the same as the local behavior of 
+the mapping Pk in example (a) near the origin. 
+(c) The mapping exp: C --> C* is an unbranched holomorphic map. For 
+exp is injective on every subset V c C which does not contain two points 
+differing by an integral multiple of 21[i. 
+(d) Suppose r c C is a lattice and 1[: IC --> IC/r is the canonical quotient 
+mapping, cf. (1.5.d). Then n is unbranched. 

@@ -1,0 +1,45 @@
+18 Functions and Differential Forms with Prescribed Principal Parts 
+151 
+and thus is a solution of the Mittag-Leffler distribution 
+ji = (h, 0) E CO(U, <.It), 
+U = (U, X\{p}). 
+Now 
+g-1 
+Res(wkjl) = ResAwk h) = L akvcv· 
+\,:: 0 
+Thus the equations Resp(wk h) = 0 have a non-trivial solution (co, ... , Cg_ 1) 
+if and only if det(ak.} = O. But this is equivalent to 
+o 
+18.8. Theorem. On a compact Riemann surface X of genus g the number of 
+Weierstrass points, counted according to their weights, is (g -
+1 )g(g + 1). 
+PROOF. Suppose (U i , z;), i E I, is a covering of X by coordinate neighbor-
+hoods. On Ui n Uj the function !/Iij:= (dz)dz;) is holomorphic and has no 
+zeros. With respect to a fixed basis Wb ... , Wg of Q(X) let 
+W;:= ~i(Wl' ... , w g ) E 0(UJ 
+By Theorem (18.5) one has 
+W;=!/I~Jtj onUin Uj' whereN=g(g+I)/2. 
+(1) 
+Setting D(x) := ordx( W;) for x E U i , defines the divisor D on X correspond-
+ing to the Weierstrass points together with their respective weights. Thus 
+deg D is the total of the weights of the Weierstrass points and the proof is 
+complete once we show deg D = (g -
+1 )g(g + 1). 
+Let DI be the divisor of WI. Then deg DI = 2g - 2 by Theorem (17.l2). If 
+we set WI = fli dZi on Ui , then D 1 (x) = ordx(fli) for every x E Ui . Moreover 
+fIi = !/IiJlj on Ui n Uj. 
+(2) 
+From (1) and (2) it follows that 
+W;flt = Jtjflt on Ui n Uj . 
+Thus there exists a global meromorphic function f E ./I((X) with 
+fl Ui = W;fliN. For the divisor offone has 
+(f)=D-ND I · 
+Since deg(f) = 0, it follows that 
+g(g + I) 
+degD=NdegDl= 
+2 
+(2g-2)=(g-I)g(g+I). 
+0 
+18.9. Corollary. Every compact Riemann surface X of genus g ~ 2 admits a 
+holomorphic covering mapping/: X --+ /pI having at most g sheets. In particular 
+every compact Riemann surface of genus 2 is hyperelliptic. 

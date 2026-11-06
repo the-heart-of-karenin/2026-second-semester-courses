@@ -1,0 +1,47 @@
+228 
+3 Non-compact Riemann Surfaces 
+§30. The Triviality of Vector Bundles 
+In this section we show that every holomorphic vector bundle on a non-
+compact Riemann surface is trivial. This will be used in the next section to 
+solve the Riemann-Hilbert problem. 
+30.1. Theorem. Suppose E is a holomorphic vector bundle qf rank n on a 
+Riemann surface X. Let U = (Vi)iEI be an open covering of X, hi: Eu--> 
+Vi X en, i El, be a holomorphic atlas for E and (gij) E Zl(U, GL(n, 0)) be 'the 
+corresponding cocycle of transition functions. Then the following are 
+equivalent: 
+(i) E is holomorphically trivial. 
+(ii) There exist n global holomorphic sections F 1, ... , F n q{ E such thatfor 
+each point x E X the vectors F1(x), ... , Fn(x) E Ex are linearly independent. 
+(iii) The 
+cocycle 
+(giJ 
+splits, 
+i.e., 
+there 
+exists 
+a 
+cochain 
+(gi)E CO(U, GL(n, &)) with 
+PROOF 
+(i) = (ii). Since E is holomorphically trivial, the holomorphic linear struc-
+ture of E contains a chart h: E --> X x en. Let e 1, ••• , en be the standard unit 
+vectors of en. Define sections F", v = 1, ... , n, of E by 
+h(F ,,(x)) = (x, e,,) for every x E X. 
+Then the F" are holomorphic and linearly independent in every fiber. 
+(ii) = (iii). Any section F" may be represented relative to any chart hi as 
+an n-tuple of holomorphic functions f~v E 0(V;), f.1 = 1, ... , n. Let gi be the 
+matrix (f~,,)1$1"":<:n' Then gi E GL(n, 0(V;}), since F1, ... , Fn are linearly 
+independent in each fiber. Moreover on Vi n Vj one has 
+gi = gijgj and thus gij = gig; 1, 
+i.e., the co cycle (giJ splits. 
+(iii) = (i). Using the charts hi: EUi --> Vi X en we will construct a linear 
+chart h: E --> X x en which is holomorphically compatible with all the hi' 
+Suppose vEEui and hi(V)=:(x,t). Then set h(v):=(X,gi-1t). This 
+definition is independent of the choice of chart. For, suppose v E EUj as well 
+and hiv) =: (x, t'). Then t = gij t' = gi g; It' and thus gi-1t = g; It'. Finally it 
+follows directly from the definition of h that {h: E --> X x C} is holomor-
+phically compatible with the atlas consisting of all the hi' 
+0 
+30.2. Lemma. Suppose X is a non-compact Riemann surface and E is a holo-
+morphic vector bundle on X. If E has a non-trivial global meromorphic section, 
+then E also has a global holomorphic section which has no zeros. 

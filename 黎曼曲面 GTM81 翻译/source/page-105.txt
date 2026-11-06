@@ -1,0 +1,28 @@
+CHAPTER 2 
+Compact Riemann Surfaces 
+Amongst all Riemann surfaces the compact ones are especially important. 
+They arise, for example, as those covering surfaces of the Riemann sphere 
+defined by algebraic functions. As well their function theory is subject to 
+interesting restrictions, like the Riemann-Roch Theorem and Abel's 
+Theorem. More recently the theory of Riemann surfaces has been gener-
+alized to an extensive theory for complex manifolds of higher dimension. 
+And the methods developed for this are very well suited to proving the 
+classical theorems. One such method is sheaf cohomology and we give a 
+short introduction to this in the present chapter. 
+To a large extent Chapter 2 is independent of Chapter 1. Essentially only 
+§1 (the definition of Riemann surfaces), the first half of §6 (the definition of 
+sheaves) and §§9 and 10 (differential forms) will be needed. 
+~12. Cohomology Groups 
+The goal of this section is to define the cohomology groups Hl(X, .~), where 
+.~ is a sheaf of abelian groups on a topological space X. In our further study 
+of Riemann surfaces, these cohomology groups playa very decided role. 
+12.1. Cochains, Cocycles, Coboundaries. Suppose X is a topological space 
+and .? is a sheaf of abelian groups on X. Also suppose that an open covering 
+of X is given, i.e., a family U = (Vi)i El of open subsets of X such that 
+UiE[ Vi = X. For q = 0, 1,2, ... define the qth cochain group of Ji', with 
+respect to U, as 
+Cq(U, .~) ,= 
+TI 
+,?(Vio 11 ... 11 ViJ 
+(io • ...• iq) E /q+ 1 
+96 

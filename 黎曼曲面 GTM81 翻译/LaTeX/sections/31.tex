@@ -1,0 +1,52 @@
+\section{Riemann--Hilbert问题}
+\sourcepage{231}
+第11节中，线性微分方程基本解系的自守行为给出同态$T:\pi_1(X)\to\operatorname{GL}(n,\C)$。反过来，给定此同态，能否找到微分方程，使解沿闭曲线解析延拓时恰按指定自守因子变化？这就是\textbf{Riemann--Hilbert问题}。本节用H.~Röhrl[57]的方法给出非紧黎曼曲面上的解。
+\entry{31.1}{自守因子}
+设$p:Y\to X$为无分歧全纯覆盖，$G=\operatorname{Deck}(Y/X)$。若全纯$\Phi:Y\to\operatorname{GL}(n,\C)$满足$\sigma\Phi=\Phi T_\sigma$，其中$T_\sigma$为常可逆矩阵，则称具有常自守因子的乘法自守函数。由(11.6)，$\sigma\mapsto T_\sigma$为群同态。下一定理对应(28.4)。
+\entry{31.2}{定理}
+若$X,Y$非紧，$p:Y\to X$为无分歧全纯Galois覆盖，则对每个同态$T:G\to\operatorname{GL}(n,\C)$，存在全纯$\Phi$使$\sigma\Phi=\Phi T_\sigma$。
+\sourcepage{232}
+\begin{proof}
+(a)取开覆盖及$G$坐标卡$\varphi_i=(p,\eta_i)$，在$Y_i=p^{-1}(U_i)$上定义$\Psi_i(y):=T_{\eta_i(y)}^{-1}$。它局部常值，因而全纯。
+
+(b)由$\eta_i(\sigma^{-1}y)=\sigma^{-1}\eta_i(y)$，得
+\[
+(\sigma\Psi_i)(y)=T_{\sigma^{-1}\eta_i(y)}^{-1}=T_{\eta_i(y)}^{-1}T_\sigma=\Psi_i(y)T_\sigma.
+\]
+(c)$F_{ij}:=\Psi_i\Psi_j^{-1}$在覆盖变换下不变，下降到$U_i\cap U_j$，构成矩阵上闭链。由(30.5)，$F_{ij}=F_iF_j^{-1}$，其中$F_i$全纯可逆。拉回这些矩阵，令$\Phi_i:=F_i^{-1}\Psi_i$，则$\sigma\Phi_i=\Phi_iT_\sigma$，且
+\[
+\Phi_i^{-1}\Phi_j=\Psi_i^{-1}F_iF_j^{-1}\Psi_j=\Psi_i^{-1}F_{ij}\Psi_j=I.
+\]
+故拼成所求整体$\Phi$。
+\end{proof}
+\entry{31.3}{推论}
+非紧曲面上任给同态$T:\pi_1(X)\to\operatorname{GL}(n,\C)$，存在$A\in M(n\times n,\Omega(X))$，使$dw=Aw$在万有覆盖上有自守因子为$T_\sigma$的基本解系。
+\begin{proof}
+对万有覆盖应用(31.2)，再用(11.6)。
+\end{proof}
+\entry{31.4}{}
+设$X$为非紧黎曼曲面。若$S\subset X$闭离散，$X':=X\setminus S$，可对$X'$应用上述推论。但还希望所构造方程在每个$a\in S$至多有正则奇点，先准备引理。
+\sourcepage{233}
+\textbf{引理。}设$p:Y\to X'$为万有覆盖，$(U,z)$为$a\in S$的坐标邻域，$z(U)=D$、$z(a)=0$、$U\cap S=\{a\}$。则$p^{-1}(U\setminus\{a\})$的每个连通分支$Z$，都以$p|_Z$成为$U\setminus\{a\}$的万有覆盖。
+\begin{proof}
+由Weierstrass定理，取$X$上恰在$a$有一阶零点的全纯函数$f$。则$\omega=df/f$在$X'$全纯，沿绕$a$一周的正向小圆$\gamma$有积分$2\pi i$。若$p|_Z$不是万有覆盖，由(5.10)它同构于某$k$次幂覆盖。此时$\gamma$可连续提升$k$次形成闭曲线$c$，于是$\int_c p^*\omega=2k\pi i$。但$p^*\omega$在单连通$Y$上有原函数，闭曲线积分必须为零，矛盾。
+\end{proof}
+现在对$X'$上方程$dw=Aw$及基本解系$\Phi$，若在每个这样的分支$Z$上，$\Phi|_Z$都满足(11.12)的条件，则称方程在$a$有正则奇点。
+\entry{31.5}{定理}
+设$X$非紧，$S$闭离散，$X'=X\setminus S$。任给同态$T:\pi_1(X')\to\operatorname{GL}(n,\C)$，
+\sourcepage{234}
+存在$A\in M(n\times n,\Omega(X'))$，使$dw=Aw$在$S$的各点有正则奇点，且在万有覆盖$p:Y\to X'$上有基本解系$\Phi$，满足$\sigma\Phi=\Phi T_\sigma$。
+\begin{proof}
+设$S=\{a_i:i\in I\}$，取满足(31.4)条件的坐标邻域$(U_i,z_i)$。令$0\notin I$，$J=I\cup\{0\}$，$U_0=X'$，则为$X$的开覆盖，不同指标的交集在$X'$中。令$Y_0=Y$、$Y_i=p^{-1}(U_i\setminus\{a_i\})$。
+
+由(31.2)取$\Psi_0\in\operatorname{GL}(n,\OO(Y))$有指定自守因子。由(11.10)，各$Y_i$上可取有正则奇点且与$\Psi_0$自守行为相同的$\Psi_i$。于是$F_{ij}:=\Psi_i\Psi_j^{-1}$在覆盖变换下不变，可视为$U_i\cap U_j$上的全纯可逆矩阵，令$F_{jj}=I$，得到矩阵上闭链。由$H^1(X,\operatorname{GL}(n,\OO))=0$，写$F_{ij}=F_iF_j^{-1}$。
+
+令$\Phi_i:=F_i^{-1}\Psi_i$，如(31.2)拼成整体$\Phi$，满足指定自守行为。因$F_i^{-1}$在整个$U_i$全纯，乘上它不破坏$\Psi_i$的正则奇点性质。最后$A:=d\Phi\cdot\Phi^{-1}$在覆盖变换下不变，下降为$X'$上的全纯1形式矩阵，故$\Phi$为所求基本解系。\translatornote{原文证明末尾把定义域和基本群写为$X$；按定理及构造，此处应为$X'$。}
+\end{proof}
+\subsection*{习题（第31节）}
+\entry{31.1}{}
+设$p:Y\to X$为非紧曲面间的无分歧全纯Galois覆盖，$G=\operatorname{Deck}(Y/X)$。设$a:G\to\operatorname{GL}(n,\OO(Y))$为交叉同态，满足$a_{\sigma\tau}=a_\sigma(\sigma a_\tau)$。
+\sourcepage{235}
+证明存在全纯可逆矩阵$\Phi$使$a_\sigma=\Phi(\sigma\Phi)^{-1}$。
+\entry{31.2}{}
+任给全纯可逆矩阵$g:\C\to\operatorname{GL}(n,\C)$，证明存在全纯可逆矩阵$f$使$f(z+1)=f(z)g(z)$。［提示：对覆盖$z\mapsto e^{2\pi iz}$应用31.1。］

@@ -1,0 +1,41 @@
+23 Countable Topology 
+185 
+EXERCISES (§22) 
+22.1. Let D := {z E C: I z I < R} and let u: D -> ~ + be a nonnegative harmonic func-
+tion. Prove Harnack's inequality 
+R - izi u(O):s; u(z):s; R + izi u(O) 
+for every ZED. 
+R+ z 
+R-
+z 
+22.2. Using Harnack's inequality prove Liouville's Theorem for harmonic functions. 
+Let u: C -> ~ be a harmonic function which is bounded from above. Then u is 
+constant. 
+22.3. Suppose Y c C is open and u: Y -+ ~ is a continuous function such that for 
+every closed disk 
+D(a, r) = {z E c: I z - a I :s; r} c Y 
+one has 
+1 f2" 
+u(a) :s; 2n 0 u(a + reicp ) drp. 
+Show that u is subharmonic. 
+22.4. Suppose Y c C is open, a E ay and there exists a line segment 
+S = {Aa + (1 - A)b: O:s; A:S; 1}, 
+b #- a 
+with Y n S = 0. Show that a is a regular boundary point of Y. 
+§23. Countable Topology 
+In this section we prove the Theorem of Rad6 which asserts that every 
+Riemann surface has a countable topology. (Clearly this is trivial for com-
+pact Riemann surfaces.) Also for later use we construct special exhaustions 
+of non-compact Riemann surfaces. 
+23.1. Lemma. Suppose X and Yare topological spaces and f: X --> Y is a 
+continuous, open and surjective mapping. If X has a countable topology, then 
+so does Y. 
+PROOF. Let U be a countable basis for the topology on X and let 
+m = {J(U): U E U}. 
+Then m is a countable family of open subsets of Y which we claim is a basis 
+for the topology of Y. 
+Suppose D is an open subset of Y and y E D. We have to show that there 
+exists V E m with y EVe D. Since f is surjective, there exists x E X with 
+f(x) = y. The setf-l(D) is an open neighborhood of x. Hence there exists 
+U E U with x E U cf-l(D). Thus V:=f(U) satisfies y EVe D. 
+0 

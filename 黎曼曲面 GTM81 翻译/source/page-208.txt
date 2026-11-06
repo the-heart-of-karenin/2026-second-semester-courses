@@ -1,0 +1,40 @@
+25 The Runge Approximation Theorem 
+199 
+25.4. Theorem. Suppose Y is a relatively compact open Runge subset of a 
+non-compact Riemann surface X. Then for every open subset Y' with 
+Y c Y' ~ X the image of the restriction map @(Y') ....... 0(Y) is dense, where the 
+topology is uniform convergence on compact subsets. 
+PROOF. Denote by f3: 6"(Y') ....... g(y) the restriction map. In order to prove 
+that f3(0(Y')) is dense in @(Y) we can use the Hahn-Banach Theorem (c.f. 
+Appendix B.9). It suffices to show the following. rfT: Io"(Y) ....... C is a contin-
+uous linear junctional with T I f3(@(Y')) = 0, then T I (I'!(Y) = O. 
+To prove this, define a linear mapping 
+S: go. l(X) ....... C 
+in the following way. By (14.16) given W Ego. l(X) there exists a function 
+f E g(y') with d'f = wi Y'. Then set 
+S[w]:= T[f I Y]. 
+This definition is independent of the choice of the function f For, if 
+d"g = wi Y, then f - g E (i')(Y') and thus by assumption T[(f - g) I Y] = O. 
+We will now show that S is also continuous. Consider the vector space 
+V:= {(w,f) E 10"0' l(X) x g'(Y'): d'j = wi Y'}. 
+Since d": Io"(Y') ....... g0, l(y') is continuous, V is a closed vector subspace of 
+10"0. l(X) x g(y') and thus is a Frechet space. Now the projection pr 1: V ....... 
+10"0. l(X) is surjective and thus by the Theorem of Banach is open. Also the 
+mapping f3 " pr 2: V ....... 10"( Y) is continuous. Since the diagram 
+V 
+p, pr, , 6"( Y) 
+'" j 
+jT 
+gO.l(X) 
+s 
+~ C 
+is commutative by definition, S is continuous because Tis. 
+By Lemma (25.2) there exists a compact subset KeY with 
+(1) T[f] = 0 for every fE 0"(Y) with Supp(f) c y\K 
+and a compact subset LeX with 
+(2) S[w] = 0 for every w EgO. l(X) with Supp(w) cX\L. 
+If g E C(X) is a function with Supp(g) ~ X\K, then S[d"g] = T[gl Y] = O. 
+Thus by Lemma (25.3) there exists a holomorphic 1-form a E Q(X\K) such 
+that 
+S[ w] = JJ a /\ w 
+X\K 

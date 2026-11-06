@@ -1,0 +1,40 @@
+206 
+3 Non-compact Riemann Surfaces 
+26.5. Let X be a non-compact Riemann surface and let 
+k 
+~( = I (I)(X)jj, 
+jj E (()(X), 
+j=1 
+be a finitely generated ideal in (I)(X). Prove that ~( is a principal ideal. 
+[Hint: Consider the divisor D on X defined by 
+D(x) = min ord,,(jj) 
+j 
+and let f E (()(X) be a holomorphic function with (f) = D. Verify that 
+~( = (()(X)f] 
+26.6. Let X be a non-compact Riemann surface and D a divisor on X. Prove 
+(a) HI(X, (JD) = 0, 
+(b) HI(X, M) = O. 
+§27. The Riemann Mapping Theorem 
+The Riemann Mapping Theorem asserts that any simply connected 
+Riemann surface, which is not isomorphic either to [pI1 or 1[, can be mapped 
+biholomorphically onto the unit disk. This means that the universal cover-
+ing of an arbitrary Riemann surface is always isomorphic to one of three 
+normal forms: the Riemann sphere, the complex plane or the unit disk. The 
+Riemann Mapping Theorem was presented by Riemann in his dissertation 
+in 1851, but not in its most general form and not with a completely accept-
+able proof. The first complete proofs were given by H. Poincare and P. 
+Koebe in the year 1907. 
+27.1. For a Riemann surface X denote by Rh~(X) := Q(X)/dC9(X) the" holo-
+morphic" deRham group, cf. (15.15). If X is simply connected, then every 
+holomorphic I-form on X has a primitive (10.7) and thus Rh~(X) = O. We 
+will prove the Riemann Mapping Theorem for Riemann surfaces X satisfy-
+ing the seemingly more general condition RhMX) = O. However, one con-
+sequence of this will be that Rh~(X) = 0 implies X is simply connected. 
+27.2. Lemma. Suppose X is a Riemann surface with Rh~(X) = O. Then 
+(i) For every holomorphicfunctionf: X -+ 1[. a logarithm and a square root 
+off exist, i.e., there exist functions g, h E C9(X) such that eg = f and h2 = f 
+(ii) Every harmonic function u: X -> IR is the real part of a holomorphic 
+function f: X -> IC. 
+PROOF 
+(i) f- 1 dfis a holomorphic I-form on X. Since Rh~(X) = 0, there exists a 
+function g E C9(X) with dg = f- 1 df By adding a constant to g if necessary, 

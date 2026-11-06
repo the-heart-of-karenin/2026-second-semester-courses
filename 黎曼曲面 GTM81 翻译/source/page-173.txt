@@ -1,0 +1,50 @@
+164 
+2 Compact Riemann Surfaces 
+PRom; 
+(a) First we show that the condition is sufficient. Suppose e E CI(X) is a 
+1-chain with DC = D and which satisfies (*). By Lemma (20.5) there is a weak 
+solution J of the divisor D such that 
+. 
+1·· dJ 
+I w = ~ II -J 1\ W 
+for every w c g(l)(X) with dw = O. 
+'c 
+m Jr.' 
+For every w E Q(X) one has by (*) 
+1· d{ 
+1 .. d'J 
+0= r w = -. J { --'---- 1\ W = -. /1 -, 1\ W. 
+. 
+2m, J 
+2m . , 
+j 
+c 
+X 
+X 
+As noted in (20.2) one has (J:= d'JIJ Ego. I(X). By (19.10) there is a function 
+g E 6"(X) with d"g = d"H}: Set 
+Like f the function F is a weak solution of D and 
+Thus F is even a meromorphic solution of D. 
+(b) We now prove the necessity of the condition. We may assume that 
+D =F O. LetJbe a meromorphic function on X with (f) = D. The functionJ 
+defines an n-sheeted covering J: X --> [pll for some n 2 1. Suppose ai' ... , 
+a, E X are the branch points ofJand let Y:= [pll\{f(ad, ... J(a,)}. For every 
+differential form W E Q(X) we construct a holomorphic differential form 
+(J = Trace(w) on pi in the following way. Every point Y E Y has an open 
+neighborhood V such that J- I(V) is the disjoint union of open sets U I, ... , 
+Un C X and all the mappings J I U v --> V are biholomorphic. Let cp: V --> U v 
+be the in verse of J I U \ --> V. Now let 
+Trace(w) I V := cptw + ... + cp~w. 
+If one carries out the same construction on an open neighborhood V' of 
+another point of Y, then on the intersection one gets the same differential 
+form. As in (8.2) one sees that one can holomorphically continue Trace(w) to 
+all of [pll. Since Q([pll} = 0, Trace(w) = O. 
+Now let}' be a curve on [pll from 00 to 0 which with the possible exception 
+of its end points lies entirely in Y. The pre image of}' under J consists of n 
+curves e 1, ... , en which join the poles off with the zeros of}: Then letting 
+e := Cl + ... + en one has DC = D and for every w E Q(X) 
+J 
+w = f Trace(w) = O. 
+c 
+}' 
+o 

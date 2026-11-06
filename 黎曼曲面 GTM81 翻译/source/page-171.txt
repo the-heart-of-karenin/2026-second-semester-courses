@@ -1,0 +1,53 @@
+162 
+2 Compact Riemann Surfaces 
+20.5. Lemma. Suppose X is a Riemann surface, c: [0, 1] --> X is a curve and V 
+is a relatively compact open neighborhood ofc([O, 1]). Then there exists a weak 
+solutionf of the divisor 8c withr I X \ V = 1, such thatfor every closed differen-
+tialform WE 0u(l)(X) one has 
+. 
+1" df 
+I W = 2' II -f' /\ W . 
+• c 
+m 'i 
+Remark. Since d!lf = 0 on X\V, the integral over X exists. 
+PROOF 
+(a) We first consider the case where (V, z) is a coordinate neighborhood 
+on X such that z(V) c C is the unit disk and the curve c lies entirely in V. 
+For simplicity identify V with the unit disk. 
+Let a:= c(O) and b:= c( 1). There exists r < 1 such that c([O, 1]) c 
+{Izl < r}. The function log((z - b)/(z - a)) has a well-defined branch in 
+{r < I z I < 1}. Choose a function IjJ E 0"(V) with IjJ I {I z I ::::; r} = 1 and 
+IjJ I{ I z I :;:. r'} = 0, where r < r' < 1 and define fo E 0"( V\{a}) by 
+. ! 
+exp ( IjJ log : = !) 
+if r < I z I < 1, 
+fo = < Iz-b 
+I z - a 
+if I z I ::::; r. 
+Since f~ I {r' < I z I < I} = 1, one can continuously extend f~ to a function 
+f E #(X\{a}), by defining it to be 1 on X\ V. By construction f is a weak 
+solution of the divisor 8c. Now suppose W E #(1)(X) is a closed differential 
+form. Since W has a primitive on V, there exists a function 9 E O"(X) with 
+compact support, such that W = dg on { I z I ::::; r'}. Thus from Lemma (20.3) 
+~ fl' dfrf /\w=-21 rr df
+r /\dg=g(b)-g(a)= rw. 
+2m . . 
+m ,. 
+'c 
+X 
+X 
+. 
+(b) In the general case there exists a partition 
+0= to < tl < ... < to = 1 
+of the interval [0, 1] and coordinate neighborhoods (U j' zJ, j = 1, ... , 11, on 
+X with the following properties: 
+(i) c([tj-t, tj]) c Vj C V, 
+(ii) zAVj ) C C is the unit disk. 
+Letting ci denote the curve c I [ti-t, ti] and using (a) one can construct a 
+weak solution jj of the divisor 8cj such thatjj I X\V j = 1 and 
+r w = ~ r r dfj /\ W 
+. . 
+2m " f 
+c) 
+X 
+J 

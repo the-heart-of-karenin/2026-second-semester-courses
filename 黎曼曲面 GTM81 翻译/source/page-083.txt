@@ -1,0 +1,51 @@
+74 
+1 Covering Spaces 
+Example. Suppose X = C*. By (5.7.a) 7r1(C*) ~ ll.. A generator Of7r1(C*) 
+is represented by the curve u: [0, 1] -> C*, u(t) = e21[it. Let w:= (dz/z), where 
+z is the canonical coordinate. Then 
+. 
+. dz 
+I w = I - = 27ri. 
+"'u 
+"11 Z 
+Hence the period homomorphism of w is 
+ll. -> C, 
+n I--> 27rin, 
+where we have explicitly realized the isomorphism ll. ~ 7r1(C*) by the corre-
+spondence n I--> cl(u"). 
+10.12. Summands of Automorphy. Suppose X is a Riemann surface and 
+p: X -> X is its universal covering. The group G:= Oeck(X/X) of covering 
+transformations of the universal covering, as was observed in (5.6), is isomor-
+phic to the fundamental group of X. If a E G andf: X -> C is a function, then 
+we can define a function af: X -> C by af:= f 0 a-I. If g: X -> C is another 
+function, then a(f + g) = af + ag and aUg) = (af)(ag). Also for a, T E G 
+one has (aT)f = a{Tf). 
+A function f: X -> C is called additively automorphic with constant sum-
+mands of automorphy, if there exist constants afT E C, a E G, such that 
+f - af = afT 
+for every a E G. 
+The constants a", which are uniquely determined by J, are called the sum-
+mands of automorphy of f Then af - aTf = at for any a, T E G, since 
+f - rf= at· Thus 
+a"t = f - aTf = (f - a!) + (af - aT!) = afT + at· 
+Hence 
+the 
+correspondence 
+a I--> a" 
+is 
+a 
+group 
+homomorphism 
+Oeck(X/X) -> C. 
+Any functionf: X -> C which is invariant under covering transformations, 
+i.e., af = f for every a E G, is an example of an additively automorphic 
+function. In particular its summands of automorphy are all zero. For any 
+such function there exists a function fo: X -> C such that f = p*fo. If f is 
+differentiable (resp. holomorphic) then fo is differentiable (resp. holo-
+morphic) as well. 
+10.13. Theorem. Suppose X is a Riemann surface and p: X -> X is its univer-
+sal covering. 
+(a) If WE g(1)(X) is a closed differentialform and FE g(X) is a primitive of 
+p*w, then F is additively automorphic with constant summands of automorphy. 
+Its summands of automorphy a", a E Oeck(X/X), are, with respect to the 
+isomorphism 7r1(X) ~ Oeck(X/X), exactly the periods of w. 

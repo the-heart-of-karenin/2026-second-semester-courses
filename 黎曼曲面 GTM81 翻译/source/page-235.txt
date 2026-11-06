@@ -1,0 +1,42 @@
+226 
+3 Non-compact Riemann Surfaces 
+We are now in the position to interpret the Picard group of a compact 
+Riemann surface as a cohomology group. Recall (cf. 21.6) that the Picard 
+group of a compact Riemann surface X is defined as 
+Pic(X) = Div(X)/Div p(X). 
+29.19. Theorem. Let X be a compact Riemann surface. Then there is a natural 
+isomorphism of groups 
+Hl(X, (()*) ~ Pic(X). 
+PROOF 
+(a) Define 
+a 
+map 
+ex: Hl(X, (()*) --+ Pic(X) 
+as 
+follows. 
+Suppose 
+~ E Hl(X, (()*) is represented by a cocycle (gij) E Zl(U, (()*) for some open 
+covering U = (Vj)ieI of X. By Theorem (29.7) there is a line bundle E --+ X 
+associated to this cocycle. Then E has a non-trivial meromorphic section f 
+by Corollary (29.17). This section is given by a family of meromorphic 
+functions J; E ..II ( Ui)' i = I, satisfying 
+/; = gij jj on Ui rl Uj. 
+Sincefdoes not vanish identically, we even have/; E ..II*(U;) for every i E I. 
+Let D be the divisor off, i.e., 
+D(x) = ordx(/;) if x E Ui . 
+Clearly this does not depend on the choice of i with x E V;. Now define 
+(X(~) :=D mod Divp(X). 
+In order that ex be well-defined, this definition must be independent of the 
+various choices made. For example, let 
+where /;, ];E..II*(V;). Then fJ]; =jj!lj on V;rl Vj. Hence the JiI]; piece 
+together to define a global meromorphic (unction cP E ..II*(X). If D and fj 
+are the divisors off = (/;)i e I and J = (l); E I respectively, we have 
+D = D + (qJ), 
+and thus D and D differ only by a principal divisor. We leave it to the reader 
+to show that ex(~) is also independent of the choice of cocycle (gij) represent-
+ing ~. It is easy to see that ex is a group homomorphism. 
+(b) The surjectivity of ex follows from (29.11). To prove the injectivity, we 
+have to show that if 
+gij = /;/fj, 
+/; E ..II*(U;) 
+and the divisor of (/;)ieI is principal, then the cocycle (gij) lies in Bl(U, (9*). 

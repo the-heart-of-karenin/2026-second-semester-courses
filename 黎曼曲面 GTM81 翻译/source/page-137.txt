@@ -1,0 +1,38 @@
+128 
+2 Compact Riemann Surfaces 
+called the degree, by letting 
+deg D:= L D(x). 
+xeX 
+The mapping deg is a group homomorphism. Note that deg(f) = 0 for any 
+principal divisor (f) on a compact Riemann surface since a meromorphic 
+function has as many zeros as poles. Hence equivalent divisors have the 
+same degree. 
+16.4. The Sheaves (!;ID • Suppose D is a divisor on the Riemann surface X. For 
+any open set U c: X define (!) D( U) to be the set of all those meromorphic 
+functions on U which are multiples of the divisor - D, i.e., 
+(!)D(U):= {f E V#(U): ordAf);::: -D(x) for every x E U}. 
+Together with the natural restriction mappings (!)D is a sheaf. In the special 
+case of the zero divisor D = 0 one has (!)o = (!). If D, D' E Div(X) are equiva-
+lent divisors, then (!)D and (!)D' are isomorphic. An isomorphism can be 
+defined as follows. Pick t/J E V#(X)\{O} such that D - D' = (t/J). Then the 
+sheaf homomorphism induced by multiplication by t/J, i.e., 
+is an isomorphism. 
+16.5. Theorem. Suppose X is a compact Riemann surface and D E Div(X) is a 
+divisor with deg D < O. Then HO(X, llJD ) = O. 
+PROOF. Suppose, to the contrary, that there exists an f E HO(X, llJD ) with 
+f 1= O. Then (f);::: - D and thus 
+deg(f);::: -deg D > O. 
+However this contradicts the fact that deg(f) = O. 
+o 
+16.6. The Skyscraper Sheaf Cp • Suppose P is a point of a Riemann surface 
+X. Define a sheaf Cp on X by 
+{c if P E U, 
+Cp(U):= 0 
+if P ¢ U, 
+where the restriction maps are the obvious homomorphisms. Then 
+(i) HO(X, Cp ) ~ C, 
+(ii) Hl(X, Cp ) = O. 
+Now assertion (i) is trivial. In order to prove (ii), consider a cohomology 
+class ~ E Hl(X, Cp ) which is represented by a cocycle in Zl(U, Cp ). The 
+covering U has a refinement m = (y")oeA such that the point P is contained 
+in only one Y". But then Zl(m, Cp ) = 0 and hence ~ = O. 

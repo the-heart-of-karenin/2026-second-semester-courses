@@ -1,0 +1,37 @@
+29 Line and Vector Bundles 
+219 
+§29. Line and Vector Bundles 
+In the consideration of many problems of analysis on manifolds the follow-
+ing situation arises. To every point x of the manifold X there is associated a 
+vector space Ex which depends in some continuous (or if X is a Riemann 
+surface, holomorphic) way on x. This leads to the notion of a vector bundle 
+on X, which we now make precise. 
+29.1. Definition. Suppose E and X are topological spaces and p: E -+ X is a 
+continuous mapping. Further suppose that every fiber Ex := p - 1 (x) has the 
+structure of an n-dimensional vector space over e. Then p: E -+ X, or simply 
+E, is called a vector bundle of rank n on X if every point a E X has an open 
+neighborhood V such that there exists a homeomorphism h of Eu:= p-l(V) 
+onto V x en with the following properties: 
+(i) h is fiber-preserving, i.e., the following diagram 
+Eu 
+h 
+I V x en 
+~~ 
+V 
+is commutative. 
+(ii) For every x E V the mapping h I Ex is a vector space isomorphism of 
+Ex onto {x} x en ~ en. 
+The mapping h: Eu -+ V x en is called a local trivialization or linear chart of 
+E over V. IfU = (Vi)iEI is an open covering of X and hi: Eu! -+ Vi X en are 
+local trivializations, then the family of all the hi is called an atlas of E. 
+29.2. Definition. A vector bundle of rank n is called trivial if there exists a 
+global linear trivialization h: E -+ X x en. 
+Thus a vector bundle is always locally trivial. For local considerations 
+the notion of a vector bundle tells us nothing which is new. It only plays a 
+role when one is dealing with global problems. 
+29.3. Definition. A line bundle is a vector bundle of rank one. 
+29.4. Theorem. Suppose E -+ X is a vector bundle of rank n on the topological 
+space X and hi: Eu! -+ Ui X en, i E I, is an atlas of E. Then there are unique 
+continuous mappings 
+such that the mappings 
+({)ij:= hi 0 hj- 1 : (Vi n Uj ) x en -+ (Ui n Uj) x en 

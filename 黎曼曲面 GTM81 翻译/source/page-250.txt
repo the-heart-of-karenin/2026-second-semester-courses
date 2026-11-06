@@ -1,0 +1,28 @@
+References 
+(a) Complex Analysis in One Variable 
+1. Ahlfors, L. V.: Complex Analysis. New York: McGraw-Hill, 1966. 
+2. Behnke, H., and Sommer, F.: Theorie der analytischen Funktionen einer kom-
+plexen Veriinderlichen. 3rd Ed. Berlin-Heidelberg-New York: Springer-Verlag 
+1965. 
+3. Cartan, H.: Elementary Theory of Analytic Functions of One or Several Complex 
+Variables. Reading, MA: Addison-Wesley, 1963. 
+4. Hurwitz, A., and Courant, R.: Funktionentheorie (with an appendix by H. Rohrl). 
+4th Ed. Berlin-Heidelberg-New York: Springer-Verlag, 1964. 
+5. Lang, S.: Complex Analysis. Reading, MA: Addison-Wesley, 1977. 
+The books of Behnke-Sommer and Hurwitz-Courant also contain large sections 
+on Riemann surfaces. 
+(b) Riemann Surfaces 
+10. Ahlfors, L. V., and Sario, L.: Riemann Surfaces. Princeton, NJ: University Press, 
+1960. 
+11. Chevalley, c.: Introduction to the Theory of Algebraic Functions of One Variable. 
+Amer. Math. Soc., 1951. 
+12. Farkas, H. M., and Kra, 1.: Riemann Surfaces. New York-Heidelberg-Berlin: 
+Springer-Verlag, 1980. 
+13. Guenot, J., and Narasimhan, R: Introduction a la Theorie des Surfaces de Rie-
+mann. Monographies de I'Enseignement Mathematique No. 23, Geneve, 1976. 
+14. Gunning, R. c.: Lectures on Riemann surfaces, Princeton Math. Notes 2 (1966). 
+15. Gunning, R c.: Lectures on vector bundles over Riemann surfaces, Princeton 
+Math. Notes 6 (1967). 
+16. Gunning, R. c.: Lectures on Riemann surfaces: Jacobi varieties, Princeton Math. 
+Notes 12 (1972). 
+243 

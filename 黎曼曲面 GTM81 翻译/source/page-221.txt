@@ -1,0 +1,41 @@
+212 
+3 Non-compact Riemann Surfaces 
+of the unit disk D modulo a group of automorphisms of D acting without 
+fixed points and discretely. 
+27.11. Lemma 
+(a) Every automorphism of pI has a fixed point. 
+(b) Suppose G is a group of automorphisms ofe which acts discretely and 
+without fixed points. Then G is one of the following: 
+(i) G = {id}. 
+(ii) G consists of all translations of the form 
+Zf---+Z + ny, 
+n E 71., 
+where y is a fixed non-zero complex number. 
+(iii) G consists of all translations of the form 
+n, m E 71. 
+where YI and Yz are two fixed complex numbers linearly independent over IR. 
+PROOF 
+(a) As is well known, the automorphisms of pI are linear fractional 
+transformations of the form 
+az + b 
+Zf---+--
+cz + d' 
+ad - bc =1= o. 
+Every such transformation has at least one fixed point. 
+(b) The automorphisms of e are affine linear mappings of the form 
+Zf---+az + b, 
+a E e*, 
+If a =1= 1, then this transformation has a fixed point. Thus the group G con-
+sists only of translations Z~ z + b. Let r be the orbit of zero under G. Then 
+r is a discrete additive subgroup of e and G consists of all translations 
+Z ~ z + b, where b E r. Let Vee be the smallest real vector subspace 
+containing r. Depending on whether dim!T,! V is 0, 1 or 2 one has case (i), (ii) 
+or (iii). This follows from Theorem (21.1). 
+0 
+27.12. Theorem 
+(a) The Riemann sphere pI is elliptic. 
+(b) The complex plane e, the punctured plane e* and all tori e/r are 
+parabolic. 
+(c) Every other Riemann surface is hyperbolic. 
+Thus, in particular, a compact Riemann surface is elliptic, parabolic or 
+hyperbolic depending on whether its genus is zero, one or greater than one. 

@@ -1,0 +1,41 @@
+26 
+1 Covering Spaces 
+rp: Uk --> l'kj be the inverse of the homeomorphism pi Vkj --> Uk' Then if we 
+set 
+Ul[t k - I , tk]:=rp 
+(UI[tk - 1, tkJ), 
+we obtain a continuous extension of the lifting u to the interval [0, tkJ. 0 
+4.15. Remark. Suppose X and Yarc Hausdorff spaces, p: Y --> X is a cover-
+ing map and Xo EO X, Yo EO Yare points with p(Yo) = Xo' Then by (4.14) and 
+(4.8) for every yurve u: [0, 1] --> X with u(o) = Xo there exists exactly one 
+lifting fi: [0, I] --> Y such that fi(O) = Yo' When the curve u is closed, the 
+lifting a need not be closed. An example of this is the following. Let 
+X=Y=C*, 
+p: C* --> C*, 
+Zf---+ Z 2, 
+and Xo = Yo = I. Define the curve u: [0, 1] --> C* by u{t) = e 2rrit• Then u has 
+initial and end point 1 and is thus closed. But u(t):= e1tit defines a lifting 
+fi: [0, 1] --> C * of u with respect to p which has initial point 1 and end point 
+-1. 
+However from Theorem (4.10) it follows that every lifting of a closed 
+null-homotopic curve is again closed and null-homotopic. 
+4.16. Theorem. Suppose X and Yare Hausdorff spaces with X pathwise con-
+nected and p: Y ---> X is a covering map. ThenjOr any two points xo, Xl EO X 
+the sets p-l(XO) and p-I(xd have the same cardinality. In particular, ifY is 
+non-empty, then p is surjective. 
+The cardinality of p-l(X) for x EO X is called the number of sheets of the 
+covering and may be either finite or infinite. 
+PROOF. Construct a mapping rp: p l(xo)--->p-l(Xl) in the following way. 
+Choose a curve u: [0, 1] ---> X joining Xo to X I' If y EO P - l{XO) is an arbitrary 
+point, then there exists precisely one lifting a: [0, 1] --> Y of u such that 
+u(O) = y. Set rp(y):= u{ 1) EO P - 1 (x I)' The uniqueness of liftings then implies 
+that the mapping just constructed is bijective. 
+0 
+Remark. In general the bijective mapping constructed in the proof 
+depends on the choice of the curve u. Thus in general there is no well-defined 
+way to enumerate globally the" sheets" of a covering. 
+4.17. Theorem. Suppose X and Y are Hausdorff spaces and p: Y --> X is a 
+covering map. Further, suppose Z is a simply connected, pathwise connected 
+and locally pathwise connected topological space and/,: Z --> X is a continuous 
+mapping. Thenfor every choice o.f'points Zo EO Z and Yo EO Y withj{zo) = p(Yo) 
+there exists precisely one lifting]: Z --> Y such that Jtzo) = Yo' 

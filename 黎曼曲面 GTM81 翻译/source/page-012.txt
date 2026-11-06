@@ -1,0 +1,40 @@
+I The Definition of Riemann Surfaces 
+3 
+1.4. Definition. A Riemann surface is a pair (X, L), where X is a connected 
+two-dimensional manifold and L is a complex structure on X. 
+One usually writes X instead of (X, L) whenever it is clear which complex 
+structure L is meant. Sometimes one also writes (X, ~I) where ~[ is a re-
+presentative of L. 
+Convention. If X is a Riemann surface, then by a chart on X we always 
+mean a complex chart belonging to the maximal atlas of the complex struc-
+ture on X. 
+Remark. Locally a Riemann surface X is nothing but an open set in the 
+complex plane. For, if <P: V --+ V c C is a chart on X, then <P maps the open 
+set V c X bijectively onto V. However, any given point of X is contained in 
+many different charts and no one of these is distinguished from the others. 
+For this reason we may only carryover to Riemann surfaces those notions 
+from complex analysis in the plane which remain invariant under biholo-
+morphic mappings, i.e., those notions which do not depend on the choice of 
+a particular chart. 
+1.5. Examples of Riemann Surfaces 
+(a) The Complex Plane C. Its complex structure is defined by the atlas 
+whose only chart is the identity map C --+ C. 
+(b) Domains. Suppose X is a Riemann surface and Y c X is a domain, 
+i.e., a connected open subset. Then Y has a natural complex structure which 
+makes it a Riemann surface. Namely, one takes as its atlas all those complex 
+charts <P: V --+ Von X, where V c Y. In particular, every domain Y c C is a 
+Riemann surface. 
+(c) The Riemann sphere !p 1. Let !p I ,= C U {oo}, where 00 is a symbol not 
+contained in C. Introduce the following topology on !pl. The open sets are 
+the usual open sets V c C together with sets of the form V U {oo}, where 
+V c C is the complement of a compact set K c C. With this topology !pI is a 
+compact Hausdorff topological space, homeomorphic to the 2-sphere S2. Set 
+V 1 ,=!pI\{00}=C 
+V2 ,=!pI\{O}=C* U {oo}. 
+Define maps <Pi: Vi --+ C, i = 1,2, as follows. <PI is the identity map and 
+( )._{1/Z forzEC* 
+<P2 Z .- o 
+for z = 00. 
+Clearly these maps are homeomorphisms and thus !pI is a two-dimensional 
+manifold. Since V I and V 2 are connected and have non-empty intersection, 
+!pI is also connected. 

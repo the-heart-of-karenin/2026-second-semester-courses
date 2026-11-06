@@ -1,0 +1,35 @@
+28 Functions with Prescribed Summands of Automorphy 
+215 
+The set of all crossed homomorphisms G ---+ A has the natural structure of an 
+additive group and will be denoted by ZI(G, A). Special crossed homo-
+morphisms are obtained in the following way. Suppose I E A is fixed and 
+a" :=I - aI for every (J E G. 
+Then 
+a", =I- (JrI=I - (JI + af - (JrI= (f - an + (J(f - rf) 
+Crossed homomorphisms which arise in this way are called coboundaries. 
+They form a subgroup of Zl(G, A) which will be denoted by B 1(G, A). The 
+quotient 
+Hl(G, A):= Zl(G, A)/Bl(G, A) 
+is called the 1st cohomology group of G with coefficients in the G-module A. 
+28.2. Summands of Automorphy. Suppose p: Y ---+ X is an unbranched holo-
+morphic covering mapping between Riemann surfaces and G:= Deck(Y/X) 
+is its group of covering transformations. Then (9(Y) is a G-module, if one 
+defines aI E (0( Y) by a.f:= I c a ~ 1 for any (J E G and IE (O( Y). The differences 
+a,,:= I - aI E 0(Y), 
+(J E G, 
+are called the summands oI automorphy of f By (28.1) the summands of 
+automorphy of I define a crossed homomorphism 
+G ---+ 0( Y), 
+If the covering is Galois (Definition 5.5) and all the summands of auto-
+morphy of a functionf E 0(Y) are zero, then the functionIlies in the subring 
+p*0(X) c 0(Y) and thus may be identified with a function on X. 
+One can do the same thing for the meromorphic functions A(Y) and the 
+differentiable functions tf( Y). 
+28.3. Galois Coverings. The notation will be the same as in (28.2). Assume 
+p: Y ---+ X is Galois. Every point x E X has a connected open neighborhood 
+U such that 
+where the VA are disjoint open subsets of Y and the mappings p I VA ---+ U are 
+homeomorphisms. Now we construct a homeomorphism 
+cp: p~l(U)---+ U x G, 
+where G has the discrete topology, in the following way. Choose an index 
+A.o E A. Then for every A. E A there is precisely one a E G such that 

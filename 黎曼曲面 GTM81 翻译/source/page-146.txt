@@ -1,0 +1,30 @@
+17 The Serre Duality Theorem 
+137 
+On the other hand, since WI] = «dz/z), 0), one has 
+<w, ~') = Res(wl]) = 1, 
+a contradiction! 
+Thus the assumption is false and WE HO(x, fL D)' 
+Since ig.(A) = ID'(W) = ig,(ID(W)), the equality A = ID(W) follows from the 
+fact that ig. is one-to-one. 
+0 
+17.8. Suppose D and B are two divisors on the compact Riemann surface X. 
+Given a meromorphic function 1/1 E HO(x, (lIB) the sheaf morphism 
+induces a linear mapping Hl(X, (I'D-B) -> Hl(X, (I'D) and thus a linear 
+mappmg 
+Hl(X, (lID)* -> Hl(X, (l:D-8)*' 
+which we also denote by 1/1. By definition 
+(I/1A)(~) = ..1.(1/10 
+for A E Hl(X, (!)D)*' 
+The diagram 
+commutes, where the arrow in the second row is also defined as multi-
+plication by 1/1. This follows since <l/1w, 0 = <w, 1/10. 
+Lemma. If 1/1 E HO(X, (I) B) is not the zero element, then the mapping 
+1/1: H 1(X, @D)*->H1(X, (!)D-B)* 
+is injective. 
+PROOF. Let A:=(I/1)~ -B be the divisor of 1/1. The mapping (!)D-B ~@D 
+factors through (!) D + A' i.e., one has 
+where (!)D+A ~ (!)D is an isomorphism. Since the mapping Hl(X, (OD-B)-> 
+Hl(X, (lJV+A) induced by the inclusion @D-B-> (!)D+A is an epimorphism 
+(16.8), it follows that 
+is also an epimorphism. The result follows from this. 
+o 

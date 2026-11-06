@@ -1,0 +1,40 @@
+21 The Jacobi Inversion Problem 
+173 
+Remark. Together with Corollary (17.13) this shows that the compact 
+Riemann surfaces of genus 1 are precisely the tori Cjr. 
+PROOF. The mapping J may be described in the following way. Suppose 
+W E n(X)\O, r ,= Per(w) and a E X. Then for x E X, one has 
+J(x) = (w mod r E c/r = Jac(X). 
+<a 
+Clearly J is a holomorphic mapping. By (21.9) J is surjective. By the way this 
+also follows directly from Theorem (2.7). The mapping J is also injective, for 
+otherwise by Abel's Theorem there would exist a meromorphic function! on 
+X having a single pole of order one. This is impossible. For, in that case X 
+would be isomorphic to [pl. 
+0 
+Remark. Suppose P(z) is a polynomial of degree 3 or 4 without repeated 
+roots and let X be the Riemann surface of the algebraic function J P(z ). 
+Then X has genus one (cf. 17.15) and 
+dz 
+w = JP(z) 
+is a basis of O(X). Let r c C be the period matrix of w. The mapping 
+J: X -> Jac(X) = c/r is then given by the" elliptic integral of the first kind" 
+J(x) = ( 
+~ 
+mod r E c/r. 
+'a V P(z) 
+Let F: Cjr -> X be the inverse of J and let n: C -> Cjr and p: X -> [pl be the 
+canonical projections. Then 
+i'= p G F 0 n: C -> [pl 
+is a doubly-periodic meromorphic function. It was the great discovery of 
+Abel and Jacobi that the study of elliptic integrals could be replaced by the 
+study of doubly-periodic functions. The generalization of this question to 
+hyperelliptic integrals then lead to the Jacobi inversion problem. An account 
+of the history of this problem can be found in [63]. 
+EXERCISES (§21) 
+21.1. Let X be a compact Riemann surface and Y c X be an open subset such that 
+X\Y has non-empty interior. Let D be a divisor on X. Show that there exists a 
+function f E A*(X) such that 
+ordAf) = D(x) for every x E Y. 
+[Hint: Find a divisor D' with support in X\Y such that D + D' is a principal 
+divisor.] 

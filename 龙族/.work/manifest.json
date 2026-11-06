@@ -1,0 +1,241 @@
+{
+  "source": "D:\\Users\\Downloads\\楚路\\【龙族原著】\\龙族旧版\\龙族1～3.txt",
+  "sha256": "b66247b762e6ff7bc6a94fbcced420d16ce762d87119e45cdf95cd88955d075e",
+  "settings": {
+    "language": "American English",
+    "style": "Faithful literary translation without abridgment",
+    "names": "Unaccented pinyin for Chinese names; original names for foreign characters",
+    "format": "English only with minimal cultural footnotes"
+  },
+  "books": [
+    {
+      "id": "01",
+      "title_zh": "火之晨曦",
+      "title_en": "The Blazing Dawn",
+      "start_line": 176,
+      "end_line": 5456,
+      "source_paragraphs": 5173,
+      "translated_through_line": 5456,
+      "status": "completed",
+      "completed_sections": [
+        "Prologue",
+        "Act One",
+        "Act Two",
+        "Act Three",
+        "Act Four",
+        "Act Five",
+        "Act Six",
+        "Act Seven",
+        "Act Eight",
+        "Act Nine",
+        "Act Ten",
+        "Epilogue"
+      ],
+      "translated_source_paragraphs": 5173,
+      "translated_source_nonwhitespace_chars": 262853,
+      "english_words": 142879,
+      "working_docx": "01_火之晨曦_英文译本.docx",
+      "next_line": null,
+      "qa_dir": "qa_round5",
+      "qa_status": "spot_checked",
+      "qa_pages": 251
+    },
+    {
+      "id": "02",
+      "title_zh": "悼亡者之瞳",
+      "title_en": "The Mourner’s Eyes",
+      "start_line": 5599,
+      "end_line": 12406,
+      "source_paragraphs": 6505,
+      "translated_through_line": 10660,
+      "status": "in_progress",
+      "completed_sections": [
+        "Prologue",
+        "Act One",
+        "Act Two",
+        "Act Three",
+        "Act Four",
+        "Act Five",
+        "Act Six",
+        "Act Seven",
+        "Act Eight",
+        "Act Nine",
+        "Act Ten",
+        "Act Eleven",
+        "Act Twelve",
+        "Act Thirteen",
+        "Act Fourteen",
+        "Act Fifteen"
+      ],
+      "translated_source_paragraphs": 4838,
+      "translated_source_nonwhitespace_chars": 306413,
+      "english_words": 174947,
+      "working_docx": "02_悼亡者之瞳_英文工作稿.docx",
+      "next_line": 10661,
+      "qa_dir": "qa_round10",
+      "qa_status": "spot_checked",
+      "qa_pages": 321
+    },
+    {
+      "id": "03a",
+      "title_zh": "黑月之潮 上",
+      "title_en": "Black Moon Tide Part One",
+      "start_line": 12502,
+      "end_line": 16872,
+      "source_paragraphs": 4138,
+      "translated_through_line": null,
+      "status": "pending"
+    },
+    {
+      "id": "03b",
+      "title_zh": "黑月之潮 中",
+      "title_en": "Black Moon Tide Part Two",
+      "start_line": 16948,
+      "end_line": 21182,
+      "source_paragraphs": 4088,
+      "translated_through_line": null,
+      "status": "pending"
+    },
+    {
+      "id": "03c",
+      "title_zh": "黑月之潮 下",
+      "title_en": "Black Moon Tide Part Three",
+      "start_line": 21363,
+      "end_line": 28345,
+      "source_paragraphs": 6757,
+      "translated_through_line": null,
+      "status": "pending"
+    }
+  ],
+  "last_updated": "2026-11-04",
+  "last_completed_round": {
+    "acts": [
+      "II:13",
+      "II:14",
+      "II:15"
+    ],
+    "ranges": {
+      "02": [
+        9856,
+        10660
+      ]
+    },
+    "qa_dir": "qa_round10",
+    "status": "translated_and_sample_checked"
+  },
+  "round_history": [
+    {
+      "acts": [
+        2,
+        3,
+        4
+      ],
+      "source_lines": [
+        976,
+        2256
+      ],
+      "source_paragraphs": 1254,
+      "source_nonwhitespace_characters": 70463,
+      "status": "translated_reviewed_rendered_verified",
+      "qa_dir": "qa_round2"
+    },
+    {
+      "acts": [
+        5,
+        6,
+        7
+      ],
+      "source_lines": [
+        2257,
+        3679
+      ],
+      "source_paragraphs": 1396,
+      "source_nonwhitespace_characters": 71137,
+      "status": "translated_reviewed_rendered_verified",
+      "qa_dir": "qa_round3"
+    },
+    {
+      "acts": [
+        8,
+        9
+      ],
+      "source_lines": [
+        3680,
+        4800
+      ],
+      "source_paragraphs": 1103,
+      "source_nonwhitespace_characters": 52864,
+      "status": "translated_reviewed_rendered_verified",
+      "qa_dir": "qa_round4"
+    },
+    {
+      "acts": [
+        "I:10",
+        "II:1",
+        "II:2",
+        "II:3"
+      ],
+      "includes": [
+        "I:Epilogue",
+        "II:Prologue"
+      ],
+      "ranges": {
+        "01": [
+          4801,
+          5456
+        ],
+        "02": [
+          5599,
+          6917
+        ]
+      },
+      "qa_dir": "qa_round5",
+      "status": "translated_and_sample_checked"
+    },
+    {
+      "acts": [
+        "II:4",
+        "II:5",
+        "II:6",
+        "II:7"
+      ],
+      "ranges": {
+        "02": [
+          6918,
+          8369
+        ]
+      },
+      "qa_dir": "qa_round6",
+      "status": "translated_and_sample_checked"
+    },
+    {
+      "acts": [
+        "II:8",
+        "II:9",
+        "II:10",
+        "II:11"
+      ],
+      "ranges": {
+        "02": [
+          8370,
+          9475
+        ]
+      },
+      "qa_dir": "qa_round7",
+      "status": "translated_and_sample_checked"
+    },
+    {
+      "acts": [
+        "II:12"
+      ],
+      "ranges": {
+        "02": [
+          9476,
+          9855
+        ]
+      },
+      "qa_dir": "qa_round8",
+      "status": "translated_and_sample_checked"
+    }
+  ]
+}

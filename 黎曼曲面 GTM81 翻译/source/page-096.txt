@@ -1,0 +1,46 @@
+II Linear Differential Equations 
+87 
+series for exp(A) and exp(B) to get the series for exp(A + B). In particular if 
+B = -A, then exp(A)exp( -A) = I, i.e., exp(A) E GL(n, C). 
+If S E GL(n, C) and A E M(n x n, C), then 
+exp(S-lAS) = S-l(exp A)S. 
+(*) 
+Now for every matrix BE GL(n, C) there exists a matrix A E M(n x n, C) 
+such that 
+exp A = B. 
+Because of (*), it suffices to prove this in the case that B has Jordan normal 
+form. If B is a diagonal matrix with entries AI, ... , An E C*, then one can 
+simply choose A to be the diagonal matrix with entries PI, ... , Pn' where 
+exp(,uj) = Aj . A general matrix in Jordan normal form is made up of Jordan 
+blocks of the form 
+i· 
+/I. 
+1 
+0 
+), 
+Bl := 
+= A(E + (l/A)N), 
+;, 
+1 
+0 
+A 
+0 
+1 
+o 
+0 
+where N = 
+o 
+o 
+o 
+A matrix Al such that exp(AI) = B1 is given by 
+Al =f1E+M, 
+where exp(p) = A and 
+( 1) 
+00 
+1 
+M=log E+~N :=k~I(-l)k-l kAkNk. 
+The series contains only finitely many non-zero terms since N is nilpotent. 
+11.9. Suppose A is an n x n matrix whose coefficients are holomorphic 
+functions on a Riemann surface X. Then the coefficients of the matrix exp A 
+are also holomorphic on X, since the series converges uniformly on compact 
+subsets of X. 

@@ -1,0 +1,48 @@
+192 
+3 Non-compact Riemann Surfaces 
+PROOF. It suffices to prove (*), since repeated application of this result will 
+show the infinite differentiability with respect to t. Since T is linear, 
+dd 7;,[g(z, t)] = lim -hI (7;,[g(z, t + h)] - T.[g(z, t)]) 
+t 
+h-O 
+-1· 
+fg(Z, t + h) - g(z, t)J 
+-
+1m 7;, 
+h 
+. 
+h-O 
+For fixed tEl and sufficiently small h E IR* let 
+f~(z) :=~ (g(z, t + h) - g(z, t)). 
+Then fh E q«X) and 
+1, --> ~g(-, t) 
+as h -> o. 
+h £i! 
+at 
+Hence, because T is continuous, 
+o 
+The next Lemma asserts that the operation of applying a distribution to a 
+function depending on a parameter may be interchanged with integration 
+with respect to that parameter. 
+24.6. Lemma. Suppose X, Yare open subsets of I[; and K c X, LeY are 
+compact subsets. Further suppose g: X x Y -> C is an infinitely (real) differen-
+tiable function with Supp(g) c K x L. Then for any distribution T on X 
+T. f j) g(z, 0 d~ dry J = tI 7;,[g(z, OJ d~ dry, 
+( = ~ + iry. 
+PROOF. It follows from (24.5) that 7;,[g(z, OJ is infinitely differentiable with 
+respect to ( = ~ + iry. Thus the integral on the right hand side is well-defined. 
+Suppose ReI[; is a rectangle with sides parallel to the axes which contains 
+L. Then the function g(z, 0 extends as zero to K x R. For every integer 
+n > 0 partition R into n2 sub rectangles Rnv' v = 1, ... , n2, by subdividing the 
+sides into n equal parts. Choose a point (nv in each Rnv . Let F be the area of 
+R. Then the Riemann sums 
+F 
+n 2 
+Gn(z) :=2 L g(z, (nv) 
+n 
+v= 1 
+converge as n -> 00 to the integral Sh g(z, 0 d~ dry. Since Supp(Gn) c K for 
+each n, 
+Gnq; fJ g(., 0 d~ d'1 
+as n-> 00. 
+y 

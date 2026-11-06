@@ -1,0 +1,41 @@
+134 
+2 Compact Riemann Surfaces 
+choose a functionfk E 6"(X) such that Supp(f,.) c Vk and such that there is an 
+open neighborhood V~ c Vk of ak with fk I V~ = 1. Set 
+9 := 1 - U1 + ... + j,,). 
+Since 9 I V~ = 0, gu may be continued across the points ak by defining it to be 
+zero there and thus may be considered as an element of 6"1, O(X). By (10.20) 
+one has 
+Jf d(gu) = O. 
+x 
+On V;'\{ak} one has dUkU) = du = d(Ui(k) - Wi(k») = dUi(k)' Thus d(f,.u) may 
+be continued differentiably across ak' Since f,. U vanishes on X'\Supp(f,.), 
+dUk u) may be considered as an element of 6"(2)(X). Then T = d(gu) + 
+L d(J;. u) implies 
+JJ T = ± Jf dUkU) = ± JJ dUkUi(k) -fkWi(k»)' 
+x 
+k= 1 X 
+k = 1 V. 
+Using (10.20) again, one has 
+Jf dUkUi(k») = 0 
+v. 
+and as in (10.21) one can show 
+Jf d(J;.Wi(k») = - 2ni Resa.(wi(k»)' 
+v. 
+Combining everything, one gets 
+1 
+n 
+~ 
+JJ T = L Resa.(wi(k») = Res(Ji). 
+1tI x 
+k=1 
+o 
+17.4. The Sheaves nD • Let X be a compact Riemann surface. For any divisor 
+DE Div(X) we denote by nD the sheaf of meromorphic I-forms which are 
+mUltiples of - D. Thus for any open set U c X the set nD ( U) consists of all 
+differential forms W E J(1)(U) such that ordAw) ~ -D(x) for every x E U. 
+In particular no = n is the sheaf of all holomorphic I-forms. 
+Suppose W E J((1)(X) is a non-trivial meromorphic I-form on X, e.g., 
+W = df, where f E J((X) is a non-constant meromorphic function. Let K be 
+the divisor of w. Then for an arbitrary divisor D E Div(X) multiplication by 
+W induces a sheaf isomorphism 

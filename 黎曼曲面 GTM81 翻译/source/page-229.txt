@@ -1,0 +1,36 @@
+220 
+3 Non-compact Riemann Surfaces 
+satisfy 
+({Jij(X, t) = (x, gij(x)t) for every (x, t) E (Vi n V j) x 1[:". 
+On Vi n Vj n V k one has the "cocyc/e relation" 
+Notation. The mappings Yij are called the transition functions and the 
+family (gij) is the cocycle associated to the atlas (hJ 
+PROOF. The mapping 
+({Jij = hi " hj 1: (Vi n V j ) x I[:" ---> (Vi n V j ) X en 
+is a fiber-preserving homeomorphism which, restricted to every fiber, is an 
+isomorphism of vector spaces. Hence for every x E Vi n Vj there exists a 
+matrix gij(x)EGL(n, C) with 
+({Jij(x, t) = (x, Yij(x)t). 
+Since ({Jij is a homeomorphism, the correspondence x f---+ %(x) is continuous. 
+The relation YijYjk = Yik follows from the corresponding one for the map-
+pings ({Jij. 
+D 
+29.5. Definition. Suppose X is a Riemann surface, E --+ X is a vector bundle 
+of rank n on X and 
+~[ = {hi: EUi --+ Vi X 1[:", i E I} 
+is an atlas of E. The atlas ~[ is said to be holomorphic if the associated 
+transition functions 
+are holomorphic. 
+Two atlases ~( and ~(' of E are called holomorphically compatible if 
+~( u ~(' is a holomorphic atlas. One can easily check that holomorphic 
+compatibility of atlases is an equivalence relation. An equivalence class of 
+holomorphically compatible atlases is called a holomorphic linear structure. 
+A holomorphic vector bundle on a Riemann surface X is a vector bundle 
+E --+ X together with a holomorphic linear structure. A holomorphic vector 
+bundle E --+ X is called holomorphically trivial if its holomorphic linear struc-
+ture contains an atlas consisting of the single chart E --+ X x en. 
+29.6. Cocycles. Suppose X is a Riemann surface. For V open in X let 
+GL(n, &(V)) denote the group of all invertible n x n-matrices with 
+coefficients in &(V). For V c: V one has the natural restriction mapping 
+GL(n, (0·(V)) --+ GL(n, (I)(V)). This defines a sheaf GL(n, (0) of groups on X 
+which for n;:o: 2 is not abelian. If U = (Vi)iEI is an open covering of X, let 

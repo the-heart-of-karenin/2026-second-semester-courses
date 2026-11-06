@@ -1,0 +1,45 @@
+18 Functions and Differential Forms with Prescribed Principal Parts 
+149 
+means the determinant of the matrix of derivatives f~m), where 0 S m S 
+g -
+1, 1 s k s g, i.e., 
+... fg 
+) 
+... 
+f~ 
+)~g- 1) 
+• 
+pr l ) 
+If the functions fl' ... , j~ are linearly independent over C, then the Wron-
+skian determinant is not identically zero. This can be proved by induction 
+on g. For, suppose that we have already shown that W(fb ... , f9- 1) 1- O. 
+Consider the differential equation 
+(;: 
+W(fl, .. . ,jg- b w) = det 
+: 
+Pr l ) f (9-1) 
+. 2 
+f (g- 1) 
+g-l 
+w 
+) 
+w' 
+~.(g-n 
+for some unknown function w. If one expands by cofactors about the last 
+column, then one gets 
+(*) 
+where ao = W(fl, ... ,fq- d· Clearly fl' ... ,j~-l are solutions of this differen-
+tial equation. If W(fb .,. ,fg) vanishes identically, thenfg is another solution 
+of (*). Hence fg 
+is a linear combination of fl' ... , f g-l over 
+U' := {z E U: ao(z) =1= O} and by the Identity Theorem over U as well. But 
+this is a contradiction. 
+Now suppose X is a compact Riemann surface of genus 9 2:': 1 and WI' ... , 
+W9 is a basis of O(X). For any coordinate neighborhood (U, z) we can 
+define a holomorphic function Jt;,(w l , ... , w g ) on U as follows. The I-forms 
+W k may be written W k = fk dz on U. Set 
+where the derivatives of the functionsfk on the right-hand side are taken with 
+respect to z. How the Wronskian determinant of WI> ... , Wg behaves under a 
+change of coordinates is answered by the next theorem. 
+IS.5. Theorem. Suppose (U, z) and (0, z) are two coordinate neighborhoods 
+on X. Then on. UnO one has 

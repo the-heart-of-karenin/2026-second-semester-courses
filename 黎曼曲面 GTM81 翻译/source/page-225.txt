@@ -1,0 +1,42 @@
+216 
+3 Non-compact Riemann Surfaces 
+O"{V,,) = VA' For Y E: V; set lji(Y):= (p(y), 0"). This maps V; homeomor-
+phically onto U x {O"} and implies that (p is a homeomorphism. The map-
+ping lji is fiber-preserving, i.e., the diagram 
+p-l(U) 
+'" 
+• U x G 
+~/r1 
+U 
+is commutative. Moreover lji is compatible with the action of G, i.e., lji(Y) = 
+(x, 0") implies lji(ry) = (x, rcr) for every r E: G. We will call such a fiber-
+preserving homeomorphism 
+lji: p-l(U)-> U x G 
+which is compatible with the action of GaG-chart of the Galois covering 
+p: Y -> X. A G-chart has a decomposition lji =(p, 1]), where 1]: p - 1 (U) -> G 
+is a mapping such that 
+I](ry) = rl](Y) for every y E: p-l(U) and r E: G. 
+28.4. Theorem. Suppose X and Yare /lon-compact Riemann surfaces, 
+p: Y -> X 
+is 
+a 
+holomorphic 
+unbranched 
+Galois 
+covering map and 
+G = Oeck(Y/X) is its group of covering tran!!/ormations. Then given any 
+crossed homomorphism 
+G -> (I (Y), 
+there exists a holomorphic function f E: (1'( Y) having summands ~r autoltwrph y 
+Remark. Theorem (28.4) asserts that Hl(G, ("i)(Y)) = O. This is also true for 
+arbitrary Stein manifolds (Stein [62], Serre [59]). 
+PROOF 
+(a) Choose an open covering U = (U;)iEl of X and G-charts 
+ljii = (p, 1];): p l( Vi) -> Vi x G. 
+Now on 1';:= p-l(U;) define functions};: 1'; -> IC by 
+.t;(y) := a~i(Y)(Y) for every y E: 1';. 
+Clearly}; is holomorphic on 1';. 
+(b) We now claim thatJ: - a.t; = a" on 1'; for every 0" E: G. For y E: 1'; one 
+has by definition 
+(O"J:)(y) =t;(O"-ly) = a~M-ly)(O"-ly) = a" 
+l~icvM-ly). 

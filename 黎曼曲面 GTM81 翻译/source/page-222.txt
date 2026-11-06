@@ -1,0 +1,39 @@
+27 The Riemann Mapping Theorem 
+213 
+Remark. Compact Riemann surfaces of genus one are also called elliptic 
+curves. As this is easily confused with the above terminology, [pI is seldom 
+called an elliptic Riemann surface. 
+PROOF. The assertions (a) and (b) are clear. One only has to show that if X is 
+not hyperbolic, then it is isomorphic to one of the surfaces listed in (a) or (b ). 
+Case 1. The universal covering of X is isomorphic to [pl. Then Lemma 
+(27.11.a) implies X itself is isomorphic to [pl. 
+Case 2. The universal covering of X is isomorphic to C. Then the group 
+G of covering transformations is, by (27.ll.b), either (i), (ii) or (iii). In case (i) 
+X is isomorphic to C and in case (ii) to C*, for then the covering is isomor-
+phic to 
+C --> C*, 
+( 21[i ) 
+zl--+exp y Z • 
+Finally in case (iii) X is a torus. 
+o 
+A simple consequence is the so-called Little Theorem of Picard. 
+27.13. Theorem. Suppose f: C --> C is a non-constant holomorphic function. 
+Then f takes every value c E C with at most one exception. 
+PROOF. Suppose f did not take two distinct values a, b E C. By Theorem 
+(27.12) the Riemann surface X :=q{a, b} is hyperbolic. Hence the mapping 
+f: C --> X can be lifted to a mapping l: C --> g, where g is the universal 
+covering of X. Since X is isomorphic to the unit disk, it follows from Liou-
+ville's Theorem that 1 and thus also f are constant. Contradiction! 
+0 
+EXERCISES (§27) 
+27.1. Let X be a Riemann surface and 
+f,.: X --->q{O, I}, 
+V E N, 
+be a sequence of holomorphic functions which do not take the values 0 and 1. 
+Suppose there exists a point Xo E X such that (!v(xo))v E " converges to a point 
+C E iC\{O, 1}. Prove that there exists a subsequence (fv,h. 'J which converges 
+uniformly on every compact subset of X to a holomorphic function 
+f: X ---> q{O, I}. 
+[Hint: Let g ---> X and D ---> q{O, 1} be the universal coverings (D is isomorphic 
+to the unit disk). Consider suitable liftings Jv: g ---> D of the fv and use the 
+classical theorem of Montel.] 

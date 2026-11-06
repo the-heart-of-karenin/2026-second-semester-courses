@@ -1,0 +1,29 @@
+14 
+1 Covering Spaces 
+called the ini tial pain t and b ,= u( 1) the end point of u. One also says that u is 
+a curve from a to b or that the curve u joins a to b. 
+Let us recall that a topological space X is called arcwise connected or 
+pathwise connected if any two points a, hEX can be joined by a curve. An 
+arcwise connected space is also connected, i.e., there does not exist a decom-
+position X = U I U U 2 where Uland U 2 are non-empty disjoint open sets. 
+A topological space is called locally arcwise connected if every point has a 
+neighborhood basis of arcwise connected sets. In particular this is always the 
+case for manifolds. A connected, locally arcwise connected space X is 
+(globally) arcwise connected. For one can easily show that the set of all 
+points x E X which can be joined with a given point a E X is both open and 
+closed. 
+3.1. Definition. Suppose X is a topological space and a, hEX. Two curves u, 
+v: I ----> X from a to h are called homotopic, denoted u ~ v, if there exists a 
+continuous mapping A: I x I ----> X with the following properties: 
+(i) A(t, 0) = u(t) for every tEl, 
+(ii) A (t, 1) = v( t) for every tEl, 
+(iii) A(O, s) = a and A(l, s) = b for every S E I. 
+Remark. If one sets us(t) ,= A(t, s), then every Us is a curve from a to band 
+Uo = U, U 1 = v. The family of curves (us)O,;s,;l is said to be a deformation of 
+the curve u into the curve v or a homotopy from u to v, cf. Fig. 3. 
+b 
+Figure 3 
+3.2. Theorem. Suppose X is a topological space and a, b E X. Then the notion 
+of homotopy is an equwalence relation on the set of all curves from a to b. 
+PROOF. Reftexitivity and symmetry are clear. As to the transitivity, suppose 
+u, v, w: I ----> X are three curves from a to b with u ~ v and v ~ w. We must 

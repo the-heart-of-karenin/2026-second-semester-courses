@@ -1,0 +1,104 @@
+\section{Riemann映射定理}
+\sourcepage{206}
+Riemann映射定理断言：每个既不同构于$\PP^1$、也不同构于$\C$的单连通黎曼曲面，都双全纯于单位圆盘。因此任意黎曼曲面的万有覆盖总是这三种标准形之一。Riemann于1851年博士论文中提出此定理，但未给出最一般形式及完全严格的证明；完整证明由Poincaré与Koebe于1907年给出。
+\entry{27.1}{}
+定义“全纯”de Rham群$\operatorname{Rh}_{\mathrm{hol}}^1(X):=\Omega(X)/d\OO(X)$。单连通时每个全纯1形式都有原函数，故此群为零。我们将在这看似更弱的条件下证明映射定理，而定理又表明此条件蕴含单连通。
+\entry{27.2}{引理}
+若$\operatorname{Rh}_{\mathrm{hol}}^1(X)=0$，则(i)每个全纯$f:X\to\C^*$都有全纯对数与平方根；(ii)每个实调和函数为全纯函数的实部。
+\begin{proof}
+(i)$f^{-1}df$全纯，故等于$dg$。调整常数使某点$a$处$e^{g(a)}=f(a)$。
+\sourcepage{207}
+则$d(fe^{-g})=e^{-g}df-fe^{-g}f^{-1}df=0$，所以$fe^{-g}=1$。平方根取$e^{g/2}$。
+(ii)由(19.4)，$du=\operatorname{Re}\omega$，而$\omega=dg$，所以$u=\operatorname{Re}g+\text{常数}$。
+\end{proof}
+\entry{27.3}{定理}
+设$X$非紧，$Y\Subset X$为区域，$\operatorname{Rh}_{\mathrm{hol}}^1(Y)=0$，且边界正则。则$Y$双全纯于单位圆盘。
+\begin{proof}
+固定$a\in Y$。由Weierstrass定理，取$g\in\OO(X)$恰在$a$有一阶零点。解Dirichlet问题，取$\overline Y$上连续、内部调和的$u$，边界值为$\log|g|$。由(27.2)，$u=\operatorname{Re}h$，$h$全纯。令$f=e^{-h}g$。
+
+在$Y\setminus\{a\}$有$|f|=\exp(\log|g|-u)$，故$|f|$延拓为$\overline Y$上连续函数$\varphi$，边界恒1。最大值原理给$|f|<1$于$Y$。对$r<1$，$f^{-1}(\{|z|\le r\})=\{y\in\overline Y:\varphi(y)\le r\}$是紧集且避开边界，故$f:Y\to D$固有。由(4.24)取值总重数恒定，而0恰取一次，所以$f$双射，从而双全纯。
+\end{proof}
+\entry{27.4}{}
+通过穷竭可从上一定理推出一般定理，先准备若干工具。
+\sourcepage{208}
+记$D(r):=\{|z|<r\}$，允许$r=\infty$。Cauchy积分公式给出：若$f:D(r)\to D(r')$全纯，则$|f'(0)|\le r'/r$。
+\entry{27.5}{引理}
+若区域$G\subset\C$的补集有内点，$w_0\in G$，则全纯映射$f:D\to G$且$f(0)=w_0$所成的族，在紧集上一致收敛拓扑下是$\OO(D)$中的紧集。
+\begin{proof}
+取补集内点$a$，映射$z\mapsto1/(z-a)$把$G$双全纯映到某有限半径圆盘的子区域，结论由Montel定理得到。
+\end{proof}
+\entry{27.6}{定理}
+所有单叶（即单射）全纯函数$f:D\to\C$，满足$f(0)=0$、$f'(0)=1$者构成紧族。
+\begin{proof}
+(a)给定序列$f_n$，令$r_n$为$D(r_n)\subset f_n(D)$的最大半径。逆映射$\varphi_n:D(r_n)\to D$满足$\varphi'_n(0)=1$，由(27.4)有$r_n\le1$。选$a_n\in\partial D(r_n)\setminus f_n(D)$，令$g_n=f_n/a_n$，则$D\subset g_n(D)$且$1\notin g_n(D)$。
+
+(b)$g_n(D)$单连通，所以有全纯$\psi:g_n(D)\to\C^*$使$\psi(0)=i$、$\psi(z)^2=z-1$。令$h_n=\psi\circ g_n$。若$w,-w$均在$h_n(D)$，由平方相同与$g_n$单射，原像点相同，故$w=-w=0$，又推出$g_n=1$，矛盾。
+
+(c)令$U=\psi(D)$；归一化使此$U$与$n$无关。由$D\subset g_n(D)$，$U\subset h_n(D)$，所以$h_n(D)$避开$-U$。由(27.5)，$h_n$有收敛子列。又$f_n=a_n(1+h_n^2)$且$|a_n|\le1$，故$f_n$也有收敛子列。
+\sourcepage{209}
+极限$f$满足$f(0)=0$、$f'(0)=1$，故非常值。
+
+(d)须证$f$单叶。否则存在$a$使$f-a$至少有两个零点。选$r<1$使其在边界无零点，圆内按重数有$k\ge2$个零点，则$k=(2\pi i)^{-1}\int_{|z|=r}f'(z)/(f(z)-a)dz$。足够接近$f$的函数也取$a$共$k$次，与子列单叶矛盾。
+\end{proof}
+\entry{27.7}{引理}
+若$Y$是$D(R)$的真子区域，$0\in Y$且$\operatorname{Rh}_{\mathrm{hol}}^1(Y)=0$，则存在$r<R$及全纯$f:Y\to D(r)$使$f(0)=0$、$f'(0)=1$。
+\begin{proof}
+先设$R<\infty$，缩放可设$R=1$。取$a\in D\setminus Y$，令$\varphi(z)=(z-a)/(1-\bar az)$。由(27.2)，存在$g$使$g^2=\varphi|_Y$，且$g(Y)\subset D$。令$b=g(0)$、$\psi(z)=(z-b)/(1-\bar bz)$、$h=\psi\circ g$。则$h(0)=0$，
+\[
+\gamma:=h'(0)=\frac1{1-|b|^2}\frac{1-|a|^2}{2b}=\frac{1+|b|^2}{2b},
+\]
+其中$b^2=-a$，故$|\gamma|>1$。取$r=1/|\gamma|$、$f=h/\gamma$。$R=\infty$情形类似处理。
+\end{proof}
+\entry{27.8}{引理}
+若$X$非紧且$\operatorname{Rh}_{\mathrm{hol}}^1(X)=0$，则每个Runge区域$Y$也满足此条件。
+\begin{proof}
+取$\omega\in\Omega(Y)$，由(26.6)选$X$上无零点形式$\omega_0$，写$\omega=f\omega_0$。由Runge定理，取$f_n\in\OO(X)$在$Y$局部一致趋于$f$。
+\sourcepage{210}
+每个$f_n\omega_0$在$X$有原函数，故对$Y$的任意闭曲线积分为零。取极限得$\omega$所有周期为零，由(10.15)有原函数。
+\end{proof}
+\entry{27.9}{Riemann映射定理}
+若$\operatorname{Rh}_{\mathrm{hol}}^1(X)=0$，则$X$双全纯于$\PP^1$、$\C$或$D$之一。
+
+\textbf{注记。}单连通蕴含此条件；三种标准形均单连通，故逆命题也成立。
+\begin{proof}
+(a)$X$紧时$d\OO(X)=0$，故$\Omega(X)=0$，亏格为0，由(16.13)得球面。
+
+(b)$X$非紧时，取边界正则的Runge穷竭$Y_0\Subset Y_1\Subset\cdots$。由(27.8)、(27.3)，各$Y_n$双全纯于圆盘。固定$a\in Y_0$及局部坐标$z$，可取$r_n>0$及双全纯$f_n:Y_n\to D(r_n)$，使$f_n(a)=0$、$df_n/dz(a)=1$。
+
+(c)$h=f_{n+1}\circ f_n^{-1}$在0导数为1，由(27.4)，$1\le r_{n+1}/r_n$。令$R=\lim_nr_n\in(0,\infty]$。
+
+(d)在$Y_0$上归一化$g_n(\zeta):=r_0^{-1}f_n(f_0^{-1}(r_0\zeta))$，是$D$上的归一化单叶函数。
+\sourcepage{211}
+由(27.6)可取子列在$Y_0$局部一致收敛，再在$Y_1,Y_2,\ldots$逐次选子列，取对角列，便在每个$Y_m$局部一致收敛。极限拼成$f\in\OO(X)$，单射且$f(a)=0$、$df/dz(a)=1$。
+
+(e)显然$f(X)\subset D(R)$。若非满射，由(27.7)存在$r<R$及$g:f(X)\to D(r)$使$g(0)=0$、$g'(0)=1$。取$r_n>r$，则$g\circ f\circ f_n^{-1}:D(r_n)\to D(r)$在0导数为1，违反(27.4)。故$f$满射，定理得证。
+\end{proof}
+\entry{27.10}{}
+按万有覆盖同构于$\PP^1$、$\C$、$D$，分别称曲面为\textbf{椭圆型、抛物型、双曲型}。覆盖变换群$G$作为万有覆盖的自同构群，无不动点且离散作用：(i)非恒等元素不固定任何点，由提升唯一性；(ii)每条轨道$Gx$为离散集，因为它恰为$p^{-1}(p(x))$。曲面就是万有覆盖模此群的商。
+\sourcepage{212}
+特别地，每个双曲型黎曼曲面均为圆盘模某个离散、无不动点自同构群的商。
+\entry{27.11}{引理}
+(a)球面的每个自同构都有不动点。
+(b)$\C$的离散、无不动点自同构群必为以下之一：平凡群；按$n\gamma$（$n\in\Z$，$\gamma\ne0$）的全部平移；按$n\gamma_1+m\gamma_2$的全部平移，其中$\gamma_1,\gamma_2$实线性无关。
+\begin{proof}
+(a)球面自同构为分式线性变换$(az+b)/(cz+d)$，总有不动点。
+(b)平面自同构为$az+b$。若$a\ne1$就有不动点，故群只由平移组成。0的轨道$\Gamma$为离散加法子群，在其张成的最小实子空间中由(21.1)为格；维数为0、1、2分别给出三种情形。
+\end{proof}
+\entry{27.12}{定理}
+球面为椭圆型；平面、穿孔平面及所有复环面为抛物型；其余黎曼曲面均为双曲型。特别地，紧曲面按亏格0、1、$>1$对应这三型。
+\sourcepage{213}
+\textbf{注记。}亏格1紧曲面也称椭圆曲线，容易与上述术语混淆，因此很少把球面称为椭圆型黎曼曲面。
+\begin{proof}
+前两类显然。若万有覆盖为球面，由(27.11.a)及无不动点作用，群平凡，曲面即球面。若覆盖为$\C$，由(27.11.b)，三种群分别给出$\C$、$\C^*$、复环面；中间情形覆盖同构于$z\mapsto\exp(2\pi iz/\gamma)$。
+\end{proof}
+\entry{27.13}{Picard小定理}
+非常值整函数取遍所有复值，至多遗漏一个。
+\begin{proof}
+若遗漏不同$a,b$，则可看作$f:\C\to X:=\C\setminus\{a,b\}$。$X$双曲，$f$提升到其圆盘万有覆盖。由Liouville定理提升为常数，故$f$常数，矛盾。
+\end{proof}
+\subsection*{习题（第27节）}
+\entry{27.1}{}
+设$f_\nu:X\to\C\setminus\{0,1\}$全纯，且某$x_0$处$f_\nu(x_0)$趋于$c\notin\{0,1\}$。证明存在子列在每个紧子集上一致趋于全纯$f:X\to\C\setminus\{0,1\}$。［提示：考虑到圆盘覆盖的适当提升并用Montel定理。］
+\sourcepage{214}
+\entry{27.2}{}
+证明Picard大定理：若$f$在$0<|z|<r$全纯且0为本性奇点，则它取遍所有复值，至多遗漏一个。［提示：考虑$f_\nu(z)=f(2^{-\nu}z)$并用27.1。］\translatornote{原文写$f_\nu:U\to\C$、$f_\nu(z)=f(2^\nu z)$。对于固定穿孔圆盘$U$，后式一般未在整个$U$上定义；此处将指数改为$-\nu$。}

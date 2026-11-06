@@ -1,0 +1,33 @@
+12 Cohomology Groups 
+103 
+Thus the coboundaries are exactly the subgroup B c 7L x 7L of those ele-
+ments (aI' a2) with al = a2 . Hence HI(U, 7L) ~ 7L x 7LIB ~ 7L. 
+Similarly one can show HI(C*, C) ~ C. 
+12.10. The Zeroth Cohomology Group. Suppose.'? is a sheaf of abelian 
+groups on the topological space X and U = (U;); EI is an open covering of X. 
+Set 
+ZO(U, .'?):= Ker(CO(U, .'?) ~ CI(U, .'?)), 
+BO(U, .'?) := 0, 
+HO(U, .'?) := ZO(U, .'?)/BO(U, .'?) = ZO(U, .~). 
+From the definition of {J it follows that a O-cochain (};) E CO(U, .'?) belongs 
+to ZO(U, .'?) precisely if}; I Ui n Uj = jj I U i n Uj for every i, j E I. By sheaf 
+axiom II the elements}; piece together to give a global element! E .'?(X) and 
+there is a natural isomorphism 
+HO(U, .'?) = ZO(U, .'?) ~ .'?(X). 
+Thus the groups HO(U, .'?) are entirely independent of the covering U and 
+one can define 
+EXERCISES (§12) 
+12.1. Suppose PI, ... , Pn are distinct points of C and let 
+Prove 
+[Hint: Construct a covering U = (V b V 2) of X such that V 1 and V 2 are 
+connected and simply connected and V I n V 2 has n + 1 connected 
+components.] 
+12.2. (a) Let X be a manifold, V c X open and V ~ V. Show that V meets only a 
+finite number of connected components of V. 
+(b) Let X be a compact manifold and U = (Vi)ief, m = (Vi)ief be two finite 
+open coverings of X such that Vi ~ Vi for every i E I. Prove that 
+is a finite-dimensional vector space. 
+(c) Let X be a compact Riemann surface. Prove that Hl(X, C) is a finite-
+dimensional vector space. 
+[Hint: Use finite coverings U = (Vi), m = (Vi) of X with Vi ~ Vi, such that all 
+the Vi and Vi are isomorphic to disks.] 

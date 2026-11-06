@@ -1,0 +1,96 @@
+Graduate Texts in Mathematics 
+1 
+TAKEun/ZARING. Introduction to Axiomatic Set Theory. 2nd ed. 
+2 
+OXTOBY. Measure and Category. 2nd ed. 
+3 
+SCHAEFFER. Topological Vector Spaces. 
+4 
+HILTON!STAMMBACH. A Course in Homological Algebra. 
+5 
+MAC LANE. Categories for the Working Mathematician. 
+6 
+HUGHES/PIPER. Projective Planes. 
+7 
+SERRE. A Course in Arithmetic. 
+8 
+TAKEun/ZARING. Axiometic Set Theory. 
+9 
+HUMPHREYS. Introduction to Lie Algebras and Representation Theory. 
+10 
+COHEN. A Course in Simple Homotopy Theory. 
+11 
+CONWAY. Functions of One Complex Variable. 2nd ed. 
+12 
+BEALS. Advanced Mathematical Analysis. 
+13 
+ANDERSON/FULLER. Rings and Categories of Modules. 
+14 
+GOLUBITSKY GUILEMIN. Stable Mappings and Their Singularities. 
+15 
+BERBERIAN. Lectures in Functional Analysis and Operator Theory. 
+16 
+WINTER. The Structure of Fields. 
+17 
+ROSENBLATT. Random Processes. 2nd ed. 
+18 
+HALMOS. Measure Theory. 
+19 
+HALMOS. A Hilbert Space Problem Book. 2nd ed., revised. 
+20 
+HUSEMOLLER. Fibre Bundles. 2nd ed. 
+21 
+HUMPHREYS. Linear Algebraic Groups. 
+22 
+BARNES/MACK. An Algebraic Introduction to Mathematical Logic. 
+23 
+GREUB. Linear Algebra. 4th ed. 
+24 
+HOLMES. Geometric Functional Analysis and Its Applications. 
+25 
+HEWfIT/STROMBERG. Real and Abstract Analysis. 
+26 
+MANES. Algebraic Theories. 
+27 
+KELLEY. General Topology. 
+28 
+ZARISKI/SAMUEL. Commutative Algebra. Vol. I. 
+29 
+ZARISKI/SAMUEL. Commutative Algebra. Vol. II. 
+30 
+JACOBSON. Lectures in Abstract Algebra I. Basic Concepts. 
+31 
+JACOBSON. Lectures in Abstract Algebra II. Linear Algebra. 
+32 
+JACOBSON. Lectures in Abstract Algebra III. Theory of Fields and Galois Theory. 
+33 
+HIRSCH. Differential Topology. 
+34 
+SPITZER. Principles of Random Walk. 2nd ed. 
+35 
+WERMER. Banach Algebras and Several Complex Variables. 2nd ed. 
+36 
+KELLEY/NAMIOKA et al. Linear Topological Spaces. 
+37 
+MONK. Mathematical Logic. 
+38 
+GRAUERT/FRITZSCHE. Several Complex Variables. 
+39 
+ARVESON. An Invitation to C· -Algebras. 
+40 
+KEMENY/SNELL/KNAPP. Denumerable Markov Chains. 2nd ed. 
+41 
+APOSTOL. Modular Functions and Dirichlet Series in Number Theory. 2nd ed. 
+42 
+SERRE. Linear Representations of Finite Groups. 
+43 
+GILLMAN/JERISON. Rings of Continuous Functions. 
+44 
+KENDIG. Elementary Algebraic Geometry. 
+45 
+LOEVE. Probability Theory I. 4th ed. 
+46 
+LoEVE. Probability Theory II. 4th ed. 
+47 
+MOISE. Geometric Topology in Dimentions 2 and 3. 
+continu.ed after inda 

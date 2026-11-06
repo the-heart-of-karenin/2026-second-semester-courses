@@ -1,0 +1,43 @@
+4 Branched and Unbranched Coverings 
+27 
+Remark. In the following proof the only properties of the mapping p that 
+are used are that it is a local homeomorphism and has the curve lifting 
+property. 
+PROOF. Define the mapping]: Z --> Y in the following way. Suppose z E Z is 
+an arbitrary point and u: 1--> Z is a curve from Zo to z. Then v ,= f 0 u is a 
+curve in X with initial point fizo) and end point fiz). Let v: 1--> Y be the 
+unique lifting of L' which has initial point Yo. Then set fiz) ,= u( 1). This 
+definition is independent of the choice of curve u from Zo to z. For, suppose 
+U1 is another curve from Zo to z. Then u1 is homotopic to u. Thus VI ,= f 
+U I 
+and V = f~ U are also homotopic. By Theorem (4.10) the liftings VI of VI and 
+1: of V with 1)1(0) = 1;(0) = Yo have the same end point. Hence .1{z) is well-
+defined. Also by construction f = p .1 
+All that remains to be proved is that the mapping]: Z --> Y is continuous. 
+Let z E Z, Y = .ltz) and suppose V is a neighborhood of y- We must show that 
+there exists a neighborhood W of z such that fiW) c V Since p is a local 
+homeomorphism, we may assume, possibly by shrinking V, that there is a 
+neighborhood U of p(y) = fiz) such that p I V --> U is a homeomorphism. Let 
+cp: U --> V be its inverse. Since f is continuous and Z is locally path wise 
+connected, there exists a pathwise connected neighborhood W of z such that 
+fiW) c U. 
+Now we claim thatfiW) c V To see this suppose that the curves u, v and 
+f' are defined as above. Let z' E W be an arbitrary point and let u' be a curve 
+from z to z' which lies entirely in W. Then the curve v' ,= f 
+u' lies entirely in 
+U and V' := cp .. v' is a lifting of u' with initial point y. Hence the product u . V' 
+is a lifting of v . v' = f r (u . u') with initial point Yo. Thus 
+fiz') = (i,· v')(I) = £i(l) E V 
+o 
+4.18. Example (The Logarithm of a Function). Suppose X is a simply con-
+nected Riemann surface and f: X --> I[: * is a nowhere vanishing holomorphic 
+function on x. We would like to find the logarithm of 1, i.e., find a holo-
+morphic function F: X --> I[: such that exp(F) = f But this just means that F 
+is a lifting off with respect to the covering exp: I[: --> I[: *, i.e., 
+F 
+f 
+X-----+II[:* 
+If Xo E X and c E I[: is any solution of the equation eC = fixo), then by 
+Theorem (4.17) there exists a lifting F: X --> I[: of the required kind with 
+F(xo) = c. By Theorem (4.9), F is holomorphic. Also any other solution of 
+the problem differs from F by an additive constant 2nin, n E 7l.. 

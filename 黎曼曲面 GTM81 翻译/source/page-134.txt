@@ -1,0 +1,35 @@
+15 The Exact Cohomology Sequence 
+125 
+PROOF. Since Hl(X,~) = 0, by Theorem (15.12) one has the exact sequence 
+The result is now obvious. 
+o 
+For many applications it IS important to be able to describe the 
+isomorphism. 
+explicitly. By Lemma (15.8) we can always assume that % = Ker {3 and 
+rx.: % ----> ~ is the inclusion map. 
+Suppose ~ E Hl(X, %) is a cohomology class which is represented by the 
+cocycle (fij) E Zl(U, %) C Zl(U, ~). Since Hl(U,~) = 0, there exists a co-
+chain (g;) E CO(U, ~) such thatfij = gj - gj on V j n V j. Since {3(fij) = 0, {3(gj) 
+and {3(g;} agree on Vj n V j • Thus there exists a global element h E £(X) 
+with hi V j = {3(gj)' Then ct>(~) is the coset of h modulo {3~(X). The fact that 
+the mapping ct> described above is the inverse of the isomorphism 
+£(X)/{3~(X) ~ Hl(X, %) induced by the exact cohomology sequence fol-
+lows from part (e) in the proof of (15.12). 
+15.14. Dolbeault's Theorem. Let X be a Riemann surface. Then there are 
+isomorphisms 
+(a) Hl(X, (0) ~ go. 1 (X)/d"g(x), 
+(b) Hl(X, Q) ~ g(2)(X)/dgl. O(X). 
+Since Hl(X, ~) = Hl(X, ~l,O) = 0, one may apply Theorem (15.13) to 
+the exact sequences given in (15.9.a) and (15.9.d) respectively. 
+Remark. Theorem (13.4) is a special case of Dolbeault's Theorem. 
+15.15. The deRham Groups. On every Riemann surface X every exact I-form 
+is closed but every closed form is not necessarily exact. Consequently one is 
+interested in the quotient group 
+Ker(g(l)(X) ~ g(2)(X» 
+Rh 1 (X) := ---'------'---"-------'---'-'-
+Im(g(X) ~ g(1)(X» 
+of closed I-forms modulo exact I-forms. Two closed differential forms which 
+determine the same element in Rhl(X), i.e., whose difference is exact, are said 
+to be cohomologous. Rhl(X} is called the 1st deRham group of X. Note that 
+Rhl(X) = 0 precisely if every closed I-form OJ E:: @~il)(X} has a primitive. 
+If X is simply connected, then Rhl(X} = 0 by (10.7). 

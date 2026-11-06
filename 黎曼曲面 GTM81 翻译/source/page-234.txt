@@ -1,0 +1,40 @@
+29 Line and Vector Bundles 
+225 
+as the difference of a surjective and a compact continuous linear operator 
+between Frechet spaces, has a finite codimensional image. However the 
+image of cp -If; is the vector space Bl(~, (l7d of all coboundaries in 
+ZI(~, (l7E)' Thus Hl(y, (l7E):;;: Hl(lJ3, (Od is finite dimensional. 
+0 
+29.14. Corollary. Suppose E is a holomorphic vector bundle on a compact 
+Riemann surface X. Then Hl(X, (l7E) isfinite dimensional. 
+29.15. Meromorphic Sections. Suppose E is a holomorphic vector bundle of 
+rank n on the Riemann surface X. Let U c X be an open set over which a 
+holomorphic linear chart h: Eu --> U x en exists and let a be a point of U. A 
+section f E (l7E(U\{a)) can be represented with respect to this chart by an 
+n-tuple of holomorphic functions (fj, ... , In) E (I7(U\{a})". The point a is 
+called a pole of order m off, if all thefi have either a pole of order :s;; m or else 
+a removable singularity at a and at least one}; does have a pole of order m at 
+a. This definition is independent of the choice of linear chart at a. 
+By a meromorphic section of E over an open subset Y c X one means a 
+holomorphic section f E (l7dY') over an open subset Y' c Y such that the 
+following hold: 
+(i) Y\ Y' is a discrete subset of Y. 
+(ii) fhas a pole at every a E Y\Y'. 
+Similar to Theorem (14.12) one can now prove the following. 
+29.16. Theorem. Suppose E is a holomorphic vector bundle on a Riemann 
+surface X and Y is a relatively compact open subset of X. Then given any 
+a E Y there exists a meromorphic section of E over Y which has a pole at a and 
+is holomorphic on Y\{a}. 
+29.17. Corollary. Every holomorphic vector bundle on a compact Riemann 
+surface has a global meromorphic section which does not vanish identically. 
+29.18. Line Bundles and Divisors. Suppose E is a holomorphic line bundle on 
+a Riemann surface X and If; is a global meromorphic section of E, which 
+does not vanish identically. Then the divisor D of If; is well-defined. For 
+a E X let D(a) be the order of If; at a with respect to a holomorphic linear 
+chart of E on some neighborhood of a. This order is independent of the 
+chart. Now we claim that the sheaf (!)E of holomorphic sections of E is 
+isomorphic to the sheaf (l7v of meromorphic multiples of -D. For, if 
+fE A(U) with (f) ~ -D on U, thenflf; is a holomorphic section of E over 
+U. Conversely for every section cp E (l7E(U) the quotient f = cpN is a well-
+defined meromorphic function in A(U) with (f) ~ -D on U. 
+This may be considered in some sense to be the converse of (29.11). 

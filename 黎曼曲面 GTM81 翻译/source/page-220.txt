@@ -1,0 +1,43 @@
+27 The Riemann Mapping Theorem 
+211 
+Then gn: D ~ IC is a schlicht holomorphic function with gn(O) = 0 and 
+g~(O) = 1. Hence by Theorem (27.6) there is a subsequence (/"o.)ke '_ of the 
+sequence (/,,), which converges uniformly on compact subsets of Yo. By the 
+same reasoning there is a subsequence (/"u) of this sequence which con-
+verges uniformly on compact subsets of Y1• Repeating this process we get for 
+each m a subsequence (/"mk) of the previous subsequence which converges 
+uniformly on compact subsets of Ym . Set In. :=Inkk' Then the sequence 
+(/".h E " has the desired property. 
+Suppose I E &(X) is the limit of the sequence (fn.), i.e. I is that holomor-
+phic function on X which coincides on every Ym with the limit of the se-
+quence (/".1 Ymk,: m' The mapping I: X -+ IC is injective and satisfies 
+dl 
+I(a) = 0 and dz (a) = 1. 
+(e) Finally we claim I maps X biholomorphically onto D(R). Since it is 
+obvious thatI(X) c D(R), it suffices to show I: X ~ D(R) is surjective. Sup-
+pose the contrary. Then by Lemma (27.7) there exists an r < R and a holo-
+morphic mapping g:I(X)-+ D(r) with g(O) = 0 and g'(O) = 1. Choose n so 
+large that r. > r. Then the mapping 
+h :=g 0 I J I;; 1: D(rn) ~ D(r) 
+satisfies h(O) = 0 and h'(O) = 1. Since r < r., this is not possible. This contra-
+diction shows that I: X ~ D(R) is surjective and thus the proof of the 
+Riemann Mapping Theorem is complete. 
+0 
+27.10. Suppose X is a Riemann surface and X is its universal covering. Since 
+g is simply connected, we may apply the Riemann Mapping Theorem to it. 
+It is standard to call X elliptic, parabolic or hyperbolic depending on whether 
+its universal covering is isomorphic to IP>\ IC or D. 
+Suppose G = Deck(g / X) is the group of covering transformations of the 
+universal covering. Every (J EGis an automorphism of g, i.e., a biholomor-
+phic mapping of g onto itself. Also the group G acts without fixed points 
+and discretely on g, i.e., 
+(i) If (J E G\{id}, then (JX =1= x for every x E g. 
+(ii) For every x E g the orbit 
+Gx :={O"x: 0" E G} 
+is a discrete subset of g. 
+Property (i) follows since each covering transformation is uniquely 
+determined once one knows the image of any point. Property (ii) holds since 
+the covering p: j{ -+ X is Galois and thus Gx = p-l(p(X)). 
+The Riemann surface X may be thought of as the quotient of g modulo 
+G, i.e., two points of g are identified if one can be transformed into the other 
+by some element of G. Thus every hyperbolic Riemann surface is a quotient 

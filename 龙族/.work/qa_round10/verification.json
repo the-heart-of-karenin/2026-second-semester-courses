@@ -1,0 +1,19 @@
+{
+  "book": "02",
+  "source_paragraphs": 4838,
+  "pages": 321,
+  "sampled_pages": [
+    1,
+    2,
+    287,
+    305,
+    321
+  ],
+  "headings": {
+    "Act Fourteen": 287,
+    "Act Fifteen": 305
+  },
+  "docx_paragraphs_match": true,
+  "source_unchanged": true,
+  "docx_sha256": "67a3ed14dcac89329782d8b890a160f59aaf0072dee3c99aa69941c65e211690"
+}

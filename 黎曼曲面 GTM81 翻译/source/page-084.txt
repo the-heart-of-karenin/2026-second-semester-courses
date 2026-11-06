@@ -1,0 +1,42 @@
+10 The Integration of Differential Forms 
+75 
+(b) Conversely suppose F E C(X) is an additive automorphic function with 
+constant summands of automorphy. Then there exists precisely one closed 
+differential form WE CO)(X) such that dF = p*w. 
+PROOF 
+(a) If (J is any deck transformation, then because p a (J- 1 = P the function 
+(JF is also a primitive of p*w. Thus 
+-au := uF -
+F 
+is a constant. Suppose Xo E X and Zo E X is a point with p(zo) = Xo' Suppose 
+(J E Deck(X/X). By (5.6) the element a- E 1l:1(X, xo) which is associated to (J 
+can be represented as follows. Choose a curve v: [0, 1] -+ X with v(O):= 
+Yo:= (J-l(ZO) and v(I):= Zo = (J(Yo). Then u:= po v is a closed curve in X 
+and a- = cl(u). By Theorem (10.8) the periods of w with respect to a- are given 
+by 
+i 
+w = F(v(l» - F(v(O» = F(zo) - F(u-1(zo» = -au· 
+(b) If F has summands of automorphy a" E C, then for every 
+(J E Deck(X/X) one has 
+(J*(dF) = d(J*F = d(F + a,,) = dF. 
+Thus the closed differential form dF is invariant under covering trans-
+formations. Since p: X -+ X 
+is locally biholomorphic, there exists 
+WECO )(X) such that dF = p*w. Clearly w is uniquely determined and is 
+~d 
+D 
+10.14. Example. Suppose r = lYI + lY2, where Yl, Y2 E C are linearly 
+independent over IR, is a lattice in C. Let X := c/r. 
+The canonical quotient mapping 1l:: C -+ X is also the universal covering 
+map and Deck(C/X) is the group of all translations by vectors Y E r, cf. 
+(5.7.c). Consider the identity map z: C -+ C. Then the function z is additively 
+automorphic under the action of Deck(C/X) with summands of automorphy 
+ay = y, Y E r. Hence dz is invariant under covering transformations. Thus 
+there exists a holomorphic differential form WE Q(X) such that p*w = dz 
+and whose periods are exactly the elements of the lattice r. 
+10.15. Theorem. Suppose X is a Riemann surface. A closed differential form 
+W E C(I)(X) has a primitive f E C(X) if and only if all the periods of ware zero. 
+PROOF. If w has a primitive, then by (10.2) all its periods are zero. 
+Conversely, suppose that all the periods of ware zero. By Corollary (10.6) 
+there exists, on the universal covering p: X -+ X, a primitive FE ,f(X) of 
+p*w. By (10.3), F has summands of automorphy O. Thus there is anf E C(X) 

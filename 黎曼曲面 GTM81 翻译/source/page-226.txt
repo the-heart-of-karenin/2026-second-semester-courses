@@ -1,0 +1,43 @@
+28 Functions with Prescribed Summands of Automorphy 
+The relation a,rr = a" + (Jar with r := (J- l1fJy) implies 
+a,,(y) = a"r(Y) - a,((J- 1 y) 
+= a~;(y)(y) -
+a"_l~;(y)(a-l y) = /;(y) - (O".fi)(y). 
+Thus the functions.fi have the desired automorphic behavior on 1';. 
+217 
+(c) By (b) the differen'ces gij :=.t: - jj E (1:(1'; n lj) are invariant under 
+covering transformations and thus may be considered as elements 
+gij E 0( Vi n VJ Obviously gij + gjk = gik on any triple intersection and 
+thus the family (gij) is a cocycle in Zl(U, (0). Because Hl(X, (0) = 0, this 
+cocycle splits. Hence there exist elements gj E 0(Vi ) with 
+gij = gi - gj 
+on Vi n Vi' 
+Consider the gj as functions on 1'; which are invariant under covering trans-
+formations. Then the functions 
+?:= r. - g. E 0(Y) 
+.Ii.li 
+I 
+I 
+also satisfyT - aT = 
+Q(I for every (J E G. On any intersection Y; n Yj one has 
+T - h =/; - jj - (gj - gJ = gij - (gj - gj) = 0. 
+Hence theT piece together to give a global functionf E (1:( Y) withf - (Jf = au 
+for every (J E G. 
+0 
+28.5. Theorem. Suppose X and Yare Riemann surfaces, p: Y --> X is a holo-
+morphic unbranched Galois covering map and G = Oeck(Y /X) is its group of 
+covering transformations. Then given any crossed homomorphism 
+G --> g(y), 
+there exists a differentiable function f E 0"( Y) having summands of automorph y 
+au· 
+PROOF. This is proved in the same way as Theorem (28.4), except the sheaf ((, 
+is replaced by the sheaf 1&. This is possible since Hl(X, 6') = ° 
+for every 
+Riemann surface, regardless of whether it is compact or not (Theorem 12.6). 
+o 
+28.6. Theorem (Behnke-Stein). Suppose X is a non-compact Riemann surface 
+and 
+is Q group homomorphism. Then there exists a holomorphic 1 {orm W E Q(X) 
+with 
+J w = a" for every 0" E 1Tl(X), 
+(I 

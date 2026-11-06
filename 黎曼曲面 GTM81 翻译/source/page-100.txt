@@ -1,0 +1,34 @@
+11 Linear Differential Equations 
+91 
+By means of (2) one gets 
+I F'(r) I s 2L I t/JjdreiO) 1'1 t/JjkeiO ) I 
+j, k 
+I.e., 1F'(r)1 s (2M/r)F(r). Now from (1) it follows that 
+( r)' - 2M 
+F(r) S F(ro) ro 
+' 
+I.e., 
+Hence 'P can have a pole of order at most M at the origin. 
+o 
+We are now going to use Theorem (11.13) to determine the form of the 
+solutions of certain linear second order differential equations which arise 
+quite often in practice. 
+11.14. Theorem. Suppose D = {z E c: I z I < R} and X ,= D\{O}. Suppose a, 
+b E (i)(D). Then the differential equation 
+w,,+a(z)w,+b(z)w=O 
+(1) 
+z 
+Z2 
+has, on the universal covering p: X ---> X, a fundamental system (IPI> IPz) of 
+solutions which has one of the following forms: Either 
+or 
+{Cf>l(Z) = ZPlt/Jl(Z), 
+IP2{Z) = ZP2t/JZ(Z), 
+{IP1(Z) = Z"I/11(Z), 
+Cf>z(z) = zP(t/J I (z)log z + t/Jz(z)). 
+Here p, p], pz denote complex numbers and t/Jl, t/J2 E (9(D). 
+Remark. log z and zP = eP log Z are single-valued holomorphic functions on 
+X. Holomorphic functions on D will be interpreted as functions on X which 
+are invariant under covering transformations. 
+PROOF. We reduce the differential equation to a system of two differential 
+equations of first order by setting 

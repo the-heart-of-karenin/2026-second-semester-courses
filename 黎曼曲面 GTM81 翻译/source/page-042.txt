@@ -1,0 +1,43 @@
+5 The Universal Covering and Covering Transformations 
+33 
+It suffices to show that any two points (x, IX), (x, P) E g, where IX 1= p, have 
+disjoint neighborhoods. Suppose U c X is an open, connected, simply con-
+nected neighborhood of x. Then [U, ex] n [U, P] = 0. Otherwise there 
+would be an element (y, y) in the intersection. Suppose w is a curve in U 
+from x to y and ex = cl(u), p = cl(v). Then by definition y = cl(u . w) = 
+cl(v . w). Thus cl(u) = cl(v). But this contradicts the assumption that ex 1= p. 
+Claim (d) g is connected and p: g -+ X has the curve lifting property 
+and thus by (4.19) is a covering map. Suppose u: [0, 1] -+ X is a curve with 
+initial point Xo' For s E [0, 1] let us: [0, 1] -+ X be the curve defined by 
+us(t):= u(st). (The curve Us runs along the points of the curve u correspond-
+ing to parameter values t E [0, s].) Further suppose v is a closed curve with 
+initial and end point Xo. Then the mapping 
+14: [0, 1] -+ g, 
+tl---+ (u(t), cl(v . ut )) 
+is continuous and is a lifting of u with 14(0) = (xo, cl( v)). This follows directly 
+from the definition of the topology on g. Finally, suppose w: [0, 1] -+ X is a 
+curve with arbitrary initial point Xl := w(O), IX E n(xo, Xl) and v is a curve 
+from Xo to x 1 with cl( v) = IX. Then it is easy to see that the lifting of u := V • W 
+with 14(0) = (xo, e), where e is the homotopy class of the constant curve at 
+Xo, gives rise to a lifting of w with w(O) = (x 1, ex). 
+Claim (e) g is simply connected. 
+Let w: [0,1] -+ g be a closed curve with initial and end point (xo, e). Then 
+u := pow is a closed curve in X with u(O) = Xo. Now let u: [0, 1] -+ g be the 
+lifting of u, which exists by claim (d), where v is chosen to be the constant 
+curve at xo. Because of the uniqueness of liftings, U = w. Thus u( 1) = 
+(xo, cl(u» = (xo, e) and hence u is null-homotopic. By Theorem (4.10) w is 
+also null-homotopic and thus X is simply connected. 
+This completes the proof of Theorem (5.3). 
+0 
+Remark. In particular, one can construct the universal covering of any 
+Riemann surface and by (4.6) this universal covering is, in a natural way, a 
+Riemann surface as well. 
+5.4. Definition. Suppose X and Yare topological spaces and p: Y -+ X is a 
+covering map. By a covering transformation or deck transformation of this 
+covering we mean a fiber-preserving homeomorphismj: Y -+ Y. With opera-
+tion the composition of mappings, the set of all covering transformation of 
+p: Y -+ X forms a group which we denote by Deck(YjX). If there is any 
+chance of confusion, then we will write Deck(Y!. X) instead of Deck(YjX). 
+5.5. Definition. Suppose X and Yare connected Hausdorff spaces and 
+p: Y -+ X is a covering map. The covering is called Galois (the terms normal 
+and regular are also in common usage) if for every pair of points Yo, Yl E Y 

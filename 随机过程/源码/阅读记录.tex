@@ -1,0 +1,641 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{nosep,leftmargin=2em}
+\hypersetup{pdftitle={应用随机过程阅读记录},pdfauthor={课程学习记录}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Exp}{\operatorname{Exp}}
+\newcommand{\Poi}{\operatorname{Poisson}}
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 应用随机过程阅读记录}\par
+  \vspace{0.5em}
+  {\large 泊松过程、马尔可夫链与更新过程}
+\end{center}
+
+\noindent 本记录整理《应用随机过程》的阅读讨论，包括泊松过程的到达时刻、马尔可夫链的转移概率与状态分类，以及更新方程的极限定理。另收录与课程相关但未指定书中页码的补充模型讨论。英文单词、翻译和用法问题不纳入记录。
+
+\section{泊松过程的到达时刻}
+
+% STUDY_RECORD_BEGIN id=sp-poisson-arrival-density
+\subsection{定理 3.2.2 到达时刻的联合密度}
+\label{note:sp-poisson-arrival-density}
+\textbf{出处：}第3章，定理3.2.2。
+
+设 $\{N(t),t\ge0\}$ 是强度为 $\lambda$ 的泊松过程，则
+\[
+ f_{\tau_1,\ldots,\tau_n}(t_1,\ldots,t_n)
+ =\lambda^n e^{-\lambda t_n}\,
+ \mathbf 1_{\{0<t_1<\cdots<t_n\}}.
+\]
+
+\textbf{最初的问题：}书中的微元证明本质上使用了密度的哪个定义？能否先求联合分布函数再求导？
+
+\textbf{简短解释：}证明使用的是联合密度的局部平均定义
+\[
+ f(t)=\lim_{x\to0}\frac{P\{(\tau_1,\ldots,\tau_n)
+ \text{ 落入以 }t\text{ 为中心、边长 }x\text{ 的小盒子}\}}{x^n}.
+\]
+核心是“小区域概率 $=$ 密度 $\times$ 体积 $+o(\text{体积})$”。从泊松过程直接求真实的联合分布函数也能证明，但一般 $n$ 下必须按各 $t_i$ 的相对次序分段，远比局部微元法繁琐。若先假定上述密度，积分得到分布函数后再求导，只是循环论证。
+
+当 $0<t_1<\cdots<t_n$ 时，由密度积分所得
+\[
+ F(t_1,\ldots,t_n)=
+ \int_{\substack{0<x_1<\cdots<x_n\\x_i\le t_i}}
+ \lambda^n e^{-\lambda x_n}\dd x_1\cdots\dd x_n,
+\]
+也可写成相应迭代积分；不能忽略约束 $x_1<\cdots<x_n$ 而在整个矩形上积分。
+% STUDY_RECORD_END id=sp-poisson-arrival-density
+
+% STUDY_RECORD_BEGIN id=sp-poisson-jacobian-proof
+\subsection{用独立指数间隔重新证明联合密度}
+\label{note:sp-poisson-jacobian-proof}
+\textbf{出处：}第3章，定理3.2.2与第3.3节的联系。
+
+\textbf{最初的问题：}已知间隔时间 $T_n$ 相互独立且服从指数分布，能否重新证明到达时刻的联合密度？应当回忆哪个标准工具？
+
+\textbf{简短解释：}使用多元随机变量的密度变换公式。若 $Y=g(X)$ 一一可微，反变换为 $X=h(Y)$，则
+\[
+ f_Y(y)=f_X(h(y))\left|\det\frac{\partial x}{\partial y}\right|.
+\]
+这里
+\[
+ T_1=\tau_1,\qquad T_k=\tau_k-\tau_{k-1}\quad(k\ge2),
+\]
+反变换的 Jacobian 矩阵为主对角线是 $1$、次对角线是 $-1$ 的下三角矩阵，行列式为 $1$。又因
+\[
+ \prod_{k=1}^n\lambda e^{-\lambda T_k}
+ =\lambda^n e^{-\lambda(T_1+\cdots+T_n)}
+ =\lambda^n e^{-\lambda\tau_n},
+\]
+且 $T_k>0$ 等价于 $0<\tau_1<\cdots<\tau_n$，立即得到定理3.2.2的联合密度。这条路线避开了复杂的联合分布函数。
+% STUDY_RECORD_END id=sp-poisson-jacobian-proof
+
+% STUDY_RECORD_BEGIN id=sp-poisson-conditional-order-stat
+\subsection{定理 3.2.3 给定计数时的到达时刻}
+\label{note:sp-poisson-conditional-order-stat}
+\textbf{出处：}第3章，定理3.2.3。
+
+\textbf{最初的问题：}条件于 $N(t)=n$ 的联合密度，能否绕开书中的微元论证？
+
+\textbf{简短解释：}可以。已知前 $n$ 个到达时刻为 $t_1<\cdots<t_n\le t$ 时，$N(t)=n$ 还要求第 $n$ 次到达后至 $t$ 不再到达，即 $T_{n+1}>t-t_n$。利用指数间隔的独立性，联合“密度乘后续无到达概率”为
+\[
+ \lambda^n e^{-\lambda t_n}e^{-\lambda(t-t_n)}=\lambda^n e^{-\lambda t}.
+\]
+再除以
+\[
+ P(N(t)=n)=e^{-\lambda t}\frac{(\lambda t)^n}{n!},
+\]
+得到
+\[
+ f_{\tau_1,\ldots,\tau_n\mid N(t)=n}(t_1,\ldots,t_n)
+ =\frac{n!}{t^n}\mathbf 1_{\{0<t_1<\cdots<t_n<t\}}.
+\]
+这正是 $n$ 个独立 $U(0,t)$ 随机变量的次序统计量联合密度，因此
+\[
+ (\tau_1,\ldots,\tau_n)\mid\{N(t)=n\}
+ \overset d=(U_{(1)},\ldots,U_{(n)}).
+\]
+% STUDY_RECORD_END id=sp-poisson-conditional-order-stat
+
+\section{指数间隔对泊松过程的刻画}
+
+% STUDY_RECORD_BEGIN id=sp-poisson-iid-exp-characterization
+\subsection{定理 3.3.2 到达间隔的充要条件}
+\label{note:sp-poisson-iid-exp-characterization}
+\textbf{出处：}第3章，第3.3节，定理3.3.2。
+
+\textbf{最初的问题：}充分性证明是否得到
+$f_{\tau_1,\ldots,\tau_n}$ 后就可以停止？该联合密度能否推出泊松过程的初始定义？
+
+\textbf{简短解释：}首先要区分术语：$\lambda^n e^{-\lambda t_n}$ 是到达时刻的联合密度，不是计数的分布函数。由 iid 指数间隔通过上一节的变量变换可得，对每个 $n$，
+\[
+ f_{\tau_1,\ldots,\tau_n}(t_1,\ldots,t_n)
+ =\lambda^n e^{-\lambda t_n}\mathbf 1_{\{0<t_1<\cdots<t_n\}}.
+\]
+这些有限维联合密度编码了计数过程，因为
+\[
+ N(t)\ge n\iff \tau_n\le t.
+\]
+由此可恢复
+\[
+ P(N(t)=n)=e^{-\lambda t}\frac{(\lambda t)^n}{n!}.
+\]
+更一般地，对 $0=t_0<t_1<\cdots<t_k$ 及非负整数 $m_j$，对到达时刻密度积分可得
+\[
+ P\!\left(N(t_j)-N(t_{j-1})=m_j,\ 1\le j\le k\right)
+ =\prod_{j=1}^k e^{-\lambda(t_j-t_{j-1})}
+ \frac{[\lambda(t_j-t_{j-1})]^{m_j}}{m_j!}.
+\]
+这同时给出不相交区间增量的独立性、平稳性以及泊松分布。因此，若已经引用“上述到达时刻联合密度刻画泊松过程”的结论，证明到联合密度处即可停止；书中继续积分，是为了不引用该刻画，而把定义中的性质逐项验证。
+
+\textbf{逻辑主线：}
+\[
+ \text{泊松过程}
+ \Longleftrightarrow \text{iid 指数间隔}
+ \Longleftrightarrow \text{到达时刻联合密度}.
+\]
+需要牢记的两个工具是联合密度的微元定义与多元密度变换公式。
+% STUDY_RECORD_END id=sp-poisson-iid-exp-characterization
+
+\section{马尔可夫链的转移概率矩阵}
+
+% STUDY_RECORD_BEGIN id=sp-markov-countable-transition-matrix
+\subsection{第 56 页：可数状态空间上的无穷转移矩阵}
+\label{note:sp-markov-countable-transition-matrix}
+\textbf{出处：}第4章，第56页，$k$ 步转移概率矩阵与 Chapman--Kolmogorov 方程。
+
+\textbf{最初的问题：}这里的 $k$ 步转移概率矩阵是否可能是行列均可数的无穷矩阵？这会不会导致矩阵乘法或 Chapman--Kolmogorov 方程出问题？
+
+\textbf{简短解释：}可以。若状态空间 $E$ 是可数无穷集，那么
+\[
+ P^{(k)}(m)=\bigl(p_{ij}^{(k)}(m)\bigr)_{i,j\in E}
+\]
+就是一个可数行、可数列的无穷矩阵。这里最好把它理解为\emph{随机核}，而不是任意的无穷矩阵。
+
+对固定的 $i,j$，Chapman--Kolmogorov 公式右侧
+\[
+ \sum_{r\in E}p_{ir}^{(k)}(m)p_{rj}^{(l)}(m+k)
+\]
+是非负级数，并且
+\[
+ 0\le \sum_{r\in E}p_{ir}^{(k)}(m)p_{rj}^{(l)}(m+k)
+ \le \sum_{r\in E}p_{ir}^{(k)}(m)=1,
+\]
+所以它必定收敛，不会出现条件收敛所造成的重排问题。乘积仍是随机矩阵，因为由非负项级数的 Tonelli 定理，
+\[
+ \sum_{j\in E}\sum_{r\in E}p_{ir}^{(k)}(m)p_{rj}^{(l)}(m+k)
+ =\sum_{r\in E}p_{ir}^{(k)}(m)\sum_{j\in E}p_{rj}^{(l)}(m+k)=1.
+\]
+同理，多个转移矩阵相乘时可以安全地交换求和次序，结合律也成立。
+
+需要注意的是，不能把这种无穷矩阵不加说明地套用所有有限维线性代数结论；例如行列式、特征值分解未必有通常意义。对马尔可夫链而言，逐项定义矩阵乘法，或把它看作作用在概率分布（$\ell^1$）上的算子，就足够严谨。
+
+此外，本页允许转移概率随时刻 $m$ 改变，因此
+\[
+ P^{(k+l)}(m)=P^{(k)}(m)P^{(l)}(m+k).
+\]
+只有在时齐马尔可夫链中，才可简写为 $P^{(k)}=P^k$。
+
+% STUDY_RECORD_END id=sp-markov-countable-transition-matrix
+
+% STUDY_RECORD_BEGIN id=sp-markov-first-hit-accessibility
+\subsection{第 62 页：首达概率与可达性}
+\label{note:sp-markov-first-hit-accessibility}
+\textbf{出处：}第4章，第62页，定义4.1.12--4.1.13、性质4.1.14与推论4.1.15。
+
+\textbf{最初的问题：}为什么推论 $f_{ij}>0\Longleftrightarrow i\to j$ 是前面首达概率分解的推论？$p_{ii}^{(0)}$ 是否为 $1$？
+
+\textbf{简短解释：}首达分解为
+\[
+ p_{ij}^{(n)}=\sum_{l=1}^n f_{ij}^{(l)}p_{jj}^{(n-l)}.
+\]
+若 $f_{ij}>0$，非负项之和为正，故某个 $f_{ij}^{(l)}>0$，从而 $p_{ij}^{(l)}>0$，即 $i\to j$。反过来，若某个 $p_{ij}^{(n)}>0$，分解式中必有一项 $f_{ij}^{(l)}p_{jj}^{(n-l)}>0$，所以 $f_{ij}>0$。
+
+按零步转移约定 $p_{ij}^{(0)}=\mathbf 1_{\{i=j\}}$，特别是 $p_{ii}^{(0)}=1$；这只表示原地经过零步，不算作“返回”。因此 $i\to i$ 在此处应指存在正步数 $n\ge1$ 使 $p_{ii}^{(n)}>0$。
+% STUDY_RECORD_END id=sp-markov-first-hit-accessibility
+
+% STUDY_RECORD_BEGIN id=sp-markov-recurrence-period
+\subsection{第 63 页：常返、返回时间与周期}
+\label{note:sp-markov-recurrence-period}
+\textbf{出处：}第4章，第63页，定义4.1.16--4.1.19。
+
+\textbf{最初的问题：}如何直观理解常返、非常返、正常返、零常返、周期、非周期与遍历状态？
+
+\textbf{简短解释：}令 $T_i^+=\inf\{n\ge1:X_n=i\}$ 为首次正步返回时间。若 $P_i(T_i^+<\infty)=1$，状态 $i$ 常返；否则非常返。常返时，若 $E_iT_i^+<\infty$，称正常返；若期望无穷，称零常返。零常返表示几乎必然会回来，但平均等待时间仍可无穷。
+
+周期
+\[
+ d(i)=\gcd\{n\ge1:p_{ii}^{(n)}>0\}
+\]
+表示所有可能返回时刻共同保留的节拍；$d(i)=1$ 时为非周期。遍历状态是正常返且非周期：它平均而言会稳定返回，又没有固定节拍造成的概率振荡。对不可约的遍历链，固定时刻的转移概率趋于平稳分布；有周期时平稳分布仍可存在，但固定时刻概率可能振荡。
+% STUDY_RECORD_END id=sp-markov-recurrence-period
+
+% STUDY_RECORD_BEGIN id=sp-renewal-series-limit
+\subsection{第 4.1 节：纯更新方程的级数判别}
+\label{note:sp-renewal-series-limit}
+\textbf{出处：}第4.1节，定理4.1.20--4.1.21及其后关于 $\sum_n p_{ii}^{(n)}$ 的注记。
+
+\textbf{最初的问题：}对更新方程
+\[
+ p_0=1,\qquad p_n=\sum_{l=1}^n f_l p_{n-l},\qquad
+ f_l\ge0,\quad \sum_{l\ge1}f_l=1,
+\]
+为何 $\limsup p_n$ 能区分 $\mu=\sum_l l f_l$ 有限还是无穷？周期为何会影响极限？
+
+% FROZEN_PROOF_BEGIN id=sp-renewal-series-standard-proof
+% 用户要求保留此前给出的标准证明原文。未经用户明确要求，不修改本区间内的文字和公式。
+下面给出完全脱离马尔可夫链的纯数列版本。这是 Erdős–Feller–Pollard 离散更新定理的标准初等证明思路。\href{https://sites.oxy.edu/lengyel/M372/1949-01Original%20Erdos-Feller_Pollard%20paper%20on%20renwal%20theory.pdf}{原始论文}
+
+\subsubsection*{命题}
+
+设
+\[
+f_n\ge0,\qquad \sum_{n=1}^{\infty}f_n=1,
+\]
+
+并定义
+\[
+p_0=1,\qquad
+p_n=\sum_{j=1}^n f_jp_{n-j},\quad n\ge1.
+\]
+
+令
+\[
+\mu=\sum_{n=1}^{\infty}nf_n\in[1,\infty]
+\]
+
+以及
+\[
+d=\gcd\{n\ge1:f_n>0\}.
+\]
+
+则
+\[
+p_n=0\qquad(d\nmid n),
+\]
+
+并且
+\[
+\boxed{\lim_{n\to\infty}p_{nd}=\frac d\mu},
+\]
+
+其中约定 $d/\infty=0$。因此
+\[
+\boxed{
+\limsup_{n\to\infty}p_n=
+\begin{cases}
+\dfrac d\mu,&\mu<\infty,\\[5pt]
+0,&\mu=\infty.
+\end{cases}}
+\]
+
+先证明 $d=1$ 的情形。
+
+\subsubsection*{1. 构造尾和}
+
+定义
+\[
+r_k=\sum_{j=k+1}^{\infty}f_j,\qquad k\ge0.
+\]
+
+由于 $\sum_{j\ge1}f_j=1$，有
+\[
+r_0=1,\qquad r_k-r_{k-1}=-f_k.
+\]
+
+而且
+\begin{equation}\tag{1}
+\sum_{k=0}^{\infty}r_k
+=\sum_{k=0}^{\infty}\sum_{j=k+1}^{\infty}f_j
+=\sum_{j=1}^{\infty}jf_j
+=\mu.
+\end{equation}
+
+接下来证明关键恒等式
+\[
+\boxed{\sum_{k=0}^n r_kp_{n-k}=1.}
+\tag{2}
+\]
+
+记左侧为 $R_n$。因为 $r_0=p_0=1$，所以 $R_0=1$。对 $n\ge1$，
+\[
+\begin{aligned}
+R_n
+&=p_n+\sum_{k=1}^n r_kp_{n-k}\\
+&=p_n+\sum_{k=1}^n(r_{k-1}-f_k)p_{n-k}\\
+&=p_n+\sum_{k=0}^{n-1}r_kp_{n-1-k}
+-\sum_{k=1}^nf_kp_{n-k}\\
+&=p_n+R_{n-1}-p_n\\
+&=R_{n-1}.
+\end{aligned}
+\]
+
+所以 $R_n=R_0=1$，即得到式 (2)。
+
+\subsubsection*{2. 一个极值传播性质}
+
+令
+\[
+A=\limsup_{n\to\infty}p_n.
+\]
+
+取子列 $n_\nu\to\infty$，使得
+\[
+p_{n_\nu}\longrightarrow A.
+\]
+
+我们先证明：若 $f_j>0$，则
+\begin{equation}\tag{3}
+p_{n_\nu-j}\longrightarrow A.
+\end{equation}
+
+因为 $0\le p_n\le1$，任意子列都有收敛子列。设沿某个子列
+\[
+p_{n_\nu-j}\longrightarrow B.
+\]
+
+固定 $K\ge j$。由更新方程，
+\[
+p_{n_\nu}
+=
+f_jp_{n_\nu-j}
++\sum_{\substack{1\le k\le K\\k\ne j}}
+f_kp_{n_\nu-k}
++\sum_{K<k\le n_\nu}f_kp_{n_\nu-k}.
+\]
+
+由 $\limsup p_n=A$，对每个固定 $k$ 都有
+\[
+\limsup_{\nu\to\infty}p_{n_\nu-k}\le A.
+\]
+
+又因为 $p_n\le1$，所以
+\[
+A
+\le
+f_jB+
+\sum_{\substack{1\le k\le K\\k\ne j}}f_kA
++\sum_{k>K}f_k.
+\]
+
+令 $K\to\infty$，得到
+\[
+A\le f_jB+(1-f_j)A.
+\]
+
+因为 $f_j>0$，所以 $B\ge A$。但 $A$ 是整个序列的上极限，必有 $B\le A$，于是
+\[
+B=A.
+\]
+
+任意收敛子列都只能趋于 $A$，故式 (3) 成立。
+
+反复使用式 (3)，若
+\[
+s=m_1j_1+\cdots+m_rj_r,
+\qquad
+m_l\in\mathbb Z_{\ge0},\quad f_{j_l}>0,
+\]
+
+则
+\begin{equation}\tag{4}
+p_{n_\nu-s}\longrightarrow A.
+\end{equation}
+
+\subsubsection*{3. 周期 $1$ 的作用}
+
+现在使用
+\[
+\gcd\{n:f_n>0\}=1.
+\]
+
+可以从集合 $\{n:f_n>0\}$ 中选出有限个数
+\[
+a_1,\ldots,a_m
+\]
+
+使得
+\[
+\gcd(a_1,\ldots,a_m)=1.
+\]
+
+由初等数论，这些数的非负整数线性组合包含所有充分大的整数。因此存在 $B$，使得每个 $s\ge B$ 都可以写成
+\[
+s=m_1a_1+\cdots+m_ma_m,
+\qquad m_j\ge0.
+\]
+
+令
+\[
+N_\nu=n_\nu-B.
+\]
+
+对任意固定 $k\ge0$，数 $B+k$ 可以写成上述非负整数线性组合。因此由式 (4)，
+\begin{equation}\tag{5}
+p_{N_\nu-k}
+=p_{n_\nu-(B+k)}
+\longrightarrow A.
+\end{equation}
+
+也就是说，一旦某个子列逼近上极限，向前移动任意固定步数后仍逼近同一个上极限。
+
+\subsubsection*{4. 当 $\mu=\infty$}
+
+把式 (2)用于 $N_\nu$：
+\[
+1=\sum_{k=0}^{N_\nu}r_kp_{N_\nu-k}.
+\]
+
+对任意固定 $M$，由所有项非负，
+\[
+1\ge\sum_{k=0}^M r_kp_{N_\nu-k}.
+\]
+
+令 $\nu\to\infty$，根据式 (5)，
+\[
+1\ge A\sum_{k=0}^M r_k.
+\]
+
+若 $\mu=\infty$，由式 (1)，
+\[
+\sum_{k=0}^{\infty}r_k=\infty.
+\]
+
+再令 $M\to\infty$，只能有
+\[
+A=0.
+\]
+
+因为 $p_n\ge0$，所以
+\[
+\boxed{p_n\longrightarrow0}.
+\]
+
+\subsubsection*{5. 当 $\mu<\infty$}
+
+仍从上极限子列出发。约定 $p_m=0$ 当 $m<0$，则式 (2)可写成
+\[
+1=\sum_{k=0}^{\infty}r_kp_{N_\nu-k}.
+\]
+
+由式 (5)，对每个固定 $k$，
+\[
+p_{N_\nu-k}\longrightarrow A.
+\]
+
+又因为
+\[
+0\le r_kp_{N_\nu-k}\le r_k,
+\qquad
+\sum_{k=0}^{\infty}r_k=\mu<\infty,
+\]
+
+可以使用控制收敛定理：
+\[
+1
+=\lim_{\nu\to\infty}
+\sum_{k=0}^{\infty}r_kp_{N_\nu-k}
+=
+A\sum_{k=0}^{\infty}r_k
+=A\mu.
+\]
+
+因此
+\begin{equation}\tag{6}
+A=\frac1\mu.
+\end{equation}
+
+同样令
+\[
+a=\liminf_{n\to\infty}p_n,
+\]
+
+选择 $p_{n_\nu}\to a$ 的子列。把刚才的论证中的“上极限”换成“下极限”，可以同样证明：
+\[
+p_{N_\nu-k}\to a
+\]
+
+对每个固定 $k$ 成立。再次对式 (2)使用控制收敛定理，得到
+\[
+1=a\mu,
+\]
+
+故
+\[
+a=\frac1\mu.
+\]
+
+所以
+\[
+\liminf p_n=\limsup p_n=\frac1\mu,
+\]
+
+即
+\[
+\boxed{p_n\longrightarrow\frac1\mu}
+\qquad(d=1,\ \mu<\infty).
+\]
+
+结合上一节，当 $d=1$ 时统一写成
+\[
+\boxed{p_n\longrightarrow\frac1\mu},
+\]
+
+并约定 $1/\infty=0$。
+
+\subsubsection*{6. 一般周期 $d$}
+
+若
+\[
+d=\gcd\{n:f_n>0\},
+\]
+
+那么 $f_n>0$ 只可能发生在 $d\mid n$ 时。由更新方程归纳可知：
+\[
+p_n=0\qquad(d\nmid n).
+\]
+
+定义压缩后的数列
+\[
+\widetilde f_m=f_{md},
+\qquad
+\widetilde p_m=p_{md}.
+\]
+
+则
+\[
+\sum_{m=1}^{\infty}\widetilde f_m=1,
+\qquad
+\gcd\{m:\widetilde f_m>0\}=1,
+\]
+
+并且
+\[
+\widetilde p_0=1,\qquad
+\widetilde p_n
+=\sum_{m=1}^n\widetilde f_m\widetilde p_{n-m}.
+\]
+
+其均值为
+\[
+\widetilde\mu
+=\sum_{m=1}^{\infty}m\widetilde f_m
+=\frac1d\sum_{n=1}^{\infty}nf_n
+=\frac\mu d.
+\]
+
+应用刚才证明的周期 $1$ 结论：
+\[
+\widetilde p_n
+\longrightarrow
+\frac1{\widetilde\mu}
+=\frac d\mu.
+\]
+
+也就是
+\[
+\boxed{p_{nd}\longrightarrow\frac d\mu}.
+\]
+
+而非 $d$ 倍数处 $p_n=0$，所以最终得到
+\[
+\boxed{
+\limsup_{n\to\infty}p_n=
+\begin{cases}
+\dfrac d{\sum_{n\ge1}nf_n},
+&\sum_{n\ge1}nf_n<\infty,\\[8pt]
+0,
+&\sum_{n\ge1}nf_n=\infty.
+\end{cases}}
+\]
+
+因此，在知道周期 $d$ 的情况下，
+\[
+\sum_{n=1}^{\infty}nf_n
+=
+\frac{d}{\limsup p_n}
+\]
+
+（当 $\limsup p_n=0$ 时理解为无穷大）。
+% FROZEN_PROOF_END id=sp-renewal-series-standard-proof
+% STUDY_RECORD_END id=sp-renewal-series-limit
+
+\section{补充模型}
+
+% STUDY_RECORD_BEGIN id=sp-random-walk-partial-sums
+\subsection{独立增量部分和是马尔可夫过程}
+\label{note:sp-random-walk-partial-sums}
+\textbf{出处：}补充讨论，未指定书中页码。
+
+\textbf{最初的问题：}若 $X_i$ 独立同分布，$V_n=\sum_{i=1}^nX_i$ 是否为马尔可夫过程？
+
+\textbf{简短解释：}是。因为 $V_{n+1}=V_n+X_{n+1}$，而 $X_{n+1}$ 与过去独立，故
+\[
+ P(V_{n+1}\in A\mid V_0,\ldots,V_n)
+ =P(V_n+X_1\in A\mid V_n).
+\]
+转移规律不依赖 $n$，所以它还是时齐的；即使增量仅独立但不同分布，过程仍为马尔可夫，但通常不时齐。若状态空间不可数，称马尔可夫过程更合适；若部分和只取可数多个值，也可称马尔可夫链。
+% STUDY_RECORD_END id=sp-random-walk-partial-sums
+
+% STUDY_RECORD_BEGIN id=sp-mg1-model-stability
+\subsection{\texorpdfstring{$M/G/1$}{M/G/1} 模型及稳定条件}
+\label{note:sp-mg1-model-stability}
+\textbf{出处：}补充讨论，未指定书中页码。
+
+\textbf{最初的问题：}如何建立 $M/G/1$ 排队模型？$\rho<1$ 中的“稳定”是否有严格含义？
+
+\textbf{简短解释：}到达为强度 $\lambda$ 的泊松过程，服务时间 $S_n$ 独立同分布、与到达过程独立，单服务台按先到先服务处理，通常假设等待空间无限。令 $\rho=\lambda E[S]$。在这些标准假设下，观察每次服务完成后的队长 $Q_n$，有
+\[
+ Q_{n+1}=(Q_n-1)^++A_{n+1},
+\]
+其中 $A_{n+1}$ 是一段服务期间的到达数且 $E[A_{n+1}]=\rho$。系统稳定的严格含义是嵌入队长链正再生、存在平稳概率分布；其充要条件为 $\rho<1$。这只保证平稳分布存在，不保证平均等待时间有限；后者通常还需 $E[S^2]<\infty$。
+% STUDY_RECORD_END id=sp-mg1-model-stability
+
+\end{document}

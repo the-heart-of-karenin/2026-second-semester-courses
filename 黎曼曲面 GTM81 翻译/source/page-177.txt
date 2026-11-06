@@ -1,0 +1,34 @@
+168 
+2 Compact Riemann Surfaces 
+as follows. Per(w J, ••• , Wg) consists of all vectors 
+where rx. runs through the fundamental group 1t1(X) (cf. 10.11). 
+Remark. It is also true (cf. 20.4) that 
+Per(wl, ... , Wg) = {({WJ, ... , {Wg): r:t. E HI(X)}. 
+We will show that Per(w l , ••• , Wg) is a lattice in C g, where C g is considered as 
+a real 2g-dimensional vector space. This lattice is called the period lattice of 
+X relative to the basis (WI' ... , w g ). 
+For the proof we need a lemma. 
+21.3. Lemma. Suppose X is a compact Riemann surface of genus g. Then there 
+are 9 distinct points a b ... , ag E X with the following property: Every holomor-
+phic 110rm W E Q(X) which vanishes at all the points ai' ... , ag is identically 
+zero. 
+PROOF. For a E X, let 
+Ha := {w E n(X): w(a) = O}. 
+Every Ha is either equal to n(X) or else has codimension one in Q(X). Since 
+the intersection of all the Ha is zero and n(X) has dimension g, there exist 9 
+points ai' ... , ag E X such that 
+Hal n ... n H ... = O. 
+These points satisfy the conditions of the Lemma. 
+o 
+21.4. Theorem. Suppose X is a compact Riemann surface of genus 9 2 1 and 
+WI' ... , Wg is a basis ofn(X). Then r:=Per(w l , ... , Wg) is a lattice in C g• 
+PROOF 
+(a) Choose points ai' ... , ag as in the Lemma and disjoint simply con-
+nected coordinate neighborhoods (Vj' Zj) of aj with zj(aJ = 0, for j = 1, ... , 
+g. With respect to these coordinates let 
+Wi = lfJij dZj 
+on V j • 
+By Lemma (21.3) the matrix 
+A:= (lfJi)aj))1 si,jsg 
+has rank g. Now define a mapping 
+F: VI x .. · X Vg-+Cg 

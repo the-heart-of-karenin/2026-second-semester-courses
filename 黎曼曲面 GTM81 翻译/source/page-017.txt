@@ -1,0 +1,42 @@
+1 Covering Spaces 
+From now on we will identify a meromorphic functionf EO <4t'(X) with the 
+corresponding holomorphic mapping f: X -> [p 1. 
+PROOF 
+(a) Let f EO ./II(X) and let P be the set of poles off Then f induces a 
+mapping f: X -> [p I which is clearly continuous. Suppose rp: U -> V and 
+t/;: U' -> V' are charts on X and [pI resp. withJ(U) c U'. We have to show 
+that 
+9 ,= tlf f 
+rp- 1: V -> V' 
+is holomorphic. Since f is holomorphic on X\P, it follows that 9 is holomor-
+phic on V\rp(P). Hence by Riemann's Removable Singularities Theorem, 9 is 
+holomorphic on all of V. 
+(b) The converse follows from the Identity Theorem (1.11). 
+0 
+1.16. Remark. From (1.11) and (1.15) it follows that the Identity Theorem 
+also holds for meromorphic functions on a Riemann surface. Thus any 
+functionf EO .it(X) which is not identically zero has only isolated zeros. This 
+implies that .1t'(X) is a field. 
+EXERCISES (~1) 
+1.1. (a) One point compactijication of[R". For n 2: lletx be a symbol not belonging 
+to [R". Introduce the following topology on the set X ,= [R" U {oo}. A set 
+U c X is open, by definition, if one of the following two conditions is 
+satisfied: 
+(i) 00 ¢ U and U is open in c:;t;" with respect to the usual topology on [R". 
+(ii) x E U and K ,= X\U is compact in [R" with respect to the usual topology 
+on [;.!n. 
+Show that X is a compact Hausdorff topological space. 
+(h) Stereographic projection. Consider the unit II-sphere 
+S" = {(XI' ... , x.+d E [I;l"+l: XI + ... + X;+I = 1} 
+and the stereographic projection 
+0-: S· -> [Rn U {oo) 
+given by 
+11 -=-- Ix 
+(X 10 ... , x.) if X. + I ~ 1 
+u(xI, ... ,x.+d'=j 
+-.+1 
+\ 00, 
+if Xn + 1 = 1. 
+Show that u is a homeomorphism of S· onto X. 
+1.2. Suppose 
+(; ~) E GL(2, C). 

@@ -1,0 +1,58 @@
+VI 
+§19. 
+Harmonic Differential Forms 
+§20. 
+Abel's Theorem 
+§21. 
+The Jacobi Inversion Problem 
+Chapter 3 
+Non-compact Riemann Surfaces 
+§22. 
+The Dirichlet Boundary Value Problem 
+§23. 
+Countable Topology 
+§24. 
+Weyl's Lemma 
+§25. 
+The Runge Approximation Theorem 
+§26. 
+The Theorems of Mittag-Leffler and Weierstrass 
+§27. 
+The Riemann Mapping Theorem 
+§28. 
+Functions with Prescribed Summands of Automorphy 
+§29. 
+Line and Vector Bundles 
+§30. 
+The Triviality of Vector Bundles 
+§31. 
+The Riemann-Hilbert Problem 
+Appendix 
+A. 
+Partitions of Unity 
+B. 
+Topological Vector Spaces 
+References 
+Symbol Index 
+Author and Subject Index 
+Contents 
+153 
+159 
+166 
+175 
+175 
+185 
+190 
+196 
+201 
+206 
+214 
+219 
+228 
+231 
+237 
+237 
+238 
+243 
+247 
+249 

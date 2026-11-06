@@ -1,0 +1,41 @@
+{"time": "2026-10-30T21:33:26.182830+08:00", "success": true, "scope": "前言、第1章引言、§1", "visual_review": false}
+{"time": "2026-10-30T21:35:30.046830+08:00", "success": true, "scope": "前言、第1章引言、§1—2", "visual_review": false}
+{"time": "2026-10-30T21:38:26.858928+08:00", "success": true, "scope": "前言及连续译稿至§3", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:40:38.239863+08:00", "success": true, "scope": "前言及连续译稿至§4", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:42:26.247814+08:00", "success": true, "scope": "前言及连续译稿至§5", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:43:30.665506+08:00", "success": true, "scope": "前言及连续译稿至§6", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:44:30.158807+08:00", "success": true, "scope": "前言及连续译稿至§7", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:46:27.933575+08:00", "success": true, "scope": "前言及连续译稿至§8", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:48:19.357976+08:00", "success": true, "scope": "前言及连续译稿至§9", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:50:16.347721+08:00", "success": true, "scope": "前言及连续译稿至§10", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:52:30.053004+08:00", "success": true, "scope": "前言及连续译稿至§11", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:54:43.815027+08:00", "success": true, "scope": "前言及连续译稿至§12", "visual_review": false, "scope_metadata_corrected": true}
+{"time": "2026-10-30T21:55:49.588135+08:00", "success": true, "scope": "前言、第一章全部、第二章引言及§12（原书第104页）", "visual_review": false}
+{"time": "2026-10-30T22:09:12.677921+08:00", "success": true, "scope": "累计至§13", "visual_review": false}
+{"time": "2026-10-30T22:10:53.316000+08:00", "success": true, "scope": "累计至§14", "visual_review": false}
+{"time": "2026-10-30T22:12:20.544232+08:00", "success": true, "scope": "累计至§15", "visual_review": false}
+{"time": "2026-10-30T22:13:16.544578+08:00", "success": true, "scope": "累计至§16", "visual_review": false}
+{"time": "2026-10-30T22:15:14.003409+08:00", "success": true, "scope": "累计至§17", "visual_review": false}
+{"time": "2026-10-30T22:16:24.075934+08:00", "success": true, "scope": "累计至§18", "visual_review": false}
+{"time": "2026-10-30T22:17:39.940204+08:00", "success": true, "scope": "累计至§19", "visual_review": false}
+{"time": "2026-10-30T22:19:01.968462+08:00", "success": true, "scope": "累计至§20", "visual_review": false}
+{"time": "2026-10-30T22:20:13.447250+08:00", "success": true, "scope": "累计至§21", "visual_review": false}
+{"time": "2026-10-30T22:22:00.088831+08:00", "success": true, "scope": "累计至§22", "visual_review": false}
+{"time": "2026-10-30T22:23:08.542988+08:00", "success": true, "scope": "累计至§23", "visual_review": false}
+{"time": "2026-10-30T22:24:09.019215+08:00", "success": true, "scope": "累计至§24", "visual_review": false}
+{"time": "2026-10-30T22:25:17.594073+08:00", "success": true, "scope": "累计至§25", "visual_review": false}
+{"time": "2026-10-30T22:26:07.399473+08:00", "success": true, "scope": "累计至§26", "visual_review": false}
+{"time": "2026-10-30T22:27:03.052040+08:00", "success": true, "scope": "累计至§26", "visual_review": false}
+{"time": "2026-10-30T22:32:58.762478+08:00", "success": true, "scope": "累计至§27", "visual_review": false}
+{"time": "2026-10-30T22:34:04.791845+08:00", "success": true, "scope": "累计至§28", "visual_review": false}
+{"time": "2026-10-30T22:35:56.996492+08:00", "success": true, "scope": "累计至§29", "visual_review": false}
+{"time": "2026-10-30T22:36:47.360377+08:00", "success": true, "scope": "累计至§30", "visual_review": false}
+{"time": "2026-10-30T22:37:42.289444+08:00", "success": true, "scope": "累计至§31", "visual_review": false}
+{"time": "2026-10-30T22:44:50.686162+08:00", "success": true, "scope": "累计至§31", "visual_review": false}
+{"time": "2026-10-30T22:48:12.095388+08:00", "success": true, "scope": "全书：§1—§31、全部习题、附录、参考文献、索引、出版资料及丛书目录", "visual_review": false}
+{"time": "2026-10-30T22:49:49.131497+08:00", "success": true, "scope": "全书：§1—§31、全部习题、附录、参考文献、索引、出版资料及丛书目录", "visual_review": false}
+{"time": "2026-10-30T22:51:55.316349+08:00", "event": "final_qa", "scope": "全书初译", "visual_review": true, "sample_page_count": 30, "full_line_by_line_proofread": false, "pdf_sha256": "e61f16a06888b0cad6ee0a62386b8a8fbdf81db698d614c778ae4fb72bd757f9", "record": "校对记录.md"}
+{"time": "2026-10-31T00:10:34.319160+08:00", "success": true, "scope": "全书：§1—§31、全部习题、附录、参考文献、索引、出版资料及丛书目录", "visual_review": false}
+{"time": "2026-10-31T10:48:51.776227+08:00", "success": true, "scope": "全书：§1—§31、全部习题、附录、参考文献、索引、出版资料及丛书目录", "visual_review": false}
+{"time": "2026-10-31T10:49:51.888225+08:00", "success": true, "scope": "全书：§1—§31、全部习题、附录、参考文献、索引、出版资料及丛书目录", "visual_review": false}
+{"date": "2026-10-31", "event": "tikz_redraw_final_review", "figures": 6, "pdf_pages": 137, "visual_review": true, "review_pages": [10, 11, 20, 23, 38, 96], "pdf_sha256": "b8c106183123bffbe7a3a7c50c50b2079f2741828709c6ac9dcab2646e187df3", "record": "图片重绘记录.md"}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-31",
+  "pdf_pages": 137,
+  "sha256": "b8c106183123bffbe7a3a7c50c50b2079f2741828709c6ac9dcab2646e187df3",
+  "figures": 6,
+  "caption_pages": {
+    "1": [
+      10
+    ],
+    "2": [
+      11
+    ],
+    "3": [
+      20
+    ],
+    "4": [
+      23
+    ],
+    "5": [
+      38
+    ],
+    "6": [
+      96
+    ]
+  },
+  "raster_images_in_redrawn_figures": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "warnings": [],
+  "source": "LaTeX/figures/tikz/fig01.tex through fig06.tex",
+  "visual_review": "completed for all six figures and their book pages"
+}

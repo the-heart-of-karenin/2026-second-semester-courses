@@ -1,0 +1,35 @@
+170 
+2 Compact Riemann Surfaces 
+But from Corollary (19.8) it then follows that 
+W :=C1 W 1 + ... + CgWg = 0, 
+a contradiction! 
+This proves that r is a lattice in ICg. 
+o 
+21.5. Remark. Theorem (21.4) tells us that there are 2g closed curves 0: I, ... , 
+U2y on X such that the vectors 
+v = 1, ... , 2g, 
+are linearly independent over the reals and 
+Per(w l, ... , w y ) = .li'l + ... + ;[Y2y· 
+One can easily see from this that the homology classes of 0: 1, ... , 0: 29 in 
+HI (X) are linearly independent over .l and generate HI (X). Thus 
+H 1(X) ~ ;[29. 
+21.6. The Jacobi Variety and the Picard Group. Suppose X is a compact 
+Riemann surface of genus 9 and WI' ... , wY is a basis of Q(X). Then 
+Jac(X) :=ICYjPer(w1, ... ,0)9) 
+is called the Jacobi variety of X. Here we are considering Jac(X) only as an 
+abelian group. It also has the structure of a compact complex manifold (a 
+complex g-dimensional torus), similar to the tori defined in (l.5.d). This 
+structure will not be dealt with here. Note that the definition depends on the 
+choice of basis WI' ... , wY' but the choice of a different basis leads to an 
+isomorphic Jac{X). 
+Let Divo(X) c Div(X) denote the subgroup of divisors of degree zero and 
+Divp(X) c Divo(X) the subgroup of principal divisors. The quotient 
+Pic(X):= Div(X)/Div p(X) 
+is called the Picard group of X. We will also consider the subgroup 
+Pico(X) := Divo(X)/Div p(X) 
+of Pic(X). Since Div(X)/Divo(X) = ;[, we have an exact sequence 
+0->- Pico(X) ->- Pic(X) ->- .l ->- O. 
+Define a map 
+<1>: Divo(X) ->- Jac(X) 
+as follows. Suppose D E Divo(X) and c Eel (X) is a chain with OC = D. The 
+vector 

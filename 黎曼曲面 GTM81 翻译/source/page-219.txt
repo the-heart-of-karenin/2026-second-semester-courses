@@ -1,0 +1,39 @@
+210 
+3 Non-compact Riemann Surfaces 
+By the Runge Approximation Theorem there exists a sequence In E (YI(X), 
+n EN, which converges uniformly on compact subsets in Y to f Hence for 
+every closed curve IX in Y the integrals S, I.wo converge to S, w. Since every 
+I-formf"wo has a primitive on X, L f~wo = O. Thus L w = O. Since all the 
+periods of w vanish, by Theorem (10.15) w has a primitive. 
+0 
+27.9. The Riemann Mapping Theorem. Suppose X is a Riemann sUlface with 
+RhJ(X) = O. Then X can be mapped bihulumurphically onto either the 
+Riemann sphere [pI, the complex plane IC or else the unit disk D. 
+Remark. As was pointed out in (27.1), the assumption Rh~(X) = 0 holds 
+whenever X is simply connected. Since [pI, IC and D are simply connected, 
+the Riemann Mapping Theorem shows that the converse also holds. 
+PROOF 
+(a) If X is compact, then every holomorphic function on X is constant 
+and so d{!:'(X) = O. Hence Rh~(X) = 0 implies Q(X) = 0, i.e., X has gcnus O. 
+By Corollary (16.13) X is biholomorphic to pl. 
+(b) Now assume X is non-compact. By Theorem (23.9) there exists an 
+exhaustion Yo <s:: YI <s:: Yz <s:: ••. of X by Runge domains Yn whose boundaries 
+are regular with respect to solving the Dirichlet problem. By Lemma (27.8) 
+RhJ.(Y,,) = 0 for every n. Thus by Theorem (27.3) every Y" is biholomorphic 
+to the unit disk. Choose a point a E Yo and a coordinate neighborhood 
+(U, z) of a. Then there exists a real number rn > 0 and a biholomorphic 
+mapping 
+f~: Y,,-->D(rn) 
+with 
+In(a) = 0 and;:; (a) = 1. 
+(c) Now rn <:::: rn+ I for every n. To see this note that the mapping 
+h:= f,,+ 1 I;; I: D(rn) --> D(rn+ 1) 
+satisfies 11(0) = 0 and 11'(0) = 1 and thus by the Remark in (27.4) one has 
+1 = h'(O) <:::: rn+ drn. Let 
+R := lim rn E ]0, ex) J. 
+We will now show that X is mapped biholomorphically onto D(R). 
+(d) We claim that there exists a subsequence U~khE of the sequence 
+(f,,)n E ',j such that for every m the sequence (f"k I Ymh 2: m converges uniformly 
+on compact subsets of Ym . The mapping zf---*Iol(roz) maps D biholo-
+morphically onto Yo. Set 
+n 2 O. 

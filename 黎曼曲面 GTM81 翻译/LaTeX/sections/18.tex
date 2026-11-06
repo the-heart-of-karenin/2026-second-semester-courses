@@ -1,0 +1,88 @@
+\section{具有指定主部的函数与微分形式}
+\sourcepage{146}
+经典Mittag--Leffler定理断言，复平面上总存在具有适当指定主部的亚纯函数。紧黎曼曲面上相应问题未必可解，但Serre对偶定理给出可解的充要条件。
+\entry{18.1}{亚纯函数的Mittag--Leffler分布}
+若$\mu=(f_i)\in C^0(\mathfrak U,\MM)$满足$f_j-f_i$在交集上全纯，即$\delta\mu\in Z^1(\mathfrak U,\OO)$，称为Mittag--Leffler分布。这表示各函数在共同定义域上的主部相同。若整体亚纯函数$f$满足$f|_{U_i}-f_i\in\OO(U_i)$，称它为$\mu$的解。记$[\delta\mu]\in H^1(X,\OO)$。
+\sourcepage{147}
+\textbf{定理。}$\mu$可解当且仅当$[\delta\mu]=0$。
+\begin{proof}
+若有解，令$g_i:=f_i-f$，则$f_j-f_i=g_j-g_i$，故为上边缘。反之，若存在全纯$g_i$使$f_j-f_i=g_j-g_i$，则$f_i-g_i$在交集上相同，拼成整体亚纯解。
+\end{proof}
+\textbf{注记。}由(17.17)，紧曲面的任意$H^1(X,\OO)$类均可表示为某分布的$[\delta\mu]$。故亏格$\ge1$时存在无解问题；球面上第一上同调为零，每个分布均可解，亦可直接看出。
+\entry{18.2}{}
+若$X$紧，$\omega$全纯，则$\omega\mu$为微分形式的Mittag--Leffler分布，其留数已由(17.2)定义。
+
+\textbf{定理。}$\mu$可解，当且仅当对每个$\omega\in\Omega(X)$有$\operatorname{Res}(\omega\mu)=0$。
+\begin{proof}
+$[\delta\mu]=0$当且仅当所有对偶泛函均取零。由Serre对偶，等价于$\langle\omega,[\delta\mu]\rangle=0$对所有$\omega$成立；由(17.3)，此值为$\operatorname{Res}(\omega\mu)$，再用(18.1)。
+\end{proof}
+\sourcepage{148}
+\textbf{注记。}(a)只需对全纯1形式的一组基$\omega_1,\ldots,\omega_g$验证，故可解等价于$g$个线性方程。
+(b)两个解之差整体全纯，故为常数；解在相差加法常数的意义下唯一。
+\entry{18.3}{对双周期函数的应用}
+设$\Gamma=\Z\gamma_1+\Z\gamma_2$，基本平行四边形$P:=\{t_1\gamma_1+t_2\gamma_2:0\le t_1,t_2<1\}$。在$a_j\in P$处指定主部$\sum_{\nu=-r_j}^{-1}c_\nu^{(j)}(z-a_j)^\nu$。存在具有这些主部的$\Gamma$双周期亚纯函数，当且仅当$\sum_{j=1}^nc_{-1}^{(j)}=0$。
+\begin{proof}
+双周期函数即环面上的亚纯函数，所给主部定义分布$\mu$。由$dz$诱导的形式$\omega$构成一维$\Omega(X)$的基，且$\operatorname{Res}(\omega\mu)=\sum_jc_{-1}^{(j)}$，用上一定理。
+\end{proof}
+特别地，不存在每个周期平行四边形内恰有一个一阶极点的双周期函数，因为此时留数非零，参见(5.7.c)。下面研究$g>1$时仅有一个阶数$\le g$的极点的函数，为此先作准备。
+\entry{18.4}{Wronski行列式}
+对区域$U\subset\C$上的全纯函数$f_1,\ldots,f_g$，定义$W(f_1,\ldots,f_g):=\det(f_k^{(m)})_{0\le m\le g-1,1\le k\le g}$。
+\sourcepage{149}
+线性无关函数的Wronski行列式不恒零。对$g$归纳：若$W(f_1,\ldots,f_{g-1})\not\equiv0$，考虑$W(f_1,\ldots,f_{g-1},w)=0$。按末列展开，得$a_0w^{(g-1)}+a_1w^{(g-2)}+\cdots+a_{g-1}w=0$，其中$a_0=W(f_1,\ldots,f_{g-1})$。前$g-1$个函数为解。若完整Wronski恒零，$f_g$亦为解，在$a_0\ne0$处由线性方程唯一性为前者的线性组合，再由恒等定理在整个$U$成立，矛盾。
+
+设$X$紧且$g\ge1$，$\omega_1,\ldots,\omega_g$为全纯1形式基。在坐标$(U,z)$中写$\omega_k=f_kdz$，定义$W_z(\omega_1,\ldots,\omega_g):=W(f_1,\ldots,f_g)$，导数对$z$取。
+\entry{18.5}{定理}
+若$z,\widetilde z$为两坐标，则在交集上
+\[
+W_{\widetilde z}(\omega_1,\ldots,\omega_g)=\left(\frac{dz}{d\widetilde z}\right)^{g(g+1)/2}W_z(\omega_1,\ldots,\omega_g).
+\]
+\sourcepage{150}
+\begin{proof}
+令$\psi=dz/d\widetilde z$，写$\omega_k=f_kdz=\widetilde f_kd\widetilde z$，则$\widetilde f_k=\psi f_k$。归纳得
+\[
+\frac{d^m\widetilde f_k}{d\widetilde z^m}=\psi^{m+1}\frac{d^mf_k}{dz^m}+\sum_{\nu=0}^{m-1}\phi_{m\nu}\frac{d^\nu f_k}{dz^\nu},
+\]
+其中$\phi_{m\nu}$全纯且与$k$无关。行列式通过逐行消去低阶项，得到因子$\psi^{1+\cdots+g}$，即所求公式。
+\end{proof}
+若换全纯形式的基，Wronski仅乘非零常数，故下面的定义与基和局部坐标均无关。
+\entry{18.6}{定义}
+若$W_z$在$p$处为零，则称$p$为\textbf{Weierstrass点}；该零点阶数称为其\textbf{权}。按定义，亏格0的球面没有Weierstrass点。
+\entry{18.7}{定理}
+存在仅在$p$有阶数$\le g$极点、其余处全纯的非常值亚纯函数，当且仅当$p$为Weierstrass点。
+\begin{proof}
+取$z(p)=0$，展开$\omega_k=\sum_{\nu=0}^\infty a_{k\nu}z^\nu dz$。所求函数的主部为$h=\sum_{\nu=0}^{g-1}c_\nu/z^{\nu+1}$，其中$c_\nu$不全零。
+\sourcepage{151}
+它对应分布$(h,0)$，由(18.2)可解当且仅当$\sum_{\nu=0}^{g-1}a_{k\nu}c_\nu=0$（$k=1,\ldots,g$）。非零解存在当且仅当$\det(a_{k\nu})=0$，等价于$W_z(\omega_1,\ldots,\omega_g)(p)=0$。
+\end{proof}
+\entry{18.8}{定理}
+Weierstrass点按权计数，总数为$(g-1)g(g+1)$。
+\begin{proof}
+取坐标覆盖$(U_i,z_i)$，令$\psi_{ij}=dz_j/dz_i$、$N=g(g+1)/2$、$W_i=W_{z_i}$。由(18.5)，$W_i=\psi_{ij}^NW_j$，故$D(x):=\operatorname{ord}_xW_i$定义权除子。设$D_1=(\omega_1)$，局部$\omega_1=f_{1i}dz_i$，则$f_{1i}=\psi_{ij}f_{1j}$。因此$W_i f_{1i}^{-N}$拼成整体亚纯函数$f$，且$(f)=D-ND_1$。由$\deg(f)=0$及$\deg D_1=2g-2$，有$\deg D=N(2g-2)=(g-1)g(g+1)$。
+\end{proof}
+\entry{18.9}{推论}
+每个亏格$g\ge2$的紧曲面有至多$g$叶的球面全纯覆盖。特别地，亏格2曲面均为超椭圆曲面。
+\sourcepage{152}
+\textbf{注记。}实际上可把叶数界改为$\lfloor(g+3)/2\rfloor$，参见[56]。
+\entry{18.10}{具有指定主部的微分形式}
+对形式分布$\mu=(\omega_i)$，若整体亚纯1形式$\omega$满足$\omega|_{U_i}-\omega_i\in\Omega(U_i)$，称为解。与(18.1)相同，可解当且仅当$[\delta\mu]\in H^1(X,\Omega)$为零。
+\entry{18.11}{定理}
+紧曲面上的形式分布可解，当且仅当$\operatorname{Res}\mu=0$。
+\begin{proof}
+由(17.3)，$\operatorname{Res}\mu=\operatorname{Res}([\delta\mu])$，而(17.11)说明留数泛函是同构。
+\end{proof}
+\entry{18.12}{推论}
+(a)任意$p$及$n\ge2$，存在仅在$p$有$n$阶极点的亚纯1形式，称为\textbf{第二类初等微分}。
+(b)对不同$p_1,p_2$，存在仅在两处有一阶极点、留数分别为$+1,-1$的亚纯1形式，称为\textbf{第三类初等微分}。
+\subsection*{习题（第18节）}
+\entry{18.1}{}
+设$f$在$U=\{|z|<r\}$全纯且$f(0)\ne0$。
+(a)令$f_j=z^{j-1}f$，证明其Wronski在0非零。
+(b)令$\varphi_j=z^{2j-2}f$，证明其Wronski在0的零点阶数为$g(g-1)/2$。
+\entry{18.2}{}
+设$\pi:X\to\PP^1$为亏格$g\ge2$的超椭圆曲面。
+(a)证明其$2g+2$个分歧点均为Weierstrass点。
+(b)证明没有其他Weierstrass点，且每点权为$g(g-1)/2$。［提示：用18.1。］
+\entry{18.3}{}
+设$X$紧且$g\ge1$，$\omega_1,\ldots,\omega_g$为全纯形式基，$D\ge0$。令$M_D$为在某开覆盖上属于$C^0(\mathfrak U,\OO_D)$的所有Mittag--Leffler分布之集。
+\sourcepage{153}
+定义$R:M_D\to\C^g$，$R(\mu):=(\operatorname{Res}(\mu\omega_1),\ldots,\operatorname{Res}(\mu\omega_g))$。证明$\dim H^1(X,\OO_D)=g-\dim R(M_D)$。

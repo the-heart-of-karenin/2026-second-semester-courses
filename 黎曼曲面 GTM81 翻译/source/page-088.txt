@@ -1,0 +1,64 @@
+10 The Integration of Differential Forms 
+and letting g(r, e) := g(reiO ), one gets 
+rr dw = 
+JJ 
+'A 
+e$lzl$R 
+JJ 
+og 
+J,j' 
+ox dx dy = 
+. 
+e5, r'5: R 
+0$0$ 2" 
+cos e -
+- -- -
+r dr de 
+( 
+og 
+sin e og) 
+or 
+r 
+(J() 
+(cos e :r (rg) - :e (sin eg) ) dr de. 
+Now for every fixed r E [e, R] 
+.2n 0 
+10 =2" 
+Jo ofJ (sin e g) de = sin fJ g(r, fJ) 0=0 = o. 
+Then 
+fJ 
+.2" 
+( . R 0 
+) 
+'A dw = Jo cos fJ Je a;. (rg) dr dfJ 
+,2" 
+. 2" 
+= I g(R, fJ)R cos e de -
+f 
+g(e, e)£ cos e de 
+'0 
+• 0 
+= J 9 dy - r 
+9 dy = r w. 
+Izl=R 
+'Izl=< 
+• ,'A 
+79 
+The case w = f dx is reduced to the case just considered by making the 
+change of coordinates (x, y)~ (y, - x) and noting that this transformation 
+has Jacobian determinant 1. This proves Stokes' Theorem for an annulus. 
+The case of the disk is obtained by letting /; -> o. 
+10.20. Theorem. Suppose X is a Riemann surface and w E g(l)(X) is a differ-
+ential form with compact support. Then 
+JJ dw = O. 
+x 
+PROOF. By multiplying by a partition of unity as in (lO.l8.b) we may write w 
+as a sum w = WI + '" + W n , where each W k has compact support which lies 
+entirely in one chart. 
+Without loss of generality we may thus assume X = C. 
+Choose R > 0 so large that 
+Supp(w) C {z E C: Izl < R}. 
+Then 
+J J dw = J J dw = J w = J 0 = o. 
+c 
+o 

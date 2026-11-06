@@ -1,0 +1,43 @@
+17 The Serre Duality Theorem 
+141 
+17.15. Coverings of the Riemann Sphere. For the special case of an n-sheeted 
+covering n: X ---+ [pI of the Riemann sphere with total branching order bone 
+gets the genus g of X from the Riemann-Hurwitz formula, i.e., 
+b 
+g=2:- n +1. 
+If one has a double covering of [pI, then b is equal the number of branch 
+points and g = (b/2) -
+1. A compact Riemann surface of genus> 1 which 
+admits a double covering of [pI is called hyperelliptic. 
+For example, let n: X ---+ [pI be the Riemann surface of Jp(z), where 
+P(z) = (z - al )' .... (z - ak) 
+is a polynomial of degree k which has distinct roots aj (cf. 8.10). Since b must 
+be even, we see that X is branched over 00 precisely if k is odd. This was 
+proved earlier. The genus of X is g = [(k - 1 )/2], where [x] denotes the 
+largest integer S:x. One can give an explicit basis Wb •.. , Wg for the vector 
+space of holomorphic I-forms on X as follows 
+zj- I dz 
+Wj:= JP(z) , 
+1 s:j s: g = [(k - 1)/2], 
+where z is simply another notation for the meromorphic function 
+n: X ---+ [pl. Using local coordinates at the critical points one can easily show 
+that the Wj are holomorphic on all of X. Clearly WI' ... , Wg are linearly 
+independent. 
+17.16. Theorem. Suppose X is a compact Riemann surface of genus g and Dis 
+a divisor on X. Then 
+HI(X, (1)D) = 0 
+whenever deg D > 2g - 2. 
+PROOF. Suppose W is a non-vanishing meromorphic I-form on X and K is its 
+divisor. Then by (17.4) there is an isomorphism !LD ~ (1)K-D' thus 
+Hl(X, (!;D)* ~ HO(X, !L D ) ~ HO(X, 
+(1)K-V)' If deg D> 2g - 2, then 
+deg(K - D) < O. Thus HO(X, (I)K_D) = 0 by Theorem (16.5). 
+17.17. Corollary. Suppose X is a compact Riemann surface and A is the sheaf 
+of meromorphic junctions on X. Then 
+PROOF. Let ~ E Hl(X, j!) be a cohomology class which is represented by a 
+cocycle (hj) E Zl(U, . .It). Passing to a refinement ofU, if necessary, one may 
+assume without loss of generality that the total number of poles of all thej;j 
+is finite. Hence there is a divisor D with deg D > 2g - 2 such that 
+(/;J E ZI(U, (1)D)' By (17.16) the cocycle (k) is cohomologous to zero rela-
+tive to the sheaf (1)v and thus also relative to the sheaf A. 
+0 

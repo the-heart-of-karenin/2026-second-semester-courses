@@ -1,0 +1,38 @@
+20 
+1 Covering Spaces 
+3.3. Let (X, a) and (Y, b) be topological spaces with base points a E X and bEY. Let 
+f, g: X ...... Y be two continuous maps withj(a) = g(a) = b. Thenfand 9 are called 
+homotopic if there exists a continuous map 
+F: X x [0, 1] ...... Y 
+such that F(x, 0) = j(x) and F(x, 1) = g(x) for every x E X and F(a, t) = b for 
+every t E [0, 1]. Consider the induced maps 
+f*, g*: ITdX, a) ..... ITl(Y' b). 
+Show that f* = 9 * iff and 9 are homotopic. 
+§4. Branched and Unbranched Coverings 
+Non-constant holomorphic maps between Riemann surfaces are covering 
+maps, possibly having branch points. For this reason we now gather 
+together the most important ideas and results from the theory of covering 
+spaces. 
+4.1. Definition. Suppose X and Yare topological spaces and p: Y -> X is a 
+continuous map. For x E X, the set p-l(X) is called the fiber of p over x. If 
+y E p-l(X), then one says that the point y lies over x. If p: Y -> X and 
+q: Z -> X are continuous maps, then a map f: Y -> Z is called jiber-
+preserving if p = q J. This means that any point y E Y, lying over the point 
+x E X, is mapped to a point which also lies over x. 
+A subset A of a topological space is called discrete if every point a E A has 
+a neighborhood V such that V (l A = {a}. A mapping p: Y -> X, between 
+topological spaces X and Y, is said to be discrete if the fiber p - l(X) of every 
+point x E X is a discrete subset of Y. 
+4.2. Theorem. Suppose X and Yare Riemann surfaces and p: Y -> X is a 
+non-constant holomorphic map. Then p is open and discrete. 
+PROOF. By (2.4) the map p is open. If the fiber of some point a E X were not 
+discrete, then, by the Identity Theorem (1.11), P would be identically equal to 
+~ 
+0 
+If p: Y -> X is a non-constant holomorphic map, then we will say that Y is 
+a domain over X. 
+A holomorphic (resp. meromorphic) functionf: Y -> IC (resp.f: Y -> pi) 
+may also be considered as a multi-valued holomorphic (meromorphic) func-
+tion on X. If x E X and p-I(X) = {y/ j E J}, then the ftyJ, j E J, are the 
+different values of this multi-valued function at the point x. Of course it 
+might turn out that p-l(X) is a single point or is empty. 

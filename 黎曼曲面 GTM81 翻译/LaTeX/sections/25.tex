@@ -1,0 +1,54 @@
+\section{Runge逼近定理}
+\sourcepage{196--197}
+经典Runge定理断言，复平面单连通区域上的全纯函数可在紧子集上一致地由整函数、从而由多项式逼近。Behnke--Stein[51]推广到任意非紧黎曼曲面：把单连通条件换为补集无紧连通分支。这里采用Malgrange[55]以Weyl引理为基础的泛函分析证明。
+\entry{25.1}{}
+在$\mathcal E(Y)$上引入Fréchet空间结构。选可数紧集族$K_j$覆盖$Y$，每个包含于坐标邻域$(U_j,z_j)$，$z_j=x_j+iy_j$。对$\nu\in\mathbb N^2$定义半范数$p_{j\nu}(f):=\sup_{a\in K_j}|D_j^\nu f(a)|$，$D_j^\nu=\partial_{x_j}^{\nu_1}\partial_{y_j}^{\nu_2}$。由$\{p_{j\nu}<\varepsilon\}$的有限交组成0的邻域基。收敛意味着函数及所有导数在每个紧集上一致收敛。此拓扑与所选紧集、坐标无关，使空间成为Fréchet空间。
+
+在$\OO(Y)$上诱导的拓扑正是紧集上一致收敛拓扑，因为全纯函数的局部一致收敛蕴含所有导数的局部一致收敛。类似地，对$\omega=f_jd\bar z_j$定义$p_{j\nu}(\omega):=\sup_{K_j}|D_j^\nu f_j|$，得到$\mathcal E^{0,1}(Y)$的Fréchet结构。
+\entry{25.2}{引理}
+每个连续线性泛函$T:\mathcal E(Y)\to\C$都有紧支集：存在紧$K\subset Y$使$\operatorname{Supp}f\subset Y\setminus K$时$T[f]=0$。对$(0,1)$形式亦然。
+\begin{proof}
+由连续性，某0邻域上$|T[f]|<1$，其中含有限个半范数小球之交。令$K$为涉及的有限个$K_j$之并。若$f$支集避开$K$，则这些半范数对任意$\lambda f$均为零。故$|T[f]|<1/\lambda$对所有$\lambda>0$成立，只能为零。
+\end{proof}
+\entry{25.3}{引理}
+设$Z\subset X$开，连续线性泛函$S:\mathcal E^{0,1}(X)\to\C$对每个紧支集于$Z$的$g$满足$S[d''g]=0$。
+\sourcepage{198}
+则存在$\sigma\in\Omega(Z)$使对每个紧支集于$Z$的$\omega$有$S[\omega]=\iint_Z\sigma\wedge\omega$。\translatornote{原文定理行写$\Omega(X)$，证明实际构造的是$\Omega(Z)$；此处按证明写出。}
+\begin{proof}
+取$Z$内坐标卡$U$，对$\varphi\in\mathcal D(U)$，把$\varphi d\bar z$在外部延零，记$\widetilde\varphi$。则$\varphi\mapsto S[\widetilde\varphi]$为分布，并在所有$\partial_{\bar z}g$上为零。由(24.10)，它由唯一全纯函数表示；吸收$dz\wedge d\bar z=-2i dxdy$的常因子后，写为$S[\widetilde\varphi]=\iint_Uh(z)\varphi(z)dz\wedge d\bar z$。令$\sigma_U=h dz$。
+
+不同坐标卡上所得形式在交集对所有测试形式积分相同，故彼此相等，拼成$\sigma\in\Omega(Z)$。对任意紧支集形式，用单位分解为有限个坐标卡内支集的形式，再逐项相加即得。
+\end{proof}
+\sourcepage{199}
+\entry{25.4}{定理}
+设$Y\Subset X$为非紧黎曼曲面中的Runge开集。若$\overline Y\subset Y'\Subset X$开，则限制$\OO(Y')\to\OO(Y)$的像在紧集上一致收敛拓扑中稠密。
+\begin{proof}
+令$\beta:\mathcal E(Y')\to\mathcal E(Y)$为限制。由Hahn--Banach定理，只须证明：若连续线性泛函$T$在$\beta\OO(Y')$上为零，则在$\OO(Y)$上为零。
+
+对$\omega\in\mathcal E^{0,1}(X)$，由(14.16)取$f\in\mathcal E(Y')$使$d''f=\omega|_{Y'}$，定义$S[\omega]:=T[f|_Y]$。两种$f$之差在$Y'$全纯，故定义无关选择。
+
+为证$S$连续，令$V:=\{(\omega,f):d''f=\omega|_{Y'}\}\subset\mathcal E^{0,1}(X)\times\mathcal E(Y')$。它为闭子空间，因而Fréchet。投影$\operatorname{pr}_1:V\to\mathcal E^{0,1}(X)$满射，由Banach定理为开映射；而$S\operatorname{pr}_1=T\beta\operatorname{pr}_2$连续，故$S$连续。
+
+由(25.2)，有紧集$K\subset Y$、$L\subset X$分别支承$T,S$。若$g$紧支集于$X\setminus K$，则$S[d''g]=T[g|_Y]=0$。由(25.3)，存在$\sigma\in\Omega(X\setminus K)$，使$S[\omega]=\iint\sigma\wedge\omega$对该开集内的紧支集形式成立。
+\sourcepage{200}
+由$S$支于$L$，$\sigma$在$X\setminus(K\cup L)$为零。$X\setminus\Lambda(K)$的每个分支均非相对紧，因而遇此集合。由恒等定理，$\sigma$在$X\setminus\Lambda(K)$为零，所以支集于此处的$\omega$有$S[\omega]=0$。
+
+任取$f\in\OO(Y)$。由$Y$为Runge，$\Lambda(K)\subset Y$。选$g\in\mathcal E(X)$紧支集于$Y$且在$\Lambda(K)$附近等于$f$。则$T[f]=T[g|_Y]=S[d''g]$，而$d''g$支集避开$\Lambda(K)$，故此值为零。
+\end{proof}
+\entry{25.5}{Runge逼近定理}
+非紧黎曼曲面$X$的开子集$Y$，若补集没有紧连通分支，则每个$Y$上的全纯函数均可在紧子集上一致地由$X$上的全纯函数逼近。
+\begin{proof}
+只须考虑$Y$相对紧的情形。给定$f\in\OO(Y)$、紧$K\subset Y$及$\varepsilon>0$，取Runge穷竭$Y_0:=Y\Subset Y_1\Subset\cdots$。由(25.4)取$f_1\in\OO(Y_1)$使$\|f_1-f\|_K<\varepsilon/2$。归纳取$f_n\in\OO(Y_n)$，使$n\ge2$时$\|f_n-f_{n-1}\|_{Y_{n-2}}<2^{-n}\varepsilon$。此列在每个$Y_n$上一致收敛于整体全纯$F$，由级数估计$\|F-f\|_K<\varepsilon$。
+\end{proof}
+\entry{25.6}{定理}
+非紧黎曼曲面上每个$\omega\in\mathcal E^{0,1}(X)$都有$f\in\mathcal E(X)$满足$d''f=\omega$。
+\begin{proof}
+由(14.16)在每个相对紧开集上可解，仿照(13.2)作穷竭。
+\sourcepage{201}
+取Runge穷竭$Y_0\Subset Y_1\Subset\cdots$。归纳构造$f_n\in\mathcal E(Y_n)$，使$d''f_n=\omega$且$\|f_{n+1}-f_n\|_{Y_{n-1}}\le2^{-n}$。先任取$f_0$。若已到$n$，取$g_{n+1}$在$Y_{n+1}$上解方程。差$g_{n+1}-f_n$在$Y_n$全纯，由Runge定理取$h\in\OO(Y_{n+1})$使$\|(g_{n+1}-f_n)-h\|_{Y_{n-1}}\le2^{-n}$。令$f_{n+1}=g_{n+1}-h$。如(13.2)，局部解加上局部一致收敛的全纯修正级数，得到整体光滑极限$f$，且$d''f=\omega$。
+\end{proof}
+\subsection*{习题（第25节）}
+\entry{25.1}{}
+设连续线性泛函$S:\mathcal E^{(2)}(X)\to\C$对所有$g\in\mathcal E(X)$满足$S[d'd''g]=0$。证明存在调和$h$使对所有紧支集2形式有$S[\omega]=\iint_Xh\omega$。
+\entry{25.2}{}
+设$Y\subset\C$开。证明任给$g\in\mathcal E(Y)$，存在$f\in\mathcal E(Y)$使$\Delta f=g$。

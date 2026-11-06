@@ -1,0 +1,49 @@
+176 
+3 Non-compact Riemann Surfaces 
+22.1. Suppose Y is an open subset of a Riemann surface X. Then a differen-
+tiable function u E g(y) is called harmonic if d'd"u = 0, cf. (9.14). With re-
+spect to a local coordinate z = x + iy this is equivalent to 
+Every real-valued harmonic function u on a simply connected domain 
+G c X is the real part of a holomorphic function f E CO(G). For, from 
+Theorem (19.4) it follows that the harmonic differential form du may be 
+written du = Re(dg) for some 9 E CO(G). This implies u = Re(g) + const. 
+This observation allows one to derive quite easily the Maximum Prin-
+ciple for harmonic functions. If a harmonic function u: Y -+ IR on the 
+domain Y attains its maximum at a point Xo E Y, then u is a constant. For, 
+suppose u = Re(f) where f is a function holomorphic on some neighbor-
+hood of Xo. Since I ef I = eO, the holomorphic function ef attains its maxi-
+mum modulus at Xo' Now the Maximum Principle for holomorphic 
+functions implies u is constant on a neighborhood of Xo. Thus u is also 
+constant on all of Y, since Y is connected. 
+22.2. By the Dirichlet Problem on a Riemann surface X we mean the 
+following: 
+Suppose Y is an open subset of X andf: ay -+ IR is a continuous function. 
+Find a continuous function u: Y -+ IR which is harmonic in Y and satisfies 
+u lay = f Suppose Y is compact and ay + 0, i.e., Y + X. If a solution 
+exists, then it is unique. For, the difference U 1 -
+U2 of two solution Ui has 
+boundary values zero. Because of the Maximum Principle for harmonic 
+functions one then has ° :::; U 1 -
+U2 :::; ° 
+on Y. Thus Ul = U2' 
+For the disk 
+D(R) := {z E IC: I z I < R}, 
+where R > 0, 
+the Dirichlet Problem can be easily solved using the Poisson Integral. 
+22.3. Theorem. Suppose f: aD(R) -+ IR is continuous and let 
+1 r21r R2 - Izl2 
+u(z) :=-
+• 
+f(Re i6 ) de for I z I < R 
+(*) 
+2n.o 
+IRe'B - zl2 
+and u(z):= f(z) for I z I = R. Then u is continuous on D(R) and harmonic on 
+D(R). 
+PROOF. For z + ( let 
+P(z r):= 1(1 2 - Izl2 
+,., 
+I( - zl2 ' 
+(+z 
+F(z, n :=-r -. 
+., - z 

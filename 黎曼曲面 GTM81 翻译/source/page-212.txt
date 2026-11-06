@@ -1,0 +1,44 @@
+26 The Theorems of Mittag-Leffler and Weierstrass 
+203 
+In order to prove the claim, note that since K j = A(Kj ), the point ao lies in 
+a connected component V of X\Kj which is not relatively compact. Hence 
+there exists a point al E V\Kj + 1 and a curve Co in V with initial point a 1 and 
+end point ao. By Lemma (20.5) there is a weak solution ({)o of the divisor (7co 
+with ({)o I K j = 1. Repeating the construction gives a sequence of points 
+av E X\Kj+v, v E ~, curves Cv in X\Kj +v from av+ 1 to av and weak solutions 
+({)v of the divisors oCv with ({)v I K j+v = 1. Then oCv = Av - Av+ 1, where Av is 
+the divisor which takes the value 1 at av and is zero otherwise. Thus the 
+product ({)o ({) 1 ..... ({)n is a weak solution of the divisor Ao - An + 1. The 
+infinite product 
+<Xl 
+({):= n ({)v 
+v=o 
+converges, since on any compact subset of X there are only finitely many 
+factors which are not identically 1. Now (() is the desired weak solution of the 
+divisor Ao. 
+(c) Now suppose D is an arbitrary divisor on X. For v E ~ set 
+Dv(x):= {~,(X), 
+where Ko := 0. Then 
+if x E KV+1 \K., 
+if x ~ KV+1 \K., 
+<Xl 
+D = L Dv· 
+v=o 
+Since Dv is non-zero only at a finite number of points, by (b) there is a weak 
+solution I/Iv of the divisor Dv with I/Iv I Kv = 1. The product 
+<Xl 
+1/1:= n I/Iv 
+v=o 
+is thus a weak solution of D. 
+o 
+26.5. Theorem. On a non-compact Riemann surface X every divisor 
+D E Div(X) is the divisor of a meromorphic function f E A*(X). 
+PROOF. Since the problem has a solution locally, there exists an open cover-
+ing U = (V;)i E I of X and meromorphic functions h E .,H*( V;) such that the 
+divisor of h coincides with D on Vi. We may assume that all the Vi are 
+simply connected. On the intersection Vi n Vj the functionsh andjj have 
+the same zeros and poles, i.e., 
+~ E (!)*(Vi n V j ) 
+for every i,j E [. 
+Now suppose 1/1 is a weak solution of D. This exists by (26.4). Then 1/1 = I/Ii h 
+on Vi' where the function I/Ii E B(Vi) has no zeros. Since Vi is simply 

@@ -1,0 +1,38 @@
+17 The Serre Duality Theorem 
+143 
+Denote by (zo: ... : ZN) E [pN the equivalence class of (zo, ... , ZN) E eN + 1 \0. 
+Equipped with the quotient topology, []J>N is a compact Hausdorff space. For 
+j = 0, ... , N let 
+U .- {(z ..... ~ ) E fTllN. Z .../.. Ot 
+r-
+o· 
+. "N 
+u-. 
+j T 
+J' 
+The family (U 0, ... , Un) forms an open covering of [pN. Let 
+be defined by 
+It is easy to see that rpj is well-defined and maps Uj homeomorphically onto 
+eN. 
+Now suppose X is a compact Riemann surface and 
+F: X --> [pN 
+is a continuous map. Then W;:= F- 1(UJ is an open subset of X for 
+j = 0, ... , N, and we can consider the maps 
+Fj:=rpj ,- F: W;-->iC"'. 
+Then every F j is an N-dimensional vector Fj = (Fj1' ... , FjN) of functions 
+F jv: W; --> C. The map F: X --> [pN is said to be holomorphic if all of the 
+functions F jv are holomorphic. F is called an immersion if it is holomorphic 
+and for every point x E X there exists at least one F jv such that x E W; and 
+dFjv(x) -+ 0. A holomorphic map F: X --> []J>N is called an embedding ifit is an 
+injective immersion. 
+17.21. Examples of holomorphic mappings F: X --> [pN can be obtained in 
+the following way. Let 10, ... , IN E j{{X) be meromorphic functions on X 
+which do not vanish identically. Define 
+F = (fO:f1: ... : IN): X --> [pN 
+as follows. For x E X let (V, z) be a coordinate neighborhood with z{x) = ° 
+and let 
+k := min ordAjj). 
+j 
+On V we can writejj = Zkgj , where gj is holomorphic in a neighborhood of x 
+and for at least one j we have gAx) -+ 0. Set 
+F(x):= (go(x): ... : gN(X)). 

@@ -1,0 +1,44 @@
+14 A Finiteness Theorem 
+115 
+Remark. By using more powerful tools from functional analysis one could 
+make the proof shorter, cf. the proof of Theorem (29.13). 
+14.8. Suppose X is a topological space, Y c X is open and .ff is a sheaf of 
+abelian groups on X. For every open covering U = (Uj)jEl of X, Un Y:= 
+(U j n Y)j E I is an open covering of Y and the natural restriction mapping 
+ZI(U, .:F) --> ZI(U n Y, . .:F) 
+induces 
+a 
+homomorphism 
+Hl(U, .'f'")--> 
+Hl(U n Y, .:F). These homomorphisms for all U give rise to a restriction 
+homomorphism 
+Clearly, if one has open sets Y c Y' eX, then the homomorphism 
+Hl(X, .'f'") --> Hl(y, .:F) 
+is 
+the composition of the homomorphisms 
+Hl(X,:F) --> Hl(y', .ff) and Hl(y', .?") --> Hl(y, .'f'"). 
+14.9. Theorem. Suppose X is a Riemann surface and Y1 If' Yz c X are open 
+subsets. Then the restriction homomorphism 
+HI ( Y2 , (n --> HI (Y1, (I)) 
+has a finite dimensional image. 
+PROOF. There exists a finite family of charts (ut, ZJ1 ~i~n on X and relatively 
+compact open subsets J.t; If' Vi If' U j If' Ui with the following properties: 
+(i) Y1 c Ui=l J.t; =: Y' if Y":= Ui=l U j c: Y2 , 
+(ii) all Zj(Un, Zj(U;) and Zj(J.t;) are disks in C. 
+Let U :=(U;)lsjsn, W:=(J.t;)lsjsn' By Lemma (14.7) the restriction map-
+ping Hl(U, 0) -+ Hl(W, (0) has a finite dimensional image. By Theorem 
+(13.4), Hl(U j , (7) = Hl(J.t;, 0) = O. Thus by Leray's Theorem (12.8), 
+Hl(U, (S') = Hl(y", 0) and Hl(W, (I)) = HI(y', (0). Since the restriction 
+mapping HI(Y2' 0) -+ Hl(Yl' (D) can be factored as follows 
+Hl(Y2' 0) -+ Hl(y", (I;) -+ HI(Y', (7) --> Hl(Yl' (''J), 
+the proof of the theorem is complete. 
+14.10. Corollary. Suppose X is a compact Riemann surface. Then 
+dim Hl(X, 0) < 00. 
+o 
+PROOF. Since X is compact, one can choose Y1 = Y2 = X in the previous 
+theorem. 
+0 
+14.11. Definition. Suppose X is a compact Riemann surface. Then 
+g := dim Hl(X, 0) 
+is called the genus of X. 
+By Theorem (13.5) the Riemann sphere [pI has genus zero. 

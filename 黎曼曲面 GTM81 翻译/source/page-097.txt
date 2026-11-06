@@ -1,0 +1,36 @@
+88 
+If A E M(n X n, C:(X)) is a matrix such that 
+A· dA = dA· A, 
+then 
+d(exp A) = dA . exp A = exp A . dA. 
+1 Covering Spaces 
+This follows immediately when one differentiates the exponential series term 
+by term. 
+11.10. Theorem. Suppose T E GL(n, C) is a given matrix and BE M(n x n, C) 
+is a matrix such that 
+exp(2niB) = T. 
+Now consider the differential equation 
+1 
+Wi = -Bw' 
+z 
+on X ,= {z E C: 0 < I z I < R}. Then 
+<1>0 ,= exp(B log) 
+is a fundamental system of solutions of Wi = ~ Bw on the universal covering 
+p: X -> X which has T as its factors of automorphy, i.e., 
+a<l>o = <1>0 T. 
+Here rr is defined the same as in (11.7). 
+PROOF. From the remark in (11.9) it follows that <1>0 = (l/z)B<I>o. Moreover, 
+a<l>o = a exp(B log) = exp(Brr log) 
+= exp(B(Iog + 2ni)) = exp(B log)exp(2niB) = <1>0 T. 
+0 
+Remark. The theorem shows that given any punctured disk X and 
+prescribed factor of automorphy one can always find a differential equation 
+whose solution has this as its factor of automorphy. We will look at the same 
+problem on an arbitrary non-compact Riemann surface X in §31. 
+11.11. Theorem. Suppose the notation is the same as in Theorem (11.10) and 
+A E M(n x n, £D(X». Then the differential equation 
+Wi =Aw 
+has a fundamental system of solutions <I> E GL(n, @(X» of the form 
+cD = '¥cDo, 
+where <1>0 = exp(B log)for a constant matrix B E M(n x n, C) and '¥ is invar-
+iant under covering transformations, i.e., '¥ defines an element in GL(n, £D(X)). 

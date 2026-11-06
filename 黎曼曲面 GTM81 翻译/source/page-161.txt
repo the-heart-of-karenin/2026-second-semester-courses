@@ -1,0 +1,50 @@
+152 
+2 Compact Riemann Surfaces 
+Remark. In fact, every compact Riemann surface of genus y ~ 2 admits a 
+covering of [pI with [(g + 3)/2] or fewer sheets, see [56]. 
+18.10. Differential Forms with Prescribed Principal Parts. Suppose X is a 
+Riemann 
+surface, 
+U = (UJiEl 
+is 
+an 
+open 
+covering 
+of 
+X 
+and 
+11 = (wJ E CO(U, ,/f{(1») is a Mittag-Leffler distribution of meromorphic 
+1-forms on X, cf. (17.2). By a solution of p we mean a global meromorphic 
+I-form w E ~H(1)(X) which has the same principal parts as f.1, i.e., wi Ui -
+Wi E Q(U;) for every i E I. As in (18.1) one can prove that p has a solution if 
+and only if the cohomology class [bp] E Hl(X. Q) vanishes. 
+18.11. Theorem. On a compact Riemann surface X a Mittag-Leffler distribu-
+tion p E CO(U, ,/f{(1») of meromorphic 1.jorms has a solution if and only if 
+Res(l1) = o. 
+PROOF. By Theorem (17.3) one has Res(l1) = Res([bp]). By the consequence 
+in (17.11) the mapping Res: HI(X. Q) ---> C is an isomorphism. Thus 
+[b 11] = 0 is equivalen t to Res(p) = 0 and the result follows. 
+0 
+18.12. Corollary. Suppose X is a compact Riemann surface. 
+(a) For any point p E X and any natural number n ~ 2 there exists a 
+meromorphic Ijorm on X which has a pole of order n at p and is otherwise 
+holomorphic (" an elementary differential of the second kind."). 
+(b) For any two distinct points PI> P2 E X there exists a meromorphic 
+1-form on X which has poles of first order at PI and P2 with residues + 1 and 
+-1, respectively, and is otherwise holomorphic (" an elementary differential of 
+the third kind "). 
+EXERCISES (§18) 
+18.1. Let U:= {z E C: I Z I < rl, r > 0, and letf: U -+ C be a holomorphic function 
+with f(O) =1= O. 
+(a) Definefj(z):= zj-If(z) for j = 1, ... , g. Prove that the Wronskian determin-
+ant W(fl, .... j~) does not vanish at the origin. 
+(b) Define <piz):= z2j- 2f(z) for j = 1, ... , g. Prove that the Wronskian deter-
+minant W(cp 1: .... cpg) has a zero of order (g(g - 1 )/2) at the origin. 
+18.2. Let 7t: X -+ pi be a hyperelliptic Riemann surface of genus g :2: 2. 
+(a) Show that all the ramification points Pl:"" P2g+ 2 E X of 7t are Weierstrass 
+points of X. 
+(b) Prove that there are no other Weierstrass points and that every Weierstrass 
+point Pj has weight (g(g - 1)/2). 
+[Hint: Use Ex. 18.1.] 
+18.3. Let X be a compact Riemann surface of genus g :2: 1 and suppose Wb ... , Wg is a 
+basis of Q(X). Let D :2: 0 be a non-negative divisor on X. Denote by M D the set 

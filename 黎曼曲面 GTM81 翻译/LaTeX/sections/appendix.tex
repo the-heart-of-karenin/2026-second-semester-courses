@@ -1,0 +1,68 @@
+\chapter*{附录}
+\markboth{附录}{附录}
+\addcontentsline{toc}{chapter}{附录}
+\section*{A. 单位分解}
+\sourcepage{237}
+单位分解是可微流形研究的重要工具，本书多次使用。本附录汇集有关主要事实，证明可参见[40]、[43]、[45]、[48]。
+\entry{A.1}{}
+函数$f$的支集$\operatorname{Supp}f$是$\{x:f(x)\ne0\}$的闭包。支集恰为半径$\varepsilon$闭球的标准$C^\infty$实函数为
+\[
+g(x):=\begin{cases}\exp\bigl(-1/(\varepsilon^2-\|x\|^2)\bigr),&\|x\|<\varepsilon,\\0,&\|x\|\ge\varepsilon,\end{cases}
+\qquad\|x\|=\left(\sum_{j=1}^n|x_j|^2\right)^{1/2}.
+\]
+由它可构造所需的其他光滑函数。
+\entry{A.2}{}
+$n$维流形为每点有邻域同胚于$\R^n$开集的Hausdorff空间。同胚$\varphi:U\to V$称坐标卡。若转移映射$\varphi_2\varphi_1^{-1}$及其逆均无限次可微，称两卡可微相容。
+\sourcepage{238}
+如第1节定义黎曼曲面那样，以可微相容代替双全纯相容，即得到可微流形。黎曼曲面尤其是二维可微流形。在每张坐标卡下均$C^\infty$的函数称为可微函数。
+\entry{A.3}{定义}
+从属于开覆盖$\mathfrak U=(U_i)$的\textbf{可微单位分解}是可微函数族$g_i:X\to\R$，满足(i)$0\le g_i\le1$；(ii)$\operatorname{Supp}g_i\subset U_i$；(iii)支集族局部有限，即每点有邻域仅遇有限多个支集；(iv)$\sum_ig_i=1$。由(iii)，求和良定义。
+\entry{A.4}{定理}
+具有可数拓扑的可微流形上，每个开覆盖均有从属的可微单位分解。
+\entry{A.5}{推论}
+对可微流形中的紧集$K$及其开邻域$V$，存在可微实函数$f$，使$\operatorname{Supp}f\Subset V$、$f|_K=1$。
+\begin{proof}
+可假设$X$有可数拓扑，否则在$K$的相对紧开邻域中工作。取$K\subset U_1\Subset V$、$U_2=X\setminus K$，取从属单位分解$(g_1,g_2)$，令$f=g_1$。
+\end{proof}
+\section*{B. 拓扑向量空间}
+这里陈述本书用到的泛函分析概念与事实，细节及证明见[44]、[47]。
+\sourcepage{239}
+\entry{B.1}{}
+以下向量空间均为复向量空间。\textbf{拓扑向量空间}是带拓扑的向量空间$E$，使加法$E\times E\to E$与数乘$\C\times E\to E$连续。每个平移$x\mapsto a+x$为同胚，因此拓扑由0的邻域基完全确定；$a+U$给出$a$的邻域基。
+\entry{B.2}{半范数}
+映射$p:E\to\R$若满足三角不等式$p(x+y)\le p(x)+p(y)$及$p(\lambda x)=|\lambda|p(x)$，称为半范数。必有$p(x)\ge0$；若仅在$x=0$为零，则称范数。
+
+半范数族$(p_i)$诱导拓扑，其0邻域基为$\{x:\max(p_{i_1}(x),\ldots,p_{i_m}(x))<\varepsilon\}$。此拓扑Hausdorff当且仅当所有$p_i(x)=0$蕴含$x=0$。可由半范数族如此诱导拓扑的空间称为\textbf{局部凸}空间。
+\entry{B.3}{Fréchet空间}
+若对每个0邻域$U$，存在$n_0$使$n,m\ge n_0$时$x_n-x_m\in U$，称$(x_n)$为Cauchy列。若(i)拓扑Hausdorff且由可数个半范数定义；(ii)每个Cauchy列收敛，则称为\textbf{Fréchet空间}。它可度量化：若$(p_n)$定义拓扑，则
+\[
+d(x,y):=\sum_{n=0}^\infty2^{-n}\frac{p_n(x-y)}{1+p_n(x-y)}
+\]
+\sourcepage{240}
+为诱导同一拓扑的度量。闭向量子空间仍为Fréchet空间，可数个Fréchet空间的乘积亦然。
+\entry{B.4}{}
+典型例子是平面开集上$\OO(X)$，取紧集上一致收敛拓扑；由半范数$p_K(f):=\sup_K|f|$定义。只需可数紧集穷竭$(K_n)$对应的半范数即可定义此拓扑。
+\entry{B.5}{Banach空间与Hilbert空间}
+完备赋范空间称为\textbf{Banach空间}，即拓扑由单一范数定义的Fréchet空间。若范数来自内积，$\|x\|=\sqrt{\langle x,x\rangle}$，则称\textbf{Hilbert空间}。子空间$A$的正交补$A^\perp:=\{y:\langle y,x\rangle=0\text{ 对所有 }x\in A\}$闭；若$A$本身闭，则$E=A\oplus A^\perp$。
+\entry{B.6}{Banach定理}
+Fréchet空间之间的连续线性满射为开映射。
+\entry{B.7}{推论}
+Banach空间之间的连续线性满射$f:E\to F$存在常数$C>0$，使每个$y\in F$有原像$x$满足$\|x\|\le C\|y\|$。
+\begin{proof}
+令$U=\{\|x\|<1\}$。开映射定理给$\varepsilon>0$使$f(U)\supset\{\|y\|<\varepsilon\}$。取$C=2/\varepsilon$。$y=0$时取$x=0$；否则令$\lambda=\|y\|$，$y_1=y/(\lambda C)$落在此球中，故有$x_1\in U$使$f(x_1)=y_1$。
+\sourcepage{241}
+取$x=\lambda Cx_1$，即得$f(x)=y$及范数估计。
+\end{proof}
+\entry{B.8}{Hahn--Banach定理}
+局部凸空间$E$的子空间$E_0$上的每个连续线性泛函$\varphi_0:E_0\to\C$都可延拓为$E$上的连续线性泛函。
+\entry{B.9}{推论}
+设$E$为局部凸拓扑向量空间。若$A\subset B\subset E$为向量子空间，而在$A$上为零的每个连续线性泛函都在$B$上为零，则$A$在$B$中稠密。
+\begin{proof}
+否则取$b_0\in B\setminus\overline A$，在$E_0=A\oplus\C b_0$上令$\varphi_0(a+\lambda b_0)=\lambda$。它连续，延拓后在$A$为零而在$b_0$不为零，矛盾。
+\end{proof}
+\entry{B.10}{紧映射}
+线性映射$\psi:E\to F$若把某0邻域映为相对紧集，称为\textbf{紧映射}或\textbf{完全连续映射}。特别地，紧线性映射连续。
+
+\textbf{例。}若$Y\Subset X\subset\C$开，则限制$\beta:\OO(X)\to\OO(Y)$紧。事实上，$U:=\{f:\sup_{\overline Y}|f|<1\}$为0邻域，由Montel定理，$M:=\{g\in\OO(Y):\sup_Y|g|\le1\}$紧，而$\beta(U)\subset M$。
+\entry{B.11}{L. Schwartz定理}
+设$E,F$为Fréchet空间，$\varphi,\psi:E\to F$连续线性，$\varphi$满射且$\psi$紧。则$\varphi-\psi$的像在$F$中余维有限。证明见[60]。

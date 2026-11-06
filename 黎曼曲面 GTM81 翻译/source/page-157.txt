@@ -1,0 +1,51 @@
+148 
+2 Compact Riemann Surfaces 
+Remarks 
+(a) If Wb ... , Wg is a basis of Q(X), then Res(w/1) = 0 for every W E Q(X) 
+if and only if 
+Res(wk/1) = 0 
+for k = 1, ... , g. 
+Thus /1 has a solution if and only if 9 linear equations hold, where 9 is the 
+genus of X. 
+(b) If /1 has a solution andj~,j~ E /It(X) are two solutions, theni1 - iz is 
+holomorphic on X and thus constant. Hence the solution is unique up to an 
+additive constant. 
+18.3. Application to Doubly Periodic Functions. Suppose It, ,'z E C arc 
+linearly independent over IR: and let 
+P:={t11t + tzyz: O:s;; t1 < 1,0:s;; t2 < I}. 
+Suppose that at the points ai' ... , an E P principal parts 
+-1 
+"(j)(-
+)\' 
+f 
+. - I 
+L., C,. 
+"- -
+ilj
+, 
+or J -
+, ... , n, 
+v= -rj 
+are prescribed. Then there exists a meromorphic functioni E -tt(C) doubly 
+periodic with respect to r = E}'l + E}'2 and having poles with the prescribed 
+principal parts at the points ai' ... , an if and only if 
+n I C~\ = o. 
+j= 1 
+PROOF. Any function doubly periodic with respect to r may be considered as 
+a function on the torus X = c/r. The prescribed principal parts then give 
+rise to a Mittag-Leffler distribution /1 on X. The differential form W on X 
+induced by the I-form dz on C (cf. 10.14) is a basis of Q(X), since 
+dim Q(X) = 1. Now 
+n 
+Res(wII) = I C~)1 
+j= 1 
+and the result follows from the above theorem. 
+o 
+In particular, this implies that there are no doubly periodic meromorphic 
+functions having precisely one pole of order one in any period paral-
+lelogram. For, such a function would have a non-zero residue (cf. 5.7.c). 
+We now consider whether on a Riemann surface of genus 9 > 1 there 
+exist merom orphic functions which have one pole of order s 9 but are 
+otherwise holomorphic. To do this we need some preliminaries. 
+18.4. The Wronskian Determinant. Suppose ii, ... ,fg are holomorphic func-
+tions on a domain U c C. By the Wronskian determinant of ib ... ,fg one 

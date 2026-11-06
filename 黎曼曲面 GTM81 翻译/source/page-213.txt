@@ -1,0 +1,46 @@
+204 
+3 Non-compact Riemann Surfaces 
+connected, there exists a function <Pi E o( U;) with 1/1 i = e"", i.e., 1/1 = e"'1i on 
+Ui . Then on Ui n Uj one has 
+e"'j-"" = /; E (0*(U. n U) 
+(*) 
+jj 
+. 
+, 
+) 
+and thus <Pi i := <P i -
+<Pi E (i;'( U i n U;). Since <Pi i + <P ik = <Pik on any triple 
+intersection, the family 
+<Pij is a cocycle (<pij) E Zl(U, 0). Because 
+Hl(X, 0) = 0, this co cycle splits. Thus there exist holomorphic functions 
+gi E (1;( U;) with 
+<Pij = <Pj -
+<Pi = gj - gi 
+on Ui n Uj 
+for every i, j E I. From (*) one gets eWO , = /; /Jj, i.e., 
+eg~ = eO:!; 
+on Vi n V j • 
+Hence there exists a global meromorphic function f E jl*(X) with f = e91i 
+on Vi for every i E 1. Since f and /; define the same divisor on V;, one has 
+(f) = D. 
+0 
+26.6. Corollary. On every non-compact Riemann sUllace X there is a holomor-
+phic 1-form W E Q(X) which never vanishes. 
+PROOF. Suppose 9 is a non-constant meromorphic function on X and 
+f E A*(X) is a function with divisor - (dg). Then w := f dg is a holomorphic 
+1-form on X which has no zeros. 
+0 
+26.7. Theorem. Suppose X is a non-compact Riemann surface and (av)v E 'J is a 
+sequence of distinct points on X which has no point of accumulation. Then 
+given arbitrary complex numbers Cv E C there exists a ho[omorphic function 
+fE 0(X) with f(aJ = c,.for every v E I\J. 
+PROOF. By Theorem (26.5) there is a function hE CQ(X) which has a zero of 
+order 1 at each av and is otherwise non-zero. For i EN let 
+V , := X\U {aJ. 
+Then U :=(Ui)ie 'oj is an open covering of X. Define giEAt(V;) by gi :=ci/h. 
+For i # j 
+Vin Vj = X\{av : vEN}. 
+Thus l/h is holomorphic on Ui n V j . Hence (g;) E CO(U, .41) is a Mittag-
+Leffler distribution on X which by (26.3) has a solution gEA(X). Let 
+f :=gh. On Vi one has 
+f = gh = gih + (g - gi)h = Ci + (g - g;)h. 

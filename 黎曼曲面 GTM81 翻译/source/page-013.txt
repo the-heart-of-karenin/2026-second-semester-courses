@@ -1,0 +1,31 @@
+4 
+1 Covering Spaces 
+The complex structure on pi is now defined by the atlas consisting of the 
+charts <Pi: Ui ~ C, i = 1, 2. We must show that the two charts are holo-
+morphically compatible. But <Pl(U l (l Uz) = <Pz(U l (l Uz) = C* and 
+<Pl 
+(Pl1:C*~C*, 
+ZI-+1/z, 
+is biholomorphic. 
+Remark. The notation pi comes from the fact that one may consider pi 
+as the 1-dimensional projective space over the field of complex numbers. 
+(d) Tori. Suppose WI' W2 EO C are linearly independent over 1Ft Define 
+r:= LZw l + 7l.W2 = {nwl + mwz: n, m EO LZ}. 
+r is called the lattice spanned by WI and W z (Fig. 2). Two complex numbers 
+z, z' EO C are called equivalent mod r if Z -
+Z' EO r. The set of all equivalence 
+classes is denoted by c/r. Let rc: C ~ c/r be the canonical projection, i.e., 
+the map which associates to each point Z EO C its equivalence class mod r. 
+Figure 2 
+Introduce the following topology (the quotient topology) on c/r. A 
+subset U c c/r is open precisely if rc-I(U) c C is open. With this topology 
+c/r is a Hausdorff topological space and the quotient map rc: C ~ c/r is 
+continuous. Since C is connected, c/r is also connected. As well c/r is 
+compact, for it is covered by the image under rc of the compact 
+parallelogram 
+P:={,1W 1 + j.1W2: A, j.1 EO [0, 1]}. 
+The map rc is open, i.e., the image of every open set V c C is open. To see this 
+one has to show that V:= rc l(rc(V)) is open. But 
+V = U (w + V). 
+WEr 
+Since every set W + V is open, so is V. 

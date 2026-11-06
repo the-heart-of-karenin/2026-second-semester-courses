@@ -1,0 +1,41 @@
+18 
+1 Covering Spaces 
+Remark. Although the group operation in 1[, (X) is written multiplica-
+tively, one writes 1[,(X) = 0 if 1[,(X) only contains the identity. 
+3.11. Theorem. Suppose X is an arcwise connected, simply connected topologi-
+cal space and a, bE X. Then any two curves u, v: I -+ X from a to bare 
+homotopic. 
+PROOF. Let Uo (resp. vo) be the constant curve at a (resp. b). Now ndX, b) 
+=0 implies v- 'U~Vo and thus v'(v- ·u)~v·vo. But v'(v- 'u)-
+(v· v-) . u ~ Uo . u ~ u and V· Va ~ v by Theorem (3.6), i.e., u ~ v. 
+0 
+3.12. Examples 
+(a) A subset X c !Ri" is called star-shaped with respect to a point a E X if 
+for every point x E X the straight line segment Aa + (1 - A)X, 0 :<:;; A :<:;; 1, is 
+contained in X. Every star-shaped subset X c !Ri" is simply connected. For 
+suppose u: I -+ X is a closed curve with initial and end point a (with a as 
+above). Then 
+A:lxI-+X, 
+A(t, s) :=sa + (1 - s)u(t) 
+is a homotopy from u to the point curve at a. Thus 1[ dX, a) = O. In particu-
+lar, the complex plane C and every disk in C are simply connected. As well 
+C\!Ri+ and q!Ri_ are simply connected, where IR+ (resp. !Ri_) denotes the 
+positive (resp. negative) real axis. 
+(b) The Riemann sphere pi is also simply connected. One can see this as 
+follows. Let VI :=pl\{oo} and V 2 :=pl\{O}. Since VI and V 2 are homeo-
+morphic to C, they are simply connected. Now suppose u: I -+ pi is any 
+closed curve starting and ending at O. Since I is compact and u is continuous, 
+one can find finitely many, not necessarily closed, curves 
+U 1, ... , 
+U 2. + , : I -+ pi with the following properties: 
+(i) The product 
+is, up to a parameter transformation, equal to the curve u and thus is 
+homotopic to u. 
+(ii) The curves u2k+ 1, k = 0, ... , n, lie entirely in VI, and the curves U 2ko 
+k = 1, ... , n, lie entirely in V 2' The initial and end points of the U2k are 
+different from 00. Now by Theorem (3.11) one can find curves uZ ko homoto-
+pic to U2b lying entirely in V 2 \{ oo}. Then 
+is homotopic to v and thus to u as weB and lies in V l' Since n 1 (V d = 0, v' is 
+null homotopic. Thus u is nuB homotopic too. 
+3.13. Definition. Suppose X is a topological space and u, v: I -+ X are two 
+closed curves in X, which do not necessarily have the same initial point. 

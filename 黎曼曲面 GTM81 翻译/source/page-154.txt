@@ -1,0 +1,38 @@
+17 The Serre Duality Theorem 
+145 
+Then D' is globally generated and hence there exists an! E HO(X, (lJD') such 
+that 
+ordxoCf)= -D(xo) + l. 
+As above! = L Aj fj for certain Aj E IC. Let (V, z) be a coordinate neighbor-
+hood of xo such that z(xo) = 0 and set 
+where k = min ordxo(fj) = -D(xo). Let v be an index such that gv(xo) =1= O. 
+We may assume v = O. The map F 0 = CPo 
+0 F: Wo --> eN considered in 
+(17.20), is now given in a neighborhood of Xo by 
+Fo = (FOb ... , FON ) = (fL~, ... , gN) 
+go 
+go 
+and we get 
+Hence 
+L Aj dFoj = d(:J. 
+Since go(xo) "" 0 and 9 has a zero of first order at Xo, we have d(g/go)(xo) 
+"" O. Hence dF oAxo) "" 0 for at least one index j. This shows that F is an 
+immersion. 
+0 
+Remark. It can be shown that if deg D ?: 2g + 1, then there exist elements 
+CPo, ... , CP3 E HO(X, (lJD) such that (CPo: ... : CP3): X --> 1P3 is an embedding. 
+Thus every compact Riemann surface admits an embedding into 1P3. 
+EXERCISES (§17) 
+17.1. Let X ..... lP'1 be the Riemann surface of the algebraic function :jT=?', i.e., the 
+algebraic function defined by the polynomial 
+P(T) = T" + zn - 1 E,It(1P1)[T], 
+where Z E .. 1t(1P1) is the canonical coordinate function. Show that the genus of 
+X is 
+(n - l)(n - 2) 
+9 = 
+2 
+. 
+17.2. Let X be a compact Riemann surface. Let 2l(X) c A(1)(X) be the space of all 
+meromorphic I-forms on X whose residues vanish at every point. Using Ex. 
+15.3 show 
+H'(X, C)::::::: 2l(X)jd.,It(X). 

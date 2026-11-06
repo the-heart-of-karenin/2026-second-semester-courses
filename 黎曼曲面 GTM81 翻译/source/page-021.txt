@@ -1,0 +1,45 @@
+12 
+1 Covering Spaces 
+PROOF. The function f has only finitely many poles. For if it did have 
+infinitely many poles then they would have a limit point and by the Identity 
+Theoremfwould be identically equal to 00. We may assume the point 00 is 
+not a pole of f Otherwise consider III instead off Now suppose at> ... , 
+a" E C arc the poles off and 
+-
+I 
+h,(z) = I 
+C,j(Z - aY, 
+j= -k\ 
+is the principal part off at the pole a" for v = I, ... , n. Then the function 
+g:= f - (hI + ... + h") is holomorphic on [pI and thus a constant by Corol-
+lary (2.8). From this it follows that f is rational. 
+0 
+2.10. Liouville's Theorem. Every bounded holomorphic function f: C -> C is 
+constant. 
+PROOF. By Riemann's Removable Singularities Theorem (2.8)fcan be analy-
+tically continued to a holomorphic mappingf: [pI -> C. By Corollary (2.8)f 
+is constant. 
+0 
+2.11. The Fundamental Theorem of Algebra. Let n ;::: 1 and let 
+f(z) = z" + c I z" - I + ... + Cn 
+be a polynomial with coefficients c, E C. Then there exists at least one point 
+a E C such that f{a) = O. 
+PROOF. The polynomial f may be considered as a holomorphic mapping 
+f: pI -> pI, where j(O'J) = O'J. By Theorem (2.7) this mapping is surjective 
+and thus 0 E f(C). 
+0 
+2.12. Doubly Periodic Functions. Suppose WI, w 2 E C are linearly indepen-
+dent over IR and r:= ?!'WI + ?!'W2 is the lattice spanned by them. A mero-
+morphic function/: C -> pI is called doubly periodic with respect to r, if 
+j{z) = j(z + w) 
+for every Z E C and W E r. 
+Clearly, for this to hold it suffices thatt{z) = j(z + WI) = j(z + W2} for every 
+z E C. Let n: C -> c/r be the canonical map. Then the doubly periodic 
+function f induces a function F: c;r -> [p I such that f = Fen. It follows 
+directly from the definition of the complex structure on c/r that F is a 
+meromorphic function on c/r. Conversely, for any meromorphic function 
+F: IC/r -> pI, the compositionf = F- n: IC --> !pI is a meromorphic function 
+which is doubly periodic with respect to r. Thus the meromorphic functions 
+on the torus c/r are in one-to-one correspondence with the meromorphic 
+functions on C, doubly periodic with respect to r. Hence from Theorem (2.7) 
+we have: 

@@ -1,0 +1,45 @@
+4 Branched and Unbranched Coverings 
+29 
+4.22. Theorem. Suppose X and Yare locally compact spaces and p: Y ---> X is 
+a proper local homeomorphism. Then p is a covering map. 
+PROOF. Suppose x E X is arbitrary and let p-I(X) = {Yb ... , Yn}, where 
+Yi =1= Yj for i =1= j. Since p is a local homeomorphism, for every j = 1, ... , n 
+there exists an open neighborhood I1j of Yj and an open neighborhood Vj of 
+x, such that p I Wi ---> Vj is a homeomorphism. We may assume that the »j 
+are pairwise disjoint. Now WI U ... U w" is a neighborhood of p-I(X). Thus 
+by(4.21.b)thereexistsanopenneighborhoodVc VI (\ ... (\ Vnofxwith 
+p-I(V) C WI U ... U w". If we let Vj:= »j (\ p-I(V), then the Vj are dis-
+joint open sets with 
+p-I(V) = VI U ... U v" 
+and all the mappings pi Vj ---> V, j = 1, ... , n are homeomorphisms. 
+0 
+4.23. Proper Holomorphic Mappings. Suppose X and Yare Riemann sur-
+faces and f: X ---> Y is a proper, non-constant, holomorphic mapping. It fol-
+lows from Theorem (2.1) that the set A of branch points off is closed and 
+discrete. Since f is proper, B := j{A) is also closed and discrete. One calls B 
+the set of critical values of I 
+Let Y':= y\B and X' := X \f - I (B) c X \A. Then f I X' ---> Y' is a proper 
+unbranched holomorphic covering and by (4.22), (4.16) and (4.21.a) it has a 
+well-defined finite number of sheets n. This means that every value c E Y' is 
+taken exactly n times. In order to be able to extend this statement to the 
+critical values b E B as well, we have to consider the multiplicities. 
+For x E X denote by v(f, x) the multiplicity, in the sense of (2.2), with 
+whichftakes the valuesj(x} at the point x. Then we will say thatftakes the 
+value c E Y, counting multiplicities, m times on X, if 
+m = 
+L v(f, x). 
+XEp-l(c) 
+4.24. Theorem. Suppose X and Yare Riemann surfaces and f: X ---> Y is a 
+proper non-constant holomorphic map. Then there exists a natural number n 
+such that f takes every value c E Y, counting multiplicities, n times. 
+PROOF. Using the same notation as in (4.23) let n be the number of sheets of 
+the unbranched covering f I X' ---> Y'. Suppose b E B is a critical value, 
+f-I(b) = {XI, ... ,xr } and kj:= v(f,Xj). By (2.1) and (2.2) there exist 
+disjoint neighborhoods Vj of Xj and Vj of b such that for every c E Vi \ {b } 
+the set f 
+I (c) (\ ~ consists of exactly kj points (j = I, ... , r). By Lemma 
+(4.21.b) we can find a neighborhood V c VI (\ ... (\ Vr of b such that 
+I-I (V) C VI U ... U V r • Then for every point c E V (\ Y' we have 
+that I-I (c) consists of kl + ... + kr points. On the other hand, for C E Y'the 
+cardinality of p-I(C) is equal to n. Thus n = kl + ... + kr · 
+0 

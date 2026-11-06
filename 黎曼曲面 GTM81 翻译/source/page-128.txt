@@ -1,0 +1,45 @@
+15 The Exact Cohomology Sequence 
+119 
+which are compatible with the restriction homomorphisms, i.e., for every 
+pair of open sets U, V c X with V c U the diagram 
+g;(U) ~ 
+~(U) 
+,.." I 
+I .," 
+g;(V) 
+'v 
+t ~(V) 
+is commutative. If all the au are isomorphisms, then a is called an 
+isomorphism. 
+Similarly, one can define homomorphisms of sheaves of vector spaces. 
+Often one just writes a: g;(U) ~ ~(U) instead of lXu: g;(U) ~ 
+~§(U). 
+15.2. Examples 
+(a) Suppose I&"(resp. 1&"(0, 1&"(2») are the sheaves of differentiable functions 
+(resp. I-forms and 2-forms) on a Riemann surface X. The exterior derivative 
+d on functions (resp. differential forms) induces sheaf homomorphisms 
+Similarly the mappings d' and d" also induce sheaf homomorphisms. 
+(b) On a Riemann surface X the natural inclusions (9 ~ 1&", C ~ 1&", "E ~ 0, 
+n ~ 1&"1. 0 etc., are sheaf homomorphisms. 
+(c) On a Riemann surface X one can define a sheaf homomorphism 
+ex: (!) ~ (9* from the sheaf of holomorphic functions into the multiplicative 
+sheaf of holomorphic functions with values in C *. For U an open subset of X 
+and.f E (o( U) let exu(.f) := exp(2n(f). 
+15.3. The Kernel of a Sheaf Homomorphism. Suppose g; and ~ are sheaves 
+on the topological space X and a: g; ~ ~ is a sheaf homomorphism. For U 
+open in X let 
+,X"(U) :=Ker(g;(U) ~ 
+~(U)). 
+One can easily show that the family of groups ,ff(U), together with the 
+restriction homomorphisms induced from the sheaf g;, is again a sheaf. It is 
+called the kernel of a and is denoted by X = Ker a. 
+Examples. On any Riemann surface one has 
+(a) (!) = Ker(1&" ~ 
+1&"0.1), 
+(see 9.1), 
+(b) n = Ker(6'l. 0 ~ 
+g(2») 
+(see 9.16), 
+(c) "E = Ker((9 ~ 
+(0*) 
+(see 15.2.c). 

@@ -1,0 +1,42 @@
+17 The Serre Duality Theorem 
+133 
+17.2. Mittag-Leffler Distributions of Differential Forms. Suppose X is a 
+Riemann surface, .H(1) is the sheaf of meromorphic I-forms on X and 
+U = (VJiE[ is an open covering of X. A cochain Ji. = (wJ E CO(U, .H(1)) is 
+called a Mittag-Leffler distribution if the differences Wj -
+Wi are holo-
+morphic on Vi n Vj, i.e., JJi. E Zl(U, Q). Denote by [JJi.] E Hl(X, Q) the 
+cohomology class of JJi.. 
+Let a be a point of X. The residue of the Mittag-Leffler distribution 
+Ji. = (w j ) at the point a is defined as follows. Choose i E [ such that a E Vi 
+and set 
+Resa(j.l):= Resa(wJ 
+If a E V j n Vj , the difference Wi - Wj is holomorphic and Wj and Wj have the 
+same residue at a. Thus the definition is independent of the choice of i E [. 
+Now assume that the Riemann surface X is compact. Then Resa(j.l) =1= 0 for 
+only finitely many points a. Thus one can define 
+Res(Ji.):= L Resa(Ji.)· 
+aE X 
+We will now show that this residue is related to the mapping Res defined in 
+(17.1). 
+17.3. Theorem. Assume the notation is the same as above. Then 
+Res(j.l) = Res([Jj.l]). 
+PROOF. In order to compute Res([bJi.]) we have to construct the isomorphism 
+Hl(X, Q) ~ g(2)(X)/dg l • O(X) explicitly, cf. (15.13). 
+Since Jj.l = (wj - wJ E Zl(U, Q) C Zl(U, gl.O) and Hl(X, tC'l. 0) = 0, 
+there exists a cochain (O'J E CO(U, tC'l. 0) such that 
+Wj - Wi = O'j -
+O'j 
+on V j n Vj. 
+Then d(wj - w;) = d"(wj - w;) = 0 implies d(Ji = d(Jj on V j n Vj. Thus 
+there exists a global 2-form T E g(2)(X) such that T I V j = d(Jj. This differen-
+tial form represents the cohomology class [Jj.l] and thus 
+Res([Jj.l]) = 2~i Jf T. 
+x 
+Suppose at> ... , an E X are the finitely many poles of Ji. and let 
+X' = X\{a 1, ... , an}. On X' n Vi n Vj one has (Ji - Wi = (Jj - Wj' Thus 
+there exists a differential form (J E gl. O(X') such that (J = (Ji - Wi on 
+X' n Vi' Hence T = d(J on X'. 
+For every ak there is an i(k) E [ such that ak E Vi(k)' Choose a coordinate 
+neighborhood (Vk,Zk) such that Vk c Vi(k) and zk(ak) = O. We may assume 
+that the Vr. are pairwise disjoint and that each Zk(y") c C is a disk. For every k 

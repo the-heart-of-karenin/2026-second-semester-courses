@@ -1,0 +1,39 @@
+2 Elementary Properties of Holomorphic Mappings 
+II 
+2.4. Corollary. Let X and Y be Riemann surfaces and let f: X ---+ Y be a 
+non-constant holomorphic mapping. Thenfis open, i.e., the image of every open 
+set under f is open. 
+PROOF. It follows directly from Theorem (2.1) that if U is a neighborhood of 
+a point a E X then!lU) is a neighborhood of the pointj{a). This impliesfis 
+open. 
+0 
+2.5. Corollary. Let X and Y be Riemann surfaces and let f: X ---+ Y be an 
+injective holomorphic mapping. Then f is a biholomorphic mapping of X onto 
+j{X). 
+PROOF. Since f is injective, in the local description of f given by Theorem 
+(2.1), one always has k = 1. Hence the inverse mapping f- 1 : .!lX) ---+ X is 
+holomorphic. 
+0 
+2.6. Corollary (Maximum Principle). Suppose X is a Riemann surface and 
+f: X ---+ IC is a non-constant holomorphic function. Then the absolute value off 
+does not attain its maximum. 
+PROOF. Suppose that there were a point a E X such that 
+R:= If(a)1 = sup{lf(x)l: XE X}. 
+Then 
+j(X) c K := {z E IC: I z I ~ R}. 
+Sincej{X) is open, it lies in the interior of K. This contradicts the assumption 
+thatj{a) E oK. 
+0 
+2.7. Theorem. Suppose X and Yare Riemann surfaces. Suppose X is compact 
+andf: X ---+ Y is a non-constant holomorphic mapping. Then Y is compact andf 
+is surjective. 
+PROOF. By (2.4)j{X) is open. Since X is compact,j{X) is compact and thus 
+closed. Since the only subsets of a connected topological space which are 
+both open and closed are the empty set and the whole space, it follows that 
+j{X) = Y. Thusfis surjective and Y compact. 
+0 
+2.8. Corollary. Every holomorphic function on a compact Riemann surface is 
+constant. 
+This follows from Theorem (2.7) since IC is not compact. 
+2.9. Corollary. Every meromorphic function f on (pI is rational, i.e., can be 
+written as the quotient of two polynomials. 

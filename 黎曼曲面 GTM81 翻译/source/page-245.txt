@@ -1,0 +1,30 @@
+Appendix 
+A. Partitions of Unity 
+Partitions of unity are an important tool in the study of differentiable mani-
+folds and have been used throughout this book. As an aid to the reader we 
+now gather together some of the main facts concerning them. Proofs may be 
+found in the literature, e.g., [40], [43], [45] or [48]. 
+A.I. By the support Supp(f} of a real or complex valued function f on a 
+topological space X is meant the closure of the set {x E X:f(x} =1= O}. 
+The standard example of a eX! function, i.e. an infinitely differentiable 
+function, g: [R" -+ IR, whose support is the closed ball of radius <; > 0, is given 
+by 
+{ 
+exp ( ___ 
+1 ___ ) 
+g(x):= 
+0 
+e2 - IIxl12 
+for Ilxll < e 
+for Ilxll ::-0: e. 
+Here Ilxll = (I x1 12 + ... + I x" 12)1/2 denotes the euclidean norm on /R". This 
+function can now be used to construct all the other COO functions which we 
+will need. 
+A.2. An n-dimensional manifold is a Hausdorff topological space X with the 
+property that every point a E X has an open neighborhood homeomorphic 
+to an open subset of [R". A homeomorphism ({J: U -+ V of an open set U c X 
+onto an open set V c /R" is called a chart on X. Two charts ({Ji: U i -+ Vi, 
+i = 1, 2, are said to be differentiably compatible if the mapping 
+({J2 
+0 ({Jt 1 : ({J1(U 1 n U 2) -+ ({J2(U 1 n U 2) 
+237 

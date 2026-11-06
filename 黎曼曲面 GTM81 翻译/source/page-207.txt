@@ -1,0 +1,34 @@
+198 
+3 Non-compact Riemann Surfaces 
+9 E g(X) with Supp(g) ~ Z. Then there exists a holomorphic I-form (T E Q(X) 
+such that 
+S[W] = fJ (TI\W 
+Z 
+for every WE g0, l(X) with Supp(w) ~ Z. 
+PROOF. Suppose z: U --+ V c IC is a chart on X which lies in Z. Identify U 
+with V. For qJ E .@(U) denote by <p any I-form in go, l(X) which equals qJ dz 
+on U and zero on X\U. Then the mapping 
+Sv:'@(U)--+IC, qJ~S[<p] 
+is a distribution on U which vanishes on all functions of the form 
+qJ = og/oz, 9 E .@(U), i.e., oSv/oz = O. Hence by Corollary (24.10) there exists 
+a unique holomorphic function hE m(U) with 
+S[;P] = fJ h(z )qJ(z) dz 1\ dz 
+for every qJ E ,@(U). 
+v 
+Setting (Tv:= h dz, we get 
+S[ w] = fJ (Tv 1\ W 
+v 
+for every WE g0, l(U) with Supp(w) ~ U. 
+Now if we carry out the same construction with respect to another chart 
+Z': U' --+ V', then we get a I-form (T v' E Q( U') with the corresponding proper-
+ties. Hence 
+for every WE g0, l(X) with Supp(w) ~ U nU', This implies (Tv = (Tv, on 
+U nU'. Thus the (Tv piece together to give a I-form (T E Q(Z) such that 
+S[ w] = fJ (T 1\ W 
+(*) 
+Z 
+for every W EgO, l(X) whose support is compact and lies in a chart inside Z. 
+If WE g0, l(X) is an arbitrary I-form with Supp(w) ~ Z, then using a parti-
+tion of unity one can write W = Wi + ... + W., where each Wj satisfies (*). 
+Thus 
+o 

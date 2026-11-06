@@ -1,0 +1,38 @@
+21 The Jacobi Inversion Problem 
+169 
+as follows: For x = (Xl' ... , Xg) E VI X··· x Vg let 
+F(X1' ... , Xg) = (F1(X), ... , Fg(x)) 
+where 
+i = 1, ... , g. 
+Here the integral J~f Wj is along any curve from aj to Xj which lies in V j; 
+since Vj is simply connected, the integral is independent of the curve chosen. 
+The map F is complex differentiable with respect to the coordinates Z 1, 
+•.• , Zg and has Jacobian matrix 
+(Op. 
+) 
+JF(x) = oz; (x) = (cpij(Xj)). 
+Thus at the point a = (aI' ... , ag) the matrix JF(a) = A and is invertible. 
+Hence 
+W'=F(V1 X ••• X V g) c: (;g 
+is a neighborhood of F(a) = o. 
+(b) Now we will show that r (] W = O. For, suppose to the contrary that 
+there exists a point t E r (] (W\O). Then there exists 
+X =1= a, 
+with F(x) E r. Renumbering, if necessary, we may assume 
+Xj =1= aj for 1 -sj -S k and Xj = aj for j > k, 
+where 1 -s k -s g. By Abel's Theorem there exists a meromorphic function! 
+on X which has a pole of first order at a j' 1 -s j -s k, a zero of first order at 
+X j' 1 -s j -s k and is holomorphic otherwise. Let C j z; 1 be the principal part 
+of! at aj • Of course cj 
+=1= 0 for 1 -s j -s k. By the Residue Theorem (10.21) 
+k 
+0= Res(fw;) = L cjcpij(aj ) 
+for i = 1, ... , g. 
+j= 1 
+But this is not possible since the matrix (cpij(aj)) has rank g. Thus the 
+assumption is false and we have shown that r is a discrete subgroup of (;g. 
+(c) Now we will show that r is not contained in any proper real vector 
+subspace of (;g. Otherwise, there would exist a non-trivial real linear form on 
+(;g, which vanished identically on r. Since every real linear form is the real 
+part of a complex linear form, one thus gets a vector (Ch ... , cg) E (;9\0 such 
+that 

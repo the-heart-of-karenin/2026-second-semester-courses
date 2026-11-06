@@ -1,0 +1,44 @@
+106 
+2 Compact Riemann Sulfaces 
+PROOF. In this case a solution cannot simply be given as an integral as in 
+(13.1), for the integral will not converge in general. For this reason we use an 
+exhaustion process which allows (13.1) to be applied in the present setting. 
+Suppose 0 < Ro < RI < ... < Rn is a sequence of radii such that 
+limn~oo Rn = R and set 
+Xn'={ZEC: Izi < Rn}· 
+There exist functions I/In E 6"(X) with compact supports SUPP(t/ln) c Xn+ I 
+and t/lnlXn = 1. The functions t/lng vanish outside X n+1 and thus if one 
+extends them by zero, they become functions on C. By (13.1) there exist 
+functions[" E 6"(X) such that 
+oj" = t/lng 
+on X. 
+Here and in the following we use the abbreviation 0 ,= (%z). 
+By induction we alter the sequence C[,,) to another sequence C1..), which 
+for all n ~ 1 satisfies 
+(i) O/" = g on X n , 
+(ii) II/,,+ I - .1..IIx.-l :s; rn. 
+(As usual let IlfilK '=SUPHK If(x)1 denote the supremum norm.) Set 
+II ,= fl· Suppose II, ... ,.1.. are already constructed. Then 
+O(j,,+l-/")=O onXn , 
+and thusfn+ I -/" is holomorphic on X n . Hence there exists a polynomial P 
+(e.g., a finite number of terms of the Taylor series of[,,+ I - .1..) such that 
+11.[,,+1 -.1.. - pllxn_,:S; 2-n. 
+If we set /" + 1 ,= j" + 1 -
+P, then (ii) is satisfied. Moreover, on X n+ lone has 
+0/"+1 = OJ,, + I - oP = Ofn+l = t/ln+lg = g, 
+i.e., (i) also holds. Since every point Z E X is contained in almost all X n' the 
+limit 
+fez) : = lim /nCz) 
+n-> 00 
+exists. On Xn one may write 
+00 
+f=/" + L Ch+1 -];J 
+k=n 
+For k ~ n, 
+the functions h+ 1 - hare holomorphic on X n , 
+since 
+O(h+l - h) = O. 
+Because of (ii), the series 
+GO 
+Fn ,= I (h+ 1 - h) 
+k;n 

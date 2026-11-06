@@ -1,0 +1,49 @@
+20 Abel's Theorem 
+161 
+20.4. Chains, Cycles and Homology. By a I-chain on a Riemann surface X 
+we mean a formal finite linear combination with integer coefficients, 
+k 
+C = L njcj , 
+j=l 
+where the cj : [0,1] --> X are curves. The integral over C of a closed differential 
+form W E g(1)(X) is defined by 
+• 
+k 
+• 
+I w:= L nj I w. 
+··c 
+)=1 
+"Cj 
+The set of all I-chains on X, which in a natural way is an abelian group, will 
+be denoted by C1(X). A boundary operator 
+0: C 1 (X) --> Div(X) 
+is defined as follows. Suppose c: [0, 1] --> X is a curve. Set OC = ° 
+if c(O) = 
+c(I). Otherwise let oc be the divisor with value + 1 at c(l) and -1 at c(O) and 
+zero at all other points. For an arbitrary I-chain 
+C = L njcj let 
+OC := L nj oCj . Clearly 
+deg(oc) = ° for every C E C1(X). 
+Conversely on a compact Riemann surface given any divisor D with 
+deg D = ° 
+there exists a I-chain C such that GC = D. For, a divisor D of 
+degree zero may be written as a sum D = Dl + ... + Dk , where each Dj takes 
+the value + 1 at some point hj' -1 at some other point aj and is zero 
+otherwise. Let cj be a curve from aj to hj and C := C 1 + ... + Ck. Then OC = D. 
+The kernel of the mapping G, 
+Zl(X):= Ker( C 1(X) ~ DiV(X)), 
+is called the group of I-cycles on X. In particular every closed curve is a 
+1-cycle. 
+Two cycles c, c' E Z 1 (X) are said to be homologous if for every closed 
+differential form W E g(l)(X) one has 
+f 
+W = r w. 
+c 
+oJ,' 
+The set of all homology classes of 1-cycles forms an additive group H1(X), 
+the 1st homology group of X. For}, E H1(X) and a closed differential form 
+W E g(l)(X), the integral L W is well-defined. 
+Two closed curves which are homotopic are also homologous. Hence 
+there is a group homomorphism 7rl(X) --> H l(X). One can easily check that 
+this mapping is surjective. However it is not in general injective, since the 
+fundamental group is not always abelian. 

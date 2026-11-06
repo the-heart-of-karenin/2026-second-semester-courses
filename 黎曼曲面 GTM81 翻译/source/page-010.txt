@@ -1,0 +1,27 @@
+CHAPTER 1 
+Covering Spaces 
+Riemann surfaces originated in complex analysis as a means of dealing with 
+the problem of multi-valued functions. Such multi-valued functions occur 
+because the analytic continuation of a given holomorphic function element 
+along different paths leads in general to different branches of that function. It 
+was the idea of Riemann to replace the domain of the function with a many 
+sheeted covering of the complex plane. If the covering is constructed so that 
+it has as many points lying over any given point in the plane as there are 
+function elements at that point, then on this" covering surface" the analytic 
+function becomes single-valued. Now, forgetting the fact that these surfaces 
+are "spread out" over the complex plane (or the Riemann sphere), we get 
+the notion of an abstract Riemann surface and these may be considered as 
+the natural domain of definition of analytic functions in one complex 
+variable. 
+We begin this chapter by discussing the general notion of a Riemann 
+surface. Next we consider covering spaces, both from the topological and 
+analytic points of view. Finally, the theory of covering spaces is applied to 
+the problem of analytic continuation, to the construction of Riemann sur-
+faces of algebraic functions, to the integration of differential forms and to 
+finding the solutions of linear differential equations. 
+§ 1. The Definition of Riemann Surfaces 
+In this section we define Riemann surfaces, holomorphic and meromorphic 
+functions on them and also holomorphic maps between Riemann surfaces. 
+Riemann surfaces are two-dimensional manifolds together with an addi-
+tional structure which we are about to define. As is well known, an 
+1 

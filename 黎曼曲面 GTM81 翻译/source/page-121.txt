@@ -1,0 +1,43 @@
+112 
+2 Compact Riemann Surfaces 
+The set of cochains having finite norm is a vector subspace ei2 (U, (9) c 
+eq(U, (9), q = 0, 1, and these subspaces are Hilbert spaces. The cocycles in 
+el2 (U, (9) form a closed vector subspace which we denote by Zl2 (U, (9). 
+14.5. If l'; (f U j , i = 1, ... , n, are relatively compact open subsets and 
+m = (l';k';j$.' then to simplify the notation we will write m ~ U. For any 
+cochain ~ E eq(U, (9) one has 11~1IL2(ll) < 00. It then follows directly from 
+Lemma (14.3) that given any e > 0, there exists a closed vector subspace 
+A c Z12(U, CO) of finite codimension such that 
+II ~ II L2(!l) :::; e II ~ II U(U) for every ~ E A. 
+14.6. Lemma. Suppose X is a Riemann surface and U* is a finite family of 
+charts on X as in (14.4). Further suppose that one has W ~ m ~ U ~ U*, i.e., 
+fixed shrinkings ofU '" are given. Then there exists a constant e > ° 
+such that 
+for every ~ E Z12(m, (9) there exist elements, E Z12(U' (9) and 11 E C22(W, (9) 
+with 
+, = ~ + c511 
+on W 
+and 
+max( 11'11 L2(U) , 111111 U(W») :::; e II ~ II £2(!l) • 
+PROOF 
+(a) Suppose ~ = (fu) E zUm, (9) is given. Forgetting for the moment 
+the restriction on the norms, we first construct 'E Z12(U, (9) and 
+11 E C2z(W, (9) such that' = {' + c5'1 on W. By Theorem (12.6) there exists a 
+cochain (g;) E eU(m, C) such that 
+fu=gj-gj on l';n J.j. 
+Since d"fij = 0, one has d"gj = d"gj on l'; n J.j, and thus there exists a differ-
+ential form WECO. 1( I m I) with W Il'; = d"g;. Since I W I ~ I m I, there exists 
+a function IjJ E 6"(X) with 
+Supp(ljJ) elm I and IjJIIW/ = 1. 
+Hence IjJw can be considered as an element of C( / u'" / ). By Theorem (13.2) 
+there exist functions h; E C( Un such that 
+d"hi = IjJw 
+on Ur 
+Because d"h; = d"hj on ut n U;, it follows that 
+Fij:= hj -
+hi E (9(Ur n Un 
+Set':= (Fij) / U. Since U ~ U*, one has' E Z12(U, CD). On Wi one has 
+d"h; = IjJw = w = d"gj. thus h; -
+g; is holomorphic on W;. Since h; - g; is 
+also bounded on W;. one has 
+'1 := (h; - g;) I WE e22(W, CD). 

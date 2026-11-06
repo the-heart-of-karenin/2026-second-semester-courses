@@ -1,0 +1,52 @@
+224 
+3 Non-compact Riemann Surfaces 
+for k = 1, ... , r are surjective. Fix k and let 
+v; ,= Vi n Yk -
+1 
+for i = 1, ... , r, 
+v; ,= V; 
+for if- k 
+and V~ ,= V k • 
+Then ~ = (V;h<;i<;r is a Leray covering of 1';.-1 and ~'= (Vi)I<;i<;r is a 
+Leray 
+covering 
+of 
+Yk • 
+Hence 
+Zl(~, 
+(0d=Zl(~', 
+(!E), 
+since 
+V; n Vi = V; n Vj for every i =1= j. Thus Hl('!3', 0E) -> Hl('!3, (('E) is surjec-
+ti~. 
+0 
+29.13. Theorem. Suppose Y is a relatively compact open subset oia Riemann 
+sw(ace X and E is a holomorphic vector bundle on X. Then Hl(y, (!JE) isjinite 
+dimensional. 
+PROOF. There is an open set Y' with Y ~ Y' ~ X and open sets V; ~ Vi' i = 1, 
+... , r, in X with the following properties: 
+(i) Ui=l V; = Y, 
+Ui=l Vi = Y'. 
+(ii) Every Vi is biholomorphic to an open subset of IC. 
+(iii) On every Vi there is a holomorphic linear chart hi: EVi -> Vi X e. 
+Now U = (V;) and ~ = (V;) are Leray coverings of Y' resp. Y for the 
+sheaf 0E' By Lemma (29.12) it follows that the restriction mapping 
+Hl(U, (0E) -> Hl('!3, (Cd is surjective. This implies that the mapping 
+<p: CO(~, (lIE) X Zl(U, (Ci E ) -> Zl(~, (f'E) 
+(fl, O~<5('7) + f3(O 
+is surjective, where f3: Zl(U, (fE) -> Zl(~, C'd is the restriction map. One 
+can make the spaces Zl(U, (0t:), ZI(~, (Cd and CO('!3, (!E) into Frechet 
+spaces in the following way. First (0E(Vi n V j )::::: (fJ(Vi n VJn with the top-
+ology of uniform convergence on compact subsets is a Frechet space. Thus 
+so is C1(U, (fid = 11 j (liE(Vi n V j ) with the product topology. It is easy to 
+see that Zl(U, (!E) is a closed subspace of C 1(U, (f;d. Thus it is likewise a 
+Frechet space. The topologies on ZI(~, (fiE) and CO(~, (f!E) are defined 
+similarly. With respect to these topologies the mappings <5: CO('!3, (Cd-> 
+ZI(~, (fE) and f3: Zl(U, (fJE) -> ZI(~, (liE) are continuous. Then Montel's 
+Theorem implies that f3 is even compact. Hence 
+1/1: CO('!3, (!'d x Zl(U, (C'E) -> Zl(~, (!E) 
+('7, ~) r-> f3('7) 
+is also compact. By the Theorem of L. Schwartz (cf. Appendix B.ll) the 
+mappmg 
+<p -1/1: CO('!3, (iiE) x Zl(U, (!)E) -> Zl(~, (!)E) 
+('7, O~ 6'7 

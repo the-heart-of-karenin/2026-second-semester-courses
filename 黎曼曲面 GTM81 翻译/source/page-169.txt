@@ -1,0 +1,40 @@
+160 
+2 Compact Riemann Surfaces 
+Now dt/l It/I is differentiable in a neighborhood of a and thus has no singulari-
+ties. As in (13.1) this implies that for any I-form 0" E S(1)(X) with compact 
+support the integral 
+Il'df 
+-/\0" 
+. f 
+x 
+exists. For later use we also note that the I-form d''flfis differentiable on all 
+of X, for the local representationf= t/lzk implies d''fIf= d"t/lit/l. 
+20.3. Lemma. Suppose aI' ... , an are distinct points on the Riemann surface X 
+and kl' ... , kn E 71.. Suppose D E Div(X) is the divisor with D(aj ) = kjfor j = 1, 
+... , nand D(x) = 0 otherwise. Let f be a weak solution of D. Then for any 
+g E S(X) with compact support 
+1 
+. df 
+n 
+~ fJ -f /\ dg = .L kjg(aJ 
+m x 
+J=1 
+PROOF. Choose disjoint coordinate neighborhoods (Vj , zJ of the aj with 
+z(aj) = 0 such that on Vj one may write f as 
+We may assume that Zj(Vj ) C C is the unit disk for j = 1, ... , n. 
+Suppose 0 < r1 < r2 < 1. There exist functions qJj E S(X) with 
+Supp(qJj)C{IZjl <r2 } 
+andqJjl{lzjl ::;r I}=l. 
+Let gj :=qJjg for j = 1, ... , n and go :=g - (gi + ... + gn). Since Supp(go) is 
+compact in X' := X\{aI' ... , an}, it follows from (1O.20) that 
+Thus 
+Now Stokes' Theorem implies 
+'J dzo 
+'J 
+(dZ o) 
+J -; /\ dg j = -lim J 
+d g j ---; 
+Uj 
+J 
+,-0,,; IZjl ,;r2 
+J 

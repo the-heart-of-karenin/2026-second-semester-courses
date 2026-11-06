@@ -1,0 +1,34 @@
+174 
+2 Compact Riemann Surfaces 
+21.2. (a) Show that the polynomial 
+F(z} :=4z3 -
+92Z - 93, 
+has 3 distinct roots if and only if 
+92,93 EIC, 
+9} -
+279~ =1= o. 
+(b) Let r c IC be a lattice and 
+1 
+(1 
+fJ(z) = 2 + L 
+----2 
+Z 
+w.rlo (Z-W) 
+be the associated Weierstrass fJ-function. Show that fJ satisfies the differ-
+ential equation 
+where 
+" 
+'\' 
+~6 
+92 = 60 
+L... 
+4 
+and 93 = 140 
+L... 
+<v.rlo W 
+<v.rlO W 
+and that the torus IC/r is isomorphic to the Riemann surface X --> pi of the 
+algebraic function J 4z3 - 92 z - 93· 
+(c) Given 92, 93 E IC with 9l =1= 279L show that there is a lattice r c IC such 
+that 
+[Hint: Use part (b) and Theorem (21.10).] 

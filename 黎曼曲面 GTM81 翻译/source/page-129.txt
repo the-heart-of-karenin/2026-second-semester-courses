@@ -1,0 +1,37 @@
+120 
+2 Compact Riemann Surfaces 
+15.4. Remark. Given a homomorphism a: :F ---> '!J of sheaves on the topo-
+logical space X one can define 
+ya(U) :=lm(:F(U) ~ 
+'!J(U)) for every open U in X. 
+This defines a pre sheaf .JI which in general does not satisfy sheaf axiom II. As 
+a counterexample consider the sheaf homomorphism 
+ex: ((' ---> (1;1*, 
+f f---* exp( 2nif), 
+on the space C*. Let U I = C*\iKL and U 2 = C*\IR+. Define};, E 0*(Uk ) by 
+.f~(z) = z for every Z E Uk, k = 1,2. Since Uk is simply connected, 
+fk E 1m ((9( Uk) ~ 
+(I*(Uk)). 
+Moreover, fl lUI n U 2 =.f~ I U I n U 2' But there is no element 
+fE 1m (0(C*) ~ 
+(1;1*(C*)) 
+with flU k = fb since the function Z f---* Z has no single-valued logarithm on 
+all of C*. 
+15.5. Exact Sequences. Suppose a: :F ---> ~tj is a sheaf homomorphism on the 
+topological space X. Then for each x E X there is an induced homo-
+morphism of the stalks 
+A sequence of sheaf homomorphisms :F -=. '!J !!.. ytJ is called exact, iffor each 
+x E X the sequence 
+is exact, i.e:, Ker f3x = 1m ax. A sequence 
+:):11-1 
+_ 
+----+ !fI' n , 
+(n > 3), 
+of sheaf homomorphisms is called exact if the sequence 
+is exact for every 1 S k S n - 2. A sheaf homomorphism a: .0;; ---> '!J is called 
+a monomorphism if 0 ---> .0;; ..:. '!J is exact and an epimorphism if .'F ~ '!J ---> 0 is 
+exact. An exact sequence of the form 0 ---> .'F ---> '!J ---> :/f' ---> 0 is called a short 
+exact sequence. 
+15.6. Lemma. Suppose a: .0;; ---> '!J is a sheaf monomorphism on the topological 
+space X. Thenfor every open subset U c X the mapping au: .o;;( U) ---> '!J( U) is 
+injective. 

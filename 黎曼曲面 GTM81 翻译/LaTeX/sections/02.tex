@@ -1,0 +1,125 @@
+\section{全纯映射的初等性质}
+\sourcepage{10}
+本节指出黎曼曲面之间全纯映射的若干初等拓扑性质。借助这些性质，可以很容易地推出复分析中的一些著名定理，例如Liouville定理和代数基本定理。
+
+\entry{2.1}{定理（全纯映射的局部行为）}
+设$X,Y$是黎曼曲面，$f:X\to Y$是非常值全纯映射。设$a\in X$且$b:=f(a)$。则存在整数$k\ge1$，以及$X$上的坐标卡$\varphi:U\to V$和$Y$上的坐标卡$\psi:U'\to V'$，满足：
+\begin{enumerate}[label=(\roman*)]
+\item $a\in U$，$\varphi(a)=0$；$b\in U'$，$\psi(b)=0$；
+\item $f(U)\subset U'$；
+\item 映射$F:=\psi\circ f\circ\varphi^{-1}:V\to V'$由$F(z)=z^k$（$z\in V$）给出。
+\end{enumerate}
+\begin{proof}
+首先，存在$X$上的坐标卡$\varphi_1:U_1\to V_1$与$Y$上的坐标卡$\psi:U'\to V'$，使得将$(U,\varphi)$换为$(U_1,\varphi_1)$后，条件(i)、(ii)成立。由恒等定理，函数
+\[
+f_1:=\psi\circ f\circ\varphi_1^{-1}:V_1\to V'
+\]
+非常值。由于$f_1(0)=0$，存在$k\ge1$使$f_1(z)=z^kg(z)$，其中$g$在$V_1$上全纯，且$g(0)\ne0$。因此，在0的某个邻域上存在全纯函数$h$使$h^k=g$。对应$z\mapsto zh(z)$定义了一个双全纯映射$\alpha:V_2\to V$，其中$V_2\subset V_1$及$V$都是0的开邻域。令$U:=\varphi_1^{-1}(V_2)$。现在把坐标卡$\varphi_1:U_1\to V_1$换为坐标卡$\varphi:U\to V$，其中$\varphi=\alpha\circ\varphi_1$。由构造，映射$F=\psi\circ f\circ\varphi^{-1}$满足$F(z)=z^k$。
+\end{proof}
+
+\entry{2.2}{注记}
+定理(2.1)中的数$k$可作如下刻画：对$a$的每个邻域$U_0$，存在$a$的邻域$U\subset U_0$与$b=f(a)$的邻域$W$，使得对每个$y\in W$、$y\ne b$，集合$f^{-1}(y)\cap U$恰含$k$个元素。称$k$为映射$f$在点$a$处取值$b$的\textbf{重数}（multiplicity），或简称$f$在点$a$处的重数为$k$。
+
+\entry{2.3}{例}
+设$f(z)=z^k+c_1z^{k-1}+\cdots+c_k$为$k$次多项式。则可把$f$看作全纯映射$f:\PP^1\to\PP^1$，其中$f(\infty)=\infty$（参见第1节）。利用$\infty$附近的坐标卡，容易验证取值$\infty$的重数为$k$。
+\sourcepage{11}
+\entry{2.4}{推论}
+设$X,Y$是黎曼曲面，$f:X\to Y$是非常值全纯映射。则$f$是开映射，即每个开集在$f$下的像都是开集。
+\begin{proof}
+由定理(2.1)直接可知，若$U$是点$a\in X$的一个邻域，则$f(U)$是点$f(a)$的一个邻域。这表明$f$是开映射。
+\end{proof}
+
+\entry{2.5}{推论}
+设$X,Y$是黎曼曲面，$f:X\to Y$是单射全纯映射。则$f$是$X$到$f(X)$的双全纯映射。
+\begin{proof}
+由于$f$单射，在定理(2.1)给出的$f$的局部描述中，总有$k=1$。因此逆映射$f^{-1}:f(X)\to X$全纯。
+\end{proof}
+
+\entry{2.6}{推论（最大值原理）}
+设$X$是黎曼曲面，$f:X\to\C$是非常值全纯函数。则$f$的绝对值不取到最大值。
+\begin{proof}
+若存在点$a\in X$使
+\[
+R:=|f(a)|=\sup\{|f(x)|:x\in X\},
+\]
+则$f(X)\subset K:=\{z\in\C:|z|\le R\}$。由于$f(X)$是开集，它包含于$K$的内部。这与$f(a)\in\partial K$的假设矛盾。
+\end{proof}
+
+\entry{2.7}{定理}
+设$X,Y$是黎曼曲面，$X$紧，且$f:X\to Y$是非常值全纯映射。则$Y$紧，且$f$为满射。
+\begin{proof}
+由(2.4)，$f(X)$是开集。由于$X$紧，$f(X)$紧，因而为闭集。连通拓扑空间中既开又闭的子集只有空集与全空间，所以$f(X)=Y$。因此$f$为满射，且$Y$紧。
+\end{proof}
+
+\entry{2.8}{推论}
+紧黎曼曲面上的每个全纯函数都是常值函数。
+
+由于$\C$非紧，这一结论由定理(2.7)得到。
+
+\entry{2.9}{推论}
+$\PP^1$上的每个亚纯函数$f$都是有理函数，即可写为两个多项式之商。
+\sourcepage{12}
+\begin{proof}
+函数$f$只有有限多个极点。否则，若极点有无穷多个，它们就会有一个聚点，由恒等定理，$f$将恒等于$\infty$。可假设$\infty$不是$f$的极点；否则，以$1/f$代替$f$。设$a_1,\ldots,a_n\in\C$为$f$的极点，并设
+\[
+h_\nu(z)=\sum_{j=-k_\nu}^{-1}c_{\nu j}(z-a_\nu)^j
+\]
+为$f$在极点$a_\nu$处的主部，$\nu=1,\ldots,n$。则函数$g:=f-(h_1+\cdots+h_n)$在$\PP^1$上全纯，由推论(2.8)，它是常数。因此$f$是有理函数。
+\end{proof}
+
+\entry{2.10}{Liouville定理}
+每个有界全纯函数$f:\C\to\C$都是常值函数。
+\begin{proof}
+由Riemann可去奇点定理(2.8)\translatornote{原文此处引用编号为(2.8)，可去奇点定理的实际编号为(1.8)。}，$f$可解析延拓为全纯映射$f:\PP^1\to\C$。由推论(2.8)，$f$为常数。
+\end{proof}
+
+\entry{2.11}{代数基本定理}
+设$n\ge1$，且$f(z)=z^n+c_1z^{n-1}+\cdots+c_n$是系数$c_\nu\in\C$的多项式。则至少存在一点$a\in\C$使$f(a)=0$。
+\begin{proof}
+可将多项式$f$看作全纯映射$f:\PP^1\to\PP^1$，其中$f(\infty)=\infty$。由定理(2.7)，这一映射为满射，因此$0\in f(\C)$。
+\end{proof}
+
+\entry{2.12}{双周期函数}
+设$\omega_1,\omega_2\in\C$在$\R$上线性无关，$\Gamma:=\Z\omega_1+\Z\omega_2$是它们张成的格。称亚纯函数$f:\C\to\PP^1$关于$\Gamma$\textbf{双周期}（doubly periodic），如果
+\[
+f(z)=f(z+\omega)\qquad\text{对所有 }z\in\C,\ \omega\in\Gamma.
+\]
+显然，只要对每个$z\in\C$有$f(z)=f(z+\omega_1)=f(z+\omega_2)$，这一条件就成立。设$\pi:\C\to\C/\Gamma$是典范映射。则双周期函数$f$诱导函数$F:\C/\Gamma\to\PP^1$，使$f=F\circ\pi$。由$\C/\Gamma$上复结构的定义直接可知，$F$是$\C/\Gamma$上的亚纯函数。反之，对任意亚纯函数$F:\C/\Gamma\to\PP^1$，复合$f=F\circ\pi:\C\to\PP^1$是关于$\Gamma$双周期的亚纯函数。因此，环面$\C/\Gamma$上的亚纯函数与$\C$上关于$\Gamma$双周期的亚纯函数一一对应。于是由定理(2.7)得到：
+\sourcepage{13}
+\entry{2.13}{定理}
+每个双周期全纯函数$f:\C\to\C$都是常值函数。每个非常值双周期亚纯函数$f:\C\to\PP^1$都取遍所有值$c\in\PP^1$。
+
+\subsection*{习题（第2节）}
+\entry{2.1}{}
+设$\Gamma\subset\C$是一个格。关于$\Gamma$的Weierstrass $\wp$函数定义为
+\[
+\wp_\Gamma(z)=\frac1{z^2}+\sum_{\omega\in\Gamma\setminus\{0\}}
+\left(\frac1{(z-\omega)^2}-\frac1{\omega^2}\right).
+\]
+(a) 证明$\wp_\Gamma$是关于$\Gamma$双周期的亚纯函数，其极点位于$\Gamma$中的各点。［提示：先考虑导数
+\[
+\wp'_\Gamma(z)=-2\sum_{\omega\in\Gamma}\frac1{(z-\omega)^3}.
+\]
+］
+
+(b) 设$f\in\MM(\C)$是关于$\Gamma$双周期的函数，其极点位于$\Gamma$中的各点，且在原点附近有如下Laurent展开：
+\[
+f(z)=\sum_{k=-2}^\infty c_kz^k,\qquad c_{-2}=1,\quad c_{-1}=c_0=0.
+\]
+证明$f=\wp_\Gamma$。
+
+\entry{2.2}{}
+设$X$是黎曼曲面，$f:X\to\C$是非常值全纯函数。证明$\operatorname{Re}f$不取到最大值。
+
+\entry{2.3}{}
+设$f:\C\to\C$是全纯函数，且其实部有上界。则$f$为常数。
+
+\entry{2.4}{}
+设$f:X\to Y$是非常值全纯映射，且
+\[
+f^*:\OO(Y)\to\OO(X),\qquad f^*(\varphi):=\varphi\circ f.
+\]
+证明$f^*$是环单同态。
+
+\entry{2.5}{}
+设$p_1,\ldots,p_n$是紧黎曼曲面$X$上的点，令$X':=X\setminus\{p_1,\ldots,p_n\}$。设$f:X'\to\C$是非常值全纯函数。证明$f$的像任意接近每个$c\in\C$。

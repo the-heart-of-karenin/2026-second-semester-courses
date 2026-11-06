@@ -1,0 +1,67 @@
+\section{Mittag--Leffler定理与Weierstrass定理}
+\sourcepage{201}
+现在讨论非紧黎曼曲面上具有指定主部、或指定阶数零点与极点的亚纯函数的构造，这是平面Mittag--Leffler定理及Weierstrass定理的对应物。紧情形在第18、20节已讨论，可解需要附加条件；非紧情形则无此限制。
+\sourcepage{202}
+\entry{26.1}{定理}
+非紧黎曼曲面满足$H^1(X,\OO)=0$。
+\begin{proof}
+由Dolbeault定理，$H^1(X,\OO)\cong\mathcal E^{0,1}(X)/d''\mathcal E(X)$，再由(25.6)商空间为零。
+\end{proof}
+\textbf{注记。}这是任意维Stein流形上Cartan--Serre定理B的特例，参见[32]、[34]。
+\entry{26.2}{}
+回顾(18.1)：开覆盖上的亚纯函数族$\mu=(f_i)$，若差$f_j-f_i$全纯，即为Mittag--Leffler分布。解为整体亚纯函数$f$，使$f-f_i$在各$U_i$全纯。差组成上闭链$(f_j-f_i)$，由(18.1)，可解当且仅当它为上边缘。因此由(26.1)得到：
+\entry{26.3}{定理}
+非紧黎曼曲面上的每个Mittag--Leffler分布均有解。
+
+接着讨论Weierstrass乘积定理的对应物：给定除子$D$，求非零亚纯$f$使$(f)=D$。弱解的定义见(20.1)。
+\entry{26.4}{引理}
+非紧曲面上的每个除子均有弱解。
+\begin{proof}
+(a)由(23.6)，选紧集穷竭$K_j$满足$K_j=\Lambda(K_j)$及$K_j\subset\operatorname{int}K_{j+1}$。
+
+(b)断言：若$a_0\notin K_j$，点除子$A_0$有在$K_j$恒为1的弱解。
+\sourcepage{203}
+因$a_0$所在的$X\setminus K_j$分支非相对紧，可选$a_1$在该分支且不属于$K_{j+1}$，再取避开$K_j$的从$a_1$到$a_0$的曲线$c_0$。由(20.5)，$\partial c_0$有在$K_j$为1的弱解$\varphi_0$。反复进行，得到$a_\nu\notin K_{j+\nu}$、避开$K_{j+\nu}$且从$a_{\nu+1}$到$a_\nu$的$c_\nu$，及$\partial c_\nu=A_\nu-A_{\nu+1}$的弱解$\varphi_\nu$，在$K_{j+\nu}$为1。有限积至$n$为$A_0-A_{n+1}$的弱解。无限积$\varphi:=\prod_{\nu=0}^\infty\varphi_\nu$在每个紧集上只有有限个非平凡因子，故收敛，正是$A_0$的所求弱解。
+
+(c)对任意$D$，令$K_0=\varnothing$，定义$D_\nu$在$K_{\nu+1}\setminus K_\nu$上等于$D$，外部为零。各$D_\nu$仅有有限支集，且$D=\sum_\nu D_\nu$。由(b)及有限乘积、整数幂，取其弱解$\psi_\nu$在$K_\nu$为1。于是局部有限的乘积$\prod_\nu\psi_\nu$为$D$的弱解。
+\end{proof}
+\entry{26.5}{定理}
+非紧黎曼曲面上的每个除子都是某个非零亚纯函数的除子。
+\begin{proof}
+局部可解，故选由单连通开集$U_i$组成的覆盖及$f_i\in\MM^*(U_i)$，使$(f_i)=D|_{U_i}$。则$f_i/f_j\in\OO^*(U_i\cap U_j)$。取(26.4)的弱解$\psi$，在$U_i$上写$\psi=\psi_i f_i$，其中$\psi_i$处处非零且可微。由单连通性存在光滑对数$\varphi_i$使$\psi_i=e^{\varphi_i}$。
+\sourcepage{204}
+于是$e^{\varphi_j-\varphi_i}=f_i/f_j$，故$\varphi_{ij}:=\varphi_j-\varphi_i$全纯，并满足上闭链关系。由$H^1(X,\OO)=0$，存在全纯$g_i$使$\varphi_j-\varphi_i=g_j-g_i$。因此$e^{g_i}f_i=e^{g_j}f_j$在交集成立，拼成整体亚纯$f$。其各局部除子等于$(f_i)$，故$(f)=D$。
+\end{proof}
+\entry{26.6}{推论}
+每个非紧黎曼曲面上存在处处非零的全纯1形式。
+\begin{proof}
+取非常值亚纯函数$g$，由(26.5)取$f$使$(f)=-(dg)$，则$\omega:=f\,dg$全纯且无零点。
+\end{proof}
+\entry{26.7}{定理}
+设$(a_\nu)$为无聚点的互异点列。任给$c_\nu\in\C$，存在$f\in\OO(X)$使$f(a_\nu)=c_\nu$。
+\begin{proof}
+由(26.5)取全纯$h$恰在各$a_\nu$有一阶零点。令$U_i:=X\setminus\bigcup_{\nu\ne i}\{a_\nu\}$，构成开覆盖。在$U_i$上令$g_i:=c_i/h$，则$i\ne j$时交集避开全部零点，故$(g_i)$为Mittag--Leffler分布。由(26.3)取解$g$，令$f:=gh$。在$U_i$上$f=c_i+(g-g_i)h$。
+\sourcepage{205}
+右端全纯，且在$a_i$值为$c_i$，得证。
+\end{proof}
+\entry{26.8}{推论}
+每个非紧黎曼曲面均为\textbf{Stein流形}，即(i)任意不同两点可由整体全纯函数分离；(ii)对任一无聚点点列$(x_\nu)$，存在整体全纯$f$使$\limsup_\nu|f(x_\nu)|=\infty$。
+
+\textbf{注记。}非紧黎曼曲面上的Mittag--Leffler、Weierstrass定理由H.~Florack[54]首次用Behnke--Stein[51]的方法证明。多复变中的对应问题，即第一、第二Cousin问题，在Stein流形理论的发展中起重要作用，参见[53]、[59]、[61]；用上同调求解这些问题也源于该理论。
+\subsection*{习题（第26节）}
+\entry{26.1}{}
+证明非紧曲面上$H^1(X,\Omega)=0$。［提示：用(26.6)说明$\Omega\cong\OO$。］
+\entry{26.2}{}
+(a)任给$\omega\in\mathcal E^{(2)}(X)$，证明存在$f\in\mathcal E(X)$使$d'd''f=\omega$。
+(b)若$\mathcal H$为调和函数层，证明$H^1(X,\mathcal H)=0$。
+\entry{26.3}{}
+证明非紧黎曼曲面上的每个亚纯函数都是两个全纯函数之商。
+\entry{26.4}{}
+设全纯$f,g$无共同零点。
+(a)证明层序列$0\to\OO\xrightarrow\alpha\OO\oplus\OO\xrightarrow\beta\OO\to0$正合，其中$\alpha(\psi)=(\psi g,-\psi f)$、$\beta(\varphi_1,\varphi_2)=\varphi_1f+\varphi_2g$。
+(b)证明存在整体全纯$\Phi,\Psi$使$\Phi f+\Psi g=1$。
+\sourcepage{206}
+\entry{26.5}{}
+设$\mathfrak A=\sum_{j=1}^k\OO(X)f_j$为有限生成理想。证明它为主理想。［提示：令$D(x):=\min_j\operatorname{ord}_xf_j$，取$(f)=D$的全纯函数，验证$\mathfrak A=\OO(X)f$。］
+\entry{26.6}{}
+对非紧黎曼曲面上的任意除子$D$，证明(a)$H^1(X,\OO_D)=0$；(b)$H^1(X,\MM)=0$。

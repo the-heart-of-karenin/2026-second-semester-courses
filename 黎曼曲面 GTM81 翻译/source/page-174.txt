@@ -1,0 +1,46 @@
+20 Abel's Theorem 
+165 
+20.8. Application to Doubly-Periodic Functions. Suppose YI> "h E Care 
+linearly independent over IR and 
+P :={tl YI + t2Y2: 0 C;; tl < 1,0 C;; t2 < I}. 
+Suppose zeros ai' ... , an E P and poles bl> ... , bn E P are prescribed, where 
+each point appears as often as its multiplicity demands. Then there exists a 
+meromorphic function 
+which 
+is 
+doubly-periodic with 
+respect 
+to 
+r = ZYI + ZY2 and has zeros ai' ... , an and poles b l , ... , bn if and only if 
+PROOF. Let D be the divisor on c/r determined by the prescribed zeros and 
+poles. Choose curves Ck from bk to ak in C, e.g. straight line segments. Let 
+n: C -+ c/r be the canonical projection and 
+c:=n-' CI + ... + n 0 Cn E C1(C/r). 
+Then 8c = D. Let OJ E Q(C/r) be the differential form on the torus induced 
+by the differential form dz on C. Then 
+r 
+OJ = I r dz = ± 
+(ak -
+bk )· 
+'c 
+k=l'Ck 
+k=l 
+Hence the result follows from the Remark right after the statement of Abel's 
+Theorem. 
+0 
+EXERCISES (§20) 
+20.1. Let X be a compact Riemann surface, C( and f3 be closed curves in X and (J. and 
+(J p be the harmonic I-forms associated to C( and fJ according to Corollary (20.6). 
+Show that 
+is an integer. (This integer is the "intersection number" of IX and p.) 
+[Hint: Show that for fE 8'(X) and IX a closed curve 
+1 I' df . 
+. 
+] 
+-2' -r IS an mteger. 
+7rl "'cr: 
+, 
+20.2. Let r = .zYl + .zY2 c IC be a lattice, X = ICjr and 
+r:J.j: [0, 1] -> X 
+be the closed curves defined by 
+where n: IC -> ICjr is the canonical projection. Find the harmonic forms (J'j' 

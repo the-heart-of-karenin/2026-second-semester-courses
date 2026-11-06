@@ -1,0 +1,69 @@
+Graduate Texts in Mathematics 
+contfnued from page U 
+48 SACHS/WU. General Relativity for Mathematicians. 
+49 GRUENBERG/WEIR. Linear Geometry. 2nd ed. 
+50 EDWARDS. Fermat's Last Theorem. 
+51 
+KLINGENBERG. A Course in Differential Geometry. 
+52 
+HARTSHORNE. Algebraic Geometry. 
+53 
+MANIN. A Course in Mathematical Logic. 
+54 GRAVERIW ATKINS. Combinatorics with Emphasis on the Theory of Graphs. 
+55 
+BRowNIPEARCY. Introduction to Operator Theory I: Elements of Functional Analysis. 
+56 MASSEY. Algebraic Topology: An Introduction. 
+57 CROWELLlFox. Introduction to Knot Theory. 
+58 KOBLITZ. p-adic Numbers, p-adic Analysis. and Zeta-Functions. 2nd ed. 
+59 LANG. Cyclotomic Fields. 
+60 ARNOLD. Mathematical Methods in Oassical Mechanics. 2nd ed. 
+61 
+WHrrEHEAD. Elements of Homotopy Theory. 
+62 KARGAPOLDVIMERLZJAKOV. Fundamentals of the Theory of Groups. 
+63 BOLLDBAS. Graph Theory. 
+64 EDWARDS. Fourier Series. Vol. I. 2nd ed. 
+65 
+WELLS. Differential Analysis on Complex Manifolds. 2nd ed. 
+66 WATERHOUSE. Introduction to Affine Group Schemes. 
+67 SERRE. Local Fields. 
+68 WEIDMANN. Linear Operators in Hilbert Spaces. 
+69 LANG. Cyclotomic Fields II. 
+70 MASSEY. Singular Homology Theory. 
+71 
+FARKAsiKRA. Riemann Surfaces. 2nd ed. 
+72 STILLWELL. Classical Topology and Combinatorial Group Theory. 2nd ed. 
+73 HUNGERFORD. Algebra. 
+74 DAVENPORT. Multiplicative Number Theory. 2nd ed. 
+75 
+HocHSCHILD. Basic Theory of Algebraic Groups and Lie Algebras. 
+76 IITAKA. Algebraic Geometry. 
+77 HECKE. Lectures on the Theory of Algebraic Numbers. 
+78 
+BURRIS/SANKAPPANAVAR. A Course in Universal Algebra. 
+79 WALTERS. An Introduction to Ergodic Theory. 
+80 ROBINSON. A Course in the Theory of Groups. 
+81 
+FORSTER. Lectures on Riemann Surfaces. 
+82 BOTTlTu. Differential Forms in Algebraic Topology. 
+83 
+WASHINGTON. Introduction to Cyclotomic Fields. 
+84 IRELAND/RosEN. A Oassical Introduction to Modern Number Theory. 2nd ed. 
+85 
+EDWARDS. Fourier Series. Vol. II. 2nd ed. 
+86 VAN LINT. Introduction to Coding Theory. 2nd ed. 
+87 
+BROWN. Cohomology of Groups. 
+88 
+PIERCE. Associative Algebras. 
+89 
+LANG. Introduction to Algebraic and Abelian Functions. 2nd ed. 
+90 BRoNDsTED. An Introduction to Convex Polytopes. 
+91 
+BEARDON. On the Geometry of Discrete Groups. 
+92 DIESTEL. Sequences and Series in Banach Spaces. 
+93 
+DUBROVINlFoMENKOlNovIKOV. Modern Geometry--Methods and Applications. Part I. 2nd ed. 
+94 WARNER. Foundations of Differentiable Manifolds and Lie Groups. 
+95 
+SHIRYAYEV. Probability, Statistics. and Random Processes. 
+96 CONWAY. A Course in Functional Analysis. 

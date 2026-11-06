@@ -1,0 +1,219 @@
+\section{线性微分方程}
+\sourcepage{81--82}
+本节考虑形如$w'=A(z)w$的线性微分方程，其中$A(z)$为给定的全纯依赖于$z$的$n\times n$矩阵，要寻找满足方程的向量值函数$w=w(z)$。局部地，对每个给定初值$w(z_0)=w_0$，总有唯一全纯解。此解可沿$A$的定义域内每条曲线延拓，但一般成为多值函数。仔细考察这种多值性质，可深入了解解的结构。
+\entry{11.1}{记号}
+用$M(n\times m,\C)$表示复系数$n\times m$矩阵空间，$\operatorname{GL}(n,\C)$表示可逆复$n\times n$矩阵群。若$X$为黎曼曲面，称$A:X\to M(n\times m,\C)$全纯，如果各系数$a_{ij}$均全纯。所有这种映射记为$M(n\times m,\OO(X))$。类似定义$\operatorname{GL}(n,\OO(X))$。
+\entry{11.2}{定理}
+设$A\in M(n\times n,\OO(D))$，$D:=\{z:|z|<R\}$，$0<R\le\infty$。对每个$w_0\in\C^n$，恰有一个全纯函数$w:D\to\C^n$满足
+\[
+\text{(1) }w'(z)=A(z)w(z)\quad(z\in D),\qquad\text{(2) }w(0)=w_0.
+\]
+这里把$\C^n$等同于列向量空间$M(n\times1,\C)$。
+\begin{proof}
+(a) 在$D$内展开$A(z)=\sum_{\nu=0}^\infty A_\nu z^\nu$，意指各矩阵系数的$n^2$个展开。设$w(z)=\sum_{\nu=0}^\infty c_\nu z^\nu$。若收敛，则(1)等价于
+\[
+\sum_{k=0}^\infty(k+1)c_{k+1}z^k=\sum_{k=0}^\infty\left(\sum_{\nu=0}^kA_{k-\nu}c_\nu\right)z^k,
+\]
+即
+\[
+\text{(3) }(k+1)c_{k+1}=\sum_{\nu=0}^kA_{k-\nu}c_\nu\quad(k\in\mathbb N).
+\]
+初值等价于$c_0=w_0$，由(3)递推确定所有$c_k$，故解唯一。
+
+(b) 为证存在，只须证所得级数在$D$收敛。使用Cauchy优级数法。任取$0<r<R$，因$\sum_\nu|a_{ij\nu}|r^\nu$收敛，存在$N\in\mathbb N$使
+\[
+\text{(4) }|a_{ij\nu}|\le Nr^{-\nu-1}\quad(\nu\ge0,\ 1\le i,j\le n).
+\]
+\sourcepage{83}
+定义$|z|<r$上的矩阵$B=(b_{ij})$为
+\[
+\text{(5) }b_{ij}(z):=\frac Nr(1-z/r)^{-1}=\frac Nr\sum_{\nu=0}^\infty\frac{z^\nu}{r^\nu}.
+\]
+若$w_0=(w_{10},\ldots,w_{n0})$，令$K:=\max_i|w_{i0}|$。方程$u'=Bu$、$u(0)=(K,\ldots,K)$有解$u(z)=(\psi(z),\ldots,\psi(z))$，其中$\psi(z):=K(1-z/r)^{-nN}$；它由(a)唯一。确实，$\psi'=(KnN/r)(1-z/r)^{-nN-1}=(nN/r)(1-z/r)^{-1}\psi$。
+
+另一方面，把$B=\sum B_\nu z^\nu$、$u=\sum\gamma_\nu z^\nu$代入方程，得到
+\[
+\text{(6) }(k+1)\gamma_{k+1}=\sum_{\nu=0}^kB_{k-\nu}\gamma_\nu.
+\]
+由(4)、(5)，$|a_{ij\nu}|\le b_{ij\nu}$。又$|c_{i0}|\le K=\gamma_{i0}$，比较(3)、(6)并归纳，得$|c_{ik}|\le\gamma_{ik}$。由于$\sum_k\gamma_{ik}z^k=\psi$在$|z|<r$内收敛，$\sum c_kz^k$也收敛。$r<R$任意，故在整个$D$收敛。
+\end{proof}
+\sourcepage{84}
+\entry{11.3}{}
+在黎曼曲面上，未知全纯函数$w:X\to\C^n$的线性微分方程可写为$dw=Aw$，其中$A=(a_{ij})\in M(n\times n,\Omega(X))$为全纯1形式矩阵。在局部坐标$(U,z)$中写$A=F\,dz$，则方程为$dw/dz=Fw$，正是(11.2)研究的形式。
+\entry{11.4}{定理}
+设$X$为单连通黎曼曲面，$A\in M(n\times n,\Omega(X))$、$x_0\in X$。对每个$c\in\C^n$，方程$dw=Aw$恰有一个全纯解$w\in\OO(X)^n$满足$w(x_0)=c$。
+\begin{proof}
+(a) 由(11.2)，存在$x_0$的连通开邻域$U_0$及满足初值的局部解$f\in\OO(U_0)^n$。下面证明$f$可沿每条从$x_0$出发的曲线$\alpha:[0,1]\to X$解析延拓。于是由(7.4)，这些延拓拼成整体全纯函数$w$，由恒等定理在整个$X$上满足方程。
+
+(b) 由(11.2)，存在分割$0=t_0<\cdots<t_k=1$及区域$U_j$（$j=1,\ldots,k-1$）满足：
+(i)$\alpha([t_j,t_{j+1}])\subset U_j$（$j=0,\ldots,k-1$）；
+(ii)在每个$U_j$上，任意初值$c_j$均有解$f_j$满足$df_j=Af_j$、$f_j(\alpha(t_j))=c_j$。
+从$f_0:=f$开始，归纳选$f_j$使$f_j(\alpha(t_j))=f_{j-1}(\alpha(t_j))$。由局部唯一性和恒等定理，相邻解在$U_{j-1}\cap U_j$中包含$\alpha(t_j)$的分支上相同，因而给出沿$\alpha$的解析延拓。唯一性同样由局部唯一性及恒等定理得到。
+\end{proof}
+\sourcepage{85}
+\entry{11.5}{推论}
+设$p:\widetilde X\to X$为万有覆盖，$p(y_0)=x_0$，$A\in M(n\times n,\Omega(X))$。则对每个$c\in\C^n$，万有覆盖上方程$dw=(p^*A)w$有唯一解$w\in\OO(\widetilde X)^n$满足$w(y_0)=c$。\translatornote{原文初值写$c\in\C$；向量方程应为$c\in\C^n$。}
+\entry{11.6}{自守因子}
+令$L_A$为万有覆盖上$dw=(p^*A)w$的全纯解空间。与实线性微分方程相同，$L_A$为$n$维复向量空间，$w_1,\ldots,w_n$线性无关当且仅当在任一点$a\in\widetilde X$的取值$w_1(a),\ldots,w_n(a)$线性无关。因此，一组基定义可逆矩阵$\Phi:=(w_1,\ldots,w_n)\in\operatorname{GL}(n,\OO(\widetilde X))$，满足$d\Phi=(p^*A)\Phi$，称为方程$dw=Aw$的\textbf{基本解系}。
+
+令$G:=\operatorname{Deck}(\widetilde X/X)\cong\pi_1(X)$。对$\sigma\in G$令$\sigma\Phi:=\Phi\circ\sigma^{-1}$。则$\sigma\Phi$也为基本解系，因此存在常矩阵$T_\sigma\in\operatorname{GL}(n,\C)$使
+\[
+\sigma\Phi=\Phi T_\sigma.
+\]
+若$\tau$为另一个覆盖变换，则
+\[
+\Phi T_{\tau\sigma}=\tau\sigma\Phi=\tau(\Phi T_\sigma)=(\tau\Phi)T_\sigma=\Phi T_\tau T_\sigma,
+\]
+即$T_{\tau\sigma}=T_\tau T_\sigma$。因此$\sigma\mapsto T_\sigma$定义群同态$\pi_1(X)\cong G\to\operatorname{GL}(n,\C)$。矩阵$T_\sigma$称为$\Phi$的\textbf{自守因子}（factors of automorphy）。
+
+反过来，设给定群同态$T:G\to\operatorname{GL}(n,\C)$及全纯映射$\Phi:\widetilde X\to\operatorname{GL}(n,\C)$，满足对每个$\sigma$有$\sigma\Phi=\Phi T_\sigma$。
+\sourcepage{86}
+则矩阵$d\Phi\cdot\Phi^{-1}$在覆盖变换下不变，因为
+\[
+\sigma(d\Phi\cdot\Phi^{-1})=(d\Phi\cdot T_\sigma)(\Phi T_\sigma)^{-1}=d\Phi\cdot\Phi^{-1}.
+\]
+因此存在$A\in M(n\times n,\Omega(X))$使$p^*A=d\Phi\cdot\Phi^{-1}$，而$\Phi$是$dw=Aw$的基本解系。
+\entry{11.7}{}
+考虑$X:=\{z:0<|z|<R\}$，$0<R\le\infty$。由(5.7.b)，其万有覆盖的覆盖变换群为$\Z$。在$\widetilde X$上存在坐标函数的全纯对数$\log:\widetilde X\to\C$，使$\exp\circ\log=p$。可选生成元$\sigma$使$\sigma\log=\log+2\pi i$。
+
+若$\Phi$为$dw=Aw$的基本解系，则其自守行为由$\sigma\Phi=\Phi T$中的$T\in\operatorname{GL}(n,\C)$完全决定。若$\Psi=\Phi S$为另一基本解系，$S$为常可逆矩阵，则$\sigma\Psi=\Psi S^{-1}TS$。因此适当选基本解系，可以使自守因子具有Jordan标准形。
+\entry{11.8}{矩阵的指数}
+对$A\in M(n\times n,\C)$定义$\exp A:=\sum_{k=0}^\infty A^k/k!$，各系数均绝对收敛。若$AB=BA$，则$\exp(A+B)=\exp A\exp B$，证明与复数情形一样，把两个级数相乘即可。
+\sourcepage{87}
+取$B=-A$得$\exp A\exp(-A)=I$，故$\exp A$可逆。又
+\begin{equation}\exp(S^{-1}AS)=S^{-1}(\exp A)S.\tag{*}\end{equation}
+每个可逆矩阵$B$均有矩阵对数，即存在$A$使$\exp A=B$。由(*)只须对Jordan形证明。对角矩阵的对数可逐项选取；一般地，Jordan块可写$B_1=\lambda(E+N/\lambda)$，其中$\lambda\ne0$、$N$为上超对角线全为1、其他元素全为0的幂零矩阵。取
+\[
+A_1:=\mu E+M,\quad e^\mu=\lambda,\quad
+M:=\log(E+N/\lambda)=\sum_{k=1}^\infty\frac{(-1)^{k-1}}{k\lambda^k}N^k.
+\]
+由$N$幂零，非零项有限，且$\exp A_1=B_1$。
+\entry{11.9}{}
+若矩阵$A$的系数在黎曼曲面上全纯，则$\exp A$的系数也全纯，因为指数级数在紧子集上一致收敛。
+\sourcepage{88}
+若$A\,dA=dA\,A$，则逐项求导得到$d(\exp A)=dA\cdot\exp A=\exp A\cdot dA$。
+\entry{11.10}{定理}
+设$T\in\operatorname{GL}(n,\C)$，$B\in M(n\times n,\C)$满足$\exp(2\pi iB)=T$。则$X:=\{0<|z|<R\}$上方程$w'=z^{-1}Bw$在万有覆盖上的基本解系可取为$\Phi_0:=\exp(B\log)$，且具有自守因子$T$，即$\sigma\Phi_0=\Phi_0T$，其中$\sigma$如(11.7)。
+\begin{proof}
+由(11.9)，$\Phi'_0=z^{-1}B\Phi_0$，且
+\[
+\sigma\Phi_0=\exp(B(\log+2\pi i))=\exp(B\log)\exp(2\pi iB)=\Phi_0T.
+\]
+\end{proof}
+\textbf{注记。}因此，在穿孔圆盘上可为任意指定自守因子找到对应微分方程。第31节将对任意非紧黎曼曲面研究同一问题。
+\entry{11.11}{定理}
+沿用(11.10)的记号，设$A\in M(n\times n,\OO(X))$。方程$w'=Aw$有形如$\Phi=\Psi\Phi_0$的基本解系，其中$\Phi_0=\exp(B\log)$，$B$为常矩阵，$\Psi$在覆盖变换下不变，因而给出$\operatorname{GL}(n,\OO(X))$中元素。
+\sourcepage{89}
+\begin{proof}
+取基本解系$\Phi$，$\sigma\Phi=\Phi T$。由(11.10)，可取$\Phi_0=\exp(B\log)$使$\sigma\Phi_0=\Phi_0T$。令$\Psi:=\Phi\Phi_0^{-1}$，则$\sigma\Psi=\Psi$。
+\end{proof}
+\entry{11.12}{}
+由(11.11)，穿孔圆盘上的基本解系可写为特殊多值函数$\Phi_0=\exp(B\log)$与单值矩阵函数$\Psi$之积。在$X$上把$\Psi$展开为Laurent级数。若$\Psi$在原点至多有极点，即负幂项仅有限多个，则称原点为方程的\textbf{正则奇点}（regular singular point），或\textbf{Fuchs型奇点}。
+\entry{11.13}{定理}
+若$A\in M(n\times n,\OO(X))$在原点至多有一阶极点，则原点为$w'=Aw$的正则奇点。
+\begin{proof}
+先证两个引理。
+
+(1) 若$K\ge0$，正值连续可微函数$F:(0,r_0]\to\R_+$满足$|F'(r)|\le(K/r)F(r)$，则$F(r)\le F(r_0)(r/r_0)^{-K}$。
+证明：$\frac d{dr}\log F=F'/F\ge-K/r$。从$r$到$r_0$积分得$\log(F(r_0)/F(r))\ge-K\log(r_0/r)$，整理即得。
+\sourcepage{90}
+(2) 若$f$在$X$上全纯，则径向导数满足$|\partial_r|f|^2|\le2|f||f'|$。
+证明：复可微性给出$f'=e^{-i\theta}\partial_rf$，故$|\partial_rf|=|f'|$。又$\partial_r\bar f=\overline{\partial_rf}$，所以$|\partial_r(f\bar f)|\le2|f||f'|$。
+
+现在证明定理。由(11.11)，取$\Phi=\Psi\Phi_0$，$\Phi_0=\exp(B\log)$，$\Psi$在$X$上单值全纯可逆。求导后右乘$\Phi_0^{-1}$得到
+\begin{equation}\Psi'=A\Psi-z^{-1}\Psi B.\tag{*}\end{equation}
+由假设$A=z^{-1}A_1$，$A_1$在整个圆盘上全纯。定义矩阵范数$\|C\|:=(\sum_{j,k}|c_{jk}|^2)^{1/2}$。由(*)，对每个$0<r_0<R$存在$M\ge0$使$\|\Psi'(z)\|\le(M/r)\|\Psi(z)\|$（$0<|z|=r\le r_0$）。
+
+固定$\theta$，令$F(r):=\|\Psi(re^{i\theta})\|^2=\sum_{j,k}|\psi_{jk}(re^{i\theta})|^2$。
+\sourcepage{91}
+由(2)及Cauchy--Schwarz不等式，$|F'(r)|\le2\sum_{j,k}|\psi_{jk}||\psi'_{jk}|\le2\|\Psi\|\|\Psi'\|\le(2M/r)F(r)$。由(1)，$F(r)\le F(r_0)(r/r_0)^{-2M}$，即
+\[
+\|\Psi(re^{i\theta})\|\le\|\Psi(r_0e^{i\theta})\|(r/r_0)^{-M}.
+\]
+因此$\Psi$在原点至多有极点（其阶数不超过上述增长界所允许的整数阶）。
+\end{proof}
+现用此定理确定实际中经常出现的一类二阶线性方程解的形式。
+\entry{11.14}{定理}
+设$D=\{|z|<R\}$、$X=D\setminus\{0\}$，$a,b\in\OO(D)$。则方程
+\begin{equation}w''+\frac{a(z)}z w'+\frac{b(z)}{z^2}w=0\tag{1}\end{equation}
+在万有覆盖上有以下两种形式之一的基本解系$(\varphi_1,\varphi_2)$：
+\[
+\begin{cases}\varphi_1(z)=z^{\rho_1}\psi_1(z),\\\varphi_2(z)=z^{\rho_2}\psi_2(z),\end{cases}
+\quad\text{或}\quad
+\begin{cases}\varphi_1(z)=z^\rho\psi_1(z),\\\varphi_2(z)=z^\rho(\psi_1(z)\log z+\psi_2(z)),\end{cases}
+\]
+其中$\rho,\rho_1,\rho_2\in\C$，$\psi_1,\psi_2\in\OO(D)$。
+
+\textbf{注记。}$\log z$及$z^\rho=e^{\rho\log z}$在万有覆盖上为单值全纯函数。$D$上的全纯函数在覆盖上解释为覆盖变换不变函数。
+\begin{proof}
+令$w_1:=w$、$w_2:=zw'$，把(1)化为一阶系统。
+\sourcepage{92}
+由$w'_2=zw''+w'$，有
+\begin{equation}
+\begin{cases}w'_1=z^{-1}w_2,\\w'_2=-z^{-1}b(z)w_1+z^{-1}(1-a(z))w_2.\end{cases}\tag{2}
+\end{equation}
+由(11.13)，可取基本解系$\Phi(z)=z^m\Psi(z)\exp(B\log z)$，其中$m\in\Z$，$\Psi$在$D$上全纯，$B$为常矩阵；换基可令$B$为Jordan形。
+
+情形1：$B=\operatorname{diag}(\alpha_1,\alpha_2)$，则$\exp(B\log z)=\operatorname{diag}(z^{\alpha_1},z^{\alpha_2})$。写
+\[
+\Phi=\begin{pmatrix}\varphi_1&\varphi_2\\z\varphi'_1&z\varphi'_2\end{pmatrix}
+=z^m\begin{pmatrix}\psi_1&\psi_2\\\psi_3&\psi_4\end{pmatrix}
+\begin{pmatrix}z^{\alpha_1}&0\\0&z^{\alpha_2}\end{pmatrix},
+\]
+得到$\varphi_j=z^{m+\alpha_j}\psi_j$。
+
+情形2：$B=\begin{pmatrix}\alpha&1\\0&\alpha\end{pmatrix}$，则$\exp(B\log z)=z^\alpha\begin{pmatrix}1&\log z\\0&1\end{pmatrix}$，故$\varphi_1=z^{m+\alpha}\psi_1$、$\varphi_2=z^{m+\alpha}(\psi_1\log z+\psi_2)$。
+\end{proof}
+\entry{11.15}{Bessel方程}
+作为例子，考虑$\C^*$上的Bessel方程
+\begin{equation}w''+\frac1z w'+\left(1-\frac{p^2}{z^2}\right)w=0,\qquad p\in\C.\tag{1}\end{equation}
+\sourcepage{93}
+由(11.14)，至少有一解形如
+\begin{equation}\varphi(z)=z^\rho\sum_{n=0}^\infty c_nz^n,\qquad \rho\in\C,\ c_0\ne0.\tag{2}\end{equation}
+求导得$\varphi'=z^\rho\sum_n(\rho+n)c_nz^{n-1}$、$\varphi''=z^\rho\sum_n(\rho+n)(\rho+n-1)c_nz^{n-2}$。代入(1)，比较$z^{\rho+n-2}$系数，等价于
+\begin{gather*}
+\text{(i) }(\rho^2-p^2)c_0=0,\qquad
+\text{(ii) }((\rho+1)^2-p^2)c_1=0,\\
+\text{(iii) }((\rho+n)^2-p^2)c_n+c_{n-2}=0\quad(n\ge2).
+\end{gather*}
+由$c_0\ne0$得$\rho=\pm p$。对偶数$n=2k$，递推式为$4k(\rho+k)c_{2k}+c_{2k-2}=0$。
+
+情形1：$p\notin\Z$。可取$c_{2k+1}=0$，并对任意$c_0$令
+\[
+c_{2k}=(-1)^k\left(\frac12\right)^{2k}\frac{c_0}{k!(\rho+1)\cdots(\rho+k)}.
+\]
+由$\Gamma(\rho+k+1)=(\rho+k)\cdots(\rho+1)\Gamma(\rho+1)$，选$c_0=1/\Gamma(\rho+1)$得$c_{2k}=(-1)^k2^{-2k}/(\Gamma(k+1)\Gamma(\rho+k+1))$。定义\textbf{$p$阶Bessel函数}
+\[
+J_p(z):=\left(\frac z2\right)^p\sum_{k=0}^\infty
+\frac{(-1)^k}{\Gamma(k+1)\Gamma(p+k+1)}\left(\frac z2\right)^{2k}.
+\]
+上述计算表明$J_p,J_{-p}$为(1)的两个线性无关解。
+\sourcepage{94}
+情形2：$p\in\Z$。可假设$p\ge0$。此时(2)取$\rho=p$必得到$\varphi=\text{常数}\cdot J_p$。若$p\ne0$且$\rho=-p$，由偶项递推及$c_0\ne0$，先得$k<p$时$c_{2k}\ne0$，再在$k=p$时得到矛盾$0\cdot c_{2p}+c_{2p-2}=0$。所以整数阶时(2)只能给出一个线性无关解。由(11.14)，存在另一解$\psi(z)=J_p(z)\log z+g(z)$，其中$g$在$\C^*$上全纯，在0处至多有极点。
+
+求导得
+\begin{gather*}
+\psi'=J'_p\log z+z^{-1}J_p+g',\\
+\psi''=J''_p\log z+2z^{-1}J'_p-z^{-2}J_p+g''.
+\end{gather*}
+代入(1)，并利用$J_p$已为解，可知$\psi$为解当且仅当
+\[
+g''+z^{-1}g'+(1-p^2z^{-2})g=-2z^{-1}J'_p.
+\]
+此方程可用$g(z)=z^{-p}\sum_{n=0}^\infty a_nz^n$求解，解在相差$J_p$的常数倍的意义下唯一。适当归一化后的第二个解称为\textbf{Neumann函数}$N_p$（或\textbf{第二类Bessel函数}），与$J_p$组成(1)的基本解系，参见[52]、[58]。
+\subsection*{习题（第11节）}
+\entry{11.1}{}
+证明对每个$A\in M(n\times n,\C)$有$\det(\exp A)=\exp(\operatorname{trace}A)$。
+\entry{11.2}{}
+计算$\exp(A_j)$，其中
+\[
+A_1=\begin{pmatrix}2&1\\-1&2\end{pmatrix},\quad
+A_2=\begin{pmatrix}2&2&0\\0&2&1\\0&0&1\end{pmatrix},\quad
+A_3=\begin{pmatrix}0&1&1\\1&1&0\\1&0&0\end{pmatrix}.
+\]
+\sourcepage{95}
+\entry{11.3}{}
+设$X=\{z:0<|z|<R\}$，$p:\widetilde X\to X$为万有覆盖，$\sigma$为覆盖变换群的生成元。求全纯映射$\Phi:\widetilde X\to\operatorname{GL}(3,\C)$使
+\[
+\sigma\Phi=\Phi\begin{pmatrix}i&1&0\\0&i&1\\0&0&i\end{pmatrix}.
+\]

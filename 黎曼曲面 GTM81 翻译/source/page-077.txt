@@ -1,0 +1,36 @@
+68 
+I Covering Spaces 
+(Using the same symbol F* should cause no confusion.) Locally a I-form 
+(resp. 2-form) may be written as a finite sum IJj dgj (resp. IJj dgj 1\ dhj), 
+where the functions fJ, gj' hj are differentiable. Set 
+F* (L fJ dgj ) = L (F*fJ) d(F*gJ, 
+F*( LfJ dg j 1\ dhj) = L (F*jj) d(F*gj) 1\ d(F*hj). 
+It is easy to check that these definitions are independent of the local re-
+presentations chosen and hence piece together to give unique global vector 
+space homomorphisms 
+F*:8"(k)(U)~6dk)(F-l(U)). For fE6'(U) and 
+WE 8(l)(U) one has 
+(i) F*(df) = d(F*f), 
+(ii) F*(dJ) = d'(F*f), 
+F*(dw) = d(F*w), 
+F*(d'w) = d'(F*w), 
+with corresponding formulas for d". 
+Consequence. Ir.f E 6'( U) is harmonic, then F*f = fe FE 8'(F- l(U)) is also 
+harmonic. For, d'd"(F*f) = d'(F*d''f) = F*(d'd''f) = o. 
+EXERCISES (~9) 
+9.1. Suppose p'=exp: C --+C* is the universal covering ofC* and w is the holo-
+morphic I-form dz/z on C*. Find p*w. 
+9.2. Prove that the holomorphic I-form 
+dz 
+1 + Z2' 
+which is defined on IC\{ ± i}, can be extended to a holomorphic I-form w on 
+/P'l\{±i}. Let 
+p'=tan: C --+ /P'l\{±i} 
+(cf. Ex. 4.4) and find p*w. 
+9.3. Suppose p: Y --+ X is a holomorphic mapping of Riemann surfaces, a E X, 
+bE p-l(a) and k is the multiplicity of pat b. Given any holomorphic I-form w 
+on X\{a} show that 
+§10. The Integration of Differential Forms 
+Differential I-forms can be integrated along curves. If the form is closed, 
+then the integral only depends on the homotopy class of the curve. Thus on 
+any simply connected surface X the indefinite integral of a closed I-form, 

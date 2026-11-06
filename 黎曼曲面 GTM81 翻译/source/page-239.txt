@@ -1,0 +1,39 @@
+230 
+3 Non-compact Riemann Surfaces 
+Ui n U j n Uk. Hence by the induction hypothesis there exist matrices 
+Gi E GL(n -
+1, t'9(Ui )) with 
+Gij = Gi(Gjt 1 
+on Ui n Uj. 
+Setting pi = (Git 1 Fi and using (1) gives 
+(2) 
+for some bij E (1"( Ui n U;'I' - 1. On Ui n U i n Uk one has the relation 
+bij + bik = bik. Since Hl(U, (1)) = 0, one can thus find holomorphic column 
+vectors bi E (9(U ir 1 having (n - 1) rows with 
+bij = bi - bj on Ui n Uj . 
+Set pi = Fi - biFn • Then it follows from (2) that 
+Hence the pi piece together to form a global {n - 1 )-tuple (F b ... , Fn- d 
+E(9E(x)n-l. By construction Fl(X), ... , Fn(x) are linearly independent for 
+every x E X. Thus E is holomorphically trivial. 
+(b) We still have to show that E has a holomorphic section which does 
+not vanish. By Theorem (29.16) and Lemma (30.2) this is the case over any 
+relatively compact domain Y c X. Thus by (a) one has that E is trivial over 
+Y. As in the proof of (30.3) one can now construct with the help of the Runge 
+Approximation Theorem a non-trivial holomorphic section of E over X. By 
+Lemma (30.2) then E also has a nowhere vanishing holomorphic section. 
+This completes the proof of the theorem. 
+D 
+30.5. Corollary. Suppose X is a non-compact Riemann surface. Then 
+Hl(X, GL(n, (0)) = O. 
+In particular, Hl(X, (9*) = O. 
+PROOF. Now Hl(X, GL(n, (0)) = 0 means that for every open covering 
+U = (U i ) of X every cocycle (gij)EZ 1(U, GL(n, (1,))) splits. But this is equi-
+valent to the triviality of holomorphic vector bundles on X. 
+0 
+EXERCISES (§30) 
+30.1. Show that on any Riemann surface X 
+(compact or not) one has 
+Hl(X, j{*) = O. 
+[Hint: Use the exact cohomology sequence of Ex. 16.4.] 
+30.2. Let X be a Riemann surface. For U c X open, let SL(n, (I)(U)) be the group of 
+all n x n-matrices of determinant 1 with coefficients in (I)(U). Together with the 

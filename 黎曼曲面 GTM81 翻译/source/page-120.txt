@@ -1,0 +1,40 @@
+14 A Finiteness Theorem 
+LetfE A. Thenfhas a Taylor series about aj 
+ro 
+f(z) = L cv(z - ajt 
+v=n 
+For every p :$ r one has 
+2 
+00 np2n+2 
+2 
+IlfIIU(B(aj'p)) = L ~ 
+Icvl , 
+v=n 
+from which it follows that 
+IlfIIV(B(ap/2)) :$ r n- 11IfIIV(B(ap))' 
+Using (i) and (ii) one has 
+II f II L2(B(aj. r)) :$ II f II L2(D) 
+and 
+k 
+Ilfllv(D·):$ L IlfIIV(B(aj,r/2))' 
+j= 1 
+Thus 
+111 
+o 
+14.4. Square Integrable Cochains. Suppose X is a Riemann surface. Choose a 
+finite family (Vr, Zi), i = 1, ... , n, of charts on X such that every Zi(Vr) c IC 
+is a disk. Note however that we are not assuming that U* = (Vrk~i:sn is a 
+covering of X. Suppose Vi c Vr are open subsets and set U :=(Vih:Si:sn' 
+We introduce L2-norms on the cochain groups CO(U, lD) and C1(U, lD), 
+defined on the space 
+in the following way: 
+(i) For 1/ = (/;) E CO(U, lD) let 
+111/ II £2(U) := L II/; II £2(Ui) • 
+i 
+(ii) For ~ = (/;i) E C1(U, lD) let 
+11~11£2(u) := L II /;i 11£2(ui (") Uj)' 
+i, j 
+Here the norms of /;, resp. /;i' are calculated with respect to the chart 
+(Vr, z;), i.e., 
+II/; IILl(uII:= II/; 0 zi- 1 1Iv(zi(ui))' 
+II/;i II V(Ui (") Uj) := II/;j a Zi- 111 V(Zi(Ui (") Uj))' 

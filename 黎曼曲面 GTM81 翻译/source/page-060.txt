@@ -1,0 +1,48 @@
+8 Algebraic Functions 
+51 
+S.4. Theorem. Suppose X is a Riemann surface, A c X is a closed discrete 
+subset and let X' = X\A. Suppose Y' is another Riemann surface and 
+n': Y' --> X' is a proper unbranched holomorphic covering. Then n' extends to a 
+branched covering of X, i.e., there exists a Riemann surface Y, a proper holo-
+morphic mapping n: Y --> X and a fiber-preserving biholomorphic mapping 
+cp: y\n-l(A) --> Y'. 
+PROOF. For every a E A choose a coordinate neighborhood (Va' za) on X 
+with the following properties: za(a) = 0, za( Va) is the unit disk in IC and 
+Va n Va' = 0 if a f d. Let V: = Ua \{a}. Since n': Y' --> X' is proper, 
+n'-l(U:) consists of a finite number of connected components V:v ' 
+v = 1, ... , n(a). For every v the mapping n'l V:,,--> V: is an unbranched 
+covering. Let its covering number be kav ' By Theorem (5.10) there exist 
+biholomorphic mappings (av: V:v --> D* of V:v onto the punctured unit disk 
+D* = D\{O} such that the diagram 
+V:v 
+~a\" 
+D* 
+I 
+. j 
+Xa" 
+U* 
+z. 
+D* 
+I 
+a 
+is commutative, where nav(O = (k a ,. 
+Now choose" ideal points" Pav' a E A, v = 1, ... , n(a), i.e., pairwise 
+distinct elements of some set disjoint from Y'. Then on 
+Y := Y' U {Pav: a E A, v = 1, ... , n(a)} 
+there exists precisely one topology with the following property. If W;, i E I is 
+a neighborhood basis of a, then 
+{PaJ U (n'-l(W;) n V:J, 
+i E I, 
+is a neighborhood basis of Pav and on Y' it induces the given topology. This 
+makes Y into a Hausdorff space. Define n: Y --> X by n(y) = n'(y) for y E Y' 
+and n(PaJ = a. Then, as one easily checks, n is proper. 
+In order to make Y into a Riemann surface, add to the charts of the 
+complex structure of Y' the following charts. Let Va" = V:" U {PaJ and let 
+be the continuation of the mapping (av: V:v --> D* described above which is 
+obtained by defining (av(Pav) := O. Since the last mapping is biholomorphic 
+with respect to the complex structure of Y', the new charts (av: Vav --> Dare 
+holomorphically compatible with the charts of the complex structure of Y'. 
+The mapping n: Y --> X is holomorphic. Since Y\n- 1(A) = Y' by construc-
+tion, we may choose cp: y\n-l(A) --> Y' to be the identity mapping. This then 
+shows the existence of a continuation of the covering n': Y' --> X'. 
+0 

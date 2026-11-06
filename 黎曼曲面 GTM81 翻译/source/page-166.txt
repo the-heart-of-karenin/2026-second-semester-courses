@@ -1,0 +1,37 @@
+19 Harmonic Differential Forms 
+157 
+19.11. Theorem. On any compact Riemann surface X there is an orthogonal 
+decomposition 
+PROOF. Taking complex conjugates in (19.9) one gets 6"l.O(X) = d' 6"(X) EEl 
+Q(X). Thus 
+6"(l)(X) = d' 6"(X) EEl d" 6"(X) EEl Q(X) EEl Q(X). 
+Hence the result follows from (19.6). 
+o 
+19.12. Theorem. Suppose X is a compact Riemann surface. Then 
+d 
+Ker(6"(1)(X) ~ 6"(2)(X)) = d6"(X) EEl Harm1(X). 
+d 
+PROOF. 
+Since .2'(X):= Ker(6"(1)(X) ..... 6"(2)(X)) ::::J d6"(X) EEl Harml(X), it 
+suffices by Theorem (19.11) to show that 
+.2'(X) .1 *d6"(X). 
+Suppose w E .2'(X) and f E 6"(X). Then 
+w /\ *(*df) = -w /\ df = d(fw). 
+Hence 
+(w, *df) = If d(fw) = o. 
+o 
+x 
+19.13. Corollary. Suppose X is a compact Riemann surface. Then a differential 
+form (F E 6"(l)(X) is exact if and only iffor every closed 110rm w E 6"(l)(X) one 
+has 
+II (F /\ W = o. 
+x 
+PROOF. The given condition is equivalent to (w, *(F) = 0 for every closed 
+I-form w. But by (19.11) this means *(F E *d6"(X), i.e., (F E d6"(X). 
+0 
+19.14. Theorem (deRham-Hodge). Suppose X is a compact Riemann surface. 
+Then 
+Because of (19.12) this follows directly from deRham's Theorem (15.15). 
+Remark. Since the sheaf C of locally constant complex-valued functions 
+on X depends only on the topological structure of X, it follows that 
+b1(X):= dim Hl(X, C), 

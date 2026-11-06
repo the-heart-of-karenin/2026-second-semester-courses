@@ -1,0 +1,36 @@
+21 The Jacobi Inversion Problem 
+171 
+is determined uniquely by D up to equivalence modulo Per(wb ... , w g). By 
+definition <I>(D) is its equivalence class. Clearly <I> is a group homomorphism. 
+Now Abel's Theorem says that the kernel of the mapping <I> is equal to 
+Divp(X). Hence by passing to the quotient we get an injective mapping 
+j: Pico(X) -> Jac(X). 
+The Jacobi inversion problem asks if this map is surjective. Actually this is 
+the case! 
+21.7. Theorem. For every compact Riemann surface X the mapping 
+j: Pico(X) -> Jac(X) 
+is an isomorphism. 
+PROOF. Let P E Jac(X) be an arbitrary point which is represented by the 
+vector ~ E e g• For N a sufficiently large natural number, the vector (1/ N)e 
+lies in the image of the mapping F considered in part (a) of the proof of 
+Theorem (21.4). This means that there exist points aj, Xj E X and curves}'j 
+from aj to Xj' for j = 1, ... , g, such that if c :=Y1 + ... + Yg , then 
+(J 
+W1, ... , f 
+W g ) = ~~. 
+c 
+c 
+N 
+Thus for the divisor D := DC one has 
+Now if () is the point ofPico(X) represented by the divisor ND, thenj((}) = p. 
+This proves that j is surjective and thus an isomorphism. 
+0 
+21.8. Suppose X is a compact Riemann surface of genus g and at> ... , ag E X 
+are arbitrarily chosen points. Define a mapping 
+in the following way. For (x 1, ... , Xg) E xg let 
+9 
+IjJ(Xb ... , Xg):= L (DXj - Da)mod Divp(X); 
+j=l 
+where Dx, for x E X, is the divisor which has the value + 1 at x but is 
+otherwise zero. Let 
+J: X9 -> Jac(X) 

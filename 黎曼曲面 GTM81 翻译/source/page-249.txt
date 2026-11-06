@@ -1,0 +1,38 @@
+B Topological Vector Spaces 
+withf(xd = Yl. Then for x :=..1.Cx1, one hasf(x) = yand 
+Ilxll = ..1.Qxlll :$ ..1.C = Qyll· 
+241 
+o 
+B.8. Hahn-Banach Theorem. Suppose E is a locally convex topological vector 
+space, Eo c: E is a vector subspace and CfJo: Eo --+ C is a continuous linear 
+functional. Then there exists a continuous linear functional CfJ: E --+ C such that 
+CfJ I Eo = CfJo' 
+B.9. Corollary. Suppose E is a locally convex topological vector space and 
+A c: B c: E are vector subspaces. If every continuous linear functional 
+CfJ: E --+ C such that CfJ I A = ° 
+satisfies CfJ I B = 0, then A is dense in B. 
+PROOF. Suppose A is not dense in B. Then there exists bo E B such that 
+bo ¢ A. Let Eo:= A EB Cbo and define a linear functional CfJo: Eo --+ C by 
+CfJo(a + ..1.bo):=..1. for a E A, ..1. E C. It is easy to check that CfJo is continuous. 
+By the Hahn-Banach Theorem CfJo extends to a continuous linear functional 
+CfJ: E --+ C. Then CfJ I A = 0, but CfJ I B ;¢; 0, which is a contradiction. 
+0 
+B.10. Compact Mappings. A linear mapping 1/1: E --+ F between two topolo-
+gical vector spaces E and F is called compact or completely continuous, if 
+there exists a neighborhood U of zero in E such that I/I(U) is relatively 
+compact in F. In particular, a compact linear mapping is continuous. 
+Example. Suppose X is an open subset of C and Y ~ X is a relatively 
+compact open subset of X. Then the restriction mapping 
+fJ: @(X)--+ @(Y), 
+is compact. One sees this as follows. Since Y is compact in X, it follows that 
+U := {f E @(X): su~ I f(x) I < I} 
+XEY 
+is a neighborhood of zero in @(X). By Montel's Theorem the set 
+M :={g E @(Y): sup Ig(y)1 :$ 1} 
+YE Y 
+is compact in @(Y). The claim now follows since fJ(U) c: M. 
+B.11. Theorem of L. Schwartz. Suppose E and Fare Frechet spaces and CfJ, 
+1/1: E --+ F are continuous linear mappings such that CfJ is surjective and 1/1 is 
+compact. Then the image of the mapping CfJ -1/1: E --+ F has finite codimension 
+in F. 
+For the proof see [60]. 

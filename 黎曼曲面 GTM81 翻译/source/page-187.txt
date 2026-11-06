@@ -1,0 +1,45 @@
+178 
+3 Non-compact Riemann Surfaces 
+22.4. Corollary. Suppose u: D(R) --+ IR is a harmonic function. Then 
+1 .. 2rr r2 _ 1_1 2 
+u(z) = - I 
+.~ u(reiB ) de 
+2n • 0 I re'B - z 12 
+for every r < Rand Izl < r. In particular, u satisfies the "Mean Value 
+Principle" 
+1 .2rr 
+u(O) = 2 I u(reifl ) dO. 
+n·o 
+Because of the uniqueness of the solution of the Dirichlet Boundary 
+Value Problem this follows from (22.3). 
+22.5. Corollary. Suppose Un: D(R) --+ IR, n E N, is a sequence ofharmonicfunc-
+tions which converges uniformly on compact subsets to aji-mction u: D(R) --+ R 
+Then u is also harmonic. 
+PROOF. By (22.4) for every r < R and all I z I < r one has 
+1 .2rr 
+un(z) = -2 I P(z, reiB)un(reiB) de, 
+n"O 
+where P(z, () is the kernel defined in (22.3). Since the sequence Un converges 
+to u uniformly on aD(r), this integral formula is also valid for the function u. 
+But then u is harmonic on D(r) by Theorem (22.3). 
+0 
+22.6. Harnack's Theorem. Suppose M E IR and 
+Uo S Uj S U z S ... S M 
+is a monotone increasing, bounded sequence of harmonic functions 
+un: D(R) --+ IR. Then the sequence converges uniformly on every compact subset 
+of D(R) to a harmonic junction u: D(R) --+ R 
+PROOF. Suppose K c D(R) is compact. Then there exist constants p < r < R 
+such that 
+K c {z E C: I z I S p}. 
+Suppose I: > 0 is given and let f,' := f,(r - p )!(r + p). Since the sequence (un(O» 
+is monotone increasing and bounded, there exists an N such that 
+un(O) - urn(O) S 1:' 
+for every n :2. m :2. N. 
+Now apply the Poisson Integral Formula to the positive harmonic function 
+Un - Urn' Since for I z I S P one has 
+_ r+lzi 
+r+p 
+0< P(z retB) <-- -- <--
+-
+, 
+-r-Izl -r-p' 

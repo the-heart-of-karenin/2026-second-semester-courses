@@ -1,0 +1,48 @@
+92 
+1 Covering Spaces 
+Since w~ = Zw" + w', equation (1) is equivalent to the system 
+(2) 
+<: 
+I 
+r 
+~b(z) 
+1 ~ a(z) 
+IW2 =-_~. -WI +-~_-~W2' 
+\ 
+~ 
+'" 
+Theorem (11.13) may be applied to the system (2). Thus it has a fundamental 
+system of solutions of the form 
+<I>(z) = z"'I'(z )exp( B log z), 
+where n E 71., 'I' E GL(2, (i!(D)), BE M(2 x 2, C). By a change of basis one may 
+even assume that B has Jordan normal form. 
+Case 1: B is a diagonal matrix, i.e., 
+Then 
+( ,,'1 0) 
+cxp(B log z) = 
+~ 
+Z22 
+<I>(z) = (IP1~Z) 
+IP;(z)) = Z"(ljJl(Z) 
+ljJ2(Z)) (za
+1 0). 
+zIPdz) 
+ZIP2(Z) 
+ljJ3(Z) 
+ljJ4(Z) 
+0 
+zX 2 
+Thus IPl(Z) = Z"+>tljJI(Z), IP2(Z) = Z"+nljJ2(Z). 
+Case 2: B is a Jordan block, i.e., 
+B= (~ 
+~). 
+Then 
+( 1 log Z) 
+exp(B log z) = z' 0 
+1 
+and this yields 
+o 
+11.15. Bessel's Equation. As an example consider the differential equation, 
+which is known as Bessel's equation, on C* 
+W"+~WI+(l~~~)W=O. 
+(1) 

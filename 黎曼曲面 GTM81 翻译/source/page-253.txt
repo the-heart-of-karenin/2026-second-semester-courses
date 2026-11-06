@@ -1,0 +1,92 @@
+Symbol Index 
+General Notation 
+N 
+C* 
+Re(z) 
+Im(z) 
+[pI 
+[a, b] 
+]a, b] 
+M(m x n, R) 
+GL(n, R) 
+set of natural 
+numbers (including 0) 
+ring of integers 
+field of real numbers 
+= {x E IR: x'" O} 
+={XEIR:X~O} 
+= {x E IR: x :::; O} 
+={XEIR:X>O} 
+field of complex 
+numbers 
+={ZEC:Z",O} 
+real part of the 
+complex number z 
+imaginary part of the 
+complex number z 
+= C v {oo}, the 
+Riemann sphere 3 
+N-dimensional 
+projective space 
+142 
+= {x E IR: a:::; x :::; b}, 
+where a, b E IR with 
+a:::;b 
+= {x E IR: a < x :::; b}, 
+where a, b E IR with 
+a<b 
+set of m x n matrices 
+with coefficients in R 
+group of invertible 
+n x n matrices with 
+Aii;B 
+vA 
+coefficients in the ring 
+R 
+A is a relatively 
+compact subset of B 
+the boundary of A 
+Sheaves and Function Spaces 
+'?1 
+sheaf of continuous 
+functions 
+41 
+g 
+sheaf of differentiable 
+functions 
+60 
+(0 
+t* 
+n 
+.If 
+jl* 
+Harm l 
+1j>1 
+C{z - a} 
+63, gl,O, gO, 1 
+63, 1,"(2) 
+65 
+sheaf of holomorphic 
+functions 
+41 
+41, 0 D 
+128, GL(n, 0) 
+220 
+63, Q 
+153, nD 
+134 
+sheaf of meromorphic 
+functions 
+41 
+41, .It(l) 65 
+154 
+topological space 
+associated to a 
+pre sheaf 42 
+stalk of a presheaf 41 
+germ off at the point 
+x 
+42 
+convergent Taylor 
+series about a 42 
+247 

@@ -1,0 +1,45 @@
+140 
+2 Compact Riemann Surfaces 
+For x E X let v(x,f) be the multiplicity with whichftakes the valuef(x) at 
+the point x, cf. (2.2) and (4.23). The number 
+b(f, x):= v(f, x) - 1 
+is called the branching order of f at the point x. Note that b(f, x) = 0 
+precisely iff is unbranched at x. Since X is compact, there are only finitely 
+many points x E X such that b(f, x) =1= O. Thus 
+b(f):= L b(j; x), 
+XEX 
+the total branching order off, is well-defined. 
+Theorem. Suppose f: X --+ Y is an n-sheeted holomorphic covering mapping 
+between compact Riemann surfaces X and Y with total branching order 
+b = b(f). Let g be the genus of X and g' be the genus of Y. Then 
+b 
+g = 2. + n(g' - 1) + 1. 
+This is known as the" Riemann-Hurwitz formula." 
+PROOF. Suppose w is a non-vanishing meromorphic I-form on Y. Then 
+deg(w) = 2g' - 2 and deg(f*w) = 2g - 2. 
+Suppose x E X and f(x) = y. By Theorem (2.1) there is a coordinate 
+neighborhood (U, z) of x (resp. (U', w) of y) with z(x) = 0 (resp. w(y) = 0) 
+such that with respect to these coordinates one can writefas w = z\ where 
+k = v(f, x). On U' let w = t/J(w) dw. Then on U one has 
+f*w = t/J(Zk) dzk = kZk- It/J(Zk) dz. 
+This implies 
+ordAf*w) = b(f, x) + v(f, x)ordy(w). 
+Since 
+L v(f, x) = n, 
+XEf- 1(y) 
+for any y E Y one has 
+L ordAf*w) = 
+I 
+bU, x) + n ordy(w). 
+XEf- 1(y) 
+XEf- 1(y) 
+Thus 
+deg(f*w) = L ordxU*w) = L 
+L ordAf*w) 
+XEX 
+YE Y XEf-l(y) 
+= L b(f, x) + n L ordy{w) = b(f) + n deg(w). 
+XEX 
+YE Y 
+This implies 2g - 2 = b + n(2g' - 2) and the result follows. 
+D 

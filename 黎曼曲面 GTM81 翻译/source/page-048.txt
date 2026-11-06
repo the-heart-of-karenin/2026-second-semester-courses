@@ -1,0 +1,31 @@
+5 The Universal Covering and Covering Transformations 
+39 
+5.2. Let X be a connected manifold and p: X -> X be its universal covering. Let 
+G c Deck(X/X) be a subgroup, Y ,= X/G be the quotient of X by the equi-
+valence relation defined in 5.H and q: Y -> X be the map induced by p. Show that 
+q is a covering map which is Galois if and only if G is a normal subgroup of 
+Deck(X/X). In the latter case 
+Deck(Y/X);- Deck(X/X)/G. 
+5.3. Determine the covering transformations of 
+tan:C->1P1\{i, -i) 
+(cf. Ex. 4.4). 
+5.4. Let r, r' c C be lattices and 
+f: c/r --> Cjr' 
+a non-constant holomorphic map withj(O) = O. Show that there exists a unique 
+ex E C* such thatexr c r' and the following diagram is commutative 
+where F(z) = rxz and nand n' are the canonical projections. Prove that f is an 
+unbranched covering map and 
+5.5. Let X ,= q{2, - 2}, Y ,= q{ ± 1, ± 2}, and let p: Y --> X be the map 
+p{z) ,= Z3 - 3z. 
+Prove that p is an unbranched 3-sheeted holomorphic covering map. Calculate 
+Deck(Y/X) and show that the covering Y --> X is not Galois. 
+[H int: Use the fact that every biholomorphic map f: Y --> Y extends to an auto-
+morphism of [pll.] 
+5.6. Let X ,= q{O, I}, Y ,= q{O, ± i, ± iJ2} and let p: Y --> X be the map 
+p(Z)'={Z2 + If 
+Prove that p is an unbranched 4-sheeted covering map, which is not Galois and 
+that 
+Deck(Y/X) = lid, <p}, 
+where <p(z) ,= -z. 
+5.7. Suppose X and Yare connected Hausdorff spaces. Show that every 2-sheeted 
+covering map p: Y -> X is Galois. 

@@ -1,0 +1,32 @@
+22 The Dirichlet Boundary Value Problem 
+Then the function u*: Y --+ IR defined by 
+u*(x):=sup{u(x): U EM} 
+is harmonic on Y. 
+181 
+PROOF. Suppose a E Y and D E Reg(Y) is a neighborhood of a. Choose a 
+sequence Un E M, n EN, with 
+lim uia) = u*(a). 
+Because of (i) we may assume 
+Let Vn := P DUn' Then one also has 
+By Harnack's Theorem the sequence (Vn ) converges on D to a harmonic 
+function v: D --+ IR and the following hold 
+v(a) = u*(a) and v ~ u* 
+on D. 
+Now we claim that v(x) = u*(x) for every XED. To see this, suppose 
+wn E M, n E N, is a sequence with 
+lim wn(x) = u*(x). 
+Because of (i) and (ii) we may assume that 
+for every n E N. Hence the sequence (wn ) converges on D to a harmonic 
+function w: D --+ IR with 
+v ~ W ~ u*. 
+Since v(a) = w(a) = u*(a), the Maximum Principle applied to the harmonic 
+function v - w on D implies v(y) = w(y) for every y E D. In particular, 
+v(x) = w(x) = u*(x), 
+and thus u* = w is a harmonic function on D. 
+o 
+22.13. To solve the Dirichlet Problem we will now use the technique devised 
+by Perron. Suppose 
+f: 8Y --+ IR 
+is a continuous bounded function (we are not assuming that Y is compact) 
+and 
+K := sup{f(x): x E 8Y}. 

@@ -1,0 +1,42 @@
+72 
+1 Covering Spaces 
+The sets [U, f + c) are pairwise disjoint and all the mappings 
+pl[U, f + c) -+ U are homeomorphisms. This proves that p: Iff I -+ X is a 
+covering map. Let X c Iff I be a connected component. Then piX -+ X is 
+also a covering map. Since X is a set of function germs, a function F: X -+ C 
+is defined in a natural way by F(cp) :=cp(p(cp)). It then follows directly from 
+the definitions that F is a primitive of p*w. 
+0 
+10.6. Corollary. Suppose X is a Riemann surface, n: X -+ X its universal 
+covering and WE g(1)(X) a closed differential form. Then there exists a primi-
+tive f E <t,(X) of n*w. 
+PROOF. Let p: X -+ X be the covering map construction in (10.5) and let 
+FE g(X) be a primitive of p*w. Since n: X -+ X is the universal covering, 
+there exists a holomorphic fiber-preserving mapping T: X -+ X. Let 
+f:=T*F E g(X). Thenfis a primitive ofT*(p*w) = n*w. 
+0 
+10.7. Corollary. On a simply connected Riemann surface X every closed differ-
+ential form w E g(1)(X) has a primitive F E g(X). 
+This follows from (10.6) since id: X -+ X is the universal covering. 
+10.S. Theorem. Suppose X is a Riemann surface and p: X -+ X is its universal 
+covering. Suppose w E g(1)(X) is a closed differential form and F E g(X) is a 
+primitive of p*w. If c: [0, 1] -+ X is a piece-wise continuously differentiable 
+curve and c: [0, 1] -+ X is a lifting of c, then 
+r w = F(c(l)) - F(c(O)). 
+·c 
+PROOF. For every piece-wise continuously differentiable curve v: [0, 1] -+ X 
+and every differential form w E g(1)(X) one has 
+J 
+p*w = J w. 
+v 
+p.v 
+This follows directly from the definitions. The theorem then follows from 
+Theorem (10.2). 
+0 
+10.9. Remark. Theorem (10.8) now gives a way to define the integral of a 
+closed differential form along an arbitrary (continuous) curve c: [0, 1] -+ X, 
+namely by the given formula. This definition is independent of the choice of 
+the primitive F of p*w, for any two primitives only differ by a constant and 
+taking the difference kills this. The definition is also independent of the 
+lifting of the curve c. For suppose u and v are two liftings of c. Since the 
+covering p: X -+ X is Galois (cf. 5.6), there is a covering transformation (J 

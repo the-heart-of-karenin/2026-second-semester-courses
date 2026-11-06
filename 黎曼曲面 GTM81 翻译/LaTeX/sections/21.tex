@@ -1,0 +1,86 @@
+\section{Jacobi反演问题}
+\sourcepage{166}
+Abel定理判定零次除子何时为主除子。本节进一步研究零次除子群模主除子群的商；它同构于一个复$g$维环面，其中$g$为曲面亏格。
+\entry{21.1}{格}
+设$V$为$N$维实向量空间。若加法子群$\Gamma$由$N$个实线性无关向量$\gamma_1,\ldots,\gamma_N$的整数线性组合组成，称为格。
+
+\textbf{定理。}子群为格当且仅当(i)离散，即0有邻域$U$使$\Gamma\cap U=\{0\}$；(ii)不包含于任何真向量子空间。
+
+\textbf{注记。}有限维实向量空间有唯一拓扑使每个到$\R^N$的线性同构均为同胚。
+\sourcepage{167}
+\begin{proof}
+格显然满足两条件。反之，对$N$归纳，$N=0$显然。取$\Gamma$中线性无关的$x_1,\ldots,x_N$，令$V_1=\operatorname{span}(x_1,\ldots,x_{N-1})$、$\Gamma_1=\Gamma\cap V_1$。由归纳有基$\gamma_1,\ldots,\gamma_{N-1}$使$\Gamma_1=\sum_{j<N}\Z\gamma_j$。
+
+每个$x\in\Gamma$唯一写为$\sum_{j<N}c_j(x)\gamma_j+c(x)x_N$。闭平行多面体$P:=\{\sum_{j<N}\lambda_j\gamma_j+\lambda x_N:\lambda_j,\lambda\in[0,1]\}$紧，故$\Gamma\cap P$有限。选$\gamma_N\in(\Gamma\cap P)\setminus V_1$使$c(\gamma_N)$最小且为正。
+
+任意$x\in\Gamma$可减去$\gamma_j$的整数倍，使余项$x'=\sum_{j<N}\lambda_j\gamma_j+\lambda x_N$满足$0\le\lambda_j<1$、$0\le\lambda<c(\gamma_N)$。由最小性$\lambda=0$，故$x'\in\Gamma_1$，所以各$\lambda_j$为整数，只能全零。于是$\Gamma=\sum_{j=1}^N\Z\gamma_j$。
+\end{proof}
+\entry{21.2}{周期格}
+设$X$紧、$g\ge1$，$\omega_1,\ldots,\omega_g$为全纯形式基，定义
+\sourcepage{168}
+\[
+\operatorname{Per}(\omega_1,\ldots,\omega_g):=\left\{\left(\int_\alpha\omega_1,\ldots,\int_\alpha\omega_g\right):\alpha\in\pi_1(X)\right\}\subset\C^g.
+\]
+亦可让$\alpha$遍历$H_1(X)$。下面证明它是实$2g$维空间$\C^g$中的格，称为关于该基的\textbf{周期格}。
+\entry{21.3}{引理}
+存在$g$个互异点$a_1,\ldots,a_g$，使在所有这些点均为零的全纯1形式必恒零。
+\begin{proof}
+令$H_a:=\{\omega:\omega(a)=0\}$，每个要么为全空间，要么余维1。所有$H_a$的交为零，由维数$g$可选$g$点使交已为零。
+\end{proof}
+\entry{21.4}{定理}
+$\Gamma:=\operatorname{Per}(\omega_1,\ldots,\omega_g)$为格。
+\begin{proof}
+(a)选(21.3)的点及不交单连通坐标邻域$(U_j,z_j)$，$z_j(a_j)=0$。写$\omega_i=\varphi_{ij}dz_j$，则$A:=(\varphi_{ij}(a_j))$秩为$g$。定义$F:U_1\times\cdots\times U_g\to\C^g$，
+\sourcepage{169}
+\[
+F_i(x_1,\ldots,x_g):=\sum_{j=1}^g\int_{a_j}^{x_j}\omega_i.
+\]
+积分在$U_j$内进行，与路径无关。$F$全纯，其Jacobi矩阵为$(\varphi_{ij}(x_j))$，在$a=(a_1,\ldots,a_g)$处等于可逆矩阵$A$，故像$W$是0的邻域。
+
+(b)证明$\Gamma\cap W=\{0\}$。若有非零$F(x)\in\Gamma$，重排使$x_j\ne a_j$（$1\le j\le k$），其他相同。由Abel定理，存在亚纯函数仅在$a_1,\ldots,a_k$有一阶极点、在$x_1,\ldots,x_k$有一阶零点。设各主部为$c_j/z_j$，$c_j\ne0$。由留数定理，对每个$i$有$0=\operatorname{Res}(f\omega_i)=\sum_{j=1}^kc_j\varphi_{ij}(a_j)$，与$A$满秩矛盾。故$\Gamma$离散。
+
+(c)若它包含于某真实子空间，则有非零实线性泛函在其上为零。每个实线性泛函都是复线性泛函的实部，故存在不全零的$c_i$使对所有闭曲线$\alpha$有$\operatorname{Re}\sum_i c_i\int_\alpha\omega_i=0$。
+\sourcepage{170}
+由(19.8)，$\sum_ic_i\omega_i=0$，与基的线性无关性矛盾。用(21.1)完成证明。
+\end{proof}
+\entry{21.5}{注记}
+存在$2g$条闭曲线$\alpha_\nu$，使向量$\gamma_\nu:=(\int_{\alpha_\nu}\omega_1,\ldots,\int_{\alpha_\nu}\omega_g)$实线性无关且生成周期格。容易看出相应同调类是$H_1(X)$的整数基，故$H_1(X)\cong\Z^{2g}$。
+\entry{21.6}{Jacobi簇与Picard群}
+定义$\operatorname{Jac}(X):=\C^g/\operatorname{Per}(\omega_1,\ldots,\omega_g)$，称\textbf{Jacobi簇}。这里主要将其视为阿贝尔群；它还自然是复$g$维紧环面，类似(1.5.d)。换基得到同构的Jacobi簇。
+
+令$\operatorname{Div}_0(X)$为零次除子群，$\operatorname{Div}_p(X)$为主除子群。定义\textbf{Picard群}$\operatorname{Pic}(X):=\operatorname{Div}(X)/\operatorname{Div}_p(X)$及子群$\operatorname{Pic}_0(X):=\operatorname{Div}_0(X)/\operatorname{Div}_p(X)$。有正合序列$0\to\operatorname{Pic}_0(X)\to\operatorname{Pic}(X)\xrightarrow{\deg}\Z\to0$。
+
+对$D\in\operatorname{Div}_0(X)$选$\partial c=D$，定义$\Phi(D)$为向量$(\int_c\omega_1,\ldots,\int_c\omega_g)$模周期格的类。
+\sourcepage{171}
+它与链的选择无关，且为群同态。Abel定理说明核为主除子群，故诱导单射$j:\operatorname{Pic}_0(X)\to\operatorname{Jac}(X)$。Jacobi反演问题问它是否满射；答案是肯定的。
+\entry{21.7}{定理}
+$j$为同构。
+\begin{proof}
+任给$\operatorname{Jac}(X)$中的点，以$\xi\in\C^g$代表。取自然数$N$充分大，使$\xi/N$落在(21.4.a)的$F$的像内。因此存在从$a_j$到$x_j$的曲线$\gamma_j$，其和$c$满足$(\int_c\omega_i)_i=\xi/N$。令$D=\partial c$，则$ND$的除子类经$j$映到所给点，故满射。
+\end{proof}
+\entry{21.8}{}
+任意固定$a_1,\ldots,a_g\in X$，定义$\psi:X^g\to\operatorname{Pic}_0(X)$为$\psi(x_1,\ldots,x_g):=\sum_j(D_{x_j}-D_{a_j})\bmod\operatorname{Div}_p$，其中$D_x$为点除子。令$J:=j\circ\psi$。
+\sourcepage{172}
+则$J(x_1,\ldots,x_g)=(\sum_j\int_{a_j}^{x_j}\omega_i)_{1\le i\le g}\bmod\operatorname{Per}$。
+\entry{21.9}{定理}
+$J:X^g\to\operatorname{Jac}(X)$满射。
+\begin{proof}
+只须证$\psi$满射。对零次除子$D$，令$D':=D+\sum_jD_{a_j}$，次数为$g$。由Riemann--Roch，$h^0(\OO_{D'})\ge1$，故存在非零$f$使$D'':=(f)+D'\ge0$。它次数为$g$，可写$D''=\sum_jD_{x_j}$，所以$\sum_j(D_{x_j}-D_{a_j})=D+(f)$，得证。
+\end{proof}
+\textbf{注记。}$J$对$x_j$的排列不变，故诱导对称积$S^gX\to\operatorname{Jac}(X)$。两者都可赋予紧复$g$维流形结构，此映射全纯。它不一定双射，但可证明为双亚纯，即诱导亚纯函数域同构，参见[16]。
+\entry{21.10}{定理}
+亏格1时$J:X\to\operatorname{Jac}(X)$为同构。
+\sourcepage{173}
+\textbf{注记。}结合(17.13)，亏格1紧黎曼曲面恰为复环面。
+\begin{proof}
+取非零$\omega$，$\Gamma=\operatorname{Per}(\omega)$，则$J(x)=\int_a^x\omega\bmod\Gamma$。它全纯，由(21.9)满射，也可由(2.7)直接得。若不单射，由Abel定理有仅一个一阶极点的亚纯函数，则$X\cong\PP^1$，与亏格矛盾。故双全纯。
+\end{proof}
+\textbf{注记。}若$P$为无重根的3次或4次多项式，$X$为$\sqrt{P(z)}$的黎曼曲面，则亏格1，$\omega=dz/\sqrt{P(z)}$为全纯形式基。$J$由第一类椭圆积分$\int_a^x dz/\sqrt{P(z)}\bmod\Gamma$给出。设$F$为其逆，$\pi:\C\to\C/\Gamma$、$p:X\to\PP^1$为典范投影，则$f:=p\circ F\circ\pi$为双周期亚纯函数。Abel与Jacobi的重要发现，是把椭圆积分的研究转为双周期函数的研究；超椭圆积分的推广导致Jacobi反演问题，历史见[63]。
+\subsection*{习题（第21节）}
+\entry{21.1}{}
+设$Y\subset X$开且$X\setminus Y$有非空内部，$X$紧。给定除子$D$，证明存在$f\in\MM^*(X)$使每个$x\in Y$有$\operatorname{ord}_xf=D(x)$。［提示：找支于$X\setminus Y$的$D'$使$D+D'$为主除子。］
+\sourcepage{174}
+\entry{21.2}{}
+(a)证明$4z^3-g_2z-g_3$有3个互异根当且仅当$g_2^3-27g_3^2\ne0$。
+(b)证明Weierstrass函数满足$(\wp')^2=4\wp^3-g_2\wp-g_3$，其中$g_2=60\sum_{\omega\in\Gamma\setminus\{0\}}\omega^{-4}$、$g_3=140\sum_{\omega\in\Gamma\setminus\{0\}}\omega^{-6}$，并证明环面同构于$\sqrt{4z^3-g_2z-g_3}$的黎曼曲面。
+(c)任给满足判别式非零的$g_2,g_3$，证明存在格$\Gamma$使上述两级数恰给出所指定的$g_2,g_3$。［提示：用(b)及(21.10)。］

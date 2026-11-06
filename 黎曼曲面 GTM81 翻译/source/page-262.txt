@@ -1,0 +1,58 @@
+97 
+KOBLITZ. Introduction to Elliptic Curves and Modular Forms. 2nd cd. 
+98 
+BROCKERrrOM DIECK. Representations of Compact Lie Groups. 
+99 GRovElBENSON. Finite Reflection Groups. 2nd ed. 
+100 BERG/CHRISTENSENfRESSEL. Harmonic Analysis on Semigroups: Theory of Positive 
+Definite and Related Functions. 
+101 EDWARDS. Galois Theory. 
+102 V ARDARAJAN. Lie Groups. Lie Algebras and Their Representations. 
+103 LANG. Complex Analysis. 3rd ed. 
+104 DUBROVINlFoMENKOINOVIKOV. Modern Geometry--Methods and Applications. Part II. 
+105 LANG. SL,(R). 
+106 SILVERMAN. The Arithmetic of Elliptic Curves. 
+107 OLVER. Applications of Lie Groups to Differential Equations. 2nd cd. 
+108 RANGE: Holomorphic Functions and Integral Representations in Several Complex Variables. 
+109 LEHTO. Univalent Functions and Teichmiiller Spaces. 
+110 LANG. Algebraic Number Theory. 
+III HUSEMOLLER. Elliptic Curves. 
+112 LANG. Elliptic Functions. 
+113 KARATZAS/SHREVE. Brownian Motion and Stochastic Calculus. 2nd ed. 
+114 KOBLITZ. A Course in Number Theory and Cryptography. 
+115 BERGERIGOSTIAUX. Differential Geometry: Manifolds. Curves. and Surfaces. 
+116 KELLEy/SRINIVASAN. Measure and Integral. Vol. l. 
+117 SERRE. Algebraic Groups and Class Fields. 
+118 PEDERSEN. Analysis Now. 
+119 ROTMAN. An Introduction to Algebraic Topology. 
+120 ZIEMER. Weakly Differentiable Functions: Sobolev Spaces and Functions of Bounded 
+Variation. 
+121 LANG. Cyclotomic Fields I and II. Combined 2nd ed. 
+122 REMMERT. Theory of Complex Functions. 
+Readings in Mathematics 
+123 EBBINGHAUS/HERMES et al. Numbers. 
+Readings ill Mathematics 
+124 DUBROVINlFoMENKOlNovIKOV. Modern Geometry--Methods and Applications. Part III. 
+125 BERENSTEIN/GAY. Complex Variahles: An Introduction. 
+126 BOREL. Linear Algebraic Groups. 
+127 MASSEY. A Basic Course in Algebraic Topology. 
+128 RAUCH. Partial Differential Equations. 
+129 FULTON/HARRIS. Representation Theory: A First Course. 
+Readings in Mathematics 
+130 DODSON/POSTON. Ten.<or Geometry. 
+131 
+LAM. A First Course in Noncommutative Rings. 
+132 BEARDON. Iteration of Rational Functions. 
+133 HARRIS. Algebraic Geometry: A First Course. 
+134 ROMAN. Coding and Information Theory. 
+135 ROMAN. Advanced Linear Algebra. 
+136 ADKINSfWEINTRAUB. Algebra: An Approach via Module Theory. 
+137 AxLERlBoURDONfRAMEY. Harmonic Function Theory. 
+138 COHEN. A Course in Computational Algebraic Number Theory. 
+139 BREDON. Topology and Geometry. 
+140 AUBIN. Optima and Equilibria. An Introduction to Nonlinear Analysis. 
+141 BECKERlWEISPl'ENNINGIKREDEL. Gr(ibner Bases. A Computational Approach 10 
+Commutative Algebra. 
+142 LANG. Real and Functional Analysis. 3rd ed. 
+143 DOOB. Measure Theory. 
+144 DENNISIFARB. Noncommutative Algebra. 
+145 VICK. Homology Theory. An Introduction to Algebraic Topology. 2nd cd. 

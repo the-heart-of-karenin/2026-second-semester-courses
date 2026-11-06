@@ -1,0 +1,37 @@
+142 
+2 Compact Riemann Surfaces 
+Remark. The sheaf JI(l) of meromorphic I-forms on X is isomorphic to 
+JI. An isomorphism JI ~JI(l) is given by fl--+fw, where w f 0 is a fixed 
+element of JI(l). Thus Hl(X, JI(l») = 0 as well. 
+This can be used to give a definition, without the use of integrals, of the 
+residue mapping Res: Hl(X, il) -+ C introduced in (17.1). For, suppose 
+~ E HI(X, il) is represented by the cocycle (wij) E ZI(U, il). Since 
+HI(X, JI(1») = 0, this cocycle splits relative to the sheaf JI(I). Thus there is a 
+Mittag-Leffler distribution /1 E CO(U, JI(1») with [0/1] = ~. Then 
+Res( 0 = Res(/1) 
+by Theorem (17.3). 
+17.18. We are now going to give some other applications of Theorem (17.16), 
+but we first consider the following notion. Let D be a divisor on a Riemann 
+surface X. We say that the sheaf (9D is globally generated, if for every x E X 
+there exists an f E HO(X, (9 D) such that 
+(9D.x = (9xf, 
+i.e., every germ cp E (9 D. x may be written cp = t/lf with t/I E (9 x' The condition 
+(9 D. x = (9 x f is equivalent to 
+ordx(f) = -D(x). 
+17.19. Theorem. Let X be a compact Riemann surface of genus g and D be a 
+divisor on X with deg D 2 2g. Then (9D is globally generated. 
+PROOF. Suppose x E X is a fixed point and let D' be the divisor defined by 
+D'(y) = {D(Y) 
+for y f x, 
+D(y) - 1 for y = x. 
+Since deg D > deg D' > 2g - 2, by Theorem (17.16) we have 
+HI(X, (9D) = HI(X, (9D') = O. 
+The Riemann-Roch Theorem now implies 
+dim HD(X, (9D) > dim HO(X, (9D')' 
+and hence there exists an elementfE HD(X, (9D)\HO(X, (9D')' This element 
+satisfies the condition ordAf) = - D(x). 
+0 
+17.20. Embedding into Projective Space. Denote by jpN the N-dimensional 
+projective space which is defined as jpN = (CN + 1\0)1 ~, where ~ is the fol-
+lowing equivalence relation: 
+(zo, ... , ZN) ~ (zo, ... , z~)<:>3A. E C*: ZV = A.Z~ for v = 0, .. " N. 

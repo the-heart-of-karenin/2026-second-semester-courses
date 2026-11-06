@@ -1,0 +1,130 @@
+Author and Subject Index 
+Factors of automorphy 85 
+Fiber of a map 20 
+Fiber-preserving mapping 20 
+Finer covering 98 
+Finiteness theorem 
+109ff., 149 
+Florack, Herta (b. 1921) 205 
+Fn:chet, Maurice (1878-1973) 
+Fn':chet space 239 
+Free homotopy 
+19 
+Fuchs, Lazarus (1833-1902) 
+singularity of Fuchsian type 
+89 
+Function 
+additivelyautomorphic 74 
+algebraic 48ff., 54 
+doubly periodic 
+12, 148, 165 
+elementary symmetric 48 
+harmonic 67 
+holomorphic 5 
+locally subharmonic 179 
+meromorphic 7 
+multi-valued holomorphic 
+(meromorphic) 20 
+schlicht 
+208 
+smoothing 
+193 
+square integrable 
+109 
+sub harmonic 
+179 
+Weierstrass g;J_ 
+13 
+Function germ 
+holomorphic 42 
+merom orphic 42 
+Fundamental group 
+13ff., 17 
+Fundamental Theorem of Algebra 
+12 
+Fundamental system of solutions 85 
+Galois, Evariste (1811-1832) 
+Galois covering 33, 52, 215 
+Gauss, Carl Friedrich (1777-1855) 
+Gaussian number plane (complex 
+plane) 
+3 
+Genus 
+115 
+Germ 
+of holomorphic function 
+42 
+of merom orphic function 
+42 
+Globally generated sheaf 142 
+Hahn, Hans (1879-1934) 
+Hahn-Banach Theorem 241 
+Harmonic differential form 
+154 
+Harmonic function 67 
+Harnack, Axel (1851-1888) 
+Harnack's inequality 
+185 
+Harnack's Theorem 
+174 
+Hilbert, David (1862-1943) 
+Hilbert space 240 
+Riemann-Hilbert problem 231ff. 
+Hodge, William Vallance Douglas 
+(1903-1975) 
+251 
+Theorem of deRham-Hodge 
+157 
+Holomorphic cotangent bundle 222 
+Holomorphic function 
+5 
+Holomorphic 
+function germ 
+42 
+linear structure 220 
+mapping 6 
+section 222 
+vector bundle 220 
+Holomorphically 
+compatible 2 
+trivial 220 
+Homologous 
+161 
+Homology group 
+161 
+Homomorphism 
+connecting 
+123 
+crossed 214 
+Homotopy 
+13ff. 
+free 
+19 
+Hurwitz, Adolf (1859-1919) 
+Riemann-Hurwitz formula 
+140 
+Hyperbolic Riemann surface 
+211 
+Hyperelliptic 
+141 
+Identity Theorem 6, 43 
+Immersion 
+143 
+Index of speciality 
+130 
+Inductive limit 
+99 
+Integral, elliptic 
+173 
+Integration of differential forms 
+68ff. 
+Inverse curve 
+15 
+Isomorphic Riemann surfaces 6 
+Jacobi, Carl Gustav Jakob (1804-1851) 
+173 
+inversion problem 
+166ff., 171 
+variety 
+170 
+Koebe, Paul (1882-1945) 206 

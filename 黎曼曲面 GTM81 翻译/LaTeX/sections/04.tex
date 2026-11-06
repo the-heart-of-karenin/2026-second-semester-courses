@@ -1,0 +1,199 @@
+\section{分歧覆盖与无分歧覆盖}
+\sourcepage{20}
+黎曼曲面之间的非常值全纯映射是可能带有分歧点的覆盖映射。因此，我们现在汇集覆盖空间理论中最重要的概念与结果。
+\entry{4.1}{定义}
+设$X,Y$是拓扑空间，$p:Y\to X$连续。对$x\in X$，集合$p^{-1}(x)$称为$p$在$x$上的\textbf{纤维}（fiber）。若$y\in p^{-1}(x)$，则称点$y$位于$x$之上。若$p:Y\to X$、$q:Z\to X$连续，则称映射$f:Y\to Z$\textbf{保纤维}，如果$p=q\circ f$。这意味着，位于$x\in X$之上的每一点$y\in Y$，都映到仍位于$x$之上的点。
+
+若拓扑空间的子集$A$满足每个$a\in A$都有邻域$V$使$V\cap A=\{a\}$，则称$A$\textbf{离散}。若每点$x\in X$的纤维$p^{-1}(x)$都是$Y$的离散子集，则称映射$p:Y\to X$离散。
+\entry{4.2}{定理}
+设$X,Y$是黎曼曲面，$p:Y\to X$是非常值全纯映射。则$p$是开的、离散的。
+\begin{proof}
+由(2.4)，$p$是开映射。若某点$a\in X$的纤维不离散，则由恒等定理(1.11)，$p$恒等于$a$。
+\end{proof}
+若$p:Y\to X$是非常值全纯映射，则称$Y$为$X$上的一个\textbf{覆盖域}（domain over $X$）。全纯函数$f:Y\to\C$（相应地，亚纯函数$f:Y\to\PP^1$）也可看作$X$上的多值全纯（亚纯）函数。若$x\in X$且$p^{-1}(x)=\{y_j:j\in J\}$，则$f(y_j)$（$j\in J$）为这一多值函数在$x$处的各个值。当然，$p^{-1}(x)$也可能只有一点或为空。
+\sourcepage{21}
+例如，设$Y=\C$，$X=\C^*$，$p=\exp:\C\to\C^*$。则恒等映射$\mathrm{id}:\C\to\C$对应于$\C^*$上的多值对数，因为对$b\in\C^*$，集合$\exp^{-1}(b)$恰由$b$的各个对数值组成。相应关系为
+\[
+\begin{array}{ccc}\C&\xrightarrow{\mathrm{id}}&\C\\ {\scriptstyle\exp}\downarrow&&\nearrow{\scriptstyle\log}\\\C^*&&\end{array}
+\]
+\entry{4.3}{定义}
+设$X,Y$是黎曼曲面，$p:Y\to X$是非常值全纯映射。若点$y\in Y$不存在使$p|_V$单射的邻域$V$，则称$y$为$p$的\textbf{分歧点}（branch point, ramification point）。若$p$没有分歧点，则称$p$为\textbf{无分歧全纯映射}。
+\entry{4.4}{定理}
+黎曼曲面之间的非常值全纯映射$p:Y\to X$无分歧点，当且仅当$p$为局部同胚，即每个$y\in Y$都有开邻域$V$，使$p$将其同胚映到$X$的某个开集$U$。
+\begin{proof}
+若$p$无分歧点，则任意$y\in Y$都有使$p|_V$单射的开邻域$V$。由于$p$连续且为开映射，它把$V$同胚映到开集$U:=p(V)$。反之，若$p$局部同胚，则每个$y$都有被$p$同胚映到$X$中开集的开邻域$V$。特别地，$p|_V$单射，故$y$不是分歧点。
+\end{proof}
+\entry{4.5}{例}
+(a) 设$k\ge2$为自然数，$p_k:\C\to\C$由$p_k(z):=z^k$定义。则$0\in\C$为$p_k$的分歧点，而映射$p_k|_{\C^*}:\C^*\to\C$无分歧。
+
+(b) 设$p:Y\to X$非常值全纯，$y\in Y$，$x:=p(y)$。则$y$为$p$的分歧点，当且仅当$p$在$y$处取值$x$的重数$\ge2$，参见(2.2)。由定理(2.1)，$p$在$y$附近的局部行为，与(a)中映射$p_k$在原点附近的局部行为相同。
+
+(c) 映射$\exp:\C\to\C^*$无分歧。因为只要子集$V\subset\C$不含相差$2\pi i$的非零整数倍的两点，$\exp$在$V$上就单射。
+
+(d) 若$\Gamma\subset\C$为格，$\pi:\C\to\C/\Gamma$为典范商映射，参见(1.5.d)，则$\pi$无分歧。
+\sourcepage{22}
+\entry{4.6}{定理}
+设$X$是黎曼曲面，$Y$是Hausdorff拓扑空间，$p:Y\to X$为局部同胚。则$Y$上存在唯一的复结构，使$p$全纯。
+
+\textbf{注记。}由(2.5)，$p$甚至局部双全纯。
+\begin{proof}
+设$\varphi_1:U_1\to V\subset\C$是$X$的复结构的一张坐标卡，并存在开集$U\subset Y$使$p|_U:U\to U_1$为同胚。则$\varphi:=\varphi_1\circ p:U\to V$是$Y$上的复坐标卡。令$\mathfrak A$为所有如此得到的复坐标卡之集。容易看出，这些坐标卡覆盖$Y$且彼此全纯相容。赋予$Y$由$\mathfrak A$定义的复结构。则投影$p$局部双全纯，尤其全纯。
+
+唯一性如下证明：若$\mathfrak A'$是$Y$上的另一个复图册，使$p:(Y,\mathfrak A')\to X$全纯，因而局部双全纯，则恒等映射$(Y,\mathfrak A)\to(Y,\mathfrak A')$局部双全纯，从而双全纯。因此$\mathfrak A,\mathfrak A'$定义同一复结构。
+\end{proof}
+\entry{4.7}{映射的提升}
+设$X,Y,Z$是拓扑空间，$p:Y\to X$与$f:Z\to X$连续。$f$关于$p$的一个\textbf{提升}（lifting）是指连续映射$g:Z\to Y$，使$f=p\circ g$，即下图交换：
+\[
+\begin{array}{ccc} &Y&\\ {\scriptstyle g}\nearrow&&\downarrow{\scriptstyle p}\\ Z&\xrightarrow{f}&X\end{array}
+\]
+\entry{4.8}{定理（提升的唯一性）}
+设$X,Y$是Hausdorff空间，$p:Y\to X$为局部同胚，$Z$是连通拓扑空间，$f:Z\to X$连续。若$g_1,g_2:Z\to Y$为$f$的两个提升，并在某点$z_0\in Z$处有$g_1(z_0)=g_2(z_0)$，则$g_1=g_2$。
+\begin{proof}
+令$T:=\{z\in Z:g_1(z)=g_2(z)\}$。由于$T$是对角线$\Delta\subset Y\times Y$在映射$(g_1,g_2):Z\to Y\times Y$下的原像，$T$为闭集。断言$T$也开。设$z\in T$，$y:=g_1(z)=g_2(z)$。由$p$局部同胚，$y$有邻域$V$被$p$同胚映到$p(y)=f(z)$的邻域$U$。由$g_1,g_2$连续，存在$z$的邻域$W$使$g_i(W)\subset V$。设$\varphi:U\to V$为$p|_V$的连续逆映射。由$p\circ g_i=f$，对$i=1,2$有$g_i|_W=\varphi\circ(f|_W)$。故$g_1|_W=g_2|_W$，$W\subset T$。因此$T$开。由$Z$连通且$T$非空，$T=Z$，即$g_1=g_2$。
+\end{proof}
+\sourcepage{23}
+\entry{4.9}{定理}
+设$X,Y,Z$是黎曼曲面，$p:Y\to X$是无分歧全纯映射，$f:Z\to X$为任意全纯映射。则$f$的每个提升$g:Z\to Y$均全纯。
+\begin{proof}
+任取$c\in Z$，令$b:=g(c)$、$a:=p(b)=f(c)$。存在$b$、$a$的开邻域$V,U$使$p|_V:V\to U$双全纯。设$\varphi:U\to V$为逆映射。由$g$连续，存在$c$的开邻域$W$使$g(W)\subset V$。由$f=p\circ g$得$g|_W=\varphi\circ(f|_W)$，故$g$在$c$处全纯。
+\end{proof}
+\textbf{推论。}若$p:Y\to X$、$q:Z\to X$是黎曼曲面之间的无分歧全纯映射，则每个连续保纤维映射$f:Y\to Z$均全纯，因为$f$是$p$关于$q$的提升。
+
+\textbf{曲线的提升。}设$X,Y$是Hausdorff空间，$p:Y\to X$局部同胚。我们特别关心曲线$u:[0,1]\to X$的提升。由定理(4.8)，若提升$\widetilde u:[0,1]\to Y$存在，则一旦指定起点的提升，整条提升便唯一确定。下文仍令$I:=[0,1]$。
+\entry{4.10}{定理（同伦曲线的提升）}
+设$X,Y$是Hausdorff空间，$p:Y\to X$局部同胚。设$a,b\in X$，$\widetilde a\in Y$且$p(\widetilde a)=a$。再设给定连续映射$A:I\times I\to X$，对每个$s\in I$有$A(0,s)=a$、$A(1,s)=b$。令$u_s(t):=A(t,s)$。若每条$u_s$均可提升为以$\widetilde a$为起点的曲线$\widetilde u_s$，则$\widetilde u_0,\widetilde u_1$有相同终点，且彼此同伦。
+\begin{proof}
+定义$\widetilde A:I\times I\to Y$为$\widetilde A(t,s):=\widetilde u_s(t)$。
+
+断言(a)：存在$\varepsilon_0>0$使$\widetilde A$在$[0,\varepsilon_0[\,\times I$上连续。证明：存在$\widetilde a$、$a$的邻域$V,U$使$p|_V:V\to U$同胚。令$\varphi:U\to V$为逆映射。由$A(\{0\}\times I)=\{a\}$及$A$连续，存在$\varepsilon_0>0$使$A([0,\varepsilon_0]\times I)\subset U$。由曲线提升的唯一性，对每个$s\in I$有$\widetilde u_s|_{[0,\varepsilon_0]}=\varphi\circ u_s|_{[0,\varepsilon_0]}$。故在$[0,\varepsilon_0]\times I$上$\widetilde A=\varphi\circ A$，从而连续。
+
+断言(b)：$\widetilde A$在整个$I\times I$上连续。反设它在某点$(t_0,\sigma)$不连续。令$\tau$为使$\widetilde A$在$(t,\sigma)$处不连续的所有$t$的下确界。由(a)，$\tau\ge\varepsilon_0$。令$x:=A(\tau,\sigma)$，$y:=\widetilde A(\tau,\sigma)=\widetilde u_\sigma(\tau)$。
+\sourcepage{24}
+存在$y$、$x$的邻域$V,U$，使$p|_V:V\to U$为同胚。设$\varphi:U\to V$为逆。由$A$连续，存在$\varepsilon>0$使$A(I_\varepsilon(\tau)\times I_\varepsilon(\sigma))\subset U$，其中$I_\varepsilon(\xi):=\{t\in I:|t-\xi|<\varepsilon\}$。特别地，$u_\sigma(I_\varepsilon(\tau))\subset U$，故$\widetilde u_\sigma|_{I_\varepsilon(\tau)}=\varphi\circ u_\sigma|_{I_\varepsilon(\tau)}$。
+
+选$t_1\in I_\varepsilon(\tau)$使$t_1<\tau$，则$\widetilde A(t_1,\sigma)=\widetilde u_\sigma(t_1)\in V$。由$\widetilde A$在$(t_1,\sigma)$处连续，存在$0<\delta\le\varepsilon$使对每个$s\in I_\delta(\sigma)$有$\widetilde A(t_1,s)=\widetilde u_s(t_1)\in V$。由提升唯一性，所有这些$s$均满足$\widetilde u_s|_{I_\varepsilon(\tau)}=\varphi\circ u_s|_{I_\varepsilon(\tau)}$。因此$\widetilde A=\varphi\circ A$在$I_\varepsilon(\tau)\times I_\delta(\sigma)$上成立。这与$(\tau,\sigma)$的定义矛盾。所以$\widetilde A$在$I\times I$上连续。
+
+由$A=p\circ\widetilde A$及$A(\{1\}\times I)=\{b\}$，有$\widetilde A(\{1\}\times I)\subset p^{-1}(b)$。由于$p^{-1}(b)$离散而$\{1\}\times I$连通，其像只有一点。这说明$\widetilde u_0,\widetilde u_1$终点相同，且$\widetilde A$给出它们的同伦。
+\end{proof}
+\textbf{覆盖映射。}现在给出保证曲线总可提升的条件。
+\entry{4.11}{定义}
+设$X,Y$是拓扑空间。若映射$p:Y\to X$满足下述条件，则称为\textbf{覆盖映射}（covering map）：每个$x\in X$都有开邻域$U$，其原像可写为$p^{-1}(U)=\bigcup_{j\in J}V_j$，其中$V_j$为$Y$中两两不交的开集，且所有$p|_{V_j}:V_j\to U$均为同胚。特别地，$p$是局部同胚。
+\entry{4.12}{例}
+(a) 设$D=\{z\in\C:|z|<1\}$为单位圆盘，$p:D\to\C$为典范嵌入。则$p$局部同胚，却不是覆盖映射，因为每个满足$|a|=1$的点$a\in\C$均不存在符合定义要求的邻域$U$。
+
+(b) 设$k\ge2$为自然数，令$p_k:\C^*\to\C^*$，$z\mapsto z^k$。
+\sourcepage{25}
+则$p_k$为覆盖映射。事实上，任取$a\in\C^*$并选$b\in\C^*$使$p_k(b)=a$。由$p_k$局部同胚，存在$b$、$a$的开邻域$V_0,U$使$p_k|_{V_0}:V_0\to U$为同胚。于是$p_k^{-1}(U)=V_0\cup\omega V_0\cup\cdots\cup\omega^{k-1}V_0$，其中$\omega$为一个$k$次本原单位根，例如$\omega=\exp(2\pi i/k)$。显然，$V_j:=\omega^jV_0$（$j=0,\ldots,k-1$）两两不交，且$p_k|_{V_j}:V_j\to U$均为同胚。
+
+(c) 映射$\exp:\C\to\C^*$为覆盖映射。
+\begin{proof}
+设$a\in\C^*$，$b\in\C$且$\exp(b)=a$。由$\exp$局部同胚，存在$b$、$a$的开邻域$V_0,U$使$\exp|_{V_0}:V_0\to U$为同胚。于是$\exp^{-1}(U)=\bigcup_{n\in\Z}V_n$，其中$V_n:=2\pi in+V_0$。显然各$V_n$两两不交，每个$\exp|_{V_n}:V_n\to U$均为同胚。
+\end{proof}
+(d) 若$\Gamma\subset\C$为格，$\pi:\C\to\C/\Gamma$为典范商映射，则与(c)同样可证$\pi$为覆盖映射。
+\entry{4.13}{定义}
+若连续映射$p:Y\to X$满足下述条件，则称它具有\textbf{曲线提升性质}：对每条曲线$u:[0,1]\to X$以及每点$y_0\in Y$，只要$p(y_0)=u(0)$，就存在$u$的提升$\widetilde u:[0,1]\to Y$满足$\widetilde u(0)=y_0$。
+\entry{4.14}{定理}
+拓扑空间之间的每个覆盖映射$p:Y\to X$均具有曲线提升性质。
+\begin{proof}
+设$u:[0,1]\to X$为曲线，$p(y_0)=u(0)$。由$[0,1]$紧，存在分割$0=t_0<t_1<\cdots<t_n=1$及开集$U_k\subset X$（$k=1,\ldots,n$）满足：
+(i) $u([t_{k-1},t_k])\subset U_k$；(ii) $p^{-1}(U_k)=\bigcup_{j\in J_k}V_{kj}$，其中$V_{kj}\subset Y$为开集，$p|_{V_{kj}}:V_{kj}\to U_k$是同胚。
+
+对$k=0,1,\ldots,n$归纳构造$u|_{[0,t_k]}$的提升$\widetilde u$，使$\widetilde u(0)=y_0$。$k=0$显然。设$k\ge1$，且已构造到$[0,t_{k-1}]$，令$y_{k-1}:=\widetilde u(t_{k-1})$。由$p(y_{k-1})=u(t_{k-1})\in U_k$，存在$j\in J_k$使$y_{k-1}\in V_{kj}$。
+\sourcepage{26}
+令$\varphi:U_k\to V_{kj}$为$p|_{V_{kj}}$的逆。定义$\widetilde u|_{[t_{k-1},t_k]}:=\varphi\circ(u|_{[t_{k-1},t_k]})$，便得到提升到$[0,t_k]$的连续延拓。
+\end{proof}
+\entry{4.15}{注记}
+设$X,Y$为Hausdorff空间，$p:Y\to X$为覆盖映射，$p(y_0)=x_0$。由(4.14)、(4.8)，每条以$x_0$为起点的曲线$u:[0,1]\to X$均有唯一以$y_0$为起点的提升$\widetilde u:[0,1]\to Y$。即使$u$闭合，$\widetilde u$也未必闭合。例如$X=Y=\C^*$，$p(z)=z^2$，$x_0=y_0=1$。曲线$u(t)=e^{2\pi it}$从1出发又回到1，故闭合；其提升$\widetilde u(t)=e^{\pi it}$却从1到$-1$。
+
+不过，由定理(4.10)，闭合零伦曲线的每个提升仍闭合且零伦。
+\entry{4.16}{定理}
+设$X,Y$是Hausdorff空间，$X$道路连通，$p:Y\to X$为覆盖映射。则任意$x_0,x_1\in X$的纤维$p^{-1}(x_0)$、$p^{-1}(x_1)$具有相同基数。特别地，若$Y$非空，则$p$满射。
+
+纤维$p^{-1}(x)$的基数称为覆盖的\textbf{叶数}，可以有限，也可以无限。
+\begin{proof}
+如下构造$\varphi:p^{-1}(x_0)\to p^{-1}(x_1)$：选连接$x_0,x_1$的曲线$u$。每个$y\in p^{-1}(x_0)$均确定唯一以$y$为起点的提升$\widetilde u$。令$\varphi(y):=\widetilde u(1)$。由提升唯一性，这一映射是双射。
+\end{proof}
+\textbf{注记。}证明中构造的双射通常依赖曲线$u$的选择。因此，通常无法以良定义的方式对覆盖的各“叶”作整体编号。
+\entry{4.17}{定理}
+设$X,Y$是Hausdorff空间，$p:Y\to X$为覆盖映射。设$Z$是单连通、道路连通且局部道路连通的拓扑空间，$f:Z\to X$连续。则对每组满足$f(z_0)=p(y_0)$的点$z_0\in Z,y_0\in Y$，恰有一个提升$\widetilde f:Z\to Y$满足$\widetilde f(z_0)=y_0$。
+\sourcepage{27}
+\textbf{注记。}下述证明只用到$p$是局部同胚并具有曲线提升性质。
+\begin{proof}
+任取$z\in Z$，选从$z_0$到$z$的曲线$u:I\to Z$。则$v:=f\circ u$从$f(z_0)$到$f(z)$。令$\widetilde v$为$v$以$y_0$为起点的唯一提升，并定义$\widetilde f(z):=\widetilde v(1)$。这与$u$的选择无关：若$u_1$也是从$z_0$到$z$的曲线，则由$Z$单连通，$u_1\sim u$，从而$v_1:=f\circ u_1\sim v$。由(4.10)，以$y_0$为起点的提升$\widetilde v_1,\widetilde v$终点相同。因此$\widetilde f$良定义，且依构造$f=p\circ\widetilde f$。
+
+只须证明$\widetilde f$连续。设$z\in Z$、$y=\widetilde f(z)$，$V$为$y$的邻域。须找到$z$的邻域$W$使$\widetilde f(W)\subset V$。由$p$局部同胚，必要时缩小$V$，可假设$p|_V:V\to U$同胚，其中$U$为$p(y)=f(z)$的邻域。设$\varphi$为其逆。由$f$连续及$Z$局部道路连通，可选$z$的道路连通邻域$W$使$f(W)\subset U$。
+
+断言$\widetilde f(W)\subset V$。保持上述曲线$u,v,\widetilde v$，任取$z'\in W$，选完全位于$W$内的从$z$到$z'$的曲线$u'$。则$v':=f\circ u'$位于$U$内，$\widetilde v':=\varphi\circ v'$是以$y$为起点的提升。故$\widetilde v\cdot\widetilde v'$是$v\cdot v'=f\circ(u\cdot u')$以$y_0$为起点的提升。因此$\widetilde f(z')=(\widetilde v\cdot\widetilde v')(1)=\widetilde v'(1)\in V$。唯一性由(4.8)得到。
+\end{proof}
+\entry{4.18}{例（函数的对数）}
+设$X$是单连通黎曼曲面，$f:X\to\C^*$是处处非零的全纯函数。要找$f$的对数，即全纯函数$F:X\to\C$使$\exp(F)=f$。这恰好要求$F$是$f$关于覆盖$\exp:\C\to\C^*$的提升：
+\[
+\begin{array}{ccc}&\C&\\{\scriptstyle F}\nearrow&&\downarrow{\scriptstyle\exp}\\X&\xrightarrow{f}&\C^*\end{array}
+\]
+若$x_0\in X$，$c\in\C$为方程$e^c=f(x_0)$的任一解，则由(4.17)存在所需提升$F$且$F(x_0)=c$。由(4.9)，$F$全纯。任何其他解与$F$只差加法常数$2\pi in$（$n\in\Z$）。
+\sourcepage{28}
+特别地，若$X$是$\C^*$中的单连通区域，$j:X\to\C^*$为典范嵌入$j(z)=z$，则$j$关于$\exp$的每个提升恰为$\log$在$X$上的一个分支。类似地，利用例(4.12.b)的覆盖，可以在任意单连通黎曼曲面上构造处处非零全纯函数的各种根。
+\entry{4.19}{定理}
+设$X$是流形，$Y$是Hausdorff空间，$p:Y\to X$是具有曲线提升性质的局部同胚。则$p$为覆盖映射。
+\begin{proof}
+任取$x_0\in X$，设$y_j$（$j\in J$）为其全部原像。取$x_0$的开邻域$U$使其同胚于球，令$f:U\to X$为典范嵌入。由(4.17)的注记，每个$j\in J$均存在$f$的提升$\widetilde f_j:U\to Y$使$\widetilde f_j(x_0)=y_j$。令$V_j:=\widetilde f_j(U)$。容易验证$p^{-1}(U)=\bigcup_{j\in J}V_j$，各$V_j$为两两不交的开集，且每个$p|_{V_j}:V_j\to U$均为同胚。
+\end{proof}
+\entry{4.20}{固有映射}
+回顾：局部紧拓扑空间是每点都有紧邻域的Hausdorff空间。局部紧空间之间的连续映射$f:X\to Y$称为\textbf{固有映射}（proper），如果每个紧集的原像均紧。例如，$X$紧时总成立。固有映射是闭映射，即每个闭集的像均闭。这是因为，在局部紧空间中，子集为闭集当且仅当它与每个紧集的交集均紧。
+\entry{4.21}{引理}
+设$X,Y$局部紧，$p:Y\to X$是固有离散映射。则：
+(a) 每个$x\in X$的纤维$p^{-1}(x)$有限；
+(b) 若$V$为$p^{-1}(x)$的邻域，则存在$x$的邻域$U$使$p^{-1}(U)\subset V$。
+\begin{proof}
+(a) $p^{-1}(x)$是紧的离散子集，因此有限。
+
+(b) 可假设$V$开，于是$Y\setminus V$闭，$A:=p(Y\setminus V)$也闭，且$x\notin A$。因此$U:=X\setminus A$是$x$的开邻域，满足$p^{-1}(U)\subset V$。
+\end{proof}
+\sourcepage{29}
+\entry{4.22}{定理}
+设$X,Y$局部紧，$p:Y\to X$是固有局部同胚。则$p$为覆盖映射。
+\begin{proof}
+任取$x\in X$，令$p^{-1}(x)=\{y_1,\ldots,y_n\}$，各$y_j$互异。由$p$局部同胚，每个$y_j$都有开邻域$W_j$以及$x$的开邻域$U_j$，使$p|_{W_j}:W_j\to U_j$同胚。可令各$W_j$两两不交。由于$W_1\cup\cdots\cup W_n$为$p^{-1}(x)$的邻域，由(4.21.b)，存在$x$的开邻域$U\subset U_1\cap\cdots\cap U_n$使$p^{-1}(U)\subset W_1\cup\cdots\cup W_n$。令$V_j:=W_j\cap p^{-1}(U)$，则各$V_j$为不交开集，$p^{-1}(U)=V_1\cup\cdots\cup V_n$，且各$p|_{V_j}:V_j\to U$为同胚。
+\end{proof}
+\entry{4.23}{固有全纯映射}
+设$f:X\to Y$为黎曼曲面之间的固有非常值全纯映射。由(2.1)，$f$的分歧点集$A$闭且离散。由$f$固有，$B:=f(A)$也闭且离散。称$B$为$f$的\textbf{临界值集}。
+
+令$Y':=Y\setminus B$、$X':=X\setminus f^{-1}(B)\subset X\setminus A$。则$f|_{X'}:X'\to Y'$是固有无分歧全纯覆盖，由(4.22)、(4.16)、(4.21.a)，有良定义的有限叶数$n$。这意味着每个$c\in Y'$恰被取到$n$次。为把这一结论推广到临界值$b\in B$，须考虑重数。
+
+对$x\in X$，用$\nu(f,x)$表示(2.2)意义下$f$在$x$处取值$f(x)$的重数。若$m=\sum_{x\in f^{-1}(c)}\nu(f,x)$，则称$f$在$X$上按重数计算取值$c\in Y$共$m$次。
+\entry{4.24}{定理}
+设$f:X\to Y$为黎曼曲面之间的固有非常值全纯映射。则存在自然数$n$，使$f$按重数计算恰取每个值$c\in Y$共$n$次。
+\begin{proof}
+沿用(4.23)的记号，令$n$为无分歧覆盖$f|_{X'}$的叶数。设$b\in B$为临界值，$f^{-1}(b)=\{x_1,\ldots,x_r\}$，$k_j:=\nu(f,x_j)$。由(2.1)、(2.2)，存在两两不交的$x_j$的邻域$V_j$及$b$的邻域$U_j$，使对每个$c\in U_j\setminus\{b\}$，集合$f^{-1}(c)\cap V_j$恰有$k_j$点。由(4.21.b)，可取$b$的邻域$U\subset U_1\cap\cdots\cap U_r$使$f^{-1}(U)\subset V_1\cup\cdots\cup V_r$。因此对每个$c\in U\cap Y'$，$f^{-1}(c)$有$k_1+\cdots+k_r$点。另一方面，$c\in Y'$时纤维基数为$n$，故$n=k_1+\cdots+k_r$。
+\end{proof}
+\sourcepage{30}
+\textbf{注记。}固有非常值全纯映射称为\textbf{$n$叶全纯覆盖映射}，其中$n$为上一定理中的整数。注意，全纯覆盖映射允许有分歧点。若要强调不存在分歧点，将明确称它为无分歧映射。说到拓扑覆盖映射，或没有复结构时，指的是(4.11)意义下的覆盖映射。
+\entry{4.25}{推论}
+紧黎曼曲面$X$上的每个非常值亚纯函数$f:X\to\PP^1$，按重数计算，其零点个数与极点个数相同。
+\begin{proof}映射$f:X\to\PP^1$是固有的。\end{proof}
+\entry{4.26}{推论}
+任意$n$次多项式$f(z)=z^n+a_1z^{n-1}+\cdots+a_n\in\C[z]$按重数计算恰有$n$个零点。
+\begin{proof}
+由(2.3)，可把$f$看作全纯映射$f:\PP^1\to\PP^1$，它按重数计算恰取值$\infty$共$n$次。
+\end{proof}
+\subsection*{习题（第4节）}
+\entry{4.1}{}
+令$X:=\C\setminus\{\pm1\}$，$Y:=\C\setminus\{\pi/2+k\pi:k\in\Z\}$。证明$\sin:Y\to X$为拓扑覆盖映射。考虑$X$中的曲线
+\[
+u:[0,1]\to X,\quad u(t):=1-e^{2\pi it};\qquad
+v:[0,1]\to X,\quad v(t):=-1+e^{2\pi it}.
+\]
+设$w_1:[0,1]\to Y$为$u\cdot v$满足$w_1(0)=0$的提升，$w_2$为$v\cdot u$满足$w_2(0)=0$的提升。证明$w_1(1)=2\pi$、$w_2(1)=-2\pi$。由此推出$\pi_1(X)$不是阿贝尔群。
+\entry{4.2}{}
+设$X,Y$为弧连通Hausdorff拓扑空间，$f:Y\to X$为覆盖映射。证明诱导映射$f_*:\pi_1(Y)\to\pi_1(X)$为单射。
+\sourcepage{31}
+\entry{4.3}{}
+设$X,Y$为Hausdorff空间，$p:Y\to X$为覆盖映射，$Z$为连通、局部弧连通拓扑空间，$f:Z\to X$连续。设$c\in Z$，$a:=f(c)$，$b\in Y$且$p(b)=a$。证明：存在$f$的提升$\widetilde f:Z\to Y$满足$\widetilde f(c)=b$，当且仅当$f_*\pi_1(Z,c)\subset p_*\pi_1(Y,b)$。
+\entry{4.4}{}
+(a) 证明$\tan:\C\to\PP^1$为局部同胚。
+
+(b) 证明$\tan(\C)=\PP^1\setminus\{\pm i\}$，且$\tan:\C\to\PP^1\setminus\{\pm i\}$为覆盖映射。
+
+(c) 令$X=\C\setminus\{it:t\in\R,\ |t|\ge1\}$。证明对每个$k\in\Z$，存在唯一全纯函数$\arctan_k:X\to\C$满足$\tan\circ\arctan_k=\mathrm{id}_X$及$\arctan_k(0)=k$（$\arctan$的第$k$个分支）。\translatornote{原文为$\arctan_k(0)=k$。按$\tan w=0$的解为$k\pi$，这里应为$k\pi$。}
+\entry{4.5}{}
+求映射$f:\C\to\PP^1$，$f(z):=\tfrac12(z+1/z)$的分歧点。

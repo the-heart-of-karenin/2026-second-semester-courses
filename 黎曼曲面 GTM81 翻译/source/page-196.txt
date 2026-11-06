@@ -1,0 +1,35 @@
+23 Countable Topology 
+187 
+not constant, the mapping f: f -+ I[: satisfies the assumptions of Lemma 
+(23.2). Thus f has a countable topology. By Lemma (23.1) Y then has a 
+countable topology. Since X = Y u V, the topology on X is also countable. o 
+In the proof of Runge's Approximation Theorem we will need to have 
+special exhaustions. These are constructed using a certain hull operator 
+which we now define. 
+23.4. Definition. Suppose X is a Riemann surface. For any subset Y c X let 
+A(Y) denote the union of Y with all the relatively compact connected com-
+ponents of X\Y. An open subset Y c X is called Runge if Y = A(Y), i.e., if 
+none of the connected components of X\ Y is compact. The following 
+properties can be checked quite easily: 
+(i) A(A(Y)) = A(Y) for every Y eX. 
+(ii) Yt c Y2 = A(Ytl c A(Y2 ). 
+Remark. If we want to indicate the dependence on X, we will write Ax(Y) 
+instead of A( Y). Consider the following example. Let 
+Y:={z E 1[:: 1 < Izl < 2}. 
+Then Y may be thought of as either a subset of I[: or of 1[:* and 
+AdY) = {z E IC: Izl < 2} 
+AC'(Y) = Y. 
+23.5. Theorem. Suppose Y is a subset of a Riemann surface X. Then the 
+following hold: 
+(i) Y closed = A(Y) closed 
+(ii) Y compact = A(Y) compact. 
+PROOF 
+(i) Suppose Cj ,j E 1, are the connected components of X\ Y. Since X\ Y is 
+open and X is a manifold, all the Cj are open. Let 10 denote the subset of 
+those j E 1 such that Cj is compact. Then 
+X\h(Y) = U {Cj:j E l\1o}. 
+Clearly this is an open set and thus A(Y) is closed. 
+(ii) We may assume Y =F 0. Let U be a relatively compact open neigh-
+borhood of Yand suppose the Cj are as above. 
+Claim (a). Every Cj meets G. Otherwise if some Cj were contained in 
+X\G, then 

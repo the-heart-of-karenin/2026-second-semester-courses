@@ -1,0 +1,46 @@
+50 
+1 Covering Spaces 
+all the points bp • This implies thatfmay be continued meromorphically to 
+all of the points bl,. 
+0 
+For later use note that the proof does not use the fact that Y is connected. 
+Thus the Theorem also holds in the case that Y is a disjoint union of finitely 
+many Riemann surfaces. 
+If n: Y ----> X is a non-constant holomorphic map between Riemann sur-
+faces X and Y, then for any meromorphic function f on X the function 
+n*f:= f' n is a meromorphic function on Y. Thus there is a map 
+n*: .H(X) ----> o/{{(Y) 
+which is a monomorphism of fields. 
+8.3. Theorem. Suppose X and Yare Riemann surfaces and n: Y ---t X is a 
+branched 
+holomorphic 
+n-sheeted 
+covering 
+map. ,t' f E A(Y) and 
+c 1, •.. , Cn E j{(X) are the elementary symmetric functions of j; then 
+f" + (n*cdf"- 1 + ... + (n*cn- df + n*cn = O. 
+The monomorphism n*: A(X) ----> A( Y) is an algebraic field extension of 
+degree :s: n. Moreover, if there exist an f E ,M,(Y) and an x E X with preimages 
+y \0 ... , Yn E Y such that the values j(y J for v = 1, ... , n are all distinct, then 
+the field extension n*: ,~(X) ----> ,/({(Y) has degree n. 
+Remark. We will see later (cf. (14.13) and (26.6)) that the last statement of 
+the Theorem is always fulfilled. 
+PROOF. The existence of the equation 
+n 
+r + I (n*cJf"-V = 0 
+v= 1 
+follows directly from the definition of the elementary symmetric functions 
+off 
+Let L := A( Y) and K := n* j{(X) c L. Then every f E L is algebraic over 
+K and the minimal polynomial off over K has degree.::; n. Suppose j~ E Lis 
+an element for which the degree no of its minimal polynomial is maximal. 
+We claim L = K(fo). Choose an arbitrary element f ELand consider the 
+field K(fo, f). By the Theorem of the Primitive Element there exists gEL 
+such that K(fo,f) = K(g). By the definition of no one has dimK K(g) .::; no. 
+On the other hand, 
+dimK K(fo,f) 2:: dimK K(fo) = no· 
+Thus K(fo) = K(j~, f) and f E K(fo)· 
+Finally if the degree of the minimal polynomial off over K were equal to 
+m < n, then f would be able to take at most m different values over every 
+point x EX. 
+0 

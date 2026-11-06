@@ -1,0 +1,43 @@
+8 Algebraic Functions 
+53 
+Then there exist an r, 0 < r ::; R, and a function cp holomorphic on the disk D(r) 
+such that cp(O) = Wo and 
+cpn + c 1 cpn - 1 + ... + Cn = 0 on D(r). 
+PROOF. For z E D(R) and w E IC let 
+F(z, w) = wn + cl(Z)Wn - 1 + ... + cn(z). 
+There exists an I-: > 0 such that the function w 1---+ F(O, w) has a unique zero Wo 
+in the disk {w E IC: I w -
+Wo I ::; £}. Now because of the continuity of F there 
+exists an r with 0 < r ::; R sllch that in the set 
+{{z,w)EIC 2 : Izl <r, Iw-wol=£} 
+the function F has no zeros. For fixed z E D(r) the integral 
+n{z) =~ r 
+Fw(z, w) d 
+2m 'Iw-wol~£ F(z, w) 
+w, 
+gives the number of zeros of the function w 1---+ F(z, w) in the disk with radius 
+£ and center Wo. Since n(O) = 1 and n depends continuously on z, one has 
+n{z) = 1 for every z E D(r). By the Residue Theorem the zero of w 1---+ F{z, w) 
+in the disk I w -
+Wo I < £ is equal to 
+cp(z) = _1. i' 
+w F w(z, w) dw. 
+2ni 'Iw- wol ~< 
+F(z, w) 
+Since the integral depends holomorphically on z, the function z 1---+ cp{z) is 
+holomorphic on D{r) and F{z, cp(z)) = 0 for every z E D(r). 
+0 
+8.8. Corollary. Let (1\ be the ring ()fholomorphicfunction germs at a point x ()f 
+a Riemann surface and let 
+P(T) = yn + CI yn-l + ... + Cn E (I\[T). 
+Suppose that the polynomial 
+p{T):= yn + cl(X)yn-1 + '" + cn{x) E iC[T] 
+has n distinct zeros WI, ... , wn. Then there exist elements CP1> ... , CPn E (!) x such 
+that CPv(x) = Wv and 
+n 
+P(T) = TI (T - cP,). 
+v= 1 
+8.9. Theorem. Suppose X is a Riemann surface and 
+P{T) = yn + C1 yn-l + ... + Cn E A(X)[T] 
+is an irreducible polynomial of degree n. Then there exist a Riemann surface Y, 
+a branched holomorphic n-sheeted covering 1t: Y ..... X and a meromorphic 

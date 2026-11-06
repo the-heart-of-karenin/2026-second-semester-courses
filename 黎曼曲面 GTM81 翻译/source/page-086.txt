@@ -1,0 +1,45 @@
+10 The Integration of Differential Forms 
+On the other hand, 
+rp*(dz;\ dz) = drp;\ dip = (rp' dz);\ W dz) = I rp'I2 dz;\ dz 
+and thus rp*w = (f, rp)lrp'12 dx;\dy. Hence 
+1'1' w = rr rp*w . 
+., 
+~ 
+~ 
+~, 
+u 
+v 
+77 
+10.18. Now suppose X is a Riemann surface. By the support of a differential 
+form w on X we mean the closed set 
+Supp(w) ,= {a EX: w(a) =1= O}. 
+The support Supp(f) of a function f: X ---> IC is defined analogously. 
+(a) Suppose rp: U ---> V is a chart on X and w E g(2)(X) is a differential 
+form whose support is compact and contained in U. Then (rp-I )*w is a 
+differential form with compact support in V c IC and thus one can define 
+JJ w ,= JJ w ,= JJ (rp-I )*w. 
+x 
+u 
+v 
+This definition is independent of the choice of chart. For, suppose 
+rp I: U I ---> VI is another chart with Supp(w) cUI' Without loss of generality 
+we may assume U = U I (otherwise take the intersection). Then 
+t/I ,= rp I ' rp - I: V ---> VI 
+is a biholomorphic mapping. Since 
+(rp-I)*W = (rp1l 
+t/I)*w = t/I*((rp1l)*w), 
+by (10.17) one has 
+JJ (rp-l)*W = JJ (rp1l)*w. 
+v 
+v, 
+Thus SIx w is defined independently of the choice of chart. 
+(b) Now suppose w E g(2)(X) is an arbitrary differential form with com-
+pact support. Then there exist finitely many charts rpk: Uk ---> Vb k = 1, ... , n 
+such that 
+n 
+Supp(w) C U Uk' 
+k=1 
+Then one can find functions fk E 0"(X) with the following properties (a 
+so-called "partition of unity," cf. Appendix A): 
+(i) Supp(fd c Ub 
+(ii) D=Jk(X) = 1 for every x EO Supp(w). 

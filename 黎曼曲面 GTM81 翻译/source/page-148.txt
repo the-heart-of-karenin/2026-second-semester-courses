@@ -1,0 +1,34 @@
+17 The Serre Duality Theorem 
+139 
+Thus the genus of a compact Riemann surface X is equal to the maximum 
+number of linearly independent holomorphic I-forms on X. 
+One can now formulate the Riemann-Roch Theorem as follows: 
+or in words: On a compact Riemann surface of genus g the maximum 
+number of linearly independent meromorphic functions which are multiples 
+of a divisor D minus the maximum number of linearly independent mero-
+morphic I-forms which are multiples of - D is equal to 1 - g - deg D. 
+17.11. Theorem. Suppose D is a divisor on the compact Riemann surface X. 
+Then 
+PROOF. Let wo i= 0 be a meromorphic I-form on X and let K be its divisor. 
+By (17.4) one has Q D ~ (!JD+K and (!J-D ~ Q-D-K' Hence the result follows 
+from the Serre Duality Theorem. 
+0 
+Consequence. In particular, for D = 0 one has dim HI(X, 0) = 
+dim HO(X, CD) = 1. This implies that the mapping 
+Res: Hl(X, Q) --> C 
+is an isomorphism, for it is clear that it is not identically zero. 
+17.12. Theorem. The divisor of a non-vanishing meromorphic I:form w on a 
+compact Riemann surface of genus g satisfies 
+deg(w) = 2g - 2. 
+PROOF. Let K = (w). By Riemann-Roch 
+dim HO(X, CDK) - dim HI(X, (!JK) = 1 - g + deg K. 
+By (17.4) one has Q ~ (!jK' Thus 
+1 - g + deg K = dim HO(X, Q) - dim Hl(X, Q) = g - 1 
+and so deg K = 2(g - 1). 
+17.13. Corollary. For any lattice r c C the torus IC/r has genus one. 
+o 
+PROOF. The I-form dz on C induces a I-form won c/r having no zeros or 
+poles (see 10.14). Thus deg(w) = 2g - 2 = 0 and hence g = 1. 
+0 
+17.14. The Riemann-Hurwitz Formula. Suppose X and Yare compact 
+Riemann surfaces and f: X --> Y is a non-constant holomorphic mapping. 

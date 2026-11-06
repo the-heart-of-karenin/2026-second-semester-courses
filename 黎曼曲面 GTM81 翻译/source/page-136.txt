@@ -1,0 +1,43 @@
+16 The Riemann-Roch Theorem 
+127 
+16.1. Divisors. Let X be a Riemann surface. A divisor on X is a mapping 
+D:X-->Z 
+such that for any compact subset K c X there are only finitely many points 
+x E K such that D(x) f O. With respect to addition the set of all divisors on 
+X is an abelian group which we denote by Div(X). As well there is a partial 
+ordering on Div(X). For D, D' E Div(X), set D ::; D' if D(x) ::; D'(x) for every 
+XE X. 
+16.2. Divisors of Meromorphic Functions and I-forms. Suppose X is a 
+Riemann surface and Y is an open subset of X. For a meromorphic function 
+IE At(Y) and a E Y define 
+0, if I is holomorphic and non-zero at a, 
+k, 
+if fhas a zero of order k at a. 
+orda(f):= - k, iff has a pole of order k at a, 
+00, iff is identically zero in a 
+neighborhood of a. 
+Thus for any meromorphic functionf E 04t(X)\{O}, the mapping x f--> ordx(f) 
+is a divisor on X. It is called the divisor off and will be denoted by (f). 
+The functionfis said to be a multiple of the divisor D if (f) 2: D. Thenfis 
+holomorphic precisely if (f) 2: O. 
+For a meromorphic 1-form W E •. H(I)(y) one can define its order at a point 
+a E Y as follows. Choose a coordinate neighborhood (U, z) of a. Then on 
+U n Y one may write w = f dz, where f is a meromorphic function. Set 
+orda( w) = orda(f). It is easy to check that this is independen t of the choice of 
+chart. For 1-forms WE At(l)(X)\{O} the mapping xf-->ordx(w) is again a 
+divisor on X, denoted by (w). 
+For j; g E At(X)\{O} and w E jt(l)(X)\{O} one has the following relations: 
+(fg) = (f) + (g), 
+(l/f) = -(f), 
+(fw) = (f) + (w). 
+A divisor D E Div(X) is called a principal divisor if there exists a function 
+f E . .$t(X)\{O} such that D = (f). Two divisors D, D' E Div(X) are said to be 
+equivalent if their difference D - D' is a principal divisor. 
+By a canonical divisor one means the divisor (w) of a meromorphic 1-form 
+w E vtt(I)(X)\{O}. Any two canonical divisors are equivalent. For, if WI, 
+W 2 E At(l)(X)\{O} then there exists a function f E 04t(X)\{O} such that 
+WI = fW 2 and thus (wd - (W2) = (f). 
+16.3. The Degree of a Divisor. Suppose now that X is a compact Riemann 
+surface. Then for every D E Div(X) there are only finitely many x E X such 
+that D(x) f O. Hence one can define a mapping 
+deg: Div(X) --> Z 

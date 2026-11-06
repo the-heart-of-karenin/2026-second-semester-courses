@@ -1,0 +1,46 @@
+31 The Riemann-Hilbert Problem 
+233 
+the resulting differential equation has at most regular singular points at all 
+the points a E S. In order to be able to carryover the definition in (11.12) to 
+this general case, we first prove the following lemma. 
+Lemma. Using the same notation as above, suppose p: Y --> X' is the universal 
+covering of x'. Further suppose (U, z) is a coordinate neighborhood of a point 
+a E S with the following properties: 
+(i) z(U) c C is the unit disk and z(a) = O. 
+(ii) U n S = {a}. 
+Suppose Z is any connected component of p - I (U\a). Then pi Z --> U\a is the 
+universal covering of U\a. 
+PROOF. By Weierstrass' Theorem (26.5) there exists a holomorphic function 
+f E (O(X) which has a zero of first order at a but is otherwise non-zero. Then 
+w := dilf is a holomorphic 1-form on X'. Let}' be the positively oriented 
+curve in U corresponding to I z I = 1. Then 
+. 
+. df 
+I w = 1- = 2ni. 
+'; 
+., f 
+Now the mapping pi Z --> U\a is a covering map. Thus we may apply 
+Theorem (5.10) to it. If pi Z --> U\a were not the universal covering, then this 
+mapping would be isomorphic to the covering 
+D* --> D*, 
+for some positive integer k, where D* denotes the punctured unit disk. But 
+then there would exist k liftings Yb"" h of I' whose product c = 1'1 ... Yk is a 
+closed curve. This implies 
+k 
+k 
+r p*w = L f p*w = L r w = 2kni. 
+·c 
+j=l 'Yi 
+j=l 'y 
+But on the other hand Ic p*w = 0, since a primitive for p*w exists on Y. This 
+contradiction proves that pi Z --> U\a must be the universal covering. 
+0 
+Now, using the same notation, suppose dw = Aw, where 
+A E 
+M(n x n, Q(X')), is a linear differential equation on X' and <l>EGL(n, 0(Y)) 
+is a fundamental system of solutions. Then the differential equation is said to 
+have a regular singular point at a E S if for every connected component Z of 
+p - l( U\a) the function <I> I Z satisfies the condition given in (11.12). 
+31.5. Theorem. Suppose X is a non-compact Riemann surface, S is a closed 
+discrete subset of X and X' := X\S. Further suppose a homomorphism 
+(J 1---* T(f' 

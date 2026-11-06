@@ -1,0 +1,50 @@
+70 
+1 Covering Spaces 
+Thus 
+r dF = I ftk (OF (C(t))~Xk(('(t)) + ~F (c(t)) dyk(C(t))) dt 
+"c 
+k=l "tk- [ oXk 
+dt 
+CYk 
+dt 
+Jl (-1 (:tF(c(t))) dt 
+" I (F(C(tk)) - F(c(tk- d)) = F(c(l)) - F(c(O)). 
+o 
+k=l 
+10.3. Definition. Suppose X is a Riemann surface and OJ E !,,(l)(X). A func-
+tion F E 6"(X) is called a primitive of OJ if dF = OJ. 
+By (9.15) any differential form which has a primitive is necessarily closed. 
+But the primitive of a differential form is not unique. If F is a primitive of OJ 
+and c E IC, then F + (' is also a primitive of OJ. Conversely any two primitives 
+differ by a constant. For, if dF = 0, it follows, for example using Theorem 
+(10.2), that F is a constant. 
+Using Theorem (10.2) one can easily compute any line integral of a 
+differential form if one knows one of its primitives. And it also follows from 
+the Theorem that the integral of an exact differential form along a curve 
+depends only on the initial and end points of the curve. 
+10.4. The Local Existence of Primitives. Suppose U ,= {z E C: I z I < r}, 
+where r > 0, is an open disk about zero in C and OJ E g(l)(U). The differen-
+tial form OJ may be written 
+OJ = f dx + 9 dy, 
+1, 9 E 0'( U), 
+where x, yare the usual real coordinates on [R2 ~ C. Assume that w is closed, 
+i.e., dOJ = O. Since 
+( og 
+iJf) 
+dw=dfAdx+dgAdy= .~ --;;-
+dXAdy, 
+ex 
+oy 
+this is equivalent to (ogjox) = (of/oy). We will prove that w has a primitive F 
+which is given by the integral 
+1 
+F(x, y) ,= { (f(tx, ty)x + g(tx, ty)y) dt, 
+for (x, y) E U. 
+'0 
+One sees directly that F is infinitely differentiable. One has only to verify 
+that dF = OJ, i.e., (oF/iJx) = f and (DF/i5y) = g. Differentiating under the 
+integral sign, we get 
+_oF_(:....x-,' .Yc.:.') = ((~f (tx, ty)tx + ~g (tx, ty)ty + f(tx, ty)) dt. 
+ox 
+·0 yX 
+uX 

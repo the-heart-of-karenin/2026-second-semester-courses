@@ -1,0 +1,35 @@
+9 Differential Forms 
+65 
+Let A(1) ( Y) denote the set of all meromorphic I-forms on Y. With the natural 
+algebraic operations and the usual restriction mappings ,A(I) is a sheaf of 
+vector spaces over X. The meromorphic i-forms on X are also called abelian 
+differentials. As well an abelian differential is said to be of the first kind ifit is 
+holomorphic everywhere, of the second kind ifits residue is zero at everyone 
+of its poles and of the third kind otherwise. 
+9.11. The Exterior Product. In order to be able to define differential forms of 
+degree two, we have to recall some properties of the exterior product of a 
+vector space with itself. Let V be a vector space over C. Then A 2 V is the 
+vector space over C whose elements are fihite sums of elements of the form 
+VI /\ V2 for Vb V2 E V. One has the following rules 
+(VI + V2)/\ V3 = V 1 /\ V3 + V2/\ V3 
+for Vb V2, V3 E V and A E C. If (e 1, ... , en) is a basis of V, then the elements 
+ei /\ ej , for i < j, form a basis of A 2 V. In fact these properties completely 
+characterize A 2 V. 
+Now we will apply this to the cotangent space Tal) of a Riemann surface 
+X at a point a. Set 
+T~2) := A 2 r"t). 
+Let (U, z) be a coordinate neighborhood of a, where z = x + iy. Then, it 
+follows from what was just said, that da x /\ da y is a basis of r/). Another 
+basis is da z /\ da Z = - 2i da x /\ da y. Thus r,,2) has dimension one. 
+9.12. Definition. Suppose Y is an open subset of a Riemann surface X. A 
+2-form on Y is a mapping 
+where w(a) E r,,2) for every a E Y. The form w is called differentiable on Y if, 
+with respect to every complex chart (U, z) on X, it can be written 
+w=fdz/\dz withfEg(Un Y), 
+where w = f dz /\ dz means that w(a) = f(a) da z /\ da z for every a E U n Y. 
+Denote by g(2)(y) the vector space of all differentiable 2-forms on Y. 
+Examples If WI' W2 E g(1)(y) are i-forms, then one can define a 2-form 
+WI /\ W2 E g(2)( Y) by letting 
+(Wl/\w2)(a):=wl(a)/\w2(a) 
+for every a E Y. For f E C(Y) and w E g(2)(y) one gets a new 2-form 
+fw E g(2)(y) by defining (fw)(a) = f(a)w(a) for every a E Y. 

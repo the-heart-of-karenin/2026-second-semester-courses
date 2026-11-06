@@ -1,0 +1,67 @@
+\section{可数拓扑}
+\sourcepage{185}
+本节证明Radó定理：每个黎曼曲面均有可数拓扑。紧情形显然。还将为后面构造非紧曲面的特殊穷竭。
+\entry{23.1}{引理}
+若连续开满射$f:X\to Y$的定义域有可数拓扑，则$Y$也有。
+\begin{proof}
+取$X$的可数基$\mathfrak U$，则$\{f(U):U\in\mathfrak U\}$为$Y$的基：若$y\in D$且$D$开，选$f(x)=y$，再取$x\in U\subset f^{-1}(D)$，则$y\in f(U)\subset D$。
+\end{proof}
+\sourcepage{186}
+\entry{23.2}{Poincaré--Volterra引理}
+若$X$为连通流形，$Y$为具有可数拓扑的Hausdorff空间，$f:X\to Y$连续且离散，则$X$有可数拓扑。
+\begin{proof}
+取$Y$的可数基$\mathfrak U$，令$\mathfrak B$为具有可数拓扑且为某$f^{-1}(U)$的连通分支的全部开集。
+
+(a)$\mathfrak B$为基。给定$x\in D$、$D$开，由离散性，取相对紧开邻域$W\subset D$，使$\partial W$不遇$f^{-1}(f(x))$。则$f(\partial W)$紧闭且不含$f(x)$，可选$U\in\mathfrak U$含$f(x)$而避开此集。包含$x$的原像分支$V$不遇$\partial W$，故$V\subset W$，有可数拓扑，因而属于$\mathfrak B$。
+
+(b)每个$V_0\in\mathfrak B$只遇到可数多个$V\in\mathfrak B$。对固定$U$，$f^{-1}(U)$的分支两两不交，$V_0$有可数拓扑，故只遇可数个分支；再用$\mathfrak U$可数。
+
+(c)固定$V^*\in\mathfrak B$，令$\mathfrak B_n$为可从$V^*$经过$n$次非空交相邻的基开集链到达的所有基开集。由连通性，$\bigcup_n\mathfrak B_n=\mathfrak B$。$\mathfrak B_0=\{V^*\}$，由(b)归纳每个$\mathfrak B_n$可数，故整基可数。
+\end{proof}
+\entry{23.3}{Radó定理}
+每个黎曼曲面有可数拓扑。
+\begin{proof}
+在坐标邻域$U$内取两不交闭圆盘$K_0,K_1$，令$Y:=X\setminus(K_0\cup K_1)$。由(22.18)，边界正则，因此存在调和函数$u$，在两边界分别为0、1。于是$\omega=d'u$为非零全纯形式。取万有覆盖$p:\widetilde Y\to Y$，$p^*\omega$有全纯原函数$f$。
+\sourcepage{187}
+$f$非常值，连续且离散，由(23.2)，$\widetilde Y$有可数拓扑；再由(23.1)，$Y$有可数拓扑。$X=Y\cup U$，故$X$亦然。
+\end{proof}
+为Runge逼近构造特殊穷竭，先定义一个包络算子。
+\entry{23.4}{定义}
+对$Y\subset X$，令$\Lambda(Y)$为$Y$与$X\setminus Y$的所有相对紧连通分支之并。若开集$Y=\Lambda(Y)$，称为\textbf{Runge开集}，即补集无紧连通分支。容易验证$\Lambda(\Lambda(Y))=\Lambda(Y)$；$Y_1\subset Y_2$则$\Lambda(Y_1)\subset\Lambda(Y_2)$。需要注明背景空间时写$\Lambda_X$。例如$Y=\{1<|z|<2\}$，则$\Lambda_\C(Y)=\{|z|<2\}$，而$\Lambda_{\C^*}(Y)=Y$。
+\entry{23.5}{定理}
+(i)$Y$闭则$\Lambda(Y)$闭；(ii)$Y$紧则$\Lambda(Y)$紧。
+\begin{proof}
+(i)设$C_j$为开集$X\setminus Y$的连通分支，均开。令$J_0$为相对紧分支的指标，则$X\setminus\Lambda(Y)=\bigcup_{j\notin J_0}C_j$开。
+
+(ii)可设$Y\ne\varnothing$。取相对紧开邻域$U$包含$Y$。每个$C_j$都遇到$U$；否则其边界包含于$Y\subset U$而又须在$X\setminus U$，从而无边界，成为既开又闭的非空真子集，与连通性矛盾。
+\sourcepage{188}
+只有有限个$C_j$遇$\partial U$，因为紧集$\partial U$被不交开集$C_j$覆盖。相对紧分支中，未遇$\partial U$的全包含于$U$。因此$\Lambda(Y)$包含于$U$及有限个相对紧分支之并，相对紧；由(i)又闭，故紧。
+\end{proof}
+\entry{23.6}{推论}
+非紧曲面有紧集列$K_j$满足(i)$\Lambda(K_j)=K_j$；(ii)$K_{j-1}\subset\operatorname{int}K_j$；(iii)$\bigcup_jK_j=X$。
+\begin{proof}
+先用可数拓扑取紧集穷竭$K_j'$。令$K_0=\Lambda(K_0')$。已构造到$m$时，取紧$M$使$K_m\cup K_m'\subset\operatorname{int}M$，令$K_{m+1}:=\Lambda(M)$。由(23.5)及包络性质得结论。
+\end{proof}
+\entry{23.7}{引理}
+若紧集$K_1\subset\operatorname{int}K_2$且$\Lambda(K_2)=K_2$，则存在Runge开集$Y$使$K_1\subset Y\subset K_2$，且可选其边界正则。
+\begin{proof}
+对每个$x\in\partial K_2$，取不遇$K_1$的坐标邻域，并在其中取内部含$x$的闭圆盘。有限个这样的$D_1,\ldots,D_k$覆盖$\partial K_2$。令$Y:=K_2\setminus\bigcup_jD_j$，则开且有上述包含关系。$X\setminus K_2$各分支非相对紧；每个$D_j$连通且遇到至少一个这样的分支，故$X\setminus Y$也无相对紧分支。由(22.18)，边界点全部正则。
+\end{proof}
+\entry{23.8}{定理}
+Runge开集的每个连通分支也为Runge开集。
+\sourcepage{189}
+\begin{proof}
+设分支为$Y_i$，$A=X\setminus Y$，其分支$A_k$闭而非紧。可设$Y\ne X$。每个$\overline{Y_i}$都遇$A$；否则$Y_i$闭开，与连通性矛盾。$X\setminus Y_i$的每个分支$C$也遇$A$；否则它遇某$Y_j$（$j\ne i$），由$C$闭、$Y_j$连通得$\overline{Y_j}\subset C$，而$\overline{Y_j}$遇$A$，矛盾。故$C$包含某个完整的$A_k$，不能紧。因此$Y_i$为Runge开集。
+\end{proof}
+\entry{23.9}{定理}
+非紧曲面有相对紧Runge区域穷竭$Y_0\Subset Y_1\Subset\cdots$，各边界正则。
+\begin{proof}
+只须使每个紧集$K$包含于这样的区域。先取连通紧$K_1\supset K$，再取紧$K_2$使$K_1\subset\operatorname{int}K_2$。由(23.7)在$K_1$与$\Lambda(K_2)$间取正则边界Runge开集，再取含$K_1$的连通分支；由(23.8)、(22.14)的注记仍Runge且边界正则。
+\end{proof}
+\subsection*{习题（第23节）}
+\entry{23.1}{}
+证明任意黎曼曲面万有覆盖的覆盖变换群可数。
+\entry{23.2}{}
+设$Y\subset\C$开，$K$为$\C\setminus Y$的紧连通分支。若多项式列在$Y$的各紧子集上一致收敛，证明它在$K$上一致收敛。
+\entry{23.3}{}
+若$Y\subset\C$上的每个全纯函数均可在紧子集上一致地由多项式逼近，证明$Y=\Lambda_\C(Y)$。

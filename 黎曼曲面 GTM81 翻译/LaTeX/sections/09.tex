@@ -1,0 +1,169 @@
+\section{微分形式}
+\sourcepage{59--60}
+本节引入黎曼曲面上的微分形式。除全纯和亚纯形式外，考虑仅在实意义下可微的形式也很重要。
+\entry{9.1}{}
+设$U\subset\C$开。写$z=x+iy$，以实坐标$x,y$将$\C$等同于$\R^2$。用$\mathcal E(U)$表示关于$x,y$无限次可微的函数$f:U\to\C$构成的$\C$代数。除$\partial/\partial x,\partial/\partial y$外，还考虑
+\[
+\frac\partial{\partial z}:=\frac12\left(\frac\partial{\partial x}-i\frac\partial{\partial y}\right),\qquad
+\frac\partial{\partial\bar z}:=\frac12\left(\frac\partial{\partial x}+i\frac\partial{\partial y}\right).
+\]
+Cauchy--Riemann方程表明，全纯函数空间$\OO(U)$是$\partial/\partial\bar z:\mathcal E(U)\to\mathcal E(U)$的核。
+\entry{9.2}{}
+利用复坐标卡，可以在任意黎曼曲面$X$上定义可微函数。对开集$Y\subset X$，令$\mathcal E(Y)$为所有函数$f:Y\to\C$之集，满足：对每个$U\subset Y$上的坐标卡$z:U\to V$，存在$\widetilde f\in\mathcal E(V)$使$f|_U=\widetilde f\circ z$。显然$\widetilde f=f\circ\psi$唯一，其中$\psi=z^{-1}$。配自然限制映射得到可微函数层$\mathcal E$。下文“可微”总指无限次可微。
+
+在坐标邻域$(U,z)$中写$z=x+iy$，可按显然方式定义$\partial/\partial x$、$\partial/\partial y$、$\partial/\partial z$、$\partial/\partial\bar z$。
+
+对$a\in X$，茎$\mathcal E_a$由$a$处的可微函数芽组成。以$\mathfrak m_a\subset\mathcal E_a$表示在$a$处为零的芽构成的向量子空间，$\mathfrak m_a^2$表示其中二阶消失的芽所成子空间。所谓二阶消失，是指可由函数$f$代表，使在$a$的某坐标邻域中$\partial f/\partial x(a)=\partial f/\partial y(a)=0$。这一定义与局部坐标的选择无关。
+\entry{9.3}{定义}
+商向量空间$T_a^{(1)}:=\mathfrak m_a/\mathfrak m_a^2$称为$X$在$a$处的\textbf{余切空间}（cotangent space）。
+\sourcepage{61}
+若$U$是$a$的开邻域，$f\in\mathcal E(U)$，则$f$在$a$处的\textbf{微分}为$d_af:=(f-f(a))\bmod\mathfrak m_a^2\in T_a^{(1)}$。函数$f-f(a)$在$a$处为零，故代表$\mathfrak m_a$的元素，其等价类即$d_af$。
+\entry{9.4}{定理}
+设$(U,z)$为$a\in X$的坐标邻域，$z=x+iy$。则$d_ax,d_ay$为$T_a^{(1)}$的一组基，$d_az,d_a\bar z$也为一组基。若$f$在$a$附近可微，则
+\[
+d_af=\frac{\partial f}{\partial x}(a)d_ax+\frac{\partial f}{\partial y}(a)d_ay
+=\frac{\partial f}{\partial z}(a)d_az+\frac{\partial f}{\partial\bar z}(a)d_a\bar z.
+\]
+\begin{proof}
+(a) 对$t\in T_a^{(1)}$取代表元$\varphi\in\mathfrak m_a$。在$a$处作Taylor展开，$\varphi=c_1(x-x(a))+c_2(y-y(a))+\psi$，其中$\psi\in\mathfrak m_a^2$。取等价类得$t=c_1d_ax+c_2d_ay$。
+
+(b) 若$c_1d_ax+c_2d_ay=0$，则$c_1(x-x(a))+c_2(y-y(a))\in\mathfrak m_a^2$。分别对$x,y$求偏导，得$c_1=c_2=0$，故线性无关。
+
+(c) $f-f(a)=f_x(a)(x-x(a))+f_y(a)(y-y(a))+g$，其中$g$二阶消失，故取商即得第一式。关于$d_az,d_a\bar z$的结论可同样证明。
+\end{proof}
+\sourcepage{62}
+\entry{9.5}{型为$(1,0)$与$(0,1)$的余切向量}
+若$(U,z),(U',z')$均为$a$的坐标邻域，则$\partial z'/\partial z(a)=:c\in\C^*$，$\partial\bar z'/\partial\bar z(a)=\bar c$，而$\partial z'/\partial\bar z(a)=\partial\bar z'/\partial z(a)=0$。故$d_az'=c\,d_az$、$d_a\bar z'=\bar c\,d_a\bar z$。因此$d_az$与$d_a\bar z$各自张成的一维子空间与坐标选择无关。记
+\[
+T_a^{1,0}:=\C d_az,\quad T_a^{0,1}:=\C d_a\bar z,\quad T_a^{(1)}=T_a^{1,0}\oplus T_a^{0,1}.
+\]
+相应元素称为$(1,0)$型、$(0,1)$型余切向量。按此直和分解定义$d_af=d'_af+d''_af$，其中
+\[
+d'_af=\frac{\partial f}{\partial z}(a)d_az,\qquad d''_af=\frac{\partial f}{\partial\bar z}(a)d_a\bar z.
+\]
+\entry{9.6}{定义}
+开集$Y\subset X$上的\textbf{一次微分形式}或\textbf{1形式}是指映射$\omega:Y\to\coprod_{a\in Y}T_a^{(1)}$，满足$\omega(a)\in T_a^{(1)}$。若每个$a$均有$\omega(a)\in T_a^{1,0}$（相应地$T_a^{0,1}$），则称$\omega$为$(1,0)$型（$(0,1)$型）。
+\entry{9.7}{例}
+(a) 对$f\in\mathcal E(Y)$，由$(df)(a):=d_af$、$(d'f)(a):=d'_af$、$(d''f)(a):=d''_af$定义的映射均为1形式。显然$f$全纯当且仅当$d''f=0$。
+
+(b) 若$\omega$为1形式，$f:Y\to\C$为函数，则$(f\omega)(a):=f(a)\omega(a)$也为1形式。
+
+\textbf{注记。}在坐标卡$(U,z)$中，写$z=x+iy$，每个1形式均可写为$\omega=f\,dx+g\,dy=\varphi\,dz+\psi\,d\bar z$。
+\sourcepage{63}
+一般而言，系数函数甚至不必连续。
+\entry{9.8}{定义}
+称$Y$上的1形式$\omega$\textbf{可微}，若对每个坐标卡$(U,z)$，在$U\cap Y$上可写$\omega=f\,dz+g\,d\bar z$，其中$f,g\in\mathcal E(U\cap Y)$；称其\textbf{全纯}，若可写$\omega=f\,dz$，$f\in\OO(U\cap Y)$。
+
+\textbf{记号。}以$\mathcal E^{(1)}(U)$表示可微1形式空间，以$\mathcal E^{1,0}(U),\mathcal E^{0,1}(U)$表示其中相应型的子空间，以$\Omega(U)$表示全纯1形式空间。配自然限制映射，它们均为$X$上的向量空间层。
+\entry{9.9}{留数}
+设$\omega$在$Y\setminus\{a\}$上为全纯1形式。取坐标邻域$(U,z)$使$U\subset Y$、$z(a)=0$，在$U\setminus\{a\}$上写$\omega=f\,dz$，并作Laurent展开$f=\sum_{n=-\infty}^\infty c_nz^n$。若所有$n<0$时$c_n=0$，则$\omega$可全纯延拓到$a$，称$a$为可去奇点。若存在$k<0$使$c_k\ne0$，且所有$n<k$时$c_n=0$，则原文称$\omega$在$a$有$k$阶极点。\translatornote{这里原文把阶数写为负数$k$；通常称极点阶数为$-k>0$。}若有无限多个$n<0$使$c_n\ne0$，则$a$为本性奇点。
+
+系数$c_{-1}$称为$\omega$在$a$处的\textbf{留数}，记为$\operatorname{Res}_a\omega:=c_{-1}$。
+
+\textbf{引理。}留数与坐标卡的选择无关。
+\begin{proof}
+设$V$为$a$的开邻域。
+
+断言(a)：若$g$在$V\setminus\{a\}$上全纯，则$dg$在$a$处留数为零，与坐标无关。
+\sourcepage{64}
+在任意$z(a)=0$的坐标中展开$g=\sum_{n=-\infty}^\infty c_nz^n$，则$dg=\sum_n nc_nz^{n-1}\,dz$，故$z^{-1}\,dz$的系数为零。
+
+断言(b)：若$\phi$在$V$上全纯并在$a$有一阶零点，则$\operatorname{Res}_a(\phi^{-1}d\phi)=1$，与坐标无关。事实上，在任意$z(a)=0$的坐标中，$\phi=zh$，$h$在$a$全纯且非零。于是$d\phi=h\,dz+z\,dh$，故$d\phi/\phi=dz/z+dh/h$。最后一项在$a$全纯，所以留数为1。
+
+现在写$\omega=f\,dz$，$f=\sum_n c_nz^n$，并令
+\[
+g:=\sum_{n=-\infty}^{-2}\frac{c_n}{n+1}z^{n+1}+\sum_{n=0}^\infty\frac{c_n}{n+1}z^{n+1}.
+\]
+则$\omega=dg+c_{-1}z^{-1}dz$。由(a)、(b)，其留数为$c_{-1}$，与坐标无关。
+\end{proof}
+\entry{9.10}{亚纯微分形式}
+若存在开集$Y'\subset Y$，使$\omega$在$Y'$上为全纯1形式，$Y\setminus Y'$仅含孤立点，且在其中每点均有极点，则称$\omega$为$Y$上的\textbf{亚纯微分形式}。
+\sourcepage{65}
+以$\MM^{(1)}(Y)$表示全体亚纯1形式。配自然代数运算和通常限制映射，它们构成向量空间层。$X$上的亚纯1形式也称\textbf{阿贝尔微分}。处处全纯的称为第一类；在每个极点处留数均为零的称为第二类；其余称为第三类。
+\entry{9.11}{外积}
+为定义2形式，回顾向量空间的外积。若$V$为复向量空间，则$\Lambda^2V$的元素是形如$v_1\wedge v_2$的元素的有限和，并满足
+\begin{gather*}
+v_1\wedge v_2=-v_2\wedge v_1,\qquad
+(v_1+v_2)\wedge v_3=v_1\wedge v_3+v_2\wedge v_3,\\
+(\lambda v_1)\wedge v_2=\lambda(v_1\wedge v_2)=v_1\wedge(\lambda v_2).
+\end{gather*}
+若$(e_1,\ldots,e_n)$为$V$的基，则$e_i\wedge e_j$（$i<j$）构成$\Lambda^2V$的基。这些性质完全刻画$\Lambda^2V$。
+
+对余切空间令$T_a^{(2)}:=\Lambda^2T_a^{(1)}$。在坐标$z=x+iy$中，$d_ax\wedge d_ay$为其基，$d_az\wedge d_a\bar z=-2i\,d_ax\wedge d_ay$为另一组基。因此$\dim T_a^{(2)}=1$。
+\entry{9.12}{定义}
+$Y$上的\textbf{2形式}是映射$\omega:Y\to\coprod_{a\in Y}T_a^{(2)}$，满足$\omega(a)\in T_a^{(2)}$。若在每张坐标卡中可写$\omega=f\,dz\wedge d\bar z$，$f\in\mathcal E(U\cap Y)$，则称其可微。此表达式意指$\omega(a)=f(a)d_az\wedge d_a\bar z$。以$\mathcal E^{(2)}(Y)$表示可微2形式空间。
+
+\textbf{例。}若$\omega_1,\omega_2\in\mathcal E^{(1)}(Y)$，定义$(\omega_1\wedge\omega_2)(a):=\omega_1(a)\wedge\omega_2(a)$便得2形式。若$f\in\mathcal E(Y)$、$\omega\in\mathcal E^{(2)}(Y)$，则$(f\omega)(a):=f(a)\omega(a)$也为2形式。
+\sourcepage{66}
+\entry{9.13}{形式的外微分}
+现在定义$d,d',d'':\mathcal E^{(1)}(U)\to\mathcal E^{(2)}(U)$。局部地，可微1形式可写为有限和$\omega=\sum_k f_k\,dg_k$，其中$f_k,g_k$可微，例如$\omega=f_1dz+f_2d\bar z$。令
+\[
+d\omega:=\sum_k df_k\wedge dg_k,\qquad d'\omega:=\sum_k d'f_k\wedge dg_k,\qquad d''\omega:=\sum_k d''f_k\wedge dg_k.
+\]
+\translatornote{以上$d',d''$的公式照录原文。若允许任意可微$g_k$，它们一般依赖表示：例如$d(z\bar z)=\bar z\,dz+z\,d\bar z$，两种表示给出的$d'$不同。通常应按形式的型定义$\partial,\bar\partial$；在坐标表达式$\omega=f\,dz+g\,d\bar z$中，取$d'\omega=g_z\,dz\wedge d\bar z$、$d''\omega=-f_{\bar z}\,dz\wedge d\bar z$。下文其余公式按此通常定义理解。}
+现在须证明定义不依赖表示。对$d$证明如下，原文称其他情形类似。
+
+若$\omega=\sum_k f_kdg_k=\sum_j\widetilde f_jd\widetilde g_j$，取坐标$z=x+iy$。由$dg_k=(g_k)_x dx+(g_k)_y dy$及对应的另一表达式，得
+\[
+\sum_k f_k(g_k)_x=\sum_j\widetilde f_j(\widetilde g_j)_x,\qquad
+\sum_k f_k(g_k)_y=\sum_j\widetilde f_j(\widetilde g_j)_y.
+\]
+分别取适当偏导再相减，混合二阶导数抵消，得
+\[
+\sum_k((f_k)_y(g_k)_x-(f_k)_x(g_k)_y)
+=\sum_j((\widetilde f_j)_y(\widetilde g_j)_x-(\widetilde f_j)_x(\widetilde g_j)_y).
+\]
+另一方面，$\sum_kdf_k\wedge dg_k=\sum_k((f_k)_x(g_k)_y-(f_k)_y(g_k)_x)dx\wedge dy$，另一表示亦然，故两者相等。
+\entry{9.14}{初等性质}
+对$f\in\mathcal E(U)$、$\omega\in\mathcal E^{(1)}(U)$，有
+\begin{enumerate}[label=(\roman*)]
+\item $ddf=d'd'f=d''d''f=0$；
+\item $d\omega=d'\omega+d''\omega$；
+\item $d(f\omega)=df\wedge\omega+f\,d\omega$，$d',d''$有类似规则。
+\end{enumerate}
+这些规则直接由定义得到，例如$ddf=d(1\cdot df)=d1\wedge df=0$。
+\sourcepage{67}
+由(i)、(ii)得$d'd''f=-d''d'f$，因为$0=(d'+d'')(d'+d'')f=d'd''f+d''d'f$。在坐标$z=x+iy$中，
+\[
+d'd''f=\frac{\partial^2 f}{\partial z\partial\bar z}dz\wedge d\bar z
+=\frac1{2i}\left(\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}\right)dx\wedge dy.
+\]
+因此，称黎曼曲面开集上的可微函数$f$\textbf{调和}，如果$d'd''f=0$。
+\entry{9.15}{定义}
+若可微1形式$\omega$满足$d\omega=0$，称其\textbf{闭}（closed）；若存在$f\in\mathcal E(Y)$使$\omega=df$，称其\textbf{恰当}（exact）。
+
+\textbf{注记。}由$ddf=0$，恰当形式均闭。反之一般不成立，下一节进一步研究此问题。
+\entry{9.16}{定理}
+(a) 每个全纯1形式$\omega\in\Omega(Y)$均闭。
+(b) 每个闭的$(1,0)$型1形式$\omega\in\mathcal E^{1,0}(Y)$均全纯。
+\begin{proof}
+局部写$\omega=f\,dz$，则
+\[
+d\omega=df\wedge dz=(f_zdz+f_{\bar z}d\bar z)\wedge dz=-f_{\bar z}dz\wedge d\bar z.
+\]
+故$d\omega=0$等价于$f_{\bar z}=0$，两项结论随即得到。
+\end{proof}
+\textbf{推论。}若$u$调和，则$d'u$为全纯1形式，因为$dd'u=d''d'u=0$。
+\entry{9.17}{微分形式的拉回}
+设$F:X\to Y$为全纯映射。对开集$U\subset Y$，$F$诱导$F^*:\mathcal E(U)\to\mathcal E(F^{-1}(U))$，$F^*f=f\circ F$。类似地定义$F^*:\mathcal E^{(k)}(U)\to\mathcal E^{(k)}(F^{-1}(U))$（$k=1,2$）。
+\sourcepage{68}
+局部把形式写为$\sum_j f_jdg_j$或$\sum_j f_jdg_j\wedge dh_j$，定义
+\begin{gather*}
+F^*\left(\sum_jf_jdg_j\right):=\sum_j(F^*f_j)d(F^*g_j),\\
+F^*\left(\sum_jf_jdg_j\wedge dh_j\right):=\sum_j(F^*f_j)d(F^*g_j)\wedge d(F^*h_j).
+\end{gather*}
+容易验证，这不依赖局部表示，故可拼成唯一的整体向量空间同态。并有
+\begin{gather*}
+F^*(df)=d(F^*f),\quad F^*(d\omega)=d(F^*\omega),\\
+F^*(d'f)=d'(F^*f),\quad F^*(d'\omega)=d'(F^*\omega),
+\end{gather*}
+$d''$亦有对应公式。
+
+\textbf{推论。}若$f$调和，则$F^*f=f\circ F$也调和，因为$d'd''(F^*f)=d'(F^*d''f)=F^*(d'd''f)=0$。
+\subsection*{习题（第9节）}
+\entry{9.1}{}
+设$p=\exp:\C\to\C^*$为万有覆盖，$\omega=dz/z$为$\C^*$上的全纯1形式。求$p^*\omega$。
+\entry{9.2}{}
+证明$\C\setminus\{\pm i\}$上的全纯1形式$dz/(1+z^2)$可延拓为$\PP^1\setminus\{\pm i\}$上的全纯1形式$\omega$。令$p=\tan:\C\to\PP^1\setminus\{\pm i\}$（参见习题4.4），求$p^*\omega$。
+\entry{9.3}{}
+设$p:Y\to X$为黎曼曲面间的全纯映射，$a\in X$、$b\in p^{-1}(a)$，$k$为$p$在$b$处的重数。对$X\setminus\{a\}$上的任意全纯1形式$\omega$，证明$\operatorname{Res}_b(p^*\omega)=k\operatorname{Res}_a\omega$。

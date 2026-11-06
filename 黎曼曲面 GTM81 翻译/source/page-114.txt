@@ -1,0 +1,73 @@
+13 Dolbeault's Lemma 
+105 
+Changing back to the original coordinates, one has 
+of(y)=_1 I' II Og((+Z)1 d 
+d-
+~r" 
+2' 1m 
+~r 
+Z 1\ 
+Z, 
+v., 
+7r1 ,-+0 
+v., 
+Z 
+B, 
+where B, :={z E IC: c;::5: I Z I ::5: R}. Since 
+og(( + z)1 = og(( + z) ~ = ~ (g(( + z)) 
+o( 
+Z 
+oz 
+Z 
+oz 
+Z 
+for Z =1= 0, one has 
+of 
+1. II 0 (g(( + Z)) 
+. II 
+~r (() = -2 . hm 
+~_ 
+dz 1\ dz = - hm 
+dw, 
+v., 
+7r1 ,-+0 
+vZ 
+Z 
+.-0 
+• 
+• 
+where the differential form w is given by 
+w(z) = ~ 
+g(( + z) dz 
+2m 
+Z 
+(here one considers Z as a variable and ( as a constant). By Stokes' Theorem 
+:~(() = -lim If dw = -lim f W'= lim f 
+w. 
+I:, 
+£-+0 BE 
+f-O 
+aB~ 
+of-O Izi =£ 
+Parametrizing the circle I z I = c; by z = c;eill, 0 ::5: e ::5: 27r, one gets 
+of 
+1 
+2" 
+~r (() = lim -2 J g(( + c;eill ) de. 
+v., 
+,-0 
+7r 0 
+Now the integral gives the average value of the function g over the circle 
+( + c;eill for 0 ::5: e ::5: 2n. Since g is continuous, this converges to g(() as c; --+ 0, 
+i.e., 
+of 
+or (() = g((). 
+o 
+The next theorem shows that one may drop the assumption that g has 
+compact support. 
+13.2. Theorem. Suppose X:= {z E C: I z I < R}, 0 < R ::5: 00, and g E C(X). 
+Then there exists f E C(X) such that 
+of 
+OZ = g. 
+This theorem is a special case of the so-called Dolbeault Lemma in 
+several complex variables, see [32]. 

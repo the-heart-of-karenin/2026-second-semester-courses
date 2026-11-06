@@ -1,0 +1,48 @@
+116 
+2 Compact Riemann Surfaces 
+14.12. Theorem. Suppose X is a Riemann surface and Y if X is a relatively 
+compact open subset. Then for every point a E Y there exists a meromorphic 
+fimction f E ,/It'( Y) which has a pole at a and is holomorphic on Y\{ a}. 
+PROOF. By Theorem (14.9) 
+k:= dim Im(HI(X, 0) -> HI(y, C:)) < 00. 
+Suppose (U I, z) is a coordinate neighborhood of a with z(a) = O. Set 
+U 2 := X\{a}. Then U = (U I, U 2) is an open covering of X. The functions z-) 
+are holomorphic on U I n U 2 = U I \{a} and represent cocycles 
+(j E ZI(U, (I), 
+j = 1, ... , k + 1. 
+Since dim Im(HI(U, (I» 
+---> HI (U n Y, <T')) < k + 1, the cocycles 
+ely E ZI(U n Y, (I), 
+1 ::::; j ::::; k + 1, are linearly dependent modulo the coboundaries. Thus there 
+exist complex numbers 
+C 10 ... , Ck+l, not all zero, and a cochain 
+'1 = (fIJ2) E CO(U n Y, 0) such that 
+I.e., 
+k+ 1 L c)z 
+j =f2 -fl on U 1 n U 2 n Y. 
+i= 1 
+Hence there is a function f E .#( Y), which coincides with 
+k + I 
+f~ + L c)z- j 
+)=1 
+on U 1 n Y and which is equal to f2 on U 2 n Y = y\{a}. This is the desired 
+function. 
+0 
+14.13. Corollary. Suppose X is a compact Riemann surface and ai' ... , an are 
+distinct points on X. Then for any given complex numbers CIo ... , Cn E C, there 
+exists a meromorphic function f E ~(X) such that f(a;) = cJor i = 1, ... , n. 
+PROOF. For every pair i =F j, by applying Theorem (14.12) in the case Y = X, 
+one gets a function fij E j{(X) which has a pole at ai but is holomorphic at 
+aj . Choose a constant Aij E C * such that fij(a k ) =F .t;AaJ -
+Aij for every 
+k = 1, ... , n. Then the function 
+._ 
+fij - fij(a j ) 
+gij '-r= ;; () , E A't(X) 
+.Jij 
+ij aj + Aij 
+is holomorphic at the points ak, 1 ::::; k ::::; n, and satisfies 9i)(a;) = 1 and 
+gij(aj) = O. Now the functions 
+hi := Ilgij' 
+j*i 
+i = 1, ... , n, 

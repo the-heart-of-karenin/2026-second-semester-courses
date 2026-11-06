@@ -1,0 +1,82 @@
+\section{Abel定理}
+\sourcepage{159}
+本节研究紧黎曼曲面上具有指定零点、极点的亚纯函数何时存在。零点、极点总阶数相等显然必要，但亏格$\ge1$时不充分；Abel定理给出充要条件。
+\entry{20.1}{具有指定除子的函数}
+若$(f)=D$，称亚纯函数$f$为$D$的\textbf{解}。紧曲面上可解必须$\deg D=0$。还需\textbf{弱解}概念：令$X_D:=\{x:D(x)\ge0\}$。若$f\in\mathcal E(X_D)$，且每个$a$有坐标$z(a)=0$及可微函数$\psi$，$\psi(a)\ne0$，使$f=\psi z^k$于$U\cap X_D$，$k=D(a)$，则称$f$为弱解。弱解为真正亚纯解当且仅当在$X_D$上全纯。两个弱解之商可延拓为处处非零的整体可微函数。
+
+若$f_1,f_2$分别为$D_1,D_2$的弱解，则乘积、商经连续延拓后分别为$D_1+D_2$、$D_1-D_2$的弱解；必要的延拓发生在极点与零点相消处。
+\entry{20.2}{对数微分}
+弱解的$df/f$在$X\setminus\operatorname{Supp}D$上为光滑1形式。若$k=D(a)$，局部有$df/f=k\,dz/z+d\psi/\psi$。
+\sourcepage{160}
+后一项在$a$附近可微，故如(13.1)，对任意紧支集1形式$\sigma$，积分$\iint_X(df/f)\wedge\sigma$存在。并且$d''f/f$在整个$X$上可微，因为局部等于$d''\psi/\psi$。
+\entry{20.3}{引理}
+设$D$支于互异点$a_j$且$D(a_j)=k_j$，$f$为弱解。对每个紧支集$g\in\mathcal E(X)$，有
+\[
+\frac1{2\pi i}\iint_X\frac{df}f\wedge dg=\sum_jk_jg(a_j).
+\]
+\begin{proof}
+取不交坐标邻域$(U_j,z_j)$，像为单位圆盘，局部$f=z_j^{k_j}\psi_j$。选$0<r_1<r_2<1$及截断函数$\varphi_j$，在$|z_j|\le r_1$恒1、支集于$|z_j|<r_2$。令$g_j=\varphi_jg$，$g_0=g-\sum_jg_j$。$g_0$的支集避开各$a_j$，由(10.20)，$\iint(df/f)\wedge dg_0=0$。同理光滑闭形式$d\psi_j/\psi_j$与$dg_j$的积分为零，故左端不含常数因子的积分等于$\sum_jk_j\iint_{U_j}(dz_j/z_j)\wedge dg_j$。
+
+由Stokes，后一积分为$-\lim_{\varepsilon\to0}\int_{\partial\{\varepsilon\le|z_j|\le r_2\}}g_jdz_j/z_j=\lim_{\varepsilon\to0}\int_{|z_j|=\varepsilon}g_jdz_j/z_j=2\pi ig(a_j)$，得证。
+\end{proof}
+\sourcepage{161}
+\entry{20.4}{链、闭链与同调}
+\textbf{1链}是有限整数线性组合$c=\sum_jn_jc_j$，其中$c_j:[0,1]\to X$为曲线。对闭形式定义$\int_c\omega:=\sum_jn_j\int_{c_j}\omega$。所有1链构成阿贝尔群$C_1(X)$。
+
+定义边界$\partial:C_1(X)\to\operatorname{Div}(X)$：曲线的边界为终点减起点，两者相同时为零，再线性延拓。总有$\deg\partial c=0$。反之，紧曲面上的零次除子可写为若干$b_j-a_j$之和，选连接曲线即得到边界为该除子的1链。
+
+核$Z_1(X):=\ker\partial$称为1闭链群。若两个闭链对每个闭1形式的积分相同，称它们\textbf{同调}。同调类形成第一同调群$H_1(X)$。故对$\gamma\in H_1(X)$及闭形式，$\int_\gamma\omega$良定义。同伦闭曲线也同调，得到满同态$\pi_1(X)\to H_1(X)$；满射性容易验证，一般非单射，因为基本群不总为阿贝尔群。
+\sourcepage{162}
+\entry{20.5}{引理}
+设$c$为曲线，$U$为包含其像的相对紧开邻域。则存在$\partial c$的弱解$f$，在$X\setminus U$恒为1，并对每个闭1形式满足$\int_c\omega=(2\pi i)^{-1}\iint_X(df/f)\wedge\omega$。由于$df=0$于外部，积分存在。
+\begin{proof}
+(a)先设曲线完全位于一张圆盘坐标中，将它等同于单位圆盘。令$a=c(0)$、$b=c(1)$，选$r<1$包含曲线像。$\log((z-b)/(z-a))$在$r<|z|<1$有单值分支。选$\psi$在$|z|\le r$恒1、在$|z|\ge r'$恒0（$r<r'<1$），定义
+\[
+f_0(z)=\begin{cases}(z-b)/(z-a),&|z|\le r,\\
+\exp(\psi(z)\log((z-b)/(z-a))),&r<|z|<1.
+\end{cases}
+\]
+外部赋1，得到所需弱解。闭形式在圆盘上有原函数，可取紧支集整体函数$g$使$dg=\omega$于$|z|\le r'$。由(20.3)，$(2\pi i)^{-1}\iint(df/f)\wedge\omega=g(b)-g(a)=\int_c\omega$。
+
+(b)一般曲线可有限分段，使每段$c_j$位于$U$内的一张圆盘坐标卡。分别用(a)得到$f_j$，取$f=\prod_jf_j$，由边界与对数微分的可加性即得。
+\end{proof}
+\sourcepage{163}
+\entry{20.6}{推论}
+对紧曲面的每条闭曲线$\alpha$，恰有一个调和形式$\sigma_\alpha$使对所有闭形式$\omega$有$\int_\alpha\omega=\iint_X\sigma_\alpha\wedge\omega$。
+\begin{proof}
+取(20.5)的弱解，因$\partial\alpha=0$，$f$处处非零。将闭形式$(2\pi i)^{-1}df/f$分解为$\sigma_\alpha+dg$。与闭$\omega$外积后，$dg\wedge\omega=d(g\omega)$积分为零，故满足公式。若有另一解，差$\tau$调和且与每个闭形式外积积分为零，取$\omega=*\tau$得$\langle\tau,\tau\rangle=0$，故唯一。
+\end{proof}
+\entry{20.7}{Abel定理}
+设$D$为紧曲面上的零次除子。则$D$有亚纯解，当且仅当存在1链$c$使$\partial c=D$且对每个$\omega\in\Omega(X)$有$\int_c\omega=0$。
+
+\textbf{注记。}只须对全纯形式基验证。若任取$\partial\gamma=D$，条件等价于存在闭链$\alpha$，使$\int_\gamma\omega_j=\int_\alpha\omega_j$（$j=1,\ldots,g$），这里$\alpha=\gamma-c$。
+\sourcepage{164}
+\begin{proof}
+(a)充分性。由(20.5)及乘法构造，取弱解$f$使$\int_c\omega=(2\pi i)^{-1}\iint(df/f)\wedge\omega$。对全纯$\omega$，右端等于$(2\pi i)^{-1}\iint(d''f/f)\wedge\omega$，由条件为零。$d''f/f$是整体$(0,1)$形式，由(19.10)存在$g$使$d''g=d''f/f$。令$F:=e^{-g}f$，仍为弱解，而$d''F=e^{-g}(d''f-fd''g)=0$，故为亚纯解。
+
+(b)必要性。可设$D\ne0$，取$(f)=D$，视$f:X\to\PP^1$为$n$叶覆盖。去掉临界值得$Y\subset\PP^1$。对$\omega\in\Omega(X)$，在$V\subset Y$上取各逆分支$\varphi_1,\ldots,\varphi_n$，定义$\operatorname{Trace}(\omega)|_V:=\sum_\nu\varphi_\nu^*\omega$。这些形式在交集上相同，如(8.2)可全纯延拓到整个球面。球面无非零全纯1形式，故迹为零。
+
+取球面上从$\infty$到0、除端点外避开临界值的曲线$\gamma$。其原像由$n$条连接极点与零点的曲线$c_j$组成，按重数计。令$c=\sum_jc_j$，则$\partial c=D$，且$\int_c\omega=\int_\gamma\operatorname{Trace}(\omega)=0$。
+\end{proof}
+\sourcepage{165}
+\entry{20.8}{对双周期函数的应用}
+在基本平行四边形内指定零点$a_1,\ldots,a_n$及极点$b_1,\ldots,b_n$，按重数重复列出。存在具有这些零极点的双周期亚纯函数，当且仅当$\sum_k(a_k-b_k)\in\Gamma$。
+\begin{proof}
+在$\C$中选从$b_k$到$a_k$的曲线$c_k$，投影到环面并相加得$c$，其边界为指定除子。对$dz$诱导的全纯形式，$\int_c\omega=\sum_k\int_{c_k}dz=\sum_k(a_k-b_k)$。由Abel定理后的注记及其周期格为$\Gamma$，得证。
+\end{proof}
+\subsection*{习题（第20节）}
+\entry{20.1}{}
+设$\alpha,\beta$为闭曲线，$\sigma_\alpha,\sigma_\beta$如(20.6)。证明$\iint_X\sigma_\alpha\wedge\sigma_\beta$为整数，称为两曲线的\textbf{交数}。［提示：对处处非零的可微函数$f$及闭曲线，$(2\pi i)^{-1}\int_\alpha df/f$为整数。］
+\entry{20.2}{}
+设$X=\C/\Gamma$，$\Gamma=\Z\gamma_1+\Z\gamma_2$，$\alpha_j(t):=\pi(t\gamma_j)$。求相应的调和形式$\sigma_{\alpha_j}$。
+\sourcepage{166}
+\entry{20.3}{}
+证明存在闭曲线$\alpha_1,\ldots,\alpha_{2g}$，使$\operatorname{Harm}^1(X)=\sum_{j=1}^{2g}\C\sigma_{\alpha_j}$。
+\entry{20.4}{}
+关于格$\Gamma$的\textbf{theta函数}是全纯函数$F:\C\to\C$，满足$F(z+\gamma)=e^{L_\gamma(z)}F(z)$，其中$L_\gamma(z)=a_\gamma z+b_\gamma$为仿射线性函数。
+(a)定义Weierstrass $\sigma$函数
+\[
+\sigma(z):=z\prod_{\gamma\in\Gamma\setminus\{0\}}(1-z/\gamma)\exp(z/\gamma+z^2/(2\gamma^2)).
+\]
+证明它是theta函数，并恰在格点有一阶零点。
+(b)证明每个双周期亚纯函数均为两个theta函数之商。

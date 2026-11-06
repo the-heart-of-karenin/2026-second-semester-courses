@@ -1,0 +1,42 @@
+6 
+1 Covering Spaces 
+This follows directly from Riemann's Removable Singularities Theorem 
+in the complex plane. 
+We now define holomorphic mappings between Riemann surfaces. 
+1.9. Definition. Suppose X and Yare Riemann surfaces. A continuous map-
+ping f: X ---> Y is called holomorphic, if for every pair of charts l/Jl: U 1 ---> VI 
+on X and l/Jz: Uz ---> Vz on Y withj{U1) c Uz , the mapping 
+l/J2 
+f 
+l/Jl1: VI ---> V2 
+is holomorphic in the usual sense. 
+A mapping f: X ---> Y is called biholomorphic if it is bijective and both 
+f: X ---> Y and f - 1: Y ---> X are holomorphic. Two Riemann surfaces X and 
+Yare called isomorphic if there exists a biholomorphic mappingf: X ---> Y. 
+1.10. Remarks 
+(a) In the special case Y = C, holomorphic mappings f: X ---> Care 
+clearly the same as holomorphic functions. 
+(b) If X, Y and Z are Riemann surfaces andf: X ---> Y and g: Y ---> Z are 
+holomorphic mappings, then the composition g= f: X ---> Z is also 
+holomorphic. 
+(c) A continuous mapping f: X -+ Y between two Riemann surfaces is 
+holomorphic precisely if for every open set V c Y and every holomorphic 
+function l/J E ((:I(V), the" pull-back" function l/J c f: f-l(V) -+ C is contained 
+in (!(f-l(V)). This follows directly from the definitions and the remarks 
+(1.7.c) and (1.10.b). 
+In this way a holomorphic mapping f: X -+ Y induces a mapping 
+f*(l/J) = l/J :f 
+One can easily check thatf* is a ring homomorphism. If g: Y ---> Z is another 
+holomorphic mapping, W is open in Z, V:=g-I(W) and U :=f-l(V), then 
+(g c f)*: ((:I(W) ---> (q U) is the composition of the mappings g*: 0(W) -+ @(V) 
+andf*: ((:1(V)--->0'(U), i.e., (g of)* =f* c g*. 
+1.11. Theorem (Identity Theorem). Suppose X and Yare Riemann surfaces 
+and fl' f2: X -+ Yare two holomorphic mappings which coincide on a set 
+A c X having a limit point a E X. Thenfl andf2 are identically equal. 
+PROOF. Let G be the set of all points x E X having an open neighborhood W 
+such that fl I W = f21 w. By definition G is open. We claim that G is also 
+closed. For, suppose b is a boundary point of G. Thenfl(b) = f2(b) sincefl 
+and j~ are continuous. Choose charts cp: U -+ V on X and l/J: U' -+ V' on Y 
+with b E U and j;(U) cU'. We may also assume that U is connected. The 
+mappings 
+gi := l/Jo j; 0 cp - 1: V ---> V' c C 

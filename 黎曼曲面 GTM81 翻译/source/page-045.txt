@@ -1,0 +1,42 @@
+36 
+1 Covering Spaces 
+Remark. Later (18.3) we will give necessary and sufficient conditions for 
+the existence of a doubly periodic meromorphic function with prescribed 
+principal parts. However it is worth noting that one can make the above 
+observation using only topological reasons. 
+5.8. Definition. Suppose X and Yare topological spaces, p: Y -> X is a cover-
+ing map and G is a subgroup of Oeck(Y/X). Two points y, y' E Yare called 
+equivalent modulo G, if there exists (J E G such that (J(Y) = y'. Clearly this 
+really is an equivalence relation on Y. 
+5.9. Theorem. Suppose X and Yare connected manifolds, q: Y -> X is a cover-
+ing map and p: X -> X is the universal covering. Let f: X -> Y be a continuous 
+fiber-preserving mapping, which by the definition of the universal covering 
+exists. Thenfis a covering map and there exists a subgroup G c Deck(X/X) 
+such that two points X, x' E X are mapped onto the same point by f precisely if 
+they are equivalent modulo G. Moreover G ~ ndY). 
+PROOF. First we will show thatfis a local homeomorphism. Suppose x E X, 
+p(x) =, sand f(x) =, y. Since p is a local homeomorphism, there exist open 
+neighborhoods WI of x and U I of s, such that p I WI -> U I is a homeo-
+morphism. Since q is a covering map, there exists an open connected neigh-
+borhood U of s contained in U I and pairwise disjoint open sets V;, i E I, 
+such that q- I( U) = U V; and q I V; -> U is a homeomorphism for every i E I. 
+Let V be the particular V; containing the point y and let W:= p - I (U) n WI. 
+Then y Ef(W) c q-I(U) and since j{W) is connected, it follows that 
+f( W) = V. Since p I W -> U and q I V -> U are homeomorphisms,f I W -> V is 
+also a homeomorphism. Thus f is a local homeomorphism. 
+In order to prove that f is a covering map, consider a curve v in Y with 
+initial point Yo and a point Xo E X withj{xo) = Yo. We have to show that the 
+curve v can be lifted to X with initial point Xo. Since p: X -> X is a covering 
+map the curve q " v in X may be lifted to a curve u in X with initial point Xo. 
+Then the curves f D U and v in Yare both liftings of the curve q 0 v and have 
+the same initial point Yo. Thus they coincide. But this means that u is the 
+desired lifting of v. Thusfis a covering map by Theorem (4.19). 
+Let G := Deck(X IY). This is a subgroup of Oeck(X IX). Since X is simply 
+connected, f: X -> Y is the universal covering of Y and so is Galois. Hence 
+G ~ nl(Y) andf(x) = fix') precisely if there exists (J E G such that (J(x) = x'. 
+This completes the proof of Theorem (5.9). 
+0 
+We will now use Theorem (5.9) to determine all the covering spaces of the 
+punctured unit disk D* = {z E IC: 0 < I z I < I}. 
+5.10. Theorem. Suppose X is a Riemann surface and f: X -> D* is an un-
+branched holomorphic covering map. Then one of the following holds: 

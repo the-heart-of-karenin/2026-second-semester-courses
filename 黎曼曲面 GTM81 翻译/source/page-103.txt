@@ -1,0 +1,39 @@
+94 
+1 Covering Spaces 
+Case 2: P E £.. We may assume p 2: O. In this case equation (2) with p = P 
+necessarily leads to the solution (p(z) = const . J Az). If p f 0 and p = - p, 
+then using (iii)' and the fact that Co f 0 first gives Clk f 0 for all k < p and 
+then for k = p the contradiction 0 . c2p + C2p - 2 = O. Thus equation (2) for p 
+an integer can only give us one linearly independent solution. By Theorem 
+(11.14) equation (1) has a second solution which is linearly independent of J p 
+and has the form 
+where g is a function holomorphic on C * having at most a pole at O. Differ-
+entiation gives 
+1 
+I/I'(z) = J~(z)log z + -:Jp(z) + g'(z), 
+~ 
+I/I"(z) = J;(z )log z + ~ J~(z) -
+_12 J p{Z) + g"(z). 
+"-
+~ 
+Substituting this into the differential equation and using the fact that 
+w = Jp(z) is already a solution of (1), one gets that 1/1 is a solution of (1) 
+precisely if 
+1 
+(2) 
+") 
+g"(z) +;- g'(z) + 1 -
+~2 g(z) = - ~ J~(z). 
+This equation can be solved by a power series of the form 
+CfJ 
+g(z) = z-P L anzn. 
+n= 0 
+This solution is then uniquely determined up to the addition of a constant 
+multiple of J p' This solution, when properly normalized, is the so-called 
+Neumann Function N p (or Besselfunction of the second kind) and together with 
+J p forms a fundamental system of solutions of Bessel's equation (1), cf. [52], 
+[58]. 
+EXERCISES (§11) 
+11.1. Show that for every A E M(n x n, C) 
+det(exp A) = exp(trace A). 
+11.2. Calculate exp(Aj) for 

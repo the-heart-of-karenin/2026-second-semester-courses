@@ -1,0 +1,40 @@
+58 
+1 Covering Spaces 
+of degree n over the field C{{z}}. For some r > 0, all the coefficients av are 
+meromorphic functions on 
+D(r):={z E C: Izl < r}, 
+and thus F may also be considered as an element of ,#(D(r))[w]. It is clear 
+that F is also irreducible over the field A'I(D(r)). Now suppose that r has 
+been chosen so small that for every a E D(r )\0 the polynomial 
+F(a, w) E C[w] 
+has no mUltiple roots. Let (Y, n, f) be the algebraic function defined by 
+F(z, w) E .it'(D(r))[w] in the sense of Theorem 8.9. Then n: Y -4 D(r) is an n-
+sheeted proper holomorphic map which is ramified only over the origin. By 
+Theorem (5.11) there exists an isomorphism 
+ex: D(p) -4 Y, 
+/-
+P = V'r, 
+such that 
+n(ex(()) = (" 
+for every ( E D(p). 
+Since F(n, f) = 0, it follows that 
+F((", rp(()) = 0, 
+where rp :=f ex. 
+This proves the following Theorem. 
+8.14. Theorem (Puiseux). Let 
+F(z, w) = w" + a1(z)w"-1 + ... + an(z) E C{{z}}[w] 
+be an irreducible polynomial of degree n over thefield q{z}}. Then there exists 
+a Laurent series 
+oc 
+rp(() = I Cv(V E C{{m 
+l'=k 
+such that 
+F((", rp(()) = 0 
+as an element ()(C{{m. 
+Remarks 
+(1) If all of the coefficients a v are holomorphic, i.e., a v E qz}, then 
+rp E C{O as well. This follows from the fact that in this case the function f 
+considered in (8.13) is holomorphic on Y. 
+(2) Another way of expressing the assertion of the Theorem is to say that 
+the equation 
+F(z, w) = 0 

@@ -1,0 +1,97 @@
+\section{Riemann--Roch定理}
+\sourcepage{126--127}
+Riemann--Roch定理是紧黎曼曲面理论的核心。粗略地说，它给出极点受指定限制的线性无关亚纯函数的个数。
+\entry{16.1}{除子}
+黎曼曲面$X$上的\textbf{除子}（divisor）是映射$D:X\to\Z$，满足每个紧集$K\subset X$中只有有限个$x$使$D(x)\ne0$。所有除子在加法下形成阿贝尔群$\operatorname{Div}(X)$。逐点定义偏序：$D\le D'$当且仅当所有$x$处$D(x)\le D'(x)$。
+\entry{16.2}{亚纯函数与1形式的除子}
+对$f\in\MM(Y)$及$a\in Y$，若$f$在$a$全纯且非零，定义$\operatorname{ord}_a f=0$；若有$k$阶零点，定义为$k$；若有$k$阶极点，定义为$-k$；若在$a$附近恒零，定义为$\infty$。对非零整体亚纯函数，$x\mapsto\operatorname{ord}_xf$为除子，记$(f)$。若$(f)\ge D$，称$f$为$D$的倍数。函数全纯当且仅当$(f)\ge0$。
+
+对亚纯1形式，局部写$\omega=f\,dz$，定义$\operatorname{ord}_a\omega:=\operatorname{ord}_af$，与坐标选择无关。非零形式同样定义除子$(\omega)$。有
+\[
+(fg)=(f)+(g),\quad(1/f)=-(f),\quad(f\omega)=(f)+(\omega).
+\]
+形如$(f)$的除子称为\textbf{主除子}；差为主除子的两个除子称为\textbf{等价}。非零亚纯1形式的除子称为\textbf{典范除子}。任意两个典范除子等价，因为$\omega_1=f\omega_2$给出$(\omega_1)-(\omega_2)=(f)$。
+\entry{16.3}{除子的次数}
+若$X$紧，每个除子只在有限点非零。
+\sourcepage{128}
+定义$\deg D:=\sum_{x\in X}D(x)$，是群同态$\operatorname{Div}(X)\to\Z$。主除子次数为零，因为零点与极点按重数计数相同。故等价除子次数相同。
+\entry{16.4}{层$\OO_D$}
+对除子$D$定义
+\[
+\OO_D(U):=\{f\in\MM(U):\operatorname{ord}_xf\ge-D(x)\text{ 对所有 }x\in U\}.
+\]
+配通常限制即为层，且$\OO_0=\OO$。若$D-D'=(\psi)$，则乘以$\psi$定义层同构$\OO_D\to\OO_{D'}$。
+\entry{16.5}{定理}
+若$X$紧且$\deg D<0$，则$H^0(X,\OO_D)=0$。
+\begin{proof}
+否则非零$f$满足$(f)\ge-D$，故$\deg(f)\ge-\deg D>0$，与主除子次数为零矛盾。
+\end{proof}
+\entry{16.6}{摩天大楼层$\C_P$}
+给定$P\in X$，定义$\C_P(U)=\C$若$P\in U$，否则为零，限制取显然的同态。则(i)$H^0(X,\C_P)\cong\C$；(ii)$H^1(X,\C_P)=0$。前者显然。对后者，将任意代表上闭链的覆盖加细，使$P$只属于一个开集，则该覆盖上的1上闭链群为零，故所有上同调类为零。
+\sourcepage{129}
+\entry{16.7}{}
+也用$P$表示在点$P$取1、其他点取0的除子。则$D\le D+P$，有自然包含$\OO_D\to\OO_{D+P}$。取$z(P)=0$的局部坐标，令$k=D(P)$。若$P\in U$，$f\in\OO_{D+P}(U)$有展开$f=\sum_{n=-k-1}^\infty c_nz^n$，定义$\beta_U(f):=c_{-k-1}\in\C_P(U)$；若$P\notin U$取零映射。于是$\beta$为层满同态，且
+\[
+0\to\OO_D\to\OO_{D+P}\xrightarrow\beta\C_P\to0
+\]
+正合。由(15.12)得到
+\begin{equation}
+\begin{aligned}0\to H^0(X,\OO_D)&\to H^0(X,\OO_{D+P})\to\C\to\\&H^1(X,\OO_D)\to H^1(X,\OO_{D+P})\to0.\end{aligned}\tag{*}
+\end{equation}
+\entry{16.8}{推论}
+若$X$紧且$D\le D'$，则包含诱导满同态$H^1(X,\OO_D)\to H^1(X,\OO_{D'})\to0$。
+\begin{proof}
+$D'=D+P$时由上式；一般写$D'=D+P_1+\cdots+P_m$归纳。
+\end{proof}
+\entry{16.9}{Riemann--Roch定理}
+设$X$为亏格$g$的紧黎曼曲面，$D$为除子。则$H^0(X,\OO_D)$、$H^1(X,\OO_D)$有限维，且
+\[
+\dim H^0(X,\OO_D)-\dim H^1(X,\OO_D)=1-g+\deg D.
+\]
+\begin{proof}
+(a)$D=0$时，整体全纯函数为常数，$\dim H^0(X,\OO)=1$，而$\dim H^1(X,\OO)=g$为定义。
+
+(b)设$D'=D+P$，且结论对两者之一成立。
+\sourcepage{130}
+令$V:=\operatorname{im}(H^0(X,\OO_{D'})\to\C)$、$W:=\C/V$。则$\dim V+\dim W=1=\deg D'-\deg D$，(*)分为
+\[
+0\to H^0(X,\OO_D)\to H^0(X,\OO_{D'})\to V\to0,
+\]
+\[
+0\to W\to H^1(X,\OO_D)\to H^1(X,\OO_{D'})\to0.
+\]
+各空间有限维，且$h^0(D')=h^0(D)+\dim V$、$h^1(D)=h^1(D')+\dim W$。因此$h^0(D')-h^1(D')-\deg D'=h^0(D)-h^1(D)-\deg D$。公式对一者成立就对另一者成立，故由(a)对所有非负除子成立。
+
+(c)任意除子可写为$D=P_1+\cdots+P_m-P_{m+1}-\cdots-P_n$。从零除子出发，反复用(b)归纳即得。
+\end{proof}
+\entry{16.10}{特殊性指数}
+称$i(D):=\dim H^1(X,\OO_D)$为除子$D$的\textbf{特殊性指数}。公式可写为$\dim H^0(X,\OO_D)=1-g+\deg D+i(D)$。(17.16)将证明当$\deg D>2g-2$时$i(D)=0$。总有$i(D)\ge0$，故右式给出下界；由(16.5)，$\deg D<0$时$i(D)=g-1-\deg D$。
+\entry{16.11}{定理}
+对紧曲面$X$的任一点$a$，存在非常值亚纯函数，只在$a$有极点，阶数$\le g+1$。
+\sourcepage{131}
+\begin{proof}
+令$D=(g+1)a$。由Riemann--Roch，$\dim H^0(X,\OO_D)\ge1-g+(g+1)=2$，故存在非常值函数，显然满足要求。
+\end{proof}
+\entry{16.12}{推论}
+亏格为$g$的紧黎曼曲面存在叶数至多$g+1$的全纯覆盖$f:X\to\PP^1$。
+\begin{proof}取(16.11)的函数，由(4.24)，其在$\infty$处取值总重数不超过$g+1$。\end{proof}
+\entry{16.13}{推论}
+每个亏格为零的紧黎曼曲面同构于黎曼球面。
+
+因为单叶全纯覆盖为双全纯映射。
+\subsection*{习题（第16节）}
+\entry{16.1}{}
+对$\PP^1$上的任意除子$D$，证明(a)$\dim H^0(\PP^1,\OO_D)=\max(0,1+\deg D)$；(b)$\dim H^1(\PP^1,\OO_D)=\max(0,-1-\deg D)$。
+\entry{16.2}{}
+设$X=\C/\Gamma$，$P$为一点$x_0$对应的除子。证明$\dim H^0(X,\OO_{nP})$在$n<0$时为0，$n=0$时为1，$n\ge1$时为$n$。［提示：用Weierstrass $\wp$函数，习题2.1。］
+\entry{16.3}{}
+设$X$紧，$D$为除子，开覆盖$\mathfrak U=(U_i)$中每个$U_i$均同构于圆盘。证明它是$\OO_D$的Leray覆盖。
+\entry{16.4}{}
+(a)令$\mathcal D$为除子层，即$\mathcal D(U)=\operatorname{Div}(U)$。
+\sourcepage{132}
+证明配自然限制它确为层，且$H^1(X,\mathcal D)=0$。［提示：仿照(12.6)，用不必连续的整数值单位分解。］
+(b)令$\beta:\MM^*\to\mathcal D$把$f$映到$(f)$，$\alpha:\OO^*\to\MM^*$为包含。证明$0\to\OO^*\xrightarrow\alpha\MM^*\xrightarrow\beta\mathcal D\to0$正合，并得到
+\[
+\begin{aligned}0\to H^0(X,\OO^*)&\to H^0(X,\MM^*)\to\operatorname{Div}(X)\to\\&H^1(X,\OO^*)\to H^1(X,\MM^*)\to0.
+\end{aligned}
+\]

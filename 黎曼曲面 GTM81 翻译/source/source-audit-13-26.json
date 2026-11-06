@@ -1,0 +1,77 @@
+{
+  "scope": "§13—§26，原书104—206页",
+  "checks": "原编号连续性、习题数量和章节及图片依赖；未检查输出PDF",
+  "sections": [
+    {
+      "section": 13,
+      "numbered_entries": 5,
+      "exercises": 3
+    },
+    {
+      "section": 14,
+      "numbered_entries": 16,
+      "exercises": 2
+    },
+    {
+      "section": 15,
+      "numbered_entries": 15,
+      "exercises": 4
+    },
+    {
+      "section": 16,
+      "numbered_entries": 13,
+      "exercises": 4
+    },
+    {
+      "section": 17,
+      "numbered_entries": 22,
+      "exercises": 7
+    },
+    {
+      "section": 18,
+      "numbered_entries": 12,
+      "exercises": 3
+    },
+    {
+      "section": 19,
+      "numbered_entries": 14,
+      "exercises": 2
+    },
+    {
+      "section": 20,
+      "numbered_entries": 8,
+      "exercises": 4
+    },
+    {
+      "section": 21,
+      "numbered_entries": 10,
+      "exercises": 2
+    },
+    {
+      "section": 22,
+      "numbered_entries": 18,
+      "exercises": 4
+    },
+    {
+      "section": 23,
+      "numbered_entries": 9,
+      "exercises": 3
+    },
+    {
+      "section": 24,
+      "numbered_entries": 10,
+      "exercises": 2
+    },
+    {
+      "section": 25,
+      "numbered_entries": 6,
+      "exercises": 2
+    },
+    {
+      "section": 26,
+      "numbered_entries": 8,
+      "exercises": 6
+    }
+  ],
+  "exercises_total": 48
+}

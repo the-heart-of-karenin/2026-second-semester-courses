@@ -1,0 +1,76 @@
+\documentclass[UTF8,11pt,openany]{ctexbook}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,graphicx,enumitem,longtable,multicol,hyperref}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=blue}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\sourcepage}[1]{\par\smallskip{\footnotesize\textit{〔原书第 #1 页〕}}\par\smallskip}
+\newcommand{\entry}[2]{\par\medskip\noindent\textbf{#1\quad #2}\quad}
+\newcommand{\translatornote}[1]{\footnote{译注：#1}}
+\counterwithout{section}{chapter}
+\renewcommand{\thesection}{\arabic{section}}
+\setlength{\emergencystretch}{3em}
+\title{黎曼曲面讲义\\GTM 81\\中文译稿}
+\author{Otto Forster\\英文译者：Bruce Gilligan}
+\date{}
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{译稿说明}
+本稿据用户提供的英文版翻译，按原书顺序逐节推进。正文采用中文，重要术语首次出现附英文；保留原书编号、数学记号及原书页码提示。六幅编号插图依据原图用TikZ重绘为矢量图，保留原有数学标记与图意。习题不附新增解答。疑似原书错误以译注说明。
+
+本稿已译完原书三章共31节及全部习题，收入前言、第四次修订印刷补记、附录、参考文献、符号索引、人名与主题索引，以及原版出版资料和丛书目录。原书目录以本译稿自动生成的目录对应呈现；书前与书末丛书目录合并列于书末。索引中的页码保留原书页码。
+
+本稿为完整初译稿，完成后对部分公式、编号、插图及排版进行抽查，尚未经逐句、逐公式的全书复核。具体抽查范围与修订见项目中的《校对记录》。
+\input{sections/publication.tex}
+\tableofcontents
+\input{sections/preface.tex}
+\mainmatter
+\chapter{覆盖空间}
+\input{sections/chapter1-intro.tex}
+\input{sections/01.tex}
+\input{sections/02.tex}
+\input{sections/03.tex}
+\input{sections/04.tex}
+\input{sections/05.tex}
+\input{sections/06.tex}
+\input{sections/07.tex}
+\input{sections/08.tex}
+\input{sections/09.tex}
+\input{sections/10.tex}
+\input{sections/11.tex}
+\chapter{紧黎曼曲面}
+\input{sections/chapter2-intro.tex}
+\input{sections/12.tex}
+\input{sections/13.tex}
+\input{sections/14.tex}
+\input{sections/15.tex}
+\input{sections/16.tex}
+\input{sections/17.tex}
+\input{sections/18.tex}
+\input{sections/19.tex}
+\input{sections/20.tex}
+\input{sections/21.tex}
+\chapter{非紧黎曼曲面}
+\input{sections/chapter3-intro.tex}
+\input{sections/22.tex}
+\input{sections/23.tex}
+\input{sections/24.tex}
+\input{sections/25.tex}
+\input{sections/26.tex}
+\input{sections/27.tex}
+\input{sections/28.tex}
+\input{sections/29.tex}
+\input{sections/30.tex}
+\input{sections/31.tex}
+\backmatter
+\input{sections/appendix.tex}
+\input{sections/references.tex}
+\input{sections/symbols.tex}
+\input{sections/index.tex}
+\input{sections/series.tex}
+\end{document}

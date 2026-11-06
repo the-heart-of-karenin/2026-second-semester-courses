@@ -1,0 +1,39 @@
+60 
+1 Covering Spaces 
+9.1. Suppose U is an open subset of C. We identify C with ~2 by writing 
+z = x + iy, where x and yare the standard real coordinates on ~2. Denote 
+by 6"( U) the C-algebra of all those functions f: U -4 C which are infinitely 
+differentiable with respect to the real coordinates x and y. Besides the partial 
+derivatives (a/ax) and (%y), we also consider the differential operators 
+~ :=~(~ + i~). 
+oi 
+2 ox 
+oy 
+As is well-known, the Cauchy-Riemann equations say that the vector space 
+&( U) of holomorphic functions on U is the kernel of the mapping 
+(%i): t5'(U) -4 t5'(U). 
+9.2. By means of the complex charts one can define the notion of differen-
+tiable function on any Riemann surface X. For any open subset Y c X, let 
+6"(Y) consist of all functions f: Y -4 C such that for every chart 
+z: U -+ V c C on X with U c Y there exists a function] E 6"(V) withf I U = 
+] 
+0 z. Clearly the function]is uniquely determined by f, for] = f 0 1/1, where 
+1/1: V -4 U is the inverse of z: U -4 V. 
+Together with the natural restriction mappings one gets the sheaf 6" of 
+differentiable functions on the Riemann surface X. In the following differen-
+tiable will always mean infinitely differentiable. 
+If (U, z), where z = x + iy, is a coordinate neighborhood on X, then the 
+differential operators 
+can be defined in the obvious way. 
+Suppose a is a point in X. Then the stalk 6" a consists of all the germs of 
+differentiable functions at the point a. Denote by nta c t5' a the vector sub-
+space of all function germs which vanish at a and by nt; c nta the vector 
+subspace of those function germs which vanish to second order. A function 
+germ qJ E nta is said to vanish to second order if it can be represented by a 
+function f such that, with respect to a coordinate neighborhood (U, z 
+= x + iy) of a, one has 
+of 
+of 
+ax (a) = oy (a) = O. 
+This definition is independent of the choice of the local coordinate z. 
+9.3. Definition. The quotient vector space 

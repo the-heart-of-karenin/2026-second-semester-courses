@@ -1,0 +1,49 @@
+21 The Jacobi Inversion Problem 
+167 
+PROOF. Clearly a lattice reV satisfies conditions (i) and (ii). Now con-
+versely suppose reV is a subgroup satisfying conditions (i) and (ii). By 
+induction on N = dim~ V we will show that there exist linearly independent 
+vectors YI> ... , YN E V such that 
+r = Z}'1 + ... + ZYN' 
+This is trivial for N = O. 
+Now consider the induction step N -
+1 ---+ N. Since r is not contained in 
+any proper vector subspace of V, there exist N linearly independent vectors 
+XI, ... , XN E r. Let VI be the vector subspace of V spanned by x 1> .•• , XN - I 
+and let r 1 := r (I VI' The induction hypothesis may be applied to r l' Thus 
+there exist linearly independent vectors YI, ... , r,v-I E r l c r such that 
+r 1 = ZYI + ... + ZYN-I' 
+Every vector x E r may be written uniquely in the form 
+x = C1(X)YI + ... + CN-I(X)YN-I + C(X)XN' 
+where cAx) and c(x) are real numbers. Since the parallelotope 
+P:={J'IYI + ... + AN -J}'N-l + AXN: Aj, A E [0, I]} 
+is compact, r (I P is finite. Hence there exists a vector IN E (r (I P)\ VI such 
+that 
+C(YN) = min{c(x): x E (r (I P)\Vd E ]0, 1]. 
+Now we claim that r = r 1 + ZYN' For, suppose x E r is arbitrary. Then 
+there exist nj E Z such that 
+N 
+N-l 
+x' :=x - L njrj = L AjYj + AxN, 
+j=1 
+j=1 
+where 
+o ~ Aj < 1 for j = 1, ... , N - 1 
+and 
+o ~ A < c(Y",,). 
+Since x' E r (I P, it follows from the definition of YN that A = O. Thus 
+x' E r (I VI = r l' Hence all A j are integers and thus are zero. This implies 
+x' = 0, i.e., 
+N 
+X= " n·y· E Z" + ... + Z" 
+L.. 
+J 
+J 
+il 
+tN' 
+o 
+j=1 
+21.2. Period Lattices. Now suppose X is a compact Riemann surface of 
+genus g 2': 1 and WIo ... , Wg is a basis of the vector space n(X) of holomor-
+phic I-forms on X. Define a subgroup 
+Per(wl' ... , w g) C C9 

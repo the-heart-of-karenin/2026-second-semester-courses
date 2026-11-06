@@ -1,0 +1,40 @@
+10 
+[ Covering Spaces 
+§2. Elementary Properties of Holomorphic Mappings 
+In this section we note some of the elementary topological properties of 
+holomorphic mappings between Riemann surfaces. Using these we show 
+that one can easily derive some of the famous theorems of complex analysis, 
+e.g., Liouville's Theorem and the Fundamental Theorem of Algebra. 
+2.1. Theorem (Local Behavior of Holomorphic Mappings). Suppose X and 
+Yare Riemann surfaces andf: X -> Y is a non-constant holomorphic mapping. 
+Suppose a E X and b ,= 1(a). Then there exists an integer k ~ 1 and charts 
+cP: U -> V on X and 1/1: U' -> V' on Y with the following properties: 
+(i) a E U, cp(a) = 0; 
+bE U', I/I(b) = O. 
+(ii)1(U)c U'. 
+(iii) The map F'=I/I cf cp-I: V-> V' is given by 
+F(z) = Zk for all z E V. 
+PROOF. First we note that there exist charts CPI: U I -> VI on X and 
+1/1: U' -+ V' on Y such that properties (i) and (ii) are satisfied if one replaces 
+(U, cp) by (U I , cpd. Now it follows from the Identity Theorem that the 
+function 
+is non-constant. Since II (0) = 0, there is a k :0,. 1 such that 11 (z) = 19(z) , 
+where g is a holomorphic function on V! with g(O) 1- O. Hence there exists a 
+neighborhood of 0 and a holomorphic function h on this neighborhood such 
+that hk = g. The correspondence Zl-+ zh(z) defines a biholomorphic mapping 
+IX: V2 -+ V of an open neighborhood V2 c VI of zero onto an open neighbor-
+hood V of zero. Let U ,= cpll(V2)' Now replace the chart CPI: U I -+ VI by the 
+chart cP: U -+ V where cP = ex c cP I' Then by construction the mappmg 
+F = 1/1 
+0 f n cp .. ! satisfies F(z) = Zk. 
+0 
+2.2. Remark. The number k in Theorem (2.1) can be characterized in the 
+following way. For every neighborhood U 0 of a there exist neighborhoods 
+U c Uo of a and W of b = j{a) such that the setf-I(y) n U contains exactly 
+k elements for every point YEW, Y 1- b. One calls k the multiplicity with 
+which the mapping f takes the value b at the point a or one just says that f 
+has multiplicity k at the point a. 
+2.3. Example. Letj{z) = Zk + CI Zk-I + ... + Ck be a polynomial of degree k. 
+Then f can be considered as a holomorphic mapping f: /pI -+ /pI where 
+1(00) = 00 (cf. §1). Using a chart about 00, one can easily check that 00 is 
+taken with multiplicity k. 

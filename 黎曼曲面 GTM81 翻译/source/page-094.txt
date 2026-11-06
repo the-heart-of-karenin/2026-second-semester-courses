@@ -1,0 +1,39 @@
+11 Linear Differential Equations 
+85 
+11.5. Corollary. Suppose X is a Riemann surface, p: X --+ X is its universal 
+covering, Xo E X is a point and Yo E X is a point such that p(Yo) = Xo' Suppose 
+A E M(n x n, Q(X)) and c E C. Then there exists a unique solution 
+W E (I}(x)n on the universal covering X of X of the differential equation 
+dw = (p*A)w 
+satisfying w(Yo) = c. 
+11.6. Factors of Automorphy. Suppose X is a Riemann surface and 
+A E M(n x n, Q(X)). On the universal covering p: X --+ X let LA be the set of 
+all solutions w E (I}(x)n of the differential equation 
+dw = (p*A)w. 
+Just as in the theory of real linear differential equations one can show that 
+LA is an n-dimensional vector space over e and that w1, ••• , Wn E LA are 
+linearly independent precisely if for an arbitrary point a E X the vectors 
+w1(a), ... , wn(a) E en are linearly independent. Therefore a basis w1, ... , Wn 
+of LA defines an invertible matrix 
+<1>:= (W1' "" wn ) E GL(n, (I}(X)) 
+such that d<l> = (p* A)<I>. Such a matrix is called a fundamental system of 
+solutions of the differential equation dw = Aw. Let G:= Oeck(X/X) ~ 1t'1(X) 
+be the group of covering transformations of p: X --+ X. Analogous to (10.12), 
+for a E G we can set a<l>:= <I> 0 a- 1, Then a<l> as well as <I> satisfies the 
+differential equation d(a<l» = (p*A)(a<I» and thus is another fundamental 
+system of solutions. Hence there exists a constant matrix T" E GL(n, e) such 
+that 
+a<l> = <I> T". , 
+If r is another covering transformation, then 
+<I>~" = ra<l> = r(<I>T".) = (r<l»T". = <1>'[. T", 
+i.e., 4" = '[. T", Hence the correspondence a f--,-> T". defines a group 
+homomorphism 
+1t'l(X) ~ Oeck(X/X) --+ GL(n, e), 
+The matrices T" are called the factors of automorphy of <1>, Now conversely 
+suppose a homomorphism 
+T: Oeck(X/X) --+ GL(n, e), 
+and a holomorphic mapping 
+<1>: X --+ GL(n, C) 
+are given such that 
+a<l> = eDT". 
+for every a E Oeck(X/X), 

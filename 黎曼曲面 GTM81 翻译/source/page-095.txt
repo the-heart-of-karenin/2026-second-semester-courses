@@ -1,0 +1,37 @@
+86 
+1 Covering Spaces 
+The matrix (d<l»<1>-l E M(n x n, Q(X)) is then invariant under covenng 
+transformations, for 
+u(d<l>' <1>-1) = (d<l>' T,,)(<I>T17r 1 = d<l>· <1>-1. 
+Hence there is a matrix A E M(n x n, Q(X)) such that p* A = d<l> . <1>- 1 and 
+<I> is a fundamental system of solutions of the differential equation dw = Aw. 
+11.7. Now consider the special case 
+X:= {z E C: 0 < I z I < R}, where 0 < R s 00. 
+Then by (5.7.b) the group of covering transformations of the universal cover-
+ing p: X ---> X is :E. Let u be one of the generators of Deck(X / X). On X the 
+logarithm of the coordinate function on X exists, i.e., there exists a holo-
+morphic function 
+log: X--->I[; 
+such that exp " log = p. Now we may assume that u is chosen so that 
+u log = log + 2ni. 
+Suppose A E M(n x n, Q(X)) and <I> E GL(n, 0(X)) is a fundamental system of 
+solutions of the differential equation dw = Aw. Since Deck(X/X) = 
+{(J": n E :E}, the behavior of <I> as an automorphic function is determined by the 
+matrix T E GL(n, 1[;) which satisfies 
+u<l> = <I> T. 
+If 'P E GL(n, (C'{X)) is another fundamental system of solutions of dw = Aw, 
+then there exists a matrix S E GL(n, C) with 'P = <l>S. Thus 
+u'P = 'PS- 1 TS = 'Pr, 
+where r:= S- 1 TS. Hence by a suitable choice of the fundamental system 'P 
+one can in fact arrange it so that the factor of automorphy T has Jordan 
+normal form. 
+11.S. The Exponential of Matrices. For a matrix A E M(n x n, 1[;) define the 
+exponential of A by 
+00 
+1 
+exp A = k~O k! Ak. 
+Then each entry of the matrix converges absolutely. If A, B E M(n x n, IC) 
+are matrices which commute with each other, i.e., AB = BA, then 
+exp(A + B) = exp(A)exp(B). 
+One proves this in the same way that one proves the comparable result for 
+the exponential of complex numbers, namely by multiplying together the 

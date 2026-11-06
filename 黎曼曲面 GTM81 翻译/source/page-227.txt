@@ -1,0 +1,35 @@
+218 
+3 Non-compact Riemann Surfaces 
+PROOF. For the universal covering p: X -> X one has Deck(X/X) = 7rl(X), 
+By Theorem (28.4) there exists a holomorphic function F E ~'(X) having the 
+constant summands of automorphy a". Then by Theorem (10.13) the differ-
+ential dF can be considered as a I-form on X and it has the periods u". 
+o 
+28.7. Theorem. Suppose X is a compact Riemann surface and 
+is 
+Q group homomorphism. Then there is u unique harmonic 
+l~rorm 
+WE Harml(X) with 
+J 
+W = Q" for every (J E 7rl(X), 
+(1 
+PROOF. Similar to (28.6) it follows from Theorem (28.5) that there exists a 
+closed I-form cv E g(l){X) with 
+J 
+cv = a" 
+for every (J E 7rJ{X), 
+By Theorem (19.12) there exists a harmonic I-form W E Harml{X) and a 
+function f E c,v(X) with 
+w =W + df 
+Clearly cv and W have the same periods. The uniqueness follows from (19.8). 
+o 
+EXERCISES (§28) 
+28.1. Let X be a Riemann surface. Prove 
+28.2. Let X be a non-compact Riemann surface and let 
+RhHX) ,= Q(X)jd0(X) 
+be the" holomorphic" deRham group. Prove 
+28.3. Let g: I[ --+ I[ be a holomorphic function. Prove that there exists a holomorphic 
+functionf: I[ --+ I[ such that 
+1(z + 1) =1(z) + g(z) for every z E C. 
+[Hint: Consider the Galois covering ex: I[ --+ 1[*, ex(z) = ehiz, and construct 
+suitable summands of automorphy 

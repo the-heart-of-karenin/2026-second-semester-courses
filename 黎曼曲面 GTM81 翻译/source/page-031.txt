@@ -1,0 +1,44 @@
+22 
+1 Covering Spaces 
+4.6. Theorem. Suppose X is a Riemann swface, Y is a Hausdorff topological 
+space and p: Y ~ X is a local homeomorphism. Then there is a unique complex 
+structure on Y such that p is holomorphic. 
+Remark. By (2.5) it follows that p is even locally biholomorphic. 
+PROOF. Suppose CP1: U 1 ~ V c IC is a chart of the complex structure of X 
+such that there exists an open subset U c Y with pi U ---> U 1 a homeo-
+morphism. Then cP := CP1 '. p: U ---> V is a complex chart on Y. Let '21 be the 
+set of all complex charts on Y obtained in this way. It is easy to see that the 
+charts of '21 cover Y and are holomorphically compatible with one anothcr. 
+Now let Y have the complex structure defined by '2l. Then the projection p is 
+locally biholomorphic and so, in particular, is a holomorphic mapping. 
+Uniqueness may be proved as follows. Suppose '2(' is another complex 
+atlas on Y such that the mapping p: (Y, '2(') ---> X is holomorphic and thus 
+locally biholomorphic. Then the identity mapping (Y, '21) ---> (Y, '2[') is 
+locally biholomorphic and thus is a biholomorphic mapping. Hence '2( and 
+'2(' define the same complex structure. 
+0 
+4.7. The Lifting of Mappings. Suppose X, Yand Z are topological spaces and 
+p: Y ---> X and f: Z ---> X are continuous maps. Then by a lifting of f with 
+respect to p is meant a continuous mapping g: Z ---> Y such thatf = p . g, l.e., 
+the following diagram commutes. 
+?l Y 
+g 
+j, 
+f 
+Z--..... X 
+4.8. Theorem (Uniqueness of Lifting). Suppose X and Yare HausdorfTspaces 
+and p: Y ---> X is a local homeomorphism. Suppose Z is a connected topological 
+space and f: Z ---> X is a continuous mapping. If g1' 9 2: Z ---> Yare two li[tings 
+off and g1(ZO) = g2(zo)for some point Zo E Z then g1 = g2' 
+PROOF. Let T:={z E Z: g1(Z)=g2(Z)}, The set T is closed, since it is the 
+preimage of the diagonal A c Y x Y under the mapping (gj, 92): Z---> 
+Y x Y. We claim that T is also open. Let Z E T and let g1(Z) = g2(Z) =: y. 
+Since p is a local homeomorphism, there exists a neighborhood V of y which 
+is mapped by p homeomorphically onto a neighborhood U of p(y) =f{z). 
+Since g1 and 92 are both continuous, there is a neighborhood W of Z with 
+gi( W) c V. Now let cP: U ---> V be the inverse of pi V ~ U and note that cP is 
+continuous. Because p 
+gj = f, one has gj 1 W = cP c (.f 1 W) for i = 1, 2. Thus 
+g1 1 W = g21 Wand WeT. Hence T is open. Since Z is connected and Tis 
+non-empty, T = Z and thus g1 = g2' 
+0 

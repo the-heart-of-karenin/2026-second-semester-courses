@@ -1,0 +1,37 @@
+22 The Dirichlet Boundary Value Problem 
+= r + p (Un(O) - Um(O)) ::; e. 
+r-p 
+179 
+Thus the sequence (un) converges uniformly on K and by (22.5) its limit 
+function is also harmonic. 
+0 
+22.7. We now return to the Dirichlet Problem on an arbitrary Riemann 
+surface X. Note that the property that a function is harmonic remains 
+invariant under biholomorphic mappings. Thus one can also solve the Dir-
+ichlet Problem on all domains D c X which are relatively compact and are 
+contained in a chart (U, z) so that z(D) c IC is a disk. 
+We need some additional notation. For any open set Y c X let Reg(Y) 
+denote the set of all subdomains D !1:: Y such that the Dirichlet problem can 
+be solved on D for arbitrary continuous boundary valuesf: aD -+ R For any 
+continuous function u: Y -+ ~ and D E Reg( Y) let P D U denote the contin-
+uous function on Y which coincides with U on y\D and solves the Dirichlet 
+problem on [j for the boundary values U I aD. 
+Let C(j [J;!(Y) denote the vector space of all continuous real-valued functions 
+on Y. Clearly for every u, v E C(j [J;!( Y), A E ~, the following hold: 
+(i) PD(u + v) = PDu + PDV, 
+(ii) PD(AU) = APDU, 
+(iii) U::; v=PDu::; PDV. 
+A function 
+U E rc [J;!( Y) is harmonic precisely if P D( u) = U for every 
+DE Reg(Y). 
+22.8. Definition. A continuous function U: Y -+ IR is called subharmonic if 
+PDu ~ U for every D E Reg(Y). 
+It follows directly from the definition that if u, v: Y -+ ~ are subharmonic 
+functions and A is a non-negative real number, then u + v, AU and sup(u, v) 
+are subharmonic on Y. 
+A function u: Y -+ ~ is called locally subharmonic if u is subharmonic on a 
+neighborhood of every point of Y. 
+22.9. Theorem (The Maximum Principle for Locally Subharmonic Func-
+tions). Suppose Y is a domain in a Riemann surface X and u: Y -+ ~ is a locally 
+sub harmonic function. If u attains its maximum at some point Xo E Y, then u is 
+constant. 

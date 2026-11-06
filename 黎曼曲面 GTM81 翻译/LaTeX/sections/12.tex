@@ -1,0 +1,143 @@
+\section{上同调群}
+\sourcepage{96}
+本节定义拓扑空间$X$上以阿贝尔群层$\mathcal F$为系数的上同调群$H^1(X,\mathcal F)$。这些群在后面研究黎曼曲面时起决定性作用。
+\entry{12.1}{上链、上闭链、上边缘}
+设$\mathcal F$为$X$上的阿贝尔群层，$\mathfrak U=(U_i)_{i\in I}$为开覆盖，即$\bigcup_iU_i=X$。对$q=0,1,2,\ldots$定义第$q$上链群
+\[
+C^q(\mathfrak U,\mathcal F):=\prod_{(i_0,\ldots,i_q)\in I^{q+1}}\mathcal F(U_{i_0}\cap\cdots\cap U_{i_q}).
+\]
+\sourcepage{97}
+其元素称为\textbf{$q$上链}（cochain），是满足$f_{i_0\ldots i_q}\in\mathcal F(U_{i_0}\cap\cdots\cap U_{i_q})$的族$(f_{i_0\ldots i_q})$，加法逐项定义。定义上边缘算子$\delta:C^0\to C^1$及$\delta:C^1\to C^2$如下：
+
+(i) 对$(f_i)\in C^0$，令$\delta(f_i)=(g_{ij})$，其中$g_{ij}:=f_j-f_i$，各项先限制到$U_i\cap U_j$再相减。
+
+(ii) 对$(f_{ij})\in C^1$，令$\delta(f_{ij})=(g_{ijk})$，其中$g_{ijk}:=f_{jk}-f_{ik}+f_{ij}$，仍先限制到共同定义域。
+
+这些算子为群同态。令
+\[
+Z^1(\mathfrak U,\mathcal F):=\ker(C^1\xrightarrow\delta C^2),\qquad
+B^1(\mathfrak U,\mathcal F):=\operatorname{im}(C^0\xrightarrow\delta C^1).
+\]
+$Z^1$的元素称为\textbf{1上闭链}（cocycle）。由定义，$(f_{ij})$为上闭链当且仅当在所有三重交上有
+\begin{equation}f_{ik}=f_{ij}+f_{jk}.\tag{*}\end{equation}
+称(*)为上闭链关系。取$i=j=k$、$i=k$分别得到$f_{ii}=0$及$f_{ij}=-f_{ji}$。
+
+$B^1$的元素称为\textbf{1上边缘}（coboundary）；每个上边缘都是上闭链，也称\textbf{可分裂上闭链}。因此$(f_{ij})$可分裂，当且仅当存在0上链$(g_i)$使$f_{ij}=g_i-g_j$于每个$U_i\cap U_j$成立。
+\entry{12.2}{定义}
+商群$H^1(\mathfrak U,\mathcal F):=Z^1(\mathfrak U,\mathcal F)/B^1(\mathfrak U,\mathcal F)$
+\sourcepage{98}
+称为关于覆盖$\mathfrak U$、以$\mathcal F$为系数的\textbf{第一上同调群}。其元素称为上同调类；属于同一类的上闭链称为上同调的，即它们之差为上边缘。
+
+此群依赖覆盖。为得到只依赖$X,\mathcal F$的群，须取越来越细的覆盖并取极限。
+
+若开覆盖$\mathfrak V=(V_k)_{k\in K}$的每个$V_k$都包含于至少一个$U_i$，则称$\mathfrak V$比$\mathfrak U$\textbf{细}，记为$\mathfrak V<\mathfrak U$。于是存在加细映射$\tau:K\to I$使$V_k\subset U_{\tau k}$。定义
+\[
+t_{\mathfrak V}^{\mathfrak U}:Z^1(\mathfrak U,\mathcal F)\to Z^1(\mathfrak V,\mathcal F),\qquad
+(f_{ij})\mapsto(g_{kl}),\quad g_{kl}:=f_{\tau k,\tau l}|_{V_k\cap V_l}.
+\]
+此映射把上边缘映到上边缘，故诱导上同调群同态，仍用同一记号。
+\entry{12.3}{引理}
+同态$t_{\mathfrak V}^{\mathfrak U}:H^1(\mathfrak U,\mathcal F)\to H^1(\mathfrak V,\mathcal F)$与加细映射$\tau$的选择无关。
+\begin{proof}
+设$\widetilde\tau$为另一加细映射。对上闭链$(f_{ij})$，令$g_{kl}:=f_{\tau k,\tau l}|_{V_k\cap V_l}$、$\widetilde g_{kl}:=f_{\widetilde\tau k,\widetilde\tau l}|_{V_k\cap V_l}$。由$V_k\subset U_{\tau k}\cap U_{\widetilde\tau k}$，可定义$h_k:=f_{\tau k,\widetilde\tau k}|_{V_k}$。在$V_k\cap V_l$上，由上闭链关系，
+\begin{align*}
+g_{kl}-\widetilde g_{kl}&=f_{\tau k,\tau l}-f_{\widetilde\tau k,\widetilde\tau l}\\
+&=f_{\tau k,\widetilde\tau l}+f_{\widetilde\tau l,\tau l}-f_{\widetilde\tau k,\widetilde\tau l}\\
+&=f_{\tau k,\widetilde\tau k}-f_{\tau l,\widetilde\tau l}=h_k-h_l.
+\end{align*}
+故两者之差为上边缘。
+\end{proof}
+\sourcepage{99}
+\entry{12.4}{引理}
+同态$t_{\mathfrak V}^{\mathfrak U}$为单射。
+\begin{proof}
+设$(f_{ij})$加细后可分裂，即$f_{\tau k,\tau l}=g_k-g_l$，$g_k\in\mathcal F(V_k)$。在$U_i\cap V_k\cap V_l$上，
+\[
+g_k-g_l=f_{\tau k,\tau l}=f_{\tau k,i}+f_{i,\tau l}=f_{i,\tau l}-f_{i,\tau k}.
+\]
+故$f_{i,\tau k}+g_k=f_{i,\tau l}+g_l$。对$U_i$的覆盖$(U_i\cap V_k)_k$应用层公理(II)，得到$h_i\in\mathcal F(U_i)$，在各交集上$h_i=f_{i,\tau k}+g_k$。因此在$U_i\cap U_j\cap V_k$上，
+\[
+f_{ij}=f_{i,\tau k}+f_{\tau k,j}=f_{i,\tau k}+g_k-f_{j,\tau k}-g_k=h_i-h_j.
+\]
+由公理(I)，此式在整个$U_i\cap U_j$成立，故原上闭链可分裂。
+\end{proof}
+\entry{12.5}{$H^1(X,\mathcal F)$的定义}
+若$\mathfrak W<\mathfrak V<\mathfrak U$，则$t_{\mathfrak W}^{\mathfrak V}\circ t_{\mathfrak V}^{\mathfrak U}=t_{\mathfrak W}^{\mathfrak U}$。在所有开覆盖的$H^1(\mathfrak U,\mathcal F)$之不交并上定义等价关系：若$\xi\in H^1(\mathfrak U,\mathcal F)$、$\eta\in H^1(\mathfrak U',\mathcal F)$在某共同加细$\mathfrak V$上的像相同，就令$\xi\sim\eta$。等价类之集称为这些群的\textbf{归纳极限}，亦即$X$上以$\mathcal F$为系数的第一上同调群：
+\[
+H^1(X,\mathcal F):=\varinjlim_{\mathfrak U}H^1(\mathfrak U,\mathcal F)
+=\left(\coprod_{\mathfrak U}H^1(\mathfrak U,\mathcal F)\right)\big/\sim.
+\]
+加法由代表元定义：先把$\xi,\eta$映到共同加细$\mathfrak V$，再把$t_{\mathfrak V}^{\mathfrak U}(\xi)+t_{\mathfrak V}^{\mathfrak U'}(\eta)$的类定义为对应元素之和。容易验证它与各项选择无关，使$H^1(X,\mathcal F)$成为阿贝尔群。若$\mathcal F$为向量空间层，则各上同调群也自然为向量空间。
+\sourcepage{100}
+由(12.4)，每个开覆盖的典范映射$H^1(\mathfrak U,\mathcal F)\to H^1(X,\mathcal F)$均为单射。特别地，$H^1(X,\mathcal F)=0$当且仅当对每个开覆盖$\mathfrak U$有$H^1(\mathfrak U,\mathcal F)=0$。
+\entry{12.6}{定理}
+设$X$为黎曼曲面，$\mathcal E$为可微函数层。则$H^1(X,\mathcal E)=0$。
+\begin{proof}
+先假设$X$有可数拓扑；第23节将证明此假设总成立。对任意开覆盖$\mathfrak U=(U_i)$，取从属于它的单位分解$(\psi_i)$，满足：(i)$\operatorname{Supp}(\psi_i)\subset U_i$；(ii)每点有邻域仅遇到有限多个支集；(iii)$\sum_i\psi_i=1$。
+
+给定$(f_{ij})\in Z^1(\mathfrak U,\mathcal E)$，函数$\psi_jf_{ij}$原定义于$U_i\cap U_j$，可在其支集外赋零，可微延拓到整个$U_i$。令$g_i:=\sum_j\psi_jf_{ij}$。由局部有限性，$g_i\in\mathcal E(U_i)$。在$U_i\cap U_j$上，
+\[
+g_i-g_j=\sum_k\psi_k(f_{ik}-f_{jk})=\sum_k\psi_kf_{ij}=f_{ij}.
+\]
+所以每个上闭链均为上边缘，结论得证。
+\end{proof}
+\textbf{注记。}完全同样可证，以$\mathcal E^{(1)},\mathcal E^{1,0},\mathcal E^{0,1},\mathcal E^{(2)}$为系数的第一上同调群也为零。
+\entry{12.7}{定理}
+若$X$为单连通黎曼曲面，则(a)$H^1(X,\C)=0$；(b)$H^1(X,\Z)=0$。
+\sourcepage{101}
+这里$\C,\Z$表示复数值、整数值局部常值函数层，参见(6.4.e)。
+\begin{proof}
+(a) 取任意开覆盖及$(c_{ij})\in Z^1(\mathfrak U,\C)$。由$H^1(\mathfrak U,\mathcal E)=0$，存在$f_i\in\mathcal E(U_i)$使$c_{ij}=f_i-f_j$。由$dc_{ij}=0$，各$df_i$在重叠处相同，拼成整体闭形式$\omega$。由$X$单连通及(10.7)，存在$f\in\mathcal E(X)$使$df=\omega$。令$c_i:=f_i-f|_{U_i}$。则$dc_i=0$，故$c_i$局部常值，且$c_{ij}=c_i-c_j$，从而可分裂。
+
+(b) 给定$(a_{jk})\in Z^1(\mathfrak U,\Z)$，由(a)可写$a_{jk}=c_j-c_k$，其中$c_j$局部常值。由于$\exp(2\pi ia_{jk})=1$，各$\exp(2\pi ic_j)$在重叠处相同；由$X$连通，它们拼成常数$b\in\C^*$。选$c\in\C$使$e^{2\pi ic}=b$，令$a_j:=c_j-c$。则$e^{2\pi ia_j}=1$，所以$a_j$为整数值局部常值函数，且$a_{jk}=a_j-a_k$。故此上闭链为上边缘。
+\end{proof}
+下一定理表明，某些情形下可只用一个覆盖计算上同调。
+\entry{12.8}{定理（Leray）}
+设$\mathcal F$为$X$上的阿贝尔群层，开覆盖$\mathfrak U=(U_i)$满足每个$H^1(U_i,\mathcal F)=0$。则$H^1(X,\mathcal F)\cong H^1(\mathfrak U,\mathcal F)$。这样的覆盖称为$\mathcal F$的（一阶）\textbf{Leray覆盖}。
+\sourcepage{102}
+\begin{proof}
+只须证每个加细$\mathfrak V=(V_\alpha)_{\alpha\in A}<\mathfrak U$的映射$t_{\mathfrak V}^{\mathfrak U}$为同构。单射性已有(12.4)。取加细映射$\tau:A\to I$。
+
+给定$(f_{\alpha\beta})\in Z^1(\mathfrak V,\mathcal F)$。由于$(U_i\cap V_\alpha)_\alpha$覆盖$U_i$且其第一上同调为零，存在$g_{i\alpha}\in\mathcal F(U_i\cap V_\alpha)$使$f_{\alpha\beta}=g_{i\alpha}-g_{i\beta}$于三重交上成立。
+
+在$U_i\cap U_j\cap V_\alpha\cap V_\beta$上，$g_{j\alpha}-g_{i\alpha}=g_{j\beta}-g_{i\beta}$。由层公理(II)，存在$F_{ij}\in\mathcal F(U_i\cap U_j)$，满足$F_{ij}=g_{j\alpha}-g_{i\alpha}$。显然$(F_{ij})$满足上闭链关系。令$h_\alpha:=g_{\tau\alpha,\alpha}|_{V_\alpha}$。在$V_\alpha\cap V_\beta$上，
+\begin{align*}
+F_{\tau\alpha,\tau\beta}-f_{\alpha\beta}
+&=(g_{\tau\beta,\alpha}-g_{\tau\alpha,\alpha})-(g_{\tau\beta,\alpha}-g_{\tau\beta,\beta})\\
+&=g_{\tau\beta,\beta}-g_{\tau\alpha,\alpha}=h_\beta-h_\alpha.
+\end{align*}
+因此两者上同调，满射性得证。
+\end{proof}
+\entry{12.9}{例}
+用Leray定理证明$H^1(\C^*,\Z)\cong\Z$。令$U_1:=\C^*\setminus\R_-$、$U_2:=\C^*\setminus\R_+$。它们星形，从而单连通，由(12.7)各$H^1(U_i,\Z)=0$。故$H^1(\C^*,\Z)\cong H^1(\mathfrak U,\Z)$。
+
+上闭链反对称，因此完全由$a_{12}$确定，故$Z^1(\mathfrak U,\Z)\cong\Z(U_1\cap U_2)$。交集有上、下半平面两个连通分支，故同构于$\Z\times\Z$。又$U_i$连通，$C^0(\mathfrak U,\Z)\cong\Z\times\Z$。在这些同构下，上边缘算子为
+\[
+\Z\times\Z\longrightarrow\Z\times\Z,\qquad(a_1,a_2)\longmapsto(a_2-a_1,a_2-a_1).
+\]
+\sourcepage{103}
+所以其像为对角子群$B:=\{(a,a):a\in\Z\}$，$H^1(\mathfrak U,\Z)\cong(\Z\times\Z)/B\cong\Z$。类似可得$H^1(\C^*,\C)\cong\C$。
+\entry{12.10}{第零上同调群}
+对阿贝尔群层$\mathcal F$及开覆盖$\mathfrak U$，令
+\[
+Z^0(\mathfrak U,\mathcal F):=\ker(C^0\xrightarrow\delta C^1),\quad B^0(\mathfrak U,\mathcal F):=0,\quad H^0(\mathfrak U,\mathcal F):=Z^0(\mathfrak U,\mathcal F).
+\]
+由$\delta$的定义，0上链$(f_i)$属于$Z^0$当且仅当它们在各重叠处相同。由层公理(II)，它们拼成整体元素$f\in\mathcal F(X)$，得到自然同构$H^0(\mathfrak U,\mathcal F)=Z^0(\mathfrak U,\mathcal F)\cong\mathcal F(X)$。故此群完全与覆盖无关，可以定义$H^0(X,\mathcal F):=\mathcal F(X)$。
+\subsection*{习题（第12节）}
+\entry{12.1}{}
+设$p_1,\ldots,p_n$为$\C$中互异点，令$X:=\C\setminus\{p_1,\ldots,p_n\}$。证明$H^1(X,\Z)\cong\Z^n$。［提示：构造由两个连通、单连通开集$U_1,U_2$组成的覆盖，使其交集有$n+1$个连通分支。］
+\entry{12.2}{}
+(a) 设$X$为流形，$U\subset X$开且$V\Subset U$。证明$V$只遇到$U$的有限多个连通分支。
+
+(b) 设$X$为紧流形，$\mathfrak U=(U_i)_{i\in I}$、$\mathfrak V=(V_i)_{i\in I}$为两个有限开覆盖，满足各$V_i\Subset U_i$。证明向量空间
+\[
+\operatorname{im}\bigl(Z^1(\mathfrak U,\C)\longrightarrow Z^1(\mathfrak V,\C)\bigr)
+\]
+有限维。
+
+(c) 设$X$为紧黎曼曲面。证明$H^1(X,\C)$有限维。［提示：用各$V_i\Subset U_i$且所有$U_i,V_i$都同构于圆盘的有限覆盖。］
+\sourcepage{104}
+\entry{12.3}{}
+(a) 设$X$为紧黎曼曲面。证明由包含$\Z\subset\C$诱导的映射$H^1(X,\Z)\to H^1(X,\C)$为单射。
+
+(b) 证明$H^1(X,\Z)$为有限生成自由$\Z$模。［提示：先仿照习题12.2(c)证明有限生成，再用12.3(a)证明自由性。］

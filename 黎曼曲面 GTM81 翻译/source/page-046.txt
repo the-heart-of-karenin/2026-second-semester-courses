@@ -1,0 +1,43 @@
+5 The Universal Covering and Covering Transformations 
+37 
+(i) II the covering has an infinite number of sheets, then there exists a 
+biholomorphic mapping qJ: X -+ H of X onto the left half plane such that 
+diagram (1) is commutative. 
+X --,-'" --+1 H 
+\/p 
+(1) 
+D* 
+(ii) If the covering is k-sheeted (k < 00), then there exists a biholomorphic 
+mapping qJ: X -+ D* such that diagram (2) is commutative, where Pk: D* -+ D* 
+is the mapping z f-+ Zk. 
+X 
+'" 
+1 D* 
+\} 
+(2) 
+D* 
+Thus every covering map of D* is either isomorphic to the covering given 
+by the logarithm or else by the kth root. 
+PROOF. Since exp: H -+ D* is the universal covering, there exists a holo-
+morphic mapping ljt: H -+ X such that exp = f 0 ljt. Let G c Deck(H/D*) be 
+the corresponding subgroup. 
+(i) If G consists only of the identity, then ljt: H -+ X is a biholomorphic 
+map. Then the mapping qJ: X -+ H, which we are looking for, is the inverse 
+mapping of ljt. 
+(ii) Now 
+Deck(H/D*) = {Tn: n E Z}, 
+where Tn: H -+ H denotes the translation Z f-+ Z + 2nin. Thus for every sub-
+group G c Deck(H/D*) which is not the identity, there exists a natural 
+number k ;::> 1 so that 
+G = {Tnk : n E Z}. 
+Let g: H -+ D* be the covering map defined by g(z) = exp(z/k). Then g(z) = 
+g(z') precisely if z and z' are equivalent modulo G. Hence there exists a 
+bijective mapping qJ: X -+ D* such that the diagram 
+H 1\ 
+X 
+'" 
+,D* 
+is commutative. Since ljt and g are locally biholomorphic, qJ is biholo-
+morphic. It is now easy to check that diagram (2) is commutative and the 
+Theorem is proved. 
+0 

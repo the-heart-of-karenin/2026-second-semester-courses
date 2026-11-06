@@ -1,0 +1,51 @@
+{
+  "source_pdf_pages": 262,
+  "numbering": "PDF pages are one-based; printed pages refer to original book",
+  "ranges": [
+    {
+      "printed_start": 1,
+      "printed_end": 235,
+      "pdf_offset": 9
+    },
+    {
+      "printed_start": 237,
+      "printed_end": 241,
+      "pdf_offset": 8
+    },
+    {
+      "printed_start": 243,
+      "printed_end": 245,
+      "pdf_offset": 7
+    },
+    {
+      "printed_start": 247,
+      "printed_end": 254,
+      "pdf_offset": 6
+    }
+  ],
+  "preface": {
+    "vii": 8,
+    "viii": 9
+  },
+  "unnumbered": {
+    "series_front": [
+      2,
+      3
+    ],
+    "title": 4,
+    "publication": 5,
+    "original_contents": [
+      6,
+      7
+    ],
+    "series_back": [
+      261,
+      262
+    ]
+  },
+  "printed_blank_pages_not_in_source_pdf": [
+    236,
+    242,
+    246
+  ]
+}

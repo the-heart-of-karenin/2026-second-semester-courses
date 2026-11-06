@@ -1,0 +1,39 @@
+52 
+1 Covering Spaces 
+The following Theorem shows that the continuation of the covering, 
+whose existence was just proven, is uniquely determined up to isomorphism. 
+8.5. Theorem. Suppose X, Y and Z are Riemann surfaces and n: Y -> X, 
+r: Z -> X are proper holomorphic covering maps. Let A c X be a closed 
+discrete subset and let X' := X\A, Y' := n- I (X') and Z' := r- 1 (X'). Then every 
+fiber-preserving biholomorphic nwpping (J': Y' -> Z' can be extended to afiber-
+preserving biholomorphic mapping (J: Y ---> Z. In particular every covering 
+transformation a' E Deck(Y'/X') can be extended to a covering transformation 
+(J E Deck(Y/X). 
+PROOF. Suppose a E A and (U, z) is a coordinate neighborhood of a such that 
+z(a) = 0 and z(U) is the unit disk. Let U* = U\{a}. Moreover we may 
+assume that U is so small that nand T are unbranched over U*. Let 
+Vb 00., v,. (resp. Wb 00., Wm) be the connected components of n- I( U) (resp. 
+T-I(U)). Then V::= Vv \n-l(a) (resp. W::= W~ \T-I(a)) are the connected 
+components of n- 1 ( U*) (resp. r- 1( U*)). 
+Since (Jlln-I(U*) ---> r-I(U*) is biholomorphic, n = m and one may re-
+number so that (JI(V~) = W~. Since nl V~ -> U* is a finite sheeted un-
+branched covering, Vv n n-l(a) (resp. w,. n ,-l(a)) consists by Theorem 
+(5.11) of exactly one point b, (resp. cJ Hence a' I rr- 1( U*) -> T- 1( U*) can be 
+continued to a bijective mapping n-l(U) ---> r-l(U) which assigns to bv the 
+point cv ' Since n I Vv ---> U and T I w,. ---> U are proper, the continuation is a 
+homeomorphism and by Riemann's Removable Singularities Theorem it is 
+biholomorphic as well. (The Removable Singularities Theorem applies since 
+Vvand Wv are isomorphic to the unit disk by Theorem (5.11).) If one now 
+applies this construction to every exceptional point a EO A, then one gets the 
+desired continuation a: Y -> Z. 
+0 
+Theorem (8.5) makes the following definition meaningful (cf. Definition 
+5.5). 
+8.6. Definition. Suppose X and Yare Riemann surfaces and rr: Y -> X is a 
+branched holomorphic covering. Let A c X be the set of critical values of n 
+and let X' := X\A and Y':= rr l(X'). Then the covering Y ---> X is called 
+Galois if the covering Y' ---> X' is Galois. 
+8.7. Lemma. Suppose Cl' 00', Cn are holomorphic functions on the disk 
+D(R) = {z EO IC: I z I < R}, 
+R >0. 
+Suppose Wo EO IC is a simple zero of the polynomial 

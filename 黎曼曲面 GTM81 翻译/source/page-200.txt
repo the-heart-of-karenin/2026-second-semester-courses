@@ -1,0 +1,41 @@
+24 Weyl's Lemma 
+191 
+Clearly the map J"'--'T,,[J] is linear and continuous. If hl' h2 E CC(X) and 
+T"JJ] = T,,2[J] for every J E .9C(X), then hl = h2. Hence the (linear) map 
+CC(X) -> .9C'(X), 
+h...--.T" 
+is injective and one can identify a continuous function on X with its asso-
+ciated distribution. 
+(b) Suppose a E X. For J E .@(X) set 
+ba[J] := J(a). 
+This defines a distribution ba E .9C'(X) which is called the Dirac delta distribu-
+tion at the point a. Unlike Example (a), this distribution cannot be repre-
+sented by a function. 
+24.4. The Differentiation of Distributions. Suppose h E 0"(X) andJ E f0(X). 
+Then for every a = (at> a2) E N 2 
+JJ h(z)DaJ(z) dx dy = ( _1)a1 h2 JJ J(z)Dah(z) dx dy. 
+x 
+x 
+This is proved by integrating by parts (al + a2) times and noting that sinceJ 
+has compact support, all the integrals over the boundary are zero. 
+Hence, using the notation of Example (24.3.a), 
+This motivates the following definition. For T E .9C'(X) set 
+(DaT)[J]:= (-1)/a/T[D1] for every J E .9C(X). 
+Since fv ~ f implies D"fv ~ Dj, the map D"T:91J(X) ~ IC is continuous, i.e., 
+'!IJ 
+'!IJ 
+D"T E 91J'(X). This points out that for differentiable functions the derivative 
+in the usual sense and in the sense of distributions is the same. 
+24.5. Lemma. Suppose given an open subset X c C, a compact subset K c X 
+and an open interval I c IR. Suppose g: X x I -> C is an irifinitely (real) differ-
+entiable Junction with Supp(g) c K x I and T is a distribution on X. Then the 
+function t...--. ~[g(z, t)] is infinitely differentiable on I and satisfies 
+d 
+[Og(Z, t)j 
+dt ~[g(z, t)] = ~ -8-t -
+. 
+(*) 
+The subscript z indicates that T operates on g(z, t) as a function of z while 
+t is thought of as a parameter. Thus one may interchange the operation of 
+applying a distribution to a function depending on a parameter and differen-
+tiation with respect to that parameter. 

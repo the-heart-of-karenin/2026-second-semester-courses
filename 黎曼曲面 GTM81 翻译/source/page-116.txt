@@ -1,0 +1,41 @@
+13 Dolbeault's Lemma 
+107 
+converges uniformly on X n and is thus holomorphic there. Hence f = J:. + F n 
+is infinitely difTerentiably on X n for every n and thus f E 8(X). As well 
+of = oJn = g on X n 
+for every n and thus of = g on all of X. 
+0 
+Remark. Naturally the solution of the equation of = g is not uniquely 
+determined, only up to the addition of an arbitrary holomorphic function. 
+13.3. Corollary. Suppose X := {z E c: I z I < R}, 0 < R ~ 00. Then given any 
+g E 8(X), there exists f E 8(X) such that fl.f = g. 
+Here 
+is the Laplace operator. 
+PROOF. Choosefl E 8(X) such that Ofl = g andf2 E 8(X) such that Of2 = fl' 
+Then f:=!]2 satisfies fl.f = g, for 
+N = 02f2 = ~ (of2) = ~ (Of2) = Ofl = g. 
+oz o-Z 
+o-Z oz 
+o-Z o-Z 
+o-Z 
+o 
+13.4. Theorem. 
+Suppose 
+X := {z E c: I Z I < R}, 
+0 < R ~ 00. 
+Then 
+Hl(X, (!J) = O. 
+PROOF. Suppose U = (U;) is an open covering of X and (Iij) E Zl(U, (!J) is a 
+cocyc1e. Since Zl(U, (!J) c Zl(U, 8) and Hl(X, 8) = 0, there exists a cochain 
+(g;) E CO(U, 8) such that 
+fij = gj - gj on U j n Uj . 
+Since ofij = 0, one has ogj = ogj on U j n Uj and thus there exists a global 
+function h E t&'(X) with hi Uj = ogj. By (13.2) we can find a function 
+g E t&'(X) such that og = h. Define 
+/; :=gj - g. 
+Now /; is holomorphic, since o/; = ogj - og = 0, and thus (/;) E CO(U, (!J). As 
+well on U j n U j one has 
+/; - fj = gj - gj = /;j' 
+i.e., the cocyc1e (k) splits. 
+13.5. Theorem. For the Riemann sphere Hl(Pl, (!J) = O. 
+o 

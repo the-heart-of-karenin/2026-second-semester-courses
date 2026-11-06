@@ -1,0 +1,42 @@
+110 
+2 Compact Riemann Surfaces 
+00 
+f(z) = I Cn(Z -
+a)n 
+n=O 
+is the Taylor series of I about a, it follows from Pythagoras that 
+14.2. Theorem. Suppose DeC is open, r > 0 and 
+Dr ;={z E C: B(z, r) c D} 
+(* ) 
+is the set of points in D whose distance from the boundary is greater than or 
+equal to r. Then for every I E L2(D, 0) one has 
+IIIlln, s: ~ Ilfllo(D)' 
+ylnr 
+PROOF. Suppose a E Dr and[(z) = I cn(z - a)" is the Taylor series offabout 
+a. Using (*) one gets 
+1 
+1 
+If(a)1 = Icol s: 
+t= IlfllL2(B(a.r)):S: t= IIIllo(D)' 
+yI nr 
+yI nr 
+Since IlflID, = sup{lf(a)l: a E Dr}, the result follows. 
+o 
+In particular, it follows from Theorem (14.2) that if U~)nE " is a Cauchy 
+sequence in L2(D, (I)), then the sequence converges uniformly on every com-
+pact subset of D. Thus the limit function is holomorphic. Hence L2(D, (9) is 
+complete and thus is a Hilbert space. 
+The following lemma may be viewed as a certain generalization of 
+Schwarz' Lemma. 
+14.3. Lemma. Suppose D' ~ D are open subsets of C. Then given any F. > 0, 
+there exists a closed vector subspace A c L2(D, (I)) of finite codimension such 
+that 
+IlfllL2(D') s: r.IIIllu(D) for every f EA. 
+PROOF. Since D' is compact and lies in D, there exist r > 0 and finitely many 
+points ai' ... , ak E D with the following properties: 
+(i) B(aj , r) c D 
+for j = 1, ... , k, 
+(ii) D' c UJ=l B(aj, r/2). 
+Choose n so large that 2- n - 1k s: B. Let A be the set of all functions 
+f E L2(D, 0) which vanish at every point aj at least to order n. Then A is a 
+closed vector subspace of L2(D, (9) of codimension s: kn. 

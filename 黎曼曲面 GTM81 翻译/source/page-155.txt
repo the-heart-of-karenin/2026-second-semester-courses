@@ -1,0 +1,40 @@
+146 
+2 Compact Riemann Surfaces 
+17.3. Let X = c/r be a torus. Show that the classes of dz and far dz form a basis of 
+Jl(X)mod d.#(X). 
+17.4. Let D be a divisor on the compact Riemann surface X of genus g. Show 
+dim HO(X, &D) = 0 
+for deg D :s; -1 
+o :s; dim HO(X, 0 D ) :s; 1 + deg D 
+for - 1 :s; deg D :s; 9 - 1 
+1 - 9 + deg D :s; dim HO(X, (lJD) :s; 9 for 9 - 1 :s; deg D :s; 2g - 1 
+dim HO(X, (liD) = 1 - 9 + deg D 
+for deg D ~ 2g -
+1. 
+17.5. Let K be a canonical divisor on a compact Riemann surface X of genus> 0, 
+and let D ~ K be a divisor with deg D = deg K + 1. Show that the sheaf (!}K is 
+globally generated, but (S'D is not. 
+17.6. Let r c C be a lattice and let g;) be the Weierstrass !'I-function with respect to 
+r. Interpret f;) and its derivative g;)' as meromorphic functions on c/r. Show 
+that 
+is an embedding. 
+17.7. Let X be a compact Riemann surface of genus two. Suppose W1 and W2 form a 
+basis of HO(X, Q) and defineJ E '#(X) by W1 = JW2' Show thatj: X --> [p1 is a 
+2-sheeted (branched) covering map. 
+§18. Functions and Differential Forms with 
+Prescribed Principal Parts 
+As is well known, the classical theorem of Mittag-Leffler asserts that in the 
+complex plane there always exists a meromorphic function having suitably 
+prescribed principal parts. Our present goal is to look at the analogous 
+problem on compact Riemann surfaces. Here the problem does not always 
+have a solution. But from the Serre Duality Theorem one can derive neces-
+sary and sufficient conditions for a solution to exist. 
+IS.I. Mittag-Leffler Distributions of Meromorphic Functions. Suppose X is 
+a Riemann surface and U = (Vi)iEI is an open covering of X. A co chain 
+11 = (/;) E CO(U, ...It) is called a Mittag-Leffler distribution if the differences 
+jj - /; are holomorphic on Vi n V j , i.e., bl1 E Z1(U, @). Thus the functions/; 
+and jj have the same principal parts on their common domain of definition. 
+By a solution of 11 is meant a global meromorphic function! E ...It(X) which 
+has the same principal parts as J.l, i.e.! I Vi -/; E @(V;) for every i E I. 
+Denote by [bill E Hl(X, @) the cohomology class represented by the cocycle 
+bl1. 

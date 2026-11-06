@@ -1,0 +1,44 @@
+6 Sheaves 
+43 
+6.S. Theorem. The system !B of all sets [U, fJ, where U is open in X and 
+f E ff( U), is a basis for a topology on I ff I. The projection p: I ff I -+ X is a 
+local homeomorphism. 
+PROOF 
+(a) To see that !B forms a basis for a topology on Iff I, one has to verify 
+the following two conditions: 
+(i) Every element q> E I ff I is contained in at least one [U, f]' This is 
+trivial. 
+(ii) If q> E [U, fJ n [V, g], then there exists a [W, h] E !B such that q> E 
+[W, h] c [U, fJ n [V, g]. For suppose p(qJ) = x. Then x E Un V and 
+qJ = pAt) = Px(g). Hence there exists an open neighborhood We U n V 
+of x such thatf I W = 9 I W =: h. This implies qJ E [W, h] c [U,f] n [V, g]. 
+(b) Now we will show that p: I ff I --+ X is a local homeomorphism. 
+Suppose qJ E Iff I and p(qJ) = x. There exists a [U, fJ E !B with qJ E [U, f]' 
+Then [U,j] is an open neighborhood of qJ and U is an open neighborhood of 
+x. The mapping pi [U, fJ --+ U is bijective and also continuous and open as 
+one sees immediately from the definition. Thus p: I ff I -+ X is a local 
+homeomorphism. 
+D 
+6.9. Definition. A presheaf ff on a topological space X is said to satisfy the 
+Identity Theorem if the following holds. If Y c X is a domain and f, 
+g E ff(Y) are elements whose germs Pa(f) and Pa(g) coincide at a point 
+a E Y, thenf= g. 
+For example, this condition is satisfied by the sheaf (!) (resp . . ,11) of holo-
+morphic (resp. meromorphic) functions on a Riemann surface X. 
+6.10. Theorem. Suppose X is a locally connected Hausdorffspace and ff is a 
+presheaf on X which satisfies the Identity Theorem. Then the topological space 
+I ff I is H ausdorjJ. 
+PROOF. Suppose q>1' qJ2 E I ff I and qJl * 
+qJ2' We have to find disjoint neigh-
+borhoods of qJl and qJ2' 
+Case 1. Suppose p(qJd =: x "# y := P(qJ2)' Since X is Hausdorff, there exist 
+disjoint neighborhoods U and V of x and y respectively. Then p-l(U) and 
+p-l(V) are disjoint neighborhoods of qJl and qJ2' respectively. 
+Case 2. Suppose p(qJd = P(qJ2) =:x. Suppose the germs qJi E ffx are re-
+presented by elements/; E ff(UJ, where the Ui are open neighborhoods of x, 
+i = 1, 2. Let U c U 1 n U 2 be a connected open neighborhood of x. Then 
+[U, Ii I U] are open neighborhoods of qJ;. Now suppose there exists ljJ E 
+[U, fll U] n [U, f21 u]. Let p(ljJ) = y. Then ljJ = py(fd = Py(f2)' From the 
+Identity Theorem it follows thatfll U = f21 U, thus qJl = qJ2' Contradiction! 
+Hence [U,fl I U] and [U,f21 U] are disjoint. 
+D 

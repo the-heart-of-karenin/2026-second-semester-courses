@@ -1,0 +1,49 @@
+244 
+References 
+17. Nevanlinna, R.: Uni[ormisierung. Berlin-Heidelberg-New York: Springer-
+Verlag, 1953. 
+18. Pfluger, A., Theorie der Riemannschen F/(ichen, Berlin-Heidelberg-New York: 
+Springer-Verlag, 1957. 
+19. Serre, J-P.: Groupes Algebriques et Corps de Classes, Paris: Hermann, 1959. 
+20. Springer, G.: Introduction to Riemann Surfaces. Reading, MA: Addison-Wesley 
+1957. 
+21. Weyl, H.: The Concept of a Riemann Surface. Reading, MA: Addison-Wesley, 
+1955. 
+The book of Hermann Weyl, which first appeared in 1913 (in German), was the 
+first modern presentation of the theory of Riemann surfaces. It is still well worth 
+reading and contains many references to the older literature, particularly that of the 
+nineteenth century. The books of Chevalley and Serre treat the theory of Riemann 
+surfaces from the algebraic standpoint. 
+(c) Complex Analysis in Several Variables, 
+Complex Manifolds 
+30. Andreian Cazacu, C: Theorie der Funktionen mehrerer komplexer Verander-
+lichen. Berlin: Dtsch. VerI. Wiss., 1975. 
+31. Grauert, H. and Remmert, R.: Theory of Stein spaces. New York-Heidelberg-
+Berlin: Springer-Verlag, 1979. 
+32. Gunning, R. C, and Rossi, H.: Analytic Functions of Several Complex Variables. 
+Englewood Cliffs, NJ: Prentice-Hall, 1965. 
+33. Hirzebruch, F.: Topological Methods in Algebraic Geometry. Berlin-Heidelberg-
+New York: Springer-Verlag, 1966. 
+34. Hormander, L.: An Introduction to Complex Analysis in Several Variables. 2nd 
+Ed. Amsterdam: North-Holland, 1973. 
+35. Wells, R. 0.: Differential Analysis on Complex Manifolds. Englewood Cliffs, NJ: 
+Prentice-Hall, 1973. 2nd Ed. New York-Heidelberg-Berlin: Springer-Verlag, 
+1980. 
+(d) Topology, Differentiable Manifolds, 
+Functional Analysis 
+40. Brocker, T., and Jiinich, K.: Einfuhrung in die Differentialtopologie. Heidelberger 
+Taschenbticher, Bd. 143. Berlin-Heidelberg-New York: Springer-Verlag, 1973. 
+41. Godement, R.: Topologie Aigebrique et Theorie des Faisceaux. Paris: Hermann, 
+1958. 
+42. Massey, W. S.: Algebraic Topology: an Introduction. New York-Heidelberg-
+Berlin: Springer-Verlag, 1967. 
+43. Narasimhan, R.: Analysis on Real and Complex Manifolds. Amsterdam: North-
+Holland, 1968. 
+44. Schaeffer, H.: Topological Vector Spaces. New York: MacMillan, 1966. 
+45. Schubert, H.: Topologie. Stuttgart: Teubner, 1964. 
+46. Seifert, H., and Threlfall, W.: Lehrbuch der Topologie, Leipzig: Teubner 1934. 
+Reprinted Chelsea, 1947 (English trans: Academic Press, 1980). 
+47. Treves, F.: Topological Vector Spaces, Distributions and Kernels. New York-
+London: Academic Press, 1967. 
+48. Warner, F.: Foundations q[ Differentiable Manifolds and Lie Groups. Glenview, 
+IL-London: Scott-Foresman, 1971. 

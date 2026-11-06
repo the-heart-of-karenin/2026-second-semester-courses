@@ -1,0 +1,42 @@
+196 
+3 Non-compact Riemann Surfaces 
+EXERCISES (§24) 
+24.1. Let X be an open subset of C and T. E Y'(X), V E F\J, a sequence of distributions 
+in X. A sequence (TJ,. F 
+is said to converge to a distribution T E 9'(X) if 
+T..[qJ]--> T[ qJ] 
+for every qJ E .Q:(X). 
+Denote this by T. 7! T. Show that if T. -; T, then 
+D"T. if D"T, 
+for every differential operator 
+(a) 7, ( C ) 7) 
+D' = ex 
+8Y . 
+24.2. Let Y c C be open. A sequence of continuous functions I: Y --> C is said to 
+converge weakly to a continuous function f: Y --> C if 
+r I' I qJ dx dy --> r I' frp dx dy 
+for every qJ E Q(X). 
+Y 
+Y 
+Show that if all thej;. are harmonic (resp. holomorphic) and converge weakly to 
+./; thenfis also harmonic (resp. holomorphic). 
+§25. The Runge Approximation Theorem 
+The classical Runge Approximation Theorem asserts that on a simply con-
+nected domain Y c C every holomorphic function can be approximated, 
+uniformly on compact sets, by functions which are holomorphic on all of C 
+(and thus by polynomials). This theorem was generalized by Behnke-Stein 
+[51] to arbitrary non-compact Riemann surfaces X. In order to approximate 
+all holomorphic functions on an open subset Y c X by functions holomor-
+phic on X, one has to replace the assumption that Y is simply connected by 
+the assumption that no connected component of X\ Y is compact. The proof 
+we present is based on a functional analytic proof using Weyl's Lemma which 
+was first given by Malgrange [55]. 
+25.1. Suppose X is a Riemann surface and Y c X is an open subset. We 
+would like to introduce the structure of a Frechet space on the vector space 
+Iff(Y) of differentiable functions on Y. To do this, choose a countable family 
+of compact sets K j C Y, j E J, with U Kj = Y and such that each K j is 
+contained in some coordinate neighborhood (Vj' zJ For j E J and 
+v = (Vb V 2 ) E f\j2 define a semi-norm Pj,': $(Y)-> lR+by 
+Pj,,(f):= sup 1 Dj f(a) I, 
+a E Kj 
+where 

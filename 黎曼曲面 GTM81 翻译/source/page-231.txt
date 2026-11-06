@@ -1,0 +1,43 @@
+222 
+3 Non-compact Riemann Surfaces 
+The condition p 0 f = idu means that f assigns to each x E Van element 
+f(x) E Ex. If hj: EUi --+ V j x en is a local trivialization of E then one can 
+associate to the section fa unique continuous function/;: V j n V --+ en such 
+that 
+hj(f(x)) = (x,.t;(x)) for every x E V j n V. 
+The function.t; is called a representation of the sectionfwith respect to the 
+local trivialization hi. 
+29.9. Definition. Suppose p: E --+ X is a holomorphic vector bundle of rank n 
+on the Riemann surface X and {hi: Eu, --+ Vi X en, i E I} is an atlas of the 
+holomorphic linear structure on E. A sectionf: V --+ E over an open subset 
+V c X is said to be holomorphic ifits representation.t; with respect to every 
+local trivialization hi is a holomorphic mapping/;: Vi n V --+ en. Of course 
+.t; is to be understood as an n-tuple of holomorphic functions V j n V --+ e. 
+Clearly the definition is independent of the choice of atlas. The set of all 
+holomorphic sections of E over V has the natural structure of a vector space, 
+which we denote by (l)dV). With the natural restriction mappings one gets 
+the sheaf (I) E of holomorphic sections of E. 
+Suppose (gjJEZ1(U, GL(n, (I))) is the cocycle associated to the atlas 
+{hi: EUi --+ Vi X en, i E I}. The representations /;: Vi n V --+ en of a section 
+f E (l)E(V) satisfy the relation 
+.t;(x) = %(x)fJ(x) for every x E V j n Vj n V. 
+(*) 
+Hence (l)E( V) is isomorphic to the vector space of all families (.t;)j E I, with 
+.t; E (I)(Vi n V)", 
+which satisfy (*). Note (l)E(V;) is isomorphic to (I)(v;)n. If E is holomor-
+phically trivial, then the sheaf (l)E is isomorphic to (I)". 
+We now give two important examples of holomorphic line bundles on 
+Riemann surfaces. 
+29.10. The Holomorphic Cotangent Bundle. Suppose X is a Riemann surface 
+and (Vj, Zj), i E I, is a covering by coordinate neighborhoods. On Vi n Vj 
+the function gij:= dZj /dzj is holomorphic and does not vanish. Thus the 
+family (gij) defines a cocycle in Zl(U, (1)*) with respect to the covering 
+U = (Vj)j E I. Let T*(X) be the line bundle associated to the cocycle (gjj). 
+T*(X) is called the holomorphic cotangent bundle or canonical line bundle of 
+X. The sheaf of holomorphic sections of T*(X) is isomorphic to the sheaf 0 
+of holomorphic I-forms on X. This isomorphism can be described as fol-
+lows. Suppose OJ E O(V). Then on V j n V one may write OJ =.t; dZ j with 
+.t; E (I)(V j n V). On Vi n Vj n V one has.t; = fJ dZj /dz j = gij fJ. Thus the 
+family (.t;) defines a holomorphic section of T*(X) over V. Conversely every 
+family (.t;) of holomorphic functions .t; E (1)( V j n V) with /; = gjj fJ on 
+Vi n Vj n V gives rise to a I-form OJ E O(V) with OJ =.t; dZ j on V j n V. 

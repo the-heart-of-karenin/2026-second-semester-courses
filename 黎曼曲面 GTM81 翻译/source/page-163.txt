@@ -1,0 +1,39 @@
+154 
+2 Compact Riemann Surfaces 
+Set 
+*W := i(wl - (1)2)' 
+The mapping *: g(1)(X) ---> g(1)(X) is an IR-linear isomorphism which maps 
+gl. O(X) onto go. I(X) and vice versa. 
+For W E a,,(1)(X), WI E gl.O(X), w 2 Ego. I(X) andiE 6'(X) one has the 
+following: 
+(a) **w = -w, 
+*w = *W, 
+(b) d*(w 1 + Uh) = id'{iJ I -
+id"(v 2 , 
+(c) *d'f = id"J, 
+*d''f = - idT, 
+(d) d*dI= 2id'd'T 
+19.3. Harmonic Differential Forms. A I-form W E t(1)(X) on a Riemann 
+surface X is called harmonic if 
+Theorem. Suppose WE g(1)(X). Then the Iollowing conditions are equivalent: 
+(i) W is harmonic, 
+(ii) d'w = d"w = 0, 
+(iii) w = WI + W2 where WI E Q(X) and Wz E Q(X), 
+(iv) given any point a E X there exists all open neighborhood U ol a and a 
+harmonic Iunction I on U such that w = df. 
+PROOF. The equivalence of (i), (ii) and (iii) follows from (19.2). 
+(i) = (iv). Since in particular a harmonic differential form is closed, locally 
+w = df, where I is a differentiable function. Since 0 = d*w = d*df = 2id'd''f, 
+it follows that I is harmonic. 
+(iv) = (i). If w = d{ and I is harmonic, then dw = ddl = 0 and d*w = 
+d*dI= O. 
+D 
+Notation. The vector space of all harmonic I-forms on the Riemann 
+surface X will be denoted by Harml(X). Thus 
+Harml(X) = Q(X)E8 Q(X). 
+Thus if X is a compact Riemann surface of genus g, then 
+dim Harml(X) = 2g. 
+19.4. Theorem. Every real harmonic I-form (J E Harml(X) is the real part ol 
+precisely olle holomorphic I-form W E Q(X). 
+PROOF. Suppose (J = 0)1 + (V2 with W10 (1)2 E Q(X). Because (J = 0)1 + 
+Wz = (j = WI + wz, it follows that WI = 0)2' Thus (J = Re(2wd. 

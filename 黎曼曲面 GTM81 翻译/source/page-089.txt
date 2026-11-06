@@ -1,0 +1,35 @@
+80 
+1 Covering Spaces 
+10.21. The Residue Theorem. Suppose X is a compact Riemann surface and 
+aI' ... , an are distinct points in X. Let X' :=X\{al' ... , an}. Then for every 
+holomorphic 1jorm WE n(X'), one has 
+n L Resak(w) = O. 
+k=1 
+PROOF. Choose coordinate neighborhoods (V k, zd of the ak such that 
+Vj n V k = 0 ifj 1= k. Also we may assume that zk(ak) = 0 and Zk(Vk) C Cis 
+a disk. For every k = 1, ... , n choose a function fk with compact support 
+Supp(fd C V k such that there exists an open neighborhood Vk C V k of ak 
+withfk I Vk = 1. Set g := 1 - (fl + ... + f,,). Then g I Vk = O. Thus gw may be 
+continued to the point ak by assigning it the value zero, and may thus be 
+considered as an element of g(l)(X). By (10.20) 
+JJ d(gw) = O. 
+x 
+Since W is holomorphic, dw = 0 on X'. On Vk n X' one hasfkw = wand 
+thus d(fk w) = O. Hence d(j~ w) may be considered to be an element of 
+'jg(2\X) whose support is a compact subset of Vk\{ak}' Now d(gw) = 
+- L d(ikw} implies 
+kt JJ d(j~w) = O. 
+x 
+Hence the proof will be complete once we show 
+JJ d(fk W ) = -2ni Resak(w). 
+x 
+Since the support of d(fk ())) is contained in Vk: we only have to integrate 
+over V k' Using the coordinate Zk we may identify V k with the unit disk. 
+There exist 0 < f, < R < 1 such that 
+But then 
+= - J ()) = - 2ni Resa.(w) 
+IZkl =< 
+by the Residue Theorem in the complex plane. 
+o 
+10.22. Corollary. Any non-constant meromorphic function f on a compact 
+Riemann surface X has, counting multiplicities, as many zeros as poles. 

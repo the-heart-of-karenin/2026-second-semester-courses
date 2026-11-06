@@ -1,0 +1,40 @@
+214 
+27 .2. Prove the" Big Theorem of Picard:" Let 
+U ,= {z E C: ° 
+< I z I < r}, 
+and 
+J: U --+ C 
+3 Non-compact Riemann Surfaces 
+where r > 0, 
+a holomorphic function having an essential singularity at the origin. Then J 
+attains every value C E C with at most one exception. 
+[Hint: Consider the sequence of functions 
+f.: U --+ C, 
+f.(z) ,= J(2)z) 
+and use Ex. 27.1.] 
+§28. Functions with Prescribed Summands of 
+Automorphy 
+In §10 we saw that the integration of differential forms on a Riemann surface 
+X gives rise to additively automorphic functions whose summands of auto-
+morphy determine a "period homomorphism" 7r 1(X) ~ C. Behnke-Stein 
+[51] proved that conversely given any homomorphism 7rl(X) ~ C on a non-
+compact Riemann surface X there always exists a holomorphic 1-form 
+having these periods. In this section we prove the Theorem of Behnke-Stein. 
+At the same time we investigate arbitrary functions having non-constant 
+summands of automorphy. 
+28.1. Cohomology of Groups. Suppose G is a group whose operation is 
+written multiplicatively and A is a G-module, i.e., an additive abelian group 
+together with a mapping 
+G x A --> A, 
+satisfying the following: 
+(i) O'(a+b)=O'a+O'b, 
+(ii) otra) = (O'r)a, 
+(iii) sa = a, 
+(0', a) f--+ O'a 
+for every 0', rEG and a, b E A. The identity of G is denoted by c. A mapping 
+G ->A, 
+is called a crossed homomorphism if 
+a(fT = a(f + O'a T 
+for every 0', rEG. 
+If G operates trivially on A, i.e., O'a = a for every 0' E G, then a crossed 
+homomorphism is nothing but a group homomorphism in the usual sense. 

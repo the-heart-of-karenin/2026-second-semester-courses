@@ -1,0 +1,37 @@
+26 The Theorems of Mittag-Lerner and Weierstrass 
+205 
+Since g - gi is holomorphic on Vi and h(ai) = 0; it follows thatf E lP(X) and 
+f(a j ) = Cj for every i EN. 
+0 
+26.8. Corollary. Every non-compact Riemann surface X is Stein, i.e., the fol-
+lowing hold: 
+(i) Given any two points x, y E X, x#- y, then there exists a holomorphic 
+functionfE lP(X) withf(x) =ff(y). 
+(ii) Given a sequence (x.). E 1\ in X having no points of accumulation, then 
+there exists a holomorphic function f E lP(X) with lim sUP.-+oo I f(x.) I = 00. 
+Remark. The Theorems of Mittag-Leffler and Weierstrass for non-
+compact Riemann surfaces were first proved by H. Florack [54] using the 
+methods developed by Behnke-Stein [51]. The analogues of these problems 
+in several complex variables (the first and second Cousin problems) played 
+an important role in the development of the theory of Stein manifolds (c.f. 
+[53], [59], [61]). Also, the use of cohomology to solve these problems stems 
+from that theory. 
+EXERCISES (§26) 
+26.1. Let X be a non-compact Riemann surface. Prove 
+Hl(X, il) = o. 
+[Hint: Using Corollary (26.6) show that il ~ 19.] 
+26.2. Let X be a non-compact Riemann surface. 
+(a) Given any (j) E G'(2)(X) show that there exists f E G'(X) with 
+d'd"f= (j). 
+(b) Let Jf' be the sheaf of harmonic functions on X. Show that 
+Hl(X, Jf') = o. 
+26.3. Show that on a non-compact Riemann surface every meromorphic function is 
+the quotient of two holomorphic functions. 
+26.4. Let X be a non-compact Riemann surface and suppose f, g E 19(X) are holo-
+morphic functions which have no common zero. 
+(a) Show that the following sequence of sheaves is exact 
+where 
+rJ.(I/I)'=(I/Ig, -I/If) 
+P(cpJ, CP2) ,= cpd + CP2g· 
+(b) Show that there exist holomorphic functions (J), 'JI E 19(X) such that 
+(J)f + 'JIg = 1. 

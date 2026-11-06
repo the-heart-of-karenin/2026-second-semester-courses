@@ -1,0 +1,44 @@
+B Topological Vector Spaces 
+239 
+B.1. Bya vector space we will always means a vector space over the field of 
+complex numbers. A topological vector space is a vector space E, together 
+with a topology, such that the operations of addition 
+E x E ---+ E, 
+and scalar multiplication 
+C x E-+ E, 
+(x, y)f-+X + y, 
+are continuous maps. In particular, for every a E E, the translation E -+ E, 
+x f-+ a + x, is a homeomorphism. Thus the topology of E is determined once 
+one knows what a neighborhood basis of zero is. For, if m is a neighbor-
+hood basis of zero, then the translated sets a + U, U E m, form a neighbor-
+hood basis of a. 
+B.2. Semi-norms. By a semi-norm on a vector space E is meant a mapping 
+p: E -+ IR with the following properties: 
+(i) p(x + y):::; p(x) + p(y) for all x, y E E 
+(ii) p(AX) = I A I p(x) for all A E C, X E E. 
+From (i) and (ii) it follows that p(x) ;::: ° 
+for every x E E. If, in fact, p(x) = 0 
+only for x = 0, then p is called a norm. 
+A family Pi' i E I, of semi-norms on a vector space E induces a topology 
+on E. For iI, ... , im E I, [; > 0, the sets of the form 
+U(Pi[' ... , Pim ; G):={x E E: max(Pi[(X), ... , pjJx)) < [;} 
+are a neighborhood basis of zero. Note that this topology is Hausdorff 
+precisely if pj(x) = 0 for every i E I implies x = O. 
+A topological vector space is said to be locally convex if its topology can 
+be induced in the above way by a family of semi-norms. 
+B.3. Frechet Spaces. A sequence (xn)n E OJ of elements in a topological vector 
+space is called a Cauchy sequence if for every neighborhood U of zero there 
+exists an no E N such that 
+Xn -
+Xm E U 
+for every n, m ;::: no . 
+A topological vector space E is called a Frechet space if the following hold: 
+(i) The topology of E is Hausdorff and can be defined by a countable 
+family of semi-norms. 
+(ii) E is complete, i.e., every Cauchy sequence in E is convergent. 
+A Frechet space E is metrizable. For, suppose Pn' n E N, is a family of 
+semi-norms which defines the topology on E. If for x, y E E one sets 
+d(x, y):= I: rn Pn(x - y) 
+, 
+n=O 
+1 + Pn(x - y) 

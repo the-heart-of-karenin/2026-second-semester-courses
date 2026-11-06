@@ -1,0 +1,33 @@
+7 Analytic Continuation 
+45 
+Figure 5 
+If one carries out the construction given in (6.7) for the sheaf (! of holo-
+morphic functions, then one gets a map p: 1 (!J 1 ---> X. The next Lemma 
+shows that one can interpret analytic continuation along a curve by means 
+of this map. 
+7.2. Lemma. Suppose X is a Riemann surface and u: [0, 1] ---> X is a curve in X 
+with u(o) =: a and u(l) =: b. Then afunction germ IjJ E (C b is the analytic contin-
+uation of a function germ ({J E 0 a along u precisely if there exists a lifting 
+u: [0, 1] ---> 1 (I: 1 of the curve u such that u(o) = ({J and u( 1) = 1jJ. 
+PROOF 
+(a) Suppose IjJ E (Cb is the analytic continuation of ({J E (!) a along u. Let 
+({Jt E mU(f) for t E [0, 1] be the family of function germs as given in the 
+Definition (7.1). It follows directly from the definition of the topology of 
+1 (!) 1 that the correspondence t I-> ({Jt represents a continuous mapping 
+u: [0,1] ---> 1(01. Thus U is a lifting of u with u(o) = ({Jo = ({J and u(l) = ({J1 = 1jJ. 
+(b) Suppose there is a lifting u: lO, 1] ---> m ofu with u(O) = ({J and u(l) = 1jJ. 
+For t E [0, 1], let ({Jt := u(t). Then ({Jt E (!Ju(t) and ({Jo = ({J, ({J1 = 1jJ. Let r E [0, 1] 
+and suppose [U,j] c 
+1 (!; 1 is an open neighborhood of u(r). Then there exists 
+a neighborhood T c [0, 1] of r such that u(T) c [U,fJ. This implies 
+u(T) c U and ({Jt = u(t) = PU(f)(f) for every t E T. But this means that IjJ is 
+the analytic continuation of ({J along u. 
+0 
+Because of the uniqueness of liftings (Theorem 4.8) it follows from the 
+lemma that if the analytic continuation of a function germ exists, then it is 
+uniquely determined. Another consequence of the lemma is the Monodromy 
+Theorem. 
+7.3. Monodromy Theorem. Suppose X is a Riemann surface and uo, 
+u 1: [0, 1] ---> X are homotopic curves from a to b. Suppose us, ° 
+:;;; s :;;; 1, is a 
+deformation of Uo into uland ({J E (C a is a function germ which admits an 

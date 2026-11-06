@@ -1,0 +1,35 @@
+156 
+2 Compact Riemann Surfaces 
+(b) Suppose f, g E c,v(X). Then 
+dfA*(*dg) = -dfAdg= -dUdg). 
+Thus 
+<df; *dg) = - JJ d(f dg) = O. 
+x 
+The equality d6(X) ffi *d6(X) = d'g(X) EB d"g(X) follows from (19.2.c). 0 
+19.7. Corollary. On a compact Riemann surface X every exact differential 
+form 
+(J E Harml(X) vanishes and every harmonic function fE c,v(X) is 
+constant. 
+This follows since dg(X) is orthogonal to Harml(X) = n(X)EB Q(X). 
+19.8. Corollary. Suppose X is a compact Riemann surface and (J EO Harm 1 (X), 
+W E n(X). rffor every closed curve i' on X one has 
+r (J = 0, 
+• f 
+then (J = 0, resp. w = o. 
+PROOF. Since (J (resp. Re(w)) is exact by Theorem (10.15), the result follows 
+from (19.7) and (19.4). 
+D 
+19.9. Theorem. On any compact Riemann surface X there is an orthogonal 
+decomposition 
+go. l(X) = d"6(X) EB Q(X). 
+PROOF. Let g be the genus of X. Since Hl(X, (1:') ~ 6 0 • 1 (X)jd"c,v(x) by 
+Dolbeault's Theorem (15.14), one has 
+dim go. 1 (X)jd"g(x) = g. 
+On the other hand, dim Q(X) = g by (17.10). The result now follows from 
+Lemma (19.6.a). 
+0 
+19.10. Corollary. Suppose X is a compact Riemann surface and (J Ega. l(X). 
+The equation d'J = (J has a solution f E 0"( X) if and only if 
+JJ (J A W = 0 for every w EO n(X). 
+x 
+The given condition is equivalent to (J ..1 Q(X). 

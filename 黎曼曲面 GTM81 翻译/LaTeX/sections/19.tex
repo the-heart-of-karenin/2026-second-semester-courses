@@ -1,0 +1,94 @@
+\section{调和微分形式}
+\sourcepage{153}
+利用已有结果，现在可推导紧黎曼曲面上调和形式的主要性质。每个闭形式都可唯一分解为调和形式与恰当形式之和，故第一de Rham群同构于调和形式空间；由此还可证明亏格为拓扑不变量。
+\entry{19.1}{复共轭}
+局部若$\omega=\sum_jf_jdg_j$，定义$\bar\omega:=\sum_j\bar f_jd\bar g_j$。若$\omega=\bar\omega$称其为实形式；一般定义$\operatorname{Re}\omega:=\tfrac12(\omega+\bar\omega)$。有$\int_c\bar\omega=\overline{\int_c\omega}$，从而$\operatorname{Re}\int_c\omega=\int_c\operatorname{Re}\omega$。若形式不闭，假设曲线分段连续可微。全纯1形式的共轭称为\textbf{反全纯形式}，其空间记为$\overline\Omega(X)$。
+\entry{19.2}{$*$算子}
+唯一分解$\omega=\omega_1+\omega_2$，其中$\omega_1$为$(1,0)$型、$\omega_2$为$(0,1)$型。
+\sourcepage{154}
+定义$*\omega:=i(\bar\omega_1-\bar\omega_2)$。这是交换两种型的实线性同构。其性质为
+\begin{gather*}
+\text{(a) }**\omega=-\omega,\quad *\bar\omega=\overline{*\omega};\\
+\text{(b) }d*(\omega_1+\omega_2)=i\,d'\bar\omega_1-i\,d''\bar\omega_2;\\
+\text{(c) }*d'f=i\,d''\bar f,\quad*d''f=-i\,d'\bar f;\qquad
+\text{(d) }d*df=2i\,d'd''\bar f.
+\end{gather*}
+\entry{19.3}{调和微分形式}
+若$d\omega=0$且$d*\omega=0$，称1形式$\omega$\textbf{调和}。
+
+\textbf{定理。}以下等价：(i)$\omega$调和；(ii)$d'\omega=d''\omega=0$；(iii)$\omega=\omega_1+\bar\omega_2$，其中$\omega_1,\omega_2$全纯；(iv)每点附近存在调和函数$f$使$\omega=df$。
+\begin{proof}
+前三者由(19.2)等价。(i)推出(iv)：闭形式局部有原函数，而$0=d*df=2i\,d'd''\bar f$说明$f$调和。反之，$\omega=df$且$f$调和时$d\omega=ddf=0$、$d*\omega=d*df=0$。
+\end{proof}
+记调和1形式空间为$\operatorname{Harm}^1(X)=\Omega(X)\oplus\overline\Omega(X)$。紧曲面上其复维数为$2g$。
+\entry{19.4}{定理}
+每个实调和1形式$\sigma$恰为一个全纯1形式的实部。
+\begin{proof}
+写$\sigma=\omega_1+\bar\omega_2$，由$\sigma=\bar\sigma$及型的唯一性得$\omega_1=\omega_2$，故$\sigma=\operatorname{Re}(2\omega_1)$。
+\sourcepage{155}
+若$\operatorname{Re}\omega=0$，局部写$\omega=df$，$f$全纯且实部常数，故$f$常数，$\omega=0$，得唯一性。
+\end{proof}
+\entry{19.5}{$\mathcal E^{(1)}(X)$中的内积}
+以下设$X$紧，定义$\langle\omega_1,\omega_2\rangle:=\iint_X\omega_1\wedge*\omega_2$。它对第一变量线性、第二变量共轭线性，且共轭对称。局部若$\omega=f dz+g d\bar z$，则$*\omega=i(\bar f d\bar z-\bar g dz)$，所以
+\[
+\omega\wedge*\omega=i(|f|^2+|g|^2)dz\wedge d\bar z=2(|f|^2+|g|^2)dx\wedge dy.
+\]
+故内积正定，使可微形式空间成为酉空间；它不完备，因而不是Hilbert空间。
+\entry{19.6}{引理}
+(a)$d'\mathcal E(X)$、$d''\mathcal E(X)$、$\Omega(X)$、$\overline\Omega(X)$两两正交。
+(b)$d\mathcal E(X)$与$*d\mathcal E(X)$正交，且$d\mathcal E\oplus*d\mathcal E=d'\mathcal E\oplus d''\mathcal E$。
+\begin{proof}
+(a)不同型显然正交。若$\omega$全纯，则$\omega\wedge*d'f=i\omega\wedge d''\bar f=i\omega\wedge d\bar f=-i\,d(\bar f\omega)$，由(10.20)积分为零。反全纯情形类似。
+\sourcepage{156}
+(b)由$df\wedge*(*dg)=-df\wedge dg=-d(f\,dg)$，积分为零；子空间等式由(19.2.c)得到。
+\end{proof}
+\entry{19.7}{推论}
+紧曲面上的恰当调和1形式为零，调和函数为常数。
+
+因为$d\mathcal E$与$\operatorname{Harm}^1$正交。
+\entry{19.8}{推论}
+若$\sigma$调和且所有闭曲线上的积分为零，则$\sigma=0$。若$\omega$全纯且所有闭曲线上的积分实部为零，则$\omega=0$。
+\begin{proof}
+由(10.15)，$\sigma$或$\operatorname{Re}\omega$恰当，再用(19.7)、(19.4)。
+\end{proof}
+\entry{19.9}{定理}
+有正交分解$\mathcal E^{0,1}(X)=d''\mathcal E(X)\oplus\overline\Omega(X)$。
+\begin{proof}
+Dolbeault定理给$\dim(\mathcal E^{0,1}/d''\mathcal E)=g$；由对偶，$\dim\overline\Omega=g$，再由(19.6)正交即得。
+\end{proof}
+\entry{19.10}{推论}
+对$\sigma\in\mathcal E^{0,1}(X)$，$d''f=\sigma$可解当且仅当对每个$\omega\in\Omega(X)$有$\iint_X\sigma\wedge\omega=0$。此条件正等价于$\sigma\perp\overline\Omega$。
+\sourcepage{157}
+\entry{19.11}{定理}
+$\mathcal E^{(1)}(X)=d\mathcal E(X)\oplus*d\mathcal E(X)\oplus\operatorname{Harm}^1(X)$为正交分解。
+\begin{proof}
+共轭(19.9)得$\mathcal E^{1,0}=d'\mathcal E\oplus\Omega$，两式相加再用(19.6)。
+\end{proof}
+\entry{19.12}{定理}
+闭1形式空间$\mathcal Z(X)=d\mathcal E(X)\oplus\operatorname{Harm}^1(X)$。
+\begin{proof}
+右边包含于闭形式。由(19.11)，只须证闭形式与$*d\mathcal E$正交。若$d\omega=0$，则$\omega\wedge*(*df)=-\omega\wedge df=d(f\omega)$，积分为零。
+\end{proof}
+\entry{19.13}{推论}
+1形式$\sigma$恰当，当且仅当它与每个闭1形式$\omega$满足$\iint_X\sigma\wedge\omega=0$。
+\begin{proof}
+此条件等价于$\langle\omega,*\sigma\rangle=0$对所有闭形式成立。由(19.11)、(19.12)，这等价于$*\sigma\in*d\mathcal E$，即$\sigma\in d\mathcal E$。
+\end{proof}
+\entry{19.14}{定理（de Rham--Hodge）}
+$H^1(X,\C)\cong\operatorname{Rh}^1(X)\cong\operatorname{Harm}^1(X)$。
+
+由(19.12)和de Rham定理直接得到。
+
+\textbf{注记。}局部常值复函数层只依赖拓扑，因此第一Betti数$b_1(X):=\dim H^1(X,\C)$为拓扑不变量。
+\sourcepage{158}
+由上式$b_1(X)=2g$，故亏格也是拓扑不变量。连通、可定向、紧二维流形的拓扑分类只依赖第一Betti数：$b_1=2g$的曲面同胚于带$g$个柄的球面，参见[46]或[42]。
+
+每个亏格$\ge1$都有同胚但不双全纯的黎曼曲面。亏格1的全纯等价类依赖一个复参数；$g\ge2$时依赖$3g-3$个复参数。本书不讨论这方面的Teichmüller理论，参见[50]。
+\subsection*{习题（第19节）}
+\entry{19.1}{}
+设$X$紧。
+(a)证明$d\mathcal E^{0,1}(X)=d'd''\mathcal E(X)\subset\mathcal E^{(2)}(X)$。
+(b)设$\mathcal H$为调和函数层，证明$H^1(X,\mathcal H)\cong\C$。
+(c)证明$d'd''f=\omega$可解当且仅当$\iint_X\omega=0$。
+\entry{19.2}{}
+设$X=\C/\Gamma$，定义均值$M(f):=(\iint_Xf\,dz\wedge d\bar z)/(\iint_Xdz\wedge d\bar z)$，对$\omega=f dz+g d\bar z$令$M(\omega):=M(f)dz+M(g)d\bar z$。证明(a)若$\omega$闭，则$\omega$与$M(\omega)$上同调；(b)$M:\mathcal Z(X)\to\operatorname{Harm}^1(X)$诱导同构$\operatorname{Rh}^1(X)\xrightarrow{\sim}\operatorname{Harm}^1(X)$。

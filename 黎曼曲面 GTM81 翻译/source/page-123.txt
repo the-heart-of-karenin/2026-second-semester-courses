@@ -1,0 +1,51 @@
+114 
+2 Compact Riemann Surfaces 
+and "'0 Ib(u) ::; CM, 11110 Ilu(w) ::; CM. Suppose 
+~o E A, 
+is the orthogonal decomposition. 
+We now construct, by induction, elements 
+C E Zi2(U, ((I), 
+with the following properties: 
+(i) 'v = ~"-l + bl1,. 
+on W 
+(ii) ". = ~v + 0'1' 
+0"0 E S, 
+~v E A, 
+(iii) IICIIL2(U)::; 2-I'CM, 
+Ill1vIIL2(W) ::; rVCM. 
+O'v E S 
+Consider the induction step from v to v + 1. Since 'v = ~v + O"v is an ortho-
+gonal decomposition, one has 
+II~v Ilu(u) ::; "'1' IIL2(U) ::; 2- vCM. 
+Thus 
+lI~vllf.2(!ll)::; ell~vllu(U)::; rVeCM::; 2-,'-lM. 
+By 
+Lemma 
+(14.6) 
+there 
+exist 
+elements '1'+ 1 E Zi2(U, 0) 
+and 
+111'+ 1 E C22(W, 0) such that 
+'v+ 1 = ~v + c5l1v+ 1 
+on W 
+and 
+Now one has an orthogonal decomposition 'v+ 1 = ~v+ 1 + O"v+ 1, where 
+~v+ 1 E A and O'v+ 1 E S, and thus the induction step is complete. 
+From the equation '0 = ~ + 0"110, together with equations (i) and (ii) up 
+to v = k, one gets 
+~k + ..to 0'1' = ~ + c5eto'1,.) 
+on W. 
+From (ii) and (iii) it follows that 
+max(ll~v Ilu(u), 110"1' Ib(u), Ill1v 11f.2(w»)::; rVCM. 
+Hence limk~ 00 ~k = 0 and the series 
+00 
+0":= "0" E S 
+Lv 
+1'=0 
+00 
+'1:= L '1v E q2(W, 0) 
+1'=0 
+converge. Finally from (*) one gets 0" = ~ + 15'1 on W. 
+(*) 
+o 

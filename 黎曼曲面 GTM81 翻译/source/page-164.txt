@@ -1,0 +1,41 @@
+19 Harmonic Differential Forms 
+155 
+To prove the uniqueness, suppose W 
+EO Q(X) and Re(w) = O. Since locally 
+w = dj, wherefis a holomorphic function, it follows thatfhas constant real 
+part. Then f itself is constant and thus (jJ = O. 
+0 
+19.5. Scalar Products in 0"(l)(X). We now assume that X is a compact 
+Riemann surface. For WI' W2 EO g(1)(X) let 
+<WI' w 2):= Jf WI 1\ *w 2 · 
+X 
+Clearly the mapping (WI' W2)~ <Wb W2) is linear in the first and semi-
+linear in the second argument and 
+<w 2 , WI) = «VI' w 2 )· 
+We now claim that < , ) is positive definite. For, suppose W EO 0"(1)(X). With 
+respect to a local chart (U, z), where z = x + iy, suppose 
+W =fdz + g dz. 
+Then 
+*W = i(] dE - g dz) 
+and 
+W 1\ *w = i( 1 f 12 + 1 g 12) dz 1\ dz = 2( 1 f 12 + 1 g 12) dx 1\ dy. 
+This shows that < 
+w, w) 2 0 and < 
+w, w) = 0 only if w = O. Hence with this 
+scalar product 0"(1)(X) becomes a unitary vector space. However it is not a 
+Hilbert space, since it is not complete. 
+19.6. Lemma. Suppose X is a compact Riemann surface. 
+(a) d' 0"(X), d"0"(X), Q(X) and Q(X) are pairwise orthogonal vector sub-
+spaces of (g'(l)(X). 
+(b) dtff(X) and *dS(X) are orthogonal vector subspaces of s(1)(X) and 
+dS(X) G;) *dg(X) = d'S(X) G;) d"0"(X). 
+PROOF 
+(a) Since 1,"1. O(X) and 0"0. 1 (X) are trivially orthogonal, it suffices to show 
+that d'S(X) -L Q(X) and d"0"(X) -L Q(X). 
+Suppose f EO 0"(X) and w EO Q(X). Then 
+W 1\ *d'f = iw 1\ d'T = iw 1\ dJ = - i dUw). 
+Thus 
+< 
+w, d'f) = - i If d(]w) = 0 
+x 
+by Theorem (10.20). Similarly one can show <w, d''f) = O. 

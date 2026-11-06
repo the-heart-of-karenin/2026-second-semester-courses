@@ -1,0 +1,46 @@
+14 A Finiteness Theorem 
+117 
+n 
+f := "c.h. 
+o 
+L. 
+1 
+l 
+i= 1 
+solves the problem. 
+o 
+We now note a few consequences of the finiteness theorem for non-
+compact Riemann surfaces. The reader who is only interested in compact 
+Riemann surfaces may skip over these if he wants. 
+14.14. Corollary. Suppose Y is a relatively compact open subset of a non-
+compact Riemann surface X. Then there exists a holomorphic function 
+f: Y -> C which is not constant on any connected component of Y. 
+PROOF. Choose a domain Y1 such that Y 11;: Y1 11;: X and a point a E Y1 \ Y. 
+(Since X is non-compact and connected, Y1 \ Y is not empty.) Now apply 
+Theorem (14.l2) to Y1 and the point a. 
+0 
+14.15. Theorem. Suppose X 
+is a non-compact Riemann surface and 
+Y 11;: Y' c X are open subsets. Then 
+Im(Hl(y', (1;1) --+ Hl(y, (I))) = O. 
+PROOF. By Theorem (14.9) we already know that 
+L:= Im(Hl(y', (I)) --+ Hl(y, (7))) 
+is a finite dimensional vector space. Choose cohomology classes 
+~b ... , ~n E Hl(y', 0) such that their restrictions to Y span the vector space 
+L. According to (14.14) we may choose a functionfE 0(Y') which is not 
+constant on any connected component of Y'. Since Hl(y', (7)) is in a natural 
+way a module over 0(Y'), the productsRv E H1(y', 0) are defined. By the 
+choice of the ~v there exist constants CVI' E C such that 
+f~v= LCvll~1l on Y forv=l, ... ,n. 
+(1) 
+11=1 
+Set 
+F :=det(fbvll -
+cvllhs:v.ll:sn' 
+Then F is a holomorphic function on Y' which is not identically zero on any 
+connected component of Y'. From (1) it follows that 
+F~vIY=O forv=I, ... ,n. 
+(2) 
+An arbitrary cohomology class (E Hl(y', 0) can be represented by a 
+cocycle (fij) E Zl(U, 0), where U = (U;)iE/ is an open covering of Y' such 
+that each zero of F is contained in at most one Ui • Thus for i f j one has 

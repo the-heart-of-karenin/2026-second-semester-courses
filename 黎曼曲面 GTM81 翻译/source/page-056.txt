@@ -1,0 +1,44 @@
+7 Analytic Continuation 
+47 
+A maximal analytic continuation is unique up to isomorphism. Namely, 
+using the above notation, if (Y, p,f, b) and (Z, q, g, c) are two maximal analytic 
+continuations of cP, then there exists a fiber-preserving holomorphic map-
+ping G: Y --> Z such that G(b) = c and G*(g) = f The composition FoG is a 
+fiber-preserving holomorphic mapping of Y onto itself which leaves the 
+point b fixed. Hence by Theorem (4.8) one has FoG = id y . Similarly 
+G c F = idz and thus G: Y --> Z is biholomorphic. 
+7.7. Lemma. Suppose X is a Riemann surface, a E X, cP E (!Ja and (Y, p,f, b) is 
+an analytic continuation of cp. Then if v: [0, 1] --> Y is a curve with v(O) = band 
+v(1) =: y, then the function germ t/I := p*(py(f)) E (!,'P(y) is an analytic continua-
+tion of cp along the curve u := p 0 v. 
+PROOF. For t E [0, 1] let CPt := P*(Pv(t)(f)) E (!J p(v(t» = (!Ju(t)· Then CPo = cp and 
+CPl = p*(fy) = t/I. Suppose to E [0, 1]. Since p: Y --> X is a local homeo-
+morphism, there exist open neighborhoods V c: Yand U c: X of v(to) and 
+p(v(to)) = u(to) resp. such that p I V --> U is biholomorphic. Let q: U --> V be 
+the inverse mapping and let g :=q*(f I V) E (!J(U). Then p*(p~(f)) = pP(~)(g) 
+for every 1'/ E V. There exists a neighborhood T of to in [0, 1] such that 
+v(T) c: V, i.e., u(T) c: U. For every t E T 
+PU(t)(g) = P*(PV(,)(f)) = cp,. 
+This proves that t/I is an analytic continuation of cp along u. 
+o 
+7.S. Theorem. Suppose X is a Riemann surface, a E X and cp E {!; a is a holo-
+morphic function germ at the point a. Then there exists a maximal analytic 
+continuation (Y, p,f, b) of cp. 
+PROOF. Let Y be the connected component of I (!J I containing cp. Let P also 
+denote the restriction of the mapping p: I (!J I --> X to Y. Then p: Y --> X is a 
+local homeomorphism. By Theorem (4.6) there is a complex structure on Y 
+so that it becomes a Riemann surface and the mapping p: Y -+ X is holo-
+morphic. Now define a holomorphic function f: Y --> C as follows. By 
+definition every 1'/ E Y is a function germ at the point p(1'/). Setj(1'/) := 1'/(p(1'/)). 
+One easily sees that f is holomorphic and p*(p~(f)) = 1'/ for every 1'/ E Y. 
+Thus if one lets b := cp, then (Y, p, I, b) is an analytic continuation of cp. 
+N ow we will show that (Y, p,f, b) is a maximal analytic continuation of cp. 
+Suppose (Z, q, g, c) is another analytic continuation of cp. Define the map 
+F: Z -+ Yas follows. Suppose' E Z and q(O =:x. By Lemma (7.7) the func-
+tion germ q*(p,(g)) E (7) .. arises by analytic continuation along a curve from a 
+to x from the function germ cp. By Lemma (7.2) Y consists of all function 
+germs which are obtained by the analytic continuation of cp along curves. 
+Hence there exists exactly one 1'/ E Y such that q*(p,(g)) = 1'/. Let F(O = 1'/. It 
+is easy to check that F: Z -+ Y is a fiber-preserving holomorphic map such 
+that F(c) = band F*(f) = g. 
+0 
