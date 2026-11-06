@@ -1,0 +1,42 @@
+\section{含参数积分}
+令
+\[F(t)=\int_0^\infty\frac{1+tx^5+t^2x^{11}}{1+t^4+x^{13}}\dd x,\qquad a_t(x)=\frac{1+tx^5+t^2x^{11}}{1+t^4+x^{12}}.\]
+\problem{B1}{证明对每个$t\in\R$，上述$F(t)$良好定义。}
+在任意有界$t$区间$|t|\le T$，被积函数的绝对值被
+\[C_T\frac{1+x^5+x^{11}}{1+x^{13}}\]
+控制，右端在$(0,\infty)$可积（无穷远为$O(x^{-2})$）。故为绝对收敛的Lebesgue积分。
+\problem{B2}{证明$F$在$\R$上连续。}
+对任意$t_0$在其紧邻域使用B1的统一控制函数，参数逐点连续，由控制收敛定理得到结论。
+\problem{B3}{证明$F$可导。}
+分母记为$D=1+t^4+x^{13}$，分子为$N=1+tx^5+t^2x^{11}$。则
+\[\partial_t(N/D)=\frac{x^5+2tx^{11}}D-\frac{4t^3N}{D^2}.\]
+在$|t|\le T$上仍被$C_T(1+x^5+x^{11})/(1+x^{13})$控制。积分求导定理说明$F' =\int\partial_t(N/D)$，并且同一控制还说明$F'\in C(\R)$。
+\problem{B4}{计算$\lim_{t\to+\infty}F(t)$。}
+令$A=1+t^4$、$c_j=\int_0^\infty u^j/(1+u^{13})\dd u$，$j=0,5,11$。这些数有限且严格正。换元$x=A^{1/13}u$得到
+\[F(t)=c_0A^{-12/13}+tc_5A^{-7/13}+t^2c_{11}A^{-1/13}.\]
+前两项分别趋于零，最后一项渐近于$c_{11}t^{22/13}$，故极限为$+\infty$。无需计算$c_j$的闭式。
+\problem{B5}{证明当$t\ne0$时$\int_0^\infty a_t(x)\dd x$发散。}
+$\lim_{x\to\infty}xa_t(x)=t^2>0$，所以从某处起$a_t(x)\ge t^2/(2x)$，积分发散到$+\infty$。
+\problem{B6}{证明每个$t\in\R$的反常积分$G(t)=\lim_{T\to\infty}\int_0^Ta_t(x)e^{ix}\dd x$存在。}
+$a_t(x)\to0$，且$a_t'(x)=O_t(x^{-2})$，故分部积分得
+\[G(t)=-\frac{a_t(0)}i-\frac1i\int_0^\infty a_t'(x)e^{ix}\dd x.\]
+右端积分绝对收敛，左端的截断边界项趋于零，从而反常积分存在。
+\problem{B7}{证明$G$在$\R$上连续。}
+在$|t|\le T$上，$a_t'$在$[0,1]$上一致有界，在$[1,\infty)$上被$C_Tx^{-2}$控制。对B6的绝对收敛表示使用控制收敛，即得连续性。
+\problem{B8}{计算$\lim_{t\to+\infty}G(t)$。}
+仅把参数极限移入原反常积分不足以证明结论。令$A=1+t^4$，$h_j(u)=u^j/(1+u^{12})$，$j=0,5,11$，则
+\[a_t(x)=A^{-1}h_0(x/A^{1/12})+tA^{-7/12}h_5(x/A^{1/12})+t^2A^{-1/12}h_{11}(x/A^{1/12}).\]
+各$h_j^{(8)}\in L^1(0,\infty)$，这是因为它们在零点光滑、在无穷远分别为$O(u^{j-20})$。所以
+\[\norm{a_t^{(8)}}_1\le C\{A^{-19/12}+tA^{-14/12}+t^2A^{-8/12}\}\longrightarrow0.\]
+连续分部积分八次的边界项只涉及$a_t^{(r)}(0)$，$0\le r\le7$。其非零项仅$r=0,5$，分别为$1/A$和$5!t/A$，均趋零；无穷远的各阶导数均趋零。因此$|G(t)|\le A^{-1}+5!t/A+\norm{a_t^{(8)}}_1\to0$。
+\section{Laplace变换}
+以下$f,g\in L^1(0,\infty)$，定义$Lf(x)=\int_0^\infty f(t)e^{-xt}\dd t$，$x>0$。
+\problem{C1}{证明$Lf\in C^\infty(0,\infty)$。}
+对紧区间$x\in[a,b]\subset(0,\infty)$和任意整数$r\ge0$，$t^re^{-xt}|f(t)|\le C_{r,a}|f(t)|$。反复使用控制收敛与积分求导定理即可。
+\problem{C2}{证明$(Lf)^{(r)}(x)=\int_0^\infty(-t)^rf(t)e^{-xt}\dd t$。}
+C1的每一次求导均可移入积分，归纳即得；该公式也说明各阶导数连续。
+\problem{C3}{令$(f\bullet g)(t)=\int_0^tf(\tau)g(t-\tau)\dd\tau$，证明$f\bullet g=g\bullet f$。}
+\fix{一般$L^1$函数的卷积应按几乎处处定义来理解；Tonelli给出$\norm{f\bullet g}_1\le\norm f_1\norm g_1$。在绝对收敛的$t$处换元$\sigma=t-\tau$得到交换律，因而作为$L^1$元素相等。}
+\problem{C4}{证明$L(f\bullet g)(x)=(Lf)(x)(Lg)(x)$。}
+双重积分绝对值至多$\norm f_1\norm g_1$，所以可用Fubini。以$t=\tau+\sigma$将三角形区域化成第一象限，得到
+\[\int_0^\infty\int_0^t f(\tau)g(t-\tau)e^{-xt}\dd\tau\dd t=\int_0^\infty\int_0^\infty f(\tau)g(\sigma)e^{-x\tau}e^{-x\sigma}\dd\sigma\dd\tau.\]

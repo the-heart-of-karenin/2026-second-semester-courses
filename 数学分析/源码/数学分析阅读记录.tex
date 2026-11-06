@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+
+\title{数学分析阅读记录}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{含参变量的积分}
+
+% STUDY_RECORD_BEGIN id=analysis-parameter-improper-uniform-boundary
+\subsection{参数端点发散与内区间上一致收敛的矛盾}
+\label{note:analysis-parameter-improper-uniform-boundary}
+
+\textbf{问题与出处：}含参变量的反常积分。设
+\[
+ f:[0,+\infty)\times[0,1]\longrightarrow\mathbb R
+\]
+连续。对 $y=0$，积分 $\int_0^{+\infty}f(x,0)\,dx$ 发散；对每个
+$y\in(0,1]$，积分 $\int_0^{+\infty}f(x,y)\,dx$ 收敛。问它是否必定不在
+$y\in(0,1)$ 上一致收敛，并希望用函数列在端点处极限不存在的对应结论来解释。
+
+\textbf{简短解释：}对每个截断上限 $R>0$，令
+\[
+ F_R(y)=\int_0^R f(x,y)\,dx,\qquad y\in[0,1].
+\]
+每个 $F_R$ 都在 $[0,1]$ 上连续。若原反常积分在 $(0,1)$ 上一致收敛，
+则一致 Cauchy 准则与有限区间含参积分关于 $y$ 的连续性允许令
+$y\to0^+$，从而推出 $F_R(0)$ 在 $R\to+\infty$ 时满足 Cauchy 准则。
+然而
+\[
+ F_R(0)=\int_0^R f(x,0)\,dx,
+\]
+这将迫使 $y=0$ 处的反常积分收敛，与题设矛盾。因此原积分不可能在
+$(0,1)$ 上一致收敛。这里的对应是把函数列 $f_n(y)$ 换成截断积分族
+$F_R(y)$，把 $n\to\infty$ 换成 $R\to+\infty$。
+
+% STUDY_RECORD_END id=analysis-parameter-improper-uniform-boundary
+
+\end{document}

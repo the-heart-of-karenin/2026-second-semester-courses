@@ -1,0 +1,423 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.4em}
+\newcommand{\supp}{\operatorname{supp}}
+\title{数学分析课堂笔记}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{lecture007}
+\subsection*{回顾：一个简单版本的单位分解定理}
+
+设 $K\subset\mathbb R^n$ 为紧集，$\{U_\alpha\}_{\alpha\in\Lambda}$
+是 $K$ 的开覆盖。则存在有限子覆盖 $\{U_i\}_{i=1}^k$，以及
+$\{\varphi_i\}_{i=1}^k\subset C^\infty(\mathbb R^n)$，使得
+\[
+ \supp\varphi_i\subset U_i,\qquad 0\leq\varphi_i\leq1,
+ \qquad \sum_{i=1}^k\varphi_i=1\quad\text{在 }K\text{ 上}.
+\]
+
+\subsection*{Step 1：缩小覆盖}
+取开集 $V_1,\ldots,V_k$，使得
+\[
+ \overline{V_i}\subset U_i,\qquad K\subset\bigcup_{i=1}^kV_i.
+\]
+
+\subsection*{Step 2：构造截断函数}
+由 $\overline{V_i}\subset U_i$，取 $\psi_i\in C_0^\infty(\mathbb R^n)$，使得
+\[
+ 0\leq\psi_i\leq1,\qquad \supp\psi_i\subset U_i,
+ \qquad \psi_i|_{V_i}=1.
+\]
+
+\subsection*{Step 3：归一化}
+小问题：不能保证 $\sum_j\psi_j$ 在全局都大于 $0$，所以不能在整个
+$\mathbb R^n$ 上直接定义 $\psi_i/\sum_j\psi_j$。
+
+\paragraph{Solution 1.}
+令
+\[
+ \Omega=\left\{x\in\mathbb R^n:\sum_{j=1}^k\psi_j(x)>0\right\}.
+\]
+这是包含 $K$ 的开集。选取截断函数 $\eta$，使
+$\eta|_K=1$、$\supp\eta\subset\Omega$，并定义
+\[
+ \varphi_i(x)=
+ \begin{cases}
+ \displaystyle\eta(x)\frac{\psi_i(x)}{\sum_{j=1}^k\psi_j(x)},&x\in\Omega,\\[6pt]
+ 0,&x\in\mathbb R^n\setminus\Omega.
+ \end{cases}
+\]
+在 $\Omega$ 中局部光滑；在 $\mathbb R^n\setminus\Omega$ 的每一点附近，
+$\eta$ 恒为 $0$，因此零延拓也是光滑的。
+
+\paragraph{Solution 2.}
+令
+\[
+ \varphi_1=\psi_1,\qquad
+ \varphi_2=(1-\psi_1)\psi_2,\qquad\ldots,\qquad
+ \varphi_k=\psi_k\prod_{j=1}^{k-1}(1-\psi_j).
+\]
+这些函数均光滑，且 $0\leq\varphi_i\leq1$、
+$\supp\varphi_i\subset\supp\psi_i\subset U_i$。由逐项相消，
+\[
+ \sum_{i=1}^k\varphi_i
+ =1-\prod_{i=1}^k(1-\psi_i).
+\]
+对任意 $x\in K$，存在 $\ell$ 使 $x\in V_\ell$，于是 $\psi_\ell(x)=1$，
+乘积为 $0$，故 $\sum_{i=1}^k\varphi_i(x)=1$。这就得到所需的单位分解。
+
+\subsection*{考虑含参积分}
+考虑
+\[
+ F(\lambda)=\int_a^b f(x)e^{\lambda S(x)}\,dx,
+ \qquad f,S\text{ 连续}.
+\]
+例如，作代换 $x=\lambda t$，有
+\[
+ \lim_{\lambda\to\infty}\Gamma(\lambda+1)
+ =\lim_{\lambda\to\infty}\int_0^\infty x^\lambda e^{-x}\,dx
+ =\lim_{\lambda\to\infty}\lambda^{\lambda+1}
+   \int_0^\infty e^{\lambda(\ln t-t)}\,dt.
+\]
+
+\subsection*{局部化引理：乘法形式}
+设 $f,S\in C([a,b])$，$x_0$ 是 $S$ 的唯一全局最大值点，即
+\[
+ S(x)<S(x_0)\qquad(x\ne x_0),
+\]
+且 $f(x_0)\ne0$。则对 $x_0$ 的任意充分小的固定相对开邻域
+$U\subset[a,b]$，存在 $c>0$，使得当 $\lambda\to+\infty$ 时，
+\[
+ \boxed{
+ \int_a^b f(x)e^{\lambda S(x)}\,dx
+ =\left(\int_U f(x)e^{\lambda S(x)}\,dx\right)
+   \left(1+O(e^{-c\lambda})\right).
+ }
+\]
+
+\paragraph{证明.}
+记 $M=S(x_0)$。由连续性和唯一全局最大值的条件，紧集
+$[a,b]\setminus U$ 上存在一致间隙 $\delta>0$，使
+\[
+ S(x)\le M-\delta\qquad(x\in[a,b]\setminus U).
+\]
+因此外部积分满足
+\[
+ \left|\int_{[a,b]\setminus U}f(x)e^{\lambda S(x)}\,dx\right|
+ \le (b-a)\|f\|_\infty e^{\lambda(M-\delta)}.
+\]
+取 $U$ 足够小，使 $f$ 在 $U$ 上同号；再取更小的相对邻域
+$V\subset U$，使 $|V|>0$，且
+\[
+ |f(x)|\ge m>0,\qquad S(x)\ge M-\frac\delta2
+ \qquad(x\in V).
+\]
+于是
+\[
+ \left|\int_U f(x)e^{\lambda S(x)}\,dx\right|
+ =\int_U |f(x)|e^{\lambda S(x)}\,dx
+ \ge m|V|e^{\lambda(M-\delta/2)}.
+\]
+将外部积分除以局部积分，得到
+\[
+ \frac{\displaystyle\int_{[a,b]\setminus U}f(x)e^{\lambda S(x)}\,dx}
+ {\displaystyle\int_U f(x)e^{\lambda S(x)}\,dx}
+ =O(e^{-\lambda\delta/2}),
+\]
+故可取 $c=\delta/2$。若 $U=[a,b]$，结论直接成立。
+
+因此积分的主要部分只与最大值点附近有关。这里要求唯一的
+\emph{全局}最大值点，仅有严格局部极大值不够；$f(x_0)\ne0$
+保证充分小邻域内没有正负相消。此引理不要求极大值点非退化。
+
+\paragraph{RMK（局部化引理的加法形式）.}
+设 $f,S\in C([a,b])$，$x_0\in[a,b]$ 是 $S$ 的唯一全局最大值点，
+记 $M=S(x_0)$。则对 $x_0$ 的任意固定相对开邻域 $U\subset[a,b]$，
+存在 $\delta>0$，使得当 $\lambda\to+\infty$ 时，
+\[
+ \boxed{
+ \int_a^b f(x)e^{\lambda S(x)}\,dx
+ =\int_U f(x)e^{\lambda S(x)}\,dx
+ +O\!\left(e^{\lambda(M-\delta)}\right).
+ }
+\]
+此形式不要求 $f(x_0)\ne0$，也不要求极大值点非退化。
+
+\paragraph{RMK 2（无穷区间上的加法局部化）.}
+设 $g,S$ 是 $[0,+\infty)$ 上的连续函数，$S\le M$，
+$U$ 是最大值点附近的固定相对开邻域。假设存在 $\delta>0$，使
+\[
+ S(x)\le M-\delta\qquad(x\in[0,+\infty)\setminus U),
+\]
+且存在固定的 $\lambda_0\ge0$，使
+\[
+ \int_0^\infty |g(x)|e^{\lambda_0S(x)}\,dx<\infty.
+\]
+则当 $\lambda\to+\infty$ 时，
+\[
+ \int_0^\infty g(x)e^{\lambda S(x)}\,dx
+ =\int_U g(x)e^{\lambda S(x)}\,dx
+ +O\!\left(e^{\lambda(M-\delta)}\right).
+\]
+\textbf{简要证明：}记 $U^c=[0,+\infty)\setminus U$。对
+$\lambda\ge\lambda_0$，有
+\begin{align*}
+ \left|\int_{U^c}g(x)e^{\lambda S(x)}\,dx\right|
+ &\le\int_{U^c}|g(x)|e^{\lambda_0S(x)}
+                 e^{(\lambda-\lambda_0)S(x)}\,dx\\
+ &\le e^{(\lambda-\lambda_0)(M-\delta)}
+       \int_{U^c}|g(x)|e^{\lambda_0S(x)}\,dx
+ =O\!\left(e^{\lambda(M-\delta)}\right).
+\end{align*}
+因此不必要求 $g$ 本身可积，只需它在某个固定指数权重下绝对可积。
+无穷区间上，唯一全局最大值并不自动保证远处与最大值有一致间隙，
+故上述间隙条件需明确给出。
+
+\subsection*{Laplace 方法：非严格的解释}
+设 $f,S\in C([a,b])$，$x_0\in(a,b)$ 是 $S$ 的唯一全局最大值点，
+$S$ 在 $x_0$ 附近二阶连续可微，且
+\[
+ f(x_0)\ne0,\qquad S'(x_0)=0,\qquad S''(x_0)<0.
+\]
+这里 $S''(x_0)<0$ 表示极大值点非退化。记
+$A=-S''(x_0)>0$，取固定的充分小 $\varepsilon>0$。
+由局部化引理，只需考虑 $x_0$ 附近。形式上，用
+\[
+ f(x)\approx f(x_0),\qquad
+ S(x)\approx S(x_0)+S'(x_0)(x-x_0)
+             +\frac{S''(x_0)}2(x-x_0)^2,
+\]
+得到
+\begin{align*}
+ F(\lambda)
+ &\approx\int_{x_0-\varepsilon}^{x_0+\varepsilon}
+ f(x_0)\exp\!\left\{\lambda\left[
+ S(x_0)+S'(x_0)(x-x_0)+\frac{S''(x_0)}2(x-x_0)^2
+ \right]\right\}\,dx\\
+ &=f(x_0)e^{\lambda S(x_0)}
+ \int_{x_0-\varepsilon}^{x_0+\varepsilon}
+ \exp\!\left\{-\frac{\lambda A}{2}(x-x_0)^2\right\}\,dx.
+\end{align*}
+令
+\[
+ y=\sqrt{\frac{\lambda A}{2}}(x-x_0),
+ \qquad dx=\sqrt{\frac{2}{\lambda A}}\,dy,
+\]
+则上面的二次近似积分恰好等于
+\[
+ f(x_0)e^{\lambda S(x_0)}\sqrt{\frac{2}{\lambda A}}
+ \int_{-\varepsilon\sqrt{\lambda A/2}}^{\varepsilon\sqrt{\lambda A/2}}
+ e^{-y^2}\,dy.
+\]
+当 $\lambda\to+\infty$ 时，积分上下限趋于 $-\infty,+\infty$。
+利用高斯积分
+\[
+ \int_{-\infty}^{+\infty}e^{-y^2}\,dy=\sqrt\pi,
+\]
+便得到主要项
+\[
+ \boxed{
+ F(\lambda)\sim
+ f(x_0)e^{\lambda S(x_0)}
+ \sqrt{\frac{2\pi}{-\lambda S''(x_0)}}.
+ }
+\]
+
+直觉上，峰的高度约为 $e^{\lambda S(x_0)}$，主要贡献区域的宽度约为
+$\lambda^{-1/2}$；$f$ 在这段越来越窄的区域里近似为 $f(x_0)$，
+而峰的形状在换元后趋于高斯形状。
+
+\subsection*{Watson 引理}
+设 $\alpha,\beta>0$，$a\in(0,+\infty]$，$f:(0,a)\to\mathbb R$
+连续且有界，$k$ 是非负整数，并且当 $x\to0^+$ 时，
+\[
+ f(x)=\sum_{p=0}^k a_px^p+o(x^k).
+\]
+则当 $\lambda\to+\infty$ 时，
+\[
+ \boxed{
+ \int_0^a x^{\beta-1}f(x)e^{-\lambda x^\alpha}\,dx
+ =\frac1\alpha\sum_{p=0}^k
+ a_p\Gamma\!\left(\frac{\beta+p}{\alpha}\right)
+ \lambda^{-(\beta+p)/\alpha}
+ +o\!\left(\lambda^{-(\beta+k)/\alpha}\right).
+ }
+\]
+
+\paragraph{证明.}
+记 $F(\lambda)$ 为左侧积分。取充分小的固定正数 $b\in(0,a)$，
+在 $(0,b)$ 上写
+\[
+ f(x)=\sum_{p=0}^k a_px^p+r(x),\qquad
+ r(x)=x^kh(x),\qquad h(x)\longrightarrow0\quad(x\to0^+).
+\]
+取 $b$ 足够小，可保证 $h$ 在 $(0,b)$ 上有界。
+用加法形式局部化，有
+\[
+ F(\lambda)=\sum_{p=0}^k a_p
+ \int_0^b x^{\beta+p-1}e^{-\lambda x^\alpha}\,dx
+ +R(\lambda)+O(e^{-\lambda b^\alpha}),
+ \qquad
+ R(\lambda)=\int_0^b x^{\beta-1}r(x)e^{-\lambda x^\alpha}\,dx.
+\]
+
+对每个 $p$，令 $u=\lambda x^\alpha$，则
+\[
+ x=(u/\lambda)^{1/\alpha},\qquad
+ dx=\frac1\alpha\lambda^{-1/\alpha}u^{1/\alpha-1}\,du,
+\]
+故
+\[
+ \int_0^b x^{\beta+p-1}e^{-\lambda x^\alpha}\,dx
+ =\frac1\alpha\lambda^{-(\beta+p)/\alpha}
+ \int_0^{\lambda b^\alpha}u^{(\beta+p)/\alpha-1}e^{-u}\,du.
+\]
+对固定 $s>0$，由 Gamma 积分及尾部估计，
+\[
+ \int_0^\infty u^{s-1}e^{-u}\,du=\Gamma(s),\qquad
+ \int_L^\infty u^{s-1}e^{-u}\,du
+ \le e^{-L/2}\int_0^\infty u^{s-1}e^{-u/2}\,du
+ =2^s\Gamma(s)e^{-L/2}.
+\]
+因此令 $s_p=(\beta+p)/\alpha$，得到
+\[
+ \int_0^b x^{\beta+p-1}e^{-\lambda x^\alpha}\,dx
+ =\frac1\alpha\lambda^{-s_p}
+ \left[\Gamma(s_p)+O(e^{-\lambda b^\alpha/2})\right].
+\]
+
+最后估计余项。令 $q=(\beta+k)/\alpha>0$，同样换元得
+\[
+ R(\lambda)=\frac1\alpha\lambda^{-q}
+ \int_0^{\lambda b^\alpha}u^{q-1}e^{-u}
+ h\!\left((u/\lambda)^{1/\alpha}\right)\,du.
+\]
+将积分中的函数在 $u\ge\lambda b^\alpha$ 处延拓为 $0$。
+对每个固定 $u>0$，当 $\lambda\to+\infty$ 时，
+$h((u/\lambda)^{1/\alpha})\to0$；且被积函数的绝对值不超过
+\[
+ C u^{q-1}e^{-u},\qquad
+ \int_0^\infty C u^{q-1}e^{-u}\,du=C\Gamma(q)<\infty.
+\]
+由控制收敛定理，上面的积分趋于 $0$，因此
+\[
+ R(\lambda)=o(\lambda^{-q})
+ =o\!\left(\lambda^{-(\beta+k)/\alpha}\right).
+\]
+所有指数小的误差也均为 $o(\lambda^{-q})$，合并即得结论。
+
+\paragraph{RMK（端点权重与局部化的修补）.}
+当 $0<\beta<1$ 时，$x^{\beta-1}$ 在 $0$ 处发散，
+但 $f$ 有界且 $\beta>0$，所以
+\[
+ \int_0^b x^{\beta-1}|f(x)|\,dx
+ \le\|f\|_\infty\frac{b^\beta}{\beta}<\infty.
+\]
+因此局部积分绝对收敛，不必要求振幅 $x^{\beta-1}f(x)$ 在端点连续。
+局部化只需估计远离 $0$ 的尾部：固定 $\lambda_0>0$，对
+$\lambda\ge\lambda_0$，有
+\begin{align*}
+ \left|\int_b^a x^{\beta-1}f(x)e^{-\lambda x^\alpha}\,dx\right|
+ &\le e^{-(\lambda-\lambda_0)b^\alpha}
+ \int_b^a x^{\beta-1}|f(x)|e^{-\lambda_0x^\alpha}\,dx\\
+ &=O(e^{-\lambda b^\alpha}).
+\end{align*}
+这里的固定积分即使 $a=+\infty$ 也有限，因为它不超过
+\[
+ \frac{\|f\|_\infty}{\alpha}
+ \lambda_0^{-\beta/\alpha}\Gamma(\beta/\alpha).
+\]
+这就直接给出了证明中所用的加法局部化；上述放缩使用的是绝对可积性。
+
+\subsection*{用 Watson 引理推导 Laplace 方法}
+设 $f,S\in C([a,b])$，$x_0\in(a,b)$ 是 $S$ 的唯一全局最大值点，
+$S$ 在 $x_0$ 附近属于 $C^2$，且
+\[
+ S'(x_0)=0,\qquad A=-S''(x_0)>0.
+\]
+记 $M=S(x_0)$，考虑
+\[
+ F(\lambda)=\int_a^b f(x)e^{\lambda S(x)}\,dx.
+\]
+
+\paragraph{1. 局部化并精确化简相位.}
+在 $x_0$ 的左侧，$S'(x)>0$；在右侧，$S'(x)<0$。
+分别在两侧作换元
+\[
+ t=\sqrt{M-S(x)},\qquad S(x)=M-t^2.
+\]
+取充分小的固定 $\rho>0$，令两侧的反函数为
+\[
+ x=x_-(t)<x_0<x_+(t)=x,\qquad 0<t\le\rho,
+ \qquad x_\pm(0)=x_0.
+\]
+于是 $U=(x_-(\rho),x_+(\rho))$ 是 $x_0$ 的固定邻域。
+由加法局部化，存在 $\delta>0$，使
+\[
+ F(\lambda)=\int_U f(x)e^{\lambda S(x)}\,dx
+ +O(e^{\lambda(M-\delta)}).
+\]
+
+\paragraph{2. 计算换元后的振幅.}
+由 Taylor 展开，
+\[
+ M-S(x)=\frac A2(x-x_0)^2+o((x-x_0)^2),\qquad
+ S'(x)=-A(x-x_0)+o(|x-x_0|).
+\]
+因此
+\[
+ \frac{x_\pm(t)-x_0}{t}\longrightarrow\pm\sqrt{\frac2A}.
+\]
+对 $S(x_\pm(t))=M-t^2$ 求导，得到
+\[
+ x_\pm'(t)=\frac{-2t}{S'(x_\pm(t))}
+ \longrightarrow\pm\sqrt{\frac2A}.
+\]
+左支在 $x$ 从 $x_-(\rho)$ 增加到 $x_0$ 时，$t$ 从 $\rho$ 减少到 $0$。
+合并两支，故
+\[
+ \int_U f(x)e^{\lambda S(x)}\,dx
+ =e^{\lambda M}\int_0^\rho H(t)e^{-\lambda t^2}\,dt,
+\]
+其中
+\[
+ H(t)=f(x_+(t))x_+'(t)-f(x_-(t))x_-'(t).
+\]
+此函数可连续延拓到 $t=0$，并且
+\[
+ H(t)=H(0)+o(1),\qquad
+ H(0)=2f(x_0)\sqrt{\frac2A}.
+\]
+
+\paragraph{3. 应用 Watson 引理.}
+对上面的积分取 Watson 引理中的 $\alpha=2$、$\beta=1$、$k=0$，得
+\begin{align*}
+ \int_0^\rho H(t)e^{-\lambda t^2}\,dt
+ &=\frac12H(0)\Gamma(1/2)\lambda^{-1/2}
+   +o(\lambda^{-1/2})\\
+ &=f(x_0)\sqrt{\frac{2\pi}{A}}\lambda^{-1/2}
+   +o(\lambda^{-1/2}).
+\end{align*}
+再合并指数小的局部化误差，得到
+\[
+ \boxed{
+ F(\lambda)=e^{\lambda S(x_0)}
+ \left[f(x_0)\sqrt{\frac{2\pi}{-\lambda S''(x_0)}}
+ +o(\lambda^{-1/2})\right].
+ }
+\]
+若 $f(x_0)\ne0$，即可写成
+\[
+ F(\lambda)\sim f(x_0)e^{\lambda S(x_0)}
+ \sqrt{\frac{2\pi}{-\lambda S''(x_0)}}.
+\]
+这里的换元使相位精确等于 $M-t^2$，而不是直接在指数中丢弃 Taylor 余项；
+剩下的振幅渐近由 Watson 引理处理。
+
+\end{document}

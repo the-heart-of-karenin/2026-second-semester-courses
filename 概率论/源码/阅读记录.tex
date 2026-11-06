@@ -1,0 +1,357 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{nosep,leftmargin=1.7em,topsep=0.3em}
+\ctexset{section={beforeskip=1.6ex,afterskip=1ex}}
+\title{李贤平《概率论基础》第四版阅读记录}
+\author{}
+\date{整理更新：2026 年 9 月 22 日}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section*{常用高斯积分公式}
+当 $a<0$ 时，
+\[
+\int_{-\infty}^{\infty} \exp\!\left(ax^2+bx+c\right)\,dx
+=\sqrt{\frac{\pi}{-a}}\,
+ \exp\!\left(c-\frac{b^2}{4a}\right).
+\]
+这是因为
+\[
+ax^2+bx+c
+=a\left(x+\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}.
+\]
+特别地，对任意 $b\in\mathbb{R}$ 及 $a<0$，
+\[
+\int_{-\infty}^{\infty}\exp\!\left(a(x-b)^2\right)\,dx
+=\sqrt{\frac{\pi}{-a}}.
+\]
+
+% STUDY_RECORD_BEGIN id=probability-p119-likelihood-view
+\section{第 119 页：似然函数为何相乘，以及它究竟是哪个变量的函数}
+\label{note:probability-p119-likelihood-view}
+\textbf{出处：}李贤平《概率论基础》第四版，第 119 页；本条只采用原书页码。
+
+\textbf{最初的问题：}为什么独立观测的似然函数定义为
+\[
+L(\mu)=\prod_{i=1}^n p(x_i-\mu) .
+\]
+这里的 $L$ 是否实际上是 $x_i$ 们的函数？
+
+\textbf{简短解释：}设 $X_i=\mu+\varepsilon_i$，误差密度为 $p$。给定参数
+$\mu$ 时，观测 $X_i=x_i$ 的密度为 $p(x_i-\mu)$；独立性使联合密度分解为
+\[
+f(x_1,\ldots,x_n\mid\mu)=\prod_{i=1}^n p(x_i-\mu).
+\]
+观测完成后，$x_1,\ldots,x_n$ 是固定数据，改从参数角度看同一表达式，便定义
+\[
+L(\mu;x_1,\ldots,x_n)=\prod_{i=1}^n p(x_i-\mu).
+\]
+因此联合密度是数据的函数，似然是在数据固定后关于 $\mu$ 的函数；它通常不是
+关于 $\mu$ 的概率密度，只用于比较不同参数对已观测数据的支持程度。
+
+\textbf{关键结论：}
+\[
+\text{概率：参数固定，看数据变化；}\qquad
+\text{似然：数据固定，看参数变化。}
+\]
+高斯的假设要求对任意样本，$\bar x$ 都使 $L(\mu)$ 达到最大。
+% STUDY_RECORD_END id=probability-p119-likelihood-view
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p120-gaussian-derivation
+\section{第 120 页：从平均数为最大似然估计推导正态密度}
+\label{note:probability-p120-gaussian-derivation}
+\textbf{出处：}李贤平《概率论基础》第四版，第 120 页，式 (3.2.38)--(3.2.41)；本条只采用原书页码。
+
+\textbf{最初的问题：}非正态分布是否也满足“样本平均数总是最大似然估计”？以及书中只用
+$n=2,3$，对更大的 $n$ 是否仍成立；若只固定一个 $n$，结论是否仍只有线性解？
+
+\textbf{推导主线：}令
+\[
+g(x)=\frac{d\ln p(x)}{dx}=\frac{p'(x)}{p(x)}.
+\]
+在 $\mu=\bar x$ 处的驻点条件是
+\[
+\sum_i g(x_i-\bar x)=0.
+\]
+$n=2$ 给出 $g(-x)=-g(x)$；$n=3$ 令残差为 $x,y,-x-y$，再用奇性得到
+\[
+g(x+y)=g(x)+g(y).
+\]
+由于 $g$ 连续，柯西方程的解只能是 $g(x)=bx$。积分并利用 $p$ 可积、归一化，得到
+\[
+p(x)=\frac{1}{\sqrt{2\pi}\sigma}
+\exp\!\left(-\frac{x^2}{2\sigma^2}\right).
+\]
+
+\textbf{关于更大样本量：}一旦 $g(x)=bx$，对任意 $n$ 都有
+\[
+\sum_{i=1}^n g(x_i-\bar x)=b\sum_{i=1}^n(x_i-\bar x)=0,
+\]
+所以 $n=4,5,\ldots$ 不再产生新限制。更一般地，固定任意一个 $n\ge3$，只要条件对该
+$n$ 的所有可能数据成立，就可取 $(x,y,-x-y,0,\ldots,0)$ 推出同一加法方程；连续性
+仍强制 $g(x)=bx$。若只有一组具体数据，则仅有一个约束，不能推出线性。
+
+\textbf{反例：}柯西密度 $p(x)=1/[\pi(1+x^2)]$ 满足对称、处处为正且光滑，但取
+$(x_1,x_2,x_3)=(0,0,10)$ 时 $\bar x=10/3$，有
+\[
+\left.\frac{d}{d\mu}\log L(\mu)\right|_{\mu=10/3}
+ =2\left(-\frac{30}{109}+\frac{60}{409}\right)\ne0.
+\]
+故平均数连驻点都不是，柯西分布不满足高斯假设。
+
+\textbf{编号说明：}对话材料的图片在 $n=3$ 段写作“方程 (3.2.29)”；按上下文应为
+前面的 (3.2.39)，此处按原文保留说明，不据此改写教材编号。
+% STUDY_RECORD_END id=probability-p120-gaussian-derivation
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p133-box-muller
+\section{第 133 页：最后一种做法为何能产生两个独立的正态随机数}
+\label{note:probability-p133-box-muller}
+\textbf{出处：}李贤平《概率论基础》第四版，第 133 页，例 9 及式 (3.3.41)--(3.3.42)；本条只采用原书页码。
+
+\textbf{最初的问题：}为什么由两个独立的 $[0,1]$ 均匀随机数 $U_1,U_2$ 构造
+\[
+\xi=\sqrt{-2\ln U_1}\cos(2\pi U_2),\qquad
+\eta=\sqrt{-2\ln U_1}\sin(2\pi U_2),
+\]
+会得到两个独立的标准正态随机变量？
+
+\textbf{简短解释：}这是 Box--Muller 变换。令半径与角度为
+\[
+\rho=\sqrt{\xi^2+\eta^2},\qquad \varphi=\arg(\xi+i\eta).
+\]
+二维标准正态的联合密度在极坐标下为
+\[
+q(r,\theta)=\frac1{2\pi}e^{-r^2/2}\,r,\quad r\ge0,\ 0\le\theta\le2\pi.
+\]
+其中雅可比为 $r$。密度可因子化为
+\[
+q(r,\theta)=\underbrace{re^{-r^2/2}}_{\text{$R$ 的密度}}
+\underbrace{\frac1{2\pi}}_{\text{$\Phi$ 的密度}}.
+\]
+故半径与角度独立，角度在 $[0,2\pi]$ 上均匀，而半径分布函数为
+\[
+F_R(r)=\int_0^r te^{-t^2/2}\,dt=1-e^{-r^2/2}.
+\]
+逆变换法给出 $R=\sqrt{-2\ln U_1}$、$\Phi=2\pi U_2$；二者独立。再作极坐标逆变换
+\[
+\xi=R\cos\Phi,\qquad \eta=R\sin\Phi.
+\]
+便得到二维标准正态联合密度，所以 $\xi,\eta$ 各自服从 $N(0,1)$ 且相互独立。
+
+\textbf{相关回忆：}若 $U\sim U(0,1)$ 且 $F$ 连续严格递增，则
+\[
+X=F^{-1}(U),
+\]
+满足
+\[
+P(X\le x)=P(F^{-1}(U)\le x)=P(U\le F(x))=F(x).
+\]
+这就是逆变换法。一般分布函数使用广义逆函数
+\[
+F^{-1}(u)=\inf\{x:F(x)\ge u\},
+\]
+仍有 $P(F^{-1}(U)\le x)=F(x)$。本页的半径构造正是这一方法。
+
+\textbf{一句话直觉：}均匀角度负责随机方向，$\sqrt{-2\ln U_1}$ 负责恰好匹配二维高斯所需的半径分布；极坐标密度中的 $r$ 正是雅可比带来的面积因子。
+% STUDY_RECORD_END id=probability-p133-box-muller
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p158-correlation-range
+\section{第 158 页：相关系数的取值范围为何是 $[-1,1]$}
+\label{note:probability-p158-correlation-range}
+\textbf{出处：}李贤平《概率论基础》第四版，第 158 页，定义 4.2.3；本条只采用原书页码。
+
+\textbf{最初的问题：}定义
+\[
+\rho_{ij}=\frac{\operatorname{cov}(\xi_i,\xi_j)}{\sqrt{D\xi_i}\sqrt{D\xi_j}}
+\]
+之后，为什么相关系数的取值范围是 $[-1,1]$？
+
+\textbf{简短解释：}令中心化随机变量
+\[
+X=\xi_i-E\xi_i,\qquad Y=\xi_j-E\xi_j.
+\]
+在平方可积随机变量的内积空间中取 $\langle X,Y\rangle=E(XY)$，则期望形式的柯西--施瓦茨不等式给出
+\[
+|E(XY)|\le \sqrt{E(X^2)}\sqrt{E(Y^2)}.
+\]
+代入 $E(XY)=\operatorname{cov}(\xi_i,\xi_j)$、$E(X^2)=D\xi_i$ 和
+$E(Y^2)=D\xi_j$，得到 $|\rho_{ij}|\le1$。因此
+\[
+-1\le\rho_{ij}\le1.
+\]
+这里要求两方差都非零；当 $i=j$ 时 $\rho_{ii}=1$。等号对应两个中心化随机变量几乎处处线性相关。
+% STUDY_RECORD_END id=probability-p158-correlation-range
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p161-uncorrelated-dependent
+\section{第 161 页：为什么 $\xi^2+\eta^2=1$ 能说明不独立}
+\label{note:probability-p161-uncorrelated-dependent}
+\textbf{出处：}李贤平《概率论基础》第四版，第 161 页，例 8；本条只采用原书页码。
+
+\textbf{最初的问题：}当 $a=\pi/2$ 或 $3\pi/2$ 时，书中有 $\rho=0$ 且
+\[
+\xi^2+\eta^2=1,
+\]
+为什么能推出 $\xi$ 与 $\eta$ 不独立？
+
+\textbf{简短解释：}以 $a=\pi/2$ 为例，$\xi=\cos\theta$、$\eta=-\sin\theta$，所以
+\[
+\eta^2=1-\xi^2.
+\]
+这说明由 $\xi$ 决定的事件会精确决定由 $\eta$ 决定的相应事件。例如令
+\[
+A=\{\xi^2>1/2\},\qquad B=\{\eta^2<1/2\}.
+\]
+除去概率为零的边界，$A=B$，且 $P(A)=P(B)=1/2$。若独立，应有
+$P(A\cap B)=P(A)P(B)=1/4$；但实际上 $P(A\cap B)=P(A)=1/2$，矛盾。
+
+\textbf{关键区别：}这里 $\rho=0$ 只表示无线性相关，不表示独立。平方和恒等式给出了非线性的确定关系
+$\eta^2=1-\xi^2$；独立性不能与这种非平凡的确定依赖关系同时成立。
+% STUDY_RECORD_END id=probability-p161-uncorrelated-dependent
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p215-varying-centers
+\section{第 215 页：为什么定义允许 $a_n$ 随 $n$ 变化}
+\label{note:probability-p215-varying-centers}
+\textbf{出处：}李贤平《概率论基础》第四版，第 215 页，定义 5.1.1；本条只采用原书页码。
+
+\textbf{最初的问题：}定义要求存在常数序列 $a_1,a_2,\ldots$，使
+\[
+P\{|\eta_n-a_n|<\varepsilon\}\longrightarrow1,
+\qquad
+\eta_n=\frac{\xi_1+\cdots+\xi_n}{n}.
+\]
+为什么不能把所有 $a_n$ 强制取成同一个常数 $a$？如果还允许 $a=+\infty$ 或
+$-\infty$，是否仍有反例？
+
+\textbf{简短解释：}$a_n$ 是第 $n$ 个样本平均所靠近的确定中心，可以随 $n$ 改变。
+例如取确定的随机变量
+\[
+\xi_i=2i-1,
+\]
+则 $\eta_n=n$。取 $a_n=n$ 时，上述概率恒等于 $1$；但它不可能依概率趋于任何
+固定的有限常数。这个例子若把“趋于 $+\infty$”也加入扩展定义，确实会被
+$a=+\infty$ 覆盖。
+
+\textbf{允许无穷后仍然成立的反例：}取
+\[
+\xi_i=(-1)^i(2i-1).
+\]
+此时
+\[
+\eta_n=\frac{\xi_1+\cdots+\xi_n}{n}=(-1)^n.
+\]
+令 $a_n=(-1)^n$，则对任意 $\varepsilon>0$，有
+$P\{|\eta_n-a_n|<\varepsilon\}=1$。但 $\eta_n$ 在 $1$ 与 $-1$ 之间交替：
+它不趋于任何有限常数，也不趋于 $+\infty$ 或 $-\infty$。因此即使把扩展实数
+作为固定极限，也不能用一个统一的 $a$ 取代一般的 $a_n$。
+
+\textbf{定义上的细节：}原式中的 $|\eta_n-a|<\varepsilon$ 只对有限实数 $a$ 有
+通常意义。若讨论 $a=+\infty$，应另定义为对每个 $M$，
+$P(\eta_n>M)\to1$；$a=-\infty$ 类似定义为
+$P(\eta_n<-M)\to1$。上述交替例子在这两种意义下都不收敛。
+% STUDY_RECORD_END id=probability-p215-varying-centers
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p216-chebyshev-variance-condition
+\section{第 216 页：为什么切比雪夫大数定律需要不相关条件}
+\label{note:probability-p216-chebyshev-variance-condition}
+\textbf{出处：}李贤平《概率论基础》第四版，第 216 页，切比雪夫大数定律证明；本条只采用原书页码。
+
+\textbf{最初的问题：}若每个随机变量的方差都有公共上界，为什么还需要“两两不相关”才能推出
+\[
+\frac{1}{n^2}D\left(\sum_{k=1}^n \xi_k\right)\longrightarrow0?
+\]
+去掉不相关性后，之前的估计为什么不够？
+
+\textbf{简短解释：}一般地，
+\[
+D\left(\sum_{k=1}^n\xi_k\right)
+=\sum_{k=1}^nD\xi_k
+ +2\sum_{i<j}\operatorname{cov}(\xi_i,\xi_j).
+\]
+两两不相关时协方差项全为零；若 $D\xi_k\le C$，便有
+\[
+\frac1{n^2}D\left(\sum_{k=1}^n\xi_k\right)
+=\frac1{n^2}\sum_{k=1}^nD\xi_k
+\le\frac Cn\longrightarrow0.
+\]
+这正是切比雪夫不等式证明大数定律所需的方差估计。
+
+\textbf{去掉条件后的反例：}令所有随机变量完全相同，
+\[
+\xi_1=\xi_2=\cdots=X,\qquad EX=0,\quad D(X)=1.
+\]
+则每个 $D\xi_k=1$，但
+\[
+D\left(\sum_{k=1}^n\xi_k\right)=D(nX)=n^2,
+\qquad
+\frac1{n^2}D\left(\sum_{k=1}^n\xi_k\right)=1.
+\]
+因此归一化方差不趋于零。这里每个协方差都等于 $1$，约有 $n^2/2$ 个协方差项，
+它们的总量正好达到 $n^2$ 的量级，不能被单项方差的上界控制为 $o(n^2)$。
+
+\textbf{结论：}公共方差上界只控制
+$\sum_kD\xi_k$；两两不相关性负责消除可能达到 $n^2$ 量级的协方差总和。
+没有不相关性，不能仅凭各项方差有界推出上述归一化方差趋于零。
+% STUDY_RECORD_END id=probability-p216-chebyshev-variance-condition
+
+\newpage
+% STUDY_RECORD_BEGIN id=probability-p218-demolaplace-local-limit
+\section{第 218 页：棣莫弗--拉普拉斯极限定理中的 $k$}
+\label{note:probability-p218-demolaplace-local-limit}
+\textbf{出处：}李贤平《概率论基础》第四版，第 218 页，定理 5.1.1；本条只采用原书页码。
+
+\textbf{最初的问题：}在伯努利试验中，$\mu_n$ 是 $n$ 次试验成功的次数，定义
+\[
+x_k=\frac{k-np}{\sqrt{npq}},\qquad q=1-p.
+\]
+定理 (i) 中的 $k$ 是固定的，还是随 $n$ 变化？若固定，是否只需 $n$ 足够大就有
+$x_k\in[a,b]$？
+
+\textbf{定理内容：}对满足
+\[
+a\le x_k\le b
+\]
+的整数 $k$，当 $n\to\infty$ 时，一致地有
+\[
+P\{\mu_n=k\}\mathbin{\bigg/}
+\left(\frac1{\sqrt{npq}}\varphi(x_k)\right)\longrightarrow1,
+\qquad
+\varphi(x)=\frac1{\sqrt{2\pi}}e^{-x^2/2}.
+\]
+这里的“一致”表示所有落在该标准化区间内的整数 $k$ 同时满足同一个渐近近似；
+更准确地说，误差的最大值趋于零。因此实际使用时应把 $k$ 看成允许随 $n$ 改变的
+$k_n$，典型取法是
+\[
+k_n=\left\lfloor np+x\sqrt{npq}\right\rfloor,\qquad x\in[a,b].
+\]
+此时 $k_n$ 位于均值 $np$ 的 $\sqrt n$ 量级邻域内。
+
+\textbf{为什么固定 $k$ 不行：}若 $k$ 是一个与 $n$ 无关的固定整数，则
+\[
+x_k=\frac{k-np}{\sqrt{npq}}\longrightarrow-\infty.
+\]
+所以对任意固定有限区间 $[a,b]$，最终反而有 $x_k<a$，并不是最终落在
+$[a,b]$ 内。定理 (i) 研究的是中心区域的单点概率，而不是固定成功次数 $k$ 的情形。
+
+\textbf{定理 (ii) 的关系：}把定理 (i) 在区间内的相邻整数 $k$ 上求和，就得到
+\[
+P\left\{a\le\frac{\mu_n-np}{\sqrt{npq}}<b\right\}
+\longrightarrow\int_a^b\varphi(x)\,dx.
+\]
+因此 (i) 是局部极限结论，给出单点概率的正态近似；(ii) 是区间概率的极限，
+即通常所说的中心极限定理形式。
+% STUDY_RECORD_END id=probability-p218-demolaplace-local-limit
+
+\end{document}

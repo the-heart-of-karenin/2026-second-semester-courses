@@ -1,0 +1,105 @@
+{
+  "all_appendix_pages_verified": 73,
+  "index_links_verified": 14,
+  "documents": [
+    {
+      "group": "41_1",
+      "source_appendix_pages_verified": 6,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\41_1.png"
+    },
+    {
+      "group": "43_1",
+      "source_appendix_pages_verified": 6,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\43_1.png"
+    },
+    {
+      "group": "43_2",
+      "source_appendix_pages_verified": 3,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\43_2.png"
+    },
+    {
+      "group": "44_1",
+      "source_appendix_pages_verified": 4,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\44_1.png"
+    },
+    {
+      "group": "46_1",
+      "source_appendix_pages_verified": 6,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\46_1.png"
+    },
+    {
+      "group": "48_1",
+      "source_appendix_pages_verified": 5,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\48_1.png"
+    },
+    {
+      "group": "48_2",
+      "source_appendix_pages_verified": 7,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\48_2.png"
+    },
+    {
+      "group": "51_1",
+      "source_appendix_pages_verified": 6,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\51_1.png"
+    },
+    {
+      "group": "51_2",
+      "source_appendix_pages_verified": 5,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\51_2.png"
+    },
+    {
+      "group": "53_1",
+      "source_appendix_pages_verified": 4,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\53_1.png"
+    },
+    {
+      "group": "53_2",
+      "source_appendix_pages_verified": 3,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\53_2.png"
+    },
+    {
+      "group": "55_1",
+      "source_appendix_pages_verified": 7,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\55_1.png"
+    },
+    {
+      "group": "57_1",
+      "source_appendix_pages_verified": 6,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\57_1.png"
+    },
+    {
+      "group": "57_2",
+      "source_appendix_pages_verified": 5,
+      "source_text_exact_match": true,
+      "out_of_page_text": false,
+      "contact_sheet": "D:\\Users\\Desktop\\answer\\tmp\\qa\\57_2.png"
+    }
+  ],
+  "visual_review": "已检查全部解答正文页的渲染缩略图、各份原题附录首页及两页PDF索引；无排版缺陷。"
+}

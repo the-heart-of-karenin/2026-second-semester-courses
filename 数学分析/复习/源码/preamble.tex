@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,enumitem,needspace}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.2em,topsep=0.3em}
+\allowdisplaybreaks[2]
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\inner}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\src}[1]{\par\noindent{\small\textbf{出处与处理：}#1}\par}
+\newcommand{\idea}[1]{\par\noindent\textbf{证明思路：}#1\par}
+\newcommand{\ex}[3]{\Needspace{6\baselineskip}\subsection*{#1\quad #2}\label{ex:#1}\src{#3}}
+\theoremstyle{definition}
+\newtheorem{result}{结论}[section]
+\newcommand{\sources}{
+\noindent\textbf{范围与来源}\quad 仅含 Fourier 级数，不含 Fourier 变换、含参积分、偏微分方程及数论应用。
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{课本：}《高等微积分学》（文件日期2023.2.6），第5.1--5.3节及“习题五”中级数部分；原书第105--122、126--129页，PDF第106--123、127--130页。第122页仅取第5.3节结尾，不含该页开始的第5.4节。
+\item \textbf{史：}常庚哲、史济怀《数学分析教程》第三版下册，第17.1--17.4节，原书及该文件PDF第303--339页。作业照片所用版本编号为第21章；本材料新增选题按实际核对的第三版第17章引用，不混用题号。
+\item \textbf{Stein：}Stein--Shakarchi, \emph{Fourier Analysis: An Introduction}，从第2、3章中筛选贴近系数计算、核估计、收敛与Parseval的Exercises；Problems只取相关的简单题或前几问，具体题号与页码逐题注明。抽象函数空间、测度理论及独立的Abel、Tauber求和题不纳入本册。
+\item \textbf{作业与笔记：}第三次作业（10.15）、第四次作业（10.22）及其教材照片；已录入的《傅里叶级数笔记》。作业与教材重合的题合并注明。课堂笔记中含参积分、Laplace、Watson等内容均不在本次范围。
+\end{enumerate}
+原书页码与PDF页码均从实际文件核对。翻译题、节选题、改编题和新增题分别注明；题面不含解题提示。来源文件的实际位置及后续修改入口见同目录说明。}

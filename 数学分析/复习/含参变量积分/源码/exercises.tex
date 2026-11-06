@@ -1,0 +1,242 @@
+\input{preamble.tex}
+\title{含参变量积分复习题集}
+\author{}\date{基础28题\quad 提高16题\qquad 2026年11月2日}
+\begin{document}\maketitle
+\scope
+
+全册44道编号题：基础A01--A28、提高H01--H16，不附答案。没有真题，当前以作业为选题依据，计算题着重含参求导、换序、振荡反常积分与Euler积分；题号的基础／提高划分是练习安排，不是对考试难度的断言。谢惠民仅选4道编号题，其余采用作业、课程教材、史济怀或明确标出的课堂自拟题。题目保留原有任务，未为凑题量追加小问。
+
+来源简称：“教材”为《高等微积分学》；“史重排稿”为第18章LaTeX编校稿，以下注明稿内页码与PDF页码，不冒充原版页码；“谢惠民”为《数学分析习题课讲义》下册第2版。第1次作业目前只有现存解答PDF，题干据其中所列内容；第2次作业题干据现存题目与解答源码。可修改入口及各文件位置见本目录README。
+
+积分按通常或反常黎曼积分理解，不用对称主值替代；涉及两个瑕点时分别判断。练习所需的核心定理在配套标准结论中查阅；本题集不重复收录课堂笔记已完整讨论的例题或阅读记录中的问题。标准结论中的定理陈述没有作为例题求解，相关作业证明任务仍予保留。
+\tableofcontents\clearpage
+\section{基础题集}
+\ex{A01}{带权常义积分的三个基本性质}{第1次作业第1题，依据现存homework1.pdf第1--2页，原题。}
+设$P=[a,b]\times[c,d]$，$f\in C(P)$，$g$在$[a,b]$上黎曼可积，令$F(y)=\int_a^bf(x,y)g(x)\dd x$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明$F\in C[c,d]$。
+\item 若$f_y\in C(P)$，证明$F\in C^1[c,d]$，且$F'(y)=\int_a^bf_y(x,y)g(x)\dd x$。
+\item 证明$\int_c^dF(y)\dd y=\int_a^b g(x)(\int_c^df(x,y)\dd y)\dd x$。
+\end{enumerate}
+
+\ex{A02}{不连续被积函数的连续积分}{第1次作业第2题，现存解答第3页，原题。}
+令$f(x,y)=\operatorname{sgn}(y-x)$，$F(x)=\int_0^1f(x,y)\dd y$。求$F$在全实轴上的表达式，并讨论其连续性。
+
+\ex{A03}{引入参数计算对数分母积分}{第1次作业第3题(1)；教材例4.1.6、习题四6(a)，原书77、101页（PDF78、102）。}
+设$a,b>0$，计算
+\[
+ \int_0^1\sin\!\left(\ln\frac1x\right)\frac{x^b-x^a}{\ln x}\dd x.
+\]
+运算中涉及反常积分或交换积分次序时，说明其合法性。
+
+\ex{A04}{对数三角积分与参数求导}{第1次作业第3题(2)，现存解答第4页，原题。}
+设$|r|<1$，计算$F(r)=\int_0^\pi\ln(1-2r\cos x+r^2)\dd x$。
+
+\ex{A05}{固定分块能否代替任意截断}{第1次作业第4题；教材引理4.2.12，原书85--86页。将原断言的量词问题列为辨析，并列必要的修正条件。}
+设$f(\cdot,y)$在$[a,\omega)$上局部黎曼可积，$y\in Y$；$a=a_0<a_1<\cdots\to\omega$为一个固定分块，令$\phi_n(y)=\int_{a_{n-1}}^{a_n}f(x,y)\dd x$。
+\begin{enumerate}[label=(\arabic*)]
+\item 判断“$\int_a^\omega f(x,y)\dd x$在$Y$上一致收敛，当且仅当$\sum_{n\ge1}\phi_n(y)$在$Y$上一致收敛”是否成立；不成立的方向须给出反例。
+\item 若再有$\sup_{y\in Y}\sup_{a_{n-1}\le t\le a_n}|\int_{a_{n-1}}^t f(x,y)\dd x|\to0$，证明分块级数一致收敛可推出原积分一致收敛。
+\end{enumerate}
+
+\ex{A06}{保号性与紧参数集的作用}{第1次作业第5题，现存解答第6--7页，原题。}
+设$Y$为紧集，$f\in C([a,\omega)\times Y)$在全域保号，且$F(y)=\int_a^\omega f(x,y)\dd x$处处收敛并属于$C(Y)$。证明该反常积分在$Y$上一致收敛，并分别举例说明“$Y$紧”和“$f$保号”不能删去。
+
+\ex{A07}{变上下限含参积分求导}{教材习题四第7题，原书101页（PDF102），原题；明确正参数以避开原式未定义点。}
+求下列函数的导数：
+\[
+ I_1(y)=\int_y^{y^2}e^{-x^2y}\dd x\quad(y\in\R),\qquad
+ I_2(y)=\int_y^{y^2}\frac{\cos(xy)}x\dd x\quad(y>0),
+\]
+\[
+ F(t)=\int_0^{t^2}\dd x\int_{x-t}^{x+t}\sin(x^2+y^2-t^2)\dd y\quad(t\in\R).
+\]
+
+\ex{A08}{含参积分的二阶导数}{教材习题四第8题，原书101页（PDF102），原题。}
+设$f$为可微函数，$I(y)=\int_0^y(x+y)f(x)\dd x$，求$I''(y)$。
+
+\ex{A09}{参数趋零时的连续性}{教材习题四第10题（连续性题），原书101页（PDF102），原题，明确参数定义域。}
+设$f\in C[0,1]$且$f(x)>0$，研究$I(y)=\int_0^1 yf(x)/(x^2+y^2)\dd x$关于实参数$y$的定义域和连续性；在$y=0$处按$x>0$时被积函数的原式取值解释其瑕积分。
+
+\ex{A10}{参数族的一致收敛}{教材习题四第二个第10题(a)(b)，原书101--102页（PDF102--103），节选。}
+证明以下积分在指定参数集合上一致收敛：
+\[
+ \int_0^\infty\frac{\cos(xy)}{x^2+y^2}\dd x\quad(y\ge a>0),
+ \qquad
+ \int_0^\infty\frac{\sin2x}{x+\alpha}\dd x\quad(0\le\alpha\le\alpha_0),
+\]
+其中$\alpha_0>0$固定，$\alpha=0$时积分按原点处可去奇点理解。
+
+\ex{A11}{用移动参数证明非一致收敛}{教材习题四第11题(a)(b)，原书102页（PDF103），原题。}
+证明下列积分在指定参数集合上不一致收敛：
+\[
+ \int_0^\infty\frac{x\sin(\alpha x)}{\alpha(1+x^2)}\dd x
+ \quad(0<\alpha<\infty),\qquad
+ \int_0^1\frac1{x^\alpha}\sin\frac1x\dd x\quad(0<\alpha<2).
+\]
+
+\ex{A12}{幂权积分的参数区间}{教材习题四第12题，原书102页（PDF103），原题。}
+设$f$在$(0,\infty)$连续，$a<b$为实数，且$\int_0^\infty t^a f(t)\dd t$与$\int_0^\infty t^b f(t)\dd t$均收敛。证明$\int_0^\infty t^\lambda f(t)\dd t$关于$\lambda\in[a,b]$一致收敛；两端反常积分分别理解。
+
+\ex{A13}{振荡积分与平移高斯的一致收敛}{教材习题四第13题，原书102页（PDF103），原题。}
+讨论下列反常积分在指定集合上的一致收敛性：
+\[
+ \int_0^\infty\frac{\cos(xy)}{\sqrt x}\dd x\quad(y\ge y_0>0),
+ \qquad
+ \int_{-\infty}^\infty e^{-(x-\alpha)^2}\dd x
+ \quad\text{分别取 }a<\alpha<b\text{ 与 }\alpha\in\R.
+\]
+这里$a<b$为有限常数。
+
+\ex{A14}{两个瑕点共同限制参数域}{教材习题四第14题，原书102页（PDF103），原题。}
+确定$F(y)=\int_0^\pi\sin x/[x^y(\pi-x)^{2-y}]\dd x$的定义域及连续范围。
+
+\ex{A15}{Laplace型积分在零参数处的连续性}{教材习题四第15题，原书102页（PDF103），原题，补明局部可积条件。}
+设$f$在$[0,\infty)$局部黎曼可积，且$\int_0^\infty f(x)\dd x$收敛。证明$F(s)=\int_0^\infty e^{-sx}f(x)\dd x$在$[0,\infty)$上连续。
+
+\ex{A16}{反常积分的参数可微性}{教材习题四第16题，原书102页（PDF103），原题。}
+证明$I(t)=\int_0^\infty\cos x/[1+(x+t)^2]\dd x$在$\R$上可微，并写出$I'(t)$的积分表达式。
+
+\ex{A17}{指数衰减与正弦差}{教材习题四第17题，原书102页（PDF103），原题。}
+设$p>0$、$b>a>0$，计算
+\[
+ \int_0^\infty e^{-px}\frac{\sin bx-\sin ax}{x}\dd x.
+\]
+
+\ex{A18}{尺度差的对数积分}{教材习题四第18题，原书102页（PDF103），原题。}
+设$f$在$[0,\infty)$连续，$\lim_{x\to\infty}f(x)=0$。对$a,b>0$，证明
+\[
+ \int_0^\infty\frac{f(ax)-f(bx)}x\dd x=f(0)\ln\frac ba.
+\]
+
+\ex{A19}{双端指数衰减的高斯型积分}{教材习题四第19题，原书102页（PDF103），保留原有两种要求。}
+已知$\int_0^\infty e^{-y^2}\dd y=\sqrt\pi/2$。对$c>0$，计算
+\[
+ L(c)=\int_0^\infty e^{-y^2-c^2/y^2}\dd y.
+\]
+另用积分号下求导建立$L$满足的微分方程，说明零参数极限如何确定常数，并计算$\int_0^\infty e^{-ay^2-b/y^2}\dd y$（$a,b>0$）。
+
+\ex{A20}{对数与幂次的双端收敛条件}{教材习题四第20题，原书103页（PDF104），原题。}
+设$F(y)=\int_0^\infty\ln(1+x^3)/x^y\dd x$。确定其定义域，并讨论其连续性。
+
+\ex{A21}{绝对收敛积分族的性质}{教材习题四第22题，原书103页（PDF104），原题。}
+令$f(t)=\int_1^\infty\cos(xt)/(1+x^2)\dd x$。证明该积分关于$t\in\R$一致收敛，$f$在$\R$上连续，$\lim_{t\to\infty}f(t)=0$，且$f$在$[0,\pi]$上至少有一个零点。
+
+\ex{A22}{Gamma函数的导数与极值}{教材习题四第23题，原书103页（PDF104），原题；原题末式的积分变量统一为u。}
+证明$\Gamma(1)=\Gamma(2)$，$\Gamma'$在某点$x_0\in[1,2]$处为零，且$\Gamma'$在$(0,\infty)$上严格递增；进一步证明
+\[
+ \int_0^1\bigl(\ln(1/u)\bigr)^{x_0-1}\ln\ln(1/u)\dd u=0.
+\]
+
+\ex{A23}{有界函数与卷积求导}{教材习题四第24题，原书103页（PDF104），修正表述：原题只给f为C1、g有界，不能保证卷积存在；此处补入f紧支集。}
+设$f\in C_c^1(\R)$，$g$为有界的局部黎曼可积函数。证明$f*g\in C^1(\R)$且$(f*g)'=f'*g$。
+
+\ex{A24}{周期性在卷积中的保持}{教材习题四第25题，原书103页（PDF104），明确绝对收敛的充分条件后改编。}
+设$f$是连续的$T$周期函数，$g$在$\R$上反常绝对可积。证明$f*g$存在且仍为$T$周期函数。
+
+\ex{A25}{对数余弦积分}{谢惠民第二版下册§23.1.3第1题，原书285页（PDF296），原题。}
+求$F(\theta)=\int_0^\pi\ln(1+\theta\cos x)\dd x$，其中$|\theta|<1$。
+
+\ex{A26}{三次正弦的反常积分}{谢惠民§23.2.6第7题(2)，原书295页（PDF306），节选；史练习18.3第5题(4)同题，只收录一次。}
+计算$\int_0^\infty\sin^3x/x\dd x$，并说明其收敛性。
+
+\ex{A27}{反正切参数积分}{谢惠民§23.2.6第8题(2)，原书295页（PDF306），节选。}
+用积分号下求导的方法求$I(\alpha)=\int_0^\infty\arctan(\alpha x)/[x(1+x^2)]\dd x$，其中$\alpha\ge0$。
+
+\ex{A28}{Gamma与B函数的计算练习}{谢惠民§23.3.5第1题，原书304页（PDF315），原题。}
+计算
+\[
+ \int_0^1\frac{\dd x}{\sqrt{x\ln(1/x)}},\qquad
+ \int_0^\infty\frac{x^{1/4}}{(1+x)^2}\dd x.
+\]
+
+\clearpage
+\section{提高题集}
+\ex{H01}{带权反常积分的运算定理}{第2次作业第1题(1)--(3)，依据document.tex，原题；两个反常方向的换序另见H02及教材定理。}
+设$P=[a,\omega)\times[c,d]$，$f\in C(P)$，$g$在$[a,\omega)$局部黎曼可积，$F(y)=\int_a^\omega f(x,y)g(x)\dd x$。
+\begin{enumerate}[label=(\arabic*)]
+\item 若$F$的定义积分在$[c,d]$上一致收敛，证明$F\in C[c,d]$。
+\item 若$f_y\in C(P)$，$\int_a^\omega f_y(x,y)g(x)\dd x$在$[c,d]$上一致收敛，且原积分在一点$y_0$处收敛，证明原积分一致收敛、$F\in C^1[c,d]$并写出导数。
+\item 在原积分一致收敛的条件下，证明$\int_c^dF(y)\dd y=\int_a^\omega g(x)(\int_c^df(x,y)\dd y)\dd x$。
+\end{enumerate}
+
+\ex{H02}{非负函数的两个反常积分换序}{第2次作业第2题，依据document.tex，原题。}
+设$f\ge0$且$f\in C([a,\omega)\times[c,\widetilde\omega))$。定义
+\[
+ F(y)=\int_a^\omega f(x,y)\dd x\in C[c,\widetilde\omega),\quad
+ \Phi(x)=\int_c^{\widetilde\omega} f(x,y)\dd y\in C[a,\omega).
+\]
+若$\int_c^{\widetilde\omega}F(y)\dd y$与$\int_a^\omega\Phi(x)\dd x$至少一个存在且有限，证明另一个也存在且与它相等。
+
+\ex{H03}{余弦与分数幂分母}{第2次作业第3题第一式，依据document.tex，原题。}
+给出详细过程，验证
+\[
+ \int_0^\infty\frac{\cos x}{x^\alpha}\dd x
+ =\frac{\pi}{2\Gamma(\alpha)\cos(\pi\alpha/2)}\qquad(0<\alpha<1).
+\]
+每次交换极限、求导或积分次序时说明理由。
+
+\ex{H04}{正弦与分数幂分母}{第2次作业第3题第二式，依据document.tex，原题。}
+给出详细过程，验证
+\[
+ \int_0^\infty\frac{\sin x}{x^\beta}\dd x
+ =\frac{\pi}{2\Gamma(\beta)\sin(\pi\beta/2)}\qquad(0<\beta<2).
+\]
+证明须覆盖$\beta=1$，并说明为何不能在$1<\beta<2$时直接使用$\Gamma(1-\beta)$的正参数积分定义。
+
+\ex{H05}{正弦与余弦乘积的分段积分值}{史重排稿练习18.3第5题(3)，稿内32页（PDF34），原题，明确实参数范围。}
+对任意实数$\alpha,\beta$，计算$\int_0^\infty\sin(\alpha x)\cos(\beta x)/x\dd x$；结果须包括$\alpha=\pm\beta$的情形。
+
+\ex{H06}{相位为平方的振荡积分}{史重排稿练习18.3第5题(2)，稿内32页（PDF34），原题。}
+计算$\int_0^\infty\sin(x^2)/x\dd x$，并说明其收敛性。
+
+\ex{H07}{带二次分母的对数积分}{史重排稿练习18.3第4题，稿内32页（PDF34），原题。}
+对$\alpha\in\R$、$\beta\ne0$，计算$\int_0^\infty\ln(\alpha^2+x^2)/(\beta^2+x^2)\dd x$。
+
+\ex{H08}{两个反正切的乘积积分}{史重排稿问题18.3第3题，稿内33页（PDF35），原题，明确参数取正。}
+设$\alpha,\beta>0$，计算$\int_0^\infty\arctan(\alpha x)\arctan(\beta x)/x^2\dd x$。
+
+\ex{H09}{高次正弦与差分消去常数项}{史重排稿问题18.3第5题(3)(4)，稿内33页（PDF35），节选。}
+计算
+\[
+ \int_0^\infty\frac{\sin^4x}{x^2}\dd x,\qquad
+ \int_0^\infty\frac{\sin^4(\alpha x)-\sin^4(\beta x)}x\dd x
+ \quad(\alpha,\beta>0).
+\]
+
+\ex{H10}{不同换元形式的Euler积分}{史重排稿练习18.4第3题(1)(3)(4)，稿内48页（PDF50），节选。}
+用Gamma函数计算
+\[
+ \int_0^1\sqrt{x-x^2}\dd x,\qquad
+ \int_0^\infty\frac{\dd x}{1+x^3},\qquad
+ \int_0^{\pi/2}\sin^5x\cos^6x\dd x.
+\]
+
+\ex{H11}{一般正定二次式的幂积分}{史重排稿练习18.4第7题，稿内48页（PDF50），原题。}
+设$a>0$，$ac-b^2>0$，$\alpha>1/2$，证明
+\[
+ \int_{-\infty}^\infty\frac{\dd x}{(ax^2+2bx+c)^\alpha}
+ =a^{\alpha-1}(ac-b^2)^{1/2-\alpha}
+   \frac{\sqrt\pi\,\Gamma(\alpha-1/2)}{\Gamma(\alpha)}.
+\]
+
+\ex{H12}{B函数的对数凸性}{史重排稿练习18.4第4题，稿内48页（PDF50），原题。}
+固定$q>0$，证明$p\mapsto\ln B(p,q)$在$(0,\infty)$上为凸函数。
+
+\ex{H13}{四次端点相位的渐近计算}{依据课堂lecture007的Watson引理自拟，非教材原题。}
+当$\lambda\to\infty$时，求$\int_0^1 e^{-\lambda x^4}/(1+x)\dd x$截至$\lambda^{-3/4}$项的渐近展开，并将余项写为$o(\lambda^{-3/4})$。
+
+\ex{H14}{内点极大值的渐近计算}{依据课堂lecture007的Laplace方法自拟，非教材原题。}
+当$\lambda\to\infty$时，求$\int_{-1}^1(1+x^2)e^{\lambda(\cos x-1)}\dd x$的首项渐近等价式，并核对所用定理的条件。
+
+\ex{H15}{紧支集条件下的卷积结合律}{教材习题四第26题(1)，原书103页（PDF104），将未展开的Schwartz函数条件换为连续紧支集条件，改编。}
+设$f,g,h$为$\R$上的连续紧支集函数。证明所有下列卷积存在，且$f*(g*h)=(f*g)*h$。
+
+\ex{H16}{Gamma核的卷积}{教材习题四第26题(2)(3)，原书103页（PDF104），保留普通函数的内容，改写符号，不涉及广义函数。}
+对$\alpha>0$、$\lambda\in\R$，定义
+\[
+ K_\lambda^\alpha(x)=\begin{cases}x^{\alpha-1}e^{\lambda x}/\Gamma(\alpha),&x>0,\\0,&x\le0.\end{cases}
+\]
+证明$K_\lambda^\alpha*K_\lambda^\beta=K_\lambda^{\alpha+\beta}$（$\alpha,\beta>0$）。再令$f(x)=e^{\lambda x}$（$x>0$）、$f(x)=0$（$x\le0$），证明对正整数$n$，其$n$次卷积为$x^{n-1}e^{\lambda x}/(n-1)!$（$x>0$），在$x\le0$为$0$。
+
+\end{document}

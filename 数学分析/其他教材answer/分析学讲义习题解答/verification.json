@@ -1,0 +1,96 @@
+{
+  "engine": "XeLaTeX (TeX Live 2026)",
+  "runs_per_document": 2,
+  "documents": [
+    {
+      "folder": "41_1",
+      "success": true,
+      "pages": 15,
+      "warnings": []
+    },
+    {
+      "folder": "43_1",
+      "success": true,
+      "pages": 14,
+      "warnings": []
+    },
+    {
+      "folder": "43_2",
+      "success": true,
+      "pages": 9,
+      "warnings": []
+    },
+    {
+      "folder": "44_1",
+      "success": true,
+      "pages": 7,
+      "warnings": []
+    },
+    {
+      "folder": "46_1",
+      "success": true,
+      "pages": 14,
+      "warnings": []
+    },
+    {
+      "folder": "48_1",
+      "success": true,
+      "pages": 9,
+      "warnings": []
+    },
+    {
+      "folder": "48_2",
+      "success": true,
+      "pages": 14,
+      "warnings": []
+    },
+    {
+      "folder": "51_1",
+      "success": true,
+      "pages": 13,
+      "warnings": []
+    },
+    {
+      "folder": "51_2",
+      "success": true,
+      "pages": 11,
+      "warnings": []
+    },
+    {
+      "folder": "53_1",
+      "success": true,
+      "pages": 12,
+      "warnings": []
+    },
+    {
+      "folder": "53_2",
+      "success": true,
+      "pages": 8,
+      "warnings": []
+    },
+    {
+      "folder": "55_1",
+      "success": true,
+      "pages": 16,
+      "warnings": []
+    },
+    {
+      "folder": "57_1",
+      "success": true,
+      "pages": 16,
+      "warnings": []
+    },
+    {
+      "folder": "57_2",
+      "success": true,
+      "pages": 12,
+      "warnings": []
+    },
+    {
+      "folder": "",
+      "success": true,
+      "pages": 2,
+      "warnings": []
+    }
+  ]
+}

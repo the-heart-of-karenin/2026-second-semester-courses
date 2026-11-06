@@ -1,0 +1,16 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,enumitem,needspace}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.2em}
+\allowdisplaybreaks[2]
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\source}[1]{\par\noindent\textbf{【#1】}\quad}
+\newcommand{\result}[3]{\Needspace{6\baselineskip}\subsection*{#1\quad #2}\label{st:#1}\source{#3}}
+\newcommand{\ex}[3]{\Needspace{7\baselineskip}\subsection*{#1\quad #2}\label{ex:#1}\noindent{\small\textbf{出处与处理：}#3}\par}
+\newcommand{\scope}{本次范围为课程教材《高等微积分学》第4.1--4.4节（原书75--98页，PDF76--99页，仅取第98页上半的第4.4节结尾），不含第4.5节广义函数简介、试验函数空间及基本解。第3.5节多项式逼近、第5.2节Fej\'er定理只作为卷积逼近的关联结论。课堂lecture007中的积分渐近另列为课堂补充。}

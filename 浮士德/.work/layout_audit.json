@@ -1,0 +1,16 @@
+{
+  "rendered_pages": 365,
+  "empty_pages": [],
+  "page_bounds_violations": [],
+  "replacement_glyphs": 0,
+  "scene_labels_in_render": 53,
+  "foreign_quote_checks": {
+    "EritissicutDeus": true,
+    "Sanctasimplicitas": true,
+    "Diesirae": true,
+    "Chacun": true,
+    "Sorge": true,
+    "Knittelvers": true,
+    "Ach!": true
+  }
+}

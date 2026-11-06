@@ -1,0 +1,517 @@
+\input{preamble.tex}
+\title{Fourier级数复习题集}
+\author{}
+\date{基础35题\quad 提高25题\qquad 2026年10月29日修订}
+\begin{document}
+\maketitle
+本册共60道编号题，分为基础35题与提高25题，各题可含相互联系的小问。重点为教材和作业中的系数、展开、核估计、收敛定理与积分不等式。配套《Fourier级数标准结论与复习提纲》提供准确陈述，本册不附完整证明或解答。保留原题号，本轮新增B31--B35及H34；有间隔的编号并非漏题。课程教材“习题五”第1--21题现均有对应练习，合并与题面问题处理见各题出处及同目录说明。
+\sources
+\noindent\textbf{积分与记号}\quad “可积”指黎曼可积；反常绝对可积允许有限个瑕点，并要求$\int|f|$收敛。“可积且平方可积”还要求通常或反常积分$\int|f|^2$有限。除特别说明外均作$2\pi$周期延拓，
+\[
+ c_n(f)=\frac1{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\dd x,\qquad
+ S_N(f,x)=\sum_{|n|\le N}c_n(f)e^{inx}.
+\]
+平方平均收敛直接写为$\lim_{N\to\infty}\int|f-S_N|^2=0$。实形式常数项为$a_0/2$；$\sigma_N=(N+1)^{-1}\sum_{j=0}^NS_j$。周期端点按延拓解释。
+\clearpage
+\tableofcontents
+\clearpage
+\section{基础题集}
+\subsection*{正交、系数与基本展开}
+
+\ex{B01}{正交关系与规范化}{课本第5.1节，第105--106页（PDF106--107），由定义改编。}
+计算$\int_{-\pi}^{\pi}e^{inx}e^{-imx}\dd x$及$1,\cos nx,\sin nx$之间的全部正交关系，写出未归一化积分内积下的规范正交三角系。再写出周期$2l$时对应的系数公式，说明常数项的归一化。
+
+\ex{B02}{最佳平方逼近与Bessel不等式}{课本定理5.1.6--5.1.7，第108--110页（PDF109--111），正文改编。}
+设$\varphi_1,\ldots,\varphi_M$在$[a,b]$上可积且平方可积，满足$\int_a^b\varphi_j\overline{\varphi_k}\dd x=\delta_{jk}$。
+对同类函数$f$令$c_j=\int_a^bf\overline{\varphi_j}\dd x$。证明对任意$d_j\in\C$，
+\[
+ \int_a^b\left|f-\sum_{j=1}^Md_j\varphi_j\right|^2\dd x
+ =\int_a^b|f|^2\dd x-\sum_{j=1}^M|c_j|^2+\sum_{j=1}^M|d_j-c_j|^2.
+\]
+据此证明最佳平方逼近系数的唯一性，并对无限规范正交系推出Bessel不等式。
+
+\ex{B03}{周期积分与积分区间的平移}{Stein第2章Exercise 1，第58页（PDF75），翻译。}
+设$f$以$2\pi$为周期且在每个有限区间可积。证明对任意$a,b,h\in\R$，
+\[
+ \int_a^bf(x)\dd x=\int_{a+2\pi}^{b+2\pi}f(x)\dd x
+ =\int_{a-2\pi}^{b-2\pi}f(x)\dd x,
+\]
+\[
+ \int_{-\pi}^{\pi}f(x+h)\dd x=\int_{-\pi}^{\pi}f(x)\dd x
+ =\int_{-\pi+h}^{\pi+h}f(x)\dd x.
+\]
+
+\ex{B04}{对称性与系数}{Stein第2章Exercise 2，第59页（PDF76）；补入半波反对称小问并明确逆命题意义，改编。}
+设$f$为可积周期函数。
+\begin{enumerate}[label=(\arabic*)]
+\item 写出$c_0,c_n,c_{-n}$与$a_0,a_n,b_n$的换算关系，允许$f$取复值。
+\item 分别证明：偶函数只有余弦项；奇函数只有正弦项；实值函数满足$c_{-n}=\overline{c_n}$。
+\item 若$f(x+\pi)=f(x)$，证明奇数频率系数为零；若$f(x+\pi)=-f(x)$，证明偶数频率系数为零。
+\item 若$f$连续且$c_{-n}=\overline{c_n}$对全部$n$成立，证明$f$为实值函数。
+\end{enumerate}
+
+\ex{B05}{平移、调制与反射}{史练习17.1第3题，第311页（PDF311）；调制、反射为新增小问，整体改编。}
+设$f$的实系数为$a_n,b_n$。证明$f(x+h)$的实系数为
+\[
+ a_n\cos nh+b_n\sin nh,\qquad b_n\cos nh-a_n\sin nh.
+\]
+用复系数分别写出$f(x+h)$、$e^{imx}f(x)$（$m\in\Z$）、$f(-x)$和$\overline{f(x)}$的系数。
+
+\ex{B06}{绝对可和系数实现为连续函数}{史练习17.1第4题，第311页（PDF311），原题。}
+设实数列$a_0,a_n,b_n$满足
+$|a_0|+\sum_{n\ge1}(|a_n|+|b_n|)<\infty$。证明三角级数
+\[
+ \frac{a_0}2+\sum_{n=1}^{\infty}(a_n\cos nx+b_n\sin nx)
+\]
+是某个连续周期函数的Fourier级数，并证明其绝对一致收敛。
+
+\ex{B07}{固定系数的平方平均展开}{已有《傅里叶级数笔记》开头定理，统一复记号后改编。}
+设$f$在一个周期上可积且平方可积，$T_N(x)=\sum_{|n|\le N}d_ne^{inx}$，各$d_n$不随$N$变化，且
+\[
+ \lim_{N\to\infty}\int_{-\pi}^{\pi}|f(x)-T_N(x)|^2\dd x=0.
+\]
+证明$d_n=c_n(f)$对每个$n$成立。若允许系数依赖$N$，给出不能推出$T_N=S_N(f)$的例子。
+
+\ex{B08}{锯齿函数的Fourier级数}{Stein第2章Exercise 8，第60--61页（PDF77--78），翻译并明确周期端点。}
+设$f(0)=0$，且
+\[
+ f(x)=\begin{cases}-\pi/2-x/2,&-\pi<x<0,\\\pi/2-x/2,&0<x<\pi.\end{cases}
+\]
+按周期延拓，并令$f(\pm\pi)=0$。求其Fourier系数，证明
+\[
+ f(x)=\sum_{n=1}^{\infty}\frac{\sin nx}{n}
+\]
+在每点成立，双边形式按对称部分和理解；说明$x=0$处的和与左右极限的关系。
+
+\Needspace{11\baselineskip}
+\ex{B09}{方波与奇数频率}{史练习17.2第1题，第322页（PDF322）；与第三次作业方波题合并。}
+把$f(x)=\operatorname{sgn}x$（$-\pi<x<\pi$）展开为Fourier级数，确定全周期内每一点的收敛值；证明当$0<x<\pi$时
+\[
+ \sum_{k=1}^{\infty}\frac{\sin((2k-1)x)}{2k-1}=\frac\pi4,
+\]
+并求$\sum_{k\ge1}(-1)^{k-1}/(2k-1)$。
+
+\ex{B10}{三角帐篷函数}{Stein第2章Exercise 5，第59页（PDF76），翻译。}
+设$0<\delta\le\pi$，在$[-\pi,\pi]$上定义
+\[
+ f(x)=\begin{cases}1-|x|/\delta,&|x|\le\delta,\\0,&\delta<|x|\le\pi.\end{cases}
+\]
+证明其Fourier展开为
+\[
+ f(x)=\frac\delta{2\pi}+2\sum_{n=1}^{\infty}\frac{1-\cos n\delta}{\pi\delta n^2}\cos nx,
+\]
+并判断收敛方式。
+
+\ex{B11}{含有乘积的系数计算}{史练习17.2第2题(3)，第322页（PDF322），节选。}
+把$f(x)=x\sin x$在$(-\pi,\pi)$上展开为Fourier级数，明确常数项、特殊频率$n=1$与一般频率的系数，并确定周期端点处的收敛值。
+
+\ex{B12}{指数函数的周期展开}{史练习17.2第7题，第322页（PDF322），原题。}
+设$a\in\R\setminus\{0\}$。证明对$0<x<2\pi$，
+\[
+ e^{ax}=\frac{e^{2\pi a}-1}{\pi}
+ \left(\frac1{2a}+\sum_{k=1}^{\infty}\frac{a\cos kx-k\sin kx}{k^2+a^2}\right).
+\]
+另说明该级数在$x=0$处的收敛值。
+
+\Needspace{14\baselineskip}
+\subsection*{基本收敛、求和与Parseval应用}
+
+\ex{B13}{Dirichlet核及部分和的积分表达式}{课本第5.2节，第113--114页（PDF114--115），正文改编。}
+证明
+\[
+ D_N(t)=\sum_{|k|\le N}e^{ikt}=\frac{\sin((N+1/2)t)}{\sin(t/2)},
+ \qquad \frac1{2\pi}\int_{-\pi}^{\pi}D_N=1.
+\]
+说明分式在$2\pi\Z$处的含义。对任意可积周期函数$f$，证明
+\[
+ S_N(f,x)=\frac1{2\pi}\int_{-\pi}^{\pi}f(p)D_N(x-p)\dd p
+ =\frac1{2\pi}\int_{-\pi}^{\pi}f(x-t)D_N(t)\dd t.
+\]
+
+\ex{B14}{Abel求和与Dirichlet判别法}{Stein第2章Exercise 7，第60页（PDF77），翻译。}
+设$A_n,B_n\in\C$，$P_k=\sum_{j=1}^kB_j$，$P_0=0$。证明
+\[
+ \sum_{n=M}^NA_nB_n=A_NP_N-A_MP_{M-1}
+ -\sum_{n=M}^{N-1}(A_{n+1}-A_n)P_n.
+\]
+若$P_k$有界且实数$A_n\downarrow0$，证明$\sum A_nB_n$收敛。
+
+\ex{B15}{单调系数正弦级数}{第四次作业补充题1（2），原题。}
+设$b_n\downarrow0$，$K_n(x)=\sum_{k=1}^n\sin kx$。证明$\sum_{n\ge1}b_n\sin nx$在$[0,\pi]$逐点收敛，在每个$[\delta,\pi]$（$0<\delta\le\pi$）上一致收敛；其和$f$满足
+\[
+ f(x)=\sum_{n=1}^{\infty}(b_n-b_{n+1})K_n(x),\qquad f\in C(0,\pi].
+\]
+
+\ex{B16}{H\"older连续与系数衰减}{课本习题五第1题，第126页（PDF127），原题。}
+设$f$为连续周期函数，且对某$0<\alpha\le1$、$L>0$及所有$x,y\in\R$有
+$|f(x)-f(y)|\le L|x-y|^\alpha$。证明$f$的Fourier级数在每点收敛到$f$，且$a_n,b_n=O(n^{-\alpha})$。
+
+\ex{B17}{光滑函数的系数小量}{Stein第3章Exercise 13，第91页（PDF108）；结合本轮端点讨论，改编。}
+设$f\in C^m[-\pi,\pi]$，且$f^{(j)}(-\pi)=f^{(j)}(\pi)$对$0\le j<m$成立。证明$c_n(f)=o(|n|^{-m})$。当$m=1$时，写出不假设$f(-\pi)=f(\pi)$的完整分部积分公式。
+
+\ex{B18}{一次导数平方可积与绝对一致收敛}{课本习题五第4题，第126页（PDF127）；第四次作业教材21.2第2题；Stein第3章Exercise 14，第91页（PDF108），合并。}
+设$f$为连续周期函数，在一个周期上除有限点外可导，补定义后的$f'$ Riemann可积且平方可积。证明$f$的Fourier级数绝对一致收敛于$f$。
+
+\ex{B19}{周期接缝与零频项辨析}{本次讨论新增题，非教材原题。}
+\begin{enumerate}[label=(\arabic*)]
+\item 对$f(x)=\cos x$（$0\le x\le\pi$），比较$\pi$周期延拓与$2\pi$周期偶延拓在接缝处的连续性。分别写出分部积分计算导数复系数时的边界项。
+\item 说明从$\sum n^2A_n^2\ge\sum A_n^2$推出函数的平方积分不等式时，为何必须单独处理$n=0$项；若不加零均值条件，给出不等式失败的例子。
+\end{enumerate}
+
+\ex{B20}{Ces\`aro和的直接计算}{史练习17.3第1题，第328页（PDF328），原题。}
+求下列级数的Ces\`aro和，并区分其是否通常收敛：
+\[
+ 1+0-1+1+0-1+\cdots,
+\]
+\[
+ \frac12+\cos x+\cos2x+\cdots,\qquad
+ \sin x+\sin2x+\cdots\quad(0<x<2\pi).
+\]
+
+\ex{B21}{Fej\'er核}{课本习题五第13题(a)--(c)，第127--128页（PDF128--129）；第三次作业教材21.2第11题，合并。}
+设$F_N=(N+1)^{-1}\sum_{j=0}^ND_j$。证明
+\[
+ F_N(t)=\frac1{N+1}\frac{1-\cos((N+1)t)}{1-\cos t},
+\]
+并说明$2\pi\Z$处取值；证明$F_N\ge0$、$(2\pi)^{-1}\int F_N=1$，以及$\delta\le|t|\le\pi$时
+\[
+ F_N(t)\le\frac{2}{(N+1)(1-\cos\delta)}.
+\]
+证明$\sigma_N(f,x)=(2\pi)^{-1}\int_{-\pi}^{\pi}f(x-t)F_N(t)\dd t$。
+
+\ex{B22}{Fej\'er定理及跳跃点的平均值}{课本习题五第13题(d)、第14题，第128页（PDF129）；第三次作业教材21.2第11、12题，合并。}
+证明：若$f$为连续周期函数，则$\sigma_N(f)\to f$一致收敛；若$f$ Riemann可积，且在$x_0$存在有限左右极限，则$\sigma_N(f,x_0)$收敛到其平均值。
+
+\ex{B23}{唯一性与三角多项式逼近}{课本习题五第20、21题，第129页（PDF130）；史练习17.3第2题，第328页（PDF328），合并。}
+\begin{enumerate}[label=(\arabic*)]
+\item 设$f$为连续周期函数的全部Fourier系数为$0$，证明$f\equiv0$。
+\item 证明每个连续周期函数可由三角多项式在平方平均意义下任意逼近，并说明事实上可一致逼近。
+\item 证明$[0,\pi]$上的每个连续函数可由余弦多项式一致逼近。
+\end{enumerate}
+
+\ex{B24}{混合Parseval等式}{课本习题五第3题，第126页（PDF127）；保留可积且平方可积条件，补绝对收敛要求，改编。}
+设实值$f,g$在$[-\pi,\pi]$上可积且平方可积，实Fourier系数分别为$a_n,b_n$与$\alpha_n,\beta_n$。证明
+\[
+ \frac1\pi\int_{-\pi}^{\pi}f(x)g(x)\dd x
+ =\frac{a_0\alpha_0}{2}+\sum_{n=1}^{\infty}(a_n\alpha_n+b_n\beta_n),
+\]
+并证明右侧级数绝对收敛。
+
+\ex{B25}{平方函数与级数求和}{课本习题五第12题，第127页（PDF128）；第四次作业教材21.2第10题，原题。}
+对$f(x)=(\pi-|x|)^2$（$-\pi\le x\le\pi$），证明
+\[
+ f(x)=\frac{\pi^2}{3}+\sum_{n=1}^{\infty}\frac4{n^2}\cos nx,
+\]
+并由此证明$\sum_{n\ge1}n^{-2}=\pi^2/6$、$\sum_{n\ge1}n^{-4}=\pi^4/90$。
+
+\ex{B26}{矩形脉冲、Parseval与无穷区间积分}{课本习题五第10题，第127页（PDF128）；第四次作业教材21.2第8题，原题，统一小问标号。}
+设$0<\delta<\pi$，$f(x)=1$（$|x|\le\delta$），$f(x)=0$（$\delta<|x|\le\pi$），周期延拓。
+\begin{enumerate}[label=(\arabic*)]
+\item 求其Fourier系数及每点的收敛值。
+\item 证明$\sum_{n\ge1}\sin(n\delta)/n=(\pi-\delta)/2$。
+\item 证明$\sum_{n\ge1}\sin^2(n\delta)/(n^2\delta)=(\pi-\delta)/2$。
+\item 令$\delta\downarrow0$，严格证明$\int_0^\infty(\sin x/x)^2\dd x=\pi/2$。
+\item 令$\delta=\pi/2$，求$\sum_{k\ge0}(2k+1)^{-2}$。
+\end{enumerate}
+
+\ex{B27}{同一半区间上的两种展开}{史第17.2节例3，第319--320页（PDF319--320），正文改编。}
+将$f(x)=x$（$0<x<\pi$）分别展开为正弦级数和余弦级数。写出两种级数在$x=0,\pi$处的和，判断两种展开能否在$[0,\pi]$上一致收敛，并说明理由。
+
+\ex{B28}{半区间Wirtinger不等式}{课本习题五第7题，第126页（PDF127）；第四次作业教材21.2第5题，原题并补等号问题。}
+设$f\in C^1[0,\pi]$，$f'$分段光滑，且$\int_0^\pi f(x)\dd x=0$。证明
+\[
+ \int_0^\pi|f'(x)|^2\dd x\ge\int_0^\pi|f(x)|^2\dd x,
+\]
+并确定所有取等号的实值函数。
+
+\ex{B29}{系数除以频率后的可和性}{史练习17.4第6题，第339页（PDF339）；由收敛加强为绝对收敛，改编。}
+设$a_n,b_n$为$f$的实Fourier系数，其中$f$在一个周期上可积且平方可积。证明
+\[
+ \sum_{n=1}^{\infty}\frac{|a_n|+|b_n|}{n}<\infty.
+\]
+
+\ex{B30}{绝对正弦的展开与振荡平均}{史练习17.2第6题，第322页（PDF322）；课本习题五第6题，第126页（PDF127）；第四次作业教材21.2第4题，合并。}
+证明在$\R$上绝对一致成立的展开
+\[
+ |\sin t|=\frac2\pi-\frac4\pi\sum_{k=1}^{\infty}\frac{\cos2kt}{4k^2-1}.
+\]
+由此对$[a,b]$上的黎曼可积函数$f$证明
+\[
+ \lim_{n\to\infty}\int_a^bf(x)|\sin nx|\dd x
+ =\frac2\pi\int_a^bf(x)\dd x.
+\]
+
+
+
+\subsection*{补充的课程教材原题}
+
+\ex{B31}{由平方倒数和求交错和与奇数项和}{课本习题五第9题，第127页（PDF128），原题。}
+利用$\sum_{n=1}^{\infty}n^{-2}=\pi^2/6$，证明
+\[
+ 1-\frac1{2^2}+\frac1{3^2}-\frac1{4^2}+\cdots=\frac{\pi^2}{12},
+ \qquad
+ 1+\frac1{3^2}+\frac1{5^2}+\frac1{7^2}+\cdots=\frac{\pi^2}{8}.
+\]
+
+\ex{B32}{线性函数与Parseval求平方倒数和}{课本习题五第11题，第127页（PDF128），原题并补系数计算与端点收敛值。}
+当$0\le x<2\pi$时令$f(x)=x$，作$2\pi$周期延拓。
+\begin{enumerate}[label=(\arabic*)]
+\item 求$f$的实Fourier系数，写出其Fourier级数，确定各点的收敛值。
+\item 应用Parseval等式，证明$\sum_{n=1}^{\infty}n^{-2}=\pi^2/6$。
+\end{enumerate}
+
+\ex{B33}{半周期阶跃函数与奇数平方倒数和}{课本习题五第16题，第128页（PDF129），原题；端点按周期延拓理解。}
+利用
+\[
+ f(x)=\begin{cases}1,&-\pi\le x<0,\\0,&0\le x<\pi,\end{cases}
+ \qquad
+ f(x)\sim\frac12-\frac2\pi\sum_{n=1}^{\infty}
+                    \frac{\sin((2n-1)x)}{2n-1},
+\]
+和Parseval等式，证明
+\[
+ \sum_{n=1}^{\infty}\frac1{(2n-1)^2}=\frac{\pi^2}{8}.
+\]
+
+\ex{B34}{绝对值函数与奇数四次倒数和}{课本习题五第17题，第128页（PDF129），保留原函数，修正所列展开式的符号后表述。}
+\noindent\textbf{原书问题说明：}原书定义的是$-\lvert x\rvert$，但所列级数
+$\pi/2+(2/\pi)\sum_{n\ge1}(((-1)^n-1)/n^2)\cos nx$对应$\lvert x\rvert$；两者整体相差一个负号。以下采用与原函数一致的展开式。
+
+设
+\[
+ f(x)=\begin{cases}x,&-\pi\le x<0,\\-x,&0\le x<\pi,\end{cases}
+\]
+并作周期延拓。
+\begin{enumerate}[label=(\arabic*)]
+\item 验证其Fourier展开为
+\[
+ f(x)=-\frac\pi2+\frac2\pi\sum_{n=1}^{\infty}
+                   \frac{1-(-1)^n}{n^2}\cos nx.
+\]
+\item 应用Parseval等式，求$\sum_{n=1}^{\infty}(2n-1)^{-4}$。
+\end{enumerate}
+
+\ex{B35}{平方函数与Parseval求四次倒数和}{课本习题五第18题，第128页（PDF129），原题。与B25结论相同，但采用的函数及展开式不同。}
+利用
+\[
+ x^2=\frac{\pi^2}{3}+4\sum_{n=1}^{\infty}
+                         \frac{(-1)^n}{n^2}\cos nx,
+ \qquad -\pi<x<\pi,
+\]
+和Parseval等式，求$\sum_{n=1}^{\infty}n^{-4}$。
+
+\Needspace{12\baselineskip}
+\section{提高题集}
+本部分保留仍适用的原题号，新选题从H25起编号，编号有间隔。各题只使用通常或反常黎曼积分及课程中的Fourier级数方法。
+
+\ex{H01}{系数的一致稳定性}{Stein第2章Exercise 11，第61--62页（PDF78--79）；将周期1换为周期$2\pi$，改编。}
+设$f_j,f$均为一个周期上黎曼可积的函数，且$\int_{-\pi}^{\pi}|f_j-f|\dd x\to0$。证明
+\[
+ \sup_{n\in\Z}|c_n(f_j)-c_n(f)|\longrightarrow0.
+\]
+再证明：若$\sum_j\int_{-\pi}^{\pi}|f_j-f|\dd x<\infty$，则$\sum_j\sup_n|c_n(f_j)-c_n(f)|<\infty$；第二问为新增推论。
+
+\ex{H06}{非整数平移的倒数平方和}{Stein第3章Exercise 9，第90页（PDF107），翻译。}
+设$\alpha\in\R\setminus\Z$。求
+\[
+ f(x)=\frac\pi{\sin\pi\alpha}e^{i(\pi-x)\alpha}\quad(0\le x<2\pi)
+\]
+的全部Fourier系数，证明其形式展开为$\sum_{n\in\Z}e^{inx}/(n+\alpha)$，并由Parseval证明
+\[
+ \sum_{n\in\Z}\frac1{(n+\alpha)^2}=\frac{\pi^2}{\sin^2\pi\alpha}.
+\]
+
+\ex{H07}{逐项积分与高次倒数和}{史练习17.4第3题，第338页（PDF338），原题。}
+从$x=2\sum_{n\ge1}(-1)^{n-1}\sin(nx)/n$（$-\pi<x<\pi$）出发，逐项积分求$x^2,x^3,x^4$在该区间上的Fourier展开式，并证明
+\[
+ \sum_{n=1}^{\infty}\frac1{n^6}=\frac{\pi^6}{945},\qquad
+ \sum_{n=1}^{\infty}\frac1{n^8}=\frac{\pi^8}{9450}.
+\]
+
+\ex{H08}{三角函数的部分分式展开}{史练习17.2第5题及例2，第318、322页；另见Stein第3章Problem 3(a)--(c)，第96--97页（PDF113--114）。只取实参数的级数部分，不取其积分应用，改编。}
+先求$\cos(\alpha x)$（$\alpha\notin\Z$）在$[-\pi,\pi]$上的Fourier展开，再证明对$x\notin\pi\Z$，
+\[
+ \cot x=\frac1x+\sum_{n=1}^{\infty}\frac{2x}{x^2-n^2\pi^2},
+ \qquad
+ \frac1{\sin x}=\frac1x+\sum_{n=1}^{\infty}(-1)^n\frac{2x}{x^2-n^2\pi^2}.
+\]
+
+\ex{H13}{单调性、系数界与局部收敛}{课本习题五第15题，第128页（PDF129）；第四次作业教材21.2第13题；Stein第3章Exercise 17，第93页（PDF110），合并。}
+设实值$f$在$[-\pi,\pi]$有界且单调。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明$\{nc_n(f)\}$有界。
+\item 证明其Fourier部分和在每个$x$收敛到左右极限平均，端点按周期延拓理解。
+\item 若只要求$f$ Riemann可积，且在$(\alpha,\beta)\subset[-\pi,\pi]$内单调，证明该平均值结论在每个$x\in(\alpha,\beta)$仍成立。
+\end{enumerate}
+
+\ex{H14}{最优常数与边界条件}{Stein第3章Exercise 11，第90--91页（PDF107--108），翻译。}
+\begin{enumerate}[label=(\arabic*)]
+\item 设$f$为连续、分段$C^1$的实值$T$周期函数，$\int_0^Tf=0$。证明
+$\int_0^Tf^2\le T^2(4\pi^2)^{-1}\int_0^Tf'^2$，并确定等号条件。
+\item 若$f$如上，$g$为$C^1$的实值$T$周期函数，证明
+\[
+ \left|\int_0^Tf(t)g(t)\dd t\right|^2
+ \le\frac{T^2}{4\pi^2}\int_0^Tf^2\dd t\int_0^Tg'^2\dd t.
+\]
+\item 设$f\in C^1[a,b]$，$f(a)=f(b)=0$。证明
+$\int_a^bf^2\le(b-a)^2\pi^{-2}\int_a^bf'^2$；确定等号条件，并证明常数最优。
+\end{enumerate}
+
+\ex{H15}{高阶光滑性与一致误差速度}{课本定理5.3.2--5.3.3，第120--121页（PDF121--122）；已有笔记高阶衰减部分，正文改编。}
+设$m\ge1$，$f\in C^{m-1}[-\pi,\pi]$，$f^{(m-1)}$有限分段连续可导，$f^{(m)}$可积且平方可积，且$f^{(j)}(-\pi)=f^{(j)}(\pi)$（$0\le j<m$）。证明
+\[
+ c_n(f)=\frac{c_n(f^{(m)})}{(in)^m}\quad(n\ne0),\qquad
+ \sum_{n\in\Z}|n|^{2m}|c_n(f)|^2<\infty,
+\]
+并证明$\sup_{|x|\le\pi}|f(x)-S_N(f,x)|=o(N^{1/2-m})$。
+
+\ex{H16}{原级数不逐点收敛时的逐项积分}{课本定理5.3.4，第122页（PDF123）；史定理17.4.4，第337--338页（PDF337--338），按可积且平方可积条件表述。}
+设$f$在一个周期上可积且平方可积。证明对任意$a,b\in[-\pi,\pi]$，
+\[
+ \int_a^bf(x)\dd x=c_0(f)(b-a)+\sum_{n\ne0}c_n(f)\frac{e^{inb}-e^{ina}}{in}.
+\]
+证明右侧绝对收敛，且以$b$为变量的级数在全区间一致收敛。说明为何无需先假定原Fourier级数处处收敛。
+
+\ex{H17}{Lebesgue数的对数增长}{第三次作业Dirichlet核题第(3)问；Stein第2章Problem 2(a)，第66页（PDF83）；将“趋于无穷”加强为双边阶估计，改编。}
+对$D_N(t)=\sin((N+1/2)t)/\sin(t/2)$，令
+$L_N=(2\pi)^{-1}\int_{-\pi}^{\pi}|D_N(t)|\dd t$。
+证明存在常数$c,C>0$，对所有$N\ge1$有
+\[
+ c\log(N+1)\le L_N\le C\log(N+1).
+\]
+
+\ex{H18}{正弦和与非负辅助核}{第四次作业补充题1（1），原题；将端点表达明确化。}
+设$K_n(x)=\sum_{k=1}^n\sin kx$。证明对$0<x\le\pi$，
+\[
+ K_n(x)=\frac{\cos(x/2)-\cos((n+1/2)x)}{2\sin(x/2)},\qquad
+ K_n^*(x)=K_n(x)-\frac12\sin nx=\sin^2(nx/2)\cot(x/2)\ge0.
+\]
+用$K_n^*$证明$\int_0^\pi|K_n(x)|\dd x\le C\log(n+1)$，其中$C$不依赖$n$。端点处取连续延拓值。
+
+\ex{H19}{正弦级数的绝对可积性}{第四次作业补充题1（3）；课本习题五第5题，第126页（PDF127），按原作业允许的反常积分结论表述。}
+设$b_n\downarrow0$，$\sum_{n\ge1}b_n/n<\infty$，并令$s_N=\sum_{k=1}^Nb_k\sin kx$，$f=\lim_Ns_N$。证明
+\[
+ \sup_N\int_0^\pi|s_N(x)|\dd x<\infty,\qquad
+ \int_{0+}^\pi|f(x)|\dd x<\infty.
+\]
+不要预先假定$f$在$0$附近有界。
+
+\ex{H20}{正弦积分与部分和的一致界}{Stein第3章Exercises 12、19，第91、94页（PDF108、111）；第三次作业Dirichlet核题、第四次作业补充题2（2），合并。}
+\begin{enumerate}[label=(\arabic*)]
+\item 证明$\int_0^\infty\sin t/t\dd t=\pi/2$。
+\item 证明$\sup_N\sup_{|x|\le\pi}|\int_0^xD_N(t)\dd t|<\infty$。
+\item 设$h(x)=i(\pi-x)$（$0\le x<2\pi$），周期延拓，证明
+\[
+ S_N(h,x)=\sum_{1\le|k|\le N}\frac{e^{ikx}}k
+ =i\left(\int_0^xD_N(t)\dd t-x\right),
+\]
+并证明这些部分和关于$N$及$|x|\le\pi$一致有界。
+\end{enumerate}
+
+\ex{H21}{Gibbs超调的定量计算}{第三次作业方波题第(2)问，原题，明确部分和指标。}
+令$Q_M(x)=(4/\pi)\sum_{k=1}^M\sin((2k-1)x)/(2k-1)$。求其第一个正极大值点$x_M$，证明
+\[
+ x_M\to0,\qquad Q_M(x_M)\to\frac2\pi\int_0^\pi\frac{\sin t}{t}\dd t,
+\]
+并算出极限超调量占方波跳跃高度的比例。说明这为何不与固定点处的收敛矛盾。
+
+\ex{H22}{连续函数的Fourier部分和在一点无界}{第四次作业补充题2（3）（4），节选并限定原题估计的基本周期范围。}
+令$P_n(x)=\sum_{1\le|k|\le n}e^{ikx}/k$、$g_n(x)=e^{inx}P_n(x)$。
+\begin{enumerate}[label=(\arabic*)]
+\item 写出$S_m(g_n,x)$在$m\ge2n$和$m<2n$时的精确表达，并证明存在绝对常数$C$使
+$|S_m(g_n,x)|\le C/|x|$对所有$m,n\ge1$和$0<|x|\le\pi$成立。
+\item 定义$\lambda_k=1+\lfloor e^{e^k}\rfloor$、$F(x)=\sum_{k\ge1}k^{-2}g_{\lambda_k}(x)$。证明$F$为连续的$2\pi$周期函数，其Fourier级数在$0<|x|\le\pi$收敛到$F(x)$，但$\limsup_N|S_N(F,0)|=\infty$。
+\end{enumerate}
+
+\ex{H23}{处处收敛的三角级数也可能不是平方可积函数的Fourier级数}{Stein第3章Exercise 7，第89页（PDF106）；史练习17.4第7题，第339页（PDF339），合并并修正一致收敛区间的表述。}
+证明$\sum_{n=2}^\infty\sin(nx)/\log n$在每个实数$x$处收敛，在每个与$2\pi\Z$距离为正的紧区间上一致收敛，却不是任何在一个周期上可积且平方可积的函数的Fourier级数，因而也不是Riemann可积周期函数的Fourier级数。
+
+
+\ex{H25}{有界连续函数也能产生大的部分和值}{Stein第2章Problem 2(b)，第66页（PDF83），节选；与H17的核积分估计配套。}
+证明存在绝对常数$c>0$，使对每个整数$N\ge2$，均存在连续的$2\pi$周期函数$f_N$，满足
+\[
+ |f_N(x)|\le1\quad(x\in\R),\qquad |S_N(f_N,0)|\ge c\log N.
+\]
+
+\ex{H26}{区间示性函数的绝对收敛问题}{Stein第2章Exercise 9，第61页（PDF78），节选并明确端点条件。}
+设$-\pi<a<b<\pi$，$f(x)=1$（$a\le x\le b$）、$f(x)=0$（区间外），周期延拓。其非零频率系数为
+\[
+ c_n=\frac{e^{-ina}-e^{-inb}}{2\pi in}\quad(n\ne0).
+\]
+证明$\sum_{n\in\Z}|c_ne^{inx}|$对每个$x$都发散，但其对称部分和仍在每点收敛；写出收敛值。
+
+\ex{H27}{分部积分得到的初等正交多项式}{Stein第3章Problem 2(a)(b)，第95--96页（PDF112--113），只取前两问，不取其余部分。}
+对$n=0,1,2,\ldots$定义$P_n(x)=\frac{\mathrm d^n}{\mathrm dx^n}(x^2-1)^n$（$-1\le x\le1$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 对$u\in C^n[-1,1]$，证明
+\[
+ \int_{-1}^1P_n(x)u(x)\dd x=(-1)^n\int_{-1}^1(x^2-1)^n u^{(n)}(x)\dd x.
+\]
+据此证明$P_n$与次数小于$n$的多项式正交，进而证明$P_n$两两正交。
+\item 计算并证明$\int_{-1}^1P_n(x)^2\dd x=(n!)^2 2^{2n+1}/(2n+1)$。
+\end{enumerate}
+
+\ex{H28}{二阶导数系数与带权放缩}{课本习题五第19题，第129页（PDF130），原题并明确导数系数记号。}
+设$f\in C^2(\R)$为$2\pi$周期函数，记$b_n(f)$、$b_n(f'')$为相应正弦系数。若$\sum_{n\ge1}|b_n(f'')|<\infty$，证明
+\[
+ \sum_{n=1}^{\infty}\sqrt{|b_n(f)|}
+ <\frac12\left(2+\sum_{n=1}^{\infty}|b_n(f'')|\right).
+\]
+
+\ex{H29}{自相关函数的系数与Parseval等式}{史问题17.4第1题，第339页（PDF339），原题。}
+设$f$为实值连续周期函数，定义
+\[
+ F(x)=\frac1\pi\int_{-\pi}^{\pi}f(t)f(x+t)\dd t.
+\]
+以$a_n,b_n$和$A_n,B_n$分别记$f$与$F$的实Fourier系数，证明
+$A_0=a_0^2$、$A_n=a_n^2+b_n^2$、$B_n=0$（$n\ge1$）。由此推出$f$的Parseval等式。
+
+\ex{H30}{附加对称性改善积分不等式常数}{史问题17.4第3题，第339页（PDF339），原题。}
+设实值$f\in C^1[0,1]$，$f(0)=f(1)=0$，且$f(1/2-x)=-f(1/2+x)$对$0\le x\le1/2$成立。证明
+\[
+ \int_0^1 f(x)^2\dd x\le\frac1{4\pi^2}\int_0^1 f'(x)^2\dd x,
+\]
+并确定等号成立的条件。
+
+\ex{H31}{分段线性函数与带参数的倒数四次和}{史练习17.4第4、5题，第338--339页（PDF338--339）；把原题分点1改为参数$\delta$并明确奇延拓，改编。}
+设$0<\delta<\pi$，在$[0,\pi]$上定义
+\[
+ f_\delta(x)=\begin{cases}\dfrac{\pi-\delta}{2\delta}x,&0\le x\le\delta,\\[3pt]\dfrac{\pi-x}{2},&\delta<x\le\pi.\end{cases}
+\]
+作奇延拓后按$2\pi$周期延拓。证明
+\[
+ f_\delta(x)=\frac1\delta\sum_{n=1}^{\infty}\frac{\sin(n\delta)}{n^2}\sin nx,
+ \qquad\sum_{n=1}^{\infty}\frac{\sin^2(n\delta)}{n^4}=\frac{\delta^2(\pi-\delta)^2}{6}.
+\]
+
+\ex{H32}{不要求绝对可积的振荡反常积分}{课本习题五第8题，第126页（PDF127）；第三次作业教材21.2第6题，原题并补统一估计。}
+设实值$f$在$[0,\infty)$连续且单调，$\lim_{x\to\infty}f(x)=0$。证明对每个$n\ge1$，反常积分$\int_0^\infty f(x)\sin nx\dd x$收敛，且
+\[
+ \left|\int_0^\infty f(x)\sin nx\dd x\right|\le\frac{2|f(0)|}{n}.
+\]
+从而证明该积分随$n\to\infty$趋于$0$；不假设$\int_0^\infty|f|$收敛。
+
+\ex{H33}{一般连续周期函数的振荡平均}{第三次作业周期振荡积分补充题；将绝对值版本与不带绝对值版本合并，改编。}
+设$f$在$[a,b]$上黎曼可积，$g$为连续$T$周期函数。证明
+\[
+ \lim_{n\to\infty}\int_a^bf(x)g(nx)\dd x
+ =\frac1T\left(\int_0^Tg(t)\dd t\right)\left(\int_a^bf(x)\dd x\right),
+\]
+并证明把$g(nx)$及$g(t)$同时换成其绝对值后结论仍成立。
+
+
+\ex{H34}{周期振荡积分的平方和与零均值条件}{课本习题五第2题，第126页（PDF127）；保留原断言，新增条件辨析，并按成立的结论改编。}
+\noindent\textbf{原书问题说明：}课本给出的条件未要求$\int_0^1 f(x)\dd x=0$，而其平方和结论需要这一条件；下题将原断言列作辨析对象，不直接当成成立的命题。
+
+设$g$为实值连续的$1$周期函数，$\int_0^1g(x)\dd x=1$；$f\in C^1[0,1]$为实值函数，令
+\[
+ a_n=\int_0^1 f(x)g(nx)\dd x\quad(n\ge1),
+ \qquad \mu=\int_0^1f(x)\dd x.
+\]
+\begin{enumerate}[label=(\arabic*)]
+\item 判断原书断言“$\sum_{n=1}^{\infty}a_n^2$收敛”是否在现有条件下总成立；若不成立，给出反例。
+\item 证明$a_n-\mu=O(1/n)$，并证明$\sum_{n=1}^{\infty}(a_n-\mu)^2$收敛。
+\item 证明$\sum_{n=1}^{\infty}a_n^2$收敛当且仅当$\mu=0$。
+\end{enumerate}
+
+\end{document}

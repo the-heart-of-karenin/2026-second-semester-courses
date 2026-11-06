@@ -1,0 +1,290 @@
+\input{preamble.tex}
+\title{含参变量积分：标准结论与复习提纲}
+\author{}\date{2026年11月2日}
+\begin{document}\maketitle
+\scope
+
+本册以上课参照的《高等微积分学》（简称“教材”）为正文主线，严格陈述结论，不重复教材证明。史济怀《数学分析教程》第18章重排稿（简称“史”）仅提供少量补充结论；谢惠民《数学分析习题课讲义》只用于配套题集，不作为本册理论来源。没有历年真题，老师尚未说明难度；复习侧重点依现有前两次作业及课堂笔记判断，不把选题难度当成已确认的考试要求。
+
+积分均为通常黎曼积分或反常黎曼积分，有限区间端点处导数按单侧理解。无穷区间、瑕点分别截断，不能用对称主值替代反常积分。记$C_c^m$为具有紧支集的$m$阶连续可微函数类；这里只讨论通常函数，不使用广义函数。配套题集独立收录题目，本册不再列计算例题。
+\tableofcontents\clearpage
+\section{含参变量常义积分}
+\result{S01}{定义与连续性}{教材·定义4.1.1、定理4.1.2，原书75--76页}
+设$D=[a,b]\times[c,d]$，对每个$y\in[c,d]$，$x\mapsto f(x,y)$在$[a,b]$上黎曼可积，定义
+\[
+ I(y)=\int_a^b f(x,y)\dd x.
+\]
+若$f\in C(D)$，则$I\in C[c,d]$，特别地
+\[
+ \lim_{y\to y_0}\int_a^bf(x,y)\dd x
+ =\int_a^b f(x,y_0)\dd x\quad(y_0\in[c,d]).
+\]
+\result{S02}{有限矩形上的换序}{教材·定理4.1.3，原书76页}
+若$f\in C([a,b]\times[c,d])$，则两个累次黎曼积分均存在，且
+\[
+ \int_c^d\left(\int_a^bf(x,y)\dd x\right)\dd y
+ =\int_a^b\left(\int_c^df(x,y)\dd y\right)\dd x.
+\]
+\result{S03}{积分号下求导}{教材·定理4.1.4，原书76页}
+若$f,f_y\in C(D)$，则$I\in C^1[c,d]$，且
+\[
+ I'(y)=\int_a^bf_y(x,y)\dd x.
+\]
+若相应的参数偏导数直到$m$阶均在$D$上连续，可逐次应用本结论得到
+$I^{(j)}(y)=\int_a^b\partial_y^jf(x,y)\dd x$，$1\le j\le m$。
+\result{S04}{变上下限积分的求导}{教材·定理4.1.5，原书76--77页}
+设$f,f_y\in C(D)$，$u,v\in C^1[c,d]$，且$a\le u(y)\le v(y)\le b$。则
+\[
+ \frac{\dd}{\dd y}\int_{u(y)}^{v(y)}f(x,y)\dd x
+ =\int_{u(y)}^{v(y)}f_y(x,y)\dd x
+ +f(v(y),y)v'(y)-f(u(y),y)u'(y).
+\]
+三项分别来自被积函数、上限和下限；变量范围须保证所有取值仍在$D$内。
+\result{S05}{带黎曼可积权的版本}{补充·第1次作业第1题（现存解答），对应教材§4.1}
+若$g$在$[a,b]$上黎曼可积，$f\in C(D)$，则
+$F(y)=\int_a^bf(x,y)g(x)\dd x$连续，且可交换$x,y$两次积分；若另有$f_y\in C(D)$，则
+\[
+ F'(y)=\int_a^bf_y(x,y)g(x)\dd x.
+\]
+依据是$\int_a^b|g|<\infty$以及$f$或$f_y$在紧矩形上的一致连续性，例如
+\[
+ |F(y)-F(y_0)|\le\left(\int_a^b|g|\dd x\right)
+ \sup_{a\le x\le b}|f(x,y)-f(x,y_0)|.
+\]
+换序可对$f(x,y)g(x)$用黎曼积分的矩形换序定理：乘积在矩形上可积且各截面可积；不要求$g$连续。
+\section{含参变量反常积分与一致收敛}
+\result{S06}{一致收敛的定义}{教材·定义4.2.1--4.2.3，原书78--79页}
+设$f(\cdot,y)$在$[a,\omega)$的每个紧子区间可积，$y\in Y$，其中$\omega\le+\infty$为反常端点。若每个参数处
+$I(y)=\int_a^\omega f(x,y)\dd x$收敛，且
+\[
+ \forall\varepsilon>0\ \exists A_0<\omega\ 
+ \forall A\in(A_0,\omega)\ \forall y\in Y:
+ \left|\int_A^\omega f(x,y)\dd x\right|<\varepsilon,
+\]
+则称该积分在$Y$上一致收敛。$A_0$不依赖$y$。左端瑕点的定义以$\eta\downarrow0$时$\int_a^{a+\eta}f$一致趋零表述；两端反常时必须分别控制两端。局部一致收敛指在参数域的每个紧子区间上一致收敛，不等于在整个参数域上一致收敛。
+\result{S07}{一致Cauchy准则}{教材·定理4.2.6，原书80--81页}
+上述积分在$Y$上一致收敛，当且仅当
+\[
+ \forall\varepsilon>0\ \exists A_0<\omega\ 
+ \forall A_0<A<B<\omega\ \forall y\in Y:
+ \left|\int_A^B f(x,y)\dd x\right|<\varepsilon.
+\]
+这个版本不必先知道各$I(y)$的表达式。证明不一致收敛时，应给出固定$\varepsilon_0>0$及趋近反常端点的$A_j<B_j$、参数$y_j$，使对应有限尾段积分的绝对值始终不小于$\varepsilon_0$。
+\result{S08}{Weierstrass判别法}{教材·定理4.2.8，原书82页}
+若对所有$x\in[a,\omega)$、$y\in Y$有$|f(x,y)|\le H(x)$，其中$H\ge0$局部可积且$\int_a^\omega H(x)\dd x<\infty$，则$\int_a^\omega f(x,y)\dd x$及$\int_a^\omega|f(x,y)|\dd x$均在$Y$上一致收敛。控制函数必须与参数无关；通常只需在反常端点附近建立此界，剩余有限区间另行处理。
+\result{S09}{Abel一致收敛判别法}{教材·定理4.2.9(1)，原书82--83页}
+设对每个$y\in Y$，$u(\cdot,y)$、$v(\cdot,y)$在有限截断区间可积，$v(\cdot,y)$关于$x$单调。若$\int_a^\infty u(x,y)\dd x$在$Y$上一致收敛，且存在$M$使$|v(x,y)|\le M$对所有$x,y$成立，则
+\[
+ \int_a^\infty u(x,y)v(x,y)\dd x
+\]
+在$Y$上一致收敛。这里不要求$v$趋于$0$。
+\result{S10}{Dirichlet一致收敛判别法}{教材·定理4.2.9(2)，原书82--83页}
+若$v(\cdot,y)$关于$x$单调，且
+\[
+ \left|\int_a^A u(x,y)\dd x\right|\le M\quad(A\ge a,\ y\in Y),
+ \qquad\sup_{y\in Y}|v(x,y)|\longrightarrow0\quad(x\to\infty),
+\]
+则$\int_a^\infty uv\dd x$在$Y$上一致收敛。原函数界和$v\to0$都必须对参数统一。若可取上述$M$，对尾段用积分第二中值定理可得
+$|\int_A^Buv|\le4M\sup_{y\in Y}|v(A,y)|$；当$v$非负递减时可取更小常数，判别法不依赖最优常数。
+\result{S11}{保号积分的Dini定理}{教材·定理4.2.11，原书84页}
+若$f\in C([a,\infty)\times[c,d])$且在全域保号，$I(y)=\int_a^\infty f(x,y)\dd x$对每个$y$收敛并在$[c,d]$上连续，则该积分在$[c,d]$上一致收敛。参数区间的紧性、保号性及极限函数的连续性不能任意删去。
+\result{S12}{分块级数与量词}{教材·引理4.2.12，原书85--86页；补充·第1次作业第4题}
+对$\int_a^\infty f(x,y)\dd x$，以下等价：积分在$Y$上一致收敛；对\textbf{每一列}严格递增且趋于无穷的$a_n$（$a_1=a$），级数
+\[
+ \sum_{n=1}^\infty\int_{a_n}^{a_{n+1}}f(x,y)\dd x
+\]
+在$Y$上一致收敛。原书的“任意”不能换成“某一个固定分块”。对一个固定分块，逆向还可由下述补充条件保证：
+\[
+ \rho_n=\sup_{y\in Y}\sup_{a_n\le t\le a_{n+1}}
+ \left|\int_{a_n}^t f(x,y)\dd x\right|\longrightarrow0.
+\]
+理由是任意截断积分等于分块端点处的部分和加上一个块内余项，后者由$\rho_n$统一控制。只有完整块积分趋零，不能控制块内部正负相消以前的积分。
+\result{S13}{一致收敛保证连续性}{教材·定理4.2.13，原书86页}
+若$f\in C([a,\infty)\times[c,d])$，且$\int_a^\infty f(x,y)\dd x$在$[c,d]$上一致收敛，则$I\in C[c,d]$，并可交换$y\to y_0$与积分。局部一致收敛足以推出参数开区间内的连续性；要讨论边界，必须检查接近边界时的统一性。
+\result{S14}{极限与反常积分交换}{教材·定理4.2.14，原书86--87页，局部一致假设的明确表述}
+设$y\to y_0$（可含$y_0=\infty$），$\int_a^\infty f(x,y)\dd x$在参数集合$Y$上一致收敛。若对每个$A>a$，$f(\cdot,y)\to g$在$[a,A]$上一致收敛，且各截断函数黎曼可积，则$\int_a^\infty g$收敛，且
+\[
+ \lim_{y\to y_0}\int_a^\infty f(x,y)\dd x=\int_a^\infty g(x)\dd x.
+\]
+教材给出更强的全半轴上一致趋近假设；此处将实际证明只需的“每个有限截断区间上一致趋近”明确标为补充放宽。证明按有限区间误差与两个统一尾项分开估计，不调用测度论。
+\result{S15}{一个有限、一个反常的换序}{教材·定理4.2.15，原书87页}
+若$f\in C([a,\infty)\times[c,d])$，且内层积分关于$y\in[c,d]$一致收敛，则
+\[
+ \int_c^d\dd y\int_a^\infty f(x,y)\dd x
+ =\int_a^\infty\dd x\int_c^d f(x,y)\dd y.
+\]
+右侧反常积分也收敛；不必另要求$\int\!\int|f|$有限。
+\result{S16}{两个反常积分的换序}{教材·定理4.2.16，原书88--89页}
+设$f\in C([a,\infty)\times[c,\infty))$。对每个有限$A>a$，$\int_c^\infty f(x,y)\dd y$关于$x\in[a,A]$一致收敛；对每个有限$D>c$，$\int_a^\infty f(x,y)\dd x$关于$y\in[c,D]$一致收敛。若
+\[
+ \int_a^\infty\dd x\int_c^\infty|f(x,y)|\dd y,
+ \qquad
+ \int_c^\infty\dd y\int_a^\infty|f(x,y)|\dd x
+\]
+至少一个作为累次反常积分存在且有限，则两个不带绝对值的累次积分均绝对收敛，并相等。
+\result{S17}{非负情形的换序}{补充·第2次作业第2题，按原题的非负性与截面积分连续条件}
+设$f\ge0$在$[a,\infty)\times[c,\infty)$连续，且两个截面反常积分$F(y)=\int_a^\infty f(x,y)\dd x$、$\Phi(x)=\int_c^\infty f(x,y)\dd y$均处处有限并连续。若两个累次积分至少一个有限，则另一个也有限且二者相等。由保号积分的Dini定理，两个方向的积分在各紧参数区间上一致收敛。此处全部按通常反常黎曼积分理解。
+
+证明可取有限矩形积分$J(A,D)=\int_a^A\int_c^D f$。非负性使它对$A,D$分别递增。若
+\[
+ \lim_{A\to\infty}\lim_{D\to\infty}J(A,D)=L<\infty,
+\]
+则每个$J(A,D)\le L$；先对$A$取极限再对$D$取极限，所得$L'\le L$。反过来，每个$J(A,D)\le L'$，再按原次序取极限得$L\le L'$。有限矩形换序及局部一致收敛保证这些中间积分和极限合法，故$L=L'$。
+\result{S18}{反常积分号下求导}{教材·定理4.2.17，原书89页}
+若$f,f_y\in C([a,\infty)\times[c,d])$，原积分对每个$y$收敛，且$\int_a^\infty f_y(x,y)\dd x$在$[c,d]$上一致收敛，则
+\[
+ I\in C^1[c,d],\qquad I'(y)=\int_a^\infty f_y(x,y)\dd x.
+\]
+\source{补充·第2次作业第1题(2)}
+原积分实际上只须在某个$y_0\in[c,d]$处收敛。此时原积分还在整个$[c,d]$上一致收敛：截断后用
+\[
+ \int_A^B f(x,y)\dd x=\int_A^B f(x,y_0)\dd x
+ +\int_{y_0}^y\left(\int_A^B f_y(x,t)\dd x\right)\dd t,
+\]
+再用一致Cauchy准则即可。导数积分的一致收敛与原积分在一点的收敛，作用不同。
+\section{Euler积分：B函数与Gamma函数}
+\result{S19}{B函数的定义、连续性与递推}{教材·定义4.3.1、定理4.3.2，原书91--92页}
+对$p,q>0$，
+\[
+ B(p,q)=\int_0^1 t^{p-1}(1-t)^{q-1}\dd t.
+\]
+它关于$(p,q)$连续，且在正参数域的每个紧矩形上，两端瑕点积分一致收敛。并有
+\[
+ B(p,q)=B(q,p),\quad
+ B(p+1,q)=\frac{p}{p+q}B(p,q),\quad
+ B(p,q+1)=\frac{q}{p+q}B(p,q).
+\]
+后两式是教材递推式的等价换元形式。
+\result{S20}{B函数的换元形式}{教材·定理4.3.2(4)、例4.3.6，原书91--93页}
+对$p,q>0$，
+\[
+ B(p,q)=\int_0^\infty\frac{t^{p-1}}{(1+t)^{p+q}}\dd t
+ =2\int_0^{\pi/2}\sin^{2p-1}\theta\cos^{2q-1}\theta\dd\theta.
+\]
+等价地，对$r,s>-1$，$\int_0^{\pi/2}\sin^r\theta\cos^s\theta\dd\theta
+=\tfrac12 B((r+1)/2,(s+1)/2)$。端点幂次条件不可省略。
+\result{S21}{Gamma函数及参数求导}{教材·定义4.3.3、定理4.3.4，原书92页}
+对$p>0$，
+\[
+ \Gamma(p)=\int_0^\infty t^{p-1}e^{-t}\dd t,
+ \qquad
+ \Gamma^{(m)}(p)=\int_0^\infty t^{p-1}(\ln t)^m e^{-t}\dd t
+ \quad(m=0,1,\ldots).
+\]
+$\Gamma\in C^\infty(0,\infty)$；求导积分在每个$[p_0,p_1]\subset(0,\infty)$上绝对一致收敛。并有
+\[
+ \Gamma(p+1)=p\Gamma(p),\quad \Gamma(1)=1,\quad
+ \Gamma(n+1)=n!,\quad \Gamma(1/2)=\sqrt\pi.
+\]
+这里$n$为非负整数。递推到非正参数时不能再直接套用上述积分定义。
+\result{S22}{B与Gamma的关系}{教材·定理4.3.5，原书92--93页}
+\[
+ B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)}\qquad(p,q>0).
+\]
+教材利用两个反常积分换序来证明；复习证明时同时核对非负性、局部一致收敛与绝对可积条件。
+\result{S23}{Gamma反射公式：作业计算的补充工具}{补充·史§18.4，定理18.4.9；第2次作业第3题的计算所需}
+对$0<p<1$，
+\[
+ \Gamma(p)\Gamma(1-p)=B(p,1-p)=\frac\pi{\sin\pi p}.
+\]
+这是外来教材补充，不冒充课程教材第4.3节的原有定理。以下给出足以独立使用的推导。将$B(p,1-p)$的无穷积分在$1$处分开，后半作$t=1/u$，得到
+\[
+ B(p,1-p)=\int_0^1\frac{t^{p-1}+t^{-p}}{1+t}\dd t
+ =\sum_{n=0}^\infty(-1)^n\left(\frac1{n+p}+\frac1{n+1-p}\right).
+\]
+有限几何展开的余项积分不超过$1/(N+p+1)+1/(N+2-p)$，所以这里交换极限有直接的黎曼积分估计。另一方面，$h(t)=e^{ipt}$在$[-\pi,\pi]$作周期延拓，其系数为
+$c_n(h)=(-1)^n\sin(\pi p)/(\pi(p-n))$。它在$0$附近光滑，故Fourier级数在$0$处收敛到$1$，从而
+\[
+ \frac\pi{\sin\pi p}=\frac1p+\sum_{n=1}^\infty(-1)^n\frac{2p}{p^2-n^2}.
+\]
+前一个交错和将$n=0$的第一项分出，余项配对，即等于后一个部分分式和。这也说明公式可用先前学过的Fourier收敛结论与通常积分证明，无须复积分。
+\section{卷积、光滑化与一致逼近}
+\result{S24}{卷积的定义与存在条件}{教材·定义4.4.1及其注，原书93--94页}
+定义$(f*g)(x)=\int_\R f(x-y)g(y)\dd y$，前提是每个$x$处该反常积分收敛。在本册中常用的充分条件为：$f,g$局部黎曼可积且都具有紧支集；或一个全实轴有界、另一个全实轴反常绝对可积；或$f,g$均局部黎曼可积且$\int_\R|f|^2$、$\int_\R|g|^2$有限，此时用积分Cauchy--Schwarz不等式控制。这里的全实轴积分是左右两端分别收敛，不是主值积分。
+\result{S25}{交换性、平移与支集}{教材·定理4.4.2(1)--(3)，原书94页}
+在相应卷积存在的条件下，$f*g=g*f$；记$T_hf(x)=f(x-h)$，则
+\[
+ T_h(f*g)=(T_hf)*g=f*(T_hg).
+\]
+若$\supp f\subset[a,b]$、$\supp g\subset[c,d]$，则
+$\supp(f*g)\subset[a+c,b+d]$。
+\result{S26}{卷积的光滑性}{教材·定理4.4.2(4)，原书94页}
+若$f$在$\R$上局部黎曼可积，$g\in C_c^m(\R)$，则$f*g\in C^m(\R)$，并且
+\[
+ (f*g)^{(j)}=f*g^{(j)}\quad(1\le j\le m).
+\]
+若$g\in C_c^\infty$，则$f*g\in C^\infty$。紧支集保证在$x$的每个紧区间上只涉及$f$在某个有限区间的积分，因而可以应用含参积分求导定理。
+\result{S27}{delta逼近列}{教材·定义4.4.3、例4.4.4--4.4.5，原书95页}
+一族非负可积函数$\rho_\varepsilon$若满足
+\[
+ \int_\R\rho_\varepsilon(t)\dd t=1,\qquad
+ \int_{|t|\ge\delta}\rho_\varepsilon(t)\dd t\to0
+ \quad(\varepsilon\to0+,\ \forall\delta>0),
+\]
+称为$\delta$-函数逼近列。这里只指普通函数族，不把$\delta$当作普通函数。若$\rho\ge0$具有紧支集、$\int\rho=1$，则
+$\rho_\varepsilon(t)=\varepsilon^{-1}\rho(t/\varepsilon)$构成这样的逼近列。
+\result{S28}{卷积一致逼近}{教材·定理4.4.6，原书95--96页}
+设$f$在$\R$上有界且局部黎曼可积，并在开区间$(a,b)$内连续。若$\rho_\varepsilon$为S27的逼近列，则对每个$[h,s]\subset(a,b)$，
+\[
+ \sup_{h\le x\le s}|(f*\rho_\varepsilon)(x)-f(x)|\longrightarrow0.
+\]
+全局一致连续的有界$f$可将$[h,s]$换成$\R$。此全局结论是同一证明的直接补充：误差近处由一致连续性控制，远处不超过$2\sup|f|\int_{|t|\ge\delta}\rho_\varepsilon$。
+\result{S29}{光滑函数一致逼近连续函数}{教材·定理4.4.2、4.4.6的推论，明确列为补充推论}
+任意$f\in C[a,b]$可在$[a,b]$上被$C^\infty(\R)$函数一致逼近。取其连续、有界且紧支集的延拓$\widetilde f$，并取
+\[
+ j(t)=\begin{cases}C\exp\!\bigl(1/(t^2-1)\bigr),&|t|<1,\\0,&|t|\ge1,\end{cases}
+ \qquad\int_\R j=1,\qquad j_\varepsilon(t)=\varepsilon^{-1}j(t/\varepsilon).
+\]
+则$\widetilde f*j_\varepsilon$光滑，且在$[a,b]$上一致趋于$f$。先连续延拓，是为了避免直接零延拓时在原端点制造跳跃。
+\result{S30}{多项式一致逼近}{教材·定理3.5.1、推论4.4.7，原书69--71、96页}
+若$f\in C[a,b]$，则存在实多项式列$P_n$在$[a,b]$上一致趋于$f$。教材先归约到$[0,1]$且$f(0)=f(1)=0$，再以零延拓后的$f$和归一化核
+$Q_n(t)=c_n(1-t^2)^n\mathbf1_{[-1,1]}(t)$作卷积型逼近。处理一般端点值时先减去连接两端点的线性函数，逼近以后再加回。
+\result{S31}{三角多项式一致逼近}{教材·推论4.4.7、定理5.2.6，原书96、117--118页}
+若$f$是连续的$2\pi$周期函数，记$S_j(f)$为其对称Fourier部分和，则
+\[
+ \sigma_N(f,x)=\frac1{N+1}\sum_{j=0}^N S_j(f,x)
+ =\frac1{2\pi}\int_{-\pi}^{\pi}f(x-t)K_N(t)\dd t,
+\]
+其中$K_N(t)=(N+1)^{-1}(\sin((N+1)t/2)/\sin(t/2))^2$。$\sigma_N$是三角多项式，并在全周期一致趋于$f$。此处是Fej\'er平均，不是断言普通Fourier部分和也一致收敛。
+\result{S32}{光滑截断函数}{教材·定理4.4.8，原书97页}
+若$\Omega\subset\R^n$为开集，$K\subset\Omega$为紧集，则存在$\chi\in C^\infty(\R^n)$，使
+\[
+ 0\le\chi\le1,\quad \chi|_K=1,\quad \supp\chi\subset\Omega.
+\]
+可取$\chi$具有紧支集；这比单说在$\R^n\setminus\Omega$上为零更明确。教材以较大紧邻域的特征函数和小支集光滑核卷积构造，属于普通函数的卷积应用，不属于广义函数部分。
+\result{S33}{单位分解}{教材·定义4.4.10、定理4.4.11，原书98页；课堂lecture007}
+若$\Omega\subset\R^n$为开集，$\{U_i\}_{i\in I}$为局部有限开覆盖，则存在$\varphi_i\in C^\infty(\Omega)$，满足
+\[
+ 0\le\varphi_i\le1,\quad \supp\varphi_i\subset U_i,
+ \quad \sum_i\varphi_i=1\ \text{在}\Omega\text{上}.
+\]
+上式的支集在$\Omega$内取相对支集；一般开集版本的函数空间明确写为$C^\infty(\Omega)$，不沿用原书在此处笼统写出的$C^\infty(\R^n)$。课堂重点是紧集$K$的有限版本：任意开覆盖可选有限子覆盖$U_1,\ldots,U_m$及紧支集光滑$\varphi_i$，满足上述支集约束且$\sum_{i=1}^m\varphi_i=1$在$K$上成立。只在$K$上保证和为$1$，不要求在全实空间恒为$1$。
+\section{课堂补充：积分渐近}
+\source{课堂·lecture007；本节不冒充教材第4章原文}
+下面保留课堂已有的三个结论及其关系。没有另行引入参考书中的命名方法。证明细节可回看原课堂笔记；这里给出严格条件与必要的推导关系。
+\result{S34}{极大值点处的局部化}{课堂·lecture007，局部化引理}
+设$f,S\in C[a,b]$，$x_0$为$S$的唯一全局最大值点，$M=S(x_0)$。对$x_0$的任意固定相对开邻域$U$，存在$\delta>0$使
+\[
+ \int_a^bf(x)e^{\lambda S(x)}\dd x
+ =\int_U f(x)e^{\lambda S(x)}\dd x+O(e^{\lambda(M-\delta)}).
+\]
+若$f(x_0)\ne0$且$U$取到$f$不变号的充分小邻域，则还存在$c>0$使总积分等于局部积分乘$1+O(e^{-c\lambda})$。加法形式不要求$f(x_0)\ne0$，乘法形式需要避免局部积分相消。无穷区间需另假设远处有一致间隙，并存在$\lambda_0$使$\int|f|e^{\lambda_0S}<\infty$，不能只凭唯一最大值直接套用。
+\result{S35}{Watson引理}{课堂·lecture007，Watson引理，参数记号沿用课堂}
+设$\alpha,\beta>0$，$a\in(0,\infty]$，$f:(0,a)\to\R$连续有界，且当$x\to0+$时
+$f(x)=\sum_{p=0}^k a_px^p+o(x^k)$。则当$\lambda\to\infty$，
+\[
+ \int_0^a x^{\beta-1}f(x)e^{-\lambda x^\alpha}\dd x
+ =\frac1\alpha\sum_{p=0}^k a_p\Gamma\!\left(\frac{\beta+p}{\alpha}\right)
+       \lambda^{-(\beta+p)/\alpha}
+ +o(\lambda^{-(\beta+k)/\alpha}).
+\]
+其推导先在固定小邻域内展开$f$，对每个幂项令$u=\lambda x^\alpha$；余项以$\varepsilon x^k$控制。邻域外因$f$有界而有指数小的尾项。这是通常积分的分段估计，不必调用控制收敛定理。
+\result{S36}{Laplace方法：内点非退化极大值}{课堂·lecture007，Laplace方法及其严格化}
+设$f,S\in C[a,b]$，$x_0\in(a,b)$是$S$唯一全局最大值点，$S$在其邻域内$C^2$，$S'(x_0)=0$、$S''(x_0)<0$，且$f(x_0)\ne0$。则
+\[
+ \int_a^bf(x)e^{\lambda S(x)}\dd x
+ \sim f(x_0)e^{\lambda S(x_0)}
+       \sqrt{\frac{2\pi}{-\lambda S''(x_0)}}.
+\]
+课堂用$x-x_0$的尺度$\lambda^{-1/2}$解释主项；严格证明先局部化，再利用二次上、下界或将变量换为$u=\operatorname{sgn}(x-x_0)\sqrt{S(x_0)-S(x)}$，归结到Watson引理。此形式不适用于退化极大值、端点极大值或$f(x_0)=0$的情况，须重新检查首项。
+\end{document}

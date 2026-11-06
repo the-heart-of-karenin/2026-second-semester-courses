@@ -1,0 +1,437 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.4em}
+\title{傅里叶级数笔记}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Thm.}
+$f\in R_2[-\pi,\pi]$，若存在
+\[
+ T_n(x)=\frac{c_0}{2}+\sum_{k=1}^{n}\bigl(c_k\cos kx+d_k\sin kx\bigr),
+\]
+使
+\[
+ \lim_{n\to\infty}\|f-T_n\|_2=0,
+\]
+则 $T_n=S_n$，$\forall n$。这里各系数不随 $n$ 改变，且
+\[
+ S_n(x)=\frac{a_0}{2}+\sum_{k=1}^{n}\bigl(a_k\cos kx+b_k\sin kx\bigr)
+\]
+是 $f$ 的傅里叶部分和，范数采用
+\[
+ \|g\|_2^2=\frac{1}{\pi}\int_{-\pi}^{\pi}|g(x)|^2\,dx.
+\]
+
+\medskip
+\noindent\textbf{Pf.}
+由于 $S_n$ 是投影，由勾股定理
+\[
+ \|f-T_n\|_2^2=\|f-S_n\|_2^2+\|S_n-T_n\|_2^2,
+\]
+故 $\|S_n-T_n\|_2\leq\|f-T_n\|_2$，从而
+\[
+ \lim_{n\to\infty}\|T_n-S_n\|_2=0.
+\]
+直接计算得
+\[
+ \|S_n-T_n\|_2^2
+ =\frac{(a_0-c_0)^2}{2}
+ +\sum_{k=1}^{n}\bigl((a_k-c_k)^2+(b_k-d_k)^2\bigr).
+\]
+若有某个系数不同，则存在 $N\geq1$ 和 $\delta>0$，使
+\[
+ \|S_n-T_n\|_2>\delta>0,\qquad\forall n\geq N.
+\]
+这与上面的极限矛盾，故所有对应系数均相同，即 $T_n=S_n$。
+
+\section*{从 $\{a_k\},\{b_k\}$ 反推 $f$ 的存在性}
+
+\subsection*{1. 系数绝对可和}
+若
+\[
+ \sum_{k=1}^{\infty}|a_k|+\sum_{k=1}^{\infty}|b_k|<\infty,
+\]
+则存在 $f\in C(-\pi,\pi)$，使得 $f$ 的傅里叶系数为 $a_k,b_k$。
+
+\noindent\textbf{Pf.}
+令
+\[
+ f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infty}
+ \bigl(a_k\cos kx+b_k\sin kx\bigr).
+\]
+由条件及
+\[
+ |a_k\cos kx+b_k\sin kx|\leq |a_k|+|b_k|,
+\]
+可知级数一致收敛，故 $f$ 连续；逐项积分可得其傅里叶系数为 $a_k,b_k$。
+
+\subsection*{2. 系数平方可和}
+若
+\[
+ \sum_{k=1}^{\infty}\bigl(|a_k|^2+|b_k|^2\bigr)<+\infty,
+\]
+同样考虑
+\[
+ f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infty}
+ \bigl(a_k\cos kx+b_k\sin kx\bigr),
+\]
+并令
+\[
+ s_n(x)=\frac{a_0}{2}+\sum_{k=1}^{n}
+ \bigl(a_k\cos kx+b_k\sin kx\bigr).
+\]
+则 $\{s_n\}$ 在 $L^2$ 中是 Cauchy 列：当 $n>m$ 时，
+\[
+ \|s_n-s_m\|_2^2
+ =\sum_{k=m+1}^{n}\bigl(|a_k|^2+|b_k|^2\bigr)
+ \longrightarrow0\qquad(n,m\to\infty).
+\]
+从而收敛到一个可测的 $F(x)$。实际上，由 $|f|$ 有界，还能证明
+\[
+ F(x)=f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infty}
+ \bigl(a_k\cos kx+b_k\sin kx\bigr).
+\]
+
+\section*{光滑性与傅里叶系数的衰减}
+
+\noindent\textbf{Thm.}
+$f\in C^1$。分部积分得
+\begin{align*}
+ a_n(f)
+ &=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nx\,dx\\
+ &=\frac{1}{\pi}\left(
+ \left.\frac{f(x)\sin nx}{n}\right|_{-\pi}^{\pi}
+ -\frac{1}{n}\int_{-\pi}^{\pi}f'(x)\sin nx\,dx\right)\\
+ &=-\frac{1}{n\pi}\int_{-\pi}^{\pi}\sin nx\,f'(x)\,dx
+ =-\frac{1}{n}b_n(f').
+\end{align*}
+同理，$b_n(f)=\frac{1}{n}a_n(f')$。
+由 $f'$ 的傅里叶系数是 $o(1)$，得到
+\[
+ a_n(f),\ b_n(f)\in o\!\left(\frac{1}{n}\right).
+\]
+
+实际上，设 $f\in C^{(m)}[-\pi,\pi]$，在端点满足
+\[
+ f^{(j)}(\pi)=f^{(j)}(-\pi),\qquad j=0,1,\ldots,m.
+\]
+则有：
+\begin{enumerate}
+\item
+\[
+ a_n(f)=\frac{\alpha_n}{n^m},\qquad
+ b_n(f)=\frac{\beta_n}{n^m},\qquad
+ \sum_{n=1}^{\infty}(\alpha_n^2+\beta_n^2)<\infty.
+\]
+从而 $a_n,b_n\in o(n^{-m})$。
+\item $S_n\rightrightarrows f$ 在 $[-\pi,\pi]$ 上，且
+\[
+ \sup_{x\in[-\pi,\pi]}|f(x)-S_n(x)|
+ \leq\frac{\gamma_n}{n^{m-\frac12}},\qquad \gamma_n^2=o(1).
+\]
+\end{enumerate}
+
+\noindent\textbf{Pf.}
+(1) 由
+\[
+ a_n(f)=-\frac{1}{n}b_n(f'),\qquad
+ b_n(f)=\frac{1}{n}a_n(f'),
+\]
+反复迭代即可。
+
+(2) 由 Cauchy 不等式，
+\begin{align*}
+ |f(x)-S_n(x)|
+ &\leq\sum_{k=n+1}^{\infty}(|a_k|+|b_k|)\\
+ &=\sum_{k=n+1}^{\infty}\frac{1}{k^m}
+ (|\alpha_k|+|\beta_k|)\\
+ &\leq\left(\sum_{k=n+1}^{\infty}\frac{1}{k^{2m}}\right)^{1/2}
+ \left(\sum_{k=n+1}^{\infty}(|\alpha_k|+|\beta_k|)^2\right)^{1/2}\\
+ &\leq\sqrt{\frac{C}{n^{2m-1}}}\,
+ \left(\sum_{k=n+1}^{\infty}(|\alpha_k|+|\beta_k|)^2\right)^{1/2}.
+\end{align*}
+这里
+\[
+ \sum_{k=n+1}^{\infty}\frac{1}{k^{2m}}
+ \leq\int_n^{\infty}t^{-2m}\,dt
+ =\frac{1}{(2m-1)n^{2m-1}},
+\]
+且由 $(|\alpha_k|+|\beta_k|)^2\leq2(\alpha_k^2+\beta_k^2)$，
+尾和趋于零。将常数吸收到 $\gamma_n$ 中，即得
+\[
+ \sup_{x\in[-\pi,\pi]}|f(x)-S_n(x)|
+ \leq\frac{\gamma_n}{n^{m-\frac12}},\qquad\gamma_n=o(1).
+\]
+
+\section*{复数形式的傅里叶级数}
+
+\subsection*{1. 复傅里叶系数及其与三角形式的关系}
+设 $f:[-\pi,\pi]\to\mathbb C$，且 $f\in L^1[-\pi,\pi]$。
+定义
+\[
+ c_n=c_n(f)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\,dx,
+ \qquad n\in\mathbb Z.
+\]
+其复数形式的傅里叶级数记为
+\[
+ f(x)\sim\sum_{n\in\mathbb Z}c_ne^{inx}.
+\]
+这里 $\sim$ 表示右侧是由 $f$ 的傅里叶系数构成的级数，尚不表示
+级数在每一点都收敛到 $f$。本节双边级数按对称部分和理解：
+\[
+ S_n(x,f)=\sum_{k=-n}^{n}c_ke^{ikx}.
+\]
+
+由 Euler 公式
+\[
+ \cos nx=\frac{e^{inx}+e^{-inx}}{2},\qquad
+ \sin nx=\frac{e^{inx}-e^{-inx}}{2i},
+\]
+可得对 $n\geq1$，
+\[
+ c_0=\frac{a_0}{2},\qquad
+ c_n=\frac{a_n-ib_n}{2},\qquad
+ c_{-n}=\frac{a_n+ib_n}{2}.
+\]
+反过来，
+\[
+ a_n=c_n+c_{-n},\qquad b_n=i(c_n-c_{-n}).
+\]
+因此
+\[
+ c_ne^{inx}+c_{-n}e^{-inx}
+ =a_n\cos nx+b_n\sin nx,
+\]
+复数形式与三角形式的部分和完全相同。即使 $f$ 是复值函数，
+上述换算仍成立，此时 $a_n,b_n$ 也可以是复数。
+若 $f$ 为实值函数，则还满足共轭对称性
+\[
+ c_{-n}=\overline{c_n},\qquad c_0\in\mathbb R.
+\]
+
+\subsection*{2. Dirichlet 核与部分和的积分表达式}
+定义 Dirichlet 核
+\[
+ D_n(t)=\sum_{k=-n}^{n}e^{ikt}
+ =1+2\sum_{k=1}^{n}\cos kt.
+\]
+利用有限等比数列求和，当 $t\notin2\pi\mathbb Z$ 时，
+\begin{align*}
+ D_n(t)
+ &=e^{-int}\frac{1-e^{i(2n+1)t}}{1-e^{it}}\\
+ &=\frac{\sin((n+\frac12)t)}{\sin(t/2)}.
+\end{align*}
+在 $t\in2\pi\mathbb Z$ 处，直接由定义得 $D_n(t)=2n+1$，
+这也等于上式的连续延拓值。
+特别地，$D_n$ 是实值偶函数，且
+\[
+ \frac{1}{2\pi}\int_{-\pi}^{\pi}D_n(t)\,dt=1.
+\]
+
+将 $c_k$ 的定义代入有限和，可交换求和与积分，得到
+\begin{align*}
+ S_n(x,f)
+ &=\sum_{k=-n}^{n}\left(\frac{1}{2\pi}
+ \int_{-\pi}^{\pi}f(t)e^{-ikt}\,dt\right)e^{ikx}\\
+ &=\frac{1}{2\pi}\int_{-\pi}^{\pi}
+ f(t)\sum_{k=-n}^{n}e^{ik(x-t)}\,dt\\
+ &=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(t)D_n(x-t)\,dt.
+\end{align*}
+把 $f$ 作 $2\pi$ 周期延拓后，还可写成
+\[
+ S_n(x,f)=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x-t)D_n(t)\,dt.
+\]
+注意：作 $u=x-t$ 换元时，$dt=-du$，积分上下限变为 $x+\pi$ 和 $x-\pi$；
+交换上下限产生的负号与微分中的负号抵消，再利用周期性将积分区间移回 $[-\pi,\pi]$。
+因而在给定 $f(x)$ 的点上，
+\[
+ S_n(x,f)-f(x)
+ =\frac{1}{2\pi}\int_{-\pi}^{\pi}
+ [f(x-t)-f(x)]D_n(t)\,dt.
+\]
+这是研究点态收敛时常用的出发点。
+
+\subsection*{3. 保留的收敛性质}
+写 $f=u+iv$，其中 $u,v$ 为实值函数。由于积分及部分和算子均为线性，
+\[
+ S_n(f)=S_n(u)+iS_n(v).
+\]
+因此实值情形的许多收敛结论可以分别用于实部和虚部，再合并为复值结论。
+
+\paragraph{点态收敛与一致收敛.}
+在固定点 $x$，$S_n(x,f)\to f(x)$ 当且仅当实部、虚部的部分和
+分别收敛到 $u(x),v(x)$。由
+\[
+ |S_n(f)-f|\leq|S_n(u)-u|+|S_n(v)-v|,
+\]
+实部和虚部的一致收敛也给出复值函数的一致收敛；反向由
+$|\operatorname{Re}z|,|\operatorname{Im}z|\leq|z|$ 得到。
+
+\paragraph{分段 $C^1$ 情形的收敛定理.}
+设 $f:\mathbb R\to\mathbb C$ 是 $2\pi$ 周期函数，在一个周期上分段 $C^1$。
+则对每个 $x\in\mathbb R$，其傅里叶部分和满足
+\[
+ \lim_{n\to\infty}S_n(x,f)=\frac{f(x+)+f(x-)}{2}.
+\]
+在连续点，这个极限就是 $f(x)$；端点处的左右极限按周期延拓理解。
+
+\paragraph{某点满足局部 H\"older 条件时的收敛定理.}
+设 $f:\mathbb R\to\mathbb C$ 是 $2\pi$ 周期函数，
+$f\in L^1[-\pi,\pi]$，并给定 $x_0\in\mathbb R$。
+若存在 $C>0$、$\delta>0$ 及 $\alpha>0$，使得对所有 $|t|<\delta$，
+\[
+ |f(x_0+t)-f(x_0)|\leq C|t|^\alpha,
+\]
+则
+\[
+ \lim_{n\to\infty}S_n(x_0,f)=f(x_0).
+\]
+特别地，在上述周期性和可积性假设下，若 $f$ 在 $x_0$ 可微，
+则该点满足 $\alpha=1$ 的上述条件，故傅里叶级数在 $x_0$ 收敛到 $f(x_0)$。
+
+\paragraph{单调性的限制.}
+笔记中“除了单调增的 Dini 定理”是指依赖实数大小关系的版本：
+紧集上的连续实值函数列，若逐点单调趋于连续函数，则一致收敛。
+复数没有与实数相同的大小顺序，因此不能直接说复值函数列“单调增”；
+若实部、虚部分别满足该定理的条件，仍可分别应用。
+
+\paragraph{系数衰减.}
+Riemann--Lebesgue 引理同样给出
+\[
+ c_n(f)\longrightarrow0\qquad(|n|\to\infty),\qquad f\in L^1.
+\]
+若 $f\in C^m[-\pi,\pi]$，并满足
+$f^{(j)}(\pi)=f^{(j)}(-\pi)$，$j=0,\ldots,m-1$，
+则反复分部积分得到
+\[
+ c_n(f')=in\,c_n(f),\qquad
+ c_n(f)=\frac{c_n(f^{(m)})}{(in)^m}\quad(n\ne0).
+\]
+故 $c_n(f)=o(|n|^{-m})$，与前面的三角系数衰减一致。
+
+\subsection*{4. $L^2$ 收敛与 Parseval 等式}
+本节复数形式采用归一化内积与范数
+\[
+ \langle f,g\rangle_{\mathbb C}
+ =\frac{1}{2\pi}\int_{-\pi}^{\pi}f(x)\overline{g(x)}\,dx,
+ \qquad
+ \|f\|_{2,\mathbb C}^2
+ =\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx.
+\]
+这里的范数平方是前文采用 $1/\pi$ 归一化的范数平方的一半。
+令 $e_k(x)=e^{ikx}$，则
+\[
+ \langle e_j,e_k\rangle_{\mathbb C}
+ =\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{i(j-k)x}\,dx
+ =\begin{cases}1,&j=k,\\0,&j\ne k.\end{cases}
+\]
+所以 $\{e_k\}_{k\in\mathbb Z}$ 是标准正交系，
+$c_k=\langle f,e_k\rangle_{\mathbb C}$。
+
+\paragraph{正交投影与 Bessel 不等式.}
+$S_n(f)$ 是 $f$ 在
+$V_n=\operatorname{span}\{e_k:|k|\leq n\}$ 上的正交投影。
+因此对任意 $p\in V_n$，
+\[
+ \|f-p\|_{2,\mathbb C}^2
+ =\|f-S_n(f)\|_{2,\mathbb C}^2
+ +\|S_n(f)-p\|_{2,\mathbb C}^2.
+\]
+取 $p=0$，结合正交性得到
+\[
+ \|f\|_{2,\mathbb C}^2
+ =\|f-S_n(f)\|_{2,\mathbb C}^2
+ +\sum_{k=-n}^{n}|c_k|^2.
+\]
+于是
+\[
+ \sum_{k\in\mathbb Z}|c_k|^2\leq\|f\|_{2,\mathbb C}^2,
+\]
+这就是 Bessel 不等式。
+
+\paragraph{$L^2$ 收敛.}
+三角多项式在 $L^2[-\pi,\pi]$ 中稠密。给定 $\varepsilon>0$，
+可选取某个三角多项式 $p\in V_N$，使
+$\|f-p\|_{2,\mathbb C}<\varepsilon$。
+由正交投影的最佳逼近性质，对所有 $n\geq N$，
+\[
+ \|f-S_n(f)\|_{2,\mathbb C}
+ \leq\|f-p\|_{2,\mathbb C}<\varepsilon.
+\]
+故对每个 $f\in L^2[-\pi,\pi]$，
+\[
+ \lim_{n\to\infty}\frac{1}{2\pi}
+ \int_{-\pi}^{\pi}|f(x)-S_n(x,f)|^2\,dx=0.
+\]
+
+\paragraph{Parseval 等式.}
+在上述有限和恒等式中令 $n\to\infty$，即得
+\[
+ \boxed{\frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx
+ =\sum_{k\in\mathbb Z}|c_k|^2.}
+\]
+相应的误差也恰好等于系数的尾部能量：
+\[
+ \|f-S_n(f)\|_{2,\mathbb C}^2
+ =\sum_{|k|>n}|c_k|^2.
+\]
+这里 $L^2$ 收敛说明平均平方误差趋于零，本身不表示每一点都收敛，
+也不表示一致收敛。
+
+最后，用系数换算核对两种形式：
+\[
+ |c_n|^2+|c_{-n}|^2=\frac{|a_n|^2+|b_n|^2}{2},\qquad n\geq1,
+\]
+所以 Parseval 等式也写成
+\[
+ \frac{1}{2\pi}\int_{-\pi}^{\pi}|f(x)|^2\,dx
+ =\frac{|a_0|^2}{4}
+ +\frac12\sum_{n=1}^{\infty}(|a_n|^2+|b_n|^2).
+\]
+两边乘以 $2$，便得到前文 $1/\pi$ 归一化下的三角形式。
+
+\section*{一般周期与 Fourier 变换}
+
+周期为 $T$，$f:[-T/2,T/2]\to\mathbb C$，记 $\omega_0=2\pi/T$，则
+\[
+ f(x)\sim\sum_{n\in\mathbb Z}c_ne^{i\omega_0nx},\qquad
+ c_n=\frac{1}{T}\int_{-T/2}^{T/2}f(x)e^{-i\omega_0nx}\,dx.
+\]
+
+\noindent\textbf{Def. Fourier 变换}
+
+$f$ 绝对可积，定义
+\[
+ \mathcal F(f)(\xi)=\widehat f(\xi)
+ =\frac{1}{\sqrt{2\pi}}\int_{\mathbb R}f(x)e^{-ix\xi}\,dx.
+\]
+逆变换为
+\[
+ \check f(\xi)=\mathcal F^{-1}(f)(\xi)
+ =\frac{1}{\sqrt{2\pi}}\int_{\mathbb R}f(x)e^{ix\xi}\,dx.
+\]
+
+\noindent\textbf{性质：}
+\[
+ \widehat f(\xi)=\check f(-\xi),\qquad
+ \mathcal F^{-1}(\widehat f)(x)=f(x).
+\]
+\begin{align*}
+ \mathcal F(f')(\xi)
+ &=\frac{1}{\sqrt{2\pi}}\int_{\mathbb R}f'(x)e^{-ix\xi}\,dx\\
+ &=\frac{1}{\sqrt{2\pi}}\left(
+ \left.f(x)e^{-ix\xi}\right|_{-\infty}^{+\infty}
+ -\int_{\mathbb R}f(x)e^{-ix\xi}(-i\xi)\,dx\right)\\
+ &=i\xi\,\mathcal F(f)(\xi).
+\end{align*}
+以上假设 $f$ 有一些性质。
+
+\end{document}

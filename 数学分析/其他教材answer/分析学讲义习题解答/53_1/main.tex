@@ -1,0 +1,59 @@
+\documentclass[UTF8,fontset=fandol,11pt]{ctexart}
+\input{../common.tex}
+\begin{document}
+\sourceintro{53.1 作业：Hilbert空间与波动方程局部能量}{53.1}{640--643}
+\section*{所用知识}
+第42--53讲的$L^p$完备性、光滑逼近、Hilbert基、Stokes定理与卷积。A7补证闭子空间投影，D部分用局部能量先证明有限传播，从而不把“每时刻紧支撑”误当成已知的统一紧支撑。
+\section{Hilbert空间与逼近}
+\problem{A1}{证明Hilbert空间的闭线性子空间仍是Hilbert空间；证明$C(\R^n)\cap L^2(\R^n)$在$L^2$中不闭。}
+子空间中的Cauchy列在$H$中收敛，闭性使极限仍在子空间，故完备。反例取立方体示性函数$\ind_{[0,1]^n}$，以连续分段线性截断函数的乘积逼近，点态几乎处处收敛且有统一紧支撑和界，控制收敛给出$L^2$收敛。其极限等价类无连续代表：若某连续代表在开立方体内几乎处处为$1$，连续性迫使处处为$1$；外部开集上则处处为$0$，在边界矛盾。
+\problem{A2}{若$f_i\to f$于$L^2(X)$，证明存在子列几乎处处收敛。}
+\fix{原题文字为$L^2$范数，箭头标签误写$L^1$；两种范数的版本均成立，这里按文字解$L^2$。}
+选$i_p$使$\norm{f_{i_p}-f}_2^2\le2^{-3p}$。Chebyshev给出$\mu(|f_{i_p}-f|>2^{-p/2})\le2^{-2p}$。Borel--Cantelli使这些事件几乎处处只发生有限次，故子列收敛。
+\problem{A3}{证明卷积代数$L^1(\R^n)$没有单位元。}
+若$e*f=f$对所有$f$成立，取非负光滑紧支撑近似单位$\eta_\eps$，则$e*\eta_\eps=\eta_\eps$。由第51--52讲的$L^1$近似单位收敛，左端趋于$e$于$L^1$。但$\eta_\eps$在原点外最终为零；$L^1$收敛必有几乎处处收敛子列（用A2相同的Chebyshev证明），所以$e=0$几乎处处，与$\int e*\eta_\eps=\int\eta_\eps=1$矛盾。
+\problem{A4}{证明$C_c^\infty(\R^n)$在$L^2$中稠密。}
+先把$f$截到有限球并截断函数值，$L^2$尾误差趋零。有界紧支撑函数可按有限值域简单函数逼近；有限测度可测集由测度正则性用紧集内逼近、开集外逼近，用截断函数得到$C_c$逼近。最后对$C_c$函数与光滑近似单位卷积，一致收敛且有统一紧支撑，所以也$L^2$收敛。
+\problem{A5}{举例说明连续有界函数在$L^\infty$中不稠密。}
+\fix{原文的$C(\R^n)\subset L^\infty$不成立，应为$C\cap L^\infty$。}
+取$f=\ind_{\{x_1>0\}}$。若连续$g$满足$\norm{f-g}_{L^\infty}<1/2$，则由连续性在两个开半空间上分别处处有$|g-1|<c$、$|g|<c$，其中$c<1/2$；逼近边界得到互不相交的两个闭圆盘同时包含$g$的边界值，矛盾。故距离至少$1/2$。
+\problem{A6}{证明$C^\infty(\R^n)\cap L^\infty$在$C(\R^n)\cap L^\infty$中对一致范数稠密。}
+不能把任意有界连续函数误认为一致连续。给定$\eps$，用局部有限光滑单位分解$\chi_j$，使各$\supp\chi_j$落在$f$振幅$<\eps$的邻域中。各邻域取$x_j$，令$g(x)=\sum_j\chi_j(x)f(x_j)$。局部有限性使$g$光滑，非负权重和为$1$使$|g-f|<\eps$且$|g|\le\norm f_\infty$。
+\problem{A7}{证明线性子空间$V$稠密当且仅当$V^\perp=\{0\}$。}
+稠密时对$V$正交即对其闭包正交，故只能零。反向若$W=\overline V\ne H$，取$x\notin W$。设$d=\inf_{w\in W}\norm{x-w}>0$，选极小化序列$w_j$。平行四边形恒等式给出
+\[\norm{w_j-w_k}^2\le2\norm{x-w_j}^2+2\norm{x-w_k}^2-4d^2\to0.\]
+闭性与完备性给出极小点$w$。对每个$v\in W$，$\norm{x-w-tv}^2$在实$t=0$取极小，故实部内积为零；再取$iv$，虚部也零。因此非零$x-w\in V^\perp$，矛盾。
+\problem{A8}{证明$L^2(\R^n)$可分。}
+有理端点矩形的有限个示性函数线性组合、系数取有理实虚部，构成可数族。由有限测度集的正则性、开集的可数有理矩形覆盖及截断，矩形简单函数在$L^2$稠密；系数有理化再逼近，因此可数族稠密。
+\problem{A9}{设$f\in L^1(\R^n)$且$\int f=1$，$f_\eps(x)=\eps^{-n}f(x/\eps)$。证明对$\varphi\in C_c(\R^n)$有$f_\eps*\varphi\to\varphi$一致成立。}
+\fix{原题归一化条件把$f$写为$\chi$且积分域写为$\R$，这里统一为$\int_{\R^n}f=1$。}
+差为$\int f(z)[\varphi(x-\eps z)-\varphi(x)]\dd z$。先选$R$使$\int_{|z|>R}|f|$小，该部分一致受$2\norm\varphi_\infty$乘尾质量控制；在$|z|\le R$部分，$\varphi$的全局一致连续性使差对$x$一致趋零。无需$f\ge0$。
+\input{../shared/parameter.tex}
+\section{波动方程与局部能量}
+设$u\in C^\infty(\R_t\times\R_x^3;\R)$满足$u_{tt}=\Delta u$，$u_0=u(0,\cdot)$、$u_1=u_t(0,\cdot)$。D1--D3另假设每时刻紧支撑。记$e=(u_t^2+|\nabla u|^2)/2$，直接计算得
+\[\partial_te=\operatorname{div}_x(u_t\nabla u).\tag{*}\]
+以下先证明不需全局支撑的局部结论D4--D6，再据此严格完成D1--D3。
+\problem{D4}{对后向实心锥$D=\{0\le t\le R,|x|\le R-t\}$，侧面$C=\{|x|=R-t\}$及其$0\le t\le r$部分，证明侧面切空间由$L=\partial_t-\partial_\rho,e_1=\rho^{-1}\partial_\vartheta,e_2=(\rho\sin\vartheta)^{-1}\partial_\phi$张成。}
+侧面是$F=t+|x|-R=0$，其微分非零处，切向量满足$\dd t+\dd\rho=0$。$L$满足此条件，两球面方向也满足，且三个向量线性无关，故张成。球坐标在极点需换另一球面坐标图；顶点$t=R,x=0$不是光滑侧面点，结论只对其余点，顶点处公式用极限解释。记$|\not\!\nabla u|^2=(e_1u)^2+(e_2u)^2$。
+\problem{D5**}{令$B_t=\{|x|\le R-t\}$，$E_{\rm loc}(t)=\int_{B_t}e$。证明局部能量等于稍后能量与侧面非负通量之和；核对原题系数。}
+对$r<R$，运动边界求导和(*)给出
+\[E_{\rm loc}'(t)=\int_{\partial B_t}u_t\partial_\rho u\dd S-\int_{\partial B_t}e\dd S=-\frac12\int_{\partial B_t}[(Lu)^2+|\not\!\nabla u|^2]\dd S.\]
+积分得到
+\[E_{\rm loc}(0)=E_{\rm loc}(r)+\frac12\int_0^r\int_{\partial B_t}[(Lu)^2+|\not\!\nabla u|^2]\dd S\dd t.\tag{**}\]
+\fix{若$d\sigma$是$\R^4$欧氏度量诱导的侧面面积元，则$d\sigma=\sqrt2\dd S\dd t$，所以原文侧面积分前应有$1/(2\sqrt2)$。若用$\dd S\dd t$作锥面约定测度，系数应为$1/2$；原式无系数不能同时符合通常面积元与$L$的定义。}
+对$r\uparrow R$用连续性和非负积分单调性延伸至顶点时刻。平移锥心与时间原点不改变证明。
+\problem{D6*}{只保留光滑性和波动方程，若$u_0,u_1$紧支撑，证明每个$t$的解紧支撑。}
+若初值在$|x|>R_0$为零，取$t>0$和$|x_0|>R_0+t$。以$(t,x_0)$为顶点的后向锥，底球与初值支撑不交，初始局部能量为零。由(**)，锥内各截面的能量均零，所以$u_t=\nabla u=0$。沿$x=x_0$的时间线由底端$u(0,x_0)=0$得到顶端$u(t,x_0)=0$。负时间由时间反演。故$\supp u(t,\cdot)\subset\overline B(R_0+|t|)$。这里“只假设光滑”仍须保留$\Box u=0$，否则结论显然不成立。
+\problem{D1}{证明总能量$E(t)=\frac12\int_{\R^3}(u_t^2+|\nabla u|^2)\dd x$守恒。}
+这里还需处理一个支撑细节：题设“每个时刻$u$紧支撑”并未直接声称$u_t$或一个时间段内的统一支撑。取任意紧时间区间，令$F_N=\{t:u(t,x)=0\text{ 对所有 }|x|>N\}$。各$F_N$闭且可数并覆盖该区间；由第28讲Baire定理，某个$F_N$含一个非空时间开区间。在其中一个时刻$t_0$，$u,u_t$均支撑于同一个球。把D6的时间原点移到$t_0$，得到任意有限时间区间上$u,u_t$的统一紧支撑。故可严格交换积分求导，并对(*)用散度定理，外边界通量为零，从而$E'(t)=0$。
+\problem{D2}{证明动量$P_i(t)=\int_{\R^3}u_tu_{x_i}\dd x$守恒。}
+同样统一紧支撑使分部积分合法，
+\[P_i'=\int\Delta u\,u_{x_i}+u_tu_{tx_i}=-\frac12\int\partial_i|\nabla u|^2+\frac12\int\partial_i u_t^2=0.\]
+\problem{D3}{证明同初值的两个光滑紧支撑波动方程解相等。}
+差$w$满足方程与零初值，D1给出$\int(w_t^2+|\nabla w|^2)=0$。光滑性使两者处处零，$w$为时空常数，由零初值为零。事实上局部能量已证明无需支撑条件的光滑解唯一性。
+\problem{D7*}{若$-u_{tt}+\Delta u=u^3$且初值紧支撑，证明每时刻空间支撑仍紧。}
+对实解令$e_{\rm nl}=\frac12(u_t^2+|\nabla u|^2)+u^4/4$。方程给出$\partial_te_{\rm nl}=\operatorname{div}(u_t\nabla u)$。在缩小球上求导的侧面流失为
+\[e_{\rm nl}-u_t\partial_\rho u=\tfrac12[(Lu)^2+|\not\!\nabla u|^2]+u^4/4\ge0.\]
+所以零底部能量仍迫使整个锥内为零，重复D6得到同一有限传播界。对复值方程，$u^4$不再是非负能量；可改在每个紧锥中用$\frac12(|u_t|^2+|\nabla u|^2+|u|^2)$，有界系数$u^2$给出$E'(t)\le C E(t)$并由Grönwall得到零解，结论仍成立。
+\originalpages
+\end{document}

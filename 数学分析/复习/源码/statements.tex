@@ -1,0 +1,418 @@
+\input{preamble.tex}
+\title{Fourier级数标准结论与复习提纲}
+\author{}
+\date{2026年10月28日修订}
+\begin{document}
+\maketitle
+本册逐条陈述复习所需的定义、定理和常用推论，写明假设、归一化与结论；困难结论仅给简明思路，不给完整证明。配套题目分为基础35题、提高25题，另见《Fourier级数复习题集》。这些内容以现有课程材料与作业为依据，不代表已获确认的考试题目或考纲。
+\sources
+\clearpage
+\tableofcontents
+\clearpage
+\section{记号与一般正交展开}
+\noindent\textbf{积分约定}\quad 本册“可积”指通常黎曼可积。“反常绝对可积”指函数除有限个瑕点外在每个闭子区间上黎曼可积，且各瑕点处的$\int|f(x)|\dd x$收敛；无穷区间也按反常黎曼积分理解。“可积且平方可积”指$f$满足上述条件，并且$\int|f(x)|^2\dd x<\infty$，同样按通常或反常黎曼积分理解。有限点处的值不影响积分。
+
+平方平均误差直接写成积分式，不另引入范数或函数空间记号；涉及单调性时取实值函数。以下未写明周期的Fourier系数均针对$2\pi$周期延拓。
+
+\begin{result}[Schwarz不等式与正交关系]\label{st:inner}
+若$f,g$在$[a,b]$上可积且平方可积，则$f\overline g$绝对可积，且
+\[
+ \left|\int_a^bf(x)\overline{g(x)}\dd x\right|^2
+ \le\int_a^b|f(x)|^2\dd x\int_a^b|g(x)|^2\dd x.
+\]
+在$[-\pi,\pi]$上，$(2\pi)^{-1}\int_{-\pi}^{\pi}e^{inx}e^{-imx}\dd x=\delta_{nm}$。
+对未归一化积分，规范正交三角系为$1/\sqrt{2\pi}$、$\cos nx/\sqrt\pi$、$\sin nx/\sqrt\pi$（$n\ge1$）。
+\end{result}
+\begin{result}[正交投影与最佳平方逼近]\label{st:projection}
+设$\varphi_1,\ldots,\varphi_M$在$[a,b]$上可积且平方可积，且$\int_a^b\varphi_j\overline{\varphi_k}\dd x=\delta_{jk}$。
+对同类函数$f$，令$c_j=\int_a^bf\overline{\varphi_j}\dd x$、$P_M=\sum_{j=1}^Mc_j\varphi_j$。
+对$p=\sum_{j=1}^Md_j\varphi_j$，
+\[
+ \int_a^b|f-p|^2\dd x=\int_a^b|f-P_M|^2\dd x+\sum_{j=1}^M|d_j-c_j|^2.
+\]
+所以$c_j$唯一地使平方误差最小；此处唯一的是系数，不把积分为零直接解释成函数处处为零。
+\end{result}
+\begin{result}[Bessel不等式及误差恒等式]\label{st:bessel}
+对上述积分意义下的无限规范正交系，$c_j=\int_a^bf\overline{\varphi_j}\dd x$，有
+\[
+ \int_a^b|f-P_M|^2\dd x=\int_a^b|f|^2\dd x-\sum_{j=1}^M|c_j|^2,
+ \qquad\sum_{j=1}^\infty|c_j|^2\le\int_a^b|f|^2\dd x.
+\]
+特别地$c_j\to0$。仅有正交性不能把不等号改成等号。
+\end{result}
+\begin{result}[分部积分产生的正交性]\label{st:Sturm}
+设$q$为$[a,b]$上的实连续函数，$u,v\in C^2[a,b]$分别满足
+\[
+ -u''+qu=\lambda u,\qquad -v''+qv=\mu v,\qquad
+ u(a)=u(b)=v(a)=v(b)=0.
+\]
+若$\lambda\ne\mu$，则$\int_a^bu(x)\overline{v(x)}\dd x=0$（实特征值情形）。特别地，$\sin(n\pi(x-a)/(b-a))$对应不同的特征值，因而两两正交。
+\end{result}
+\begin{result}[正交系的完备性  积分形式]\label{st:complete}
+对给定的可积且平方可积函数类及一个规范正交系，下列条件等价：
+\begin{enumerate}[label=(\arabic*)]
+\item 每个$f$均可被有限线性组合任意精确地平方平均逼近，即对任意$\varepsilon>0$存在$p$使$\int|f-p|^2<\varepsilon$；
+\item 对每个$f$，$\lim_{M\to\infty}\int|f-P_M|^2=0$；
+\item 对每个$f$，$\int|f|^2=\sum_{j\ge1}|c_j|^2$。
+\end{enumerate}
+称这样的正交系在该函数类中完备。这里不讨论任意平方可和系数是否能构造出某个函数。
+\end{result}
+\idea{最佳逼近把“存在逼近”转化成“Fourier部分和逼近”；误差恒等式再把逼近转化成Parseval等式。}
+\src{课本第5.1节；史第17.4节；已有笔记的正交投影部分。}
+
+\section{系数与基本运算}
+\begin{result}[定义及实复形式换算]\label{st:coeff}
+设$f$在一个周期上可积或反常绝对可积，定义
+\[
+ c_n(f)=\frac1{2\pi}\int_{-\pi}^{\pi}f(x)e^{-inx}\dd x\quad(n\in\Z),
+\]
+\[
+ a_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\cos nx\dd x\ (n\ge0),\qquad
+ b_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\sin nx\dd x\ (n\ge1).
+\]
+则$c_0=a_0/2$、$c_n=(a_n-ib_n)/2$、$c_{-n}=(a_n+ib_n)/2$，且
+\[
+ S_N(f,x)=\sum_{|n|\le N}c_ne^{inx}
+ =\frac{a_0}2+\sum_{n=1}^N(a_n\cos nx+b_n\sin nx).
+\]
+符号$f\sim\sum c_ne^{inx}$只表示系数对应，不预先断言逐点收敛。
+\end{result}
+\begin{result}[周期积分与一般周期]\label{st:period}
+可积的$T$周期函数在任意长度为$T$的区间上的积分相同。对$T$周期函数，令$\omega_0=2\pi/T$，则
+\[
+ c_n=\frac1T\int_{x_0}^{x_0+T}f(x)e^{-in\omega_0x}\dd x,
+ \qquad S_N=\sum_{|n|\le N}c_ne^{in\omega_0x}.
+\]
+在周期$2l$的实形式中，$a_n=l^{-1}\int_{-l}^lf(x)\cos(n\pi x/l)\dd x$，$b_n$同理，常数项仍是$a_0/2$。
+\end{result}
+\begin{result}[对称性]\label{st:symmetry}
+$f$为偶函数时$b_n=0$；为奇函数时$a_n=0$（含$a_0$）；为实值函数时$c_{-n}=\overline{c_n}$。
+若$f(x+\pi)=f(x)$，则奇数频率系数全为$0$；若$f(x+\pi)=-f(x)$，则偶数频率系数全为$0$。有限点处改变函数值不影响这些系数结论。
+\end{result}
+\begin{result}[平移、调制、反射与共轭]\label{st:operations}
+对在一个周期上可积或反常绝对可积的$f$、$h\in\R$、$m\in\Z$，
+\[
+ c_n(f(\cdot+h))=e^{inh}c_n(f),\quad
+ c_n(e^{im\cdot}f)=c_{n-m}(f),
+\]
+\[
+ c_n(f(-\cdot))=c_{-n}(f),\quad
+ c_n(\overline f)=\overline{c_{-n}(f)}.
+\]
+\end{result}
+\begin{result}[系数界与Riemann--Lebesgue引理]\label{st:RL}
+对在一个周期上可积或反常绝对可积的$f$，$|c_n(f)|\le(2\pi)^{-1}\int|f|$，且$c_n(f)\to0$（$|n|\to\infty$）。更一般地，若$f$在有限区间$I$上黎曼可积，或在有限、无穷区间$I$上反常绝对可积，则
+\[
+ \int_I f(x)e^{i\lambda x}\dd x\longrightarrow0\quad(|\lambda|\to\infty).
+\]
+这只给出趋零，不给出统一的幂次衰减速度。
+\end{result}
+\idea{用阶梯函数$p$使$\int|f-p|$任意小，再直接计算阶梯函数的振荡积分；反常积分先截去绝对积分很小的尾部。}
+\begin{result}[系数对积分误差的稳定性]\label{st:stability}
+设$f_j,f$均在一个周期上可积或反常绝对可积。若$\int_{-\pi}^{\pi}|f_j-f|\to0$，则
+\[
+ \sup_{n\in\Z}|c_n(f_j)-c_n(f)|
+ \le\frac1{2\pi}\int_{-\pi}^{\pi}|f_j-f|\longrightarrow0.
+\]
+\end{result}
+\begin{result}[连续周期函数的卷积]\label{st:convolution}
+设$f,g$为连续的$2\pi$周期函数，定义
+\[
+ (f*g)(x)=\frac1{2\pi}\int_{-\pi}^{\pi}f(x-t)g(t)\dd t.
+\]
+则$f*g$连续且为$2\pi$周期，$c_n(f*g)=c_n(f)c_n(g)$，并有
+\[
+ \frac1{2\pi}\int_{-\pi}^{\pi}|f*g|\dd x
+ \le\left(\frac1{2\pi}\int_{-\pi}^{\pi}|f|\dd x\right)
+     \left(\frac1{2\pi}\int_{-\pi}^{\pi}|g|\dd x\right).
+\]
+这是本册所需的通常黎曼积分版本。
+\end{result}
+\src{课本第5.1--5.2节；史第17.1节；Stein第2章Exercises 1、2、11及第3章Exercise 15。}
+
+\section{积分核与逐点收敛}
+\begin{result}[Dirichlet核与卷积公式]\label{st:D}
+\[
+ D_N(t)=\sum_{|k|\le N}e^{ikt}=1+2\sum_{k=1}^N\cos kt
+ =\frac{\sin((N+\tfrac12)t)}{\sin(t/2)}.
+\]
+最后一个分式在$2\pi\Z$处取连续延拓值$2N+1$。$D_N$为偶函数，且$(2\pi)^{-1}\int_{-\pi}^{\pi}D_N=1$。
+对在一个周期上可积或反常绝对可积的$f$，每个$x$都有
+\[
+ S_N(f,x)=(f*D_N)(x)
+ =\frac1{2\pi}\int_0^\pi[f(x+t)+f(x-t)]D_N(t)\dd t.
+\]
+\end{result}
+\begin{result}[局部化原理]\label{st:localization}
+若$f,g$均在一个周期上可积或反常绝对可积，并在$x_0$的某邻域内相同，则
+$S_N(f,x_0)-S_N(g,x_0)\to0$。因而两级数在该点同敛散，收敛时同和。
+\end{result}
+\idea{差函数在近端消失，远端除以$\sin(t/2)$仍可积，随后用Riemann--Lebesgue引理。}
+\begin{result}[Dini判别法]\label{st:dini}
+设$f$在一个周期上可积或反常绝对可积，给定$x_0$及$s\in\C$。若存在$\delta>0$使
+\[
+ \int_0^\delta\frac{|f(x_0+t)+f(x_0-t)-2s|}{t}\dd t<\infty,
+\]
+则$S_N(f,x_0)\to s$。这是一个充分条件，不是必要条件。
+\end{result}
+\begin{result}[局部H\"older条件与单侧导数]\label{st:holderpoint}
+设$f$在一个周期上可积或反常绝对可积，左右极限$L_\pm$存在。若对某$\alpha>0$、$C,\delta>0$及$0<t<\delta$有
+\[
+ |f(x_0+t)-L_+|+|f(x_0-t)-L_-|\le Ct^\alpha,
+\]
+则$S_N(f,x_0)\to(L_++L_-)/2$。特别地，局部H\"older连续点、可微点，以及具有有限左右导数的连续点都满足相应收敛结论；分段$C^1$的周期函数在每点收敛到左右极限平均。
+若进一步$f$为连续周期函数，且满足全局$\alpha$阶H\"older条件（$\alpha>0$），则其普通Fourier级数一致收敛于$f$。更一般地，记
+$\omega_f(t)=\sup_{x,\,|h|\le t}|f(x+h)-f(x)|$，条件
+$\int_0^\delta\omega_f(t)/t\dd t<\infty$也保证一致收敛（统一Dini条件）。这不自动保证绝对收敛。
+\end{result}
+\begin{result}[局部单调收敛定理]\label{st:jordan}
+设实值$f$在一个周期上可积或反常绝对可积，且在$x_0$左右两个充分小的区间上分别有界单调。则有限左右极限存在，且
+\[
+ S_N(f,x_0)\longrightarrow\frac{f(x_0+)+f(x_0-)}2.
+\]
+两侧可有不同单调方向；全周期有限分段且每段有界单调也是充分条件；周期接缝处按延拓理解。
+\end{result}
+\idea{远端用局部化，近端利用$\int_a^bD_N$的一致界，配合积分第二中值定理和单调函数的单侧极限。}
+\begin{result}[正弦积分与核积分的一致界]\label{st:Si}
+\[
+ \operatorname{Si}(u)=\int_0^u\frac{\sin t}{t}\dd t,
+ \qquad\int_0^\infty\frac{\sin t}{t}\dd t=\frac\pi2.
+\]
+$\operatorname{Si}$在实轴有界；在$u\ge0$上的最大值为$\operatorname{Si}(\pi)\in(\pi/2,2)$。并有
+\[
+ \sup_{N\ge0}\sup_{|x|\le\pi}\left|\int_0^xD_N(t)\dd t\right|<\infty,
+ \qquad \sup_{N,x}\left|\sum_{k=1}^N\frac{\sin kx}{k}\right|<\infty.
+\]
+\end{result}
+\idea{将$1/\sin(t/2)$拆为$2/t$与在$0$处连续延拓的余项；后者直接估计，前者换元为正弦积分。}
+\begin{result}[Lebesgue数与一般一致收敛的限制]\label{st:Lebesgue}
+设$L_N=(2\pi)^{-1}\int_{-\pi}^{\pi}|D_N(t)|\dd t$，则存在绝对常数$c,C>0$，使
+\[
+ c\log(N+1)\le L_N\le C\log(N+1)\quad(N\ge1).
+\]
+存在连续周期函数，其Fourier部分和在某一点无界；因此仅连续不能推出逐点收敛，更不能推出一致收敛。
+\end{result}
+\begin{result}[Gibbs现象的标准方波例子]\label{st:Gibbs}
+设$q(x)=\operatorname{sgn}x$（$-\pi<x<\pi$），周期延拓，
+\[
+ Q_M(x)=\frac4\pi\sum_{k=1}^M\frac{\sin((2k-1)x)}{2k-1}.
+\]
+其第一个正极大值点为$x_M=\pi/(2M)$，且
+\[
+ x_M\to0,\quad Q_M(x_M)\to\frac2\pi\operatorname{Si}(\pi)>1.
+\]
+超出右极限$1$的量与跳跃高度$2$之比趋于
+$\operatorname{Si}(\pi)/\pi-1/2\approx0.08949$。这不与每个固定连续点的收敛矛盾。
+\end{result}
+\src{课本第5.2节；史第17.1--17.2节；第三次作业Dirichlet核题和Gibbs题；第四次作业补充题2。}
+
+\section{平均求和与逼近}
+\begin{result}[Ces\`aro求和的正则性]\label{st:Cesaro}
+若数列$s_N\to s$，则$(N+1)^{-1}\sum_{j=0}^Ns_j\to s$。所以普通收敛的级数Ces\`aro可和且同和，逆命题不成立。Fourier级数的平均和定义为
+\[
+ \sigma_N(f,x)=\frac1{N+1}\sum_{j=0}^NS_j(f,x).
+\]
+\end{result}
+\begin{result}[Fej\'er核]\label{st:Fejerkernel}
+\[
+ F_N(t)=\frac1{N+1}\sum_{j=0}^ND_j(t)
+ =\frac1{N+1}\left(\frac{\sin((N+1)t/2)}{\sin(t/2)}\right)^2,
+ \qquad\sigma_N=f*F_N.
+\]
+$F_N\ge0$、$(2\pi)^{-1}\int F_N=1$；在$\delta\le|t|\le\pi$上
+$F_N(t)\le[(N+1)\sin^2(\delta/2)]^{-1}$。$F_N(0)=N+1$。
+注意这与作业中$K_n=\sum_{k=1}^n\sin kx$不是同一个核。
+\end{result}
+\begin{result}[好核的逼近恒等性质]\label{st:goodkernel}
+设$K_j$为周期可积核，满足$(2\pi)^{-1}\int K_j=1$、$\sup_j\int|K_j|<\infty$，且对每个$\delta>0$有$\int_{\delta\le|t|\le\pi}|K_j(t)|\dd t\to0$。则对连续周期函数$f$有$f*K_j\to f$一致收敛。若$f$有界可积并在$x_0$连续，则在$x_0$处收敛到$f(x_0)$。
+\end{result}
+\idea{误差写成$\int[f(x-t)-f(x)]K_j(t)$；近端用连续性和核的绝对积分的统一界，远端用核质量趋零。}
+\begin{result}[Fej\'er定理]\label{st:Fejer}
+若$f$为连续周期函数，则$\sigma_N(f)\to f$在全周期一致收敛。
+若$f$在一个周期上黎曼可积或反常绝对可积，且在$x_0$有有限左右极限，则
+$\sigma_N(f,x_0)\to[f(x_0+)+f(x_0-)]/2$。
+因此若普通Fourier级数在该点也收敛，其和必为这个平均值。
+\end{result}
+\begin{result}[三角多项式逼近与连续函数的唯一性]\label{st:density}
+每个连续周期函数均可被三角多项式一致逼近。每个在一周期上可积且平方可积的$f$，对任意$\varepsilon>0$存在三角多项式$p$使
+\[
+ \int_{-\pi}^{\pi}|f(x)-p(x)|^2\dd x<\varepsilon.
+\]
+两个连续周期函数若全部Fourier系数相同，则处处相等。
+对一般可积且平方可积的$f,g$，相同系数先推出$\int|f-g|^2=0$；在二者的共同连续点$x_0$才可进而推出$f(x_0)=g(x_0)$。
+\end{result}
+\idea{连续情形用Fej\'er平均；黎曼可积函数先用分段线性函数使平方误差很小，反常平方可积情形再先截去平方积分很小的瑕点邻域。}
+\src{课本第5.2节；史第17.3节；第三次作业教材21.2第11、12题；Stein第2章Exercise 15。}
+
+\section{平方平均收敛与能量恒等式}
+\begin{result}[平方平均收敛与Parseval等式]\label{st:Parseval}
+若$f$在一个周期上可积且平方可积，则
+\[
+ \lim_{N\to\infty}\frac1{2\pi}\int_{-\pi}^{\pi}|f(x)-S_N(f,x)|^2\dd x=0,
+\]
+\[
+ \frac1{2\pi}\int_{-\pi}^{\pi}|f|^2\dd x
+ =\sum_{n\in\Z}|c_n|^2
+ =\frac{|a_0|^2}{4}+\frac12\sum_{n=1}^\infty(|a_n|^2+|b_n|^2).
+\]
+并有$\frac1{2\pi}\int_{-\pi}^{\pi}|f-S_N(f)|^2\dd x=\sum_{|n|>N}|c_n|^2$。
+\end{result}
+\begin{result}[混合Parseval等式]\label{st:mixed}
+若$f,g$在一个周期上可积且平方可积，系数分别为$c_n,d_n$，则
+\[
+ \frac1{2\pi}\int f\overline g=\sum_{n\in\Z}c_n\overline{d_n}.
+\]
+右端绝对收敛。对实值函数，实形式为
+\[
+ \frac1\pi\int fg=\frac{a_0\alpha_0}{2}
+ +\sum_{n\ge1}(a_n\alpha_n+b_n\beta_n).
+\]
+\end{result}
+\begin{result}[绝对可和系数的实现]\label{st:RF}
+若$\sum_{n\in\Z}|c_n|<\infty$，则级数$\sum c_ne^{inx}$绝对一致收敛到连续周期函数$f$，并可逐项积分验证$c_n(f)=c_n$。
+\end{result}
+\begin{result}[固定系数的平方平均展开唯一性]\label{st:fixed}
+设$f$在一个周期上可积且平方可积，$T_N=\sum_{|n|\le N}d_ne^{inx}$，各$d_n$不随$N$变化。若
+\[
+ \lim_{N\to\infty}\int_{-\pi}^{\pi}|f(x)-T_N(x)|^2\dd x=0,
+\]
+则所有$d_n=c_n(f)$，所以每个$T_N=S_N(f)$。若系数允许随$N$变化，此结论不成立。
+\end{result}
+\begin{result}[平方平均与点值的区别]\label{st:notpointwise}
+有限区间上一致收敛蕴含平方平均收敛，因为
+\[
+ \int_a^b|f_N-f|^2\dd x\le(b-a)\left(\sup_{x\in[a,b]}|f_N(x)-f(x)|\right)^2.
+\]
+平方误差积分趋零本身不能用来断言每点收敛。$\int|h|^2=0$也不推出每点$h=0$，例如只在一个点取$1$、其余为$0$的函数；若$h$在$x_0$连续，则该积分为零必有$h(x_0)=0$。
+\end{result}
+\src{课本第5.1节、第5.2.7--5.2.9条；史第17.4节；已有Fourier笔记。}
+
+\section{光滑性、逐项运算与不等式}
+\begin{result}[导数系数的完整边界项]\label{st:boundary}
+设$f$在$[-\pi,\pi]$连续、有限分段连续可导。分部积分给出
+\[
+ c_n(f')=in\,c_n(f)+\frac{(-1)^n}{2\pi}[f(\pi)-f(-\pi)].
+\]
+只有端点相等，才得到完整简化关系$c_n(f')=in\,c_n(f)$。
+实形式为
+\[
+ b_n(f')=-na_n(f),\quad
+ a_n(f')=nb_n(f)+\frac{(-1)^n}{\pi}[f(\pi)-f(-\pi)]\quad(n\ge1).
+\]
+第一式的边界项由正弦端点为$0$自动消失，不需端点相等。
+\end{result}
+\begin{result}[光滑性与衰减]\label{st:smooth}
+若$f\in C^m[-\pi,\pi]$，且$f^{(j)}(-\pi)=f^{(j)}(\pi)$（$0\le j<m$），则对$n\ne0$
+\[
+ c_n(f)=\frac{c_n(f^{(m)})}{(in)^m}=o(|n|^{-m}).
+\]
+端点匹配不能省略；仅在闭区间上$C^m$不够。
+\end{result}
+\begin{result}[绝对一致收敛及高阶误差]\label{st:error}
+设$m\ge1$为整数，$f\in C^{m-1}[-\pi,\pi]$，$f^{(m-1)}$有限分段连续可导，且$f^{(m)}$可积且平方可积，且$0\le j<m$阶导数在两端匹配。则
+\[
+ \sum_{n\in\Z}|c_n(f)|<\infty,\qquad S_N(f)\to f\ \text{一致},
+\]
+\[
+ \sup_{|x|\le\pi}|f(x)-S_N(f,x)|
+ \le\left(\sum_{|n|>N}|n|^{-2m}\right)^{1/2}
+ \left(\sum_{|n|>N}|c_n(f^{(m)})|^2\right)^{1/2}
+ =o(N^{1/2-m}).
+\]
+特别地连续周期、分段$C^1$且导数平方可积的函数，其Fourier级数绝对一致收敛。
+\end{result}
+\idea{导数系数平方可和；写$|c_n(f)|=|n|^{-m}|c_n(f^{(m)})|$，用带权Cauchy--Schwarz及尾和$\sum_{n>N}n^{-2m}\le N^{1-2m}/(2m-1)$。}
+\begin{result}[H\"older连续的系数估计]\label{st:holderdecay}
+若$f$为连续周期函数，且$|f(x+h)-f(x)|\le C|h|^\alpha$（$0<\alpha\le1$），则$c_n(f)=O(|n|^{-\alpha})$。证明中可使用半波平移公式
+\[
+ c_n(f)=\frac1{4\pi}\int_{-\pi}^{\pi}[f(x)-f(x+\pi/n)]e^{-inx}\dd x.
+\]
+\end{result}
+\begin{result}[有界单调函数的系数估计]\label{st:BV}
+若实值$f$在$[-\pi,\pi]$有界单调，令$V=|f(\pi)-f(-\pi)|$，则
+\[
+ |c_n(f)|\le\frac{V}{\pi|n|}\quad(n\ne0).
+\]
+因此$\{nc_n(f)\}$有界，但$O(1/|n|)$本身不保证系数绝对可和。
+\end{result}
+\begin{result}[逐项积分]\label{st:integrate}
+若$f$在一个周期上可积且平方可积，则对任意$a,b\in[-\pi,\pi]$，
+\[
+ \int_a^b f(x)\dd x=c_0(b-a)+\sum_{n\ne0}c_n\frac{e^{inb}-e^{ina}}{in}.
+\]
+右侧绝对收敛；其积分上限形式在全区间一致收敛。即使原Fourier级数未处处收敛，这一积分等式仍成立。本册采用上述可积且平方可积条件，不调用更一般的积分理论。
+\end{result}
+\begin{result}[逐项求导的充分条件]\label{st:differentiate}
+若$\sum_{n\in\Z}|n c_n|<\infty$，则$\sum c_ne^{inx}$一致收敛到$C^1$周期函数$f$，且
+$f'(x)=\sum in c_ne^{inx}$一致收敛。更一般地，原函数级数在某点收敛、导数级数在区间上一致收敛，也可逐项求导。系数关系成立不等于已经满足这些级数求导条件。
+\end{result}
+\begin{result}[半区间展开及端点]\label{st:half}
+对$(0,l)$上的可积函数，可作$2l$周期偶延拓，余弦系数为
+$A_n=(2/l)\int_0^lf(x)\cos(n\pi x/l)\dd x$（$n\ge0$）；奇延拓的正弦系数为
+$B_n=(2/l)\int_0^lf(x)\sin(n\pi x/l)\dd x$（$n\ge1$）。
+在满足逐点收敛定理的内部点收敛到$f$；端点按所选延拓的左右平均确定。奇延拓不保证端点连续，偶延拓总能匹配周期两端的函数值。
+\end{result}
+\begin{result}[Wirtinger与Poincar\'e不等式]\label{st:Wirtinger}
+设$f$为连续、分段$C^1$的$T$周期函数，$\int_0^Tf=0$，则
+\[
+ \int_0^T|f|^2\le\frac{T^2}{4\pi^2}\int_0^T|f'|^2,
+\]
+等号当且仅当$f=A\cos(2\pi x/T)+B\sin(2\pi x/T)$。
+若$f\in C^1[a,b]$且$f(a)=f(b)=0$，则
+\[
+ \int_a^b|f|^2\le\frac{(b-a)^2}{\pi^2}\int_a^b|f'|^2,
+\]
+等号当且仅当$f=A\sin(\pi(x-a)/(b-a))$，上述常数最优。
+若$f\in C^1[0,\pi]$且$\int_0^\pi f=0$，则$\int|f|^2\le\int|f'|^2$，等号为$f=A\cos x$。
+\end{result}
+\idea{Parseval把导数变成频率平方权重；零均值首先消去$n=0$项，随后才能使用$n^2\ge1$。半区间问题根据边界条件选偶延拓或奇延拓。}
+\src{课本第5.3节及习题五4、7；史第17.4节；Stein第3章Exercises 11、13、14、17；第四次作业相关题目。}
+
+\section{作业中的常用估计与结论}
+\begin{result}[Abel求和与Dirichlet判别法]\label{st:Abel}
+若$P_j=\sum_{k=a}^jv_k$，则
+\[
+ \sum_{k=a}^bu_kv_k=u_bP_b+\sum_{k=a}^{b-1}(u_k-u_{k+1})P_k.
+\]
+若$|P_j|\le M$且$u_k\ge0$递减，则该和的模不超过$Mu_a$。若$u_k\downarrow0$且$\sum_{k=1}^jv_k$有界，则$\sum u_kv_k$收敛；若部分和界对参数一致，则尾估计也一致。
+\end{result}
+\begin{result}[正弦和及非负辅助核]\label{st:Kstar}
+令$K_n(x)=\sum_{k=1}^n\sin kx$，则对$0<x\le\pi$
+\[
+ K_n(x)=\frac{\cos(x/2)-\cos((n+1/2)x)}{2\sin(x/2)},\qquad
+ K_n^*(x)=K_n(x)-\tfrac12\sin nx=\sin^2(nx/2)\cot(x/2)\ge0.
+\]
+在端点按连续延拓理解。并有
+\[
+ |K_n(x)|\le\min\{n,\pi/x\},\quad
+ K_n^*(x)\le\min\{n^2x/2,2/x\},\quad
+ \int_0^\pi|K_n|\le C\log(n+1).
+\]
+\end{result}
+\begin{result}[单调系数正弦级数]\label{st:sineseries}
+若$b_n\downarrow0$，则$f(x)=\sum_{n\ge1}b_n\sin nx$在$[0,\pi]$逐点收敛，在每个$[\delta,\pi]$（$\delta>0$）上一致收敛，且
+\[
+ f(x)=\sum_{n\ge1}(b_n-b_{n+1})K_n(x),\qquad f\in C(0,\pi].
+\]
+若另有$\sum b_n/n<\infty$，则部分和$s_N$满足$\sup_N\int_0^\pi|s_N|<\infty$，并且$\int_{0+}^{\pi}|f|<\infty$。该结论不保证$f$在$0$附近有界或在闭区间上通常Riemann可积。
+\end{result}
+\begin{result}[周期振荡平均]\label{st:average}
+设$f$在$[a,b]$上黎曼可积或反常绝对可积，$g$为连续$T$周期函数，$\overline g=T^{-1}\int_0^Tg$，则
+\[
+ \lim_{n\to\infty}\int_a^bf(x)g(nx)\dd x=\overline g\int_a^bf(x)\dd x.
+\]
+特别地，将$g$取为$|\sin|$或$|\cos|$时，平均值均为$2/\pi$。若用一致收敛的三角展开，其余项积分由$\int|f|$乘一致误差控制，不要求$f$有界。
+\end{result}
+\src{Stein第2章Exercise 7；第三次、第四次作业；课本习题五5、6。}
+
+\section{需要单独检查的条件}
+\begin{enumerate}
+\item 区间内光滑不能代替周期端点匹配；分部积分前检查边界项。
+\item $n=0$项不能参与$n^2\ge1$的放缩；零均值是在消去导数无法控制的常数项。
+\item 平方平均误差积分趋零、逐点收敛、一致收敛分别陈述，不能互相偷换。
+\item $\int|f-g|^2=0$不能直接推出每点相等；共同连续点处可推出相等。
+\item 在$[\delta,\pi]$上一致收敛，不能未经论证扩展到含跳跃点的全周期。
+\item 连续函数的Fej\'er平均一致收敛，不表示普通部分和一致收敛。
+\item 系数的形式对应，不等于已具备逐项求导及逐点收敛条件。
+\end{enumerate}
+\end{document}
