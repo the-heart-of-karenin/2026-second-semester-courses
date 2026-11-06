@@ -1,0 +1,363 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[a4paper,top=2.45cm,bottom=2.3cm,left=2.65cm,right=2.65cm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,enumitem,fancyhdr,xcolor,hyperref,microtype}
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{\setCJKmainfont{SimSun}}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKsansfont{Noto Sans CJK SC}}{\setCJKsansfont{SimHei}}
+\definecolor{accent}{RGB}{33,65,91}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=accent,urlcolor=accent,pdfauthor={拓扑学课程作业},pdftitle={第三次作业——详细解答}}
+\ctexset{section={format=\Large\bfseries\color{accent}},subsection={format=\large\bfseries},subsubsection={format=\normalsize\bfseries}}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\linespread{1.22}
+\fancyhf{}
+\pagestyle{fancy}
+\fancyhead[L]{\small 第三次作业\quad 基础拓扑学}
+\fancyhead[R]{\small \nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\newtheorem*{claim}{说明}
+\newtheorem*{lemma}{引理}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Sphere}{S^n}
+\newcommand{\Torus}{T^2}
+\newcommand{\Proj}{P^2}
+\newcommand{\Homeo}{\cong}
+\newcommand{\Homot}{\simeq}
+\newcommand{\type}[1]{\textsf{#1}}
+\newcommand{\pp}[1]{\bigl(#1\bigr)}
+\newcommand{\word}[1]{\(\displaystyle #1\)}
+\begin{document}
+\begin{center}
+{\fontsize{22}{28}\selectfont\bfseries 第三次作业：详细解答}\\[8pt]
+{\large 《基础拓扑学及应用》\quad 第105页、第156--157页}\\[5pt]
+\small 第105页：习题5.1（3--6）\qquad 第156页：习题6.3（1(2)(3)、2(3)(4)(5)、3、12）
+\end{center}
+\vspace{3mm}
+\noindent\colorbox{accent!7}{\parbox{\dimexpr\textwidth-2\fboxsep}{\small
+\textbf{约定与范围}\quad 按教材第5.1节的同伦定义与第6.2--6.3节的多边形表示、I型和II型手术、闭曲面分类定理作答。\(I=[0,1]\)；\(f\simeq g\) 表示普通同伦（不要求保持道路端点）；\(nT^2\) 和 \(mP^2\) 沿用原书表示连通和的记号。第156页第3题的“所有”按\emph{边名重命名、同名两边同时反向、循环移动及整个多边形翻转}视作同一种标注的通常含义列出，避免无穷多无意义的重命名。}}
+
+\section{第105页：习题5.1}
+
+\subsection*{第3题：常值映射与道路的同伦}
+\textbf{题目。}\;设 \(f,g:X\to Y\) 为两个不同的常值映射，\(Y\) 道路连通。证明 \(f\simeq g\)，且 \(Y\) 上任意两条道路同伦。
+
+\textbf{证明。}\;因 \(f,g\) 为常值映射，存在 \(y_0,y_1\in Y\)，使得
+\[
+ f(x)=y_0,\qquad g(x)=y_1\qquad(x\in X).
+\]
+由 \(Y\) 道路连通，存在连续映射（道路）\(\gamma:I\to Y\)，满足
+\(\gamma(0)=y_0\)、\(\gamma(1)=y_1\)。定义
+\[
+ H:X\times I\to Y,\qquad H(x,t)=\gamma(t).
+\]
+这是连续映射，并且 \(H(x,0)=f(x)\)、\(H(x,1)=g(x)\)。按教材同伦的定义，\(f\simeq g\)。
+
+现设 \(\alpha,\beta:I\to Y\) 是任意两条道路。取连接 \(\alpha(0)\) 与 \(\beta(0)\) 的道路 \(\gamma:I\to Y\)。定义
+\[
+ H(s,t)=
+ \begin{cases}
+ \alpha((1-3t)s),&0\le t\le \frac13,\\[2pt]
+ \gamma(3t-1),&\frac13\le t\le\frac23,\\[2pt]
+ \beta((3t-2)s),&\frac23\le t\le1.
+ \end{cases}
+\]
+在 \(t=\frac13\) 处，第一段与第二段同为 \(\alpha(0)=\gamma(0)\)；
+在 \(t=\frac23\) 处，第二段与第三段同为 \(\gamma(1)=\beta(0)\)。
+因此由连续映射的粘贴性质，\(H:I\times I\to Y\) 连续。又有
+\(H(s,0)=\alpha(s)\)、\(H(s,1)=\beta(s)\)，故 \(\alpha\simeq\beta\)。\hfill\(\square\)
+
+\textbf{注意。}\;本题讨论的是把道路看作映射 \(I\to Y\) 的\emph{普通同伦}；同伦过程中不必固定两个端点。若要求端点始终不动，结论一般不成立。
+
+\subsection*{第4题：不满射的球面映射是零伦的}
+\textbf{题目。}\;设连续映射 \(f:X\to S^n\) 不满，证明 \(f\) 是零伦的。
+
+\textbf{证明。}\;选取 \(q\in S^n\setminus f(X)\)，并令 \(p=-q\in S^n\)。因为 \(S^n\subset\R^{n+1}\)，可以定义
+\[
+ H(x,t)=\frac{(1-t)f(x)+tp}{\bigl|(1-t)f(x)+tp\bigr|},
+ \qquad (x,t)\in X\times I.
+\]
+先说明分母处处不为零。若
+\((1-t)f(x)+tp=0\)，由于 \(|f(x)|=|p|=1\)，必有 \(0<t<1\) 且
+\[
+ f(x)=-\frac{t}{1-t}p.
+\]
+两边取长度得到 \(t/(1-t)=1\)，即 \(t=1/2\) 且 \(f(x)=-p=q\)，这与 \(q\notin f(X)\) 矛盾。因此 \(H\) 有定义且连续，并满足
+\[
+ H(x,0)=f(x),\qquad H(x,1)=p.
+\]
+所以 \(f\) 与常值映射 \(x\mapsto p\) 同伦，按定义 \(f\) 是零伦映射。\hfill\(\square\)
+
+\subsection*{第5题：球面上的距离条件}
+\textbf{题目。}\;设 \(f,g:X\to S^n\) 连续，且对所有 \(x\in X\) 有 \(|f(x)-g(x)|<2\)。证明 \(f\simeq g\)。
+
+\textbf{证明。}\;对 \((x,t)\in X\times I\)，设
+\[
+ u(x,t)=(1-t)f(x)+tg(x).
+\]
+若 \(u(x,t)=0\)，则 \((1-t)f(x)=-tg(x)\)。两边取长度，并利用
+\(|f(x)|=|g(x)|=1\)，得 \(1-t=t\)，故 \(t=1/2\)，进而
+\(g(x)=-f(x)\)。于是
+\[
+ |f(x)-g(x)|=|2f(x)|=2,
+\]
+与题设矛盾。因此 \(u(x,t)\ne0\)。定义
+\[
+ H(x,t)=\frac{u(x,t)}{|u(x,t)|}.
+\]
+\(H\) 是取值于 \(S^n\) 的连续映射；同时 \(H(x,0)=f(x)\)、\(H(x,1)=g(x)\)。所以 \(f\simeq g\)。\hfill\(\square\)
+
+\subsection*{第6题：去掉原点的复平面中的距离条件}
+\textbf{题目。}\;设 \(f,g:X\to\C\setminus\{0\}\) 连续，对所有 \(x\in X\) 满足 \(|f(x)-g(x)|<|f(x)|\)。证明 \(f\simeq g\)。
+
+\textbf{证明。}\;取直线同伦
+\[
+ H(x,t)=(1-t)f(x)+tg(x)=f(x)+t\pp{g(x)-f(x)}.
+\]
+由三角不等式，对 \(x\in X\)、\(0\le t\le1\)，
+\[
+ \begin{aligned}
+ |H(x,t)|&\ge |f(x)|-t|g(x)-f(x)|\\
+ &\ge |f(x)|-|g(x)-f(x)|>0.
+ \end{aligned}
+\]
+故 \(H(x,t)\in\C\setminus\{0\}\) 始终成立。由于 \(H\) 连续且
+\(H(x,0)=f(x)\)、\(H(x,1)=g(x)\)，故 \(f\simeq g\)。\hfill\(\square\)
+
+\clearpage
+\section{第156页：习题6.3}
+
+\subsection*{先备计算：多边形表示中的顶点类}
+下列各题仅需教材第6.2--6.3节的多边形表示与分类结果。为明确计算过程，统一说明顶点类的求法。
+
+设一个 \(2r\) 边形的边界依次记为 \(e_1,\ldots,e_{2r}\)，顶点记为
+\(v_0,v_1,\ldots,v_{2r-1}\)，其中边 \(e_i\) 从 \(v_{i-1}\) 走到 \(v_i\)，下标按 \(2r\) 取模。若 \(e_i,e_j\) 为同名边，则：
+\begin{itemize}[topsep=3pt,itemsep=1pt,leftmargin=3.1em]
+\item \textbf{同向粘合}（字中同名字母指数相同）：\(v_{i-1}\sim v_{j-1}\)，\(v_i\sim v_j\)；
+\item \textbf{反向粘合}（指数相反）：\(v_{i-1}\sim v_j\)，\(v_i\sim v_{j-1}\)。
+\end{itemize}
+取这些关系生成的等价关系，便得到商曲面顶点类的数目 \(V\)。边对数为 \(E=r\)，内部面数为 \(F=1\)。记
+\[
+ \eta=V-E+1.
+\]
+\emph{这只是顶点、边对和内部面的计数，不需要调用教材范围以外的工具。}
+教材第6.2节的I型手术使 \(V,E\) 同时各减少1；II型手术不改变二者。因此 \(\eta\) 在教材所用的多边形变形中保持不变。在第6.3节的标准形式中，
+\[
+ \begin{array}{c|c|c|c}
+ \text{曲面} & \text{标准边界字}&\text{可定向性}&\eta\\\hline
+ S^2 &\text{球面标准表示}&\text{可定向}&2\\
+ nT^2 &(a_1b_1a_1^{-1}b_1^{-1})\cdots(a_nb_na_n^{-1}b_n^{-1})&\text{可定向}&2-2n\\
+ mP^2&a_1a_1\cdots a_ma_m&\text{不可定向}&2-m
+ \end{array}
+\]
+故判断方法是：
+\emph{所有边对均反向粘合时曲面可定向，否则不可定向}；再由 \(\eta\) 以及闭曲面分类定理唯一确定曲面类型。原书的克莱因瓶 \(K\cong2P^2\)。
+
+\subsection*{第1题（2）（3）：判断曲面类型}
+
+\textbf{（2）}\;多边形字是
+\[
+ w=abcab^{-1}dcd.
+\]
+共8条边，\(E=4\)。按上面的端点粘合规则（同名 \(a,c,d\) 同向，\(b\) 反向），得到唯一顶点类
+\[
+ \{v_0,v_1,v_2,v_3,v_4,v_5,v_6,v_7\}.
+\]
+因此 \(V=1\)，\(\eta=1-4+1=-2\)。由于出现同向粘合边对，曲面不可定向。设它同胚于 \(mP^2\)，则
+\[
+ 2-m=-2\quad\Longrightarrow\quad m=4.
+\]
+\textbf{结论：}\(\boxed{\,4P^2\,}\)，即4个射影平面的连通和。
+
+\textbf{（3）}\;多边形字是
+\[
+ w=ab^{-1}dc^{-1}a^{-1}bcd^{-1}.
+\]
+四对边 \(a,b,c,d\) 均反向粘合，所以曲面可定向。逐对粘合后，八个顶点分为三个顶点类：
+\[
+ \{v_0,v_2,v_5\},\qquad
+ \{v_1,v_4,v_6\},\qquad
+ \{v_3,v_7\}.
+\]
+故 \(V=3\)，\(E=4\)，从而 \(\eta=3-4+1=0\)。若曲面为 \(nT^2\)，则
+\[
+ 2-2n=0\quad\Longrightarrow\quad n=1.
+\]
+\textbf{结论：}\(\boxed{\,T^2\,}\)，即环面。
+
+\subsection*{第2题（3）（4）（5）：比较两种表示}
+\textbf{题意。}\;对每小题中两个多边形字，证明它们表示同一曲面，确定类型，并说明两种多边形表示的关系。
+
+\textbf{（3）}\;两个字分别是
+\[
+ \begin{aligned}
+ w_1&=a^{-1}cdc^{-1}d^{-1}bab^{-1},\\
+ w_2&=a^{-1}c^{-1}d^{-1}bcdab^{-1}.
+ \end{aligned}
+\]
+两者均有8条边和4对边，且每个字母都出现一次正向、一次反向；因而都可定向。按顶点粘合关系逐对计算，两者的 \(v_0,\ldots,v_7\) 都合为\emph{一个}顶点类，即
+\[
+ V(w_1)=V(w_2)=1,\qquad E(w_1)=E(w_2)=4.
+\]
+于是两者均有 \(\eta=-2=2-2n\)，从而 \(n=2\)。故
+\[
+ \boxed{\,S(w_1)\cong S(w_2)\cong2T^2\,}.
+\]
+这里 \(S(w)\) 表示边界字 \(w\) 粘合得到的闭曲面。两者是\textbf{同胚曲面的两种不同多边形表示}：虽能用第6.2节手术相互变换，但不只是循环移动或重命名。确实，按边界的8个位置计算每对同名边的\emph{最短循环间距}，\(w_1\) 得到 \(\{2,2,2,2\}\)，而 \(w_2\) 得到 \(\{2,3,3,4\}\)；这个多重集在循环移动、整体翻转及边名更换下不变，所以两者不属于同一个纯重标记形式。
+
+\textbf{（4）}\;两个字分别是
+\[
+ w_1=ab^{-1}c^{-1}bca,\qquad w_2=aac^{-1}b^{-1}cb.
+\]
+每个字有6条边、3对边；由于 \(a\) 的两次出现同向，曲面不可定向。端点粘合后，两者均只有一个顶点类，因此
+\[
+ V=1,\qquad E=3,\qquad\eta=-1=2-m,
+\]
+从而 \(m=3\)，即
+\[
+ \boxed{\,S(w_1)\cong S(w_2)\cong3P^2\,}.
+\]
+而且，\textbf{两字实际上只差循环移动和字母重命名}：从 \(w_1\) 的最后一个 \(a\) 开始依边界读，得到
+\[
+ ab^{-1}c^{-1}bca\quad\leadsto\quad
+ aab^{-1}c^{-1}bc.
+\]
+再交换字母名称 \(b\leftrightarrow c\)，便恰好得到
+\(aac^{-1}b^{-1}cb=w_2\)。故它们不仅同胚，甚至可看作同一带标记六边形表示的不同书写方式。
+
+\textbf{（5）}\;两个字分别是
+\[
+ w_1=aba^{-1}b^{-1}cc,\qquad w_2=ccaba^{-1}b^{-1}.
+\]
+这是显然的循环移动：把 \(w_1\) 的末尾 \(cc\) 移到最前即可得到 \(w_2\)，所以它们是\textbf{完全相同的边界粘合表示}（只是改变了起读位置）。为确定曲面，注意 \(c\) 为同向边对，故不可定向；全部6个顶点合为一个顶点类，\(V=1,E=3,\eta=-1\)。因此
+\[
+ \boxed{\,S(w_1)=S(w_2)\text{（按边界字重读）}\cong3P^2\,}.
+\]
+
+\clearpage
+\subsection*{第3题：\(P^2\)、\(K\)、\(T^2\) 的所有六边形表示}
+\textbf{解释。}\;“列出所有”须排除只是字母更名、选择字母正方向、改变边界起点或反向绕边界读而造成的重复。下面每个代表均有3对边，且每个字母 \(a,b,c\) 正好出现两次。按以上约定，每类的\emph{全部不重复代表}如下。
+
+\textbf{（I）射影平面 \(P^2\)：共5种。}
+\[
+ \boxed{\begin{aligned}
+ &aa^{-1}bb^{-1}cc,\\
+ &aa^{-1}bcbc,\\
+ &aa^{-1}bcc^{-1}b,\\
+ &aa^{-1}bccb^{-1},\\
+ &abcabc.
+ \end{aligned}}
+\]
+这些表示均有 \(V=3\)、\(E=3\)，因而 \(\eta=1\)，且不可定向，所以均同胚于 \(P^2\)。
+
+\textbf{（II）克莱因瓶 \(K\cong2P^2\)：共8种。}
+\[
+ \boxed{\begin{aligned}
+ &aa^{-1}bbcc,\\
+ &aa^{-1}bcb^{-1}c,\\
+ &aa^{-1}bccb,\\
+ &aabcbc,\\
+ &aabccb^{-1},\\
+ &aba^{-1}cbc^{-1},\\
+ &abacb^{-1}c,\\
+ &abca^{-1}bc.
+ \end{aligned}}
+\]
+这些表示均有 \(V=2\)、\(E=3\)，因而 \(\eta=0\)，但至少有一对同向边，所以均同胚于 \(2P^2\)，即克莱因瓶。
+
+\textbf{（III）环面 \(T^2\)：共3种。}
+\[
+ \boxed{\begin{aligned}
+ &aa^{-1}bcb^{-1}c^{-1},\\
+ &aba^{-1}cb^{-1}c^{-1},\\
+ &abca^{-1}b^{-1}c^{-1}.
+ \end{aligned}}
+\]
+这些表示中的三个边对全部反向粘合，而且 \(V=2,E=3\)，故 \(\eta=0\)，均为 \(T^2\)。
+
+\textbf{完备性的核对。}\;为了说明确实没有遗漏六边形表示，把六边形的边界位置记为 \(0,1,2,3,4,5\)。先不写箭头，仅把6个位置配成3对，共有
+\(5\cdot3\cdot1=15\) 种配对。在六边形的循环移动和整体反向之下，这15种配对恰分为以下5类；表内还给出允许同一配对的各对边同向或反向（每组初始有 \(2^3=8\) 种可能）后，再按上述重标记操作合并所得到的不同表示的数目。
+\begin{center}
+\renewcommand{\arraystretch}{1.30}
+\begin{tabular}{>{\centering\arraybackslash}m{2.1cm} >{\centering\arraybackslash}m{5.7cm} ccc}
+\toprule
+无向配对类型&位置成对关系&\(P^2\)&\(K\)&\(T^2\)\\\midrule
+A&\((01)(23)(45)\)&1&1&0\\
+B&\((01)(24)(35)\)&1&2&1\\
+C&\((01)(25)(34)\)&2&2&0\\
+D&\((02)(14)(35)\)&0&2&1\\
+E&\((03)(14)(25)\)&1&1&1\\\midrule
+合计& &\(5\)&\(8\)&\(3\)\\\bottomrule
+\end{tabular}
+\end{center}
+表的检查方法完全是前文的\emph{顶点粘合规则}：逐一为3对边填入“同向”或“反向”，识别顶点类数，再以 \(V-3+1\) 和可定向性分类，同时消去循环移动、反读和重命名造成的重复。例如 A 类的6条边排成3个相邻的边对，分别选择正反方向便得到球面、\(P^2\)、\(K\) 及 \(3P^2\) 的情形。其余4类同法检验，表中的数字给出所有需要的六边形表示，因而上列清单是完备的。
+
+\subsection*{第12题：不可定向闭曲面去掉小开圆盘后可嵌入 \(\R^3\)}
+\textbf{题目。}\;证明任意一个连通的不可定向闭曲面挖去一个小开圆盘后都可嵌入 \(\R^3\)。
+
+\textbf{证明。}\;记
+\[
+ C^\bullet:=C\setminus\operatorname{Int}(D^2),
+\]
+表示闭曲面 \(C\) 挖去一个小开圆盘。对连通闭曲面，挖去不同的小开圆盘所得的曲面同胚，因此以下可把圆盘选在方便的位置。符号 \(\#\) 表示普通连通和；符号 \(\natural\) 表示\emph{边界连通和}：将两个带边界曲面沿各自边界上的一段闭弧粘合。等价地，可以用一条窄矩形带，把两段边界弧连接起来。
+
+\textbf{第一步：说明两个闭曲面挖洞与连通和的关系。}
+对任意连通闭曲面 \(A,B\)，有
+\[
+ \boxed{\ (A\# B)^\bullet\cong A^\bullet\natural B^\bullet.\ }\tag{$*$}
+\]
+具体说明如下：按普通连通和的定义，先从 \(A,B\) 中\emph{各}挖去一个小开圆盘，得到 \(A^\bullet,B^\bullet\)，再把它们的\emph{整个边界圆周}粘在一起，得到 \(A\# B\)。粘合的圆周成为闭曲面内部的一条接缝。
+
+现在从 \(A\# B\) 中再挖去一个以接缝上的一点为中心的小开圆盘，使圆盘一半位于 \(A^\bullet\) 一侧，另一半位于 \(B^\bullet\) 一侧。这样，每一侧只是在边界上被“咬掉一小口”，其同胚类型仍分别是 \(A^\bullet,B^\bullet\)；原来的整圈接缝则被挖断一小段，剩下一条闭弧。于是两个曲面只沿这条边界弧连接，这正是 \(A^\bullet\natural B^\bullet\)。公式 \((*)\) 得证。
+
+\textbf{第二步：先将三个射影平面的情形展开。}
+射影平面可由莫比乌斯带 \(M\) 沿边界补一个圆盘得到，故
+\[
+ (P^2)^\bullet\cong M.
+\]
+对三个射影平面，连续两次应用 \((*)\)，得到
+\[
+\begin{aligned}
+ (P^2\#P^2\#P^2)^\bullet
+ &=\bigl((P^2\#P^2)\#P^2\bigr)^\bullet\\
+ &\cong(P^2\#P^2)^\bullet\natural(P^2)^\bullet\\
+ &\cong\bigl((P^2)^\bullet\natural(P^2)^\bullet\bigr)\natural(P^2)^\bullet\\
+ &\cong(M\natural M)\natural M.
+\end{aligned}
+\]
+第一次应用时，把 \(P^2\#P^2\) 整体看作闭曲面 \(A\)，取 \(B=P^2\)；第二次再展开 \((P^2\#P^2)^\bullet\)。因此每个射影平面都对应最后的一个莫比乌斯带。
+
+\textbf{第三步：用归纳法得到一般结论。}
+令
+\[
+ S_k:=\underbrace{P^2\#\cdots\#P^2}_{k\text{个}}.
+\]
+当 \(k=1\) 时，\(S_1^\bullet\cong M\)。对 \(k\ge2\)，由于 \(S_k=S_{k-1}\#P^2\)，将 \((*)\) 用于闭曲面 \(A=S_{k-1}\)、\(B=P^2\)，得
+\[
+ S_k^\bullet\cong S_{k-1}^\bullet\natural(P^2)^\bullet
+ \cong S_{k-1}^\bullet\natural M.
+\]
+于是由归纳法，
+\[
+ \boxed{\ (mP^2)^\bullet\cong
+ \underbrace{M\natural\cdots\natural M}_{m\text{个莫比乌斯带}}.\ }
+\]
+这里每一步都在更换同胚模型，并非在原曲面上不断增加洞。每次边界连通和把两个边界圆周合成一个，所以边界分支数为 \(1+1-1=1\)；最终仍只有一个边界圆周，正对应左边挖出的那个洞。
+
+\textbf{第四步：在三维空间中放置这个模型。}
+设 \(S\) 是题设的连通不可定向闭曲面。由闭曲面分类定理，\(S\cong mP^2\)，其中 \(m\ge1\)。因此
+\[
+ S^\bullet\cong\underbrace{M\natural\cdots\natural M}_{m\text{个}}.
+\]
+将 \(m\) 个标准莫比乌斯带分开放在 \(\R^3\) 的互不相交的小球中，再用 \(m-1\) 条窄矩形带沿边界依次连接。把连接带安排在互不相交的狭窄通道中，使其内部与其余曲面不相交，就得到右侧边界连通和的一个不自交的空间模型。因此
+\[
+ \boxed{\ S\setminus\operatorname{Int}(D^2)\ \hookrightarrow\ \R^3.\ }
+\]
+命题得证。\hfill\(\square\)
+
+\vspace{5mm}
+\begin{center}
+\rule{0.35\textwidth}{0.35pt}\\[4pt]
+\small 依据：雷逢春、杨志青、李凤玲《基础拓扑学及应用》，\S 5.1、\S 6.2、\S 6.3。
+\end{center}
+\end{document}

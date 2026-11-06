@@ -1,0 +1,824 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\proofstart}{\par\noindent\textbf{证明}\quad}
+\title{数学分析第4次作业答案}
+\author{}
+\date{题目日期：10月22日}
+\begin{document}
+\maketitle
+\vspace{-2em}
+本答案收录教材练习题21.2第2、4、5、8、10、13题及全部补充题，保留题干并给出证明。教材题依据第140--142页照片，补充题依据10月22日作业原件。原题需要说明的端点或范围问题在相应题后另列。
+
+\section{教材练习题21.2}
+题干依据教材第140--142页照片，收录原作业指定的第2、4、5、8、10、13题。三角 Fourier 系数统一采用
+\[
+ a_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\cos nx\dd x,\qquad
+ b_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\sin nx\dd x,
+\]
+常数项为$a_0/2$；第13题另按原题采用复系数$c_n$。
+
+\subsection{第2题}
+\noindent\textbf{原题}\quad 设$f(x)$是以$2\pi$为周期的连续函数，并且在$[-\pi,\pi]$上除有限个点外可导，又设（在任意补充有限个点上的值之后）$f'$在$[-\pi,\pi]$上可积和平方可积，证明$f$的傅里叶级数绝对一致收敛于$f$。
+
+\proofstart 由$f'$的 Riemann 可积性知其有界。把有限个例外点作为分点，在各段内用中值定理，再用$f$在分点处连续，可知$f$在整个周期上 Lipschitz 连续，特别地绝对连续。分部积分及$f(-\pi)=f(\pi)$给出
+\[
+ a_n(f')=nb_n(f),\qquad b_n(f')=-na_n(f)\quad(n\ge1).
+\]
+对$f'$用 Bessel 不等式，得到
+\[
+ \sum_{n=1}^{\infty}n^2(a_n^2+b_n^2)
+ \le\frac1\pi\int_{-\pi}^{\pi}|f'(x)|^2\dd x<\infty.
+\]
+由 Cauchy--Schwarz 不等式，
+\begin{align*}
+ \sum_{n=1}^{\infty}(|a_n|+|b_n|)
+ &\le\sqrt2\sum_{n=1}^{\infty}\sqrt{a_n^2+b_n^2}\\
+ &\le\sqrt2\left(\sum_{n=1}^{\infty}n^2(a_n^2+b_n^2)\right)^{1/2}
+ \left(\sum_{n=1}^{\infty}\frac1{n^2}\right)^{1/2}<\infty.
+\end{align*}
+因此 Fourier 级数绝对且一致收敛到某连续周期函数$h$。逐项积分表明$h$与$f$的 Fourier 系数相同。
+由连续周期函数的 Fourier 系数唯一性，$h=f$。
+此处唯一性亦可直接由 Fej\'er 定理得到：$h-f$的每个 Fourier 系数均为$0$，所以它的所有 Fej\'er 平均都是$0$，而这些平均一致收敛到$h-f$，故$h-f=0$。
+若函数取复值，对实部、虚部分别使用上述论证即可。
+
+\subsection{第4题}
+\noindent\textbf{原题}\quad 设$f(x)$在$[a,b]$上可积。试用傅里叶展开式证明：
+\[
+ \lim_{n\to\infty}\int_a^b f(x)|\sin nx|\dd x
+ =\frac2\pi\int_a^b f(x)\dd x.
+\]
+
+\proofstart $|\sin t|$是连续的偶函数，其 Fourier 展开为
+\begin{equation}\label{eq:abs-sin}
+ |\sin t|=\frac2\pi-\frac4\pi
+ \sum_{k=1}^{\infty}\frac{\cos2kt}{4k^2-1}.
+\end{equation}
+确实，奇频率系数为$0$，而
+\[
+ a_0=\frac4\pi,\qquad
+ a_{2k}=\frac2\pi\int_0^\pi\sin t\cos2kt\dd t
+ =-\frac4{\pi(4k^2-1)}.
+\]
+系数绝对可求和，故\eqref{eq:abs-sin}一致收敛。代入$t=nx$，乘$f$并逐项积分，得
+\[
+ \int_a^b f(x)|\sin nx|\dd x
+ =\frac2\pi\int_a^b f(x)\dd x
+ -\frac4\pi\sum_{k=1}^{\infty}\frac1{4k^2-1}
+      \int_a^b f(x)\cos(2knx)\dd x.
+\]
+对每个固定$k$，Riemann--Lebesgue 引理表明最后的积分趋于$0$。同时其绝对值不超过$\int_a^b|f|$，且$\sum_{k\ge1}(4k^2-1)^{-1}<\infty$。因此先截断$k$的级数、再令$n\to\infty$、最后令截断指标趋于无穷，即得结论。
+
+\subsection{第5题}
+\noindent\textbf{原题}\quad 设$f(x)$在$[0,\pi]$上有连续导数，且$f'(x)$在$[0,\pi]$上分段光滑，$\int_0^\pi f(x)\dd x=0$，试证：
+\[
+ \int_0^\pi f'^2(x)\dd x\ge\int_0^\pi f^2(x)\dd x.
+\]
+
+\proofstart 作$f$的偶延拓并以$2\pi$为周期延拓。设其余弦系数为
+\[
+ A_n=\frac2\pi\int_0^\pi f(x)\cos nx\dd x\quad(n\ge0).
+\]
+题设给出$A_0=0$。\textbf{这里零均值条件很重要：后面的放缩$n^2\ge1$只适用于$n\ge1$；若$A_0\ne0$，Parseval 等式还含有$\pi A_0^2/4$这一常数项，不能忽略。}由 Parseval 等式，
+\[
+ \int_0^\pi f^2(x)\dd x=\frac\pi2\sum_{n=1}^{\infty}A_n^2.
+\]
+另一方面，对$f'$作奇延拓，其正弦系数由分部积分为
+\[
+ B_n=\frac2\pi\int_0^\pi f'(x)\sin nx\dd x
+ =-\frac{2n}\pi\int_0^\pi f(x)\cos nx\dd x=-nA_n.
+\]
+再用 Parseval 等式，
+\[
+ \int_0^\pi f'^2(x)\dd x=\frac\pi2\sum_{n=1}^{\infty}n^2A_n^2
+ \ge\frac\pi2\sum_{n=1}^{\infty}A_n^2
+ =\int_0^\pi f^2(x)\dd x.
+\]
+等号当且仅当$A_n=0$（$n\ge2$），即$f(x)=A\cos x$，其中$A$为实常数。
+
+\par\noindent\textbf{强调：函数与导数的 Fourier 系数关系有端点条件。}
+设$u$在$[-\pi,\pi]$上绝对连续（本题的分段光滑情形满足所需条件），记
+\[
+ c_n(u)=\frac1{2\pi}\int_{-\pi}^{\pi}u(x)e^{-inx}\dd x.
+\]
+分部积分实际给出
+\[
+ \boxed{\displaystyle c_n(u')=in\,c_n(u)
+ +\frac{(-1)^n}{2\pi}\bigl(u(\pi)-u(-\pi)\bigr).}
+\]
+因此，要使用完整的简化关系$c_n(u')=in\,c_n(u)$，必须有
+\textbf{$u(-\pi)=u(\pi)$，使边界项消失}；仅仅在区间上可导或光滑并不足够。
+这首先是系数关系，不能单凭此式就断言 Fourier 级数可逐项求导并逐点收敛到$u'$。
+
+本题作偶延拓$u(x)=f(|x|)$，自动满足$u(-\pi)=u(\pi)=f(\pi)$。
+若直接按$\pi$周期延拓原函数，则未必有$f(0)=f(\pi)$，接缝可能跳跃，不能忽略相应边界项。
+但要区分：上文在$[0,\pi]$上计算单个正弦系数时，
+$[f(x)\sin nx]_0^\pi=0$是由正弦端点值为$0$保证的，\textbf{这一个等式本身不要求$f(0)=f(\pi)$}。
+
+\subsection{第8题}
+\noindent\textbf{原题}\quad 设$0<\delta<\pi$，当$|x|\le\delta$时$f(x)=1$，当$\delta<|x|\le\pi$时$f(x)=0$，而对一切$x$，$f(x+2\pi)=f(x)$。
+\begin{enumerate}
+ \item[(a)] 求$f$的傅里叶系数；
+ \item[(b)] 推证$\displaystyle\sum_{n=1}^{\infty}\frac{\sin(n\delta)}n=\frac{\pi-\delta}{2}$，$0<\delta<\pi$；
+ \item[(c)] 由帕塞瓦尔定理证明$\displaystyle\sum_{n=1}^{\infty}\frac{\sin^2(n\delta)}{n^2\delta}=\frac{\pi-\delta}{2}$；
+ \item[(d)] 令$\delta\to0$，证明$\displaystyle\int_0^\infty\left(\frac{\sin x}{x}\right)^2\dd x=\frac\pi2$；
+ \item[(e)] 在(c)中令$\delta=\pi/2$，能得出什么结论？
+\end{enumerate}
+
+\proofstart \textbf{(a)} $f$为偶函数，所以$b_n=0$。直接计算得
+\[
+ a_0=\frac{2\delta}\pi,\qquad
+ a_n=\frac2\pi\int_0^\delta\cos nx\dd x
+ =\frac{2\sin(n\delta)}{\pi n}\quad(n\ge1).
+\]
+因此
+\[
+ f(x)\sim\frac\delta\pi+\frac2\pi
+ \sum_{n=1}^{\infty}\frac{\sin(n\delta)}n\cos nx.
+\]
+
+\textbf{(b)} $x=0$为连续点，由分段光滑函数的 Fourier 收敛定理，
+\[
+ 1=\frac\delta\pi+\frac2\pi\sum_{n=1}^{\infty}\frac{\sin(n\delta)}n.
+\]
+移项即得$\sum_{n\ge1}\sin(n\delta)/n=(\pi-\delta)/2$。
+
+\textbf{(c)} 因$f^2=f$，Parseval 等式给出
+\[
+ \frac{2\delta}\pi
+ =\frac1\pi\int_{-\pi}^{\pi}f^2(x)\dd x
+ =\frac{a_0^2}{2}+\sum_{n=1}^{\infty}a_n^2
+ =\frac{2\delta^2}{\pi^2}+\frac4{\pi^2}
+       \sum_{n=1}^{\infty}\frac{\sin^2(n\delta)}{n^2}.
+\]
+整理可得
+\[
+ \sum_{n=1}^{\infty}\frac{\sin^2(n\delta)}{n^2}
+ =\frac{\delta(\pi-\delta)}2,
+\]
+再除以$\delta$便是所求。
+
+\textbf{(d)} 令$h(x)=(\sin x/x)^2$（$x>0$），并定义$h(0)=1$。由(c)，
+\[
+ \delta\sum_{n=1}^{\infty}h(n\delta)=\frac{\pi-\delta}{2}.
+\]
+以下说明左侧确实收敛到反常积分。因为$0\le h(x)\le\min(1,x^{-2})$，该反常积分收敛。
+固定$R>1$，令$q=\lfloor R/\delta\rfloor$，则有限区间上的 Riemann 和满足
+\[
+ \delta\sum_{n=1}^{q}h(n\delta)\longrightarrow\int_0^R h(x)\dd x
+ \quad(\delta\downarrow0).
+\]
+对$0<\delta<R/2$，离散尾项满足
+\[
+ 0\le\delta\sum_{n>q}h(n\delta)
+ \le\frac1\delta\sum_{n>q}\frac1{n^2}
+ \le\frac1{\delta q}\le\frac2R.
+\]
+连续尾项也有$\int_R^\infty h(x)\dd x\le1/R$。
+故先令$\delta\downarrow0$，再令$R\to\infty$，得到
+\[
+ \int_0^\infty\left(\frac{\sin x}{x}\right)^2\dd x
+ =\lim_{\delta\downarrow0}\frac{\pi-\delta}{2}=\frac\pi2.
+\]
+
+\textbf{(e)} 当$\delta=\pi/2$时，$\sin^2(n\pi/2)$在$n$为奇数时等于$1$，偶数时等于$0$，所以
+\[
+ \boxed{\displaystyle 1+\frac1{3^2}+\frac1{5^2}+\cdots=\frac{\pi^2}{8}.}
+\]
+
+\subsection{第10题}
+\noindent\textbf{原题}\quad 设在$[-\pi,\pi]$上$f(x)=(\pi-|x|)^2$，试证
+\[
+ f(x)=\frac{\pi^2}{3}+\sum_{n=1}^{\infty}\frac4{n^2}\cos nx,
+\]
+由此证明
+\[
+ \sum_{n=1}^{\infty}\frac1{n^2}=\frac{\pi^2}{6},\qquad
+ \sum_{n=1}^{\infty}\frac1{n^4}=\frac{\pi^4}{90}.
+\]
+
+\proofstart $f$为偶函数，故$b_n=0$，并且
+\[
+ a_0=\frac2\pi\int_0^\pi(\pi-x)^2\dd x=\frac{2\pi^2}{3}.
+\]
+对$n\ge1$，分部积分两次，得
+\begin{align*}
+ \int_0^\pi(\pi-x)^2\cos nx\dd x
+ &=\frac2n\int_0^\pi(\pi-x)\sin nx\dd x\\
+ &=\frac2n\left(\left[-\frac{(\pi-x)\cos nx}{n}\right]_0^\pi
+ -\frac1n\int_0^\pi\cos nx\dd x\right)
+ =\frac{2\pi}{n^2}.
+\end{align*}
+因此$a_n=4/n^2$。周期延拓的$f$连续且分段光滑，其 Fourier 级数处处收敛到$f$，并因系数绝对可求和而一致收敛，故得所求展开。
+
+令$x=0$，得$\pi^2=\pi^2/3+4\sum_{n\ge1}n^{-2}$，于是
+$\sum_{n\ge1}n^{-2}=\pi^2/6$。再用 Parseval 等式：
+\[
+ \frac1\pi\int_{-\pi}^{\pi}(\pi-|x|)^4\dd x
+ =\frac{a_0^2}{2}+\sum_{n=1}^{\infty}a_n^2,
+\]
+即
+\[
+ \frac{2\pi^4}{5}=\frac{2\pi^4}{9}+16\sum_{n=1}^{\infty}\frac1{n^4}.
+\]
+所以$\sum_{n\ge1}n^{-4}=\pi^4/90$。
+
+\subsection{第13题}
+\noindent\textbf{原题}\quad 假设$f(x)$在$[-\pi,\pi]$上有界且单调，并且它的傅里叶系数$c_n$定义为
+\[
+ c_n=\frac1{2\pi}\int_{-\pi}^{\pi}f(x)e^{-\ii nx}\dd x.
+\]
+\begin{enumerate}
+ \item[(a)] 证明$\{nc_n\}$是有界序列；
+ \item[(b)] 证明：对于每个$x$，有$\displaystyle\lim_{N\to\infty}s_N(f,x)=\tfrac12[f(x+0)+f(x-0)]$；
+ \item[(c)] 若只假设$f(x)$在$[-\pi,\pi]$上黎曼可积，而$f$在某开区间$(\alpha,\beta)\subset[-\pi,\pi]$单调，试证：对于每个$x\in(\alpha,\beta)$，(b)的结论仍然成立。
+\end{enumerate}
+
+\noindent\textbf{端点约定}\quad Fourier 部分和按$2\pi$周期计算；在$\pm\pi$处的单侧极限也按周期延拓理解。端点单个函数值不影响积分及 Fourier 系数。
+
+\proofstart \textbf{(a)} 记$V=|f(\pi)-f(-\pi)|$。单调函数的总变差为$V$。
+当$n\ne0$时，用 Riemann--Stieltjes 分部积分，
+\[
+ c_n=-\frac1{2\pi\ii n}
+    \left[f(x)e^{-\ii nx}\right]_{-\pi}^{\pi}
+   +\frac1{2\pi\ii n}\int_{-\pi}^{\pi}e^{-\ii nx}\dd f(x).
+\]
+因为$e^{\ii n\pi}=e^{-\ii n\pi}=(-1)^n$，边界项的模为$V$；而 Stieltjes 积分的模不超过$V$。故
+\[
+ |nc_n|\le\frac{V}{\pi}\quad(n\ne0).
+\]
+$n=0$时$nc_n=0$，从而序列有界。
+
+\textbf{用于(b)(c)的局部引理。}
+设$f$为 Riemann 可积周期函数，并且在点$x$的左右两侧分别单调，则其对称 Fourier 部分和收敛到左右极限的平均。这里不要求左右两侧单调方向相同。下面证明这一引理。
+
+Dirichlet 核为
+\[
+ D_N(t)=\frac{\sin((N+\tfrac12)t)}{\sin(t/2)}
+ =1+2\sum_{k=1}^N\cos kt.
+\]
+补充题2第二部分已证明正弦和$\sum_{k=1}^N\sin(kt)/k$一致有界，故存在绝对常数$C_0$，使
+\begin{equation}\label{eq:primitive}
+ \left|\int_a^b D_N(t)\dd t\right|\le C_0
+ \quad(0\le a\le b\le\pi,\ N\ge0).
+\end{equation}
+事实上其原函数为$t+2\sum_{k=1}^N\sin(kt)/k$，可直接取$C_0=2(\pi+B)$，其中$B$为\eqref{eq:B}中的常数。
+
+设$L_+=f(x+0)$、$L_-=f(x-0)$，并令
+$h_+(t)=f(x+t)-L_+$、$h_-(t)=f(x-t)-L_-$（$t>0$）。由卷积公式和$\int_0^\pi D_N=\pi$，有
+\begin{equation}\label{eq:localdirichlet}
+ s_N(f,x)-\frac{L_++L_-}{2}
+ =\frac1{2\pi}\int_0^\pi[h_+(t)+h_-(t)]D_N(t)\dd t.
+\end{equation}
+取足够小的$\eta>0$，使两个$h_\pm$均在$(0,\eta]$单调；补定义$h_\pm(0)=0$，它们仍单调。
+由积分第二中值定理和\eqref{eq:primitive}，
+\[
+ \left|\int_0^\eta h_\pm(t)D_N(t)\dd t\right|
+ \le C_0|h_\pm(\eta)|.
+\]
+例如递增时$h_\pm\ge0$，第二中值定理将该积分写成
+$h_\pm(\eta)\int_\xi^\eta D_N(t)\dd t$；递减时对$-h_\pm$使用同一结论。
+由于$h_\pm(\eta)\to0$，这部分对所有$N$一致地趋于$0$。
+
+对固定$\eta>0$，函数
+\[
+ \frac{h_+(t)+h_-(t)}{\sin(t/2)}
+\]
+在$[\eta,\pi]$上 Riemann 可积。因此 Riemann--Lebesgue 引理给出
+\[
+ \int_\eta^\pi[h_+(t)+h_-(t)]D_N(t)\dd t\longrightarrow0.
+\]
+该引理对频率$N+1/2\to\infty$同样成立。先固定$\eta$令$N\to\infty$，再令$\eta\downarrow0$，代入\eqref{eq:localdirichlet}，便证明了局部引理。
+
+\textbf{(b)} 在每个内部点$x\in(-\pi,\pi)$，有界单调函数的左右极限存在，且左右两侧均单调，应用局部引理即可。在端点，周期延拓在左右两侧仍分别单调且有有限极限，也可使用引理，得到
+\[
+ \lim_{N\to\infty}s_N(f,x)=\frac{f(x+0)+f(x-0)}2.
+\]
+周期性再给出所有实数$x$处的结论。
+
+\textbf{(c)} 固定$x\in(\alpha,\beta)$，取
+$0<\eta<\min(x-\alpha,\beta-x)$。在此邻域内$f$单调，故左右极限存在，局部引理的近端估计成立。邻域外仅使用 Riemann 可积性与 Riemann--Lebesgue 引理，不要求单调。因此相同证明得到(b)中的结论。
+
+\clearpage
+\section{补充题1}
+\subsection*{（1）正弦和及其积分估计}
+\noindent\textbf{原题}\quad 记
+\[
+ K_n(x)=\sum_{k=1}^n\sin kx,\qquad x\in[0,\pi],
+\]
+证明：
+\[
+ K_n(x)=\frac{\cos\frac x2-\cos(n+\frac12)x}{2\sin\frac x2},
+\]
+进而证明：$\exists C>0$, s.t.
+\[
+ \int_0^\pi |K_n(x)|\dd x\le C\log(n+1),\qquad \forall n\in\N.
+\]
+（Hint：$K_n^*(x)\coloneqq K_n(x)-\frac12\sin nx
+=\frac{\sin^2\frac{nx}{2}}{\tan\frac x2}\ge0$，
+$|K_n(x)|\le K_n^*(x)+\frac12$。）
+
+\noindent\textbf{题面说明}\quad 原分式在$x=0$无定义，应在$0<x\le\pi$理解，$x=0$处取连续延拓值$K_n(0)=0$；提示中的商同样如此。
+
+\proofstart 利用积化和差，
+\[
+ 2\sin\frac x2\sin kx
+ =\cos\left(k-\frac12\right)x-\cos\left(k+\frac12\right)x.
+\]
+从$k=1$到$n$相加，中间项消去，即得所求公式。再由
+\[
+ \cos\left(n+\frac12\right)x
+ =\cos nx\cos\frac x2-\sin nx\sin\frac x2
+\]
+可得
+\[
+ K_n(x)=\frac{1-\cos nx}{2}\cot\frac x2+\frac12\sin nx
+ =\frac{\sin^2\frac{nx}{2}}{\tan\frac x2}+\frac12\sin nx.
+\]
+这也验证了提示中的恒等式及非负性。
+
+为估计积分，直接由定义及闭式公式得
+\[
+ |K_n(x)|\le n,\qquad
+ |K_n(x)|\le\frac1{\sin(x/2)}\le\frac\pi x
+ \quad(0<x\le\pi),
+\]
+其中用到了$\sin(x/2)\ge x/\pi$。因此
+\begin{align*}
+ \int_0^\pi|K_n(x)|\dd x
+ &\le\int_0^{1/n}n\dd x+\int_{1/n}^\pi\frac\pi x\dd x\\
+ &=1+\pi\log(\pi n)\le C\log(n+1).
+\end{align*}
+例如可取$C=\pi+(1+\pi\log\pi)/\log2$。以下固定这样一个与$n$无关的常数$C$。
+
+\subsection*{（2）正弦级数及其 Abel 变换}
+\noindent\textbf{原题}\quad 设数列$\{b_n\}$单调递减到$0$，证明正弦级数
+$\sum_{n=1}^{\infty}b_n\sin nx$在$[0,\pi]$上收敛，在$[\delta,\pi]$（$\delta>0$）上一致收敛，
+\[
+ f(x)=\sum_{n=1}^{\infty}b_n\sin nx
+ =\sum_{n=1}^{\infty}(b_n-b_{n+1})K_n(x),
+ \qquad f\in C(0,\pi].
+\]
+
+\proofstart 单调递减到$0$保证$b_n\ge0$。记
+$\Delta b_k=b_k-b_{k+1}\ge0$。有限 Abel 求和给出
+\begin{equation}\label{eq:abel1}
+ s_n(x)\coloneqq\sum_{k=1}^n b_k\sin kx
+ =\sum_{k=1}^{n-1}\Delta b_k K_k(x)+b_nK_n(x).
+\end{equation}
+对固定$0<\delta\le\pi$，由（1）的闭式公式，
+\[
+ \sup_{x\in[\delta,\pi]}|K_n(x)|
+ \le A_\delta\coloneqq\frac1{\sin(\delta/2)}.
+\]
+且$\sum_{k=1}^{\infty}\Delta b_k=b_1$，故
+$\sum_{k\ge1}\Delta b_kK_k(x)$在$[\delta,\pi]$上一致绝对收敛，而
+\[
+ \sup_{x\in[\delta,\pi]}|b_nK_n(x)|\le A_\delta b_n\longrightarrow0.
+\]
+在\eqref{eq:abel1}中令$n\to\infty$，即得该区间上一致收敛和题中恒等式。
+在$x=0$时，两边各项均为$0$，所以在整个$[0,\pi]$上逐点收敛且恒等式成立。
+由于$s_n$连续，一致极限在每个$[\delta,\pi]$上连续，因而$f\in C(0,\pi]$。
+
+\subsection*{（3）绝对可积性}
+\noindent\textbf{原题}\quad 若附加$\sum_{n=1}^{\infty}\frac{b_n}{n}<\infty$，记
+$s_n(x)=\sum_{k=1}^n b_k\sin kx$，证明：$\exists M>0$, s.t.
+\[
+ \int_0^\pi|s_n(x)|\dd x\le M,\qquad\forall n\in\N.
+\]
+进而证明$f(x)$在$[0,\pi]$上Riemann可积（故绝对可积），或反常Riemann积分绝对收敛（故反常积分收敛）。
+
+\noindent\textbf{解答所取结论}\quad 证明题目“或”之后的结论，即
+$\int_{0+}^{\pi}|f(x)|\dd x<\infty$。这不要求$f$在$0$附近有界。
+
+\proofstart 设$A=\sum_{k=1}^{\infty}b_k/k<\infty$。
+由\eqref{eq:abel1}及（1）中的估计，
+\begin{align*}
+ \int_0^\pi|s_n(x)|\dd x
+ &\le C\left\{\sum_{k=1}^{n-1}(b_k-b_{k+1})\log(k+1)
+       +b_n\log(n+1)\right\}\\
+ &=C\left\{b_1\log2+\sum_{k=2}^{n}b_k
+                   \log\frac{k+1}{k}\right\}\\
+ &\le C\sum_{k=1}^{n}\frac{b_k}{k}\le CA.
+\end{align*}
+中间等号是有限求和的逐项合并，最后用了$\log(1+1/k)\le1/k$。
+取$M=1+CA>0$即得所需一致界。
+
+对每个$\varepsilon\in(0,\pi)$，由（2）知$s_n\to f$在$[\varepsilon,\pi]$上一致收敛，
+故$|s_n|\to|f|$也一致收敛。因此全部使用通常的 Riemann 积分即可得到
+\[
+ \int_\varepsilon^\pi |f(x)|\dd x
+ =\lim_{n\to\infty}\int_\varepsilon^\pi |s_n(x)|\dd x\le CA.
+\]
+左边随$\varepsilon\downarrow0$单调增加而有界，所以
+\[
+ \boxed{\displaystyle\int_{0+}^\pi |f(x)|\dd x\le CA<\infty.}
+\]
+由绝对收敛的 Cauchy 判别法，$\int_{0+}^\pi f(x)\dd x$也收敛。
+这完成了原题允许的第二种结论，不需要额外假定$f$在$0$处连续，也不需要把逐点极限直接与积分交换。
+
+\section{补充题2}
+\subsection*{第一部分 Fourier 系数}
+\noindent\textbf{原题}\quad 设$f(x)$是$\R$上以$2\pi$为周期的函数，
+$f(x)=\ii(\pi-x)$，$x\in[0,2\pi)$，$\ii$为虚数单位，证明：
+\[
+ f(x)\sim\sum_{k=-\infty}^{+\infty}c_k(f)e^{\ii kx}
+ =\sum_{|k|\ge1}\frac1k e^{\ii kx}.
+\]
+
+\proofstart 采用系数约定
+\[
+ c_k(f)=\frac1{2\pi}\int_0^{2\pi}f(x)e^{-\ii kx}\dd x.
+\]
+首先$c_0(f)=0$。对$k\ne0$，分部积分，注意$f'(x)=-\ii$，得
+\begin{align*}
+ \int_0^{2\pi}\ii(\pi-x)e^{-\ii kx}\dd x
+ &=\left[\ii(\pi-x)\frac{e^{-\ii kx}}{-\ii k}\right]_0^{2\pi}
+ -\frac1k\int_0^{2\pi}e^{-\ii kx}\dd x\\
+ &=\frac{2\pi}{k}.
+\end{align*}
+故$c_k(f)=1/k$，得到题中的 Fourier 展开。
+这里$\sim$表示对应的 Fourier 级数：在$x\notin2\pi\mathbb Z$处其和为$f(x)$；在跳跃点$x=0$处，每个对称部分和为$0$，并不等于原定义的$f(0)=\ii\pi$。
+
+\subsection*{第二部分 部分和及一致有界性}
+\noindent\textbf{原题}\quad Fourier 级数前$n$项部分和
+\[
+ S_n(f,x)=\sum_{1\le|k|\le n}\frac1k e^{\ii kx}
+ =\ii\left(\int_0^xD_n(t)\dd t-x\right),
+\]
+$D_n(t)$为 Dirichlet 核，且
+\[
+ \sup_{n\in\N}\sup_{|x|\le\pi}|S_n(f,x)|<\infty.
+\]
+
+\proofstart 将正负指标配对，
+\[
+ S_n(f,x)=2\ii\sum_{k=1}^{n}\frac{\sin kx}{k}.
+\]
+又因$D_n(t)=\sum_{|k|\le n}e^{\ii kt}=1+2\sum_{k=1}^n\cos kt$，逐项积分便得原题等式。
+
+下面给出与$n,x$都无关的界。由几何级数公式，对任意整数$b\ge a$及$0<x\le\pi$，
+\begin{equation}\label{eq:geom}
+ \left|\sum_{k=a}^{b}e^{\ii kx}\right|
+ \le\frac1{\sin(x/2)}\le\frac\pi x.
+\end{equation}
+特别地，实部和虚部也满足同样的界。若$u_k$是正的递减数列，令
+$P_j=\sum_{k=a}^j e^{\ii kx}$，Abel 求和得
+\[
+ \sum_{k=a}^{b}u_ke^{\ii kx}
+ =u_bP_b+\sum_{k=a}^{b-1}(u_k-u_{k+1})P_k,
+\]
+故
+\begin{equation}\label{eq:block}
+ \left|\sum_{k=a}^{b}\frac{e^{\ii kx}}{k}\right|
+ \le\frac1{a\sin(x/2)}\le\frac\pi{ax}\qquad(1\le a\le b).
+\end{equation}
+同一估计也可直接用于正弦和。
+
+固定$0<x\le\pi$，令$L=\lfloor1/x\rfloor$。低频部分满足
+\[
+ \left|\sum_{k=1}^{\min(n,L)}\frac{\sin kx}{k}\right|
+ \le\min(n,L)x\le1.
+\]
+若$n>L$，对高频部分用上式，取$a=L+1$，得到
+\[
+ \left|\sum_{k=L+1}^{n}\frac{\sin kx}{k}\right|
+ \le\frac\pi{(L+1)x}\le\pi.
+\]
+所以$|S_n(f,x)|\le2(1+\pi)$。在$x=0$时部分和为$0$，在负半轴利用正弦的奇性即可。
+从而可固定
+\begin{equation}\label{eq:B}
+ B=2(1+\pi),\qquad |S_n(f,x)|\le B\quad(x\in\R,n\in\N),
+\end{equation}
+其中全实轴的结论来自周期性。
+
+\subsection*{（3）调制后的 Fourier 部分和}
+\noindent\textbf{原题}\quad 记$g_n(x)=e^{\ii nx}S_n(f,x)$，$n\in\N$，考虑$g_n(x)$的 Fourier 级数的前$m$项部分和$S_m(g_n,x)$，则
+\[
+ S_m(g_n,x)=
+ \begin{cases}
+ e^{\ii nx}\displaystyle\sum_{1\le|k|\le n}\frac1k e^{\ii kx},&m\ge2n,\\[4pt]
+ e^{\ii nx}\displaystyle\sum_{\substack{-n\le k\le m-n\\k\ne0}}\frac1k e^{\ii kx},&m<2n.
+ \end{cases}
+\]
+且$\exists C>0$, s.t. $\forall m,n\in\N$, $\forall x\ne0$，
+\[
+ |S_m(g_n,x)|\le\frac C{|x|}.
+\]
+（Hint：利用 Abel 求和公式。）
+
+\noindent\textbf{题面说明}\quad 最后一个估计须在基本周期内理解，即$0<|x|\le\pi$。如果将“$\forall x\ne0$”理解为全实轴，则命题不成立：在$x=2\pi$、$m=n$时，$S_n(g_n,2\pi)=-\sum_{r=1}^{n}1/r$无界。全实轴的相应估计可用到$2\pi\mathbb Z$的距离作分母。
+
+\proofstart 乘以$e^{\ii nx}$将频率$k$平移为$n+k$，因而
+\[
+ g_n(x)=\sum_{\substack{-n\le k\le n\\k\ne0}}\frac1k e^{\ii(n+k)x}.
+\]
+所有频率均在$[0,2n]$内。对称 Fourier 截断保留$|n+k|\le m$的项，等价于$n+k\le m$，即$k\le m-n$。这就得到题中两个分支。
+
+上述任意分支中的指标集都可以分成一个负指标区间和一个正指标区间，某一部分也可能为空。正指标区间由\eqref{eq:block}满足
+\[
+ \left|\sum_{k=a}^{b}\frac1k e^{\ii kx}\right|
+ \le\frac1{a|\sin(x/2)|}\le\frac\pi{|x|}.
+\]
+负指标区间令$k=-r$后，同样满足这个界。乘子$e^{\ii nx}$的模为$1$，故
+\begin{equation}\label{eq:Sm}
+ \boxed{\displaystyle |S_m(g_n,x)|\le\frac{2\pi}{|x|}
+ \quad(0<|x|\le\pi).}
+\end{equation}
+常数与$m,n$均无关。
+
+\subsection*{（4）连续函数的 Fourier 级数在一点发散}
+\noindent\textbf{原题}\quad 令$\lambda_k=1+[e^{e^k}]$，$[x]$为高斯整数，即不大于$x$的最大整数，定义
+\[
+ F(x)=\sum_{k=1}^{\infty}\frac1{k^2}g_{\lambda_k}(x).
+\]
+则$F\in C[-\pi,\pi]$，其 Fourier 级数在$x\ne0$处收敛，但
+\[
+ \limsup_{N\to\infty}|S_N(F,0)|=\infty.
+\]
+（Hint：取$N=[e^{e^m}]$，$m\to\infty$。）
+
+\proofstart 以下沿用（2）中的常数$B$与（3）的估计，分别证明连续性、部分和的交换公式、非零点处收敛以及原点处发散。
+
+\textbf{第一步：定义级数一致收敛，因而$F$连续。}
+由\eqref{eq:B}及$|e^{\ii nx}|=1$，对所有$n\ge1$、$x\in\R$都有
+\[
+ |g_n(x)|=|S_n(f,x)|\le B.
+\]
+因此对任意整数$L>J\ge0$，
+\[
+ \sup_{x\in\R}\left|\sum_{k=J+1}^{L}\frac{g_{\lambda_k}(x)}{k^2}\right|
+ \le B\sum_{k>J}\frac1{k^2}\longrightarrow0\qquad(J\to\infty).
+\]
+由一致收敛的 Cauchy 准则，定义$F$的级数在全实轴上一致收敛。每个加数都是连续的$2\pi$周期函数，故$F$也连续且以$2\pi$为周期，尤其$F\in C[-\pi,\pi]$。又因为每个$g_n(0)=0$，所以$F(0)=0$。
+
+\textbf{第二步：可以逐项计算 Fourier 系数，再计算固定阶数的部分和。}
+记
+\[
+ F_J(x)=\sum_{k=1}^{J}\frac{g_{\lambda_k}(x)}{k^2},\qquad
+ c_r(h)=\frac1{2\pi}\int_{-\pi}^{\pi}h(t)e^{-\ii rt}\dd t
+ \quad(r\in\mathbb Z).
+\]
+对任意固定$r$，有
+\[
+ |c_r(F)-c_r(F_J)|
+ \le\frac1{2\pi}\int_{-\pi}^{\pi}|F(t)-F_J(t)|\dd t
+ \le\sup_{t\in\R}|F(t)-F_J(t)|\longrightarrow0.
+\]
+结合有限和的线性性，得到
+\begin{equation}\label{eq:F-coefficients}
+ c_r(F)=\sum_{k=1}^{\infty}\frac1{k^2}c_r(g_{\lambda_k}).
+\end{equation}
+这个数项级数绝对收敛，因为$|c_r(g_{\lambda_k})|\le B$。
+计算时，$\int_{-\pi}^{\pi}e^{\ii rt}e^{-\ii rt}\dd t=2\pi$，正好抵消 Fourier 系数定义中的$1/(2\pi)$，所以指数项前已有的系数不再额外乘$1/(2\pi)$。
+
+固定任意整数$N\ge0$，将\eqref{eq:F-coefficients}代入
+$S_N(F,x)=\sum_{r=-N}^{N}c_r(F)e^{\ii rx}$。由于$r$的求和只有有限项，可以与关于$k$的绝对收敛级数交换次序，得到
+\begin{equation}\label{eq:interchange}
+ S_N(F,x)=\sum_{k=1}^{\infty}\frac1{k^2}S_N(g_{\lambda_k},x).
+\end{equation}
+这里$N$始终固定；事实上
+\[
+ |S_N(g_{\lambda_k},x)|
+ \le\sum_{r=-N}^{N}|c_r(g_{\lambda_k})|\le(2N+1)B,
+\]
+也直接保证了\eqref{eq:interchange}右侧对$x$一致绝对收敛。下面让$N$趋于无穷时，还需要另外控制尾项，不能仅凭此式交换极限与无穷求和。
+
+\textbf{第三步：非零点处收敛到$F$。}
+固定$0<|x|\le\pi$。由\eqref{eq:Sm}，对所有$N,k$都有
+\[
+ |S_N(g_{\lambda_k},x)|\le\frac{2\pi}{|x|},
+ \qquad |g_{\lambda_k}(x)|\le B.
+\]
+先取任意正整数$J$，再取$N\ge2\lambda_J$。由于$\lambda_k$递增，由（3）可知，对每个$1\le k\le J$，
+\[
+ S_N(g_{\lambda_k},x)=g_{\lambda_k}(x).
+\]
+于是前$J$项之差全部为零；从\eqref{eq:interchange}减去$F$的定义式，得到
+\begin{align*}
+ |S_N(F,x)-F(x)|
+ &=\left|\sum_{k>J}\frac{S_N(g_{\lambda_k},x)-g_{\lambda_k}(x)}{k^2}\right|\\
+ &\le\left(\frac{2\pi}{|x|}+B\right)\sum_{k>J}\frac1{k^2}.
+\end{align*}
+给定$\varepsilon>0$，先选$J$使最后一式右侧小于$\varepsilon$，再令$N\ge2\lambda_J$，便得$|S_N(F,x)-F(x)|<\varepsilon$。故$S_N(F,x)\to F(x)$。同理，对任意$0<\delta\le\pi$，将上界中的$|x|$换为$\delta$，还可得到在$\delta\le|x|\le\pi$上的一致收敛。
+
+\textbf{第四步：选取子列，在$0$处得到无界的部分和。}
+按提示令
+\[
+ A_m=e^{e^m},\qquad N_m=\lfloor A_m\rfloor,\qquad
+ \lambda_m=N_m+1.
+\]
+先说明当$m\ge2$、$j<m$时，有$N_m\ge2\lambda_j$。事实上
+\[
+ \frac{A_m}{A_{m-1}}=\exp\!\bigl(e^m-e^{m-1}\bigr)>4,
+ \qquad A_{m-1}>2,
+\]
+故
+\[
+ N_m>A_m-1>4A_{m-1}-1
+ >2(A_{m-1}+1)\ge2\lambda_{m-1}\ge2\lambda_j.
+\]
+由（3），这些$j<m$的项对部分和的贡献为
+\[
+ S_{N_m}(g_{\lambda_j},0)=g_{\lambda_j}(0)=0.
+\]
+另一方面，若$j\ge m$，则$N_m<\lambda_m\le\lambda_j$。在（3）的第二个分支中取$x=0$，将求和指标记为$q$，再令$r=-q$，可得
+\[
+ S_{N_m}(g_{\lambda_j},0)
+ =\sum_{q=-\lambda_j}^{N_m-\lambda_j}\frac1q
+ =-\sum_{r=\lambda_j-N_m}^{\lambda_j}\frac1r\le0.
+\]
+特别地，$j=m$时$\lambda_m-N_m=1$，所以
+\[
+ S_{N_m}(g_{\lambda_m},0)=-H_{\lambda_m},
+ \qquad H_q\coloneqq\sum_{r=1}^{q}\frac1r.
+\]
+将上述结论代入\eqref{eq:interchange}，得到
+\[
+ S_{N_m}(F,0)
+ =-\sum_{j=m}^{\infty}\frac1{j^2}
+      \sum_{r=\lambda_j-N_m}^{\lambda_j}\frac1r
+ \le-\frac{H_{\lambda_m}}{m^2}.
+\]
+这里关于$j$的级数对固定$m$绝对收敛，已由第二步保证；并且每项均非正，因而保留$j=m$一项就给出了所需上界，不存在相互抵消的问题。
+
+最后，由积分比较，
+\[
+ H_q=\sum_{r=1}^{q}\frac1r
+ \ge\sum_{r=1}^{q}\int_r^{r+1}\frac{\dd t}{t}
+ =\log(q+1).
+\]
+又因$\lambda_m>A_m=e^{e^m}$，所以
+\[
+ S_{N_m}(F,0)
+ \le-\frac{\log(\lambda_m+1)}{m^2}
+ <-\frac{e^m}{m^2}\longrightarrow-\infty.
+\]
+由于$N_m\to\infty$，这就证明了
+\[
+ \boxed{\displaystyle\limsup_{N\to\infty}|S_N(F,0)|=\infty.}
+\]
+因此，$F$虽是连续周期函数且$F(0)=0$，其 Fourier 级数在原点的部分和仍然无界；而在基本周期内每个非零点，部分和都收敛到$F$本身。
+\clearpage
+\section{本次作业的放缩技巧总结}
+\label{sec:estimates}
+本节集中整理本次题目中如何选取上界、保留振荡抵消、拆分积分或级数，以及如何建立下界。常数$C$可随行改变；要求一致估计时，应始终注明它不依赖哪些变量。
+
+\subsection{同一个量准备两个上界 按尺度分开使用}
+\noindent\textbf{对应：补充题1（1）、补充题2第二部分。}
+对$0<x\le\pi$，常用的初等不等式是
+\[
+ |\sin u|\le\min\{|u|,1\},\qquad
+ \sin\frac x2\ge\frac x\pi,\qquad
+ \tan\frac x2\ge\frac x2.
+\]
+补充题1中，从求和定义与闭式公式分别得到
+\[
+ |K_n(x)|\le n,\qquad |K_n(x)|\le\frac\pi x.
+\]
+第一种在$0$附近没有奇性，第二种在远离$0$时避免了随$n$线性增长。因此应使用
+\[
+ |K_n(x)|\le\min\{n,\pi/x\},
+ \qquad
+ \int_0^\pi|K_n|\le\int_0^{1/n}n\dd x+\int_{1/n}^\pi\frac\pi x\dd x.
+\]
+分点只需取两个上界大致相当的尺度$x\asymp1/n$，无须追求最优常数。
+
+补充题2中的$\sum_{k=1}^n\sin(kx)/k$也采用同一思想：在$kx\le1$的部分用$|\sin kx|\le kx$；余下部分用 Abel 求和。频率分点取$k\asymp1/|x|$。
+
+\subsection{使用非负辅助核时 保留分子在端点的消失}
+\noindent\textbf{对应：补充题1（1），本轮讨论的补充方法。}
+最初的问题是：按照题目提示使用$K_n^*$后，如何估计
+\[
+ \int_0^\pi K_n^*(x)\dd x
+ =\int_0^\pi\frac{\sin^2(nx/2)}{\tan(x/2)}\dd x?
+\]
+若全程只用$\sin^2(nx/2)\le1$，会得到$2/x$，其在$0$附近不可积；必须在近端保留分子的二阶小量：
+\[
+ 0\le K_n^*(x)
+ \le\min\left\{\frac{n^2x}{2},\frac2x\right\}.
+\]
+于是
+\begin{align*}
+ \int_0^\pi K_n^*(x)\dd x
+ &\le\int_0^{1/n}\frac{n^2x}{2}\dd x
+    +\int_{1/n}^\pi\frac2x\dd x\\
+ &=\frac14+2\log(\pi n).
+\end{align*}
+再由$|K_n|\le K_n^*+1/2$，得到
+\[
+ \int_0^\pi|K_n(x)|\dd x
+ \le\frac14+\frac\pi2+2\log(\pi n)
+ \le C\log(n+1).
+\]
+要点是分别估计分子与分母时，不能把使奇点可积的消失阶数丢掉。
+
+\subsection{先利用振荡抵消 再对 Abel 变换后的式子取绝对值}
+\noindent\textbf{对应：补充题1（2）、补充题2第二部分及（3）。}
+若先逐项取绝对值，$\sum e^{ikx}/k$只能得到调和和的上界。几何级数公式却能先保留振荡抵消：
+\[
+ \left|\sum_{k=a}^b e^{ikx}\right|
+ \le\frac1{|\sin(x/2)|}\quad(x\notin2\pi\mathbb Z).
+\]
+更一般地，设$P_j=\sum_{k=a}^jv_k$且$|P_j|\le B$，权重$u_k\ge0$单调递减，则
+\[
+ \sum_{k=a}^bu_kv_k
+ =u_bP_b+\sum_{k=a}^{b-1}(u_k-u_{k+1})P_k,
+\]
+从而
+\[
+ \left|\sum_{k=a}^bu_kv_k\right|
+ \le B\left[u_b+\sum_{k=a}^{b-1}(u_k-u_{k+1})\right]
+ =Bu_a.
+\]
+取$u_k=1/k$便得到
+\[
+ \left|\sum_{k=a}^b\frac{e^{ikx}}k\right|
+ \le\frac1{a|\sin(x/2)|}\le\frac\pi{a|x|}
+ \quad(0<|x|\le\pi).
+\]
+补充题1（2）则用$\Delta b_k\ge0$及$\sum\Delta b_k=b_1$，把各个$K_k$的一致界传给级数。
+
+\subsection{把难处理的权重转移成它的差分}
+\noindent\textbf{对应：补充题1（3）。}
+已知的是$\sum b_k/k<\infty$，而核的积分估计产生了$\log(k+1)$。两者之间的联系是
+\[
+ \log(k+1)-\log k=\log(1+1/k)\le1/k.
+\]
+因此先做有限求和重排，并保留末端项：
+\begin{align*}
+ &\sum_{k=1}^{n-1}(b_k-b_{k+1})\log(k+1)+b_n\log(n+1)\\
+ &\hspace{1em}=b_1\log2+\sum_{k=2}^nb_k\log\frac{k+1}{k}
+ \le\sum_{k=1}^n\frac{b_k}{k}.
+\end{align*}
+一般地，若希望控制$\sum\Delta b_k\,w_k$，可先检查$w_k-w_{k-1}$是否与题设中的可求和权重相匹配。
+
+\subsection{用平方和控制绝对和 用频率权重比较能量}
+\noindent\textbf{对应：教材第2、5题。}
+教材第2题已由导数的 Bessel 不等式获得$\sum n^2(a_n^2+b_n^2)<\infty$，于是把$n$放入已知平方和，把$1/n$留给另一个平方和：
+\[
+ \sum_{n\ge1}\sqrt{a_n^2+b_n^2}
+ \le\left(\sum_{n\ge1}n^2(a_n^2+b_n^2)\right)^{1/2}
+     \left(\sum_{n\ge1}\frac1{n^2}\right)^{1/2}.
+\]
+这是带权 Cauchy--Schwarz 的选权方法，而不只是直接使用不等式名称。
+
+教材第5题中，零均值去掉了频率$0$；Parseval 将目标变成
+\[
+ \frac\pi2\sum_{n\ge1}n^2A_n^2
+ \ge\frac\pi2\sum_{n\ge1}A_n^2,
+\]
+此时只需逐项使用$n^2\ge1$。条件“零均值”保证不会留下导数无法控制的常数项。
+
+\subsection{有限部分取极限 无穷尾部使用统一上界}
+\noindent\textbf{对应：教材第4、8题及补充题2（4）。}
+教材第4题对每个固定频率用 Riemann--Lebesgue 引理，再用
+\[
+ \left|\int_a^bf(x)\cos(2knx)\dd x\right|\le\int_a^b|f(x)|\dd x
+\]
+控制全部频率，并与可求和权重$(4k^2-1)^{-1}$结合，保证尾项对$n$一致地小。
+
+教材第8题从 Riemann 和过渡到无穷区间积分时，取$h(x)=(\sin x/x)^2$和$q=\lfloor R/\delta\rfloor$；由$h(x)\le x^{-2}$及积分比较，
+\[
+ \delta\sum_{n>q}h(n\delta)
+ \le\frac1\delta\sum_{n>q}\frac1{n^2}
+ \le\frac1{\delta q}\le\frac2R
+ \quad(0<\delta<R/2).
+\]
+这使远端尾项对$\delta$一致可控。不能只凭每个有限区间上的 Riemann 和收敛，就直接处理整个无穷区间。
+
+补充题2（4）的相同结构是：先取$J$使$\sum_{k>J}k^{-2}$很小，再取$N$使前$J$个多项式已完全截入；具体上界为
+\[
+ |S_N(F,x)-F(x)|
+ \le\left(\frac{2\pi}{|x|}+B\right)\sum_{k>J}\frac1{k^2}.
+\]
+固定$x\ne0$后右侧可任意小；若要求对$x$一致，则须限定$|x|\ge\delta>0$。
+
+\subsection{奇点附近用局部小量 远处再用振荡趋零}
+\noindent\textbf{对应：教材第13题。}
+将卷积误差积分拆成$(0,\eta)$与$(\eta,\pi)$两段。近端不能只粗估$|D_N|$，而用 Dirichlet 核积分的一致界和第二中值定理：
+\[
+ \left|\int_0^\eta h(t)D_N(t)\dd t\right|
+ \le C_0|h(\eta)|\longrightarrow0,
+\]
+这里$h$单调且$h(0+)=0$，常数$C_0$不依赖$N$。远端分母$\sin(t/2)$远离$0$，可用 Riemann--Lebesgue 引理。
+顺序是先把$\eta$取小控制近端，再在这个固定$\eta$下把$N$取大控制远端。
+
+\subsection{证明无界时先检查符号 再挑出一个大项}
+\noindent\textbf{对应：补充题2（4）。}
+在选定的$N_m=\lfloor e^{e^m}\rfloor$处，小指标项恰好为$0$，其余各项均为非正实数，因此可直接保留$j=m$的一项得到下界：
+\[
+ S_{N_m}(F,0)\le-\frac{H_{\lambda_m}}{m^2},\qquad
+ |S_{N_m}(F,0)|\ge\frac{H_{\lambda_m}}{m^2}
+ >\frac{e^m}{m^2}\longrightarrow\infty.
+\]
+同号保证没有抵消；此时不必再估计全部尾项。若各项符号不一致，则不能直接由“其中一项很大”推出整个和很大。
+\end{document}

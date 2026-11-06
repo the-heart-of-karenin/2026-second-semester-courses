@@ -1,0 +1,130 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.4em}
+
+\title{拓扑学阅读记录}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{商空间与商映射}
+
+% STUDY_RECORD_BEGIN id=topology-projective-space-origin
+\subsection{射影空间构造中为何要删去原点}
+\label{note:topology-projective-space-origin}
+
+\textbf{问题与出处：}在射影平面的商空间构造中，如果不从
+$\mathbb R^3$ 中删去原点，而让原点单独构成一个等价类，所得空间是否只是
+$\mathbb{RP}^2$ 加上一个孤立点？
+
+\textbf{简短解释：}在 $\mathbb R^3$ 上定义
+\[
+ x\sim y\quad\Longleftrightarrow\quad y=\lambda x
+ \quad(\lambda\in\mathbb R^\times).
+\]
+因为 $0$ 只与自身等价，所以在集合意义下，商集确实是
+\[
+ \mathbb R^3/{\sim}=\mathbb{RP}^2\sqcup\{[0]\}.
+\]
+但在商拓扑下，$[0]$ 不是孤立点。若它是孤立点，则
+$q^{-1}(\{[0]\})=\{0\}$ 应在 $\mathbb R^3$ 中开，这显然不成立。
+
+更强地，$[0]$ 的唯一开邻域是整个商空间。事实上，设 $U$ 是包含原点的开
+饱和集。某个 $\varepsilon>0$ 满足 $B_\varepsilon(0)\subset U$。对任意
+$x\ne0$，可取充分小的 $\lambda\ne0$，使
+$\lambda x\in B_\varepsilon(0)$。由饱和性，$\lambda x\in U$ 又推出
+$x\in U$，故 $U=\mathbb R^3$。
+
+因此，商空间中虽有一个开子空间同胚于通常的 $\mathbb{RP}^2$，但额外点
+$[0]$ 的邻域结构极不良：任意非空 $A\subset\mathbb{RP}^2$ 都满足
+$[0]\in\overline A$。特别地，该商空间不是 $T_1$ 空间，更不是 Hausdorff
+空间。射影空间的标准定义必须先删去零向量：
+\[
+ \mathbb{RP}^2=(\mathbb R^3-\{0\})/\mathbb R^\times.
+\]
+
+% STUDY_RECORD_END id=topology-projective-space-origin
+
+% STUDY_RECORD_BEGIN id=topology-quotient-closed-map-normality
+\subsection{闭商映射保持正规性}
+\label{note:topology-quotient-closed-map-normality}
+
+\textbf{出处：}芒克里斯《拓扑学》第 11 章 Seifert--van Kampen 定理，
+引理 73.3（原书第 339--340 页）。设 $\pi:E\to X$ 是闭的商映射；若
+$E$ 正规，则 $X$ 正规。
+
+\textbf{最初的问题：}证明中分别用到了商映射的哪些事实？满射性除了显然的
+位置还在哪里使用？若把“闭映射”改成“开映射”，结论是否仍成立？
+
+\textbf{证明结构与各条件的作用：}
+按照本书的定义，商映射 $\pi$ 是连续满射，并以逆像判定开集。这个证明实际
+使用的是“连续、满射、闭映射”三项，而没有另外调用商拓扑的开集判别性质。
+
+先说明 $X$ 是 $T_1$。对每个 $x\in X$，满射性给出 $e\in E$ 使
+$\pi(e)=x$。由于正规空间在本书中包含 $T_1$ 条件，$\{e\}$ 在 $E$ 中闭；
+再由 $\pi$ 为闭映射，
+\[
+  \{x\}=\pi(\{e\})
+\]
+在 $X$ 中闭。这里同时用到了满射性和闭映射性。
+
+现取 $X$ 中不交闭集 $A,B$。连续性保证
+$\pi^{-1}(A),\pi^{-1}(B)$ 是 $E$ 中不交闭集。由 $E$ 正规，可取不交开集
+$U,V\subset E$，分别包含它们。不能直接使用 $\pi(U),\pi(V)$：映射未必是
+开映射，而且同一条纤维可以一部分落在 $U$、另一部分落在 $V$，故两像未必
+不交。正确构造是
+\[
+ C=E-U,\qquad D=E-V,
+\]
+\[
+ U_0=X-\pi(C),\qquad V_0=X-\pi(D).
+\]
+因为 $C,D$ 闭且 $\pi$ 是闭映射，$U_0,V_0$ 是开集。又因
+$C\cap\pi^{-1}(A)=\varnothing$，可得 $A\cap\pi(C)=\varnothing$，所以
+$A\subset U_0$；同理 $B\subset V_0$。
+
+这个构造的关键等价式是
+\[
+ x\in X-\pi(E-U)
+ \quad\Longleftrightarrow\quad
+ \pi^{-1}(x)\subset U.
+\]
+因此若 $x\in U_0\cap V_0$，则
+\[
+ \pi^{-1}(x)\subset U\cap V=\varnothing.
+\]
+此处再次使用满射性：每条纤维 $\pi^{-1}(x)$ 都非空，矛盾。故
+$U_0\cap V_0=\varnothing$，$X$ 正规。
+
+\textbf{闭映射为何恰到好处：}
+\[
+ \pi(U)=\{x:\pi^{-1}(x)\cap U\ne\varnothing\}
+\]
+只表示纤维“碰到” $U$；而
+\[
+ X-\pi(E-U)=\{x:\pi^{-1}(x)\subset U\}
+\]
+表示整条纤维都落在 $U$ 中。正规性要求构造不交邻域，证明需要的是后者；
+闭映射恰好保证这个“完整纤维部分”在 $X$ 中是开集。
+
+\textbf{开映射版本不成立：}
+反例是“有两个原点的直线”。令
+\[
+ E=\mathbb R_0\sqcup\mathbb R_1,
+\]
+把两份直线中对应的非零点识别，但不识别两个原点，记商空间为 $X$、商映射
+为 $q:E\to X$。空间 $E$ 是正规空间，且 $q$ 是开映射：任意开集的饱和仍是
+开集，故其商像为开集。然而 $X$ 的两个原点是不同的闭点，却不能被不交开集
+分离，因为它们的任意邻域都会含有同一个充分靠近 $0$ 的非零点。因此 $X$
+不正规。这说明“开商映射的正规定义域推出正规值域”是错误的。
+
+% STUDY_RECORD_END id=topology-quotient-closed-map-normality
+
+\end{document}

@@ -1,0 +1,427 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist{itemsep=3pt,topsep=4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.08}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathbb K}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\problem}{\par\textbf{原题}\quad}
+\newcommand{\solution}{\par\medskip\textbf{解答}\quad}
+\title{数学分析第5次作业标准解答}
+\author{}
+\date{题目日期：2026年10月29日}
+\begin{document}
+\maketitle
+\vspace{-2em}
+本答案收录习题21.2第14、15题、习题21.3第1、2、3题及全部五道补充题。
+原题中的复内积空间勾股等式有误，保留原文，并在补充题第2题中说明修正及反例。
+教材第14题依据已归档的教材第142页照片；补充题依据本次作业原件。
+
+\section*{一\quad 习题21.2第14题}
+\problem 利用
+\[
+ f(x)=
+ \begin{cases}
+  1,&x\in[-\pi,0),\\
+  0,&x\in[0,\pi),
+ \end{cases}
+ \qquad
+ f(x)\sim\frac12-\frac2\pi
+       \sum_{n=1}^{\infty}\frac{\sin(2n-1)x}{2n-1}
+\]
+和帕塞瓦尔等式证明
+\[
+ \sum_{n=1}^{\infty}\frac1{(2n-1)^2}=\frac{\pi^2}{8}.
+\]
+
+\solution 采用三角 Fourier 系数的通常约定
+\[
+ a_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\cos nx\dd x,\qquad
+ b_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\sin nx\dd x,
+\]
+其中常数项为$a_0/2$。由题给展开式，或直接积分，得到
+\[
+ a_0=1,\qquad a_n=0\ (n\ge1),\qquad
+ b_n=\frac{(-1)^n-1}{\pi n}
+ =
+ \begin{cases}
+ -\dfrac2{\pi n},&n\text{为奇数},\\
+ 0,&n\text{为偶数}.
+ \end{cases}
+\]
+函数$f$分段连续，故可应用 Parseval 等式：
+\[
+ \frac1\pi\int_{-\pi}^{\pi}|f(x)|^2\dd x
+ =\frac{a_0^2}{2}+\sum_{n=1}^{\infty}(a_n^2+b_n^2).
+\]
+左边为$1$，代入系数即得
+\[
+ 1=\frac12+\frac4{\pi^2}
+              \sum_{n=1}^{\infty}\frac1{(2n-1)^2}.
+\]
+移项得
+\[
+ \boxed{\displaystyle\sum_{n=1}^{\infty}\frac1{(2n-1)^2}
+                  =\frac{\pi^2}{8}.}
+\]
+有限个端点处的取值不影响上述积分与 Fourier 系数。
+
+\newpage
+\section*{二\quad 习题21.2第15题}
+\problem 利用
+\[
+f(x)=\begin{cases}x,&x\in[-\pi,0),\\-x,&x\in[0,\pi),\end{cases}
+\quad f(x)\sim\frac\pi2+\frac2\pi\sum_{n=1}^{\infty}
+\frac{(-1)^n-1}{n^2}\cos nx
+\]
+和帕塞瓦尔等式，求$\displaystyle\sum_{n=1}^{\infty}(2n-1)^{-4}$。
+
+\textbf{题面说明}\quad 原题函数为$-|x|$，所列展开式却对应$|x|$，
+应将展开式整体变号。以下保留所给函数计算；系数整体变号不改变平方和。
+
+\solution \textbf{使用 Parseval 等式。}由偶性和直接积分，
+\[
+a_0=-\pi,\quad b_n=0,\quad
+a_n=-\frac2\pi\int_0^\pi x\cos nx\dd x
+=\frac{2(1-(-1)^n)}{\pi n^2}.
+\]
+所以正确的展开式为
+\[
+f(x)\sim-\frac\pi2+\frac4\pi
+\sum_{n=1}^{\infty}\frac{\cos(2n-1)x}{(2n-1)^2}.
+\]
+由 Parseval 等式，
+\[
+\frac1\pi\int_{-\pi}^{\pi}|f(x)|^2\dd x
+=\frac{a_0^2}{2}+\sum_{n=1}^{\infty}(a_n^2+b_n^2),
+\]
+得到
+\[
+\frac{2\pi^2}{3}=\frac{\pi^2}{2}
++\frac{16}{\pi^2}\sum_{n=1}^{\infty}\frac1{(2n-1)^4}.
+\]
+因此
+\[
+\boxed{\displaystyle\sum_{n=1}^{\infty}\frac1{(2n-1)^4}
+=\frac{\pi^4}{96}.}
+\]
+
+\newpage
+\section*{三\quad 习题21.3}
+\subsection*{第1题}
+\problem 设$f(x)$为$(-\infty,+\infty)$上以$2\pi$为周期，且具有二阶连续导数的函数，记
+\[
+b_n=\frac1\pi\int_{-\pi}^{\pi}f(x)\sin nx\dd x,\qquad
+b_n''=\frac1\pi\int_{-\pi}^{\pi}f''(x)\sin nx\dd x.
+\]
+证明：若$\sum_{n=1}^{\infty}b_n''$绝对收敛，则
+\[
+\sum_{n=1}^{\infty}\sqrt{|b_n|}
+<\frac12\left(2+\sum_{n=1}^{\infty}|b_n''|\right).
+\]
+
+\solution \textbf{先用导函数的 Fourier 系数关系。}
+这里$b_n''$表示$f''$的正弦系数。由周期性，
+$f(\pi)=f(-\pi)$、$f'(\pi)=f'(-\pi)$，两次分部积分得
+\begin{align*}
+b_n''&=-\frac n\pi\int_{-\pi}^{\pi}f'(x)\cos nx\dd x\\
+&=-\frac n\pi\left([f(x)\cos nx]_{-\pi}^{\pi}
++n\int_{-\pi}^{\pi}f(x)\sin nx\dd x\right)=-n^2b_n.
+\end{align*}
+因此$\sqrt{|b_n|}=\sqrt{|b_n''|}/n$。
+\textbf{再用$2ab\le a^2+b^2$}，得到
+\[
+\sqrt{|b_n|}\le\frac12\left(\frac1{n^2}+|b_n''|\right).
+\]
+右端级数收敛，故左端级数也收敛，且
+\[
+\sum_{n=1}^{\infty}\sqrt{|b_n|}
+\le\frac12\left(\frac{\pi^2}{6}+\sum_{n=1}^{\infty}|b_n''|\right)
+<\frac12\left(2+\sum_{n=1}^{\infty}|b_n''|\right).
+\]
+严格不等号来自$\pi^2/6<2$。
+
+\newpage
+\subsection*{第2题}
+\problem 设$f(x)$为$(-\infty,+\infty)$上以$2\pi$为周期的连续函数，
+证明：若$f(x)$的傅里叶系数全为零，则$f(x)=0$。
+
+\solution \textbf{方法一\quad 使用 Fej\'er 定理。}
+设$S_k(f,x)$为$f$的 Fourier 部分和。因为包括常数项在内的全部
+Fourier 系数均为零，对每个$k\ge0$都有$S_k(f,x)\equiv0$，故
+\[
+\sigma_n(f,x):=\frac1{n+1}\sum_{k=0}^{n}S_k(f,x)\equiv0.
+\]
+题设中$f$连续且以$2\pi$为周期，恰好满足 Fej\'er 定理的条件，因此
+$\sigma_n(f,\cdot)$在$[-\pi,\pi]$上一致收敛于$f$。于是
+\[
+\sup_{x\in[-\pi,\pi]}|f(x)|
+=\sup_{x\in[-\pi,\pi]}|f(x)-\sigma_n(f,x)|\longrightarrow0.
+\]
+左端与$n$无关，故$f$在$[-\pi,\pi]$上恒为零，再由周期性即得
+$\boxed{f(x)=0\ (x\in\R)}$。
+这里无需假设 Fourier 部分和$S_k$本身收敛于$f$。
+
+\par\medskip\textbf{方法二\quad 使用 Parseval 等式}：
+\[
+\frac1\pi\int_{-\pi}^{\pi}|f(x)|^2\dd x
+=\frac{|a_0|^2}{2}+\sum_{n=1}^{\infty}(|a_n|^2+|b_n|^2)=0.
+\]
+若存在$x_0\in[-\pi,\pi]$使$f(x_0)\ne0$，由连续性，
+在$x_0$附近某个正长度的区间上有$|f(x)|\ge |f(x_0)|/2>0$，
+从而上述积分严格大于零，矛盾。
+故$f$在$[-\pi,\pi]$上恒为零，再由周期性，
+$\boxed{f(x)=0\ (x\in\R)}$。
+
+\subsection*{第3题}
+\problem 设$f(x)$是周期为$2\pi$的任意连续函数，证明对任意给定的
+$\varepsilon>0$，存在三角多项式
+\[
+\varphi_n(x)=\frac{A_0}{2}
++\sum_{k=1}^{n}(A_k\cos kx+B_k\sin kx),
+\]
+使得$\displaystyle\int_{-\pi}^{\pi}|f(x)-\varphi_n(x)|\dd x<\varepsilon$。
+
+\solution 取$f$的 Fourier 部分和
+\[
+S_n(f,x)=\frac{a_0}{2}+\sum_{k=1}^{n}(a_k\cos kx+b_k\sin kx).
+\]
+\textbf{使用 Fourier 部分和的平方平均收敛性}：
+\[
+\int_{-\pi}^{\pi}|f(x)-S_n(f,x)|^2\dd x\longrightarrow0.
+\]
+给定$\varepsilon>0$，取充分大的$n$使上述积分小于$\varepsilon^2/(2\pi)$。
+\textbf{再用 Cauchy--Schwarz 不等式}，
+\[
+\int_{-\pi}^{\pi}|f(x)-S_n(f,x)|\dd x
+\le\sqrt{2\pi}
+\left(\int_{-\pi}^{\pi}|f(x)-S_n(f,x)|^2\dd x\right)^{1/2}
+<\varepsilon.
+\]
+故取$\boxed{\varphi_n=S_n(f,\cdot)}$即可，即$A_k=a_k$、$B_k=b_k$。
+这里仅需平方平均收敛，不要求 Fourier 级数逐点收敛或一致收敛。
+
+\newpage
+\section*{四\quad 补充题}
+\problem 设$(X,\langle\cdot,\cdot\rangle)$是数域
+$\K$（$\R$或$\C$）上的内积空间，证明下列各题。
+
+以下范数均由内积诱导，即$\norm{x}=\sqrt{\ip{x}{x}}$。
+为统一复数情形的计算，约定内积对第一个变量线性，对第二个变量共轭线性。
+
+\subsection*{第1题\quad 平行四边形恒等式}
+\problem $\forall x,y\in X$，
+\[
+ \norm{x+y}^2+\norm{x-y}^2
+   =2\norm{x}^2+2\norm{y}^2.
+\]
+
+\solution 利用内积的共轭对称性，
+\begin{align*}
+ \norm{x+y}^2
+ &=\norm{x}^2+\norm{y}^2+\ip{x}{y}+\ip{y}{x}\\
+ &=\norm{x}^2+\norm{y}^2+2\operatorname{Re}\ip{x}{y},\\
+ \norm{x-y}^2
+ &=\norm{x}^2+\norm{y}^2-2\operatorname{Re}\ip{x}{y}.
+\end{align*}
+两式相加即得所证恒等式。
+
+\subsection*{第2题\quad 三角不等式的等号与勾股等式}
+\problem $x\ne0$，
+\[
+ \norm{x+y}=\norm{x}+\norm{y}
+ \iff y=\lambda x,\quad\lambda\in\K,\ \lambda\ge0;
+\]
+\[
+ \norm{x+y}^2=\norm{x}^2+\norm{y}^2
+ \iff \ip{x}{y}=0.
+\]
+
+\textbf{修正说明}\quad 第一条中的$\lambda\ge0$表示$\lambda$是非负实数，
+即使$\K=\C$也如此。第二条对实内积空间成立；对复内积空间应改为
+\[
+ \boxed{\norm{x+y}^2=\norm{x}^2+\norm{y}^2
+       \iff\operatorname{Re}\ip{x}{y}=0.}
+\]
+以下分别证明。
+
+\solution \textbf{第一条。}
+若$y=\lambda x$，$\lambda\ge0$，则
+\[
+ \norm{x+y}=(1+\lambda)\norm{x}
+ =\norm{x}+\norm{y}.
+\]
+反之，设$\norm{x+y}=\norm{x}+\norm{y}$。若$y=0$，取$\lambda=0$即可。
+若$y\ne0$，两边平方并展开，得
+\[
+ \operatorname{Re}\ip{x}{y}=\norm{x}\norm{y}.
+\]
+因而
+\[
+ \left\|\frac{x}{\norm{x}}-\frac{y}{\norm{y}}\right\|^2
+ =2-\frac{2\operatorname{Re}\ip{x}{y}}{\norm{x}\norm{y}}=0.
+\]
+故$x/\norm{x}=y/\norm{y}$，于是
+\[
+ y=\frac{\norm{y}}{\norm{x}}x,
+ \qquad \lambda=\frac{\norm{y}}{\norm{x}}>0.
+\]
+双向蕴含均已证明。
+
+\newpage
+\subsection*{第2题续\quad 勾股等式}
+\textbf{第二条。}
+由第1题证明中已经得到的展开式，
+\[
+ \norm{x+y}^2-\norm{x}^2-\norm{y}^2
+       =2\operatorname{Re}\ip{x}{y},
+\]
+立即得到修正后的等价命题。若$\K=\R$，内积为实数，
+$\operatorname{Re}\ip{x}{y}=\ip{x}{y}$，于是原题第二条成立。
+
+复数情形下原题的反例为$X=\C$，$\ip{z}{w}=z\overline w$，
+$x=1$，$y=i$。此时
+\[
+ |1+i|^2=2=|1|^2+|i|^2,\qquad
+ \ip{1}{i}=-i\ne0.
+\]
+所以在复内积空间中，单独一个勾股等式不能推出$x\perp y$。
+
+\subsection*{第3题\quad 有限维内积空间的完备性}
+\problem 若$\dim X<\infty$，证明$X$是 Hilbert 空间。
+
+\solution Hilbert 空间就是完备的内积空间，故只需证明$X$中每个 Cauchy 列都收敛。
+当$\dim X=0$时显然成立。以下设$\dim X=d\ge1$，用 Gram--Schmidt
+正交化取$X$的一组规范正交基$e_1,\ldots,e_d$。
+
+设$(u_n)$是$X$中的 Cauchy 列，写作
+\[
+ u_n=\sum_{j=1}^{d}a_{n,j}e_j,\qquad a_{n,j}=\ip{u_n}{e_j}.
+\]
+由 Cauchy--Schwarz 不等式，
+\[
+ |a_{n,j}-a_{m,j}|
+   =|\ip{u_n-u_m}{e_j}|
+   \le\norm{u_n-u_m}.
+\]
+故对每个$j$，$(a_{n,j})_n$都是$\K$中的 Cauchy 列。
+由$\R$或$\C$的完备性，存在$a_j\in\K$使$a_{n,j}\to a_j$。
+令
+\[
+ u=\sum_{j=1}^{d}a_je_j\in X.
+\]
+利用基的规范正交性与和式只有有限项，得
+\[
+ \norm{u_n-u}^2=\sum_{j=1}^{d}|a_{n,j}-a_j|^2\longrightarrow0.
+\]
+因此$u_n\to u\in X$，$X$完备，从而$X$是 Hilbert 空间。
+
+\newpage
+\subsection*{第4题\quad Gram--Schmidt 正交化与闭线性包}
+\problem 设$\{x_i\}_{i=1}^{\infty}$是$X$上的一个线性无关组，
+$\{y_i\}_{i=1}^{\infty}$是其经 Gram--Schmidt 正交化得到的规范正交系，考虑
+\[
+ \spn\{x_i\}_{i\ge1}
+ :=\left\{\sum_{i=1}^{N}\lambda_i x_i:
+        \lambda_i\in\K,\ N\in\N\right\}.
+\]
+证明：其闭包满足
+\[
+ \overline{\spn\{x_i\}_{i\ge1}}
+   =\overline{\spn\{y_i\}_{i\ge1}},
+\]
+且$\overline{\spn\{y_i\}_{i\ge1}}$对线性运算封闭：对任意
+\[
+ Y_1,Y_2\in\overline{\spn\{y_i\}_{i\ge1}},\quad
+ \alpha_1,\alpha_2\in\K,
+\]
+都有
+\[
+ \alpha_1Y_1+\alpha_2Y_2
+    \in\overline{\spn\{y_i\}_{i\ge1}}.
+\]
+
+\solution Gram--Schmidt 的递推公式为
+\[
+ v_n=x_n-\sum_{j=1}^{n-1}\ip{x_n}{y_j}y_j,\qquad
+ y_n=\frac{v_n}{\norm{v_n}}.
+\]
+由$x_1,x_2,\ldots$线性无关，每一步的$v_n$都不为零。
+归纳可知，对每个$N$，
+\[
+ \spn\{x_1,\ldots,x_N\}
+   =\spn\{y_1,\ldots,y_N\}.
+\]
+事实上，$y_N$由$x_N$及前面的$y_j$线性表示；反过来，
+\[
+ x_N=\norm{v_N}y_N+\sum_{j=1}^{N-1}\ip{x_N}{y_j}y_j.
+\]
+对$N$取并集，便得两个代数线性包相等，再取闭包即得第一条结论。
+
+记$M=\spn\{y_i\}_{i\ge1}$。若$Y_1,Y_2\in\overline M$，
+可取$u_n,v_n\in M$满足$u_n\to Y_1$、$v_n\to Y_2$。
+由于$M$为线性空间，
+$\alpha_1u_n+\alpha_2v_n\in M$，且
+\[
+ \norm{\alpha_1u_n+\alpha_2v_n-(\alpha_1Y_1+\alpha_2Y_2)}
+ \le|\alpha_1|\norm{u_n-Y_1}+|\alpha_2|\norm{v_n-Y_2}
+ \longrightarrow0.
+\]
+故$\alpha_1Y_1+\alpha_2Y_2\in\overline M$。
+这里的闭包均相对于$X$取，证明不要求$X$本身完备。
+
+\newpage
+\subsection*{第5题\quad Hermite 多项式的正交性}
+\problem 利用 Hermite 多项式$H_n(x)$，$n=0,1,2,\ldots$满足微分方程
+\[
+ y''(x)-2xy'(x)+2ny(x)=0,
+\]
+证明如下正交性：
+\[
+ \int_{-\infty}^{+\infty}H_n(x)H_m(x)e^{-x^2}\dd x=0,
+ \qquad n\ne m.
+\]
+
+\solution 令$w(x)=e^{-x^2}$，有$w'(x)=-2xw(x)$。
+将$H_n$与$H_m$满足的方程分别乘以$w$，写成
+\[
+ (wH_n')'+2nwH_n=0,\qquad
+ (wH_m')'+2mwH_m=0.
+\]
+第一式乘以$H_m$，第二式乘以$H_n$，两式相减，得到
+\[
+ \bigl[w(H_n'H_m-H_m'H_n)\bigr]'
+       +2(n-m)wH_nH_m=0.
+\]
+在$[-R,R]$上积分：
+\[
+ 2(n-m)\int_{-R}^{R}H_n(x)H_m(x)e^{-x^2}\dd x
+ =-\left[e^{-x^2}
+       \bigl(H_n'(x)H_m(x)-H_m'(x)H_n(x)\bigr)\right]_{-R}^{R}.
+\]
+由于$H_n,H_m$及其导数都是多项式，而对任意非负整数$k$，
+$|x|^k e^{-x^2}\to0$（$|x|\to\infty$），故右边的边界项趋于$0$。
+同样，多项式乘$e^{-x^2}$在$\R$上绝对可积，所以左边的反常积分存在。
+令$R\to\infty$，得
+\[
+ 2(n-m)\int_{-\infty}^{+\infty}H_n(x)H_m(x)e^{-x^2}\dd x=0.
+\]
+由$n\ne m$，除以$2(n-m)$即得
+\[
+ \boxed{\displaystyle\int_{-\infty}^{+\infty}
+             H_n(x)H_m(x)e^{-x^2}\dd x=0.}
+\]
+
+\end{document}

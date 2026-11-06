@@ -1,0 +1,1258 @@
+% !TeX program = xelatex
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm
+}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.3em}
+\allowdisplaybreaks
+
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\R}{\mathbb R}
+
+\title{\textbf{第二次作业（第二周 9.24）}\\[0.5em]
+\large 题目与解答}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent
+\textbf{说明：}
+原题第 1、2 题中
+\[
+P\in\mathbb R^2
+\]
+应为
+\[
+P\subset\mathbb R^2,
+\]
+以下已作相应修正。
+
+% ============================================================
+\section*{1.\ 含参变量反常积分的基本性质}
+
+\subsection*{题目}
+
+设
+\[
+P=[a,\omega)\times Y\subset\R^2,
+\]
+函数
+\[
+f(x,y)\in C(P),
+\]
+函数 \(g(x)\) 是 \([a,\omega)\) 上的局部可积函数，即对任意
+\[
+[a,b]\subset[a,\omega),
+\]
+都有
+\[
+g\in R[a,b].
+\]
+考虑含参变量反常积分
+\[
+F(y)=\int_a^\omega f(x,y)g(x)\dd x.
+\]
+
+证明：
+
+\begin{enumerate}[label=(\arabic*),leftmargin=3em]
+\item
+设 \(Y=[c,d]\)。若 \(F(y)\) 在 \(Y\) 上一致收敛，则
+\[
+F\in C[c,d].
+\]
+
+\item
+设 \(Y=[c,d]\)。若
+\[
+\partial_y f(x,y)\in C(P),
+\]
+且
+\[
+\int_a^\omega \partial_y f(x,y)g(x)\dd x
+\]
+在 \(Y\) 上一致收敛，而 \(F(y)\) 在某一点
+\[
+y_0\in Y
+\]
+收敛，则 \(F(y)\) 在 \(Y\) 上收敛且一致收敛，并且
+\[
+F\in C^1[c,d],
+\]
+且
+\[
+F'(y)
+=
+\int_a^\omega
+\partial_y f(x,y)g(x)\dd x.
+\]
+
+\item
+设 \(Y=[c,d]\)。若 \(F(y)\) 在 \(Y\) 上一致收敛，则
+\[
+F\in R[c,d],
+\]
+且
+\[
+\int_c^d F(y)\dd y
+=
+\int_a^\omega
+\left(
+\int_c^d f(x,y)g(x)\dd y
+\right)\dd x.
+\]
+
+\item
+设
+\[
+Y=[c,\widetilde\omega).
+\]
+若定义 \(F(y)\) 的反常积分在任意
+\[
+[c,d]\subset[c,\widetilde\omega)
+\]
+上一致收敛，且
+\[
+\Phi(x)
+=
+\int_c^{\widetilde\omega}
+f(x,y)g(x)\dd y
+\]
+在任意
+\[
+[a,b]\subset[a,\omega)
+\]
+上一致收敛，并且下列两个绝对值累次积分至少有一个存在：
+\[
+\int_c^{\widetilde\omega}
+\dd y
+\int_a^\omega
+|f(x,y)g(x)|\dd x,
+\]
+\[
+\int_a^\omega
+\dd x
+\int_c^{\widetilde\omega}
+|f(x,y)g(x)|\dd y,
+\]
+证明
+\[
+\int_c^{\widetilde\omega}F(y)\dd y
+=
+\int_a^\omega
+\dd x
+\int_c^{\widetilde\omega}
+f(x,y)g(x)\dd y.
+\]
+\end{enumerate}
+
+\subsection*{解答}
+
+对 \(b<\omega\)，记
+\[
+F_b(y)
+=
+\int_a^b f(x,y)g(x)\dd x.
+\]
+
+在任意紧矩形 \([a,b]\times[c,d]\) 上，由第一次作业第 1 题
+关于含参变量常义积分连续性的结论，
+\[
+F_b\in C[c,d].
+\]
+
+\medskip
+
+\noindent
+\textbf{(1)}
+
+由假设，反常积分
+\[
+F(y)=\int_a^\omega f(x,y)g(x)\dd x
+\]
+在 \(Y=[c,d]\) 上一致收敛，也就是说
+\[
+F_b(y)\longrightarrow F(y)
+\qquad (b\uparrow\omega)
+\]
+在 \([c,d]\) 上一致成立。
+
+每个 \(F_b\) 都是连续函数，而连续函数列的一致极限仍连续，所以
+\[
+\boxed{F\in C[c,d].}
+\]
+
+\medskip
+
+\noindent
+\textbf{(2)}
+
+记
+\[
+G_b(y)
+=
+\int_a^b
+\partial_y f(x,y)g(x)\dd x.
+\]
+由于
+\[
+\partial_y f\in C(P),
+\]
+由第一次作业第 1 题关于积分号下求导的结论，
+\[
+F_b'(y)=G_b(y).
+\]
+
+由题设，
+\[
+G_b(y)
+\longrightarrow
+G(y)
+:=
+\int_a^\omega
+\partial_y f(x,y)g(x)\dd x
+\]
+在 \(Y=[c,d]\) 上一致收敛。
+
+又因为 \(F(y_0)\) 收敛，所以存在常数 \(L\)，使得
+\[
+F_b(y_0)\longrightarrow L
+\qquad (b\uparrow\omega).
+\]
+
+对任意 \(y\in[c,d]\)，由微积分基本定理，
+\[
+F_b(y)-F_b(y_0)
+=
+\int_{y_0}^yG_b(t)\dd t.
+\]
+因此
+\[
+F_b(y)
+=
+F_b(y_0)
++
+\int_{y_0}^yG_b(t)\dd t.
+\]
+
+令 \(b\uparrow\omega\)，得到候选极限
+\[
+F_*(y)
+=
+L+\int_{y_0}^yG(t)\dd t.
+\]
+并且
+\begin{align*}
+|F_b(y)-F_*(y)|
+&\le
+|F_b(y_0)-L|
++
+\left|
+\int_{y_0}^y
+\bigl(G_b(t)-G(t)\bigr)\dd t
+\right|\\
+&\le
+|F_b(y_0)-L|
++
+(d-c)
+\sup_{t\in[c,d]}|G_b(t)-G(t)|.
+\end{align*}
+右端与 \(y\) 无关并趋于 \(0\)，故
+\[
+F_b\longrightarrow F_*
+\]
+在 \([c,d]\) 上一致收敛。
+
+这说明对每个 \(y\in[c,d]\)，原反常积分 \(F(y)\) 均收敛，
+且
+\[
+F(y)=F_*(y).
+\]
+所以 \(F(y)\) 在 \(Y\) 上一致收敛。
+
+另一方面，每个 \(G_b\) 连续，而 \(G_b\to G\) 一致，
+故
+\[
+G\in C[c,d].
+\]
+由
+\[
+F(y)
+=
+L+\int_{y_0}^yG(t)\dd t
+\]
+可知
+\[
+F\in C^1[c,d]
+\]
+且
+\[
+F'(y)=G(y).
+\]
+因此
+\[
+\boxed{
+F'(y)
+=
+\int_a^\omega
+\partial_y f(x,y)g(x)\dd x.
+}
+\]
+
+\medskip
+
+\noindent
+\textbf{(3)}
+
+由第 (1) 问，
+\[
+F\in C[c,d],
+\]
+因而当然
+\[
+F\in R[c,d].
+\]
+
+对于任意 \(b<\omega\)，在有限矩形
+\[
+[a,b]\times[c,d]
+\]
+上由第一次作业第 1 题的换序结论，于是
+\begin{align*}
+\int_c^dF_b(y)\dd y
+&=
+\int_c^d
+\left(
+\int_a^b f(x,y)g(x)\dd x
+\right)\dd y\\
+&=
+\int_a^b
+\left(
+\int_c^d f(x,y)g(x)\dd y
+\right)\dd x.
+\end{align*}
+
+由于
+\[
+F_b\longrightarrow F
+\]
+在 \([c,d]\) 上一致收敛，
+所以可以在有限区间上逐项积分：
+\[
+\lim_{b\uparrow\omega}
+\int_c^dF_b(y)\dd y
+=
+\int_c^dF(y)\dd y.
+\]
+故
+\[
+\lim_{b\uparrow\omega}
+\int_a^b
+\left(
+\int_c^d f(x,y)g(x)\dd y
+\right)\dd x
+=
+\int_c^dF(y)\dd y.
+\]
+这同时说明右边关于 \(x\) 的反常积分存在，并且
+\[
+\boxed{
+\int_c^dF(y)\dd y
+=
+\int_a^\omega
+\left(
+\int_c^d f(x,y)g(x)\dd y
+\right)\dd x.
+}
+\]
+
+\medskip
+
+\noindent
+\textbf{(4)}
+
+记
+\[
+H(x,y)=f(x,y)g(x).
+\]
+对 \(b<\omega\)、\(d<\widetilde\omega\)，令
+\[
+Q(b,d)
+=
+\int_a^b\dd x\int_c^dH(x,y)\dd y,
+\]
+以及
+\[
+M(b,d)
+=
+\int_a^b\dd x\int_c^d|H(x,y)|\dd y.
+\]
+在有限矩形上由第一次作业第 1 题的换序结论也可写成
+\[
+Q(b,d)
+=
+\int_c^d\dd y\int_a^bH(x,y)\dd x,
+\]
+\[
+M(b,d)
+=
+\int_c^d\dd y\int_a^b|H(x,y)|\dd x.
+\]
+
+根据题设，两个绝对值累次积分中至少有一个存在。
+无论是哪一个存在，都有某个常数 \(C<\infty\)，使得对所有
+\(b<\omega,d<\widetilde\omega\)，
+\[
+0\le M(b,d)\le C.
+\]
+
+定义
+\[
+M_b
+=
+\lim_{d\uparrow\widetilde\omega}M(b,d),
+\]
+以及
+\[
+N_d
+=
+\lim_{b\uparrow\omega}M(b,d).
+\]
+由于 \(M(b,d)\) 对 \(b,d\) 都单调不减且有统一上界，
+这些极限都存在。
+
+再令
+\[
+M_*=\sup_{b,d}M(b,d).
+\]
+则
+\[
+M_b\uparrow M_*
+\qquad (b\uparrow\omega),
+\]
+且
+\[
+N_d\uparrow M_*
+\qquad (d\uparrow\widetilde\omega).
+\]
+
+先考察关于 \(x\) 的累次积分。
+由于
+\[
+\int_c^{\widetilde\omega}H(x,y)\dd y=\Phi(x)
+\]
+在每个紧区间 \([a,b]\) 上一致收敛，所以
+\[
+\int_a^b\Phi(x)\dd x
+=
+\lim_{d\uparrow\widetilde\omega}Q(b,d).
+\]
+若 \(b_2>b_1\)，则
+\begin{align*}
+\left|
+\int_{b_1}^{b_2}\Phi(x)\dd x
+\right|
+&=
+\left|
+\lim_{d\uparrow\widetilde\omega}
+\bigl(Q(b_2,d)-Q(b_1,d)\bigr)
+\right|\\
+&\le
+\lim_{d\uparrow\widetilde\omega}
+\bigl(M(b_2,d)-M(b_1,d)\bigr)\\
+&=
+M_{b_2}-M_{b_1}\\
+&\le
+M_*-M_{b_1}.
+\end{align*}
+当 \(b_1\uparrow\omega\) 时，右端趋于 \(0\)。
+由反常积分的 Cauchy 判别法，
+\[
+\int_a^\omega\Phi(x)\dd x
+\]
+存在。
+
+完全类似地，由 \(F(y)\) 在每个
+\([c,d]\) 上的一致收敛可得
+\[
+\int_c^dF(y)\dd y
+=
+\lim_{b\uparrow\omega}Q(b,d).
+\]
+若 \(d_2>d_1\)，则
+\[
+\left|
+\int_{d_1}^{d_2}F(y)\dd y
+\right|
+\le
+N_{d_2}-N_{d_1}
+\le
+M_*-N_{d_1}.
+\]
+因此
+\[
+\int_c^{\widetilde\omega}F(y)\dd y
+\]
+也存在。
+
+最后说明两者相等。
+
+若 \(b_2\ge b_1\)、\(d_2\ge d_1\)，则
+\begin{align*}
+|Q(b_2,d_2)-Q(b_1,d_1)|
+&\le
+|Q(b_2,d_2)-Q(b_1,d_2)|\\
+&\qquad
++
+|Q(b_1,d_2)-Q(b_1,d_1)|\\
+&\le
+M_{b_2}-M_{b_1}
++
+N_{d_2}-N_{d_1}\\
+&\le
+(M_*-M_{b_1})
++
+(M_*-N_{d_1}).
+\end{align*}
+当
+\[
+b_1\uparrow\omega,\qquad
+d_1\uparrow\widetilde\omega
+\]
+时，右端趋于 \(0\)。
+
+因此 \(Q(b,d)\) 在
+\[
+b\uparrow\omega,\qquad
+d\uparrow\widetilde\omega
+\]
+时存在共同极限，故两个累次极限相等：
+\begin{align*}
+\int_c^{\widetilde\omega}F(y)\dd y
+&=
+\lim_{d\uparrow\widetilde\omega}
+\lim_{b\uparrow\omega}Q(b,d)\\
+&=
+\lim_{b\uparrow\omega}
+\lim_{d\uparrow\widetilde\omega}Q(b,d)\\
+&=
+\int_a^\omega\Phi(x)\dd x.
+\end{align*}
+即
+\[
+\boxed{
+\int_c^{\widetilde\omega}F(y)\dd y
+=
+\int_a^\omega
+\dd x
+\int_c^{\widetilde\omega}
+f(x,y)g(x)\dd y.
+}
+\]
+
+% ============================================================
+\section*{2.\ 非负函数的累次反常积分}
+
+\subsection*{题目}
+
+设
+\[
+P=[a,\omega)\times[c,\widetilde\omega)
+\subset\R^2,
+\]
+非负函数
+\[
+f(x,y)\in C(P).
+\]
+考虑含参变量反常积分
+\[
+F(y)=\int_a^\omega f(x,y)\dd x,
+\qquad
+\Phi(x)=\int_c^{\widetilde\omega}f(x,y)\dd y.
+\]
+
+若
+\[
+F\in C[c,\widetilde\omega),
+\qquad
+\Phi\in C[a,\omega),
+\]
+且下列两个累次积分至少有一个存在：
+\[
+\int_c^{\widetilde\omega}
+\dd y
+\int_a^\omega f(x,y)\dd x,
+\]
+\[
+\int_a^\omega
+\dd x
+\int_c^{\widetilde\omega}f(x,y)\dd y,
+\]
+证明另一个也存在，且两者相等。
+
+\subsection*{解答}
+
+记
+\[
+F_b(y)=\int_a^b f(x,y)\dd x,
+\qquad
+\Phi_d(x)=\int_c^d f(x,y)\dd y.
+\]
+
+固定任意紧区间 \([c,d]\subset[c,\widetilde\omega)\)。
+将第一次作业第 5 题的结论用于非负函数 \(f\)，由
+\(F\in C[c,d]\) 可得
+\[
+F_b\longrightarrow F
+\]
+在 \([c,d]\) 上一致收敛。交换 \(x,y\) 的角色，同理，对任意
+紧区间 \([a,b]\subset[a,\omega)\)，由 \(\Phi\in C[a,b]\) 可得
+\[
+\Phi_d\longrightarrow\Phi
+\]
+在 \([a,b]\) 上一致收敛。
+
+不妨假设
+\[
+A
+:=
+\int_c^{\widetilde\omega}F(y)\dd y
+=
+\int_c^{\widetilde\omega}
+\dd y
+\int_a^\omega f(x,y)\dd x
+<\infty.
+\]
+我们证明另一个累次积分存在且等于 \(A\)。
+
+对任意 \(a<b<\omega\)，由 \(\Phi_d\to\Phi\) 在
+\([a,b]\) 上一致收敛以及第一次作业第 1 题的换序结论，
+\begin{align*}
+\int_a^b\Phi(x)\dd x
+&=
+\lim_{d\uparrow\widetilde\omega}
+\int_a^b\Phi_d(x)\dd x\\
+&=
+\lim_{d\uparrow\widetilde\omega}
+\int_a^b\dd x\int_c^d f(x,y)\dd y\\
+&=
+\lim_{d\uparrow\widetilde\omega}
+\int_c^d\dd y\int_a^b f(x,y)\dd x.
+\end{align*}
+因为 \(f\ge0\)，有
+\[
+\int_a^b f(x,y)\dd x
+\le
+F(y),
+\]
+故
+\[
+\int_a^b\Phi(x)\dd x
+\le A.
+\]
+
+另一方面，\(\Phi(x)\ge0\)，所以
+\[
+\int_a^b\Phi(x)\dd x
+\]
+随 \(b\uparrow\omega\) 单调不减且有上界 \(A\)。
+因此极限存在，即
+\[
+B
+:=
+\int_a^\omega\Phi(x)\dd x
+\]
+存在，并且
+\[
+B\le A.
+\]
+
+下面证明反向不等式。
+
+对任意 \(d<\widetilde\omega\)，由
+\(F_b\to F\) 在 \([c,d]\) 上一致收敛，
+\begin{align*}
+\int_c^dF(y)\dd y
+&=
+\lim_{b\uparrow\omega}
+\int_c^dF_b(y)\dd y\\
+&=
+\lim_{b\uparrow\omega}
+\int_c^d\dd y\int_a^b f(x,y)\dd x\\
+&=
+\lim_{b\uparrow\omega}
+\int_a^b\dd x\int_c^d f(x,y)\dd y.
+\end{align*}
+又因 \(f\ge0\)，
+\[
+\int_c^d f(x,y)\dd y
+\le
+\Phi(x),
+\]
+所以
+\[
+\int_c^dF(y)\dd y
+\le
+B.
+\]
+令 \(d\uparrow\widetilde\omega\)，得到
+\[
+A\le B.
+\]
+结合 \(B\le A\)，可得
+\[
+A=B.
+\]
+
+因此
+\[
+\boxed{
+\int_c^{\widetilde\omega}
+\dd y
+\int_a^\omega f(x,y)\dd x
+=
+\int_a^\omega
+\dd x
+\int_c^{\widetilde\omega}f(x,y)\dd y.
+}
+\]
+
+若一开始假设右边的累次积分存在，只需交换 \(x,y\) 的角色，
+同理可得相同结论。
+
+% ============================================================
+\section*{3.\ 两个振荡反常积分}
+
+\subsection*{题目}
+
+验证
+\[
+\int_0^\infty\frac{\cos x}{x^\alpha}\dd x
+=
+\frac{\pi}
+{2\Gamma(\alpha)\cos\left(\dfrac{\pi\alpha}{2}\right)},
+\qquad
+\alpha\in(0,1),
+\]
+以及
+\[
+\int_0^\infty\frac{\sin x}{x^\beta}\dd x
+=
+\frac{\pi}
+{2\Gamma(\beta)\sin\left(\dfrac{\pi\beta}{2}\right)},
+\qquad
+\beta\in(0,2).
+\]
+
+请给出详细过程并说明理由。
+
+\subsection*{解答}
+
+首先说明两个积分的收敛性。
+
+对于
+\[
+\int_0^\infty\frac{\cos x}{x^\alpha}\dd x,
+\qquad 0<\alpha<1,
+\]
+在 \(x=0\) 附近，
+\[
+\left|\frac{\cos x}{x^\alpha}\right|
+\le \frac1{x^\alpha},
+\]
+而
+\[
+\int_0^1x^{-\alpha}\dd x<\infty.
+\]
+在无穷远处，\(x^{-\alpha}\) 单调趋于 \(0\)，
+故由 Dirichlet 判别法，
+\[
+\int_1^\infty x^{-\alpha}\cos x\dd x
+\]
+收敛。
+
+类似地，在 \(x=0\) 附近，
+\[
+\frac{\sin x}{x^\beta}
+\sim x^{1-\beta},
+\]
+所以当且仅当 \(\beta<2\) 时局部可积。
+在无穷远处，\(x^{-\beta}\downarrow0\)，
+故当 \(\beta>0\) 时由 Dirichlet 判别法收敛。
+因此题中给出的参数范围正是
+\[
+0<\alpha<1,
+\qquad
+0<\beta<2.
+\]
+
+\medskip
+
+\noindent
+\textbf{第一部分：计算余弦积分。}
+
+令
+\[
+s=1-\alpha\in(0,1).
+\]
+对 \(\varepsilon>0\)，由 Gamma 函数的 Laplace 积分公式
+\[
+\int_0^\infty x^{s-1}e^{-zx}\dd x
+=
+\Gamma(s)z^{-s},
+\qquad
+\Re z>0,
+\]
+取
+\[
+z=\varepsilon-i,
+\]
+得到
+\[
+\int_0^\infty
+x^{-\alpha}e^{-\varepsilon x}e^{ix}\dd x
+=
+\Gamma(1-\alpha)
+(\varepsilon-i)^{-(1-\alpha)}.
+\]
+取实部：
+\[
+\int_0^\infty
+e^{-\varepsilon x}
+\frac{\cos x}{x^\alpha}\dd x
+=
+\Gamma(1-\alpha)
+\Re\left(
+(\varepsilon-i)^{-(1-\alpha)}
+\right).
+\]
+
+由于原反常积分已经收敛，Abel 极限定理给出
+\[
+\lim_{\varepsilon\downarrow0}
+\int_0^\infty
+e^{-\varepsilon x}
+\frac{\cos x}{x^\alpha}\dd x
+=
+\int_0^\infty
+\frac{\cos x}{x^\alpha}\dd x.
+\]
+
+当 \(\varepsilon\downarrow0\) 时，
+\[
+\varepsilon-i
+\longrightarrow
+e^{-i\pi/2},
+\]
+于是
+\begin{align*}
+\int_0^\infty
+\frac{\cos x}{x^\alpha}\dd x
+&=
+\Gamma(1-\alpha)
+\cos\left(
+\frac{(1-\alpha)\pi}{2}
+\right)\\
+&=
+\Gamma(1-\alpha)
+\sin\left(
+\frac{\pi\alpha}{2}
+\right).
+\end{align*}
+
+利用 Euler 反射公式
+\[
+\Gamma(\alpha)\Gamma(1-\alpha)
+=
+\frac{\pi}{\sin\pi\alpha},
+\]
+以及
+\[
+\sin\pi\alpha
+=
+2\sin\frac{\pi\alpha}{2}
+\cos\frac{\pi\alpha}{2},
+\]
+可得
+\begin{align*}
+\Gamma(1-\alpha)
+\sin\frac{\pi\alpha}{2}
+&=
+\frac{\pi}
+{\Gamma(\alpha)\sin\pi\alpha}
+\sin\frac{\pi\alpha}{2}\\
+&=
+\frac{\pi}
+{2\Gamma(\alpha)
+\cos\left(\dfrac{\pi\alpha}{2}\right)}.
+\end{align*}
+因此
+\[
+\boxed{
+\int_0^\infty\frac{\cos x}{x^\alpha}\dd x
+=
+\frac{\pi}
+{2\Gamma(\alpha)
+\cos\left(\dfrac{\pi\alpha}{2}\right)},
+\qquad 0<\alpha<1.
+}
+\]
+
+\medskip
+
+\noindent
+\textbf{第二部分：计算正弦积分。}
+
+先设
+\[
+0<\beta<1.
+\]
+同样由 Gamma 函数公式，
+\[
+\int_0^\infty
+x^{-\beta}
+e^{-\varepsilon x}e^{ix}\dd x
+=
+\Gamma(1-\beta)
+(\varepsilon-i)^{-(1-\beta)}.
+\]
+取虚部并令 \(\varepsilon\downarrow0\)，由 Abel 极限定理得到
+\begin{align*}
+\int_0^\infty
+\frac{\sin x}{x^\beta}\dd x
+&=
+\Gamma(1-\beta)
+\sin\left(
+\frac{(1-\beta)\pi}{2}
+\right)\\
+&=
+\Gamma(1-\beta)
+\cos\left(
+\frac{\pi\beta}{2}
+\right).
+\end{align*}
+利用反射公式，
+\begin{align*}
+\Gamma(1-\beta)
+\cos\frac{\pi\beta}{2}
+&=
+\frac{\pi}
+{\Gamma(\beta)\sin\pi\beta}
+\cos\frac{\pi\beta}{2}\\
+&=
+\frac{\pi}
+{2\Gamma(\beta)
+\sin\left(\dfrac{\pi\beta}{2}\right)}.
+\end{align*}
+因此当 \(0<\beta<1\) 时结论成立。
+
+下面考虑
+\[
+\beta=1.
+\]
+对 \(\varepsilon>0\)，令
+\[
+K_\varepsilon(a)
+=
+\int_0^\infty
+e^{-\varepsilon x}
+\frac{\sin(ax)}x\dd x.
+\]
+则
+\[
+K_\varepsilon'(a)
+=
+\int_0^\infty
+e^{-\varepsilon x}\cos(ax)\dd x
+=
+\frac{\varepsilon}{\varepsilon^2+a^2}.
+\]
+又 \(K_\varepsilon(0)=0\)，所以
+\[
+K_\varepsilon(1)
+=
+\int_0^1
+\frac{\varepsilon}{\varepsilon^2+a^2}\dd a
+=
+\arctan\frac1\varepsilon.
+\]
+令 \(\varepsilon\downarrow0\)，得到
+\[
+\int_0^\infty\frac{\sin x}{x}\dd x
+=
+\frac{\pi}{2},
+\]
+恰好与公式
+\[
+\frac{\pi}
+{2\Gamma(1)\sin(\pi/2)}
+=
+\frac{\pi}{2}
+\]
+一致。
+
+最后设
+\[
+1<\beta<2.
+\]
+对反常积分分部积分：
+\[
+u=\sin x,
+\qquad
+\dd v=x^{-\beta}\dd x,
+\]
+则
+\[
+v=\frac{x^{1-\beta}}{1-\beta}.
+\]
+由于
+\[
+x^{1-\beta}\sin x\longrightarrow0
+\qquad (x\to0^+),
+\]
+因为此时
+\[
+x^{1-\beta}\sin x\sim x^{2-\beta}\to0,
+\]
+而且
+\[
+x^{1-\beta}\sin x\longrightarrow0
+\qquad (x\to\infty),
+\]
+故边界项为零。于是
+\begin{align*}
+\int_0^\infty
+\frac{\sin x}{x^\beta}\dd x
+&=
+\frac1{\beta-1}
+\int_0^\infty
+x^{1-\beta}\cos x\dd x\\
+&=
+\frac1{\beta-1}
+\int_0^\infty
+\frac{\cos x}{x^{\beta-1}}\dd x.
+\end{align*}
+
+因为
+\[
+0<\beta-1<1,
+\]
+可使用第一部分的结论：
+\[
+\int_0^\infty
+\frac{\cos x}{x^{\beta-1}}\dd x
+=
+\frac{\pi}
+{2\Gamma(\beta-1)
+\cos\left(\dfrac{\pi(\beta-1)}2\right)}.
+\]
+注意
+\[
+\Gamma(\beta)
+=
+(\beta-1)\Gamma(\beta-1)
+\]
+以及
+\[
+\cos\left(
+\frac{\pi(\beta-1)}2
+\right)
+=
+\sin\left(
+\frac{\pi\beta}{2}
+\right),
+\]
+故
+\[
+\boxed{
+\int_0^\infty
+\frac{\sin x}{x^\beta}\dd x
+=
+\frac{\pi}
+{2\Gamma(\beta)
+\sin\left(\dfrac{\pi\beta}{2}\right)},
+\qquad 0<\beta<2.
+}
+\]
+
+\medskip
+
+这里所用的 Abel 极限定理是：
+若反常积分
+\[
+\int_0^\infty h(x)\dd x
+\]
+收敛，则
+\[
+\lim_{\varepsilon\downarrow0}
+\int_0^\infty e^{-\varepsilon x}h(x)\dd x
+=
+\int_0^\infty h(x)\dd x.
+\]
+因此上述由指数衰减积分向原振荡反常积分取极限的步骤是合法的。
+
+% ============================================================
+\section*{4.\ Riemann--Lebesgue 引理的一个特殊形式}
+
+\subsection*{题目}
+
+设
+\[
+f\in R[a,b].
+\]
+证明
+\[
+\lim_{n\to\infty}
+\int_a^b f(x)\sin nx\dd x=0.
+\]
+
+提示：
+\[
+\int_{\frac{2k\pi}{n}}^{\frac{(2k+2)\pi}{n}}
+f(x)\sin nx\dd x
+=
+\int_{\frac{2k\pi}{n}}^{\frac{(2k+2)\pi}{n}}
+\left[
+f(x)-f\left(\frac{2k\pi}{n}\right)
+\right]
+\sin nx\dd x.
+\]
+
+\subsection*{解答}
+
+因为 \(f\in R[a,b]\)，所以 \(f\) 在 \([a,b]\) 上有界。
+设
+\[
+|f(x)|\le M.
+\]
+
+考虑长度为一个正弦周期的区间
+\[
+I_{k,n}
+=
+\left[
+\frac{2k\pi}{n},
+\frac{2(k+1)\pi}{n}
+\right].
+\]
+由于
+\[
+\int_{I_{k,n}}\sin nx\dd x=0,
+\]
+故只要 \(I_{k,n}\subset[a,b]\)，就有
+\begin{align*}
+\int_{I_{k,n}}f(x)\sin nx\dd x
+&=
+\int_{I_{k,n}}
+\left[
+f(x)-f\left(\frac{2k\pi}{n}\right)
+\right]
+\sin nx\dd x.
+\end{align*}
+这正是题目所给的提示。
+
+记 \(f\) 在 \(I_{k,n}\) 上的振幅为
+\[
+\operatorname{osc}(f;I_{k,n})
+=
+\sup_{x\in I_{k,n}}f(x)
+-
+\inf_{x\in I_{k,n}}f(x).
+\]
+则
+\begin{align*}
+\left|
+\int_{I_{k,n}}f(x)\sin nx\dd x
+\right|
+&\le
+\int_{I_{k,n}}
+\left|
+f(x)-f\left(\frac{2k\pi}{n}\right)
+\right|\dd x\\
+&\le
+\operatorname{osc}(f;I_{k,n})
+\,|I_{k,n}|\\
+&=
+\operatorname{osc}(f;I_{k,n})
+\frac{2\pi}{n}.
+\end{align*}
+
+现在用所有位于 \([a,b]\) 内的完整周期区间
+\(I_{k,n}\)，再加上左右两端不足一个周期的区间，
+组成 \([a,b]\) 的一个分割 \(P_n\)。
+
+该分割的网格满足
+\[
+\|P_n\|
+\le
+\frac{2\pi}{n}
+\longrightarrow0.
+\]
+
+由于 \(f\) Riemann 可积，对任意网格趋于 \(0\) 的分割序列，
+都有
+\[
+U(P_n,f)-L(P_n,f)\longrightarrow0.
+\]
+这里 \(U,L\) 分别表示 Darboux 上和与下和。
+
+所有完整周期区间上的积分之和满足
+\begin{align*}
+\left|
+\sum_{I_{k,n}\subset[a,b]}
+\int_{I_{k,n}}
+f(x)\sin nx\dd x
+\right|
+&\le
+\sum_{I_{k,n}\subset[a,b]}
+\operatorname{osc}(f;I_{k,n})|I_{k,n}|\\
+&\le
+U(P_n,f)-L(P_n,f).
+\end{align*}
+
+另一方面，左右两端至多各剩下一段长度小于
+\(2\pi/n\) 的区间，因此这两个端部区间总长度小于
+\[
+\frac{4\pi}{n}.
+\]
+于是端部积分的绝对值不超过
+\[
+\frac{4\pi M}{n}.
+\]
+
+综上，
+\[
+\left|
+\int_a^bf(x)\sin nx\dd x
+\right|
+\le
+U(P_n,f)-L(P_n,f)
++
+\frac{4\pi M}{n}.
+\]
+令 \(n\to\infty\)，右端趋于 \(0\)，故
+\[
+\boxed{
+\lim_{n\to\infty}
+\int_a^bf(x)\sin nx\dd x
+=
+0.
+}
+\]
+
+这就是 Riemann--Lebesgue 引理在 Riemann 可积函数情形下的一个特殊形式。
+
+\end{document}
