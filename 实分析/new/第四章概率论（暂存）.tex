@@ -1,0 +1,150 @@
+\chapter{概率论}
+\section{概率测度}
+% 本章转录时，用户未另行说明的编号均指“资料”中的概率论讲义。
+% 默认抄录定理、命题等内容时，连同证明一起录入，除非用户另行说明。
+% 抽取资料后，如记号含义不清，可添加“这里……是……”形式的简短说明。
+
+\begin{definition}[概率空间]\label{def:probability-space}
+设 $\Omega$ 是集合，$\mathcal F$ 是 $\Omega$ 上的 $\sigma$-代数，$P$ 是 $\mathcal F$ 上的测度，满足 $P(\Omega)=1$，则称 $P$ 是 $\mathcal F$ 上的概率，$(\Omega,\mathcal F,P)$ 是概率空间。
+\end{definition}
+
+\begin{definition}[独立性]\label{def:event-independence}
+设 $(\Omega,\mathcal F,P)$ 是概率空间，$A_i\in\mathcal F$（$i=1,2,\ldots,n$）。称这 $n$ 个事件独立，当且仅当对任意 $1\leq i_1<i_2<\cdots<i_k\leq n$，都有
+\[
+P\left(\bigcap_{j=1}^k A_{i_j}\right)=\prod_{j=1}^kP(A_{i_j})
+\]
+成立。
+\end{definition}
+\begin{proposition}\label{prop:independence-complements}
+事件 $A_1,\ldots,A_n$ 相互独立，当且仅当它们的补集 $A_1^c,\ldots,A_n^c$ 相互独立。实际上，把其中任意几个事件换成补集，都不影响相互独立性。
+\end{proposition}
+\begin{proof}
+只需考虑把 $A_1$ 换成 $A_1^c$。对任意 $J\subseteq\{2,\ldots,n\}$，由独立性，
+\[
+\begin{aligned}
+P\left(A_1^c\cap\bigcap_{j\in J}A_j\right)
+&=P\left(\bigcap_{j\in J}A_j\right)-P\left(A_1\cap\bigcap_{j\in J}A_j\right)\\
+&=(1-P(A_1))\prod_{j\in J}P(A_j)
+=P(A_1^c)\prod_{j\in J}P(A_j).
+\end{aligned}
+\]
+不含 $A_1^c$ 的子族仍然独立，因此替换后仍相互独立。依次替换就得到所有补集相互独立；反向再取一次补集即可。
+\end{proof}
+
+\begin{remark}
+
+注意 $n$ 个事件独立能推出 $n$ 个事件两两独立，反之不然。
+\end{remark}
+
+\begin{theorem}[Borel--Cantelli]\label{thm:borel-cantelli}
+设 $(\Omega,\mathcal F,P)$ 是概率空间，$A_n\in\mathcal F$ 是一列集合。若级数 $\sum_{n=1}^{\infty}P(A_n)$ 收敛，则
+\[
+P\left(\limsup_{n\to\infty}A_n\right)=0.
+\]
+若级数 $\sum_{n=1}^{\infty}P(A_n)$ 发散，且事件列 $\{A_n\}$ 相互独立，则
+\[
+P\left(\limsup_{n\to\infty}A_n\right)=1.
+\]
+\end{theorem}
+
+这里
+\[
+\limsup_{n\to\infty}A_n=\bigcap_{m=1}^{\infty}\bigcup_{n=m}^{\infty}A_n,
+\qquad
+\liminf_{n\to\infty}A_n=\bigcup_{m=1}^{\infty}\bigcap_{n=m}^{\infty}A_n.
+\]
+
+\begin{proof}
+对收敛的情形，根据测度的连续性，再由可列次可加性，
+\[
+P\left(\limsup_{n\to\infty}A_n\right)
+=\lim_{m\to\infty}P\left(\bigcup_{n=m}^{\infty}A_n\right)
+\leq\lim_{m\to\infty}\sum_{n=m}^{\infty}P(A_n).
+\]
+注意到级数收敛，
+\[
+\lim_{m\to\infty}\sum_{n=m}^{\infty}P(A_n)
+=\sum_{n=1}^{\infty}P(A_n)-\lim_{m\to\infty}\sum_{n=1}^{m-1}P(A_n)=0.
+\]
+这就证明了收敛的情形。对发散的情形，根据测度的连续性和独立性，有
+\[
+\begin{aligned}
+1-P\left(\bigcup_{n=m}^{\infty}A_n\right)
+&=P\left(\bigcap_{n=m}^{\infty}(\Omega\setminus A_n)\right)\\
+&=\lim_{N\to\infty}\prod_{n=m}^{N}P(\Omega\setminus A_n)
+=\lim_{N\to\infty}\prod_{n=m}^{N}(1-P(A_n)).
+\end{aligned}
+\]
+作放缩，
+\[
+\prod_{n=m}^{N}(1-P(A_n))
+\leq\prod_{n=m}^{N}\exp(-P(A_n))
+=\exp\left(-\sum_{n=m}^{N}P(A_n)\right)\longrightarrow0.
+\]
+于是
+\[
+P\left(\limsup_{n\to\infty}A_n\right)
+=\lim_{m\to\infty}P\left(\bigcup_{n=m}^{\infty}A_n\right)=1.
+\]
+\end{proof}
+
+\section{一元概率论}
+
+\begin{definition}[随机变量]\label{def:random-variable}
+设 $(\Omega,\mathcal F,P)$ 是概率空间。若函数 $X:\Omega\to\mathbb R$ 满足对任意 $B\in\mathbb B_{\mathbb R}$，都有
+\[
+\{\omega\in\Omega:X(\omega)\in B\}\in\mathcal F,
+\]
+称 $X$ 是一个随机变量。这里 $\mathbb B_{\mathbb R}$ 是 $\mathbb R$ 上的 Borel $\sigma$-代数。
+\end{definition}
+
+\begin{definition}[分布函数]\label{def:distribution-function}
+设 $(\Omega,\mathcal F,P)$ 是概率空间，$X$ 是其上的一个随机变量。定义
+\[
+F(x)=P(X\leq x)=P(\{\omega\in\Omega:X(\omega)\leq x\})
+\]
+为 $X$ 的概率分布函数。
+\end{definition}
+
+\begin{proposition}\label{prop:distribution-function-properties}
+设 $(\Omega,\mathcal F,P)$ 是概率空间，$X$ 是其上的一个随机变量，则 $X$ 的概率分布函数 $F$ 满足：
+\begin{enumerate}
+\item （单调性）任意 $x<y$ 都有 $F(x)\leq F(y)$。
+\item （连续性）$F$ 在任一点处右连续，即
+\[
+\lim_{x\to x_0^+}F(x)=F(x_0),
+\]
+且左极限
+\[
+\lim_{x\to x_0^-}F(x)=P(X<x_0)=P(\{\omega\in\Omega:X(\omega)<x_0\}).
+\]
+\item 在无穷远处，
+\[
+\lim_{x\to-\infty}F(x)=0,\qquad\lim_{x\to+\infty}F(x)=1.
+\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+只需仔细验证第二条。
+
+任取一列 $x_n\downarrow x_0$，由测度的连续性，
+\[
+\lim_{x\to x_0^+}F(x)=\lim_{n\to\infty}P(X\leq x_n)
+=P\left(\bigcap_{n=1}^{\infty}\{\omega\in\Omega:X(\omega)\leq x_n\}\right).
+\]
+利用极限的性质，有
+\[
+\bigcap_{n=1}^{\infty}\{\omega\in\Omega:X(\omega)\leq x_n\}
+=\{\omega\in\Omega:X(\omega)\leq x_0\},
+\]
+即得 $\lim_{x\to x_0^+}F(x)=F(x_0)$。
+
+类似地，根据 $F$ 在 $(-\infty,x_0)$ 上单调有界，可知左极限存在。任取 $x_n\uparrow x_0$，$x_n<x_0$，有
+\[
+\lim_{x\to x_0^-}F(x)
+=P\left(\bigcup_{n=1}^{\infty}\{\omega\in\Omega:X(\omega)\leq x_n\}\right)
+=P(X<x_0).
+\]
+\end{proof}
+

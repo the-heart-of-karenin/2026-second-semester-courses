@@ -1,0 +1,116 @@
+
+===== PDF PAGE 1 =====
+复分析/ Complex Analysis                   作业记录/ Homework Notes
+
+
+          复分析作业记录
+
+                      Complex Analysis Homework Notes
+
+
+       1 第1 次作业，第1 题/ Homework 1, Problem 1
+
+
+题目与出处/ Problem and source. 设f = u + iv : C →C，F = (u, v) : R2 →R2。证明：若f
+全纯，则JF 是从C 到C 的复线性映射，且Cauchy–Riemann 方程等价于
+              (   ) (    )  (    ) (   )
+                        0 −1   ux  uy      ux  uy    0 −1
+                           =                                  .
+                        1   0     vx  vy       vx  vy    1   0
+
+Let f = u + iv : C →C and F = (u, v) : R2 →R2. Show that holomorphicity makes JF complex-
+linear, and that the Cauchy–Riemann equations are equivalent to the matrix identity above. 来
+
+源：第01 次作业/作业原件.pdf，第1 题。
+
+最初的问题/ Original question. “复线性映射”是什么意思？给一个反例。
+
+简短解释/ Brief explanation. 复线性映射可把复数从映射中提出；对已知实线性的映射，只需
+
+检验A(iz) = iA(z)。共轭映射A(z) = ¯z 是实线性但不复线性，因为A(i) = −i̸ = iA(1) = i。A
+
+real-linear map is complex-linear exactly when it commutes with multiplication by i; conjugation
+
+does not.
+
+进一步的疑问与解释：在区域内，若F 已实可微，则f 全纯当且仅当每一点的实微分dFz 复线
+性。实可微给出f(z + h) −f(z) = dFz(h) + o(|h|)；复线性时dFz(h) = h dFz(1)，故复导数为
+dFz(1)。反之，复可微给出dFz(h) = f′(z)h。复线性又等价于Jacobian 与乘以i 的矩阵交换，即
+Cauchy–Riemann 方程。这里“已实可微”不能仅由偏导数存在代替。
+
+
+       2 第1 次作业，第2 题/ Homework 1, Problem 2
+
+
+题目与出处/ Problem and source. 证明f = u + iv 的Cauchy–Riemann 方程在极坐标(r, θ)
+
+下可写成
+                                    1                                  ur =          vr = −1                                        rvθ,           ruθ.
+Show that the Cauchy–Riemann equations in polar coordinates take the displayed form. 来源：第
+
+01 次作业/作业原件.pdf，第2 题。
+
+最初的问题/ Original question. 为什么极坐标变换的Jacobian 非零，就能由极坐标Cauchy–
+
+Riemann 方程反推直角坐标方程？
+
+简短解释/ Brief explanation. 令c = cos θ、s = sin θ，以E1 = ux −vy、E2 = uy + vx 表示直
+角坐标方程的误差，以P1 = ur −vθ/r、P2 = vr + uθ/r 表示极坐标方程的误差。链式法则给出
+                         (   )
+                           (P1 )      c   s  (E1 )
+                        =                          .
+                                P2     −s  c   E2
+
+
+
+
+                                          1
+
+===== PDF PAGE 2 =====
+复分析/ Complex Analysis                   作业记录/ Homework Notes
+
+
+中间矩阵行列式为1，故P1 = P2 = 0 蕴含E1 = E2 = 0。原坐标变换的Jacobian 为r̸ = 0，
+保证1/r 有意义且坐标变换可逆。The polar residuals are an invertible rotation of the Cartesian
+
+residuals, so their vanishing is equivalent.
+
+
+       3 第1 次作业，第4 题/ Homework 1, Problem 4
+
+
+题目与出处/ Problem and source. 设标准化的分式线性变换T(z) = (az + b)/(cz + d) 有有
+限不动点z1，其乘子为κ = T ′(z1)。按题意，抛物型指κ = 1，双曲型指κ > 0 且κ̸ = 1，椭圆
+型指|κ| = 1 且κ̸ = 1，其余为斜向型。证明这四种情形依次等价于a + d = ±2、a + d ∈R 且
+
+|a + d| > 2、a + d ∈R 且|a + d| < 2、以及a + d /∈R。提示涉及不动点数、第二个不动点的乘子
+及κ + κ−1 = (a + d)2 −2。
+
+来源：第01 次作业/作业原件.pdf，第4 题。
+
+最初的问题/ Original question. “Normalized form” 对分式线性变换是什么意思？若不先规范
+
+化，题中关于迹a + d 的判别是否仍成立？
+
+简短解释/ Concise explanation. 分式线性变换的系数只确定到非零公因子。因ad−bc̸ = 0，可
+
+把代表矩阵缩放到ad −bc = 1；此后只剩M 与−M 两种选择，因此题中关于a + d = ±2、|a + d|
+及迹是否为实数的分类不受影响，并且T ′(z) = 1/(cz + d)2。未规范化时，迹本身随缩放而变，真
+
+正不依赖表示的是
+                                  (a + d)2
+                               q =              ,    κ + κ−1 = q −2.
+                              ad −bc
+例如抛物型条件应写为(a + d)2 = 4(ad −bc)，不能直接写成a + d = ±2。
+
+Normalize by rescaling the representing matrix to determinant 1. Without normalization, replace
+
+trace conditions by the invariant q = (a + d)2/(ad −bc); in particular, the parabolic condition is
+
+q = 4.
+
+
+
+
+
+                                          2

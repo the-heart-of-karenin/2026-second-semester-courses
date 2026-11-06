@@ -1,0 +1,75 @@
+
+===== PDF PAGE 1 =====
+        P∞    1. Let f(z) =                                                         D := D(0; 1).                 n=0 anzn and g(z) = P∞n=0 bnzn be two analytic functions on the unit disk
+For any n ∈N, set
+                                              n
+                                           cn = X akbn−k.
+
+                                              k=0
+
+                                    P∞Show that f(z)g(z) is analytic on D, with the Taylor expansion f(z)g(z) =   n=0 cnzn.
+Hint. Show that cn = (fg)(n)(0)/n!, using the Leibniz’s rule:
+
+
+                                            n
+                                    (fg)(n)(z) = X Cknf (k)(z)g(n−k)(z).
+
+                                            k=0
+
+
+    2. The Legendre polynomials can be defined as the coefficients Pn(α) of the series expansion of
+
+                                   ∞
+                                         1     X
+                             f(z) =           = 1 +    Pn(α)zn.
+                                      (1 −2αz + z2)1/2
+                                                       n=1
+
+Calculate the first four Legendre polynomials.
+
+    3. Let {an}∞n=0 and {bn}∞n=0 be two sequences of complex numbers, and set
+
+                                          n
+                                       cn = X akbn−k,  n ∈N.
+
+                                          k=0
+
+       P∞   P∞     P∞
+Suppose that   n=0 an,   n=0 bn and   n=0 cn are all convergent. Show that
+
+                      ∞  !  ∞  !  ∞
+            X an    · X bn = X cn.
+
+                                   n=0       n=0      n=0
+
+Hint. Use Exercise 1 and Abel’s theorem.
+
+    4. Let {an}∞n=0 be the Fibonacci sequence, i.e. a0 = a1 = 1 and an = an−1 + an−2, n ≥2.
+              P∞1) Show that the power series   n=0 anzn coincides with the rational function 1/(1 −z −z2), and determine
+the radius of convergence.
+2) Deduce the following formula of Binet:
+
+                             √ !n+1     √ !n+1
+                                 1     1 +  5         1 −  5
+                          an = √          −            .
+                                  5      2              2
+
+
+
+    5. Consider the Taylor series of 1/ cos z centered at 0:
+
+
+                             ∞
+                                       1  X E2n
+                           =                                          cos z       (2n)!z2n,
+                                             n=0
+
+where E2n are called Euler numbers.
+1) Determine the radius of convergence of the series.
+2) Show that all E2n are natural numbers, and compute E2n for 0 ≤n ≤6.
+
+
+
+
+
+                                              1

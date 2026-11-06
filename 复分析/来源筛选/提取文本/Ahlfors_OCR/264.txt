@@ -1,0 +1,77 @@
+﻿254
+hyperbola( 双 曲 ). 95 一 97
+hyperbolic transformation( 双 曲 变 换） ， 86
+hypergeometric differential equation （ 超 几 何
+微 分 方 程 ） ， 315 ． 321
+hypergeometric function(ü 几 何 函 数 ） ， 317
+identity• lagra 吨 e 、 （ 拉 格 朗 日 恒 等 式 ）
+， 9
+image( 象 ） ， 63 ， 73
+imaginary axis(**). 12
+imaginary part(*ß), ]
+index of 就 凶 int （ 一 点 的 指 数 ） ， 114 18
+indicial uat n （ 指 数 方 程 ） ， 312
+indirectly conformal 灬 嗯 （ 间 接 共 形 映 射 ）
+inf( 下 确 界 ） ， 55
+infinite product( 无 穷 乘 积 ） ， 191 ． 193
+infinity( 无 穷 ). 18
+injective, definitlon( 单 射 ， 定 义 ） ， 65
+integral()l 分 ） ， 101 刁 04
+integral domain( 整 环 ） ， 4
+integrauon( 积 分 ). 101 刁 73
+interior( 内 部 ） ， 52
+intersection( 交 ） ， 50
+inverse function( 反 数 ） ， 65
+inverse image( 逆 象 ）， 63
+inverslon( 反 77
+involutory transformation( 对 合 变 换 ） ， 7
+“ 园 y “ 禳 不 可 约 多 项 式 ). 3
+， 74
+isolated point( 孤 立 点 ） ， 53
+tsolated singularity( 孤 立 奇 点 ） ， 124
+isomorphism( 同 构 ） ， 5
+Jacobi ， & G.. 241
+Jacobiun( 雅 可 比 行 列 式 ） ， 25 ， 74
+Jensen's form 司 a （ 翁 森 公 式 ), 207 、 208
+Jordan arc(* 尔 当 A), 68
+Jordan curve( 若 尔 当 曲 线） ， 68
+Jordan curve th«)r “ 〔 若 尔 当 曲 线 定 理 ） ， 118
+kernel(E) ， 45 ， 161
+Koebe. P. ， 230
+lacunary “ № e （ 空 隙 值 ） ， 307
+L•grange 5 identity( 拉 格 朗 日 恒 等 式 ). 9
+Laplace's equation( 拉 普 拉 斯 方 程 ） ， 25 ， 162
+L 叩 旧 n （ 拉 普 拉 斯 式 ). 245
+Laurent series( 洛 朗 级 数 ), 184 ． 186
+least upper bound(). u. b ， ） （ 上 确 界 ） ， 34 ， 55
+Legendre 凶 lynom 〈 勒 让 德 多 项 式 ） ， 4
+Legendre relation( 勒 让 德 关 系 ） ， 274
+length( 长 度 ） ， 75 ， 104
+level curve( 阶 层 曲 89
+limes inferior(lim inf lim)( 下 极 限 ),
+hmes superior(lim sup ， 嗚 ） （ 上 极 限 ） ， 34
+hrnit(B•.N). 22 ． 24
+limit p 卣 nt （ 极 限 点 ） ， 62
+LindelOf, 匚 ， 97 ． 201
+line int “ l( 线 积 分 ） ， 101 刁 0 《
+hnear differential equation · （ 线 性 微 分 方 程 ） ，
+306 ． 321
+linear group(R 性 76 ． 78
+linear transformation( 线 性 变 换 ） ， 76 ． 89
+Liouville ， s theo 代 m （ 刘 维 尔 定 理 ） ， 122
+local mapptng( 局 部 映 射 ） ， 130 ． 133
+local solution （ 局 部 解 ） ， 308
+locally bcunded famil / （ 局 部 有 界 族 ） ， 225
+locally connected $ et （ 局 部 连 通 集 ） ， 58
+lc ℃ ally exact differential （ 局 部 恰 当 微 分 ),
+144 一 146
+logarithm( 对 数 ） ， 46 ． 48
+loxodromic transformation()& 变 换） ， 88
+Lucas's theorem( 卢 卡 斯 定 理 ） ， 29
+M test(M 判 别 法 ), 37
+majorant( 强 级 数 ）， 77
+mapping(* 射 )' 63
+conformal( 共 形 ） ， 73 ． 75 ， 229 一 261
+co ntinuous(u ） ， 64 ． 67
+1 al( 局 部 ） ， 130 刂 33
+schlicht( 单 叶 ） ， 230

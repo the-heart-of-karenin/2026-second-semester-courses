@@ -1,0 +1,44 @@
+
+===== PDF PAGE 1 =====
+    1. For f = u + iv : C →C, denote F = (u, v) : R2 →R2. Show that if f is holomorphic, then JF  is a
+C-linear map from C to C and the Cauchy-Riemann equations are equivalent to
+
+                          0  −1     ux  uy        ux  uy     0  −1
+                             =                                         .
+                          1   0       vx   vy        vx   vy      1   0
+
+
+    2. Show that the Cauchy-Riemann equations for f = u + iv in the polar coordinates (r, θ) take the form:
+
+                              ∂u   1 ∂v   ∂v     ∂u                         =         ,    = −1     .
+                                  ∂r    r ∂θ   ∂r     r ∂θ
+
+
+                           ∂2
+    3. Show that ∆= 4 ∂z∂z.
+
+    4. Let T(z) = (az + b)/(cz + d) be a fractional linear transformation in normalized form. Assume that T
+has a fixed point z1, with z1̸ = ∞. Set κ := T ′(z1), called the multiplier of T. We say that T is parabolic if
+κ = 1, hyperbolic if κ > 0 and κ̸ = 1, elliptic if |κ| = 1 and κ̸ = 1, and loxodromic otherwise. Prove that T
+is parabolic if and only if a + d = ±2, hyperbolic if and only if a + d is real with |a + d| > 2, elliptic if and
+only if a + d is real with |a + d| < 2, and loxodromic if and only if a + d is non-real.
+Hint. First, show that κ = 1 if and only if T has only one fixed point. Second, show that κ = 1/f ′(z2) if z2
+is another finite fixed point of T. Third, show that κ + 1/κ = (a + d)2 −2.
+
+    5. Let f be a holomorphic function. The Schwarzian derivative of f is the expression
+
+                                                                                                ′′′                ′′  2
+                                            f −3  f        .                                   S(f) =
+                                             f ′   2   f ′
+
+Show that
+1) S(f) ≡0 if and only if f is a fractional linear transformation.
+Hint. Denote N(f) := (log f ′)′ = f ′′/f ′. Then, S(f) = N(f)′ −12N(f)2.
+2) For g holomorphic, S(g◦f) = (S(g)◦f)(f ′)2+S(f). In particular, if g is a fractional linear transformation,
+then S(g ◦f) = S(f).
+
+
+
+
+
+                                              1

@@ -1,0 +1,64 @@
+
+===== PDF PAGE 1 =====
+    1. 1) State and prove the minimum modulus principle for non-vanishing holomorphic functions f on a
+domain Ω.
+2) Let Ωbe a bounded domain and f ∈A(Ω) ∩C0(Ω). Suppose that |f(z)| is constant for z ∈∂Ω. Show
+that either f is constant or f has a zero in Ω.
+
+    2. Prove the following Painlev´e’s Theorem: Assume that Ω1 and Ω2 are two domains with an adjacent
+piece-wise smooth boundary arc L. Let fj(z), j = 1, 2, be holomorphic functions on Ωj which are continuous
+on Ωj, respectively. Furthermore, suppose that f1(z) = f2(z) for z ∈L. Define
+
+                                                   f1(z),  z ∈Ω1 ∪L,
+                                F(z) =
+                                                   f2(z),  z ∈Ω2.
+
+Then, F is holomorphic on Ω1 ∪L ∪Ω2.
+
+    3. Let Ωbe a domain. A chain on Ωis of the form Pmj=1 cjγj, where cj ∈Z and γj’s are closed piece-wise
+smooth curves on Ω. A chain Pmj=1 cjγj is said to be homologous to 0, if for all z ∈C\Ω,
+
+
+                            m
+             X cjW(γj; z) = 0.
+
+                                          j=1
+
+Show that for f ∈A(Ω), if Pmj=1 cjγj is homologous to 0 then
+
+
+                           m
+                                       I
+             X cj    f(z)dz = 0,
+                                         j=1     γj
+
+and
+                 m               m
+                     1 X  I   f(ζ)   X
+                                   cj         dζ = f(z)    cjW(γj; z),   z ∈Ω\ ∪mj=1 Γj.
+                    2πi                                    ζ −z
+                                                 j=1                         j=1     γj
+
+
+    4. Let Ωbe a domain and f ∈A(Ω). Let γ be a closed piece-wise smooth curve in Ωwhich is homologous
+to 0. Let σ = f ◦γ and suppose that σ does not pass through α. Let {aj}mj=1 be the preimages of α under
+f, with multiplicity rj, 1 ≤j ≤m. Prove that
+
+
+                                m
+                              W(σ; α) = X rjW(γ; aj).
+
+                                                 j=1
+
+
+    5. Let γ be a closed piece-wise smooth curve in C and denote by Γ its trace. Prove that, for any n ≥2,
+
+                                I    dζ
+                              = 0,     z̸ ∈Γ.
+                                            γ (ζ −z)n
+
+
+
+
+
+                                              1

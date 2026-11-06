@@ -1,0 +1,292 @@
+\documentclass[UTF8,a4paper,11pt,fontset=fandol]{ctexart}
+\usepackage{amsmath,amssymb,geometry,fancyhdr}
+\geometry{left=25mm,right=25mm,top=24mm,bottom=24mm}
+\setlength{\parindent}{2em}
+\linespread{1.18}
+\pagestyle{fancy}\fancyhf{}\fancyhead[C]{\small 曲面上等温参数存在性的一个初等证明}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dz}{\dd\bar z\,\dd z}
+\newcommand{\zz}{\bar\zeta}
+\title{曲面上等温参数存在性的一个初等证明}
+\author{陈省身}\date{}
+\begin{document}
+\maketitle
+\section{引言}
+设
+\begin{equation}\dd s^2=E(x,y)\dd x^2+2F(x,y)\dd x\dd y+G(x,y)\dd y^2,\qquad EG-F^2>0,\quad E>0,\tag{1}\end{equation}
+是在曲面某个邻域内定义的二维正定黎曼度量，$x,y$ 为该邻域的局部坐标。所谓等温参数，是指使度量具有如下形式的局部坐标 $u,v$：
+\begin{equation}\dd s^2=\lambda(u,v)(\dd u^2+\dd v^2),\qquad\lambda(u,v)>0.\tag{2}\end{equation}
+为了保证等温参数存在，必须对度量施加某些正则性假设。事实上，Hartman 和 Wintner 最近已经证明，仅假设函数 $E,F,G$ 连续是不够的。\footnote{P. Hartman and A. Wintner, \textit{On the existence of Riemannian manifolds which cannot carry non-constant analytic or harmonic functions in the small}（论局部不能容许非常值解析函数或调和函数的黎曼流形的存在性）, Amer. J. Math. 75 (1953), 260--276。另见 S. Chern, P. Hartman, and A. Wintner, \textit{On isothermic coordinates}（论等温坐标）, Comment. Math. Helv. 28 (1954), 301--309。}
+迄今已知保证等温参数存在的最弱条件，是由 Korn 和 Lichtenstein 得到的。\footnote{A. Korn, \textit{Zwei Anwendungen der Methode der sukzessiven Annäherungen}（逐次逼近法的两个应用）, Schwarz Abhandlungen, 215--229；L. Lichtenstein, \textit{Zur Theorie der konformen Abbildung. Konforme Abbildung nichtanalytischer, singularitätenfreier Flächenstücke auf ebene Gebiete}（论保形映射理论：非解析且无奇点的曲面片到平面区域的保形映射）, Bull. Int. de l'Acad. Sci. Cracovie, sér. A (1916), 192--217。另参见 C. B. Morrey, \textit{On the solutions of quasi-linear elliptic partial differential equations}（论拟线性椭圆型偏微分方程的解）, Trans. Amer. Math. Soc. 43 (1938), 126--166；该文在更弱的假设下证明了广义意义下等温参数的存在性。\par 校样补记：Hartman 和 Wintner 最近得到了更弱的条件。见其论文 \textit{On uniform Dini conditions in the theory of linear partial differential equations of elliptic type}（论线性椭圆型偏微分方程理论中的一致 Dini 条件）, Amer. J. Math. 77 (1955), 329--354。}
+为叙述他们的定理，先回顾如下定义：若对 $(x,y)$ 平面内区域 $D$ 中任意两点 $(x,y)$ 和 $(x',y')$，均有
+\begin{equation}|f(x,y)-f(x',y')|\le Cr^\lambda,\tag{3}\end{equation}
+则称函数 $f(x,y)$ 满足 $\lambda$ 阶 Hölder 条件，其中 $0<\lambda\le1$，$C$ 为常数，$r$ 为这两点之间的欧氏距离。由此，Korn--Lichtenstein 定理可表述如下：
+
+\textbf{定理。}\textit{设在 $(x,y)$ 平面的区域 $D$ 内，函数 $E,F,G$ 满足 $\lambda$ 阶 Hölder 条件，$0<\lambda<1$。则 $D$ 的每一点都有一个邻域，其局部坐标为等温参数。}
+
+在不宜作解析性假设的曲面整体理论中，这一定理相当有用。这里将给出一个看来初等而又相当直接的证明。不言而喻，这一证明的基本思想已包含在 Korn 和 Lichtenstein 的工作中。不过，我们相信，始终采用复数记号可以使证明有所简化。\footnote{本文投稿后，我得知 L. Bers 在其关于黎曼曲面的油印讲义（纽约大学，1951--1952）中已给出过一个类似的证明。}
+
+首先注意，等温参数在保形变换下保持不变；这里的保形变换，是指将黎曼度量 (1) 乘以一个正因子。在保形变换下，两向量之间的角保持不变。若进一步假设坐标 $x,y$ 构成正向坐标系，即只允许雅可比行列式为正的局部坐标变换，则还可以定义角的定向。为了用解析式表示这些关系，引入复值微分形式是方便的，即形如 $\omega=\alpha+\ii\beta$ 的形式，其中 $\alpha,\beta$ 为实微分形式。记 $\bar\omega=\alpha-\ii\beta$。
+
+由于 (1) 右端的二次微分形式正定，可写为
+\begin{equation}\dd s^2=\theta_1^2+\theta_2^2,\tag{4}\end{equation}
+其中 $\theta_1,\theta_2$ 为实线性微分形式：
+\begin{equation}\theta_1=a_1\dd x+b_1\dd y,\qquad\theta_2=a_2\dd x+b_2\dd y.\tag{5}\end{equation}
+假设 $a_1b_2-a_2b_1>0$，则 $\theta_1,\theta_2$ 在相差一个正交变换（其行列式为 $+1$）的意义下唯一确定。令
+\begin{equation}\phi=\theta_1+\ii\theta_2,\tag{6}\end{equation}
+于是
+\begin{equation}\dd s^2=\phi\bar\phi.\tag{7}\end{equation}
+因此，形式 $\phi$ 在相差一个模为 $1$ 的复因子的意义下唯一确定。用形式 $\phi$ 表示时，黎曼度量的保形变换对应于将 $\phi$ 乘以任意非零复因子。按照近来的术语，我们说：在相差一个非零复因子的意义下确定的复线性微分形式 $\phi$，定义了一个殆复结构。如上所述，这样的结构使我们能够引入有向角的概念。
+
+确定等温参数 $u,v$，等价于确定一个复值函数 $w=u+\ii v$，使得
+\begin{equation}\dd w=(1/\rho)\phi.\tag{8}\end{equation}
+因为此时有
+\begin{equation}\dd s^2=\phi\bar\phi=|\rho|^2\dd w\dd\bar w=|\rho|^2(\dd u^2+\dd v^2).\tag{9}\end{equation}
+反过来，等温参数 $u,v$ 也确定一个满足 (8) 的函数 $w$。
+
+\section{预备知识}
+先估计证明中将要用到的某些积分。
+
+设 $(\xi,\eta)$ 为 $(x,y)$ 平面中的任意一点，并令
+\begin{equation}r=+\bigl((x-\xi)^2+(y-\eta)^2\bigr)^{1/2}.\tag{10}\end{equation}
+若 $g(r)$ 为 $C^1$ 类函数，则由外微分运算可得
+\[\dd\left\{g(r)\frac{-(y-\eta)\dd x+(x-\xi)\dd y}{r^2}\right\}=\frac{g'(r)}r\dd x\wedge\dd y.\]
+由 Stokes 定理，若 $D$ 为以曲线 $C$ 为边界的区域，且 $(\xi,\eta)\notin D$，则
+\begin{equation}\iint_D\frac{g'(r)}r\dd x\dd y=\int_Cg(r)\frac{-(y-\eta)\dd x+(x-\xi)\dd y}{r^2}.\tag{11}\end{equation}
+即使 $(\xi,\eta)\in D$（但不在 $C$ 上），只要左端积分收敛，此公式仍然成立。积分
+\begin{equation}\nu=\frac1{2\pi}\int_C\frac{-(y-\eta)\dd x+(x-\xi)\dd y}{r^2},\qquad(\xi,\eta)\notin C,\tag{12}\end{equation}
+是一个整数，通常称为点 $(\xi,\eta)$ 关于曲线 $C$ 的绕数。
+
+特别地，若 $g(r)=r^\lambda$，$\lambda\ne0$，则 (11) 化为
+\begin{equation}\lambda\iint_D\frac{r^\lambda}{r^2}\dd x\dd y=\int_Cr^\lambda\frac{-(y-\eta)\dd x+(x-\xi)\dd y}{r^2},\tag{13}\end{equation}
+它在 $(\xi,\eta)\notin D$ 或 $\lambda>0$ 时成立。因此，若从 $(\xi,\eta)$ 指向点 $(x,y)\in C$ 的向量始终沿同一方向单调转动，则有
+\begin{equation}\left|\iint_D\frac{r^\lambda}{r^2}\dd x\dd y\right|\le\frac{2\pi}{\lambda}\Delta^\lambda,\qquad\lambda>0,\tag{14}\end{equation}
+\begin{equation}\left|\iint_D\frac{r^\lambda}{r^2}\dd x\dd y\right|\le\frac{2\pi}{|\lambda|}\delta^\lambda,\qquad\lambda<0,\tag{15}\end{equation}
+其中 $\Delta,\delta$ 分别是从 $(\xi,\eta)$ 到点 $(x,y)\in C$ 的距离的一个上界和一个下界。须强调，公式 (15) 只在假设 $(\xi,\eta)\notin D$ 下成立。
+
+\section{主要引理}
+为简化公式，在 $(x,y)$ 平面中使用复坐标 $z=x+\ii y$。若 $f(x,y)$ 为 $C^1$ 类复值函数，则由下式定义 $f_z,f_{\bar z}$：
+\begin{equation}\dd f=f_z\dd z+f_{\bar z}\dd\bar z=f_z(\dd x+\ii\dd y)+f_{\bar z}(\dd x-\ii\dd y).\tag{16}\end{equation}
+因此，它们与通常的偏导数 $f_x,f_y$ 的关系为
+\begin{equation}f_z=(f_x-\ii f_y)/2,\qquad f_{\bar z}=(f_x+\ii f_y)/2.\tag{17}\end{equation}
+我们将函数写成 $f(z,\bar z)$，以强调它一般不是 $z$ 的解析函数。
+
+另一方面，也可以不借助偏导数 $f_x,f_y$，直接定义算子 $f_z,f_{\bar z}$。例如，可采用如下定义：
+\begin{equation}\begin{aligned}
+f_z={}&\lim_{h\to0}\bigl\{f(z+h/2,\bar z+h/2)-f(z,\bar z)\\
+&\qquad+\ii f(z-h\ii/2,\bar z+h\ii/2)-\ii f(z,\bar z)\bigr\}/h,\\
+f_{\bar z}={}&\lim_{h\to0}\bigl\{f(z+h/2,\bar z+h/2)-f(z,\bar z)\\
+&\qquad+\ii f(z+h\ii/2,\bar z-h\ii/2)-\ii f(z,\bar z)\bigr\}/h.
+\end{aligned}\tag{18}\end{equation}
+当 $f_x,f_y$ 存在时，这显然给出 (17)。
+
+\textbf{引理。}\textit{设 $D$ 为 $(x,y)$ 平面中以原点为中心、半径为 $R$ 的圆盘，$f(z,\bar z)$ 为 $D$ 内的连续复值函数，且对任意两点 $\zeta_1,\zeta_2\in D$ 满足
+\begin{equation}|f(\zeta_1,\bar\zeta_1)-f(\zeta_2,\bar\zeta_2)|\le Br_{12}^{\lambda},\qquad r_{12}=|\zeta_1-\zeta_2|,\tag{19}\end{equation}
+其中 $\lambda,B$ 为常数，$0<\lambda<1$。定义函数 $F(\zeta,\bar\zeta)$ 如下：
+\begin{equation}-2\pi\ii F(\zeta,\zz)=\iint_D\frac{f(z,\bar z)\dz}{z-\zeta}=2\ii\iint_D\frac{f(z,\bar z)\dd x\dd y}{z-\zeta},\quad\zeta\in D.\tag{20}\end{equation}
+则：(1) $F_\zeta,F_{\bar\zeta}$ 存在，且 $F_{\bar\zeta}=f(\zeta,\bar\zeta)$；(2) 若 $|f(z,\bar z)|\le A$，$z\in D$，则下列不等式成立：
+\begin{equation}|F(\zeta,\zz)|\le4RA,\tag{21}\end{equation}
+\begin{equation}|F_\zeta(\zeta,\zz)|\le(2^{\lambda+1}/\lambda)R^\lambda B,\tag{22}\end{equation}
+\begin{equation}|F(\zeta_1,\bar\zeta_1)-F(\zeta_2,\bar\zeta_2)|\le2\bigl(A+(2^{\lambda+1}/\lambda)R^\lambda B\bigr)r_{12},\tag{23}\end{equation}
+\begin{equation}|F_\zeta(\zeta_1,\bar\zeta_1)-F_\zeta(\zeta_2,\bar\zeta_2)|\le\mu(\lambda)Br_{12}^\lambda,\tag{24}\end{equation}
+其中 $\mu(\lambda)>0$ 与 $\zeta_1,\zeta_2$ 无关。}
+
+为证明此引理，根据 (18) 的第二式，写成
+\begin{align*}
+-2\pi\ii F_{\bar\zeta}={}&\lim_{h\to0}\frac12\iint_D\bigl(f(z,\bar z)-f(\zeta,\zz)\bigr)\\
+&\quad\cdot\left\{\frac1{(z-\zeta)(z-\zeta-h/2)}-\frac1{(z-\zeta)(z-\zeta-h\ii/2)}\right\}\dz\\
+&+f(\zeta,\zz)\frac{\partial}{\partial\bar\zeta}\iint_D\frac{\dz}{z-\zeta}.
+\end{align*}
+计算得
+\begin{equation}\iint_D\frac{\dz}{z-\zeta}=-2\pi\ii\bar\zeta.\tag{25}\end{equation}
+由此得到 $F_{\bar\zeta}=f(\zeta,\zz)$。类似地，可证明 $F_\zeta$ 存在，且由下式给出：
+\begin{equation}-2\pi\ii F_\zeta=\iint_D\frac{f(z,\bar z)-f(\zeta,\zz)}{(z-\zeta)^2}\dz.\tag{26}\end{equation}
+由 (20)，并在 (14) 中取 $\lambda=1$，可得
+\[2\pi|F|\le2A\iint_D\frac{\dd x\dd y}{r}\le8\pi AR,\]
+这就得到 (21)。类似地，由 (26) 得
+\[2\pi|F_\zeta|\le2B\iint_D\frac{r^\lambda}{r^2}\dd x\dd y\le\frac{2^{\lambda+2}}\lambda\pi BR^\lambda,\]
+即得 (22)。
+
+不等式 (23) 是显然的。为证明 (24)，设 $D_0$ 为 $D$ 与以 $\zeta_2$ 为中心、半径为 $2r_{12}=2|\zeta_1-\zeta_2|$ 的圆盘的交集。可写为
+\begin{equation}\begin{aligned}
+&-2\pi\ii\bigl(F_\zeta(\zeta_1,\bar\zeta_1)-F_\zeta(\zeta_2,\bar\zeta_2)\bigr)\\
+={}&\iint_{D_0}\frac{f(z,\bar z)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta_1)^2}\dz
+-\iint_{D_0}\frac{f(z,\bar z)-f(\zeta_2,\bar\zeta_2)}{(z-\zeta_2)^2}\dz\\
+&+\iint_{D-D_0}\frac{f(z,\bar z)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta_1)^2}\dz
+-\iint_{D-D_0}\frac{f(z,\bar z)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta_2)^2}\dz\\
+&+\bigl(f(\zeta_2,\bar\zeta_2)-f(\zeta_1,\bar\zeta_1)\bigr)
+\frac{\partial}{\partial\zeta_2}\iint_{D-D_0}\frac{\dz}{z-\zeta_2}.
+\end{aligned}\tag{27}\end{equation}
+注意，这个和式中只有前两个积分是反常积分，后三个则是常规积分。为估计其绝对值，先有
+\begin{align*}
+\left|\iint_{D_0}\frac{f(z,\bar z)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta_1)^2}\dz\right|
+&\le2B\iint_{D_0}\frac{\dd x\dd y}{|z-\zeta_1|^{2-\lambda}}\le\frac{4\pi B}\lambda(3r_{12})^\lambda,\\
+\left|\iint_{D_0}\frac{f(z,\bar z)-f(\zeta_2,\bar\zeta_2)}{(z-\zeta_2)^2}\dz\right|
+&\le2B\iint_{D_0}\frac{\dd x\dd y}{|z-\zeta_2|^{2-\lambda}}\le\frac{4\pi B}\lambda(2r_{12})^\lambda.
+\end{align*}
+(27) 中第三、第四个积分之和等于
+\begin{align*}
+&\iint_{D-D_0}\{f(z,\bar z)-f(\zeta_1,\bar\zeta_1)\}\int_{\zeta_2}^{\zeta_1}\dd\frac1{(z-\zeta)^2}\,\dz\\
+={}&4\ii\iint_{D-D_0}\int_{\zeta_2}^{\zeta_1}
+\frac{f(z,\bar z)-f(\zeta,\zz)+f(\zeta,\zz)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta)^3}\dd\zeta\,\dd x\dd y,
+\end{align*}
+其中 $\zeta$ 为线段 $\zeta_1\zeta_2$ 上的一点。因此，其绝对值不超过 $4r_{12}(F_1+F_2)$，其中 $F_1,F_2$ 分别为积分
+\[\left|\iint_{D-D_0}\frac{f(z,\bar z)-f(\zeta,\zz)}{(z-\zeta)^3}\dd x\dd y\right|,\qquad
+\left|\iint_{D-D_0}\frac{f(\zeta,\zz)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta)^3}\dd x\dd y\right|\]
+当 $\zeta$ 在线段 $\zeta_1\zeta_2$ 上变动时的上界。利用 (15)，有
+\begin{align*}
+\left|\iint_{D-D_0}\frac{f(z,\bar z)-f(\zeta,\zz)}{(z-\zeta)^3}\dd x\dd y\right|
+&\le B\iint_{D-D_0}\frac{r^{\lambda-1}}{r^2}\dd x\dd y
+\le\frac{4\pi B}{1-\lambda}\frac1{r_{12}^{1-\lambda}},\\
+\left|\iint_{D-D_0}\frac{f(\zeta,\zz)-f(\zeta_1,\bar\zeta_1)}{(z-\zeta)^3}\dd x\dd y\right|
+&\le Br_{12}^{\lambda}\frac{4\pi}{r_{12}}.
+\end{align*}
+所以可分别取这两个不等式的右端作为 $F_1,F_2$。
+
+最后，由 (25) 得
+\[\iint_{D-D_0}\frac{\dz}{z-\zeta_2}=\iint_D\frac{\dz}{z-\zeta_2}-\iint_{D_0}\frac{\dz}{z-\zeta_2}=-2\pi\ii\bar\zeta_2,\]
+其中在 $D_0$ 上的积分为零。因此 (27) 的最后一项为零。
+
+将这些估计相加，得到
+\begin{align*}
+&2\pi|F_\zeta(\zeta_1,\bar\zeta_1)-F_\zeta(\zeta_2,\bar\zeta_2)|\\
+&\qquad\le\frac{4\pi B}\lambda(3r_{12})^\lambda+\frac{4\pi B}\lambda(2r_{12})^\lambda
++4\left(\frac{4\pi B}{1-\lambda}+4\pi B\right)r_{12}^{\lambda}.
+\end{align*}
+所以，若令
+\begin{equation}\mu(\lambda)=\frac2\lambda(3^\lambda+2^\lambda)+8\frac{2-\lambda}{1-\lambda},\tag{28}\end{equation}
+即得 (24)。引理证毕。
+
+\section{一个积分微分方程的存在唯一性定理及其对等温参数的应用}
+\textbf{定理。}\textit{在复 $z$ 平面内由 $|z|\le R$（$R$ 为正常数）定义的区域 $D$ 中，设
+\begin{equation}Zw=a(z,\bar z)w_{\bar z}+b(z,\bar z)w_z\tag{29}\end{equation}
+为一个微分算子，其系数 $a(z,\bar z),b(z,\bar z)$ 满足 $\lambda$ 阶 Hölder 条件，$0<\lambda<1$，并在 $z=0$ 处为零。又设 $\alpha(z,\bar z)$ 是 $D$ 内满足同阶 Hölder 条件的函数。则只要 $R$ 充分小，方程
+\begin{equation}2\pi\ii w(\zeta,\zz)+\iint_D\frac{(Zw+\alpha w)(z,\bar z)}{z-\zeta}\dz=\sigma(\zeta),\qquad\zeta\in D,\tag{30}\end{equation}
+恰有一个解 $w(z,\bar z)$，其中 $\sigma(\zeta)$ 为复解析函数，且 $\sigma(0)=0$。}
+
+在证明这一定理之前，先根据上一节的引理，再作一些积分估计。
+
+定理的假设保证存在充分大的数 $M$，使下列不等式成立：
+\begin{equation}1<M,\qquad|\alpha(\zeta,\zz)|\le M,\qquad|\sigma(\zeta)|\le M,\tag{31}\end{equation}
+\begin{equation}|h(\zeta_1,\bar\zeta_1)-h(\zeta_2,\bar\zeta_2)|\le Mr_{12}^{\lambda},\tag{32}\end{equation}
+\begin{equation}|(Z+\alpha)\sigma(\zeta_1)-(Z+\alpha)\sigma(\zeta_2)|\le\frac{M^2}{2^\lambda}r_{12}^{\lambda},\qquad r_{12}=|\zeta_1-\zeta_2|,\tag{33}\end{equation}
+其中 $\zeta,\zeta_1,\zeta_2$ 为 $D$ 中任意三点，而 $h(z,\bar z)$ 分别代表 $a(z,\bar z),b(z,\bar z),\alpha(z,\bar z),\sigma(z)$。由于 $a,b,(Z+\alpha)\sigma$ 均在 $0$ 处为零，由相应的 Hölder 不等式得
+\begin{equation}\begin{gathered}|a(\zeta,\zz)|\le M|\zeta|^\lambda\le MR^\lambda,\qquad|b(\zeta,\zz)|\le MR^\lambda,\\
+|(Z+\alpha)\sigma(\zeta)|\le M^2R^\lambda.
+\end{gathered}\tag{34}\end{equation}
+现在考虑 (20) 定义的函数 $F(\zeta,\zz)$。沿用第3节引理中的记号，有
+\begin{equation}\begin{aligned}
+|(Z+\alpha)F(\zeta,\zz)|
+&=|a(\zeta,\zz)F_{\bar\zeta}+b(\zeta,\zz)F_\zeta+\alpha(\zeta,\zz)F|\\
+&\le MR^\lambda\bigl(A+(2^{\lambda+1}/\lambda)R^\lambda B\bigr)+4MRA\\
+&=MR^\lambda\bigl\{(1+4R^{1-\lambda})A+(2^{\lambda+1}/\lambda)R^\lambda B\bigr\},
+\end{aligned}\tag{35}\end{equation}
+\begin{equation}\begin{aligned}
+&|(Z+\alpha)F(\zeta_1,\bar\zeta_1)-(Z+\alpha)F(\zeta_2,\bar\zeta_2)|\\
+={}&|a(\zeta_1,\bar\zeta_1)f(\zeta_1,\bar\zeta_1)+b(\zeta_1,\bar\zeta_1)F_\zeta(\zeta_1,\bar\zeta_1)
++\alpha(\zeta_1,\bar\zeta_1)F(\zeta_1,\bar\zeta_1)\\
+&\quad-a(\zeta_2,\bar\zeta_2)f(\zeta_2,\bar\zeta_2)-b(\zeta_2,\bar\zeta_2)F_\zeta(\zeta_2,\bar\zeta_2)
+-\alpha(\zeta_2,\bar\zeta_2)F(\zeta_2,\bar\zeta_2)|\\
+\le{}&Mr_{12}^\lambda\{A+(2^{\lambda+1}/\lambda)R^\lambda B+4RA\}
++MR^\lambda\bigl(B+\mu(\lambda)B\bigr)r_{12}^\lambda\\
+&+M\bigl(A+(2^{\lambda+1}/\lambda)R^\lambda B\bigr)\,2r_{12}\\
+\le{}&Mr_{12}^\lambda\{A+g_1(R)A+g_2(R)B\},
+\end{aligned}\tag{36}\end{equation}
+其中
+\begin{equation}\begin{aligned}g_1(R)&=4R+2^{2-\lambda}R^{1-\lambda},\\
+g_2(R)&=\{(2^{\lambda+1}/\lambda)+\mu(\lambda)+1\}R^\lambda+(8/\lambda)R
+\end{aligned}\tag{37}\end{equation}
+均为随 $R$ 趋于零而趋于零的函数。
+
+有了上述不等式，就可用逐次逼近法证明 (30) 的解存在。由于稍后将会说明的原因，对 $R$ 作如下限制：
+\begin{equation}4R^\lambda\le1,\qquad2^{2-\lambda}\frac{\lambda+2}\lambda R^{1-\lambda}\le1,\tag{38}\end{equation}
+并选取一个仅依赖于 $\lambda$ 的常数 $c$，使
+\begin{equation}\begin{gathered}\frac{\lambda+2}\lambda+\frac\lambda{\lambda+2}2^\lambda\le c,\\
+1+\mu(\lambda)+\frac{3\lambda+2}\lambda2^\lambda\le c.
+\end{gathered}\tag{39}\end{equation}
+现定义
+\begin{equation}\begin{gathered}2\pi\ii w_0(\zeta,\zz)=\sigma(\zeta),\\
+2\pi\ii w_{n+1}(\zeta,\zz)=-\iint_D\frac{(Zw_n+\alpha w_n)(z,\bar z)}{z-\zeta}\dz,\quad n=0,1,\ldots.
+\end{gathered}\tag{40}\end{equation}
+对于这些函数，将证明以下不等式：
+\begin{equation}|w_n(\zeta,\zz)|\le M(cMR^\lambda)^n,\tag{41}\end{equation}
+\begin{equation}|(Z+\alpha)w_n(\zeta,\zz)|\le M(cMR^\lambda)^{n+1},\tag{42}\end{equation}
+\begin{equation}|w_n(\zeta_1,\bar\zeta_1)-w_n(\zeta_2,\bar\zeta_2)|\le M(cMR^\lambda)^nr_{12}^\lambda,\tag{43}\end{equation}
+\begin{equation}|(Z+\alpha)w_n(\zeta_1,\bar\zeta_1)-(Z+\alpha)w_n(\zeta_2,\bar\zeta_2)|
+\le\frac{cM^2}{2^\lambda}(cMR^\lambda)^nr_{12}^\lambda.\tag{44}\end{equation}
+特别地，最后一个不等式表明 (40) 中的被积函数满足 Hölder 条件，从而可以定义下一个积分。
+
+用关于 $n$ 的归纳法证明 (41)--(44)。当 $n=0$ 时，(41) 由 (31) 的第三个不等式得出；因 $c>1$，(42) 由 (34) 的第三个不等式得出；(43) 由 (32) 得出，(44) 由 (33) 得出。
+
+现假设 (41)--(44) 成立，来证明下标为 $n+1$ 时相应的不等式。由 (21)、(23) 以及归纳假设，有
+\[|w_{n+1}(\zeta,\zz)|\le4R\,M(cMR^\lambda)^{n+1}\le M(cMR^\lambda)^{n+1},\]
+\begin{align*}
+&|w_{n+1}(\zeta_1,\bar\zeta_1)-w_{n+1}(\zeta_2,\bar\zeta_2)|\\
+&\quad\le2r_{12}\left\{M(cMR^\lambda)^{n+1}+(2^{\lambda+1}/\lambda)R^\lambda(cM^2/2^\lambda)(cMR^\lambda)^n\right\}\\
+&\quad=M(cMR^\lambda)^{n+1}r_{12}^\lambda(1+2/\lambda)\,2r_{12}^{1-\lambda}.
+\end{align*}
+由 (38) 的第二个不等式，最后一个关系给出下标为 $n+1$ 时的 (43)。
+
+类似地，由 (35) 和归纳假设，得到
+\begin{align*}
+|(Z+\alpha)w_{n+1}(\zeta,\zz)|
+&\le MR^\lambda\{(1+4R^{1-\lambda})cM^2R^\lambda\\
+&\qquad\quad+(2^{\lambda+1}/\lambda)R^\lambda(cM^2/2^\lambda)\}(cMR^\lambda)^n\\
+&=M^2R^\lambda(cMR^\lambda)^{n+1}(1+4R^{1-\lambda}+2/\lambda)\\
+&\le M(cMR^\lambda)^{n+2},
+\end{align*}
+这里利用了 (39) 的第一个不等式。由 (36)，有
+\begin{align*}
+&|(Z+\alpha)w_{n+1}(\zeta_1,\bar\zeta_1)-(Z+\alpha)w_{n+1}(\zeta_2,\bar\zeta_2)|\\
+&\quad\le Mr_{12}^\lambda M(cMR^\lambda)^n
+\{(1+g_1(R))cMR^\lambda+g_2(R)cM/2^\lambda\}\\
+&\quad=M^2r_{12}^\lambda(cMR^\lambda)^{n+1}
+\{1+g_1(R)+(1/(2R)^\lambda)g_2(R)\}.
+\end{align*}
+若
+\[1+g_1(R)+(1/(2R)^\lambda)g_2(R)\le c/2^\lambda,\]
+便得到下标为 $n+1$ 时的 (44)。而这个不等式由 (39) 的第二个不等式得出。归纳完成。
+
+因此，若 $cMR^\lambda<1$，则级数
+\begin{equation}\sum_{n=0}^{\infty}w_n(z,\bar z)\tag{45}\end{equation}
+在 $D$ 内绝对且一致收敛，并定义一个满足 (30) 的函数 $w(z,\bar z)$。
+
+为了证明当 $R$ 充分小时解的唯一性，设 $w'(z,\bar z)$ 为 (30) 的另一个解，且 $(Z+\alpha)w'(z,\bar z)$ 满足 $\lambda$ 阶 Hölder 条件。于是函数
+\[\widetilde w(z,\bar z)=w(z,\bar z)-w'(z,\bar z)\]
+满足方程
+\[-2\pi\ii\widetilde w(\zeta,\zz)=\iint_D\frac{(Z+\alpha)\widetilde w(z,\bar z)}{z-\zeta}\dz.\]
+设 $A,B$ 分别为
+\[|(Z+\alpha)\widetilde w(\zeta,\zz)|,\qquad\zeta\in D,\]
+以及
+\[\frac{|(Z+\alpha)\widetilde w(\zeta_1,\bar\zeta_1)-(Z+\alpha)\widetilde w(\zeta_2,\bar\zeta_2)|}{r_{12}^\lambda},\qquad\zeta_1,\zeta_2\in D,\quad\zeta_1\ne\zeta_2,\]
+的上确界。由 (35)、(36) 得
+\begin{align*}
+A&\le MR^\lambda\{(1+4R^{1-\lambda})A+(2^{\lambda+1}/\lambda)R^\lambda B\},\\
+B&\le M\{A+g_1(R)A+g_2(R)B\}.
+\end{align*}
+由此容易得出，当 $R$ 充分小时，$A=0$。这又推出 $\widetilde w(z,\bar z)=0$。定理证毕。
+
+为从上述存在定理推出 Korn--Lichtenstein 定理，沿用第1节的记号。在点 $z=x+\ii y=0$ 的一个邻域内，设殆复结构由复值线性微分形式
+\begin{equation}\phi=(1-a(z,\bar z))\dd z+b(z,\bar z)\dd\bar z\tag{46}\end{equation}
+给出，其中 $\phi$ 在相差一个非零因子的意义下确定。对 $x,y$ 作常系数线性变换，并在必要时将 $\phi$ 乘以一个常因子，即可假设 $a(0,0)=b(0,0)=0$。方程 (8) 等价于
+\[w_{\bar z}=b/\rho,\qquad w_z=(1-a)/\rho.\]
+消去 $\rho$，得到
+\[(1-a)w_{\bar z}-bw_z=0,\]
+或者，利用 (29) 中的算子 $Z$，可写为
+\begin{equation}w_{\bar z}=Zw.\tag{47}\end{equation}
+由上述存在定理，方程
+\begin{equation}2\pi\ii w(\zeta,\zz)+\iint_D\frac{Zw(z,\bar z)}{z-\zeta}\dz=\sigma(\zeta),\qquad\zeta\in D,\quad\sigma(0)=0,\tag{48}\end{equation}
+有一个解 $w(z,\bar z)$。若 $\sigma(\zeta)$ 不是常数，例如取 $\sigma(\zeta)=\zeta$，则此解具有性质 $w_z(0,0)\ne0$。由于 $Zw(z,\bar z)$ 满足 Hölder 条件，由第3节的引理可知，$w(z,\bar z)$ 满足 (47)。至此，Korn--Lichtenstein 定理得证。
+
+\textbf{注。}1. 正如 L. Bers 向我指出的，同一方法也可用于证明方程
+\begin{equation}w_{\bar z}=a\bar w_{\bar z}+bw_z+\alpha w+\beta\bar w+\gamma\tag{49}\end{equation}
+的局部解存在，其中 $a,b,\alpha,\beta,\gamma$ 满足 Hölder 条件，并且 $|a|+|b|<1$。
+
+2. 由我们的证明还可得出，等温参数的一阶偏导数也满足 $\lambda$ 阶 Hölder 条件。
+
+\begin{flushright}高等研究院\\芝加哥大学\end{flushright}
+\vfill
+{\footnotesize 收稿日期：1954年9月29日；修订稿收到日期：1954年11月15日。}
+\end{document}

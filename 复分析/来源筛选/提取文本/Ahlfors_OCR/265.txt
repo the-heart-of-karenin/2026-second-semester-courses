@@ -1,0 +1,77 @@
+﻿slit(eø) ， 260
+topological( 拓 扑 ). 65
+univalent( 单 价 ） ， 230
+Marty. F. ， 226 胨
+大 ). 56
+rnanmurn principle(Æ 大 值 原 理 ） ， 133 一 137 ， 166
+mean-value property （ 均 值 性 质 ） ， 165 ． 166
+242 ． 243
+meromorphic function( 亚 纯 函 数 ） ， 128
+metric space( 度 量 空 间）， 51
+minimum( 极 小 ） ， 56
+minorant( 弱 级 数 ） ， 37
+Mittag-Leffler ， G. ， 187
+modular 278
+modular 群 ） ， 267
+rnodule(ß), 147 ， 265
+modulus(• ). 7
+monodromy theorem （ 单 值 性 定 理 ） ， 295 一 297
+Morera's 山 eorem （ 莫 累 拉 定 理 ). 122
+multiply connected r n （ 多 连 通 域 ） ， 146048
+natural boundary( 自 然 边 界 ） ， 291
+nerghborhood( 邻 域） ， 52
+noneuclidean d ance （ 非 欧 几 里 得 距 离 ） ， 136
+normal derivative( 法 向 导 数 ） ， ] 63
+normal family( 正 规 族 ） ， 219 ． 227
+0
+one toone ， definition( 一 对 一 ， 定 义 ） ， 65
+onto ， definition(* 上 的 ， 定 义 ） ， 65
+0 些 n covering()f 覆 盖） ， 59
+open set （ 开 集 ） ， 52
+order ， algebraic( 代 数 阶 数 ） ， 128
+of a branch potnt （ 支 点 ） ， 98
+of entire function( 整 函 数 ), 208
+a le （ 极 点 ） ， 30 ， 128
+of rauonal fu 吡 tion （ 有 理 函 数 ） ， 31
+of ro （ 零 点 ） ， 29 ， 127
+order a n （ 次 序 关 系 ） ， 5
+orientation( 定 向 ） ， 83
+Osgood ， W. F. ， 230 ” ．
+255
+*function( 函 数 ） ， 272 一 277
+parabola( 抛 物 ） ， ％
+parabolic transformation(" 物 型 变 换 ） ， 86
+parallel translation( 平 行 移 动 ). 31
+parameter(& 数 ）， 68
+change of （ 变 换 ） ， 68
+partial fraction( 部 分 分 式 ） ， 31 ， 187 ． 190
+period( 周 期 ） ， 45 ． 46 ， 263
+Perron ， ， 245 ， 248
+Picard S theorem( 皮 卡 定 理 ） ， 306 · 308
+piecemse differentiable “ c （ 分 段 可 微 弧 ） ， 68
+plane( 平 面 ）
+complex( 复 ). 12
+extended( 扩 充 ） ， 18
+Plunkett, R 、 L, 101
+point( 点 ） ， 12 ， 50
+accumulation( 聚 ） ， 53
+branch( 分 支 ） ， 98 ， 299
+fixed( 不 动 ). 86
+isolated( 孤 立 ） ， 53
+limit(& 限 ） ， 62
+ordinary( 寻 常 ). 309
+point cu “ e （ 点 曲 线 ） ， 68
+Poisson formula （ 泊 松 公 式 ） ， 166 一 168
+PoissomJensen f 。 rmula （ 泊 松 一 詹 森 公 式 ） ， 8
+pole( 极 点 ） ， 30 ， 127
+algebratc( 代 数 ), 299
+凶 ly n （ 折 线 ） ， 57
+conformal mapping of （ 共 形 映 射 ),
+235 ． 241
+polynomial( 多 项 式 ), 28 ． 29
+Porcelli ， P. ， 101m
+power sertes()* 数 ） ， 38 一 42
+principal branch( 主 支 ）， 7 ]
+probability integral(" 积 分 ）， 206
+projecuon of germ （ 芽 的 投 影 ） ， 285
+rational funcuon( 有 理函 数 ） ， 30 ． 33

@@ -1,0 +1,141 @@
+\documentclass[UTF8,a4paper,10pt,fontset=fandol]{ctexart}
+\usepackage{amsmath,amssymb,geometry,enumitem}
+\geometry{left=25mm,right=25mm,top=23mm,bottom=23mm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\linespread{1.08}
+\pagestyle{plain}
+\setlist[enumerate]{label=\arabic*),leftmargin=2.4em,labelsep=.6em,itemsep=6pt,topsep=5pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\pa}{\partial}
+\begin{document}
+\noindent\textbf{光滑度量的等温坐标}
+
+本题可以直接使用下面的标准结论，不要求证明。
+
+\noindent\textbf{定理（Dirichlet 问题与 Schauder 估计）.}
+记 $B=\{X\in\R^2:|X|<1\}$，固定 $0<\alpha<1$。设
+\[
+Lw=\sum_{i,j=1}^2a^{ij}(X)\pa_i\pa_jw+\sum_{i=1}^2b^i(X)\pa_iw,
+\qquad a^{ij}=a^{ji}.
+\]
+假设系数属于 $C^{0,\alpha}(\overline B)$，且存在 $\lambda,K>0$ 使得
+\[
+\sum_{i,j=1}^2a^{ij}(X)\xi_i\xi_j\ge\lambda|\xi|^2
+\quad(X\in\overline B,\ \xi\in\R^2),\qquad
+\sum_{i,j=1}^2\norm{a^{ij}}_{C^{0,\alpha}}+\sum_{i=1}^2\norm{b^i}_{C^{0,\alpha}}\le K.
+\]
+那么，对任意 $f\in C^{0,\alpha}(\overline B)$，问题
+\[
+\begin{cases}Lw=f&\text{在 }B\text{ 内},\\ w=0&\text{在 }\pa B\text{ 上}\end{cases}
+\]
+有唯一解 $w\in C^{2,\alpha}(\overline B)$，且
+\[
+\norm{w}_{C^{2,\alpha}(\overline B)}\le C\norm{f}_{C^{0,\alpha}(\overline B)},
+\qquad C=C(\alpha,\lambda,K).
+\]
+若系数与 $f$ 光滑，则解在 $B$ 内光滑。特别地，当一族算子可以使用相同的 $\lambda,K$ 时，估计中的 $C$ 也可以统一选取。
+
+这里
+\[
+[h]_{\alpha}=\sup_{X\ne Y\in\overline B}\frac{|h(X)-h(Y)|}{|X-Y|^{\alpha}},
+\qquad \norm{h}_{C^{0,\alpha}}=\sup_{\overline B}|h|+[h]_{\alpha}.
+\]
+$C^{2,\alpha}(\overline B)$ 表示二阶偏导数连续到边界且满足 $\alpha$ 阶 Hölder 条件；其范数取为
+\[
+\norm{h}_{C^{2,\alpha}}=
+\sup|h|+\sum_i\sup|\pa_i h|+\sum_{i,j}\bigl(\sup|\pa_i\pa_jh|+[\pa_i\pa_jh]_{\alpha}\bigr).
+\]
+
+设 $\Omega\subset\R^2$ 为开集，$p\in\Omega$，并且
+\[
+g=E(x,y)\dd x^2+2F(x,y)\dd x\dd y+G(x,y)\dd y^2,
+\qquad E>0,\quad EG-F^2>0,
+\]
+其中 $E,F,G\in C^\infty(\Omega)$。我们的目标是证明：$p$ 有一个邻域，其上存在光滑局部坐标 $(u,v)$，使得
+\[
+g=\rho(u,v)(\dd u^2+\dd v^2),\qquad \rho>0.
+\]
+这样的坐标称为\textbf{等温坐标}。
+
+\begin{enumerate}
+\item 证明，经过平移和可逆线性坐标变换，可以假设 $p=0$，且
+\[
+E(0)=G(0)=1,\qquad F(0)=0.
+\]
+以下均在这样的坐标中讨论。记 $x_1=x,\ x_2=y$，并令
+\[
+H=\begin{pmatrix}E&F\\F&G\end{pmatrix},\qquad
+(h^{ij})=H^{-1},\qquad D=\sqrt{EG-F^2}.
+\]
+\end{enumerate}
+\newpage
+\begin{enumerate}[resume]
+\item 对光滑函数 $u$，定义
+\[
+\Delta_g u=\frac1D\sum_{i,j=1}^2\pa_i\bigl(Dh^{ij}\pa_j u\bigr).
+\]
+证明它可写成 $\Delta_g u=\sum_{i,j}a^{ij}\pa_i\pa_j u+\sum_j b^j\pa_j u$，其中
+\[
+a^{ij}=h^{ij},\qquad b^j=\frac1D\sum_i\pa_i(Dh^{ij}).
+\]
+说明 $a^{ij},b^j$ 光滑，且 $(a^{ij}(0))=I$。
+
+\item 取充分小的 $r>0$，使 $r\overline B\subset\Omega$。在单位圆盘上定义
+\[
+L_rU=\sum_{i,j}a^{ij}(rX)\pa_i\pa_jU
++\sum_j r b^j(rX)\pa_jU.
+\]
+证明，当 $r\to0$ 时，
+\[
+a^{ij}(r\,\cdot)\longrightarrow\delta_{ij},\qquad
+r b^j(r\,\cdot)\longrightarrow0
+\quad\text{在 }C^{0,\alpha}(\overline B)\text{ 中}.
+\]
+进而说明，充分小的 $r$ 所对应的 $L_r$ 满足题首定理的假设，且可以使用相同的 $\lambda,K$。
+（提示：利用一阶导数的上界估计 Hölder 半范数。）
+
+\item 利用题首定理构造 $W_r$，使
+\[
+L_rW_r=-r b^1(rX)\quad\text{在 }B\text{ 内},\qquad
+W_r|_{\pa B}=0.
+\]
+令 $U_r(X)=X_1+W_r(X)$。证明
+\[
+L_rU_r=0,\qquad U_r|_{\pa B}=X_1,\qquad
+\norm{U_r-X_1}_{C^{2,\alpha}(\overline B)}\longrightarrow0.
+\]
+由此证明，充分小的 $r$ 满足 $\nabla U_r(0)\ne0$。
+
+\item 固定这样的 $r$，在 $rB$ 上令 $u(x,y)=rU_r(x/r,y/r)$。验证
+\[
+\Delta_g u=0,\qquad \nabla u(0)\ne0.
+\]
+说明 $u$ 光滑，并且缩小到原点的某个圆盘邻域 $V$ 后，可以保证 $\nabla u$ 处处非零。
+
+\item 在 $V$ 上考虑微分形式
+\[
+\omega=\frac{Fu_x-Eu_y}{D}\dd x+\frac{Gu_x-Fu_y}{D}\dd y.
+\]
+证明 $\dd\omega=0$，并利用庞加莱引理得到光滑函数 $v$，使得
+\[
+v_x=\frac{Fu_x-Eu_y}{D},\qquad v_y=\frac{Gu_x-Fu_y}{D}.
+\]
+当 $E=G=1,\ F=0$ 时，这与通常的共轭调和函数有什么关系？
+
+\item 证明
+\[
+\frac{\pa(u,v)}{\pa(x,y)}=
+\frac{Gu_x^2-2Fu_xu_y+Eu_y^2}{D}>0.
+\]
+由逆函数定理，说明再次缩小 $V$ 后，$(u,v)$ 构成光滑局部坐标。
+
+\item 令 $q=(Gu_x^2-2Fu_xu_y+Eu_y^2)/D^2$。证明 $q>0$，并直接展开验证
+\[
+\dd u^2+\dd v^2=q\bigl(E\dd x^2+2F\dd x\dd y+G\dd y^2\bigr).
+\]
+由此完成等温坐标存在性的证明，并说明 $\rho$ 在新坐标中是光滑正函数。
+\end{enumerate}
+\end{document}

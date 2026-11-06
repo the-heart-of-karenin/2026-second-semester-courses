@@ -1,0 +1,438 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{nosep,leftmargin=1.7em,topsep=0.3em}
+\ctexset{section={beforeskip=1.6ex,afterskip=1ex},
+  subsection={beforeskip=1.3ex,afterskip=0.7ex}}
+\title{Stein--Shakarchi《实分析》阅读记录}
+\author{}
+\date{整理更新：2026 年 9 月 14 日}
+\begin{document}
+\maketitle
+\vspace{-2em}
+% STUDY_RECORD_BEGIN id=stein-ch6-p270-premeasure-additivity
+\section{第 270 页：预测度为什么要求可数可加}
+\label{note:stein-ch6-p270-premeasure-additivity}
+\textbf{出处：}Stein--Shakarchi, \textit{Real Analysis: Measure Theory,
+Integration, and Hilbert Spaces}，第 6 章第 1.3 节，原书第 270 页
+（PDF 第 291 页）预测度的定义；第 271 页（PDF 第 292 页）引理 1.4。
+
+\textbf{最初的问题：}预测度的定义要求 $E_i\in\mathcal A$ 两两不交，
+且它们的可数并也在 $\mathcal A$ 中。若改成只要求有限可加，究竟哪里不够？
+
+\textbf{简短解释：}“代数对有限并封闭”是集合族的性质；
+“预测度可数可加”是集合函数的性质。代数不保证任意可数并仍在其中，
+但只要某次可数并 $E=\bigsqcup_iE_i$ 确实在其中，就必须满足
+$\mu_0(E)=\sum_i\mu_0(E_i)$。有限可加性只能推出
+$\sum_i\mu_0(E_i)\leq\mu_0(E)$，不能保证反向不等式。
+
+\textbf{反例：}在 $\mathbb N$ 的有限集／余有限集代数上，令
+\[
+\mu_0(E)=
+\begin{cases}
+0,&E\text{ 有限},\\
+1,&\mathbb N\setminus E\text{ 有限}.
+\end{cases}
+\qquad
+1=\mu_0(\mathbb N)\ne\sum_{i=1}^{\infty}\mu_0(\{i\})=0.
+\]
+它有限可加：不交的有限族中至多有一个余有限集。
+但 $S_n=\{1,\ldots,n\}\uparrow\mathbb N$ 时，
+$\mu_0(S_n)=0$ 并不趋于 $\mu_0(\mathbb N)=1$；有限可加不保证与集合极限相容。
+
+\textbf{条件实际用在哪里：}引理 1.4 用可数覆盖构造外测度。
+为证明 $\mu^*(E)\geq\mu_0(E)$（$E\in\mathcal A$），对覆盖
+$E\subseteq\bigcup_k A_k$ 作不交化
+$F_k=E\cap(A_k\setminus\bigcup_{j<k}A_j)$，便要用到
+\[
+\mu_0(E)=\sum_k\mu_0(F_k)\leq\sum_k\mu_0(A_k).
+\]
+反例中，单点覆盖的总费用为零，得到的外测度把 $\mathbb N$ 的值从 $1$ 变成了 $0$。
+任何测度延拓也都会被单点的可数可加性迫使取值 $0$，所以根本不存在这样的延拓。
+第~\ref{note:stein-ch6-p277-rectangle-premeasure}~节中矩形的可数分拆，正是在验证同一条件。
+% STUDY_RECORD_END id=stein-ch6-p270-premeasure-additivity
+
+\newpage
+% STUDY_RECORD_BEGIN id=stein-ch6-p273-outer-approximation
+\section{第 273 页：外逼近、取补与精确外包络}
+\label{note:stein-ch6-p273-outer-approximation}
+\textbf{出处：}第 6 章第 1.3 节，命题 1.6，原书第 273 页（PDF 第 294 页）。
+本条及后面乘积测度条目据\href{\%E8\%B5\%84\%E6\%96\%99/product_measure_conversation_transcript.md}{对话材料}整理并核对原书。
+材料含图片转写及追问，未见明显截断。
+
+\textbf{命题与最初的问题：}记 $\mathcal A_\sigma$ 为 $\mathcal A$ 中集合的可数并，
+$\mathcal A_{\sigma\delta}$ 为 $\mathcal A_\sigma$ 中集合的可数交。
+对任意 $E\subseteq X$ 和 $\varepsilon>0$，存在
+\[
+\begin{gathered}
+E\subseteq E_1\in\mathcal A_\sigma,\qquad
+E\subseteq E_2\in\mathcal A_{\sigma\delta},\\
+\mu^*(E_1)\leq\mu^*(E)+\varepsilon,\qquad
+\mu^*(E_2)=\mu^*(E).
+\end{gathered}
+\]
+这里的外逼近与内逼近是否本质一样，取补集便能在同一集合类中互换？
+后续还问到：前面 $\mathbb R^d$ 的对应论述在哪里，其证明能否搬到这里？
+
+\textbf{简短解释与证明：}两项都是外逼近。可搬用 $\mathbb R^d$ 中“可数覆盖再取交”的思路，
+但不能把 $\mathcal A_\sigma$ 等同于开集族。直接用覆盖定义
+\[
+\mu^*(E)=\inf\left\{\sum_{j=1}^{\infty}\mu_0(A_j):
+E\subseteq\bigcup_{j=1}^{\infty}A_j,\ A_j\in\mathcal A\right\}.
+\]
+若 $\mu^*(E)<\infty$，选一组总费用小于 $\mu^*(E)+\varepsilon$ 的覆盖，
+令 $E_1=\bigcup_jA_j$，由次可加性及 $\mu^*(A_j)=\mu_0(A_j)$ 得
+$\mu^*(E_1)\leq\sum_j\mu_0(A_j)<\mu^*(E)+\varepsilon$。
+再对每个 $n$ 取这样的外包集合 $G_n\in\mathcal A_\sigma$，误差为 $1/n$，令
+\[
+E_2=\bigcap_{n=1}^{\infty}G_n,\qquad
+\mu^*(E)\leq\mu^*(E_2)\leq\mu^*(G_n)\leq\mu^*(E)+\frac1n.
+\]
+令 $n\to\infty$ 即得相等；这里只用单调性，不需要外测度的递减连续性。
+若 $\mu^*(E)=\infty$，直接取 $E_1=E_2=X$ 即可。
+
+\textbf{取补为什么不能照字面互换：}若 $E^c\subseteq G$，则
+$F=G^c\subseteq E$，且 $E\setminus F=G\setminus E^c$。
+因此，\emph{若已知差集的测度很小}，内外误差可以直接互换，甚至不要求总测度有限。
+但这里的命题只控制外层集合的测度：
+\begin{itemize}
+\item 集合类会变。$G\in\mathcal A_\sigma$ 只保证
+$G^c\in\mathcal A_\delta$，其中 $\mathcal A_\delta$ 是 $\mathcal A$ 的可数交类，
+一般不能保证 $G^c\in\mathcal A_\sigma$。
+\item 测度大小不等于差集误差。对可测、有限测度的 $E$，才可由
+$\mu(E_1)\leq\mu(E)+\varepsilon$ 相减得到
+$\mu(E_1\setminus E)\leq\varepsilon$；不可测集不能如此相减，
+无限测度时也不能用 $\infty-\infty$。尤其“等外测度”本身不表示“只差一个零测集”。
+\end{itemize}
+若被逼近的 $E$ 本来就在 $\mathcal A_\sigma$，写
+$E=\bigcup_nA_n$，则 $F_n=\bigcup_{j\leq n}A_j\in\mathcal A$ 且 $F_n\uparrow E$。
+总有 $\mu(F_n)\uparrow\mu(E)$；当 $\mu(E)<\infty$ 时，还得到
+$\mu(E\setminus F_n)\to0$，这就是直接的内逼近。
+
+\textbf{前文对应位置（已核对）：}
+\begin{itemize}
+\item 第 1 章第 2 节 Observation 3，原书第 13--14 页（PDF 第 34--35 页）：
+任意 $E\subseteq\mathbb R^d$ 满足
+$m^*(E)=\inf_{O\supseteq E,\ O\text{ 开}}m^*(O)$。
+\item 第 1 章第 3 节定理 3.4，原书第 21 页（PDF 第 42 页）：
+可测集可用开集外逼近、闭集内逼近，误差按差集测度计算；
+用紧集内逼近则还要求 $m(E)<\infty$。
+\item 同节推论 3.5，原书第 23--24 页（PDF 第 44--45 页）：
+可测集与某个 $G_\delta$ 集只差零测集，也与某个 $F_\sigma$ 集只差零测集。
+\end{itemize}
+% STUDY_RECORD_END id=stein-ch6-p273-outer-approximation
+
+\newpage
+% STUDY_RECORD_BEGIN id=analysis-simple-function-approximation
+\section{可测函数的简单函数逼近}
+\label{note:analysis-simple-function-approximation}
+\textbf{题目与出处：}Stein--Shakarchi, \textit{Real Analysis: Measure Theory,
+Integration, and Hilbert Spaces}，第 6 章第 2 节，原书第 274 页
+（PDF 第 295 页）。已核对用户提供的
+\href{\%E8\%AF\%BE\%E5\%A0\%82\%E8\%B5\%84\%E6\%96\%99/\%E7\%AE\%80\%E5\%8D\%95\%E5\%87\%BD\%E6\%95\%B0\%E9\%80\%BC\%E8\%BF\%91\%E5\%AE\%9A\%E7\%90\%86.png}{定理截图}与该页一致。
+
+本节假设 $(X,\mathcal M,\mu)$ 是 $\sigma$-有限测度空间。教材中的简单函数
+为有限和 $\sum_j a_j\mathbf1_{E_j}$，其中 $E_j$ 可测且测度有限。
+设 $f$ 是该空间上的非负可测函数，则存在简单函数列 $(\varphi_k)$，使对每个 $x\in X$，
+\[
+\varphi_k(x)\leq\varphi_{k+1}(x),\qquad
+\lim_{k\to\infty}\varphi_k(x)=f(x).
+\]
+一般地，若 $f$ 是可测函数，则存在简单函数列 $(\varphi_k)$，使对每个 $x\in X$，
+\[
+|\varphi_k(x)|\leq|\varphi_{k+1}(x)|,\qquad
+\lim_{k\to\infty}\varphi_k(x)=f(x).
+\]
+本轮先考虑实值情形；非负情形也可允许 $f$ 取 $+\infty$。
+
+\textbf{最初的问题：}假如忘了之前怎么证明的，希望得到一点引导，帮助独立重建证明。
+
+\textbf{简短解释：}将函数值截到 $k$，再向下取到间距为 $2^{-k}$ 的台阶上；
+刻度逐次细分，便于保证单调性。一般实值情形先逼近绝对值，再恢复符号。
+
+\textbf{核对教材后的补充：}上一轮只提示了函数值的截断，尚未处理教材要求的有限测度。
+利用 $\sigma$-有限性取 $X=\bigcup_j F_j$，$\mu(F_j)<\infty$，令
+$B_k=\bigcup_{j\leq k}F_j$。仅在 $B_k$ 上保留上述近似，在外面置零。
+试检查：$B_k\uparrow X$ 如何同时保证单调性、逐点收敛和有限测度要求。
+讨论截至目前只提供提示，尚未核对用户写出的证明。
+% STUDY_RECORD_END id=analysis-simple-function-approximation
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p275-integral-construction
+\section{第 275 页：一般测度空间中的积分构造}
+\label{note:stein-ch6-p275-integral-construction}
+\textbf{出处：}第 6 章第 2 节，原书第 273--275 页（PDF 第 294--296 页）。
+
+\textbf{最初的问题：}第 6 章是否省略了积分的具体构造，例如为什么可测函数可以在可测集合上积分？
+
+\textbf{简短解释：}是。第 273 页明确说，第 1 章第 4 节的可测函数结论和
+第 2 章的积分理论几乎逐字推广，故不重复证明；第 275 页引用了从简单函数开始的四步构造。
+本节统一假设空间 $\sigma$-有限；第~\ref{note:analysis-simple-function-approximation}~节
+说明了如何保证教材所用简单函数的非零部分落在有限测度集上。
+
+对非负可测 $f$，积分总能定义为 $[0,\infty]$ 中的值；
+对实值 $f$，写 $f=f^+-f^-$，仅当正负部分的积分不同时为无穷时，
+才能用两者之差定义积分。\emph{可积}则特指 $\int_X|f|\,d\mu<\infty$。
+对可测集 $E$，定义
+\[
+\int_E f\,d\mu=\int_X f\mathbf1_E\,d\mu,
+\]
+其中 $f\mathbf1_E$ 表示在 $E$ 上取 $f$、在 $E^c$ 上取零。
+因此“可测”不等于“积分有限”，一般有正负号的可测函数也未必有定义良好的积分。
+% STUDY_RECORD_END id=stein-ch6-p275-integral-construction
+
+\newpage
+\begingroup
+\small
+\setlength{\parskip}{0.3em}
+\ctexset{subsection={beforeskip=1ex,afterskip=0.5ex}}
+\section{第 275 页：三个积分极限定理}
+\textbf{出处：}同书第 6 章第 2 节，原书第 275 页（PDF 第 296 页），条目 (i)--(iii)。
+沿用本节的 $\sigma$-有限测度空间；以下积分均在 $X$ 上、关于 $\mu$。
+若条件仅几乎处处成立，可先在同一个可测零测集上将相关函数置零。
+
+\textbf{建议尝试顺序：}(ii) $\longrightarrow$ (i) $\longrightarrow$ (iii)。
+此前仅请求证明提示；下面保留关键构造，尚未核对用户自行完成的证明。
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p275-fatou
+\subsection*{(i) Fatou 引理}
+\label{note:stein-ch6-p275-fatou}
+\textbf{命题：}若 $f_n$ 是非负可测函数，则
+\[
+\int \liminf_{n\to\infty} f_n\,d\mu
+\leq \liminf_{n\to\infty}\int f_n\,d\mu.
+\]
+\textbf{最初的问题：}类似简单函数逼近定理，给出证明提示，帮助独立完成。
+
+\textbf{简短解释（提示）：}令 $h_n=\inf_{k\geq n}f_k$，则
+$h_n\uparrow\liminf f_n$。由 $h_n\leq f_k$（$k\geq n$）比较积分，
+再对 $h_n$ 使用单调收敛定理。
+% STUDY_RECORD_END id=stein-ch6-p275-fatou
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p275-mct
+\subsection*{(ii) 单调收敛定理}
+\label{note:stein-ch6-p275-mct}
+\textbf{命题：}若非负可测函数列满足 $f_n\uparrow f$，则
+$\displaystyle\lim_{n\to\infty}\int f_n\,d\mu=\int f\,d\mu$。
+
+\textbf{最初的问题：}类似地，给出证明提示。
+后来在命题 3.1 的证明中又问：单调收敛定理上一次是在哪里介绍的？
+
+\textbf{简短解释（提示）：}上界用 $f_n\leq f$。下界固定简单函数
+$0\leq\varphi\leq f$ 和 $0<c<1$，取 $E_n=\{f_n\geq c\varphi\}$，
+则 $E_n\uparrow X$。用 $\int f_n\geq c\int_{E_n}\varphi$，
+结合测度的下连续性、$c\uparrow1$ 及简单函数的上确界刻画。
+因子 $c<1$ 留出了严格余量，避免 $f_n$ 始终达不到 $\varphi$。
+这与第~\ref{note:analysis-simple-function-approximation}~节的从下逼近思路相通。
+
+\textbf{出处与本次用法：}第 6 章最近一次列出本定理就在第 275 页条目 (ii)；
+最早正式陈述在第 2 章第 1 节推论 1.9，原书第 62 页（PDF 第 83 页）。
+同页推论 1.10 及第 63 页证明给出
+$\int\sum_{j\geq1}a_j=\sum_{j\geq1}\int a_j$（$a_j\geq0$ 可测）：
+对有限部分和使用单调收敛即可。命题 3.1 正是用这个形式，
+不需要预先假设级数的积分有限。
+% STUDY_RECORD_END id=stein-ch6-p275-mct
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p275-dct
+\subsection*{(iii) 控制收敛定理}
+\label{note:stein-ch6-p275-dct}
+\textbf{命题：}若可测函数列 $f_n\to f$ 几乎处处，且 $|f_n|\leq g$，
+其中 $g$ 可积，则
+\[
+\int|f_n-f|\,d\mu\longrightarrow0,
+\qquad \int f_n\,d\mu\longrightarrow\int f\,d\mu.
+\]
+\textbf{最初的问题：}类似地，给出证明提示。
+
+\textbf{简短解释（提示）：}先得 $|f|\leq g$，再令 $u_n=|f_n-f|$。
+对非负函数 $2g-u_n$ 用 Fatou，可控制 $\limsup_n\int u_n$；
+$\int g<\infty$ 保证整理时可以消去有限的 $2\int g$。
+直接对 $u_n$ 用 Fatou 只得到显然的下界。积分收敛再由三角不等式得到。
+% STUDY_RECORD_END id=stein-ch6-p275-dct
+\endgroup
+
+\newpage
+\section{第 276--277 页：乘积测度的出发点}
+\textbf{共同设定：}第 6 章第 3.1 节（PDF 第 297--298 页）假设
+$(X_i,\mathcal M_i,\mu_i)$ 均完备且 $\sigma$-有限。
+可测矩形为 $A\times B$，其中 $A\in\mathcal M_1$、$B\in\mathcal M_2$；
+$\mathcal A$ 是有限个两两不交可测矩形的并所组成的代数。
+在矩形上定义 $\mu_0(A\times B)=\mu_1(A)\mu_2(B)$，约定 $0\cdot\infty=0$。
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p277-rectangle-premeasure
+\subsection{有限分解与可数可加}
+\label{note:stein-ch6-p277-rectangle-premeasure}
+\textbf{出处与最初的问题：}原书第 277 页式 (6)（PDF 第 298 页）。
+$\mathcal A$ 的元素只是有限个矩形的并，为什么却要证明
+\[
+A\times B=\bigsqcup_{j=1}^{\infty}(A_j\times B_j)
+\quad\Longrightarrow\quad
+\mu_1(A)\mu_2(B)=\sum_{j=1}^{\infty}\mu_1(A_j)\mu_2(B_j)\ ?
+\]
+
+\textbf{简短解释：}有限并描述集合的一种表示方式，不能排除同一集合也有可数分拆。
+例如 $B=\bigsqcup_jB_j$ 时，一个矩形 $A\times B$ 就等于
+$\bigsqcup_j(A\times B_j)$。式 (6) 是为了得到预测度所需的可数可加性，
+与第~\ref{note:stein-ch6-p270-premeasure-additivity}~节的疑问相同。
+
+固定 $x_1$，由不交分拆与 $\mu_2$ 的可数可加性得到
+\[
+\mathbf1_A(x_1)\mu_2(B)=
+\sum_{j=1}^{\infty}\mathbf1_{A_j}(x_1)\mu_2(B_j).
+\]
+再对 $x_1$ 积分，用非负部分和的单调收敛交换求和与积分，便得到式 (6)。
+这里用的是已经建立的一重积分理论，没有预先使用 Fubini 定理。
+
+将有限不交并的值定义为各矩形的值之和，两种有限分解可用相互交集共同细分，
+故定义与分解无关。若 $E=\bigsqcup_nE_n$ 且 $E,E_n\in\mathcal A$，
+再把各 $E_n$ 展开成有限个矩形，并与 $E$ 的有限矩形分解相交：
+每个大矩形得到可数不交分拆，逐个用式 (6) 并求和，就得到
+$\mu_0(E)=\sum_n\mu_0(E_n)$。这才完成在代数上验证预测度，随后可用扩张定理。
+% STUDY_RECORD_END id=stein-ch6-p277-rectangle-premeasure
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p277-countable-rectangle-unions
+\subsection{可数矩形并与取补封闭性}
+\label{note:stein-ch6-p277-countable-rectangle-unions}
+\textbf{出处与最初的问题：}第 277 页 $\mathcal A$ 的定义。
+能否一开始就取可数个矩形的并？这样会不会已经是 $\sigma$-代数？
+
+\textbf{简短解释：}可以定义这一类，它就是 $\mathcal A_\sigma$；
+经不交化后也等于可数个两两不交矩形的并所组成的类，
+具体拆法见第~\ref{note:stein-ch6-p278-slices}~节。
+它对可数并封闭，却一般不对补集封闭。
+
+例如取 $\mathbb R^2$ 中的对角线 $\Delta=\{(x,x):x\in\mathbb R\}$，则
+\[
+\Delta^c=\bigcup_{q\in\mathbb Q}
+\left[(-\infty,q)\times(q,\infty)\ \cup\
+(q,\infty)\times(-\infty,q)\right]\in\mathcal A_\sigma.
+\]
+但 $\Delta$ 内的非空矩形只能是 $\{x\}\times\{x\}$：
+矩形的任意两个坐标必须相等，从而两个因子都只能有同一个点。
+可数个这样的矩形最多覆盖可数多个点，故 $\Delta\notin\mathcal A_\sigma$。
+所以 $\mathcal A_\sigma$ 一般不是 $\sigma$-代数；乘积 $\sigma$-代数应取
+$\mathcal M_1\otimes\mathcal M_2=\sigma(\mathcal A)$。
+% STUDY_RECORD_END id=stein-ch6-p277-countable-rectangle-unions
+
+\newpage
+% STUDY_RECORD_BEGIN id=stein-ch6-p278-slices
+\section{第 278 页：可数矩形分解与切片积分}
+\label{note:stein-ch6-p278-slices}
+\textbf{出处：}第 6 章第 3.1 节，命题 3.1 及式 (7)，原书第 278 页（PDF 第 299 页）。
+记 $\mu=\mu_1\times\mu_2$，$E^{x_2}=\{x_1:(x_1,x_2)\in E\}$。
+命题说：若 $E\in\mathcal A_{\sigma\delta}$，则每个切片都 $\mu_1$-可测，
+$x_2\mapsto\mu_1(E^{x_2})$ 是 $\mu_2$-可测函数，且
+\[
+\int_{X_2}\mu_1(E^{x_2})\,d\mu_2=\mu(E).
+\]
+
+\textbf{最初的问题：}证明把 $E\in\mathcal A_\sigma$ 写成可数个矩形的并，
+是否先写成 $\mathcal A$ 中元素的并，再把每个元素拆成有限份？
+
+\textbf{简短解释：}是，但不同元素里的矩形仍可能重叠，必须补上不交化。
+可以先写 $E=\bigcup_nF_n$，$F_n\in\mathcal A$，然后令
+\[
+D_n=F_n\setminus\bigcup_{k<n}F_k\in\mathcal A,
+\qquad E=\bigsqcup_{n=1}^{\infty}D_n.
+\]
+每个 $D_n$ 再拆成有限个两两不交的矩形，重新编号，就得到
+$E=\bigsqcup_{j=1}^{\infty}R_j$。也可以先展开所有 $F_n$ 再不交化；
+但矩形的差集一般只是有限矩形并，仍须再作有限拆分。
+
+固定 $x_2$ 后，不交性保留：
+\[
+E^{x_2}=\bigsqcup_jR_j^{x_2},\qquad
+\mu_1(E^{x_2})=\sum_j\mu_1(R_j^{x_2}).
+\]
+若 $R_j=A_j\times B_j$，则
+$\mu_1(R_j^{x_2})=\mu_1(A_j)\mathbf1_{B_j}(x_2)$ 是非负可测函数。
+对这些函数的有限部分和用单调收敛定理，得到
+\[
+\int_{X_2}\mu_1(E^{x_2})\,d\mu_2
+=\sum_j\int_{X_2}\mu_1(R_j^{x_2})\,d\mu_2
+=\sum_j\mu(R_j)=\mu(E).
+\]
+这解释了证明中 $\mathcal A_\sigma$ 的一步，以及此处如何使用单调收敛；
+定理的前文出处已并入\hyperref[note:stein-ch6-p275-mct]{第 275 页单调收敛条目}。
+% STUDY_RECORD_END id=stein-ch6-p278-slices
+
+% STUDY_RECORD_BEGIN id=stein-ch6-p278-assert-and-defined
+\section{第 278--279 页：“断言”、切片可测与测度有定义}
+\label{note:stein-ch6-p278-assert-and-defined}
+\textbf{出处：}第 6 章第 3.1 节，命题 3.2，原书第 278--279 页（PDF 第 299--300 页）。
+
+\textbf{命题与最初的问题：}若 $E$ 是乘积空间的任意可测集，
+命题 3.1 的结论仍成立，但只断言 $E^{x_2}$ 可测、$\mu_1(E^{x_2})$ 有定义，
+对几乎处处的 $x_2$ 成立。这里 assert 后面是额外假设吗？
+后续又问：切片可测与切片测度有定义是否其实是同一件事？
+
+\textbf{简短解释：}assert 是“断言”，引出的是结论；
+假设是 $E$ 可测以及本节既定的空间条件。
+若 $\mu_1$ 的定义域就是 $\mathcal M_1$，则
+$E^{x_2}\in\mathcal M_1$ 与 $\mu_1(E^{x_2})$ 有定义等价。
+后一句强调现在可以讨论切片测度这个数值函数。
+“有定义”允许值为 $+\infty$，不表示有限；
+而 $x_2\mapsto\mu_1(E^{x_2})$ 的\emph{函数可测性}是另外一个结论。
+在例外的可测零测集上把它补为零，便可作为处处定义的可测代表参与积分。
+
+\textbf{核对语境后的补充：}原书此处的 $\mathcal M=\mathcal M_1\otimes\mathcal M_2$
+中，每个 $E$ 的所有切片其实都可测：固定 $x_2$ 后，切片可测的集合类是包含所有矩形的
+$\sigma$-代数。命题在这里给出了较弱的结论。第 279 页另说明定理适用于乘积测度的完备化；
+在完备化上，切片一般只能保证几乎处处可测。两种可测集的范围应当区分。
+% STUDY_RECORD_END id=stein-ch6-p278-assert-and-defined
+
+\newpage
+% STUDY_RECORD_BEGIN id=stein-ch6-p279-fubini
+\section{第 279 页：由集合的切片公式到 Fubini 定理}
+\label{note:stein-ch6-p279-fubini}
+\textbf{出处：}第 6 章第 3.1 节，定理 3.3，原书第 279 页（PDF 第 300 页）。
+沿用前述完备、$\sigma$-有限的两个因子空间，记 $\mu=\mu_1\times\mu_2$。
+
+\textbf{定理与最初的问题：}若 $f\in L^1(X_1\times X_2,\mu)$，则
+几乎每个 $x_2$ 对应的切片 $f_{x_2}(x_1)=f(x_1,x_2)$ 在 $X_1$ 上可积；
+内层积分作为 $x_2$ 的函数在 $X_2$ 上可积，且
+\[
+\int_{X_2}\left(\int_{X_1}f(x_1,x_2)\,d\mu_1(x_1)\right)d\mu_2(x_2)
+=\int_{X_1\times X_2}f\,d\mu.
+\]
+这个定理是否基本上使用前两个命题就能证出？
+
+\textbf{简短解释：}是。直接起点是命题 3.2，命题 3.1 为它提供集合层面的基础。
+推广顺序为
+\[
+\text{特征函数}\ \longrightarrow\ \text{简单函数}\
+\longrightarrow\ \text{非负可测函数}\ \longrightarrow\ L^1\text{ 函数}.
+\]
+
+若 $f=\mathbf1_E$ 且 $\mu(E)<\infty$，则
+$\int_{X_1}f_{x_2}\,d\mu_1=\mu_1(E^{x_2})$；
+命题 3.2 正好给出所需积分公式。用有限线性组合即得非负简单函数的结论。
+
+对非负可测 $f$，取教材中的简单函数 $0\leq\varphi_n\uparrow f$。
+这些简单函数涉及可数多个集合，将各自的例外零测集合并成同一个零测集 $N$。
+在 $x_2\notin N$ 时先对内层积分用单调收敛，再对外层积分及乘积空间积分使用它，得
+\[
+g(x_2):=\int_{X_1}f_{x_2}\,d\mu_1
+=\lim_n\int_{X_1}(\varphi_n)_{x_2}\,d\mu_1,
+\qquad
+\int_{X_2}g\,d\mu_2=\int f\,d\mu.
+\]
+在 $N$ 上将 $g$ 补为零即可。这里先得到非负函数的积分公式，等式两边可以都是无穷，
+还不能据此称切片可积。
+
+\textbf{可积性条件用在哪里：}对 $|f|$ 使用上述公式，有
+\[
+h(x_2):=\int_{X_1}|f(x_1,x_2)|\,d\mu_1,\qquad
+\int_{X_2}h\,d\mu_2=\int|f|\,d\mu<\infty.
+\]
+因此 $h<\infty$ 几乎处处，这才推出切片可积，即定理 (i)。
+对实值 $f$ 再写 $f=f^+-f^-$，分别使用非负情形并相减。
+内层积分 $G$ 的可测性随之得到，且 $|G|\leq h$ 几乎处处，所以 $G\in L^1(X_2)$，
+得到 (ii) 与 (iii)。复值函数对实部、虚部分别处理。
+这也说明了为什么“非负可测时能交换积分”与“可积时切片几乎处处可积”需要分清。
+% STUDY_RECORD_END id=stein-ch6-p279-fubini
+\end{document}

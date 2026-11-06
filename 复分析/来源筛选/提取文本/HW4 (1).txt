@@ -1,0 +1,38 @@
+
+===== PDF PAGE 1 =====
+    1. Prove the following generalized Liouville’s theorem: If f is an entire function and |f(z)| ≤C(1 + |z|N)
+for all z ∈C, then f is a polynomial of degree at most N.
+
+    2. Prove the following Cartan’s uniqueness theorem. Let f be a holomorphic self-mapping of a bounded
+domain Ω. Suppose that there exists z0 ∈Ωsuch that f(z0) = z0 and f ′(z0) = 1. Then f is the identity.
+Hint. Without loss of generality, suppose that z0 = 0. Assume that f(z) = z + akzk + O(zk+1) with ak̸ = 0
+for some k ≥2. Denote by f n the n-th iterate of f. Apply the Cauchy estimates to f n to get a contradiction.
+
+         P∞    3.  Let f(z) =   n=0 anzn be a power series with radius of convergence ρ > 0.  Prove the following
+Gutzmer’s inequality:
+                    ∞
+           X |an|2r2n ≤Af(r)2,  0 < r < ρ,
+
+                               n=0
+
+where Af(r) := max{|f(z)| :  |z| = r}.
+Hint. Consider the integral 2π1 R 02π |f(reiθ)|2dθ.
+
+    4. Compute
+                               I        |dz|
+                                                                                    ,  0 < |a| < 1,
+                                               |z|=1 |z −a|2
+
+by transforming the integral into a form where you can apply the Cauchy integral formula.
+
+    5. Prove the following version of the mean value property: Let Ωbe a domain and f ∈A(Ω). Suppose
+that D(z0; ρ) ⊂Ω. Then,
+                                         1 ZZ
+                                    f(z0) =              f(z)dλ(z).
+                                        πρ2    D(z0;ρ)
+
+
+
+
+
+                                              1

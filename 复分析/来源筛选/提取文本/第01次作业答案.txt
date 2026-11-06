@@ -1,0 +1,283 @@
+
+===== PDF PAGE 1 =====
+复分析·作业1 / Complex Analysis ·HW 1      中英双语解答/ Bilingual Solutions
+
+        复分析第1 次作业解答
+
+                  Complex Analysis Homework 1: Solutions
+
+
+
+
+ 1. 复线性与Cauchy–Riemann 方程/ Complex linearity and the
+
+               Cauchy–Riemann equations
+
+
+题目/ Problem. 设f = u + iv : C →C，F = (u, v) : R2 →R2。证明若f 全纯，则JF 是复
+线性映射，且Cauchy–Riemann 方程等价于
+              (   ) (    )  (    ) (   )
+                       0 −1   ux  uy      ux  uy    0 −1
+                          =                                  .
+                       1   0     vx  vy       vx  vy    1   0
+
+Let f = u + iv : C →C and F = (u, v) : R2 →R2. Show that holomorphicity of f makes JF
+
+complex-linear, and that the Cauchy–Riemann equations are equivalent to the displayed matrix
+
+identity.
+
+中文解答. 令                    (    )      (   )
+                                  ux  uy             0 −1
+               A = JF =                  ,    J =                 .
+                                     vx  vy             1   0
+在R2 ∼= C 下，J 正是“乘以i”。实线性映射A 为复线性，当且仅当A(iw) = iA(w) 对每个w
+成立，亦即AJ = JA。直接相乘得到
+                 (      )       (     )
+                         −vx  −vy               uy  −ux
+                JA =                       ,   AJ =                     .
+                             ux   uy                 vy  −vx
+
+两矩阵相等恰好等价于ux = vy 和uy = −vx。若f 全纯，则实微分为h 7→f′(z)h，所以JF 复
+线性，以上等式也证明了所要求的矩阵表述。
+
+English solution. Under R2 ∼= C, the matrix J represents multiplication by i. A real-linear
+
+map A = JF is complex-linear exactly when A(iw) = iA(w) for every w, or equivalently AJ =
+JA. The displayed products show that this commutation relation is precisely ux = vy and
+uy = −vx. If f is holomorphic, its real differential is h 7→f′(z)h, which is complex-linear. Thus
+
+its Jacobian commutes with J, and the matrix identity is equivalent to the Cauchy–Riemann
+
+equations.
+
+
+               2. 极坐标形式/ Polar-coordinate form
+
+题目/ Problem. 证明f = u+iv 的极坐标Cauchy–Riemann 方程为ur = r−1vθ、vr = −r−1uθ。
+Show that the Cauchy–Riemann equations in polar coordinates take the form ur = r−1vθ and
+vr = −r−1uθ.
+
+
+                                         1
+
+===== PDF PAGE 2 =====
+复分析·作业1 / Complex Analysis ·HW 1      中英双语解答/ Bilingual Solutions
+
+
+中文解答. 以下取r > 0。由x = r cos θ、y = r sin θ 及链式法则，
+
+                                                   vθ
+                    ur = ux cos θ + uy sin θ,     = −vx sin θ + vy cos θ.
+                                                r
+
+代入ux = vy、uy = −vx，便得ur = r−1vθ。同理，
+
+                      vr = vx cos θ + vy sin θ,    −uθ = ux sin θ −uy cos θ,
+                                                  r
+
+故vr = −r−1uθ。由于从(r, θ) 到(x, y) 的雅可比行列式为r̸ = 0，这些极坐标方程也反过来蕴
+含直角坐标的Cauchy–Riemann 方程。
+
+English solution. For r > 0, the chain rule gives the four identities displayed above. Substi-
+
+tuting ux = vy and uy = −vx yields
+
+                                   1                                 ur =          vr = −1                                       rvθ,           ruθ.
+
+Conversely, the polar change of variables has Jacobian determinant  r̸ = 0; reversing the same
+
+calculation recovers the Cartesian Cauchy–Riemann equations. The formulas are not asserted
+
+at r = 0, where polar coordinates are singular.
+
+
+  3. Laplace 算子与Wirtinger 导数/ Laplacian and Wirtinger
+
+                            derivatives
+
+
+题目/ Problem. 证明∆= 4∂z∂¯z。Show that ∆= 4∂z∂¯z.
+
+中文解答. 对任意C2 函数，定义
+
+                             1                   1
+                           ∂z = 2(∂x −i∂y),       ∂¯z = 2(∂x + i∂y).
+
+由于混合偏导可交换，
+
+                           4∂z∂¯z = (∂x −i∂y)(∂x + i∂y) = ∂2x + ∂2y = ∆.
+
+English solution. For a C2 function, expand the product of the two Wirtinger operators as
+
+above. The mixed terms cancel because ∂x∂y = ∂y∂x, leaving 4∂z∂¯z = ∆.
+
+
+     4. 分式线性变换的分类/ Classification of fractional linear
+
+                       transformations
+
+
+题目/ Problem. 设标准化的分式线性变换T(z) = (az + b)/(cz + d) 有有限不动点z1，其乘
+子为κ = T ′(z1)。按题意，抛物型指κ = 1，双曲型指κ > 0 且κ̸ = 1，椭圆型指|κ| = 1 且
+κ̸ = 1，其余为斜向型。证明这四种情形依次等价于a + d = ±2、a + d ∈R 且|a + d| > 2、
+
+a + d ∈R 且|a + d| < 2、以及a + d /∈R。题目提示还要求讨论不动点数、第二个不动点的乘子
+及κ + κ−1 = (a + d)2 −2。
+
+
+                                         2
+
+===== PDF PAGE 3 =====
+复分析·作业1 / Complex Analysis ·HW 1      中英双语解答/ Bilingual Solutions
+
+
+Let T(z) = (az + b)/(cz + d) be normalized and have a finite fixed point z1.  Its multiplier is
+κ = T ′(z1). The stated definitions are: parabolic for κ = 1; hyperbolic for positive real κ̸ = 1;
+
+elliptic for |κ| = 1, κ̸ = 1; and loxodromic otherwise. Prove that these correspond, respectively,
+
+to trace a + d = ±2, real trace with |a + d| > 2, real trace with |a + d| < 2, and nonreal
+
+trace. The hints concern the number of fixed points, the multiplier at a second fixed point, and
+κ + κ−1 = (a + d)2 −2.
+                                (  )
+                                                  a  b
+中文解答. “标准化”指ad −bc = 1。设t = a + d、M =     ∈SL2(C)。若有限不动点z1
+                                                             c  d
+的对应特征值是λ = cz1 + d，则
+                   (z1 )    (z1 )                 ad −bc
+         M    = λ         ,    κ = T ′(z1) =       = λ−2.
+                      1        1                      (cz1 + d)2
+
+另一特征值是λ−1，因此
+                         κ + κ−1 = λ−2 + λ2 = t2 −2.                               (1)
+
+若有两个不同不动点，它们的乘子互为倒数；第二个点为∞时，在局部坐标w = 1/z 中计算其
+
+乘子即可。若κ = 1，则t2 = 4，矩阵有重特征值；除恒等变换外，T 恰有一个不动点。
+
+由式(1) 可逐一判定：
+
+
+                              κ = 1 ⇐⇒t = ±2;
+
+                        κ > 0,  κ̸ = 1 ⇐⇒t ∈R,  |t| > 2;
+
+                                   |κ| = 1,  κ̸ = 1 ⇐⇒t ∈R,  |t| < 2.
+
+例如第二行中κ + κ−1 > 2，故t2 > 4；反向则由X + X−1 = t2 −2 > 2 的两个根均为正实数可
+得。第三行对应κ + κ−1 ∈[−2, 2)，故t2 ∈[0, 4)；反向则两根在单位圆上。四类穷尽所有乘子，
+
+所以剩余的斜向型情形恰为t /∈R。
+
+English solution. Write t = tr M and normalize M by det M = 1. At a finite fixed point,
+(z1, 1)T  is an eigenvector with eigenvalue λ = cz1 + d, and κ = T ′(z1) = λ−2.  The other
+eigenvalue is λ−1, so equation (1) follows. Two distinct fixed points therefore have reciprocal
+
+multipliers (use w = 1/z when one is at infinity). The alternatives now follow from the ranges
+of κ + κ−1:  it equals 2 for κ = 1, lies in (2, ∞) for positive real κ̸ = 1, and lies in [−2, 2) for
+unit-modulus κ̸ = 1. Conversely, the quadratic equation X + X−1 = t2 −2 gives the indicated
+
+type in each real-trace range. All remaining cases have nonreal trace and are loxodromic.
+
+题目提示的例外/ Exception in the hint. 恒等变换也满足κ = 1 和t = ±2，但它的每个
+
+点都是不动点。因此“κ = 1 当且仅当只有一个不动点”须排除恒等变换；提示中第二个不动
+点处的f′(z2) 应为T ′(z2)。The identity has multiplier 1 and trace ±2 but fixes every point;
+
+the unique-fixed-point claim needs this exception. The derivative in the second hint should be
+T ′(z2).
+
+
+
+
+
+                                         3
+
+===== PDF PAGE 4 =====
+ 复分析·作业1 / Complex Analysis ·HW 1      中英双语解答/ Bilingual Solutions
+
+
+             5. Schwarzian 导数/ Schwarzian derivative
+
+
+ 题目/ Problem. 对全纯函数f，其Schwarzian 导数为
+                                             )2                                                                f′′′     (f′′                               S(f) =  −3             .
+                                                 f′   2   f′
+
+ 证明：(1) S(f) ≡0 当且仅当f 是分式线性变换；(2) 对全纯g，有S(g◦f) = (S(g)◦f)(f′)2+S(f)，
+ 特别地，若g 是分式线性变换，则S(g ◦f) = S(f)。提示：令N(f) = f′′/f′，则S(f) =
+ N(f)′ −12N(f)2。
+ For a holomorphic f, define S(f) = f′′′/f′ −32(f′′/f′)2. Show that (1) S(f) ≡0 exactly for
+ fractional linear maps and (2) S(g ◦f) = (S(g) ◦f)(f′)2 + S(f) for holomorphic g; in particular,
+ postcomposition by a fractional linear map leaves S(f) unchanged. Hint: N(f) = f′′/f′ satisfies
+ S(f) = N(f)′ −12N(f)2.
+
+
+ (1) S(f) ≡0 与分式线性变换/ Vanishing Schwarzian and Möbius maps
+
+ 中文解答. 在连通定义域上先假设f′̸ = 0，令N = f′′/f′。直接求导得
+
+                                  S(f) = N′ −1                                          2N2.
+
+ 若S(f) = 0，则N′ = N2/2。如果N 在某点为零，微分方程解的唯一性说明N ≡0，于是
+
+ f(z) = Az + B，其中A̸ = 0。否则N 处处非零，且
+                   (  )′
+                              1                        2                      = −1     N(z) = −                  N        2,              z −ζ
+
+（常数ζ 不在定义域内）。积分两次得到f′(z) = C(z −ζ)−2 与f(z) = A(z −ζ)−1 + B，也是分
+
+ 式线性变换。反过来，对于f(z) = (az + b)/(cz + d)，
+
+                 ad −bc                  2c                    2c2      1
+            f′(z) =                ,    N(f) = −           N(f)′ =      =                    (cz + d)2                cz + d,              (cz + d)2   2N(f)2,
+
+ 故S(f) = 0。
+
+ English solution. On a connected domain where f′̸ = 0, put N = f′′/f′. Then S(f) = N′ −
+ N2/2. If S(f) = 0, the differential equation N′ = N2/2 has either the zero solution, giving the
+
+ aﬀine map Az+B, or a nowhere-zero solution N = −2/(z−ζ), giving f = A/(z−ζ)+B. Both are
+
+ fractional linear maps. Conversely, the displayed derivative calculation for f = (az + b)/(cz + d)
+ gives N′ = N2/2, hence S(f) = 0. If critical points of f were initially allowed, a zero Schwarzian
+ on the regular set actually rules them out: at a zero of f′ of order m ≥1, S(f) has leading term
+ −m(m + 2)/(2(z −z0)2).
+
+
+
+
+
+                                          4
+
+===== PDF PAGE 5 =====
+复分析·作业1 / Complex Analysis ·HW 1      中英双语解答/ Bilingual Solutions
+
+
+(2) 复合公式/ Composition law
+
+中文解答. 在相关导数非零处，设A = (N(g)◦f)f′、B = N(f)。链式法则给出N(g◦f) = A+B，
+
+且
+        S(g ◦f) = A′ + B′ −1  + B)2                         2(A
+                    (                           (                       (         )
+          =  N(g)′ −1      ◦f (f′)2 + B′ −1   + (N(g) ◦f) f′′ −f′B                          2N(g)2)              2B2)
+          = (S(g) ◦f)(f′)2 + S(f),
+
+因为f′B = f′′。若g 是分式线性变换，由第(1) 问S(g) = 0，遂有S(g ◦f) = S(f)。
+
+English solution. The chain rule gives N(g ◦f) = (N(g)◦f)f′ +N(f). Expanding N(g ◦f)′ −
+2N(g1    ◦f)2 as above, the cross term cancels because f′N(f) = f′′. Thus
+
+                           S(g ◦f) = (S(g) ◦f)(f′)2 + S(f).
+
+
+For a fractional linear g, part (1) gives S(g) = 0, so S(g ◦f) = S(f).
+
+
+
+
+
+                                         5

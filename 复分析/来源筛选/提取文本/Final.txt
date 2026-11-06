@@ -1,0 +1,37 @@
+
+===== PDF PAGE 1 =====
+                     Complex Analysis Final
+
+1. Show that  if u  : ⌦! R is C2 and subharmonic, and φ  : R ! R is C2, convex and
+non-decreasing, then φ ◦u : ⌦! R is subharmonic. Moreover, if u is actually harmonic,then it is not necessary to assume that φ is non-decreasing.
+
+
+2. Use the contour integration to compute
+                   1     1
+                              < a < 1.                                     0  xa(1 + x2)dx,  −1                       Z
+
+3. Let f be a meromorphic function in the punctured unit disk D⇤. Suppose that there is a
+                       j=1 of f which accumulates to the origin. Prove that f(D⇤) is densesequence of poles {zj}1in the complex plane C.
+Hint. Use the same method for proving the Casaroti-Weierstrass Theorem.
+
+4. 1) Let f be a holomorphic function on the unit disk D. Suppose that |f(z)| M on D
+and f(aj) = 0 for some aj 2 D, 1 j n. Show that
+                                   z −a1      z −an   ,   z   D.                         |f(z)| M 1            · · · 1        2                                  −¯a1z      −¯anz
+Hint. Use the same method for proving the Schwarz Lemma.                                                                                                                                                                                      """"                                        """"                  """"                                         """"
+2) A ﬁnite Blaschke product is a rational function of the form
+                      B(z) = ei'   −a1       −an     ,                                   1             · · ·  1                     ✓z −¯a1z ◆  ✓z −¯anz ◆
+where a1, · · · , an 2 D and 0 ' < 2⇡. Suppose that f is holomorphic on D and continuous
+on D with |f(z)| = 1 for |z| = 1. Show that f is a ﬁnite Blaschke product.
+
+5. Let ⌦be a bounded simply-connected domain and φ a Riemann mapping from ⌦to the
+                           1
+unit disk D. Set f = φ−1 and write f(z) =    anzn.
+                                          n=0             X                 1
+1) Prove that Area(⌦) = ⇡     n|an|2.
+                          n=1        XHint. Integrate over D using polar coordinates.
+2) Suppose that f extends to be analytic on D, |f(z)| ≥1 for all |z| = 1, and f(0) = 0.Prove that Area(⌦)                    2⇡ ≥⇡.
+Hint. Consider                    0   |f(ei✓)|2d✓.            Z
+
+
+
+                                                  1

@@ -1,0 +1,838 @@
+% 本份微分几何独立笔记的写作约定（仅适用于本笔记）：
+% 数学术语保留英文，其他叙述用中文；专业数学术语首次出现时附中文名称，之后不重复。
+% 例如 Gaussian curvature（高斯曲率）；open set 等基础术语不用附中文名称。
+% 基本保留用户原有措辞、表达和内容，不因片段不连贯而自行补写。
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\title{Differential geometry of surfaces（曲面微分几何）}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\section{The structure equations（结构方程）of $\mathbb{R}^n$}
+
+设 $\{e_i\}_{i=1}^n$ 是 $\mathbb{R}^n$ 中或某个 open set $U$ 中的 $n$ 个 smooth vector fields（光滑向量场），并且构成一个 orthonormal moving frame（正交归一活动标架）。这就是说，
+\[
+\langle e_i,e_j\rangle=\delta_{ij}.
+\]
+考虑 $1$-form（一次微分形式）$\omega_j$，使得
+\[
+\omega_j(e_i)=\delta_{ij}.
+\]
+$\omega_j$ 是 smooth 的，这一点容易看出，因为可以写出 $\omega_j$ 关于 $dx_1,\ldots,dx_n$ 的分量表示。
+
+另一方面，每个 vector field $e_i$ 都是一个 map
+\[
+e_i\colon U\longrightarrow\mathbb{R}^n.
+\]
+它在 $p\in U$ 处有 differential（微分）
+\[
+(de_i)_p\colon\mathbb{R}^n\longrightarrow\mathbb{R}^n.
+\]
+我们当然可以写
+\[
+(de_i)_p(v)=\sum_j(\omega_{ij})_p(v)e_j,
+\]
+这里作为分量的 $\omega_{ij}$ 是 smooth $1$-form。为简洁起见，写作
+\[
+de_i=\sum_j\omega_{ij}e_j.
+\]
+令 $e=(e_1,\ldots,e_n)^{\mathsf T}$，$W=(\omega_{ij})_{n\times n}$，则上式也可简写为 $de=We$。
+称 $\omega_{ij}$ 为 \textbf{connection forms（联络形式）}。
+
+这些 forms 并非全部 independent。例如，对
+\[
+\langle e_i,e_j\rangle=1
+\]
+取 differential，得到
+\[
+\langle de_i,e_j\rangle+\langle e_i,de_j\rangle=0,
+\]
+即
+\[
+\omega_{ij}+\omega_{ji}=0.
+\]
+
+对于 manifold（流形） $M$（以下经常是 $\mathbb{R}^3$ 中的 $2$ 维 surface（曲面）），如果有 inner product（内积）
+\[
+\langle v,u\rangle_p,\qquad v,u\in T_pM,
+\]
+也可定义 orthonormal moving frame 等。
+
+这里需要区分 $d$ 的两种用法。最初 $e_i\colon U\to\mathbb{R}^n$ 是 map，其 differential 在每点为
+\[
+(de_i)_p\colon T_pU\longrightarrow\mathbb{R}^n.
+\]
+严格来说，map 的 differential 的 target 是 $T_{e_i(p)}\mathbb{R}^n$；这里通过 Euclidean space 的自然识别，将它统一视为固定的 $\mathbb{R}^n$。因此，不同 $p$ 处的 $(de_i)_p$ 的像都落在同一个 $\mathbb{R}^n$ 中，而不是保留在随点变化的 tangent spaces 中。
+
+将这些 linear maps 合在一起，$de_i$ 是一个 $\mathbb{R}^n$-valued $1$-form（向量值一次微分形式）。对它再写 $d(de_i)$ 时，$d$ 指的是作用于 vector-valued forms 的 exterior derivative，而不是把 $de_i$ 当作普通 map 再求 differential。该 exterior derivative 可逐分量定义，并满足 $d^2=0$；它在 $\mathbb{R}^n$-valued functions 上与原来的 differential 一致。因此
+\[
+d(de_i)=0.
+\]
+换成 moving frame 表示 $de_i=\sum_j\omega_{ij}e_j$ 后，$e_j$ 也随点变化，求 exterior derivative 时必须一并求导：
+\[
+d(de_i)=\sum_j(d\omega_{ij})e_j-\sum_j\omega_{ij}\wedge de_j.
+\]
+
+\textbf{Theorem（structure equations）}
+\[
+d\omega_i=\sum_k\omega_k\wedge\omega_{ki},
+\qquad
+d\omega_{ij}=\sum_k\omega_{ik}\wedge\omega_{kj}.
+\]
+
+\textbf{Proof.} 令 $x\colon U\longrightarrow\mathbb{R}^n$ 是 inclusion（包含映射）。
+\[
+dx=\sum_i\omega_i e_i,
+\qquad
+de_i=\sum_j\omega_{ij}e_j.
+\]
+于是
+\begin{align*}
+d^2x
+&=\sum_i(d\omega_i)e_i-\sum_i\omega_i\wedge de_i\\
+&=\sum_i(d\omega_i)e_i
+  -\sum_i\omega_i\wedge\left(\sum_j\omega_{ij}e_j\right)=0.
+\end{align*}
+比较 $e_i$ 的系数，得
+\[
+d\omega_i=\sum_k\omega_k\wedge\omega_{ki}.
+\]
+又有
+\begin{align*}
+d^2e_i
+&=d\left(\sum_j\omega_{ij}e_j\right)\\
+&=\sum_j d\omega_{ij}e_j
+  -\sum_j\omega_{ij}\wedge\left(\sum_k\omega_{jk}e_k\right)=0.
+\end{align*}
+同理得到
+\[
+d\omega_{ij}=\sum_k\omega_{ik}\wedge\omega_{kj}.
+\]
+
+\medskip
+现在假设 $M^n$ 是 $\mathbb{R}^{n+k}$ 的 submanifold（子流形）。
+
+以后 frame 都指之前的 orthonormal moving frame。我们称一个 frame 是 adapted（适配）的，如果 restrict 到 $M^n$ 的 tangent space（切空间） 里，那 $e_1,\ldots,e_n$ 就是 $M^n$ 的 frame。设 inclusion map 是 $x$，则有 $M$ 上的
+\[
+x^*(\omega_i),\qquad x^*(\omega_{ij}).
+\]
+另一方面，由 submanifold 的定义，对于 $M$ 上的 frame，总能（至少是 locally）扩展成 $\mathbb{R}^{n+k}$ 中的 frame。所以先前的讨论方法也是最一般的。
+
+\medskip
+\textbf{Lemma.} 设 $V$ 是 $\mathbb{R}$ 上的 vector space，$\dim V=n$，$\omega_1,\ldots,\omega_r$（$r\leq n$）是 linearly independent 的 $1$-forms。如果 forms
+\[
+\theta_1,\ldots,\theta_r\colon V\longrightarrow\mathbb{R}
+\]
+满足
+\[
+\sum_{i=1}^r\omega_i\wedge\theta_i=0,
+\]
+则
+\[
+\theta_i=\sum_{j=1}^r a_{ij}\omega_j,
+\qquad a_{ij}=a_{ji}.
+\]
+
+\textbf{Proof.} 设 $\omega_1,\ldots,\omega_r$ 与 $\omega_{r+1},\ldots,\omega_n$ 组成 $V^*$ 的 basis。写作
+\[
+\theta_i=\sum_{j=1}^r a_{ij}\omega_j
++\sum_{\ell=r+1}^n b_{i\ell}\omega_\ell.
+\]
+现在代入条件，得到
+\[
+\sum_{i=1}^r\omega_i\wedge
+\left[
+\left(\sum_{p=1}^r a_{ip}\omega_p\right)
++\sum_{q=r+1}^n b_{iq}\omega_q
+\right]=0.
+\]
+比较系数即可（注意 $\omega_s\wedge\omega_\ell$，$s<\ell$，是 $\Lambda^2(V)$ 的 basis）。
+
+\medskip
+\textbf{Lemma.} 设 $U\subset\mathbb{R}^n$，$\omega_1,\ldots,\omega_n$ 是 $U$ 上 linearly independent 的 $1$-forms。如果存在 $1$-forms $\omega_{ij}$（$i,j=1,\ldots,n$），满足
+\[
+\omega_{ij}+\omega_{ji}=0,
+\qquad d\omega_j=\sum_k\omega_k\wedge\omega_{kj},
+\]
+则对于所有 $k,j$，$\omega_{kj}$ 唯一。
+
+可以想到，之后这个 lemma 会被用来证明一些 $M$ 上 $\omega_{ij}$ 的 uniqueness（唯一性）。
+
+\textbf{Proof.} 如果另有 $\overline{\omega}_{ij}$ 满足
+\[
+\overline{\omega}_{ij}+\overline{\omega}_{ji}=0,
+\qquad d\omega_j=\sum_k\omega_k\wedge\overline{\omega}_{kj},
+\]
+则
+\[
+0=d\omega_j-d\omega_j
+=\sum_k\omega_k\wedge(\omega_{kj}-\overline{\omega}_{kj}).
+\]
+由上一个 lemma，对于 $k=1,\ldots,n$，有
+\[
+\omega_{kj}-\overline{\omega}_{kj}=\sum_r B^j_{kr}\omega_r,
+\]
+其中
+\begin{equation}
+B^j_{kr}=B^j_{rk}.
+\tag{S}\label{eq:dg-B-symmetry}
+\end{equation}
+现在再看 $\omega_{kj}+\omega_{jk}=0$ 的条件：
+\[
+0=\omega_{kj}+\omega_{jk}
+-\overline{\omega}_{kj}-\overline{\omega}_{jk}
+=\sum_r(B^j_{kr}+B^k_{jr})\omega_r.
+\]
+由 $\omega_r$ 的 linear independence，对所有 $r$ 有
+\begin{equation}
+B^j_{kr}=-B^k_{jr}.
+\tag{A}\label{eq:dg-B-antisymmetry}
+\end{equation}
+因此，最后的等式链可写成
+\begin{align*}
+B^j_{kr}
+&\overset{\text{(S)}}{=}B^j_{rk}
+ \overset{\text{(A)}}{=}-B^r_{jk}
+ \overset{\text{(S)}}{=}-B^r_{kj}\\
+&\overset{\text{(A)}}{=}B^k_{rj}
+ \overset{\text{(S)}}{=}B^k_{jr}
+ \overset{\text{(A)}}{=}-B^j_{kr}.
+\end{align*}
+这里每一步均将 (S) 或 (A) 中的指标相应替换；(S) 交换两个下标，(A) 交换上标与第一个下标并变号。
+故 $B^j_{kr}=0$，从而 $\omega_{kj}=\overline{\omega}_{kj}$。
+
+\section{$\mathbb{R}^3$ 中的 surfaces}
+设 surface $M\subset\mathbb{R}^3$。在 $\mathbb{R}^3$ 的一个 open set 中选取 frame $e_1,e_2,e_3$，相应的 forms 为
+\[
+\omega_1,\omega_2,\omega_3,\qquad
+\omega_{12},\omega_{13},\omega_{23}.
+\]
+由于 $\omega_{ij}+\omega_{ji}=0$，有 $\omega_{ii}=0$。现在写出已知的 structure equations：
+\begin{align*}
+d\omega_1&=\omega_2\wedge\omega_{21}+\omega_3\wedge\omega_{31},\\
+d\omega_2&=\omega_1\wedge\omega_{12}+\omega_3\wedge\omega_{32},\\
+d\omega_3&=\omega_1\wedge\omega_{13}+\omega_2\wedge\omega_{23},\\
+d\omega_{12}&=\omega_{13}\wedge\omega_{32},\\
+d\omega_{13}&=\omega_{12}\wedge\omega_{23},\\
+d\omega_{23}&=\omega_{21}\wedge\omega_{13}.
+\end{align*}
+
+回忆：由 inclusion $x\colon M\hookrightarrow\mathbb{R}^3$ 诱导的 pullback（拉回） $x^*$ 与 exterior derivative（外微分）$d$ 和 wedge product（楔积）可交换，即
+\[
+x^*(d\alpha)=d(x^*\alpha),\qquad
+x^*(\alpha\wedge\beta)=x^*\alpha\wedge x^*\beta.
+\]
+这里选取 adapted frame，使 $e_1,e_2$ 是 $M$ 上的 tangent frame（切标架），$e_3$ 是 unit normal（单位法向量）。于是
+\[
+x^*(\omega_3)=0,
+\]
+因为 $T_pM\perp e_3(p)$。
+
+为简洁起见，下面仍用 $\omega_i,\omega_{ij}$ 表示各自的 pullback。由上面的 structure equations 得到 $M$ 上的方程：
+\begin{align*}
+d\omega_1&=\omega_2\wedge\omega_{21}
+          =-\omega_2\wedge\omega_{12},\\
+d\omega_2&=\omega_1\wedge\omega_{12},\\
+0=d\omega_3&=\omega_1\wedge\omega_{13}+\omega_2\wedge\omega_{23},\\
+d\omega_{12}&=\omega_{13}\wedge\omega_{32}
+             =-\omega_{13}\wedge\omega_{23},\\
+d\omega_{13}&=\omega_{12}\wedge\omega_{23},\\
+d\omega_{23}&=\omega_{21}\wedge\omega_{13}
+             =-\omega_{12}\wedge\omega_{13}.
+\end{align*}
+
+由
+\[
+\omega_1\wedge\omega_{13}+\omega_2\wedge\omega_{23}=0,
+\]
+使用上一个关于 $1$-forms 的 lemma，得到
+\[
+\omega_{13}=h_{11}\omega_1+h_{12}\omega_2,
+\qquad
+\omega_{23}=h_{21}\omega_1+h_{22}\omega_2,
+\qquad h_{12}=h_{21}.
+\]
+
+\subsection*{Structure equations 的进一步化简}
+记 Gaussian curvature（高斯曲率）与 mean curvature（平均曲率） 分别为
+\[
+K=h_{11}h_{22}-h_{12}^2,
+\qquad H=\frac12(h_{11}+h_{22}).
+\]
+于是
+\begin{align*}
+d\omega_{12}
+&=\omega_{13}\wedge\omega_{32}\\
+&=(h_{11}\omega_1+h_{12}\omega_2)
+\wedge(-h_{12}\omega_1-h_{22}\omega_2)\\
+&=(-h_{11}h_{22}+h_{12}^2)\omega_1\wedge\omega_2
+=-K\omega_1\wedge\omega_2.
+\end{align*}
+另外，
+\begin{align*}
+\omega_{13}\wedge\omega_2+\omega_1\wedge\omega_{23}
+&=(h_{11}\omega_1+h_{12}\omega_2)\wedge\omega_2\\
+&\quad+\omega_1\wedge(h_{21}\omega_1+h_{22}\omega_2)\\
+&=2H\omega_1\wedge\omega_2.
+\end{align*}
+
+\subsection*{$h_{ij}$ 的解释}
+考虑 Gauss map（高斯映射） $e_3\colon U\longrightarrow S^2$，其中 $U$ 是 $M$ 上选定 unit normal 的局部区域。有
+\begin{align*}
+de_3
+&=\sum_i\omega_{3i}e_i
+=\omega_{31}e_1+\omega_{32}e_2\\
+&=-(h_{11}\omega_1+h_{12}\omega_2)e_1
+  -(h_{21}\omega_1+h_{22}\omega_2)e_2.
+\end{align*}
+现在对 $v=a_1e_1(p)+a_2e_2(p)\in T_pM$ 代入，得到
+\[
+(de_3)_p(v)
+=-(h_{11}(p)a_1+h_{12}(p)a_2)e_1(p)
+ -(h_{21}(p)a_1+h_{22}(p)a_2)e_2(p).
+\]
+将 $T_{e_3(p)}S^2=e_3(p)^\perp$ 与 $T_pM$ 自然识别后，在 basis $(e_1(p),e_2(p))$ 下，
+\[
+\bigl[(de_3)_p(v)\bigr]
+=-\begin{pmatrix}
+h_{11}(p)&h_{12}(p)\\
+h_{21}(p)&h_{22}(p)
+\end{pmatrix}
+\begin{pmatrix}a_1\\a_2\end{pmatrix}.
+\]
+
+\textbf{Corollary.} $(de_3)_p$ 是 self-adjoint operator（自伴算子），因此对于 $v,u\in T_pM$，
+\[
+\langle(de_3)_p(v),u\rangle
+=\langle v,(de_3)_p(u)\rangle.
+\]
+而且 $(de_3)_p$ 有两个 real eigenvalues（实特征值）（计 multiplicity（重数）），设为 $-\lambda_1,-\lambda_2$。
+
+因此，在上述 tangent spaces 的自然识别下，
+\[
+K(p)=\det((de_3)_p)=\lambda_1\lambda_2,
+\qquad
+H(p)=-\frac12\operatorname{tr}((de_3)_p)
+=\frac{\lambda_1+\lambda_2}{2}.
+\]
+\medskip
+\textbf{First fundamental form（第一基本形式）.} 对 adapted frame $\{e_i\}$，$i=1,2,3$，
+\[
+\mathrm{I}(v)=\langle v,v\rangle
+=(\omega_1\omega_1+\omega_2\omega_2)(v).
+\]
+这里 $\omega_1\omega_1$ 就是 $\omega_1(v)\cdot\omega_1(v)$。
+
+\textbf{Second fundamental form（第二基本形式）.}
+\begin{align*}
+\mathrm{II}_p(v)
+&=-\langle de_3(v),v\rangle_p\\
+&=-\langle\omega_{31}(v)e_1+\omega_{32}(v)e_2,v\rangle_p\\
+&=-(\omega_{31}\omega_1+\omega_{32}\omega_2)(v)\\
+&=(\omega_{13}\omega_1+\omega_{23}\omega_2)(v).
+\end{align*}
+（回忆：$v=\omega_1(v)e_1+\omega_2(v)e_2+\omega_3(v)e_3$，这里 $\omega_3(v)=0$。）
+
+\subsection*{另一种解释}
+$\alpha\colon(-\varepsilon,\varepsilon)\longrightarrow M$ 是 arc length curve（弧长参数曲线），以 $s$ 参数化，$\alpha(0)=p$，$\alpha'(0)=v\in T_pM$。当然有 $\alpha'(s)\perp e_3(s)$。我们将看到 $\mathrm{II}_p(v)$ 是 $\dfrac{d^2\alpha}{ds^2}$ 在 normal direction（法向）上的投影：
+\begin{align*}
+\left.\left\langle\frac{d^2\alpha}{ds^2},e_3(s)\right\rangle\right|_{s=0}
+&=-\left.\left\langle\frac{d\alpha}{ds},\frac{de_3}{ds}\right\rangle\right|_{s=0}\\
+&=-\langle\omega_1e_1+\omega_2e_2,
+\omega_{31}e_1+\omega_{32}e_2\rangle(v)
+=\mathrm{II}_p(v).
+\end{align*}
+称 $p$ 处 $v$ 方向的 normal curvature（法曲率）为
+\[
+k_n(v)=\mathrm{II}_p(v).
+\]
+
+由于 $de_3$ 是 self-adjoint 的，设 $\|v\|=1$，$v\in T_pM$，
+\[
+v=\cos\theta\,u_1+\sin\theta\,u_2,
+\]
+其中 $u_1,u_2$ 是 $de_3$ 的两个 orthonormal eigenvectors（正交归一特征向量），$de_3(u_i)=-\lambda_i u_i$；对应的 eigenvalues $-\lambda_1,-\lambda_2$ 可能相等。从而
+\[
+k_n(v)=\lambda_1\cos^2\theta+\lambda_2\sin^2\theta.
+\]
+\textbf{Corollary.} $\mathrm{II}_p(v)$ 在 $\|v\|=1$ 上的两个极值是 $\lambda_1,\lambda_2$。
+
+称 $\lambda_i$ 为 principal curvatures（主曲率），$u_i$ 为 principal directions（主方向）。
+
+
+\medskip
+\textbf{Theorem.} 设 $U,U'$ 是 $\mathbb{R}^3$ 中两个 connected 的 $2$ 维 submanifolds。假设 $U$ 上存在 adapted frame $\{e_i\}$，$U'$ 上存在 adapted frame $\{e_i'\}$，$i=1,2,3$，以及 diffeomorphism $f\colon U\to U'$，使得
+\[
+f^*\omega_i'=\omega_i,
+\qquad
+f^*\omega_{ij}'=\omega_{ij},
+\qquad i,j=1,2,3.
+\]
+则存在 rigid motion（刚体运动）$\rho\colon\mathbb{R}^3\to\mathbb{R}^3$，使得 $\rho|_U=f$。
+\section{曲面的 intrinsic geometry（内蕴几何）}
+以下我们总设 $M$ 是一个 $2$ 维 Riemannian manifold（黎曼流形）（直观上就是已经有了光滑的 $\mathrm{I}_p(v)$，但是已经看不到 $e_3$）。
+
+这时候，对于 frame $\{e_i\}$、coframe $\{\omega_i\}$，存在 $1$-forms $\omega_{12},\omega_{21}$，使得
+\[
+\omega_{12}+\omega_{21}=0,
+\qquad
+d\omega_1=\omega_{12}\wedge\omega_2,
+\qquad
+d\omega_2=\omega_{21}\wedge\omega_1.
+\]
+（注意这里就没有良定义的 $de_i$ 了。）
+
+\textbf{Proof.} 定义
+\[
+\omega_{12}(e_1)=d\omega_1(e_1,e_2),
+\qquad
+\omega_{12}(e_2)=d\omega_2(e_1,e_2)
+\]
+即可。
+
+设 $\{\bar e_1,\bar e_2\}$ 是 $U$ 中的另一个 frame。如果 $\{\bar e_1,\bar e_2\}$ 与 $\{e_1,e_2\}$ 有相同的 orientation（定向），则
+\[
+\bar e_1=\cos\theta\,e_1+\sin\theta\,e_2,
+\qquad
+\bar e_2=-\sin\theta\,e_1+\cos\theta\,e_2,
+\]
+
+
+相反则是
+\[
+\bar e_1=\cos\theta\,e_1+\sin\theta\,e_2,
+\qquad
+\bar e_2=\sin\theta\,e_1-\cos\theta\,e_2,
+\]
+其中 $\theta$ 是局部选取的 smooth function，必要时缩小 $U$。
+
+\textbf{Proposition.} 设 $\{e_1,e_2\}$ 与 $\{\bar e_1,\bar e_2\}$ 是 $U$ 上的两个 frames，$\omega_{12},\bar\omega_{12}$ 为各自的 connection forms。按上述 frame 变换中的 $\theta$，定义
+\[
+\tau=d\theta.
+\]
+若两个 frames 同定向，则
+\[
+\omega_{12}=\bar\omega_{12}-\tau;
+\]
+若反定向，则
+\[
+\omega_{12}=-\bar\omega_{12}-\tau.
+\]
+\textbf{Proof（同定向情形）.} 记 $c=\cos\theta$、$s=\sin\theta$。由 frame 的变换，
+\[
+\omega_1=c\bar\omega_1-s\bar\omega_2,
+\qquad
+\omega_2=s\bar\omega_1+c\bar\omega_2.
+\]
+利用 $\bar\omega_{21}=-\bar\omega_{12}$ 及带 bar 的 structure equations，分组得到
+\begin{align*}
+d\omega_1
+&=-s\,d\theta\wedge\bar\omega_1
++c\,\bar\omega_{12}\wedge\bar\omega_2\\
+&\quad-c\,d\theta\wedge\bar\omega_2
+-s\,\bar\omega_{21}\wedge\bar\omega_1\\
+&=(\bar\omega_{12}-d\theta)
+\wedge(s\bar\omega_1+c\bar\omega_2)\\
+&=(\bar\omega_{12}-d\theta)\wedge\omega_2.
+\end{align*}
+同样，
+\begin{align*}
+d\omega_2
+&=c\,d\theta\wedge\bar\omega_1
++s\,\bar\omega_{12}\wedge\bar\omega_2\\
+&\quad-s\,d\theta\wedge\bar\omega_2
++c\,\bar\omega_{21}\wedge\bar\omega_1\\
+&=-(\bar\omega_{12}-d\theta)
+\wedge(c\bar\omega_1-s\bar\omega_2)\\
+&=-(\bar\omega_{12}-d\theta)\wedge\omega_1.
+\end{align*}
+因此，令 $\eta_{12}=\bar\omega_{12}-d\theta$、$\eta_{21}=-\eta_{12}$，就有
+\[
+\eta_{12}+\eta_{21}=0,
+\qquad
+d\omega_1=\eta_{12}\wedge\omega_2,
+\qquad
+d\omega_2=\eta_{21}\wedge\omega_1.
+\]
+这与 $\omega_{12},\omega_{21}$ 对同一个 coframe 满足的 structure equations 相同。由之前的 \textbf{connection forms uniqueness lemma}，
+\[
+\omega_{12}=\eta_{12}=\bar\omega_{12}-d\theta
+=\bar\omega_{12}-\tau.
+\]
+
+\textbf{Theorem.} 设 $\{e_1,e_2\}$ 与 $\{\bar e_1,\bar e_2\}$ 是 $U$ 上同定向的两个 frames，局部地以之前的 angle function $\theta$ 表示它们的变换。设 $\gamma\colon I\to U$ 是 curve，$\gamma(t_0)=p$，并选定初始有向角 $\varphi_0$，使
+\[
+\bar e_1(p)=\cos\varphi_0\,e_1(p)+\sin\varphi_0\,e_2(p).
+\]
+则整个参数区间 $I$ 上存在唯一的 differentiable angle function $\varphi$，满足 $\varphi(t_0)=\varphi_0$ 及
+\[
+\bar e_1(\gamma(t))
+=\cos\varphi(t)\,e_1(\gamma(t))
++\sin\varphi(t)\,e_2(\gamma(t)).
+\]
+其 differential 满足
+\[
+d\varphi=\gamma^*(d\theta),
+\qquad
+\varphi(t)=\varphi_0+\int_{t_0}^{t}
+(d\theta)_{\gamma(s)}\bigl(\gamma'(s)\bigr)\,ds.
+\]
+这里 $\theta$ 只需局部选取；不同局部选择在重叠处相差局部常数 $2\pi m$，因此 $d\theta$ 一致，定义了 $U$ 上的同一个 $1$-form。$\varphi$ 是沿 curve 的累计有向转角，不必限制在某个 $2\pi$ 长的范围内。
+
+\textbf{Proposition.} 设 $M$ 是一个 $2$ 维 Riemannian manifold。对于每个 $p\in M$，在 $p$ 附近选择 moving frame $\{e_1,e_2\}$，通过
+\[
+(d\omega_{12})_p=-K(p)(\omega_1\wedge\omega_2)_p
+\]
+定义一个数 $K(p)$。则 $K(p)$ 不依赖于 frame 的选择，称为 $M$ 在 $p$ 处的 Gaussian curvature。
+
+\textbf{Proof.} 设 $\{\bar e_1,\bar e_2\}$ 是 $p$ 附近的另一个 moving frame。先假设两个 frames 同定向。由前面的 Proposition，局部地有
+\[
+\omega_{12}=\bar\omega_{12}-d\theta.
+\]
+由于 $d(d\theta)=0$，有 $d\omega_{12}=d\bar\omega_{12}$。又由 coframe 的变换，
+\[
+\bar\omega_1\wedge\bar\omega_2=\omega_1\wedge\omega_2.
+\]
+从而
+\begin{align*}
+-K\omega_1\wedge\omega_2
+&=d\omega_{12}=d\bar\omega_{12}\\
+&=-\bar K\bar\omega_1\wedge\bar\omega_2
+=-\bar K\omega_1\wedge\omega_2.
+\end{align*}
+由于 $\omega_1\wedge\omega_2$ 处处非零，得到 $K=\bar K$。
+
+若两个 frames 反定向，则
+\[
+\omega_{12}=-\bar\omega_{12}-d\theta,
+\qquad
+\bar\omega_1\wedge\bar\omega_2=-\omega_1\wedge\omega_2.
+\]
+因此
+\[
+-K\omega_1\wedge\omega_2
+=d\omega_{12}=-d\bar\omega_{12}
+=\bar K\bar\omega_1\wedge\bar\omega_2
+=-\bar K\omega_1\wedge\omega_2,
+\]
+同样得到 $K=\bar K$。\hfill$\square$
+
+\medskip
+\textbf{Definition.} 设 $M$ 是一个 $2$ 维 Riemannian manifold，$Y$ 是 $M$ 上的 differentiable vector field。取 $p\in M$、$x\in T_pM$，并考虑 curve $\alpha\colon(-\varepsilon,\varepsilon)\to M$，满足 $\alpha(0)=p$、$\alpha'(0)=x$。为定义 $Y$ 在 $p$ 处沿 $x$ 的 covariant derivative（协变导数）$(\nabla_xY)(p)$，在 $p$ 附近选 moving frame $\{e_i\}$，将 $Y(\alpha(t))$ 在这个 frame 下表示为
+\[
+Y(\alpha(t))=\sum_i y_i(t)e_i,\qquad i=1,2,
+\]
+并令
+\[
+(\nabla_xY)(p)
+=\sum_i\left(
+\frac{dy_i}{dt}(0)+\sum_j\omega_{ji}(x)y_j(0)
+\right)e_i,
+\qquad i,j=1,2,
+\]
+其中约定 $\omega_{ii}=0$。
+
+在二维情形，展开为
+\[
+(\nabla_xY)(p)=\bigl(y_1'(0)-\omega_{12}(x)y_2(0)\bigr)e_1(p)+\bigl(y_2'(0)+\omega_{12}(x)y_1(0)\bigr)e_2(p).
+\]
+其中 prime 表示对 curve 的参数 $t$ 求导。
+
+\par\noindent
+
+$\omega_{12}$ 与 covariant derivative 的关系为
+\[
+\omega_{12}(x)
+=\langle\nabla_xe_1,e_2\rangle
+=-\langle e_1,\nabla_xe_2\rangle.
+\]
+事实上，$\nabla_xe_1=\omega_{12}(x)e_2$，$\nabla_xe_2=-\omega_{12}(x)e_1$。
+
+\par\noindent\textbf{Lemma.} Covariant derivative 不依赖于 frame 的选择。
+
+\textbf{Proof（同定向情形）.} 沿 $\alpha(t)$ 计算，以下各量最终均在 $t=0$ 取值。记
+\[
+c=\cos\theta,\qquad s=\sin\theta,\qquad
+\theta'=(\theta\circ\alpha)'(0)=d\theta_p(x),\qquad
+A=\bar\omega_{12}(x).
+\]
+由同定向的 frame 变换及 $Y=y_1e_1+y_2e_2=\bar y_1\bar e_1+\bar y_2\bar e_2$，有
+\[
+\begin{aligned}
+e_1&=c\bar e_1-s\bar e_2,& e_2&=s\bar e_1+c\bar e_2,\\
+y_1&=c\bar y_1-s\bar y_2,& y_2&=s\bar y_1+c\bar y_2.
+\end{aligned}
+\]
+对分量求导，得到
+\begin{align*}
+y_1'&=-s\theta'\bar y_1+c\bar y_1'-c\theta'\bar y_2-s\bar y_2',\\
+y_2'&=c\theta'\bar y_1+s\bar y_1'-s\theta'\bar y_2+c\bar y_2'.
+\end{align*}
+由之前的 connection form 变换公式，$\omega_{12}(x)=A-\theta'$。将这些表达式代入
+\[
+\nabla_xY=(y_1'-\omega_{12}(x)y_2)e_1
++(y_2'+\omega_{12}(x)y_1)e_2.
+\]
+换成 $\bar e_1,\bar e_2$ 后，$\bar e_1$ 的系数为
+\[
+C_1=c\bigl(y_1'-(A-\theta')y_2\bigr)
++s\bigl(y_2'+(A-\theta')y_1\bigr).
+\]
+全部代入，尚未化简时为
+\begin{align*}
+C_1={}&c\bigl[-s\theta'\bar y_1+c\bar y_1'
+-c\theta'\bar y_2-s\bar y_2'
+-(A-\theta')(s\bar y_1+c\bar y_2)\bigr]\\
+&+s\bigl[c\theta'\bar y_1+s\bar y_1'
+-s\theta'\bar y_2+c\bar y_2'
++(A-\theta')(c\bar y_1-s\bar y_2)\bigr].
+\end{align*}
+按 $\bar y_1',\bar y_2',\bar y_1,\bar y_2$ 收集系数，分别为
+\begin{align*}
+\bar y_1':&\quad c^2+s^2=1,\\
+\bar y_2':&\quad -cs+sc=0,\\
+\bar y_1:&\quad -cs\theta'-cs(A-\theta')
++sc\theta'+sc(A-\theta')=0,\\
+\bar y_2:&\quad -c^2\theta'-c^2(A-\theta')
+-s^2\theta'-s^2(A-\theta')=-A.
+\end{align*}
+因此 $C_1=\bar y_1'-A\bar y_2$。同样，$\bar e_2$ 的系数为
+\begin{align*}
+C_2&=-s\bigl(y_1'-(A-\theta')y_2\bigr)
++c\bigl(y_2'+(A-\theta')y_1\bigr)\\
+&=(-sy_1'+cy_2')+(A-\theta')(sy_2+cy_1)\\
+&=(\bar y_2'+\theta'\bar y_1)+(A-\theta')\bar y_1
+=\bar y_2'+A\bar y_1.
+\end{align*}
+故
+\[
+\nabla_xY
+=\bigl(\bar y_1'-\bar\omega_{12}(x)\bar y_2\bigr)\bar e_1
++\bigl(\bar y_2'+\bar\omega_{12}(x)\bar y_1\bigr)\bar e_2,
+\]
+与用带 bar 的 frame 定义的结果一致。同定向情形得证。
+
+
+\medskip
+在进入之后的概念前，先看一下 $\mathbb{R}^2$ 作为 $M$ 有什么把握。
+\begin{enumerate}
+\item $K\equiv0$。注意由之前的论述，$K$ 无关 $e_i$ 的选择。令 $e_1=\partial_x$、$e_2=\partial_y$，从而 $\omega_1=dx$，于是 $d\omega_1=0$、$d\omega_2=0$。由满足
+\[
+d\omega_1=\omega_{12}\wedge\omega_2,
+\qquad d\omega_2=\omega_{21}\wedge\omega_1
+\]
+的 $\omega_{12}$ 的唯一性，得到 $\omega_{12}=0$，从而 $K=0$。
+
+\item $\nabla_xY$。仍假设 $e_1=\partial_x$、$e_2=\partial_y$，那 $\omega_{12}=0$，就得
+\[
+\nabla_xY=y_1'e_1+y_2'e_2,
+\]
+即方向导数。
+\end{enumerate}
+
+\medskip
+\textbf{Proposition.} 设 $V$ 是沿 curve $\alpha(s)$ 的 differentiable tangent vector field，则
+\[
+\frac{d}{ds}\langle V,V\rangle
+=\langle\nabla_{\alpha'}V,V\rangle
++\langle V,\nabla_{\alpha'}V\rangle.
+\]
+
+\textbf{Proof.} 沿 $\alpha$ 写 $V=v_1e_1+v_2e_2$，记 $a=\omega_{12}(\alpha')$。由于 frame 是 orthonormal，
+\[
+\frac{d}{ds}\langle V,V\rangle
+=\frac{d}{ds}(v_1^2+v_2^2)
+=2v_1v_1'+2v_2v_2'.
+\]
+另一方面，
+\[
+\nabla_{\alpha'}V=(v_1'-av_2)e_1+(v_2'+av_1)e_2,
+\]
+所以
+\begin{align*}
+\langle\nabla_{\alpha'}V,V\rangle
+&=(v_1'-av_2)v_1+(v_2'+av_1)v_2\\
+&=v_1v_1'+v_2v_2'.
+\end{align*}
+两个 connection 项由 $\omega_{21}=-\omega_{12}$ 恰好抵消。再由 inner product 的对称性，结论成立。\hfill$\square$
+\textbf{Definition.} 沿 curve $\alpha\colon I\to M$ 的 vector field $Y$ 称为沿 $\alpha$ 的 parallel vector field（平行向量场），如果
+\[
+\nabla_{\alpha'(t)}Y=0,\qquad t\in I.
+\]
+由上面的 Proposition，若 $V$ 沿 $\alpha$ 平行，则 $\dfrac{d}{ds}\|V\|^2=0$，因此 $\|V\|$ 恒定。
+
+
+\textbf{Proposition.} 设 $M\subset\mathbb{R}^3$ 采用 Euclidean inner product 诱导的 metric，$Y$ 是沿 $\alpha\colon I\to M$ 的 tangent vector field。则
+\[
+\nabla_{\alpha'}Y=\left(\frac{dY}{dt}\right)^{\top},
+\]
+其中 ${}^{\top}$ 表示向 $T_{\alpha(t)}M$ 的 orthogonal projection（正交投影）。因此，$Y$ 沿 $\alpha$ 平行，当且仅当 $dY/dt$ 的 tangent projection 为零，即 $dY/dt$ 沿 surface normal（包括零向量的情形）。
+
+\textbf{Proof.} 沿 $\alpha$ 局部选取 adapted frame $e_1,e_2,e_3$，$e_3$ 为 unit normal。
+沿 curve $\alpha(t)$ 时，$e_i(t)$ 实际表示 $e_i\circ\alpha(t)$。由 chain rule（链式法则），
+\[
+\frac{de_i}{dt}
+=(de_i)_{\alpha(t)}\bigl(\alpha'(t)\bigr).
+\]
+因此，将 $de_i=\sum_j\omega_{ij}e_j$ 作用到 $\alpha'(t)$ 上，就得到
+\[
+\frac{de_i}{dt}=\sum_j\omega_{ij}(\alpha')e_j.
+\]
+这里 $\omega_{ij}$ 是 $1$-form，而 $\omega_{ij}(\alpha')$ 已经是 scalar function。在 $\mathbb{R}^3$ 中，具体为
+\[
+\frac{de_1}{dt}=\omega_{12}(\alpha')e_2+\omega_{13}(\alpha')e_3,
+\qquad
+\frac{de_2}{dt}=-\omega_{12}(\alpha')e_1+\omega_{23}(\alpha')e_3.
+\]
+所以，沿 surface 上的 curve 写 $Y=y_1e_1+y_2e_2$ 时，普通的乘积求导公式给出
+\begin{align*}
+\frac{dY}{dt}
+&=y_1'e_1+y_2'e_2+y_1\frac{de_1}{dt}+y_2\frac{de_2}{dt}\\
+&=y_1'e_1+y_2'e_2
++y_1\bigl[\omega_{12}(\alpha')e_2+\omega_{13}(\alpha')e_3\bigr]\\
+&\quad+y_2\bigl[-\omega_{12}(\alpha')e_1+\omega_{23}(\alpha')e_3\bigr].
+\end{align*}
+
+
+按 $e_1,e_2,e_3$ 收集系数，得到
+\begin{align*}
+\frac{dY}{dt}
+&=\bigl(y_1'-\omega_{12}(\alpha')y_2\bigr)e_1
++\bigl(y_2'+\omega_{12}(\alpha')y_1\bigr)e_2\\
+&\quad+\bigl(y_1\omega_{13}(\alpha')+y_2\omega_{23}(\alpha')\bigr)e_3.
+\end{align*}
+前两项正是 $\nabla_{\alpha'}Y$，最后一项是 normal 分量，故结论成立。\hfill$\square$
+
+\par\noindent\textbf{Definition.} 如果 curve $\alpha\colon I\to M$ 的 velocity field $\alpha'$ 沿 $\alpha$ 平行，即
+\[
+\nabla_{\alpha'(t)}\alpha'=0,\qquad t\in I,
+\]
+则称 $\alpha$ 为 geodesic（测地线）。
+
+\medskip
+考虑 $\mathbb{R}^3$ 中的嵌入 surface $M$，以及以 arc length 参数化的 curve $\alpha(s)$。曲率 $k=\|\alpha''\|$，考虑 $\alpha''$ 在 $T_{\alpha(s)}M$ 上的投影。取 adapted frame $\{e_i\}$，$e_1=\alpha'$，从而
+\[
+\alpha''=\frac{de_1}{ds}
+=\omega_{12}(\alpha')e_2+\omega_{13}(\alpha')e_3.
+\]
+所以在 tangent plane 上的投影为 $\omega_{12}(\alpha')e_2$。
+
+\textbf{Definition.} 一般地，设 $M$ 是一个 oriented 的 $2$ 维 Riemannian manifold，$\alpha\colon I\to M$ 以 arc length $s$ 参数化。沿 $\alpha$ 选取与 $M$ 的 orientation 一致的 frame $\{e_1=\alpha',e_2\}$，令
+\[
+k_g=(\alpha^*\omega_{12})\left(\frac{d}{ds}\right)
+=\omega_{12}(\alpha'),
+\]
+称为 $\alpha$ 在 $M$ 中的 geodesic curvature（测地曲率）。
+
+\medskip
+\textbf{Proposition.} 设 $\alpha\colon I\to M^2$ 以 arc length 参数化，取 frame $\{e_1=\alpha',e_2\}$。则
+\[
+e_1\text{ 沿 }\alpha\text{ 平行}
+\quad\Longleftrightarrow\quad
+\alpha^*\omega_{12}=0.
+\]
+
+\textbf{Proof.}
+\[
+e_1\text{ 沿 }\alpha\text{ 平行}
+\quad\Longleftrightarrow\quad
+\nabla_{\alpha'(t)}e_1=0
+\quad\Longleftrightarrow\quad
+\nabla_{e_1}e_1=0.
+\]
+而 $\nabla_xe_1=\omega_{12}(x)e_2$，故等价性成立。\hfill$\square$
+
+这里 $e_1=\alpha'$，所以
+\[
+(\alpha^*\omega_{12})_s\left(\frac{\partial}{\partial s}\right)
+=(\omega_{12})_{\alpha(s)}\bigl(\alpha'(s)\bigr)
+=(\omega_{12})_{\alpha(s)}\bigl(e_1(\alpha(s))\bigr),
+\]
+即 $\alpha^*\omega_{12}=\bigl(\omega_{12}(e_1)\circ\alpha\bigr)\,ds$。
+
+\medskip
+\textbf{Corollary.} 以 arc length 参数化的 curve $\alpha$ 是 geodesic，当且仅当其 geodesic curvature 恒为零。
+
+\medskip
+\textbf{Proposition.} 设 $M^2$ 是 oriented 的 Riemannian manifold，$\alpha\colon I\to M$ 是以 arc length $s$ 参数化的 differentiable curve，$\alpha'(s)\neq0$。设 $V$ 是沿 $\alpha$ 的非零 parallel vector field，$\varphi=\operatorname{ang}(V,\alpha')$ 为按给定 orientation 测量、沿曲线连续选取的有向角。则
+\[
+k_g(s)=\frac{d\varphi}{ds}.
+\]
+
+\textbf{Proof.} 令 $\bar e_1=\alpha'$，补成与 $M$ 同定向的 frame $\{\bar e_1,\bar e_2\}$；令 $e_1=V/\|V\|$，补成同定向的 frame $\{e_1,e_2\}$。局部地可将两套 frames 扩展到 $M$ 上的一个 neighborhood，并写
+\[
+\bar e_1=\cos\varphi\,e_1+\sin\varphi\,e_2,
+\qquad
+\bar e_2=-\sin\varphi\,e_1+\cos\varphi\,e_2.
+\]
+由 connection forms 的变换公式，
+\[
+\omega_{12}=\bar\omega_{12}-d\varphi.
+\]
+由于 $V$ 平行，$\|V\|$ 恒定，故 $e_1$ 也沿 $\alpha$ 平行。于是
+\[
+0=\nabla_{\alpha'}e_1=\omega_{12}(\alpha')e_2,
+\qquad\text{即}\quad\omega_{12}(\alpha')=0.
+\]
+因此
+\begin{align*}
+k_g(s)
+&=\bar\omega_{12}(\bar e_1)
+=\omega_{12}(\alpha')+d\varphi(\alpha')\\
+&=d\varphi(\alpha')
+=\frac{d}{ds}(\varphi\circ\alpha)
+=\frac{d\varphi}{ds}.
+\end{align*}
+最后使用了 chain rule；其中局部 neighborhood 上的 angle function 与沿 $\alpha$ 的 angle function 仍用同一个记号 $\varphi$。结论沿整条参数区间成立。\hfill$\square$
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

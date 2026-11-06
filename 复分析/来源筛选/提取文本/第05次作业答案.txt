@@ -1,0 +1,292 @@
+
+===== PDF PAGE 1 =====
+        复分析第5 次作业标准解答
+
+
+
+
+                              Homework 5
+
+题干保留作业原件的英文表述，解答采用中文。A(Ω) 表示Ω上的全纯函数空间，Γ 表示相应曲线
+的迹。第三题第一问按用户要求作为课堂已知定理使用，暂不证明；第二问直接由第一问推出。第
+四题也允许使用该已知定理。本答案采用用户所附课堂截图中的同调于零定义与Cauchy 定理。
+
+
+               1 Minimum modulus principle
+
+
+Problem 原题
+
+1) State and prove the minimum modulus principle for non-vanishing holomorphic functions f on
+a domain Ω.
+
+2) Let Ωbe a bounded domain and f ∈A(Ω) ∩C0(Ω). Suppose that |f(z)| is constant for z ∈∂Ω.
+Show that either f is constant or f has a zero in Ω.
+
+
+1) 最小模原理
+
+
+解答 定理陈述。设Ω⊂C 为区域，f ∈A(Ω) 且f 在Ω内处处非零。若|f| 在Ω内某点取得局
+部极小值，则f 在Ω上为常数。等价地，非常数且处处非零的全纯函数，其模在区域内部不能取
+得局部极小值。
+
+证明。由f 处处非零，函数g = 1/f 在Ω上全纯。如果|f| 在z0 ∈Ω处局部极小，则|g| = 1/|f|
+在z0 处局部极大。由最大模原理，g 在连通区域Ω上为常数，故f 亦为常数。
+
+相应地，若Ω有界、f ∈C(Ω) 且f 在Ω上处处非零，则|f| 的最小值在边界上取得。这是由闭
+包的紧性与刚证的内部最小模原理得到的。
+
+
+2) 边界上模恒定
+
+
+解答 设边界上|f| = c，其中c ≥0。若c = 0，最大模原理的边界形式给出|f| ≤0，故f ≡0。
+
+以下设c > 0。若f 在Ω内已有零点，则结论成立。若f 在Ω内没有零点，则结合边界上|f| = c > 0，
+f 在整个Ω上都不为零。因此
+                                    1
+                                         f,  ∈A(Ω) ∩C(Ω).
+                                     f
+
+分别对f 和1/f 应用最大模原理的边界形式，得到
+
+                                          1                                 |f(z)| ≤c,      ≤1   (z ∈Ω).
+                                           f(z)    c
+
+第二个不等式即|f(z)| ≥c，所以|f| ≡c。由最大模原理，f 为常数。故
+
+               f为常数，或者f在Ω内有零点。
+
+
+
+                                          1
+
+===== PDF PAGE 2 =====
+                                                                                    2
+
+
+                   2  Painlevé’s theorem
+
+
+Problem 原题
+
+Prove the following Painlevé’s Theorem: Assume that Ω1 and Ω2 are two domains with an adjacent
+piece-wise smooth boundary arc L. Let fj(z), j = 1, 2, be holomorphic functions on Ωj which are
+continuous on Ωj, respectively. Furthermore, suppose that f1(z) = f2(z) for z ∈L. Define
+                       (
+                                              f1(z),  z ∈Ω1 ∪L,
+                             F(z) =
+                                              f2(z),  z ∈Ω2.
+
+Then, F is holomorphic on Ω1 ∪L ∪Ω2.
+
+解答 记U = Ω1 ∪L ∪Ω2。按“相邻公共边界弧”的通常含义，U 为开集：公共弧上每点附近的
+两侧分别属于Ω1 与Ω2。弧的外侧端点若不属于U 的内点，就不计入这里的拼接区域；全纯性的
+结论是对开区域U 而言的。
+
+由于f1, f2 分别连续到边界，且在L 上取值相同，F 在U 上连续；在U \ L 上它已经全纯。只需
+证明它在L 附近全纯。
+
+任取p ∈L，取以p 为中心的小圆盘D，使D ⊂U，且L ∩D 包含在有限长度的分段光滑弧内。
+记这段弧的长度为ℓ。下面证明：对任意闭三角形T ⊂D，均有
+                                Z
+                                      F(z) dz = 0.
+                                        ∂T
+
+于是由Morera 定理，F 在D 上全纯。
+
+将T 的每条边等分为N 段，再作平行线，把它剖分成N2 个相似小三角形。令h = diam(T)/N。
+各小三角形的直径不超过h，周长不超过CT h，其中CT 与N 无关。称闭包与L 相交的小三角形
+为边界三角形，其余的称为内部三角形。
+
+每个内部三角形及其边界均位于某一个Ωj 中。由Cauchy 积分定理，F 沿其正向边界的积分为零。
+边界三角形的个数BN 满足
+                                                         ℓ
+                         BN ≤CT  1 +       .
+                                         h
+
+理由是：将上述有限长度弧按弧长分为长度不超过h 的小段，共不超过1 + ℓ/h 段；每段包含在一
+个半径h 的圆盘内。在这组形状固定、大小为h 的三角网格中，每个这样的圆盘至多与固定个数
+的小三角形相交，故得到上界。
+
+由F 在紧集T 上一致连续，令
+
+                  ω(h) =  sup  |F(z) −F(w)|,    ω(h) −→0  (h →0).
+                              z,w∈T
+                            |z−w|≤h
+
+对每个边界三角形Q，任取aQ ∈Q。由于常数函数沿闭曲线的积分为零，
+                  Z            Z
+                       F(z) dz =     F(z) −F(aQ) dz ≤CT h ω(h).
+                    ∂Q           ∂Q
+
+把所有小三角形的正向边界积分相加，内部公共边两两抵消。内部三角形的积分又均为零，所以
+            Z
+                 F(z) dz ≤BNCT h ω(h) ≤C′T (h + ℓ)ω(h) −→0   (N →∞).
+                ∂T
+
+左边与N 无关，故必为零。由Morera 定理，F 在D 上全纯。p ∈L 任意，结合F 在U \ L 上的
+全纯性，即得F ∈A(U)。
+
+===== PDF PAGE 3 =====
+                                                                                    3
+
+
+         3  Homological Cauchy theorem and formula
+
+
+Problem 原题
+                        Pm
+Let Ωbe a domain. A chain on Ωis of the form   j=1 cjγj, where cj ∈Z and γj’s are closed piece-                  Pm
+wise smooth curves on Ω. A chain   j=1 cjγj is said to be homologous to 0, if for all z ∈C \ Ω,
+
+            Xm
+                                      cjW(γj; z) = 0.
+
+                                      j=1
+              Pm
+Show that for f ∈A(Ω), if   j=1 cjγj is homologous to 0 then
+                         m   I            X
+                                                 cj    f(z) dz = 0,
+                                     j=1     γj
+
+and              m   I            m                m                1 X      f(ζ)   X          [
+                             cj         dζ = f(z)    cjW(γj; z),     z ∈Ω\    Γj.
+               2πi                               ζ −z                     j=1     γj                                              j=1                        j=1
+
+
+第一问 同调形式的Cauchy 定理
+                              Pm
+按用户要求，暂不证明，直接作为已知定理使用：若链C =   j=1 cjγj 在Ω中同调于零，则
+
+                   m   I         X
+                                      cj    h(ζ) dζ = 0 对每个h ∈A(Ω).
+                            j=1     γj
+
+
+第二问 由第一问推出积分公式
+
+           Sm
+解答 固定z ∈Ω\  j=1 Γj，定义
+                    
+                     f(ζ) −f(z)                                                                                                           ,     ζ̸ = z,
+                                 gz(ζ) =      ζ −z
+                                         f′(z),         ζ = z.
+
+由f 在z 处的Taylor 展开，ζ = z 是上述差商的可去奇点，按所给值补定义后有gz ∈A(Ω)。
+对gz 应用第一问的已知定理，得
+                    m   I         X      f(ζ) −f(z)
+                       0 =     cj              dζ
+                                           ζ −z                              j=1     γj
+                    m   I            m   I         X      f(ζ)   X       dζ
+                =     cj         dζ −f(z)     cj               .
+                                        ζ −z                                                                 ζ −z                                                      j=1     γj                              j=1     γj
+
+根据绕数的定义，                          I
+                                           1      dζ
+                             W(γj; z) =                      .
+                                           2πi  γj ζ −z
+移项并除以2πi，便得
+                    m   I            m                        1 X      f(ζ)   X
+                                        cj         dζ = f(z)    cjW(γj; z).
+                        2πi                                        ζ −z                              j=1     γj                                                       j=1
+
+这里使用的是整条链同调于零，并不要求每条γj 分别同调于零。
+
+===== PDF PAGE 4 =====
+                                                                                    4
+
+
+        4  Winding number under a holomorphic map
+
+
+Problem 原题
+
+Let Ωbe a domain and f ∈A(Ω).  Let γ be a closed piece-wise smooth curve in Ωwhich is
+homologous to 0. Let σ = f ◦γ and suppose that σ does not pass through α. Let {aj}mj=1 be the
+preimages of α under f, with multiplicity rj, 1 ≤j ≤m. Prove that
+
+              Xm
+                          W(σ; α) =    rjW(γ; aj).
+
+                                              j=1
+
+
+解答  α /∈σ 等价于f(ζ) −α 在γ 上处处非零，所以没有aj 落在γ 的迹上。题面以有限个点
+a1, . . . , am 列出全部原像；以下按此条件，将它们视为互不相同的点，重数由rj 记录。
+
+若f 为常数，则f̸ = α，原像集合为空，σ 为常曲线，等式两边均为0。以下设f 非常数。
+
+由零点的局部分解，可以定义
+
+                                  f(ζ) −α
+                         g(ζ) = Qm                 (ζ /∈{a1, . . . , am}).
+                                   j=1(ζ −aj)rj
+
+在每个aj 处，分子与分母恰有相同的零点阶数，故商的奇点可去，补定义后g 在Ω上全纯且处处
+非零。因此g′/g ∈A(Ω)，而在避开这些零点处，
+
+                                    f′(ζ)  Xm    rj      g′(ζ)
+                        =      +         .
+                               f(ζ) −α       ζ −aj    g(ζ)
+                                            j=1
+
+由曲线积分换元σ = f ◦γ，
+                                I            I
+                                 1    dw     1       f′(ζ)
+                   W(σ; α) =        =                 dζ.
+                                 2πi  σ w −α   2πi  γ f(ζ) −α
+
+将上面的分解代入。由于γ 在Ω中同调于零，对全纯函数g′/g 应用第三题第一问的已知定理，有
+                                I
+                                               g′(ζ)
+                                           dζ = 0.
+                                              γ g(ζ)
+
+故
+
+                             m      I              X   1      dζ
+                         W(σ; α) =     rj
+                                              2πi  γ ζ −aj                                            j=1
+              Xm
+                        =    rjW(γ; aj).
+
+                                            j=1
+
+这就证明了所求等式。这里不必假设g 在Ω上存在全纯对数。
+
+===== PDF PAGE 5 =====
+                                                                                    5
+
+
+                  5  Higher order kernels
+
+
+Problem 原题
+
+Let γ be a closed piece-wise smooth curve in C and denote by Γ its trace. Prove that, for any
+n ≥2,                            I
+                                    dζ
+                           = 0,     z /∈Γ.
+                                        γ (ζ −z)n
+
+解答 固定z /∈Γ 与整数n ≥2。在C \ {z} 上，函数(ζ −z)−n 有单值全纯原函数
+
+                              1                             1
+                  H(ζ) = −       −z)−(n−1),    H′(ζ) =               .                        n −1(ζ                           (ζ −z)n
+
+若γ : [a, b] →C \ {z} 为分段光滑的闭曲线，逐段使用链式法则与微积分基本定理，得到
+                       I
+                               dζ
+                       = H(γ(b)) −H(γ(a)) = 0.
+                                  γ (ζ −z)n
+
+最后一步利用γ(a) = γ(b)，因此
+                                I
+                                         dζ
+                              = 0.
+                                              γ (ζ −z)n
+
+此题不要求γ 在C \ {z} 中同调于零；原函数的存在已足够。条件n ≥2 是必要的：当n = 1 时，
+该积分为2πiW(γ; z)，未必为零。

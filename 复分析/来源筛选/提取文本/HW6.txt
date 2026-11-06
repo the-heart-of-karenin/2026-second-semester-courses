@@ -1,0 +1,65 @@
+
+===== PDF PAGE 1 =====
+    1. Let f(t) be a continuous function on [0, ∞). Assume that there exist A > 0 and c ∈R such that
+|f(t)| ≤Aect for t sufficiently large. The Laplace transform is an integral of the form
+
+                                        Z ∞
+                                   Lf(z) =     f(t)e−ztdt.
+                                                         0
+
+1) Show that the Laplace transform Lf is holomorphic in the half-plane {Re z > c}. (c is called the abscissa
+of convergence of the integral.)
+2) Assume that f is of class C1. Show that Lf ′(z) = zLf(z) −f(0).
+
+    2. Let P be a complex polynomial of degree n ≥2, with n not necessarily distinct zeros z1, · · · , zn. Prove
+the following Gauss-Lucas theorem:
+For each zero ζ of P ′, there exist n non-negative real numbers λ1, · · · , λn with Pnj=1 λj = 1 such that
+ζ = Pnj=1 λjzj.
+Hint. Note that for z ∈C\{z1, · · · , zn},
+
+
+                                         n           n
+                         P ′(z) X   1  X  z −zj
+                        =      =                     .
+                               P(z)       z −zj         |z −zj|2
+                                           j=1          j=1
+
+
+    3. Let Ωbe a domain and f ∈A(Ω). Show that, for any z0 ∈Ωand any open neighborhood U of z0 in
+Ω, there exist two points z1, z2 ∈U such that
+
+                                        f(z2) −f(z1)
+                                = f ′(z0).
+                                              z2 −z1
+
+Hint. Consider the function g(z) := f(z) −zf ′(z0).
+
+    4. 1) Prove the following L2 version of Riemann’s removable singularity theorem.  If f has an isolated
+singularity at z0 and is L2-integrable near z0, then z0 is a removable singularity for f.
+     P∞Hint. Let  n=−∞an(z −z0)n be the Laurent series expansion of f. Use the L2 integrability to show that
+an = 0 for all n < 0.
+2) Give an example to show that the L2 integrability is optimal, i.e., the theorem does not hold if assuming
+only Lp integrability for any p < 2.
+
+    5. Let Ω= {z ∈C : a < ℑz < b}, −∞≤a < b ≤∞. Let f ∈A(Ω) with period 1, i.e. f(z + 1) = f(z)
+for all z ∈Ω. Prove that f can be represented as the complex Fourier series:
+
+                            ∞
+                                       f(z) = X  anei2πnz,
+
+                                  n=−∞
+
+which is normally convergent on Ω. And the Fourier coefficients an, n ∈Z, are given by the formula
+
+                                 Z 1
+                                an =    f(x + iy)e−i2πn(x+iy)dx,
+                                                0
+
+where y ∈(a, b) is arbitrary.
+Hint. Consider the map w = ei2πz and the function g(w) = g(ei2πz) = f(z).
+
+
+
+
+
+                                              1

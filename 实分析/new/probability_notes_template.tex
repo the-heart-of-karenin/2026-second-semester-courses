@@ -1,0 +1,137 @@
+% !TeX program = xelatex
+% 概率论讲义排版模板（按原 PDF 风格近似复刻）
+\documentclass[12pt,letterpaper,twoside,openright]{ctexbook}
+
+% 原 PDF 的中文正文字体为 FandolSong，西文/数学主要为 Latin Modern。
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% -------------------- 超链接 --------------------
+% 原 PDF 目录条目为蓝色可点击链接，而页码保持黑色。
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  linktoc=section
+}
+
+% -------------------- 章节样式 --------------------
+% 保留英文 Chapter 1 / Contents 的外观。
+\renewcommand{\contentsname}{Contents}
+\ctexset{
+  chapter = {
+    name = {Chapter\ ,},
+    number = \arabic{chapter},
+    format = \raggedright\normalfont,
+    nameformat = \huge,
+    numberformat = \huge,
+    titleformat = \Huge\bfseries,
+    aftername = {\par\vspace{0.9em}},
+    beforeskip = 10pt,
+    afterskip = 26pt
+  },
+  section = {
+    format = \raggedright\Large\bfseries,
+    aftername = \quad,
+    beforeskip = 3.2ex plus 1ex minus .2ex,
+    afterskip = 1.5ex plus .2ex
+  }
+}
+
+% book/ctexbook 的 headings 页眉与原 PDF 很接近：
+% 偶数页：页码在左，章标题在右；奇数页：节标题在左，页码在右。
+\pagestyle{headings}
+
+% -------------------- 定理类环境 --------------------
+% 原 PDF 中 theorem/proposition/corollary 共用一个全局编号；
+% definition 自己全局编号；example 自己全局编号。
+% 环境标题与正文同为 12pt，标题加粗并着色。
+
+\newtheoremstyle{bluehead}
+  {0.8\baselineskip}      % Space above
+  {0.45\baselineskip}     % Space below
+  {\normalfont}           % Body font
+  {0pt}                    % Indent
+  {\color{blue}\bfseries} % Head font
+  {}                       % Punctuation after head
+  {0.45em}                 % Space after head
+  {\thmname{#1}\thmnumber{ #2.}\thmnote{(#3)}}
+
+\newtheoremstyle{olivehead}
+  {0.8\baselineskip}
+  {0.45\baselineskip}
+  {\normalfont}
+  {0pt}
+  {\color{olive}\bfseries}
+  {}
+  {0.45em}
+  {\thmname{#1}\thmnumber{ #2.}\thmnote{(#3)}}
+
+\newtheoremstyle{orangehead}
+  {0.8\baselineskip}
+  {0.45\baselineskip}
+  {\normalfont}
+  {0pt}
+  {\color{orange}\bfseries}
+  {}
+  {0.45em}
+  {\thmname{#1}\thmnumber{ #2.}\thmnote{(#3)}}
+
+\newtheoremstyle{redremark}
+  {0.8\baselineskip}
+  {0.45\baselineskip}
+  {\normalfont}
+  {0pt}
+  {\color{red}\bfseries}
+  {}
+  {0.45em}
+  {\thmname{#1.}}
+
+\theoremstyle{bluehead}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+% 原讲义中有 **Theorem、**Proposition 这样的强调写法。
+\newtheorem{doubletheorem}[theorem]{**Theorem}
+\newtheorem{doubleproposition}[theorem]{**Proposition}
+
+\theoremstyle{olivehead}
+\newtheorem{definition}{Definition}
+% 原讲义中有 *Definition 这样的强调写法。
+\newtheorem{stardefinition}[definition]{*Definition}
+
+\theoremstyle{orangehead}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{redremark}
+\newtheorem*{remark}{Remark}
+
+% amsthm 默认 Proof. 为斜体，结尾为方框，与原 PDF 基本一致。
+\renewcommand{\proofname}{Proof}
+
+% -------------------- 文档 --------------------
+\begin{document}
+
+% 原 PDF 当前文件从逻辑页码 3 开始；目录在 p.3，p.4 为空白页，Chapter 1 从 p.5 开始。
+\setcounter{page}{3}
+\tableofcontents
+
+% 每一章由 book 类的 openright 自动从奇数页开始；必要时插入空白偶数页。
+\chapter{概率论的公理化}
+
+% 当前转换到的节：
+\input{section_1_1.tex}
+
+% 后续继续时依次加入：
+% \input{section_1_2.tex}
+% \input{section_1_3.tex}
+% \chapter{一元概率论}
+% \input{section_2_1.tex}
+% ...
+
+\end{document}
+
