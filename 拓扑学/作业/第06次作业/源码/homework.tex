@@ -1,0 +1,213 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=2.15cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,tikz,fancyhdr,hyperref}
+\usetikzlibrary{arrows.meta}
+\setCJKmainfont{SimSun}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\setlength{\headheight}{15pt}
+\setlength{\parskip}{5pt}
+\linespread{1.12}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{基础拓扑学及应用\quad 第六次作业解答}\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}\newcommand{\Z}{\mathbb Z}\newcommand{\C}{\mathbb C}
+\newcommand{\id}{\operatorname{id}}\newcommand{\pf}{\par\noindent\textbf{证明。}}
+\newcommand{\problem}[2]{\subsection*{#1}\noindent\textbf{题目。}#2\par}
+\begin{document}
+\begin{center}{\LARGE\bfseries 第六次作业解答}\\[5pt]
+《基础拓扑学及应用》（雷逢春、杨志青、李凤玲）\\[3pt]
+第105页：8、9、10、11、16；第166页起：15、16、17、18、22、23
+\end{center}
+\noindent 下文题号按教材习题编号；习题7.1的第16题及以后续于第167页。$I=[0,1]$，所有同伦与映射均连续。可缩空间按通常约定非空；覆盖映射按满射的均匀覆盖定义理解。涉及覆盖重数时，底空间连通。
+\section*{一、习题5.1：同伦与同伦等价}
+\problem{8. 同伦逆的唯一性（差一个同伦）}{设 $f:X\to Y$ 是同伦等价。证明 $f$ 的任意两个同伦逆是同伦的。}
+\pf 设 $g,h:Y\to X$ 都是 $f$ 的同伦逆，即
+\[gf\simeq\id_X,\quad fg\simeq\id_Y,\qquad hf\simeq\id_X,\quad fh\simeq\id_Y.\]
+利用同伦可与连续映射复合，得到
+\[g=g\id_Y\simeq g(fh)=(gf)h\simeq\id_Xh=h.\]
+因此 $g\simeq h$。这里的结论是普通同伦；题目没有要求保持基点。\hfill$\square$
+\problem{9. 乘积保持同伦等价}{设 $X_1\simeq X_2$，$Y_1\simeq Y_2$。证明 $X_1\times Y_1\simeq X_2\times Y_2$。}
+\pf 取同伦等价 $f:X_1\to X_2$、$g:Y_1\to Y_2$ 及其同伦逆 $u,v$。
+令 $F=f\times g$，$G=u\times v$。若
+\[H:X_1\times I\to X_1,\quad H(\cdot,0)=uf,\quad H(\cdot,1)=\id_{X_1},\]
+且 $K$ 是 $vg\simeq\id_{Y_1}$ 的同伦，则
+\[L((x,y),t)=(H(x,t),K(y,t))\]
+给出 $GF\simeq\id_{X_1\times Y_1}$。同理 $FG\simeq\id_{X_2\times Y_2}$，所以 $F$ 是同伦等价。\hfill$\square$
+\problem{10. 可缩空间与零伦映射}{设 $X$ 可缩，$Y$ 道路连通。证明：(1) 任意 $f:Y\to X$ 与常值映射同伦；(2) 任意 $f:X\to Y$ 与常值映射同伦。}
+\pf 取收缩同伦 $H:X\times I\to X$，使 $H(x,0)=x$，$H(x,1)=x_0$。
+
+(1) $F(y,t)=H(f(y),t)$ 是从 $f$ 到常值映射 $y\mapsto x_0$ 的同伦。
+
+(2) $G(x,t)=f(H(x,t))$ 是从 $f$ 到常值映射 $x\mapsto f(x_0)$ 的同伦。
+
+这两步本身不需要 $Y$ 道路连通。该条件进一步保证(2)中的常值可以取为 $Y$ 的任意指定点：用一条从 $f(x_0)$ 到指定点的道路连接两个常值映射即可。\hfill$\square$
+\newpage
+\problem{11. 用所有映射刻画可缩性}{证明空间 $Y$ 可缩，当且仅当对任意空间 $X$，每个连续映射 $f:X\to Y$ 都与一个常值映射同伦。}
+\pf 若 $Y$ 可缩，取 $H:Y\times I\to Y$ 满足 $H(y,0)=y$、$H(y,1)=y_0$。对任意 $f:X\to Y$，
+\[F(x,t)=H(f(x),t)\]
+是 $f$ 到常值 $y_0$ 的同伦。
+
+反过来，在题设中取 $X=Y$、$f=\id_Y$，即得 $\id_Y$ 与某个常值映射同伦，这正是 $Y$ 可缩的定义。\hfill$\square$
+\problem{16. 乘积空间的可缩性}{证明 $X\times Y$ 可缩，当且仅当 $X$ 和 $Y$ 都可缩。}
+\pf 若 $X,Y$ 分别有收缩同伦 $H,K$，则
+\[L((x,y),t)=(H(x,t),K(y,t))\]
+将 $X\times Y$ 收缩到一点 $(x_0,y_0)$。
+
+反过来，设 $L:(X\times Y)\times I\to X\times Y$ 满足
+\[L((x,y),0)=(x,y),\qquad L((x,y),1)=(a,b).\]
+记 $p_X,p_Y$ 为两个投影，定义
+\[H(x,t)=p_XL((x,b),t),\qquad K(y,t)=p_YL((a,y),t).\]
+两者连续，且
+\[H(x,0)=x,\quad H(x,1)=a;\qquad K(y,0)=y,\quad K(y,1)=b.\]
+所以 $X,Y$ 都可缩。\hfill$\square$
+
+\medskip\noindent\textbf{约定说明。}上述反向证明可由乘积的可缩性自动得到 $(a,b)$ 的存在。正向证明使用了可缩空间非空的约定；这是教材中“同伦等价于一点”的通常含义。
+\newpage
+\section*{二、习题7.1：覆盖空间}
+\problem{15. “8”字空间的两个不同胚三重覆盖}{画出图形 $\infty$（两个圆周的一点并）的两个不同胚的3重覆盖。}
+\textbf{解。}把底空间写成 $B=S^1_a\vee S^1_b$，唯一顶点记为 $v$。覆盖空间取三个顶点 $v_0,v_1,v_2$，所有 $a$ 边、$b$ 边分别按给定方向映到 $a$、$b$ 圆周，每条边的内部同胚映到相应圆周去掉 $v$ 后的开弧。
+
+\textbf{覆盖A：}$a$ 边为 $v_0\to v_1\to v_2\to v_0$，每个 $v_i$ 上各附一条 $b$ 自环。
+
+\textbf{覆盖B：}$a$ 边与 $b$ 边都为 $v_0\to v_1\to v_2\to v_0$，但它们是不同的边。
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=1.05,every node/.style={font=\small}]
+\begin{scope}
+\coordinate (a) at (0,0);\coordinate (b) at (2.4,0);\coordinate (c) at (1.2,2.0);
+\draw[->] (a)--node[below]{$a$}(b);\draw[->] (b)--node[right]{$a$}(c);\draw[->] (c)--node[left]{$a$}(a);
+\draw[->] (a) .. controls (-1.1,.4) and (-1.1,-.65) .. node[left]{$b$}(a);
+\draw[->] (b) .. controls (3.5,-.65) and (3.5,.4) .. node[right]{$b$}(b);
+\draw[->] (c) .. controls (2.0,3.1) and (.4,3.1) .. node[above]{$b$}(c);
+\foreach \p/\n in {a/0,b/1,c/2}{\fill (\p) circle(2pt);\node[fill=white,inner sep=1pt] at ([yshift=-10pt]\p){$v_{\n}$};}
+\node at (1.2,-1.1){覆盖A};
+\end{scope}
+\begin{scope}[xshift=6cm]
+\coordinate (a) at (0,0);\coordinate (b) at (2.4,0);\coordinate (c) at (1.2,2.0);
+\draw[->] (a)--node[above]{$a$}(b);\draw[->] (b)--node[left]{$a$}(c);\draw[->] (c)--node[right]{$a$}(a);
+\draw[->] (a) to[bend right=35] node[below]{$b$}(b);
+\draw[->] (b) to[bend right=35] node[right]{$b$}(c);
+\draw[->] (c) to[bend right=35] node[left]{$b$}(a);
+\foreach \p/\n in {a/0,b/1,c/2}{\fill (\p) circle(2pt);\node[fill=white,inner sep=1pt] at ([yshift=-10pt]\p){$v_{\n}$};}
+\node at (1.2,-1.1){覆盖B};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\textbf{覆盖性质。}取 $v$ 的一个小星形邻域，它有 $a$ 的入、出两条半边和 $b$ 的入、出两条半边。在每个 $v_i$ 处恰有这四种半边各一条，因此其原像是三个互不相交的小星形邻域，每个都同胚映到原邻域。非顶点处的覆盖性质由边内部的定义立即得到。各点的纤维都有三个点，故二者都是3重覆盖，且均连通。
+
+\textbf{总空间不同胚。}两图中恰有三个点的局部分支数为4，其余点局部分支数为2，故同胚必置换这三个顶点。删去这三个顶点后，覆盖A有三个开弧分支的两个端点趋向同一个顶点（即三条自环的内部）；覆盖B的每个开弧分支的两个端点都趋向不同顶点。该性质在同胚下保持，故两个总空间不同胚。\hfill$\square$
+\newpage
+\problem{16. 不可定向曲面的二重覆盖}{证明对每个正整数 $n$，都存在从 $nT^2$ 到 $(n+1)\mathbb P^2$ 的2重覆盖。这里 $nT^2$、$k\mathbb P^2$ 分别表示 $n$ 个环面、$k$ 个实射影平面的连通和。}
+\pf 记 $N=(n+1)\mathbb P^2$。构造它的\textbf{定向二重覆盖}：对 $x\in N$，局部坐标圆盘在 $x$ 处恰有两种局部定向，令
+\[\widetilde N=\{(x,o):x\in N,\ o\text{ 是 }x\text{ 处的一种局部定向}\},\qquad p(x,o)=x.\]
+对任一坐标圆盘 $U$，选定其一种定向 $o_U$，则 $p^{-1}(U)$ 分为
+\[U_+=\{(x,o_U(x)):x\in U\},\qquad U_-=\{(x,-o_U(x)):x\in U\}.\]
+以这些集合为局部开片定义拓扑，各片经 $p$ 同胚到 $U$，故 $p$ 是2重覆盖。总空间在 $(x,o)$ 处采用 $o$ 指定的定向；这样各局部定向相容，所以 $\widetilde N$ 可定向。
+
+\textbf{连通性。}若 $\widetilde N$ 不连通，由道路提升及底空间道路连通，每个道路分支都映满 $N$。总重数只有2，故它必分为两个单重覆盖，每个分支都同胚于 $N$。在其中一个分支连续选取的局部定向便给出 $N$ 的全局定向，与 $N$ 不可定向矛盾。因此 $\widetilde N$ 连通。
+
+有限重覆盖保持紧致性（证明见第18题中的引理），所以 $\widetilde N$ 是紧致、连通、可定向的无边界曲面。取 $N$ 的一个有限三角剖分，每个顶点、边、面都有两份提升，所以
+\[\chi(\widetilde N)=2\chi(N)=2\bigl(2-(n+1)\bigr)=2-2n.\]
+由闭曲面分类定理，$\widetilde N$ 同胚于亏格为 $n$ 的可定向闭曲面 $nT^2$。将该同胚与 $p$ 复合，即得所求2重覆盖。\hfill$\square$
+
+\medskip\noindent\textbf{几何理解。}沿 $N$ 上一条反转定向的闭路走一圈时，局部定向从正变负，因此它的提升从一层走到另一层；这也解释了定向二重覆盖为什么连通。对 $n=1$，得到熟悉的环面对克莱因瓶的二重覆盖。
+\newpage
+\problem{17. 覆盖映射的复合}{设 $p:E\to B$、$q:B\to C$ 为覆盖映射，令 $r=q\circ p$。证明：(1) $q$ 为有限重覆盖时，$r$ 是覆盖映射；(2) $q$ 为无限重覆盖时，$r$ 可能不是覆盖映射；(3) 反之，若 $q,r$ 是覆盖映射且 $C$ 局部道路连通，则 $p$ 是覆盖映射。第(3)问按反向命题理解，只预设 $p$ 连续且 $r=qp$。}
+\pf\textbf{(1)} 任取 $c\in C$，取 $q$ 的基本邻域 $U$，写成
+\[q^{-1}(U)=\coprod_{i=1}^m V_i,\qquad q|_{V_i}:V_i\to U\text{ 为同胚}.\]
+令 $b_i=(q|_{V_i})^{-1}(c)$。取 $b_i$ 的 $p$-基本邻域 $W_i\subset V_i$。$q(W_i)$ 是 $c$ 的开邻域；因为只有有限项，
+\[U'=\bigcap_{i=1}^m q(W_i)\]
+仍是开邻域。令 $V_i'=(q|_{V_i})^{-1}(U')\subset W_i$，把 $p^{-1}(W_i)$ 的各片限制在 $p^{-1}(V_i')$ 上，便得到 $r^{-1}(U')$ 的不交开片分解。每片经 $p$ 同胚到 $V_i'$，再经 $q$ 同胚到 $U'$。因此 $r$ 是覆盖映射。
+
+\textbf{(3)} 先证 $p$ 满射。教材此处沿用覆盖空间道路连通的预设，故 $B$ 道路连通。固定 $e_0\in E$，对任意 $b\in B$ 取从 $p(e_0)$ 到 $b$ 的道路 $\beta$。将 $q\beta$ 经 $r$ 从 $e_0$ 提升为 $\alpha$。$p\alpha$ 和 $\beta$ 都是 $q\beta$ 经 $q$ 的提升，且起点相同，故由提升唯一性 $p\alpha=\beta$，特别 $p(\alpha(1))=b$。所以 $p$ 满射。
+
+任取 $b\in B$，利用 $C$ 局部道路连通，选取 $q(b)$ 的道路连通开邻域 $U$，使它同时被 $q,r$ 均匀覆盖。令 $V$ 为 $q^{-1}(U)$ 中含 $b$ 的片。每个 $r$-片 $W$ 连通，故其像在某个 $q$-片 $V_W$ 内，且
+\[p|_W=(q|_{V_W})^{-1}\circ(r|_W),\]
+故 $p|_W$ 是 $W$ 到 $V_W$ 的同胚。因此
+\[p^{-1}(V)=\coprod_{W:\,V_W=V}W,\]
+且由满射性此分解非空。故 $p$ 是覆盖映射。
+
+\textbf{预设说明。}若不要求 $B$ 连通，也不另要求 $p$ 满射，第(3)问需补充条件。例如 $C=E=\{*\}$、$B=\{0,1\}$ 为离散空间，$q$ 为常值映射、$p(*)=0$，则 $q,r$ 都是覆盖而 $p$ 不满射。若直接预设 $p$ 满射，上述局部开片证明不需要 $B$ 连通。
+\newpage
+\subsection*{17(2). 连通空间中的反例}
+\textbf{构造底空间。}在平面中令
+\[C_j=\{(x,y):(x-1/j)^2+y^2=1/j^2\},\quad
+C=\bigcup_{j\ge1}C_j,\quad v=(0,0).\]
+这是夏威夷耳环空间：各圆仅在 $v$ 相交，并且越往后的圆越小。$v$ 的每个开邻域都包含所有充分大的 $C_j$。该空间道路连通且局部道路连通。
+
+令 $h:C\to S^1$ 在 $C_1$ 上为将 $v$ 映到 $1$ 的同胚，在各 $C_j$（$j\ge2$）上恒等于 $1$。因为 $C_j$ 缩向 $v$，该映射连续。取标准覆盖 $\R\to S^1$ 的拉回：
+\[B=\{(x,t)\in C\times\R:h(x)=e^{2\pi it}\},\qquad q(x,t)=x.\]
+拉回的局部开片来自标准指数覆盖的开弧，故 $q$ 是覆盖映射；$q^{-1}(v)=\{v_k=(v,k):k\in\Z\}$，所以它是无限重覆盖。
+
+直观上，$B$ 是一条由 $C_1$ 的提升形成的无限长链，在每个整数顶点 $v_k$ 处，附着 $C_j$（$j\ge2$）的一整串小圆。特别地 $B$ 道路连通。记附着在 $v_k$ 的 $C_j$ 副本为 $C_{j,k}$。
+
+\textbf{构造 $p$。}在每个顶点 $v_k$ 选一个圆
+\[D_k=C_{|k|+2,k},\]
+并在其远离顶点的位置取一个内点 $m_k$。取 $B$ 的两份副本，沿每个 $m_k$ 将圆切开，把两份副本的切口交叉粘合。得到 $p:E\to B$：绕 $D_k$ 一圈会交换两层，绕其余附着圆则不交换。
+
+为验证 $p$ 确为覆盖，注意切口点集 $\{m_k\}$ 在 $B$ 中局部有限（在拉回坐标中其高度为整数 $k$）。每个顶点 $v_k$ 有一个避开所有切口的邻域，其原像就是两个同胚的副本；普通非切口点也一样。在切口附近，交叉粘合把两对半开弧各接成一条开弧，仍得到两个局部同胚片。因此 $p$ 是2重覆盖。绕任意 $D_k$ 能交换两层，结合 $B$ 的道路连通性可知 $E$ 也道路连通。
+
+\textbf{复合不是覆盖。}假设 $r=qp$ 是覆盖，取 $v$ 的一个均匀覆盖开邻域 $U$。选充分大的 $j\ge2$ 使 $C_j\subset U$，再令 $k=j-2$。绕 $C_j$ 一圈的闭路 $\gamma$ 经 $q$ 从 $v_k$ 提升，恰为绕 $C_{j,k}=D_k$ 一圈；再经 $p$ 提升便交换两层。因此 $\gamma$ 经 $r$ 的某条提升不是闭路。
+
+但若 $U$ 被 $r$ 均匀覆盖，完全位于 $U$ 中的闭路从任一纤维点出发，都只能在对应的同胚片中提升，并必回到起点。矛盾，故 $r$ 不是覆盖映射。\hfill$\square$
+\newpage
+\problem{18. 覆盖的紧致性与豪斯多夫性}{设 $p:E\to B$ 为覆盖映射。证明：(1) $E$ 紧致则覆盖重数有限；(2) $B$ 豪斯多夫则 $E$ 豪斯多夫；(3) $B$ 是紧致流形，则 $E$ 紧致当且仅当 $p$ 为有限重覆盖；(4) $p$ 有限重、$E$ 豪斯多夫、$B$ 紧致，则 $E$ 紧致；(5) $p$ 有限重，则 $E$ 紧致豪斯多夫当且仅当 $B$ 紧致豪斯多夫。}
+\pf\textbf{(1)} 固定 $b\in B$，记 $F=p^{-1}(b)$。对每个 $e\in E$，取 $p(e)$ 的均匀覆盖邻域，并取其中含 $e$ 的一个开片 $V_e$。由于 $p|_{V_e}$ 单射，$V_e$ 与 $F$ 至多交于一点。各 $V_e$ 构成 $E$ 的开覆盖；由 $E$ 紧致，可选有限个 $V_e$ 覆盖 $E$，于是 $F$ 有限。故覆盖重数有限。此证明不需要底空间满足分离公理。
+
+\textbf{(2)} 对不同点 $e_1,e_2$，若 $p(e_1)\ne p(e_2)$，在 $B$ 中取分离它们的不交开邻域，再取原像即可。若 $p(e_1)=p(e_2)=b$，则 $b$ 的一个均匀覆盖邻域中，$e_1,e_2$ 位于不同开片，这两片就是所需的不交开邻域。所以 $E$ 豪斯多夫。
+
+\textbf{有限重覆盖的紧致性引理。}若 $p$ 有限重且 $B$ 紧致，则 $E$ 紧致。事实上，给定 $E$ 的任意开覆盖 $\mathcal O$，对每个 $b\in B$，取基本邻域 $U_b$，其有限个片记为 $V_1,\ldots,V_m$。对各片中的纤维点 $e_i$，选 $O_i\in\mathcal O$ 含 $e_i$，并令
+\[U_b'=\bigcap_{i=1}^m p(O_i\cap V_i).\]
+由于各 $p|_{V_i}$ 为同胚，$U_b'$ 是 $b$ 的开邻域，且 $p^{-1}(U_b')\subset\bigcup_{i=1}^m O_i$。由 $B$ 紧致，有限多个 $U_b'$ 覆盖 $B$，其对应的有限多个 $O_i$ 覆盖 $E$，证毕。此引理无需豪斯多夫性。
+
+\textbf{(3)} 紧致流形豪斯多夫，必要性由(1)得出；充分性由引理得出。
+
+\textbf{(4)} 直接由引理得出；其中 $E$ 豪斯多夫这一条件对紧致性的结论并非必要。
+
+\textbf{(5)} 若 $B$ 紧致豪斯多夫，则由引理及(2)，$E$ 紧致豪斯多夫。反过来，若 $E$ 紧致豪斯多夫，则 $B=p(E)$ 紧致。还需证明 $B$ 豪斯多夫：任取 $b\ne c$，纤维 $F_b,F_c$ 都是有限集；在豪斯多夫空间 $E$ 中，两个不交有限集有不交的开邻域 $O_b,O_c$。通过有限片取交的方法，可取 $b,c$ 的开邻域 $U_b,U_c$，使 $p^{-1}(U_b)\subset O_b$、$p^{-1}(U_c)\subset O_c$。若 $U_b\cap U_c\ne\varnothing$，由 $p$ 满射便与 $O_b\cap O_c=\varnothing$ 矛盾。因此 $B$ 豪斯多夫。\hfill$\square$
+\newpage
+\problem{22. 对克莱因瓶覆盖的可能重数}{(1) 从 $\R^2$ 到克莱因瓶的覆盖映射的重数可以是多少？(2) 从 $S^1\times\R$ 到克莱因瓶的覆盖映射的重数可以是多少？}
+\textbf{解。}两问的答案都为\textbf{可数无穷重}，既不可能有限重，也不可能不可数重。
+
+先说明存在性。令平面上的变换
+\[a(x,y)=(x+1,y),\qquad b(x,y)=(-x,y+1).\]
+群 $G=\langle a,b\rangle$ 的作用自由且适当不连续，商空间 $\R^2/G$ 是克莱因瓶 $K$；商映射 $\R^2\to K$ 是覆盖，纤维为可数无穷的轨道。
+
+子群 $H=\langle a\rangle$ 的商空间为
+\[\R^2/H\cong S^1\times\R,\quad [x,y]_H\longmapsto(e^{2\pi ix},y).\]
+自然映射 $\R^2/H\to\R^2/G=K$ 也是覆盖，重数为 $[G:H]=\aleph_0$（不同整数的 $y$ 平移给出不同陪集），得到第(2)问的例子。
+
+任意这样的覆盖若重数有限，由 $K$ 紧致及第18题引理，其总空间必紧致；但 $\R^2$、$S^1\times\R$ 都非紧致，矛盾。因此重数无限。另一方面，这两个总空间都是第二可数空间，而覆盖的每条纤维为离散子空间，必至多可数：对每个纤维点取只含该点的纤维邻域，再选其中一个基元素，不同纤维点对应不同基元素。故重数恰为 $\aleph_0$。\hfill$\square$
+
+\problem{23. 两个分歧覆盖的构造}{(1) 构造3重分歧覆盖 $S^2\to S^2$，有两个分歧点；(2) 构造2重分歧覆盖 $T^2\to S^2$，有四个分歧点。这里“分歧点”按题意指底空间中的分歧值。}
+\textbf{(1)} 将球面看成黎曼球面 $\widehat\C=\C\cup\{\infty\}$，定义
+\[f(z)=z^3\quad(z\in\C),\qquad f(\infty)=\infty.\]
+当 $w\ne0,\infty$ 时有三个不同原像；在避开 $0$ 的小圆盘上有三个连续的立方根分支，故去掉 $0,\infty$ 后是3重覆盖。在 $0$ 附近是局部模型 $z\mapsto z^3$；在无穷远取局部坐标 $u=1/z$、$v=1/w$，仍有 $v=u^3$。所以恰有两个分歧值 $0,\infty$，它们的原像也恰为 $0,\infty$。
+\newpage
+\subsection*{23(2). 环面对球面的二重分歧覆盖}
+将环面写成 $T^2=\R^2/\Z^2$，定义对合
+\[\tau([x,y])=[-x,-y].\]
+设 $Q=T^2/\langle\tau\rangle$，$\pi:T^2\to Q$ 是商映射。固定点满足 $2x,2y\in\Z$，恰好为
+\[(0,0),\quad(\tfrac12,0),\quad(0,\tfrac12),\quad(\tfrac12,\tfrac12)\pmod{\Z^2}.\]
+
+\textbf{说明 $Q\cong S^2$。}每条轨道都能在圆柱
+\[(\R/\Z)\times[0,\tfrac12]\]
+中取代表；只有边界上还须识别 $(x,0)\sim(-x,0)$、$(x,\tfrac12)\sim(-x,\tfrac12)$。沿 $x=0$、$x=\tfrac12$ 把圆柱分成两个矩形。上述边界识别正好把两个矩形的整个边界逐点配对，而每个矩形的内部保持不变。因此 $Q$ 是两个闭圆盘沿边界粘合，即球面。这就是“枕头形球面”。
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+\draw[rounded corners=12pt,fill=blue!5] (0,0) rectangle (3,2);
+\draw[dashed,rounded corners=12pt] (0,0) .. controls (-.35,1) and (-.35,1.5) .. (0,2)
+.. controls (1,2.4) and (2,2.4) .. (3,2)
+.. controls (3.4,1.5) and (3.4,.5) .. (3,0)
+.. controls (2,-.4) and (1,-.4) .. (0,0);
+\foreach \p in {(0,0),(3,0),(0,2),(3,2)}\fill[red!75!black] \p circle(2.8pt);
+\node[align=center] at (1.5,1){两个圆盘沿边界粘合\\四个红点为分歧值};
+\end{tikzpicture}
+\end{center}
+\textbf{非固定点处。}若 $z\ne\tau(z)$，可取小圆盘 $U\ni z$ 使 $U\cap\tau(U)=\varnothing$。于是
+\[\pi^{-1}(\pi(U))=U\coprod\tau(U),\]
+两片均同胚映到 $\pi(U)$。因此去掉四个固定点及其像后，$\pi$ 是2重覆盖。
+
+\textbf{固定点处。}在每个固定点附近取中心化的复坐标 $z=u+iv$，对合为 $z\mapsto-z$。局部商映射可用 $z\mapsto z^2$ 表示，因为它恰把 $z$ 与 $-z$ 识别。因此每个固定点都产生一个简单分歧值。四个固定点分别形成不同轨道，所以分歧值恰有四个。
+
+最后取任意同胚 $h:Q\to S^2$，则
+\[\boxed{f=h\circ\pi:T^2\longrightarrow S^2}\]
+便是所求2重分歧覆盖。\hfill$\square$
+\end{document}

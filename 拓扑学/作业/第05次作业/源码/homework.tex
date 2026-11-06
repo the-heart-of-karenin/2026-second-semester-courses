@@ -1,0 +1,126 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,fancyhdr,hyperref}
+\setCJKmainfont{SimSun}
+\setlength{\parskip}{5pt}
+\linespread{1.15}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{基础拓扑学及应用\quad 第五次作业}\fancyfoot[C]{\thepage}
+\newcommand{\R}{\mathbb R}\newcommand{\Z}{\mathbb Z}\newcommand{\C}{\mathbb C}
+\newcommand{\pf}{\par\noindent\textbf{证明。}}
+\begin{document}
+\begin{center}{\LARGE\bfseries 第五次作业完整解答}\\[6pt]习题7.1，第1、2、3、4、5、7、10、11题\\[4pt]教材原书第166页\end{center}
+\noindent 题目据《基础拓扑学及应用》（雷逢春、杨志青、李凤玲）原文录入。下文以“基本邻域”表示被均匀覆盖的开邻域，以“片”表示其原像中同胚映到该邻域的开集。
+
+\section*{1. 积映射}
+\textbf{原题。}(E) 设 $\rho_i:E_i\to B_i$ 为覆盖映射，$i=1,2$. 证明
+\[\rho_1\times\rho_2:E_1\times E_2\to B_1\times B_2\]
+也是覆盖映射。
+\pf 连续性及满射性由各因子具有相应性质得到。任取 $(b_1,b_2)$，分别取基本邻域 $U_i$，使
+\[\rho_i^{-1}(U_i)=\coprod_{\lambda\in\Lambda_i}V_{i\lambda},\qquad
+\rho_i|_{V_{i\lambda}}:V_{i\lambda}\longrightarrow U_i\text{ 为同胚}.\]
+则 $U_1\times U_2$ 是 $(b_1,b_2)$ 的开邻域，而且
+\[(\rho_1\times\rho_2)^{-1}(U_1\times U_2)
+=\coprod_{(\lambda,\mu)\in\Lambda_1\times\Lambda_2}(V_{1\lambda}\times V_{2\mu}).\]
+这些片两两不交且开；每片上的限制是两个同胚之积，其逆为两个逆映射之积，故为同胚。这就验证了覆盖映射的定义。\hfill$\square$
+
+\section*{2. 离散因子的投影}
+\textbf{原题。}(E) 设 $X$ 是一个拓扑空间，$S$ 是一个离散拓扑空间，$p:X\times S\to X$，$\forall(x,s)\in X\times S$，$p(x,s)=x$. 证明 $p$ 是一个覆盖映射。
+\pf 在通常隐含的 $S\ne\varnothing$ 条件下，$p$ 连续且满射。任取 $X$ 的开集 $U$，有
+\[p^{-1}(U)=\coprod_{s\in S}(U\times\{s\}).\]
+因 $S$ 离散，各 $U\times\{s\}$ 都在 $X\times S$ 中开且两两不交。限制 $p|_{U\times\{s\}}$ 的连续逆映射为 $x\mapsto(x,s)$，故是到 $U$ 的同胚。特别可取 $U=X$，所以 $p$ 是平凡覆盖。\hfill$\square$
+
+\textbf{题干约定说明。}若允许 $S=\varnothing$ 且 $X\ne\varnothing$，则 $p$ 不满射，结论须补充 $S\ne\varnothing$。此外，教材定义7.1.1在叙述前预设总空间与底空间道路连通、局部道路连通，而本题允许任意 $X$ 和离散 $S$；因此本题应按一般的均匀覆盖定义理解（允许总空间不连通），不能由题设推出该额外预设。
+
+\section*{3. 三个覆盖映射}
+\textbf{原题。}证明下列映射是覆盖映射：
+\begin{align*}
+&(1)\ (ER)\ f:\R^2\to S^1\times\R,\quad (x,y)\mapsto(e^{2\pi ix},y);\\
+&(2)\ (M)\ f:\C\to\C-\{0\},\quad z\mapsto e^z;\\
+&(3)\ (E)\ f:\R^2\to S^1\times S^1,\quad (x,y)\mapsto(e^{2\pi ix},e^{2\pi iy}).
+\end{align*}
+\pf 先验证标准指数映射 $q:\R\to S^1$，$q(t)=e^{2\pi it}$ 是覆盖。任取 $q(a)$，选 $0<\delta<1/2$，令
+\[A=q((a-\delta,a+\delta)).\]
+这是开圆弧，且 $q^{-1}(A)=\coprod_{n\in\Z}(a-\delta+n,a+\delta+n)$。每个区间上 $q$ 的限制都是到 $A$ 的同胚（逆为连续辐角分支除以 $2\pi$）。因此 $q$ 是覆盖。
+
+(1) 恒等映射 $\operatorname{id}_{\R}$ 是覆盖，故由第1题，$f=q\times\operatorname{id}_{\R}$ 是覆盖。
+
+(2) 任取 $w_0\ne0$，写成 $w_0=r_0e^{i\theta_0}$。取 $0<r_-<r_0<r_+$ 及 $0<\varepsilon<\pi$，令
+\[U=\{re^{i\theta}:r_-<r<r_+,\ \theta_0-\varepsilon<\theta<\theta_0+\varepsilon\}.\]
+这是 $w_0$ 的开邻域，且
+\[f^{-1}(U)=\coprod_{k\in\Z}V_k,\quad
+V_k=\{x+iy:\log r_-<x<\log r_+,\ \theta_0-\varepsilon+2k\pi<y<\theta_0+\varepsilon+2k\pi\}.\]
+各 $V_k$ 两两不交且开。$f|_{V_k}$ 的逆为
+\[re^{i\theta}\longmapsto\log r+i(\theta+2k\pi),\]
+其中 $\theta$ 取上述区间中的唯一值；该逆连续。因此各限制均为同胚。又 $f$ 连续满射，所以为覆盖映射。
+
+(3) $f=q\times q$，由第1题即得。\hfill$\square$
+
+\section*{4. 判断是否为覆盖}
+\textbf{原题。}(E) 下列映射是否为覆盖映射？
+\begin{align*}
+&(1)\ f:(0,3)\to S^1,\quad x\mapsto e^{2\pi ix};\\
+&(2)\ f:\R^2\to\R^1,\quad (x,y)\mapsto x.
+\end{align*}
+\textbf{解。}(1) 不是。覆盖映射的纤维基数在任一基本邻域上恒定：每一片与每条纤维恰交于一点。但此处
+\[f^{-1}(1)=\{1,2\},\qquad
+f^{-1}(e^{2\pi it})=\{t,t+1,t+2\}\quad(0<t<1).\]
+若 $1$ 有基本邻域 $U$，则当 $t>0$ 足够小时 $e^{2\pi it}\in U$，这与两条纤维基数分别为2、3矛盾。
+
+(2) 不是。覆盖映射必为局部同胚：取含某点的一片即可。但对任意 $(x_0,y_0)$ 的开邻域 $V$，存在 $\eta>0$ 使 $(x_0,y_0)$ 和 $(x_0,y_0+\eta)$ 均在 $V$ 中；这两点有相同的像。因此 $f$ 在任何这样的 $V$ 上都不单射，不能是局部同胚，更不是覆盖。
+
+\section*{5. 圆柱面覆盖默比乌斯带}
+\textbf{原题。}(ER) 给出 $S^1\times\R$ 到默比乌斯带的覆盖映射。
+
+\textbf{题意说明。}题中定义域没有边界，因此此题的默比乌斯带须理解为\textbf{开默比乌斯带}。若采用带边界的紧默比乌斯带，本题所写定义域不适用；相应的二重覆盖定义域应为 $S^1\times[-1,1]$。以下分别给出构造，原题保持不变。
+
+\textbf{解。}设 $g:\R^2\to\R^2$ 为 $g(s,t)=(s+1,-t)$。开默比乌斯带可写为
+\[M=\R^2/\langle g\rangle,\qquad q:\R^2\to M.\]
+因为 $g^2(s,t)=(s+2,t)$，中间商空间
+\[C=\R^2/\langle g^2\rangle\cong S^1\times\R,\quad
+[s,t]_{\langle g^2\rangle}\longmapsto(e^{\pi is},t).
+\]
+故所求映射为
+\[\boxed{\ p:S^1\times\R\longrightarrow M,\quad p(e^{\pi is},t)=q(s,t).\ }\]
+$s$ 的不同选择相差偶整数，所以公式良定义；由商拓扑，$p$ 连续且满射。
+
+下面直接验证均匀覆盖性质。对任意 $(s_0,t_0)$，取
+\[W=(s_0-\delta,s_0+\delta)\times(t_0-\eta,t_0+\eta),\quad 0<\delta<1/2,\quad\eta>0.\]
+各 $g^n(W)$ 两两不交。商映射 $q$ 是开映射，因为任何开集 $O$ 的饱和集 $\bigcup_{n\in\Z}g^n(O)$ 开。故 $U=q(W)$ 开，且 $q|_W:W\to U$ 是同胚。记 $r:\R^2\to C$ 为中间商映射，同理它开。于是
+\[p^{-1}(U)=r(W)\ \coprod\ r(gW),\]
+右端为两个不交开集，且各自经 $p$ 同胚映到 $U$。所以 $p$ 是二重覆盖。
+
+若采用紧默比乌斯带，只须将上述 $t\in\R$ 换成 $t\in[-1,1]$，所得为 $S^1\times[-1,1]\to M_{\rm compact}$ 的二重覆盖，邻域取条带中的相对开集即可。紧默比乌斯带的边界点没有同胚于平面开集的邻域，而 $S^1\times\R$ 每点都有这种邻域；局部同胚保持流形边界，所以不能用原题定义域覆盖紧默比乌斯带。
+
+\section*{7. 环面覆盖克莱因瓶}
+\textbf{原题。}(MRH) 证明环面是克莱因瓶上的覆盖空间。
+\pf 取环面模型 $T=(\R/2\Z)\times(\R/\Z)$，记其中点为 $([s]_2,[t]_1)$。定义
+\[\tau([s]_2,[t]_1)=([s+1]_2,[-t]_1).\]
+此映射良定义，且 $\tau^2=\operatorname{id}$。又 $[s+1]_2\ne[s]_2$，所以 $\tau$ 无不动点。商空间 $T/\langle\tau\rangle$ 可取矩形 $[0,1]\times[0,1]$ 为基本域：上下边按 $(s,0)\sim(s,1)$ 粘合，左右边按 $(0,t)\sim(1,1-t)$ 粘合。这正是克莱因瓶的标准模型 $K$。
+
+所求映射就是
+\[p:T\longrightarrow K=T/\langle\tau\rangle,\qquad u\longmapsto\{u,\tau u\}.\]
+为验证它为覆盖，任取 $u\in T$。因环面为豪斯多夫空间且 $u\ne\tau u$，存在不交开邻域 $A\ni u$、$B\ni\tau u$。取 $V=A\cap\tau^{-1}(B)$，则 $V\ni u$ 且 $V\cap\tau V=\varnothing$。商映射 $p$ 开，因为 $p^{-1}(p(O))=O\cup\tau O$ 对每个开集 $O$ 都开。因此 $U=p(V)$ 开，且
+\[p^{-1}(U)=V\coprod\tau V.\]
+两片上的限制均为连续开双射，故是同胚。这证明 $p$ 是二重覆盖，从而环面是克莱因瓶上的覆盖空间。\hfill$\square$
+
+\section*{10. 覆盖映射是开映射和商映射}
+\textbf{原题。}(MRH) 设 $\rho:E\to B$ 为覆盖映射，证明 $\rho$ 是开映射和商映射。
+\pf 设 $O\subset E$ 开。对任意 $b\in\rho(O)$，取 $e\in O$ 使 $\rho(e)=b$，并取 $b$ 的基本邻域 $U$ 以及含 $e$ 的片 $V$。$O\cap V$ 在 $V$ 中开，故
+\[\rho(O\cap V)=(\rho|_V)(O\cap V)\]
+在 $U$ 中开，也在 $B$ 中开，且包含 $b$ 并包含于 $\rho(O)$。所以 $\rho(O)$ 开，$\rho$ 是开映射。
+
+覆盖映射连续且满射。对任意 $A\subset B$，若 $A$ 开，则 $\rho^{-1}(A)$ 开；反之，若 $\rho^{-1}(A)$ 开，由开映射及满射性，
+\[A=\rho(\rho^{-1}(A))\]
+开。因此 $A$ 开当且仅当其原像开，这正是商映射的定义。\hfill$\square$
+
+\section*{11. 局部截面的像是开集}
+\textbf{原题。}(M) 设 $\rho:E\to B$ 为覆盖映射，$U\subset B$ 为开集，连续映射 $h:U\to E$ 满足 $\rho\circ h=i:U\to B$，其中 $i:U\hookrightarrow B$ 为含入映射。证明 $h(U)$ 为 $E$ 的开集。
+\pf 任取 $e=h(b)\in h(U)$。在 $b$ 处选取基本邻域 $W\subset U$，设 $V$ 是其原像中含 $e$ 的片。由 $h$ 连续，
+\[N=W\cap h^{-1}(V)\]
+是 $U$ 中包含 $b$ 的开集；因 $U$ 在 $B$ 中开，$N$ 也在 $B$ 中开。
+
+对每个 $x\in N$，$h(x)\in V$ 且 $\rho(h(x))=x$，由 $\rho|_V$ 的单射性，
+\[h(x)=(\rho|_V)^{-1}(x),\qquad
+h(N)=(\rho|_V)^{-1}(N).\]
+因此 $h(N)$ 是 $V$ 中的开集；因 $V$ 在 $E$ 中开，$h(N)$ 也是 $E$ 中包含 $e$ 的开集，且 $h(N)\subset h(U)$。$h(U)$ 的每个点均有这样的开邻域，故 $h(U)$ 开。\hfill$\square$
+\end{document}

@@ -1,0 +1,302 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[a4paper,top=2.2cm,bottom=2.2cm,left=2.5cm,right=2.5cm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,amscd,mathtools,fancyhdr,xcolor,hyperref}
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{\setCJKmainfont{SimSun}}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKsansfont{Noto Sans CJK SC}}{\setCJKsansfont{SimHei}}
+\definecolor{accent}{RGB}{33,65,91}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=accent,urlcolor=accent,pdftitle={习题5.2作业解答：1、3、6、7、8},pdfauthor={拓扑学作业}}
+\ctexset{section={format=\large\bfseries\color{accent}}}
+\setlength{\parskip}{3pt}
+\linespread{1.18}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 基础拓扑学及应用\quad 习题5.2}
+\fancyhead[R]{\small 第1、3、6、7、8题}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newcommand{\I}{[0,1]}
+\newcommand{\pc}[1]{\langle #1\rangle}
+\newcommand{\pe}{\simeq_p}
+\newcommand{\pf}{\par\noindent\textbf{证明。}}
+\newcommand{\done}{\hfill\(\square\)\par}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 习题5.2\quad 作业解答}\\[7pt]
+{\large 第1、3、6、7、8题}\\[4pt]
+{\small 《基础拓扑学及应用》，习题始于原书第115页}
+\end{center}
+
+\noindent\textbf{记号。}
+令 \(I=[0,1]\)，\(e_x\) 为点 \(x\) 处的常值道路，\(\pc{\alpha}\) 为道路 \(\alpha\) 的定端同伦类。
+道路乘积 \(\alpha\beta\) 表示先走 \(\alpha\)，再走 \(\beta\)；
+\(\alpha^{-1}(s)=\alpha(1-s)\)。沿用教材原书第113页的定义：若 \(\gamma\) 从 \(a\) 到 \(b\)，则
+\[
+ \gamma_\#: \pi_1(X,a)\longrightarrow\pi_1(X,b),
+ \qquad \gamma_\#(\pc{\sigma})=\pc{\gamma^{-1}\sigma\gamma}.
+\]
+它是同构，逆为 \((\gamma^{-1})_\#\)。下文道路类的运算均在端点可以衔接时使用；结合律、常值道路的单位性质与逆道路的消去性质见教材命题5.2.3、5.2.4。
+
+\section*{第1题：单连通空间中同端点道路定端同伦}
+\textbf{题目。}设 \(X\) 为单连通空间，\(\alpha,\beta\) 是 \(X\) 中有相同起点和终点的道路。证明 \(\alpha\pe\beta\)。
+
+\pf 设共同起点为 \(a\)，共同终点为 \(b\)。道路 \(\alpha\beta^{-1}\) 是以 \(a\) 为基点的闭路。因为 \(X\) 单连通，\(\pi_1(X,a)\) 为平凡群，故
+\[
+ \alpha\beta^{-1}\pe e_a.
+\]
+利用定端同伦与道路乘积的相容性，以及道路乘积的基本性质，得到
+\[
+ \begin{aligned}
+ \alpha
+ &\pe \alpha e_b
+ \pe \alpha(\beta^{-1}\beta)
+ \pe (\alpha\beta^{-1})\beta\\
+ &\pe e_a\beta
+ \pe \beta.
+ \end{aligned}
+\]
+因此 \(\alpha\pe\beta\)。\done
+
+\section*{第3题：平凡或离散拓扑空间的基本群}
+\textbf{题目。}设 \(X\) 为平凡或离散拓扑空间，\(x_0\in X\)。证明 \(\pi_1(X,x_0)\) 是平凡群。
+
+\pf 只需证明每条以 \(x_0\) 为基点的闭路都与 \(e_{x_0}\) 定端同伦。
+
+\textbf{（1）\(X\) 具有平凡拓扑。}
+这里平凡拓扑指 \(\{\varnothing,X\}\)。设 \(\alpha:I\to X\) 是以 \(x_0\) 为基点的任意闭路，定义
+\[
+ H:I\times I\to X,\qquad
+ H(s,t)=
+ \begin{cases}
+ \alpha(s),&t=0,\\
+ x_0,&0<t\leq1.
+ \end{cases}
+\]
+由于到平凡拓扑空间的任意映射都连续，\(H\) 连续。又有
+\[
+ H(s,0)=\alpha(s),\quad H(s,1)=x_0,
+ \qquad H(0,t)=H(1,t)=x_0.
+\]
+因此 \(\alpha\pe e_{x_0}\)，从而 \(\pi_1(X,x_0)=\{\pc{e_{x_0}}\}\)。
+
+\textbf{（2）\(X\) 具有离散拓扑。}
+任意道路 \(\alpha:I\to X\) 的像 \(\alpha(I)\) 连通，因为 \(I\) 连通而 \(\alpha\) 连续。离散空间的非空连通子集只能是单点集：若一个子集含有至少两点，取其中一点，其单点集与其余点集便构成一个分离。
+所以 \(\alpha\) 为常值道路。特别地，以 \(x_0\) 为基点的闭路只有 \(e_{x_0}\)，故基本群也是平凡群。\done
+
+\clearpage
+\section*{第6题：基本群交换与基点变换的道路无关性}
+\textbf{题目。}设 \(X\) 道路连通，\(x_1,x_2\in X\)。证明 \(\pi_1(X,x_1)\) 是交换群，当且仅当对任意两条从 \(x_1\) 到 \(x_2\) 的道路 \(\alpha,\beta\)，都有 \(\alpha_\#=\beta_\#\)。
+
+\pf 令 \(G=\pi_1(X,x_1)\)。对任意从 \(x_1\) 到 \(x_2\) 的道路 \(\alpha,\beta\)，道路 \(\beta\alpha^{-1}\) 是以 \(x_1\) 为基点的闭路。令
+\[
+ c=\pc{\beta\alpha^{-1}}\in G.
+\]
+由道路类的消去性质，对于任意 \(u\in G\)，有
+\begin{equation}
+ \beta_\#(u)=\alpha_\#(c^{-1}uc).
+ \tag{$*$}
+\end{equation}
+具体地，若 \(u=\pc{\sigma}\)，则
+\[
+\begin{aligned}
+ \alpha_\#(c^{-1}uc)
+ &=\pc{\alpha^{-1}(\alpha\beta^{-1})\sigma
+                 (\beta\alpha^{-1})\alpha}\\
+ &=\pc{\beta^{-1}\sigma\beta}
+ =\beta_\#(u).
+\end{aligned}
+\]
+
+\textbf{必要性。}设 \(G\) 为交换群。则对任意 \(u,c\in G\)，均有 \(c^{-1}uc=u\)。代入 \((*)\)，得到
+\[
+ \beta_\#(u)=\alpha_\#(u)\qquad(\forall u\in G),
+\]
+所以 \(\alpha_\#=\beta_\#\)。
+
+\textbf{充分性。}反之，假设任意两条从 \(x_1\) 到 \(x_2\) 的道路诱导相同的基点变换。
+由道路连通性，固定一条道路 \(\delta:x_1\to x_2\)。任取 \(a,u\in G\)，选取以 \(x_1\) 为基点的闭路 \(\lambda\)，使 \(a=\pc{\lambda}\)。
+令
+\[
+ \alpha=\delta,\qquad \beta=\lambda\delta.
+\]
+这两条道路都从 \(x_1\) 到 \(x_2\)，且
+\[
+ \pc{\beta\alpha^{-1}}
+ =\pc{\lambda\delta\delta^{-1}}
+ =\pc{\lambda}=a.
+\]
+由假设及 \((*)\)，
+\[
+ \delta_\#(u)=(\lambda\delta)_\#(u)
+             =\delta_\#(a^{-1}ua).
+\]
+因为 \(\delta_\#\) 是同构，特别是单射，故
+\[
+ u=a^{-1}ua,
+ \qquad\text{即}\qquad au=ua.
+\]
+由于 \(a,u\) 任意，\(G\) 是交换群。\done
+
+\noindent\textbf{关键关系。}两条道路诱导的基点变换相差一个内自同构。要求所有这些基点变换相等，正是要求基本群的所有内自同构均为恒等映射，也就是基本群交换。
+
+\clearpage
+\section*{第7题：连续映射与基点变换的相容性}
+\textbf{题目。}设 \(f:X\to Y\) 连续，\(x_i\in X\)、\(y_i\in Y\)（\(i=0,1\)），\(\gamma\) 是 \(X\) 中从 \(x_0\) 到 \(x_1\) 的道路。证明下面的图表可交换：
+\[
+\begin{CD}
+ \pi_1(X,x_0) @>{f_{*,x_0}}>> \pi_1(Y,y_0)\\
+ @V{\gamma_\#}VV @VV{(f\circ\gamma)_\#}V\\
+ \pi_1(X,x_1) @>{f_{*,x_1}}>> \pi_1(Y,y_1).
+\end{CD}
+\]
+即
+\[
+ (f\circ\gamma)_\#\circ f_{*,x_0}
+ =f_{*,x_1}\circ\gamma_\#.
+\]
+这里 \(f_{*,x_i}:\pi_1(X,x_i)\to\pi_1(Y,y_i)\) 表示以相应基点定义的诱导同态。
+
+\noindent\textbf{题意说明。}图表中的 \(f_*\) 以及 \((f\circ\gamma)_\#\) 要按通常定义成立，隐含条件是
+\[
+ y_0=f(x_0),\qquad y_1=f(x_1).
+\]
+原题文字没有单独写出这一条件，以下按图表隐含的这一条件证明。
+
+\pf 任取 \(\pc{\sigma}\in\pi_1(X,x_0)\)。沿图表的“先下后右”方向，有
+\[
+\begin{aligned}
+ (f_{*,x_1}\circ\gamma_\#)(\pc{\sigma})
+ &=f_{*,x_1}(\pc{\gamma^{-1}\sigma\gamma})\\
+ &=\pc{f\circ(\gamma^{-1}\sigma\gamma)}.
+\end{aligned}
+\]
+连续映射与道路乘积、逆道路相容，即
+\[
+ f\circ(\mu\nu)=(f\circ\mu)(f\circ\nu),
+ \qquad f\circ\mu^{-1}=(f\circ\mu)^{-1}.
+\]
+因此
+\[
+\begin{aligned}
+ (f_{*,x_1}\circ\gamma_\#)(\pc{\sigma})
+ &=\pc{(f\circ\gamma)^{-1}(f\circ\sigma)(f\circ\gamma)}\\
+ &=(f\circ\gamma)_\#(\pc{f\circ\sigma})\\
+ &=\bigl((f\circ\gamma)_\#\circ f_{*,x_0}\bigr)(\pc{\sigma}).
+\end{aligned}
+\]
+故两条复合映射在每个元素上相等，题中图表可交换。\done
+
+\clearpage
+\section*{第8题：用带基点的圆周映射定义基本群}
+\textbf{题目。}令 \(b=(1,0)\in S^1\)，设
+\[
+ A=\{f:S^1\to X\mid f\text{ 连续且 }f(b)=x_0\}.
+\]
+对 \(f_1,f_2\in A\)，若存在连续映射 \(H:S^1\times I\to X\)，满足
+\[
+ H(z,0)=f_1(z),\qquad H(z,1)=f_2(z),
+ \qquad H(b,t)=x_0,
+\]
+则记 \(f_1\sim f_2\)。令 \(\pi'_1(X,x_0)=A/{\sim}\)，并在 \(A\) 上定义乘法
+\[
+ (f_1f_2)(\cos\theta,\sin\theta)=
+ \begin{cases}
+ f_1(\cos2\theta,\sin2\theta),&0\leq\theta\leq\pi,\\
+ f_2(\cos2\theta,\sin2\theta),&\pi\leq\theta\leq2\pi.
+ \end{cases}
+\]
+证明它在商集上给出群结构，且 \(\pi'_1(X,x_0)\cong\pi_1(X,x_0)\)。
+
+\pf 取标准的圆周参数映射
+\[
+ q:I\to S^1,\qquad q(s)=(\cos2\pi s,\sin2\pi s).
+\]
+它把 \(0,1\) 识别为 \(b\)，其余点一一对应；又因 \(I\) 紧致、\(S^1\) 为 Hausdorff 空间，连续满射 \(q\) 是闭映射，因而是商映射。
+
+\textbf{第一步：圆周映射与闭路一一对应。}
+对任意 \(f\in A\)，令
+\[
+ \alpha_f=f\circ q.
+\]
+则 \(\alpha_f(0)=\alpha_f(1)=x_0\)，所以 \(\alpha_f\) 是以 \(x_0\) 为基点的闭路。
+反过来，任意这样的闭路 \(\alpha:I\to X\) 满足 \(\alpha(0)=\alpha(1)\)，故它在 \(q\) 的每个纤维上为常值。由商映射的性质，存在唯一的连续映射
+\[
+ f_\alpha:S^1\to X,\qquad f_\alpha(q(s))=\alpha(s).
+\]
+而且 \(f_\alpha(b)=x_0\)。这两个构造互为逆。
+
+\textbf{第二步：两种同伦恰好对应。}
+若 \(f_1\sim f_2\)，取相应的保基点同伦 \(H:S^1\times I\to X\)，则
+\[
+ F:I\times I\to X,\qquad F(s,t)=H(q(s),t)
+\]
+连续，并且
+\[
+ F(s,0)=f_1(q(s)),\quad F(s,1)=f_2(q(s)),
+ \qquad F(0,t)=F(1,t)=x_0.
+\]
+所以 \(f_1\circ q\pe f_2\circ q\)。
+
+反之，若 \(F:f_1\circ q\pe f_2\circ q\) 是一个定端同伦，则
+\(F(0,t)=F(1,t)=x_0\)。考虑映射
+\[
+ Q=q\times\operatorname{id}_I:I\times I\to S^1\times I,
+ \qquad Q(s,t)=(q(s),t).
+\]
+它也是从紧致空间到 Hausdorff 空间的连续满射，故是商映射。由于 \(F\) 在 \(Q\) 的每个纤维上为常值，\(F\) 唯一分解为
+\[
+ F=H\circ Q,\qquad H:S^1\times I\to X\text{ 连续}.
+\]
+这个 \(H\) 满足
+\[
+ H(z,0)=f_1(z),\quad H(z,1)=f_2(z),
+ \qquad H(b,t)=x_0,
+\]
+故 \(f_1\sim f_2\)。因此
+\[
+ f_1\sim f_2\quad\Longleftrightarrow\quad
+ f_1\circ q\pe f_2\circ q.
+\]
+这也说明 \(\sim\) 是等价关系，并且
+\[
+ \Phi:\pi'_1(X,x_0)\to\pi_1(X,x_0),
+ \qquad \Phi([f])=\pc{f\circ q}
+\]
+是良定义的双射。这里 \([f]\) 表示圆周映射的保基点同伦类。
+
+\textbf{第三步：乘法对应并在同伦类上良定义。}
+题中乘积在 \(\theta=\pi\) 的两段都取值 \(x_0\)，且 \(\theta=0,2\pi\) 处也取值 \(x_0\)。由粘贴引理及端点识别，\(f_1f_2\) 是连续的带基点映射，因而属于 \(A\)。
+更具体地，把 \(\theta=2\pi s\) 代入乘法公式，就得到
+\[
+ ((f_1f_2)\circ q)(s)=
+ \begin{cases}
+ f_1(q(2s)),&0\leq s\leq\tfrac12,\\
+ f_2(q(2s-1)),&\tfrac12\leq s\leq1.
+ \end{cases}
+\]
+第二段用了三角函数的 \(2\pi\) 周期性。所以作为道路有严格的等式
+\[
+ (f_1f_2)\circ q=(f_1\circ q)(f_2\circ q).
+\]
+若 \(f_i\sim g_i\)（\(i=1,2\)），由第二步及道路乘积与定端同伦的相容性，
+\[
+ (f_1f_2)\circ q
+ =(f_1\circ q)(f_2\circ q)
+ \pe(g_1\circ q)(g_2\circ q)
+ =(g_1g_2)\circ q.
+\]
+再用第二步，得到 \(f_1f_2\sim g_1g_2\)。故 \([f_1][f_2]=[f_1f_2]\) 良定义，且
+\[
+ \begin{aligned}
+ \Phi([f_1][f_2])
+ &=\pc{(f_1f_2)\circ q}\\
+ &=\pc{f_1\circ q}\,\pc{f_2\circ q}
+ =\Phi([f_1])\Phi([f_2]).
+ \end{aligned}
+\]
+因此 \(\Phi\) 是保持乘法的双射。由 \(\pi_1(X,x_0)\) 的群公理及 \(\Phi\) 的双射性，\(\pi'_1(X,x_0)\) 也满足群公理，\(\Phi\) 是群同构。
+其中单位元为常值圆周映射 \(z\mapsto x_0\) 的类；\([f]\) 的逆元为 \([f\circ r]\)，其中 \(r(x,y)=(x,-y)\)，因为 \(r(q(s))=q(1-s)\)。于是
+\[
+ \boxed{\pi'_1(X,x_0)\cong\pi_1(X,x_0).}
+\]
+\done
+\end{document}
