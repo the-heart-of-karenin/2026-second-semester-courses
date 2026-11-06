@@ -1,0 +1,17 @@
+{
+  "book": "02",
+  "source_paragraphs": 4075,
+  "pages": 268,
+  "sampled_pages": [
+    1,
+    2,
+    245,
+    268
+  ],
+  "headings": {
+    "Act Twelve": 245
+  },
+  "docx_paragraphs_match": true,
+  "source_unchanged": true,
+  "docx_sha256": "f7f14848d737f47eed244a238cb6c5a8cd88b9ec31212de2fd391fd5044750ec"
+}

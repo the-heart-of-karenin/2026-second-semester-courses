@@ -1,0 +1,23 @@
+{
+  "book": "02",
+  "source_paragraphs": 3709,
+  "pages": 244,
+  "sampled_pages": [
+    1,
+    2,
+    173,
+    191,
+    205,
+    227,
+    244
+  ],
+  "headings": {
+    "Act Eight": 173,
+    "Act Nine": 191,
+    "Act Ten": 205,
+    "Act Eleven": 227
+  },
+  "docx_paragraphs_match": true,
+  "source_unchanged": true,
+  "docx_sha256": "37322ec8416f96189e8cede26b0c9ab159bbca0bc2bc75acba5d13f6152e8569"
+}

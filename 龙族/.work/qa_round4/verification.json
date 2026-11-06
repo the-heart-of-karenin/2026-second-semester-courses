@@ -1,0 +1,77 @@
+{
+  "source_unchanged": true,
+  "source_paragraph_coverage": "4535 of 4535 through source line 4800",
+  "docx_paragraph_text_matches": true,
+  "pdf_body_text_matches": true,
+  "pages": 251,
+  "visual_inspection": "Passed: new or changed pages individually inspected; unchanged pages pixel-identical to previously inspected images.",
+  "next_source_line": 4801,
+  "sections": [
+    {
+      "section": "Prologue",
+      "paragraphs": 41,
+      "source_nonwhitespace_characters": 1467,
+      "english_words": 913
+    },
+    {
+      "section": "Act One",
+      "paragraphs": 741,
+      "source_nonwhitespace_characters": 37189,
+      "english_words": 21624
+    },
+    {
+      "section": "Act Two",
+      "paragraphs": 463,
+      "source_nonwhitespace_characters": 26206,
+      "english_words": 12396
+    },
+    {
+      "section": "Act Three",
+      "paragraphs": 360,
+      "source_nonwhitespace_characters": 19740,
+      "english_words": 9094
+    },
+    {
+      "section": "Act Four",
+      "paragraphs": 431,
+      "source_nonwhitespace_characters": 24517,
+      "english_words": 11034
+    },
+    {
+      "section": "Act Five",
+      "paragraphs": 364,
+      "source_nonwhitespace_characters": 20120,
+      "english_words": 11767
+    },
+    {
+      "section": "Act Six",
+      "paragraphs": 613,
+      "source_nonwhitespace_characters": 29729,
+      "english_words": 16771
+    },
+    {
+      "section": "Act Seven",
+      "paragraphs": 419,
+      "source_nonwhitespace_characters": 21288,
+      "english_words": 12159
+    },
+    {
+      "section": "Act Eight",
+      "paragraphs": 613,
+      "source_nonwhitespace_characters": 28552,
+      "english_words": 16626
+    },
+    {
+      "section": "Act Nine",
+      "paragraphs": 490,
+      "source_nonwhitespace_characters": 24312,
+      "english_words": 13762
+    }
+  ],
+  "visual_review_reports": [
+    "visual-review-192-211.md",
+    "visual-review-212-231.md",
+    "visual-review-232-251.md"
+  ],
+  "docx_sha256": "fa2867d66a581c7fb290e601751aa57ad0790498799dbe308cf5d69fd1ffa21d"
+}

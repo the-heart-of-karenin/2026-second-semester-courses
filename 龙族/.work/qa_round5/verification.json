@@ -1,0 +1,35 @@
+[
+  {
+    "book": "01",
+    "source_paragraphs": 5173,
+    "pages": 284,
+    "sampled_pages": [
+      1,
+      2,
+      252,
+      275,
+      279,
+      284
+    ],
+    "docx_paragraphs_match": true,
+    "source_unchanged": true,
+    "docx_sha256": "f3dc5085352e5caf304974b94cee30ca971be5688d43451f6a6da68d43f4f946"
+  },
+  {
+    "book": "02",
+    "source_paragraphs": 1263,
+    "pages": 81,
+    "sampled_pages": [
+      1,
+      2,
+      23,
+      40,
+      62,
+      76,
+      81
+    ],
+    "docx_paragraphs_match": true,
+    "source_unchanged": true,
+    "docx_sha256": "5f790e7e9335574fa4a943887ec14f6ea5a0f6771d6be5924ee3b9a1b1cc3f8f"
+  }
+]
