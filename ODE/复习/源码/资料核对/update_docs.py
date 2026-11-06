@@ -1,0 +1,13 @@
+from pathlib import Path
+p=Path('ODE/复习/README.md');s=p.read_text(encoding='utf-8')
+s=s.replace('从指定习题集选出的 50 道题，全部有独立题干及书页/PDF页定位。例题也作为独立训练题使用。新增提示和小问明确标注；不附完整答案。','真题导向修订版，50 题：概念 6、代表计算 14、证明 18、首次积分综合 6、教材应用 6。来源包括两份试卷、教材与习题集；逐题标明来源、改编和新增小问；不附完整答案。SIR、等角轨线、二体问题三个应用专题各有两题。')
+s=s.replace('`源码/make_training.py`：训练题的可编辑题库主源，含全部题干、来源和补充说明；修改题目后运行一次，生成 `training.tex` 和 `sources.csv`。','`源码/exam_revision.py`：本次真题导向版本的主要题库源，定义新题与从旧题库选入的题目。长期修改在此文件进行。\n- `源码/make_training.py`：保留习题集候选题库，并调用 `exam_revision.py` 生成当前的 `training.tex` 和 `sources.csv`。')
+s=s.replace('长期修改应回到 `make_training.py`','长期修改应回到 `exam_revision.py`，其中 `keep` 引用的旧书题可在 `make_training.py` 修改')
+s=s.replace('两本参考资料均为图像扫描','两本参考资料均为图像扫描')
+s=s.replace('- 本册训练第 4 题（原书第 1 章练习 3）在初始点不能给出以 y 为 x 的 C1 函数解，保留原式，并说明用反函数/参数曲线解释的区别。','- 原版中初值不相容的原书第 1 章练习 3 本轮未选入，避免将辨析题混作常规计算题。\n- 新增两份试卷已保存于 `ODE/历年试题/`，压缩包条目与保存文件名对应见 `archive_map.json`。2025 卷由 6 张照片组成，其中 `paper1-02-upright.png` 为卷首双页旋正图；2023 试题为 `paper2-01.pdf`，部分答案为 `paper2-02.pdf`。\n- 2023 文件为署编者的整理稿，来源身份未进一步认证；其涉及第四章的一般理论问法未据此扩大本次考试范围。\n- 当前训练 11 页；复习重点增加试卷导向与误差结果后为 15 页。')
+p.write_text(s,encoding='utf-8')
+p=Path('README.md');s=p.read_text(encoding='utf-8');s+='\n本次 ODE 复习于 2026-10-28 根据新提供的两份期中试卷修订：先分析试卷各大题的分值、证明/辨析/建模要求，再重配练习；优先覆盖真题所反映的能力，不按重复积分技巧堆题。保留 50 题，其中 18 道基本证明，教材 2.6 三个应用专题均纳入；范围仍截止 3.1。新增或改编题逐题注明，不能继续宣称所有题均为习题集原题。\n';p.write_text(s,encoding='utf-8')
+p=Path('ODE/复习/源码/资料核对/final_check.py');s=p.read_text(encoding='utf-8');s=s.replace("assert all(int(r['PDF页'])==int(r['印刷页'])+8 for r in rows)","assert all(int(r['PDF页'])==int(r['印刷页'])+8 for r in rows if r['印刷页'])")
+s=s.replace("'make_training.py','build.py'","'make_training.py','exam_revision.py','build.py'")
+s=s.replace('14 页','15 页').replace('复习重点：51 个知识点，15 页。','复习重点：51 个知识点及真题导向补充，15 页。').replace('教材为 +10。','教材为 +10；真题与改编另标来源位置。')
+p.write_text(s,encoding='utf-8')

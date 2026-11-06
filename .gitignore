@@ -1,0 +1,30 @@
+# Large PDF omitted from the initial upload
+/全国大学生数学竞赛解析教程_数学分析上册/全国大学生数学竞赛解析教程_数学分析上册.pdf
+
+# Temporary files and generated build outputs
+/tmp/
+**/build/
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.nav
+*.snm
+*.vrb
+.DS_Store
+Thumbs.db
+~$*
+
+# Local credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx

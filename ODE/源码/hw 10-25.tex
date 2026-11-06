@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue,pdftitle={hw 10-25}]{hyperref}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{微分方程}\fancyhead[R]{hw 10-25}
+\fancyfoot[C]{\thepage}\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\xx}{\boldsymbol{x}}
+\newcommand{\bb}{\boldsymbol{b}}
+\begin{document}
+\begin{center}{\LARGE\bfseries hw 10-25}\\[7pt]题目与解答\end{center}
+\textbf{范围：}第 93 页第 9 题 (1)；第 94 页第 10 题。题干依据用户提供的截图，页码沿用用户标注。
+
+\section*{第 93 页，第 9 题 (1)}
+\textbf{题目。}求解下列非齐次线性系统的初值问题：
+\[
+\text{(1)}\quad
+\begin{cases}
+\displaystyle\frac{dx_1}{dt}=-\frac2t x_1+1,\quad
+\displaystyle\frac{dx_2}{dt}=\left(1+\frac2t\right)x_1+x_2-1
+\quad(t>0),\\[7pt]
+\displaystyle x_1(1)=\frac13,\quad x_2(1)=-\frac13.
+\end{cases}
+\]
+
+\textbf{解答。}先解第一个方程：
+\[
+x_1'+\frac2t x_1=1.
+\]
+在 $t>0$ 上，积分因子为 $t^2$，故
+\[
+(t^2x_1)'=t^2.
+\]
+从 $1$ 到 $t$ 积分，利用初值 $x_1(1)=1/3$，得到
+\[
+t^2x_1(t)-\frac13=\frac{t^3-1}{3},
+\qquad\text{即}\qquad x_1(t)=\frac t3.
+\]
+
+将原系统的两个方程相加，有
+\[
+(x_1+x_2)'=
+-\frac2t x_1+1+\left(1+\frac2t\right)x_1+x_2-1
+=x_1+x_2.
+\]
+令 $y=x_1+x_2$，则
+\[
+y'=y,\qquad y(1)=\frac13-\frac13=0.
+\]
+因此 $y(t)=y(1)e^{t-1}=0$，从而 $x_2(t)=-x_1(t)=-t/3$。
+所求解为
+\[
+\boxed{\quad x_1(t)=\frac t3,\qquad x_2(t)=-\frac t3,\qquad t>0.\quad}
+\]
+系统的系数和非齐次项在 $(0,\infty)$ 上连续，由线性系统初值问题的存在唯一性定理，此解是该区间上满足所给初值的唯一解。
+
+\newpage
+\section*{第 94 页，第 10 题}
+\textbf{题目。}设 $A(t)$ 和 $b(t)$ 分别是区间 $I$ 上的连续 $n$ 阶矩阵函数和 $n$ 维向量函数，并且 $b(t)\ne0$，证明：非齐次线性系统
+\[
+\frac{dx}{dt}=A(t)x+b(t)
+\]
+在区间 $I$ 上至多有 $n+1$ 个线性无关的解。
+
+\textbf{证明。}这里的线性无关是指作为区间 $I$ 上的向量函数线性无关，即线性组合中的系数为与 $t$ 无关的常数。
+
+任取上述非齐次系统的 $n+2$ 个解
+\[
+\xx^{(1)}(t),\ \xx^{(2)}(t),\ \ldots,\ \xx^{(n+2)}(t).
+\]
+只需证明它们线性相关。固定 $t_0\in I$，在 $\mathbb R^{n+1}$（复系数情形则在 $\mathbb C^{n+1}$）中考虑 $n+2$ 个向量
+\[
+\begin{pmatrix}\xx^{(1)}(t_0)\\1\end{pmatrix},\quad
+\begin{pmatrix}\xx^{(2)}(t_0)\\1\end{pmatrix},\quad\ldots,\quad
+\begin{pmatrix}\xx^{(n+2)}(t_0)\\1\end{pmatrix}.
+\]
+它们必线性相关。因此存在不全为零的常数 $c_1,\ldots,c_{n+2}$，使
+\[
+\sum_{j=1}^{n+2}c_j\xx^{(j)}(t_0)=0,
+\qquad
+\sum_{j=1}^{n+2}c_j=0.
+\]
+令
+\[
+\boldsymbol{y}(t)=\sum_{j=1}^{n+2}c_j\xx^{(j)}(t).
+\]
+由于每个 $\xx^{(j)}$ 都满足原系统，得到
+\begin{align*}
+\boldsymbol{y}'(t)
+&=\sum_{j=1}^{n+2}c_j\bigl(A(t)\xx^{(j)}(t)+\bb(t)\bigr)\\
+&=A(t)\boldsymbol{y}(t)+\left(\sum_{j=1}^{n+2}c_j\right)\bb(t)
+=A(t)\boldsymbol{y}(t).
+\end{align*}
+同时 $\boldsymbol{y}(t_0)=0$。
+
+由齐次线性系统初值问题的唯一性，$\boldsymbol{y}$ 与零解有相同初值，故
+\[
+\boldsymbol{y}(t)\equiv0\qquad(t\in I).
+\]
+于是
+\[
+\sum_{j=1}^{n+2}c_j\xx^{(j)}(t)\equiv0,
+\]
+且这些常数不全为零，说明任意 $n+2$ 个解都线性相关。因此
+\[
+\boxed{\text{该非齐次线性系统在 }I\text{ 上至多有 }n+1\text{ 个线性无关的解。}}
+\]
+\end{document}

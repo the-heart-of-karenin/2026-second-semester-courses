@@ -1,0 +1,517 @@
+\input{preamble.tex}
+\newcounter{exercise}
+\newcommand{\problem}[3]{\refstepcounter{exercise}\subsection*{\theexercise.\quad #1}\label{ex:#2}\textit{出处：#3}\par}
+\title{微分方程 I：期中训练题 67 题\\\large 标准题面版 · 截止第 3.1 节（含）}
+\author{}\date{2026 年 10 月 28 日}
+\maketitle\vspace{-2em}
+\textbf{范围与构成。}考试范围截止第 3.1 节（含）。全册 67 题：前 50 题包括概念辨析 6 题、代表计算 14 题、基本定理证明 18 题、首次积分综合 6 题、教材应用 6 题；第 51--60 题为已有的变量分离、线性化、积分因子与隐式方程补充；第 61--64 题收录教材习题 2.5 第 2 题全部四问，第 65--67 题为习题集首次积分补充题。原有编号不变。不附答案。
+
+\textbf{符号约定。}除另有规定外，$I$ 为非空开区间，未知向量 $x$ 取值于 $\R^n$，$I_n$ 为 $n$ 阶单位矩阵；$|\cdot|$ 为向量范数，$\|\cdot\|$ 为其诱导矩阵范数。线性相关或无关均指以常数为系数的向量函数关系。函数独立性按对状态变量的 Jacobi 矩阵秩判定。
+
+\textbf{来源。}“2025 卷”指所提供、卷首标有上海交通大学致远班 2025--2026 学年第一学期期中试卷的照片；“2023 卷”指所提供、署编者史瑞普的 2023--2024 学年第一学期试题及部分答案整理稿。教材为《微分方程 I（101 计划）》，习题集为博亚尔丘克、戈洛瓦奇《高等数学例题与习题集（四）常微分方程》。题面按本册要求统一，原题来源与改编标记见各题。
+
+\textbf{页码。}所选习题集题目 PDF 页＝印刷页＋8；教材 PDF 页＝印刷页＋10。试卷按大题、小题号定位。
+
+\begingroup\small\setlength{\parskip}{0pt}\tableofcontents\endgroup\newpage
+\section{A. 概念辨析与反例（6 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{解、通解与消元}{01}{教材 1.2、1.3 改编；教材书 p.7--16 / PDF p.17--26}
+\par（1）给出 $n$ 阶常微分方程的解、通解的定义，并写出通解中 $n$ 个任意常数相互独立的 Jacobi 行列式条件。
+\par（2）在 $t>0$ 上，判断函数族 $x=C_1t+C_2t^{-1}+t\ln t$ 是否为方程 $t^2x''+tx'-x-t=0$ 的通解，并说明理由。
+\par（3）将方程组 $x''+y=0,\ y''-x=0$ 化为四维一阶微分方程组。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{函数无关与逐点无关}{02}{教材习题 3.1 第 3 题改编；2025 卷第 4 题风格；教材书 p.92 / PDF p.102}
+设
+\[\varphi_1(t)=(1,0,0)^{\mathsf T},\quad\varphi_2(t)=(t,0,0)^{\mathsf T},\quad\varphi_3(t)=(t^2,0,0)^{\mathsf T},\quad t\in\R.\]
+\par（1）判断上述向量函数组在 $\R$ 上是否线性无关。
+\par（2）是否存在连续矩阵函数 $A:\R\to\R^{3\times3}$，使上述三个函数均为 $x'=A(t)x$ 的解？
+\par（3）对任意三个连续三维向量函数，条件 $\det(\varphi_1(t),\varphi_2(t),\varphi_3(t))\equiv0$ 是否足以推出它们线性相关？各问均须说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{解集、张成空间与维数}{03}{教材习题 3.1 第 10 题；2025 卷第 4 题改编；教材书 p.94 / PDF p.104；2025 卷第 4 题}
+设 $I$ 为区间，$A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$ 且 $b\not\equiv0$。记方程 $x'=A(t)x+b(t)$ 在 $I$ 上的全体解为 $\mathcal S$。判断下列命题，正确者给出证明，错误者给出反例或理由：
+\par（1）$\mathcal S$ 是 $n+1$ 维线性空间；\par（2）$\mathcal S$ 是 $n$ 维仿射空间；\par（3）$\mathcal S$ 中任意 $n+2$ 个解线性相关；\par（4）若 $x_1,\ldots,x_k\in\mathcal S$，$c_j\in\R$ 且 $\sum_{j=1}^k c_j=1$，则 $\sum_{j=1}^k c_jx_j\in\mathcal S$。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{零点拼接与变号}{04}{2023 卷第 4 题变式；2023 卷第 4 题（原卷 PDF p.1--2）}
+设 $g\in C(\R)$ 且 $g(t)>0$。考虑方程
+\[x'=g(t)\sqrt[3]{x}.\]
+\par（1）对任意 $(t_0,x_0)\in\R^2$，求一个定义在 $\R$ 上且满足 $x(t_0)=x_0$ 的解。
+\par（2）证明：对任意 $t_0\in\R$，初值条件 $x(t_0)=0$ 对应无穷多个定义在 $\R$ 上的解。
+\par（3）证明：方程的任一全实轴解 $x$ 均满足 $x(t)\ge0\ (\forall t\in\R)$ 或 $x(t)\le0\ (\forall t\in\R)$。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{全局存在与奇点}{05}{教材 2.1、3.1 改编；教材书 p.18--22、76--80}
+\par（1）求初值问题 $x'=x^2,\ x(0)=1$ 的解及其最大存在区间。
+\par（2）设 $a,b\in C(\R)$。证明 $x'=a(t)x+b(t),\ x(0)=1$ 存在唯一的全实轴解。
+\par（3）求 $x'=x/t,\ x(1)=1$ 在原方程定义域内的最大存在区间。所得函数能否延拓为 $\R$ 上的 $C^1$ 函数？延拓后的函数是否为原方程在 $\R$ 上的解？
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{闭、恰当与奇解候选}{06}{教材 2.3、2.4 改编；教材书 p.34--46}
+\par（1）在 $D=\R^2\setminus\{(0,0)\}$ 上，令
+\[M(t,x)=-\frac{x}{t^2+x^2},\qquad N(t,x)=\frac{t}{t^2+x^2}.\]
+证明 $M_x=N_t$，并证明不存在 $U\in C^1(D)$ 同时满足 $U_t=M,U_x=N$。
+\par（2）设 $U(t,x,C)$ 为 $C^2$ 函数。消去 $U=0,U_C=0$ 中的 $C$ 所得曲线是否必为曲线族 $U(t,x,C)=0$ 的包络，或该曲线族对应微分方程的奇解？说明理由，并列出验证包络与奇解所需的条件。
+\end{minipage}\par\vspace{5pt}
+\section{B. 代表性计算与结构化求解（14 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{07}{第 1 章练习 7（本册改编）；书 p.135 / PDF p.143}
+求微分方程的通解或通积分，并确定解的适用区间：
+\[y'=\frac yx+e^x\frac{2xy}{x^2+y^2}.\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{08}{第 1 章练习 9（本册改编）；书 p.135 / PDF p.143}
+求微分方程的通积分：
+\[(2x-4y+6)\dd x+(x+y-3)\dd y=0.\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{09}{第 1 章练习 16（本册改编）；书 p.135 / PDF p.143}
+求微分方程 $y=x(y'-x\cos x)$ 的通解，并分别给出其在 $x>0$ 和 $x<0$ 上的表达式。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{10}{第 1 章练习 19（本册改编）；书 p.135 / PDF p.143}
+求微分方程的通解或通积分，并给出原方程的定义域及所取解支的适用区间：
+\[y'=\frac{y}{3x-y^2}.\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{11}{第 1 章练习 20（本册改编）；书 p.135 / PDF p.143}
+求微分方程 $y'+2y=e^xy^2$ 的全部实解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{12}{第 1 章练习 21（本册改编）；书 p.135 / PDF p.143}
+在 $x\ne0$ 上求微分方程
+\[xy'-2x^2\sqrt y=4y\]
+的非负实解。对所得非零解，给出其适用区间；另求出可在区间内部取零值的解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{13}{第 1 章练习 29（本册改编）；书 p.136 / PDF p.144}
+在不含 $x=0$ 的区间上，求微分方程
+\[2y'=xy+y^2+\frac1{x^2}-3\]
+的通解或通积分。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{14}{第 1 章练习 33（本册改编）；书 p.136 / PDF p.144}
+求微分方程的通积分：
+\[(1+y^2\sin2x)\dd x-2y\cos^2x\dd y=0.\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{15}{第 1 章练习 38（本册改编）；书 p.136 / PDF p.144}
+求微分方程
+\[(x^2+2x+y)\dd x-(x-3x^2y)\dd y=0\]
+的一个处处非零的积分因子及相应通积分，并说明积分因子的适用区域。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{非唯一性与奇解}{16}{第 1 章练习 40（本册改编）；书 p.136 / PDF p.144}
+求方程 $y'=\sqrt y$ 的全部全实轴非负 $C^1$ 解，并确定其中满足 $y(0)=0$ 的解。判断 $y\equiv0$ 是否为奇解，并说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶隐式微分方程}{17}{第 1 章例 173（本册改编）；书 p.87 / PDF p.95}
+求一阶隐式微分方程
+\[(y')^2-(3x-2y)y'+2x^2-xy-3y^2=0\]
+的各支通解或通积分。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶隐式方程}{18}{第 1 章例 179（本册改编）；书 p.89 / PDF p.97}
+求一阶隐式微分方程 $x=y'\sin y'$ 的参数形式解，并写出参数曲线可局部表示为 $y=y(x)$ 的条件。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{已知特解的 Riccati 方程}{19}{2025 卷第 2.1 题（本册改编）；2025 卷第 2.1 题}
+已知方程
+\[x'=x^2-2tx+t^2+1\]
+有特解 $\varphi(t)=t$。
+\par（1）求方程的通解；\par（2）对任意 $(t_0,x_0)\in\R^2$，求满足 $x(t_0)=x_0$ 的解及其最大存在区间。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{已知一列解与三角系统}{20}{2025 卷第 2.2 题（本册改编）；2025 卷第 2.2 题}
+在 $t>0$ 上考虑系统
+\[x'=A(t)x,\qquad A(t)=\begin{pmatrix}1/t&t\\0&-1/t\end{pmatrix}.\]
+已知 $\varphi(t)=(t,0)^{\mathsf T}$ 为系统的一个解。
+\par（1）求系统通解及一个基本解矩阵 $\Phi(t)$；
+\par（2）计算 $W(t)=\det\Phi(t)$，验证 $W'=\operatorname{tr}A(t)W$；
+\par（3）求满足 $X(1)=I_2$ 的基本解矩阵 $X(t)$。
+\end{minipage}\par\vspace{5pt}
+\section{C. 基本定理与证明训练（18 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{积分等价式}{21}{定理 3.1 的准备引理；教材书 p.76 / PDF p.86}
+设 $I\subset\R$ 为区间，$t_0\in I$，$x_0\in\R^n$，$A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$。证明下列两个条件等价：
+\begin{enumerate}[label=(\arabic*)]
+\item $x\in C^1(I,\R^n)$，$x'=A(t)x+b(t)$，且 $x(t_0)=x_0$；
+\item $x\in C(I,\R^n)$，且对任意 $t\in I$，
+\[x(t)=x_0+\int_{t_0}^t[A(s)x(s)+b(s)]\dd s.\]
+\end{enumerate}
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{Picard 迭代的收敛与全局存在}{22}{教材定理 3.1 改编；教材书 p.77--80 / PDF p.87--90}
+设 $I$ 为区间，$t_0\in I$，$x_0\in\R^n$，$A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$。定义
+\[x^{[0]}(t)=x_0,\qquad x^{[k+1]}(t)=x_0+\int_{t_0}^t[A(s)x^{[k]}(s)+b(s)]\dd s.\]
+\par（1）设 $J\subset I$ 为包含 $t_0$ 的紧区间，$\|A(t)\|\le K,|b(t)|\le K$（$t\in J$）。证明对 $k\ge1$，
+\[|x^{[k]}(t)-x^{[k-1]}(t)|\le(1+|x_0|)\frac{K^k|t-t_0|^k}{k!}.\]
+\par（2）证明 $x^{[k]}$ 在 $J$ 上一致收敛，且极限为相应初值问题的解。
+\par（3）证明该初值问题的解存在于整个 $I$ 上。本题不得直接引用线性系统的全局存在定理。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{Picard 的截断误差}{23}{2025 卷第 5.2 题细化；2025 卷第 5.2 题}
+设 $A\in C([t_0,T],\R^{n\times n})$，$t_0<T$，且 $\|A(t)\|\le M$。令 $x$ 为初值问题 $x'=A(t)x,\ x(t_0)=x_0$ 的解，并定义
+\[x^{[0]}(t)=x_0,\qquad x^{[k+1]}(t)=x_0+\int_{t_0}^t A(s)x^{[k]}(s)\dd s.\]
+求仅依赖于 $M,T-t_0,|x_0|,n$ 的显式量 $E_n$，使
+\[\sup_{t\in[t_0,T]}|x(t)-x^{[n]}(t)|\le E_n,\qquad\lim_{n\to\infty}E_n=0,\]
+并证明所给估计。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{唯一性与零初值}{24}{教材定理 3.1、3.4 改编；教材书 p.79--85 / PDF p.89--95}
+设 $A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$，$t_0\in I$。
+\par（1）证明：若 $x_1,x_2$ 均满足 $x'=A(t)x+b(t)$ 且 $x_1(t_0)=x_2(t_0)$，则 $x_1\equiv x_2$。本问不得直接引用唯一性定理。
+\par（2）证明：若 $x$ 为 $x'=A(t)x$ 的非零解，则对所有 $t\in I$ 均有 $x(t)\ne0$。
+\par（3）给出一个连续系数齐次系统及其非零解，使该解的某个分量在区间内变号。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{齐次解空间的维数}{25}{教材定理 3.2；教材书 p.80--81 / PDF p.90--91}
+设 $A\in C(I,\R^{n\times n})$。记
+\[\mathcal S(A)=\{x\in C^1(I,\R^n):x'=A(t)x\}.\]
+证明 $\mathcal S(A)$ 是实线性空间，且 $\dim\mathcal S(A)=n$。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{Liouville 公式}{26}{教材定理 3.3；教材书 p.84 / PDF p.94}
+设 $A\in C(I,\R^{n\times n})$，$\varphi_1,\ldots,\varphi_n$ 为系统 $x'=A(t)x$ 的解。令
+\[\Phi(t)=(\varphi_1(t),\ldots,\varphi_n(t)),\qquad W(t)=\det\Phi(t).\]
+不假设 $\Phi(t)$ 可逆。证明
+\[W'(t)=\operatorname{tr}A(t)W(t),\qquad W(t)=W(t_0)\exp\!\left(\int_{t_0}^t\operatorname{tr}A(s)\dd s\right)\quad(t,t_0\in I).\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一点无关与处处无关}{27}{教材定理 3.4 与推论；教材书 p.85 / PDF p.95}
+设 $A\in C(I,\R^{n\times n})$，$\varphi_1,\ldots,\varphi_n$ 为同一系统 $x'=A(t)x$ 的解，$W(t)=\det(\varphi_1(t),\ldots,\varphi_n(t))$。证明下列条件等价：
+\par（1）$\varphi_1,\ldots,\varphi_n$ 在 $I$ 上线性无关；
+\par（2）存在 $t_0\in I$ 使 $W(t_0)\ne0$；
+\par（3）对任意 $t\in I$，$W(t)\ne0$。
+若 $\varphi_j$ 仅为任意 $C^1$ 向量函数，上述哪些蕴涵仍成立？证明结论或给出反例。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{全部基本解矩阵的关系}{28}{教材推论 3.3；教材书 p.86--87 / PDF p.96--97}
+设 $A\in C(I,\R^{n\times n})$，$\Phi,\Psi$ 均为系统 $x'=A(t)x$ 的基本解矩阵。证明：
+\par（1）存在唯一的常数可逆矩阵 $C$，使 $\Psi(t)=\Phi(t)C$（$t\in I$）；
+\par（2）对任意常数可逆矩阵 $C$，$\Phi(t)C$ 也是该系统的基本解矩阵；
+\par（3）对任意常数可逆矩阵 $C$，$C\Phi(t)$ 是否必为该系统的基本解矩阵？说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{由基本解矩阵唯一确定系统}{29}{2025 卷第 5.1 题；教材习题 3.1 第 5 题扩展；2025 卷第 5.1 题；教材书 p.93 / PDF p.103}
+设 $I$ 为区间。
+\par（1）设 $A,B\in C(I,\R^{n\times n})$，$\Phi$ 同时为系统 $x'=A(t)x$ 与 $x'=B(t)x$ 的基本解矩阵。证明 $A(t)=B(t)$（$t\in I$）。
+\par（2）设 $\Phi\in C^1(I,\R^{n\times n})$ 且 $\det\Phi(t)\ne0$（$t\in I$）。求连续矩阵函数 $A(t)$，并证明 $\Phi$ 是 $x'=A(t)x$ 的基本解矩阵。
+\par（3）若将\par（1）中的“基本解矩阵”改为“解矩阵”，结论是否仍成立？说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{非齐次通解的仿射结构}{30}{教材命题 3.1、定理 3.6；教材书 p.87--89 / PDF p.97--99}
+设 $A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$，$x_p$ 为 $x'=A(t)x+b(t)$ 的一个解，$\mathcal S(A)$ 为对应齐次系统的解空间。证明：
+\par（1）任意两个非齐次解之差属于 $\mathcal S(A)$；
+\par（2）非齐次系统的全体解为 $\mathcal S(A,b)=x_p+\mathcal S(A)$；
+\par（3）若 $x_j\in\mathcal S(A,b)$，$c_j\in\R$ 且 $\sum c_j=1$，则 $\sum c_jx_j\in\mathcal S(A,b)$。
+当 $b\not\equiv0$ 时，判断 $\mathcal S(A,b)$ 是否为线性空间，并说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{非齐次解的 n+1 上界}{31}{2025 卷第 4 题；教材习题 3.1 第 10 题扩展；2025 卷第 4 题；教材书 p.94 / PDF p.104}
+设 $A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$ 且 $b\not\equiv0$。
+\par（1）证明方程 $x'=A(t)x+b(t)$ 的任意 $n+2$ 个解线性相关。
+\par（2）证明该方程存在 $n+1$ 个线性无关的解。
+\par（3）求该方程解集的仿射维数及其线性张成空间的维数。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{常数变易公式}{32}{教材定理 3.7；教材书 p.89--91 / PDF p.99--101}
+设 $A\in C(I,\R^{n\times n})$，$b\in C(I,\R^n)$，$\Phi$ 为 $x'=A(t)x$ 的任一基本解矩阵。证明非齐次系统 $x'=A(t)x+b(t)$ 的通解为
+\[x(t)=\Phi(t)\left(c+\int_{t_*}^t\Phi(s)^{-1}b(s)\dd s\right),\qquad c\in\R^n,\ t_*\in I.\]
+并证明满足初值 $x(t_0)=x_0$ 的解为
+\[x(t)=\Phi(t)\Phi(t_0)^{-1}x_0+\Phi(t)\int_{t_0}^t\Phi(s)^{-1}b(s)\dd s.\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{状态转移矩阵}{33}{教材习题 3.1 第 7 题；教材书 p.93 / PDF p.103}
+设 $A\in C(I,\R^{n\times n})$，$\Phi$ 为 $x'=A(t)x$ 的基本解矩阵。对 $t,s\in I$ 定义 $U(t,s)=\Phi(t)\Phi(s)^{-1}$。证明 $U$ 与基本解矩阵的选择无关，并证明对任意 $t,r,s\in I$，
+\[U(s,s)=I_n,\quad U(t,r)U(r,s)=U(t,s),\quad U(t,s)^{-1}=U(s,t),\]
+\[\partial_tU(t,s)=A(t)U(t,s),\qquad \partial_sU(t,s)=-U(t,s)A(s).\]
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{全微分判据}{34}{教材定理 2.3；教材书 p.35--37 / PDF p.45--47}
+设 $I,J$ 为开区间，$M,N\in C^1(I\times J)$。
+\par（1）证明：存在 $U\in C^2(I\times J)$ 满足 $U_t=M,U_x=N$，当且仅当 $M_x=N_t$ 在 $I\times J$ 恒成立。
+\par（2）在 $M_x=N_t$ 时，给出 $U$ 的积分表达式。
+\par（3）若将 $I\times J$ 改为任意单连通开区域，上述等价结论是否仍成立？说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{复合积分因子的充要条件}{35}{教材习题 2.3 第 3 题改编；教材书 p.42 / PDF p.52}
+设 $D\subset\R^2$ 为单连通开区域，$M,N\in C^1(D)$，$\varphi\in C^1(D)$，$J$ 为包含 $\varphi(D)$ 的开区间。证明下列命题等价：
+\par（1）存在处处非零的 $m\in C^1(J)$，使 $\mu(t,x)=m(\varphi(t,x))$ 为 $M\dd t+N\dd x=0$ 的积分因子；
+\par（2）存在 $h\in C(J)$，使
+\[N_t-M_x=(M\varphi_x-N\varphi_t)h(\varphi)\qquad\text{在 }D\text{ 上恒成立}.\]
+给出由 $h$ 构造 $m$ 的公式，并分别写出 $\varphi=tx$ 与 $\varphi=t^2+x^2$ 时的条件。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{Bernoulli 零点结论}{36}{教材习题 2.2 第 2 题；教材书 p.34 / PDF p.44}
+设 $I$ 为开区间，$p,q\in C(I)$。考虑非负实解满足的 Bernoulli 方程
+\[x'+p(t)x=q(t)x^\alpha.\]
+\par（1）设 $\alpha>1$。证明：若 $x(t_0)=0$，$t_0\in I$，则 $x\equiv0$。
+\par（2）设 $0<\alpha<1$。分别给出一组 $p,q$，使初值 $x(t_0)=0$ 有非零解，和一组 $p,q$，使该初值只有零解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{已知两解：线性与 Riccati}{37}{教材习题 2.2 第 3 题；教材书 p.34 / PDF p.44}
+设 $I$ 为区间，以下各方程的系数均在 $I$ 上连续。
+\par（1）已知 $x_1,x_2$ 是一阶线性方程 $x'+p(t)x=q(t)$ 的两个不同解，证明其通解为
+\[x=x_1+C(x_2-x_1),\qquad C\in\R.\]
+\par（2）已知 $x_1,x_2$ 是 Riccati 方程 $x'+p(t)x=q(t)x^2+r(t)$ 的两个不同解。对任意解 $x$，在 $x-x_2\ne0$ 的区间上令 $z=(x-x_1)/(x-x_2)$。证明
+\[z'=q(t)(x_1-x_2)z.\]
+由此求出 Riccati 方程的通解，并说明所得表达式的适用区间。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{能量守恒与耗散}{38}{教材 2.5 弹簧振子模型改编；教材书 p.56 / PDF p.66}
+设 $g\in C(\R)$，$d\in C(\R^2)$。令 $x\in C^2(I)$ 为方程
+\[x''+d(x,x')x'+g(x)=0\]
+的解，并定义
+\[E(t)=\tfrac12x'(t)^2+\int_0^{x(t)}g(u)\dd u.\]
+\par（1）证明 $E'(t)=-d(x(t),x'(t))x'(t)^2$。
+\par（2）若 $d\ge0$，证明 $E$ 不增；此时 $E$ 是否一定为首次积分？说明理由。
+\par（3）若 $d\equiv0$，证明能量守恒。
+\end{minipage}\par\vspace{5pt}
+\section{D. 首次积分、独立性与解的恢复（6 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分综合题}{39}{2025 卷第 3 题细化；2025 卷第 3 题}
+考虑自治系统
+\[x'=x(y^2-z^2),\quad y'=y(z^2-x^2),\quad z'=z(x^2-y^2).\]
+\par（1）求全部平衡点，并判断三个坐标平面是否为不变集合。
+\par（2）求两个不含 $t$ 的首次积分 $F_1,F_2$，确定 $\operatorname{rank}\partial(F_1,F_2)/\partial(x,y,z)=2$ 的区域及秩小于 $2$ 的点集。
+\par（3）在非平衡点的充分小邻域内，分别求不含 $t$ 及允许显含 $t$ 的函数独立首次积分个数的上界。
+\par（4）仅由\par（2）的两个首次积分能否唯一确定带时间参数的解 $(x(t),y(t),z(t))$？说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{能量与时间积分}{40}{2023 卷第 5(ii) 题（本册改编）；2023 卷第 5(ii) 题（PDF p.2）}
+设 $g\in C^1(\R)$，考虑系统 $x'=2y,\ y'=-g(x)$。
+\par（1）求一个不含 $t$ 的首次积分，并给出其力学解释。
+\par（2）在 $y\ne0$ 的解支上，将时间 $t$ 表示为 $x$ 的积分式。
+\par（3）求系统的全部平衡点，并给出非平衡解在 $x'=0$ 处的转向判据。
+\par（4）给定首次积分常数后，是否已唯一确定初值解？说明理由。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{2.5：首次积分判据}{41}{第 3 章练习 23（本册改编）；书 p.259 / PDF p.267}
+在 $x\ne0$ 上，$y,z$ 为自变量 $x$ 的函数。求系统
+\[y'=\frac{z^2}{x},\qquad z'=\frac{y^2}{x}\]
+的一个不含 $x$ 的非恒定首次积分，并确定该首次积分对 $(y,z)$ 的梯度非零的点集。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{2.5：对称形式与守恒组合}{42}{第 3 章练习 24（本册改编）；书 p.259 / PDF p.267}
+考虑自治系统
+\[\frac{\dd x}{\dd t}=z^2-y^2,\qquad \frac{\dd y}{\dd t}=z,\qquad \frac{\dd z}{\dd t}=-y.\]
+求两个不含 $t$ 的首次积分，并确定它们函数独立的区域。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分判据与隐函数定理}{43}{教材定理 2.5、2.7 改编；教材书 p.49--55 / PDF p.59--65}
+设 $D\subset\R^{n+1}$ 为开区域，$f\in C^1(D,\R^n)$，$F\in C^1(D)$，且 $F$ 在 $D$ 的任意非空开子集上均非常数。证明 $F$ 是系统 $x'=f(t,x)$ 的首次积分，当且仅当
+\[F_t(t,x)+\sum_{j=1}^nF_{x_j}(t,x)f_j(t,x)=0\qquad((t,x)\in D).\]
+若 $F_1,\ldots,F_n$ 为 $C^1$ 首次积分，且在 $(t_0,x_0)$ 处
+\[\det\frac{\partial(F_1,\ldots,F_n)}{\partial(x_1,\ldots,x_n)}(t_0,x_0)\ne0,\]
+证明方程组 $F_j(t,x)=c_j$ 在该点附近确定系统的一族通解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与通解}{44}{教材例 2.5.2 改编；教材书 p.50--52 / PDF p.60--62}
+求自治系统
+\[x'=y-x(x^2+y^2-1),\qquad y'=-x-y(x^2+y^2-1)\]
+的通解，并在适当区域内求两个显含 $t$ 的函数独立首次积分。分别给出非零解、零解及位于 $x^2+y^2=1$ 上的解，并说明各解的存在区间及首次积分的定义区域。
+\end{minipage}\par\vspace{5pt}
+\section{E. 教材三个应用专题与真题变式（6 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{应用专题一：SIR 的建模与阈值}{45}{教材 2.6.1 SIR 模型改编；教材书 p.58--62 / PDF p.68--72}
+某封闭人群由易感者、感染者、移出者三类组成，人数分别记为 $S(t),I(t),R(t)$。假设无出生、死亡及人口迁移；单位时间内新增感染人数为 $\beta S(t)I(t)$；感染者以比例 $\gamma$ 移出，其中 $\beta,\gamma>0$。初值为 $S(0)=S_0>0,I(0)=I_0>0,R(0)=R_0\ge0$。
+\par（1）建立 SIR 微分方程组。
+\par（2）求总人口守恒量及一个关于 $S,I$ 的首次积分。
+\par（3）求 $I$ 在初始时刻增长的充要条件；确定 $I$ 在 $t\ge0$ 上的最大值，并分别讨论最大值在 $t=0$ 及 $t>0$ 取得的情形。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{SIR 的终值与模型约定}{46}{教材 2.6.1 SIR 模型变式；教材书 p.59--62 / PDF p.69--72}
+设 $\beta,\gamma>0$，$S_0,I_0>0,R_0\ge0$。设 $(S,I,R)$ 为系统
+\[S'=-\beta SI,\quad I'=\beta SI-\gamma I,\quad R'=\gamma I\]
+在 $[0,\infty)$ 上的解，初值为 $(S_0,I_0,R_0)$，记 $N=S_0+I_0+R_0$。
+\par（1）证明 $S,I,R$ 保持非负，$S$ 不增，$R$ 不减。
+\par（2）证明 $I(t)\to0$，并推导 $S_\infty=\lim_{t\to\infty}S(t)$ 满足的隐式方程。
+\par（3）将感染发生率改为 $\beta SI/N$，求修改后系统的首次积分、初始感染增长阈值及 $S_\infty$ 满足的方程。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{应用专题二：等角轨线}{47}{教材 2.6.2；2023 卷第 5(i) 题（本册改编）；教材书 p.62--65；2023 卷第 5(i) 题}
+在 $t$--$x$ 平面中，求曲线族 $x=t\ln(ct)$ 的 $-\pi/4$ 等角轨线族，其中 $c\in\R\setminus\{0\}$，原曲线定义在 $ct>0$ 的区域。有向角约定为：从原曲线沿 $t$ 增大方向的切线转向所求曲线沿 $t$ 增大方向的切线的角度为 $-\pi/4$（模 $\pi$）。写出轨线方程及其解的适用区域。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{正交轨线与对数螺线}{48}{教材 2.6.2 直线族例题改编；教材书 p.63--65 / PDF p.73--75}
+在 $t$--$x$ 平面中，考虑过原点的直线族（包括竖直直线）。设 $0<\alpha<\pi/2$。
+\par（1）求该直线族的正交轨线族。
+\par（2）分别求与该直线族成有向角 $+\alpha$、$-\alpha$ 的等角轨线族，并将结果写成极坐标 $t=r\cos\theta,x=r\sin\theta$ 下的形式。
+上述轨线均在去心平面中讨论。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{应用专题三：二体问题与 Kepler 定律}{49}{教材 2.6.3 二体问题改编；教材书 p.65--70 / PDF p.75--80}
+在惯性坐标系中，两个质量分别为 $m_1,m_2>0$ 的质点仅受彼此的 Newton 万有引力作用，引力常数为 $G>0$。设其位置为 $q_1(t),q_2(t)\in\R^3$，且在讨论区间无碰撞。记 $r=q_2-q_1$，$\rho=|r|$，$\mu=G(m_1+m_2)$。
+\par（1）建立 $r$ 的运动方程，证明 $h=r\times r'$ 与 $\varepsilon=|r'|^2/2-\mu/\rho$ 为常量。
+\par（2）设 $h\ne0$。证明轨道位于固定平面内且面积速度为常数，并推导
+\[\rho(\theta)=\frac{p}{1+e\cos(\theta-\theta_0)}.\]
+求 $p,e$ 与 $|h|,\varepsilon,\mu$ 的关系，写出圆、椭圆、抛物线、双曲线各自对应的条件。
+\par（3）设轨道为椭圆，半长轴为 $a$、周期为 $T$，证明 $T^2=4\pi^2a^3/\mu$。
+\par（4）描述 $h=0$ 时的运动轨迹。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{二体问题的地表发射变式}{50}{教材习题 2.6 第 4 题；2025 卷第 6 题；教材书 p.70 / PDF p.80；2025 卷第 6 题}
+设地球为半径 $R$、质量 $M$ 的球对称天体，地心固定，忽略空气阻力、地球自转及其他天体的引力。质点于 $t=0$ 从地表以速率 $v_0>0$ 向外发射，速度与当地水平面的夹角为 $0\le\alpha<\pi/2$。取发射点的地心极角为 $\theta=0$，记 $\mu=GM$。
+\par（1）建立质点在地球外部的运动方程和初值条件。
+\par（2）求比角动量、比能量及轨道的极坐标方程，明确方程中的参数和初始相位。
+\par（3）按 $v_0,\alpha$ 判别形式轨道的类型，给出质点能够逃逸至无穷远的充要条件。
+\par（4）确定质点是否在 $t>0$ 再次与地表相交。若相交，给出相交极角满足的方程及有效飞行弧段；若不相交，说明理由。
+\end{minipage}\par\vspace{5pt}
+\section{F. 2.1 节补充训练（5 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{零次齐次方程}{51}{教材 2.1 零次齐次类型（自拟）；教材书 p.23--24 / PDF p.33--34}
+在 $t>0$ 上求方程 $x'=(t^2+tx+x^2)/t^2$ 的通解，并求满足 $x(1)=0$ 的解及其最大存在区间。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{52}{教材习题 2.1 第 1(5) 题（增加初值问）；教材书 p.25 / PDF p.35}
+求方程 $x'=(x+t)/(x-t+1)$ 的通解或通积分，并求满足 $x(0)=0$ 的局部解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{53}{教材 2.1 一次式比值退化类型（自拟）；教材书 p.24 / PDF p.34}
+求方程 $x'=(2t+2x+1)/(t+x-1)$ 的全部实解，并给出满足 $x(0)=0$ 的解的最大存在区间。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{54}{教材 2.1 线性组合类型（自拟）；教材书 p.25 / PDF p.35}
+求方程 $x'=\cos(t+2x)$ 的通积分及所有直线解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{55}{教材习题 2.1 第 4 题类型（自拟）；教材书 p.25 / PDF p.35}
+在 $t>0$ 上求方程 $x'=2x/t+x^2/t^3$ 的全部实解，并求满足 $x(1)=1$ 的解及其最大存在区间。
+\end{minipage}\par\vspace{5pt}
+\section{G. 线性化与积分因子补充（2 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶微分方程}{56}{教材习题 2.2 第 1(3) 题（增加分支条件问）；教材书 p.33 / PDF p.43}
+求方程 $(t^2+3)\cos x\,\dfrac{\dd x}{\dd t}+2t\sin x=t(t^2+3)$ 的通积分，并在实数范围内写出局部显式解的分支条件。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{积分因子与通积分}{57}{用户提供题目；本次对话所给方程（末项按 $x^4\dd y$ 理解）}
+求方程 $(x^3y-2y^2)\dd x+x^4\dd y=0$ 在 $xy\ne0$ 区域内的一个积分因子及通积分，并确定在 $x\ne0$ 的区间上是否存在恒等于零的解。
+\end{minipage}\par\vspace{5pt}
+\section{H. 隐式方程补充（3 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶隐式微分方程}{58}{教材习题 2.4 第 1(2) 题；教材书 p.46 / PDF p.56}
+求一阶隐式微分方程 $(x'(t))^3-(x'(t))^2-x=0$ 的解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶隐式微分方程}{59}{教材习题 2.4 第 1(4) 题；教材书 p.46 / PDF p.56}
+在实数范围内求一阶隐式微分方程 $x-tx'(t)-4\sqrt{x'(t)}=0$ 的解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{一阶隐式微分方程}{60}{教材习题 2.4 第 1(6) 题；教材书 p.46 / PDF p.56}
+求一阶隐式微分方程 $(x'(t))^3-(x'(t))^2-2t=0$ 的解。
+\end{minipage}\par\vspace{5pt}
+\section{I. 首次积分补充（7 题）}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与解的恢复}{61}{教材习题 2.5 第 2(1) 题（增加独立性、定义域等小问）；教材书 p.57--58 / PDF p.67--68}
+求系统
+\[x'=x^2-y^2-z^2,\qquad y'=2xy,\qquad z'=2xz\]
+的解。求三个允许显含 $t$ 的函数独立首次积分，并明确各自的定义区域及独立性条件；另求不含 $t$ 的首次积分，给出在所取区域内的独立性判定。若求解中除以 $y$、$z$ 或 $y^2+z^2$，须补充讨论相应零集上的解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与解的恢复}{62}{教材习题 2.5 第 2(2) 题（增加独立性、定义域等小问）；教材书 p.57--58 / PDF p.67--68}
+求系统
+\[x'=yz,\qquad y'=xz,\qquad z'=xy\]
+的两个不含 $t$ 的首次积分，确定它们函数独立的点集。求全部平衡解，并在非平衡解的适当区间上，以一个坐标为参数，用定积分表示其余坐标及时间 $t$；明确所选实数分支和参数范围。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与解的恢复}{63}{教材习题 2.5 第 2(3) 题（增加独立性、定义域等小问）；教材书 p.57--58 / PDF p.67--68}
+在 $x\ne y$ 上，求系统
+\[x'=\frac{y}{x-y},\qquad y'=\frac{x}{x-y}\]
+的两个函数独立首次积分，并由此求通解及其最大存在区间。确定何种初值对应的解在有限时间趋于直线 $x=y$ 上的有限点，并说明它能否作为原系统的解穿过该直线。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与解的恢复}{64}{教材习题 2.5 第 2(4) 题（增加独立性、定义域等小问）；教材书 p.57--58 / PDF p.67--68}
+求系统
+\[x'=\frac12,\qquad y'=1+\sqrt{t-x-y}\]
+的解。先在开区域 $D=\{(t,x,y):t-x-y>0\}$ 内求两个函数独立的首次积分，给出通解及其在 $D$ 内的最大存在区间；再讨论解能否延伸到 $t-x-y=0$，以及能否在该边界上构成一个非退化时间区间内的实解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与独立性}{65}{第 3 章练习 25（对称式改写为自治系统，增加独立性等小问）；书 p.260 / PDF p.268}
+考虑自治系统
+\[x'=-x^2,\qquad y'=xy-2z^2,\qquad z'=xz.\]
+求两个不含 $t$ 的首次积分，并确定它们函数独立的点集；求全部平衡点，说明首次积分独立性失效的点集与平衡点集之间的关系。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与独立性}{66}{第 3 章练习 26（对称式改写为自治系统，增加独立性等小问）；书 p.260 / PDF p.268}
+考虑自治系统
+\[x'=2y-z,\qquad y'=y,\qquad z'=z.\]
+在 $y\ne0$ 的区域内求两个不含 $t$ 的函数独立首次积分，再求一个显含 $t$ 的首次积分，使三个首次积分对 $(x,y,z)$ 的 Jacobi 行列式非零。由它们求系统通解，并补充 $y\equiv0$ 的解。
+\end{minipage}\par\vspace{5pt}
+\noindent\begin{minipage}{\linewidth}
+\problem{首次积分与独立性}{67}{第 3 章练习 27（对称式改写为自治系统，增加独立性等小问）；书 p.260 / PDF p.268}
+考虑四维自治系统
+\[x'=z,\qquad y'=u,\qquad z'=x,\qquad u'=y.\]
+求三个不含 $t$ 的首次积分，并明确给出一个使它们函数独立的非空开区域。说明仅由这三个积分能否唯一确定带时间参数的解；再求一个显含 $t$ 的首次积分，使所得四个首次积分在适当非空开区域内函数独立。
+\end{minipage}\par\vspace{5pt}
+\newpage\section*{来源速查表}\addcontentsline{toc}{section}{来源速查表}
+\small\begin{longtable}{r p{.30\linewidth}rr p{.33\linewidth}}\toprule 本册 & 原书题号 & 书页 & PDF 页 & 章节映射\\\midrule\endhead
+1 & 教材 1.2、1.3 改编 & -- & -- & 解、通解与消元\\
+2 & 教材习题 3.1 第 3 题改编；2025 卷第 4 题风格 & -- & -- & 函数无关与逐点无关\\
+3 & 教材习题 3.1 第 10 题；2025 卷第 4 题改编 & -- & -- & 解集、张成空间与维数\\
+4 & 2023 卷第 4 题变式 & -- & -- & 零点拼接与变号\\
+5 & 教材 2.1、3.1 改编 & -- & -- & 全局存在与奇点\\
+6 & 教材 2.3、2.4 改编 & -- & -- & 闭、恰当与奇解候选\\
+7 & 第 1 章练习 7（本册改编） & 135 & 143 & 一阶微分方程\\
+8 & 第 1 章练习 9（本册改编） & 135 & 143 & 一阶微分方程\\
+9 & 第 1 章练习 16（本册改编） & 135 & 143 & 一阶微分方程\\
+10 & 第 1 章练习 19（本册改编） & 135 & 143 & 一阶微分方程\\
+11 & 第 1 章练习 20（本册改编） & 135 & 143 & 一阶微分方程\\
+12 & 第 1 章练习 21（本册改编） & 135 & 143 & 一阶微分方程\\
+13 & 第 1 章练习 29（本册改编） & 136 & 144 & 一阶微分方程\\
+14 & 第 1 章练习 33（本册改编） & 136 & 144 & 一阶微分方程\\
+15 & 第 1 章练习 38（本册改编） & 136 & 144 & 一阶微分方程\\
+16 & 第 1 章练习 40（本册改编） & 136 & 144 & 非唯一性与奇解\\
+17 & 第 1 章例 173（本册改编） & 87 & 95 & 一阶隐式微分方程\\
+18 & 第 1 章例 179（本册改编） & 89 & 97 & 一阶隐式方程\\
+19 & 2025 卷第 2.1 题（本册改编） & -- & -- & 已知特解的 Riccati 方程\\
+20 & 2025 卷第 2.2 题（本册改编） & -- & -- & 已知一列解与三角系统\\
+21 & 定理 3.1 的准备引理 & -- & -- & 积分等价式\\
+22 & 教材定理 3.1 改编 & -- & -- & Picard 迭代的收敛与全局存在\\
+23 & 2025 卷第 5.2 题细化 & -- & -- & Picard 的截断误差\\
+24 & 教材定理 3.1、3.4 改编 & -- & -- & 唯一性与零初值\\
+25 & 教材定理 3.2 & -- & -- & 齐次解空间的维数\\
+26 & 教材定理 3.3 & -- & -- & Liouville 公式\\
+27 & 教材定理 3.4 与推论 & -- & -- & 一点无关与处处无关\\
+28 & 教材推论 3.3 & -- & -- & 全部基本解矩阵的关系\\
+29 & 2025 卷第 5.1 题；教材习题 3.1 第 5 题扩展 & -- & -- & 由基本解矩阵唯一确定系统\\
+30 & 教材命题 3.1、定理 3.6 & -- & -- & 非齐次通解的仿射结构\\
+31 & 2025 卷第 4 题；教材习题 3.1 第 10 题扩展 & -- & -- & 非齐次解的 n+1 上界\\
+32 & 教材定理 3.7 & -- & -- & 常数变易公式\\
+33 & 教材习题 3.1 第 7 题 & -- & -- & 状态转移矩阵\\
+34 & 教材定理 2.3 & -- & -- & 全微分判据\\
+35 & 教材习题 2.3 第 3 题改编 & -- & -- & 复合积分因子的充要条件\\
+36 & 教材习题 2.2 第 2 题 & -- & -- & Bernoulli 零点结论\\
+37 & 教材习题 2.2 第 3 题 & -- & -- & 已知两解：线性与 Riccati\\
+38 & 教材 2.5 弹簧振子模型改编 & -- & -- & 能量守恒与耗散\\
+39 & 2025 卷第 3 题细化 & -- & -- & 首次积分综合题\\
+40 & 2023 卷第 5(ii) 题（本册改编） & -- & -- & 能量与时间积分\\
+41 & 第 3 章练习 23（本册改编） & 259 & 267 & 2.5：首次积分判据\\
+42 & 第 3 章练习 24（本册改编） & 259 & 267 & 2.5：对称形式与守恒组合\\
+43 & 教材定理 2.5、2.7 改编 & -- & -- & 首次积分判据与隐函数定理\\
+44 & 教材例 2.5.2 改编 & -- & -- & 首次积分与通解\\
+45 & 教材 2.6.1 SIR 模型改编 & -- & -- & 应用专题一：SIR 的建模与阈值\\
+46 & 教材 2.6.1 SIR 模型变式 & -- & -- & SIR 的终值与模型约定\\
+47 & 教材 2.6.2；2023 卷第 5(i) 题（本册改编） & -- & -- & 应用专题二：等角轨线\\
+48 & 教材 2.6.2 直线族例题改编 & -- & -- & 正交轨线与对数螺线\\
+49 & 教材 2.6.3 二体问题改编 & -- & -- & 应用专题三：二体问题与 Kepler 定律\\
+50 & 教材习题 2.6 第 4 题；2025 卷第 6 题 & -- & -- & 二体问题的地表发射变式\\
+51 & 教材 2.1 零次齐次类型（自拟） & -- & -- & 零次齐次方程\\
+52 & 教材习题 2.1 第 1(5) 题（增加初值问） & -- & -- & 一阶微分方程\\
+53 & 教材 2.1 一次式比值退化类型（自拟） & -- & -- & 一阶微分方程\\
+54 & 教材 2.1 线性组合类型（自拟） & -- & -- & 一阶微分方程\\
+55 & 教材习题 2.1 第 4 题类型（自拟） & -- & -- & 一阶微分方程\\
+56 & 教材习题 2.2 第 1(3) 题（增加分支条件问） & -- & -- & 一阶微分方程\\
+57 & 用户提供题目 & -- & -- & 积分因子与通积分\\
+58 & 教材习题 2.4 第 1(2) 题 & -- & -- & 一阶隐式微分方程\\
+59 & 教材习题 2.4 第 1(4) 题 & -- & -- & 一阶隐式微分方程\\
+60 & 教材习题 2.4 第 1(6) 题 & -- & -- & 一阶隐式微分方程\\
+61 & 教材习题 2.5 第 2(1) 题（增加独立性、定义域等小问） & -- & -- & 首次积分与解的恢复\\
+62 & 教材习题 2.5 第 2(2) 题（增加独立性、定义域等小问） & -- & -- & 首次积分与解的恢复\\
+63 & 教材习题 2.5 第 2(3) 题（增加独立性、定义域等小问） & -- & -- & 首次积分与解的恢复\\
+64 & 教材习题 2.5 第 2(4) 题（增加独立性、定义域等小问） & -- & -- & 首次积分与解的恢复\\
+65 & 第 3 章练习 25（对称式改写为自治系统，增加独立性等小问） & 260 & 268 & 首次积分与独立性\\
+66 & 第 3 章练习 26（对称式改写为自治系统，增加独立性等小问） & 260 & 268 & 首次积分与独立性\\
+67 & 第 3 章练习 27（对称式改写为自治系统，增加独立性等小问） & 260 & 268 & 首次积分与独立性\\
+\bottomrule\end{longtable}\end{document}

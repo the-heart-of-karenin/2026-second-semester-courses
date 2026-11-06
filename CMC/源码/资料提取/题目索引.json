@@ -1,0 +1,3500 @@
+[
+  {
+    "id": 1,
+    "name": "第1届 初赛 · 数学类",
+    "start": 5,
+    "end": 7,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 5,
+        "stem": "求经过三条平行直线L1 : x = y = z, L2 : x −1 = y = z + 1, L3 : x = y + 1 = z −1 的圆 柱面的方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 5,
+        "stem": "设Cn×n 为n 阶复矩阵构成的线性空间, 且   0 0 · · · 0 −an   1 0 · · · 0 −an−1      F =  0 1 · · · 0 −an−2  .      ... ... ... ... ...  0 0 · · · 1 −a1 (1) 若A = (aij)n×n 满足AF = FA, 证明A = an1F n−1 + an−1,1F n−2 + · · · + a21F + a11E. (2) 求C(F) = {X ∈Cn×n : FX = XF} 的维数."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 6,
+        "stem": "设V 是复数域上的n 维线性空间(n > 0), f, g 是V 上的线性变换. 若fg −gf = f, 证 明f 的特征值都是0, 且f, g 有公共特征向量."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 6,
+        "stem": "设无穷阶可微函数列{fn} 在[a, b] 上逐点收敛, 且|f n(x)|′ ≤M. (1) 证明{fn} 在[a, b] 上一致收敛. (2) 极限函数是否一定在[a, b] 上处处可导? ε"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 6,
+        "stem": "Z π 3 ∞ 2 X sin nt 1 设an = t dt. 证明级数 发散. 0 sin t n=1 an"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 7,
+        "stem": "设f(x, y) 在圆盘x2 + y2 ≤1 上二阶连续可微, 且fxx + fyy = x2y2. 计算 ! ZZ x y I = p + p dxdy. x2+y2≤1 x2 + y2fx x2 + y2fy"
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 7,
+        "stem": "设f 在[0, 1] 上连续, 在(0, 1) 内二阶可导. 过A(0, f(0)), B(1, f(1)) 的直线与曲线 y = f(x) 相交于C(c, f(c)), 其中0 < c < 1. 证明存在ξ ∈(0, 1), 使f ′′(ξ) = 0."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "第1届 决赛 · 数学类",
+    "start": 8,
+    "end": 11,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 8,
+        "stem": "Z +∞ e−αx2 −e−βx2 设β > α > 0, 求 dx. 0 x2"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 8,
+        "stem": "1 若方程kx + = 1 (k > 0) 在(0, +∞) 内有唯一实数解, 求k. x2 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 8,
+        "stem": "Z x 设f 在[a, b] 上连续, f(t) dt = (x −a)f(ξ), 其中a ≤ξ ≤x < b. 若f +(a)′ 存在且非 a ξ −a 零, 求lim x→a+ x −a."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 8,
+        "stem": "设(a × b) · c = 6, 求[(a + b) × (b + c)] · (a + c)."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 9,
+        "stem": "Xn k f ′(0) 设f 在(−1, 1) 内有定义, 在0 处可导, 且f(0) = 0. 证明lim f = . n→∞ n2 2 k=1"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 9,
+        "stem": "设f 在[0, +∞) 上一致连续, 且对每个固定的x ≥0, 有f(x + n) →0 (n →∞). 证明 {f(x + n)} 在[0, 1] 上一致收敛于0. ε"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 9,
+        "stem": "设D = {(x, y) : x2+y2 < 1}, f, g 在D 内连续且有二阶偏导数, g 有界. 若f(x, y) →+∞ (x2 + y2 →1−), 且fxx + fyy = ef, gxx + gyy ≥eg, 证明f ≥g 在D 内成立."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 9,
+        "stem": "ZZ ∞ X dxdy 1 设R = [0, 1]2, Rε = [0, 1 −ε]2, Iε = I = lim Iε. (1) 证明I = (2) ε→0+ n2. Rε 1 −xy, n=1 X∞ x + y y −x 1 π2 利用u = , v = 计算I, 并推出 = . 2 2 n2 6 n=1"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 10,
+        "stem": "x y z −b 已知直线L : x = y = z, L′ : = = . (1) 求L, L′ 异面的条件. (2) 当两直线不重 1 a 1 合时, 求L′ 绕L 旋转生成的集合Π 的方程, 并指出其类型."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 11,
+        "stem": "设A, B 均为n 阶半正定实对称矩阵, 且n −1 ≤rank A ≤n. 证明存在实可逆矩阵C, 使 CTAC, CTBC 均为对角矩阵."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 11,
+        "stem": "设V 是复数域上的n 维线性空间, f1, f2 : V →C 是非零线性函数, 且不存在c ∈C 使 f1 = cf2. 证明每个α ∈V 均可写成α = α1 + α2, 使f1(α) = f1(α2), f2(α) = f2(α1)."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "第2届 初赛 · 数学类",
+    "start": 12,
+    "end": 14,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 12,
+        "stem": "设0 < ε < 1, x0 = a, xn+1 = a + ε sin xn (n = 0, 1, . . .). 证明ξ = n→∞xnlim 存在, 且是方程 x −ε sin x = a 的唯一根."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 12,
+        "stem": "  0 10 30   设B = 0 0 2010 . 证明矩阵方程X2 = B 没有三阶复方阵解. 0 0 0"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 12,
+        "stem": "设D ⊂R2 是凸区域, f : D →R 是凸函数, 即对u, v ∈D 及0 < α < 1, 有f(αu + (1 − α)v) ≤αf(u) + (1 −α)f(v). 证明或否定: f 在D 上连续."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 13,
+        "stem": "设f 在[0, 1] 上黎曼可积, 在1 处可导, 且f(1) = 0, f ′(1) = a. 证明 Z 1 n→∞n2lim xnf(x) dx = −a. 0"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 13,
+        "stem": "已知非退化二次曲面Σ 经过九点 A(1, 0, 0), B(1, 1, 2), C(1, −1, −2), D(3, 0, 0), E(3, 1, 2), √ F(3, −2, −4), G(0, 1, 4), H(3, −1, −2), I(5, 2 2, 8). 问Σ 是哪一类曲面?"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 13,
+        "stem": "设A 是n 阶实矩阵, 对任意实行向量α 有αAαT ≥0, 且存在实行向量β 使βAβT = 0. 又对任意实行向量x, y, 若xAyT̸ = 0, 则xAyT + yAxT̸ = 0. 证明对任意实行向量v, 都 有vAβT = 0."
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 14,
+        "stem": "设f 在[0, 1] 上黎曼可积, 且0 ≤f ≤1. 证明对每个ε > 0, 存在只取0, 1 两值的有限段 分段常值函数g, 使对任意[α, β] ⊂[0, 1], 都有 Z β (f(x) −g(x)) dx < ε. α 2"
+      },
+      {
+        "number": 8,
+        "section": "",
+        "page": 14,
+        "stem": "设φ : (0, +∞) →(0, +∞) 连续且严格递减, lim φ(t) = +∞, 并且 t→0+ Z ∞ Z ∞ φ(t) dt = φ−1(t) dt = a < +∞. 0 0 证明 Z ∞ Z ∞ 3 2. φ(t)2 dt + φ−1(t)2 dt ≥1 0 0 2a a"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "第2届 决赛 · 数学类",
+    "start": 15,
+    "end": 17,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 15,
+        "stem": "求所有过原点且与椭球面4x2 + 5y2 + 6z2 = 1 相交成圆周的平面."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 15,
+        "stem": "Z +∞ Z +∞ 设0 < f(x) < 1, 且 f(x) dx 与 xf(x) dx 均收敛. 证明 0 0 Z +∞ Z +∞ 2 1 xf(x) dx > f(x) dx . 0 2 0 Z +∞"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 15,
+        "stem": "X∞ X∞ 设 nan 收敛, tn = kan+k. 证明tn 有定义且limn→∞tn = 0. n=1 k=1 X∞"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 16,
+        "stem": "设A ∈Mn(C), 定义σA : Mn(C) →Mn(C) 为σA(X) = AX −XA. 证明若A 可对角化, 则σA 也可对角化."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 16,
+        "stem": "设连续函数f : R →R 满足sup |f(x + y) −f(x) −f(y)| < +∞. 证明存在实常数a, 使 x,y∈R sup |f(x) −ax| < +∞. x∈R"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 16,
+        "stem": "设非零线性映射φ : Mn(R) →R 满足φ(XY ) = φ(Y X). 定义双线性型(X, Y ) = φ(XY ). (1) 证明该双线性型非退化. (2) 若A1, . . . , An2 为一组基, B1, . . . , Bn2 为其对偶基, 即 Xn2 (Ai, Bj) = δij, 证明 AiBi 是数量矩阵. i=1"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "第3届 初赛 · 数学类",
+    "start": 18,
+    "end": 21,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 18,
+        "stem": "√ √ 求经过四点(1, 2, 7), (4, 3, 3), (5, −1, 6), ( 7, 7, 0) 的球面方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 18,
+        "stem": "设f1, . . . , fn 是[0, 1] 上非负连续函数. 证明存在ξ ∈[0, 1], 使 Z 1 Yn Yn fk(ξ) ≤ fk(x) dx. 0 k=1 k=1 Z 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 18,
+        "stem": "设F 是数域, V = F n, σ : V →V 是线性变换. 若对任意A ∈Mn(F) 及α ∈V , 都有 σ(Aα) = Aσ(α), 证明σ = λ idV , 其中λ ∈F."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 19,
+        "stem": "求三角形ABC 中3 sin A + 4 sin B + 18 sin C 的最大值."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 19,
+        "stem": "证明对任意实数α, 都存在只取−1, 1 的数列{an}, 使 ! Xn 3 2 = α. lim √n + ak −n n→∞ k=1 Xn"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 20,
+        "stem": "! B O 设A 为数域F 上的n 阶方阵. 证明A 在F 上相似于 , 其中B 可逆, C 幂零. O C"
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 21,
+        "stem": "设F 是[0, +∞) 上的单调递减函数, t→∞F(t)lim = 0, 且 Z ∞ t lim F(t) sin dt = 0. n→∞ 0 n Z ∞ 证明: (1) t→∞tF(t)lim = 0; (2) x→0lim F(t) sin(xt) dt = 0. 0 Z ∞"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "第3届 决赛 · 数学类",
+    "start": 22,
+    "end": 24,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 22,
+        "stem": "空间中有五点A(1, 0, 1), B(1, 1, 2), C(1, −1, −2), D(3, 1, 0), E(3, 1, 2). 求过E 且平行于 平面ABC, 垂直于直线AD 的直线方程. −−→"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 22,
+        "stem": "设f 在[a, b] 上二阶可导, 且f ′′ 在[a, b] 上黎曼可积. 证明 Z x f(x) = f(a) + f ′(a)(x −a) + (x −t)f ′′(t) dt (x ∈[a, b]). a"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 22,
+        "stem": "设k0 < k1 < · · · < kn 为正整数, A1, . . . , An 为实参数. 求 Xn f(x) = sin k0x + Aj sin kjx j=1 在[0, 2π] 上不同零点个数的最小值, 并证明."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 23,
+        "stem": "设正数列{an} 满足lim inf = 1, lim sup < +∞, lim n√a1 · · · an = 1. 证明 n→∞an n→∞an n→∞ a1 + · · · + an lim = 1. n→∞ n"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 23,
+        "stem": "设A, B 分别是3 × 2, 2 × 3 实矩阵, 且   8 0 −4   AB = −3 9 −6 . −2 0 1 求BA."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 23,
+        "stem": "设{Ai}i∈I, {Bi}i∈I 为有理数域上的两族同阶矩阵. 若存在实可逆矩阵P, 使P −1AiP = Bi 对所有i ∈I 成立, 证明也存在有理可逆矩阵满足这些等式."
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 24,
+        "stem": "设F, G 是[0, +∞) 上非负单调递减函数, 且limx→∞x(F(x) + G(x)) = 0. (1) 证明对任意 ε > 0, Z +∞ lim xF(xt) cos t dt = 0. x→∞ ε Z +∞ t (2) 若又有lim (F(t) −G(t)) cos dt = 0, 证明 n→∞ 0 n Z +∞ lim (F(t) −G(t)) cos(xt) dt = 0. x→0 0"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "第4届 初赛 · 数学类",
+    "start": 25,
+    "end": 27,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 25,
+        "stem": "设Γ 为椭圆抛物面z = 3x2 + 4y2 + 1. 求从原点作Γ 的切锥面方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 25,
+        "stem": "设Γ 为抛物线, 点P 与焦点位于抛物线同侧. 过P 的直线L 与Γ 围成的有界区域面积 为A(L). 证明A(L) 取最小值当且仅当P 是L 被Γ 截得的线段的中点."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 25,
+        "stem": "Z ∞ Z ∞ dx dx 设f ∈C1[0, +∞), f(0) > 0, f ′(x) ≥0, 且 < +∞. 证明 < 0 f(x) + f ′(x) 0 f(x) +∞."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 26,
+        "stem": "设A, B, C 均为n 阶正定矩阵, P(t) = At2 + Bt + C, f(t) = det P(t). 证明f 的每个复 根λ 都满足Re λ < 0."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 26,
+        "stem": "X∞ Xn−1 已知(1 + x)n = aixi (|x| < 1), 其中n 为正整数. 求 ai. (1 −x)3 i=0 i=0 + x)n解析 所求和是(1 中xn−1 的系数. 由 (1 −x)4 Xn (1 + x)n n = (−1)j 2n−j(1 −x)j−4, (1 −x)4 j j=0 j ≥4 的项为次数不超过n −4 的多项式, 不贡献xn−1 的系数. 因而 Xn−1 n + 2 n + 1 n n ai = 2n −n2n−1 + 2n−2n − 2n−3 3 2 2 3 i=0 n(n + 2)(n + 7) = 2n−4. 3 n 其中 = 0 (j > n), 故公式也适用于n = 1, 2. j"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 26,
+        "stem": "Z 1 设f : [0, 1] →R 可微, f(0) = f(1), f(x) dx = 0, 且f ′(x)̸ = 1. 证明对任意正整数n, 0 都有 Xn−1 k 1 f < n 2. k=0 ′̸解析 由Rolle 定理, 存在c ∈(0, 1) 使f ′(c) = 0. 结合导函数的介值性质及f = 1, 得 Z 1 f ′(x) < 1 (0 < x < 1). 令g(x) = f(x)−x, 则g 严格递减, g(0)−g(1) = 1, 且 g = −1 0 2. 左, 右端点和严格夹住积分, 故 Xn Xn−1 1 k 1 k g < −1 < g . n n 2 n n k=1 k=0 两和之差为1 所以 n, Xn−1 −n < g k < −n + 1. 2 n 2 k=0 Xn−1 Xn−1 k n −1 1加上 = , 即得−1 < f(k < n 2 2 n) 2. k=0 k=0"
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 27,
+        "stem": "! ! 2 2 4 b 设A = , B = 为实矩阵. 证明: (1) AX = B 有解而BY = A 无解, 当且 2 a 3 1 4 2 仅当a̸ = 2, b = 3; (2) A, B 相似, 当且仅当a = 3, b = 3; (3) A, B 合同, 当且仅当a < 2, b = 3."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "第4届 决赛 · 数学类",
+    "start": 28,
+    "end": 30,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 28,
+        "stem": "设A > 0, 直线l 与双曲线x2 −y2 = 2 (x > 0) 围成的有限部分面积为A. 证明: (1) 所有 这些截弦中点的轨迹为双曲线. (2) l 总是该轨迹曲线的切线. x + y x −y"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 28,
+        "stem": "设f : [a, b] →[a, b], 且对任意不同的x, y ∈[a, b], 有|f(x) −f(y)| < L|x −y|, 其中 1 0 < L < 1. 任取x1 ∈[a, b], 令xn+1 = 2(xn + f(xn)). 证明xn 收敛于某ξ, 且f(ξ) = ξ. 1 + L"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 29,
+        "stem": "设n 阶实矩阵A 每个元素的绝对值均为2. 证明当n ≥3 时, det A ≤1 2n+1n!. 3 1解析 令B = 其元素均为±1. 先证| det B| ≤2 2A, 3n!. n = 3 时, 行列式展开为六个±1 的项, 六项的乘积为−1, 故其中负项个数为1, 3 或5, 其 2 和的绝对值至多为4 = 3!. 若结论对n −1 成立, 按首行展开并用三角不等式, 得 3 2 2 | det B| ≤n · 3(n −1)! = 3n!. 归纳即得结论, 再乘2n 即得原不等式."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 29,
+        "stem": "设f 在(a, b) 上可导. 若存在x0 的邻域U, 使所有x ∈U \\ {x0} 均满足f(x) > f(x0) + f ′(x0)(x −x0), 则称x0 为凹点; 将不等号反向则称为凸点. 证明若f 不能表示为kx + c 的形式, 则f 一定存在凹点或凸点."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 29,
+        "stem": "设实对称矩阵   a11 a12 a13   A = a12 a22 a23 , a13 a23 a33 其伴随矩阵为A∗, det A = −12, 特征值之和为1, 且(A∗−4I)(1, 0, −2)T = 0. 记 x21 x2 x3 x4 −x2 a11 a12 a13 f(x1, x2, x3, x4) = . −x3 a12 a22 a23 −x4 a13 a23 a33 求正交变换x = Qy, 将f 化为标准形."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 30,
+        "stem": "给定自然数n, 设A 为全体n 次首一实系数多项式. 证明 R b+a |P(x)| dx inf b > 0. b∈R, a>0 an+1 P∈A Z b+a"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "第5届 初赛 · 数学类",
+    "start": 31,
+    "end": 33,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 31,
+        "stem": "两个半径为r 的圆C1, C2 外切于P. 让C2 沿C1 外侧无滑动滚动一周, 其上的点P 描 出心脏线Γ. 以P 的初始位置为圆心, R 为半径作反演γ, 即点Q̸ = P 的像Q′ 在射线 PQ 上并满足|PQ| |PQ′| = R2. 证明γ(Γ) 为抛物线."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 31,
+        "stem": "设B(t) = (bij(t)) 为n 阶方阵, b(t) = (b1(t), . . . , bn(t))T, 各元素均为实系数多项式. 记 d(t) = det B(t), di(t) 为用b(t) 替换B(t) 的第i 列后所得行列式. 若d(t0) = 0, 且 B(t0)x = b(t0) 相容, 证明d, d1, . . . , dn 有次数至少为1 的公因式."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 31,
+        "stem": "设f ∈C2[0, a], f ′(0) = 1, f ′′(0)̸ = 0, 且0 < f(x) < x (0 < x < a). 取x1 ∈(0, a), xn+1 = f(xn). (1) 证明{xn} 收敛并求极限. (2) 判断{nxn} 是否收敛, 并在收敛时求其 极限."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 32,
+        "stem": "设a > 1, f : (0, +∞) →(0, +∞) 可微. 证明存在趋于无穷的正数列{xn}, 使f ′(xn) < f(axn)."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 32,
+        "stem": "设f : [−1, 1] →R 为偶函数, 在[0, 1] 上单调递增; g 是[−1, 1] 上的凸函数. 证明 Z 1 Z 1 Z 1 2 f(x)g(x) dx ≥ f(x) dx g(x) dx . −1 −1 −1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 32,
+        "stem": "设ϕ : Rn×n →Rn×n 满足ϕ(AB) = ϕ(A)ϕ(B). 记Eij 为矩阵单位, Γr 为秩为r 的实方阵 全体. (1) 证明对A, B ∈Γr, 有rank ϕ(A) = rank ϕ(B). (2) 若ϕ(O) = O, 且存在秩为1 的矩阵W 使ϕ(W)̸ = O, 证明存在可逆矩阵R, 使ϕ(Eij) = REijR−1 对所有i, j 成立."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "第5届 决赛 · 数学类(低年级)",
+    "start": 34,
+    "end": 36,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 34,
+        "stem": "1 设S 为抛物面z = 2(x2 + y2), 点P = (a, b, c) 满足a2 + b2 > 2c. 过P 作S 的所有切线, 证明其切点位于同一平面. 1"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 34,
+        "stem": "设实二次型q(x) = xTAx, 其中   2 a0 2 −2    a 0 b c  A =      d e 0 f  g h k 4 的各参数均为实数, 且特征值2 的几何重数为3. (1) A 能否相似于对角矩阵? 说明理由. (2) 当a0 = 2 时, 求q 在正交变换下的标准形."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 35,
+        "stem": "设实矩阵A = (aij)n×n 满足aij = 0 (j > i + 1), ai,i+1 = bi̸ = 0 (1 ≤i < n), 且有n 个 线性无关的特征向量. 记W = {X ∈Mn(R) : XA = AX}. 证明W 是实线性空间, 且 I, A, . . . , An−1 为其一组基."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 35,
+        "stem": "设f(x, u) 在[a, b] × R 上关于u 单调下降. 可微函数y, z 满足y′ = f(x, y), z′ ≤f(x, z), 且z(a) ≤y(a). 证明在[a, b] 上z ≤y."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 35,
+        "stem": "Z +∞ 设f 是[0, +∞) 上非负可导函数, f(0) = 0, f ′(x) ≤1 且 f(x) dx 收敛. 证明对每 2, 0 Z +∞ 个α > 1, f α(x) dx 收敛且 0 α+1 Z +∞ Z +∞ 2 f α(x) dx ≤ f(x) dx . 0 0 Z t"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 36,
+        "stem": "对全实根多项式p, 记d(p) 为最大, 最小实根之差. 给定n ≥2, 求最大的实数C, 使每个 n 次全实根多项式均满足d(p′) ≥Cd(p). r"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "第5届 决赛 · 数学类(高年级)",
+    "start": 37,
+    "end": 41,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 37,
+        "stem": "1 设S 为抛物面z = 2(x2 + y2), 点P = (a, b, c) 满足a2 + b2 > 2c. 过P 作S 的所有切线, 证明其切点位于同一平面. 1"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 37,
+        "stem": "设实二次型q(x) = xTAx, 其中   2 a0 2 −2    a 0 b c  A =      d e 0 f  g h k 4 的各参数均为实数, 且特征值2 的几何重数为3. (1) A 能否相似于对角矩阵? 说明理由. (2) 当a0 = 2 时, 求q 在正交变换下的标准形."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 38,
+        "stem": "Z +∞ 设f 是[0, +∞) 上非负可导函数, f(0) = 0, f ′(x) ≤1 且 f(x) dx 收敛. 证明对每 2, 0 Z +∞ 个α > 1, f α(x) dx 收敛且 0 α+1 Z +∞ Z +∞ 2 f α(x) dx ≤ f(x) dx . 0 0 Z t"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 38,
+        "stem": "对全实根多项式p, 记d(p) 为最大, 最小实根之差. 给定n ≥2, 求最大的实数C, 使每个 n 次全实根多项式均满足d(p′) ≥Cd(p). r"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 39,
+        "stem": "设f(x, u) 在[a, b] × R 上关于u 单调下降. 可微函数y, z 满足y′ = f(x, y), z′ ≤f(x, z), 且z(a) ≤y(a). 证明在[a, b] 上z ≤y."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 39,
+        "stem": "设D = {z ∈C : |z| < 1}, 非常数函数f 在D 上连续, 在D 上解析, 且当|z| = 1 时 |f(z)| = 1. 证明f(D) = D."
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 39,
+        "stem": "∞ Z [ 设{Ek} 为可测集列, f ∈L1( Ek). (1) 令A = lim sup Ek, 证明 f dm = k→∞ A Z k=1 Z Z lim f dm. (2) 令B = lim inf 证明 f dm = lim f dm. (3) 若n→∞ ∪∞ k→∞Ek, n→∞ ∩∞ k=n Ek Z BZ k=n Ek 集列单调, 证明E = k→∞Eklim 存在且 f dm = k→∞lim f dm. E Ek [∞ [∞ \\∞"
+      },
+      {
+        "number": 8,
+        "section": "",
+        "page": 40,
+        "stem": "设空间平面内的抛物线绕其准线旋转一周生成曲面S. 求S 的两个主曲率之比. z2"
+      },
+      {
+        "number": 9,
+        "section": "",
+        "page": 40,
+        "stem": "盒中有标号1 至N 的N 张票券, 每次等可能, 有放回且独立地抽一张. 收集到r 张不同 票券所需抽取次数的期望是多少, 其中1 ≤r ≤N?"
+      },
+      {
+        "number": 10,
+        "section": "",
+        "page": 41,
+        "stem": "设群G = AB = BA, 其中A, B 均为交换子群. 记[g, h] = ghg−1h−1, G′ 为换位子群. (1) 证明对a, x ∈A, b, y ∈B, 有[x−1, y−1][a, b][x−1, y−1]−1 = [a, b]. (2) 证明G′ 是交换群."
+      },
+      {
+        "number": 11,
+        "section": "",
+        "page": 41,
+        "stem": "设T0(x) = 1, T1(x) = x, Tn+1(x) = 2xTn(x) −Tn−1(x). (1) 证明Tn(x) = cos(n arccos x) Z 1 f(x)g(x) (−1 ≤x ≤1). (2) 对内积⟨f, g⟩= √ dx, 证明m̸ = n 时⟨Tm, Tn⟩= 0. (3) 对 −1 1 −x2 1 n ≥1 的任一n 次首一多项式P, 证明∥P∥∞≥ 2n−1, 等号当且仅当P = 21−nTn, 其中 ∥P∥∞= max |P|. [−1,1]"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "第6届 初赛 · 数学类",
+    "start": 42,
+    "end": 44,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 42,
+        "stem": "已知空间直线 x −4 y −3 z −8 x + 1 y + 1 z + 1 l1 : = = , l2 : = = . 1 −2 1 7 −6 1 (1) 证明二直线异面. (2) 求公垂线的标准方程. (3) 求连接二直线上任意两点的线段中点 轨迹的一般方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 42,
+        "stem": "设f ∈C[0, 1] 非负且严格递增. 证明: (1) 对每个正整数n, 存在唯一xn ∈[0, 1], 使 Z 1 f(xn)n = f(x)n dx; (2) xn →1. 0"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 43,
+        "stem": "设V 为[0, 1] 上全体实函数组成的实向量空间, f1, . . . , fn ∈V . 证明以下两条等价: (1) f1, . . . , fn 线性无关; (2) 存在a1, . . . , an ∈[0, 1], 使det[fi(aj)]ni,j=1̸ = 0. X"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 43,
+        "stem": "设f 在R 上二阶可导, 且f, f ′, f ′′ 均为正. 已知正数a, b 满足f ′′(x) ≤af(x) + bf ′(x). (1) 证明f ′(x) →0 (x →−∞). (2) 证明存在常数c 使f ′(x) ≤cf(x). (3) 求对所有满足 条件的函数均适用的最小常数c."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 43,
+        "stem": "设m 为正整数. 证明对任意正整数n, l, 存在m 阶实方阵X 使   1 0 0 · · · 0    2 1 0 · · · 0      Xn + Xl = I +  3 2 1 · · · 0  .      ... ... ... ... ...  m m −1 m −2 · · · 1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 44,
+        "stem": "设0 < α < 1, 正数列{an} 满足 an limn→∞nαinf an+1 −1 = λ ∈(0, +∞). 证明对每个k > 0, 都有nkan →0."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "第6届 决赛 · 数学类(低年级)",
+    "start": 45,
+    "end": 47,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 45,
+        "stem": "求实二次型2x1x2 −x1x3 + 5x2x3 的规范形."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 45,
+        "stem": "X∞ n 求级数 的和. 3n n=1 X∞ X∞ 1 t 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 45,
+        "stem": "ZZ 计算球面第一类曲面积分I = (x2 + 2y2 + 3z2) dS. x2+y2+z2=1"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 45,
+        "stem": "设n > 1, 实对称矩阵A 的秩为n −1, 每行元素和为0, 全部非零特征值为2, 3, . . . , n. 求 元素a11 的代数余子式A11."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 46,
+        "stem": "空间定点P 到定直线l 的距离为p. 一族球面均经过P, 且截l 所得弦长均为正数a. 求 球心轨迹."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 46,
+        "stem": "设 ( ! ) z1 z2 Γ = : z1, z2 ∈C . −z2 z1 证明每个A ∈Γ 的若尔当标准形JA 仍在Γ 中, 且可取可逆的P ∈Γ, 使P −1AP = JA. p"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 46,
+        "stem": "1 |f(x) −f(y)| 设f(0) = 0, f(x) = x sin (x̸ = 0). 求使sup < +∞的最大常数α. x x̸=y |x −y|α"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 47,
+        "stem": "Z ∞ 设实连续函数a, f 满足a(t) ≥1, f(t) > 0 (t ∈R), 且 f(t) dt = +∞. 若x(t) 满足 0 x′′(t) + a(t)f(x(t)) ≤0 (t ∈R), 证明x 在[0, +∞) 上有上界."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 47,
+        "stem": "设f ∈C1[0, 1], f(0) = f(1) = 0. 证明 Z 1 2 Z 1 xf(x) dx ≤1 f ′(x)2 dx, 0 45 0 且等号当且仅当f(x) = A(x −x3), 其中A 为常数. Z 1"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "第6届 决赛 · 数学类(高年级)",
+    "start": 48,
+    "end": 52,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 48,
+        "stem": "求实二次型2x1x2 −x1x3 + 5x2x3 的规范形."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 48,
+        "stem": "X∞ n 求级数 的和. 3n n=1 X∞ X∞ 1 t 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 48,
+        "stem": "ZZ 计算球面第一类曲面积分I = (x2 + 2y2 + 3z2) dS. x2+y2+z2=1"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 48,
+        "stem": "设n > 1, 实对称矩阵A 的秩为n −1, 每行元素和为0, 全部非零特征值为2, 3, . . . , n. 求 元素a11 的代数余子式A11."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 49,
+        "stem": "空间定点P 到定直线l 的距离为p. 一族球面均经过P, 且截l 所得弦长均为正数a. 求 球心轨迹."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 49,
+        "stem": "设 ( ! ) z1 z2 Γ = : z1, z2 ∈C . −z2 z1 证明每个A ∈Γ 的若尔当标准形JA 仍在Γ 中, 且可取可逆的P ∈Γ, 使P −1AP = JA. p"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 49,
+        "stem": "1 |f(x) −f(y)| 设f(0) = 0, f(x) = x sin (x̸ = 0). 求使sup < +∞的最大常数α. x x̸=y |x −y|α"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 50,
+        "stem": "Z ∞ 设实连续函数a, f 满足a(t) ≥1, f(t) > 0 (t ∈R), 且 f(t) dt = +∞. 若x(t) 满足 0 x′′(t) + a(t)f(x(t)) ≤0 (t ∈R), 证明x 在[0, +∞) 上有上界."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 50,
+        "stem": "设a, b 是不同的复数. 求所有满足(f ′(z))2 = (f(z) −a)(f(z) −b) 的非常数整函数f. + b a −b解析 令g = f −a , d = = 0. 方程成为g′2 = g2 −d2. 求导得g′(g′′ −g) = 0. 2 2̸ 因g 非常数, 由解析函数恒等定理得g′′ = g, 故 g(z) = Cez + De−z. d2 (a −b)2 代回原方程得CD = = . 因此全部解为 4 16 a + b (a −b)2 f(z) = + Cez + e−z, C ∈C \\ {0}. 2 16C 反向代入可直接验证, 且这些函数均非常数."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 50,
+        "stem": "设f : R →R 为利普希茨函数, 常数为K. 证明每个可测集E 的像f(E) 均可测, 且 m(f(E)) ≤Km(E)."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 51,
+        "stem": "设三维欧氏空间中的正则光滑曲面S 含点P0 = (0, 0, −1), 且对每个P ∈S 均有|OP| ≤ 1. 证明S 在P0 的高斯曲率K(P0) ≥1."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 51,
+        "stem": "求解Ax = b 的迭代格式为 (αD −C)x(k+1) = ((α −1)D + CT)x(k) + b. 1 其中A, D 为实对称正定矩阵, C + CT = D −A, α > 2, 且αD −C 可逆. 证明对任意初 始向量迭代均收敛."
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 52,
+        "stem": "设R = C[0, 1] 为实连续函数环, I 为其极大左理想. 证明任意f, g ∈I 在[0, 1] 上有公共 零点. 2 1解析 若无公共零点, 则f + g2 > 0 在紧区间上成立, 故 ∈R. 由理想性质, f 2 + g2 2 1 2f + g2 ∈I, 于是1 = + g2) ∈I, 与极大理想为真理想矛盾. f 2 + g2(f"
+      },
+      {
+        "number": 10,
+        "section": "解答",
+        "page": 52,
+        "stem": "某出口商品年需求量X 服从[100, 200] 上的均匀分布. 每销售一吨收益3 万元, 每积压 一吨保养费用1 万元. 应准备多少吨, 才能使平均收益最大?"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "第7届 初赛 · 数学类",
+    "start": 53,
+    "end": 55,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 53,
+        "stem": "设异面直线l1, l2 分别过向量为a, b 的点, 以单位向量v, w 为方向. (1) 证明存在唯一 P ∈l1, Q ∈l2, 使PQ 同时垂直于两直线. (2) 用a, b, v, w 表示P, Q 的坐标."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 53,
+        "stem": "设A 为四阶复方阵, 且tr(Aj) = j (j = 1, 2, 3, 4). 求det A. X"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 54,
+        "stem": "设A 为n 阶方阵, 其全部特征值均为偶整数. 证明矩阵方程X + AX −XA2 = O 只有零 解."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 54,
+        "stem": "n 设a1 > 0, an+1 = an + (n ≥1). 证明limn→∞n(an −n) 存在. an 1"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 54,
+        "stem": "Z ∞ 设f 在[0, +∞) 上有界连续, h 连续且 |h(t)| dt = a < 1. 定义 0 Z x g0(x) = f(x), gn(x) = f(x) + h(t)gn−1(t) dt. 0 证明gn 收敛于连续函数, 并求极限函数."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 55,
+        "stem": "Z x 设f 为R 上有上界或有下界的连续函数, 且存在a > 0 使f(x) + a f(t) dt 为常数. x−1 证明f 必为常数."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "第7届 决赛 · 数学类(低年级)",
+    "start": 56,
+    "end": 58,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 56,
+        "stem": "X 设Γ 为所有2016 阶置换矩阵组成的集合. 求 det A. A∈Γ"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 56,
+        "stem": "Z π ∞ 4 X 令an = tann x dx. 求级数 apn 收敛时实数p 的范围. 0 n=1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 56,
+        "stem": "ZZ 设D = {(x, y) : x2 + 2y2 ≤2x + 4y}. 求 (x + y) dxdy. D"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 56,
+        "stem": "!2016 a b 若实数a, b, c 满足 = I2, 求全部三元组(a, b, c). 0 c"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 57,
+        "stem": "椭圆柱面S : x2 + 2y2 = 1 与平面σ 的交线为圆. 求所有这样的平面的法向量."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 57,
+        "stem": "设A, B 为n 阶实对称矩阵. 证明tr((AB)2) ≤tr(A2B2)."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 57,
+        "stem": "单位圆的外切n 边形为A1 · · · An, 各边切点依次为B1, . . . , Bn. 记这两个多边形的周长 1 2 为PA, PB. 证明P A3 P B3 > 2π. X π"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 58,
+        "stem": "Z ∞ f(x) 设连续函数a, f 满足a(x) > 0, a(x) dx = +∞, lim = 0. 若y′ + ay = f, 证明 x→∞ a(x) 0 y(x) →0 (x →+∞). Z x"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 58,
+        "stem": "Z x x2 设f : R →R 连续且满足xf(x) = 2 f(t) dt + . 求f. x 4 2 Z x"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "第7届 决赛 · 数学类(高年级)",
+    "start": 59,
+    "end": 63,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 59,
+        "stem": "X 设Γ 为所有2016 阶置换矩阵组成的集合. 求 det A. A∈Γ"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 59,
+        "stem": "Z π ∞ 4 X 令an = tann x dx. 求级数 apn 收敛时实数p 的范围. 0 n=1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 59,
+        "stem": "ZZ 设D = {(x, y) : x2 + 2y2 ≤2x + 4y}. 求 (x + y) dxdy. D"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 59,
+        "stem": "!2016 a b 若实数a, b, c 满足 = I2, 求全部三元组(a, b, c). 0 c"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 60,
+        "stem": "椭圆柱面S : x2 + 2y2 = 1 与平面σ 的交线为圆. 求所有这样的平面的法向量."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 60,
+        "stem": "设A, B 为n 阶实对称矩阵. 证明tr((AB)2) ≤tr(A2B2)."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 60,
+        "stem": "单位圆的外切n 边形为A1 · · · An, 各边切点依次为B1, . . . , Bn. 记这两个多边形的周长 1 2 为PA, PB. 证明P A3 P B3 > 2π. X π"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 61,
+        "stem": "群G 中的元素u1, v1, u2, v2 满足u1v1 = v1u1 = u2v2 = v2u2. 若u1, u2 的阶均为8, v1, v2 的阶均为13, 证明u1u2 的阶为4, v1v2 的阶为13."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 61,
+        "stem": "设E ⊂R 为勒贝格可测集, m(E) > a > 0. 证明存在无内点的有界闭集F ⊂E, 使 m(F) = a."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 61,
+        "stem": "设γ(s) (0 ≤s ≤l) 是以弧长参数化的光滑闭空间曲线, 曲率κ > 0. 其单位主法向量在 单位球面上组成简单闭曲线B. 证明B 将球面分成面积相等的两部分."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 62,
+        "stem": "Z 1 定义∥q∥1 = |q(x)| dx. (1) 求二次实多项式p, 使p(x) ≤x3 在[0, 1] 成立, 且∥x3 −p∥1 0 最小. (2) 求三次实多项式p, 使p(x) ≤x4 在[0, 1] 成立, 且∥x4 −p∥1 最小."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 62,
+        "stem": "2|z| 设f 在单位圆盘D 内解析, f(0) = 0, 且Re f(z) ≤1. 证明Re f(z) ≤ 1 + |z|. f(z)"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 63,
+        "stem": "甲袋有N −1 个白球和一个黑球, 乙袋有N 个白球, N > 1. 每次分别从两袋等可能抽取 一球并交换. 求交换n 次后黑球在甲袋中的概率pn 及其极限."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "第8届 初赛 · 数学类",
+    "start": 64,
+    "end": 66,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 64,
+        "stem": "空间中的一束平行光沿固定方向V 照射椭球面S, 与椭球相切的光线的切点构成曲线Γ. 证明Γ 位于经过椭球中心的某个平面上. x2 y2 z2"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 64,
+        "stem": "设n 为奇数, A, B 为n 阶实方阵, 且BA = O. 记A + JA 与B + JB 的特征值集合分别 为S1, S2, 其中JA, JB 分别为A, B 的Jordan 标准形. 证明0 ∈S1 ∪S2."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 64,
+        "stem": "设A1, . . . , A2017 为2016 阶实方阵. 证明方程det(x1A1 + · · · + x2017A2017) = 0 至少有一 组非零实数解(x1, . . . , x2017). X2017"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 65,
+        "stem": "Z 1 Z 1 设f0, f1 为[0, 1] 上正连续函数, 且 f0 ≤ f1. 定义 0 0 Z 1 2fn(x)2 fn+1(x) = an = fn(x) dx. fn(x) + fn−1(x), 0 证明{an}n≥1 单调递增且收敛."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 65,
+        "stem": "设α > 1. 证明不存在[0, +∞) 上的可导正函数f, 满足f ′(x) ≥f(x)α 对所有x ≥0 成 立."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 66,
+        "stem": "Z 1 Z 1 Z 1 设f, g : [0, 1] →(0, 1] 均单调递增, 且 f = g. 证明 |f(x) −g(x)| dx ≤1 0 0 0 2. Z 1"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "第8届 决赛 · 数学类(低年级)",
+    "start": 67,
+    "end": 70,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 67,
+        "stem": "α1 α2 α3 α4 α2 α3 α4 α1 设x4 + 3x2 + 2x + 1 = 0 的四个根为α1, α2, α3, α4. 求 . α3 α4 α1 α2 α4 α1 α2 α3"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 67,
+        "stem": "求实数a 的范围, 使方程3x4 −8x3 −30x2 + 72x + a = 0 有虚根."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 67,
+        "stem": "ZZ p ax dydz + (z + a)2 dxdy 设a > 0, S : z = − a2 −x2 −y2 取上侧. 求I = p . S x2 + y2 + z2"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 68,
+        "stem": "设Γ 是特征值为1, 2 的二阶实对称矩阵全体. 求{a21 : A = (aij) ∈Γ} 的最小元. 1 + u22解析 可写A = I + uuT, 其中u = (u1, u2)T 为单位向量. 故a21 = u1u2 ≥−u2 = 2 −1 在u = √1 −1)T 时等号成立. 最小元为−1 2, 2(1, 2. 解答题"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 68,
+        "stem": "1 旋转抛物面Γ : z = 2(x2 + y2) 与平面P 相交成曲线C. 判断C 的类型并证明. 1"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 68,
+        "stem": "设n 阶方阵A, B 满足rank(ABA) = rank B. 证明AB 与BA 相似."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 69,
+        "stem": "对R 上无穷次可微的复值函数φ, 若任意非负整数m, k 均满足sup |xmφ(k)(x)| < ∞, 则 Z x∈R Z 记φ ∈S. 对f ∈S 定义bf(x) = f(y)e−2πixy dy. 证明bf ∈S, 且f(x) = bf(y)e2πixy dy. R R"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 69,
+        "stem": "Xn−1 n k 设整数n > 1, Sn = . (1) 证明Sn 严格递增且有界. (2) 求Sn 的极限. n k=1"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 70,
+        "stem": "证明方程y′ = −y3 + sin x 在[0, 2π] 上存在唯一满足y(0) = y(2π) 的解."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "第8届 决赛 · 数学类(高年级)",
+    "start": 71,
+    "end": 75,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 71,
+        "stem": "α1 α2 α3 α4 α2 α3 α4 α1 设x4 + 3x2 + 2x + 1 = 0 的四个根为α1, α2, α3, α4. 求 . α3 α4 α1 α2 α4 α1 α2 α3"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 71,
+        "stem": "求实数a 的范围, 使方程3x4 −8x3 −30x2 + 72x + a = 0 有虚根."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 71,
+        "stem": "ZZ p ax dydz + (z + a)2 dxdy 设a > 0, S : z = − a2 −x2 −y2 取上侧. 求I = p . S x2 + y2 + z2"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 72,
+        "stem": "设Γ 是特征值为1, 2 的二阶实对称矩阵全体. 求{a21 : A = (aij) ∈Γ} 的最小元. 1 + u22解析 可写A = I + uuT, 其中u = (u1, u2)T 为单位向量. 故a21 = u1u2 ≥−u2 = 2 −1 在u = √1 −1)T 时等号成立. 最小元为−1 2, 2(1, 2. 解答题"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 72,
+        "stem": "1 旋转抛物面Γ : z = 2(x2 + y2) 与平面P 相交成曲线C. 判断C 的类型并证明. 1"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 72,
+        "stem": "设n 阶方阵A, B 满足rank(ABA) = rank B. 证明AB 与BA 相似."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 73,
+        "stem": "对R 上无穷次可微的复值函数φ, 若任意非负整数m, k 均满足sup |xmφ(k)(x)| < ∞, 则 Z x∈R Z 记φ ∈S. 对f ∈S 定义bf(x) = f(y)e−2πixy dy. 证明bf ∈S, 且f(x) = bf(y)e2πixy dy. R R"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 73,
+        "stem": "设F 是特征为素数p > 0 的域, φ : (F, +) →(F, ·) 为同态, 即φ(x + y) = φ(x)φ(y). 证 明φ 恒为0 或恒为1."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 73,
+        "stem": "(1) 设E 为三分Cantor 集, 证明χE 不是[0, 1] 上的有界变差函数. (2) 对任意E ⊂[0, 1], 证明χE 在[0, 1] 上有界变差当且仅当E 的边界点集有限."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 74,
+        "stem": "设S 为三维欧氏空间中的连通光滑正则曲面. 过S 上每一点都有三条不同的直线落在S 上. 证明S 是平面的一部分."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 74,
+        "stem": "对初值问题y′ = f(x, y), y(x0) = y0, 考虑三级Runge–Kutta 格式 yn+1 = yn + h(c1K1 + c2K2 + c3K3), K1 = f(xn, yn), K2 = f(xn+ah, yn+b21hK1), K3 = f(xn+a3h, yn+b31hK1+b32hK2). (1) 求使其为三阶格式的所有参数. (2) 讨论稳定性."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 75,
+        "stem": "设f 在单位圆盘内解析, |f(z)| ≤M, 其中M > 0. 证明|f ′(0)| ≤M −|f(0)|2 . M f"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 75,
+        "stem": "Xn 1 Xk 设{Xn} 独立同分布, P(Xn = 0) = P(Xn = a) = 2, a > 0. 令Yn = 2k . 求其特征函 k=1 数, 并证明其分布趋于[0, a] 上的均匀分布."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "第9届 初赛 · 数学类",
+    "start": 76,
+    "end": 78,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 76,
+        "stem": "平面P 与单叶双曲面x2 + y2 −z2 = 1 交于抛物线C. 求平面P 的法线与z 轴的夹角."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 76,
+        "stem": "设{an} 递增, a1 > 1. 证明级数 X∞ an+1 −an an ln an+1 n=1 收敛当且仅当{an} 有界. 分母中的an 能否换成an+1?"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 77,
+        "stem": "设Γ = {W1, . . . , Wr} 是由r 个互不相同的可逆n 阶复方阵组成的集合, 且关于乘法封 Xr Xr 闭. 证明 Wi = O 当且仅当 tr Wi = 0. i=1 i=1 X"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 77,
+        "stem": "给定非零实数a 及n 阶实反对称矩阵A, 记 T = {(X, Y ) : X, Y ∈Rn×n, XY = aI + A}. T̸证明对任意(X, Y ), (M, N) ∈T , 都有XN + Y TM = O."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 77,
+        "stem": "Xn 设f(x) = arctan x, A 为常数. 若B = lim f(k −An) 存在, 求A, B. n→∞( n) k=1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 78,
+        "stem": "设f(x) = 1 −x2 + x3 (0 ≤x ≤1). 计算并说明理由: R 1 f(x)n ln(x + 2) dx lim 0 R 1 . n→∞ f(x)n dx 0 Z 1 1"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "第9届 决赛 · 数学类(低年级)",
+    "start": 79,
+    "end": 81,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 79,
+        "stem": "! ! 0 1 Hn I 设H1 = , Hn+1 = , 其中I 与Hn 同阶. 求rank H4. 1 0 I Hn"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 79,
+        "stem": "ln(1 + tan x) −ln(1 + sin x) 求lim . x→0 x3 x −sin x解析 由中值定理, 分子为tan , 其中ξx 介于sin x, tan x 之间. 因ξx →0, 故极 1 + ξx 限为 sin x(1 −cos x) 1 lim = x→0 x3 cos x 2."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 79,
+        "stem": "t 设Γ 为x = π sin 2, y = t −sin t, z = sin 2t 从t = 0 到t = π 的曲线段. 求Z esin x(cos x cos y dx −sin y dy) + cos z dz. Γ"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 79,
+        "stem": "设n > 1, 实对称矩阵A 的对角元均为1, 其余元素均为a ∈R. 求二次型xTAx 在正交 变换下的标准形."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 80,
+        "stem": "x2 y2 z2 设S : + + = 1, a, b, c > 0, 点A(x0, y0, z0) 在椭球外. 过A 且与S 相切的直线 a2 b2 c2 构成锥面Σ. 证明存在平面Π 使S ∩Σ = S ∩Π, 并求Π."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 80,
+        "stem": "设n 阶复矩阵A, B, C 满足AB −BA = C, AC = CA, BC = CB. (1) 证明C 幂零. (2) 证明三者可同时相似化为上三角矩阵. (3) 若C̸ = 0, 求最小可能的n."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 81,
+        "stem": "Z 1 Z 1 Z 1 设f ∈C2[0, 1], f(0)f(1) ≥0. 证明 |f ′| ≤2 |f| + |f ′′|. 0 0 0"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 81,
+        "stem": "X∞ 设α ∈(1, 2), (1 −x)α = akxk 为麦克劳林展开. 对实幂零矩阵A ∈Rn×n 定义 k=0 Z 1 X∞ G(x) = (gij(x)) = ak(xI + A)k (0 ≤x < 1). 证明所有反常积分 gij(x) dx 均存在 0 k=0 当且仅当A3 = 0."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 81,
+        "stem": "设连续函数g : R →R 满足1 < g(t) < 2, x(t) > 0 是方程x′′ = g(t)x 在全实轴上的单调 解. 证明存在常数C2 > C1 > 0 使C1x(t) < |x′(t)| < C2x(t) 对所有t 成立."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "第9届 决赛 · 数学类(高年级)",
+    "start": 82,
+    "end": 86,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 82,
+        "stem": "! ! 0 1 Hn I 设H1 = , Hn+1 = , 其中I 与Hn 同阶. 求rank H4. 1 0 I Hn"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 82,
+        "stem": "ln(1 + tan x) −ln(1 + sin x) 求lim . x→0 x3 x −sin x解析 由中值定理, 分子为tan , 其中ξx 介于sin x, tan x 之间. 因ξx →0, 故极 1 + ξx 限为 sin x(1 −cos x) 1 lim = x→0 x3 cos x 2."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 82,
+        "stem": "t 设Γ 为x = π sin 2, y = t −sin t, z = sin 2t 从t = 0 到t = π 的曲线段. 求Z esin x(cos x cos y dx −sin y dy) + cos z dz. Γ"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 82,
+        "stem": "设n > 1, 实对称矩阵A 的对角元均为1, 其余元素均为a ∈R. 求二次型xTAx 在正交 变换下的标准形."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 83,
+        "stem": "x2 y2 z2 设S : + + = 1, a, b, c > 0, 点A(x0, y0, z0) 在椭球外. 过A 且与S 相切的直线 a2 b2 c2 构成锥面Σ. 证明存在平面Π 使S ∩Σ = S ∩Π, 并求Π."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 83,
+        "stem": "设n 阶复矩阵A, B, C 满足AB −BA = C, AC = CA, BC = CB. (1) 证明C 幂零. (2) 证明三者可同时相似化为上三角矩阵. (3) 若C̸ = 0, 求最小可能的n."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 84,
+        "stem": "Z 1 Z 1 Z 1 设f ∈C2[0, 1], f(0)f(1) ≥0. 证明 |f ′| ≤2 |f| + |f ′′|. 0 0 0"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 84,
+        "stem": "设群G 满足(xy)2 = (yx)2 (x, y ∈G). 证明xyx−1y−1 的阶不超过2."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 84,
+        "stem": "Z 设可测集E ⊂Rn 满足m(E) < ∞, f, fk ∈L2(E), fk →f 几乎处处, 且lim sup |fk|2 ≤ Z Z k→∞ E |f|2 < ∞. 证明 |fk −f|2 →0. E E Z Z"
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 85,
+        "stem": "设椭圆柱面S : r(u, v) = (a cos u, b sin u, v), a, b > 0. (1) 求其全部测地线. (2) 当a = b 时, 求连接P = (a, 0, 0) 与Q = (a cos u0, a sin u0, v0) 的最短曲线, 其中−π < u0 < π."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 85,
+        "stem": "推导求解线性方程组的共轭梯度法, 并证明在精确运算下经有限步得到解. 1"
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 86,
+        "stem": "设f 在单位圆盘内解析, 在闭圆盘上连续, 且在|z| = 1 上|f(z)| = 1. 证明f 在单位圆盘 内可以表示为有理函数."
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 86,
+        "stem": "设n ≥2, X1, . . . , Xn 独立同分布, 分布函数为F, 密度为f, 次序统计量为Xn1 ≤· · · ≤ Xnn. (1) 求(Xn1, Xnn) 的联合密度. (2) 当Xi 在[0, 1] 上均匀分布时, 求U = Xn1 + Xnn 的密度."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "第10届 初赛 · 数学类",
+    "start": 87,
+    "end": 89,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 87,
+        "stem": "设马鞍面S : x2 −y2 = 2z, 平面σ : z = αx + βy + γ, 其中α, β, γ 为常数. 求S 上点P, 使过P 且包含于S 的直线的方向均平行于σ."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 87,
+        "stem": "设实方阵A = (aij)n×n 满足aii = a > 0, 且对每个i, Xn Xn |aij| + |aji| < 4a. j=1 j=1 求二次型f(x1, . . . , xn) = (x1, . . . , xn)A(x1, . . . , xn)T 的规范形. A + AT"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 88,
+        "stem": "元素均为整数的矩阵称为整矩阵. 设A, B 为n 阶整矩阵. (1) 证明A 可逆且A−1 是整 矩阵, 当且仅当| det A| = 1. (2) 若A −2jB (j = 0, 1, . . . , 2n) 均可逆, 且逆矩阵均为整矩 阵, 证明A + B 可逆."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 88,
+        "stem": "设f ∈C1[0, 1], 在0 处有任意阶导数, 且f (n)(0) = 0 (n ≥0). 又有常数C > 0 使 f(x) |xf ′(x)| ≤C|f(x)|. (1) 证明lim = 0 对每个整数n ≥0 成立. (2) 证明f ≡0 于 x→0+ xn [0, 1]."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 88,
+        "stem": "X∞ 设an > 0, bn 绝对收敛, 且 n=1 an 1 1 ≤1 + + + bn (n ≥2). an+1 n n ln n X∞ an n + 1 ln(n + 1) 证明: (1) < + bn; (2) an 发散. an+1 n ln n n=1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 89,
+        "stem": "设可微函数f : R →(0, +∞) 满足 |f ′(x) −f ′(y)| ≤|x −y|α (x, y ∈R), α+1 α + 1 α < f(x).其中0 < α ≤1. 证明对每个x, 有|f ′(x)| α"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "第10届 决赛 · 数学类(低年级)",
+    "start": 90,
+    "end": 93,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 90,
+        "stem": "设A 为实对称方阵, (1, 0, 1) 和(1, 2, 0) 是其行向量的一个极大无关组. 求A."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 90,
+        "stem": "sin y(x) 设y ∈C1[0, 1), 0 ≤y(x) ≤π, 且x = , 右端在y = 0 处定义为1. 求y′(0). y(x)"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 90,
+        "stem": "Z ∞ Z ∞ 设f(x) = e−t2 dt. 求 xf(x) dx. x 0"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 90,
+        "stem": "1 设U 为八阶实正交矩阵. 其中所有元素均为 √ 的3 × 3 子矩阵最多有多少个? 2 2"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 91,
+        "stem": "设l1 为z 轴, l2 经过(−1, 0, 0) 和(0, 1, 1). 动直线l 分别与l1, l2 共面, 其方向平行于平 面z = 0. (1) 求这些直线构成的曲面S 的方程. (2) 判定曲面类型."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 91,
+        "stem": "证明任意n 阶实方阵均可写成A = aIn + A1 + A2, 其中a ∈R, A1, A2 均幂零."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 92,
+        "stem": "设α > 0, f ∈C1[0, 1], 对每个非负整数n 均有f (n)(0) = 0. 又存在C > 0, 使|xαf ′(x)| ≤ C|f(x)| (0 ≤x ≤1). (1) 证明α = 1 时f ≡0. (2) 当α > 1 时举出不恒为零的例子."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 92,
+        "stem": "设0 < c < 1, 0 < x1 < 1, x1̸ = c(1 −x21), 并令xn+1 = c(1 −x2n). 证明{xn} 收敛当且仅 √ 3 当0 < c ≤ . 2"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 93,
+        "stem": "设a, b, c ∈C(R), 方程y′ = a(x)y2 + b(x)y + c(x) 只有有限个2π 周期解. 求周期解个数 的最大值."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "第10届 决赛 · 数学类(高年级)",
+    "start": 94,
+    "end": 99,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 94,
+        "stem": "设A 为实对称方阵, (1, 0, 1) 和(1, 2, 0) 是其行向量的一个极大无关组. 求A."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 94,
+        "stem": "sin y(x) 设y ∈C1[0, 1), 0 ≤y(x) ≤π, 且x = , 右端在y = 0 处定义为1. 求y′(0). y(x)"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 94,
+        "stem": "Z ∞ Z ∞ 设f(x) = e−t2 dt. 求 xf(x) dx. x 0"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 94,
+        "stem": "1 设U 为八阶实正交矩阵. 其中所有元素均为 √ 的3 × 3 子矩阵最多有多少个? 2 2"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 95,
+        "stem": "设l1 为z 轴, l2 经过(−1, 0, 0) 和(0, 1, 1). 动直线l 分别与l1, l2 共面, 其方向平行于平 面z = 0. (1) 求这些直线构成的曲面S 的方程. (2) 判定曲面类型."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 95,
+        "stem": "证明任意n 阶实方阵均可写成A = aIn + A1 + A2, 其中a ∈R, A1, A2 均幂零."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 96,
+        "stem": "设α > 0, f ∈C1[0, 1], 对每个非负整数n 均有f (n)(0) = 0. 又存在C > 0, 使|xαf ′(x)| ≤ C|f(x)| (0 ≤x ≤1). (1) 证明α = 1 时f ≡0. (2) 当α > 1 时举出不恒为零的例子."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 96,
+        "stem": "设R 为含幺结合环, 1̸ = 0, a, b ∈R, a + b = ba. 若方程组 x2 −(ax2 + x2a) + ax2a = 1, x + a −(ax + xa) + axa = 1 在R 中有解, 证明ab = ba."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 96,
+        "stem": "设f : R →R 可测. 证明其图像G = {(x, f(x)) : x ∈R} 为二维勒贝格零测集."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 97,
+        "stem": "1 设椭圆抛物面S : γ(u, v) = (u, v, u2 + 2v2). (1) 求全部脐点. (2) 与任一脐点处切平面平 行的平面若截S 成曲线C, 证明C 为圆周. √"
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 97,
+        "stem": "设a = x0 < x1 < · · · < xn = b, S[a, b] 为在各小区间上次数不超过三且在[a, b] 上二阶连 续可导的实函数全体. (1) 证明对任意实函数f, 存在唯一s ∈S[a, b] 满足s(xi) = f(xi) Z b Z b (0 ≤i ≤n), s′′(a) = s′′(b) = 0. (2) 若f ∈C2[a, b], 证明 (s′′)2 ≤ (f ′′)2, 等号当且仅 a a 当f = s."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 98,
+        "stem": "设z0 为解析函数f 的n 阶极点. 证明存在ρ, R > 0, 使任意|w| > R 时, 方程f(z) = w 在|z −z0| < ρ 内有n 个零点. φ(z)"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 99,
+        "stem": "Xn 1 设独立随机变量Xn 满足P(Xn = nθ) = P(Xn = −nθ) = 2, θ > 0, Sn = Xi. (1) 若 i=1 1 Snθ < 证明Sn 依概率趋于0. (2) 证明 依分布趋于N(0, 1). 2, n √Var Sn Xn"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "第11届 初赛 · 数学A类",
+    "start": 100,
+    "end": 102,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 100,
+        "stem": "空间中球面B2 严格包含在球面B1 所围球体内部, 两球面之间的闭区域为D. 球B 含于 D, 且与B1, B2 均相切. (1) 判断B 的球心轨迹S 是何种曲面. (2) B1, B2 的球心是S 的 何种点? 证明你的结论."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 100,
+        "stem": "设α > 0, f 在[0, 1] 上非负且二阶可导, f(0) = 0, 并且f 不恒为零. 证明存在ξ ∈(0, 1), 使 ξf ′′(ξ) + (α + 1)f ′(ξ) > αf(ξ). Z x"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 100,
+        "stem": "设A 为n 阶复矩阵, A 为其共轭矩阵, p(t) 为I −AA 的特征多项式. 证明p(t) 的系数均 为实数."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 101,
+        "stem": "已知f1 为实n 元正定二次型. 令V 为所有满足下列条件的实n 元二次型f 的集合: 对 每个k ∈R, kf + f1 均为零二次型, 正定二次型或负定二次型. 证明V 在通常的加法和 数乘下构成实向量空间, 并求其维数."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 101,
+        "stem": "设δ > 0, 0 < α < 1, 实数列满足 1 xn+1 = xn 1 −hn + , n ≥1, nα nα+δ 其中{hn} 有正的上下界. 证明{nδxn} 有界."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 101,
+        "stem": "1 设f(x) = (1) 证明f 在[0, +∞) 上为凸函数, 且对x, y ≥0, 1 + ex. f(x) + f(y) ≤f(0) + f(x + y). (2) 对n ≥3, 确定集合 ( ) Xn Xn E = f(xi) : xi = 0, xi ∈R . i=1 i=1 ex(ex −1)"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "第11届 初赛 · 数学B类",
+    "start": 103,
+    "end": 105,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 103,
+        "stem": "设L1, L2 是空间中两条不垂直的异面直线, B 是其公垂线段的中点. 点Ai 在Li 上滑动, 且BA1 ⊥BA2. 证明直线A1A2 扫成的曲面的闭包是一个单叶双曲面."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 103,
+        "stem": "Z +∞ dx 计算I = 0 (1 + x2)(1 + x2019). 1 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 103,
+        "stem": "设x1 > 0, xn+1 = ln(1 + xn) (n ≥1). 证明数列收敛, 并求其极限."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 104,
+        "stem": "Xn 设ε1, . . . , εn 为实n 维空间V 的一组基, εn+1 = − εi. 证明: i=1 (1) 从这n + 1 个向量中任意删去一个, 余下的均为V 的基. (2) 对每个α ∈V , 上述基中至少有一组使α 的坐标均非负. Xn (3) 若α = aiεi, 各ai 均非零且|ai| 两两不同, 则(2) 中的基唯一. i=1 Xn+1"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 104,
+        "stem": "设F 为数域, A ∈F n×n. 若A2 = In, 称A 为对合矩阵. 证明: (1) rank(In + A) + rank(In −A) = n. (2) A 可对角化, 相似于diag(Ir, −In−r), 其中r = rank(In + A). (3) 若对合矩阵A, B 满足AB = BA, 则存在可逆矩阵P, 使P −1AP, P −1BP 同时为对 角矩阵."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 104,
+        "stem": "设f 为[a, b] 上连续凹函数, f(a) = 0, f(b) > 0, 且f +(a)′ 存在并非零. 对n ≥2, 定义 ( ) Xn Xn Sn = kxk : kf(xk) = f(b), xk ∈[a, b] . k=1 k=1 (1) 证明每个α ∈(0, f(b)) 恰有一个原像x ∈(a, b). (2) 求limn→∞(sup Sn −inf Sn)."
+      },
+      {
+        "number": 7,
+        "section": "",
+        "page": 105,
+        "stem": "X∞ Xn X∞ 1 n2an 设an > 0, < ∞, Sn = ak. 证明 收敛. an S2n n=1 k=1 n=1 n"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "第11届 决赛 · 数学类(低年级)",
+    "start": 106,
+    "end": 109,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 106,
+        "stem": "! 1 3n−1Y 2n 1 求极限lim k sin n→∞ n. k=n 1"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 106,
+        "stem": "Z 1 已知f ∈C2(−1, 3), f(0) = 12, f(2) = 2f ′(2) + 8. 求 xf ′′(2x) dx. 0"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 106,
+        "stem": "判断二次曲面2x2 + y2 + z2 + 2xy −2xz = 1 的类型."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 106,
+        "stem": "  1 −2 0   设A = 1 0 1 . 在奇异值分解A = UΛV 中, U, V 为正交矩阵, Λ 为非负对角矩阵. 0 2 1 求Λ."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 107,
+        "stem": "考虑单叶双曲面S : x2 −y2 + z2 = 1. (1) 证明同族中任意两条不同的直母线异面. (2) 同 族的两条直母线分别经过M1(1, 1, 1) 和M2(2, 2, 1), 求它们的公垂线及距离."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 107,
+        "stem": "设有限维欧氏空间V = V1 ⊕V2, 其中V1, V2 非平凡. 设pi 为V 到Vi 的正交投影, φ = p1 + p2. 证明0 < det φ ≤1, 且等号当且仅当V1 ⊥V2."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 108,
+        "stem": "(1) 证明x3 −3x = t 有三个在[−2, 2] 上连续, 在(−2, 2) 内连续可微的解x = φj(t), 满 Z 2 足φ1(−t) = −φ3(t), φ2(−t) = −φ2(t). (2) 对[−2, 2] 上的连续偶函数f, 证明 f(x3 − Z 1 1 3x) dx = f(x3 −3x) dx. 0"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 108,
+        "stem": "对A ∈Rn×n, n ≥2, 形式定义 X∞ X∞ X∞ (−1)kA2k+1 (−1)kA2k (−1)kA2k+1 sin A = , cos A = , arctan A = . (2k + 1)! (2k)! 2k + 1 k=0 k=0 k=0 令∥A∥= max ∥Ax∥. 证明: (1) sin A, cos A 均有意义且(sin A)2 + (cos A)2 = I; (2) ∥x∥=1 ∥A∥< 1 时arctan A 有意义且sin(arctan A) = A cos(arctan A)."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 109,
+        "stem": "设m, n 为正整数, k̸ = 0. 证明微分方程y′(x) = ky2n(x) + x2m−1 没有定义在整个实轴上 的解."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "第11届 决赛 · 数学类(高年级)",
+    "start": 110,
+    "end": 115,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 110,
+        "stem": "! 1 3n−1Y 2n 1 求极限lim k sin n→∞ n. k=n 1"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 110,
+        "stem": "Z 1 已知f ∈C2(−1, 3), f(0) = 12, f(2) = 2f ′(2) + 8. 求 xf ′′(2x) dx. 0"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 110,
+        "stem": "判断二次曲面2x2 + y2 + z2 + 2xy −2xz = 1 的类型."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 110,
+        "stem": "  1 −2 0   设A = 1 0 1 . 在奇异值分解A = UΛV 中, U, V 为正交矩阵, Λ 为非负对角矩阵. 0 2 1 求Λ."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 111,
+        "stem": "考虑单叶双曲面S : x2 −y2 + z2 = 1. (1) 证明同族中任意两条不同的直母线异面. (2) 同 族的两条直母线分别经过M1(1, 1, 1) 和M2(2, 2, 1), 求它们的公垂线及距离."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 111,
+        "stem": "设有限维欧氏空间V = V1 ⊕V2, 其中V1, V2 非平凡. 设pi 为V 到Vi 的正交投影, φ = p1 + p2. 证明0 < det φ ≤1, 且等号当且仅当V1 ⊥V2."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 112,
+        "stem": "(1) 证明x3 −3x = t 有三个在[−2, 2] 上连续, 在(−2, 2) 内连续可微的解x = φj(t), 满 Z 2 足φ1(−t) = −φ3(t), φ2(−t) = −φ2(t). (2) 对[−2, 2] 上的连续偶函数f, 证明 f(x3 − Z 1 1 3x) dx = f(x3 −3x) dx. 0"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 112,
+        "stem": "设E ⊆R 为Lebesgue 可测集, {fn} 为E 上一致有界的可测函数列. 若 ∞ Z N 2 X X 1 1 fn(x) dm < ∞, N E N n=1 N=1 XN 证明1 fn(x) →0 在E 上几乎处处成立. N n=1 XN 1"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 113,
+        "stem": "设f 在|z| ≤R 上解析, |f(z)| ≤M, 且f(0)̸ = 0. 证明f 在|z| ≤R 内的零点个数, 按 3 1 M 重数计, 不超过 log log 2 |f(0)|."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 113,
+        "stem": "证明180 阶群不是单群."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 113,
+        "stem": "设光滑正则曲面r = r(u, v) 的第一基本形式为ds2 = E du2 + 2F du dv + G dv2. (1) 证明 局部存在新参数(u1, v1), 使ds2 = h(u1, v1)(du21 + dv21), 其中h > 0 光滑. (2) 在这样的参 ∂2 ∂2数下证明高斯曲率为K = −1 h, 其中∆= + . 2h∆log ∂u21 ∂v21"
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 115,
+        "stem": "设{Xi} 为独立随机变量序列. (1) 若 nP n (Xi −EXi) X 1 i=1 (Xi −EXi) P−→0, r D−→N(0, 1), n nP i=1 Var(Xi) i=1 Xn Xn 证明1 Var(Xi) →0. (2) 若Xi 还同分布且nP(|X1| ≥n) →0, 证明1 Xi−µn P−→ n2 n i=1 i=1 0, 其中µn = E[X1I(|X1| ≤n)]. Xn Xn"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 115,
+        "stem": "设A 为具有正对角元的非奇异实对称矩阵. 若求解Ax = b 的Gauss–Seidel 迭代对任意 初始值均收敛, 证明A 正定."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "第12届 初赛 · 数学A类",
+    "start": 116,
+    "end": 118,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 116,
+        "stem": "设N(0, 0, 1) 是球面S : x2 + y2 + z2 = 1 的北极点, A(a1, a2, 0), B(b1, b2, 0), C(c1, c2, 0) 为 xOy 平面上不同的三点. 直线NA, NB, NC 分别与球面再次交于A1, B1, C1. (1) 求直线 NA 的方程. (2) 求A1, B1, C1 的坐标. (3) 当A = (1, −1, 0), B = (−1, 1, 0), C = (1, 1, 0) 时, 求四面体NA1B1C1 的体积."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 116,
+        "stem": "ln n 求极限lim n→∞ ln(12020 + 22020 + · · · + n2020)."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 116,
+        "stem": "设A, B 均为2020 阶实正交矩阵, 方程组Ax = Bx 的解空间维数为3. 判断A, B 是否 相似, 并证明."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 117,
+        "stem": "称n 次非常值多项式的xn−1 项系数为其第二项系数, 该系数可以为零. 求所有2020 次 复系数首一多项式f, 使得对f 的每个复根r, 都存在非常值复系数首一多项式g, h, 满 足f(x) = (x −r)g(x)h(x), 且g, h 的第二项系数相等."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 117,
+        "stem": "设φ 是R 上严格递增的连续函数, ψ 是它在值域上的反函数. 实数列满足 1 xn+2 = ψ 1 −1 φ(xn) + , n ≥2. √n √nφ(xn+1) 证明该数列收敛, 或举例说明它可能发散."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 118,
+        "stem": "设f 在[a, b] 上满足Lipschitz 条件|f(x) −f(y)| ≤M|x −y|. 对划分P : a = x0 < x1 < · · · < xn+1 = b, 定义 Xn p ∥P∥= max (xk+1 −xk), s(f; P) = (xk+1 −xk)2 + (f(xk+1) −f(xk))2. k k=0 记Pn 为[a, b] 的2n 等分. 证明: (1) s(f; Pn) 有极限. (2) lim s(f; P) 存在, 即曲线 ∥P∥→0 y = f(x) 可求长. √"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "第12届 初赛 · 数学B类",
+    "start": 119,
+    "end": 120,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 119,
+        "stem": "y2 z2设a > b > 0, c > 0. 椭球面x2 + + = 1 的外切柱面Σε 的各母线平行于方向向量 √ a2 b2 c2 (0, ε a2 −b2, c), 其中ε = ±1. 求与该柱面交于圆周的平面的法方向. 外切柱面的每一条 母线均与椭球面相切. √ εd"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 119,
+        "stem": "设f 在[0, 1] 上连续且1 ≤f ≤3. 证明 Z 1 Z 1 dx 1 ≤ f(x) dx ≤4 0 0 f(x) 3. Z 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 120,
+        "stem": "设A 为n 阶复矩阵, p 为其特征多项式, g 为次数至少为1 的复系数多项式. 证明: g(A) 可逆当且仅当p, g 互素."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 120,
+        "stem": "设σ 为Cn 上的线性变换, I 为恒等变换. 证明下列条件等价: (1) σ = kI, k ∈C. (2) 存 在σ 的n + 1 个特征向量, 其中任意n 个均线性无关."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 120,
+        "stem": "Z +∞ {x} 计算反常积分 dx, 其中{x} 为x 的小数部分. 1 x3"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 120,
+        "stem": "Z x Z 1 −x4设f 在[0, 1] 上连续, 且对每个x ∈[0, 1] 有 f(t) dt ≥x2 . 证明 f(x)2 dx ≥1 x2 2 0 10."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "第12届 决赛 · 数学类(低年级)",
+    "start": 121,
+    "end": 125,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 121,
+        "stem": "ZZZ 设Ω: (x −2)2 + (y −3)2 + (z −4)2 ≤1, 求 (x2 + 2y2 + 3z2) dx dy dz. Ω"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 121,
+        "stem": "Z n Xn ek2 xn 设xn = , yn = ex2 dx, 求lim . k 0 n→∞ yn k=1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 121,
+        "stem": "  1 0 1 0 0   0 1 0 1 0    求矩阵A = 0 0 1 0 1  的Jordan 标准形.     0 0 0 1 0  0 0 0 0 1"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 121,
+        "stem": "设A 为2021 阶实对称矩阵, 每一行均为1, 2, . . . , 2021 的一个排列. 求tr A."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 122,
+        "stem": "√ 圆C 位于yOz 平面, 参数方程为y = 3 + cos θ, z = 1 + sin θ, 0 ≤θ ≤2π. (1) 求它绕 z 轴旋转所得环面S 的隐式方程. (2) 设t ≥0, 以M(0, 0, t) 为顶点的两个锥面S1, S2 的 半顶角之差为π , 且每条母线均与S 相切. 求t 及两锥面的隐式方程. 3 p √"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 122,
+        "stem": "设复矩阵A1, . . . , A2n ∈Cn×n 均可对角化. (1) 证明Cn = ker Ak ⊕Im Ak. (2) 若k < j 时AkAj = 0, 证明这些矩阵中至少有n 个为零矩阵."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 123,
+        "stem": "Z 1 dx 称f 满足条件(P), 若f 在[0, 1] 上非负连续, f(1) > f(0) = 0, = +∞, 且 0 f(x) x1 + x2 + f(x2) f ≥f(x1) (x1, x2 ∈[0, 1]). 2 2 (1) 对c > 0, 判断f1(x) = cx 与f2(x) = √x 是否满足(P), 并求 lim − x→0+(fi(x) xf i(x))mef′′ i(x), m ≥1. (2) 证明对每个m ≥1, 存在满足(P) 的函数f 及趋于零的正 数列xn, 使f 在xn 处可导且(f(xn) −xnf ′(xn))mef′(xn) →+∞. Z 1 Z 1 dx dx"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 124,
+        "stem": "设α, β, α1, α2, β1, β2, A 均为实数. 分别求(1) sin(nα + β) →A; (2) sin(nα1 + β1) + sin(nα2 + β2) →0 的充要条件."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 124,
+        "stem": "设g 为R 上恒正的连续函数, n 为正整数, x0, y0 ∈R. 证明初值问题 y′(x) = y(x) 2n+1g(x),1 y(x0) = y0 (1) 有定义于整个R 的解; (2) 当y0 = 0 时有无穷多个全局解; (3) 每个全局解在整个实 轴上非负或在整个实轴上非正. 2n"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "第12届 决赛 · 数学类(高年级)",
+    "start": 126,
+    "end": 131,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 126,
+        "stem": "ZZZ 设Ω: (x −2)2 + (y −3)2 + (z −4)2 ≤1, 求 (x2 + 2y2 + 3z2) dx dy dz. Ω"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 126,
+        "stem": "Z n Xn ek2 xn 设xn = , yn = ex2 dx, 求lim . k 0 n→∞ yn k=1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 126,
+        "stem": "  1 0 1 0 0   0 1 0 1 0    求矩阵A = 0 0 1 0 1  的Jordan 标准形.     0 0 0 1 0  0 0 0 0 1"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 126,
+        "stem": "设A 为2021 阶实对称矩阵, 每一行均为1, 2, . . . , 2021 的一个排列. 求tr A."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 127,
+        "stem": "√ 圆C 位于yOz 平面, 参数方程为y = 3 + cos θ, z = 1 + sin θ, 0 ≤θ ≤2π. (1) 求它绕 z 轴旋转所得环面S 的隐式方程. (2) 设t ≥0, 以M(0, 0, t) 为顶点的两个锥面S1, S2 的 半顶角之差为π , 且每条母线均与S 相切. 求t 及两锥面的隐式方程. 3 p √"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 127,
+        "stem": "设复矩阵A1, . . . , A2n ∈Cn×n 均可对角化. (1) 证明Cn = ker Ak ⊕Im Ak. (2) 若k < j 时AkAj = 0, 证明这些矩阵中至少有n 个为零矩阵."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 128,
+        "stem": "Z 1 dx 称f 满足条件(P), 若f 在[0, 1] 上非负连续, f(1) > f(0) = 0, = +∞, 且 0 f(x) x1 + x2 + f(x2) f ≥f(x1) (x1, x2 ∈[0, 1]). 2 2 (1) 对c > 0, 判断f1(x) = cx 与f2(x) = √x 是否满足(P), 并求 lim − x→0+(fi(x) xf i(x))mef′′ i(x), m ≥1. (2) 证明对每个m ≥1, 存在满足(P) 的函数f 及趋于零的正 数列xn, 使f 在xn 处可导且(f(xn) −xnf ′(xn))mef′(xn) →+∞. Z 1 Z 1 dx dx"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 129,
+        "stem": "Z 设fn, f 为R 上可测函数, f n,2 f 2 ∈L1(R), 且fn →f 几乎处处成立. 若 |fn|2 dm → Z Z R |f|2 dm, 证明 |fn −f|2 dm →0. R R"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 129,
+        "stem": "设解析函数列fn 在区域G 内闭一致收敛于f. (1) 若f̸ ≡0, ℓ为G 内不经过f 的零点 的可求长简单闭曲线, 且其内部属于G, 证明充分大的n 下fn, f 在ℓ内的零点数相同, 按重数计. (2) 若各fn 均单叶且f 非常数, 证明f 也单叶解析."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 129,
+        "stem": "设R 为有单位元的交换环, f(x) = a0 + a1x + · · · + anxn ∈R[x]. 证明f 在R[x] 中可逆, 当且仅当a0 在R 中可逆且a1, . . . , an 均为幂零元."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 130,
+        "stem": "设光滑曲面为r = (x, y, h(x, y)). (1) 求其平均曲率. (2) 若曲面为极小曲面且h(x, y) = f(x) + g(y), 求h 的表达式. (−hx, −hy, 1)"
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 130,
+        "stem": "第k 个盒子有k 个球, 其中一个红球, 其余为白球. 从前n 个盒子中各独立等可能地取 Sn Sn −log n 一球, 以Sn 表示取出的红球数. 证明(1) P−→1; (2) D−→N(0, 1); (3) 对任 log n √log n |Sn −log n|r 意r > 0, E →0. logr n + |Sn −log n|r 1"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 131,
+        "stem": "考虑常微分方程初值问题y′ = f(x, y), y(x0) = y0 的数值格式 yn + a1yn−1 + a2yn−2 = h(b0fn + b1fn−1 + b2fn−2), fj = f(xj, yj). (1) 确定各常数使精度阶尽可能高. (2) 分析所得格式的稳定性与收敛性."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "第13届 初赛 · 数学A类",
+    "start": 132,
+    "end": 134,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 132,
+        "stem": "设a, b, c ∈R 不全为零. 求直线(x, y, z) = (1, 1, 1) + t(a, b, c) 绕z 轴旋转所得的点集的方 程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 132,
+        "stem": "设B ⊂Rn 为单位开球, n ≥2. 函数u, v ∈C(B) ∩C2(B) 满足 −∆u = (1 −u2 −v2)u, −∆v = (1 −u2 −v2)v 于B, u = v = 0 于∂B. 证明u2 + v2 ≤1."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 132,
+        "stem": "设f(x) = x2021 + a2020x2020 + · · · + a1x + a0 为整系数多项式, a0̸ = 0, 且所有|ak| ≤40. 证明它的根不可能全为实数."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 133,
+        "stem": "设P 为对称酉矩阵. 证明存在可逆复矩阵Q, 使P = QQ−1."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 133,
+        "stem": "设α > 1. (1) 证明下列两个反常累次积分相等: Z ∞ Z ∞ Z ∞ Z ∞ dx e−tαx sin x dt = dt e−tαx sin x dx. 0 0 0 0 Z ∞ Z ∞ 2 dx .(2) 计算 sin x3 dx sin x 3 0 0 Z ∞ 1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 134,
+        "stem": "设f, g ∈C1(R) 非负, 且f ′ ≥6+f −f 2, g′ ≤6+g −g2. 证明: (1) 对任意ε ∈(0, 1) 及x, 存在ξ < x, 使f(ξ) ≥3 −ε. (2) f ≥3. (3) 对任意x, 存在η < x, 使g(η) ≤3. (4) g ≤3."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "第13届 初赛 · 数学B类",
+    "start": 135,
+    "end": 136,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 135,
+        "stem": "设球面S : x2 + y2 + z2 = 1. 求以M0 = (0, 0, a) 为顶点且与S 相切的锥面方程, 其中 |a| > 1."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 135,
+        "stem": "设B ⊂Rn 为单位开球, n ≥2, u, v ∈C(B) ∩C2(B) 满足 −∆u = (1 −u2 −v2)u, −∆v = (1 −u2 −v2)v 于B, u = v = 0 于∂B. 证明u2 + v2 ≤1."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 135,
+        "stem": "设f(x) = x2021 + a2020x2020 + · · · + a1x + a0 为整系数多项式, a0̸ = 0, 且所有|ak| ≤40. 证明它的根不可能全为实数."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 135,
+        "stem": "设S 为元素均属于{0, 1, −1} 的三阶矩阵的行列式全体. 证明 S = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. √ √ √ √"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 136,
+        "stem": "f(x) 设f 在[−1, 1] 上有定义, 在0 的某邻域内连续可导, 且lim = a > 0. 证明 x→0 x X∞ X∞ (−1)nf(1 收敛, 而 f(1 发散. n) n) n=1 n=1"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 136,
+        "stem": "! X∞ enx 设f(x) = ln , x < 0. 证明f 严格凸, 并证明对每个ξ < 0, 存在x1 < x2 < 0, n2 n=1 f(x2) −f(x1) 使f ′(ξ) = . x2 −x1 X∞"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "第13届 初赛(补赛) · 数学A类",
+    "start": 137,
+    "end": 139,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 137,
+        "stem": "设S 为三维欧氏空间中的椭球面, P 为不在S 上的定点. 当X 遍历S 时, 求线段PX 的中点X∗的轨迹, 并证明."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 137,
+        "stem": "Z ∞ x −x2 + x3 −· · · −x2018 计算I = dx. 0 (1 + x)2021"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 137,
+        "stem": "设R = {0, 1, 4, 9, 16}, U 为元素均属于R 的三阶矩阵全体. 设S ⊂U, 且|S| > 59−53−18. 证明存在不同的A, B ∈S, 使AB = BA."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 138,
+        "stem": "设实数a1, a2, a3, b1, b2 满足a21 + a22 + a23 = b21 + b22 = 1. 矩阵M1 为5 × 3 矩阵, 每行是 a1, a2, a3 的一个排列; M2 为5 × 2 矩阵, 每行是b1, b2 的一个排列. 令M = (M1, M2). 证 √ √ √ 明: (1) (tr M)2 ≤(5 + 2 6) rank M. (2) M 有实特征值λ, 且|λ| ≤ 2 + 3. ! A B"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 138,
+        "stem": "设正数列{an} 的前2021 项属于(0, 1), 且 a2022n+2021 = an + an+1 + · · · + an+2020, n ≥1. 证明lim an 存在. 1 an"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 139,
+        "stem": "X∞ X∞ cos(n + 1 X∞ cos(n + 1 sin n 2) 2)(1) 证明lim = . (2) 计算lim , 并说明理由. α↓0 n1+α n α↓0 nα n=1 n=1 n=1 1"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "第13届 初赛(补赛) · 数学B类",
+    "start": 140,
+    "end": 141,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 140,
+        "stem": "设P = (a, b, c), a, b, c > 0. 求经过P 的平面方程, 使其与三条坐标轴正半轴的交点 A, B, C 构成的三角形恰以P 为重心."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 140,
+        "stem": "Z ∞ x −x2 + x3 −· · · −x2018 计算I = dx. 0 (1 + x)2021 Z ∞ x −x2019 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 140,
+        "stem": "设R = {0, 1, 4, 9, 16}, U 为元素均属于R 的三阶矩阵全体. 若S ⊂U 且|S| > 59−53−18, 证明存在不同的A, B ∈S 满足AB = BA."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 141,
+        "stem": "X 设a1, . . . , an > 0, n ≥2, ai = 1. 矩阵A 的每一行均为a1, . . . , an 的一个排列. (1) 求 特征值1 的复特征子空间的维数及一组基. (2) 证明特征值1 的代数重数也为1."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 141,
+        "stem": "Z π 当f 遍历[0, π] 上所有连续函数时, 求I(f) = (sin x −f(x))f(x) dx 的最大值. 0"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 141,
+        "stem": "1 设α > 1, Γk = [kα, (k + 2)α) ∩N. 定义    1  1  n = min Γk 对某个满足Γk̸ = ∅的k,  n ∈Γk 对某个k, n, n, bn = an =  1  1  nα, 其他,  nα, 其他. X X 判断 an 和 bn 的敛散性."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "第13届 决赛 · 数学类(低年级)",
+    "start": 142,
+    "end": 145,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 142,
+        "stem": "设y + 2y2 + y3 = e−x + x −1, 且y = Ax2 + Bx3 + o(x3), x →0. 求(A, B)."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 142,
+        "stem": "求 (x,y)→(0,0)(|x|lim + |y|)|xy|."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 142,
+        "stem": "设A ∈Rn×n, m 为正整数, (I + A)m = 0. 求det A."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 142,
+        "stem": "1 求微分方程y′ −cos x sin2 y = sin 2y 的通解. 2"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 142,
+        "stem": "固定球S 与固定平面Σ 不相交, 球心为P, 半径为r. 动球B 与S 外切且与Σ 相切, 球 心为M. (1) 求所有可能的M 构成的曲面. (2) 说明P 与该曲面的关系并证明."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 143,
+        "stem": "设A̸ = 0 为n 阶复方阵. 对b ∈Cn, 满足f(A)b = 0 的非零多项式称为b 关于A 的零化 多项式, 其中次数最低的首一多项式称为其最小多项式. 证明矩阵A 的最小多项式也是 某个向量b 关于A 的最小多项式. Ys"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 143,
+        "stem": "|f(x)| 设α > 0, f 在[0, +∞) 上二阶可导, 且lim = 0, lim sup ′′(x)| < ∞. (1) 当 x→∞ xα x→∞xα|f ′0 < α ≤1 时证明f ′(x) →0. (2) 当α > 1 时构造满足条件而f ′(x)̸ →0 的函数, 且f 在 任何区间上均非常数."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 144,
+        "stem": "! a b 设A = ∈R2×2, p(X, Y ) = tr(XAY T). (1) 证明p 为R2×2 上内积的充要条件为 c d a > 0, b = c, ad > b2. (2) 若  √  3 1 !   0 1 σ(X) =  2 √2 X −1 3 −1 0 2 2 为此内积空间上的正交变换, 求A."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 144,
+        "stem": "证明(1) 方程ey −y = ex −x 唯一确定连续函数y = y(x) ∈C(−∞, 0], 满足y(0) = 0, y(x) ≥0, 且x < 0 时y(x) > 0. (2) y ∈C1(−∞, 0], y′(0) = −1. (3) x < 0 时x+y(x) < 0, 且y ∈C2(−∞, 0] 为凹函数, y′′(0) = −2 3."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 145,
+        "stem": "设n 为正整数. 证明方程y(2n) −x2y = | sin x| 满足初值y(2j)(0) = 1, y(2j+1)(0) = 0, j = 0, . . . , n −1 的解为整个实轴上的偶函数, 且x̸ = 0 时y(x) > 1."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "第13届 决赛 · 数学类(高年级)",
+    "start": 146,
+    "end": 151,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 146,
+        "stem": "设y + 2y2 + y3 = e−x + x −1, 且y = Ax2 + Bx3 + o(x3), x →0. 求(A, B)."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 146,
+        "stem": "求 (x,y)→(0,0)(|x|lim + |y|)|xy|."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 146,
+        "stem": "设A ∈Rn×n, m 为正整数, (I + A)m = 0. 求det A."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 146,
+        "stem": "1 求微分方程y′ −cos x sin2 y = sin 2y 的通解. 2"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 146,
+        "stem": "固定球S 与固定平面Σ 不相交, 球心为P, 半径为r. 动球B 与S 外切且与Σ 相切, 球 心为M. (1) 求所有可能的M 构成的曲面. (2) 说明P 与该曲面的关系并证明."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 147,
+        "stem": "设A̸ = 0 为n 阶复方阵. 对b ∈Cn, 满足f(A)b = 0 的非零多项式称为b 关于A 的零化 多项式, 其中次数最低的首一多项式称为其最小多项式. 证明矩阵A 的最小多项式也是 某个向量b 关于A 的最小多项式. Ys"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 148,
+        "stem": "|f(x)| 设α > 0, f 在[0, +∞) 上二阶可导, 且lim = 0, lim sup ′′(x)| < ∞. (1) 当 x→∞ xα x→∞xα|f ′0 < α ≤1 时证明f ′(x) →0. (2) 当α > 1 时构造满足条件而f ′(x)̸ →0 的函数, 且f 在 任何区间上均非常数."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 148,
+        "stem": "证明存在两个互不相交的Borel 集A1, A2 ⊆R, 使对每个非空开区间J 均有m(Ak ∩J) > 0, k = 1, 2."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 149,
+        "stem": "X∞ 设f(z) = anzn 在单位圆内解析, Re f(z) ≤1, 且Re f(0) = 0. 证明|an| ≤2, n ≥1. n=0"
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 149,
+        "stem": "设p 为素数, |G| = prm, r ≥1, p ∤m. 以Nk 表示G 中pk 阶子群的个数, 0 ≤k ≤r. 证 明Nk ≡1 (mod p)."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 150,
+        "stem": "设光滑空间曲线γ(s) 以弧长为参数. 球面|x −x0|2 = R2 称为曲线在s = s0 处的密切球 面, 若f(s) = |γ(s) −x0|2 −R2 满足f(s0) = f ′(s0) = f ′′(s0) = f ′′′(s0) = 0. 若曲率与挠 率均非零, 证明每一点都有唯一密切球面."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 150,
+        "stem": "设p ≥2, X ∼N(0, Σ), Σ 正定, ε ∼N(0, σ2) 与X 独立, σ2 > 0. 令Y = sgn(XTβ0 + ε), β∗= arg min E(Y −XTβ)2. (1) 求β∗的显式表示. (2) 以F 表示ε 的分布函数, 证明 β∈Rp Cov(X, Y ) = −2 Cov(X, F(−XTβ0)). (3) 对任意α 及非零β, 证明E(αTX | βTX) = αTΣβ βTX. (4) 求β∗与β0 的比例因子. βTΣβ"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 151,
+        "stem": "给出QR 方法求矩阵特征值的算法描述, 并证明算法的收敛性."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "第14届 初赛 · 数学A类",
+    "start": 152,
+    "end": 154,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 152,
+        "stem": "求过点P = (1, 1, 1) 且位于单叶双曲面x2 + y2 −z2 = 1 上的两条直线之间的夹角."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 152,
+        "stem": "Xn 设an →a, bn →b. 证明lim 1 akbn−k 存在, 并求其值. n2 n2 n→∞ n5 k=0"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 152,
+        "stem": "! 2 1 设A = . 矩阵B 与A 可交换, 元素全为正整数且det B = 1. 证明存在正整数k, 1 1 使B = Ak. ! u + v v"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 153,
+        "stem": "设n ≥2. 证明f(x) = xn −x −1 在Q 上不可约."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 153,
+        "stem": "设βn →0, f 在[−1, 2] 上有界且在[0, 1] 上黎曼可积. 证明 Z 1 Xn 1 k lim f + βn = f(x) dx. n→∞ n n 0 k=1 k"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 153,
+        "stem": "Z x 设f 在[0, ∞) 的每个闭区间上黎曼可积, 定义F(x) = tαf(t + x) dt, x ≥0. (1) 若 0 −1 < α < 0 且f(x) →A, 证明F 一致连续. (2) 若0 < α < 1, f 以T > 0 为周期且 Z 3 f(t)dt = 2022, 证明F 不一致连续. 0"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "第14届 初赛 · 数学B类",
+    "start": 155,
+    "end": 156,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 155,
+        "stem": "设L 是平面x + y + z −3 = 0 与x −2y −z + 2 = 0 的交线. 求过点(1, 2, 3) 且与L 垂直 的平面方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 155,
+        "stem": "Xn 设an →a, bn →b. 证明lim 1 akbn−k 存在, 并求其值. n2 n2 n→∞ n5 k=0"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 155,
+        "stem": "! 2 1 设A = . 矩阵B 与A 可交换, 元素全为正整数且det B = 1. 证明B = Ak 对某 1 1 个正整数k 成立. ! u + v v"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 155,
+        "stem": "设复矩阵     8 y1 y2 2 0 1  3   8      A = 4 1 x , B =  y2 y1  .  3  4 0 5 8 y1 y2 3 若二者有相同的Jordan 标准形, 求x, y1, y2. 3 . 循环矩阵B 可对角化, 三个特征解析 A 的特征多项式为(t −1)2(t −6). 令ω = e 2πi 值为 8 8 8 + y1 + y2, + ωy1 + ω2y2, + ω2y1 + ωy2. 3 3 3 因此A 也须可对角化, 即rank(A −I) = 1, 解得x = 4. 将6, 1, 1 分别配置到上述三个特 征值中, 得 5 5 5ω 5ω2 5ω2 5ω x = 4, (y1, y2) ∈ 3, 3 , 3 , 3 , 3 , 3 . 各组均使二者相似于diag(6, 1, 1), 故全部符合."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 156,
+        "stem": "X∞ 1 f (n)(0) an+1 设f(x) = an = . 证明 收敛并求和. 1 −x −x2, n! anan+2 n=0"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 156,
+        "stem": "证明: (1) 对每个0 < a < 1, 存在唯一b > 1, 使a−ln a = b−ln b. (2) 对此数对有ab < 1. (3) b + ln a > 1."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "第14届 初赛(补赛一) · 数学A类",
+    "start": 157,
+    "end": 159,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 157,
+        "stem": "已知圆柱面含有母线(x, y, z) = (1, 1, 1) + t(1, 0, 1), 并经过(0, 0, 2), (1, −1, −1). 求该圆柱 面的方程. x −z"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 157,
+        "stem": "设f 是[0, 1] 上的凸函数. 证明 Z 1 Z 1 t(1 −t)f(t) dt ≤1 t3 + (1 −t)3 f(t) dt. 0 3 0 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 157,
+        "stem": "设A 为n 阶实对称矩阵, n ≥2. 非零实向量v = (a1, . . . , an)T, w = (b1, . . . , bn)T 分别属 于不同的特征值. 令B = (ai + bj)n×n. 求B 的全部特征值."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 158,
+        "stem": "设A, B 为数域K 上的n 阶矩阵, 且对某个正整数m 有AB −BA = Am. 证明对每个正 整数k, det(I + Ak) = 1."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 158,
+        "stem": "设x0, y0 ∈R, 并递推定义 1 1 xn+1 = yn+1 = x2n + xnyn + 2y2n + 1, 2x2n + xnyn + y2n + 1. 证明: (1) xn −yn →0. (2) xn 收敛."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 159,
+        "stem": "Z ∞ ln(1 + sx) π2对s > 0, 设ψ(s) = dx. 证明: (1) ψ(1) = . (2) ψ(s) + ψ(1 = 0 x(1 + x) 6 s) π2 1 + ln2 s. 3 2 1"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "第14届 初赛(补赛一) · 数学B类",
+    "start": 160,
+    "end": 161,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 160,
+        "stem": "给定平面x + y + z + 1 = 0, x + λy + µz −1 = 0, x + λ2y + µ2z = 0, 其中λ, µ ∈R. 求三 平面恰交于一点的条件及交点坐标."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 160,
+        "stem": "设f 为[0, 1] 上的凸函数. 证明 Z 1 Z 1 t(1 −t)f(t) dt ≤1 t3 + (1 −t)3 f(t) dt. 0 3 0 √ 3 − 3 1"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 160,
+        "stem": "设A 为n 阶实对称矩阵, n ≥2. 非零实向量v = (a1, . . . , an)T, w = (b1, . . . , bn)T 分别属 于不同特征值. 令B = (ai + bj)n×n. 求B 的全部特征值."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 161,
+        "stem": "X 设实矩阵A = (aij) 的元素非负, 且每一行均满足 aij < 1. 证明det(I + A) > 0. j̸=i"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 161,
+        "stem": "设f ∈C1[0, 1], 在(0, 1) 内三阶可导, 且f(0) = 2, f(1) = 1, f ′(0) = 0, f ′(1) = 4. 证明存 在ξ ∈(0, 1), 使f ′′′(ξ) = 24 + 24ξ."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 161,
+        "stem": "定义fk(x) = sink(1 当x̸ = 0, 并令fk(0) = 0. 判断f2, f3 在整个实轴上是否有原函数, x) 并证明. c"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "第14届 初赛(补赛二) · 数学A类",
+    "start": 162,
+    "end": 164,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 162,
+        "stem": "求单叶双曲面S : x2 + y2 −z2 = 1 上所有点P = (a, b, c), 使过P 且位于S 上的两条直 线均平行于平面x + y −z = 0."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 162,
+        "stem": "设Γ 为各项均属于{0, 2} 的数列全体. 对x = {xn} ∈Γ, 定义 X∞ xn x1 + · · · + xn Π(x) = , f(x) = lim sup . 3n n→∞ n n=1 证明: (1) Π 为单射. (2) Π(Γ) 中每一点均为其聚点. (3) f(Γ) = [0, 2]."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 162,
+        "stem": "设n ≥2, 方阵A1, . . . , An 的元素属于数域K, 且其极小多项式两两互素. 给定任意 f1, . . . , fn ∈K[x], 证明存在f ∈K[x], 使f(Ai) = fi(Ai) 对所有i 成立. Y"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 163,
+        "stem": "设A, B 都是秩为r < n 的实n 阶矩阵, I, J ⊂{1, . . . , n} 各含r + 1 个元素. 令V 为 仅在行标属于I, 列标属于J 的位置可以非零的实矩阵全体. 证明存在0̸ = C ∈V , 使 ACB = 0."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 163,
+        "stem": "Z b Z b 设f, g 在[a, b] 上可导, g′(x)̸ = 0, 并且 f(x)dx = f(x)g(x)dx = 0. 证明存在 a a ξ ∈(a, b), 使f ′(ξ) = 0."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 163,
+        "stem": "X∞ rm 1 设A = { : m, n ∈N+} \\ Q, x0 = 对实参数α, 在x > 0 上定义 n 10n!. n=0    0, x /∈Q, f(x) = 1 p   qα, x = q 为既约分数, q > 0. 证明: (1) 对每个x ∈A, 存在Mx > 0, 使对任意既约分数p 有|x −p ≥Mx . (2) f 在 q q| q2 A 中每点可微的充要条件为α > 2. (3) 对任意α, f 在x0 处不可微. rm解析 (1) 写x = /∈Q. 若|x −p < 1, 则 n q| |mq2 −np2| 1 x −p = p ≥ q nq2|x + n(2x + 1)q2. q| 1 若距离不小于1, 结论也成立. 故可取Mx = min{1, n(2x + 1)}. (2) 有理数p →x /∈Q 时, 既约分母必趋于无穷. 若α > 2, (1) 给出 q f( pq) −f(x) p ≤q2−α →0. −x Mx q 沿无理数趋近时差商恒为零, 故f ′(x) = 0. 反之, 由Dirichlet 有理逼近定理, 存在无穷多 1个既约分数满足0 < |x −p < 若α ≤2, 对应差商绝对值大于q2−α ≥1, 而沿无理数 q| q2. 差商为零, 故不可微. XN PN (3) 令rN = 10−n! = 10N!. 有 n=0 0 < x0 −rN ≤2 · 10−(N+1)!. p 1 若x0 = 为有理数, 左端至少为 当N 充分大时矛盾. 故x0 无理. 记rN 的既约 q q10N!, 分母为qN ≤10N!. 当α ≥0 时, f(rN) −f(x0) ≥1 10(N+1−α)N! →∞. rN −x0 2 当α < 0 时f(rN) ≥1, 差商同样无界. 沿无理数的差商恒为零, 因而对任意α 均不可微."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "第14届 初赛(补赛二) · 数学B类",
+    "start": 165,
+    "end": 166,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 165,
+        "stem": "设三角形的顶点为A = (1, 2, 3), B = (2, 3, 1), C = (3, 1, 2), M 为重心. 求过M, 与三角 形所在平面垂直且与直线BC 平行的平面方程. −−→"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 165,
+        "stem": "设Γ 为各项属于{0, 2} 的数列全体, 并定义 X∞ xn x1 + · · · + xn Π(x) = , f(x) = lim sup . 3n n→∞ n n=1 证明: (1) Π 为单射. (2) Π(Γ) 的每一点均为其聚点. (3) f(Γ) = [0, 2]. X 2 1解析 (1) 若两数列首次在第k 项不同, 则像的差的绝对值至少为2 − = > 0. 3k 3n 3k n>k (2) 只将第k 项由0 与2 互换, 得到不同的像, 与原像的距离为2 →0. (3) 显然值域包 3k −1)c含于[0, 2]. 对任意c ∈[0, 2], 取xn = 2(⌊nc ⌋−⌊(n ⌋). 则各项为0 或2, 且平均值 2 2 2⌊nc ⌋ 2 →c, 从而f(x) = c. n"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 165,
+        "stem": "设n ≥2, 数域K 上的方阵A1, . . . , An 的极小多项式两两互素. 对任意给定f1, . . . , fn ∈ K[x], 证明存在f ∈K[x], 使f(Ai) = fi(Ai) 对所有i 成立. Y"
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 165,
+        "stem": "设三阶实对称矩阵A 的特征值为−1, 1, 1, 且(0, 0, 1)T 是关于−1 的特征向量. 求A."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 166,
+        "stem": "x x −y2n 给定x ∈[0, 1], 设y1 = 2, yn+1 = 2 . 证明yn 收敛并求极限. x −t2 x"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 166,
+        "stem": "给定a > 1, 定义f(x) = −1 当0 ≤x < a, 且f(x) = (−1)k+1 当ak ≤x < ak+1, k ≥1. ∞ Z n X an 令an = f(x)dx. 分别求使 绝对收敛, 收敛的实参数β 的集合. nβ 0 n=1 Z x"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "第14届 决赛 · 数学类(低年级)",
+    "start": 167,
+    "end": 170,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 167,
+        "stem": "由x + y = t, x2 −y2 = t 确定的参数曲线在(1, 0) 处的切线方程是什么?"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 167,
+        "stem": "Z 设L 为x2 + y2 + z2 = 1 与x + 2y + z = 0 的交线. 求 (2x2 + x + y2 + y) ds. L 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 167,
+        "stem": "设A ∈Rn×n 满足An = 0, An−1̸ = 0. 求rank A."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 167,
+        "stem": "Z x 设f ∈C1(R) 且f(x) = (x −t)f ′(t) dt + x2. 求f(x). 0"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 167,
+        "stem": "x x′ 二次曲线Ax2 + Bxy + Cy2 + Dx + Ey + F = 0 经正交变换 = Q 后得到新方 y y′ 程. (1) 证明B2 −4AC 与F 不变. (2) 给出新方程交叉项系数为零的充要条件.   B A  "
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 168,
+        "stem": "Xm 设实多项式f(x) = akxk, m ≥1, am̸ = 0, 且f(1) = a̸ = 0, f ′(1) = b̸ = 0. 证明对任意 k=0 n ≥2 及ε̸ = 0, 存在复矩阵C, 使f(C) = aI + εN, 其中N 为n 阶上超对角线全为1 的 幂零Jordan 块."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 168,
+        "stem": "X∞ 将有理数排列为q1, q2, . . ., 满足|qn| < n. 设0 < r < 1, g(x) = rn 3√x −qn, E = n=1 {g(q) : q ∈Q}. 证明(1) g 在R 上连续且严格增, E = R; (2) 对每个t, X∞ g(x) −g(t) rn lim = 2 , 3 x→t x −t n=1 3|t −qn| 其中零分母表示+∞; (3) 反函数f = g−1 处处可导且f ′ = 0 于E; (4) 任意a < b 内存 f(b) −f(a) 在不同的ξ, η, 使f ′(ξ) = f ′(η) = . b −a"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 169,
+        "stem": "设A 为复数域上的4 阶幂等矩阵. 证明存在c0, c1, c2, c3 ∈C, 使A 相似于   c0 c1 c2 c3    c3 c0 c1 c2    .    c2 c3 c0 c1  c1 c2 c3 c0"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 169,
+        "stem": "Z x 1 设f 为[0, 1] 上的可积函数, α > 0. 证明 lim f(t) dt 存在, 当且仅当 0 Z x x→0+ x 1 lim tα−1f(t) dt 存在. x→0+ xα 0"
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 170,
+        "stem": "求在R 上处处可微且满足(y′)2 = 4 −y2 的全部实函数."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "第14届 决赛 · 数学类(高年级)",
+    "start": 171,
+    "end": 176,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 171,
+        "stem": "由x + y = t, x2 −y2 = t 确定的参数曲线在(1, 0) 处的切线方程是什么?"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 171,
+        "stem": "Z 设L 为x2 + y2 + z2 = 1 与x + 2y + z = 0 的交线. 求 (2x2 + x + y2 + y) ds. L 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 171,
+        "stem": "设A ∈Rn×n 满足An = 0, An−1̸ = 0. 求rank A."
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 171,
+        "stem": "Z x 设f ∈C1(R) 且f(x) = (x −t)f ′(t) dt + x2. 求f(x). 0"
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 171,
+        "stem": "x x′ 二次曲线Ax2 + Bxy + Cy2 + Dx + Ey + F = 0 经正交变换 = Q 后得到新方 y y′ 程. (1) 证明B2 −4AC 与F 不变. (2) 给出新方程交叉项系数为零的充要条件.   B A  "
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 172,
+        "stem": "Xm 设实多项式f(x) = akxk, m ≥1, am̸ = 0, 且f(1) = a̸ = 0, f ′(1) = b̸ = 0. 证明对任意 k=0 n ≥2 及ε̸ = 0, 存在复矩阵C, 使f(C) = aI + εN, 其中N 为n 阶上超对角线全为1 的 幂零Jordan 块."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 172,
+        "stem": "X∞ 将有理数排列为q1, q2, . . ., 满足|qn| < n. 设0 < r < 1, g(x) = rn 3√x −qn, E = n=1 {g(q) : q ∈Q}. 证明(1) g 在R 上连续且严格增, E = R; (2) 对每个t, X∞ g(x) −g(t) rn lim = 2 , 3 x→t x −t n=1 3|t −qn| 其中零分母表示+∞; (3) 反函数f = g−1 处处可导且f ′ = 0 于E; (4) 任意a < b 内存 f(b) −f(a) 在不同的ξ, η, 使f ′(ξ) = f ′(η) = . b −a"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 173,
+        "stem": "X∞ xj 将实数写为十进展开x = , 其中x0 ∈Z, xj ∈{0, . . . , 9} (j ≥1); 在双重表示的零 10j j=0 测集外此展开唯一. 定义φn(x) = 1 当xn 为偶数, φn(x) = −1 当xn 为奇数. 证明对每 Z 个f ∈L1(R), 有 f(x)φn(x) dx →0. R"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 173,
+        "stem": "X∞ X∞ 设a0 = 1, a1̸ = 0, f(z) = anzn 在单位圆内解析. 证明(1) 若 n|an| < |a1|, 则f 单 n=0 n=2 叶; (2) 若Re f ≥0, 则|a1| ≤2."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 174,
+        "stem": "设环R 的每个理想都有限生成. 证明R 到自身的每个满同态都是同构."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 174,
+        "stem": "dx2 + dy2 (1) 证明上半平面H2 = {(x, y) : y > 0} 配以度量ds2 = 后, 其测地线为圆心在 y2 x 轴上的上半圆或平行于y 轴的直线. (2) 求半径为r 的球面上的测地线方程, 并说明大 圆是测地线. (3) 阐明二者的几何意义."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 175,
+        "stem": "Xn 设Tn 独立同分布且服从参数为1 的指数分布, S0 = 0, Sn = Tj, Nt = max{n ≥0 : j=1 Sn ≤t} (t ≥0). (1) 求Sn 的分布函数及Nt 的分布列. (2) 对f ∈L1[0, 1] 证明 ∞ Z 1 Z 1 X E f(s) dNs = E f(Sn)I(Sn ≤1) = f(s) ds. 0 n=1 0 (3) 据此构造计算该积分的Monte Carlo 算法. sn−1e−s"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 176,
+        "stem": "设A 为n 阶实矩阵. (1) 描述其LU 分解算法. (2) 分析运算量. (3) 证明A 有唯一的LU 分解, 当且仅当前n −1 阶顺序主子式均非零. 这里L 为单位下三角阵, U 为上三角阵."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "第15届 初赛 · 数学A类",
+    "start": 177,
+    "end": 179,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 177,
+        "stem": "在空间中给定直线L 及直线外定点P. 设M 是过P 且与L 相切的球面的球心. 问所有 可能的球心M 构成何种曲面, 并证明结论."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 177,
+        "stem": "设f(x, y, z) = x2 + (y2 + z2)(1 −x)3. (1) 求f 的驻点. (2) 求f 在柱体{(x, y, z) : |x| ≤ y2 z2 2, y2 + z2 ≤4} 的边界Σ 上的最小值. (3) 求f 在椭球体x2 + + ≤1 上的最小值. 2 3"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 178,
+        "stem": "设V 是复数域C 上的n 维线性空间, A 是V 上的线性变换. 证明: 存在α ∈V , 使 α, Aα, . . . , An−1α 成为V 的一组基, 当且仅当A 的每个特征值的几何重数均为1."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 178,
+        "stem": "2π 设n ≥3 为自然数, θ = , A = (sin((s + t)θ))n×n. 计算det(I + A2023). n"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 179,
+        "stem": "设E ⊂Rn 非空有界, c ∈Rn, c̸ = 0. 记diam E = sup ∥x −y∥, E + c = {x + c : x ∈E}. x,y∈E 证明diam E < diam(E ∪(E + c))."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 179,
+        "stem": "3√ 设a = 3, x1 = a, xn+1 = axn (n ≥1). 证明数列{xn} 的极限存在, 但不是3."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "第15届 初赛 · 数学B类",
+    "start": 180,
+    "end": 182,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 180,
+        "stem": "在空间中给定两不同点P, Q. 过P 的直线与过Q 的直线正交于点M. 问所有可能的正 交点M 构成何种曲面, 并证明结论."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 180,
+        "stem": "设f(x, y, z) = x2 + (y2 + z2)(1 −x)3. (1) 求f 的驻点. (2) 求f 在柱体{(x, y, z) : |x| ≤ y2 z2 2, y2 + z2 ≤4} 的边界Σ 上的最小值. (3) 求f 在椭球体x2 + + ≤1 上的最小值. 2 3"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 181,
+        "stem": "设V 是复数域C 上的n 维线性空间, A 是V 上的线性变换. 证明: 存在α ∈V , 使 α, Aα, . . . , An−1α 成为V 的一组基, 当且仅当A 的每个特征值的几何重数均为1."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 181,
+        "stem": "证明: 对任意n 阶方阵A, 存在对角元均为1 或−1 的n 阶对角矩阵J, 使A + J 可逆."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 182,
+        "stem": "设f(x) = xn(1 −x)n, F(x) = f(x) −f ′′(x) + f (4)(x) −· · · + (−1)nf (2n)(x). 计算并化简 d ′(x) sin x −F(x) cos x).dx(F"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 182,
+        "stem": "Z +∞ 设非负函数f ∈C1[0, +∞), f(x) dx 收敛, 且非负函数g 满足f ′(x) ≤g(x) (x ≥0). 0 Z +∞ 分别在下列条件下证明 x→+∞f(x)lim = 0: (1) g(x) dx 收敛; (2) g(x) = C > 0; (3) 0 g(x) = Cf(x)p, 其中C, p > 0 为常数."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "第15届 决赛 · 数学类(低年级)",
+    "start": 183,
+    "end": 186,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 183,
+        "stem": "将24 阶实对称矩阵按合同关系分类, 共有多少类?"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 183,
+        "stem": "Xn 1 k 设f(x) = e−x2. 求lim (−1)k−1f . n→∞ n n k=1 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 183,
+        "stem": "Z 1 Z 1 Z x Z y 设f 在[0, 1] 上连续, xkf(x) dx = ak (k = 0, 1, 2). 求 dx dy f(z) dz. 0 0 0 0"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 183,
+        "stem": "求微分方程xy′ + y = cos x 在R 上的全局解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 184,
+        "stem": "过动点P = (x, y, z) 存在三条互相垂直的射线与椭球面x2 + 2y2 + 3z2 = 4 相切. 求P 满 足的方程."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 184,
+        "stem": "设A ∈Rn×n, I 为单位矩阵. 证明A4 = I 当且仅当 rank(I −A) + rank(I + A + A2 + A3) = n."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 185,
+        "stem": "设f, g 是[0, 1] 上有正下界的黎曼可积函数, Z 1 Z 1 Z 1 f = g, δ = |f −g| > 0. 0 0 0 Z 1 Z 1 2 Z 1 Z 1 2 f 3 f (1) 证明 f < . (2) 若f, g 进一步为分段常值函数, f = 1, δ = 求 0 0 g 0 2, 0 g 的下确界. Z 1"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 185,
+        "stem": "设A 是n 阶实可逆矩阵, n ≥3, 且当1 ≤k ≤n! 时Ak 均相似于A. 证明对所有正整数 k, Ak 均相似于A."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 186,
+        "stem": "设0 < a1 < a2, an −an−1 an+1 = log ean + , n ≥2. an−1 证明{an} 单调递增且有界."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 186,
+        "stem": "设f, g 在R 上连续, 且xf(x) > 0 对每个x̸ = 0 成立. 证明x′′ + f(x′) + g(x) = 0 没有非 常数周期解."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "第15届 决赛 · 数学类(高年级)",
+    "start": 187,
+    "end": 192,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 187,
+        "stem": "将24 阶实对称矩阵按合同关系分类, 共有多少类?"
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 187,
+        "stem": "Xn 1 k 设f(x) = e−x2. 求lim (−1)k−1f . n→∞ n n k=1 1"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 187,
+        "stem": "Z 1 Z 1 Z x Z y 设f 在[0, 1] 上连续, xkf(x) dx = ak (k = 0, 1, 2). 求 dx dy f(z) dz. 0 0 0 0"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 187,
+        "stem": "求微分方程xy′ + y = cos x 在R 上的全局解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 188,
+        "stem": "过动点P = (x, y, z) 存在三条互相垂直的射线与椭球面x2 + 2y2 + 3z2 = 4 相切. 求P 满 足的方程."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 188,
+        "stem": "设A ∈Rn×n, I 为单位矩阵. 证明A4 = I 当且仅当 rank(I −A) + rank(I + A + A2 + A3) = n."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 189,
+        "stem": "设f, g 是[0, 1] 上有正下界的黎曼可积函数, Z 1 Z 1 Z 1 f = g, δ = |f −g| > 0. 0 0 0 Z 1 Z 1 2 Z 1 Z 1 2 f 3 f (1) 证明 f < . (2) 若f, g 进一步为分段常值函数, f = 1, δ = 求 0 0 g 0 2, 0 g 的下确界. Z 1"
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 189,
+        "stem": "设f ∈C1[0, 1], W = {x : f ′(x) = 0}, E = f(W). 证明E 为零测度集."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 190,
+        "stem": "(1) 设n ≥3, f 是以a1, . . . , an 为简单零点的n 次多项式, m 为整数且0 < m ≤n −2. Xn amk证明 = 0. (2) 若f 在|z| ≤1 上解析, 证明对|z| < 1, f ′(ak) k=1 Z 2π |f(eiθ)| dθ ≥(1 −|z|2)|f(z)|. 0 amk解析 (1) 函数zm 在ak 的留数为 而在无穷远为O(|z|−2). 沿充分大圆积分并 f(z) f ′(ak), 令半径趋于无穷, 由留数定理得到所证等式. (2) 固定z, 对解析函数(1 −¯zζ)f(ζ) 用Cauchy 公式, 得 Z 2π 1 1 −¯zeiθ (1 −|z|2)f(z) = f(eiθ) dθ. 2π 0 1 −ze−iθ 分式的模为1, 所以 Z 2π (1 −|z|2)|f(z)| ≤1 |f(eiθ)| dθ, 2π 0 这比题设结论更强."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 190,
+        "stem": "设p 为素数, 有限群G 的阶为pn. 证明对每个0 ≤k ≤n, G 都有pk 阶正规子群."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 191,
+        "stem": "设悬链面 r(u, v) = (cosh u cos v, cosh u sin v, u), u ∈R, 0 ≤v ≤2π. (1) 证明它是极小曲面. (2) 求其Gauss 曲率取到最大值的全部点."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 191,
+        "stem": "1 令e1 = (0, 1), e2 = (1, 0). 给定ε > 0, 独立同分布随机向量ξεn 满足P(ξεn = ±εei) = 4 (i = 1, 2). 令Nt 为与它们独立的强度1 泊松过程, Xn Sε0 = 0, Sεn = ξεj, Zεt = SεN t , P tε φ(z) = uε(t, z) = Eφ(Zεt + z), ε2 j=1 其中φ : R2 →R 有界连续. (1) 求Zεt 的特征函数. (2) 证明P t+sε = P tε P sε . (3) 验证 1 ∂tuε = 4∆εuε, 其中 X2 f(z + εei) + f(z −εei) −2f(z) ∆εf(z) = . ε2 i=1 1 (4) 证明uε(t, z) →u(t, z) = Eφ(B t + z), 并说明∂tu = 其中B 为二维标准布朗运 2 4∆u, 动. 1"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 192,
+        "stem": "1 将[0, 1] 等分为Ij = [xj−1, xj), xj = jh, h = , 并令 N Vh = {v : v|Ij 为次数不超过k 的多项式, 1 ≤j ≤N}. 设u ∈Ck+2[0, 1], uh 为其在Vh 内的L2 投影. (1) 证明∥u −uh∥2 ≤Chk+1 并给出C 对 Z 1 导数的依赖. (2) 对φ ∈Ck+2[0, 1], 证明 (u −uh)φ dx ≤Ch2k+2, 并给出相应常数. 0"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "第16届 初赛 · 数学A类",
+    "start": 193,
+    "end": 195,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 193,
+        "stem": "设双叶双曲面S : x2 + y2 −z2 = −2, 以M0 = (1, 1, −1) 为顶点且与上半叶S+ = √ {(x, y, z) ∈S : z ≥ 2} 相切的所有切线构成锥面Σ. (1) 求Σ 的方程. (2) 求S+ ∩Σ 所 在平面π 的方程."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 193,
+        "stem": "Z +∞ ln(1 + sx2) 设s ≥0, φ(s) = dx. 求φ(1) 和φ(2). 0 x(1 + x2) √解析 由ln(1 + t) ≤C t (t ≥0), 被积函数在有界s 区间上受C√s 控制, 故积分收敛 1 + x2 且φ 连续, φ(0) = 0. 对s 的任一正紧区间, 又有 x 1 0 ≤ ≤ (1 + x2)(1 + sx2) 2√s(1 + x2), 故可在积分号下求导. 当s > 0, s̸ = 1 时, Z +∞ +∞ x 1 1 + x2 ln s φ′(s) = dx = ln = − 0 (1 + x2)(1 + sx2) 2(1 −s) 1 + sx2 0 2(1 −s). 右端在s = 1 处连续延拓. 因而 ∞ Z 1 X ln(1 −t) 1 1 π2 φ(1) = −1 dt = = 12. 2 0 t 2 n=1 n2 X 这里先在[0, r], r < 1, 上将幂级数逐项积分, 再利用 n−2 收敛令r ↑1. 同理, ∞ Z 1 X ln(1 −t) 1 π2 φ(2) = −1 dt = = . 2 −1 t j=0 (2j + 1)2 8 最后一步先在[−r, r] 上逐项积分, 再令r ↑1 即得."
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 194,
+        "stem": "设A = (aij)3×3 是不可逆实矩阵, 其伴随矩阵满足A∗= (a2ij)3×3. 求A."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 194,
+        "stem": "X2024 设fi ∈R[x] 的次数为ni (1 ≤i ≤2024), 规定零多项式次数为−∞. 若 ni < 2047276, i=1 证明f1, . . . , f2024 线性相关."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 195,
+        "stem": "讨论级数 X∞ X∞ (−1)n (−1)n n + (−1)⌊√n⌋, √n + (−1)⌊√n⌋ n=2 n=2 的收敛性, 其中⌊x⌋为x 的整数部分."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 195,
+        "stem": "t + 3 t + 6 (1) 设f1(t) = , f2(t) = , nk ∈{1, 2}, F1 = fn1, Fk+1 = Fk ◦fnk+1. 证明对任意 2 3 x ∈R, k→∞Fk(x)lim 存在且与x 无关. (2) 若改为f1(t) = t −arctan t, f2(t) = 2 arctan t −t, 结论如何?"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "第16届 初赛 · 数学B类",
+    "start": 196,
+    "end": 198,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 196,
+        "stem": "设单叶双曲面S : x2 + y2 −z2 = 1. (1) 求S 上过M0 = (1, −1, 1) 的两条不同族的直母 线方程. (2) 求S 上相互垂直的直母线交点的轨迹."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 196,
+        "stem": "Z +∞ ln(1 + sx2) 设s ≥0, φ(s) = dx. 求φ(1) 和φ(2). 0 x(1 + x2) √解析 由ln(1 + t) ≤C t (t ≥0), 被积函数在有界s 区间上受C√s 控制, 故积分收敛 1 + x2 且φ 连续, φ(0) = 0. 对s 的任一正紧区间, 又有 x 1 0 ≤ ≤ (1 + x2)(1 + sx2) 2√s(1 + x2), 故可在积分号下求导. 当s > 0, s̸ = 1 时, Z +∞ +∞ x 1 1 + x2 ln s φ′(s) = dx = ln = − 0 (1 + x2)(1 + sx2) 2(1 −s) 1 + sx2 0 2(1 −s). 右端在s = 1 处连续延拓. 因而 ∞ Z 1 X ln(1 −t) 1 1 π2 φ(1) = −1 dt = = 12. 2 0 t 2 n=1 n2 X 这里先在[0, r], r < 1, 上将幂级数逐项积分, 再利用 n−2 收敛令r ↑1. 同理, ∞ Z 1 X ln(1 −t) 1 π2 φ(2) = −1 dt = = . 2 −1 t j=0 (2j + 1)2 8 最后一步先在[−r, r] 上逐项积分, 再令r ↑1 即得. "
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 197,
+        "stem": "设A = (aij)3×3 是不可逆实矩阵, 其伴随矩阵满足A∗= (a2ij)3×3. 求A."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 197,
+        "stem": "设f 是R 上无零点的实连续函数, 且f(2023)+f(2024) = 2025. 证明对任意x1, . . . , xn ∈ R, 矩阵   1 + f(x1) f(x2) · · · f(xn)    f(x1) 1 + f(x2) · · · f(xn)  A =     ... ... ... ...  f(x1) f(x2) · · · 1 + f(xn) 可逆."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 197,
+        "stem": "√ √ 对n ≥2, 记En = {k ∈N : 1 ≤k2 ≤n}, Fn = { k : 1 ≤k ≤n, k ∈N, k /∈N}. 设 An Bn An, Bn 依次为两集合中所有元素之和. 求lim 3 和lim 3 . n→∞ n 2 n→∞ n 2"
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 198,
+        "stem": "设α > 0, 正数列{xn}, {yn} 满足x1 = 2024, y1 = 20251109, 以及 xn+1 + x1+αn+1 = xn, yn+1 + 2−αy1+αn+1 ≤yn (n ≥1). (1) 证明{nxαn} 收敛并求极限. (2) 证明lim sup n ≤2α . n→∞nyα α"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "第16届 决赛 · 数学类(低年级)",
+    "start": 199,
+    "end": 202,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 199,
+        "stem": "设2025 阶实对称矩阵A 的秩为1012, 且A2 = A. 求二次型xTAx 的规范型."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 199,
+        "stem": "求f(x, y) = x2 + xy + y2 −3y 的极小值点."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 199,
+        "stem": "Z 1 Z 1 将 dx f(x, y) dy 化为极坐标积分. 0 x"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 199,
+        "stem": "求y′ = 1 + xey 的通解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 199,
+        "stem": "(1) 半径为r, 球心为(0, 0, h) (h > r > 0) 的球与以原点为顶点,z 轴为轴的圆锥形漏斗相 切, 求漏斗方程. (2) 求以原点为顶点且包含三条坐标轴的圆锥面方程. r"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 200,
+        "stem": "设首一实多项式 p(x) = xn + a1xn−1 + · · · + an, q(x) = xm + b1xm−1 + · · · + bm, m 满足q | p, 且某个k 有|bk| > 2025k . 证明存在j 使|aj| > 2024. k m"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 200,
+        "stem": "设连续函数f : [a, b] →[a, b], x0 ∈[a, b], xn+1 = f(xn). (1) 若xn+1 −xn →0, 证明{xn} 收敛. (2) 若xn+2025 −xn →0, 证明{xn : n ≥1} 的聚点不超过2025 个."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 200,
+        "stem": "设M = (aij)3×3, ! ! ! a21 a22 a31 a32 a11 a12 N = , P = , Q = . a31 a32 a11 a12 a21 a22 已知det M = 12, det N = 1, det P = 2, det Q = 3. 求三条直线ai1x + ai2y + ai3 = 0 (i = 1, 2, 3) 所围三角形的面积."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 201,
+        "stem": "给定x0 > y0 > 0, 对n ≥0 定义 ! 1 Xn Yn 2n+2 1 xn+1 = (xk + yk), yn+1 = xkyk . 2(n + 1) k=0 k=0 证明(1) xn −yn →0; (2) n(xn −yn) 收敛于正数."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 202,
+        "stem": "验证微分方程 dy dx p = ± √ 1 −y4 1 −x4 √ dy dx 具有形如x2 + y2 + c2x2y2 = c2 + 2xy 1 −c4 的解族. 求 p = ± √ 的通解. 1 + y4 1 + x4 √"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "第16届 决赛 · 数学类(高年级)",
+    "start": 203,
+    "end": 207,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 203,
+        "stem": "设2025 阶实对称矩阵A 的秩为1012, 且A2 = A. 求二次型xTAx 的规范型."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 203,
+        "stem": "求f(x, y) = x2 + xy + y2 −3y 的极小值点."
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 203,
+        "stem": "Z 1 Z 1 将 dx f(x, y) dy 化为极坐标积分. 0 x"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 203,
+        "stem": "求y′ = 1 + xey 的通解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 203,
+        "stem": "(1) 半径为r, 球心为(0, 0, h) (h > r > 0) 的球与以原点为顶点,z 轴为轴的圆锥形漏斗相 切, 求漏斗方程. (2) 求以原点为顶点且包含三条坐标轴的圆锥面方程. r"
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 204,
+        "stem": "设首一实多项式 p(x) = xn + a1xn−1 + · · · + an, q(x) = xm + b1xm−1 + · · · + bm, m 满足q | p, 且某个k 有|bk| > 2025k . 证明存在j 使|aj| > 2024. k m"
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 204,
+        "stem": "设连续函数f : [a, b] →[a, b], x0 ∈[a, b], xn+1 = f(xn). (1) 若xn+1 −xn →0, 证明{xn} 收敛. (2) 若xn+2025 −xn →0, 证明{xn : n ≥1} 的聚点不超过2025 个."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 204,
+        "stem": "记Sr = {(x, y) : x2 + y2 = r2} (r ≥0), 对g ∈C(R2) 定义Eg 为各圆Sr 上的全部最小值 点之并. (1) 证明Eg 为闭集. (2) 若闭集E 与每个Sr 相交, 证明存在连续g 使Eg = E. (3) 证明某个Eg 不连通. (4) 是否存在g, 使Eg 的每个连通子集都为单点集? |zn|"
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 205,
+        "stem": "设D = {z : |z| < 1}. (1) 若f : D →D 解析, 证明(1 −|z|2)|f ′(z)| ≤1 −|f(z)|2. (2) 若f 在D 内解析, F 在D 内单叶解析, f(0) = F(0) 且f(D) ⊂F(D), 证明存在解析w, 使f = F ◦w, |w(z)| ≤|z|. (3) 在(2) 条件下, 证明|f ′(0)| ≤|F ′(0)|, 等号成立当且仅当 w(z) = eiθz. ζ −a"
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 205,
+        "stem": "设p 为素数, q = pn, n ≥1. (1) 证明存在q 元域Fq. (2) 证明任意q 元域都同构于Fq. (3) 对有限扩张L ⊃Fq, 证明ηq(x) = xq 是固定Fq 的自同构. (4) 证明Gal(L : Fq) 由ηq 生成. (5) 证明L× 为循环群, 从而存在α 使L = Fq[α]."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 206,
+        "stem": "设C 是曲面S 上曲率不为零的渐近曲线, 挠率为τ, 曲面Gauss 曲率为K. 证明|τ| = √ −K."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 206,
+        "stem": "设n ≥2, X1, . . . , Xn 独立同分布, 均服从参数1 的指数分布. 记Y = min Xi, Zi = Xi−Y , i Xn Sn = Xi. (1) 求Y, Sn 的密度及P(Y = X1). (2) 证明在Y = X1 条件下Z2, . . . , Zn 独 i=1 立且均服从参数1 的指数分布. (3) 证明T = Sn −nY 与Sn−1 同分布, 且与Y 独立. (4) 求Y 的密度. Sn"
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 207,
+        "stem": "2n + 1 n Legendre 多项式由L0 = 1, L1 = x 及Ln+1 = xLn − 定义. 已知 n + 1 n + 1Ln−1 Z 1 2 LmLn = L′n−1 = xL′n −nLn, L′n+1 = xL′n + (n + 1)Ln. −1 2n + 1δmn, Z 1 2i(i + 1) (1) 证明(x2 −1)L′n = nxLn −nLn−1. (2) 证明 (1 −x2)L′iL′j = δij. (3) 设 −1 2i + 1 sj, wj 为n 点Gauss 求积的节点和权重, A = (L′i(sj))ni,j=1, W = diag((1 −s2j)wj)nj=1. 证明AWAT 为对角矩阵."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "第17届 初赛 · 数学A类",
+    "start": 208,
+    "end": 210,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 208,
+        "stem": "设O 为四面体ABCD 的内部一点, 四面体OBCD, OACD, OABD, OABC 的体积依次 为VA, VB, VC, VD. (1) 证明 −→ −−→ −−→ −−→ OA · (−→OC × OD) OB · (−→OC × OD) < 0. −→ −−→ −→ −−→ (2) 证明VA OA + VB OB + VC OC + VD OD = 0. −→ −−→ −→ −−→"
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 208,
+        "stem": "设N ≥1, S 为含N 个整数的集合, 且当n1, n2, n3, n4 ∈S 满足n1 + n2 = n3 + n4 时, 必 Z 1 Z 1 X 有n1 = n3 或n1 = n4. 令f(x) = e2πinx. (1) 计算 |f(x)|2 dx 和 |f(x)|4 dx. (2) n∈S 0 0 Z 1 1 证明 |f(x)| dx ≥ √ . 0 2 N"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 209,
+        "stem": "设m, n > 2 为整数, a1, . . . , am+1 ∈Q. (1) 证明存在B1, . . . , Bm ∈Qn×n, 使det Bj = j. (2) 证明存在A1, . . . , Am ∈Qn×n, 同时满足det Aj = aj (1 ≤j ≤m) 和det(A1 −A2 − · · · −Am) = am+1."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 209,
+        "stem": "设K 为数域, A : V →V 为n 维K 线性空间上的线性算子, 极小多项式与特征多项式依 次为µA, χA. 对α ∈V , 记µA,α 为满足f(A)α = 0 的首一最小次数多项式. 证明: (1) 存 在α 使µA,α = µA. (2) K[A]α = {f(A)α : f ∈K[x]} 是维数为deg µA,α 的A 不变子空 间. (3) 若µA = χA, 则对线性算子B, 有AB = BA 当且仅当B = f(A) 对某个f ∈K[x] 成立. Ys"
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 210,
+        "stem": "设f ∈C[0, 1]∩C2(0, 1), sup f ′′(x) = 2. 证明存在唯一的二次多项式P(x) = x2 +bx+c, x∈(0,1) 使P(0) = f(0), P(1) = f(1), 且下列结论之一成立: (1) 对每个x ∈(0, 1), f(x) > P(x); (2) 在[0, 1] 上f = P."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 210,
+        "stem": "Sn(0, 1) 设A ⊂Z+, 对0 ≤a ≤b ≤1, 记Sn(a, b) = #{k ∈A : an ≤k ≤bn}, 且lim = p. n→∞ n Sn(a, b) (1) 对0 < a < b < 1, 求lim . (2) 若f 在[0, 1] 上Riemann 可积, 证明 n→∞ n Z 1 X 1 k lim f = p f(x) dx. n→∞ n n 0 k≤n k∈A"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "第17届 初赛 · 数学B类",
+    "start": 211,
+    "end": 213,
+    "questions": [
+      {
+        "number": 1,
+        "section": "",
+        "page": 211,
+        "stem": "−→ −→ −−→ 在四面体ABCD 中, 取e1 = AB, e2 = AC, e3 = AD, 设O1, O2, O3 依次为三角 形BCD, ACD, ABD 的重心. (1) 求O1 在坐标系(A, e1, e2, e3) 中的坐标. (2) 证明 AO1, BO2, CO3 相交于一点P. (3) 求P 在此坐标系中的坐标."
+      },
+      {
+        "number": 2,
+        "section": "",
+        "page": 211,
+        "stem": "设N ≥1, S 为含N 个整数的集合, 且当n1, n2, n3, n4 ∈S 满足n1 + n2 = n3 + n4 时, 必 Z 1 Z 1 X 有n1 = n3 或n1 = n4. 令f(x) = e2πinx. (1) 计算 |f(x)|2 dx 和 |f(x)|4 dx. (2) n∈S 0 0 Z 1 1 证明 |f(x)| dx ≥ √ . 0 2 N"
+      },
+      {
+        "number": 3,
+        "section": "",
+        "page": 212,
+        "stem": "设m, n > 2 为整数, a1, . . . , am+1 ∈Q. (1) 证明存在B1, . . . , Bm ∈Qn×n, 使det Bj = j. (2) 证明存在A1, . . . , Am ∈Qn×n, 同时满足det Aj = aj (1 ≤j ≤m) 和det(A1 −A2 − · · · −Am) = am+1."
+      },
+      {
+        "number": 4,
+        "section": "",
+        "page": 212,
+        "stem": "设A 为n 阶方阵, 主对角元均为3, 其余元素均为2 或2029. 证明rank A = n 或n −1."
+      },
+      {
+        "number": 5,
+        "section": "",
+        "page": 212,
+        "stem": "1 设k ≥1 为整数. (1) 证明方程x3k+1 + x2 −6x + 1 = 0 在(0, 2) 内有唯一根xk. (2) 证 明{xk} 严格递减. (3) 求limk→∞xk."
+      },
+      {
+        "number": 6,
+        "section": "",
+        "page": 213,
+        "stem": "设f ∈C1[0, 1], 且对x ∈(0, 1) 有f(x) ln2 x + xf ′(x) ≤0. 证明下列结论之一成立: (1) 对 每个x ∈(0, 1), Z 1 Z x f(t) dt < f(t) dt ≤0; 0 0 (2) 在[0, 1] 上f ≡0. ln3 x"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "第17届 决赛 · 数学类(低年级)",
+    "start": 214,
+    "end": 218,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 214,
+        "stem": "设  2026 π π sin −cos  1013 1013  A =   . π π cos sin 1013 1013 求tr A. π解析 括号内是旋转角π − 的矩阵. 其2026 次幂的旋转角为1011π, 故A = −I, 2 1013 tr A = −2."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 214,
+        "stem": "设f(x, y) = x2 −y2 + 9x2y −3y3, BR = {(x, y) : x2 + y2 ≤R2}, LR = max f, ℓR = min f. BR BR LR + ℓR 求lim . R→∞ R2"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 215,
+        "stem": "Z x dt 1 设f(x) = g(x) = f(x) −f . 求g(2). 0 1 + t3, x"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 215,
+        "stem": "求微分方程tx′′ −x′ −(4t −2)x = 0 的通解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 215,
+        "stem": "在空间直角坐标系中, 椭球面S, T 的方程分别为 S : x2 + 2y2 + 3z2 = 4, T : x2 + 2y2 + 3z2 = 1. 直线L 交S 于A, B, 交T 于C, D. 证明: (1) 线段AB 与CD 的中点重合; (2) 线段AC 与DB 的长度相等."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 216,
+        "stem": "设n 阶实矩阵A, B 满足AB = BA, A2025 = I, B2026 = I. 证明A + B + I 可逆."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 216,
+        "stem": "记f1(x) = |(x−1)(x−2)|, fn+1 = f1◦fn, En = {x : fn(x) = 2}, an = min En, bn = max En. (1) 求an, bn 的递推式. (2) 证明an, bn 的极限存在, 并求出极限."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 216,
+        "stem": "设A, B 为n 阶实矩阵, n ≥2, det(A −B) = 1, 且AAT −I, BBT −I 均正定. (1) 证明 (I −ABT)(I −BBT)−1(I −ABT)T −(I −AAT) = (I −BBT)−1 −I −ABT(I −BBT)−1 −(I −BBT)−1BAT + A I + BT(I −BBT)−1B AT. (2) 证明 det(I −AAT) det(I −BBT) < det(I −ABT)2 −1."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 217,
+        "stem": "设f : R →R 可导, 实数列an 收敛. 给定x1 ∈R, 定义xn+1 = f(xn) + an. (1) 若存在 |x| + M α ∈(0, 1) 使|f ′| ≤α, 证明xn 收敛. (2) 若存在M > 0 使|f ′(x)| ≤ 判断 |x| + M + 1, xn 是否一定收敛并证明."
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 218,
+        "stem": "常系数线性微分方程y′′ + py′ + qy = f(x) 的特征方程有两个互异的非零实根λ < µ, 其 中f 在R 上连续. 证明: 该微分方程存在周期解的充分必要条件是f 为周期函数."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "第17届 决赛 · 数学类(高年级)",
+    "start": 219,
+    "end": 225,
+    "questions": [
+      {
+        "number": 1,
+        "section": "填空",
+        "page": 219,
+        "stem": "设  2026 π π −cos 1013 1013  . A = sin π π cos sin 1013 1013 求tr A. π解析 括号内是旋转角π − 的矩阵. 其2026 次幂的旋转角为1011π, 故A = −I, 2 1013 tr A = −2."
+      },
+      {
+        "number": 2,
+        "section": "填空",
+        "page": 219,
+        "stem": "设f(x, y) = x2 −y2 + 9x2y −3y3, BR = {(x, y) : x2 + y2 ≤R2}, LR = max f, ℓR = min f. BR BR LR + ℓR 求lim . R→∞ R2"
+      },
+      {
+        "number": 3,
+        "section": "填空",
+        "page": 220,
+        "stem": "Z x dt 1 设f(x) = g(x) = f(x) −f . 求g(2). 0 1 + t3, x"
+      },
+      {
+        "number": 4,
+        "section": "填空",
+        "page": 220,
+        "stem": "求微分方程tx′′ −x′ −(4t −2)x = 0 的通解."
+      },
+      {
+        "number": 1,
+        "section": "解答",
+        "page": 220,
+        "stem": "直线L 与椭球面x2 + 2y2 + 3z2 = 4 交于A, B, 与椭球面x2 + 2y2 + 3z2 = 1 交于C, D. 证明(1) 线段AB 与CD 的中点重合; (2) AC = DB."
+      },
+      {
+        "number": 2,
+        "section": "解答",
+        "page": 220,
+        "stem": "设A, B 为n 阶实矩阵, n ≥2, det(A −B) = 1, 且AAT −I, BBT −I 均正定. (1) 证明 (I −ABT)(I −BBT)−1(I −ABT)T −(I −AAT) = (I −BBT)−1 −I −ABT(I −BBT)−1 −(I −BBT)−1BAT + A I + BT(I −BBT)−1B AT. (2) 证明 det(I −AAT) det(I −BBT) < det(I −ABT)2 −1."
+      },
+      {
+        "number": 3,
+        "section": "解答",
+        "page": 221,
+        "stem": "设f : R →R 可导, 实数列an 收敛. 给定x1 ∈R, 定义xn+1 = f(xn) + an. (1) 若存在 |x| + M α ∈(0, 1) 使|f ′| ≤α, 证明xn 收敛. (2) 若存在M > 0 使|f ′(x)| ≤ 判断 |x| + M + 1, xn 是否一定收敛并证明."
+      },
+      {
+        "number": 4,
+        "section": "解答",
+        "page": 222,
+        "stem": "Z 1 设h 为[0, 1] 上非负Lebesgue 可积函数, A = h(x) dx. 证明 0 Z 1 1 1 (1 + A3) 3 ≤ (1 + h(x)3) 3 dx ≤1 + A. 0 3 (t ≥0). 因解析 令ϕ(t) = (1 + t3) 1 2t ϕ′′(t) = 5 ≥0, (1 + t3) 3 有ϕ(t) ≥ϕ(A) + ϕ′(A)(t −A). 代入t = h(x) 后积分即得左侧. 又1 + t3 ≤(1 + t)3, 故 ϕ(h) ≤1 + h, 不仅保证其可积, 而且给出右侧不等式."
+      },
+      {
+        "number": 5,
+        "section": "解答",
+        "page": 222,
+        "stem": "设f 为非常数整函数, M(r) = max |f(z)|. (1) 证明M 在[0, ∞) 上严格递增且趋于无穷. |z|=r (2) 设an̸ = 0 为f 的零点, 每个零点的出现次数不超过其重数, 并按|a1| ≤|a2| ≤· · · 排 列. 若 log log M(r) lim = ρ, 0 < ρ < ∞, r→∞ log r X∞ 1 证明对任意ε > 0, 收敛. |an|ρ+ε n=1"
+      },
+      {
+        "number": 6,
+        "section": "解答",
+        "page": 223,
+        "stem": "设G 为有限交换群, x ∈G 的阶n 为群中元素的最大阶. (1) 若a, b 的阶分别为互素的 m1, m2, 证明ab 的阶为m1m2. (2) 证明每个y ∈G 都有yn = 1. (3) 对任意域F 与正整 数N, 证明UN(F) = {α ∈F : αN = 1} 为乘法循环群."
+      },
+      {
+        "number": 7,
+        "section": "解答",
+        "page": 223,
+        "stem": "圆环面T 2 由xz 平面内圆心为(a, 0, 0), 半径为b 的圆绕z 轴旋转得到, 其中a > b > 0. (1) 证明T 2 无脐点. (2) 求其Gauss 曲率为零的点集."
+      },
+      {
+        "number": 8,
+        "section": "解答",
+        "page": 224,
+        "stem": "设离散随机变量X, Y 分别取值于有限集. 记边缘概率为p(x), p(y), 联合概率为p(x, y), 条件概率为p(x | y), 并定义 X H(X) = − p(x) log p(x), Xx H(X, Y ) = − p(x, y) log p(x, y), x,y X H(X | Y ) = − p(x, y) log p(x | y), x,y 约定0 log 0 = 0, 条件熵中p(y) = 0 对应的项为零. 证明(1) H(X, Y ) = H(X)+H(Y | X); (2) H(X | Y ) ≤H(X), 等号成立当且仅当X, Y 独立."
+      },
+      {
+        "number": 9,
+        "section": "解答",
+        "page": 224,
+        "stem": "设An 为主对角线全为2, 上下相邻对角线全为−1 的n 阶三对角阵, 其最小, 最大特征 kπ λn 值为λ1, λn. (1) 证明λk = 4 sin2 并求条件数κ2(An) = 的渐近式. (2) 对 2(n + 1), λ1 Richardson 迭代x(m+1) = x(m) −α(Anx(m) −b), 求对任意初值收敛的α > 0 范围及最优 参数. (3) 证明Jacobi 迭代收敛, 并分析n 很大时的收敛速度. jkπ"
+      }
+    ]
+  }
+]

@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{微分方程 I}\fancyhead[R]{10月29日作业答案}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}
+\begin{document}
+\begin{center}\LARGE\bfseries 10月29日作业答案\end{center}
+教材《微分方程 I》（101计划）：第120页习题3.3第1(1)(2)题、第2题，以及定理3.11。
+
+\section*{第1题}
+\textbf{题目（原文）。}求周期线性系统 $\dfrac{dx}{dt}=A(t)x$ 的特征乘子和特征指数，其中 $A(t)$ 如下：
+\[
+\text{(1)}\quad A(t)=\begin{pmatrix}\cos t&1\\0&\sin t\end{pmatrix};
+\qquad
+\text{(2)}\quad A(t)=\begin{pmatrix}\cos t&\sin t\\\sin t&\cos t\end{pmatrix}.
+\]
+
+\textbf{解。}两题系数矩阵的最小正周期均为 $T=2\pi$。取满足 $\Phi(0)=I$ 的归一化基本解矩阵，单值算子为 $\Phi(2\pi)$，其特征值为特征乘子。若 $\rho$ 为特征乘子，则特征指数 $\nu$ 满足 $e^{2\pi\nu}=\rho$。
+
+\subsection*{(1)}
+系统为
+\[
+x_1'=\cos t\,x_1+x_2,\qquad x_2'=\sin t\,x_2.
+\]
+先解第二式：$x_2(t)=c_2e^{1-\cos t}$。代入第一式，并乘以积分因子 $e^{-\sin t}$，得
+\[
+\frac{d}{dt}(e^{-\sin t}x_1)
+=c_2e^{1-\cos t-\sin t}.
+\]
+故标准基本解矩阵为
+\[
+\Phi(t)=\begin{pmatrix}
+e^{\sin t}&e^{\sin t}\displaystyle\int_0^t e^{1-\cos s-\sin s}\,ds\\
+0&e^{1-\cos t}
+\end{pmatrix}.
+\]
+记 $K=\displaystyle\int_0^{2\pi}e^{1-\cos s-\sin s}\,ds>0$，则
+\[
+\Phi(2\pi)=\begin{pmatrix}1&K\\0&1\end{pmatrix}.
+\]
+因此两个特征乘子（计代数重数）均为 $1$：
+\[
+\boxed{\rho_1=\rho_2=1.}
+\]
+相应特征指数满足 $e^{2\pi\nu}=1$，故
+\[
+\boxed{\nu=ik,\qquad k\in\mathbb Z.}
+\]
+选取对数的主值时，可取 $\nu_1=\nu_2=0$。这里单值算子不是单位矩阵；特征乘子全为 $1$ 不表示所有解均为周期解。
+
+\subsection*{(2)}
+设 $u=x_1+x_2$、$v=x_1-x_2$，则
+\[
+u'=(\cos t+\sin t)u,\qquad v'=(\cos t-\sin t)v.
+\]
+积分得
+\[
+u(t)=u(0)e^{\sin t+1-\cos t},\qquad
+v(t)=v(0)e^{\sin t-1+\cos t}.
+\]
+因而取 $b(t)=1-\cos t$，标准基本解矩阵为
+\[
+\Phi(t)=e^{\sin t}\begin{pmatrix}
+\cosh b(t)&\sinh b(t)\\
+\sinh b(t)&\cosh b(t)
+\end{pmatrix}.
+\]
+由于 $\sin(2\pi)=0$、$b(2\pi)=0$，有 $\Phi(2\pi)=I$。因此
+\[
+\boxed{\rho_1=\rho_2=1,\qquad \nu=ik\ (k\in\mathbb Z).}
+\]
+取主值可令 $\nu_1=\nu_2=0$。本题 $\Phi(t)$ 本身是 $2\pi$ 周期矩阵函数，因此所有解均为 $2\pi$ 周期函数。
+
+\section*{第2题}
+\textbf{题目（原文）。}证明：常系数齐次线性系统 $\dfrac{dx}{dt}=Ax$ 的基本解矩阵 $\Phi(t)$ 满足等式
+\[
+\Phi(\tau-t)=\Phi(\tau)\Phi^{-1}(t),\qquad\forall\tau,t\in\R.
+\]
+讨论周期线性系统 $\dfrac{dx}{dt}=A(t)x$ 的基本解矩阵 $\Phi(t)$ 是否满足上面的等式。
+
+\textbf{原题条件说明。}按教材对基本解矩阵的一般定义，原题第一句缺少 $\Phi(0)=I$ 的归一化条件，不能对任意基本解矩阵成立。例如 $A=0$、$\Phi(t)=2I$ 时，左边为 $2I$，右边为 $I$。以下先证明在 $\Phi(0)=I$ 条件下的结论，再给出任意基本解矩阵适用的公式；原题题干保留不改。
+
+\textbf{归一化情形的证明。}对常系数系统，满足 $\Phi(0)=I$ 的基本解矩阵为 $\Phi(t)=e^{At}$。由同一矩阵的指数运算规律，
+\[
+\Phi(\tau)\Phi^{-1}(t)=e^{A\tau}e^{-At}
+=e^{A(\tau-t)}=\Phi(\tau-t).
+\]
+即得所需等式。
+
+\textbf{周期系数情形一般不成立。}取一维周期系统
+\[
+x'=\cos t\,x,\qquad \Phi(t)=e^{\sin t}.
+\]
+令 $\tau=\pi$、$t=\pi/2$，则
+\[
+\Phi(\tau-t)=e,
+\qquad
+\Phi(\tau)\Phi^{-1}(t)=e^{-1},
+\]
+二者不等。因此周期性本身不能保证题中恒等式。
+
+\textbf{记号说明。}若将“基本解矩阵”泛指任意可逆解矩阵而不作 $\Phi(0)=I$ 的归一化，则原题等式即使对常系数系统也不成立。事实上令 $\tau=t$，原题等式便要求 $\Phi(0)=I$。对任意解矩阵 $X(t)=e^{At}C$，正确的关系为
+\[
+X(\tau-t)=X(\tau)X^{-1}(t)X(0).
+\]
+
+\section*{定理3.11（按教材原文录入）}
+\textbf{出处：教材第109页。}下文保留书中的定理叙述与紧随其后的说明；书中在此处未展开证明。
+
+\textbf{定理3.11}\quad 设 $A\in\mathcal L(\R^n)$。若矩阵 $A$ 的所有特征值的实部非零，则存在 $\R^n$ 的线性子空间 $E^s$ 和 $E^u$，使得 $\R^n=E^s\bigoplus E^u$，并且对于任意 $v\in E^s$（或 $E^u$），有 $e^{At}v\in E^s$（或 $E^u$），$t\in\R$。进一步，存在常数 $\lambda>0$，$\mu>0$，$C>0$ 和 $K>0$，使得对于任意 $v\in E^s$ 和 $t\ge0$，有
+\[
+|e^{At}v|\le Ce^{-\lambda t}|v|;
+\]
+而对于任意 $v\in E^u$ 和 $t\le0$，有
+\[
+|e^{At}v|\le Ke^{\mu t}|v|.
+\]
+
+由矩阵的 Jordan 标准形理论，可选取空间 $\R^n$ 的适当的基，使得在此基下矩阵 $A$ 可表示为分块矩阵，从而实现对 $\R^n$ 的线性分解：$\R^n=E^s\bigoplus E^u$，进而在适当的范数下估计 $E^s$ 和 $E^u$ 这两个子空间上解的极限状态。由定理3.11可得到如下推论，其证明留作习题。
+\subsection*{定理3.11的补充证明}
+\textbf{证明。}不妨设 $A$ 已为实 Jordan 标准形，并按特征值实部的正负排列为
+\[
+A=\begin{pmatrix}A_s&0\\0&A_u\end{pmatrix},
+\]
+其中 $A_s$ 的特征值实部均为负，$A_u$ 的特征值实部均为正。设两块的维数分别为 $n_s,n_u$，定义
+\[
+E^s=\R^{n_s}\times\{0\},\qquad E^u=\{0\}\times\R^{n_u}.
+\]
+则 $\R^n=E^s\oplus E^u$。由于
+\[
+e^{At}=\begin{pmatrix}e^{A_st}&0\\0&e^{A_ut}\end{pmatrix},
+\]
+对所有 $t\in\R$，$e^{At}$ 均将 $E^s$ 映入 $E^s$、将 $E^u$ 映入 $E^u$。
+
+以下采用欧氏范数及其诱导矩阵范数。任一实 Jordan 块均可写为 $J=D+N$，其中 $N^m=0$、$DN=ND$；$D$ 的对角块为实数 $a$，或形如
+\[
+B=\begin{pmatrix}a&-b\\b&a\end{pmatrix}
+\]
+的二阶实矩阵。这里 $a$ 是相应特征值的实部。由
+\[
+e^{Bt}=e^{at}\begin{pmatrix}\cos bt&-\sin bt\\\sin bt&\cos bt\end{pmatrix}
+\]
+知 $\|e^{Dt}\|_2=e^{at}$。因而
+\[
+e^{Jt}=e^{Dt}\sum_{k=0}^{m-1}\frac{t^kN^k}{k!},\qquad
+\|e^{Jt}\|_2\le e^{at}\sum_{k=0}^{m-1}\frac{|t|^k\|N^k\|_2}{k!}.
+\]
+
+若稳定块非空，令
+\[
+\delta_s=-\max_{\zeta\in\sigma(A_s)}\operatorname{Re}\zeta>0,
+\qquad \lambda=\frac{\delta_s}{2}.
+\]
+合并有限个 Jordan 块的估计，存在系数非负的多项式 $Q_s$，使
+\[
+\|e^{A_st}\|_2\le Q_s(t)e^{-\delta_st}\qquad(t\ge0).
+\]
+由于 $Q_s(t)e^{-\delta_st/2}$ 在 $[0,+\infty)$ 上有界，存在 $C>0$，使
+\[
+\|e^{A_st}\|_2\le Ce^{-\lambda t}\qquad(t\ge0).
+\]
+对任意 $v=(\xi,0)^{\mathsf T}\in E^s$，因此有
+\[
+|e^{At}v|_2=|e^{A_st}\xi|_2
+\le Ce^{-\lambda t}|\xi|_2
+=Ce^{-\lambda t}|v|_2,\qquad t\ge0.
+\]
+
+同理，若非稳定块非空，令
+\[
+\delta_u=\min_{\zeta\in\sigma(A_u)}\operatorname{Re}\zeta>0,
+\qquad\mu=\frac{\delta_u}{2}.
+\]
+对 $t\le0$，上述 Jordan 块估计给出
+\[
+\|e^{A_ut}\|_2\le Q_u(-t)e^{\delta_ut}
+=\bigl[Q_u(-t)e^{\delta_ut/2}\bigr]e^{\mu t}
+\le Ke^{\mu t},
+\]
+其中 $Q_u$ 为系数非负的多项式，$K>0$ 为常数；最后一个不等式利用了令 $\tau=-t\ge0$ 后，$Q_u(\tau)e^{-\delta_u\tau/2}$ 有界。因此对任意 $v=(0,\eta)^{\mathsf T}\in E^u$，
+\[
+|e^{At}v|_2=|e^{A_ut}\eta|_2
+\le Ke^{\mu t}|\eta|_2
+=Ke^{\mu t}|v|_2,\qquad t\le0.
+\]
+若某一类特征值不存在，则相应子空间为 $\{0\}$，该子空间上的估计自然成立。由有限维空间中范数等价，调整 $C,K$ 后，同样的结论对任意给定范数成立。\hfill$\square$
+\end{document}

@@ -1,0 +1,233 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=21mm]{geometry}
+\usepackage{amsmath,amssymb,xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sep}{\par\vspace{5pt}\noindent\rule{\linewidth}{0.7pt}\par\vspace{5pt}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\allowdisplaybreaks
+\begin{document}
+\begin{center}\Large 小作文1\end{center}
+给定 $\T^2$ 上的光滑向量场 $X$，考虑构造光滑向量场 $Y,Z$，使得 $[Y,Z]=X$。
+将 $\T^2$ 写成 $\R^2/(2\pi\mathbb Z)^2$。通过覆盖映射将 $X$ 提升到 $\R^2$ 后，
+问题等价于在 $\R^2$ 上求解 $[Y,Z]=X$，并要求 $Y,Z$ 对所有
+$(2k\pi,2p\pi)$，$k,p\in\mathbb Z$，均具有周期性。
+以下仍用 $X$ 表示提升后的向量场，取 $\R^2$ 上坐标为 $(s,t)$。
+
+Lie 括号满足
+\[\red{[fU,gV]=fg[U,V]+fU(g)V-gV(f)U.}\]
+\sep
+\textbf{初步构造与周期性限制。}
+先考虑 $[\partial_t,W]=X$。令
+\[X=F\partial_s+G\partial_t,\qquad W=a(s,t)\partial_s+b(s,t)\partial_t.\]
+则 $[\partial_t,W]=a_t\partial_s+b_t\partial_t$，故方程化为
+\[a_t=F,\qquad b_t=G.\]
+在 $\R^2$ 上，可直接积分求解。但若要求 $a,b$ 关于 $t$ 有周期性，
+则相应右端的周期积分必须为零；特别地，必须有
+\[\int_0^{2\pi}F(s,t)\dd t=0\qquad\forall s.\]
+因此这一构造不能直接处理一般的 $X$。
+\sep
+\textbf{旋转公式。} 设 $U,V$ 为光滑向量场，$\theta$ 为光滑函数，令
+\[Y=\cos\theta\,U+\sin\theta\,V,\qquad Z=-\sin\theta\,U+\cos\theta\,V.\]
+即对两个向量场作角度为 $\theta$ 的旋转。由括号公式，
+\begin{align*}
+[Y,Z]&=[\cos\theta\,U+\sin\theta\,V,-\sin\theta\,U+\cos\theta\,V]\\
+&=\bigl(-\cos\theta\,U(\sin\theta)+\sin\theta\,U(\cos\theta)\bigr)U\\
+&\quad+\bigl(\sin\theta\,V(\cos\theta)-\cos\theta\,V(\sin\theta)\bigr)V\\
+&\quad+\cos^2\theta[U,V]+\cos\theta\,U(\cos\theta)V-\cos\theta\,V(\cos\theta)U\\
+&\quad+\sin^2\theta[U,V]+\sin\theta\,V(-\sin\theta)U+\sin\theta\,U(\sin\theta)V\\
+&=[U,V]+\bigl(-\cos^2\theta\,U(\theta)-\sin^2\theta\,U(\theta)\bigr)U\\
+&\quad+\cos\theta\sin\theta\,V(\theta)U-\sin\theta\cos\theta\,V(\theta)U\\
+&\quad+\bigl(-\sin^2\theta\,V(\theta)-\cos^2\theta\,V(\theta)
+             -\cos\theta\sin\theta\,U(\theta)+\sin\theta\cos\theta\,U(\theta)\bigr)V\\
+&=[U,V]-U(\theta)U-V(\theta)V.
+\end{align*}
+取 $U=\partial_t$，$V=W$，则
+\begin{align*}
+[Y,Z]&=a_t\partial_s+b_t\partial_t-\theta_t\partial_t
+ -(a\theta_s+b\theta_t)(a\partial_s+b\partial_t)\\
+&=(a_t-a^2\theta_s-ab\theta_t)\partial_s
+ +(b_t-ab\theta_s-(1+b^2)\theta_t)\partial_t.
+\end{align*}
+所以需要求解
+\[\begin{cases}F=a_t-a^2\theta_s-ab\theta_t,\\
+G=b_t-ab\theta_s-(1+b^2)\theta_t.\end{cases}\]
+\sep
+\textbf{角度函数的两种选取。}
+若取 $\theta=\theta(t)$，使 $\theta_s=0$，则方程化为
+\[\begin{cases}a_t-ab\theta_t=F,\\
+b_t-(1+b^2)\theta_t=G.\end{cases}\]
+固定 $\theta$ 后，可先由第二条 Riccati 方程求 $b$，再由第一条线性方程求 $a$。
+但周期性仍然带来限制。事实上，
+\[\theta_t+\frac{G}{1+b^2}=\frac{b_t}{1+b^2}=(\arctan b)_t.\]
+若 $b$ 是周期函数，且 $\theta(2\pi)-\theta(0)=2\pi k$，$k\in\mathbb Z$，
+则在一个周期上积分得到
+\[2\pi k+\int_0^{2\pi}\frac{G}{1+b^2}\dd t=0.\]
+特别地，若该积分位于 $(0,\frac32\pi)$，便与这一整数倍条件矛盾。
+因此，这一选取会引入额外的周期约束。
+
+另一种选取是 $\theta(s)=s$，此时 $\theta_s=1$，方程化为
+\[F=a_t-a^2,\qquad G=b_t-ab.\]
+这一方程组中不再出现上一种选取中的 $1+b^2$ 系数。
+对第一条在一个周期上积分，得到必要条件
+\[\int_0^{2\pi}F(s,t)\dd t=-\int_0^{2\pi}a(s,t)^2\dd t\leq0.\]
+\sep
+\textbf{负周期积分条件下的构造。}
+引入待选正常数 $L$，取 $U=L\partial_t$，$V=W/L$，$\theta=s$，即
+\[Y=L\cos s\,\partial_t+\frac{\sin s}{L}W,\qquad
+Z=-L\sin s\,\partial_t+\frac{\cos s}{L}W.\]
+旋转公式给出
+\[[Y,Z]=\partial_tW-\frac{a}{L^2}W.\]
+故需要求解
+\[\tag{1}\begin{cases}a_t-\dfrac{a^2}{L^2}=F,\\[3pt]
+b_t-\dfrac{a}{L^2}b=G.\end{cases}\]
+\red{假设对每个 $s$，都有 $\int_0^{2\pi}F(s,t)\dd t<0$。}
+下面证明：当 $L$ 充分大时，方程组 (1) 存在光滑周期解。
+
+令
+\[m(s)=-\frac1{2\pi}\int_0^{2\pi}F(s,t)\dd t>0,\qquad
+r(s,t)=\int_0^t(F(s,\tau)+m(s))\dd\tau.\]
+则 $r_t=F+m$，且 $r$ 关于 $s,t$ 均为 $2\pi$ 周期。
+取 $K>\sup|r|$，再取 $L$ 充分大，使 $L\min_s\sqrt{m(s)}>2K$。设
+\[a_\pm(s,t)=-L\sqrt{m(s)}+r(s,t)\pm K.\]
+于是
+\[a_-<-L\sqrt{m(s)}<a_+<0,\]
+并且
+\[(a_+)_t=F+m>F+\frac{a_+^2}{L^2},\qquad
+(a_-)_t=F+m<F+\frac{a_-^2}{L^2}.\]
+因此 $a_+,a_-$ 分别是严格周期上解、下解。
+
+固定 $s$，记 $a(s,t;\xi)$ 为初值问题
+\[a_t=F+\frac{a^2}{L^2},\qquad a(s,0;\xi)=\xi\]
+的解。初值在 $[a_-(s,0),a_+(s,0)]$ 内时，解被上下解夹住，
+因而在 $[0,2\pi]$ 上存在。定义 Poincar\'e 映射
+\[P_s(\xi)=a(s,2\pi;\xi).\]
+由严格比较，
+\[P_s(a_-(s,0))>a_-(s,2\pi)=a_-(s,0),\]
+\[P_s(a_+(s,0))<a_+(s,2\pi)=a_+(s,0).\]
+所以连续函数 $\xi\mapsto P_s(\xi)-\xi$ 在两个端点异号，存在
+$\xi_s$ 使得 $P_s(\xi_s)=\xi_s$。于是 $a(s,t;\xi_s)$ 是严格负的周期解。
+
+严格负的周期解唯一。若 $a_1,a_2$ 是两个不同的负周期解，由解的唯一性，
+其差处处不为零，且
+\[(a_1-a_2)_t=\frac{a_1^2-a_2^2}{L^2},\qquad
+\bigl(\ln|a_1-a_2|\bigr)_t=\frac{a_1+a_2}{L^2}<0,\]
+这与周期性矛盾。
+
+再证明 $\xi_s$ 关于 $s$ 光滑。它是 $P_s(\xi)-\xi=0$ 的根，
+只需验证 $\partial_\xi P_s(\xi_s)\ne1$。对初值 $\xi$ 求导，令
+$V(t)=\partial_\xi a(s,t;\xi_s)$，则
+\[V_t=\frac{2a}{L^2}V,\qquad V(0)=1.\]
+因此
+\[\partial_\xi P_s(\xi_s)=V(2\pi)
+=\exp\!\left(\int_0^{2\pi}\frac{2a}{L^2}\dd t\right)<1.\]
+由隐函数定理，$\xi_s$ 光滑，故所得周期解 $a$ 光滑。
+由 $F$ 关于 $s$ 的周期性及负周期解的唯一性，$a$ 关于 $s$ 也为 $2\pi$ 周期。
+\sep
+\textbf{线性方程的周期解。} 给定上述 $a$，考虑 $b_t-\frac{ab}{L^2}=G$。其解为
+\[b(s,t)=\exp\!\left(\int_0^t\frac{a(s,u)}{L^2}\dd u\right)
+\left[b(s,0)+\int_0^t
+e^{-\int_0^\tau\frac{a(s,\rho)}{L^2}\dd\rho}G(s,\tau)\dd\tau\right].\]
+周期条件 $b(s,0)=b(s,2\pi)$ 等价于
+\begin{align*}
+b(s,0)
+&=\exp\!\left(\int_0^{2\pi}\frac{a(s,u)}{L^2}\dd u\right)\\[-2pt]
+&\quad\times\left[b(s,0)+\int_0^{2\pi}
+e^{-\int_0^\tau\frac{a(s,\rho)}{L^2}\dd\rho}G(s,\tau)\dd\tau\right].
+\end{align*}
+由于 $a<0$，外面的指数因子严格小于 $1$，因此可以唯一解出 $b(s,0)$。
+由此得到光滑的周期解 $b$；其关于 $s$ 的周期性也由唯一性得到。
+代回 $W,Y,Z$，即完成负周期积分条件下的构造。
+\sep
+\textbf{去掉负周期积分条件。}
+令 $X=P\partial_x+Q\partial_y$，并用横线表示相对于标准面积的平均。
+
+\red{Step 1. 假设 $\overline P=\dfrac1{4\pi^2}\int_{\T^2}P\ne0$，不妨 $\overline P>0$。}
+若非零平均分量为 $Q$，可先交换坐标；平均为负时可反转相应坐标。
+对正整数 $N$，取环面坐标变换
+\[\phi_N(s,t)=(t,s+Nt)=(x,y).\]
+其整数矩阵行列式为 $-1$，故为环面微分同胚，并且
+\[\mathrm d\phi_N(\partial_s)=\partial_y,\qquad
+\mathrm d\phi_N(\partial_t)=\partial_x+N\partial_y.\]
+因此拉回向量场为
+\[\phi_N^*X=
+\bigl(Q(t,s+Nt)-NP(t,s+Nt)\bigr)\partial_s
++P(t,s+Nt)\partial_t.\]
+为应用前面的构造，需要选取充分大的 $N$，使对所有 $s$ 均有
+\[\int_0^{2\pi}\bigl(Q(t,s+Nt)-NP(t,s+Nt)\bigr)\dd t<0.\]
+这由下面的平均引理保证。
+
+\textbf{平均引理。} 对于 $h\in C(\T^2)$，有
+\[\frac1{2\pi}\int_0^{2\pi}h(s+Nt,t)\dd t
+\longrightarrow\frac1{4\pi^2}\int_{\T^2}h\]
+其中 $N$ 沿正整数趋于无穷，且收敛关于 $s$ 一致。
+
+\textbf{证明。} 分段换元并利用周期性，得到
+\begin{align*}
+\frac1{2\pi}\int_0^{2\pi}h(s+Nt,t)\dd t
+&=\frac1{2\pi}\sum_{j=0}^{N-1}\int_0^{2\pi}
+\frac1N h\!\left(s+u,\frac{2\pi j+u}{N}\right)\dd u\\
+&=\frac1{2\pi}\int_0^{2\pi}\left[\sum_{j=0}^{N-1}
+h\!\left(s+u,\frac{2\pi j+u}{N}\right)\frac1N\right]\dd u\\
+&\longrightarrow\frac1{2\pi}\int_0^{2\pi}
+\left[\frac1{2\pi}\int_0^{2\pi}h(s+u,v)\dd v\right]\dd u\\
+&=\frac1{4\pi^2}\int_0^{2\pi}\dd u\int_0^{2\pi}h(s+u,v)\dd v
+=\frac1{4\pi^2}\int_{\T^2}h.
+\end{align*}
+
+括号中的和是 Riemann 和；由 $h$ 在紧环面上的一致连续性，
+该收敛关于 $s,u$ 一致，故上述结论关于 $s$ 一致成立。
+
+将引理应用于交换变量后的 $P$，得到
+$\frac1{2\pi}\int_0^{2\pi}P(t,s+Nt)\dd t\to\overline P>0$，且关于 $s$ 一致。
+又因为 $Q$ 有界，故充分大的同一个整数 $N$ 使上述负积分条件对所有 $s$ 成立。
+对 $\phi_N^*X$ 应用前面的构造，再由 $\phi_N$ 推前，即得 $X$ 的括号表示。
+\sep
+\red{Step 2. 假设 $\overline P=\overline Q=0$。}
+零向量场可直接取 $Y=Z=0$。对 $X\not\equiv0$，使用下面的引理。
+
+\textbf{引理（此处不证明）。} 设 $X\not\equiv0$ 是 $\T^2$ 上的光滑向量场，
+且 $\overline X=0$。则存在光滑微分同胚
+\[\phi:\T^2\to\T^2,\qquad \overline{\phi_*X}\ne0.\]
+由此引理，$\phi_*X$ 满足 Step 1 的条件，故可写成两个光滑向量场的括号。
+再通过 $\phi$ 拉回，便得到 $X$ 的括号表示。
+\clearpage
+\sep
+\textbf{$T^2\times M$ 的情形（$M$ 紧致）}
+
+设 $M$ 是紧致光滑流形，$s,t$ 是 $T^2$ 上周期为 $2\pi$ 的角坐标。
+利用乘积结构，将 $T^2\times M$ 上的光滑向量场写成
+\[X=F\partial_s+G+H\partial_t,\qquad G(s,p,t)\in T_pM.\]
+假设对每个 $(s,p)\in S^1\times M$，都有
+\[\int_0^{2\pi}F(s,p,t)\dd t<0.\]
+则同样可以构造 $T^2\times M$ 上的光滑向量场 $Y,Z$，使得 $[Y,Z]=X$。
+
+\textbf{证明。} 取充分大的正常数 $L$，令
+\[W=a\partial_s+B+c\partial_t,\qquad B(s,p,t)\in T_pM,\]
+并设
+\[
+Y=L\cos s\,\partial_t+\frac{\sin s}{L}W,
+\qquad
+Z=-L\sin s\,\partial_t+\frac{\cos s}{L}W.
+\]
+由旋转公式，
+\[[Y,Z]=\partial_tW-\frac{a}{L^2}W.\]
+因此只需要求出下面方程组的光滑周期解：
+\[
+\begin{cases}
+a_t-\dfrac{a^2}{L^2}=F,\\[6pt]
+B_t-\dfrac{a}{L^2}B=G,\\[6pt]
+c_t-\dfrac{a}{L^2}c=H.
+\end{cases}
+\]
+
+把 $(s,p)$ 视为参数，沿用前面的上下解、Poincar\'e 映射及隐函数定理论证。
+由于 $S^1\times M$ 紧致，可以统一选取充分大的 $L$，得到光滑的严格负周期解 $a$。
+后两条是在固定的向量空间 $T_pM$ 及 $\mathbb R$ 中的线性方程；其周期乘子
+\[\exp\!\left(\int_0^{2\pi}\frac{a(s,p,t)}{L^2}\dd t\right)\in(0,1),\]
+故各有唯一的光滑周期解 $B,c$。代回即得 $[Y,Z]=X$。
+这里不需要 $TM$ 平凡。取 $M=T^{n-2}$，即得到 $T^n$ 在上述条件下的结论。
+\end{document}

@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,fancyhdr}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,pdftitle={hw 10-14}]{hyperref}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{微分方程}\fancyhead[R]{hw 10-14}
+\fancyfoot[C]{\thepage}\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\xx}{\boldsymbol{x}}
+\begin{document}
+\begin{center}{\LARGE\bfseries hw 10-14}\\[7pt]题目与解答\end{center}
+\textbf{范围：}第 92 页第 3 题 (2)、(3)，第 4 题 (1)、(3)；第 93 页第 6 题（全部），第 8 题 (2)，第 9 题 (2)、(3)。题干依据用户提供的截图。
+
+\section*{第 92 页，第 3 题 (2)、(3)}
+\textbf{题目：}讨论下列向量函数组在 $\R$ 上是否线性相关，以及它们能否作为某个齐次线性系统基本解矩阵的列向量。
+
+\subsection*{(2)}
+\[
+\varphi_1(t)=\begin{pmatrix}e^t\cos t\\e^t\sin t\end{pmatrix},\qquad
+\varphi_2(t)=\begin{pmatrix}-\sin t\\\cos t\end{pmatrix}.
+\]
+\textbf{解：}以这两个向量为列，令
+\[
+\Phi(t)=\begin{pmatrix}e^t\cos t&-\sin t\\e^t\sin t&\cos t\end{pmatrix}.
+\]
+则
+\[
+\det\Phi(t)=e^t(\cos^2t+\sin^2t)=e^t\ne0\qquad(t\in\R).
+\]
+因此两向量函数在 $\R$ 上\textbf{线性无关}。又因 $\Phi$ 光滑且处处可逆，取
+\[
+A(t)=\Phi'(t)\Phi^{-1}(t)
+=\begin{pmatrix}
+\cos^2t&\sin t\cos t-1\\
+\sin t\cos t+1&\sin^2t
+\end{pmatrix},
+\]
+便有 $\Phi'=A\Phi$，且 $A$ 在 $\R$ 上连续。故
+\[
+\boxed{\text{该向量函数组线性无关，并能组成系统 }\xx'=A(t)\xx\text{ 的基本解矩阵。}}
+\]
+
+\subsection*{(3)}
+\[
+\varphi_1(t)=\begin{pmatrix}1\\0\\0\end{pmatrix},\quad
+\varphi_2(t)=\begin{pmatrix}t\\0\\0\end{pmatrix},\quad
+\varphi_3(t)=\begin{pmatrix}t^2\\0\\0\end{pmatrix}.
+\]
+\textbf{解：}设常数 $c_1,c_2,c_3$ 满足
+\[
+c_1\varphi_1(t)+c_2\varphi_2(t)+c_3\varphi_3(t)\equiv0.
+\]
+则 $c_1+c_2t+c_3t^2\equiv0$，由多项式恒等可知 $c_1=c_2=c_3=0$。
+因此这三个\textbf{向量函数线性无关}。但是
+\[
+\Phi(t)=\begin{pmatrix}1&t&t^2\\0&0&0\\0&0&0\end{pmatrix},
+\qquad \det\Phi(t)\equiv0,
+\]
+不满足基本解矩阵处处可逆的要求，故\textbf{不能组成基本解矩阵}。
+这里线性无关要求系数为与 $t$ 无关的常数；每个固定时刻的向量线性相关，并不意味着向量函数线性相关。
+
+\newpage
+\section*{第 92 页，第 4 题 (1)、(3)}
+\textbf{题目：}求齐次线性系统 $\xx'=A(t)\xx$ 的基本解矩阵和通解。
+
+\subsection*{(1) $\displaystyle A(t)=\begin{pmatrix}1/t&0\\0&1/t\end{pmatrix}$，$t>0$}
+\textbf{解：}系统为
+\[
+x_1'=\frac1t x_1,\qquad x_2'=\frac1t x_2.
+\]
+两个方程分别积分，得到 $x_1=C_1t$、$x_2=C_2t$。因此可取基本解矩阵
+\[
+\boxed{\Phi(t)=\begin{pmatrix}t&0\\0&t\end{pmatrix},\qquad t>0.}
+\]
+事实上，$\Phi'=I_2=A(t)\Phi(t)$，且 $\det\Phi(t)=t^2>0$。
+通解为
+\[
+\boxed{\xx(t)=\Phi(t)\begin{pmatrix}C_1\\C_2\end{pmatrix}
+=\begin{pmatrix}C_1t\\C_2t\end{pmatrix},\qquad t>0.}
+\]
+
+\subsection*{(3) $\displaystyle A=\begin{pmatrix}0&1&0\\-1&0&0\\0&0&-1\end{pmatrix}$}
+\textbf{解：}系统为
+\[
+x_1'=x_2,\qquad x_2'=-x_1,\qquad x_3'=-x_3.
+\]
+由前两式得 $x_1''+x_1=0$，故
+\[
+x_1=C_1\cos t+C_2\sin t,\qquad
+x_2=x_1'=-C_1\sin t+C_2\cos t.
+\]
+第三式给出 $x_3=C_3e^{-t}$。因此可取
+\[
+\boxed{\Phi(t)=\begin{pmatrix}
+\cos t&\sin t&0\\-\sin t&\cos t&0\\0&0&e^{-t}
+\end{pmatrix},\qquad t\in\R.}
+\]
+其列向量均满足系统，并且
+\[
+\det\Phi(t)=e^{-t}(\cos^2t+\sin^2t)=e^{-t}\ne0.
+\]
+通解为
+\[
+\boxed{\xx(t)=\begin{pmatrix}
+C_1\cos t+C_2\sin t\\-C_1\sin t+C_2\cos t\\C_3e^{-t}
+\end{pmatrix},\qquad t\in\R.}
+\]
+以上 $C_1,C_2,C_3$ 均为任意实常数。
+
+\newpage
+\section*{第 93 页，第 6 题}
+\textbf{题目：}设下列矩阵分别是某个齐次线性系统的基本解矩阵，求对应的齐次线性系统，并确定其定义域。
+
+\textbf{方法：}由 $\Phi'=A\Phi$ 及 $\Phi$ 可逆，必有
+\[
+\boxed{A(t)=\Phi'(t)\Phi^{-1}(t).}
+\]
+应在 $\Phi$ 可逆且 $A$ 连续的区间上讨论。
+
+\subsection*{(1) $\displaystyle\Phi(t)=\begin{pmatrix}e^t&0\\-(t+1)&1\end{pmatrix}$}
+\textbf{解：}因为 $\det\Phi(t)=e^t>0$，故对所有 $t\in\R$ 均可逆。计算得
+\[
+\Phi'(t)=\begin{pmatrix}e^t&0\\-1&0\end{pmatrix},\qquad
+\Phi^{-1}(t)=\begin{pmatrix}e^{-t}&0\\(t+1)e^{-t}&1\end{pmatrix}.
+\]
+所以
+\[
+A(t)=\begin{pmatrix}e^t&0\\-1&0\end{pmatrix}
+\begin{pmatrix}e^{-t}&0\\(t+1)e^{-t}&1\end{pmatrix}
+=\begin{pmatrix}1&0\\-e^{-t}&0\end{pmatrix}.
+\]
+对应系统为
+\[
+\boxed{\begin{cases}x_1'=x_1,\\x_2'=-e^{-t}x_1.\end{cases}}
+\]
+系数矩阵在整个实轴上连续，故最大定义区间为
+\[
+\boxed{I=\R.}
+\]
+
+\subsection*{(2) $\displaystyle\Phi(t)=\begin{pmatrix}e^t&-(t+1)\\0&t\end{pmatrix}$}
+\textbf{解：}此时 $\det\Phi(t)=te^t$，因此必须有 $t\ne0$。对这样的 $t$，
+\[
+\Phi'(t)=\begin{pmatrix}e^t&-1\\0&1\end{pmatrix},\qquad
+\Phi^{-1}(t)=\begin{pmatrix}e^{-t}&\dfrac{(t+1)e^{-t}}{t}\\0&\dfrac1t\end{pmatrix}.
+\]
+于是
+\[
+A(t)=\Phi'(t)\Phi^{-1}(t)
+=\begin{pmatrix}1&\dfrac{t+1}{t}-\dfrac1t\\0&\dfrac1t\end{pmatrix}
+=\begin{pmatrix}1&1\\0&1/t\end{pmatrix}.
+\]
+对应系统为
+\[
+\boxed{\begin{cases}x_1'=x_1+x_2,\\x_2'=\dfrac1t x_2.\end{cases}}
+\]
+系数在 $t=0$ 处无定义，$\Phi(0)$ 也不可逆。因此系数的定义域为 $\R\setminus\{0\}$，通常分别在两个最大区间
+\[
+\boxed{I=(-\infty,0)\quad\text{或}\quad I=(0,\infty)}
+\]
+上把所给 $\Phi$ 视为基本解矩阵。
+
+\newpage
+\section*{第 93 页，第 8 题 (2)}
+\textbf{题目：}求下列齐次线性系统的基本解矩阵：
+\[
+\xx'=\begin{pmatrix}-\dfrac2t&0\\[3pt]1+\dfrac2t&1\end{pmatrix}\xx,
+\qquad t>0.
+\]
+
+\textbf{解：}将系统写为
+\[
+\begin{cases}
+x_1'=-\dfrac2t x_1,\\[4pt]
+x_2'=\left(1+\dfrac2t\right)x_1+x_2.
+\end{cases}
+\]
+先解第一个方程，得到
+\[
+x_1=C_1t^{-2}.
+\]
+代入第二个方程，得
+\[
+x_2'-x_2=C_1\left(\frac1{t^2}+\frac2{t^3}\right).
+\]
+乘积分因子 $e^{-t}$，有
+\[
+{\color{red}\boxed{\color{black}(e^{-t}x_2)'=C_1e^{-t}\left(\frac1{t^2}+\frac2{t^3}\right).}}
+\]
+注意到
+\[
+\left(\frac{e^{-t}}{t^2}\right)'
+=-e^{-t}\left(\frac1{t^2}+\frac2{t^3}\right),
+\]
+故积分后得到
+\[
+e^{-t}x_2=-C_1\frac{e^{-t}}{t^2}+C_2,
+\qquad x_2=-C_1t^{-2}+C_2e^t.
+\]
+于是系统通解为
+\[
+\xx(t)=C_1\begin{pmatrix}t^{-2}\\-t^{-2}\end{pmatrix}
++C_2\begin{pmatrix}0\\e^t\end{pmatrix}.
+\]
+取两组系数 $(C_1,C_2)=(1,0),(0,1)$，可得基本解矩阵
+\[
+\boxed{\Phi(t)=\begin{pmatrix}t^{-2}&0\\-t^{-2}&e^t\end{pmatrix},\qquad t>0.}
+\]
+确实，直接求导有
+\[
+\Phi'(t)=\begin{pmatrix}-2t^{-3}&0\\2t^{-3}&e^t\end{pmatrix}
+=\begin{pmatrix}-2/t&0\\1+2/t&1\end{pmatrix}\Phi(t),
+\]
+并且 $\det\Phi(t)=t^{-2}e^t>0$，满足基本解矩阵的要求。
+
+\newpage
+\section*{第 93 页，第 9 题 (2)}
+\textbf{题目：}求非齐次线性系统的初值问题：
+\[
+\begin{cases}
+\displaystyle x_1'=\frac{2t}{1+t^2}x_1,\qquad
+x_2'=-\frac1t x_2+x_1+t,\quad t>0,\\[6pt]
+\displaystyle x_1(1)=0,\qquad x_2(1)=\frac43.
+\end{cases}
+\]
+
+\textbf{解：}先解第一个方程。由于
+\[
+\left(\frac{x_1}{1+t^2}\right)'
+=\frac{(1+t^2)x_1'-2tx_1}{(1+t^2)^2}=0,
+\]
+所以
+\[
+x_1=C_1(1+t^2).
+\]
+代入初值 $x_1(1)=0$，得 $2C_1=0$，因而
+\[
+\boxed{x_1(t)=0.}
+\]
+第二个方程随之化为
+\[
+x_2'+\frac1t x_2=t.
+\]
+乘积分因子 $t$，得到
+\[
+(tx_2)'=t^2.
+\]
+从 $1$ 到 $t$ 积分，并用 $x_2(1)=4/3$，有
+\[
+tx_2(t)-\frac43=\int_1^t s^2\dd s=\frac{t^3-1}{3}.
+\]
+因此所求解为
+\[
+\boxed{\xx(t)=\begin{pmatrix}0\\[2pt]\dfrac{t^2}{3}+\dfrac1t\end{pmatrix},
+\qquad t\in(0,\infty).}
+\]
+
+\textbf{核验：}初值显然满足；并且
+\[
+x_2'=\frac{2t}{3}-\frac1{t^2}
+=-\frac1t\left(\frac{t^2}{3}+\frac1t\right)+t,
+\]
+恰好等于第二个方程的右端。系统系数在 $(0,\infty)$ 上连续，故上述解是该初值问题在此区间上的唯一解。
+
+\newpage
+\section*{第 93 页，第 9 题 (3)}
+\textbf{题目：}求非齐次线性系统的初值问题：
+\[
+\begin{cases}
+x_1'=2tx_1+t^2x_2,\qquad x_2'=-tx_2+e^{-t},\\[3pt]
+x_1(0)=1,\qquad x_2(0)=-1.
+\end{cases}
+\]
+
+\textbf{解：}先解独立的第二个方程，再代入第一个方程。
+
+\textbf{第一步：求 $x_2$。}将第二式写成 $x_2'+tx_2=e^{-t}$，乘积分因子 $e^{t^2/2}$，得
+\[
+\left(e^{t^2/2}x_2\right)'=e^{t^2/2-t}.
+\]
+从 $0$ 到 $t$ 积分，用 $x_2(0)=-1$，得
+\[
+e^{t^2/2}x_2(t)+1=\int_0^t e^{s^2/2-s}\dd s.
+\]
+所以
+\[
+\boxed{x_2(t)=e^{-t^2/2}\left(-1+\int_0^t e^{s^2/2-s}\dd s\right).}
+\]
+
+\textbf{第二步：求 $x_1$。}第一个方程写为 $x_1'-2tx_1=t^2x_2$，乘积分因子 $e^{-t^2}$，得
+\[
+(e^{-t^2}x_1)'=t^2e^{-t^2}x_2(t).
+\]
+从 $0$ 到 $t$ 积分，用 $x_1(0)=1$，可得
+\[
+x_1(t)=e^{t^2}\left(1+\int_0^t s^2e^{-s^2}x_2(s)\dd s\right).
+\]
+代入上面求出的 $x_2$，最终解为
+\[
+\boxed{\begin{aligned}
+x_1(t)&=e^{t^2}\left[1+\int_0^t s^2e^{-3s^2/2}
+\left(-1+\int_0^s e^{u^2/2-u}\dd u\right)\dd s\right],\\[5pt]
+x_2(t)&=e^{-t^2/2}\left[-1+\int_0^t e^{s^2/2-s}\dd s\right],
+\qquad t\in\R.
+\end{aligned}}
+\]
+这里的定积分给出了明确的精确解，无须将其化成初等函数。
+
+\textbf{核验与定义区间：}记
+\[
+F(t)=\int_0^t e^{s^2/2-s}\dd s,\qquad
+G(t)=\int_0^t s^2e^{-3s^2/2}(F(s)-1)\dd s.
+\]
+则 $x_2=e^{-t^2/2}(F-1)$、$x_1=e^{t^2}(1+G)$，且
+\[
+x_2'=-tx_2+e^{-t},\qquad
+x_1'=2tx_1+t^2e^{-t^2/2}(F-1)=2tx_1+t^2x_2.
+\]
+由 $F(0)=G(0)=0$ 可知初值满足。全部系数和非齐次项在 $\R$ 上连续，故此解在整个实轴上唯一存在。
+\end{document}

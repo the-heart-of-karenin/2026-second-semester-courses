@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{微分方程 I}\fancyhead[R]{10月26日作业答案}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}\setlength{\parindent}{0pt}\setlength{\parskip}{6pt}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}
+\begin{document}
+\begin{center}\LARGE\bfseries 10月26日作业答案\end{center}
+教材《微分方程 I》（101计划），习题 3.2，第111页第9、10题。
+
+\section*{第9题}
+\textbf{题目（原文）。}证明：常系数齐次线性系统 $\dfrac{dx}{dt}=Ax$ 的任何解当 $t\to+\infty$ 时都趋于零，当且仅当系数矩阵 $A$ 的所有特征值都具有负的实部。
+
+\textbf{证明。}系统满足初值 $x(0)=x_0$ 的解为 $x(t)=e^{At}x_0$。
+
+\textbf{充分性。}在复数域内取可逆矩阵 $P$，使 $A=PJP^{-1}$，其中 $J$ 为 Jordan 标准形。设其中一个 Jordan 块为
+\[
+J_j=\lambda_j I+N_j,\qquad N_j^{m_j}=0.
+\]
+由于 $\lambda_jI$ 与 $N_j$ 可交换，
+\[
+e^{J_jt}=e^{\lambda_jt}\sum_{k=0}^{m_j-1}\frac{t^kN_j^k}{k!}.
+\]
+若 $\operatorname{Re}\lambda_j<0$，则对每个 $k\ge0$，
+\[
+\left|t^ke^{\lambda_jt}\right|=t^ke^{(\operatorname{Re}\lambda_j)t}\longrightarrow0
+\qquad(t\to+\infty).
+\]
+故各 Jordan 块的指数矩阵均趋于零，从而
+\[
+e^{At}=Pe^{Jt}P^{-1}\longrightarrow0.
+\]
+因此任意解 $x(t)=e^{At}x_0$ 都趋于零。
+
+\textbf{必要性。}设系统的每个实解都趋于零。若存在特征值 $\lambda\in\C$ 满足 $\operatorname{Re}\lambda\ge0$，取对应非零复特征向量 $v$，则
+\[
+z(t)=e^{\lambda t}v
+\]
+是复化系统 $z'=Az$ 的解，且
+\[
+|z(t)|_2=e^{(\operatorname{Re}\lambda)t}|v|_2\not\longrightarrow0.
+\]
+另一方面，因为 $A$ 为实矩阵，$\operatorname{Re}z(t)$ 与 $\operatorname{Im}z(t)$ 均为原系统的实解。由假设二者都趋于零，因而 $z(t)$ 也趋于零，矛盾。故所有特征值均具有负的实部。\hfill$\square$
+
+\section*{第10题}
+\textbf{题目（原文）。}如果存在实数 $\alpha$ 和 $n$ 阶实常数矩阵 $A$，使得对于任意 $v\in\R^n$，向量内积 $(Av,v)$ 满足 $(Av,v)\le\alpha\|v\|^2$，证明：
+\[
+\|e^{At}\|\le e^{\alpha t},\qquad\forall t\ge0.
+\]
+
+\textbf{范数约定。}本题采用与内积对应的欧氏范数 $|v|_2=\sqrt{(v,v)}$，矩阵范数为其诱导算子范数
+\[
+\|B\|_2=\sup_{v\ne0}\frac{|Bv|_2}{|v|_2}.
+\]
+
+\textbf{证明。}任取 $v\in\R^n$，令 $x(t)=e^{At}v$，则 $x'=Ax$。由题设，
+\[
+\frac{d}{dt}|x(t)|_2^2=2(Ax(t),x(t))\le2\alpha|x(t)|_2^2.
+\]
+因此
+\[
+\frac{d}{dt}\left(e^{-2\alpha t}|x(t)|_2^2\right)
+=2e^{-2\alpha t}\bigl((Ax(t),x(t))-\alpha|x(t)|_2^2\bigr)\le0.
+\]
+对 $t\ge0$，有
+\[
+e^{-2\alpha t}|x(t)|_2^2\le|x(0)|_2^2=|v|_2^2,
+\]
+即 $|e^{At}v|_2\le e^{\alpha t}|v|_2$。对所有单位向量取上确界，得
+\[
+\boxed{\|e^{At}\|_2\le e^{\alpha t},\qquad t\ge0.}
+\]
+\hfill$\square$
+
+\textbf{关于范数的说明。}此处不能直接改用列和矩阵 $1$-范数。例如
+\[
+A=\begin{pmatrix}0&2\\0&0\end{pmatrix},\qquad\alpha=1,
+\]
+满足 $(Av,v)=2v_1v_2\le v_1^2+v_2^2$，但
+\[
+e^{At}=\begin{pmatrix}1&2t\\0&1\end{pmatrix},\qquad
+\|e^{At}\|_1=1+2t>e^t
+\]
+对充分小的 $t>0$ 成立。因此本题的范数约定是证明成立的必要说明。
+\end{document}

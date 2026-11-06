@@ -1,0 +1,162 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=21mm]{geometry}
+\usepackage{amsmath,amssymb,xcolor,needspace}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sep}{\par\vspace{5pt}\noindent\rule{\linewidth}{0.7pt}\par\vspace{5pt}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\allowdisplaybreaks
+\begin{document}
+\begin{center}\Large 环面上向量场的 Lie 括号表示\end{center}
+设 $\T^2=\R^2/(2\pi\mathbb Z)^2$。给定 $\T^2$ 上的光滑向量场 $X$，
+考虑是否存在光滑向量场 $Y,Z$，使得 $[Y,Z]=X$。
+以下先在一个分量的周期积分处处为负时作出构造，再证明平均向量非零时可化归到这一情形。
+平均向量为零的情形尚缺少一个关键命题的证明，具体缺口在后文说明。
+
+
+在二维流形的局部坐标 $(s,t)$ 中，若 $U=a\partial_s+b\partial_t$，
+$V=c\partial_s+d\partial_t$，则其 Lie 括号为
+\[[U,V]=(ac_s+bc_t-ca_s-da_t)\partial_s
++(ad_s+bd_t-cb_s-db_t)\partial_t.\]
+以下向量场及其系数均视为覆盖空间上的周期对象。Lie 括号满足
+\[[fU,gV]=fg[U,V]+fU(g)V-gV(f)U.\]
+若
+\[Y=\cos\theta\,U+\sin\theta\,V,\qquad
+Z=-\sin\theta\,U+\cos\theta\,V,\]
+则将上式展开并合并同类项，得到旋转公式
+\[[Y,Z]=[U,V]-U(\theta)U-V(\theta)V.\]
+\sep
+\textbf{一、负周期积分条件下的构造。}
+取 $\T^2$ 上周期均为 $2\pi$ 的角坐标 $(s,t)$。
+设 $X=F\partial_s+G\partial_t$ 是 $\T^2$ 上的光滑向量场。如果
+\[\int_0^{2\pi}F(s,t)\dd t<0\qquad\text{对每个 }s\in S^1,\]
+则存在光滑向量场 $Y,Z$，使得 $[Y,Z]=X$。
+
+
+\textbf{证明。} 令 $W=a\partial_s+b\partial_t$。引入待选正常数 $L$，取 $U=L\partial_t$，$V=W/L$，$\theta=s$，即
+\[Y=L\cos s\,\partial_t+\frac{\sin s}{L}W,\qquad
+Z=-L\sin s\,\partial_t+\frac{\cos s}{L}W.\]
+旋转公式给出
+\[[Y,Z]=\partial_tW-\frac{a}{L^2}W.\]
+故需要求解
+\[\tag{1}\begin{cases}a_t-\dfrac{a^2}{L^2}=F,\\[3pt]
+b_t-\dfrac{a}{L^2}b=G.\end{cases}\]
+下面证明：当 $L$ 充分大时，方程组 (1) 存在光滑周期解。
+
+令
+\[m(s)=-\frac1{2\pi}\int_0^{2\pi}F(s,t)\dd t>0,\qquad
+r(s,t)=\int_0^t(F(s,\tau)+m(s))\dd\tau.\]
+则 $r_t=F+m$，且 $r$ 关于 $s,t$ 均为 $2\pi$ 周期。
+取 $K>\sup|r|$，再取 $L$ 充分大，使 $L\min_s\sqrt{m(s)}>2K$。设
+\[a_\pm(s,t)=-L\sqrt{m(s)}+r(s,t)\pm K.\]
+于是
+\[a_-<-L\sqrt{m(s)}<a_+<0,\]
+并且
+\[(a_+)_t=F+m>F+\frac{a_+^2}{L^2},\qquad
+(a_-)_t=F+m<F+\frac{a_-^2}{L^2}.\]
+因此 $a_+,a_-$ 分别是严格周期上解、下解。
+
+固定 $s$，记 $a(s,t;\xi)$ 为初值问题
+\[a_t=F+\frac{a^2}{L^2},\qquad a(s,0;\xi)=\xi\]
+的解。初值在 $[a_-(s,0),a_+(s,0)]$ 内时，由比较原理，解被上下解夹住，
+因而在 $[0,2\pi]$ 上存在。定义 Poincar\'e 映射
+\[P_s(\xi)=a(s,2\pi;\xi).\]
+由严格比较，
+\[P_s(a_-(s,0))>a_-(s,2\pi)=a_-(s,0),\]
+\[P_s(a_+(s,0))<a_+(s,2\pi)=a_+(s,0).\]
+所以连续函数 $\xi\mapsto P_s(\xi)-\xi$ 在两个端点异号，存在
+$\xi_s$ 使得 $P_s(\xi_s)=\xi_s$。于是 $a(s,t;\xi_s)$ 是严格负的周期解。
+
+严格负的周期解唯一。若 $a_1,a_2$ 是两个不同的负周期解，由解的唯一性，
+其差处处不为零，且
+\[(a_1-a_2)_t=\frac{a_1^2-a_2^2}{L^2},\qquad
+\bigl(\ln|a_1-a_2|\bigr)_t=\frac{a_1+a_2}{L^2}<0,\]
+这与周期性矛盾。
+
+再证明 $\xi_s$ 关于 $s$ 光滑。它是 $P_s(\xi)-\xi=0$ 的根，
+只需验证 $\partial_\xi P_s(\xi_s)\ne1$。对初值 $\xi$ 求导，令
+$V(t)=\partial_\xi a(s,t;\xi_s)$，则
+\[V_t=\frac{2a}{L^2}V,\qquad V(0)=1.\]
+因此
+\[\partial_\xi P_s(\xi_s)=V(2\pi)
+=\exp\!\left(\int_0^{2\pi}\frac{2a}{L^2}\dd t\right)<1.\]
+由隐函数定理，$\xi_s$ 光滑，故所得周期解 $a$ 光滑。
+由 $F$ 关于 $s$ 的周期性及负周期解的唯一性，$a$ 关于 $s$ 也为 $2\pi$ 周期。
+
+最后求解线性方程。 给定上述 $a$，考虑 $b_t-\frac{ab}{L^2}=G$。其解为
+\[b(s,t)=\exp\!\left(\int_0^t\frac{a(s,u)}{L^2}\dd u\right)
+\left[b(s,0)+\int_0^t
+e^{-\int_0^\tau\frac{a(s,\rho)}{L^2}\dd\rho}G(s,\tau)\dd\tau\right].\]
+周期条件 $b(s,0)=b(s,2\pi)$ 等价于
+\begin{align*}
+b(s,0)
+&=\exp\!\left(\int_0^{2\pi}\frac{a(s,u)}{L^2}\dd u\right)\\[-2pt]
+&\quad\times\left[b(s,0)+\int_0^{2\pi}
+e^{-\int_0^\tau\frac{a(s,\rho)}{L^2}\dd\rho}G(s,\tau)\dd\tau\right].
+\end{align*}
+由于 $a<0$，外面的指数因子严格小于 $1$，因此可以唯一解出 $b(s,0)$。
+由此得到光滑的周期解 $b$；其关于 $s$ 的周期性也由唯一性得到。
+代回 $W,Y,Z$，即完成负周期积分条件下的构造。
+\sep
+\textbf{二、平均向量非零的情形。}
+设 $X=P\partial_x+Q\partial_y$，并用横线表示相对于标准面积的平均。
+若 $\overline X=(\overline P,\overline Q)\ne0$，则 $X$ 可以写成两个光滑向量场的 Lie 括号。
+
+\textbf{证明。} 不妨设 $\overline P=\dfrac1{4\pi^2}\int_{\T^2}P>0$。
+若非零平均分量为 $Q$，可先交换坐标；平均为负时可反转相应坐标。
+对正整数 $N$，取环面坐标变换
+\[\phi_N(s,t)=(t,s+Nt)=(x,y).\]
+其整数矩阵行列式为 $-1$，故为环面微分同胚，并且
+\[\mathrm d\phi_N(\partial_s)=\partial_y,\qquad
+\mathrm d\phi_N(\partial_t)=\partial_x+N\partial_y.\]
+因此拉回向量场为
+\[\phi_N^*X=
+\bigl(Q(t,s+Nt)-NP(t,s+Nt)\bigr)\partial_s
++P(t,s+Nt)\partial_t.\]
+为应用前面的构造，需要选取充分大的 $N$，使对所有 $s$ 均有
+\[\int_0^{2\pi}\bigl(Q(t,s+Nt)-NP(t,s+Nt)\bigr)\dd t<0.\]
+这由下面的平均引理保证。
+
+\textbf{平均引理。} 对于 $h\in C(\T^2)$，有
+\[\frac1{2\pi}\int_0^{2\pi}h(s+Nt,t)\dd t
+\longrightarrow\frac1{4\pi^2}\int_{\T^2}h\]
+其中 $N$ 沿正整数趋于无穷，且收敛关于 $s$ 一致。
+
+\textbf{证明。} 分段换元并利用周期性，得到
+\begin{align*}
+\frac1{2\pi}\int_0^{2\pi}h(s+Nt,t)\dd t
+&=\frac1{2\pi}\sum_{j=0}^{N-1}\int_0^{2\pi}
+\frac1N h\!\left(s+u,\frac{2\pi j+u}{N}\right)\dd u\\
+&=\frac1{2\pi}\int_0^{2\pi}\left[\sum_{j=0}^{N-1}
+h\!\left(s+u,\frac{2\pi j+u}{N}\right)\frac1N\right]\dd u\\
+&\longrightarrow\frac1{2\pi}\int_0^{2\pi}
+\left[\frac1{2\pi}\int_0^{2\pi}h(s+u,v)\dd v\right]\dd u\\
+&=\frac1{4\pi^2}\int_0^{2\pi}\dd u\int_0^{2\pi}h(s+u,v)\dd v
+=\frac1{4\pi^2}\int_{\T^2}h.
+\end{align*}
+
+括号中的和是 Riemann 和；由 $h$ 在紧环面上的一致连续性，
+该收敛关于 $s,u$ 一致，故上述结论关于 $s$ 一致成立。
+
+将引理应用于交换变量后的 $P$，得到
+$\frac1{2\pi}\int_0^{2\pi}P(t,s+Nt)\dd t\to\overline P>0$，且关于 $s$ 一致。
+又因为 $Q$ 有界，故充分大的同一个整数 $N$ 使上述负积分条件对所有 $s$ 成立。
+对 $\phi_N^*X$ 应用第一部分的构造，再由 $\phi_N$ 推前，即得 $X$ 的括号表示。
+\sep
+\Needspace{13\baselineskip}\textbf{三、平均向量为零时尚未解决的一步。}
+若 $X=0$，可直接取 $Y=Z=0$。对 $X\not\equiv0$ 且 $\overline X=0$ 的情形，
+上述方法还需要下面的命题。
+
+\textbf{待证命题。} 设 $X\not\equiv0$ 是 $\T^2$ 上的光滑向量场，且 $\overline X=0$。
+则存在光滑微分同胚 $\phi:\T^2\to\T^2$，使得
+\[\overline{\phi_*X}\ne0.\]
+目前尚未得到这一命题的证明，因此上述论证尚不能覆盖所有非零的零平均向量场。
+如果这一命题成立，则 $\phi_*X$ 满足第二部分的条件，可写成两个光滑向量场的括号；
+再通过 $\phi$ 拉回，就得到 $X$ 的括号表示。
+\end{document}
+
+
+

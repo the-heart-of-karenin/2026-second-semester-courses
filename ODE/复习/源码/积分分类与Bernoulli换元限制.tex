@@ -1,0 +1,517 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,longtable,array,enumitem,fancyhdr,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{微分方程 I · 积分分类与换元限制}\fancyhead[R]{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{itemsep=3pt,topsep=4pt,leftmargin=2em}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\entry}[1]{\subsection*{#1}}
+\allowdisplaybreaks[2]
+\begin{document}
+\title{积分分类与 Bernoulli 换元限制}
+\author{}\date{2026 年 10 月 31 日}
+\maketitle
+第一部分收录此前的积分分类输出，保留题号、分类、出处、方法与计算结果；第二部分补充讨论 Bernoulli 换元中实参数 $\alpha$ 的限制。主表范围截止教材第 3.1 节（含）；超出范围的作业内容另外标明。
+
+\part*{第一部分：作业、教材与题集中的积分分类}
+已检查工作区中的 8 份作业 PDF（习题 2.2 的旧版、修订版按同一次作业处理），并对照教材和现有 67 题题集筛选。最值得补的是：二次分母的处理、万能三角换元、连续分部积分，以及反认乘积或商的导数。另外，有一些积分没有初等原函数，应与计算训练分开。
+
+下面列出实际出现的积分、出处、方法和结果，不将普通幂函数积分列为重点。各不定积分均在被积函数有定义的区间内讨论。下文“题集第几题”均指《期中训练题67题\_截止3.1》；“教材”指《微分方程 I（101 计划）》；“习题集”指博亚尔丘克、戈洛瓦奇《高等数学例题与习题集（四）常微分方程》。
+
+\section{二次分母：拆出分母导数，再配方}
+这类积分的主要计算要求是准确拆分分子，并在配方后保留正确系数。
+
+\entry{1. 作业习题 2.1，第 1(3) 题}
+\[
+I=\int\frac{1-v}{v^2+2v+2}\dd v.
+\]
+关键分解为
+\[
+1-v=-\frac12(2v+2)+2,\qquad v^2+2v+2=(v+1)^2+1.
+\]
+所以
+\[
+\boxed{I=-\frac12\ln(v^2+2v+2)+2\arctan(v+1)+C.}
+\]
+此处须同时保留对数项与反正切项。作业文件：\texttt{hw2(1).pdf}。
+
+\entry{2. 同份作业，第 1(5) 题}
+\[
+I=\int\frac{v-1}{1+2v-v^2}\dd v.
+\]
+分母导数为 $2-2v=-2(v-1)$，因此
+\[
+\boxed{I=-\frac12\ln|1+2v-v^2|+C.}
+\]
+分母虽然为二次式，但本题无需配方或部分分式分解。
+
+\entry{3. 题集第 51 题}
+令 $v=x/t$ 后出现 $\int\dd v/(v^2+v+1)$。由
+\[
+v^2+v+1=\left(v+\frac12\right)^2+\frac34
+\]
+得到
+\[
+\boxed{\int\frac{\dd v}{v^2+v+1}
+=\frac2{\sqrt3}\arctan\frac{2v+1}{\sqrt3}+C.}
+\]
+一般地，计算 $\int(\alpha v+\beta)/(av^2+bv+c)\dd v$ 时，可先将分子写为 $A(2av+b)+B$，再处理剩余的常数分子积分。
+
+\section{可分解的有理函数：部分分式与多项式除法}
+\entry{4. 教材习题 2.1，第 1(8) 题}
+\[
+1+3x+2x^2=(x+1)(2x+1),\qquad
+\frac1{(x+1)(2x+1)}=-\frac1{x+1}+\frac2{2x+1}.
+\]
+故
+\[
+\boxed{\int\frac{\dd x}{1+3x+2x^2}
+=\ln\left|\frac{2x+1}{x+1}\right|+C.}
+\]
+出处：教材印刷第 25 页。
+
+\entry{5. 教材 Logistic 方程，例 2.1.3}
+\[
+\frac1{x(1-x)}=\frac1x+\frac1{1-x},\qquad
+\boxed{\int\frac{\dd x}{x(1-x)}=\ln|x|-\ln|1-x|+C.}
+\]
+第二项积分前为正号，积分后为负号。出处：教材印刷第 21 页。
+
+\entry{6. 题集第 8 题}
+平移后令 $v=Y/X$，会出现
+\[
+\int\frac{v+1}{(v-1)(v-2)}\dd v.
+\]
+由
+\[
+\frac{v+1}{(v-1)(v-2)}=-\frac2{v-1}+\frac3{v-2}
+\]
+得到
+\[
+\boxed{\int\frac{v+1}{(v-1)(v-2)}\dd v
+=-2\ln|v-1|+3\ln|v-2|+C.}
+\]
+
+\entry{7. 题集第 53 题}
+令 $z=t+x$ 后出现
+\[
+\frac{z-1}{3z}=\frac13-\frac1{3z},\qquad
+\boxed{\int\frac{z-1}{3z}\dd z=\frac z3-\frac13\ln|z|+C.}
+\]
+本题只需先作除法，无需更复杂的换元。
+
+\section{三角函数分母：万能换元}
+\entry{8. 教材例 2.1.5，印刷第 23 页}
+\[
+I=\int\frac{\dd z}{3+2\sin z}.
+\]
+取
+\[
+u=\tan\frac z2,\qquad \sin z=\frac{2u}{1+u^2},\qquad
+\dd z=\frac{2\dd u}{1+u^2},
+\]
+则
+\[
+I=\int\frac{2\dd u}{3u^2+4u+3}
+=\boxed{\frac2{\sqrt5}\arctan\frac{3\tan(z/2)+2}{\sqrt5}+C.}
+\]
+
+\entry{9. 题集第 54 题}
+令 $z=t+2x$ 后出现 $I=\int\dd z/(1+2\cos z)$。取 $u=\tan(z/2)$，则
+\[
+I=\int\frac{2\dd u}{3-u^2}
+=\boxed{\frac1{\sqrt3}\ln\left|
+\frac{\sqrt3+\tan(z/2)}{\sqrt3-\tan(z/2)}\right|+C.}
+\]
+第 8、9 项同用万能换元，但换元后的二次分母分别为平方和与平方差，因此一个产生反正切，另一个产生对数。公式在不跨越换元奇点及原分母零点的局部区间上使用。
+
+\entry{10. 积分因子中的三角积分}
+作业习题 2.3 第 2(4) 题用到
+\[
+\boxed{\int\cot x\dd x=\ln|\sin x|+C,}\qquad
+e^{\int\cot x\dd x}=|\sin x|
+\]
+（最后一式取定一个原函数）。在不跨越 $\sin x=0$ 的区间上，可调整非零常数倍，选取积分因子 $\mu=\sin x$。与之对应，
+\[
+\boxed{\int\tan x\dd x=-\ln|\cos x|+C.}
+\]
+后一式也会出现在习题集例 431 的常数变易计算中。
+
+\section{分部积分：多项式乘三角函数或指数函数}
+\entry{11. 作业习题 2.3，第 2(4) 题}
+求势函数时需要
+\[
+\int2x\sin x\cos x\dd x=\int x\sin2x\dd x.
+\]
+先用倍角公式，再分部积分，得到
+\[
+\boxed{\int x\sin2x\dd x=-\frac x2\cos2x+\frac14\sin2x+C.}
+\]
+两个系数 $1/2$、$1/4$ 均须保留。作业文件：\texttt{hw2-3.pdf}。
+
+\entry{12. 题集第 9 题}
+原方程化为 $(y/x)'=\cos x$，实际只需计算 $\int\cos x\dd x$。如果没有先使用积分因子化简，容易误以为需要计算更复杂的 $\int x\cos x\dd x$。后者的结果为
+\[
+\boxed{\int x\cos x\dd x=x\sin x+\cos x+C,}
+\]
+但本题并不需要该积分。应先确认方程已经正确化简，再判断积分的难度。
+
+\entry{13. 题集第 18 题：参数法中的连续分部积分}
+令 $p=y'$，由 $x=p\sin p$ 得
+\[
+\frac{\dd y}{\dd p}=p\frac{\dd x}{\dd p}=p\sin p+p^2\cos p.
+\]
+分别计算
+\[
+\int p\sin p\dd p=-p\cos p+\sin p+C,
+\]
+\[
+\int p^2\cos p\dd p=p^2\sin p+2p\cos p-2\sin p+C.
+\]
+相加得
+\[
+\boxed{\int(p\sin p+p^2\cos p)\dd p
+=p^2\sin p+p\cos p-\sin p+C.}
+\]
+本题可练习每次分部积分使多项式次数降低一阶的计算。
+
+\entry{14. 教材例 2.2.2，印刷第 29 页}
+对 $x'+x=t+t^2$ 使用积分因子后，需要
+\[
+\boxed{\int(t+t^2)e^t\dd t=e^t(t^2-t+1)+C.}
+\]
+既可连续分部积分，也可设原函数为 $e^t(At^2+Bt+D)$，求导后比较系数。
+
+\section{反认导数：看似难算，实际已经配好}
+\entry{15. 作业习题 3.1，第 8(2) 题}
+\[
+I=\int e^{-t}\left(\frac1{t^2}+\frac2{t^3}\right)\dd t.
+\]
+由
+\[
+\left(\frac{e^{-t}}{t^2}\right)'=-\frac{e^{-t}}{t^2}-\frac{2e^{-t}}{t^3}
+\]
+得到
+\[
+\boxed{I=-\frac{e^{-t}}{t^2}+C.}
+\]
+不宜先把两项拆开分别计算：两个单项均没有初等原函数，但其组合恰好是一个初等函数的导数。作业文件：\texttt{hw 10-14.pdf}。
+
+\entry{16. 作业习题 3.1，第 9(1) 题}
+按分量逐个积分时，会遇到 $\int(t-1)e^{-t}\dd t$。因 $(te^{-t})'=(1-t)e^{-t}$，故
+\[
+\boxed{\int(t-1)e^{-t}\dd t=-te^{-t}+C.}
+\]
+原题还可先求 $x_1+x_2$，从而减少计算。作业文件：\texttt{hw 10-25.pdf}。
+
+\entry{17. 习题集例 430，印刷第 235 页}
+分子恰为分母的导数，取 $u=e^t-1$，得到
+\[
+\boxed{\int\frac{e^t}{e^t-1}\dd t=\ln|e^t-1|+C.}
+\]
+无需将指数函数展开。
+
+\section{根式积分：利用根式本身换元}
+\entry{18. 教材例 2.4.3，印刷第 46 页}
+\[
+I=\int\frac{3v^3}{\sqrt{1-v^2}}\dd v,\qquad |v|<1.
+\]
+令 $u=1-v^2$，将 $v^3\dd v$ 写为 $v^2(v\dd v)$，其中 $v^2=1-u$、$v\dd v=-\dd u/2$，得到
+\[
+I=-\frac32\int(1-u)u^{-1/2}\dd u
+=\boxed{-(v^2+2)\sqrt{1-v^2}+C.}
+\]
+
+\entry{19. 教材习题 2.5，第 2(4) 题；题集第 64 题}
+令 $z=t-x-y$ 后，$z'=-1/2-\sqrt z$，分离时需要
+\[
+I=\int\frac{\dd z}{\frac12+\sqrt z}.
+\]
+令 $u=\sqrt z$，则 $\dd z=2u\dd u$，因而
+\[
+I=\int\frac{2u}{u+1/2}\dd u
+=\int\left(2-\frac1{u+1/2}\right)\dd u.
+\]
+故
+\[
+\boxed{I=2\sqrt z-\ln(1+2\sqrt z)+C.}
+\]
+本题的关键是换元后先作除法，再积分。
+
+\section{应用题中的较复杂定积分}
+\entry{20. 二体问题的周期计算}
+出处：教材印刷第 69 页；题集第 49 题。
+\[
+\boxed{\int_0^{2\pi}\frac{\dd\theta}{(1+e\cos\theta)^2}
+=\frac{2\pi}{(1-e^2)^{3/2}},\qquad 0\le e<1.}
+\]
+万能换元后，将整周期积分写为
+\[
+2\int_{-\infty}^{+\infty}\frac{1+u^2}{\bigl[(1+e)+(1-e)u^2\bigr]^2}\dd u.
+\]
+再缩放变量，使分母化为 $(1+w^2)^2$，使用
+\[
+\int_{-\infty}^{+\infty}\frac{\dd w}{(1+w^2)^2}
+=\int_{-\infty}^{+\infty}\frac{w^2\dd w}{(1+w^2)^2}=\frac\pi2.
+\]
+本项计算量较大，可安排在基础积分方法之后练习。
+
+\section{应保留积分形式的题目}
+\entry{21. 教材例 2.2.1，印刷第 28--29 页}
+$\int e^{-t^2}\dd t$ 没有初等原函数，教材对此有明确说明。解中用 $\int_{t_0}^t e^{-s^2}\dd s$ 表示即可。
+
+\entry{22. 作业习题 3.1，第 9(3) 题}
+\[
+\int_0^t e^{s^2/2-s}\dd s,\qquad
+\frac{s^2}2-s=\frac{(s-1)^2}2-\frac12.
+\]
+配方后仍无初等原函数。后续解中的嵌套积分也可保留，不必追求没有积分号的表达式。作业文件：\texttt{hw 10-14.pdf}。
+
+\entry{23. 题集第 7、13 题}
+第 7 题取 $v=y/x$ 后得到
+\[
+\left(\frac1v+v\right)\dd v=\frac{2e^x}{x}\dd x,
+\]
+需要 $\int e^x/x\dd x$，它没有初等原函数。第 13 题可找到特解 $y_1=-x-1/x$，线性化后出现 $\int e^{-x^2/4}/x\dd x$，同样没有初等原函数。两题均允许保留积分形式。
+
+\entry{24. 作业习题 2.1，第 3 题}
+\[
+\int_0^x\frac{\dd u}{(1+u^2)^{1/3}},\qquad
+\int_0^t\frac{\dd s}{(1+s^4)^{1/3}}.
+\]
+本题应保留定积分，通过单调性与反常积分的收敛性研究渐近线，无须先求初等原函数。作业文件：\texttt{hw2(1).pdf}。
+
+\entry{25. 题集第 62 题}
+由首次积分 $x^2-y^2=A$、$x^2-z^2=B$ 恢复时间时，通常出现
+\[
+\int\frac{\dd x}{\sqrt{(x^2-A)(x^2-B)}}.
+\]
+一般属于椭圆积分，特殊参数可能使其退化为初等积分。原题要求用定积分恢复时间时，保留上述形式即可；所取坐标分支须满足原系统及实根条件。
+
+\section{超出本次范围的作业补充：指数乘三角函数}
+第 3.2 节作业若采用常数变易法，会用到
+\[
+\boxed{\int e^{at}\cos bt\dd t
+=\frac{e^{at}(a\cos bt+b\sin bt)}{a^2+b^2}+C,}
+\]
+\[
+\boxed{\int e^{at}\sin bt\dd t
+=\frac{e^{at}(a\sin bt-b\cos bt)}{a^2+b^2}+C,}
+\]
+其中 $a,b\in\R$、$a^2+b^2>0$。计算方法为连续分部积分两次，再联立求出原积分。该份作业也可用待定系数法减少积分。作业文件：\texttt{10.25作业2.pdf}；该作业不纳入截止 3.1 的考试范围。
+
+\textbf{练习顺序。}建议优先重做第 1、6、8、9、11、13、15、18、19 项，它们覆盖主要计算障碍；第 21--25 项则重点识别何时应保留积分形式。
+
+\clearpage
+\part*{第二部分：Bernoulli 换元中 $\alpha$ 的限制}
+本部分为补充说明。讨论实数范围内的方程
+\[
+\boxed{x'+p(t)x=q(t)x^\alpha,\qquad p,q\in C(I),\quad\alpha\in\R.}
+\]
+需要分别确定：原方程中的 $x^\alpha$ 是否有定义；换元 $z=x^{1-\alpha}$ 在何处可微、可逆；求得的线性方程解 $z(t)$ 是否落在该换元的值域内；零解与经过零点的解是否被换元排除。这些限制不能仅由线性方程的存在区间代替。
+
+\section{先分开处理 $\alpha=0$ 与 $\alpha=1$}
+\textbf{$\alpha=0$。}按该类方程的通常约定，将零次幂项作为常数项 $1$，原方程直接写成
+\[
+x'+p(t)x=q(t).
+\]
+这已经是一阶线性方程，无需 Bernoulli 换元。零函数为解当且仅当 $q\equiv0$；不能套用“$\alpha>0$ 时零函数为解”的结论。
+
+\textbf{$\alpha=1$。}原方程为
+\[
+x'+\bigl(p(t)-q(t)\bigr)x=0,
+\qquad x=C\exp\!\left(\int_{t_*}^t(q(s)-p(s))\dd s\right).
+\]
+此时 $z=x^{1-\alpha}=x^0=1$ 在非零解支上为常数，不能区分不同的 $x$，且 $1-\alpha=0$，逆变换不存在。因此标准 Bernoulli 换元必须要求 $\alpha\ne1$。
+
+以下讨论 $\alpha\ne0,1$，并记 $\beta=1-\alpha\ne0$。
+
+\section{实幂定义域：正解支与负解支不能混同}
+\subsection{正解支 $x>0$}
+对任意实数 $\alpha$，均可定义
+\[
+x^\alpha=e^{\alpha\ln x},\qquad x>0.
+\]
+在该区域上，$x^\alpha$ 与 $x^\beta$ 均为光滑函数。因此，若只讨论正解，实幂的定义不要求 $\alpha$ 为整数或有理数。
+
+\subsection{负解支 $x<0$}
+采用通常的实数幂约定时，$x<0$ 上的 $x^\alpha$ 有实数意义，需要 $\alpha$ 为整数，或为最简分数
+\[
+\alpha=\frac mn,\qquad m\in\mathbb Z,\quad n\in\mathbb N,
+\quad \gcd(|m|,n)=1,\quad n\text{ 为奇数}.
+\]
+整数包含在 $n=1$ 的情形中。此时
+\[
+x^{m/n}=(-1)^m|x|^{m/n}\quad(x<0),
+\]
+可先取实数奇次根再取整数次幂。若最简分母 $n$ 为偶数，或 $\alpha$ 为无理数，则通常不在 $x<0$ 上定义该实幂，不能自行增加负解分支。例如 $\alpha=1/2$、$3/2$、$\sqrt2$ 时，标准实数讨论均限制在非负或正的 $x$ 上。
+
+对允许负底数的 $\alpha=m/n$，有
+\[
+\beta=1-\alpha=\frac{n-m}{n},\qquad
+\gcd(|n-m|,n)=1.
+\]
+因此 $\beta$ 的最简分母同样为奇数，换元 $x^\beta$ 在每个非零负解支上也有定义，并满足通常的幂函数求导公式。
+
+\subsection{零点 $x=0$}
+若 $\alpha>0$，则 $0^\alpha=0$，原方程在 $x=0$ 处有定义，且 $x\equiv0$ 始终是解。若 $\alpha<0$，则 $0^\alpha$ 无定义，原方程的定义域不包含 $x=0$，零函数不是解；即使 $q$ 在某处为零，也不能未经重新定义就把乘积 $q(t)x^\alpha$ 在 $x=0$ 处视为有意义。
+
+\section{标准换元只在选定的非零符号分支上等价}
+在 $x^\alpha$ 有定义且 $x\ne0$ 的区间上，除以 $x^\alpha$ 得
+\[
+x^{-\alpha}x'+p(t)x^{1-\alpha}=q(t).
+\]
+令 $z=x^\beta$，由
+\[
+z'=\beta x^{\beta-1}x'=\beta x^{-\alpha}x'
+\]
+得到
+\[
+\boxed{z'+\beta p(t)z=\beta q(t).}
+\]
+在每个选定的正、负半轴上，
+\[
+\frac{\dd z}{\dd x}=\beta x^{-\alpha}\ne0,
+\]
+故换元局部可逆，且在该整个半轴上严格单调。上述等价性以 $x\ne0$ 为前提；它不自动覆盖含零点的整个解。
+
+若 $x(t_0)=x_0\ne0$，初值必须转换为 $z(t_0)=x_0^\beta$。取 $P(t)=\int_{t_0}^t p(s)\dd s$，线性初值解为
+\[
+\boxed{z(t)=e^{-\beta P(t)}
+\left[x_0^\beta+\beta\int_{t_0}^t q(s)e^{\beta P(s)}\dd s\right].}
+\]
+求得 $z$ 后，仍须筛选其取值，才能恢复原方程的解。
+
+\section{逆变换的值域限制与分支选择}
+\subsection{正解的逆变换始终要求 $z>0$}
+在 $x>0$ 上，无论 $\beta$ 的正负，均有
+\[
+z=x^\beta>0,\qquad \boxed{x=z^{1/\beta}\quad(z>0).}
+\]
+所以线性方程的任意实解 $z(t)$ 并不一定对应正的 Bernoulli 解。应在 $\{t\in I:z(t)>0\}$ 的连通分支上使用上述逆变换；对于给定非零初值，选择包含 $t_0$ 的分支。
+
+尤其当 $1/\beta$ 是整数时，$z^{1/\beta}$ 可能对某些负 $z$ 仍为实数，但这不代表它是原换元在正半轴上的逆。是否为逆必须检验 $x^\beta=z$，不能只检查最后一个幂是否可计算。
+
+\subsection{负解的逆变换由分子奇偶性决定}
+设 $\alpha=m/n$ 为最简分数，$n$ 为奇数，取 $x<0$。记 $k=n-m$，则
+\[
+z=x^{k/n}=(-1)^k|x|^\beta.
+\]
+由于 $n$ 为奇数，分两种情况：
+\begin{itemize}
+\item 若 $m$ 为奇数，则 $k$ 为偶数，负解支对应 $z>0$，逆变换为 $x=-z^{1/\beta}$。此时正、负两个解支均映到正的 $z$，必须用原初值确定符号。
+\item 若 $m$ 为偶数，则 $k$ 为奇数，负解支对应 $z<0$，逆变换可无歧义地写为 $x=-(-z)^{1/\beta}$。此式中 $-z>0$，实幂始终按正底数计算。
+\end{itemize}
+所有非零分支可统一写为
+\[
+\begin{array}{c|c|c}
+\text{原解支}&\text{允许的 }z&\text{逆变换}\\\hline
+x>0&z>0&x=z^{1/\beta}\\
+x<0,\ m\text{ 奇},\ n\text{ 奇}&z>0&x=-z^{1/\beta}\\
+x<0,\ m\text{ 偶},\ n\text{ 奇}&z<0&x=-(-z)^{1/\beta}
+\end{array}
+\]
+不能不加条件地把 $x=z^{1/(1-\alpha)}$ 当作同时适用于所有正、负分支的公式。
+
+\section{$\alpha$ 的大小决定零点附近的行为}
+\subsection{$\alpha<0$：零点不属于原方程定义域}
+此时 $\beta>1$。正解分支上 $z\to0^+$ 对应 $x\to0^+$，但到达零点后原方程失去定义，不能接上零解，也不能作为原方程的解穿过零点。逆幂指数 $1/\beta\in(0,1)$，其在零点的导数还可能发散。
+
+\subsection{$0<\alpha<1$：非零支可在有限时刻到达零点}
+此时 $0<\beta<1$，正解逆变换为 $x=z^{1/\beta}$，其指数 $1/\beta>1$。当线性解在有限时刻 $a$ 满足 $z(a)=0$，且某一侧 $z>0$ 时，
+\[
+x(t)=z(t)^{1/\beta},\qquad
+x'(t)=\frac1\beta z(t)^{1/\beta-1}z'(t)\longrightarrow0.
+\]
+因此可在该侧取非零解支，另一侧取 $x=0$，得到满足原方程的局部 $C^1$ 拼接解。给定 $z(a)=0$ 后，
+\[
+z(t)=\beta e^{-\beta\int_a^t p(u)\dd u}
+\int_a^t q(s)e^{\beta\int_a^s p(u)\dd u}\dd s.
+\]
+若 $q(a)\ne0$，由 $z'(a)=\beta q(a)$ 可知在某一侧有 $z>0$：$q(a)>0$ 时为右侧，$q(a)<0$ 时为左侧。若 $q(a)=0$，则不能仅凭这一条件判断是否存在非零拼接解；例如 $q\equiv0$ 时零初值解唯一。
+
+在零解持续的时间段上，$z=x^\beta\equiv0$，但它通常不满足线性方程 $z'+\beta pz=\beta q$。这说明：为了得到原方程的完整解集，须在各非零区间分别使用线性化结果，再直接检验零点处的连接；不能要求拼接后的 $z$ 在整个区间都满足那条线性方程。
+
+\subsection{$\alpha>1$：线性变量的零点对应原变量无穷大}
+此时 $\beta<0$，在正解支上
+\[
+z\to0^+\Rightarrow x=z^{1/\beta}\to+\infty,
+\qquad
+x\to0^+\Rightarrow z=x^\beta\to+\infty.
+\]
+所以有限时刻的 $z=0$ 通常对应原解发散，而不是 $x=0$。系数连续的线性方程解在 $I$ 的有限内点附近保持有限，因此非零 Bernoulli 解不能在这样的内点趋于零。
+
+另一方面，$\alpha>1$ 时原方程的右端在零附近、所选合法实数分支上对 $x$ 局部 Lipschitz；故经过零点的解只能是零解。若只考虑 $x\ge0$，同样有这一唯一性结论。这里不能将 $0<\alpha<1$ 时的等待拼接现象直接移用过来。
+
+\section{代表指数：直接检查分支}
+\subsection{$\alpha=1/2$：平方回代后仍要求 $z>0$}
+\[
+z=\sqrt x,\qquad z'+\frac12pz=\frac12q,\qquad x=z^2.
+\]
+非零解支要求 $x>0$，因而必须有 $z>0$。即使 $z<0$ 时 $z^2$ 也为实数，它仍不满足 $\sqrt x=z$。例如 $x'=\sqrt x$ 的变换给出 $z=(t-a)/2$，所以
+\[
+x=(t-a)^2/4\quad\text{只在 }t>a\text{ 时为非零解支}.
+\]
+在 $t<a$ 时，该表达式导数为负而 $\sqrt x\ge0$，不满足原方程。其全实轴拼接解为 $t\le a$ 时取零、$t>a$ 时取该正解支。
+
+\subsection{$\alpha=1/3$：同一个正 $z$ 对应两个符号分支}
+\[
+z=x^{2/3}=|x|^{2/3}>0\quad(x\ne0),\qquad
+z'+\frac23pz=\frac23q.
+\]
+逆变换有 $x=+z^{3/2}$ 与 $x=-z^{3/2}$ 两支，分别由正、负初值确定。例如 $x'=x^{1/3}$ 的非零支为
+\[
+x=\pm\left[\frac23(t-a)\right]^{3/2},\qquad t>a.
+\]
+两个符号都是合法实解，不能只写正支。
+
+\subsection{$\alpha=2/3$：$z$ 可正可负，原解可经过零点}
+\[
+z=x^{1/3},\qquad z'+\frac13pz=\frac13q,\qquad x=z^3.
+\]
+非零区间内允许 $z$ 取任一非零符号。例 $x'=x^{2/3}$ 有
+\[
+z=(t-a)/3,\qquad x=(t-a)^3/27.
+\]
+将 $x$ 直接代入原方程可知该函数在全实轴上为解，并从负值经过零点变为正值。此外还可存在带零值停留时间的拼接解；这些拼接解不一定对应一条全区间的线性解 $z(t)$。因此，不同 $\alpha$ 的过零与变号性质不能互相套用。
+
+\subsection{$\alpha=3/2$：负指数逆变换也会掩盖符号限制}
+此时负 $x$ 不在实幂定义域内，且
+\[
+z=x^{-1/2}>0,\qquad x=z^{-2}.
+\]
+虽然 $z^{-2}$ 对负 $z$ 也有定义，但该取值不能满足 $x^{-1/2}=z$。例如 $x'=x^{3/2}$ 给出 $z=C-t/2$；所得 $x=(C-t/2)^{-2}$ 仅在 $C-t/2>0$ 的区间内满足原方程。若 $z<0$，则 $x'=z^{-3}<0$，而 $x^{3/2}>0$，两者不等。
+
+\subsection{$\alpha=2$ 与 $\alpha=3$：整数指数仍须区分逆分支}
+当 $\alpha=2$ 时，
+\[
+z=x^{-1},\qquad z'-pz=-q,\qquad x=1/z,\quad z\ne0.
+\]
+$z$ 与 $x$ 同号，正负分支均由 $1/z$ 表示。零函数是原方程的另一个解，不能用有限 $z$ 表示。
+
+当 $\alpha=3$ 时，
+\[
+z=x^{-2}>0,\qquad z'-2pz=-2q,\qquad x=\pm z^{-1/2}.
+\]
+正负两个解支对应同一正值 $z$，应由初值选择符号；零解也不由此变换得到。
+
+\subsection{$\alpha=-1$：正负分支存在，但零解不存在}
+\[
+z=x^2>0,\qquad z'+2pz=2q,\qquad x=\pm\sqrt z.
+\]
+原方程含 $1/x$，故正负解支均不得包含零点。如果 $z$ 到达零，原解虽可能连续趋于零，但不能在该点继续作为原方程的解。
+
+\section{求解时如何确定最终有效区间}
+给定 $x(t_0)=x_0\ne0$ 时，先依据 $\alpha$ 与 $x_0$ 判断原实幂是否有定义，再选择包含 $x_0$ 的正或负半轴，计算 $z(t_0)=x_0^\beta$ 并解线性初值问题。随后：
+\begin{enumerate}
+\item 将 $z(t)$ 限制在对应换元的值域内。正解支要求 $z>0$；负解支的条件按前述奇偶性表确定。
+\item 取满足条件且包含 $t_0$ 的连通时间区间，使用该分支的逆变换，而不是无条件使用形式上的 $z^{1/\beta}$。
+\item 若 $0<\alpha<1$ 且到达零点，检查是否能与零解或另一非零支作 $C^1$ 连接；连接后的函数须逐点满足原方程。
+\item 若 $\alpha>1$ 且 $z\to0$，应按原解发散处理；若 $\alpha<0$ 且 $x\to0$，应按离开原方程定义域处理。
+\item 若 $\alpha>0$，完整求解结果须包含零解；若 $\alpha<0$，不能将零函数加入结果。$\alpha=0,1$ 按线性方程单独处理。
+\end{enumerate}
+因此，“先解线性方程再回代”中的回代，包含实幂定义、值域筛选、符号分支与零点检查四个步骤；线性方程的任意实解并不自动给出原 Bernoulli 方程的合法实解。
+\end{document}

@@ -1,0 +1,172 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{微分方程 I}\fancyhead[R]{习题 2.3}
+\fancyfoot[C]{\thepage}\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\title{微分方程 I：习题 2.3\\\large 题目与解答}
+\author{}\date{}
+\begin{document}
+\maketitle\vspace{-2em}
+\textbf{来源与范围。}《微分方程 I（101 计划，前三章）》教材第 42 页习题 2.3；
+按用户提供的题干解答第 1 题 (1)、(3)，第 2 题 (2)、(4)，第 3 题。
+教材式 (2.19) 为 $M(t,x)\,dt+N(t,x)\,dx=0$。
+
+\section*{1. 判断全微分方程并求通积分}
+\textbf{方法。}若 $M,N$ 有连续的一阶偏导数，在矩形区域（或单连通区域）上，全微分方程的判据为 $M_x=N_t$。
+寻找势函数 $U$，使 $U_t=M,U_x=N$，则通积分为 $U(t,x)=C$。
+
+\subsection*{1(1)}
+\textbf{题目。}
+\[(3t^2-1)\,dt+(2x+1)\,dx=0.\]
+\textbf{解答。}取 $M=3t^2-1,N=2x+1$，则
+\[M_x=0=N_t,\]
+故在 $\mathbb R^2$ 上为全微分方程。直接积分得
+\[U(t,x)=t^3-t+x^2+x,\qquad dU=(3t^2-1)\,dt+(2x+1)\,dx.
+\]
+因此通积分为
+\[\boxed{t^3-t+x^2+x=C.}\]
+
+\subsection*{1(3)}
+\textbf{题目。}
+\[\left(\frac xt+t^2\right)\,dt+(\ln t-2x)\,dx=0.\]
+\textbf{解答。}实数范围内取 $t>0$。令 $M=x/t+t^2,N=\ln t-2x$，则
+\[M_x=\frac1t=N_t,\]
+故在 $(0,\infty)\times\mathbb R$ 上为全微分方程。
+由 $U_t=M$，对 $t$ 积分得
+\[U=x\ln t+\frac{t^3}{3}+h(x).
+\]
+再由 $U_x=\ln t+h'(x)=N=\ln t-2x$，得到 $h'(x)=-2x$，可取 $h(x)=-x^2$。
+因此
+\[\boxed{x\ln t+\frac{t^3}{3}-x^2=C,\qquad t>0.}\]
+
+\section*{2. 求积分因子与通积分}
+\textbf{方法。}积分因子取处处非零的函数 $\mu$，使
+\[(\mu M)_x=(\mu N)_t.
+\]
+若取 $\mu=\mu(x)$，条件化为
+\[\frac{\mu'(x)}{\mu(x)}=\frac{N_t-M_x}{M},\]
+只要右边仅依赖 $x$，便可对 $x$ 积分。积分因子可以乘任意非零常数。
+
+\subsection*{2(2)}
+\textbf{题目。}
+\[x\,dt+(2tx-e^{-2x})\,dx=0.\]
+\textbf{解答。}这里 $M=x,N=2tx-e^{-2x}$，故 $M_x=1,N_t=2x$，原方程并非全微分方程。
+在 $x\ne0$ 的区域上，
+\[\frac{N_t-M_x}{M}=\frac{2x-1}{x}=2-\frac1x.
+\]
+所以可取
+\[\boxed{\mu(x)=\frac{e^{2x}}{x},\qquad x\ne0.}\]
+在每个半平面 $x>0$ 或 $x<0$ 上，这与 $\exp(2x-\ln|x|)$ 仅相差一个非零常数。
+乘以该积分因子后，方程成为
+\[e^{2x}\,dt+\left(2te^{2x}-\frac1x\right)\,dx=0.
+\]
+左边为 $d(te^{2x}-\ln|x|)$，所以
+\[\boxed{te^{2x}-\ln|x|=C,\qquad x\ne0.}\]
+\textbf{补回被排除的解。}把 $x(t)\equiv0$ 直接代入原方程，得到 $0=0$，故它也是原方程的解。
+上述积分因子在 $x=0$ 处无定义，不能凭通积分族否定这一解。
+
+\subsection*{2(4)}
+\textbf{题目。}
+\[e^t\,dt+(e^t\cot x+2x\cos x)\,dx=0.\]
+\textbf{解答。}原方程要求 $\sin x\ne0$。令 $M=e^t,N=e^t\cot x+2x\cos x$，有
+\[\frac{N_t-M_x}{M}=\cot x.
+\]
+故在每个条带 $k\pi<x<(k+1)\pi$（$k\in\mathbb Z$）上可取
+\[\boxed{\mu(x)=\sin x.}\]
+乘后得到
+\[e^t\sin x\,dt+(e^t\cos x+2x\sin x\cos x)\,dx=0.
+\]
+势函数可取
+\begin{align*}
+U(t,x)&=e^t\sin x+\int 2x\sin x\cos x\,dx\\
+&=e^t\sin x+\int x\sin 2x\,dx\\
+&=e^t\sin x-\frac{x}{2}\cos 2x+\frac14\sin 2x.
+\end{align*}
+因此
+\[\boxed{e^t\sin x-\frac{x}{2}\cos 2x+\frac14\sin 2x=C,
+\qquad \sin x\ne0.}\]
+核验：$U_t=e^t\sin x$，$U_x=e^t\cos x+x\sin2x$，恰为乘后两个系数。
+虽然乘后的表达式可延拓到 $x=k\pi$，这些直线不属于原方程的定义域。
+
+\section*{3. 指定复合形式的积分因子的充要条件}
+\textbf{题目。}给出方程 (2.19)
+\[M(t,x)\,dt+N(t,x)\,dx=0\]
+存在形如 $\mu(t,x)=m(\varphi(t,x))$ 的积分因子的充要条件，其中依次取
+\[\varphi=tx,\qquad \varphi=e^{at+bx}\ (ab\ne0),\qquad
+\varphi=(t^2+x^2)^\alpha\ (\alpha\ne0).
+\]
+这里用 $m$ 表示一元函数，以区别于二元复合函数 $\mu$。
+
+\subsection*{统一判据与证明}
+在所讨论的区域 $D$ 上，设 $M,N\in C^1$、$\varphi\in C^1$。
+以下在矩形或单连通区域上讨论全微分方程；也可以理解为局部结论。
+设一元函数 $m$ 在包含 $\varphi(D)$ 的区间 $J$ 上为 $C^1$ 且处处非零。
+记
+\[B=N_t-M_x,\qquad A=M\varphi_x-N\varphi_t.
+\]
+由链式法则，
+\begin{align*}
+(m(\varphi)M)_x&=m'(\varphi)\varphi_xM+m(\varphi)M_x,\\
+(m(\varphi)N)_t&=m'(\varphi)\varphi_tN+m(\varphi)N_t.
+\end{align*}
+因此全微分条件等价于
+\[m'(\varphi)A=m(\varphi)B.
+\]
+于是\textbf{充要条件}是：存在区间 $J$ 上的连续一元函数 $h$，使
+\[\boxed{B(t,x)=A(t,x)\,h(\varphi(t,x)),\qquad (t,x)\in D.}\]
+必要性：取 $h(s)=m'(s)/m(s)$ 即得。
+充分性：给定这样的 $h$，令
+\[\boxed{m(s)=c\exp\left(\int_{s_0}^{s}h(u)\,du\right),\qquad c\ne0.}\]
+则 $m$ 处处非零，$m'/m=h$，代回即得到 $(\mu M)_x=(\mu N)_t$。
+
+\textbf{常用商式判据。}在 $A\ne0$ 的区域上，上述条件等价于
+\[\frac{N_t-M_x}{M\varphi_x-N\varphi_t}
+\quad\text{是仅关于 $\varphi$ 的连续函数。}\]
+“仅关于 $\varphi$”意味着同一个 $\varphi$ 值对应同一个商值，而非仍可独立依赖 $t,x$。
+若 $A=0$，不能使用除法：此处必须有 $B=0$，并要求其余点上的商能够表示为同一个连续的 $h(\varphi)$。
+如果 $A=B=0$ 在整个区域恒成立，则任取处处非零的 $C^1$ 函数 $m$ 都满足条件。
+
+\subsection*{(a) $\varphi(t,x)=tx$}
+此时 $\varphi_t=x,\varphi_x=t$，所以充要条件为存在连续一元函数 $h$，使
+\[\boxed{N_t-M_x=(tM-xN)h(tx).}\]
+当 $tM-xN\ne0$ 时，常用形式为
+\[\boxed{\frac{N_t-M_x}{tM-xN}=h(tx).}\]
+积分因子为
+\[\boxed{\mu(t,x)=c\exp\left(\int_{s_0}^{tx}h(u)\,du\right).}\]
+
+\subsection*{(b) $\varphi(t,x)=e^{at+bx}$，$ab\ne0$}
+令 $s=e^{at+bx}>0$，则 $\varphi_t=as,\varphi_x=bs$。充要条件为
+\[\boxed{N_t-M_x=e^{at+bx}(bM-aN)h(e^{at+bx}).}\]
+在 $bM-aN\ne0$ 的区域上，这也等价于存在连续一元函数 $g$，使
+\[\boxed{\frac{N_t-M_x}{bM-aN}=g(at+bx).}\]
+这里两种表述的关系为 $g(v)=e^v h(e^v)$；因为指数与对数互为逆函数，两个单变量条件等价。
+相应地可取
+\[\boxed{\mu(t,x)=c\exp\left(\int_{v_0}^{at+bx}g(v)\,dv\right).}\]
+它确为 $e^{at+bx}$ 的函数：将上式中的 $at+bx$ 换成 $\ln s$ 即得 $m(s)$。
+在分母为零处，仍按前述不作除法的条件判定。
+
+\subsection*{(c) $\varphi(t,x)=(t^2+x^2)^\alpha$，$\alpha\ne0$}
+先在 $r=t^2+x^2>0$ 的区域上讨论，以保证任意实指数都有定义且光滑。
+此时
+\[\varphi_t=2\alpha t r^{\alpha-1},\qquad
+\varphi_x=2\alpha x r^{\alpha-1}.
+\]
+所以充要条件为
+\[\boxed{N_t-M_x=2\alpha r^{\alpha-1}(xM-tN)h(r^\alpha).}\]
+由于 $r\mapsto r^\alpha$ 在 $r>0$ 上可逆，条件也等价于存在连续一元函数 $g$，使
+\[\boxed{N_t-M_x=(xM-tN)g(t^2+x^2).}\]
+在 $xM-tN\ne0$ 时，即要求
+\[\boxed{\frac{N_t-M_x}{xM-tN}=g(t^2+x^2).}\]
+两种表述的关系为 $g(r)=2\alpha r^{\alpha-1}h(r^\alpha)$。
+积分因子可取
+\[\boxed{\mu(t,x)=c\exp\left(\frac12\int_{r_0}^{t^2+x^2}g(u)\,du\right).}\]
+事实上，将右边写为 $q(r)$，则 $\mu=q(t^2+x^2)=m((t^2+x^2)^\alpha)$，其中 $m(s)=q(s^{1/\alpha})$。
+同时 $\mu_x/\mu=xg(r)$、$\mu_t/\mu=tg(r)$，因此
+\[\frac{(\mu M)_x-(\mu N)_t}{\mu}
+=M_x-N_t+(xM-tN)g(r)=0.
+\]
+若所讨论的区域含有原点，则必须另行检查 $\varphi$ 与所构造的 $\mu$ 是否在原点有定义、可微且非零，并在那里检验全微分条件；不能直接沿用 $r>0$ 的除法推导。
+\end{document}
