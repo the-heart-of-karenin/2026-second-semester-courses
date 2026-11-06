@@ -1,0 +1,37 @@
+﻿本 书 从 现 代 数 学 的 观 点 介 绍 复 分 析 的 基 础 知 识 与 常 用 工 具 ． 全 书 共 分 为 8 章 · 主 要 包 括 ：
+复 数 、 复 孓 数 、 作 为 映 射 的 解 析 函 数 、 复 积 分 、 级 数 与 乘 积 展 开 、 共 形 映 射 ， 狄 利 克 雷 问 题 、
+椭 圆 函 数 以 及 全 局 解 析 函 数 ． 此 外 大 部 分 章 节 后 都 有 练 习 ， 便 于 学 生 掌 握 书 中 内 容
+本 书 取 材 合 理 、 言 简 意 赅 、 由 浅 人 深 、 逻 辑 严 谨 、 论 述 清 晰 ， 可 作 为 高 等 院 校 高 年 级 本
+科 生 以 及 研 究 生 的 教 材 和 参 考 书 。
+Lars 妩 Ahlfors: Complex Analysis ， Third Edition (ISBN 0 ． 07 ． 000657 ． l)
+Copyright 0 ] 979 ， 1956 by the McGraw•-Hill Companies ， lnc•
+Original English edition published by the McGraw- Hill Companies. lnc. AII rights reserved.
+NO part this publication may be reprOduced Or dlstributed in any form 0 r by any means ， or
+stored in a database Or retneval system ， wIthOut the prior written permisston of the publisher.
+Simplified Chinese translation edition jointly published by McGraw-Hill Education （ Asia ）
+Co. and China Machine Press.
+本 书 中 文 简 体 字 翻 译 版 由 机 槭 工 业 出 版 社 和 美 国 麦 格 劳 一 希 尔 教 育 （ 亚 洲 ） 出 版 公 司 合 作
+出 版 ． 未 经 出 版 者 楨 先 书 面 许 可 · 不 得 以 任 何 方 式 复 制 或 杪 袭 本 书 的 任 何 部 分
+本 书 封 面 贴 有 McGraw-HIII 公 司 防 伪 标 签 ， 无 标 签 者 不 得 销 售
+版 权 所 有 · 侵 权 必 究 ，
+本 书 法 律 顾 问 北 京 市 展 达 律 师 事 务 所
+本 书 版 权 登 记 号 ： 图 字 ： 01 ． 2003 ． 8558
+图 书 在 版 编 目 （ CIP) 數 据
+复 分 析 （ 原 书 第 3 版 ） / （ 美 ） 阿 尔 福 斯 （ AhIfors. v. ） 著 ； 赵 志 勇 等 译 ． 一 北 京 ： 机
+械 工 业 出 版 社 ， 2005 ． 7
+（ 华 章 数 学 译 丛 ）
+书 名 原 文 ； Compiex Analys1s ， Third Edition
+ISBN 7 彐 1 卜 16793 ． 7
+I ． 复 ． “ II ． ． 阿 “ ． 0 赵 “ ． ． 复 分 析 一 高 等 学 校
+中 国 版 本 图 书 CIP 数 据 核 字 （ 2 開 5 ） 第 071163 号
+一 教 材
+IV ． 0174 ． 5
+机 械 工 业 出 版 社 ` 北 京 市 西 臧 区 百 万 庄 大 22 号 邮 政 码 № 0037 ）
+责 任 编 辑 ： 迟 振 春
+北 京 诚 信 伟 业 印 刷 有 限 公 司 印 刷 ． 新 华 书 店 北 京 发 行 所 发 行
+2005 年 7 月 第 1 版 第 1 次 印 刷
+787mm × 1092mm 1 / 16 · 16 ． 75 印 张
+印 数 ： 0 00 卜 4 000 册
+定 价 ： 33 ， 00 元
+凡 购 本 书 ， 如 有 倒 页 、 脱 页 、 缺 页 ， 由 本 社 发 行 部 调 换
+本 社 购 书 热 线 ： （ 010 ） 68326294

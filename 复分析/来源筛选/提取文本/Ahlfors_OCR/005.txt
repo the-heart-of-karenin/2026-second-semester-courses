@@ -1,0 +1,33 @@
+﻿译 者 序
+本 书 是 复 变 大 师 Lars V. AhIfors 的 经 典 之 作 · Lars V. AhIfors （ 1907 一
+} 996 ） ， 美 籍 芬 垩 数 学 家 ， 是 20 世 纪 最 伟 大 的 分 析 大 师 之 一 · 他 是 1936 年 首 次
+菲 尔 茨 奖 获 奖 者 ， 1981 年 因 在 几 何 函 数 论 方 面 的 有 效 新 方 法 的 创 立 和 根 本 性 的
+发 现 而 荣 获 沃 尔 夫 奖 ， Ahlf 。 rs 是 迄 今 为 止 获 得 这 两 项 世 界 数 学 最 高 奖 的 仅 有 的
+几 个 人 之 一
+Ah rs 的 主 要 工 作 领 域 是 复 分 析 ， 他 对 值 分 布 论 、 黎 曼 曲 面 、 数 值 长 度 、
+拟 共 形 映 射 和 克 莱 因 群 等 领 域 都 做 出 了 重 大 贡 献 ， 他 于 1929 年 证 明 了 当 茹 瓦
+(Denjoy) 于 1907 年 提 出 的 猜 想 ： 如 果 整 数 的 阶 为 有 限 渐 进 值 个 数 为 狲
+则 n<2e 1935 年 提 出 覆 盖 面 理 论 ， 由 此 可 推 出 著 名 的 ] 925 年 的 奈 旺 林 纳
+（ Nevanlinna) 理 论 ， 并 对 值 分 布 论 的 几 何 意 义 予 以 明 确 的 阐 述 ． 他 发 展 了 H.
+Weyl 的 亚 纯 曲 线 理 论 ． 后 来 的 工 作 围 绕 黎 曼 曲 面 的 参 模 理 论 ． 由 于 参 模 空 间 难
+于 处 理 ， 问 题 转 向 研 究 其 覆 盖 空 间 一 一 泰 希 米 勒 〈 TeichmüIIer ） 空 间 ． 为 此 ，
+AhIfors 发 展 了 拟 共 形 映 射 理 论 ， 用 来 对 其 结 构 进 行 研 究 ， 特 别 是 证 明 它 具 有 复
+解 析 结 构 ． AhIfors 的 著 作 清 晰 流 畅 ， 除 了 本 书 外 ， 还 包 括 《 拟 共 形 映 射 讲 义 》
+和 《 Conformal lnvariants) （ 共 形 不 变 量 ） 等 ， 因 此 而 荣 获 1982 年 美 国 数 学 会
+Steele 奖 ，
+复 分 析 研 究 复 自 变 量 复 值 函 数 的 分 析 ， 是 数 学 中 最 重 要 的 分 支 之 一 ， 同 时 在
+数 学 的 其 他 分 支 （ 如 微 分 方 程 、 积 分 方 程 、 概 率 论 、 数 论 等 ） 以 及 在 自 然 科 学 的
+其 他 领 域 （ 如 空 气 动 力 学 、 流 体 力 学 、 电 学 、 热 学 、 理 论 物 理 等 ） 都 有 着 重 要 的
+应 用 ． AhIf 。 rs 的 这 本 书 被 国 内 外 很 多 大 学 采 纳 作 为 教 材 ， 是 复 分 析 领 域 历 经 考
+验 的 一 本 经 典 教 材
+这 本 教 材 取 材 合 理 、 言 简 意 賅 、 由 浅 人 深 、 逻 辑 严 谨 、 论 述 清 晰 、 易 于 教
+学 ． 本 书 中 使 用 了 很 多 诸 如 “ 不 难 看 出 ” 、 “ 显 然 ” 、 “ 明 显 ” 、 “ 易 见 ” 等 词 ， 对 应
+的 英 文 包 括 ： clearly ， obviously ， evidently ， it is easy tO see••• ， it is not difficult
+tO see••• ， it 这 plain that••• ， IS readily seen that••• ， it is easy tO see••• ， 等 等 ． 据
+作 者 在 该 书 第 1 版 的 前 言 中 所 说 ， “ They are not used to blur the picture. On t he
+COntrary ， they test the reader•s understanding ， fOr if he does nOt agree that the
+omitted reasOmng iS clear ， obvious ， and evident ， he had better turn back a few
+pages and make a fresh start.
+” （ 目 的 并 不 是 在 故 弄 玄 虚 ， 而 是 试 验 读 者 是 否 真 正
+了 解 “ ． ． “ ） ， 全 书 共 分 成 8 章 ， 主 要 包 括 ： 复 数 、 复 函 数 、 作 为 映 射 的 解 析 函
+数 、 复 积 分 、 级 数 与 乘 积 展 开 、 共 形 映 射 ． 狄 利 克 雷 问 题 、 椭 圆 函 数 以 及 全 局 解

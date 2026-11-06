@@ -1,0 +1,60 @@
+
+===== PDF PAGE 1 =====
+   2025-2026-1 Complex Analysis Final (Recalled Version)
+
+
+
+
+
+1. Let u be a harmonic function, and f be a holomorphic function. Using ∆= 4∂¯∂, prove
+
+   that
+
+                       ∆(u ◦f) = ((∆u) ◦f) · |f′|2.
+
+
+2. Use the contour integration to compute
+
+                        Z ∞    1
+                                  −1 < a < 1.                                   0  xa(1 + x)dx,
+
+
+3. 1) Let f be a holomorphic function on the unit disk D. Suppose that |f(z)| ≤M on D
+
+  and f(aj) = 0 for some aj ∈D, 1 ≤j ≤n. Show that
+
+                                   z −a1      z −an
+                           |f(z)| ≤M|            | · · · |             |,   z ∈D.
+                                1 −¯a1z     1 −¯anz
+
+
+   Hint. Use the same method for proving the Schwarz Lemma.
+
+
+   2) A finite Blaschke product is a rational function of the form
+
+                                       z −a1       z −an
+                        B(z) = eiφ(         ) · · · (          ),
+                                    1 −¯a1z     1 −¯anz
+
+                                                  D and  where a1, · · · an ∈D and 0 ≤φ < 2π.  Suppose that f  is holomorphic on
+
+   continuous on ¯D with |f(z)| = 1 for |z| = 1. Show that f is a finite Blaschke product.
+
+4. Let f be a holomorphic function in the punctured unit disk D∗. Suppose that there is
+
+   a sequence of poles {zj}∞j=1 of f which accumulates to the origin. Prove that f(D∗) is
+
+   dense in the complex plane C.
+
+
+   Hint. Use the same method for proving the Casaroti-Weierstrass Theorem.
+
+
+5. Suppose Ωis an area in C, and 0 is on the boundary of Ω. Suppose the interval [0, 1]
+
+    is in C \ Ω, construct a subharmonic barrier near 0.
+
+
+
+                                      1

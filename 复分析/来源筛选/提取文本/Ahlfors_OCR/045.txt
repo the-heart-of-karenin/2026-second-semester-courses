@@ -1,0 +1,41 @@
+﻿35
+以 及 恒 等 式
+COS 之 ． 卜 SIn Z ： = 1 ．
+还 可 以 得 到
+DCOSZ = ： - 一 smz ， = COSZ.
+加 法 公 式
+cos(a + = cosacosb 一 sina sinb
+sin(a + = cosasinb + si 皿 co 奶
+是 （ 23 ） 式 和 指 数 函 数 加 法 定 理 的 直 接 推 论 ．
+另 外 的 几 个 三 角 数 tanz ， cotz ， secz ， cosecz 都 是 次 要 的 ， 它 们 可 以 按 惯
+例 用 cosz 和 sinz 来 定 义 ． 例 如 ，
+tanz
+酽 + e
+注 意 ： 所 有 的 三 角 数 都 是 的 有 理 数 ．
+1. 求 sin i 、 cos i 和 tan(l+i) 的 值
+2 ． 双 曲 余 弦 和 双 曲 正 弦 定 义 为 coshz=(et+e 乛 ）／2 ， sinhz “ （
+2 · 用 cos 和 sin 彘 表 示 它 们 ． 推 导 出 加 法 公 式 ， 以 及 cosh2z 、 sinh2 z 的
+公 式 ，
+3 ． 用 加 法 公 式 将 cos(x+iy) 、 sin(x + i ， ） 分 解 为 实 部 和 虚 部 ．
+和
+2 ． 3 · 3
+4 ． 证 明
+COSZ 俨 = sinh2y+ COS 《 丆 = cOsh2y
+Sinh2y + Sin = cosh2y
+Sinz 《
+周 期 性
+一 （ cosh2y + cos2x) ，
+51n 上 = =
+2
+一 （ cosh2y 一 cos2 ).
+COS 上
+2
+如 果 不 z + c ） = 不 之 ） 对 所 有 的 z 成 立 ， 我 们 称 不 z ） 具 有 周 期 “ 这 样 ， 酽 的
+一 个 周 期 满 足 十 = e• 或 者 et=l. 因 此 c 到 - 为 实 数 ， 称 为 酽 的 一 个 周 期 ．
+我 们 将 证 明 有 几 个 周 期 ， 而 这 些 周 期 都 是 一 个 正 周 期 “ 的 整 数 倍 ．
+在 证 明 周 期 存 在 的 许 多 方 法 中 ， 我 们 选 取 下 面 的 方 法 ： 对 ， > 0 ， 由 Dsiny =
+cosy< 1 和 si = 0 ， 通 过 积 分 或 者 应 用 中 值 定 理 ， 得 到 smy<y. 用 同 样 的 方 法 ，
+Dcosy=—stny>—y 和 cos0 = 1 给 出 cos ， > 1 一 / 2 ， 由 此 又 得 到 sin ， > ， 一 ， 3 / 6 ，
+最 终 得 到 cos ， < 1 一 ， 2 / 2 + ， 4 / 24 ． 这 个 不 等 式 表 明 c 。 s 孬 < 0 ， 因 此 在 0 和 之
+间 存 在 一 个 弘 使 得 c 。 ” 。 = 0 ． 由 于
+COS + sin2 №

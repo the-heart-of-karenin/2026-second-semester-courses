@@ -1,0 +1,300 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[margin=2.15cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,enumitem,longtable,booktabs,fancyhdr,xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\parskip}{4pt}\setlength{\parindent}{2em}
+\setlist[enumerate]{itemsep=3pt,topsep=4pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{复分析期中复习}\fancyhead[R]{课堂内容补充重点}\fancyfoot[C]{\thepage}\setlength{\headheight}{15pt}
+\theoremstyle{definition}\newtheorem{theorem}{定理}[section]\newtheorem{proposition}[theorem]{命题}\newtheorem{definition}[theorem]{定义}
+\newcommand{\C}{\mathbb C}\newcommand{\R}{\mathbb R}\newcommand{\Z}{\mathbb Z}\newcommand{\D}{\mathbb D}\newcommand{\dd}{\,\mathrm d}
+\newcommand{\src}[1]{\par\noindent\textbf{【#1】}\par\nopagebreak}
+\DeclareMathOperator{\tr}{tr}\DeclareMathOperator{\supp}{supp}
+\title{复分析期中考试重点\\\large 课堂内容与史济怀教材的差异补充}
+\author{}\date{2026年11月6日}
+\begin{document}\maketitle\vspace{-2.4em}
+本册供已经读过史济怀、刘太顺《复变函数》的读者使用。范围依据同学提供的《复分析：定义、定理与证明》（36页，以下称“课堂整理稿”），另纳入已明确将讲授的幅角原理、Rouché定理、开映射定理和Hurwitz定理。整理稿由手写笔记经AI补全，不把其中每项补充都认定为教师明确强调的考点。
+
+\textbf{本册只展开差异。} 史书已有的CR判别、Cauchy公式、Taylor与Laurent展开、最大模、Morera、Weierstrass、可去奇点、Casorati--Weierstrass等基础内容，不再重复写定理和证明。史书对微分形式、非齐次Cauchy公式、$\bar\partial$方程、Abel边界定理及Schwarz反射也有专门叙述，不能因课堂记法不同就当作新理论。
+
+重点分为两种：史书对应章节未作系统展开的课堂内容，及史书已有主要结论、但课堂的组织形式或证明目标不同的内容。后者只补差异。本册的“重点”依据内容差异和知识之间的依赖确定，不代表已知考试命中率。
+
+史书是优先阅读的参照书，并非假定存在的课程统一教材；Simon、Lang等用于核实补充与选题，不据此扩大课堂范围。已有作业中的专题可继续直接阅读原作业答案；本册不将它们重新汇编一遍。
+
+\textbf{记号。} $H(U)$表示区域$U$上的全纯函数，$\widehat\C=\C\cup\{\infty\}$；$D(a,r)$为开圆盘。曲线分段$C^1$；边界按区域在左侧定向。$\partial_z=\frac12(\partial_x-i\partial_y)$，$\partial_{\bar z}=\frac12(\partial_x+i\partial_y)$；$\dd A=\dd x\dd y$。所有边界积分中需在边界取值的函数均明确要求相应连续性，或在闭包的邻域中定义。
+
+\tableofcontents
+
+\section{先辨认课堂与教材的对应}
+下表只作阅读定位，不重复相关基础结论。史书页码为印刷页；现有PDF的正文页码通常比印刷页大7，实际查阅以章节、定理号为准。
+\small
+\begin{longtable}{p{.23\textwidth}p{.24\textwidth}p{.44\textwidth}}
+\toprule 课堂整理稿 & 史书定位 & 本次处理\\\midrule\endhead
+§1，pp.1--2，复数与球面 & §1.1--1.3 & 已有充分叙述；不重写球极投影与广义圆的基础证明。\\
+§2.1，pp.2--4，复微分、CR、反函数 & §2.1--2.3、定理4.4.8--4.4.9 & 一点的实可微条件与全区域全纯的条件应区分；只在后文说明局部标准形的差异。\\
+§2.2，pp.4--6，Möbius与交比 & §2.5，pp.53--66 & 圆、三点确定映射、交比、共圆已充分讲述；仅补归一化矩阵的迹判别。\\
+§3.1，pp.6--11，级数、零点、边界 & §4.1--4.3；§6.2 & Abel第二定理、收敛圆周至少有一奇点及自然边界例题，史书已有；不重复。\\
+§3.2，pp.12--13，初等函数与分支 & §2.4、§3.3及§6.3 & 只需回看已学内容；不将单值性定理等后续体系自动加入期中。\\
+§4.1，pp.13--15，形式与原函数 & §3.3、§3.6 & 微分形式运算并非史书缺失；补闭与恰当的区分及Poincaré径向构造。\\
+§4.2，pp.16--19，局部Cauchy理论 & §3.2--3.5、§4.3 & 已有完整理论；不重写。\\
+§4.3，pp.19--21，Green、Pompeiu、$\bar\partial$ & §3.6--3.7，pp.94--101 & 史书专门讲述，直接阅读；不复制公式及证明。\\
+§4.4，pp.22--25，基本推论 & §3.5、§4.1、§4.5、§6.1、§8.1 & 基础结论不重写。Looman--Menchoff仅按原稿的课外补充性质列出。\\
+§4.5，pp.25--29，同调Cauchy理论 & §3.2--3.4、§4.4有相关积分与绕数，但未按本节系统展开 & 本册核心：绕数、整数链、Dixon证明、球面补集与原函数条件。\\
+§4.6，pp.29--30，双周期整函数 & 史书的Liouville理论可用，相关基础章节未作椭圆函数专题 & 只补课堂中的基本平行四边形论证，不加入椭圆函数构造体系。\\
+§5.1，pp.30--32，零点与临界点 & §4.3、定理4.4.4--4.4.9 & 零点分解及局部计数已在书中；只补显式全纯坐标标准形及临界阶数的关系。\\
+§5.2，pp.33--36，孤立奇点与Laurent分解 & §5.1--5.2 & 奇点分类充分已有；只补内外函数分解、无穷远归一化和唯一性证明。\\
+新增四个定理 & §4.4，pp.124--133 & 四个定理及主要推论均在史书；列回看位置与应用条件，不重复基础证明。\\
+\bottomrule
+\end{longtable}\normalsize
+
+\section{Möbius变换：归一化矩阵的迹}
+\src{课堂引理2.2.4，p.5；教材对照：史书命题2.5.2只给基本不动点性质；核实参考：Simon §7.3}
+\begin{proposition}[迹与二重不动点]
+设$T(z)=(az+b)/(cz+d)$非恒等，且$ad-bc=1$。则$T$在$\widehat\C$上恰有一个不动点，当且仅当$a+d=\pm2$；其余情形恰有两个互异不动点。这里“一个”指球面上的一个点，不动点方程的代数重数为2。
+\end{proposition}
+\begin{proof}
+若$c\ne0$，$\infty$不是不动点，有限不动点满足
+\[cz^2+(d-a)z-b=0.\]
+判别式为$(d-a)^2+4bc=(a+d)^2-4$，故所述条件成立。
+
+若$c=0$，则$ad=1$，$\infty$恒是不动点。若$a\ne d$，另有唯一有限不动点$b/(d-a)$，共两个；若$a=d$，则$a=d=\pm1$。因$T\ne\mathrm{id}$，此时$b\ne0$，无有限不动点，只有$\infty$。
+\end{proof}
+
+\textbf{归一化的意义。} 对一般可逆矩阵$A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$，$A$与$\lambda A$给出相同Möbius变换；先除以$\sqrt{\det A}$才能使用上面的迹条件。平方根的两个选择把迹变号，因此不依赖选择的条件是
+\[(\tr A)^2=4\det A.\]
+恒等映射的代表为标量矩阵，虽然也满足该式，却固定球面上每一点，必须单独排除。
+
+\src{课堂与史书的记号对照：交比}
+课堂采用$S(z)=\dfrac{z-z_1}{z-z_3}\dfrac{z_2-z_3}{z_2-z_1}$，故
+\[S(z_1)=0,\qquad S(z_2)=1,\qquad S(z_3)=\infty.\]
+史书定义2.5.3的槽位顺序不同。使用三点归一化时应直接核对代入值，不把两套槽位混用；原稿p.6的证明将这三个像点写为另一顺序，读证明时应按上式理解。交比不变性与共圆判别本身无需再学一遍。
+
+\section{闭形式与恰当形式：局部构造及全局障碍}
+\src{课堂引理4.1.2与例4.1.1，pp.13--15；史书§3.6已定义微分形式和外微分}
+本节不重讲$\dd,\partial,\bar\partial$的运算法则。需要额外分清的是：闭形式是微分条件，恰当形式要求一个全局单值势函数。
+
+\begin{definition}
+设$\omega=P\dd x+Q\dd y$，$P,Q\in C^1(U)$，允许复值。若$Q_x=P_y$，称$\omega$闭；若存在$F\in C^2(U)$使$\dd F=\omega$，称其恰当。恰当蕴含闭，但逆命题一般只在局部或附加域的条件后成立。
+\end{definition}
+
+\begin{theorem}[星形域上的Poincaré构造]
+设$U$关于原点星形，$\omega=P\dd x+Q\dd y$为$C^1$闭形式。则
+\[F(x,y)=\int_0^1\big[xP(tx,ty)+yQ(tx,ty)\big]\dd t\]
+满足$F_x=P$、$F_y=Q$。星形中心不为原点时先平移坐标。
+\end{theorem}
+\begin{proof}
+闭条件$Q_x=P_y$给出
+\begin{align*}
+F_x&=\int_0^1[P(tx,ty)+txP_x(tx,ty)+tyQ_x(tx,ty)]\dd t\\
+&=\int_0^1\frac{\dd}{\dd t}[tP(tx,ty)]\dd t=P(x,y).
+\end{align*}
+同理，由$P_y=Q_x$，
+\[F_y=\int_0^1[txQ_x+Q+tyQ_y](tx,ty)\dd t
+=\int_0^1\frac{\dd}{\dd t}[tQ(tx,ty)]\dd t=Q(x,y).\]
+在每条径向线段的紧邻域内可对积分求偏导，所需连续性由$P,Q\in C^1$保证。所得一阶偏导为$C^1$，故$F\in C^2$。
+\end{proof}
+
+\begin{proposition}[周期判据]
+区域$U$上的连续1-形式$\omega$具有全局势函数，当且仅当它沿每条闭的分段光滑曲线的积分都为零。对$C^1$形式，势函数具有$C^2$正则性。
+\end{proposition}
+\begin{proof}
+若$\omega=\dd F$，闭曲线积分为零。反之固定$a\in U$，以域内分段光滑路径定义$F(z)=\int_a^z\omega$。任意两条路径之差是闭路，积分条件保证定义与路径无关。沿水平、竖直短线段取差商得到$F_x=P,F_y=Q$，从而结论成立。
+\end{proof}
+
+在$\C^*$上，
+\[\omega=\frac{-y\dd x+x\dd y}{x^2+y^2}\]
+闭，局部等于$\dd\arg z$，但在单位圆上的积分为$2\pi$，故不恰当。不存在全局单值辐角正是这一积分障碍的体现。对$f\in H(U)$，$f\dd z$闭；它恰当等价于$f$具有全纯原函数。后一等价与史书§3.3衔接，不需要另建一种“原函数”。
+
+\section{同调形式的Cauchy理论}
+\subsection{绕数与整数链}
+\src{课堂§4.5，pp.25--28；补充核实：Lang IV §1--2、Simon §4.1--4.3}
+\begin{definition}
+设$\gamma:[0,1]\to\C$闭，迹为$|\gamma|$，$a\notin|\gamma|$。定义
+\[W(\gamma,a)=\frac1{2\pi i}\int_\gamma\frac{\dd z}{z-a}.\]
+整数闭链为有限形式和$\Gamma=\sum_{j=1}^mc_j\gamma_j$，$c_j\in\Z$。积分与绕数均按系数线性延拓，迹$|\Gamma|$取所有参与曲线的迹的并。
+\end{definition}
+
+\begin{proposition}
+$W(\Gamma,a)$为整数；它在$\C\setminus|\Gamma|$的每个连通分支上为常数，且在无界分支上为0。
+\end{proposition}
+\begin{proof}
+先处理单条曲线。取$L(0)$使$e^{L(0)}=\gamma(0)-a$，并定义
+\[L(t)=L(0)+\int_0^t\frac{\gamma'(s)}{\gamma(s)-a}\dd s.\]
+在每段光滑区间上求导可知$e^{-L(t)}(\gamma(t)-a)$为常数，连接处由连续性成立。因此$e^{L(1)-L(0)}=1$，得到$L(1)-L(0)\in2\pi i\Z$。这证明绕数为整数。
+
+被积核对$a$连续，且$a$在迹外的小邻域中与迹有正距离，故绕数随$a$连续；连续的整数值函数在连通分支上为常数。又
+\[|W(\gamma,a)|\le\frac{\operatorname{length}(\gamma)}{2\pi\operatorname{dist}(a,|\gamma|)}\to0\quad(a\to\infty),\]
+所以无界分支上的常数为0。有限整数线性组合继承所有结论。
+\end{proof}
+
+\begin{definition}[在区域中同调于零]
+若$|\Gamma|\subset U$，且$W(\Gamma,a)=0$对每个$a\in\C\setminus U$成立，称$\Gamma$在$U$中同调于零。条件检查的是域外的点；并不要求对每个域内点绕数也为零。
+\end{definition}
+
+例如$U=\{r<|z|<R\}$，取$r<\rho_1<\rho_2<R$，正向圆周$C_j:|z|=\rho_j$。$C_1,C_2$各自在$U$中不同调于零，但$C_2-C_1$同调于零。它们绕被挖去的内圆盘各绕一圈，相减后才抵消。对$z$位于两圆之间，$W(C_2-C_1,z)=1$，这与同调于零毫不矛盾。
+
+\subsection{Dixon证明：把局部公式粘合成整函数}
+\begin{theorem}[同调Cauchy公式与定理]
+设$U$为区域，$f\in H(U)$，$\Gamma$为$U$中同调于零的整数闭链。对$z\in U\setminus|\Gamma|$，
+\[\frac1{2\pi i}\int_\Gamma\frac{f(\zeta)}{\zeta-z}\dd\zeta=W(\Gamma,z)f(z),\qquad
+\int_\Gamma f(\zeta)\dd\zeta=0.\]
+\end{theorem}
+\begin{proof}
+令$V=\{z\notin|\Gamma|:W(\Gamma,z)=0\}$。它是开集；由同调假设，$\C\setminus U\subset V$，所以$U\cup V=\C$。
+
+对$z\in U$定义
+\[h(z)=\frac1{2\pi i}\int_\Gamma\frac{f(\zeta)-f(z)}{\zeta-z}\dd\zeta,\]
+在$\zeta=z$处按$f'(z)$补值；对$z\in V$定义
+\[\widetilde h(z)=\frac1{2\pi i}\int_\Gamma\frac{f(\zeta)}{\zeta-z}\dd\zeta.\]
+这里$h\in H(U)$，$\widetilde h\in H(V)$。为说明第一个全纯性，固定$z_0\in U$：在$z_0$附近，$\zeta$远离$z_0$的部分可直接对$z$求导；$\zeta$靠近$z_0$时用$f$的局部幂级数展开差商，得到对$(z,\zeta)$连续、对$z$全纯的延拓。紧曲线可分成有限个这样的部分，故含参积分合法。
+
+在$U\cap V$，两式之差为$f(z)W(\Gamma,z)=0$，故它们粘合成整函数$H$。当$|z|$足够大，$z\in V$，且
+\[|H(z)|\le\frac{\sum_j|c_j|\operatorname{length}(\gamma_j)\max_{|\Gamma|}|f|}
+{2\pi\operatorname{dist}(z,|\Gamma|)}\to0.\]
+由Liouville定理，$H\equiv0$。对$z\in U\setminus|\Gamma|$展开$h(z)=0$即得积分公式。
+
+再取$a\in U\setminus|\Gamma|$，把公式用于$F(\zeta)=(\zeta-a)f(\zeta)$。因$F(a)=0$，得到$\int_\Gamma f=0$。
+\end{proof}
+
+\textbf{证明的结构。} 域外绕数为零使两个定义覆盖整个平面；差商消去域内的对角奇点；重叠处绕数为零使两式一致；无穷远估计与Liouville使粘合函数消失。这四步比只记结论更能体现课堂的证明路线。
+
+\src{课堂推论4.5.6，p.28；高阶形式}
+在同样条件下，对$n\ge0$、$z\in U\setminus|\Gamma|$，
+\[\frac{n!}{2\pi i}\int_\Gamma\frac{f(\zeta)}{(\zeta-z)^{n+1}}\dd\zeta
+=W(\Gamma,z)f^{(n)}(z).\]
+在$z$的小圆盘内，绕数为常数、积分核与曲线有正距离，对公式求$n$阶导即得。不要遗漏绕数因子，也不要把这里的同调假设误换成“曲线闭合”即可。
+
+\subsection{球面补集、同调平凡与全纯原函数}
+\src{课堂定理4.5.7，pp.28--29；核实与修正证明：Simon §4.4--4.5，pp.145--151 / PDF164--170}
+\begin{theorem}
+对平面区域$U$，以下条件等价：
+\begin{enumerate}[label=(\arabic*)]
+\item $\widehat\C\setminus U$连通；
+\item $U$中每条整数闭链均同调于零；
+\item $U$上每个全纯函数都有全局全纯原函数。
+\end{enumerate}
+课堂将(3)称为“全纯单连通”。对平面区域，它也与通常的拓扑单连通等价；这里证明课堂使用的上述三条件，不另外展开基本群理论。
+\end{theorem}
+\begin{proof}
+(1)$\Rightarrow$(2)：对$U$中的闭链$\Gamma$，绕数在球面去掉$|\Gamma|$后连续，且可在$\infty$处补值0。其在连通集$\widehat\C\setminus U$上的整数值必为常数，因该集包含$\infty$，常数只能为0。
+
+(2)$\Rightarrow$(3)：同调Cauchy定理保证任意$f\in H(U)$沿闭路积分为零。路径积分定义原函数，按史书§3.3或上节周期判据即可。
+
+(3)$\Rightarrow$(1)：反设球面补集不连通。应将它分为两个\emph{非空、互不相交、相对既开又闭}的集合$A,B$，其中$\infty\in B$。因为球面补集紧，$A,B$均紧；$A$位于有限平面，且与$B\cap\C$有正距离（若$B=\{\infty\}$，取任意足够大的外界限即可）。
+
+取足够细的正方网格，把所有与$A$相交的闭小方格连同一圈相邻小方格一起取出，记有限并为$E$。网格可细到使$E\cap B=\varnothing$，并且$A\subset\operatorname{int}E$。其定向边界抵消公共边后形成有限多边形闭链$\Gamma$。边界既不经过$A$也不经过$B$，故$|\Gamma|\subset U$；它对每个$a\in A$的绕数为1。网格内部边的抵消给出这一结论；若$a$在内部网格线上，则用绕数的连续性取极限。
+
+固定$a\in A$。函数$1/(z-a)$在$U$全纯，而
+\[\int_\Gamma\frac{\dd z}{z-a}=2\pi i\ne0,\]
+与(3)蕴含的全部闭路积分为零矛盾。
+\end{proof}
+
+\textbf{为什么强调球面。} 对无界域，$\C\setminus U$可以不连通，而$\widehat\C\setminus U$连通。例如水平带状域的上下两片补集在加入$\infty$后连在一起。不能把球面补集偷换成平面补集。
+
+\textbf{原稿证明需要补的条件。} 原稿p.28--29直接取“不含$\infty$的一个连通分支$A$”，并把其余补集当作闭集；任意分支的补集不一定闭，未必可取与其余分支分离的邻域。上面采用不连通所给的相对开闭分割，保证紧性与分离性，再作网格构造。这是对证明的修正，不改变原定理的陈述。
+
+\src{与史书已有分支理论衔接：课堂命题5.1.3，pp.31--32}
+在上述等价条件成立的$U$中，无零全纯$f$的$f'/f$有原函数$G$，故$(fe^{-G})'=0$。调整加法常数即可写成$f=e^g$，进而有每个正整数次的全纯根$e^{g/n}$。存在性和基本构造可回看史书§3.3；这里需要掌握的是它们为何由全局周期条件保证。该性质不要求$f(U)$本身是单连通域。
+
+\section{临界点附近的全纯坐标标准形}
+\src{课堂p.32“临界点的局部行为”；史书定理4.4.4--4.4.9已有局部计数、开映射、局部逆；核实：Simon定理3.5.1，p.108 / PDF127}
+\begin{theorem}[局部标准形]
+设$f$在$a$附近全纯且不恒定，$f(z)-f(a)$在$a$有$p$阶零点，$p\ge1$。则存在$a$的邻域$U$及双全纯坐标$\phi:U\to D(0,\eta)$使
+\[\phi(a)=0,\qquad \phi'(a)\ne0,\qquad f(z)=f(a)+\phi(z)^p.\]
+可进一步取$\phi'(a)$为首项系数的任意一个$p$次根；一旦确定该根，足够小邻域内的$\phi$唯一。
+\end{theorem}
+\begin{proof}
+由零点分解，$f(z)-f(a)=(z-a)^ph(z)$，$h(a)\ne0$。缩小圆盘使$h$处处非零，在此单连通圆盘取$h$的全纯$p$次根$q$。令$\phi(z)=(z-a)q(z)$，则$\phi'(a)=q(a)\ne0$，由史书局部反函数定理，$\phi$在$a$的某邻域双全纯。再把邻域取为一个小坐标圆盘的原像，得到所述形式。两支$p$次根之比连续且只取有限个单位根值，故固定$a$处值后唯一。
+\end{proof}
+
+\begin{proposition}[计数、临界阶数与绕数]
+在标准形的邻域内，对$0<|w-f(a)|<\eta^p$，$f(z)=w$有恰好$p$个互异原像，均为单根；$f(z)=f(a)$仅有$a$一个原像，计重数为$p$。若$f'$在$a$有$m$阶零点，则$p=m+1$。
+\end{proposition}
+\begin{proof}
+前两项化为$\zeta^p=w-f(a)$的求根。由$f'=p\phi^{p-1}\phi'$且$\phi'$在足够小邻域不为零，$f'$在$a$的阶为$p-1$。
+\end{proof}
+
+对任意足够小的\emph{原坐标圆周}$|z-a|=r$，
+\[W(f\circ\partial D(a,r),f(a))=p.\]
+因为$f(z)-f(a)=(z-a)^ph(z)$，$h$在闭圆盘邻域无零且有全纯对数，其绕数贡献为0。这一步说明原坐标的圆周未必被$\phi$映成圆周，但绕数仍可准确计算。
+
+\textbf{与史书的差异。} 史书已证明“小值附近有$p$个根”、开映射、单叶函数导数不为零与逆函数全纯。本节额外要会把局部函数\emph{显式写成坐标的$p$次幂}，并分清“$f-f(a)$零点阶$p$”与“临界点阶$m=p-1$”。不再重证史书已经完整给出的基础推论。
+
+\section{双周期整函数的基本平行四边形论证}
+\src{课堂命题4.6.1，pp.29--30；直接使用史书的Liouville定理}
+\begin{proposition}
+设整函数$f$具有两个在$\R$上线性无关的周期$\omega_1,\omega_2$，即$f(z+\omega_j)=f(z)$。则$f$为常数。
+\end{proposition}
+\begin{proof}
+任意$z\in\C$可唯一写成$z=s\omega_1+t\omega_2$，其中$s,t\in\R$。将$s,t$分别减去整数，使新系数落在$[0,1]$中。于是由周期性，$f(z)$等于紧平行四边形
+\[Q=\{s\omega_1+t\omega_2:0\le s,t\le1\}\]
+中某点的值。$f$在$Q$连续，故在$Q$有界，进而在全平面有界。Liouville定理给出常数性。
+\end{proof}
+
+因此，若一个\emph{非常数}的全平面亚纯函数具有这样的两个周期，它必有极点。课堂中的这项结论只需要紧性、周期平移和Liouville，不需要预先学习椭圆函数的级数构造、加法公式或椭圆积分。
+
+\section{Laurent分解：内外函数与无穷远归一化}
+\src{课堂定理5.2.9，pp.35--36；史书定理5.1.2及其证明，pp.142--144，已有正负幂分拆；这里补函数形式和唯一性}
+\begin{theorem}
+设$0\le r<R\le\infty$，$f\in H(\{r<|z-a|<R\})$。则存在唯一的$f_+,f_-$使：
+\begin{enumerate}[label=(\arabic*)]
+\item $f_+\in H(D(a,R))$；
+\item $f_-$在$\{|z-a|>r\}$全纯，在$\infty$全纯且$f_-(\infty)=0$；
+\item 在原圆环中$f=f_++f_-$。
+\end{enumerate}
+“在$\infty$全纯”指$w\mapsto f_-(a+1/w)$在$w=0$可去。$R=\infty$时$f_+$为整函数。
+\end{theorem}
+\begin{proof}
+使用史书已证的Laurent展开$f(z)=\sum_{n\in\Z}c_n(z-a)^n$，令
+\[f_+(z)=\sum_{n\ge0}c_n(z-a)^n,\qquad f_-(z)=\sum_{n\ge1}c_{-n}(z-a)^{-n}.\]
+正幂部分在$|z-a|<R$收敛。负幂部分在$|z-a|>r$收敛，变元$w=1/(z-a)$下成为无常数项的幂级数，故在$\infty$全纯且值为0。两部分在原圆环相加等于$f$。
+
+若$f=\widetilde f_++\widetilde f_-$为另一分解，则在重叠圆环中
+\[f_+-\widetilde f_+=\widetilde f_--f_-.\]
+用左式在内圆盘定义$H$，右式在外域定义$H$，粘合得整函数。外域表达式使$H(z)\to0$，所以$H\equiv0$，两分解相同。
+\end{proof}
+
+\textbf{边界积分表示。} 若$r<s<S<R$，则在各自适用的区域有
+\[f_+(z)=\frac1{2\pi i}\int_{|\zeta-a|=S}\frac{f(\zeta)}{\zeta-z}\dd\zeta\quad(|z-a|<S),\]
+\[f_-(z)=-\frac1{2\pi i}\int_{|\zeta-a|=s}\frac{f(\zeta)}{\zeta-z}\dd\zeta\quad(|z-a|>s).\]
+两圆都按逆时针写，故内圆前有负号；可由史书Laurent证明中的两个核展开直接得到。改变$s,S$不会改变对应函数在公共定义域的值。
+
+归一化$f_-(\infty)=0$不可删去：若不要求它，便可将任意常数从$f_-$移到$f_+$。原稿p.36的唯一性证明中，内外两式的差应按上面的相反次序粘合；两边同时使用$f_\pm-\widetilde f_\pm$时它们互为相反数，不能直接视作相同函数。
+
+\section{新增四个定理：只补应用边界}
+\src{已确认的新增范围；史书§4.4，pp.124--133}
+这四项在史书都已有正式结论与证明，本册不重新抄写。复习时应把教材证明与题集中应用连接起来。
+\begin{longtable}{p{.23\textwidth}p{.28\textwidth}p{.40\textwidth}}
+\toprule 项目 & 史书位置 & 本次应用侧重\\\midrule\endhead
+幅角原理 & 定理4.4.1--4.4.2；习题4.4第1、18题 & 闭合像曲线的绕数；重数；多连通域内边界的负方向；亚纯情形零点减极点。\\
+Rouché定理 & 定理4.4.3及后续例题 & 在整个边界取得严格估计；分圆盘、圆环、半平面截断；参数改变时防止根穿过边界。\\
+开映射与局部逆 & 定理4.4.4--4.4.9 & 非常数与连通性；临界点仍可开映射；非零导数保证局部单叶，不自动保证全局单叶。\\
+Hurwitz & 定理4.4.10--4.4.11；习题4.4第6--10题 & 内闭一致收敛；极限不恒为零；计数曲线不得经过极限零点；无零与单叶在极限中的例外。\\
+\bottomrule
+\end{longtable}
+
+\src{在课堂已有局部分解基础上的补充：幅角原理的亚纯记账}
+若$f$在有界有限连通、边界分段光滑的区域闭包邻域亚纯，边界无零点和极点，零点$a_j$阶数$m_j$，极点$b_k$阶数$n_k$，则
+\[\frac1{2\pi i}\int_{\partial U}\frac{f'}f\dd z=\sum_jm_j-\sum_kn_k.\]
+这里是相对于史书§4.4\emph{全纯版本}的补充；原理可不依赖一般留数定理而证明。在每个零点附近$f=(z-a)^mh$，因此$f'/f=m/(z-a)+h'/h$；在极点附近$f=(z-b)^{-n}h$，因此贡献为$-n/(z-b)$。挖去这些点的小圆盘，对余下全纯的对数导数用Cauchy定理，小圆积分即给出上式。这个证明只使用已经在范围内的工具，不据“留数”这个名称引入整章定积分技巧。
+
+\textbf{关于考试形式的有限判断。} 两份期末卷以少量证明和多问综合题为主，也含积分计算；可据此保留完整论证和综合训练，但不能由其调和、次调和、Riemann映射等后续专题反推期中也考这些专题。这里的练习数量与难度按“覆盖广、略高于作业”的要求安排，四个新增定理主要集中在第二节练习。
+
+\section{整理稿中的课外提示与阅读时的修正}
+\src{课堂注4.4.2，p.22：Looman--Menchoff提示}
+整理稿额外提到以下加强版CR判别：若$f\in C(U)$，$f_x,f_y$在每一点存在且满足CR方程，则$f\in H(U)$。它是Looman--Menchoff定理的一个充分条件版本。原稿自己说明证明超出本课程范围；本册保留该提示，不把它改写成可以用普通实反函数定理或逐点偏导交换立即证明的结论。用史书的常用判别时，仍应检查实可微或$C^1$条件，不能将“仅一点偏导存在且满足CR”与这里的全区域条件混为一谈。
+
+\src{课堂例3.1.20，p.11：复数不能直接比较大小}
+原稿对$\sum z^{n!}$在单位根径向发散的论证中，写出复数级数的“$\ge$”不够严谨。若$\zeta$为$q$次单位根，应写
+\[f(r\zeta)=\sum_{n<q}r^{n!}\zeta^{n!}+\sum_{n\ge q}r^{n!}.\]
+第一项是有界的有限和；第二项为非负实数和，任取有限个尾项后令$r\uparrow1$可使其实部任意大。因此$\Re f(r\zeta)\to+\infty$，从而不存在有限的径向极限。这是原证明所需的修正。自然边界等基础实例可继续读史书§6.2，不必另抄一遍。
+
+\src{课堂命题1.3.1的证明，p.2：过北极的情形}
+把平面$aX+bY+cZ=d$代入球极投影后，当$c=d$时，原稿称“$c\ne0$”，这并非必要。例如$a\ne0,b=c=d=0$完全可能。正确条件是：对真正的球面圆且平面过北极，$(a,b)\ne(0,0)$；否则平面为$Z=1$的切平面，只与球面相交于一点。故所得$2ax+2by-2c=0$仍为直线，原命题结论不变。
+
+本册已经在对应位置修正交比归一化、补集分离以及Laurent唯一性粘合的步骤。上述内容是对本次使用到的论证的核实，不声称已逐字校订原稿中所有证明，也未修改原始文件。
+
+\section*{资料位置与后续使用}\addcontentsline{toc}{section}{资料位置与后续使用}
+课堂整理稿为课程目录中的\texttt{复分析定理与证明.pdf}；史书及其余八本书位于\texttt{参考书/}。来源对应以\texttt{复分析作业与期末题目\_参考书包含性最终汇总.md}及分轮筛选记录为基础。习题的原题定位与改编说明见本次练习册及相邻来源清单。
+
+先按第1节的表回看史书，再阅读本册展开的差异内容；作业中的Schwarzian、Cartan唯一性、Gutzmer估计、Painlevé拼接、Gauss--Lucas、$L^2$可去性和周期Fourier展开等，继续使用已有作业答案。新题集不重排这些原题。
+\end{document}

@@ -1,0 +1,361 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[margin=2.15cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,enumitem,longtable,booktabs,fancyhdr,xcolor,needspace,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\setlength{\parindent}{2em}\setlength{\parskip}{3pt}
+\setlist[enumerate]{itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{复分析期中复习}\fancyhead[R]{补充练习}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\newcommand{\D}{\mathbb D}\newcommand{\C}{\mathbb C}\newcommand{\Z}{\mathbb Z}\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\Rea}{Re}\DeclareMathOperator{\Ima}{Im}\DeclareMathOperator{\ord}{ord}\DeclareMathOperator{\Log}{Log}
+\newcounter{exercise}
+\newcommand{\topic}[1]{\par\Needspace{12\baselineskip}\subsection*{#1}}
+\newcommand{\exercise}[3]{\par\Needspace{6\baselineskip}\refstepcounter{exercise}\addvspace{10pt}\noindent\textbf{\theexercise.}\label{ex:\theexercise}\par\nopagebreak\noindent{\small\color{black!65}【#2】}\par\nopagebreak #3\par}
+\title{复分析期中复习：补充练习100题}
+\author{}\date{2026年11月6日}
+\begin{document}\maketitle\vspace{-2.5em}
+本题集配合史济怀、刘太顺《复变函数》及课堂内容补充重点使用。第一节60题，第二节40题，题号连续；每个题号为一组完整练习，小问不另计数。整体以已有作业的证明、估计和构造风格为主，后段内容适当加重。难度从巩固到综合均有，部分综合题略高于作业；并非两份模拟试卷，也不预测考试题量。
+
+已有第1--6次作业及两份期末卷中的原题、仅换记号的等价题不收录。期末卷仅用于判断证明深度和多问结构，不据其专题扩大范围。第二节集中训练幅角原理、Rouché、开映射、Hurwitz及其与奇点、局部映射的联系。
+
+\textbf{来源说明。} 本册主要按原书叙述选录习题，不增加追问、不自行加强结论。英文题目忠实译成中文；选取原题部分小问时另行注明。原书提示不并入待证目标。个别必须消除的歧义在题面外注明，不冒充原文。每题只保留编号、来源及题面，题组统一设置标题。页码为印刷页，另标PDF页；Gamelin现有电子版仅标PDF页。
+
+\textbf{统一约定。} $\D=\{z:|z|<1\}$，$\D^*=\D\setminus\{0\}$，$D(a,r)=\{z:|z-a|<r\}$，区域指非空连通开集；圆环$\{r<|z|<R\}$默认$0\le r<R\le\infty$。闭曲线分段$C^1$，圆周逆时针定向；一般区域边界按区域在左侧定向。零点、极点个数均计重数。“闭集上全纯”指在其某开邻域全纯；内闭一致收敛指在每个紧子集上一致收敛。面积元$\dd A=\dd x\dd y$。本册不附解答。
+
+\tableofcontents
+\section{习题一（第1--60题）}
+\topic{复微分、初等函数与映射}
+\exercise{第1题}{选录：Stein，第1章Exercises 12，pp.27--28 / PDF46--47}{
+令$f(x+iy)=\sqrt{|x||y|}$。证明$f$在原点的两个一阶偏导数存在并满足CR方程，但$f$在原点不复可导。}
+
+\exercise{第2题}{选录：Stein，第1章Exercise 8，p.27 / PDF46}{
+设$f:U\to V$、$g:V\to\C$实可微，$h=g\circ f$。证明
+\[h_z=(g_w\circ f)f_z+(g_{\bar w}\circ f)\overline{f_{\bar z}},\qquad
+h_{\bar z}=(g_w\circ f)f_{\bar z}+(g_{\bar w}\circ f)\overline{f_z}.\]。}
+
+\exercise{第3题}{选录：Stein第1章Exercise 13，p.28 / PDF47}{
+设$f$在区域$U$上全纯。分别证明：若$\Rea f$为常数、$\Ima f$为常数或$|f|$为常数，则$f$为常数。}
+
+\exercise{第4题}{选录：Stein第1章Exercise 5，p.25 / PDF44}{
+证明复平面中的开集$U$连通，当且仅当$U$中任意两点可由完全位于$U$内的分段光滑曲线连接。}
+
+\exercise{第5题}{选录：Stein第1章Exercise 6，p.26 / PDF45}{
+设$U\subset\C$开，$C_z$为$U$中可用域内曲线与$z$连接的点集。(a)证明各$C_z$开且连通，它们构成$U$的两两不交的连通分支分解。(b)证明这些分支至多可数。(c)若$U$为某紧集的补集，证明$U$恰有一个无界分支。}
+
+\exercise{第6题}{选录：Stein第1章Exercise 7，pp.26--27 / PDF45--46}{
+对$a\in\D$，令$F(z)=(a-z)/(1-\bar a z)$。证明$F$把$\D$双全纯地映到自身，交换$0,a$，在单位圆周上模为1，并验证$F\circ F=\mathrm{id}$。}
+
+\exercise{第7题}{选录：Lang V §1 Exercise 1，p.158 / PDF172}{
+设$f$在开集$U$上全纯，$a\in U$且$f\prime(a)\ne0$。设$C$是以$a$为中心的充分小正向圆周。证明\[\int_C\frac{\dd z}{f(z)-f(a)}=\frac{2\pi i}{f\prime(a)}.\]}
+
+\exercise{第8题}{选录：Stein第1章Exercise 22，p.30 / PDF49}{
+称$\{a,a+d,a+2d,\ldots\}$为公差$d$的正整数等差数列，其中$a,d\ge1$。证明正整数集不能分拆成有限个公差两两不同的此类等差数列，除非是$a=d=1$的平凡分拆。}
+
+\exercise{第9题}{选录：Lang II §3 Exercise 1，pp.67--68 / PDF81--82}{
+令$L(w)=\sum_{n\ge1}(-1)^{n-1}w^n/n$。(a)证明$\exp L(z-1)=z$对$|z-1|<1$成立。(b)设$a\ne0$且$e^\alpha=a$，证明$L((z-a)/a)+\alpha$在$|z-a|<|a|$上为$z$的全纯对数。}
+
+\exercise{第10题}{选录：Simon §2.3 Problem 15，p.62 / PDF81}{
+求复幂$i^i$的全部可能值，并证明它们都是实数。}
+
+
+\topic{级数、生成函数与边界}
+\exercise{第11题}{选录：Stein，第1章Exercise 16，pp.28--29 / PDF47--48}{
+求系数分别为$\log^2(n+1)$、$n!$、$(n!)^3/(3n)!$的幂级数$\sum_{n\ge1}a_nz^n$的收敛半径。再求
+\[1+\sum_{n\ge1}\frac{(\alpha)_n(\beta)_n}{n!(\gamma)_n}z^n\]
+的收敛半径，其中$(a)_n=a(a+1)\cdots(a+n-1)$，$\gamma\notin\{0,-1,-2,\ldots\}$；须分别处理$\alpha$或$\beta$为非正整数的情形。}
+
+\exercise{第12题}{选录：Stein，第1章Exercise 17，p.29 / PDF48}{
+设$a_n\ne0$，$|a_{n+1}/a_n|\to L\in[0,\infty]$。证明$|a_n|^{1/n}\to L$，并说明$L=0$和$L=\infty$时的论证。}
+
+\exercise{第13题}{选录：Stein，第1章Exercise 20，p.29 / PDF48}{
+设$m$为正整数，将$(1-z)^{-m}$展开为幂级数$\sum_{n\ge0}a_nz^n$，证明
+\[a_n\sim\frac{n^{m-1}}{(m-1)!}\quad(n\to\infty).\]。}
+
+\exercise{第14题}{选录：Stein第1章Exercise 21，pp.29--30 / PDF48--49}{
+证明当$|z|<1$时，\[\sum_{n=0}^\infty\frac{z^{2^n}}{1-z^{2^{n+1}}}=\frac z{1-z},\qquad \sum_{n=0}^\infty\frac{2^nz^{2^n}}{1+z^{2^n}}=\frac z{1-z}.\]说明所用求和顺序交换的依据。}
+
+\exercise{第15题}{选录：Simon §3.1 Problem 11(a)--(d)，p.92 / PDF111}{
+用$z/(e^z-1)=\sum_{n\ge0}B_nz^n/n!$定义$B_n$，其中原点取可去延拓。推导决定全部$B_n$的递推关系；证明每个$B_n$为有理数，求$B_0,\ldots,B_4$，并证明$B_{2k+1}=0\ (k\ge1)$。}
+
+\exercise{第16题}{选录：Simon §3.1 Problem 8(a)--(e)，p.90 / PDF109；选取原题前五问}{
+证明存在多项式$T_n,U_n$使$T_n(\cos\theta)=\cos n\theta$，$U_n(\cos\theta)\sin\theta=\sin((n+1)\theta)$。证明$T_0=1,T_1=x,U_0=1,U_1=2x$，以及两族的递推关系$T_{n+1}=2xT_n-T_{n-1}$、$U_{n+1}=2xU_n-U_{n-1}$，并求两族首项系数。}
+
+\exercise{第17题}{选录：Simon §3.1 Problem 3，p.88 / PDF107}{
+设$f_n(z)=\sum_{m\ge0}a_{mn}z^m$在$D(0,R)$全纯，且$\sum_{n\ge1}f_n$内闭一致收敛到$F$。证明对每个$m$，$A_m=\sum_{n\ge1}a_{mn}$收敛，且$F(z)=\sum_{m\ge0}A_mz^m$。说明这里不要求$\sum_n|a_{mn}|$收敛。}
+
+\exercise{第18题}{选录：Stein，第1章Exercise 19，p.29 / PDF48}{
+证明$\sum_{n\ge1}nz^n$在单位圆周上处处发散，$\sum_{n\ge1}z^n/n^2$处处收敛，$\sum_{n\ge1}z^n/n$恰在$z=1$处发散。}
+
+\exercise{第19题}{选录：Stein，第2章Problem 1(a)，pp.67--68 / PDF86--87}{
+设$f(z)=\sum_{n\ge0}z^{2^n}$。证明其收敛半径为1，并证明单位圆周上没有任何一点允许全纯开拓：即不存在$\zeta\in\partial\D$及其圆盘邻域$V$和$g\in H(V)$使$g=f$于$V\cap\D$。}
+
+\exercise{第20题}{选录：Lang II §3 Exercise 5，p.68 / PDF82}{
+求$1/[(z+1)(z+2)]$在原点的幂级数展开及收敛半径。}
+
+\exercise{第21题}{选录：Stein第1章Exercise 18，p.29 / PDF48}{
+设$f(z)=\sum_{n\ge0}a_nz^n$的收敛半径为$R>0$。证明对每个$|a|<R$，$f$在$a$附近可展为关于$z-a$的幂级数。}
+
+\exercise{第22题}{选录：Simon §3.1 Problem 4，p.89 / PDF108}{
+设$f(z)=\sum_{n\ge0}a_nz^n$在$\D$全纯，且$|f(z)|<1/(1-|z|)$。通过对圆周半径优化，求Cauchy估计能够给出的$|a_n|$的最佳上界，并确定该上界在$n\to\infty$时的渐近行为。}
+
+
+\topic{Cauchy理论、收敛与积分估计}
+\exercise{第23题}{选录：Simon §3.3 Problem 9(c)--(e)，p.103 / PDF122；选取原题三问}{
+设$z_1,\ldots,z_n$互异，定义差商$[z_1;f]=f(z_1)$及
+\[[z_1,\ldots,z_n;f]=\frac{[z_1,\ldots,z_{n-1};f]-[z_2,\ldots,z_n;f]}{z_1-z_n}.\]
+若$f$在正向Jordan曲线$C$及内部的邻域全纯，节点均在内部，证明
+\[[z_1,\ldots,z_n;f]=\frac1{2\pi i}\int_C\frac{f(z)}{\prod_j(z-z_j)}\dd z
+=\sum_j\frac{f(z_j)}{\prod_{k\ne j}(z_j-z_k)}.\]
+证明该差商关于节点对称。}
+
+\exercise{第24题}{选录：Simon §3.3 Problem 9(h)，p.103 / PDF122}{
+沿用上一题的差商定义。设$z_1,\ldots,z_n$互异，证明\[p(z)=\sum_{j=1}^n[z_1,\ldots,z_j;f]\prod_{\ell<j}(z-z_\ell)\]是满足$p(z_j)=f(z_j)$的唯一次数至多$n-1$的多项式，空乘积解释为1。}
+
+\exercise{第25题}{选录：Stein，第2章Exercise 1，p.64 / PDF83}{
+使用复路径积分计算$\int_0^\infty\cos(x^2)\dd x$和$\int_0^\infty\sin(x^2)\dd x$。可使用$\int_{-\infty}^{\infty}e^{-x^2}\dd x=\sqrt\pi$；须证明所用圆弧上的积分趋于零，并说明两个反常积分的收敛。}
+
+\exercise{第26题}{选录：Stein，第2章Exercise 4，p.65 / PDF84}{
+证明对每个$\xi\in\C$有
+\[\int_{-\infty}^{\infty}e^{-\pi x^2}e^{2\pi i x\xi}\dd x=e^{-\pi\xi^2}.\]
+须说明左侧关于$\xi$全纯，并给出从实参数到复参数的合法推导。}
+
+\exercise{第27题}{选录：Stein，第2章Exercise 7，p.65 / PDF84}{
+设$f\in H(\D)$，$d=\sup_{z,w\in\D}|f(z)-f(w)|<\infty$。证明$2|f'(0)|\le d$。}
+
+\exercise{第28题}{选录：Stein，第2章Exercise 8，p.65 / PDF84}{
+设$f$在$|\Ima z|<1$全纯，且$|f(z)|\le A(1+|z|)^\eta$，其中$\eta\in\mathbb R$。证明对每个整数$k\ge0$存在$A_k$使$|f^{(k)}(x)|\le A_k(1+|x|)^\eta$对所有实数$x$成立。}
+
+\exercise{第29题}{选录：Stein，第2章Exercise 13，p.67 / PDF86}{
+设整函数$f$在每个中心$a\in\C$的Taylor展开中至少有一个系数为零，允许消失系数的阶数随$a$改变。证明$f$是多项式。}
+
+\exercise{第30题}{选录：Stein，第2章Exercise 14，p.67 / PDF86}{
+设$f$在包含$\overline\D$的某开集中，除单位圆周上一点$\zeta_0$处的有限阶极点外全纯。若$f(z)=\sum_{n\ge0}a_nz^n$于$\D$，证明$a_n$最终非零且$a_n/a_{n+1}\to\zeta_0$。}
+
+\exercise{第31题}{选录：Lang V §1 Exercise 11(a)(b)，p.160 / PDF174}{
+设$0<s<R$，证明存在仅依赖$s,R$的常数$C_1,C_2$，使在$\overline{D(0,R)}$全纯的$f$满足\[\|f\|_{\infty,s}\le C_1\|f\|_{1,R}\le C_2\|f\|_{2,R}.\]这里右侧为圆盘面积的$L^1,L^2$范数。若区域$U$上的全纯函数列在$L^2(U)$范数下为Cauchy列，证明其在$U$内闭一致收敛。}
+
+\exercise{第32题}{选录：Lang V §1 Exercise 10，p.159 / PDF173}{
+设$f(z)=\sum_{n\ge0}a_nz^n$在$\D$全纯且面积平方可积。证明\[\int_\D|f(z)|^2\dd A=\pi\sum_{n\ge0}\frac{|a_n|^2}{n+1}.\]}
+
+\exercise{第33题}{选录：Lang V §1 Exercise 2，p.158 / PDF172}{
+实区间上的Weierstrass逼近定理断言连续函数可由多项式一致逼近。判断闭单位圆盘上的每个连续复值函数是否都可由关于$z$的多项式一致逼近，并证明你的结论。}
+
+\exercise{第34题}{选录：Lang V §1 Exercises 4--5，p.158 / PDF172}{
+证明$\sum_{n\ge1}nz^n/(1-z^n)$与$\sum_{n\ge1}z^n/(1-z^n)^2$在$\D$内闭一致收敛，且两者相等。}
+
+\exercise{第35题}{选录：Lang V §1 Exercise 6，p.159 / PDF173}{
+设$\{a_n\}$为复数列，Dirichlet级数$\sum_{n\ge1}a_nn^{-s}$至少在某点绝对收敛。证明其绝对收敛点构成一个右半平面（边界上的点另论），并且在任何位于该半平面内部、与边界相距正数的闭右半平面上一致绝对收敛；证明和函数全纯。}
+
+\exercise{第36题}{选录：Lang V §2 Exercise 4，p.164 / PDF178}{
+将$f(z)=z/(1+z^3)$分别展开为正幂级数和负幂级数，并分别指出两种展开成立的区域。}
+
+\exercise{第37题}{选录：Lang V §3 Exercise 1(a)，p.170 / PDF184}{
+证明$F(z)=\sum_{n=0}^\infty(-1)^n/[n!(z+n)]$在$\C$上定义亚纯函数。确定全部极点及阶数，}
+
+\exercise{第38题}{选录：Lang V §3 Exercise 4，pp.170--171 / PDF184--185}{
+设$z_n\ne0$互异且$\sum_n|z_n|^{-3}<\infty$。证明
+\[F(z)=\sum_{n\ge1}\left(\frac1{(z-z_n)^2}-\frac1{z_n^2}\right)\]
+在$\C$上定义亚纯函数，确定其全部极点及阶数。证明中须说明$\{z_n\}$在有限平面内无聚点。}
+
+
+\topic{周期、同调、反射与极值的应用}
+\exercise{第39题}{选录：Lang V §3 Exercise 9，p.171 / PDF185}{
+设$f$在$\C$上亚纯且$|f(z)|\to\infty$当$|z|\to\infty$。证明$f$是有理函数。不得预先假设$f$只有有限多个极点。}
+
+\exercise{第40题}{选录：Lang V §3 Exercise 10，pp.171--172 / PDF185--186}{
+以$w=1/z$定义函数在无穷远的全纯性、亚纯性和极点阶数。证明：球面上的亚纯函数恰为有理函数；球面上的全纯函数均为常数；在无穷远有极点的整函数必为多项式，并确定该极点阶数与多项式次数的关系。}
+
+\exercise{第41题}{选录：Simon §2.3 Problem 4，p.60 / PDF79}{
+设$a_n\to0$且$\sum_{n\ge0}|a_{n+1}-a_n|<\infty$。证明$\sum_{n\ge0}a_nz^n$在单位圆周上每个$z\ne1$处收敛。}
+
+\exercise{第42题}{选录：史书习题3.6第2题，p.98 / PDF105}{
+设$U$由有限条可求长简单闭曲线围成，$f,g\in C^1(\overline U)$。证明\[\int_U(g_z-f_{\bar z})\dd z\wedge\dd\bar z=\int_{\partial U}(f\dd z+g\dd\bar z).\]}
+
+\exercise{第43题}{选录：史书习题3.6第3题，p.98 / PDF105}{
+设$U$由有限条光滑简单闭曲线围成，$\boldsymbol n$为外单位法向，$u,v\in C^2(\overline U)$。证明两条Green恒等式：\[\int_U(u\Delta v+\nabla u\cdot\nabla v)\dd A=\int_{\partial U}u\frac{\partial v}{\partial\boldsymbol n}|\dd z|,\]\[\int_U(u\Delta v-v\Delta u)\dd A=\int_{\partial U}\left(u\frac{\partial v}{\partial\boldsymbol n}-v\frac{\partial u}{\partial\boldsymbol n}\right)|\dd z|.\]}
+
+\exercise{第44题}{选录：Lang V §2 Exercise 5，p.164 / PDF178}{
+求下列函数在所给区域的Laurent展开：(a)$z/(z+2)$，$|z|>2$；(b)$\sin(1/z)$，$z\ne0$；(c)$\cos(1/z)$，$z\ne0$；(d)$1/(z-3)$，$|z|>3$。}
+
+\exercise{第45题}{选录：Stein第2章Exercise 11，p.66 / PDF85}{
+设$f$在$D(0,R_0)$全纯。(a)对$0<R<R_0$及$|z|<R$证明\[f(z)=\frac1{2\pi}\int_0^{2\pi}f(Re^{i\theta})\Rea\frac{Re^{i\theta}+z}{Re^{i\theta}-z}\dd\theta.\](b)证明$\Rea[(Re^{i\theta}+r)/(Re^{i\theta}-r)]=(R^2-r^2)/(R^2-2Rr\cos\theta+r^2)$。}
+
+\exercise{第46题}{选录：Stein第2章Exercise 12，pp.66--67 / PDF85--86}{
+设$u$为$\D$上的实值$C^2$调和函数。(a)证明存在$f\in H(\D)$使$\Rea f=u$，且其虚部在相差实常数的意义下唯一。(b)若$u$连续到$\overline\D$，由Cauchy公式推导\[u(re^{i\theta})=\frac1{2\pi}\int_0^{2\pi}\frac{1-r^2}{1-2r\cos(\theta-t)+r^2}u(e^{it})\dd t.\]}
+
+\exercise{第47题}{选录：Simon §3.6 Problem 7，p.119 / PDF138}{
+设$f_1,\ldots,f_m$在区域$U$上全纯，且$\sum_{j=1}^m|f_j(z)|^2$为常数。证明每个$f_j$为常数。}
+
+\exercise{第48题}{选录：Simon §3.6 Problem 16，p.120 / PDF139}{
+设$U$为有界区域，$f:U\to U$全纯且$f(a)=a$。证明$|f'(a)|\le1$。}
+
+\exercise{第49题}{选录：Stein，第3章Exercise 15(d)，p.106 / PDF125}{
+设$f$为整函数，$\Rea f$在$\C$上有上界。证明$f$为常数。}
+
+\exercise{第50题}{选录：Simon §3.2 Problem 1，p.94 / PDF113}{
+设$f$在$\overline{D(0,R)}$全纯，$f(0)=0$，$0<r<R$。利用该节系数估计$|a_k|R^k\le4\max_{|z|=R}\Rea f(z)$，证明\[\max_{|z|=r}|f(z)|\le\frac{4r}{R-r}\max_{|z|=R}\Rea f(z).\]}
+
+\exercise{第51题}{选录：Simon §3.6 Problem 12，p.120 / PDF139}{
+设$f$在$\overline{D(0,R)}$全纯，$0<r<R$。证明Borel--Carathéodory不等式\[\max_{|z|\le r}|f(z)|\le\frac{2r}{R-r}\max_{|z|=R}\Rea f(z)+\frac{R+r}{R-r}|f(0)|.\]}
+
+
+\topic{Laurent展开、奇点与无穷远}
+\exercise{第52题}{选录：Lang V §2 Exercise 12，p.165 / PDF179}{
+求$f(z)=1/[(z-1)^2(z+1)^2]$在$1<|z|<2$的Laurent展开。}
+
+\exercise{第53题}{选录：Lang V §2 Exercise 3，p.164 / PDF178}{
+是否存在非零多项式$P(z)$使$P(z)e^{1/z}$成为整函数？证明你的判断，并写出$e^{1/z}$在$z\ne0$时的Laurent展开。}
+
+\exercise{第54题}{选录：Lang V §3 Exercise 1(b)(c)，p.170 / PDF184；选取原题两项}{
+证明下列级数在$\C$上定义亚纯函数，并分别确定全部极点及其阶数：\[\sum_{n=1}^{\infty}\frac1{z^2+n^2},\qquad \sum_{n=1}^{\infty}\frac1{(z+n)^2}.\]}
+
+\exercise{第55题}{选录：Lang V §3 Exercise 7，p.171 / PDF185}{
+设$f$在$a$附近亚纯，$\phi$在$b$附近双全纯且$\phi(b)=a$。证明$\ord_b(f\circ\phi)=\ord_a f$，其中零点的阶为正、极点的阶为负。}
+
+\exercise{第56题}{选录：Lang V §3 Exercises 11--12，p.172 / PDF186}{
+证明任意非零有理函数$R$满足$\sum_{a\in\widehat\C}\ord_aR=0$。反过来，给定球面上互异点$a_1,\ldots,a_m$及整数$n_1,\ldots,n_m$，证明存在仅在这些点有指定非零阶数的有理函数，当且仅当$\sum n_j=0$}
+
+\exercise{第57题}{选录：Lang V §3 Exercise 5，p.171 / PDF185}{
+设$f$在$\C$上亚纯但不是整函数。证明$e^f$不能在$\C$上成为亚纯函数。}
+
+\exercise{第58题}{选录：Simon §3.8 Problem 1，p.128 / PDF147}{
+设$f$在$\D^*$全纯且处处非零，$f'/f$在原点有有限阶极点。证明存在$k\in\Z$、$P\in\C[w]$及$h\in H(\D)$，$h(0)\ne0$，使
+\[f(z)=z^kh(z)\exp(P(1/z)).\]。}
+
+\exercise{第59题}{选录：Stein，第3章Exercise 14，p.105 / PDF124；亦见Lang V §3 Theorem 3.3}{
+证明每个单叶整函数都具有$f(z)=az+b$的形式，其中$a\ne0$。证明中不得直接假设$f$是多项式，须排除无穷远为本性奇点的可能性。}
+
+\exercise{第60题}{选录：Lang V §3 Exercise 8，p.171 / PDF185}{
+设$f$在$\C$上亚纯，并具有三个在$\mathbb Q$上线性无关的周期$\omega_1,\omega_2,\omega_3$。证明$f$为常数。}
+
+
+\section{习题二（第61--100题）}
+\topic{幅角原理、Rouché与零点位置}
+\exercise{第61题}{选录：史书习题4.4第1题，p.132 / PDF139}{
+设$U$由有限条可求长简单闭曲线围成，$f,g$在$\overline U$全纯，$f$在$\partial U$无零点。设$f$在$U$的互异零点为$a_j$，阶数为$m_j$。证明\[\frac1{2\pi i}\int_{\partial U}g(z)\frac{f\prime(z)}{f(z)}\dd z=\sum_jm_jg(a_j).\]}
+
+\exercise{第62题}{选录：Gamelin VIII.1 Exercise 1，PDF198}{
+确定多项式$z^4+2z^2-z+1$在各开象限内的零点个数。}
+
+\exercise{第63题}{选录：Simon §3.3 Problems 1--2，p.101 / PDF120}{
+分别求$z^{12}-4z^8+9z^5-2z+1$在$|z|<1$中的零点数，以及$z^4-6z+3$在$1<|z|<2$中的零点数。说明所用边界上没有零点。}
+
+\exercise{第64题}{选录：Simon §3.3 Problem 3(b)，p.101 / PDF120}{
+确定多项式$z^4-2z^3-z^2+2z+11$在各开象限中的零点数，并证明坐标轴上没有零点。}
+
+\exercise{第65题}{选录：史书习题4.4第11(4)题，p.133 / PDF140}{
+对每个正整数$n$，求$e^z-4z^n+1$在$\D$中的零点数。}
+
+\exercise{第66题}{选录：史书习题4.4第3题，p.132 / PDF139}{
+设$\lambda>1$。证明$z=\lambda-e^{-z}$在右半平面$\Rea z>0$恰有一个根，并且该根为正实数。}
+
+\exercise{第67题}{选录：史书习题4.4第4题，p.132 / PDF139}{
+设$0<a_0<a_1<\cdots<a_n$。证明$a_0+a_1\cos\theta+\cdots+a_n\cos n\theta$在$(0,2\pi)$恰有$2n$个互异零点。}
+
+\exercise{第68题}{选录：Gamelin VIII.1 Exercise 2，PDF198}{
+确定多项式$z^4+z^3+4z^2+3z+2$在各开象限内的零点个数。}
+
+\exercise{第69题}{选录：Gamelin VIII.1 Exercise 3，PDF198}{
+确定多项式$z^6+4z^4+z^3+2z^2+z+5$在第一开象限内的零点个数。}
+
+\exercise{第70题}{选录：Gamelin VIII.2 Exercise 7，PDF200}{
+设$U$为有界区域，$f,g\in H(U)\cap C(\overline U)$，且在$\partial U$上$|f+g|<|f|+|g|$。证明$f,g$在$U$中的零点数相同，计重数。}
+
+\exercise{第71题}{选录：Gamelin VIII.2 Exercise 1，PDF199}{
+证明$2z^5+6z-1$在实区间$(0,1)$中有一个根，在圆环$1<|z|<2$中有四个根。}
+
+\exercise{第72题}{选录：Simon §3.3 Problem 5，p.102 / PDF121}{
+设$f\in H(\D)\cap C(\overline\D)$，且$f(\overline\D)\subset\D$。证明$f$在$\D$有唯一不动点}
+
+\exercise{第73题}{选录：史书习题4.4第17题，p.133 / PDF140}{
+设$U$为有界Jordan域，边界可求长，$f\in H(U)\cap C(\overline U)$。若$f$将$\partial U$一一映到Jordan曲线$\Gamma$，证明$f$把$U$双全纯地映到$\Gamma$所围的有界区域。}
+
+
+\topic{开映射、局部单叶与全局像}
+\exercise{第74题}{选录：Simon §3.6 Problem 6，p.119 / PDF138}{
+设$g\in H(U)$，$f\in H(V)$，其中$U,V$为区域且$g(U)\subset V$。若$f\circ g$为常数，证明$f$或$g$必为常数。}
+
+\exercise{第75题}{选录：Gamelin VIII.4 Exercise 8，PDF203}{
+设$U$为有界区域，$f\in H(U)\cap C(\overline U)$。证明$\partial(f(U))\subset f(\partial U)$。}
+
+\exercise{第76题}{选录：Simon §3.5 Problem 1，p.113 / PDF132}{
+构造一个全纯满射$f:\D\to\C$并证明满射性。}
+
+\exercise{第77题}{选录：Stein，第3章Problem 1(a)(b)，p.108 / PDF127}{
+考虑所有满足$f\in H(\D)$、$f(0)=0$的函数。是否存在统一$r>0$使每个此类$f$均满足$D(0,r)\subset f(\D)$？若另加$f'(0)=1$，结论是否改变？分别给出证明或反例。}
+
+\exercise{第78题}{选录：Gamelin VIII.4 Exercise 4，PDF203}{
+设$f\in H(\D)$。若存在$r\in(0,1)$使$f$在圆环$r<|z|<1$上单射，证明$f$在整个$\D$上单射。}
+
+\exercise{第79题}{选录：Gamelin VIII.4 Exercise 5，PDF203}{
+设$f=p/q$为非常数有理函数，$p,q$互素，$d=\max(\deg p,\deg q)$。(a)证明每个有限值$w\ne f(\infty)$在$\C$中被$f$取得$d$次，计重数。(b)证明球面上每个值均在球面上被取得$d$次，计重数。}
+
+\exercise{第80题}{选录：Gamelin VIII.4 Exercise 6，PDF203}{
+设$f$在$\C$上亚纯。若存在整数$m$使每个$w\in\C$的原像集$f^{-1}(w)$至多有$m$个点，证明$f$为有理函数。}
+
+
+\topic{Hurwitz、零点稳定与参数}
+\exercise{第81题}{选录：史书习题4.4第9题，p.133 / PDF140}{
+设区域$U$上的全纯函数列$f_n$处处非零且内闭一致收敛到$f$。证明$f\equiv0$或$f$处处非零。}
+
+\exercise{第82题}{选录：史书习题4.4第10题，p.133 / PDF140}{
+设$f_n$在区域$U$上全纯且单叶，内闭一致收敛到$f$。证明$f$或者为常数，或者仍单叶。}
+
+\exercise{第83题}{选录：Gamelin VIII.3 Exercise 2，PDF201}{
+令$\mathcal S$为满足$f\in H(\D)$、$f$单叶、$f(0)=0$、$f\prime(0)=1$的函数族。证明$\mathcal S$关于内闭一致收敛封闭，即若$f_n\in\mathcal S$内闭一致收敛到$f$，则$f\in\mathcal S$。}
+
+\exercise{第84题}{选录：Gamelin VIII.4 Exercise 3，PDF203}{
+设$f_n\in H(U)$在区域$U$内闭一致收敛到$f$。若每个$f_n$在$U$中取得任一值至多$m$次，计重数，证明$f$为常数，或$f$在$U$中取得任一值也至多$m$次。}
+
+\exercise{第85题}{选录：史书习题4.4第7题，p.132 / PDF139}{
+设$P_n(z)=\sum_{k=0}^nz^k/k!$。证明对每个$R>0$，当$n$充分大时$P_n$在$\overline{D(0,R)}$中无根。}
+
+\exercise{第86题}{选录：史书习题4.4第6题，p.132 / PDF139}{
+设$0<r<1$。证明$n$充分大时，$1+2z+3z^2+\cdots+nz^{n-1}$在$\overline{D(0,r)}$中无根。}
+
+\exercise{第87题}{选录：史书习题4.4第8题，p.132 / PDF139}{
+设$f$在$\overline\D$的某开邻域全纯，$f'$在$\partial\D$无零点。令$F_n(z)=\frac1n[f(z+1/n)-f(z)]$（$n$充分大）。证明$F_n$与$f'$在$\D$中的零点数相同。}
+
+\exercise{第88题}{选录：Gamelin VIII.2 Exercise 8，PDF200}{
+设$U$为有界区域，$f,h$在$U$亚纯并全纯延拓过$\partial U$，且边界上$|h|<|f|$。举例说明$f$与$f+h$在$U$中的零点数可以不同。确定在该条件下仍成立的零点、极点计数关系，并证明。}
+
+\exercise{第89题}{选录：Stein第3章Exercise 16，p.106 / PDF125}{
+设$f,g$在包含$\overline\D$的区域内全纯，$f$在$z=0$有单零点，在$\overline\D$内无其他零点。令$f_\varepsilon=f+\varepsilon g$。证明$|\varepsilon|$充分小时：(a)$f_\varepsilon$在$\overline\D$内有唯一零点$z_\varepsilon$；(b)$\varepsilon\mapsto z_\varepsilon$连续。}
+
+\exercise{第90题}{选录：Gamelin VIII.1 Exercise 5，PDF198}{
+对每个实参数$\alpha$，确定$z^4+z^3+4z^2+\alpha z+3$在左半平面$\Rea z<0$内的零点数，给出关于$\alpha$的完整分类。}
+
+\exercise{第91题}{选录：Gamelin VIII.1 Exercise 6，PDF198}{
+对每个实参数$\alpha$，确定方程$z^5+2z^3-z^2+z=\alpha$在右半平面$\Rea z>0$内的解的个数，给出关于$\alpha$的完整分类。}
+
+\exercise{第92题}{选录：Gamelin VIII.2 Exercise 4，PDF199}{
+固定$\lambda\in\C$，$|\lambda|<1$。对$n\ge1$，证明$(z-1)^ne^z-\lambda$在$|z-1|<1$内有$n$个零点，在右半平面内没有其他零点，并确定这些零点的重数。}
+
+
+\topic{后段综合}
+\exercise{第93题}{选录：Lang V §2 Exercise 1，p.163 / PDF177}{
+设$f(z)=\sum_{n\in\Z}a_nz^n$为圆环$r<|z|<R$上的Laurent展开。证明该级数可以逐项求导，所得级数在该圆环内表示$f\prime$。}
+
+\exercise{第94题}{选录：Gamelin VIII.2 Exercise 5，PDF199--200}{
+固定$\lambda\in\C$，$|\lambda|<1$。证明$(z-1)^ne^z+\lambda(z+1)^n$在右半平面内有$n$个零点，且$\lambda\ne0$时它们均为单零点，其中$n\ge1$。}
+
+\exercise{第95题}{选录：Gamelin VIII.2 Exercise 6，PDF200}{
+设$p(z)=z^6+9z^4+z^3+2z+4$。(a)确定其单位圆内四个零点分别位于哪些开象限。(b)确定其单位圆外两个零点分别位于哪些开象限。(c)证明圆外两个零点分别满足$|z-3i|<1/10$与$|z+3i|<1/10$。}
+
+\exercise{第96题}{选录：史书习题5.2第4题，p.151 / PDF158}{
+设$0$为$f$的本性奇点，$f$在某去心邻域内全纯且不取$a_1,\ldots,a_n$。若$R$为非常数有理函数，全部有限极点包含于$\{a_1,\ldots,a_n\}$，证明$0$也是$R(f(z))$的本性奇点。}
+
+\exercise{第97题}{选录：Lang V §2 Exercise 15，p.165 / PDF179}{
+设$f$在上半平面全纯、以1为周期，已有展开$f(z)=\sum_{n\in\Z}c_ne^{2\pi inz}$。若存在$y_0>0$使$f$在$\Im z\ge y_0$上有界，证明$c_n=0$对$n<0$成立。逆命题是否成立？证明你的判断。}
+
+\exercise{第98题}{选录：Simon §3.10 Problem 1，p.135 / PDF154；合并为完整证明题}{
+设$f$为整函数，$f(z+1)=f(z)$且$f(-z)=f(z)$。证明存在唯一整函数$G$使$f(z)=G(\cos2\pi z)$。证明中须处理$\cos2\pi z=\pm1$处的分支，并证明$G(w)=\sum_{n\ge0}b_nw^n$的系数满足：对每个$K>0$，存在$C_K$使$|b_n|\le C_Ke^{-Kn}$。}
+
+\exercise{第99题}{选录：Gamelin VIII.4 Exercise 2，PDF203}{
+设$f$为非常数双周期亚纯函数，周期格为$\Lambda$。其互不同余的零点、极点代表为$z_1,\ldots,z_n$，令$m_j$为$f$在$z_j$处的阶数（极点取负）。证明$\sum_jm_jz_j\in\Lambda$。}
+
+\exercise{第100题}{选录：Gamelin VIII.2 Exercise 9，PDF200}{
+设$f\in C^1(U)$，$U$为区域。若对任意$a,b\in\C$及$U$内任意充分小的正向圆周$C$，只要$f(z)+az+b$在$C$上无零点，该函数值沿$C$的幅角增量总非负，证明$f$在$U$全纯。}
+
+
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\D}{\mathbb D}
+\newcommand{\C}{\mathbb C}
+\begin{document}
+\begin{center}
+{\Large\bfseries Complex Analysis Final Examination}\\[5pt]
+{\normalsize 2025--2026 \quad First Semester}\\[3pt]
+{\small Standard Study Version}
+\end{center}
+\vspace{5pt}
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*,itemsep=14pt]
+\item Let $G,\Omega\subset\C$ be domains, let $u:G\to\mathbb R$ be harmonic, and let $f:\Omega\to G$ be holomorphic. Using $\Delta=4\partial\bar\partial$, prove that
+\[
+\Delta(u\circ f)=((\Delta u)\circ f)\,|f'|^2.
+\]
+In particular, $u\circ f$ is harmonic on $\Omega$.
+
+\item Use contour integration to evaluate
+\[
+\int_0^\infty \frac{dx}{x^a(1+x)},\qquad 0<a<1.
+\]
+
+\item Let $\D=\{z\in\C:|z|<1\}$.
+\begin{enumerate}[label=(\alph*),leftmargin=1.6em,itemsep=7pt]
+\item Suppose $f$ is holomorphic on $\D$, $|f(z)|\le M$ on $\D$, where $M>0$, and $a_1,\ldots,a_n\in\D$ are zeros of $f$, listed with multiplicities not exceeding their orders. Prove that
+\[
+|f(z)|\le M\prod_{j=1}^n\left|\frac{z-a_j}{1-\overline{a_j}z}\right|,
+\qquad z\in\D.
+\]
+\textit{Hint.} Use the method of proof of Schwarz's lemma.
+\item A finite Blaschke product is a function of the form
+\[
+B(z)=e^{i\theta}\prod_{j=1}^n\frac{z-a_j}{1-\overline{a_j}z},
+\qquad a_j\in\D,\quad\theta\in\mathbb R,
+\]
+where $n\ge0$ and an empty product is interpreted as $1$.
+Suppose $f$ is holomorphic on $\D$, continuous on $\overline\D$, and $|f(z)|=1$ for $|z|=1$. Prove that $f$ is a finite Blaschke product.
+\end{enumerate}
+
+\item Let $f$ be meromorphic on $\D^*=\{z\in\C:0<|z|<1\}$. Suppose $f$ has a sequence of distinct poles $z_j\to0$. Prove that the set of its finite values
+\[
+\{f(z):z\in\D^*,\ z\text{ is not a pole of }f\}
+\]
+is dense in $\C$.
+\textit{Hint.} Use the method of proof of the Casorati--Weierstrass theorem.
+
+\item Let $\Omega\subset\C$ be a domain with $0\in\partial\Omega$ and $[0,1]\subset\C\setminus\Omega$. Construct a local subharmonic barrier at $0$. More precisely, find $r\in(0,1)$ and a real-valued function $v$, continuous on $\overline\Omega\cap\overline{D(0,r)}$ and subharmonic on $\Omega\cap D(0,r)$, such that
+\[
+v(0)=0,\qquad v(z)<0\quad
+\text{for every }z\in(\overline\Omega\cap\overline{D(0,r)})\setminus\{0\}.
+\]
+\end{enumerate}
+\end{document}
