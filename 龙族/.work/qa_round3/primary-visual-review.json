@@ -1,0 +1,11 @@
+{
+  "pages": [
+    1,
+    113,
+    114,
+    137,
+    140
+  ],
+  "result": "Passed. Cover scope and navigation fit on one page. Chapter opening and dense body sample have clear black typography, consistent indents, unobstructed margins and page numbers; no clipping, overlaps, missing glyphs, or unintended blank areas.",
+  "header_review": "All 191 PNG header crops (0,0,918,75) are pixel-identical to page 140, opened individually and visually confirmed. Page 114 also individually confirmed. Reviewers reported intermittent header absence, but saved PNG evidence disproves this; no document change is warranted."
+}
