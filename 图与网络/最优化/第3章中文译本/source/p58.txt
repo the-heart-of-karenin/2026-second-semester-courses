@@ -1,0 +1,48 @@
+58      3. Linear Programming
+
+
+Corollary 3.17. Let max{cx : Ax ≤ b} and min{yb : y A = c, y ≥ 0} be a
+primal-dual pair of LPs. Let x and y be feasible solutions, i.e. Ax ≤ b, y A = c
+and y ≥ 0. Then the following statements are equivalent:
+(a) x and y are both optimum solutions.
+(b) cx = yb.
+(c) y(b − Ax) = 0.
+
+Proof: The Duality Theorem 3.16 immediately implies the equivalence of (a) and
+(b). The equivalence of (b) and (c) follows from y(b− Ax) = yb− y Ax = yb−cx.
+                                                                            2
+
+   The property (c) of optimum solutions is often called complementary slack-
+ness. Let us write the last result in another form:
+
+Corollary 3.18. Let min{cx : Ax ≥ b, x ≥ 0} and max{yb : y A ≤ c, y ≥ 0} be
+a primal-dual pair of LPs. Let x and y be feasible solutions, i.e. Ax ≥ b, y A ≤ c
+and x, y ≥ 0. Then the following statements are equivalent:
+(a) x and y are both optimum solutions.
+(b) cx = yb.
+(c) (c − y A)x = 0 and y(b − Ax) = 0.
+Proof: The equivalence
+                                           obtained
+                          of(a) and(b) is       by applying the Duality The-
+                                −A             −b
+orem 3.16 to max (−c)x :               x≤              .
+                                −I              0
+    To prove that (b) and (c) are equivalent, observe that we have y(b − Ax) ≤
+0 ≤ (c − y A)x for any feasible solutions x and y, and that y(b − Ax) = (c − y A)x
+iff yb = cx.                                                                    2
+    The two conditions in (c) are sometimes called primal and dual complemen-
+tary slackness conditions.
+    The Duality Theorem has many applications in combinatorial optimization.
+One reason for its importance is that the optimality of a solution can be proved by
+giving a feasible solution of the dual LP with the same objective value. We shall
+show now how to prove that an LP is unbounded or infeasible:
+Theorem 3.19. There exists a vector x with Ax ≤ b if and only if yb ≥ 0 for
+each vector y ≥ 0 for which y A = 0.
+
+Proof: If there is a vector x with Ax ≤ b, then yb ≥ y Ax = 0 for each y ≥ 0
+with y A = 0.
+   Consider the LP
+
+                        − min{1lw : Ax − w ≤ b, w ≥ 0}.                       (3.5)
+
+Writing it in standard form we have

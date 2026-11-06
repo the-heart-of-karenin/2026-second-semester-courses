@@ -1,0 +1,94 @@
+\section{组合拓扑}
+本节回顾单纯复形的基本事实。Munkres (1984a) 和 Spanier (1966) 是很好的通用参考书。假定读者已了解（拓扑）空间、连续映射、同胚等基本概念。本章中，拓扑空间之间的映射一律假定连续，即使没有明说。
+\subsection*{单纯复形与偏序集}\addcontentsline{toc}{subsection}{单纯复形与偏序集}
+\entry{9.1}{}一个\textbf{抽象单纯复形} $\Delta=(V,\Delta)$ 由集合 $V$（顶点集）及其非空有限子集组成的一族 $\Delta$ 构成；这些子集称为\textbf{单形}或\textbf{面}，满足
+\[
+\varnothing\ne\sigma\subseteq\tau\in\Delta\quad\Longrightarrow\quad\sigma\in\Delta.
+\]
+通常 $V=\bigcup_{\tau\in\Delta}\tau$，于是可以在记号中略去 $V$。面的\textbf{维数}为 $\dim\sigma=|\sigma|-1$，复形的维数为 $\dim\Delta=\max_{\sigma\in\Delta}\dim\sigma$。若每个面都包含于某个 $d$ 维面，则称 $d$ 维复形为\textbf{纯的}。由一个 $d+1$ 元集合的全部非空子集组成的复形，称为 $d$ \textbf{单形}。定义允许空复形 $\Delta=\varnothing$，约定其维数为 $-1$。
+
+\textbf{原文附注：}这里采用不含空面的定义，是拓扑学中的标准定义。在组合学中，通常容许空集作为面更方便，尤其与约化同调的定义一致。
+
+\sourcepage{1843}
+记 $\Delta^k=\{\Delta\text{ 的 }k\text{ 维面}\}$，且对 $k\ge0$，令 $\Delta^{\le k}=\bigcup_{j\le k}\Delta^j$。$\Delta^0=V$ 和 $\Delta^1$ 的元素分别称为\textbf{顶点}与\textbf{边}。若 $\Delta$ 纯且为 $d$ 维，$\Delta^d$ 的元素称为\textbf{极大面}（facet，亦称 chamber）。$\Delta^{\le k}$ 是 $\Delta$ 的\textbf{$k$ 骨架}，它是一个子复形。
+
+\textbf{几何单纯复形}是 $\R^d$ 中的多面体复形〔按 12.1 的意义〕，其胞腔为几何单形，即仿射无关点集的凸包。若 $\Gamma$ 是几何单纯复形，其胞腔极点集组成有限抽象单纯复形 $\Delta(\Gamma)$。反过来，对有限 $d$ 维抽象单纯复形 $\Delta$，在 $\R^{2d+1}$ 中存在几何单纯复形 $\Gamma$，使 $\Delta(\Gamma)\cong\Delta$。这种 $\Gamma$ 的底空间 $\bigcup\Gamma$ 在线性同胚意义下唯一，称为 $\Delta$ 的\textbf{几何实现}或\textbf{空间}，记为 $\real\Delta$。反过来，$\Delta$ 称为 $\real\Delta$ 以及任何与其同胚空间的一个\textbf{三角剖分}。因此，在有限情形，更一般地在有限维、可数且局部有限的情形，抽象与几何单纯复形是等价的概念。任意无限抽象单纯复形的几何实现可按 Spanier (1966) 构造。
+
+\textbf{单纯映射} $f:\Delta_1\to\Delta_2$ 是顶点映射 $f:\Delta_1^0\to\Delta_2^0$，使对全部 $\sigma\in\Delta_1$ 都有 $f(\sigma)\in\Delta_2$。在各单形上仿射延拓，便诱导连续映射 $\real f:\real{\Delta_1}\to\real{\Delta_2}$。
+
+所有 $d$ 维单纯复形在 $\R^{2d+1}$ 中存在直线实现很容易证明，而且 $2d+1$ 是最佳的一般界。然而，在特殊情形中能否在 $\R^j$（$d<j\le2d$）内进行直线实现或拓扑实现，是困难且研究很多的问题。$d=1$ 时这是图的平面性问题（见 Thomassen 所写的第 5 章）；$d\ge2$ 的直线嵌入见例如 Bokowski 与 Sturmfels (1989) 及其文献，拓扑嵌入见 Rushing (1973)。例如，原文写作时尚不知道二维环面的每个三角剖分是否都能直线嵌入 $\R^3$。经典的 van Kampen--Flores 定理（1932--1933）断言：一个 $(2d+2)$ 单形的 $d$ 骨架不能嵌入 $\R^{2d}$。Sarkaria (1991b) 在也包含第 5 节所述拓扑 Radon--Tverberg 定理的框架中讨论了这个结果；另见 Sarkaria (1991a)。
+
+\entry{9.2}{}设 $P=(P,\le)$ 为\textbf{偏序集}。全序子集 $x_0<x_1<\cdots<x_k$ 称为长度 $k$ 的\textbf{链}。所有链长的上确界称为 $P$ 的\textbf{秩}或\textbf{长度}。若所有极大链都有相同的有限长度，称 $P$ 为\textbf{纯的}。若每对 $x,y\in P$ 都有最小上界（并）$x\vee y$ 和最大下界（交）$x\wedge y$，则称 $P$ 为\textbf{格}。记
+\[
+P_{\ge x}=\{y\in P:y\ge x\},
+\]
+其他类似记号同理。对 $x<y$，定义\textbf{开区间} $(x,y)=P_{>x}\cap P_{<y}$ 及\textbf{闭区间} $[x,y]=P_{\ge x}\cap P_{\le y}$。满足 $\hat0\le x$、$x\le\hat1$ 对全部 $x\in P$ 成立的元素，分别称为\textbf{最小元}和\textbf{最大元}。二者均存在时称 $P$ \textbf{有界}。
+
+\sourcepage{1844}
+此时记 $\overline P=P\setminus\{\hat0,\hat1\}$，称为 $P$ 的\textbf{真部}。对任意偏序集 $P$，$\widehat P=P\cup\{\hat0,\hat1\}$ 表示添加新的最大、最小元后的偏序集，故 $|\widehat P\setminus P|=2$。
+
+若 $P$ 纯且秩为 $r$，令 $r(x)=\rk(P_{\le x})$。\textbf{秩函数} $r:P\to\{0,1,\ldots,r\}$ 在每条极大链上为双射。它将 $P$ 分成秩层 $P_i=\{x\in P:r(x)=i\}$，$0\le i\le r$。
+
+\entry{9.3}{}单纯复形 $\Delta$ 的\textbf{面偏序集} $\mathcal P(\Delta)=(\Delta,\subseteq)$ 是按包含关系排序的面集。\textbf{面格}是 $\widehat{\mathcal P}(\Delta)=\mathcal P(\Delta)\cup\{\hat0,\hat1\}$，它确为格。$\mathcal P(\Delta)$ 纯当且仅当 $\Delta$ 纯，而且 $\rk\mathcal P(\Delta)=\dim\Delta$。
+
+偏序集 $P$ 的\textbf{序复形} $\Delta(P)$ 以 $P$ 为顶点集，其 $k$ 维面是 $P$ 的 $k$ 链 $x_0<\cdots<x_k$。保序映射或逆序映射 $f:P_1\to P_2$ 都给出单纯映射 $\Delta(P_1)\to\Delta(P_2)$，因而诱导连续映射 $\real f:\real{\Delta(P_1)}\to\real{\Delta(P_2)}$。$\Delta(P)$ 的定义可追溯到 Aleksandrov (1937)。
+
+复形 $\Delta$ 的 $\operatorname{sd}\Delta:=\Delta(\mathcal P(\Delta))$ 称为（第一次）\textbf{重心细分}，其名称来自几何版本。基本事实是 $\Delta$ 与 $\operatorname{sd}\Delta$ 同胚。因此，经由 $\mathcal P(\cdot)$ 与 $\Delta(\cdot)$ 在单纯复形和偏序集之间转换，不改变拓扑；从拓扑角度看，两种概念本质上等价。
+
+定义 $\real P:=\real{\Delta(P)}$，便为每个偏序集配上一个拓扑空间。本章中关于 $P$ 的拓扑陈述，一律是指这个空间。
+
+至少还有另一种给偏序集配备有用拓扑的方式，也来自 Aleksandrov (1937)：把序理想作为开集。序理想是满足 $x\le y\in A\Rightarrow x\in A$ 的子集 $A\subseteq P$。将所得空间记为 $T(P)$。例如，第 12 节图 2 右边的偏序集，其 $T(P)$ 恰有十个开集，而其序复形同胚于二维球面。对这种理想拓扑，连续映射恰为保序映射，而同伦〔见 9.10〕具有直接的组合意义。例如，$T(P)$ 可缩当且仅当 $P$ 按 11.1 的意义可拆除，见 Stong (1966)。理想拓扑与偏序集上的层上同调有关（Baclawski 1975；Yuzvinsky 1987），并与序复形拓扑有出人意料的联系（McCord 1966）。
+
+\entry{9.4}{}设 $T$ 为拓扑空间，$\approx$ 为等价关系，$\pi:T\to T/{\approx}$ 为投影。规定 $A\subseteq T/{\approx}$ 为开集，当且仅当 $\pi^{-1}(A)$ 在 $T$ 中开，由此得到\textbf{商拓扑}。若 $S_i$（$i\in I$）是 $T$ 的两两不交子集，则 $T/(S_i)_{i\in I}$ 表示分别将每个 $S_i$ 中的点识别为一点所得的商空间。例如，
+\[
+\operatorname{cone}(T)=T\times[0,1]/(T\times\{1\})
+\]
+是 $T$ 上的\textbf{锥}，而
+\[
+\operatorname{susp}(T)=T\times[0,1]/(T\times\{0\},T\times\{1\})
+\]
+是 $T$ 的\textbf{悬挂}。$d$ 维闭球将其边界压成一点后同胚于 $d$ 维球面：$B^d/S^{d-1}\cong S^d$。
+
+\sourcepage{1845}
+若 $(T_i,x_i)_{i\in I}$ 为两两不交的带基点空间族，则其\textbf{楔和}为
+\[
+\bigvee_{i\in I}(T_i,x_i)=\left(\coprod_{i\in I}T_i\right)\Big/\left(\bigcup_{i\in I}\{x_i\}\right).
+\]
+两空间的\textbf{连接} $T_1*T_2$ 由 $T_1\times T_2\times[0,1]$ 取商得到：对每个 $t\in T_1$，将 $\{(t,x,0):x\in T_2\}$ 压成一点；对每个 $s\in T_2$，将 $\{(y,s,1):y\in T_1\}$ 压成一点。
+
+两个顶点集不交的单纯复形的连接为
+\[
+\Delta_1*\Delta_2=\Delta_1\cup\Delta_2\cup\{\sigma\cup\tau:\sigma\in\Delta_1,\ \tau\in\Delta_2\}.
+\]
+若 $\Gamma_i$ 是有 $i$ 个顶点的零维复形（$i=1,2$），则 $\operatorname{cone}(\Delta)=\Delta*\Gamma_1$，$\operatorname{susp}(\Delta)=\Delta*\Gamma_2$。有同胚
+\begin{equation}
+\real{\Delta_1*\Delta_2}\cong\real{\Delta_1}*\real{\Delta_2}.\tag{9.5}
+\end{equation}
+若两个复形不局部有限，右侧的拓扑可能需要改成相应的紧生成拓扑，见 Walker (1988)。特别地，$\real{\operatorname{cone}(\Delta)}\cong\operatorname{cone}(\real\Delta)$，$\real{\operatorname{susp}(\Delta)}\cong\operatorname{susp}(\real\Delta)$。
+
+连接还有如下几何实现。先在同一个足够高维的 $\R^d$ 中实现 $\Delta_1,\Delta_2$，使连接两侧点的任意两条不同线段，其内部不相交。再取所有这些线段的并，并赋予 $\R^d$ 的子空间拓扑，即得到 $\real{\Delta_1*\Delta_2}$。
+
+复形 $\Delta$ 的\textbf{$p$ 重删除连接} $\Delta_*^{(p)}$ 定义如下：取不交副本 $\Delta_1,\ldots,\Delta_p$ 及同构 $f_i:\Delta_i\to\Delta$，从连接 $\Delta_1*\cdots*\Delta_p$ 中只保留满足
+\[
+f_i(\sigma_i)\cap f_j(\sigma_j)=\varnothing\quad(i\ne j)
+\]
+的面 $\sigma_1\cup\cdots\cup\sigma_p$。其组合应用见 Sarkaria (1990, 1991a,b) 及 Živaljević 与 Vrećica (1992)。
+
+偏序集的\textbf{直积} $P\times Q$ 按逐坐标关系排序。它们的\textbf{连接}或\textbf{序和} $P*Q$ 是不交并，保留各自的序，并规定 $P$ 的每个元素都小于 $Q$ 的每个元素。显然 $\Delta(P*Q)=\Delta(P)*\Delta(Q)$。有以下同胚（Quillen 1978；Walker 1988）：
+\begin{align}
+\real{P\times Q}&\cong\real P\times\real Q,\tag{9.6}\\
+\real{(P\times Q)_{>(x,y)}}&\cong\real{P_{>x}}*\real{Q_{>y}},\tag{9.7}\\
+\real{((x,y),(x',y'))}&\cong\operatorname{susp}\big(\real{(x,x')}*\real{(y,y')}\big),\tag{9.8}
+\end{align}
+其中最后一式要求 $x<x'$ 于 $P$、$y<y'$ 于 $Q$。若相关序复形不局部有限，右侧拓扑仍须特别留意。
+
+\entry{9.9}{}对 $\sigma\in\Delta\cup\{\varnothing\}$，定义以下子复形：
+\begin{align*}
+\operatorname{dl}_\Delta(\sigma)&=\{\tau\in\Delta:\tau\cap\sigma=\varnothing\} &&\text{（删除）},\\
+\operatorname{st}_\Delta(\sigma)&=\{\tau\in\Delta:\tau\cup\sigma\in\Delta\} &&\text{（星形邻域）},\\
+\lk_\Delta(\sigma)&=\{\tau\in\Delta:\tau\cap\sigma=\varnothing,\ \tau\cup\sigma\in\Delta\} &&\text{（链接）}.
+\end{align*}
+显然 $\operatorname{dl}(\sigma)\cap\operatorname{st}(\sigma)=\lk(\sigma)$，且 $\sigma*\lk(\sigma)=\operatorname{st}(\sigma)$。若 $\sigma$ 为顶点，另有 $\operatorname{dl}(\sigma)\cup\operatorname{st}(\sigma)=\Delta$。空面时，三者全为 $\Delta$。
+\tnote{在 $\sigma*\lk(\sigma)$ 中，$\sigma$ 指由它的全部非空子集组成的单形。链接可能没有非空面，连接与空面有关的退化情形须采用相应的增广约定。}
+
+\input{bjorner-9-homology}

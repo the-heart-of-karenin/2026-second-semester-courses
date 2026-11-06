@@ -1,0 +1,45 @@
+References 341
+for all X ⊆ V(G). The task is to decide whether a feasible ﬂow exists and, if
+yes, to ﬁnd one whose cost ∑
+e∈ E(G) c(e) f (e) is minimum possible.
+Show that this problem generalizes the Minimum Cost Flow Problem and
+the problem of optimizing a linear function over the intersection of two poly-
+matroids.
+Note: The Submodular Flow Problem, introduced by Edmonds and Giles
+[1977], can be solved in strongly polynomial time; see Fujishige, R ¨ock and
+Zimmermann [1989]. See also Fleischer and Iwata [2000].
+12.∗ Show that the inequality system describing a feasible submodular ﬂow (Exer-
+cise 11) is TDI. Show that this implies Theorems 14.12 and 19.10.
+(Edmonds and Giles [1977])
+13. Prove that the set of vertices of the base polyhedron is precisely the set of
+vectors b
+≺ for all total orders ≺ of U, where
+b≺ (u) := f ({v ∈ U : v ⪯ u}) − f ({v ∈ U : v ≺ u})
+(u ∈ U).
+Hint: See the proof of Theorem 14.11.
+14. Show that Lemma 8.38 is a special case of Lemma 14.24.
+References
+General Literature:
+Bixby, R.E., and Cunningham, W.H. [1995]: Matroid optimization and algorithms. In:
+Handbook of Combinatorics; V ol. 1 (R.L. Graham, M. Gr ¨otschel, L. Lov ´asz, eds.), El-
+sevier, Amsterdam, 1995
+Bj¨orner, A., and Ziegler, G.M. [1992]: Introduction to greedoids. In: Matroid Applications
+(N. White, ed.), Cambridge University Press, Cambridge 1992
+Fujishige, S. [1991]: Submodular Functions and Optimization. North-Holland, Amsterdam
+1991
+Korte, B., Lov ´asz, L., and Schrader, R. [1991]: Greedoids. Springer, Berlin 1991
+McCormick, S.T. [2004]: Submodular function minimization. In: Handbook on Discrete
+Optimization (K. Aardal, G. Nemhauser, R. Weismantel, eds.), Elsevier, Berlin (forth-
+coming)
+Schrijver, A. [2003]: Combinatorial Optimization: Polyhedra and Efﬁciency. Springer,
+Berlin 2003, Chapters 44–49
+Cited References:
+Edmonds, J. [1970]: Submodular functions, matroids and certain polyhedra. In: Combina-
+torial Structures and Their Applications; Proceedings of the Calgary International Con-
+ference on Combinatorial Structures and Their Applications 1969 (R. Guy, H. Hanani,
+N. Sauer, J. Schonheim, eds.), Gordon and Breach, New York 1970, pp. 69–87
+Edmonds, J. [1979]: Matroid intersection. In: Discrete Optimization I; Annals of Discrete
+Mathematics 4 (P.L. Hammer, E.L. Johnson, B.H. Korte, eds.), North-Holland, Amster-
+dam 1979, pp. 39–49
+Edmonds, J., and Giles, R. [1977]: A min-max relation for submodular functions on graphs.
+In: Studies in Integer Programming; Annals of Discrete Mathematics 1 (P.L. Hammer,

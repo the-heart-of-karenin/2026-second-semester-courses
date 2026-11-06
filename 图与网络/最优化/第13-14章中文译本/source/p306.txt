@@ -1,0 +1,56 @@
+306 13. Matroids
+Theorem 13.20. (Rado [1957], Edmonds [1971]) An independence system
+(E, F) is a matroid if and only if the Best-In-Greedy ﬁnds an optimum solution
+for the Maximization Problem for (E, F, c) for all cost functions c : E → R+.
+Proof: By Theorem 13.19 we have q(E, F)< 1 if and only if there exists a cost
+function c : E → R+ for which the Best-In-Greedy does not ﬁnd an optimum
+solution. By Proposition 13.7 we have q(E, F)< 1 if and only if (E, F) is not
+a matroid. 2
+This is one of the rare cases where we can deﬁne a structure by its algorithmic
+behaviour. We also obtain a polyhedral description:
+Theorem 13.21. (Edmonds [1970]) Let (E, F) be a matroid and r : E → Z+
+its rank function. Then the matroid polytope of (E, F), i.e. the convex hull of the
+incidence vectors of all elements of F, is equal to
+{
+x ∈ RE : x ≥ 0,
+∑
+e∈ A
+xe ≤ r(A) for all A ⊆ E
+}
+.
+Proof: Obviously, this polytope contains all incidence vectors of independent
+sets. By Corollary 3.27 it remains to show that all vertices of this polytope are
+integral. By Theorem 5.12 this is equivalent to showing that
+max
+{
+cx : x ≥ 0,
+∑
+e∈ A
+xe ≤ r(A) for all A ⊆ E
+}
+(13.2)
+has an integral optimum solution for any c : E → R. W.l.o.g. c(e) ≥ 0 for all e,
+since for e ∈ E with c(e)< 0 any optimum solution x of (13.2) has xe = 0.
+Let x be an optimum solution of (13.2). In (13.1) we replace |Oj | by∑
+e∈ Ej xe
+( j = 0,..., n). We obtain c(Gn) ≥ ∑
+e∈ E c(e)xe.S ot h e Best-In-Greedy pro-
+duces a solution whose incidence vector is another optimum solution of (13.2).
+2
+When applied to graphic matroids, this also yields Theorem 6.12. As in this
+special case, we also have total dual integrality in general. A generalization of this
+result will be proved in Section 14.2.
+The above observation that the Best-In-Greedy for the Maximization Prob-
+lem for (E, F, c) corresponds to the W orst-Out-Greedyfor the Minimization
+Problem for (E, F
+∗ , c) suggests the following dual counterpart of Theorem 13.19:
+Theorem 13.22. (Korte and Monma [1979]) Let (E, F) be an independence
+system. For c : E → R+ let G(E, F, c) denote a solution found by the W orst-
+Out-Greedy for the Minimization Problem. Then
+1 ≤ G(E, F, c)
+OPT(E, F, c) ≤ max
+F⊆ E
+|F|− ρ∗ (F)
+|F|− r ∗ (F) (13.3)
+for all c : E → R+, where ρ∗ and r ∗ are the rank functions of the dual indepen-
+dence system (E, F∗ ). There is a cost function where the upper bound is attained.

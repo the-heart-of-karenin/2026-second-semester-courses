@@ -1,0 +1,43 @@
+14.2 Polymatroids 327
+On the other hand, there are interesting functions that can be maximized over
+arbitrary greedoids, for example bottleneck functions c(F) := min{c′(e) : e ∈ F}
+for some c′ : E → R+ (Exercise 2). See (Korte, Lov ´asz and Schrader [1991]) for
+more results in this area.
+14.2 Polymatroids
+From Theorem 13.10 we know the tight connection between matroids and sub-
+modular functions. Submodular functions deﬁne the following interesting class of
+polyhedra:
+Deﬁnition 14.9. A polymatroid is a polytope of type
+P( f ) :=
+{
+x ∈ R
+E : x ≥ 0,
+∑
+e∈ A
+xe ≤ f (A) for all A ⊆ E
+}
+where E is a ﬁnite set and f :2 E → R+ is a submodular function.
+It is not hard to see that for any polymatroid f can be chosen such that
+f (∅) = 0 and f is monotone (Exercise 5; a function f :2 E → R is called
+monotone if f (X) ≤ f (Y) for X ⊆ Y ⊆ E). Edmonds’ original deﬁnition was
+different; see Exercise 6. Moreover, we mention that the term polymatroid is
+sometimes not used for the polytope but for the pair (E, f ).
+If f is the rank function of a matroid, P( f ) is the convex hull of the incidence
+vectors of the independent sets of this matroid (Theorem 13.21). We know that
+the Best-In-Greedy optimizes any linear function over a matroid polytope. A
+similar greedy algorithm also works for general polymatroids. We assume that f
+is monotone:
+Polymatroid Greedy Algorithm
+Input: A ﬁnite set E and a submodular, monotone function f :2 E → R+
+(given by an oracle). A vector c ∈ RE .
+Output: A vector x ∈ P( f ) with cx maximum.
+1⃝ Sort E ={ e1,..., en } such that c(e1) ≥ ··· ≥ c(ek)> 0 ≥ c(ek+1) ≥
+··· ≥ c(en).
+2⃝ If k ≥ 1 then set x(e1) := f ({e1}).
+Set x(ei ) := f ({e1,..., ei }) − f ({e1,..., ei− 1}) for i = 2,..., k.
+Set x(ei ) := 0 for i = k + 1,..., n.
+Proposition 14.10. Let E ={ e1,..., en } and f :2 E → R be a submodular
+function with f (∅) ≥ 0. Let b : E → R with b(e1) ≤ f ({e1}) and b(ei ) ≤
+f ({e1,..., ei }) − f ({e1,..., ei− 1}) for i = 2,..., n. Then∑
+a∈ A b(a) ≤ f (A) for
+all A ⊆ E.

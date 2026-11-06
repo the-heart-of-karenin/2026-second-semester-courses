@@ -1,0 +1,32 @@
+13.5 Matroid Intersection 311
+satisﬁed because otherwise the path could be shortcut. We conclude that X ′ ∈ F2.
+2
+We shall now prove that if there exists no SX -TX -path in G X , then X is already
+maximum. We need the following simple fact:
+Proposition 13.29. Let (E, F1) and (E, F2) be two matroids with rank functions
+r1 and r2. Then for any F ∈ F1 ∩ F2 and any Q ⊆ E we have
+|F|≤ r1(Q) + r2(E \ Q).
+Proof: F ∩ Q ∈ F1 implies |F ∩ Q|≤ r1(Q). Similarly F \ Q ∈ F2 implies
+|F \ Q|≤ r2(E \ Q). Adding the two inequalities completes the proof. 2
+Lemma 13.30. X ∈ F1 ∩ F2 is maximum if and only if there is no SX -TX -path in
+G X .
+Proof: If there is an SX -TX -path, there is also a shortest one. We apply Lemma
+13.28 and obtain a set X ′ ∈ F1 ∩ F2 of greater cardinality.
+X E \ X
+A(1)
+X
+A(2)
+X
+E \ R
+R
+SX
+TX
+Fig. 13.3.
+Otherwise let R be the set of vertices reachable from SX in G X (see Figure
+13.3). We have R ∩ TX =∅ . Let r1 and r2 be the rank function of F1 and F2,
+respectively.
+We claim that r2(R) =| X ∩ R|. If not, there would be a y ∈ R \ X with
+(X ∩ R) ∪{ y}∈ F2. Since X ∪{ y} /∈ F2 (because y /∈ TX ), the circuit C2(X, y)
+must contain an element x ∈ X \ R. But then (y, x) ∈ A(2)
+X means that there is an
+edge leaving R. This contradicts the deﬁnition of R.

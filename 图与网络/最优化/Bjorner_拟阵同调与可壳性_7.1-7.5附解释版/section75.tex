@@ -1,0 +1,71 @@
+\sect{7.5\quad 拟阵不等式的应用}
+前面建立的材料为处理独立数及第一类Whitney数的某些不等式提供了良好框架。本节专论此应用；跳过本节也不影响后续连贯性。在这些不等式背后，是理解拟阵复形和断路复形的 $h$ 向量这一更深且大部分尚未解决的问题。
+本节始终用 $r,n$ 表示所讨论拟阵 $M$ 的秩及底集基数，用 $c_M$（围长）表示回路的最小基数，即 $c_M=\min\{|C|:C\text{ 是 }M\text{ 的回路}\}$。先讨论拟阵复形的面数，通常称为独立数。令 $I_k$ 为 $S$ 中 $k$ 元独立子集数，$k=0,\ldots,r$。基数 $b(M)=I_r$ 尤其令人关注。\redinsert{围长为 $c$ 意味着大小小于 $c$ 的子集都独立，这会确定 $h$ 向量的前若干项。}
+\st{命题7.5.1}设 $M$ 无环且 $n>r$。则：(i) 对 $0\le k<j\le r-k$ 有 $I_k<I_j$；(ii) 若 $1\le k<(r+1)/2$ 且 $M$ 的余圈元少于 $k$ 个，则 $I_k\le I_{r-k+1}$。
+\src{15}
+\st{命题7.5.2}设 $M$ 无环，$c=c_M$。则
+\[I_k\ge\sum_{i=0}^{c-1}\binom{n-r+i-1}{i}\binom{r-i}{k-i},\qquad k=0,\ldots,r.\]
+对某个 $k\ge c$ 等号成立（等价地，对所有 $k$ 等号成立），当且仅当 $M$ 同构于自由拟阵 $B_{r-c+1}$ 与均匀拟阵 $U_{c-1,n-r+c-1}$ 的直积。
+\pr 在命题7.2.5中令 $\Delta=\IN(M)$ 即得不等式。\redinsert{具体地，取其中的 $e=c-1$；在(7.5)中保留已确定的项，并舍去其余非负项即可。}命题7.5.1见习题7.5.2。若命题7.5.2对所有 $k$ 取等，则 $b(M)=\binom{n-r+c-1}{c-1}$；由命题7.2.5的证明，$h$ 向量必为
+\[(1,n-r,\ldots,\binom{n-r+c-2}{c-1},0,\ldots,0).\]
+Tutte多项式 $T_M(x,1)=x^r+(n-r)x^{r-1}+\cdots+\binom{n-r+c-2}{c-1}x^{r-c+1}$ 的形式说明，$M$ 恰有 $r-c+1$ 个余圈元（习题7.5.1），它们组成自由子拟阵 $B_{r-c+1}$。\redinsert{（余圈元属于每个基；自由拟阵的所有子集均独立。）}所以 $M=A\oplus B_{r-c+1}$，其中 $A$ 的秩为 $c-1$、基数为 $n-r+c-1$。由 $b(A)=b(M)=\binom{n-r+c-1}{c-1}$，只能有 $A=U_{c-1,n-r+c-1}$。\qed
+特别地，令 $k=r$，得到对所有无环拟阵，
+\[b(M)\ge\binom{n-r+c-1}{c-1}.\tag{7.20}\]
+设 $(h_0,\ldots,h_r)$ 是 $\IN(M)$ 的 $h$ 向量。由(7.12)，$T_M(x,1)=\sum_{i=0}^rh_ix^{r-i}$；由(7.6)和命题7.4.7，$h_0=1,h_1=n-r,h_r=\widetilde\mu(M^*)$。若 $M$ 连通，还能说得更多。
+\st{命题7.5.3}若 $M$ 没有余圈元，则 $h_i\ge n-r$（$i=2,\ldots,r-1$）。若还满足 $M$ 连通，或者 $M$ 的所有连通分支都不是回路，则还有 $h_r\ge n-r$。
+\pr 先设 $M$ 连通。两个元素上的唯一连通拟阵是二元回路，其 $h$ 向量为 $(1,1)$，所以对 $n$ 归纳的初始情形成立。取 $e\in S$。由连通性，收缩 $M/e$ 或删除 $M-e$ 至少一个连通（White 1986，第181页）。令 $(h_0^c,\ldots,h_{r-1}^c)$、$(h_0^r,\ldots,h_r^r)$ 分别为二者独立复形的 $h$ 向量。Tutte恒等式 $T_M(x,y)=T_{M/e}(x,y)+T_{M-e}(x,y)$ 在 $y=1$ 处给出 $h_i=h_{i-1}^c+h_i^r$。
+若 $M/e$ 连通，它秩为 $r-1$、有 $n-1$ 个元素，由归纳假设立即有 $h_i^c\ge n-r$（$i=1,\ldots,r-1$）。若 $M-e$ 连通，则 $h_i^r\ge n-r-1$（$i=1,\ldots,r$）。收缩的对偶 $(M/e)^*=M^*-e$ 是连通拟阵 $M^*$ 的限制，不能有环，故 $\widetilde\mu((M/e)^*)>0$，即 $h_{r-1}^c\ge1$。由(7.7)及引理7.2.6，还迫使 $h_i^c\ge1$（$i=1,\ldots,r-2$）。因此两种情形都有 $h_i\ge n-r$（$i=2,\ldots,r$），连通情形成立。
+\src{16}
+现在假定对无环、无余圈元且有 $p-1$ 个连通分支的拟阵，已知 $h_i\ge n-r$（$i=1,\ldots,r-1$）及 $h_r\ge1$。若 $M$ 有 $p$ 个分支，其中一个为 $M_1$，则 $M=M_1\oplus M_2$，$M_2$ 有 $p-1$ 个分支。记 $M_j$ 的秩、基数、$h$ 向量分别为 $r_j,n_j,(h_0^j,\ldots,h_{r_j}^j)$。有 $r_1+r_2=r$、$n_1+n_2=n$，$h_i^1\ge n_1-r_1\ge1$（$i=1,\ldots,r_1$），$h_i^2\ge n_2-r_2$（$i=1,\ldots,r_2-1$），$h_{r_2}^2\ge1$。比较 $T_M(x,1)=T_{M_1}(x,1)T_{M_2}(x,1)$ 的系数，得 $h_i=\sum_{j+k=i}h_j^1h_k^2$，从而得到 $h_i\ge n_1-r_1+n_2-r_2=n-r$（$i=1,\ldots,r-1$）。
+若 $M$ 没有一个分支是回路，则 $n_1-r_1\ge2$，归纳假设还可取 $h_{r_2}^2\ge n_2-r_2\ge2$。因此
+\[h_r=h_{r_1}^1h_{r_2}^2\ge(n_1-r_1)(n_2-r_2)\ge n_1-r_1+n_2-r_2=n-r.\]\qed
+\st{命题7.5.4}设 $M$ 无环、无余圈元，$c=c_M$。则
+\[I_k\ge\sum_{i=0}^{c-1}\binom{n-r+i-1}{i}\binom{r-i}{k-i}+(n-r)\binom{r-c+1}{k-c},\quad k=0,\ldots,r-1.\]
+若 $M$ 连通，或者没有任何连通分支是回路，则 $k=r$ 时也成立，即
+\[b(M)\ge\binom{n-r+c-1}{c-1}+(n-r)(r-c+1).\]
+\pr 由(7.8)，$h_i=\binom{n-r+i-1}i$（$i=0,\ldots,c-1$）；由命题7.5.3，$h_i\ge n-r$（$i=c,\ldots,r-1$，适用时也包括 $r$）。由(7.5)即得。\qed
+在上式中取 $c=2$，得
+\[I_k\ge\binom rk+(n-r)\binom r{k-1},\quad k=0,\ldots,r-1,\tag{7.21}\]
+以及
+\[b(M)\ge1+r(n-r).\tag{7.22}\]
+它们对无环、无余圈元拟阵成立，只是涉及回路的少数直积会使(7.22)略微失效（习题7.5.7）。对连通拟阵，可证明(7.21)对所有 $k\le r$ 取等，等价于(7.22)取等，当且仅当 $M$ 同构于一个 $(r+1)$ 元回路与一个 $(n-r)$ 点原子的平行联接。在命题7.5.4中取 $c=3$，得到对所有连通简单拟阵成立的公式。
+现在转向断路复形的面数。\redinsert{最小断路的大小为 $c-1$，因此已确定的初始 $h_i$ 比独立复形少一项；这解释了下文求和上限从 $c-1$ 变为 $c-2$。}由定理7.4.6，它们就是第一类Whitney数 $\widetilde w_0,\ldots,\widetilde w_r$；特别地，$\widetilde w_r=\widetilde\mu(M)$。以下假定所有拟阵都是简单的，即没有环或平行元素；由命题7.4.1，这不损失一般性。
+\src{17}
+\st{命题7.5.5}设 $M$ 简单且 $n>r$。则：(i) $\widetilde w_k<\widetilde w_j$（$0\le k<j\le r-k$）；(ii) 若 $2\le k<(r+1)/2$ 且连通分支数少于 $k$，或若 $k=1$、$4\le r\le n-2$ 且 $M$ 连通，则 $\widetilde w_k\le\widetilde w_{r-k+1}$。
+\st{命题7.5.6}设 $M$ 简单，$c=c_M$。则
+\[\widetilde w_k\ge\sum_{i=0}^{c-2}\binom{n-r+i-1}{i}\binom{r-i}{k-i},\quad k=0,\ldots,r.\]
+对某个 $k\ge c-1$ 取等，等价于所有 $k$ 取等，当且仅当 $M$ 同构于自由拟阵 $B_{r-c+1}$ 与均匀拟阵 $U_{c-1,n-r+c-1}$ 的直积。
+取 $k=r$ 得
+\[\widetilde\mu(M)\ge\binom{n-r+c-2}{c-2}.\tag{7.23}\]
+又因简单拟阵有 $c\ge3$，得
+\[\widetilde w_k\ge\binom rk+(n-r)\binom{r-1}{k-1},\quad k=0,\ldots,r,\tag{7.24}\]
+等号刻画自由拟阵与直线的直积。值得注意的是，命题7.5.2与7.5.6中的下界，恰由同一类拟阵达到。
+\pr 将命题7.2.5应用于断路复形即得。命题7.5.5见习题7.5.3。这里只需验证7.5.6的取等刻画。若 $M=B\oplus U$，其中 $B=B_{r-c+1}$、$U=U_{c-1,n-r+c-1}$，则 $\widetilde w_r=\widetilde\mu(M)=\widetilde\mu(B)\widetilde\mu(U)=\widetilde\mu(U)=\binom{n-r+c-2}{c-2}$；由命题7.2.5，对所有 $k$ 取等。
+反设所有 $k$ 取等，特别地 $\widetilde\mu(M)=\binom{n-r+c-2}{c-2}$。命题7.2.5的证明说明，作为断路复形壳多项式的 $T_M(x,0)$ 必为 $x^r+(n-r)x^{r-1}+\cdots+\binom{n-r+c-3}{c-2}x^{r-c+2}$。由其形式，$M$ 是 $r-c+2$ 个连通简单拟阵 $M_i$ 的直积（习题7.5.1）。记其秩和基数为 $r_i,n_i$。显然 $\widetilde\mu(M_i)\le\binom{n_i-1}{r_i-1}$，因为有 $\widetilde\mu(M_i)$ 个nbc基，且都含某个次序中的最小元素。同理，等号成立当且仅当 $M_i$ 是 $r_i$ 均匀拟阵。于是
+\[\begin{aligned}
+\widetilde\mu(M)&=\prod_{i=1}^{r-c+2}\widetilde\mu(M_i)
+\le\prod_{i=1}^{r-c+2}\binom{n_i-1}{r_i-1}\\
+&\le\binom{n-r+c-2}{c-2}=\widetilde\mu(M).
+\end{aligned}\]
+然而 $\binom{a_1}{b_1}\binom{a_2}{b_2}\le\binom{a_1+a_2}{b_1+b_2}$，等号当且仅当 $a_1=b_1=0$ 或 $a_2=b_2=0$。因此除一个（不妨 $i=1$）外，均有 $n_i=r_i=1$；而 $n_1=n-r+c-1$、$r_1=c-1$，$\widetilde\mu(M_1)=\binom{n_1-1}{r_1-1}$。所以 $M_1=U_{c-1,n-r+c-1}$，其余之直和为 $B_{r-c+1}$。\qed
+\src{18}
+设 $(h_0,\ldots,h_r)$ 是简单拟阵的断路复形的 $h$ 向量，因此 $T_M(x,0)=h_0x^r+\cdots+h_r$。由(7.6)、命题7.4.7及习题7.2.1，一般有 $h_0=1,h_1=n-r,h_{r-1}=\beta(M),h_r=0$。与拟阵复形类似，连通时能得到更多结果。
+\st{命题7.5.7}若 $M$ 连通，则 $h_i\ge n-r$（$i=2,\ldots,r-2$），且 $h_{r-1}\ge1$。
+\pr $\beta(M)\ge1$ 等价于 $M$ 连通（命题7.4.8）。其余不等式见 Brylawski (1977b)，定理3.1.2。\qed
+\st{命题7.5.8}设 $M$ 是连通简单拟阵，$c=c_M$。则
+\[\widetilde w_k\ge\sum_{i=0}^{c-2}\binom{n-r+i-1}{i}\binom{r-i}{k-i}+(n-r)\binom{r-c+2}{k-c+1},\quad k=0,\ldots,r-2,\]
+\[\widetilde w_{r-1}\ge\sum_{i=0}^{c-2}(r-i)\binom{n-r+i-1}{i}+(n-r)\left[\binom{r-c+2}2-1\right]+\beta(M),\]
+\[\widetilde\mu(M)\ge\binom{n-r+c-2}{c-2}+(n-r)(r-c)+\beta(M).\]
+\pr 由(7.5)，$\widetilde w_k=\sum_{i=0}^rh_i\binom{r-i}{k-i}$。由(7.8)，$h_i=\binom{n-r+i-1}i$（$i=0,\ldots,c-2$），而由命题7.5.7，$h_i\ge n-r$（$i=c-1,\ldots,r-2$），于是得到各式。最后两式即 $k=r-1,r$ 的情形，实际要求 $c\le r$；若 $c>r$，则 $M$ 均匀，且 $\widetilde w_{r-1}=\binom n{r-1}$、$\widetilde\mu(M)=\binom{n-1}{r-1}$。\qed
+取 $c=3$，得到对所有连通简单拟阵成立的不等式：
+\[\begin{aligned}
+\widetilde w_k&\ge\binom rk+(n-r)\binom{r-1}{k-1},\quad k=0,\ldots,r-2,\\
+\widetilde w_{r-1}&\ge r+(n-r)\left[\binom r2-1\right]+\beta(M),\\
+\widetilde\mu(M)&\ge1+(n-r)(r-2)+\beta(M).
+\end{aligned}\tag{7.25}\]
+为了消去 $\beta(M)$，后两式可换为
+\[\begin{aligned}
+\widetilde w_{r-1}&\ge r+(n-r)\binom r2-1,\\
+\widetilde\mu(M)&\ge(n-r)(r-1).
+\end{aligned}\tag{7.26}\]
+除三个三点直线的平行联接外，这对所有连通简单拟阵成立；该例中 $r=4,n=7,\widetilde\mu=8,\widetilde w_3=20$，见 Brylawski (1977b)。在(7.25)、(7.26)中取等的连通简单拟阵尚未得到完整刻画；例子包括回路和直线的平行联接、Fano射影平面以及完全图 $K_4$ 的图拟阵。

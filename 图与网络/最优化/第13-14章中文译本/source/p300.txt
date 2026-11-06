@@ -1,0 +1,34 @@
+300 13. Matroids
+Proposition 13.14. (E, F∗∗ ) = (E, F).
+Proof: F ∈ F∗∗ ⇔ there is a basis B∗ of (E, F∗ ) such that F ∩ B∗ =∅⇔
+there is a basis B of (E, F) such that F ∩ (E \ B) =∅⇔ F ∈ F. 2
+Theorem 13.15. Let (E, F) be an independence system, (E, F∗ ) its dual, and let
+r and r ∗ be the corresponding rank functions.
+(a) (E, F) is a matroid if and only if (E, F∗ ) is a matroid. (Whitney [1935])
+(b) If (E, F) is a matroid, then r ∗ (F) =| F|+ r(E \ F) − r(E) for F ⊆ E.
+Proof: Due to Proposition 13.14 we have to show only one direction of (a). So
+let (E, F) be a matroid. We deﬁne q :2 E → Z+ by q(F) :=| F|+r(E \ F)− r(E).
+We claim that q satisﬁes (R1), (R2) and (R3). By this claim and Theorem 13.10,
+q is the rank function of a matroid. Since obviously q(F) =| F| if and only if
+F ∈ F∗ , we conclude that q = r ∗ , and (a) and (b) are proved.
+Now we prove the above claim: q satisﬁes (R1) because r satisﬁes (R2). To
+check that q satisﬁes (R2), let X ⊆ Y ⊆ E. Since (E, F) is a matroid, (R3) holds
+for r,s o
+r(E \ X) + 0 = r((E \ Y) ∪ (Y \ X)) + r(∅) ≤ r(E \ Y) + r(Y \ X).
+We conclude that
+r(E \ X) − r(E \ Y) ≤ r(Y \ X) ≤| Y \ X |=| Y |−| X |
+(note that r satisﬁes (R1)), so q(X) ≤ q(Y).
+It remains to show that q satisﬁes (R3). Let X, Y ⊆ E. Using the fact that r
+satisﬁes (R3) we have
+q(X ∪ Y) + q(X ∩ Y)
+=| X ∪ Y |+| X ∩ Y |+ r(E \ (X ∪ Y)) + r(E \ (X ∩ Y)) − 2r(E)
+=| X |+| Y |+ r((E \ X) ∩ (E \ Y)) + r((E \ X) ∪ (E \ Y)) − 2r(E)
+≤| X |+| Y |+ r(E \ X) + r(E \ Y) − 2r(E)
+= q(X) + q(Y). 2
+For any graph G we have introduced the cycle matroid M(G) which of course
+has a dual. For an embedded planar graph G there is also a planar dual G∗ (which
+in general depends on the embedding of G). It is interesting that the two concepts
+of duality coincide:
+Theorem 13.16. Let G be a connected planar graph with an arbitrary planar
+embedding, and G∗ the planar dual. Then
+M(G∗ ) = (M(G))∗ .

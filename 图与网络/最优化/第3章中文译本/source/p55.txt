@@ -1,0 +1,54 @@
+                                                     3.2 The Simplex Algorithm          55
+
+
+Proof: We ﬁrst prove that the following conditions hold at any stage of the
+algorithm:
+(a) x ∈ P;
+(b) A J x = b J ;
+(c) A J is nonsingular;
+(d) cw > 0;
+(e) λ ≥ 0.
+(a) and (b) hold initially. 2 and 3 guarantee cw = y Aw = −yi > 0. By 4 ,
+x ∈ P implies λ ≥ 0. (c) follows from the fact that A J \{i} w = 0 and a j w > 0. It
+remains to show that 5 preserves (a) and (b).
+    We show that if x ∈ P, then also x + λw ∈ P. For a row index k we have
+two cases: If ak w ≤ 0 then (using λ ≥ 0) ak (x + λw) ≤ ak x ≤ βk . Otherwise
+λ ≤ βka−a
+       kw
+          kx
+             and hence ak (x + λw) ≤ ak x + ak w βka−a
+                                                    kw
+                                                       kx
+                                                          = βk . (Indeed, λ is chosen
+in 4 to be the largest number such that x + λw ∈ P.)
+                                                                            β −a x
+    To show (b), note that after 4 we have A J \{i} w = 0 and λ = jaj wj , so
+                                                                            β −a x
+A J \{i} (x + λw) = A J \{i} x = b J \{i} and a j (x + λw) = a j x + a j w jaj wj = β j .
+Therefore after 5 , A J x = b J holds again.
+      So we indeed have (a)–(e) at any stage. If the algorithm returns x and y in
+ 2 , x and y are feasible solutions of (3.1) and (3.2), respectively. x is a vertex of
+P by (a), (b) and (c). Moreover, cx = y Ax = yb since the components of y are
+zero outside J . This proves the optimality of x and y by Proposition 3.12.
+      If the algorithm stops in 3 , the LP (3.1) is indeed unbounded because in this
+case x + µw ∈ P for all µ ≥ 0, and cw > 0 by (d).
+      We ﬁnally show that the algorithm terminates. Let J (k) and x (k) be the set J
+and the vector x in iteration k of the     Simplex Algorithm, respectively. If the
+algorithm did not terminate after mn iterations, there are iterations k < l with
+J (k) = J (l) . By (b) and (c), x (k) = x (l) . By (d) and (e), cx never decreases, and it
+strictly increases if λ > 0. Hence λ is zero in all the iterations k, k + 1, . . . , l − 1,
+and x (k) = x (k+1) = · · · = x (l) .
+      Let h be the highest index leaving J in one of the iterations k, . . . , l − 1,
+say in iteration p. Index h must also have been added to J in some iteration
+q ∈ {k, . . . , l − 1}. Now let y  be the vector y at iteration p, and let w  be the
+vector w at iteration q. We have y  Aw  = cw  > 0. So let r be an index for which
+yr ar w  > 0. Since yr = 0, index r belongs to J ( p) . If r > h, index r would also
+belong to J (q) and J (q+1) , implying ar w  = 0. So r ≤ h. But by the choice of i
+in iteration p we have yr < 0 iff r = h, and by the choice of j in iteration q we
+have ar w  > 0 iff r = h (recall that λ = 0 and ar x (q) = ar x ( p) = βr as r ∈ J ( p) ).
+This is a contradiction.                                                                 2
+
+    Klee and Minty [1972] and Avis and Chvátal [1978] found examples where
+the Simplex Algorithm (with Bland’s rule) needs 2n iterations on LPs with n
+variables and 2n constraints, proving that it is not a polynomial-time algorithm.
+It is not known whether there is a pivot rule that leads to a polynomial-time

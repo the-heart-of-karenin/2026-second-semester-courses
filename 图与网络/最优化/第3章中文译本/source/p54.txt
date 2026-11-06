@@ -1,0 +1,50 @@
+54        3. Linear Programming
+
+
+ Simplex Algorithm
+ Input:       A matrix A ∈ Rm×n and column vectors b ∈ Rm , c ∈ Rn .
+              A vertex x of P := {x ∈ Rn : Ax ≤ b}.
+ Output:      A vertex x of P attaining max{cx : x ∈ P} or a vector w ∈ Rn with
+              Aw ≤ 0 and cw > 0 (i.e. the LP is unbounded).
+ 1       Choose a set of n row indices J such that A J is nonsingular and A J x = b J .
+ 2       Compute c (A J )−1 and add zeros in order to obtain a vector y with c = y A
+           such that all entries of y outside J are zero.
+         If y ≥ 0 then stop. Return x and y.
+ 3       Choose the minimum index i with yi < 0.
+         Let w be the column of −(A J )−1 with index i, so A J \{i} w = 0 and
+           ai w = −1.
+         If Aw ≤ 0 then stop.
+         Return w.
+                                                                   
+                          βj − aj x
+ 4       Let λ := min               : j ∈ {1, . . . , m}, a j w > 0 ,
+                            aj w
+           and let j be the smallest row index attaining this minimum.
+ 5       Set J := (J \ {i}) ∪ { j} and x := x + λw.
+         Go to 2 .
+
+    Step 1 relies on Proposition 3.8 and can be implemented with Gaussian
+Elimination (Section 4.3). The selection rules for i and j in 3 and 4 (often
+called pivot rule) are due to Bland [1977]. If one just chose an arbitrary i with
+yi < 0 and an arbitrary j attaining the minimum in 4 the algorithm would run
+into cyclic repetitions for some instances. Bland’s pivot rule is not the only one
+that avoids cycling; another one (the so-called lexicographic rule) was proved to
+avoid cycling already by Dantzig, Orden and Wolfe [1955]. Before proving the
+correctness of the Simplex Algorithm, let us make the following observation
+(sometimes known as “weak duality”):
+
+Proposition 3.12. Let x and y be feasible solutions of the LPs
+
+                            max{cx : Ax ≤ b}     and                              (3.1)
+                           min{yb : y A = c , y ≥ 0},
+                                          
+                                                                                  (3.2)
+
+respectively. Then cx ≤ yb.
+
+Proof:     cx = (y A)x = y(Ax) ≤ yb.                                                 2
+Theorem 3.13. (Dantzig [1951], Dantzig, Orden and     Wolfe [1955], Bland [1977])
+The Simplex Algorithm terminates after at most mn iterations. If it returns x and
+y in 2 , these vectors are optimum solutions of the LPs (3.1) and (3.2), respectively,
+with cx = yb. If the algorithm returns w in 3 then cw > 0 and the LP (3.1) is
+unbounded.

@@ -1,0 +1,32 @@
+13. Matroids
+Many combinatorial optimization problems can be formulated as follows. Given a
+set system (E, F), i.e. a ﬁnite set E and some F ⊆ 2E , and a cost function c : F →
+R, ﬁnd an element of F whose cost is minimum or maximum. In the following we
+consider modular functions c, i.e. assume that c(X) = c(∅)+∑
+x∈ X (c({x})− c(∅))
+for all X ⊆ E; equivalently we are given a function c : E → R and write
+c(X) =∑
+e∈ X c(e).
+In this chapter we restrict ourselves to those combinatorial optimization prob-
+lems where F describes an independence system (i.e. is closed under subsets) or
+even a matroid. The results of this chapter generalize several results obtained in
+previous chapters.
+In Section 13.1 we introduce independence systems and matroids and show that
+many combinatorial optimization problems can be described in this context. There
+are several equivalent axiom systems for matroids (Section 13.2) and an interesting
+duality relation discussed in Section 13.3. The main reason why matroids are
+important is that a simple greedy algorithm can be used for optimization over
+matroids. We analyze greedy algorithms in Section 13.4 before turning to the
+problem of optimizing over the intersection of two matroids. As shown in Sections
+13.5 and 13.7 this problem can be solved in polynomial time. This also solves the
+problem of covering a matroid by independent sets as discussed in Section 13.6.
+13.1 Independence Systems and Matroids
+Deﬁnition 13.1. A set system (E, F) is an independence system if
+(M1) ∅∈ F;
+(M2) If X ⊆ Y ∈ F then X ∈ F.
+The elements of F are called independent, the elements of 2E \ F dependent.
+Minimal dependent sets are called circuits, maximal independent sets are called
+bases. For X ⊆ E, the maximal independent subsets of X are called bases of X .
+Deﬁnition 13.2. Let (E, F) be an independence system. For X ⊆ E we deﬁne
+the rank of X by r(X) := max{|Y | : Y ⊆ X, Y ∈ F}. Moreover, we deﬁne the
+closure of X by σ(X) :={ y ∈ E : r(X ∪{ y}) = r(X)}.

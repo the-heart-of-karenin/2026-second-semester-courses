@@ -1,0 +1,49 @@
+292 13. Matroids
+Throughout this chapter, (E, F) will be an independence system, and c : E →
+R will be a cost function. We shall concentrate on the following two problems:
+Maximization Problem For Independence Systems
+Instance: An independence system (E, F) and c : E → R.
+Task: Find an X ∈ F such that c(X) :=∑
+e∈ X c(e) is maximum.
+Minimization Problem For Independence Systems
+Instance: An independence system (E, F) and c : E → R.
+Task: Find a basis B such that c(B) is minimum.
+The instance speciﬁcation is somewhat vague. The set E and the cost function
+c are given explicitly as usual. However, the set F is usually not given by an
+explicit list of its elements. Rather one assumes an oracle which – given a subset
+F ⊆ E – decides whether F ∈ F. We shall return to this question in Section 13.4.
+The following list shows that many combinatorial optimization problems ac-
+tually have one of the above two forms:
+(1) Maximum Weight Stable Set Problem
+Given a graph G and weights c : V(G) → R, ﬁnd a stable set X in G of
+maximum weight.
+Here E = V(G) and F ={ F ⊆ E : F is stable in G}.
+(2) TSP
+Given a complete undirected graph G and weights c : E(G) → R
++, ﬁnd a
+minimum weight Hamiltonian circuit in G.
+Here E = E(G) and F ={ F ⊆ E : F is a subset of a Hamiltonian circuit in
+G}.
+(3) Shortest P ath Problem
+Given a digraph G, c : E(G) → R and s, t ∈ V(G) such that t is reachable
+from s, ﬁnd a shortest s-t-path in G with respect to c.
+Here E = E(G) and F ={ F ⊆ E : F is a subset of an s-t-path}.
+(4) Knapsack Problem
+Given nonnegative numbers n, ci ,w i (1 ≤ i ≤ n), and W , ﬁnd a subset
+S ⊆{ 1,..., n} such that ∑
+j∈ S wj ≤ W and∑
+j∈ S cj is maximum.
+Here E ={ 1,..., n} and F =
+{
+F ⊆ E :∑
+j∈ F wj ≤ W
+}
+.
+(5) Minimum Spanning Tree Problem
+Given a connected undirected graph G and weights c : E(G) → R, ﬁnd a
+minimum weight spanning tree in G.
+Here E = E(G) and F is the set of forests in G.
+(6) Maximum Weight Forest Problem
+Given an undirected graph G and weights c : E(G) → R, ﬁnd a maximum
+weight forest in G.
+Here again E = E(G) and F is the set of forests in G.

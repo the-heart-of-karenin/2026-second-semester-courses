@@ -1,0 +1,29 @@
+\documentclass[UTF8,zihao=-4,fontset=windows,a4paper]{ctexart}
+\usepackage[margin=25mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,enumitem,fancyhdr,booktabs,longtable,array,xcolor}
+\usepackage[unicode,colorlinks,linkcolor=blue!45!black,urlcolor=blue!45!black,bookmarksnumbered]{hyperref}
+\setlength{\parskip}{.35em}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\pdfstringdefDisableCommands{\def\quad{ }}
+\linespread{1.15}
+\setlist{nosep,leftmargin=2em,topsep=.4em}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small 拟阵与单纯复形选读}\fancyhead[R]{\small\shorttitle}\fancyfoot[C]{\thepage}
+\newcommand{\sourcepage}[1]{\par\medskip\noindent{\color{gray}\small〔原文第 #1 页〕}\par\smallskip}
+\newcommand{\entry}[2]{\par\medskip\noindent\textbf{#1\quad #2}\quad}
+\newenvironment{proofcn}{\par\noindent\textbf{证明。}}{\hfill$\square$\par}
+\newcommand{\tnote}[1]{\par\smallskip\noindent{\small\color{blue!45!black}\textbf{译注。}#1}\par\smallskip}
+\newcommand{\omitsection}[2]{\section*{#1\quad #2}\addcontentsline{toc}{section}{#1\quad #2（留空）}\noindent 本选读稿不译本节；保留节号与标题作为位置标记。\par\vspace{7mm}}
+\newcommand{\B}{\mathcal B}\newcommand{\C}{\mathcal C}
+\newcommand{\IP}{\operatorname{IP}}\newcommand{\IA}{\operatorname{IA}}\newcommand{\EP}{\operatorname{EP}}\newcommand{\EA}{\operatorname{EA}}
+\newcommand{\rk}{\operatorname{rk}}\newcommand{\lk}{\operatorname{lk}}\newcommand{\del}{\operatorname{del}}\newcommand{\con}{\operatorname{con}}
+\newcommand{\lex}{\mathrm{lex}}\newcommand{\Gale}{\mathrm{Gale}}
+\newcommand{\Q}{\mathbb Q}\newcommand{\R}{\mathbb R}\newcommand{\Z}{\mathbb Z}
+\newcommand{\QI}{\mathrm{QI}}\newcommand{\QE}{\mathrm{QE}}\newcommand{\QC}{\mathrm{QC}}
+\newcommand{\cm}{\mathrm{CM}}
+\newcommand{\real}[1]{\lVert#1\rVert}
+\newcommand{\blankrefs}{\section*{参考文献（留空）}\addcontentsline{toc}{section}{参考文献（留空）}正文保留原文的文献引注；完整书目信息请查本目录中的原文 PDF。本选读稿不翻译文末参考文献表。}
+\hypersetup{pdfauthor={中文选读译稿}}
+\begin{document}

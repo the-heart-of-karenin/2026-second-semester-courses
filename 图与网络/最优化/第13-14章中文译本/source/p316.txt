@@ -1,0 +1,41 @@
+316 13. Matroids
+5⃝ Apply BFS to compute the set R of vertices reachable from ¯S in ¯G.
+6⃝ If R ∩ ¯T ̸=∅ then: Find an ¯S- ¯T -path P in ¯G with a minimum number
+of edges, set Xk+1 := Xk △V(P) and k := k + 1 and go to 2⃝.
+7⃝ Compute
+ε1 := min{c1(x) − c1(y) : (x, y) ∈ A(1) ∩ δ+(R)};
+ε2 := min{c2(x) − c2(y) : (y, x) ∈ A(2) ∩ δ+(R)};
+ε3 := min{m1 − c1(y) : y ∈ S \ R};
+ε4 := min{m2 − c2(y) : y ∈ T ∩ R};
+ε := min{ε1,ε2,ε3,ε4}
+(where min ∅ :=∞ ).
+8⃝ If ε< ∞ then:
+Set c1(x) := c1(x) − εand c2(x) := c2(x) +εfor all x ∈ R. Go to 4⃝.
+If ε=∞ then:
+Among X0, X1,..., Xk , let X be the one with maximum weight. Stop.
+See Edmonds [1979] and Lawler [1976] for earlier versions of this algorithm.
+Theorem 13.35. (Frank [1981]) The Weighted Matroid Intersection Al-
+gorithm correctly solves the Weighted Matroid Intersection Problem in
+O(|E|4 +| E|3θ) time, where θ is the maximum complexity of the two indepen-
+dence oracles.
+Proof: Let m be the ﬁnal value of k. The algorithm computes sets X0, X1,...,
+Xm . We ﬁrst prove that Xk ∈ F1 ∩ F2 for k = 0,..., m, by induction on k. This
+is trivial for k = 0. If we are working with Xk ∈ F1 ∩ F2 for some k, ¯G is a
+subgraph of (E, A(1) ∪ A(2)) = G Xk . So if a path P is found in 5⃝, Lemma 13.28
+ensures that Xk+1 ∈ F1 ∩ F2.
+When the algorithm stops, we have ε1 = ε2 = ε3 = ε4 =∞ ,s o T is not
+reachable from S in G Xm . Then by Lemma 13.30 m =| Xm |= max{|X | : X ∈
+F1 ∩ F2}.
+To prove correctness, we show that for k = 0,..., m, c(Xk) = max{c(X) :
+X ∈ F1 ∩ F2, |X |= k}. Since we always have c = c1 + c2, it sufﬁces to prove that
+at any stage of the algorithm (13.5) holds. This is clearly true when the algorithm
+starts (for k = 0); we show that (13.5) is never violated. We use Theorem 13.23.
+When we set X
+k+1 := Xk △V(P) in 6⃝ we have to check that (13.5) holds.
+Let P be an s-t-path, s ∈ ¯S, t ∈ ¯T . By deﬁnition of ¯G we have c1(Xk+1) =
+c1(Xk)+c1(s) and c2(Xk+1) = c2(Xk)+c2(t). Since Xk satisﬁes (13.5), conditions
+(a) and (b) of Theorem 13.23 must hold with respect to Xk and each of F1 and
+F2.
+By deﬁnition of ¯S both conditions continue to hold for Xk ∪{ s} and F1.
+Therefore c1(Xk+1) = c1(Xk ∪{ s}) = max{c1(Y) : Y ∈ F1, |Y |= k+1}. Moreover,
+by deﬁnition of ¯T , (a) and (b) of Theorem 13.23 continue to hold for Xk ∪{ t}

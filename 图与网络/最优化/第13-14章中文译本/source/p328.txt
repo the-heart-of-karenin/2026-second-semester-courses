@@ -1,0 +1,70 @@
+328 14. Generalizations of Matroids
+Proof: Induction on i = max{ j : ej ∈ A}. The assertion is trivial for A =∅
+and A ={ e1}.I f i ≥ 2, then ∑
+a∈ A b(a) = ∑
+a∈ A\{ei } b(a) + b(ei ) ≤ f (A \
+{ei }) + b(ei ) ≤ f (A \{ ei }) + f ({e1,..., ei }) − f ({e1,..., ei− 1}) ≤ f (A), where
+the ﬁrst inequality follows from the induction hypothesis and the third one from
+submodularity. 2
+Theorem 14.11. The Polymatroid Greedy Algorithm correctly ﬁnds an x ∈
+P( f ) with cx maximum. If f is integral, then x is also integral.
+Proof: Let x ∈ R
+E be the output of the Polymatroid Greedy Algorithm for
+E, f and c. By deﬁnition, if f is integral, then x is also integral. We have x ≥ 0
+since f is monotone, and thus x ∈ P( f ) by Proposition 14.10.
+Now let y ∈ RE
++ with cy > cx . Similarly as in the proof of Theorem 13.19
+we set dj := c(ej ) − c(ej+1) ( j = 1,..., k − 1) and dk := c(ek), and we have
+k∑
+j=1
+dj
+j∑
+i=1
+x(ei ) = cx < cy ≤
+k∑
+j=1
+c(ej )y(ej ) =
+k∑
+j=1
+dj
+j∑
+i=1
+y(ei ).
+Since dj ≥ 0 for all j there is an index j ∈{ 1,..., k} with ∑j
+i=1 y(ei )>∑j
+i=1 x(ei ); however, since ∑j
+i=1 x(ei ) = f ({e1,..., ej }) this means that y /∈
+P( f ). 2
+As with matroids, we can also handle the intersection of two polymatroids.
+The following polymatroid intersection theorem has many implications:
+Theorem 14.12. (Edmonds [1970,1979]) Let E be a ﬁnite set, and let f, g :
+2E → R+ be submodular functions. Then the system
+x ≥ 0∑
+e∈ A
+xe ≤ f (A)( A ⊆ E)
+∑
+e∈ A
+xe ≤ g(A)( A ⊆ E)
+is TDI.
+Proof: Consider the primal-dual pair of LPs
+max
+{
+cx :
+∑
+e∈ A
+xe ≤ f (A) and
+∑
+e∈ A
+xe ≤ g(A) for all A ⊆ E, x ≥ 0
+}
+and
+min
+{∑
+A⊆ E
+( f (A)yA + g(A)z A) :
+∑
+A⊆ E, e∈ A
+(yA + z A) ≥ ce for all e ∈ E, y, z ≥ 0
+}
+.
+To show total dual integrality, we use Lemma 5.22.

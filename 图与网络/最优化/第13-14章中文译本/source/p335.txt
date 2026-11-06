@@ -1,0 +1,66 @@
+14.4 Schrijver’s Algorithm 335
+proving that X is an optimum solution. 2
+Lemma 14.21. (Schrijver [2000]) Each iteration can be performed in O(n3 +
+γn2) time, where γ is the time for an oracle call.
+Proof: It sufﬁces to show that 5⃝ can be done in O(n3 + γn2) time. Let x =
+λ1b≺ 1 +···+ λk b≺ k and s ≺ i t. We ﬁrst show:
+Claim: δ(χt − χs), for some δ ≥ 0, can be written as convex combination of
+the vectors b≺ s,v
+i − b≺ i for s ≺ i v ⪯i t in O(γn2) time.
+To prove this, we need some preliminaries. Let s ≺ i v ⪯i t. By deﬁnition,
+b≺ s,v
+i (u) = b≺ i (u) for u ≺ i s or u ≻i v As f is submodular, we have for s ⪯i
+u ≺ i v:
+b≺ s,v
+i (u) = f ({w ∈ U : w ⪯s,v
+i u}) − f ({w ∈ U : w ≺ s,v
+i u})
+≤ f ({w ∈ U : w ⪯i u}) − f ({w ∈ U : w ≺ i u}) = b≺ i (u).
+Moreover, for u = v we have:
+b≺ s,v
+i (v) = f ({w ∈ U : w ⪯s,v
+i v}) − f ({w ∈ U : w ≺ s,v
+i v})
+= f ({w ∈ U : w ≺ i s}∪{ v}) − f ({w ∈ U : w ≺ i s})
+≥ f ({w ∈ U : w ⪯i v}) − f ({w ∈ U : w ≺ i v})
+= b≺ i (v).
+Finally, observe that ∑
+u∈ U b≺ s,v
+i (u) = f (U) =∑
+u∈ U b≺ i (u).
+As the claim is trivial if b≺ s,v
+i = b≺ i for some s ≺ i v ⪯i t, we may assume
+b≺ s,v
+i (v) > b≺ i (v) for all s ≺ i v ⪯i t. We recursively set
+κv :=
+χt
+v − ∑
+v≺ i w⪯i t κw(b≺ s,w
+i (v) − b≺ i (v))
+b≺ s,v
+i (v) − b≺ i (v) ≥ 0
+for s ≺ i v ⪯i t, and obtain ∑
+s≺ i v⪯i t κv(b≺ s,v
+i − b≺ i ) = χt − χs , because∑
+s≺ i v⪯i t κv(b≺ s,v
+i (u) − b≺ i (u)) = ∑
+u⪯i v⪯i t κv(b≺ s,v
+i (u) − b≺ i (u)) = χt
+u for all
+s ≺ i u ⪯i t, and the sum over all components is zero.
+By letting δ:= 1∑
+s≺ i v⪯i t κv
+and multiplying each κu by δ, the claim follows.
+Now consider ϵ := min{λi δ,− x(t)} and x′ := x + ϵ(χt − χs).I f ϵ = λi δ ≤
+− x(t), then we have x′ =∑k
+j=1 λj b≺ j + λi
+∑
+s≺ i v⪯i t κv(b≺ s,v
+i − b≺ i ), i.e. we have
+written x′ as a convex combination of b≺ j ( j ∈{ 1,..., k}\{ i}) and b≺ s,v
+i (s ≺ i
+v ⪯i t). If ϵ =− x(t), we may additionally use b≺ i in the convex combination.
+We ﬁnally reduce this convex combination to at most n vectors in O(n3) time,
+as shown in Exercise 5 of Chapter 4. 2
+Lemma 14.22. (Vygen [2003]) Schrijver’s Algorithmterminates after O(n5)
+iterations.

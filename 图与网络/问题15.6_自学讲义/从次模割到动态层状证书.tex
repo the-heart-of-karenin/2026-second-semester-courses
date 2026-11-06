@@ -1,0 +1,306 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem}
+\usepackage{xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=2.4em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{从次模割到层状证书}
+\fancyhead[R]{问题 15.6 自学材料}
+\fancyfoot[C]{\thepage}
+\newtheorem{definition}{定义}[section]
+\newtheorem{lemma}[definition]{引理}
+\newtheorem{proposition}[definition]{命题}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{remark}[definition]{说明}
+\newcommand{\cut}{\delta}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\calF}{\mathcal F}
+\newcommand{\calL}{\mathcal L}
+\newcommand{\R}{\mathbb R}
+\newcommand{\progressrule}{\par\medskip\noindent\rule{\linewidth}{0.65pt}\par\medskip}
+\newcommand{\ownrule}{\par\medskip\noindent\textcolor{red}{\rule{\linewidth}{1pt}}\par\medskip}
+\title{从次模割到层状证书\\\large 问题 15.6 的零起点自学讲义}
+\author{围绕《Hall》讲义与 Hirai (2016) 整理}
+\date{2026 年 9 月}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+本文为只具备基本图论与线性规划知识、尚未系统阅读《Hall》讲义的读者而写。从集合函数、次模性、图割、紧集和解交起步，建立割覆盖 LP 的对偶解交，再说明 Hirai 的解交博弈、区间核心与一份尚待独立审查的线性步数改进稿。本文是导读和重新组织的讲义，不替代所引论文的原始证明。
+\end{abstract}
+
+\tableofcontents
+
+\section{读前约定：我们究竟要回答什么}
+
+设 $V$ 是有限顶点集，$G=(V,E)$ 是无向图，边费用 $c_e\ge0$。研究问题 15.6 问两件事：
+\begin{quote}
+对给定的基于割的 LP，最快的显式解交算法是什么？当图动态变化时，能否动态维护层状证书？
+\end{quote}
+这里至少有三个相互独立的任务：\emph{求出}一个适当的原始/对偶解；把已有对偶解\emph{解交}成层状解；图或费用变化后\emph{维护最优性}。Hirai 论文主要处理第二项。第三项的初步观察另存于本文件夹下「动态图\_研究笔记」中的《动态图：维护层状证书的初步思路》。若不给出「最优或近似最优」要求，只说维护一个层状可行对偶，那么恒为零的对偶解就已满足要求，因此这样的表述没有研究内容。
+
+全文约定 $n=|V|$。同一无向割由 $S$ 与 $V\setminus S$ 共同表示；在讨论二划分时，它们被视为\emph{同一个}割。若需要树形表示，固定根 $r\in V$，一律选不含 $r$ 的那侧作为代表。
+
+\section{集合函数、四块分解与图割}
+
+\subsection{次模性从何而来}
+
+\begin{definition}[次模、超模与对称]
+集合函数 $g:2^V\to\R$ 称为\emph{次模}，若对任意 $X,Y\subseteq V$，
+\begin{equation}\label{eq:submod}
+g(X)+g(Y)\ge g(X\cap Y)+g(X\cup Y).
+\end{equation}
+不等号反向时称为超模。若 $g(S)=g(V\setminus S)$，称为对称。次模性的等价语言是「边际收益递减」：$A\subseteq B$ 且 $e\notin B$ 时，$g(A+e)-g(A)\ge g(B+e)-g(B)$。
+\end{definition}
+
+要研究两个割，最稳妥的办法是把顶点分成四块：
+\begin{equation}\label{eq:four}
+I=X\cap Y,\qquad P=X\setminus Y,\qquad Q=Y\setminus X,\qquad O=V\setminus(X\cup Y).
+\end{equation}
+它们两两不交，合起来是 $V$。两种标准替换分别为
+\begin{equation}\label{eq:two-replacements}
+(X,Y)\mapsto(I,I\cup P\cup Q),\qquad
+(X,Y)\mapsto(P,Q).
+\end{equation}
+前者简称\emph{交--并}，后者简称\emph{差集}。这个四块记号将贯穿全文。
+
+\subsection{无向割的两个精确恒等式}
+
+令 $\cut_G(S)=\{uv\in E:|\{u,v\}\cap S|=1\}$，$d_G(S)=|\cut_G(S)|$。对 $A,B\subseteq V$，记 $E(A,B)$ 为两块之间的边集。对式~\eqref{eq:four} 的四块逐边检查，可得
+\begin{align}
+d_G(X)+d_G(Y)-d_G(X\cap Y)-d_G(X\cup Y)&=2|E(P,Q)|,\label{eq:cutsub}\\
+d_G(X)+d_G(Y)-d_G(P)-d_G(Q)&=2|E(I,O)|.\label{eq:cutposi}
+\end{align}
+第一式给出割函数的次模性，第二式给出\emph{余次模性}。带非负边权时，把边数换成总权即可。尤其要注意：后面 LP 使用的是\emph{每条边上的}示性向量不等式，而不只是求和后的标量式。对每个 $e\in E$，
+\begin{align}
+\mathbf1_{e\in\cut(X)}+\mathbf1_{e\in\cut(Y)}
+&\ge\mathbf1_{e\in\cut(I)}+\mathbf1_{e\in\cut(X\cup Y)},\label{eq:coord1}\\
+\mathbf1_{e\in\cut(X)}+\mathbf1_{e\in\cut(Y)}
+&\ge\mathbf1_{e\in\cut(P)}+\mathbf1_{e\in\cut(Q)}.\label{eq:coord2}
+\end{align}
+更精确地，\eqref{eq:coord1} 的左侧减右侧等于 $2\mathbf1_{e\in E(P,Q)}$，而~\eqref{eq:coord2} 的左侧减右侧等于 $2\mathbf1_{e\in E(I,O)}$；其余边的松弛均为 $0$。这是之后「搬动对偶权重不会破坏边约束」的全部原因。
+
+\begin{remark}[对称性为何重要]
+$d_G(S)=d_G(V\setminus S)$。更一般地，对称的次模函数自动余次模：把次模不等式应用于 $X$ 和 $V\setminus Y$ 即得。因此无向割同时支持式~\eqref{eq:two-replacements} 的两种方向；但\emph{需求函数}未必同时支持两种方向。
+\end{remark}
+
+\section{两种不同的「解交」}
+
+\subsection{紧集的交、并封闭}
+
+还有一类容易混淆的论证。设 $g$ 次模、$m$ 模，即 $m(X)+m(Y)=m(X\cap Y)+m(X\cup Y)$，并且 $g(S)\ge m(S)$。称 $g(S)=m(S)$ 的集合为\emph{紧集}。
+
+\begin{lemma}[紧集解交]
+如果 $X,Y$ 都紧，且四个相关集合仍在定义域，那么 $X\cap Y$、$X\cup Y$ 也紧。
+\end{lemma}
+\begin{proof}
+由次模性与下界，
+\[
+m(X)+m(Y)=g(X)+g(Y)\ge g(X\cap Y)+g(X\cup Y)
+\ge m(X\cap Y)+m(X\cup Y)=m(X)+m(Y).
+\]
+两次不等式都必须取等号。
+\end{proof}
+
+对于一族普通子集，\emph{层状}一般指任意两集合包含或不交。紧集引理说所有紧集对交、并封闭，却\emph{并不}说所有紧集已是层状的。它允许我们为特定的证明选择层状的代表族。这个版本搬动的是顶点示性向量 $\mathbf1_S$。
+
+\subsection{二划分的 crossing 与对偶支撑}
+
+对于无向\emph{二划分}，定义 $X,Y$ crossing，当且仅当式~\eqref{eq:four} 的 $I,P,Q,O$ \emph{四块都非空}。一个二划分族若没有 crossing 对，称为无交叉；选定根 $r$ 并取不含根的一侧后，它恰可表示为通常的层状子集族。确实，若两个均不含 $r$ 的代表集合相交而互不包含，则 $I,P,Q$ 非空，且 $r\in O$，故二划分 crossing；反向也显然。这与「两个集合相交且互不包含」不完全相同：当 $X\cup Y=V$ 时，普通子集可能重叠，但对应二划分不 crossing。
+
+下文的对偶解交搬动的是\emph{边割示性向量} $\mathbf1_{\cut(S)}$。由于~\eqref{eq:coord1}--\eqref{eq:coord2} 只有「$\ge$」而非等号，对偶可行性通常保留为不等式。这也是紧集的链化定理不能直接替代 Hirai 论文的原因。
+
+\section{割覆盖 LP 及其对偶}
+
+\subsection{先看原始与对偶各在说什么}
+
+令 $f$ 给每个非平凡二划分一个非负需求值，且 $f(S)=f(V\setminus S)$。考虑割覆盖 LP：
+\begin{align}
+(P_G)\qquad\min\quad&\sum_{e\in E}c_ex_e\label{eq:primal}\\
+\text{s.t.}\quad&\sum_{e\in\cut(S)}x_e\ge f(S)\quad\text{对所有非平凡 }S\subset V,\nonumber\\
+&x_e\ge0.\nonumber
+\end{align}
+其对偶是
+\begin{align}
+(D_G)\qquad\max\quad&\sum_S f(S)\lambda_S\label{eq:dual}\\
+\text{s.t.}\quad&\sum_{S:e\in\cut(S)}\lambda_S\le c_e\quad(e\in E),\nonumber\\
+&\lambda_S\ge0.\nonumber
+\end{align}
+把 $\lambda_S$ 想成放在割 $S$ 上的重量。每条图边 $e$ 有容量 $c_e$；所有跨过 $e$ 的割重量之和不能超过容量。任意原始可行 $x$ 与对偶可行 $\lambda$ 满足弱对偶
+\[
+\sum_S f(S)\lambda_S\le \sum_e c_ex_e.
+\]
+若两边相等，二者都最优。
+
+\subsection{斜超模性：两种替换至少有一种划算}
+
+\begin{definition}[斜超模需求]
+$f$ 称为\emph{斜超模}（skew-supermodular），若对任意 $X,Y$，至少有一式成立：
+\begin{align}
+f(X)+f(Y)&\le f(X\cap Y)+f(X\cup Y),\label{eq:skew1}\\
+f(X)+f(Y)&\le f(X\setminus Y)+f(Y\setminus X).\label{eq:skew2}
+\end{align}
+等价地，左边不超过右边两个候选和的最大值。这里的 $f$ 是需求函数；它与前节的\emph{次模割函数} $d_G$ 不应混为一谈。
+\end{definition}
+
+一个最简单的例子是固定端点 $s,t$，令 $f(S)=1$ 当 $S$ 分开 $s,t$，否则为 $0$。若 $X,Y$ 均不分开二者，左侧为 $0$。若二者都分开，分别取含 $s$ 的代表，则 $s\in X\cap Y$、$t\notin X\cup Y$，交与并均分开 $s,t$，式~\eqref{eq:skew1} 成立。若恰有 $X$ 分开，取 $s\in X,t\notin X$；当 $Y$ 同时含 $s,t$ 时，$X\cap Y$ 分开二者，式~\eqref{eq:skew1} 成立；当 $Y$ 同时不含 $s,t$ 时，$X\setminus Y$ 分开二者，式~\eqref{eq:skew2} 成立。因此 $f$ 斜超模。一般的生存网络设计还可从点对连通性需求 $r_{uv}$ 得到 $f(S)=\max_{u\in S,v\notin S}r_{uv}$；参见第 2.10 节及 Jain 的工作~\cite{jain}。
+
+\subsection{一次解交的完整代数核查}
+
+设 $\lambda_X,\lambda_Y>0$ 且 $X,Y$ crossing。选符合~\eqref{eq:skew1} 或~\eqref{eq:skew2} 的一对替代割 $(X',Y')$，令 $\alpha=\min\{\lambda_X,\lambda_Y\}$，执行
+\begin{equation}\label{eq:weightmove}
+\lambda_X\gets\lambda_X-\alpha,\quad
+\lambda_Y\gets\lambda_Y-\alpha,\quad
+\lambda_{X'}\gets\lambda_{X'}+\alpha,\quad
+\lambda_{Y'}\gets\lambda_{Y'}+\alpha.
+\end{equation}
+每个边约束左侧的改变量为
+\[
+\alpha\bigl(\mathbf1_{e\in\cut(X')}+\mathbf1_{e\in\cut(Y')}
+-\mathbf1_{e\in\cut(X)}-\mathbf1_{e\in\cut(Y)}\bigr)\le0
+\]
+（用~\eqref{eq:coord1} 或~\eqref{eq:coord2}）。目标值变化为
+\[
+\alpha\bigl(f(X')+f(Y')-f(X)-f(Y)\bigr)\ge0.
+\]
+所以可行性和目标值均不恶化。若开始就是最优对偶，则新解仍最优。这个证明并未使用图上跑最小割算法；它假设已有一个有限支撑对偶解及可比较的 $f$ 值。
+
+\begin{proposition}[一个证明终止、但不保证强多项式的势]
+置 $\psi(S)=|S|(n-|S|)$，$\Phi(\lambda)=\sum_S\lambda_S\psi(S)$。当四块均非空时，交--并操作使 $\Phi$ 减少 $2\alpha|P||Q|$；差集操作使其减少 $2\alpha|I||O|$。
+\end{proposition}
+\begin{proof}
+将~\eqref{eq:four} 中四块的大小代入 $\psi$ 并整理即可。两种减少量严格为正。
+\end{proof}
+若初始权重均为有理数，取公分母 $D$，则以后每个权重和每个 $\alpha$ 仍为 $D^{-1}$ 的整数倍。令 $M=\sum_S\lambda_S$；一次操作同时减去、加上两份 $\alpha$，故 $M$ 不变，且 $0\le\Phi\le Mn^2/4$。每次 crossing 解交又使 $\Phi$ 至少减少 $2/D$，所以反复解交必在有限步后停止。但此上界依赖 $D$ 和 $M$，不能据此宣称强多项式。这正是 Hirai 的博弈策略要补上的算法性内容。
+
+\progressrule
+\section{Hirai 的解交博弈}
+
+\subsection{Red、Blue 与权重更新的关系}
+
+博弈的状态是当前对偶支撑所对应的割族 $\calF$。若它无交叉，Red 赢。否则 Red 选一个 crossing 对 $X,Y\in\calF$，再选一种满足斜超模不等式的替换 $(X',Y')$。Red 删去旧的 $X,Y$ 并放入新的两割；Blue 随后可以返还旧割之一。Blue 代表真实权重更新中的不确定性：在~\eqref{eq:weightmove} 中，权重较大的旧割可能仍有正剩余。若旧权重相等，二者都不返还。
+
+Red 必须在\emph{任何} Blue 选择下都保证终止，且步数只依赖 $n$ 和初始支撑大小，而不依赖权重数值。Hirai 的定理给出 $O(n^3|\calF|)$ 步策略~\cite{hirai}。这是一条\emph{基本解交次数}界；把它变成具体机器上的运行时间，还须实现寻找交叉对、求值 $f$、表示割及更新支撑的操作。
+
+\subsection{平凡成员与原子}
+
+若一个割不与当前族中任何割 crossing，称它为平凡成员。Hirai 证明：对其他两割解交后，它仍不会开始与新割 crossing，因此可以暂时移出正在处理的族，而不影响尚待解决的交叉。定义顶点等价关系：$u\sim_{\calF}v$ 当且仅当当前族中没有割把 $u,v$ 分开；等价类称为\emph{原子}。所有割都是原子的并。解交及删除平凡割后，原子可能合并，但不会被拆开。于是分析中可不断收缩原子，减少有效顶点数。
+
+\section{区间核心 (A)：先读懂 Hirai 原论证}
+
+\label{sec:caseA}
+取有效顶点顺序 $V=\{1,\dots,n\}$，记 $[a,b]=\{a,a+1,\dots,b\}$。Hirai 的特殊情形 (A) 假设所有非平凡割都属于
+\begin{equation}\label{eq:AB}
+A_i=[1,i]\quad(2\le i\le n-2),\qquad
+B_j=[2,j]\quad(3\le j\le n-1).
+\end{equation}
+同类 $A$ 互相嵌套，同类 $B$ 互相嵌套；$A_i$ 与 $B_j$ 恰在 $i<j$ 时 crossing。因而复杂性集中在两条链之间。对任意 $i<j$，
+\begin{equation}\label{eq:AB-four}
+A_i\cap B_j=B_i,\quad A_i\cup B_j=A_j,\quad
+A_i\setminus B_j=\{1\},\quad B_j\setminus A_i=[i+1,j].
+\end{equation}
+
+Hirai 取当前最小的 $B_d$，在必要的原子收缩后可假设 $A_2,\ldots,A_{d-1}$ 都在场。他先比较 $A_{d-1},B_d$ 的差集替换是否可行。如果可行，两个替代割是单点，可以删除；Blue 无论返还哪一个，$|B|$ 或有效顶点数都会下降。如果差集不合法，斜超模性强迫交--并方向合法。此时寻找一个最早的 $k$，使从 $k$ 到 $d-1$ 的相邻交--并不等式全部成立：
+\begin{equation}\label{eq:hirai-local}
+f(A_\ell)+f(B_{\ell+1})\le f(B_\ell)+f(A_{\ell+1})
+\quad(\ell=k,\ldots,d-1).
+\end{equation}
+将这些不等式相加，中间项望远镜相消，得到
+\begin{equation}\label{eq:hirai-telescope}
+f(A_k)+f(B_d)\le f(B_k)+f(A_d).
+\end{equation}
+因此可对 $A_k,B_d$ 做一次非相邻交--并。若 Blue 返还 $A_k$，则 $B_d$ 消失；$k>2$ 时新生成的 $B_k$ 使最小下标降至 $k<d$，$k=2$ 时 $B_2$ 是单点而移出，故 $|B|$ 下降。若 Blue 返还 $B_d$ 且 $k>2$，则 $B_k$ 留在族中；由 $k$ 的极小性，$\ell=k-1$ 时式~\eqref{eq:hirai-local} 失败，斜超模性保证 $A_{k-1},B_k$ 的差集替换合法。若 $k=2$，新生成的 $B_2$ 同样是可移出的单点。Hirai 分别检查后续 Blue 分支，以 $n+|B|$ 和最小下标 $d$ 作进度量，证明经过 $O(d)$ 步就有实际进展，从而在 (A) 中得到 $O(n^2)$ 步。
+
+阅读原文时应追问三件事：为什么~\eqref{eq:hirai-local} 能相加；Blue 返还不同旧割时哪个量下降；为什么删去单点和平凡割后仍属于 (A)。掌握这些比记住每个下标更重要。
+
+\clearpage
+\ownrule
+\section{区间核心 (A) 的另一条线性步数路线}
+
+\label{sec:improvement}
+以下给出一种选步规则及其局部步数上界。它是\emph{目前已写出的证明候选}，不是已发表结果；第~\ref{sec:limits} 节列出仍须复查的接口。
+
+\subsection{把合法性变成数列比较}
+
+为了方便边界情形，也定义 $A_t=[1,t]$、$B_t=[2,t]$ 于 $2\le t\le n-1$，即便某割当前不存在。置
+\begin{equation}\label{eq:h}
+h_t=f(A_t)-f(B_t).
+\end{equation}
+由~\eqref{eq:AB-four}，$A_i,B_j$ 的交--并替换合法当且仅当
+\begin{equation}\label{eq:hcomp}
+f(A_i)+f(B_j)\le f(B_i)+f(A_j)
+\quad\Longleftrightarrow\quad h_i\le h_j.
+\end{equation}
+若 $h_i>h_j$，斜超模性保证差集替换合法。注意当 $h_i\le h_j$ 时差集\emph{也可能}合法，以下策略只主动选择交--并，不假定另一方向不合法。
+
+称位置 $t$ 活跃，若当前族含 $A_t$ 或 $B_t$。当前活跃位置集合记为 $U$，$m=|U|$。交--并只生成边界 $i,j$ 上的 $B_i,A_j$，不会创造新位置。若 $i<j$ 为相邻活跃位置，对 $A_i,B_j$ 做差集产生 $\{1\}$ 和 $[i+1,j]$。由于中间没有活跃边界，区间 $[i+1,j]$ 是当前族的一个原子；这两割对余下族都是平凡的，可从继续博弈的族中删除。因此差集步骤也不增加活跃位置。
+
+\subsection{Red 的选步规则}
+
+\begin{enumerate}
+\item 若存在 $A_i,B_j$（$i<j$）满足 $h_i\le h_j$，在所有这样的对中先取\emph{最大的 $j$}，再在这个 $j$ 下取\emph{最小的 $i$}，对该对做交--并。
+\item 若不存在这样的对，取相邻活跃位置上的某个 crossing 对 $A_i,B_j$，做差集。此时所有 crossing 对都满足 $h_i>h_j$，故该操作合法。
+\end{enumerate}
+第二种情形中相邻 crossing 对必存在：把活跃位置写成 $u_1<\cdots<u_q$。在所有「右侧存在 $B$」的 $A_{u_a}$ 中，取下标 $a$ 最大者。由于右侧确有 $B$，$a<q$。若 $u_{a+1}$ 不带 $B$，它必带 $A$，且其右侧仍有 $B$，与 $a$ 最大矛盾。因此 $A_{u_a},B_{u_{a+1}}$ 是所需的一对。
+
+\begin{theorem}[复核稿的局部线性界]\label{thm:local}
+在情形 (A) 中，若初始活跃边界数为 $m\le1$，族已无 crossing；若 $m\ge2$，上述规则无论 Blue 如何返还旧割，至多 $2m-3$ 次基本解交后获胜。
+\end{theorem}
+
+\begin{proof}
+关键是证明\emph{每一步至少有一种可参与交叉的割类型永久消失}。先考虑交--并步骤，选中 $A_i,B_J$。由 $J$ 最大性，任何现存 $B_k$（$k>J$）都满足 $h_i>h_k$。新生成的 $A_J$ 满足 $h_J\ge h_i>h_k$，所以不会与右方 $B_k$ 构成新的可行交--并对；新生成的 $B_i$ 位于 $J$ 左边。更形式化地，令性质 $\mathcal P(J)$ 表示「每个现存 $B_k$（$k>J$）与每个其左侧的现存 $A_a$ 均满足 $h_a>h_k$」。选取最大 $J$ 时它成立。以后若在 $J'\le J$ 处交--并，新生成的 $B$ 下标小于 $J'$，不产生右侧 $B_k$；新生成的 $A_{J'}$ 来自某个 $A_a$ 且 $h_{J'}\ge h_a$，故对每个既存的 $B_k$（$k>J$），由归纳假设 $h_{J'}\ge h_a>h_k$。差集只删割。故 $\mathcal P(J)$ 永久成立，以后的可行交--并右端点不会超过 $J$。
+
+若 Blue 返还 $A_i$，则旧 $B_J$ 被删，且本步只额外生成 $B_i$。以后重造 $B_J$ 必须有某个交--并操作以 $A_J$ 作左割、以 $B_k$（$k>J$）作右割；上段排除了这种操作。因此 $B_J$ 永久消失。
+
+若 Blue 返还 $B_J$，则 $A_i$ 被删。由于 $i$ 在固定 $J$ 下最小，所有当前的 $A_\ell$（$\ell<i$）满足 $h_\ell>h_J\ge h_i$。未来在 $i$ 左侧新产生的 $A_\ell$，只能由更左的 $A_a$ 经交--并产生，且合法性要求 $h_a\le h_\ell$；归纳可知它们仍都满足 $h_\ell>h_i$。而重造 $A_i$ 必须以某个更左的 $A_\ell$ 和 $B_i$ 做交--并，这需要 $h_\ell\le h_i$，矛盾。因此 $A_i$ 永久消失。Blue 若两者都不返还，两个结论同时成立。
+
+若已无可行交--并对，则之后只能用差集。选相邻活跃位置使替代割平凡，每步删去至少一个旧的 $A/B$ 类型，而且不再生成非平凡类型。
+
+初始 $U$ 中最小位置的 $B$ 和最大位置的 $A$ 永远不能参与 crossing，可忽略。故最多只有 $2m-2$ 种可参与的 $A/B$ 类型。每一步永久淘汰其中至少一种，而要再走一步至少需要两种未淘汰的 crossing 类型，于是总步数至多 $(2m-2)-1=2m-3$。
+\end{proof}
+
+\subsection{如何从局部界回到任意割族}
+
+Hirai 的下一层条件 (B) 将当前族写成两个层状族 $\mathcal C,\mathcal D$，并要求 $\mathcal C$ 中每个割的一侧至多接触 $\mathcal D$ 的两个原子。逐一处理 $\mathcal C$ 中的割：固定其中一个 $X$ 后，与它 crossing 的 $\mathcal D$ 成员排成一条链，收缩原子后正好落到 (A)。Hirai 在此逐个使用局部 $O(n^2)$ 界，得到 (B) 的 $O(n^3)$ 步；将定理~\ref{thm:local} 的 $O(n)$ 局部界代入，可得 (B) 的 $O(n^2)$ 步。最后把任意初始族中层状部分以外的至多 $|\calF|$ 个割逐个并入，得到
+\begin{equation}\label{eq:global-bound}
+O(n^2|\calF|)\quad\text{次基本解交操作}.
+\end{equation}
+此处依赖 Hirai 对 (B) 到 (A)、再到任意族的归约；本稿的关键审查任务是核对每次局部处理与原子收缩对固定下标策略的兼容性。
+
+\section{结果边界：哪些已经得到，哪些尚未得到}
+\label{sec:limits}
+
+式~\eqref{eq:global-bound} 衡量的是基本解交\emph{次数}，不是总机器时间。选最大 $j$、最小 $i$、维护活跃边界、计算 $f(A_t)$ 与 $f(B_t)$ 均有代价；不同需求函数的求值模型也不同。局部上界 $2m-3$ 未证明是\emph{原始博弈}的最坏最优值。原手稿对一个受限比较博弈给出了匹配下界，但原始博弈可能允许额外合法差集，不能直接移用该下界。
+
+更重要的是，解交步骤只从\emph{已有可行对偶解}出发，并保持或提高其目标值；它不会凭空求出初始最优对偶解。它也没有解决图变化后的再优化。因此这项结果较好回应了原问题的「显式解交」部分，但没有宣称解决「最快的算法」或「动态维护」两项完整要求。需要正式发表时，应独立复查第~\ref{sec:improvement} 节的永久淘汰不变量、Hirai 的两层归约接口，以及具体运算模型下的运行时间。
+
+\ownrule
+\progressrule
+\section{建议的阅读与大作业路线}
+
+\begin{enumerate}
+\item 先掌握本文第 2--4 节，并亲自证明逐边不等式~\eqref{eq:coord1}--\eqref{eq:coord2} 与一次搬权的两个保持性结论。对应原讲义中文版第 1.1 节的定义/无向割例子、第 1.2 节紧集与术语提醒、第 2.9 节对偶解交。
+\item 读 Hirai 论文第 218--222 页。第 218 页看博弈定义，第 219--220 页看情形 (A)，第 221 页看两层归约，第 222 页看 LP 应用。暂可跳过最后的局部最优性命题。
+\item 对照本文第~\ref{sec:improvement} 节与《证明复核》手稿，重点复核「最大 $j$、最小 $i$」为何永久淘汰割类型；尝试找反例而非只重复推导。
+\end{enumerate}
+
+\paragraph{暂不需要读的内容。}原讲义中 Lov\'asz 扩张、基多面体、zonotope、拟阵、Hall 定理证明、树打包、定向和分裂等，不是理解 Hirai 解交博弈的先修。若需要一个具体网络设计应用，再补读原讲义第 2.10 节的 Jain 迭代舍入；若研究动态割本身，另行学习相应动态图算法，而不是把它们视为本讲义的前置课程。
+
+\paragraph{自检题。}（1）为什么次模的是割向量，而斜超模的是需求函数？（2）Blue 的返还对应权重更新的哪一步？（3）局部 $O(n)$ 步为什么尚不等于总体 $O(n)$ 时间？能独立回答这些问题，便具备继续读原论文与设计大作业的基础。
+
+\clearpage
+\begin{thebibliography}{9}
+\bibitem{hall} 《次模性、凸性与图的连通性》（本课程《Hall》讲义中文译本），特别是第 1.1、1.2、2.9、2.10、15.5 节；文件位于上一级「图与网络」目录。
+\bibitem{hirai} H. Hirai, ``On Uncrossing Games for Skew-Supermodular Functions,'' \emph{Journal of the Operations Research Society of Japan} 59 (2016), 218--223. DOI: \href{https://doi.org/10.15807/jorsj.59.218}{10.15807/jorsj.59.218}；本地副本位于「问题15.6\_解交叉线性界」的参考文献目录。
+\bibitem{proofnote} 《问题 15.6：区间解交博弈的线性步数界》，2026 年 9 月证明复核稿，位于「问题15.6\_解交叉线性界」目录。其中计算核查与受限博弈下界不应误认为原始博弈的最优性定理。
+\bibitem{jain} K. Jain, ``A Factor 2 Approximation Algorithm for the Generalized Steiner Network Problem,'' \emph{Combinatorica} 21 (2001), 39--60.
+\end{thebibliography}
+
+\end{document}

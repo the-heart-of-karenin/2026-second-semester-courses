@@ -1,0 +1,41 @@
+References 321
+Frank, A. [1981]: A weighted matroid intersection algorithm. Journal of Algorithms 2
+(1981), 328–336
+Frank, A., and Tardos, ´E. [1989]: An application of submodular ﬂows. Linear Algebra and
+Its Applications 114/115 (1989), 329–348
+Fulkerson, D.R. [1971]: Blocking and anti-blocking pairs of polyhedra. Mathematical Pro-
+gramming 1 (1971), 168–194
+Gabow, H.N. [1995]: A matroid approach to ﬁnding edge connectivity and packing arbores-
+cences. Journal of Computer and System Sciences 50 (1995), 259–273
+Gabow, H.N., and Xu, Y. [1996]: Efﬁcient theoretic and practical algorithms for linear
+matroid intersection problems. Journal of Computer and System Sciences 53 (1996),
+129–147
+Hausmann, D., Jenkyns, T.A., and Korte, B. [1980]: Worst case analysis of greedy type
+algorithms for independence systems. Mathematical Programming Study 12 (1980), 120–
+131
+Hausmann, D., and Korte, B. [1981]: Algorithmic versus axiomatic deﬁnitions of matroids.
+Mathematical Programming Study 14 (1981), 98–111
+Jenkyns, T.A. [1976]: The efﬁciency of the greedy algorithm. Proceedings of the 7th S-
+E Conference on Combinatorics, Graph Theory, and Computing, Utilitas Mathematica,
+Winnipeg 1976, pp. 341–350
+Korte, B., and Hausmann, D. [1978]: An analysis of the greedy algorithm for independence
+systems. In: Algorithmic Aspects of Combinatorics; Annals of Discrete Mathematics 2
+(B. Alspach, P. Hell, D.J. Miller, eds.), North-Holland, Amsterdam 1978, pp. 65–74
+Korte, B., and Monma, C.L. [1979]: Some remarks on a classiﬁcation of oracle-type algo-
+rithms. In: Numerische Methoden bei graphentheoretischen und kombinatorischen Prob-
+lemen; Band 2 (L. Collatz, G. Meinardus, W. Wetterling, eds.), Birkh ¨auser, Basel 1979,
+pp. 195–215
+Lehman, A. [1979]: On the width-length inequality. Mathematical Programming 17 (1979),
+403–417
+Nash-Williams, C.S.J.A. [1967]: An application of matroids to graph theory. In: Theory of
+Graphs; Proceedings of an International Symposium in Rome 1966 (P. Rosenstiehl, ed.),
+Gordon and Breach, New York, 1967, pp. 263–265
+Rado, R. [1942]: A theorem on independence relations. Quarterly Journal of Math. Oxford
+13 (1942), 83–89
+Rado, R. [1957]: Note on independence functions. Proceedings of the London Mathematical
+Society 7 (1957), 300–320
+Seymour, P.D. [1977]: The matroids with the Max-Flow Min-Cut property. Journal of
+Combinatorial Theory B 23 (1977), 189–222
+Whitney, H. [1933]: Planar graphs. Fundamenta Mathematicae 21 (1933), 73–84
+Whitney, H. [1935]: On the abstract properties of linear dependence. American Journal of
+Mathematics 57 (1935), 509–533

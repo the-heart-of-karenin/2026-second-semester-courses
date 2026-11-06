@@ -1,0 +1,40 @@
+13.4 The Greedy Algorithm 307
+Proof: We use the same notation as in the proof of Theorem 13.19. By con-
+struction, G j ∪ (E \ Ej ) contains a basis of E, but (G j ∪ (E \ Ej )) \{ e} does not
+contain a basis of E for any e ∈ G j ( j = 1,..., n). In other words, Ej \ G j is a
+basis of Ej with respect to (E, F∗ ),s o |Ej |−| G j |≥ ρ∗ (Ej ).
+Since On ⊆ E \(Ej \ Oj ) and On is a basis, Ej \ Oj is independent in (E, F∗ ),
+so |Ej |−| Oj |≤ r ∗ (Ej ).
+We conclude that
+|G j |≤| Ej |− ρ∗ (Ej ) and
+|Oj |≥| Ej |− r ∗ (Ej ).
+Now the same calculation as (13.1) provides the upper bound. To see that this
+bound is tight, consider
+c(e) :=
+{ 1 for e ∈ F
+0 for e ∈ E \ F ,
+where F ⊆ E is a set where the maximum in (13.3) is attained. Let B1 be a basis
+of F with respect to (E, F∗ ), with |B1|= ρ∗ (F). If we sort e1,..., en such that
+c(e1) ≥ c(e2) ≥ ... ≥ c(en) and B1 ={ e1,..., e|B1 |}, we have G(E, F, c) =
+|F|−| B1| and OPT(E, F, c) =| F|− r ∗ (F). 2
+12 M >> 2
+Fig. 13.1.
+If we apply the W orst-Out-Greedyto the Maximization Problem or the
+Best-In-Greedy to the Minimization Problem, there is no positive lower/ﬁnite
+upper bound for G(E,F,c)
+OPT(E,F,c) . To see this, consider the problem of ﬁnding a minimal
+vertex cover of maximum weight or a maximal stable set of minimum weight in
+the simple graph shown in Figure 13.1.
+However in the case of matroids, it does not matter whether we use the Best-
+In-Greedy or the W orst-Out-Greedy: since all bases have the same cardinality,
+the Minimization Problem for (E, F, c) is equivalent to the Maximization
+Problem for (E, F, c
+′), where c′(e) := M − c(e) and M := 1+max{c(e) : e ∈ E}.
+Therefore Kruskal’s Algorithm(Section 6.1) solves the Minimum Spanning
+Tree Problem optimally.
+The Edmonds-Rado Theorem 13.20 also yields the following characterization
+of optimum k-element solutions of the Maximization Problem.
+Theorem 13.23. Let (E, F) be a matroid, c : E → R, k ∈ N and X ∈ F with
+|X |= k. Then c(X) = max{c(Y) : Y ∈ F, |Y |= k} if and only if the following
+two conditions hold:
+(a) For all y ∈ E \ X with X ∪{ y} /∈ F and all x ∈ C(X, y) we have c(x) ≥ c(y);

@@ -1,0 +1,49 @@
+332 14. Generalizations of Matroids
+f (S) ≤− f (∅) + f (S \{ x}) + f ({x}) ≤· · ·≤− | S| f (∅) + f (∅) +
+∑
+x∈ S
+f ({x}),
+and for S ⊂ U (let y ∈ U \ S):
+f (S) ≥− f ({y}) + f (S ∪{ y}) + f (∅) ≥ ···
+≥−
+∑
+y∈ U \S
+f ({y}) + f (U) +| U \ S| f (∅). 2
+Proposition 14.17. The following problem can be solved in polynomial time:
+Given a ﬁnite set U , a submodular and monotone function f :2 U → Z+ (by
+an oracle) with f (S)> 0 for S ̸=∅ , a number B ∈ N with f (S) ≤ B for all
+S ⊆ U , and a vector x ∈ ZU
++ , decide if x ∈ P( f ) and otherwise return a set
+S ⊆ U with∑
+v∈ S x(v) > f (S).
+Proof: This is the Separation Problem for the polymatroid P( f ). We will
+use Theorem 4.23, because we have already solved the optimization problem for
+P( f ): the Polymatroid Greedy Algorithmmaximizes any linear function over
+P( f ) (Theorem 14.11).
+We have to check the prerequisites of Theorem 4.23. Since the zero vector and
+the unit vectors are all in P( f ), we can take x0 := ϵ1 l as a point in the interior,
+where ϵ = 1
+|U |+1 . We have size (x0) = O(|U | log |U |)). Moreover, each vertex of
+P( f ) is produced by the Polymatroid Greedy Algorithm (for some objective
+function; cf. Theorem 14.11) and thus has size O(|U |(2 + log B)). We conclude
+that the Separation Problem can be solved in polynomial time. By Theorem
+4.23, we get a facet-deﬁning inequality of P( f ) violated by x if x /∈ P( f ). This
+corresponds to a set S ⊆ U with∑
+v∈ S x(v) > f (S). 2
+Since we do not require that f is monotone, we cannot apply this result
+directly. Instead we consider a different function:
+Proposition 14.18. Let f :2 U → R be a submodular function and β ∈ R. Then
+g :2 U → R, deﬁned by
+g(X) := f (X) − β +
+∑
+e∈ X
+( f (U \{ e}) − f (U)),
+is submodular and monotone.
+Proof: The submodularity of g follows directly from the submodularity of f .T o
+show that g is monotone, let X ⊂ U and e ∈ U \ X. We have g(X ∪{ e}) − g(X) =
+f (X ∪{ e}) − f (X) + f (U \{ e}) − f (U) ≥ 0 since f is submodular. 2
+Theorem 14.19. The Submodular Function Minimization Problem can be
+solved in time polynomial in |U |+ log max{| f (S)| : S ⊆ U }.
+Proof: Let U be a ﬁnite set; suppose we are given f by an oracle. First compute
+a number B ∈ N with | f (S)|≤ B for all S ⊆ U (cf. Proposition 14.16). Since f
+is submodular, we have for each e ∈ U and for each X ⊆ U \{ e}:

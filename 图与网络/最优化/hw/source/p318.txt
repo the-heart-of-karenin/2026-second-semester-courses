@@ -1,0 +1,48 @@
+318 13. Matroids
+Exercises
+1. Prove that all the independence systems apart from (5) and (6) in the list at
+the beginning of Section 13.1 are – in general – not matroids.
+2. Show that the uniform matroid with four elements and rank 2 is not a graphic
+matroid.
+3. Prove that every graphic matroid is representable over every ﬁeld.
+4. Let G be an undirected graph, K ∈ N, and let F contain those subsets of
+E(G) that are the union of K forests. Prove that (E(G), F) is a matroid.
+5. Compute a tight lower bound for the rank quotients of the independence
+systems listed at the beginning of Section 13.1.
+6. Let S be a family of sets. A set T is a transversal of S if there is a bijection
+/Phi1: T → S with t ∈ /Phi1(t) for all t ∈ T . (For a necessary and sufﬁcient
+condition for the existence of a transversal, see Exercise 6 of Chapter 10.)
+Assume that S has a transversal. Prove that the family of transversals of S is
+the family of bases of a matroid.
+7. Let E be a ﬁnite set and B ⊆ 2
+E . Show that B is the set of bases of some
+matroid (E, F) if and only if the following holds:
+(B1) B ̸=∅ ;
+(B2) For any B1, B2 ∈ B and y ∈ B2 \ B1 there exists an x ∈ B1 \ B2 with
+(B1 \{ x}) ∪{ y}∈ B.
+8. Let G be a graph. Let F be the family of sets X ⊆ V(G), for which a
+maximum matching exists that covers no vertex in X. Prove that (V(G), F)
+is a matroid. What is the dual matroid?
+9. Show that M(G∗ ) = (M(G))∗ also holds for disconnected graphs G,
+extending Theorem 13.16.
+Hint: Use Exercise 31(a) of Chapter 2.
+10. Show that the clutters in (3) and (6) in the list of Section 13.3 have the Max-
+Flow-Min-Cut property. (Use Theorem 19.10.) Show that the clutters in (1),
+(4) and (5) do not have the Max-Flow-Min-Cut property.
+11.∗ A clutter (E, F) is called binary if for all X
+1,..., Xk ∈ F with k odd there
+exists a Y ∈ F with Y ⊆ X1△···△ Xk . Prove that the clutter of minimal
+T -joins and the clutter of minimal T -cuts (example (7) of the list in Section
+13.3) are binary. Prove that a clutter is binary if and only if |A ∩ B| is odd for
+all A ∈ F and all B ∈ F∗ , where (E, F∗ ) is the blocking clutter. Conclude
+that a clutter is binary if and only if its blocking clutter is binary.
+Note: Seymour [1977] classiﬁed the binary clutters with the Max-Flow-Min-
+Cut property.
+12.∗ Let P be a polyhedron of blocking type, i.e. we have x + y ∈ P for all x ∈ P
+and y ≥ 0. The blocking polyhedron of P is deﬁned to be B(P) :={ z : z
+⊤ x ≥
+1 for all x ∈ P}. Prove that B(P) is again a polyhedron of blocking type and
+that B(B(P)) = P.
+Note: Compare this with Theorem 4.22.
+13. How can one check (in polynomial time) whether a given set of edges of a
+complete graph G is a subset of some Hamiltonian circuit in G?

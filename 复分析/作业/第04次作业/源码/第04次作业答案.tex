@@ -1,0 +1,225 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.5pt}
+\linespread{1.08}
+\setlength{\emergencystretch}{2em}
+\newcommand{\C}{\mathbb C}
+\newcommand{\pair}[2]{\par\noindent #1\par\nopagebreak[3]\noindent #2\par}
+\newcommand{\heading}[2]{\par\medskip\textbf{#1 / #2}\par\nopagebreak[4]}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\id}{\operatorname{id}}
+\title{Homework 4: Standard Solutions\\复分析第 4 次作业标准解答}
+\author{}\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+\pair{Each English sentence is followed by its Chinese translation; a displayed formula is shared by the corresponding pair.}{每个英文句子后紧接对应的中文译文；陈列公式由对应的两句共用。}
+\pair{The solutions use only Cauchy's integral formula and its elementary consequences, power series, and elementary real integration.}{解答仅使用柯西积分公式及其初等推论、幂级数和初等实积分。}
+
+\section*{1. Generalized Liouville's theorem / 广义刘维尔定理}
+\heading{Problem}{原题}
+\pair{Prove the following \emph{generalized Liouville's theorem}: If $f$ is an entire function and $|f(z)|\le C(1+|z|^N)$ for all $z\in\C$, then $f$ is a polynomial of degree at most $N$.}{证明下述\emph{广义刘维尔定理}：若 $f$ 是整函数，且对所有 $z\in\C$ 都有 $|f(z)|\le C(1+|z|^N)$，则 $f$ 是次数不超过 $N$ 的多项式。}
+
+\heading{Solution}{解答}
+\pair{As usual, $C$ is a fixed positive constant and $N$ is a nonnegative integer.}{按通常约定，$C$ 是固定的正常数，$N$ 是非负整数。}
+\pair{Write the Taylor expansion of the entire function at the origin as follows.}{将整函数在原点的泰勒展开写为如下形式。}
+\[
+f(z)=\sum_{n=0}^{\infty}a_nz^n,\qquad z\in\C.
+\]
+\pair{For every $R>0$, Cauchy's coefficient formula and the given bound imply the following estimate.}{对任意 $R>0$，由柯西系数公式及题设的上界可得如下估计。}
+\[
+a_n=\frac{1}{2\pi i}\int_{|\zeta|=R}
+       \frac{f(\zeta)}{\zeta^{n+1}}\dd\zeta,
+\qquad
+|a_n|\le\frac{\max_{|\zeta|=R}|f(\zeta)|}{R^n}
+\le C\bigl(R^{-n}+R^{N-n}\bigr).
+\]
+\pair{Fix an integer $n>N$ and let $R\to\infty$; both powers on the right tend to zero, so $a_n=0$.}{固定整数 $n>N$ 并令 $R\to\infty$；右端的两个幂次项都趋于零，故 $a_n=0$。}
+\pair{Consequently, $f$ has the following form and is a polynomial of degree at most $N$, with the zero polynomial included.}{因此，$f$ 具有如下形式，是次数不超过 $N$ 的多项式，其中包括零多项式。}
+\[
+\boxed{f(z)=\sum_{n=0}^{N}a_nz^n.}
+\]
+
+\newpage
+\section*{2. Cartan's uniqueness theorem / Cartan 唯一性定理}
+\heading{Problem}{原题}
+\pair{Prove the following \emph{Cartan's uniqueness theorem}.}{证明下述 \emph{Cartan 唯一性定理}。}
+\pair{Let $f$ be a holomorphic self-mapping of a bounded domain $\Omega$.}{设 $f$ 是有界区域 $\Omega$ 的全纯自映射。}
+\pair{Suppose that there exists $z_0\in\Omega$ such that $f(z_0)=z_0$ and $f'(z_0)=1$.}{假设存在 $z_0\in\Omega$，使得 $f(z_0)=z_0$ 且 $f'(z_0)=1$。}
+\pair{Then $f$ is the identity.}{则 $f$ 是恒等映射。}
+\pair{\emph{Hint.} Without loss of generality, suppose that $z_0=0$.}{\emph{提示。}不妨设 $z_0=0$。}
+\pair{Assume that $f(z)=z+a_kz^k+O(z^{k+1})$ with $a_k\ne0$ for some $k\ge2$.}{假设对某个 $k\ge2$，有 $f(z)=z+a_kz^k+O(z^{k+1})$，其中 $a_k\ne0$。}
+\pair{Denote by $f^n$ the $n$-th iterate of $f$.}{用 $f^n$ 表示 $f$ 的第 $n$ 次迭代。}
+\pair{Apply the Cauchy estimates to $f^n$ to get a contradiction.}{对 $f^n$ 应用柯西估计以得到矛盾。}
+
+\heading{Solution}{解答}
+\pair{Replacing $\Omega$ by $\Omega-z_0$ and $f$ by $w\mapsto f(w+z_0)-z_0$, we may assume that $0\in\Omega$, $f(0)=0$, and $f'(0)=1$.}{将 $\Omega$ 换为 $\Omega-z_0$，将 $f$ 换为 $w\mapsto f(w+z_0)-z_0$，便可假设 $0\in\Omega$、$f(0)=0$ 且 $f'(0)=1$。}
+\pair{Suppose, for a contradiction, that $f$ is not the identity on $\Omega$.}{为导出矛盾，假设 $f$ 在 $\Omega$ 上不是恒等映射。}
+\pair{By the Taylor expansion and the identity theorem, there is a least integer $k\ge2$ with a nonzero coefficient in $f(z)-z$, giving the following local expansion.}{由泰勒展开和恒等定理，$f(z)-z$ 中存在一个系数非零的最低次项，其次数为某个 $k\ge2$，从而有如下局部展开。}
+\[
+f(z)=z+a_kz^k+O(z^{k+1}),\qquad a_k\ne0.
+\]
+\pair{Let $F_n=f^{\circ n}$ denote the $n$-fold composition; we claim that its expansion at zero is as follows.}{用 $F_n=f^{\circ n}$ 表示 $f$ 的 $n$ 次复合；我们断言它在零点处具有如下展开。}
+\[
+F_n(z)=z+n a_kz^k+O(z^{k+1}),\qquad n\ge1.
+\]
+\pair{The case $n=1$ is immediate.}{当 $n=1$ 时，断言直接成立。}
+\pair{If the claim holds for $n$, then $F_n(z)=z+O(z^k)$ and $k\ge2$ imply the following relations.}{若断言对 $n$ 成立，则由 $F_n(z)=z+O(z^k)$ 及 $k\ge2$ 得到下列关系。}
+\[
+F_n(z)^k=z^k+O(z^{2k-1})=z^k+O(z^{k+1}),
+\qquad F_n(z)^{k+1}=O(z^{k+1}).
+\]
+\pair{Substitution into the expansion of $f$ proves the induction step.}{将其代入 $f$ 的展开，便完成归纳步骤。}
+\begin{align*}
+F_{n+1}(z)&=f(F_n(z))\\
+&=F_n(z)+a_kF_n(z)^k+O(F_n(z)^{k+1})\\
+&=z+(n+1)a_kz^k+O(z^{k+1}).
+\end{align*}
+\pair{Choose $r>0$ such that $\overline{D(0;r)}\subset\Omega$, and choose $M>0$ such that $|w|\le M$ for every $w\in\Omega$.}{选取 $r>0$ 使得 $\overline{D(0;r)}\subset\Omega$，并选取 $M>0$ 使得对每个 $w\in\Omega$ 都有 $|w|\le M$。}
+\pair{Since $f$ maps $\Omega$ into itself, every $F_n$ is holomorphic on $\Omega$ and satisfies $|F_n(z)|\le M$ there.}{由于 $f$ 将 $\Omega$ 映入自身，每个 $F_n$ 都在 $\Omega$ 上全纯，且在其中满足 $|F_n(z)|\le M$。}
+\pair{Cauchy's estimate for the coefficient of $z^k$ in the expansion of $F_n$ therefore yields a bound independent of $n$.}{因此，对 $F_n$ 的展开中 $z^k$ 的系数应用柯西估计，得到一个与 $n$ 无关的上界。}
+\[
+n|a_k|=\left|\frac{F_n^{(k)}(0)}{k!}\right|
+\le\frac{M}{r^k},\qquad n\ge1.
+\]
+\pair{Letting $n\to\infty$ contradicts $a_k\ne0$, so the translated map is the identity, and translating back gives $f(z)=z$ throughout the original domain.}{令 $n\to\infty$，便与 $a_k\ne0$ 矛盾，故平移后的映射为恒等映射，平移回去即得原区域上处处有 $f(z)=z$。}
+
+\newpage
+\section*{3. Gutzmer's inequality / Gutzmer 不等式}
+\heading{Problem}{原题}
+\pair{Let $f(z)=\sum_{n=0}^{\infty}a_nz^n$ be a power series with radius of convergence $\rho>0$.}{设 $f(z)=\sum_{n=0}^{\infty}a_nz^n$ 是收敛半径为 $\rho>0$ 的幂级数。}
+\pair{Prove the following \emph{Gutzmer's inequality}:}{证明如下 \emph{Gutzmer 不等式}：}
+\[
+\sum_{n=0}^{\infty}|a_n|^2r^{2n}\le A_f(r)^2,
+\qquad 0<r<\rho.
+\]
+\pair{where $A_f(r):=\max\{|f(z)|:|z|=r\}$.}{其中 $A_f(r):=\max\{|f(z)|:|z|=r\}$。}
+\pair{\emph{Hint.} Consider the integral $\frac{1}{2\pi}\int_0^{2\pi}|f(re^{i\theta})|^2\dd\theta$.}{\emph{提示。}考虑积分 $\frac{1}{2\pi}\int_0^{2\pi}|f(re^{i\theta})|^2\dd\theta$。}
+
+\heading{Solution}{解答}
+\pair{Fix $0<r<\rho$ and define the partial sums on the circle by the following formula.}{固定 $0<r<\rho$，按下式定义圆周上的部分和。}
+\[
+S_m(\theta)=\sum_{n=0}^{m}a_nr^n e^{in\theta},\qquad 0\le\theta\le2\pi.
+\]
+\pair{The power series converges uniformly on $|z|=r$, so $S_m(\theta)\to f(re^{i\theta})$ uniformly in $\theta$.}{幂级数在 $|z|=r$ 上一致收敛，因此 $S_m(\theta)$ 关于 $\theta$ 一致收敛到 $f(re^{i\theta})$。}
+\pair{The elementary orthogonality identity below evaluates the integral of each finite sum.}{下面的初等正交恒等式可以计算每个有限和的积分。}
+\[
+\frac{1}{2\pi}\int_0^{2\pi}e^{i(n-j)\theta}\dd\theta
+=\begin{cases}1,&n=j,\\0,&n\ne j.\end{cases}
+\]
+\pair{Expanding the squared modulus and integrating term by term in this finite sum gives the following equality.}{展开模的平方，并对这个有限和逐项积分，得到如下等式。}
+\begin{align*}
+\frac{1}{2\pi}\int_0^{2\pi}|S_m(\theta)|^2\dd\theta
+&=\sum_{n,j=0}^{m}a_n\overline{a_j}\,r^{n+j}
+  \frac{1}{2\pi}\int_0^{2\pi}e^{i(n-j)\theta}\dd\theta\\
+&=\sum_{n=0}^{m}|a_n|^2r^{2n}.
+\end{align*}
+\pair{Uniform convergence also gives uniform convergence of the squared moduli, by the following estimate.}{由下面的估计可知，一致收敛还蕴含模的平方一致收敛。}
+\[
+\bigl||S_m(\theta)|^2-|f(re^{i\theta})|^2\bigr|
+\le |S_m(\theta)-f(re^{i\theta})|
+       \bigl(|S_m(\theta)|+|f(re^{i\theta})|\bigr).
+\]
+\pair{Passing to the limit as $m\to\infty$ therefore proves the desired inequality, together with an exact integral identity.}{因此，令 $m\to\infty$，便得到所需不等式，同时得到一个精确的积分恒等式。}
+\[
+\boxed{\sum_{n=0}^{\infty}|a_n|^2r^{2n}
+=\frac{1}{2\pi}\int_0^{2\pi}|f(re^{i\theta})|^2\dd\theta
+\le A_f(r)^2.}
+\]
+
+\newpage
+\section*{4. An integral on the unit circle / 单位圆周上的积分}
+\heading{Problem}{原题}
+Compute
+\[
+\oint_{|z|=1}\frac{|\mathrm dz|}{|z-a|^2},\qquad 0<|a|<1.
+\]
+by transforming the integral into a form where you can apply the Cauchy integral formula.
+\par\nopagebreak[3]
+将上式中的积分化为可以应用柯西积分公式的形式，并计算其值。
+
+\heading{Solution}{解答}
+\pair{The integral is with respect to arc length, so we may choose the counterclockwise parametrization $z=e^{it}$, $0\le t\le2\pi$.}{该积分关于弧长进行，故可选取逆时针参数化 $z=e^{it}$，其中 $0\le t\le2\pi$。}
+\pair{On this parametrized circle, the following identities hold.}{在这样参数化的圆周上，有下列恒等式。}
+\[
+\overline z=\frac1z,\qquad \mathrm dz=iz\dd t,
+\qquad |\mathrm dz|=\mathrm dt=\frac{\mathrm dz}{iz},
+\]
+\[
+|z-a|^2=(z-a)(\overline z-\overline a)
+=\frac{(z-a)(1-\overline a z)}{z}.
+\]
+\pair{Substitution transforms the arc length integral into the following complex contour integral, taken counterclockwise.}{代入上述恒等式，就将弧长积分化为下面沿逆时针方向进行的复曲线积分。}
+\[
+I:=\oint_{|z|=1}\frac{|\mathrm dz|}{|z-a|^2}
+=\frac1i\oint_{|z|=1}\frac{1}{(z-a)(1-\overline a z)}\dd z.
+\]
+\pair{Set $g(z)=1/(1-\overline a z)$; since its only possible singularity is at $1/\overline a$, whose modulus is greater than $1$, $g$ is holomorphic on a neighborhood of the closed unit disk.}{令 $g(z)=1/(1-\overline a z)$；由于它唯一可能的奇点 $1/\overline a$ 的模大于 $1$，故 $g$ 在闭单位圆盘的某个邻域上全纯。}
+\pair{Because $|a|<1$, Cauchy's integral formula applies directly at $a$ and gives the result.}{由于 $|a|<1$，可在 $a$ 处直接应用柯西积分公式，得到结果。}
+\[
+I=\frac1i\oint_{|z|=1}\frac{g(z)}{z-a}\dd z
+=\frac1i\,2\pi i\,g(a)
+=\boxed{\frac{2\pi}{1-|a|^2}}.
+\]
+
+\newpage
+\section*{5. The area mean value property / 面积平均值性质}
+\heading{Problem}{原题}
+\pair{Prove the following version of the \emph{mean value property}: Let $\Omega$ be a domain and $f\in A(\Omega)$.}{证明下述形式的\emph{平均值性质}：设 $\Omega$ 是一个区域，且 $f\in A(\Omega)$。}
+\pair{Suppose that $D(z_0;\rho)\subset\Omega$.}{假设 $D(z_0;\rho)\subset\Omega$。}
+\pair{Then the following equality holds.}{则下列等式成立。}
+\[
+f(z_0)=\frac{1}{\pi\rho^2}\iint_{D(z_0;\rho)}f(z)\dd\lambda(z).
+\]
+
+\heading{Clarification of the hypothesis}{题设说明}
+\pair{Here $A(\Omega)$ is understood to mean the holomorphic functions on $\Omega$, and $\lambda$ denotes planar area measure.}{这里将 $A(\Omega)$ 理解为 $\Omega$ 上的全纯函数空间，$\lambda$ 表示平面面积测度。}
+\pair{If $D(z_0;\rho)$ denotes an open disk, the stated inclusion alone does not guarantee that $f$ is integrable over that disk.}{若 $D(z_0;\rho)$ 表示开圆盘，则题中给出的包含关系本身不能保证 $f$ 在该圆盘上可积。}
+\pair{For an ordinary area integral, a sufficient additional condition is $\overline{D(z_0;\rho)}\subset\Omega$, or, more generally, $f\in L^1(D(z_0;\rho))$.}{若采用通常的面积积分，一个充分的补充条件是 $\overline{D(z_0;\rho)}\subset\Omega$，或者更一般地，$f\in L^1(D(z_0;\rho))$。}
+\pair{If the notation $D$ in the course already denotes a closed disk, its stated inclusion supplies the sufficient condition directly.}{若课程中的记号 $D$ 本来就表示闭圆盘，则原题中的包含关系已直接给出上述充分条件。}
+
+\heading{Solution under the usual integrability condition}{在通常可积条件下的解答}
+\pair{First fix $0<R<\rho$; its closed disk is contained in $\Omega$, so all integrals below over this smaller disk are well defined.}{先固定 $0<R<\rho$；相应闭圆盘包含于 $\Omega$，因而下面在这个较小圆盘上的所有积分都有定义。}
+\pair{For every $0<r\le R$, Cauchy's integral formula and the parametrization $\zeta=z_0+re^{it}$ give the circle mean value identity.}{对每个 $0<r\le R$，由柯西积分公式及参数化 $\zeta=z_0+re^{it}$ 得到圆周平均值恒等式。}
+\[
+f(z_0)=\frac{1}{2\pi i}\oint_{|\zeta-z_0|=r}
+\frac{f(\zeta)}{\zeta-z_0}\dd\zeta
+=\frac{1}{2\pi}\int_0^{2\pi} f(z_0+re^{it})\dd t.
+\]
+\pair{Using polar coordinates about $z_0$, whose area element is $r\,\mathrm dr\,\mathrm dt$, we obtain the following equality.}{采用以 $z_0$ 为中心的极坐标，其面积元为 $r\,\mathrm dr\,\mathrm dt$，可得如下等式。}
+\begin{align*}
+\iint_{D(z_0;R)} f(z)\dd\lambda(z)
+&=\int_0^R\left(\int_0^{2\pi}f(z_0+re^{it})\dd t\right)r\dd r\\
+&=\int_0^R2\pi f(z_0)\,r\dd r
+=\pi R^2 f(z_0).
+\end{align*}
+\pair{If $f\in L^1(D(z_0;\rho))$, letting $R\uparrow\rho$ is justified by integrability, and yields the required formula.}{若 $f\in L^1(D(z_0;\rho))$，则可由可积性令 $R\uparrow\rho$，得到所需公式。}
+\[
+\boxed{\frac{1}{\pi\rho^2}\iint_{D(z_0;\rho)}f(z)\dd\lambda(z)=f(z_0).}
+\]
+\pair{Indeed, the absolute value of the difference between the full integral and the integral over $D(z_0;R)$ is at most the integral of $|f|$ over the remaining annulus, which tends to zero.}{事实上，全圆盘积分与 $D(z_0;R)$ 上积分之差的绝对值，不超过剩余圆环上 $|f|$ 的积分，而后者趋于零。}
+\pair{In particular, when $\overline{D(z_0;\rho)}\subset\Omega$, continuity makes $f$ bounded on that closed disk, so this integrability condition is automatic.}{特别地，当 $\overline{D(z_0;\rho)}\subset\Omega$ 时，连续性保证 $f$ 在该闭圆盘上有界，因而上述可积性条件自动成立。}
+
+\heading{Why the open disk hypothesis needs care}{为何开圆盘条件需要说明}
+\pair{For a counterexample to automatic integrability, take $\Omega=D(0;1)$ and $f(z)=(1-z)^{-2}$.}{为说明可积性并不自动成立，取 $\Omega=D(0;1)$ 及 $f(z)=(1-z)^{-2}$。}
+\pair{This function is holomorphic on $\Omega$, but its absolute area integral diverges.}{该函数在 $\Omega$ 上全纯，但其绝对值的面积积分发散。}
+\pair{To see this, write $z=1-se^{i\theta}$ and restrict to $0<s<1/2$ and $|\theta|<\pi/3$; this sector lies inside $D(0;1)$ because of the following inequality.}{为验证这一点，写成 $z=1-se^{i\theta}$ 并限制 $0<s<1/2$、$|\theta|<\pi/3$；由下列不等式可知，该扇形包含于 $D(0;1)$。}
+\[
+|z|^2=1-2s\cos\theta+s^2\le1-s+s^2<1.
+\]
+\pair{On this sector, $|f(z)|=s^{-2}$ and the area element is $s\,\mathrm ds\,\mathrm d\theta$, so the following divergence holds.}{在该扇形上，$|f(z)|=s^{-2}$，面积元为 $s\,\mathrm ds\,\mathrm d\theta$，因此有如下发散关系。}
+\[
+\iint_{D(0;1)}|f(z)|\dd\lambda(z)
+\ge\int_{-\pi/3}^{\pi/3}\int_0^{1/2}\frac{1}{s^2}s\dd s\dd\theta
+=\infty.
+\]
+\pair{Thus the ordinary complex Lebesgue integral in the original statement need not exist if only the open disk inclusion is assumed.}{因此，若只假设开圆盘包含关系，原题中的通常复值勒贝格积分可能不存在。}
+\pair{Without any extra condition, the result remains valid as an improper integral defined by concentric disks, since the identity for $R<\rho$ already gives the following limit.}{无须任何额外条件，该结论仍可理解为通过同心圆盘定义的反常积分，因为 $R<\rho$ 时的恒等式已经给出如下极限。}
+\[
+\lim_{R\uparrow\rho}\iint_{D(z_0;R)}f(z)\dd\lambda(z)
+=\pi\rho^2 f(z_0).
+\]
+\end{document}

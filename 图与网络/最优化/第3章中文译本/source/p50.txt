@@ -1,0 +1,42 @@
+50      3. Linear Programming
+
+
+present the Simplex Algorithm, which we also use to derive the Duality Theorem
+and related results (Section 3.3). LP duality is a most important concept which
+explicitly or implicitly appears in almost all areas of combinatorial optimization;
+we shall often refer to the results in Sections 3.3 and 3.4.
+
+
+3.1 Polyhedra
+Linear Programming deals with maximizing or minimizing a linear objective func-
+tion of ﬁnitely many variables subject to ﬁnitely many linear inequalities. So the
+set of feasible solutions is the intersection of ﬁnitely many halfspaces. Such a set
+is called a polyhedron:
+Deﬁnition 3.1. A polyhedron in Rn is a set of type P = {x ∈ Rn : Ax ≤ b} for
+some matrix A ∈ Rm×n and some vector b ∈ Rm . If A and b are rational, then P
+is a rational polyhedron. A bounded polyhedron is also called a polytope.
+    We denote by rank(A) the rank of a matrix A. The dimension dim X of a
+nonempty set X ⊆ Rn is deﬁned to be
+     n − max{rank(A) : A is an n × n-matrix with Ax = Ay for all x, y ∈ X }.
+A polyhedron P ⊆ Rn is called full-dimensional if dim P = n.
+    Equivalently, a polyhedron is full-dimensional if and only if there is a point
+in its interior. For most of this chapter it makes no difference whether we are in
+the rational or real space. We need the following standard terminology:
+Deﬁnition 3.2. Let P := {x : Ax ≤ b} be a nonempty polyhedron. If c is a
+nonzero vector for which δ := max{cx : x ∈ P} is ﬁnite, then {x : cx = δ} is
+called a supporting hyperplane of P. A face of P is P itself or the intersection
+of P with a supporting hyperplane of P. A point x for which {x} is a face is called
+a vertex of P, and also a basic solution of the system Ax ≤ b.
+Proposition 3.3. Let P = {x : Ax ≤ b} be a polyhedron and F ⊆ P. Then the
+following statements are equivalent:
+(a) F is a face of P.
+(b) There exists a vector c such that δ := max{cx : x ∈ P} is ﬁnite and
+    F = {x ∈ P : cx = δ}.
+(c) F = {x ∈ P : A x = b } = ∅ for some subsystem A x ≤ b of Ax ≤ b.
+Proof: (a) and (b) are obviously equivalent.
+    (c)⇒(b): If F = {x ∈ P : A x = b } is nonempty, let c be the sum of the rows
+of A , and let δ be the sum of the components of b . Then obviously cx ≤ δ for
+all x ∈ P and F = {x ∈ P : cx = δ}.
+    (b)⇒(c): Assume that c is a vector, δ := max{cx : x ∈ P} is ﬁnite and
+F = {x ∈ P : cx = δ}. Let A x ≤ b be the maximal subsystem of Ax ≤ b such
+that A x = b for all x ∈ F. Let A x ≤ b be the rest of the system Ax ≤ b.

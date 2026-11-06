@@ -1,0 +1,56 @@
+\section{有向拟阵}
+本节讨论有向拟阵理论中的两个主题。最重要的是 Folkman 和 Lawrence (1978) 的\textbf{拓扑表示定理}：每个有向拟阵都能由伪球面配置实现。作为应用，我们说明这类实现如何快速证明秩为3的有向拟阵的某些组合性质。其次，我们依照 Las Vergnas (1978)，概要说明怎样用 Maurer 同伦定理6.7推出行列式符号函数的存在性。
+有向拟阵的定义见 Welsh 的第9章。由于这里使用 Folkman 和 Lawrence (1978) 的略有不同的表述，并要用线性情形作为动机，先简要回顾基础并固定记号。更详细的讨论见 Bachem 和 Kern (1992)，以及 Björner、Las Vergnas、Sturmfels、White 和 Ziegler (1993)。
+\sourcepage{1835}
+设 $E$ 是有限集，带有无不动点的对合 $x\mapsto x^*$，即对所有 $x\in E$，$x^*\ne x=x^{**}$。对 $A\subseteq E$ 写 $A^*=\{x^*:x\in A\}$。\textbf{有向拟阵} $\mathcal O=(E,*,\mathcal C)$ 由这样的集合及一个非空子集族 $\mathcal C$ 构成，满足：
+\begin{description}
+\item[(OM1)] $\mathcal C$ 是杂族，即不同的 $C_1,C_2\in\mathcal C$ 满足 $C_1\nsubseteq C_2$；
+\item[(OM2)] 若 $C\in\mathcal C$，则 $C^*\in\mathcal C$ 且 $C\cap C^*=\varnothing$；
+\item[(OM3)] 若 $C_1,C_2\in\mathcal C$、$C_1\ne C_2^*$ 且 $x\in C_1\cap C_2^*$，则存在 $D\in\mathcal C$，使 $D\subseteq C_1\cup C_2-\{x,x^*\}$。
+\end{description}
+$\mathcal C$ 中的集合称为 $\mathcal O$ 的回路。对 $x\in E$ 令 $\bar x=\{x,x^*\}$；对 $A\subseteq E$ 令 $\bar A=\{\bar x:x\in A\}$，并令 $\overline{\mathcal C}=\{\bar C:C\in\mathcal C\}$。$\overline{\mathcal C}$ 满足通常的拟阵回路交换公理，因此 $\overline{\mathcal O}=(\bar E,\overline{\mathcal C})$ 是拟阵，称为 $\mathcal O$ 的\textbf{底层拟阵}。并非所有拟阵都能这样得到；能这样得到的称为可定向的。若 $\bar B$ 是底层拟阵的基，称 $B\subseteq E$ 是 $\mathcal O$ 的基。$\mathcal O$ 的秩等于底层拟阵的秩。以下不妨默认所有有向拟阵都是简单的，即没有少于三个元素的回路。
+有向拟阵的基本模型是 $\R^d$ 中的向量集及正线性相关关系，更一般地也可使用任意有序域上的向量。设有限集 $E\subseteq\R^d-\{0\}$ 满足 $E=-E$，且 $E$ 中不同的平行向量必互为相反数。令 $x^*=-x$。若存在不全为零的实系数 $\lambda_x\ge0$，使 $\sum_{x\in A}\lambda_xx=0$，称 $A\subseteq E$ 正线性相关。令 $\mathcal C$ 为按包含关系极小的正线性相关集，但排除形如 $\{x,x^*\}$ 的集合。等价地，$\mathcal C$ 由这样的集合组成：它们是一个维数至少为2的单形的顶点集，且原点属于该单形的相对内部。以此方式得到的有向拟阵称为实数域上的\textbf{线性有向拟阵}或\textbf{可实现有向拟阵}。并非所有有向拟阵都同构于线性的有向拟阵。
+\subsection*{拓扑表示定理}
+为了引出表示定理，先考虑线性情形。实际上，表示定理说：从线性情形得到的直观，在允许适当的拓扑变形后，对一般有向拟阵仍然基本正确。
+设有限集 $E\subseteq\R^d-\{0\}$ 满足 $E=-E$，$\mathcal O=(E,*,\mathcal C)$ 是前述线性有向拟阵。对每个 $e=\bar x=\{x,x^*\}\in\bar E$，令 $H_e$ 为与 $e$ 所张成直线正交的超平面。超平面配置 $\mathcal H=\{H_e:e\in\bar E\}$ 包含 $\mathcal O$ 的全部信息：由 $H_e$ 可恢复一对方向相反的法向量，而 $\mathcal O$ 的回路定义与向量长度无关。与单位球面 $S^{d-1}$ 相交后，也可考虑球面配置 $\mathcal S=\{H_e\cap S^{d-1}:e\in\bar E\}$，即 $(d-1)$ 维球面中的一族赤道 $(d-2)$ 维球面。因此线性有向拟阵（允许重新定向）、超平面配置及球面配置是等价的。
+\sourcepage{1836}
+把线性有向拟阵看成球面配置时，宜将元素 $x\in E$ 想成闭半球 $\bar H_x=\{y\in S^{d-1}:\langle y,x\rangle\ge0\}$。于是 $A\in\mathcal C$ 当且仅当 $A\cap A^*=\varnothing$，且 $A$ 是满足 $\bigcup_{x\in A}\bar H_x=S^{d-1}$ 的极小集合。
+需要以下拓扑术语。若拓扑空间 $\Sigma$ 与标准 $j$ 维球面 $S^j=\{x\in\R^{j+1}:\|x\|=1\}$ 同胚，则称之为球面。$\Sigma$ 中的\textbf{伪球面} $S$ 是赤道 $\{x\in S^j:x_{j+1}=0\}$ 在某个同胚 $f:S^j\to\Sigma$ 下的像；拓扑学中也称这种嵌入为温驯或平坦的余维一子球面。其两侧（伪半球）为 $S^+=f(\{x\in S^j:x_{j+1}\ge0\})$、$S^-=f(\{x\in S^j:x_{j+1}\le0\})$。显然 $S$ 是两侧之交，两侧均同胚于球。
+关键定义是：$S^{d-1}$ 中的\textbf{伪球面配置} $(\bar E,\mathcal A)$ 是一族有限个不同的伪球面 $\mathcal A=\{S_e:e\in\bar E\}$，满足：
+\begin{description}
+\item[(AP1)] 每个非空交 $S_A=\bigcap_{e\in A}S_e$（$A\subseteq\bar E$）都是球面；
+\item[(AP2)] 对每个非空交 $S_A$ 和每个 $e\in\bar E$，或者 $S_A\subseteq S_e$，或者 $S_A\cap S_e$ 是 $S_A$ 中的伪球面，其两侧为 $S_A\cap S_e^+$ 和 $S_A\cap S_e^-$。
+\end{description}
+这一定义来自 Folkman 和 Lawrence (1978)。他们实际上要求了更多条件，但 Mandel (1982) 证明额外条件是多余的。
+仿照线性情形，伪球面配置 $\mathcal A$ 给出系统 $\mathcal O(\mathcal A)=(E,*,\mathcal C)$：令 $E=\{S_e^+:e\in\bar E\}\cup\{S_e^-:e\in\bar E\}$，令 $(S_e^+)^*=S_e^-$，反之亦然，并定义 $\mathcal C$ 为满足 $\bigcup A=S^{d-1}$ 且 $A\cap A^*=\varnothing$ 的极小子集 $A\subseteq E$ 的集合。尽管存在拓扑变形，$\mathcal O(\mathcal A)$ 仍是有向拟阵；更令人惊讶的是，这样能得到所有有向拟阵。若 $\bigcap\mathcal A=\varnothing$，称该配置为\textbf{本质的}。
+\entry{定理7.1}{（表示定理，Folkman 和 Lawrence 1978）}\begin{enumerate}[label=(\roman*)]
+\item 若 $\mathcal A$ 是 $S^{d-1}$ 中的伪球面配置，则 $\mathcal O(\mathcal A)$ 是有向拟阵；若配置本质，则其秩为 $d$。
+\item 若 $\mathcal O$ 是秩 $d$ 的有向拟阵，则存在 $S^{d-1}$ 中的本质伪球面配置 $\mathcal A$，使 $\mathcal O=\mathcal O(\mathcal A)$。
+\item 在自然等价关系下，映射 $\mathcal A\mapsto\mathcal O(\mathcal A)$ 给出秩 $d$ 的有向拟阵与 $S^{d-1}$ 中本质伪球面配置之间的一一对应。
+\end{enumerate}
+这个结果的证明相当复杂。对(ii)，先由有向拟阵构造偏序集，再由定理12.6证明该偏序集是某个正则胞腔复形 $\mathcal C$ 的面偏序集。这个复形给出 $(d-1)$ 维球面及构成配置的各种 $(d-2)$ 维子球面。$\mathcal C$ 是可构造的（Edmonds 和 Mandel 1978；Mandel 1982），甚至是可壳的（Lawrence 1984）；因此整个构造可在分片线性拓扑中进行，不必处理病态拓扑现象。完整证明见 Folkman 和 Lawrence (1978)、Mandel (1982) 及 Björner 等 (1993)。
+\sourcepage{1837}
+表示定理说明，秩为3的有向拟阵对应于二维球面上的“伪圆”配置；在射影版本中则对应实射影平面上的伪直线配置。这种表示能迅速证明某些组合性质：
+\entry{定理7.2}{}设 $M$ 是秩3的可定向拟阵。则：(i) $M$ 有一条含两个点的直线；(ii) 若将 $M$ 的点染成两色，则存在一条单色直线。
+下面说明如何由定理7.1得到定理7.2。把 $M$ 的点表示为二维球面上的伪圆；直线对应于交非空的极大伪圆族，其交必为零维球面，即两个点。伪圆配置确定图 $G$：顶点是交点，边是相邻交点间的伪圆段。$G$ 嵌入 $S^2$，因此是平面图；又因 $\rk(M)=3$，它是简单图。需要以下引理。
+\entry{引理7.3}{}对任意已作平面嵌入的简单图：(i) 存在度数至多为5的顶点；(ii) 若边染成两色，则存在一个顶点，使每种颜色的边在嵌入所诱导的循环次序中都连续排列。
+(i) 是欧拉公式的著名推论；(ii) 也是欧拉公式的推论，但较不为人熟知。Cauchy 在证明三维凸多胞体刚性定理时曾使用它。
+现在完成定理7.2的证明。若 $M$ 的每条直线至少有3个点，则伪圆配置所确定的图 $G$ 的每个顶点度数至少为6，与(i)矛盾。若伪圆染成两色，且每个交点都至少有一条每种颜色的伪圆通过，则诱导的边染色将违反(ii)。
+定理7.2第一部分是 Sylvester--Gallai 定理的推广，线性情形的证明在20世纪40年代已有。Csima 和 Sawyer (1993) 进一步证明：$M$ 中两点直线至少有 $\frac6{13}|M|$ 条，也使用了伪直线表示。第二部分在线性情形下的证明由 G. D. Chakerian 给出，后由 Edmonds、Lovász 和 Mandel (1980) 重新发现，他们也观察到了对有向拟阵的推广。
+\sourcepage{1838}
+\subsection*{基的符号赋值}
+正如普通拟阵，有向拟阵也可用多种方式刻画。这里讨论有向拟阵的基集 $\mathcal B$ 的一个特征性质：可以定义类似行列式的符号，但不定义其大小。Las Vergnas (1978) 最先证明此事；J. Bokowski、A. Dress、L. Gutierrez-Novoa 和 J. Lawrence 也发现了用带符号的基刻画有向拟阵的方法。
+考虑函数 $\delta:\widetilde{\mathcal B}\to\{+1,-1\}$：它将线性有向拟阵 $(E,*,\mathcal C)$（$E\subseteq\R^d$）的有序基映为其行列式的符号。对 $\R^d$ 中某些有序基对 $\beta,\beta'$，可如下定义函数 $\eta$：
+\entry{7.4}{}若 $\beta,\beta'$ 是同一个基 $B$ 的排列，则同奇偶性时令 $\eta(\beta,\beta')=+1$，否则令其为 $-1$。
+\entry{7.5}{}若 $\beta=x_1\cdots x_{r-1}y$、$\beta'=x_1\cdots x_{r-1}z$ 且 $y\ne z$，当 $y,z$ 位于 $\{x_1,\ldots,x_{r-1}\}$ 张成的超平面的同侧时，令 $\eta(\beta,\beta')=+1$；否则令其为 $-1$。
+选定有序基 $\beta_0$ 并令 $\det(\beta_0):=+1$ 后，由线性代数规则可确定所有有序基的行列式及其符号 $\delta$。但 $\delta$ 也由组合信息决定：任意两个有序基可由(7.4)或(7.5)型步骤组成的链连接，而对这样相关的 $\beta,\beta'$，有 $\delta(\beta)=\eta(\beta,\beta')\delta(\beta')$。
+上面的讨论指出如何把行列式符号函数推广到所有有向拟阵。首先，为使(7.5)与公理(OM1)--(OM3)更相容，改写如下：
+\entry{7.5'}{}设 $\beta=x_1\cdots x_{r-1}y$、$\beta'=x_1\cdots x_{r-1}z$ 且 $y\ne z$。若 $y\ne z^*$，令 $\{C,C^*\}$ 为唯一一对回路，使底层拟阵中 $\{\bar y,\bar z\}\subseteq\bar C\subseteq\{\bar x_1,\ldots,\bar x_{r-1},\bar y,\bar z\}$。若 $y,z$ 中一个属于 $C$、另一个属于 $C^*$，令 $\eta(\beta,\beta')=+1$，否则令其为 $-1$。
+\tnote{原文在(7.5')中没有单独写出 $y=z^*$ 时的约定；在线性情形，它们位于超平面两侧，因此取 $\eta=-1$。}
+\entry{定理7.6}{（Las Vergnas 1978）}设 $\widetilde{\mathcal B}$ 是有向拟阵的有序基集合，$\beta_0\in\widetilde{\mathcal B}$。存在唯一函数 $\delta:\widetilde{\mathcal B}\to\{+1,-1\}$，使 $\delta(\beta_0)=+1$，且若 $\beta,\beta'$ 按(7.4)或(7.5')相关，则 $\delta(\beta)=\eta(\beta,\beta')\delta(\beta')$。
+证明思路如下。在顶点集 $\widetilde{\mathcal B}$ 上定义图：若一对有序基按(7.4)或(7.5')相关，则连边。此图显然连通，且有到其底层拟阵基图 $\mathcal B$ 的投影 $\pi:\widetilde{\mathcal B}\to\mathcal B$。令 $\delta(\beta_0)=+1$，并对 $\beta\in\widetilde{\mathcal B}$，选取从 $\beta_0$ 到 $\beta$ 的路 $\beta_0,\beta_1,\ldots,\beta_n=\beta$，定义
+\[\delta(\beta):=\prod_{i=1}^n\eta(\beta_{i-1},\beta_i).\]
+\sourcepage{1839}
+只需证明定义与所选路径无关。若 $P_1,P_2$ 是两条这样的路，则由定理6.7，它们在基图中的投影 $\pi(P_1),\pi(P_2)$ 相差一系列初等同伦。因此只需对有序基图中投影为边的往返路 $BCB$、三角形 $BCDB$ 或四边形 $BCDEB$ 的闭路 $\alpha_0,\ldots,\alpha_k=\alpha_0$，验证
+\[\prod_{i=1}^k\eta(\alpha_{i-1},\alpha_i)=1.\]
+而产生基图三角形和四边形的基配置已在(6.3)--(6.5)中明确刻画，故验证被化为可处理的有限情形。详情见 Las Vergnas (1978)。

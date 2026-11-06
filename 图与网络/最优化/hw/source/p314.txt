@@ -1,0 +1,58 @@
+314 13. Matroids
+Now the family of partitionable subsets of X can be written as
+{A ⊆ X : there is a function f : A →{ 1,..., k}
+with {(e, f (e)) : e ∈ A}∈ I1 ∩ I2}.
+So the maximum cardinality of a partitionable set is the maximum cardinal-
+ity of a common independent set in I1 and I2. By Theorem 13.31 this maximum
+cardinality equals min
+{
+s1(Q) + s2(X ′ \ Q) : Q ⊆ X ′}
+.I f Q ⊆ X ′ attains this min-
+imum, then for A := Q1 ∩···∩ Qk we have
+r(X) = s1(Q) + s2(X ′ \ Q) =
+k∑
+i=1
+ri (Qi ) +
+⏐⏐
+⏐
+⏐
+⏐X \
+k⋂
+i=1
+Qi
+⏐⏐
+⏐
+⏐
+⏐ ≥
+k∑
+i=1
+ri (A) +| X \ A|.
+So we have found a set A ⊆ X with∑k
+i=1 ri (A) +| X \ A|≤ r(X).
+Having proved the formula for the rank function r, we ﬁnally show that r is
+submodular. By Theorem 13.10, this implies that (E, F) is a matroid. To show
+the submodularity, let X, Y ⊆ E, and let A ⊆ X, B ⊆ Y with r(X) =| X \ A|+∑k
+i=1 ri (A) and r(Y) =| Y \ B|+ ∑k
+i=1 ri (B). Then
+r(X) + r(Y)
+=| X \ A|+| Y \ B|+
+k∑
+i=1
+(ri (A) + ri (B))
+≥| (X ∪ Y) \ (A ∪ B)|+| (X ∩ Y) \ (A ∩ B)|+
+k∑
+i=1
+(ri (A ∪ B) + ri (A ∩ B))
+≥ r(X ∪ Y) + r(X ∩ Y). 2
+The construction in the above proof (Edmonds [1970]) reduces the Matroid
+P artitioning Problemto the Matroid Intersection Problem. A reduction in
+the other direction is also possible (Exercise 20), so both problems can be regarded
+as equivalent.
+Note that we ﬁnd a maximum independent set in the union of an arbitrary
+number of matroids, while the intersection of more than two matroids is intractable.
+13.7 Weighted Matroid Intersection
+We now consider a generalization of the above algorithm to the weighted case.
+Weighted Matroid Intersection Problem
+Instance: Two matroids (E, F1) and (E, F2), given by independence oracles.
+Weights c : E → R.
+Task: Find a set X ∈ F1 ∩ F2 whose weight c(X) is maximum.

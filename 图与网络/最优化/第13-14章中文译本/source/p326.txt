@@ -1,0 +1,44 @@
+326 14. Generalizations of Matroids
+Even for modular cost functions c this algorithm does not always provide an
+optimal solution. At least we can characterize those greedoids where it works:
+Theorem 14.7. Let (E, F) be a greedoid. The Greedy Algorithm For Gree-
+doids ﬁnds a set F ∈ F of maximum weight for each modular weight function
+c :2 E → R+ if and only if (E, F) has the so-called strong exchange property:
+For all A ∈ F, B maximal in F, A ⊆ B and x ∈ E \ B with A ∪{ x}∈ F there
+exists a y ∈ B \ A such that A ∪{ y}∈ F and (B \ y) ∪{ x}∈ F.
+Proof: Suppose (E, F) is a greedoid with the strong exchange property. Let
+c : E → R+, and let A ={ a1,..., al } be the solution found by the Greedy Al-
+gorithm For Greedoids, where the elements are chosen in the order a1,..., al .
+Let B ={ a1,..., ak }
+.
+∪ B′ be an optimum solution such that k is max-
+imum, and suppose that k < l. Then we apply the strong exchange property
+to {a1,..., ak }, B and ak+1. We conclude that there exists a y ∈ B′ with
+{a1,..., ak, y}∈ F and (B \ y) ∪{ ak+1}∈ F. By the choice of ak+1 in 2⃝
+of the Greedy Algorithm For Greedoids we have c(ak+1) ≥ c(y) and thus
+c((B \ y) ∪{ ak+1}) ≥ c(B), contradicting the choice of B.
+Conversely, let (E, F) be a greedoid that does not have the strong exchange
+property. Let A ∈ F, B maximal in F, A ⊆ B and x ∈ E \ B with A ∪{ x}∈ F
+such that for all y ∈ B \ A with A ∪{ y}∈ F we have (B \ y) ∪{ x} /∈ F.
+Let Y :={ y ∈ B \ A : A ∪{ y}∈ F}.W es e t c(e) := 2 for e ∈ B \ Y , and
+c(e) := 1 for e ∈ Y ∪{ x} and c(e) := 0 for e ∈ E \ (B ∪{ x}). Then the Greedy
+Algorithm For Greedoids might choose the elements of A ﬁrst (they have
+weight 2) and then might choose x. It will eventually end up with a set F ∈ F
+that cannot be optimal, since c(F) ≤ c(B ∪{ x}) − 2 < c(B ∪{ x}) − 1 = c(B) and
+B ∈ F. 2
+Indeed, optimizing modular functions over general greedoids is NP-hard. This
+follows from the following observation (together with Corollary 15.24):
+Proposition 14.8. The problem of deciding, given an undirected graph G and k ∈
+N, whether G has a vertex cover of cardinality k, linearly reduces to the following
+problem: Given a greedoid (E, F) (by a membership oracle) and a function c :
+E → R+, ﬁnd an F ∈ F with c(F) maximum.
+Proof: Let G be any undirected graph and k ∈ N. Let D := V(G)
+.
+∪ E(G) and
+F :={ X ⊆ D : for all e ={ v,w }∈ E(G) ∩ X we have v ∈ X or w ∈ X }.
+(D, F) is an antimatroid: it is accessible and closed under union. In particular, by
+Proposition 14.3, it is a greedoid.
+Now consider F′ :={ X ∈ F : |X |≤| E(G)|+ k}. Since (M1) and (M3) are
+preserved, (D, F′) is also a greedoid. Set c(e) := 1 for e ∈ E(G) and c(v) := 0
+for v ∈ V(G). Then there exists a set F ∈ F′ with c(F) =| E(G)| if and only if
+G contains a vertex cover of size k. 2

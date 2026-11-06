@@ -1,0 +1,547 @@
+\srcpage{49}
+\section*{第3章\quad 线性规划}\addcontentsline{toc}{section}{第3章\quad 线性规划}
+本章回顾线性规划中最重要的事实。虽然本章的叙述是自足的，但不能将其视为对这一领域的全面论述。不熟悉线性规划的读者，可参阅本章末列出的教科书。
+
+一般问题表述如下：
+\alg{线性规划}
+\textbf{实例：}矩阵 $A\in\R^{m\times n}$ 及列向量 $b\in\R^m$、$c\in\R^n$。\par
+\textbf{任务：}求列向量 $x\in\R^n$，使 $Ax\le b$ 且 $c^\top x$ 最大；或者判定 $\{x\in\R^n:Ax\le b\}$ 为空；或者判定对每个 $\alpha\in\R$，都存在满足 $Ax\le b$ 且 $c^\top x>\alpha$ 的 $x\in\R^n$。
+
+线性规划（LP）是上述问题的一个实例。我们常将线性规划写作 $\max\{c^\top x:Ax\le b\}$。线性规划 $\max\{c^\top x:Ax\le b\}$ 的一个\textbf{可行解}是满足 $Ax\le b$ 的向量 $x$。达到最大值的可行解称为\textbf{最优解}。
+
+这里 $c^\top x$ 表示向量的内积。对于同样大小的向量 $x,y$，记号 $x\le y$ 表示逐分量成立的不等式。如果未注明大小，总假定矩阵与向量的维数相容。我们常省略列向量的转置记号，例如用 $cx$ 表示内积。
+
+如问题表述所示，线性规划没有解有两种可能：问题可能\textbf{不可行}，即 $P:=\{x\in\R^n:Ax\le b\}=\varnothing$；也可能\textbf{无界}，即对每个 $\alpha\in\R$，都存在 $x\in P$ 使 $cx>\alpha$。如果一个线性规划既非不可行也非无界，那么它存在最优解，我们将在第3.2节证明这一点。这也说明了为什么使用记号 $\max\{c^\top x:Ax\le b\}$，而不是 $\sup\{c^\top x:Ax\le b\}$。
+
+许多组合优化问题可以表述为线性规划。为此，我们把可行解编码为某个 $\R^n$ 中的向量。第3.4节将说明，可以通过求解一个线性规划，在有限向量集 $S$ 上优化线性目标函数。虽然这个线性规划的可行集不仅包含 $S$ 中的向量，还包含它们的所有凸组合，但可以证明，最优解中总有一个属于 $S$。
+
+第3.1节汇集多面体的一些术语和基本事实；多面体就是线性规划的可行解集 $P=\{x\in\R^n:Ax\le b\}$。第3.2节将
+\srcpage{50}
+介绍单纯形算法，并利用它推导对偶定理及相关结果（第3.3节）。线性规划对偶性是极重要的概念，几乎在组合优化的所有领域中都会显式或隐式地出现；我们将经常引用第3.3、3.4节的结果。
+
+\sect{3.1\quad 多面体}
+线性规划处理的是：在有限个线性不等式的约束下，最大化或最小化有限个变量的线性目标函数。因此，可行解集是有限个半空间的交。这样的集合称为多面体：
+
+\st{定义3.1} $\R^n$ 中的\textbf{多面体}是形如 $P=\{x\in\R^n:Ax\le b\}$ 的集合，其中 $A\in\R^{m\times n}$ 为某个矩阵，$b\in\R^m$ 为某个向量。如果 $A,b$ 都是有理的，则称 $P$ 为\textbf{有理多面体}。有界多面体也称为\textbf{多胞体}。
+
+以 $\rank(A)$ 表示矩阵 $A$ 的秩。非空集合 $X\subseteq\R^n$ 的\textbf{维数} $\dim X$ 定义为
+\[
+n-\max\{\rank(A):A\text{ 是 }n\times n\text{ 矩阵，且对所有 }x,y\in X\text{ 有 }Ax=Ay\}.
+\]
+若 $\dim P=n$，则称多面体 $P\subseteq\R^n$ 为\textbf{满维}的。
+
+等价地，一个多面体满维，当且仅当其内部存在一点。在本章的大多数内容中，使用有理数空间还是实数空间并无区别。我们需要以下标准术语：
+
+\st{定义3.2} 设 $P:=\{x:Ax\le b\}$ 是非空多面体。如果非零向量 $c$ 使 $\delta:=\max\{cx:x\in P\}$ 有限，则称 $\{x:cx=\delta\}$ 为 $P$ 的一个\textbf{支撑超平面}。$P$ 的一个\textbf{面}是 $P$ 本身，或者 $P$ 与其某个支撑超平面的交。若 $\{x\}$ 是一个面，则称点 $x$ 为 $P$ 的一个\textbf{顶点}，也称为系统 $Ax\le b$ 的一个\textbf{基解}。
+
+\st{命题3.3} 设 $P=\{x:Ax\le b\}$ 是多面体，$F\subseteq P$。下列命题等价：
+\begin{enumerate}[label=(\alph*)]
+\item $F$ 是 $P$ 的一个面。
+\item 存在向量 $c$，使 $\delta:=\max\{cx:x\in P\}$ 有限，且 $F=\{x\in P:cx=\delta\}$。
+\item 对 $Ax\le b$ 的某个子系统 $A'x\le b'$，有 $F=\{x\in P:A'x=b'\}\ne\varnothing$。
+\end{enumerate}
+\pr (a)与(b)显然等价。
+
+(c)$\Rightarrow$(b)：若 $F=\{x\in P:A'x=b'\}$ 非空，令 $c$ 为 $A'$ 各行之和，$\delta$ 为 $b'$ 各分量之和。显然，对所有 $x\in P$ 有 $cx\le\delta$，且 $F=\{x\in P:cx=\delta\}$。
+
+(b)$\Rightarrow$(c)：设向量 $c$ 使 $\delta:=\max\{cx:x\in P\}$ 有限，且 $F=\{x\in P:cx=\delta\}$。令 $A'x\le b'$ 为 $Ax\le b$ 中满足对所有 $x\in F$ 都有 $A'x=b'$ 的极大子系统；以 $A''x\le b''$ 表示系统 $Ax\le b$ 中剩余的部分。
+
+\srcpage{51}
+首先注意，对 $A''x\le b''$ 的每个不等式 $a_i''x\le\beta_i''$（$i=1,\ldots,k$），都存在点 $x_i\in F$，使 $a_i''x_i<\beta_i''$。令
+\[
+x^*:=\frac1k\sum_{i=1}^k x_i
+\]
+为这些点的重心（若 $k=0$，可任取 $x^*\in F$）；则 $x^*\in F$，且对所有 $i$ 有 $a_i''x^*<\beta_i''$。
+
+我们要证明，对任何 $y\in P\setminus F$，都不可能有 $A'y=b'$。取 $y\in P\setminus F$，则 $cy<\delta$。对充分小的 $\varepsilon>0$，考虑 $z:=x^*+\varepsilon(x^*-y)$；具体地，对所有满足 $a_i''x^*>a_i''y$ 的 $i\in\{1,\ldots,k\}$，令
+\[
+\varepsilon<\frac{\beta_i''-a_i''x^*}{a_i''(x^*-y)}.
+\]
+有 $cz>\delta$，所以 $z\notin P$。因此 $Ax\le b$ 中存在某个不等式 $ax\le\beta$，使 $az>\beta$。于是 $ax^*>ay$。不等式 $ax\le\beta$ 不可能属于 $A''x\le b''$，否则由 $\varepsilon$ 的选择，
+\[
+az=ax^*+\varepsilon a(x^*-y)
+<ax^*+\frac{\beta-ax^*}{a(x^*-y)}a(x^*-y)=\beta.
+\]
+故 $ax\le\beta$ 属于 $A'x\le b'$。由于
+\[
+ay=a\left(x^*+\frac1\varepsilon(x^*-z)\right)<\beta,
+\]
+证明完成。\qed
+
+由此得到一个简单但重要的推论：
+
+\st{推论3.4} 若 $P$ 是非空多面体，且对向量 $c$，$\max\{cx:x\in P\}$ 有界，则达到最大值的点组成 $P$ 的一个面。\qed
+
+“是……的面”这一关系具有传递性：
+
+\st{推论3.5} 设 $P$ 是多面体，$F$ 是 $P$ 的一个面。那么 $F$ 也是多面体。此外，集合 $F'\subseteq F$ 是 $P$ 的面，当且仅当它是 $F$ 的面。\qed
+
+与 $P$ 不同的极大面尤其重要：
+
+\st{定义3.6} 设 $P$ 是多面体。$P$ 的一个\textbf{刻面}是与 $P$ 不同的极大面。若对所有 $x\in P$ 有 $cx\le\delta$，且 $\{x\in P:cx=\delta\}$ 是 $P$ 的一个刻面，则称不等式 $cx\le\delta$ \textbf{定义了 $P$ 的一个刻面}。
+
+\st{命题3.7} 设 $P\subseteq\{x\in\R^n:Ax=b\}$ 是维数为 $n-\rank(A)$ 的非空多面体。设 $A'x\le b'$ 是满足 $P=\{x:Ax=b,\ A'x\le b'\}$ 的极小不等式系统。则 $A'x\le b'$ 中每个不等式都定义了 $P$ 的一个刻面，且 $P$ 的每个刻面都由 $A'x\le b'$ 中的一个不等式定义。
+
+\pr 若 $P=\{x\in\R^n:Ax=b\}$，则没有刻面，结论显然。否则，令 $A'x\le b'$ 为满足 $P=\{x:Ax=b,\ A'x\le b'\}$ 的极小不等式系统，$a'x\le\beta'$ 为其中一个不等式，$A''x\le b''$ 为其余部分。取向量 $y$，使 $Ay=b$、$A''y\le b''$ 且 $a'y>\beta'$（这样的 $y$ 存在，因为不等式 $a'x\le\beta'$ 并非冗余）。取 $x\in P$，使 $a'x<\beta'$（这样的 $x$ 必存在，因为 $\dim P=n-\rank(A)$）。
+
+考虑
+\[
+z:=x+\frac{\beta'-a'x}{a'y-a'x}(y-x).
+\]
+有 $a'z=\beta'$；又因 $0<(\beta'-a'x)/(a'y-a'x)<1$，故 $z\in P$。因此 $F:=\{x\in P:a'x=\beta'\}\ne\varnothing$，且 $F\ne P$（因为 $x\in P\setminus F$）。于是 $F$ 是 $P$ 的一个刻面。
+
+由命题3.3，$P$ 的每个刻面都由 $A'x\le b'$ 中的一个不等式定义。\qed
+
+\srcpage{52}
+除刻面外，另一类重要的面是极小面，即不包含任何其他面的面。对此有：
+
+\st{命题3.8（Hoffman 和 Kruskal [1956]）} 设 $P=\{x:Ax\le b\}$ 是多面体。非空子集 $F\subseteq P$ 是 $P$ 的极小面，当且仅当对 $Ax\le b$ 的某个子系统 $A'x\le b'$，有 $F=\{x:A'x=b'\}$。
+
+\pr 若 $F$ 是 $P$ 的极小面，由命题3.3，存在子系统 $A'x\le b'$，使 $F=\{x\in P:A'x=b'\}$。取这样的 $A'x\le b'$ 为极大的。令 $A''x\le b''$ 是 $Ax\le b$ 的一个极小子系统，使 $F=\{x:A'x=b',\ A''x\le b''\}$。我们断言，$A''x\le b''$ 不含任何不等式。
+
+反设 $a''x\le\beta''$ 是 $A''x\le b''$ 中的一个不等式。由于它在 $F$ 的描述中并非冗余，命题3.7说明
+\[
+F':=\{x:A'x=b',\ A''x\le b'',\ a''x=\beta''\}
+\]
+是 $F$ 的一个刻面。由推论3.5，$F'$ 也是 $P$ 的面，与 $F$ 为 $P$ 的极小面矛盾。
+
+现在设 $\varnothing\ne F=\{x:A'x=b'\}\subseteq P$，其中 $A'x\le b'$ 是 $Ax\le b$ 的某个子系统。显然，$F$ 除自身外没有其他面。由命题3.3，$F$ 是 $P$ 的面。再由推论3.5，$F$ 是 $P$ 的极小面。\qed
+
+推论3.4和命题3.8说明：对 $Ax\le b$ 的每个子系统 $A'x\le b'$ 求解线性方程组 $A'x=b'$，便能在有限时间内求解线性规划。更巧妙的方法是下一节介绍的单纯形算法。
+
+命题3.8的另一个推论是：
+
+\st{推论3.9} 设 $P=\{x\in\R^n:Ax\le b\}$ 是多面体。则 $P$ 的所有极小面的维数都为 $n-\rank(A)$。多胞体的极小面是顶点。\qed
+
+因此，满足 $\rank(A)=n$ 的多面体 $\{x\in\R^n:Ax\le b\}$ 称为\textbf{尖多面体}：它们的极小面都是点。
+
+本节最后讨论多面锥。
+
+\st{定义3.10} \textbf{锥}是集合 $C\subseteq\R^n$，满足：若 $x,y\in C$ 且 $\lambda,\mu\ge0$，则 $\lambda x+\mu y\in C$。若 $x_1,\ldots,x_k\in C$，且对任意 $x\in C$ 都存在 $\lambda_1,\ldots,\lambda_k\ge0$ 使 $x=\sum_{i=1}^k\lambda_i x_i$，则称锥 $C$ 由 $x_1,\ldots,x_k$ \textbf{生成}。能由某个有限向量集生成的锥称为\textbf{有限生成锥}。\textbf{多面锥}是形如 $\{x:Ax\le0\}$ 的多面体。
+
+显然，多面锥确实是锥。下面证明多面锥是有限生成的。$I$ 始终表示单位矩阵。
+
+\st{引理3.11（Minkowski [1896]）} 设 $C=\{x\in\R^n:Ax\le0\}$ 是多面锥。则 $C$ 可由下述方程组解集的一个子集生成：
+\[
+My=b',
+\]
+其中 $M$ 由 $\begin{pmatrix}A\\I\end{pmatrix}$ 的 $n$ 个线性无关的行组成，且对某个单位向量 $e_j$，有 $b'=\pm e_j$。
+
+\srcpage{53}
+\pr 设 $A$ 为 $m\times n$ 矩阵。考虑方程组 $My=b'$，其中 $M$ 由 $\begin{pmatrix}A\\I\end{pmatrix}$ 的 $n$ 个线性无关的行组成，且对某个单位向量 $e_j$，有 $b'=\pm e_j$。令 $y_1,\ldots,y_t$ 为这些方程组中属于 $C$ 的解。我们断言，$C$ 由 $y_1,\ldots,y_t$ 生成。
+
+先设 $C=\{x:Ax=0\}$，即 $C$ 是线性子空间。将其写为 $C=\{x:A'x=0\}$，其中 $A'$ 由 $A$ 的一个极大线性无关行集组成。取 $I$ 的若干行组成 $I'$，使 $\begin{pmatrix}A'\\I'\end{pmatrix}$ 为非奇异方阵。则 $C$ 由以下方程组的解生成：
+\[
+\begin{pmatrix}A'\\I'\end{pmatrix}x=\begin{pmatrix}0\\b\end{pmatrix},
+\qquad b=\pm e_j,\quad j=1,\ldots,\dim C.
+\]
+
+一般情形对 $C$ 的维数归纳。如果 $C$ 不是线性子空间，选择 $A$ 的一行 $a$ 及一个子矩阵 $A'$，使 $\begin{pmatrix}A'\\a\end{pmatrix}$ 的各行线性无关，且 $\{x:A'x=0,\ ax\le0\}\subseteq C$。根据构造，存在 $s\in\{1,\ldots,t\}$，使 $A'y_s=0$、$ay_s=-1$。
+
+现在任取 $z\in C$。令 $a_1,\ldots,a_m$ 为 $A$ 的各行，且
+\[
+\mu:=\min\left\{\frac{a_i z}{a_i y_s}:i=1,\ldots,m,\ a_i y_s<0\right\}.
+\]
+有 $\mu\ge0$。设 $k$ 为达到最小值的一个指标。考虑 $z':=z-\mu y_s$。由 $\mu$ 的定义，对 $j=1,\ldots,m$，有
+\[
+a_jz'=a_jz-\frac{a_kz}{a_ky_s}a_jy_s,
+\]
+故 $z'\in C':=\{x\in C:a_kx=0\}$。$C'$ 是维数比 $C$ 少1的锥（因为 $a_ky_s<0$ 且 $y_s\in C$）。由归纳假设，$C'$ 由 $y_1,\ldots,y_t$ 的一个子集生成，所以对某些 $\lambda_1,\ldots,\lambda_t\ge0$，有 $z'=\sum_{i=1}^t\lambda_i y_i$。令 $\lambda_s':=\lambda_s+\mu$（注意 $\mu\ge0$），对 $i\ne s$ 令 $\lambda_i':=\lambda_i$，便得到
+\[
+z=z'+\mu y_s=\sum_{i=1}^t\lambda_i' y_i.
+\]\qed
+
+因此，任何多面锥都是有限生成的。我们将在第3.3节末证明其逆命题。
+
+\sect{3.2\quad 单纯形算法}
+求解线性规划最早且最著名的算法是 Dantzig [1951] 的单纯形法。我们先假定多面体存在顶点，且已给定其中一个顶点作为输入。随后将说明如何用此方法求解一般线性规划。
+
+对行指标集 $J$，用 $A_J$ 表示 $A$ 中仅由 $J$ 内各行组成的子矩阵，用 $b_J$ 表示 $b$ 中仅由指标属于 $J$ 的分量组成的子向量。简记 $a_i:=A_{\{i\}}$、$\beta_i:=b_{\{i\}}$。
+
+\srcpage{54}
+\alg{单纯形算法}
+\textbf{输入：}矩阵 $A\in\R^{m\times n}$ 及列向量 $b\in\R^m$、$c\in\R^n$；多面体 $P:=\{x\in\R^n:Ax\le b\}$ 的一个顶点 $x$。\par
+\textbf{输出：}达到 $\max\{cx:x\in P\}$ 的顶点 $x$；或者满足 $Aw\le0$、$cw>0$ 的向量 $w\in\R^n$（即线性规划无界）。
+\begin{enumerate}[label=\arabic*.]
+\item 选择含 $n$ 个行指标的集合 $J$，使 $A_J$ 非奇异，且 $A_Jx=b_J$。
+\item 计算 $c(A_J)^{-1}$，并补入零分量，得到满足 $c=yA$ 的向量 $y$，其中 $y$ 在 $J$ 外的所有分量均为零。若 $y\ge0$，则停止，返回 $x,y$。
+\item 选择满足 $y_i<0$ 的最小指标 $i$。令 $w$ 为 $-(A_J)^{-1}$ 中对应指标 $i$ 的列，于是 $A_{J\setminus\{i\}}w=0$ 且 $a_iw=-1$。若 $Aw\le0$，则停止，返回 $w$。
+\item 令
+\[
+\lambda:=\min\left\{\frac{\beta_j-a_jx}{a_jw}:j\in\{1,\ldots,m\},\ a_jw>0\right\},
+\]
+并令 $j$ 为达到此最小值的最小行指标。
+\item 令 $J:=(J\setminus\{i\})\cup\{j\}$，$x:=x+\lambda w$，返回步骤2。
+\end{enumerate}
+
+步骤1依据命题3.8，可用高斯消元法（第4.3节）实现。步骤3、4中选择 $i,j$ 的规则（通常称为\textbf{换基规则}）由 Bland [1977] 提出。若只任取一个满足 $y_i<0$ 的 $i$，并在步骤4中任取达到最小值的 $j$，则对某些实例，算法会陷入循环。Bland 换基规则并不是唯一能避免循环的规则；另一种规则（所谓字典序规则）早在 Dantzig、Orden 和 Wolfe [1955] 中就已被证明可以避免循环。在证明单纯形算法的正确性之前，先作如下观察（有时称为“弱对偶性”）：
+
+\st{命题3.12} 设 $x,y$ 分别是以下两个线性规划的可行解：
+\begin{align}
+&\max\{cx:Ax\le b\},\qquad\text{以及}\tag{3.1}\\
+&\min\{yb:yA=c,\ y\ge0\}.\tag{3.2}
+\end{align}
+则 $cx\le yb$。
+\pr $cx=(yA)x=y(Ax)\le yb$。\qed
+
+\st{定理3.13（Dantzig [1951]，Dantzig、Orden 和 Wolfe [1955]，Bland [1977]）} 单纯形算法至多经过 $\binom mn$ 次迭代便终止。如果算法在步骤2返回 $x,y$，则它们分别是线性规划(3.1)、(3.2)的最优解，且 $cx=yb$。如果算法在步骤3返回 $w$，则 $cw>0$，线性规划(3.1)无界。
+
+\srcpage{55}
+\pr 首先证明，在算法的任意阶段，下列条件成立：
+\begin{enumerate}[label=(\alph*)]
+\item $x\in P$；
+\item $A_Jx=b_J$；
+\item $A_J$ 非奇异；
+\item $cw>0$；
+\item $\lambda\ge0$。
+\end{enumerate}
+(a)、(b)初始时成立。步骤2、3保证 $cw=yAw=-y_i>0$。由步骤4，$x\in P$ 蕴含 $\lambda\ge0$。(c)来自 $A_{J\setminus\{i\}}w=0$ 和 $a_jw>0$。剩下只需说明步骤5保持(a)、(b)。
+
+先证若 $x\in P$，则 $x+\lambda w\in P$。对某个行指标 $k$，分两种情形：若 $a_kw\le0$，则由 $\lambda\ge0$，
+\[
+a_k(x+\lambda w)\le a_kx\le\beta_k.
+\]
+否则，$\lambda\le(\beta_k-a_kx)/(a_kw)$，故
+\[
+a_k(x+\lambda w)\le a_kx+a_kw\frac{\beta_k-a_kx}{a_kw}=\beta_k.
+\]
+事实上，步骤4选择的 $\lambda$ 正是使 $x+\lambda w\in P$ 的最大数。
+
+为证明(b)，注意步骤4后有 $A_{J\setminus\{i\}}w=0$ 及 $\lambda=(\beta_j-a_jx)/(a_jw)$，所以
+\[
+A_{J\setminus\{i\}}(x+\lambda w)=A_{J\setminus\{i\}}x=b_{J\setminus\{i\}},
+\]
+并且
+\[
+a_j(x+\lambda w)=a_jx+a_jw\frac{\beta_j-a_jx}{a_jw}=\beta_j.
+\]
+因此步骤5后，$A_Jx=b_J$ 再次成立。
+
+所以(a)--(e)确实在任意阶段都成立。如果算法在步骤2返回 $x,y$，则它们分别是(3.1)、(3.2)的可行解。由(a)、(b)、(c)，$x$ 是 $P$ 的顶点。此外，因为 $y$ 在 $J$ 外的分量为零，有 $cx=yAx=yb$。由命题3.12，$x,y$ 最优。
+
+如果算法在步骤3停止，则线性规划(3.1)确实无界，因为此时对所有 $\mu\ge0$ 都有 $x+\mu w\in P$，且由(d)，$cw>0$。
+
+最后证明算法终止。以 $J^{(k)}$、$x^{(k)}$ 分别表示单纯形算法第 $k$ 次迭代中的集合 $J$ 和向量 $x$。若算法经过 $\binom mn$ 次迭代仍未终止，则存在迭代次数 $k<l$，使 $J^{(k)}=J^{(l)}$。由(b)、(c)，$x^{(k)}=x^{(l)}$。由(d)、(e)，$cx$ 从不减少，且当 $\lambda>0$ 时严格增加。因此，第 $k,k+1,\ldots,l-1$ 次迭代中的 $\lambda$ 全为零，且 $x^{(k)}=x^{(k+1)}=\cdots=x^{(l)}$。
+
+令 $h$ 为第 $k,\ldots,l-1$ 次迭代中曾离开 $J$ 的最大指标，设它在第 $p$ 次迭代离开。指标 $h$ 也必在某次迭代 $q\in\{k,\ldots,l-1\}$ 加入 $J$。以 $y'$ 表示第 $p$ 次迭代中的 $y$，$w'$ 表示第 $q$ 次迭代中的 $w$。有 $y'Aw'=cw'>0$，故存在指标 $r$，使 $y_r'a_rw'>0$。由于 $y_r'\ne0$，$r\in J^{(p)}$。若 $r>h$，则 $r$ 也属于 $J^{(q)}$ 和 $J^{(q+1)}$，从而 $a_rw'=0$。所以 $r\le h$。但由第 $p$ 次迭代中 $i$ 的选择，有 $y_r'<0$ 当且仅当 $r=h$；由第 $q$ 次迭代中 $j$ 的选择，有 $a_rw'>0$ 当且仅当 $r=h$（注意 $\lambda=0$，且因 $r\in J^{(p)}$，有 $a_rx^{(q)}=a_rx^{(p)}=\beta_r$）。矛盾。\qed
+
+Klee 和 Minty [1972] 以及 Avis 和 Chvátal [1978] 找到了一些例子：在具有 $n$ 个变量和 $2n$ 个约束的线性规划上，采用 Bland 规则的单纯形算法需要 $2^n$ 次迭代，因而它不是多项式时间算法。目前尚不知道是否存在一种能使算法成为多项式时间
+\srcpage{56}
+算法的换基规则。不过，Borgwardt [1982] 证明，在某个自然概率模型下，随机实例的平均运行时间具有多项式上界。在实际中，经过精心实现的单纯形算法也相当快。
+
+现在说明如何用单纯形算法求解一般线性规划。更确切地说，我们要说明如何找到一个初始顶点。因为有些多面体根本没有顶点，所以先将给定线性规划变成另一种形式。
+
+设 $\max\{cx:Ax\le b\}$ 是一个线性规划。以 $y-z$ 代替 $x$，可等价地写为
+\[
+\max\left\{
+\begin{pmatrix}c&-c\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}:
+\begin{pmatrix}A&-A\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}\le b,\ y,z\ge0
+\right\}.
+\]
+因此不妨假定线性规划具有形式
+\begin{equation}
+\max\{cx:A'x\le b',\ A''x\le b'',\ x\ge0\},\tag{3.3}
+\end{equation}
+其中 $b'\ge0$，$b''<0$。先对以下实例运行单纯形算法：
+\begin{equation}
+\min\{(\one A'')x+\one y:A'x\le b',\ A''x+y\ge b'',\ x,y\ge0\}.\tag{3.4}
+\end{equation}
+这里 $\one$ 表示所有分量均为1的向量。因为 $\begin{pmatrix}x\\y\end{pmatrix}=0$ 定义了一个顶点，所以可以运行算法。这个线性规划显然不是无界的，因为最小值至少为 $\one b''$。对(3.3)的任意可行解 $x$，
+\[
+\begin{pmatrix}x\\b''-A''x\end{pmatrix}
+\]
+都是(3.4)的最优解，目标值为 $\one b''$。因此，若(3.4)的最小值大于 $\one b''$，则(3.3)不可行。
+
+反之，设 $\begin{pmatrix}x\\y\end{pmatrix}$ 是(3.4)的一个最优顶点，目标值为 $\one b''$。我们断言，$x$ 是(3.3)所定义多面体的顶点。先注意 $A''x+y=b''$。设 $x,y$ 的维数分别为 $n,m$；由命题3.8，存在(3.4)中 $n+m$ 个取等的不等式组成的集合 $S$，使这些不等式对应的子矩阵非奇异。
+
+令 $S'$ 为 $S$ 中属于 $A'x\le b'$ 或 $x\ge0$ 的不等式。令 $S''$ 包含 $A''x\le b''$ 中满足以下条件的不等式：其在 $A''x+y\ge b''$ 中对应的不等式，以及相应的 $y\ge0$ 中的不等式，都属于 $S$。显然，
+\[
+|S'\cup S''|\ge |S|-m=n,
+\]
+而 $S'\cup S''$ 中的不等式线性无关，并且在 $x$ 处取等。因此，$x$ 使(3.3)中 $n$ 个线性无关的不等式取等，所以 $x$ 确实是顶点。于是可以从(3.3)及顶点 $x$ 出发运行单纯形算法。
+
+\srcpage{57}
+\sect{3.3\quad 对偶性}
+定理3.13表明，线性规划(3.1)和(3.2)之间存在联系。这引出了以下定义：
+
+\st{定义3.14} 给定线性规划 $\max\{cx:Ax\le b\}$，定义其\textbf{对偶线性规划}为 $\min\{yb:yA=c,\ y\ge0\}$。
+
+此时，原来的线性规划 $\max\{cx:Ax\le b\}$ 常称为\textbf{原线性规划}。
+
+\st{命题3.15} 一个线性规划的对偶的对偶，等价于原线性规划。
+
+\pr 给定原线性规划 $\max\{cx:Ax\le b\}$。其对偶为 $\min\{yb:yA=c,\ y\ge0\}$，等价地可写为
+\[
+-\max\left\{-by:
+\begin{pmatrix}A^\top\\-A^\top\\-I\end{pmatrix}y
+\le\begin{pmatrix}c\\-c\\0\end{pmatrix}
+\right\}.
+\]
+这里把每个等式约束拆成了两个不等式约束。因此，对偶的对偶为
+\[
+-\min\left\{zc-z'c:
+\begin{pmatrix}A&-A&-I\end{pmatrix}
+\begin{pmatrix}z\\z'\\w\end{pmatrix}
+=-b,\ z,z',w\ge0\right\}.
+\]
+以 $x$ 代替 $z'-z$，它等价于
+\[
+-\min\{-cx:-Ax-w=-b,\ w\ge0\}.
+\]
+消去松弛变量 $w$，可见它等价于原线性规划。\qed
+
+现在得到线性规划理论中最重要的定理——对偶定理：
+
+\st{定理3.16（von Neumann [1947]，Gale、Kuhn 和 Tucker [1951]）} 若多面体 $P:=\{x:Ax\le b\}$ 和 $D:=\{y:yA=c,\ y\ge0\}$ 均非空，则
+\[
+\max\{cx:x\in P\}=\min\{yb:y\in D\}.
+\]
+
+\pr 若 $D$ 非空，则它有一个顶点 $y$。对 $\min\{yb:y\in D\}$ 及顶点 $y$ 运行单纯形算法。由命题3.12，某个 $x\in P$ 的存在保证 $\min\{yb:y\in D\}$ 不是无界的。因此，由定理3.13，单纯形算法返回线性规划 $\min\{yb:y\in D\}$ 及其对偶的最优解 $y,z$。而根据命题3.15，该对偶正是 $\max\{cx:x\in P\}$。有 $yb=cz$，符合要求。\qed
+
+关于原线性规划与对偶线性规划的最优解之间的关系，还可以说得更多：
+
+\srcpage{58}
+\st{推论3.17} 设 $\max\{cx:Ax\le b\}$ 与 $\min\{yb:yA=c,\ y\ge0\}$ 是一对原、对偶线性规划。设 $x,y$ 是可行解，即 $Ax\le b$、$yA=c$ 且 $y\ge0$。则下列命题等价：
+\begin{enumerate}[label=(\alph*)]
+\item $x,y$ 都是最优解。
+\item $cx=yb$。
+\item $y(b-Ax)=0$。
+\end{enumerate}
+\pr 对偶定理3.16立即给出(a)与(b)的等价性。由
+\[
+y(b-Ax)=yb-yAx=yb-cx
+\]
+可得(b)与(c)等价。\qed
+
+最优解的性质(c)常称为\textbf{互补松弛}。将上述结果改写为另一种形式：
+
+\st{推论3.18} 设 $\min\{cx:Ax\ge b,\ x\ge0\}$ 与 $\max\{yb:yA\le c,\ y\ge0\}$ 是一对原、对偶线性规划。设 $x,y$ 为可行解，即 $Ax\ge b$、$yA\le c$ 且 $x,y\ge0$。则下列命题等价：
+\begin{enumerate}[label=(\alph*)]
+\item $x,y$ 都是最优解。
+\item $cx=yb$。
+\item $(c-yA)x=0$ 且 $y(b-Ax)=0$。
+\end{enumerate}
+\pr 对线性规划
+\[
+\max\left\{(-c)x:\begin{pmatrix}-A\\-I\end{pmatrix}x
+\le\begin{pmatrix}-b\\0\end{pmatrix}\right\}
+\]
+应用对偶定理3.16，得到(a)与(b)等价。
+
+为证明(b)与(c)等价，注意对任意可行解 $x,y$，有
+\[
+y(b-Ax)\le0\le(c-yA)x,
+\]
+并且 $y(b-Ax)=(c-yA)x$ 当且仅当 $yb=cx$。\qed
+
+(c)中的两个条件有时分别称为原问题和对偶问题的互补松弛条件。
+
+对偶定理在组合优化中有许多应用。它之所以重要，一个原因是：给出对偶线性规划的一个具有相同目标值的可行解，就可以证明原问题某个解的最优性。下面说明如何证明线性规划无界或不可行：
+
+\st{定理3.19} 存在满足 $Ax\le b$ 的向量 $x$，当且仅当对每个满足 $y\ge0$、$yA=0$ 的向量 $y$，都有 $yb\ge0$。
+
+\pr 若存在满足 $Ax\le b$ 的向量 $x$，则对每个满足 $y\ge0$、$yA=0$ 的 $y$，都有 $yb\ge yAx=0$。
+
+考虑线性规划
+\begin{equation}
+-\min\{\one w:Ax-w\le b,\ w\ge0\}.\tag{3.5}
+\end{equation}
+将其写成标准形式，得到
+
+\srcpage{59}
+\[
+\max\left\{
+\begin{pmatrix}0&-\one\end{pmatrix}\begin{pmatrix}x\\w\end{pmatrix}:
+\begin{pmatrix}A&-I\\0&-I\end{pmatrix}\begin{pmatrix}x\\w\end{pmatrix}
+\le\begin{pmatrix}b\\0\end{pmatrix}
+\right\}.
+\]
+它的对偶线性规划为
+\[
+\min\left\{
+\begin{pmatrix}b&0\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}:
+\begin{pmatrix}A^\top&0\\-I&-I\end{pmatrix}\begin{pmatrix}y\\z\end{pmatrix}
+=\begin{pmatrix}0\\-\one\end{pmatrix},\ y,z\ge0
+\right\},
+\]
+等价地，
+\begin{equation}
+\min\{yb:yA=0,\ 0\le y\le1\}.\tag{3.6}
+\end{equation}
+因为(3.5)、(3.6)都存在可行解（$x=0$、$w=|b|$、$y=0$），可以应用定理3.16，故(3.5)、(3.6)的最优值相同。系统 $Ax\le b$ 有解，当且仅当(3.5)的最优值为零，证明完成。\qed
+
+因此，要证明线性不等式系统 $Ax\le b$ 无解，可以给出满足 $y\ge0$、$yA=0$ 且 $yb<0$ 的向量 $y$。下面给出定理3.19的两个等价表述：
+
+\st{推论3.20} 存在满足 $Ax\le b$ 的向量 $x\ge0$，当且仅当对每个满足 $y\ge0$、$yA\ge0$ 的向量 $y$，都有 $yb\ge0$。
+
+\pr 对系统 $\begin{pmatrix}A\\-I\end{pmatrix}x\le\begin{pmatrix}b\\0\end{pmatrix}$ 应用定理3.19。\qed
+
+\st{推论3.21（Farkas [1894]）} 存在满足 $Ax=b$ 的向量 $x\ge0$，当且仅当对每个满足 $yA\ge0$ 的向量 $y$，都有 $yb\ge0$。
+
+\pr 对系统 $\begin{pmatrix}A\\-A\end{pmatrix}x\le\begin{pmatrix}b\\-b\end{pmatrix}$、$x\ge0$ 应用推论3.20。\qed
+
+推论3.21通常称为\textbf{Farkas引理}。上述结果反过来又能推出对偶定理3.16；这一点很有意思，因为它们有相当简单的直接证明，实际上早在单纯形算法之前就已为人所知；见习题6、7。
+
+我们已经知道如何证明线性规划不可行。如何证明线性规划无界呢？下一个定理回答这个问题。
+
+\st{定理3.22} 若一个线性规划无界，则其对偶线性规划不可行。若一个线性规划存在最优解，则其对偶也存在最优解。
+
+\pr 第一条结论立即由命题3.12得到。
+
+为证第二条，假设原线性规划 $\max\{cx:Ax\le b\}$ 存在最优解 $x^*$，但其对偶 $\min\{yb:yA=c,\ y\ge0\}$ 不可行（由第一条结论，对偶不可能无界）。
+
+若对偶不可行，即不存在满足 $A^\top y=c$ 的 $y\ge0$，则应用Farkas引理（推论3.21），得到向量 $z$，使 $zA^\top\ge0$ 且 $zc<0$。但此时 $x^*-z$
+
+\srcpage{60}
+是原问题的可行解，因为 $A(x^*-z)=Ax^*-Az\le b$。而 $c(x^*-z)>cx^*$，与 $x^*$ 最优矛盾。\qed
+
+所以，一对原、对偶线性规划共有四种情形：两者都有最优解（此时最优值相同）；一者不可行、另一者无界；或者两者都不可行。
+
+下面这个重要事实将经常使用：
+
+\st{定理3.23} 设 $P=\{x\in\R^n:Ax\le b\}$ 是多面体，且 $z\notin P$。则存在一个分离超平面，即存在向量 $c\in\R^n$，使
+\[
+cz>\max\{cx:Ax\le b\}.
+\]
+\pr 因为 $z\notin P$，集合 $\{x:Ax\le b,\ Ix\le z,\ -Ix\le-z\}$ 为空。因此由定理3.19，存在向量 $y,\lambda,\mu\ge0$，使
+\[
+yA+(\lambda-\mu)I=0,\qquad yb+(\lambda-\mu)z<0.
+\]
+令 $c:=\mu-\lambda$，则对所有 $x\in P$，有
+\[
+cz>yb\ge y(Ax)=(yA)x=cx.
+\]\qed
+
+Farkas引理还可以用来证明，每个有限生成锥都是多面锥：
+
+\st{定理3.24（Minkowski [1896]，Weyl [1935]）} 一个锥是多面锥，当且仅当它是有限生成的。
+
+\pr 必要性已由引理3.11证明。现考虑由 $a_1,\ldots,a_t$ 生成的锥 $C$。我们要证明 $C$ 是多面锥。令 $A$ 为以 $a_1,\ldots,a_t$ 为行的矩阵。
+
+由引理3.11，锥 $D:=\{x:Ax\le0\}$ 由某些向量 $b_1,\ldots,b_s$ 生成。令 $B$ 为以 $b_1,\ldots,b_s$ 为行的矩阵。我们证明 $C=\{x:Bx\le0\}$。
+
+因为对所有 $i,j$ 都有 $b_ja_i=a_ib_j\le0$，故 $C\subseteq\{x:Bx\le0\}$。现假设存在 $w\notin C$，使 $Bw\le0$。$w\notin C$ 表示不存在 $v\ge0$ 使 $A^\top v=w$。由Farkas引理（推论3.21），这意味着存在向量 $y$，使 $yw<0$ 且 $Ay\ge0$。因此 $-y\in D$。由于 $D$ 由 $b_1,\ldots,b_s$ 生成，对某个 $z\ge0$ 有 $-y=zB$。但于是 $0<-yw=zBw\le0$，矛盾。\qed
+
+\sect{3.4\quad 凸包与多胞体}
+本节汇集关于多胞体的一些进一步事实。特别地，我们将证明，多胞体恰好是有限个点的凸包。先回顾几个基本定义：
+
+\st{定义3.25} 给定向量 $x_1,\ldots,x_k\in\R^n$，以及满足 $\sum_{i=1}^k\lambda_i=1$ 的数 $\lambda_1,\ldots,\lambda_k\ge0$，称 $x=\sum_{i=1}^k\lambda_i x_i$ 为 $x_1,\ldots,x_k$ 的一个\textbf{凸组合}。若对所有 $x,y\in X$ 及 $\lambda\in[0,1]$ 都有 $\lambda x+(1-\lambda)y\in X$，则称集合 $X\subseteq\R^n$ 为\textbf{凸集}。集合 $X$ 的\textbf{凸包} $\conv(X)$ 定义为 $X$ 中各点的所有凸组合组成的集合。集合 $X$ 的一个\textbf{极点}是满足 $x\notin\conv(X\setminus\{x\})$ 的元素 $x\in X$。
+
+\srcpage{61}
+因此，集合 $X$ 是凸集，当且仅当 $X$ 中各点的所有凸组合仍属于 $X$。$X$ 的凸包是包含 $X$ 的最小凸集。此外，凸集之交仍为凸集，故多面体是凸集。现在证明“多胞体的有限基定理”；这是一个基本结果，看似显然，却不容易直接证明：
+
+\st{定理3.26（Minkowski [1896]，Steinitz [1916]，Weyl [1935]）} 集合 $P$ 是多胞体，当且仅当它是一个有限点集的凸包。
+
+\pr （Schrijver [1986]）设 $P=\{x\in\R^n:Ax\le b\}$ 是非空多胞体。显然，
+\[
+P=\left\{x:\begin{pmatrix}x\\1\end{pmatrix}\in C\right\},
+\qquad
+C:=\left\{\begin{pmatrix}x\\\lambda\end{pmatrix}\in\R^{n+1}:
+\lambda\ge0,\ Ax-\lambda b\le0\right\}.
+\]
+$C$ 是多面锥，由定理3.24，它由有限个非零向量生成，记为
+\[
+\begin{pmatrix}x_1\\\lambda_1\end{pmatrix},\ldots,
+\begin{pmatrix}x_k\\\lambda_k\end{pmatrix}.
+\]
+由于 $P$ 有界，所有 $\lambda_i$ 均非零；不妨设所有 $\lambda_i=1$。于是 $x\in P$ 当且仅当存在 $\mu_1,\ldots,\mu_k\ge0$，使
+\[
+\begin{pmatrix}x\\1\end{pmatrix}
+=\mu_1\begin{pmatrix}x_1\\1\end{pmatrix}
++\cdots+\mu_k\begin{pmatrix}x_k\\1\end{pmatrix}.
+\]
+换言之，$P$ 是 $x_1,\ldots,x_k$ 的凸包。
+
+现在设 $P$ 是 $x_1,\ldots,x_k\in\R^n$ 的凸包。那么 $x\in P$ 当且仅当 $\begin{pmatrix}x\\1\end{pmatrix}\in C$，其中 $C$ 是由
+\[
+\begin{pmatrix}x_1\\1\end{pmatrix},\ldots,
+\begin{pmatrix}x_k\\1\end{pmatrix}
+\]
+生成的锥。由定理3.24，$C$ 是多面锥，故可以写为
+\[
+C=\left\{\begin{pmatrix}x\\\lambda\end{pmatrix}:Ax+b\lambda\le0\right\}.
+\]
+因此 $P=\{x\in\R^n:Ax+b\le0\}$。\qed
+
+\st{推论3.27} 多胞体是其顶点的凸包。
+
+\pr 设 $P$ 是多胞体。由定理3.26，其顶点的凸包是一个多胞体 $Q$。显然 $Q\subseteq P$。假设存在点 $z\in P\setminus Q$。由定理3.23，存在向量 $c$，使 $cz>\max\{cx:x\in Q\}$。$P$ 的支撑超平面 $\{x:cx=\max\{cy:y\in P\}\}$ 定义了一个不含任何顶点的面。由推论3.9，这是不可能的。\qed
+
+前面两个结果和下面的结果是多面体组合学的出发点，本书将频繁使用。对给定底集 $E$ 及子集 $X\subseteq E$，$X$ 关于 $E$ 的\textbf{关联向量}定义为向量 $x\in\{0,1\}^E$，其中当 $e\in X$ 时 $x_e=1$，当 $e\in E\setminus X$ 时 $x_e=0$。
+
+\srcpage{62}
+\st{推论3.28} 设 $(E,\F)$ 是集合系统，$P$ 是 $\F$ 中各元素的关联向量的凸包，$c:E\to\R$。则
+\[
+\max\{cx:x\in P\}=\max\{c(X):X\in\F\}.
+\]
+\pr 由于 $\max\{cx:x\in P\}\ge\max\{c(X):X\in\F\}$ 显然成立，设 $x$ 是 $\max\{cx:x\in P\}$ 的一个最优解（注意，由定理3.26，$P$ 是多胞体）。由 $P$ 的定义，$x$ 是 $\F$ 中各元素的关联向量 $y_1,\ldots,y_k$ 的凸组合：存在 $\lambda_1,\ldots,\lambda_k\ge0$，$\sum_{i=1}^k\lambda_i=1$，使 $x=\sum_{i=1}^k\lambda_i y_i$。由于 $cx=\sum_{i=1}^k\lambda_i cy_i$，至少存在一个 $i\in\{1,\ldots,k\}$ 使 $cy_i\ge cx$。这个 $y_i$ 是某个集合 $Y\in\F$ 的关联向量，且 $c(Y)=cy_i\ge cx$。\qed
+
+\sect{第3章习题}
+\begin{enumerate}[label=\arabic*.]
+\item 若不存在 $\lambda\in\R^k\setminus\{0\}$ 满足 $\lambda^{\mathsf T}\one=0$ 以及 $\sum_{i=1}^k\lambda_i x_i=0$，则称向量集 $x_1,\ldots,x_k$ \textbf{仿射无关}。设 $\varnothing\ne X\subseteq\R^n$。证明：由 $X$ 中元素构成的仿射无关集的最大基数等于 $\dim X+1$。
+\item 设 $P$ 是多面体。证明：$P$ 的每个刻面的维数都比 $P$ 的维数小一。
+\item 写出工作分配问题的线性规划表述(1.1)的对偶。说明在只有两项工作的情况下，如何用一个简单算法求解原线性规划及其对偶。
+\item 设 $G$ 是有向图，$c:E(G)\to\R_+$，$E_1,E_2\subseteq E(G)$，$s,t\in V(G)$。考虑线性规划
+\[
+\begin{aligned}
+\min\quad &\sum_{e\in E(G)}c(e)y_e\\
+\text{满足}\quad &y_e\ge z_w-z_v &&(e=(v,w)\in E(G)),\\
+&z_t-z_s=1,\\
+&y_e\ge0 &&(e\in E_1),\\
+&y_e\le0 &&(e\in E_2).
+\end{aligned}
+\]
+证明：存在最优解 $(y,z)$ 和集合 $s\in X\subseteq V(G)\setminus\{t\}$，使得对 $e\in\delta^+(X)$ 有 $y_e=1$，对 $e\in\delta^-(X)\setminus E_1$ 有 $y_e=-1$，而对所有其他边 $e$ 有 $y_e=0$。
+
+\textbf{提示：}考虑进入或离开 $\{v\in V(G):z_v\le z_s\}$ 的边所满足的互补松弛条件。
+\item 设 $Ax\le b$ 是含 $n$ 个变量的线性不等式组。将各行乘以适当的正常数，可以假设 $A$ 的第一列只含 $0,-1,1$。因此可将 $Ax\le b$ 等价地写为
+\[
+\begin{aligned}
+a'_i x'&\le b_i &&(i=1,\ldots,m_1),\\
+-x_1+a'_j x'&\le b_j &&(j=m_1+1,\ldots,m_2),\\
+x_1+a'_k x'&\le b_k &&(k=m_2+1,\ldots,m).
+\end{aligned}
+\]
+\end{enumerate}
+
+\srcpage{63}
+\noindent 其中 $x'=(x_2,\ldots,x_n)$，$a'_1,\ldots,a'_m$ 是将 $A$ 各行的第一个分量删去后得到的向量。于是可以消去 $x_1$：证明，$Ax\le b$ 有解，当且仅当下列不等式组有解：
+\[
+\begin{aligned}
+a'_i x'&\le b_i &&(i=1,\ldots,m_1),\\
+a'_j x'-b_j&\le b_k-a'_k x'
+&&(j=m_1+1,\ldots,m_2;\ k=m_2+1,\ldots,m).
+\end{aligned}
+\]
+说明：重复应用这一方法，可以得到一个求解线性不等式组 $Ax\le b$（或证明其不可行）的算法。
+
+\textbf{注：}这一方法由 Fourier 提出，Motzkin [1936] 对其作了研究，因而称为 \textbf{Fourier--Motzkin 消元法}。可以证明，它不是多项式时间算法。
+
+\begin{enumerate}[label=\arabic*.,start=6]
+\item 使用 Fourier--Motzkin 消元法（习题5）直接证明定理3.19。（Kuhn [1956]）
+\item 证明定理3.19蕴含对偶定理3.16。
+\item 证明多面体的分解定理：任意多面体 $P$ 都可以写为 $P=\{x+c:x\in X,\ c\in C\}$，其中 $X$ 是多胞体，$C$ 是多面锥。（Motzkin [1936]）
+\item\textsuperscript{*} 设 $P$ 是有理多面体，$F$ 是 $P$ 的一个面。证明
+\[
+\{c:cz=\max\{cx:x\in P\}\text{ 对所有 }z\in F\}
+\]
+是有理多面锥。
+\item 证明 Carathéodory 定理：若 $X\subseteq\R^n$ 且 $y\in\conv(X)$，则存在 $x_1,\ldots,x_{n+1}\in X$，使 $y\in\conv(\{x_1,\ldots,x_{n+1}\})$。（Carathéodory [1911]）
+\item 证明 Carathéodory 定理（习题10）的如下推广：若 $X\subseteq\R^n$ 且 $y,z\in\conv(X)$，则存在 $x_1,\ldots,x_n\in X$，使 $y\in\conv(\{z,x_1,\ldots,x_n\})$。
+\item 证明多面体的极点恰好是它的顶点。
+\item 设 $P$ 是非空多胞体。考虑图 $G(P)$，其顶点为 $P$ 的顶点，其边对应于 $P$ 的一维面。设 $x$ 是 $P$ 的任意顶点，$c$ 是满足 $c^{\mathsf T}x<\max\{c^{\mathsf T}z:z\in P\}$ 的向量。证明：$x$ 在 $G(P)$ 中有一个邻点 $y$ 满足 $c^{\mathsf T}x<c^{\mathsf T}y$。
+\item\textsuperscript{*} 使用习题13证明：对任意 $n$ 维多胞体 $P$（$n\ge1$），$G(P)$ 是 $n$ 连通图。
+\end{enumerate}
+
+\sect{第3章参考文献}
+\noindent\textbf{一般文献：}
+\begin{description}[font=\normalfont,leftmargin=1em]
+\item Chvátal, V. [1983]: \textit{Linear Programming}. Freeman, New York 1983
+\item Padberg, M. [1995]: \textit{Linear Optimization and Extensions}. Springer, Berlin 1995
+\item Schrijver, A. [1986]: \textit{Theory of Linear and Integer Programming}. Wiley, Chichester 1986
+\end{description}
+
+\srcpage{64}
+\noindent\textbf{引用文献：}
+\input{references3.tex}

@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\C}{\mathbb C}
+\newcommand{\e}{\mathrm e}
+\title{复分析第 3 次作业答案}
+\author{}\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+题目来源：\texttt{HW3.pdf}，共 1 页。按原题顺序给出题干和解答；用到全纯函数的相关定理时，明确叙述所用性质与适用条件。
+
+\section*{1. 指数函数的不等式}
+\textbf{题目。}证明：
+\begin{align*}
+\text{(1)}\quad &|\e^z-1|\le \e^{|z|}-1\le |z|\e^{|z|},\qquad z\in\C;\\
+\text{(2)}\quad &|\e^z-1|\le 2|z|,\qquad |z|\le 1.
+\end{align*}
+
+\textbf{解答。}(1) 由指数函数的绝对收敛幂级数，
+\[
+|\e^z-1|=\left|\sum_{n=1}^\infty\frac{z^n}{n!}\right|
+\le\sum_{n=1}^\infty\frac{|z|^n}{n!}=\e^{|z|}-1.
+\]
+记 $r=|z|\ge0$，则
+\[
+\e^r-1=r\sum_{m=0}^\infty\frac{r^m}{(m+1)!}
+\le r\sum_{m=0}^\infty\frac{r^m}{m!}=r\e^r.
+\]
+合并即得所需不等式。
+
+(2) 当 $0\le r\le1$ 时，$r^n\le r$（$n\ge1$），故
+\[
+|\e^z-1|\le\sum_{n=1}^\infty\frac{r^n}{n!}
+\le r\sum_{n=1}^\infty\frac1{n!}=(\e-1)r\le2r.
+\]
+这里 $\e<3$，例如由 $n!\ge2^{n-1}$（$n\ge2$，且 $n\ge3$ 时严格大于）可得
+\[
+\e=2+\sum_{n=2}^\infty\frac1{n!}<2+\sum_{n=2}^\infty\frac1{2^{n-1}}=3.
+\]
+
+\newpage
+\section*{2. 反双曲函数的表达式与导数}
+\textbf{题目。}证明以下公式（平方根和对数取相容的分支）：
+\begin{align*}
+\sinh^{-1}z&=\log\bigl(z+(z^2+1)^{1/2}\bigr),&
+(\sinh^{-1}z)'&=\frac1{(z^2+1)^{1/2}},\\
+\cosh^{-1}z&=\log\bigl(z+(z^2-1)^{1/2}\bigr),&
+(\cosh^{-1}z)'&=\frac1{(z^2-1)^{1/2}},\\
+\tanh^{-1}z&=\frac12\log\frac{1+z}{1-z},&
+(\tanh^{-1}z)'&=\frac1{1-z^2}.
+\end{align*}
+
+\textbf{三个双曲函数的定义。}对复变量 $w$，定义
+\[
+\boxed{\sinh w=\frac{\e^w-\e^{-w}}2,\qquad
+\cosh w=\frac{\e^w+\e^{-w}}2,\qquad
+\tanh w=\frac{\sinh w}{\cosh w}
+=\frac{\e^{2w}-1}{\e^{2w}+1}.}
+\]
+前两个函数在整个 $\C$ 上定义，第三个要求 $\cosh w\ne0$，即
+$w\ne (k+\tfrac12)\pi i$，$k\in\mathbb Z$。
+题中的上标 $-1$ 表示反函数，而不是倒数。
+
+\textbf{分支约定。}复反双曲函数一般是多值的。以下在避开相应分支点的一个足够小的圆盘内，选择全纯平方根及全纯对数，得到单值的局部反函数；等式中的平方根始终采用同一个分支。
+所用性质为：\emph{非零全纯函数在每一点的足够小邻域内存在全纯对数，因此也存在全纯平方根。}全纯对数 $L$ 满足 $\e^{L(u)}=u$ 及 $L'(u)=1/u$。
+
+\textbf{(1) 反双曲正弦。}令 $w$ 满足 $\sinh w=z$，并记 $u=\e^w\ne0$。由定义，
+\[
+u-u^{-1}=2z\quad\Longleftrightarrow\quad u^2-2zu-1=0,
+\]
+所以 $u=z\pm\sqrt{z^2+1}$。
+
+具体地，在避开 $z=\pm i$ 的上述邻域中，选定 $s=s(z)$，使 $s^2=z^2+1$。
+由于
+\[
+(z+s)(z-s)=-1,
+\]
+$z+s\ne0$。取 $w=\log(z+s)$，则
+\[
+\e^w=z+s,\qquad \e^{-w}=\frac1{z+s}=s-z.
+\]
+因此 $\sinh w=((z+s)-(s-z))/2=z$，证明了该表达式确实给出反函数的一个分支。
+
+由 $s^2=z^2+1$ 得 $s'=z/s$，从而
+\[
+\boxed{w'=\frac{1+s'}{z+s}
+=\frac{1+z/s}{z+s}=\frac1s=\frac1{\sqrt{z^2+1}}.}
+\]
+例如在 $z=0$ 附近取 $s(0)=1$、$w(0)=0$，便得到与实反双曲正弦相接的分支。
+
+\textbf{(2) 反双曲余弦。}同样，由 $\cosh w=z$ 得
+\[
+u+u^{-1}=2z\quad\Longleftrightarrow\quad u^2-2zu+1=0,
+\]
+故 $u=z\pm\sqrt{z^2-1}$。
+在避开 $z=\pm1$ 的小邻域内取 $s^2=z^2-1$，则
+\[
+(z+s)(z-s)=1.
+\]
+取 $w=\log(z+s)$，有 $\e^w=z+s$、$\e^{-w}=z-s$，所以
+\[
+\cosh w=\frac{(z+s)+(z-s)}2=z.
+\]
+又 $s'=z/s$，于是
+\[
+\boxed{w'=\frac{1+z/s}{z+s}=\frac1s=\frac1{\sqrt{z^2-1}}.}
+\]
+例如在实轴 $z>1$ 上取正平方根和实对数，便得到通常取非负值的实反双曲余弦，并可在各点附近延拓。
+
+\textbf{(3) 反双曲正切。}由定义，
+\[
+z=\frac{\e^{2w}-1}{\e^{2w}+1}
+\quad\Longleftrightarrow\quad
+\e^{2w}=\frac{1+z}{1-z}.
+\]
+在避开 $z=\pm1$ 的小邻域中，右端全纯且非零，故可取
+\[
+w=\frac12\log\frac{1+z}{1-z}.
+\]
+将 $\e^{2w}=(1+z)/(1-z)$ 代回定义即得 $\tanh w=z$。记 $g(z)=(1+z)/(1-z)$，则
+\[
+\boxed{w'=\frac12\frac{g'}g
+=\frac12\frac{2}{(1-z)^2}\frac{1-z}{1+z}
+=\frac1{1-z^2}.}
+\]
+在 $z=0$ 附近取 $\log1=0$，便得到 $w(0)=0$ 的分支。
+
+\newpage
+\section*{3. 对数函数的积分表示}
+\textbf{题目。}当 $\operatorname{Re}z>0$ 时，证明
+\[
+\log z=\int_0^\infty\frac{\e^{-t}-\e^{-zt}}t\,dt.
+\]
+提示：对两边求导。
+
+\textbf{解答。}在右半平面 $H=\{z:\operatorname{Re}z>0\}$ 上，取
+\[
+\log z=\ln|z|+i\arg z,\qquad -\frac\pi2<\arg z<\frac\pi2.
+\]
+这是满足 $\log1=0$ 的全纯对数分支，导数为 $1/z$。记右边为 $F(z)$。
+
+\textbf{先验证积分收敛。}当 $t\to0^+$ 时，
+\[
+\e^{-t}=1-t+O(t^2),\qquad
+\e^{-zt}=1-zt+O(t^2),
+\]
+所以被积函数为 $z-1+O(t)$，在 $0$ 附近可积。
+当 $t\ge1$ 时，令 $a=\operatorname{Re}z>0$，则
+\[
+\left|\frac{\e^{-t}-\e^{-zt}}t\right|
+\le\e^{-t}+\e^{-at},
+\]
+右边在 $[1,\infty)$ 可积。因此积分绝对收敛。
+
+\textbf{再说明可在积分号下求导。}固定 $z_0\in H$，记 $a=\operatorname{Re}z_0$。
+对 $0<|h|<a/2$，差商可写为
+\[
+\frac{F(z_0+h)-F(z_0)}h
+=\int_0^\infty\e^{-z_0t}\frac{1-\e^{-ht}}{ht}\,dt,
+\qquad
+\frac{1-\e^{-ht}}{ht}=\int_0^1\e^{-sht}\,ds.
+\]
+故该差商的被积函数模长至多为
+\[
+\e^{-at}\e^{|h|t}\le\e^{-at/2}.
+\]
+这是与 $h$ 无关的可积控制函数，而被积函数逐点趋于 $\e^{-z_0t}$。
+由控制收敛定理（分别应用于实部和虚部），可将极限移入积分，得到
+\[
+F'(z_0)=\int_0^\infty\e^{-z_0t}\,dt=\frac1{z_0}.
+\]
+这里积分值由 $\operatorname{Re}z_0>0$、$\e^{-z_0T}\to0$ 得到。
+由于 $z_0$ 任意，$F$ 在 $H$ 上全纯，且 $F'(z)=1/z$。
+
+\textbf{所用全纯函数性质：}若一个函数在连通开集上全纯，且导数恒为零，则该函数在此开集上为常数。
+对 $F(z)-\log z$ 应用此性质（$H$ 连通），可知它为常数。
+又 $F(1)=0=\log1$，故常数为零，所求公式成立。
+
+\newpage
+\section*{4. 多项式在无穷远处的估计}
+\textbf{题目。}设
+\[
+P(z)=a_nz^n+\cdots+a_0,\qquad n\ge1,\quad a_n\ne0,
+\]
+并令
+\[
+\rho=\max\left\{1,\frac2{|a_n|}\sum_{j=0}^{n-1}|a_j|\right\}.
+\]
+证明对所有 $|z|\ge\rho$，
+\[
+\frac12|a_n||z|^n\le |P(z)|\le\frac32|a_n||z|^n.
+\]
+
+\textbf{解答。}记 $S=\sum_{j=0}^{n-1}|a_j|$。因 $|z|\ge\rho\ge1$，对 $0\le j\le n-1$ 有 $|z|^j\le|z|^{n-1}$。因此
+\[
+|P(z)-a_nz^n|
+\le\sum_{j=0}^{n-1}|a_j||z|^j
+\le S|z|^{n-1}.
+\]
+又因 $|z|\ge2S/|a_n|$，得到
+\[
+|P(z)-a_nz^n|\le\frac12|a_n||z|^n.
+\]
+分别应用三角不等式和反三角不等式，便有
+\begin{align*}
+|P(z)|&\le |a_n||z|^n+|P(z)-a_nz^n|
+\le\frac32|a_n||z|^n,\\
+|P(z)|&\ge |a_n||z|^n-|P(z)-a_nz^n|
+\ge\frac12|a_n||z|^n.
+\end{align*}
+
+\section*{5. 用第 4 题证明代数基本定理}
+\textbf{题目。}利用上一题证明代数基本定理。
+提示：写成 $P(z)=zQ(z)+a_0$，并用 $1/z=P(z)/(zP(z))$，沿半径为 $R$ 的圆周积分。
+
+\textbf{解答。}先证明每个次数 $n\ge1$ 的复系数多项式都有复零点。
+反设 $P$ 在 $\C$ 上处处非零。写成
+\[
+P(z)=zQ(z)+a_0,
+\]
+其中 $Q$ 为多项式。对 $z\ne0$，有
+\[
+\frac1z=\frac{P(z)}{zP(z)}
+=\frac{Q(z)}{P(z)}+\frac{a_0}{zP(z)}.
+\]
+令 $C_R: z=R\e^{it}$，$0\le t\le2\pi$，取正向。
+因为假设 $P$ 处处非零，$Q/P$ 在整个复平面全纯。
+
+\textbf{所用全纯函数性质（Cauchy 积分定理）：}若函数在包含闭圆盘的开集上全纯，则它沿该圆盘正向边界的积分等于零。
+因此
+\[
+\int_{C_R}\frac{Q(z)}{P(z)}\,dz=0.
+\]
+另一方面，直接用上述参数化可得
+\[
+\int_{C_R}\frac{dz}{z}=\int_0^{2\pi}i\,dt=2\pi i.
+\]
+对恒等式积分，得到
+\[
+2\pi i=\int_{C_R}\frac{a_0}{zP(z)}\,dz.
+\]
+当 $R\ge\rho$ 时，第 4 题给出圆周上
+\[
+|P(z)|\ge\frac12|a_n|R^n.
+\]
+由积分估计 $|\int_\gamma f(z)\,dz|\le \operatorname{length}(\gamma)\sup_\gamma|f|$，有
+\[
+2\pi
+=\left|\int_{C_R}\frac{a_0}{zP(z)}\,dz\right|
+\le 2\pi R\frac{2|a_0|}{|a_n|R^{n+1}}
+=\frac{4\pi|a_0|}{|a_n|R^n}\longrightarrow0
+\qquad(R\to\infty),
+\]
+矛盾。因此 $P$ 至少有一个复零点。
+
+最后，若 $\alpha_1$ 为一个零点，由多项式除法可写成
+$P(z)=(z-\alpha_1)P_1(z)$，其中 $P_1$ 次数为 $n-1$。
+对剩余非常数因子反复应用上述结论，即得
+\[
+\boxed{P(z)=a_n\prod_{j=1}^n(z-\alpha_j),\qquad \alpha_j\in\C.}
+\]
+因此次数为 $n$ 的复系数多项式在复数域内按重数计算恰有 $n$ 个根。
+\end{document}

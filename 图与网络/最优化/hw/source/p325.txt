@@ -1,0 +1,39 @@
+14.1 Greedoids 325
+τ(X ∪{ b}) ⊆ τ(τ(X ∪{ a}) ∪{ b}) = τ(τ(X ∪{ a})) = τ(X ∪{ a}).
+Hence τ(X ∪{ b}) is a proper subset of τ(X ∪{ a}), contradicting the choice of a.
+2
+The anti-exchange property of Theorem 14.5 is different from (S4). While (S4)
+of Theorem 13.11 is a property of linear hulls in Rn, this is a property of convex
+hulls in Rn:i f y ̸= z, z ̸∈ conv(X) and z ∈ conv(X ∪{ y}), then clearly y /∈
+conv(X ∪{ z}). So for any ﬁnite set E ⊂ Rn, (E, {X ⊆ E : X ∩ conv(E \ X) =∅ } )
+is an antimatroid.
+Greedoids generalize matroids and antimatroids, but they also contain other
+interesting structures. One example is the blossom structure we used in Edmonds’
+Cardinality Matching Algorithm (Exercise 1). Another basic example is:
+Proposition 14.6. Let G be a graph (directed or undirected) and r ∈ V(G). Let
+F be the family of all edge sets of arborescences in G rooted at r , or trees in G
+containing r (not necessarily spanning). Then (E(G), F) is a greedoid.
+Proof: (M1) is trivial. We prove (M3) for the directed case; the same argument
+applies to the undirected case. Let (X1, F1) and (X2, F2) be two arborescences in
+G rooted at r with |F1| > |F2|. Then |X1|=| F1|+ 1 > |F2|+ 1 =| X2|,s ol e t
+x ∈ X1 \ X2. The r-x-path in (X1, F1) contains an edge (v, w) with v ∈ X2 and
+w/∈ X2. This edge can be added to (X2, F2), proving that F2 ∪{ (v, w)}∈ F. 2
+This greedoid is called the directed (undirected) branching greedoid of G.
+The problem of ﬁnding a maximum weight spanning tree in a connected graph
+G with nonnegative weights is the Maximization Problem for the cycle matroid
+M(G). The Best-In-Greedy Algorithm is in this case nothing but Kruskal’s
+Algorithm. Now we have a second formulation of the same problem: we are
+looking for a maximum weight set F with F ∈ F, where (E(G), F) is the
+undirected branching greedoid of G.
+We now formulate a general greedy algorithm for greedoids. In the special case
+of matroids, it is exactly the Best-In-Greedy Algorithm discussed in Section
+13.4. If we have an undirected branching greedoid with a modular cost function
+c,i ti s Prim’s Algorithm:
+Greedy Algorithm For Greedoids
+Input: A greedoid (E, F) and a function c :2 E → R, given by an oracle
+which for any given X ⊆ E says whether X ∈ F and returns c(X).
+Output: A set F ∈ F.
+1⃝ Set F :=∅ .
+2⃝ Let e ∈ E \ F such that F ∪{ e}∈ F and c(F ∪{ e}) is maximum;
+if no such e exists then stop .
+3⃝ Set F := F ∪{ e} and go to 2⃝.

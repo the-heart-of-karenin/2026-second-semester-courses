@@ -1,0 +1,76 @@
+302 13. Matroids
+(6) F is the set of minimal edge sets whose contraction makes the digraph strongly
+connected, F′ is the set of minimal directed cuts;
+(7) F is the set of minimal T -joins, F′ is the set of minimal T -cuts.
+All these blocking relations can be veriﬁed easily: (1) and (2) follow directly from
+Theorems 2.4 and 2.5, (3), (4) and (5) are trivial, (6) follows from Corollary 2.7,
+and (7) from Proposition 12.6.
+In some cases, the blocking clutter gives a polyhedral characterization of the
+Minimization Problem For Independence Systems for nonnegative cost func-
+tions:
+Deﬁnition 13.17. Let (E, F) be a clutter, (E, F
+′) its blocking clutter and P the
+convex hull of the incidence vectors of the elements of F. We say that (E, F) has
+the Max-Flow-Min-Cut property if
+{
+x + y : x ∈ P, y ∈ RE
++
+}
+=
+{
+x ∈ RE
++ :
+∑
+e∈ B
+xe ≥ 1 for all B ∈ F′
+}
+.
+Examples are (2) and (7) of our list above (by Theorems 6.14 and 12.16),
+but also (3) and (6) (see Exercise 10). The following theorem relates the above
+covering-type formulation to a packing formulation of the dual problem and allows
+to derive certain min-max theorems from others:
+Theorem 13.18. (Fulkerson [1971], Lehman [1979]) Let (E, F) be a clutter and
+(E, F
+′) its blocking clutter. Then the following statements are equivalent:
+(a) (E, F) has the Max-Flow-Min-Cut property;
+(b) (E, F′) has the Max-Flow-Min-Cut property;
+(c) min {c(A) : A ∈ F}= max
+{
+1ly : y ∈ RF ′
++ ,∑
+B∈ F ′:e∈ B yB ≤ c(e)
+for all e ∈ E
+}
+for every c : E → R+.
+Proof: Since BL (E, F′) = BL (BL (E, F)) = (E, F) it sufﬁces to prove
+(a)⇒ (c)⇒ (b). The other implication (b)⇒ (a) then follows by exchanging the roles
+of F and F′.
+(a)⇒ (c): By Corollary 3.28 we have for every c : E → R+
+min{c(A) : A ∈ F}= min{cx : x ∈ P}= min
+{
+c(x + y) : x ∈ P, y ∈ RE
++
+}
+,
+where P is the convex hull of the incidence vectors of elements of F. From this,
+the Max-Flow-Min-Cut property and the LP Duality Theorem 3.16 we get (c).
+(c)⇒ (b): Let P′ denote the convex hull of the incidence vectors of the elements
+of F′. We have to show that
+{
+x + y : x ∈ P′, y ∈ RE
++
+}
+=
+{
+x ∈ RE
++ :
+∑
+e∈ A
+xe ≥ 1 for all A ∈ F
+}
+.
+Since “ ⊆ ” is trivial from the deﬁnition of blocking clutters we only show the other
+inclusion. So let c ∈ RE
++ be a vector with ∑
+e∈ A ce ≥ 1 for all A ∈ F. By (c) we
+have

@@ -1,0 +1,71 @@
+\subsection*{同伦与同调}\addcontentsline{toc}{subsection}{同伦与同调}
+\sourcepage{1846}
+\entry{9.10}{}拓扑空间之间的两个映射 $f_0,f_1:T_1\to T_2$ 称为\textbf{同伦的}，记为 $f_0\sim f_1$，若存在映射 $F:T_1\times[0,1]\to T_2$，使对每个 $t\in T_1$，都有 $F(t,0)=f_0(t)$、$F(t,1)=f_1(t)$。$F$ 称为一个\textbf{同伦}。记住，拓扑空间之间的所有映射都假定连续。若存在 $f_1:T_1\to T_2$、$f_2:T_2\to T_1$，使
+\[
+f_2\circ f_1\sim\operatorname{id}_{T_1},\qquad
+f_1\circ f_2\sim\operatorname{id}_{T_2},
+\]
+则称两个空间具有相同\textbf{同伦型}，或\textbf{同伦等价}，记为 $T_1\simeq T_2$。同伦等价于一点的空间称为\textbf{可缩的}。
+
+标准 $(d-1)$ 维球面与 $d$ 维闭球分别为
+\[
+S^{d-1}=\{x\in\R^d:\|x\|=1\},\qquad
+B^d=\{x\in\R^d:\|x\|\le1\}.
+\]
+注意 $S^{-1}=\varnothing$，$S^0$ 为两点，$B^0$ 为一点。球面与闭球对连接运算封闭（在同胚意义下）：
+\[
+S^a*S^b\cong S^{a+b+1},\qquad
+B^a*B^b\cong B^a*S^b\cong B^{a+b+1}.
+\]
+
+空间 $T$ 称为\textbf{$k$ 连通的}，若对全部 $0\le i\le k$，每个映射 $f:S^i\to T$ 都可延拓为 $\widehat f:B^{i+1}\to T$，即 $\widehat f$ 在 $S^i$ 上等于 $f$。特别地，0 连通就是道路连通。$k$ 连通性是同伦不变量，即会传给同伦等价的空间。$S^d$ 是 $(d-1)$ 连通的，但不是 $d$ 连通的（见定理 13.1），而 $B^d$ 可缩。方便起见约定：$(-1)$ 连通就是非空；$k\le-2$ 时任何空间，无论是否为空，都为 $k$ 连通。
+
+单纯复形 $\Delta$ 可缩，当且仅当它对所有 $k\ge0$ 都 $k$ 连通；等价地，只须对 $0\le k\le\dim\Delta$ 成立。一般拓扑空间的相应命题在非平凡的那个方向并不成立。此外，复形 $k$ 连通当且仅当它的 $(k+1)$ 骨架 $k$ 连通。
+
+设 $\pi_i(T)=\pi_i(T,x)$ 为从带基点的 $i$ 维球面到带基点空间 $(T,x)$ 的映射的同伦类集，其中 $i\ge0$，且 $f((1,0,\ldots,0))=x$。当 $i\ge1$ 时，存在使它成为群的合成运算，所得群称为 $T$ 在 $x$ 处的\textbf{第 $i$ 同伦群}；$i\ge2$ 时该群交换。$\pi_1(T)$ 是\textbf{基本群}；$\pi_1(T)=0$ 时称空间\textbf{单连通}。空间 $T$ 为 $k$ 连通，当且仅当对所有 $0\le i\le k$ 以及 $x\in T$，都有 $\pi_i(T,x)=0$。因此 1 连通意味着单连通且道路连通。
+\tnote{原文把“基本群平凡”与“道路连通”分开陈述。许多教材把道路连通也包含在“单连通”的定义内，阅读时应留意这一约定。}
+
+\entry{9.11}{}复形 $\Delta$ 以交换群 $G$ 为系数的\textbf{单纯同调群} $H_i(\Delta,G)$ 和\textbf{约化单纯同调群} $\widetilde H_i(\Delta,G)$ 的定义，参阅 Munkres (1984a) 或 Spanier (1966)。记 $\widetilde H_i(\Delta)=\widetilde H_i(\Delta,\Z)$。须注意退化情形：
+\[
+\widetilde H_i(\varnothing)\cong
+\begin{cases}\Z,&i=-1,\\0,&i\ne-1.\end{cases}
+\]
+若 $\Delta\ne\varnothing$，则 $i<0$ 或 $i>\dim\Delta$ 时 $\widetilde H_i(\Delta)=0$，而 $\widetilde H_0(\Delta)\cong\Z^{c-1}$，其中 $c$ 是连通分支数。对 $i\ne-1,0$，$H_i(\Delta)=\widetilde H_i(\Delta)$；另有 $H_{-1}(\Delta)=0$ 和 $H_0(\Delta)\cong\widetilde H_0(\Delta)\oplus\Z$。
+
+\sourcepage{1847}
+设 $\Delta_1,\Delta_2$ 为有限复形，并假定 $p+q=i-1$ 时，$\widetilde H_p(\Delta_1)$ 与 $\widetilde H_q(\Delta_2)$ 至少一个无挠。则
+\begin{equation}
+\widetilde H_{i+1}(\Delta_1*\Delta_2)
+\cong\bigoplus_{p+q=i}\big(\widetilde H_p(\Delta_1)\otimes\widetilde H_q(\Delta_2)\big).
+\tag{9.12}
+\end{equation}
+以域为系数的约化同调无需任何限制，也有同样分解。详见 Milnor (1956)，或 Cooke 与 Finney (1967) 第 V 章。
+
+对有限单纯复形 $\Delta$，令 $\beta_i:=\operatorname{rank}H_i(\Delta)=\dim_\Q H_i(\Delta,\Q)$，$i\ge0$。\textbf{Betti 数} $\beta_i$ 满足 \textbf{Euler--Poincaré 公式}：
+\begin{equation}
+\sum_{i\ge0}(-1)^i|\Delta^i|=\sum_{i\ge0}(-1)^i\beta_i.\tag{9.13}
+\end{equation}
+两侧任一边都可用来定义\textbf{Euler 示性数} $\chi(\Delta)$。\textbf{约化 Euler 示性数}为 $\widetilde\chi(\Delta)=\chi(\Delta)-1$。对任意域 $\mathbf k$，取 $\beta_i=\dim_{\mathbf k}H_i(\Delta,\mathbf k)$，公式仍成立，尽管各个 $\beta_i$ 本身可能依赖系数域。面数 $f_i=|\Delta^i|$ 与 Betti 数间还有其他关系（Björner 与 Kalai 1988）。对于各种特殊复形类，关于 $f$ 向量 $f(\Delta)=(f_0,f_1,\ldots)$ 已知很多结果。多胞形边界这一重要情形见 Klee 与 Kleinschmidt 所写的第 18 章，更一般复形类的综述见 Björner 与 Kalai (1989)。
+
+局部有限偏序集的 Möbius 函数在 Gessel 与 Stanley 所写的第 21 章定义。利用 (9.13)，该章源于 P. Hall 的定理 13.4 可写成
+\begin{equation}
+\mu(x,y)=\widetilde\chi\big(\Delta((x,y))\big),\qquad x<y.\tag{9.14}
+\end{equation}
+右侧是开区间 $(x,y)$ 的序复形的约化 Euler 示性数。Möbius 函数与拓扑之间的这一联系，最早由 Rota (1964) 和 Folkman (1966) 指出，有许多有趣的延伸。
+
+\entry{9.15}{}同伦等价的两个复形在各维具有同构的同调群。若对所有 $i\le k$，都有 $\widetilde H_i(\Delta,G)=0$，称 $\Delta$ \textbf{在 $G$ 上 $k$ 无环}。因此 $(-1)$ 无环表示非空，0 无环表示非空且连通。若对全部 $i\in\Z$ 都有 $\widetilde H_i(\Delta,G)=0$，则称 $\Delta$ \textbf{在 $G$ 上无环}，或称\textbf{$G$ 无环}。省略系数群时，一律指 $G=\Z$。
+\tnote{“无环”（acyclic）在这里指约化同调消失；不是说复形的一维骨架没有图论意义的圈。}
+
+下面列出复形的同伦性质与同调之间的一些常用联系，它们来自 Hurewicz 与 Whitehead 定理，见 Spanier (1966)。
+
+\entry{9.16}{}对 $k\ge1$，$\Delta$ 为 $k$ 连通，当且仅当它在 $\Z$ 上 $k$ 无环且单连通。
+\sourcepage{1848}
+\entry{9.17}{}$\Delta$ 可缩，当且仅当它 $\Z$ 无环且单连通。
+
+\entry{9.18}{}若 $\Delta$ 单连通，$d>1$，对所有 $i\ne d$ 有 $\widetilde H_i(\Delta)=0$，且 $\widetilde H_d(\Delta)\cong\Z^k$，则 $\Delta$ 同伦等价于 $k$ 个 $d$ 维球面的楔和。
+
+\entry{9.19}{}设 $\dim\Delta=d\ge0$。则 $\Delta$ 为 $(d-1)$ 连通，当且仅当它同伦等价于若干 $d$ 维球面的楔和。
+
+\textbf{原文附注：}对不能三角剖分的空间，9.17--9.19 的类似命题可能不成立。
+
+\entry{9.20}{}若 $\Delta_1$ 为 $k_1$ 无环，$\Delta_2$ 为 $k_2$ 无环，则 $\Delta_1*\Delta_2$ 为 $(k_1+k_2+2)$ 无环。这来自 (9.12)。再利用 9.16 可得：若 $\Delta_i$ 为 $k_i$ 连通，则 $\Delta_1*\Delta_2$ 为 $(k_1+k_2+2)$ 连通。另见 Milnor (1956)。

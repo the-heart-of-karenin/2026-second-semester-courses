@@ -1,0 +1,45 @@
+336 14. Generalizations of Matroids
+Proof: If an edge (v, w) is introduced after a new vector b≺ s,v
+i was added in 5⃝
+of an iteration, then s ⪯i w ≺ i v ⪯i t in this iteration. Thus d(w) ≤ d(s) + 1 =
+d(t) ≤ d(v) +1 in this iteration, and the introduction of the new edge cannot make
+the distance from P to any v ∈ U smaller. As 5⃝ makes sure that no element is
+ever added to P, the distance d(v) never decreases for any v ∈ U.
+Call a block a sequence of iterations where the pair (t, s) remains constant.
+Note that each block has O(n2) iterations, because (α, β)decreases lexicographi-
+cally in each iteration within each block. It remains to prove that there are O(n3)
+blocks.
+A block can end only because of at least one of the following reasons (by the
+choice of t and s, since an iteration with t = t∗ does not add any edge whose head
+is t∗ , and since a vertex v can enter N only if v = s and hence d(v) < d(t)):
+(a) the distance d(v) increases for some v ∈ U.
+(b) t is removed from N.
+(c) (s, t) is removed from A.
+We now count the number of blocks of these three types. Clearly there are
+O(n2) blocks of type (a).
+Now consider type (b). We claim that for eacht∗ ∈ U there are O(n2) iterations
+with t = t∗ and x′(t) = 0. This is easy to see: between every two such iterations,
+d(v) must change for some v ∈ U, and this can happen O(n2) times as d-values
+can only increase. Thus there are O(n3) phases of type (b).
+We ﬁnally show that there are O(n3) blocks of type (c). It sufﬁces to show
+that d(t) will change before the next such block with the pair (s, t).
+For s, t ∈ U, we call s to be t-boring if (s, t)/∈ A or d(t) ≤ d(s). Let
+s∗ , t∗ ∈ U, and consider the time period after a block with s = s∗ and t = t∗
+ending because (s∗ , t∗ ) is removed from A, until the subsequent change of d(t∗ ).
+We prove that each v ∈{ s∗ ,..., n} is t∗ -boring throughout this period. Applying
+this for v = s∗ concludes the proof.
+At the beginning of the period, each v ∈{ s∗ + 1,..., n} is t∗ -boring due to
+the choice of s = s∗ in the iteration immediately preceding the period. s∗ is also
+t∗ -boring as (s∗ , t∗ ) is removed from A.A s d(t∗ ) remains constant within the
+considered time period and d(v) never decreases for any v, we only have to check
+the introduction of new edges.
+Suppose that, for some v ∈{ s∗ ,..., n}, the edge (v, t∗ ) is added to A after
+an iteration that chooses the pair (s, t). Then, by the initial remarks of this proof,
+s ⪯i t∗ ≺ i v ⪯i t in this iteration, and thus d(t∗ ) ≤ d(s) + 1 = d(t) ≤ d(v) + 1.
+Now we distinguish two cases: If s >v , then we have d(t∗ ) ≤ d(s): either because
+t∗ = s,o ra s s was t∗ -boring and (s, t∗ ) ∈ A.I f s <v , then we have d(t) ≤ d(v):
+either because t = v, or by the choice of s and since (v, t) ∈ A. In both cases we
+conclude that d(t∗ ) ≤ d(v), and v remains t∗ -boring. 2
+Theorem 14.20, Lemma 14.21 and Lemma 14.22 imply:
+Theorem 14.23. The Submodular Function Minimization Problem can be
+solved in O(n8 + γn7), where γ is the time for an oracle call. 2

@@ -1,0 +1,54 @@
+330 14. Generalizations of Matroids
+Corollary 14.14. (Edmonds [1970]) Let E be a ﬁnite set, and let f, g :2 E →
+R+ be submodular and monotone functions. Then
+max{1lx : x ∈ P( f ) ∩ P(g)}= min
+A⊆ E
+( f (A) + g(E \ A)).
+Moreover, if f and g are integral, there exists an integral x attaining the maximum.
+Proof: By Theorem 14.12, the dual to
+max{1lx : x ∈ P( f ) ∩ P(g)},
+which is
+min
+{∑
+A⊆ E
+( f (A)yA + g(A)z A) :
+∑
+A⊆ E, e∈ A
+(yA + z A) ≥ 1 for all e ∈ E, y, z ≥ 0
+}
+,
+has an integral optimum solution y, z. Let B :=⋃
+A:yA ≥ 1 A and C :=⋃
+A:z A ≥ 1 A.
+Let y′
+B := 1, z′
+C := 1 and let all other components of y′ and z′ be zero. We have
+B ∪ C = E and y′, z′ is a feasible dual solution. Since f and g are submodular
+and nonnegative,
+∑
+A⊆ E
+( f (A)yA + g(A)z A) ≥ f (B) + g(C).
+Since E \ B ⊆ C and g is monotone, this is at least f (B) + g(E \ B), proving
+“ ≥ ”.
+The other inequality “ ≤ ” is trivial, because for any A ⊆ E we obtain a feasible
+dual solution y, z by setting yA := 1, zE\A := 1 and all other components to zero.
+The integrality follows directly from Theorem 14.12 and Corollary 5.14. 2
+Theorem 13.31 is a special case. Moreover we obtain:
+Corollary 14.15. (Frank [1982]) Let E be a ﬁnite set and f, g :2 E → R such
+that f is supermodular, g is submodular and f ≤ g. Then there exists a modular
+function h :2 E → R with f ≤ h ≤ g.I f f and g are integral, h can be chosen
+integral.
+Proof: Let M := 2 max{| f (A)|+| g(A)| : A ⊆ E}. Let f ′(A) := g(E) − f (E \
+A) + M|A| and g′(A) := g(A) − f (∅) + M|A| for all A ⊆ E. f ′ and g′ are
+nonnegative, submodular and monotone. An application of Corollary 14.14 yields
+max{1lx : x ∈ P( f ′) ∩ P(g′)}
+= min
+A⊆ E
+( f ′(A) + g′(E \ A))
+= min
+A⊆ E
+(g(E) − f (E \ A) + M|A|+ g(E \ A) − f (∅) + M|E \ A|)
+≥ g(E) − f (∅) + M|E|.
+So let x ∈ P( f ′) ∩ P(g′) with 1 lx = g(E) − f (∅) + M|E|.I f f and g are
+integral, x can be chosen integral. Let h′(A) :=∑
+e∈ A xe and h(A) := h′(A) +

@@ -1,0 +1,224 @@
+\section{三个拟拟阵类}
+本节引入三个新的拟拟阵类，全文将围绕它们展开研究。
+\sourcepage{12}
+\entry{定义 4.1}{}设 $\Psi=(E,\Delta)$ 是有序单纯复形。用以下公理定义类 $\QI,\QE,\QC$。
+\begin{itemize}
+\item \textbf{拟独立性公理（QI）：}$\Psi$ 是纯的；对任意独立集 $I_1,I_2$，若 $|I_1|>|I_2|$，并存在 $I\subseteq I_1\cap I_2$ 使 $I_1\setminus I\subseteq B_{I,0}$，则存在 $e\in I_1\setminus I_2$，使 $I_2\cup\{e\}$ 独立。
+\item \textbf{拟交换公理（QE）：}$\Psi$ 是纯的；对任意基 $B_1,B_2$，若 $b_1\in B_1\setminus B_2$ 且 $b_1>\max(B_2\setminus B_1)$，则存在 $b_2\in B_2\setminus B_1$，使 $(B_1\setminus\{b_1\})\cup\{b_2\}\in\Delta$。
+\item \textbf{拟回路公理（QC）：}若 $C_1,C_2$ 为不同回路，$c\in C_1\cap C_2$ 且 $c<\max(C_1\triangle C_2)$，则 $(C_1\cup C_2)\setminus\{c\}$ 包含一个回路 $C_3$。
+\end{itemize}
+
+首先要说明 $\QI,\QE,\QC$ 是拟拟阵类。容易看出，有序拟阵属于这三个类。拟拟阵类的第二条公理也容易验证：去掉 QI、QE、QC 中关于排序的限制，就得到经典的独立性、交换和回路公理。另一方面，证明移位单纯复形满足这些公理是一道有趣的练习。
+
+\entry{定理 4.2}{}若 $\Psi$ 是纯移位复形，则 $\Psi$ 属于 $\QI,\QE,\QC$。
+\begin{proofcn}
+为证 QI，注意若独立集 $I$ 与 $B_0$ 不交，则 $B_{I,0}$ 是 $B_0$ 的前 $d-|I|$ 个元素构成的初始子集，其中 $d=|B_0|$。设独立集 $I_1,I_2$ 满足 QI 的条件，其见证集为 $I\subseteq I_1\cap I_2$。于是 $I_1\setminus I$ 包含于 $B_{I,0}$，而 $B_{I_2,0}\subseteq B_{I,0}$。必有
+\[
+B_{I_2,0}\cap(I_1\setminus I)\ne\varnothing.
+\]
+否则，因为二者都是 $B_{I,0}$ 的子集，将有
+\[
+\big|B_{I_2,0}\cup(I_1\setminus I)\big|
+=(d-|I_2|)+(|I_1|-|I|)>d-|I|=|B_{I,0}|,
+\]
+矛盾。交集中的元素属于 $I_1\setminus I_2$，并可加入 $I_2$ 保持独立。
+
+为证 QE，若基 $B_1,B_2$ 中的 $b_1\in B_1\setminus B_2$ 大于 $B_2\setminus B_1$ 的全部元素，移位性允许用其中任意 $b_2$ 替换 $b_1$。
+
+为证 QC，取满足公理条件的回路 $C_1,C_2$ 和公共元素 $c$。假设 $I=(C_1\cup C_2)\setminus\{c\}$ 独立，并令 $c_1=\max(C_1\triangle C_2)$。移位性保证
+\[
+I'=(I\setminus\{c_1\})\cup\{c\}
+\]
+独立，但它包含 $C_1$ 或 $C_2$ 中的一个，矛盾。
+\end{proofcn}
+\tnote{原定理省略“纯”，但 QI、QE 的定义要求纯性，故在本节语境中须加上它。QI 证明中原稿先在 $I\cap B_0=\varnothing$ 的特例下描述 $B_{I,0}$，随后直接使用；一般情形应将“$B_0$ 的前 $d-|I|$ 个元素”改读为“$B_0\setminus I$ 的前 $d-|I|$ 个元素”。由此仍有 $B_{I_2,0}\subseteq B_{I,0}$，后面的计数证明不变。}
+
+显然，每个拟拟阵类都能转化为一种拟阵的等价公理刻画。虽然拟阵的各种等价公理产生相同的对象类，但拟拟阵类却有多种，各自突出拟阵理论的不同方面。下一个定理说明，刚定义的三个类确实不同。
+
+\entry{定理 4.3}{}$\QI,\QE,\QC$ 两两不同，并且任何一类都不包含在另一类中。
+\sourcepage{13}
+\begin{proofcn}
+对每一对公理，只须给出满足其中一个而不满足另一个的例子。
+\begin{itemize}
+\item $\Psi_1=(\{1,2,3,4\},\Delta_1)$ 的基为 $12,13,14,34$。它满足 QI、QE，但回路 $23,24$ 违反 QC。
+\item $\Psi_2=(\{1,2,3,4\},\Delta_2)$ 的基为 $14,24,23,34$。它满足 QI；基 $14,23$ 表明它不满足 QE，回路 $12,13$ 表明它不满足 QC。
+\item $\Psi_3=(\{1,2,3,4\},\Delta_3)$ 的基为 $12,13,23,34$。它满足 QC，但不满足 QI、QE。
+\item $\Psi_4=(\{1,2,3,4,5\},\Delta_4)$ 的基为 $13,14,23,24,25$。它满足 QE，但不满足 QI、QC。
+\end{itemize}
+\end{proofcn}
+\tnote{第二个例子中，原稿将用于反驳 QC 的回路写成 $13,14$；但 $14$ 本来就是基，不可能是回路。应使用 $12,13$：公共元素 $1<\max\{2,3\}$，而删除公共元素后的 $23$ 是基，不含回路。}
+
+这个证明表明 $\QC$ 不包含于 $\QI\cap\QE$。另一方面，一个直接的图论练习表明，属于 $\QE\cap\QC$ 的秩 2 复形也属于 $\QI$。不过，这个证明在秩 3 时失效，因此自然提出如下问题。
+
+\entry{问题 4.4}{}$\QI\cap\QE$、$\QI\cap\QC$、$\QE\cap\QC$ 与 $\QI\cap\QE\cap\QC$ 是否全都不同？
+
+不论答案如何，这些定义给出了若干单纯复形类；它们各自与有序拟阵类共享某些结构性质，并不奇怪。本节余下部分的目标是为这些类建立理论的第一步：既给出拟阵性质的某些类似结论，也给出可以在指定类内部进行的多种构造。
+
+\subsection{拟独立性类}
+现在说明 $\QI$ 是具有额外结构的拟拟阵类。
+\entry{定理 4.5}{}设 $\Psi=(E,\Delta)$、$\Psi'=(E',\Delta')$ 属于 $\QI$。
+\begin{enumerate}[label=\roman*.]
+\item 对 $E,E'$ 的任意交错排序 $s(E,E')$，连接 $\Psi*_{s(E,E')}\Psi'$ 属于 $\QI$。
+\item 若 $v\in E\setminus B_0$ 是顶点，则收缩 $\con_v\Psi$ 属于 $\QI$。
+\item 若 $v$ 是 $\Psi$ 的最大非余环顶点，则 $\del_v\Psi$ 属于 $\QI$。
+\item 若 $0\le k\le\rk(\Psi)$，则秩 $k$ 骨架 $\operatorname{Skel}_k(\Psi)$ 属于 $\QI$。
+\item 若 $\rk(\Psi)=\rk(\Psi')$，则连通和 $\Psi\#_\phi\Psi'$ 属于 $\QI$。
+\end{enumerate}
+第 i、ii、iii 项表明，$\QI$ 是 $\mathrm{PURE}$ 的拟拟阵子类。
+\tnote{本稿保留原稿第 ii 项的限制 $v\notin B_0$ 及其后这句推论。按定义 3.1，“对收缩封闭”要求任意独立集的收缩；因此仅凭列出的这三项还不能直接得到该推论，原稿此处的论述有省略。环不能收缩，故第 ii 项明确限于顶点。}
+
+\sourcepage{14}
+\begin{proofcn}
+第 i 项来自以下事实：连接保持纯性，并与链接运算交换。即若 $I_1,I_2$ 分别是 $\Delta_1,\Delta_2$ 的面，则
+\[
+\operatorname{Link}_{\Delta_1*\Delta_2}(I_1\cup I_2)
+=\operatorname{Link}_{\Delta_1}(I_1)*\operatorname{Link}_{\Delta_2}(I_2).
+\]
+对于第 ii 项，若 $I_1,I_2$ 以及 $I\subseteq I_1\cap I_2$ 在 $\operatorname{Link}_\Delta(v)$ 中满足公理假设，则 $I_1\cup\{v\}$、$I_2\cup\{v\}$、$I\cup\{v\}$ 在 $\Psi$ 中满足相应假设。因此可在 $\Psi$ 中使用 QI 公理得到结论。
+
+为证第 iii 项，先说明：若 $I$ 是不含 $v$ 的独立集，则 $v\notin B_{I,0}$。否则，令
+\[
+B=(I\cup B_{I,0})\setminus\{v\}.
+\]
+对 $B_0$ 与 $B$ 使用 QI，得到 $u\in B_0\setminus B$ 使 $B\cup\{u\}$ 独立。$u$ 不在基 $I\cup B_{I,0}$ 中，故不是余环，因而 $u<v$。于是 $(B\cup\{u\})\setminus I$ 是收缩 $\con_I\Psi$ 的一个基，且字典序小于 $B_{I,0}$，矛盾。这也使删除后的独立集及其字典序最小补全可沿用原复形的 QI 公理。
+
+第 iv 项来自恒等式
+\[
+\operatorname{Link}_{\operatorname{Skel}_k\Delta}(I)
+=\operatorname{Skel}_{k-|I|}(\operatorname{Link}_\Delta I),
+\]
+以及 $\operatorname{Skel}_k\Psi$ 的字典序最小极大面正是 $B_0$ 的字典序最小 $k$ 元面这一事实。
+
+对于第 v 项，假设 $I_1,I_2$ 及 $I\subseteq I_1\cap I_2$ 在连通和中满足公理假设。若 $I_1,I_2$ 分别来自 $\Psi,\Psi'$，则在自然识别下 $I_1\cap I_2\subseteq B_0=B'_0$，因此
+\[
+B_{I,0}=B_0\setminus I=B'_0\setminus I.
+\]
+于是 $I_1\subseteq B_0=B'_0$，可在 $\Psi'$ 中应用公理。若两个独立集都来自同一侧，便在该侧应用 QI。
+\end{proofcn}
+
+下一个定理从特定意义上说明 QI 细化了 PURE：QI 复形中有更大一族诱导子复形为纯复形。
+\entry{定理 4.6}{}设 $\Psi=(E,\Delta)\in\QI$，且 $A\subseteq E$ 满足 $\rk(A)=|B_0\cap A|$。则 $\Psi|_A$ 是纯的。
+\begin{proofcn}
+若 $I$ 是 $\Psi|_A$ 的独立集，可对 $B_0\cap A$ 与 $I$ 应用 QI，将 $I$ 扩充为 $\Psi|_A$ 的独立集 $B$，直到
+\[
+|B|=|B_0\cap A|=\rk(A).
+\]
+于是每个独立集都能扩充到满秩的基，故限制是纯的。
+\end{proofcn}
+
+\subsection{交换公理}
+单纯复形的可壳性理论最好用极大面的语言研究，因此它自然应当由基族上的条件推出。事实表明，QE 是运用这套工具的适当对象类。
+
+\entry{定理 4.7}{}设 $\Psi=(E,\Delta)$、$\Psi'=(E',\Delta')$ 属于 $\QE$。
+\begin{enumerate}[label=\roman*.]
+\item 对 $E,E'$ 的任意交错排序 $s(E,E')$，连接 $\Psi*_{s(E,E')}\Psi'$ 属于 $\QE$。
+\item 若 $U\subseteq E$，且 $\Psi|_U$ 纯并与 $\Psi$ 同秩，则 $\Psi|_U\in\QE$。
+\item 若 $A\subseteq E$ 包含 $B_0$，并包含所有小于 $B_0$ 中最大非余环元素的元素，则 $\Psi|_A\in\QE$。
+\item 若 $v$ 是顶点，则 $\con_v\Psi\in\QE$。
+\end{enumerate}
+特别地，$\QE$ 是 $\mathrm{PURE}$ 的拟拟阵子类。
+
+\sourcepage{15}
+\begin{proofcn}
+第 i 项来自连接保持纯性，且连接中的基对应于两侧各取一个基。因而对可以交换的每个元素，在其所属一侧应用 QE 即可。
+
+对于第 ii 项，若 $B_1,B_2$ 是 $\Psi|_U$ 的基，对它们使用 QE，得到的仍是包含于 $U$ 的基。
+
+对于第 iii 项，由第 ii 项，只须证 $\Psi|_A$ 纯。取其一个面 $I$，并取 $\Psi$ 中包含 $I$ 的基 $B$。对 $B,B_0$ 应用 QE，可以把 $B\setminus A$ 中的顶点逐一换成 $B_0$ 的元素，因为被换出的元素均大于可换入的非余环元素。所得基包含于 $A$，且仍包含 $I$，于是限制为纯。
+\tnote{原证明误将 $I$ 写成未定义的 $F$，并写 $\min(E\setminus A)>\max B_0$。后一个不等式在 $B_0$ 含较大余环时未必成立；实际只须比较 $B_0\setminus B$ 的元素，它们都不是余环，故上述交换论证仍成立。}
+
+对于第 iv 项，若 $B_1,B_2$ 是收缩的基，则 $B_1\cup\{v\},B_2\cup\{v\}$ 是原复形的基，可对它们应用 QE。由于 $v$ 同属于两个基，它不影响交换条件，因此收缩也满足 QE。
+\end{proofcn}
+
+从组合拓扑，特别是可壳性的角度看，QE 公理相当丰富。虽然定理 3.5 已说明 $\Psi$ 可壳，但顶点分解给出的壳序是递归得到的，其限制集因而难以研究。限制集的生成函数等于 $h$ 多项式，因此希望有一种壳序，其限制集能更直接地计算。QE 复形保证了这一点。
+
+\entry{定理 4.8}{}若 $\Psi=(E,\Delta)\in\QE$，则 $\B$ 的字典序为壳序，且在这个壳序下 $R(B)=\IP(B)$。
+\begin{proofcn}
+设 $B_1<_{\lex}B_2$。目标是找到 $B_3<_{\lex}B_2$，使
+\[
+B_1\cap B_2\subseteq B_3\cap B_2=B_2\setminus\{e\}.
+\]
+对 $r-|B_1\cap B_2|$ 归纳，其中 $r$ 为复形的秩。起始情形显然成立。分两种情形。
+
+\textbf{情形 1：}$b:=\max(B_1\triangle B_2)$ 属于 $B_2$。由 QE，存在 $b'\in B_1\setminus B_2$ 使
+\[
+B_3=(B_2\setminus\{b\})\cup\{b'\}
+\]
+为基，这个 $B_3$ 直接满足要求。
+
+\textbf{情形 2：}$b:=\max(B_1\triangle B_2)$ 属于 $B_1$。由 QE，存在 $b'\in B_2\setminus B_1$ 使
+\[
+B'_1=(B_1\setminus\{b\})\cup\{b'\}
+\]
+为基。此时 $B_1\cap B_2\subsetneq B'_1\cap B_2$，而且 $B'_1<_{\lex}B_2$。由归纳假设，存在 $B_3$ 使
+\[
+B'_1\cap B_2\subseteq B_2\cap B_3=B_2\setminus\{e\},
+\]
+因而也满足原要求。
+
+第二个结论直接来自限制集的定义，与 [Bjö92] 中的证明相同。
+\end{proofcn}
+\tnote{原稿在证明目标中将第一个交集写成 $B_1\cap B_3$；本稿依壳序定义及后续归纳步骤改为 $B_1\cap B_2$。}
+
+\sourcepage{16}
+\entry{注 4.9}{}定理 4.8 表明 $\QE\subseteq\mathrm{LEX}$，而且一般小得多。图是秩 2 单纯复形；可壳在这里就是连通。给定顶点集为 $[n]$ 的连通图 $\Delta$，若对每个 $1\le r\le n$，$\Delta|_{[r]}$ 连通，则复形 $([n],\Delta)$ 属于 LEX。然而这类图中有相当一部分不属于 QE。因此即使只比较秩 2 复形，QE 也明显小于 LEX。
+
+下面的推论直接来自定理 4.8，推广了 Björner [Bjö92] 的结果。正如第 7 节将说明的，在这个框架中研究它会更有力。
+\entry{推论 4.10}{}若 $\Psi=(E,\Delta)$ 属于 $\mathrm{LEX}$（或属于 $\QE$），则
+\begin{equation}
+h(\Psi,x)=\sum_{B\in\B}x^{|\IP(B)|}.\tag{3}
+\end{equation}
+
+还有一种从旧 QE 复形得到新 QE 复形的值得注意的方法，它在组合拓扑中并不常见。它表明：按定理 4.8 的壳序逐步构造 QE 复形时，部分步骤所得的复形仍属于 QE。
+
+\entry{定理 4.11}{}若 $\Psi=(E,\Delta)\in\QE$，$J$ 是 $\operatorname{Gale}(\Psi)$ 的序理想，则 $\Psi[J]\in\QE$。此外，对 $\Psi[J]$ 的每个基 $B$，都有
+\[
+\IP(B,\Psi[J])=\IP(B,\Psi).
+\]
+\begin{proofcn}
+第一个结论来自以下事实：字典序是 Gale 序的线性扩张；QE 公理给出的交换产生一个比原基更小的基，因此仍在向下封闭的 $J$ 中。
+
+被动集的相等甚至对一般有序复形也成立，因为见证 $B$ 的内部被动性的那些基都在 Gale 序中小于 $B$：它们与 $B$ 只相差一次用小元素换大元素的替换。
+\end{proofcn}
+\tnote{为了保证仍属于序理想，交换后的基须在 Gale 序中更小；这里一次“换入较小元素”的交换确有这一性质。原证明第二段写成 external activity（外部活动性），但结论与所用的基替换都涉及内部被动性，本稿据此译出。}
+
+QE 复形的一个有用性质涉及 Gale 序的结构。
+\entry{引理 4.12}{}若 $\Psi=(E,\Delta)$ 满足 QE，则 $B_0$ 是 $\operatorname{Gale}(\Psi)$ 的唯一极小基。特别地，$\QE\subseteq\mathrm{GALE}$。
+\begin{proofcn}
+由于字典序是 Gale 序的线性扩张，$B_0$ 显然是极小元。另一方面，对任意其他基 $B$，与 $B_0$ 应用 QE 得到基 $B'$。这个交换从 $B$ 中移去一个元素，并换入更小的顶点，因此 $B'<_{\Gale}B$。
+\end{proofcn}
+
+\sourcepage{17}
+另一个有用工具是 Las Vergnas 的内部偏序集。将会看到，$\operatorname{Int}(\Psi)$ 比 $\operatorname{Gale}(\Psi)$ 更粗；这一点有助于研究 Stanley 猜想。下面给出若干结构结果。
+
+\entry{引理 4.13}{}设 $\Psi\in\QE$，$B$ 为基，且 $\IP(B)\ne\varnothing$。则存在 $b\in\IP(B)$ 和基 $B'$，使
+\[
+\IP(B')=\IP(B)\setminus\{b\}.
+\]
+特别地，$\operatorname{Int}(\Psi)$ 是分次偏序集，基的次数等于其内部被动集的基数。
+\begin{proofcn}
+字典序是壳序，且这个壳序的限制集恰是内部被动集，因此第一个结论来自 [Bjö92, Lemma 7.2.6]。由此立即可知，被动集的基数给出 $\operatorname{Int}(\Psi)$ 的一个分次。
+\end{proofcn}
+\tnote{原稿漏写 $\IP(B)\ne\varnothing$；对最小基 $B_0$，其内部被动集为空，不可能从中选出 $b$，故补明这一必要条件。}
+
+最后验证 QE 复形的 Gale 序和内部偏序之间的以下关系。
+\entry{定理 4.14}{}设 $\Psi\in\QE$，且基 $B,B'$ 满足 $\IP(B)\subseteq B'$。则 $B\le_{\Gale}B'$。因此 $\operatorname{Gale}(\Psi)$ 是 $\operatorname{Int}(\Psi)$ 的偏序扩张。
+\begin{proofcn}
+固定 $B$，对 $|B'\setminus B|$ 归纳。起始情形 $B=B'$ 无须证明。假设结论对所有满足 $\IP(B)\subseteq B_2$ 且 $|B_2\setminus B|<|B'\setminus B|$ 的基成立。
+
+对 $B,B'$ 使用 QE，令 $u=\max(B\triangle B')$。由于 $\IP(B)\subseteq B\cap B'$，有 $u\notin\IP(B)$。若 $u\in B$，QE 保证存在 $b'\in B'\setminus B$，使
+\[
+B_2=(B\setminus\{u\})\cup\{b'\}
+\]
+为基。但此时 $B_2<_{\lex}B$ 且 $\IP(B)\subseteq B_2$，这不可能。因此 $u\in B'$，进而存在 $b\in B\setminus B'$，使
+\[
+B_2=(B'\setminus\{u\})\cup\{b\}
+\]
+为基。于是 $B_2<_{\Gale}B'$、$\IP(B)\subseteq B_2$，且 $|B_2\setminus B|<|B'\setminus B|$。由归纳假设，
+\[
+B\le_{\Gale}B_2<_{\Gale}B',
+\]
+即得结论。
+
+若 $B\le_{\rm int}B'$，则 $\IP(B)\subseteq\IP(B')\subseteq B'$，故 $B\le_{\Gale}B'$。这说明 Gale 序是内部偏序的扩张。
+\end{proofcn}

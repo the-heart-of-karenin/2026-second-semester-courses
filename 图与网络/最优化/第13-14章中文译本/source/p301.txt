@@ -1,0 +1,58 @@
+13.3 Duality 301
+Proof: For T ⊆ E(G) we write T
+∗
+:={ e∗ : e ∈ E(G) \ T }, where e∗ is the dual
+of edge e. We have to prove the following:
+Claim: T is the edge set of a spanning tree in G iff T
+∗
+is the edge set of a
+spanning tree in G∗ .
+Since (G∗ )∗ = G (by Proposition 2.42) and (T
+∗
+)
+∗
+= T it sufﬁces to prove
+one direction of the claim.
+So let T ⊆ E(G), where T
+∗
+is the edge set of a spanning tree in G∗ . (V(G), T)
+must be connected, for otherwise a connected component would deﬁne a cut, the
+dual of which contains a circuit in
+T
+∗
+(Theorem 2.43). On the other hand, if
+(V(G), T) contains a circuit, then the dual edge set is a cut and (V(G∗ ), T
+∗
+) is
+disconnected. Hence (V(G), T) is indeed a spanning tree in G. 2
+This implies that if G is planar then (M(G))∗ is a graphic matroid. If, for
+any graph G, (M(G))∗ is a graphic matroid, say (M(G))∗ = M(G′), then G′
+is evidently an abstract dual of G. By Exercise 34 of Chapter 2, the converse is
+also true: G is planar if and only if G has an abstract dual (Whitney [1933]). This
+implies that (M(G))∗ is graphic if and only if G is planar.
+Note that Theorem 13.16 quite directly implies Euler’s formula (Theorem
+2.32): Let G be a connected planar graph with a planar embedding, and let M(G)
+be the cycle matroid of G. By Theorem 13.15 (b), r(E(G))+r ∗ (E(G)) =| E(G)|.
+Since r(E(G)) =| V(G)|− 1 (the number of edges in a spanning tree) and
+r ∗ (E(G)) =| V(G∗ )|− 1 (by Theorem 13.16), we obtain that the number of faces
+of G is |V(G∗ )|=| E(G)|−| V(G)|+ 2, Euler’s formula.
+Duality of independence systems has also some nice applications in polyhedral
+combinatorics. A set system (E, F) is called a clutter if X ̸⊂ Y for all X, Y ∈ F.
+If (E, F) is a clutter, then we deﬁne its blocking clutter by
+BL (E, F) := (E, {X ⊆ E : X ∩ Y ̸=∅ for all Y ∈ F,
+X minimal with this property }).
+For an independence system (E, F) and its dual (E, F∗ ) let B and B∗ be the
+family of bases, and C and C∗ the family of circuits, respectively. (Every clutter
+arises in both of these ways except for F =∅ or F = {∅} .) It follows immediately
+from the deﬁnitions that (E, B∗ ) = BL (E, C) and (E, C∗ ) = BL (E, B). Together
+with Proposition 13.14 this implies BL (BL (E, F)) = (E, F) for every clutter
+(E, F). We give some examples for clutters (E, F) and their blocking clutters
+(E, F′). In each case E = E(G) for some graph G:
+(1) F is the set of spanning trees, F′ is the set of minimal cuts;
+(2) F is the set of arborescences rooted at r, F′ is the set of minimal r-cuts;
+(3) F is the set of s-t-paths, F′ is the set of minimal cuts separating s and t (this
+example works in undirected graphs and in digraphs);
+(4) F is the set of circuits in an undirected graph, F′ is the set of complements
+of maximal forests;
+(5) F is the set of circuits in a digraph, F′ is the set of minimal feedback edge
+sets;

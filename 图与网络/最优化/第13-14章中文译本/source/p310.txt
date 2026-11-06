@@ -1,0 +1,35 @@
+310 13. Matroids
+X E \ X
+A(1)
+X
+A(2)
+X
+SX
+TX
+Fig. 13.2.
+Given a set X ∈ F1 ∩ F2, we deﬁne a directed auxiliary graph G X by
+A(1)
+X :={ (x, y) : y ∈ E \ X, x ∈ C1(X, y) \{ y}} ,
+A(2)
+X :={ (y, x) : y ∈ E \ X, x ∈ C2(X, y) \{ y}} ,
+G X := (E, A(1)
+X ∪ A(2)
+X ).
+We set
+SX :={ y ∈ E \ X : X ∪{ y}∈ F1},
+TX :={ y ∈ E \ X : X ∪{ y}∈ F2}
+(see Figure 13.2) and look for a shortest path from SX to TX . Such a path will
+enable us to augment the set X. (If SX ∩ TX ̸=∅ , we have a path of length zero
+and we can augment X by any element in SX ∩ TX .)
+Lemma 13.28. Let X ∈ F1 ∩ F2. Let y0, x1, y1,..., xs, ys be the vertices of a
+shortest y0-ys -path in G X (in this order), with y0 ∈ SX and ys ∈ TX . Then
+X ′ := (X ∪{ y0,..., ys }) \{ x1,..., xs }∈ F1 ∩ F2.
+Proof: First we show that X ∪{ y0}, x1,..., xs and y1,..., ys satisfy the require-
+ments of Lemma 13.27 with respect to F1. Observe that X ∪{ y0}∈ F1 because
+y0 ∈ SX . (a) is satisﬁed because (xj , yj ) ∈ A(1)
+X for all j, and (b) is satisﬁed
+because otherwise the path could be shortcut. We conclude that X ′ ∈ F1.
+Secondly, we show that X ∪{ ys }, xs, xs− 1,..., x1 and ys− 1,..., y1, y0 satisfy
+the requirements of Lemma 13.27 with respect to F2. Observe that X ∪{ ys }∈ F2
+because ys ∈ TX . (a) is satisﬁed because (yj− 1, xj ) ∈ A(2)
+X for all j, and (b) is

@@ -1,0 +1,40 @@
+\documentclass[UTF8,11pt,a4paper,fontset=windows]{ctexart}
+\usepackage[margin=24mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,graphicx,booktabs,enumitem,needspace,fancyhdr,xcolor,hyperref}
+\hypersetup{unicode=true,hypertexnames=false,colorlinks=true,linkcolor=blue!45!black,pdftitle={拟阵与几何格的同调及可壳性：第7.1--7.5节中文译本}}
+\setlength{\parskip}{4pt}\linespread{1.12}\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=2.5em}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small 拟阵与几何格的同调及可壳性}\fancyhead[R]{\small 第7.1--7.5节中文译本}\fancyfoot[C]{\thepage}
+\newcommand{\st}[1]{\par\Needspace{4\baselineskip}\medskip\noindent\textbf{#1}\quad}
+\newcommand{\pr}{\par\noindent\textbf{证明。}\;}
+\newcommand{\qed}{\hfill$\square$\par}
+\newcommand{\src}[1]{\par\Needspace{4\baselineskip}\medskip\noindent{\small\color{gray}〔底本第#1页〕}\par\smallskip}
+\newcommand{\sect}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\IN}{\operatorname{IN}}\newcommand{\BC}{\operatorname{BC}}
+\newcommand{\EA}{\operatorname{EA}}\newcommand{\EP}{\operatorname{EP}}
+\newcommand{\IA}{\operatorname{IA}}\newcommand{\IP}{\operatorname{IP}}
+\newcommand{\ci}{\operatorname{ci}}\newcommand{\bo}{\operatorname{bo}}
+\newcommand{\RR}{\mathcal R}\newcommand{\nbc}{\operatorname{nbc}}
+\newcommand{\Z}{\mathbb Z}\newcommand{\R}{\mathbb R}
+\newcommand{\redinsert}[1]{{\color{red}#1}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{25mm}
+{\Huge\bfseries 拟阵与几何格的同调\\[4mm]及可壳性\par}\vspace{10mm}
+{\large Homology and Shellability of Matroids and Geometric Lattices\par}
+\vspace{15mm}{\Large Anders Björner\par}
+\vspace{15mm}{\LARGE 第7.1--7.5节中文译本（附解释版）\par}\vfill
+\begin{minipage}{.9\textwidth}\small
+依据用户提供的1990年3月扫描稿翻译，范围为底本第1--18页（PDF第3--20页），包括五节全部正文、编号结果、证明、公式、表格与图1--4。原文后续章节、习题及完整参考文献表不在本次范围内，相关引用保留。原图保留，图题译为中文。
+
+本文将空集计入单纯复形；$f_k$ 表示含$k$个顶点的面数，$\chi$ 是约化欧拉示性数。facet译为“刻面”，shelling译为“壳序”，restriction译为“限制面”，broken circuit译为“断路”，isthmus译为“余圈元”。原文的orthogonal matroid按现用术语译为“对偶拟阵”。保留底本的历史性叙述；与通常图拟阵中“桥”的对应可帮助理解余圈元。
+\redinsert{本版在原译文句间和括号中插入红色解释；红色文字不属于作者原文。}
+\end{minipage}\vspace{10mm}\par 2026年11月
+\end{titlepage}
+\tableofcontents\clearpage
+\input{section71}
+\input{section72}
+\input{section73}
+\input{section74}
+\input{section75}
+\end{document}

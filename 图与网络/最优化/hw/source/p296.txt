@@ -1,0 +1,41 @@
+296 13. Matroids
+Now let
+F :={ F ⊆ E : there exists a B ∈ B with F ⊆ B}.
+(E, F) is an independence system, and B is the family of its bases. To show
+that (E, F) satisﬁes (M3), let X, Y ∈ F with |X | > |Y |. Let X ⊆ B1 ∈ B and
+Y ⊆ B2 ∈ B, where B1 and B2 are chosen such that |B1 ∩ B2| is maximum. If
+B2 ∩ (X \ Y) ̸=∅ , we are done because we can augment Y .
+We claim that the other case, B2 ∩ (X \ Y) =∅ , is impossible. Namely, with
+this assumption we get
+|B1 ∩ B2|+| Y \ B1|+| (B2 \ B1) \ Y |=| B2|=| B1|≥| B1 ∩ B2|+| X \ Y |.
+Since |X \ Y | > |Y \ X |≥| Y \ B1|, this implies (B2 \ B1) \ Y ̸=∅ .S ol e t
+y ∈ (B2 \ B1) \ Y . By (B2) there exists an x ∈ B1 \ B2 with (B2 \{ y}) ∪{ x}∈ B,
+contradicting the maximality of |B1 ∩ B2|. 2
+A very important property of matroids is that the rank function is submodular:
+Theorem 13.10. Let E be a ﬁnite set and r :2 E → Z+. Then the following
+statements are equivalent:
+(a) r is the rank function of a matroid (E, F) (and F ={ F ⊆ E : r(F) =| F|}).
+(b) For all X, Y ⊆ E:
+(R1) r(X) ≤| X |;
+(R2) If X ⊆ Y then r(X) ≤ r(Y);
+(R3) r(X ∪ Y) + r(X ∩ Y) ≤ r(X) + r(Y).
+(c) For all X ⊆ E and x, y ∈ E:
+(R1′) r(∅) = 0;
+(R2′) r(X) ≤ r(X ∪{ y}) ≤ r(X) + 1;
+(R3′) If r(X ∪{ x}) = r(X ∪{ y}) = r(X) then r(X ∪{ x, y}) = r(X).
+Proof: (a)⇒ (b): If r is a rank function of an independence system (E, F), (R1)
+and (R2) evidently hold. If (E, F) is a matroid, we can also show (R3):
+Let X, Y ⊆ E, and let A be a basis of X ∩ Y . By (M3), A can be extended
+to a basis A
+.
+∪ B of X and to a basis (A ∪ B)
+.
+∪ C of X ∪ Y . Then A ∪ C is an
+independent subset of Y ,s o
+r(X) + r(Y) ≥| A ∪ B|+| A ∪ C|
+= 2|A|+| B|+| C|=| A ∪ B ∪ C|+| A|
+= r(X ∪ Y) + r(X ∩ Y).
+(b)⇒ (c): (R1′) is implied by (R1). r(X) ≤ r(X ∪{ y}) follows from (R2). By
+(R3) and (R1),
+r(X ∪{ y}) ≤ r(X) + r({y}) − r(X ∩{ y}) ≤ r(X) + r({y}) ≤ r(X) + 1,
+proving (R2′).

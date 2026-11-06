@@ -1,0 +1,416 @@
+\srcpage{323}
+\section*{第14章\quad 拟阵的推广}\addcontentsline{toc}{section}{第14章\quad 拟阵的推广}
+拟阵有若干有趣的推广。第13.1节已经见到独立系统，它来自删去公理(M3)。第14.1节考虑贪心结构，它来自改为删去(M2)。此外，与拟阵和次模函数有关的一类多胞体，称为多拟阵，可将重要定理大幅推广；第14.2节将讨论它们。第14.3、14.4节考虑任意次模函数最小化问题的两种方法：一种使用椭球法，另一种使用组合算法。对于对称次模函数这一重要特例，第14.5节介绍一种更简单的算法。
+\sect{14.1\quad 贪心结构}
+由定义，集合系统 $(E,\F)$ 是拟阵，当且仅当满足：
+\begin{description}
+\item[(M1)] $\varnothing\in\F$；
+\item[(M2)] 若 $X\subseteq Y\in\F$，则 $X\in\F$；
+\item[(M3)] 若 $X,Y\in\F$ 且 $|X|>|Y|$，则存在 $x\in X\setminus Y$，使 $Y\cup\{x\}\in\F$。
+\end{description}
+删去(M3)就得到第13.1、13.4节讨论的独立系统。现在改为删去(M2)。
+\st{定义14.1} \textbf{贪心结构}（greedoid）是满足(M1)、(M3)的集合系统 $(E,\F)$。
+
+取代子集封闭性(M2)的是可达性：若 $\varnothing\in\F$，且对每个 $X\in\F\setminus\{\varnothing\}$，存在 $x\in X$ 使 $X\setminus\{x\}\in\F$，则称 $(E,\F)$ \textbf{可达}。贪心结构具有可达性（由(M1)、(M3)直接得到）。虽然比拟阵更一般，但它们仍有丰富的结构，另一方面也推广了许多不同的、表面上没有联系的概念。从以下结果开始。
+\st{定理14.2} 设 $(E,\F)$ 是可达集合系统。以下命题等价：
+\begin{enumerate}[label=(\alph*)]
+\item 对任意 $X\subseteq Y\subset E$ 及 $z\in E\setminus Y$，若 $X\cup\{z\}\in\F$ 且 $Y\in\F$，则 $Y\cup\{z\}\in\F$；
+\item $\F$ 对并运算封闭。
+\end{enumerate}
+
+\srcpage{324}
+\pr (a)$\Rightarrow$(b)：设 $X,Y\in\F$，证明 $X\cup Y\in\F$。取满足 $Z\in\F$、$X\subseteq Z\subseteq X\cup Y$ 的极大集合 $Z$。假设 $Y\setminus Z\ne\varnothing$。对 $Y$ 反复应用可达性，可得 $Y'\in\F$、$Y'\subseteq Z$，以及 $y\in Y\setminus Z$，使 $Y'\cup\{y\}\in\F$。对 $Z,Y',y$ 应用(a)，得 $Z\cup\{y\}\in\F$，与 $Z$ 的选取矛盾。(b)$\Rightarrow$(a)显然。\qed
+若满足定理14.2的条件，则称 $(E,\F)$ 为\textbf{反拟阵}（antimatroid）。
+\st{命题14.3} 每个反拟阵都是贪心结构。
+\pr 设 $(E,\F)$ 是反拟阵，即可达且对并封闭。为证(M3)，设 $X,Y\in\F$、$|X|>|Y|$。由可达性，可将 $X$ 排为 $\{x_1,\ldots,x_n\}$，使 $\{x_1,\ldots,x_i\}\in\F$（$i=0,\ldots,n$）。取最小的 $i$ 使 $x_i\notin Y$。因 $\F$ 对并封闭，$Y\cup\{x_i\}=Y\cup\{x_1,\ldots,x_i\}\in\F$。\qed
+反拟阵也可用闭包算子等价定义。
+\st{命题14.4} 设集合系统 $(E,\F)$ 满足 $\F$ 对并封闭且 $\varnothing\in\F$。定义
+\[\tau(A):=\bigcap\{X\subseteq E:A\subseteq X,\ E\setminus X\in\F\}.\]
+则 $\tau$ 是闭包算子，即满足定理13.11的(S1)--(S3)。
+\pr 设 $X\subseteq Y\subseteq E$。$X\subseteq\tau(X)\subseteq\tau(Y)$ 显然。为证(S3)，假设存在 $y\in\tau(\tau(X))\setminus\tau(X)$。则对所有满足 $\tau(X)\subseteq Y$、$E\setminus Y\in\F$ 的 $Y\subseteq E$，都有 $y\in Y$；但存在 $Z\subseteq E\setminus\{y\}$，使 $X\subseteq Z$、$E\setminus Z\in\F$。这蕴含 $\tau(X)\nsubseteq Z$，矛盾。\qed
+\st{定理14.5} 设集合系统 $(E,\F)$ 满足 $\F$ 对并封闭且 $\varnothing\in\F$。则 $(E,\F)$ 可达，当且仅当命题14.4的闭包算子 $\tau$ 满足\textbf{反交换性质}：若 $X\subseteq E$、$y,z\in E\setminus\tau(X)$、$y\ne z$，且 $z\in\tau(X\cup\{y\})$，则 $y\notin\tau(X\cup\{z\})$。
+\pr 若 $(E,\F)$ 可达，则由命题14.3，(M3)成立。为证反交换性质，设 $X\subseteq E$、$B:=E\setminus\tau(X)$，以及 $y,z\in B$，满足 $z\notin A:=E\setminus\tau(X\cup\{y\})$。注意 $A,B\in\F$，且 $A\subseteq B\setminus\{y,z\}$。对 $A,B$ 应用(M3)，得 $b\in B\setminus A\subseteq E\setminus(X\cup A)$，使 $A\cup\{b\}\in\F$。$A\cup\{b\}$ 不可能包含在 $E\setminus(X\cup\{y\})$ 中，否则 $\tau(X\cup\{y\})\subseteq E\setminus(A\cup\{b\})$，与 $\tau(X\cup\{y\})=E\setminus A$ 矛盾。因此 $b=y$。所以 $A\cup\{y\}\in\F$，从而 $\tau(X\cup\{z\})\subseteq E\setminus(A\cup\{y\})$，得到 $y\notin\tau(X\cup\{z\})$。
+
+反之，取 $A\in\F\setminus\{\varnothing\}$，令 $X:=E\setminus A$，则 $\tau(X)=X$。取 $a\in A$ 使 $|\tau(X\cup\{a\})|$ 最小。断言 $\tau(X\cup\{a\})=X\cup\{a\}$，即 $A\setminus\{a\}\in\F$。否则存在 $b\in\tau(X\cup\{a\})\setminus(X\cup\{a\})$。由反交换性质，$a\notin\tau(X\cup\{b\})$。此外，
+
+\srcpage{325}
+\[\tau(X\cup\{b\})\subseteq\tau(\tau(X\cup\{a\})\cup\{b\})
+=\tau(\tau(X\cup\{a\}))=\tau(X\cup\{a\}).\]
+故 $\tau(X\cup\{b\})$ 是 $\tau(X\cup\{a\})$ 的真子集，与 $a$ 的选取矛盾。\qed
+定理14.5的反交换性质与(S4)不同。定理13.11的(S4)是 $\R^n$ 中线性包的一条性质，而反交换性质是 $\R^n$ 中凸包的一条性质：若 $y\ne z$、$z\notin\conv(X)$ 且 $z\in\conv(X\cup\{y\})$，则显然 $y\notin\conv(X\cup\{z\})$。所以对任意有限集 $E\subset\R^n$，
+\[(E,\{X\subseteq E:X\cap\conv(E\setminus X)=\varnothing\})\]
+是反拟阵。
+
+贪心结构推广了拟阵和反拟阵，还包含其他有趣结构。例如 Edmonds 基数匹配算法中使用的花结构（习题1）。另一个基本例子是：
+\st{命题14.6} 设 $G$ 是有向或无向图，$r\in V(G)$。令 $\F$ 是 $G$ 中所有以 $r$ 为根的树形图的边集族，或所有包含 $r$ 的树的边集族（不要求生成）。则 $(E(G),\F)$ 是贪心结构。
+\pr (M1)显然。对有向情形证明(M3)，无向情形同理。设 $(X_1,F_1)$、$(X_2,F_2)$ 是以 $r$ 为根的两个树形图，且 $|F_1|>|F_2|$。则 $|X_1|=|F_1|+1>|F_2|+1=|X_2|$，取 $x\in X_1\setminus X_2$。$(X_1,F_1)$ 中的 $r$--$x$ 路包含某条边 $(v,w)$，其中 $v\in X_2$、$w\notin X_2$。可将该边加入 $(X_2,F_2)$，所以 $F_2\cup\{(v,w)\}\in\F$。\qed
+这称为 $G$ 的\textbf{有向（无向）分支贪心结构}。
+
+在具有非负权的连通图 $G$ 中寻找最大权生成树，是圈拟阵 $M(G)$ 上的最大化问题。此时择优加入贪心算法就是 Kruskal 算法。现在同一问题有了第二种表述：在 $G$ 的无向分支贪心结构 $(E(G),\F)$ 中，寻找最大权集合 $F\in\F$。
+
+下面给出贪心结构上的一般贪心算法。在拟阵特例下，它恰是第13.4节的择优加入贪心算法；对具有模费用函数 $c$ 的无向分支贪心结构，它就是 Prim 算法。
+\alg{贪心结构的贪心算法}
+\textbf{输入：}贪心结构 $(E,\F)$ 及函数 $c:2^E\to\R$，由预言机给出：对给定 $X\subseteq E$，判定 $X\in\F$ 并返回 $c(X)$。\par
+\textbf{输出：}集合 $F\in\F$。
+\begin{enumerate}[label=\arabic*.]
+\item 令 $F:=\varnothing$。
+\item 选 $e\in E\setminus F$，使 $F\cup\{e\}\in\F$ 且 $c(F\cup\{e\})$ 最大。若不存在则停止。
+\item 令 $F:=F\cup\{e\}$，返回步骤2。
+\end{enumerate}
+
+\srcpage{326}
+即使 $c$ 是模费用函数，该算法也不总给出最优解。至少可以刻画它在哪些贪心结构上有效。
+\st{定理14.7} 设 $(E,\F)$ 是贪心结构。贪心结构的贪心算法对每个模权函数 $c:2^E\to\R_+$ 都能找到最大权集合 $F\in\F$，当且仅当 $(E,\F)$ 具有所谓的\textbf{强交换性质}：对所有 $A\in\F$、$\F$ 中极大的 $B$、$A\subseteq B$，以及满足 $A\cup\{x\}\in\F$ 的 $x\in E\setminus B$，存在 $y\in B\setminus A$，使 $A\cup\{y\}\in\F$ 且 $(B\setminus\{y\})\cup\{x\}\in\F$。
+\pr 设 $(E,\F)$ 具有强交换性质。取 $c:E\to\R_+$，设算法所得解为 $A=\{a_1,\ldots,a_l\}$，元素按 $a_1,\ldots,a_l$ 的顺序选入。取最优解 $B=\{a_1,\ldots,a_k\}\mathbin{\dot\cup}B'$，使 $k$ 最大，假设 $k<l$。对 $\{a_1,\ldots,a_k\}$、$B$、$a_{k+1}$ 应用强交换性质，得 $y\in B'$，使 $\{a_1,\ldots,a_k,y\}\in\F$ 且 $(B\setminus\{y\})\cup\{a_{k+1}\}\in\F$。由算法步骤2对 $a_{k+1}$ 的选择，$c(a_{k+1})\ge c(y)$，从而 $c((B\setminus\{y\})\cup\{a_{k+1}\})\ge c(B)$，与 $B$ 的选取矛盾。
+
+反之，设 $(E,\F)$ 不具有强交换性质。取 $A\in\F$、$\F$ 中极大的 $B$、$A\subseteq B$ 和 $x\in E\setminus B$，满足 $A\cup\{x\}\in\F$，但所有满足 $A\cup\{y\}\in\F$ 的 $y\in B\setminus A$ 都有 $(B\setminus\{y\})\cup\{x\}\notin\F$。
+令 $Y:=\{y\in B\setminus A:A\cup\{y\}\in\F\}$。定义 $c(e):=2$（$e\in B\setminus Y$）、$c(e):=1$（$e\in Y\cup\{x\}$）、$c(e):=0$（$e\in E\setminus(B\cup\{x\})$）。算法可能先选 $A$ 的元素（权重为2），再选 $x$。最终所得 $F\in\F$ 不可能最优，因为
+\[c(F)\le c(B\cup\{x\})-2<c(B\cup\{x\})-1=c(B),\qquad B\in\F.\]\qed
+事实上，在一般贪心结构上优化模函数是 NP 困难的。这可由以下观察结合推论15.24得到。
+\st{命题14.8} 给定无向图 $G$、$k\in\N$，判定 $G$ 是否有基数为 $k$ 的顶点覆盖，这个问题可线性归约为：给定由隶属预言机描述的贪心结构 $(E,\F)$ 及函数 $c:E\to\R_+$，求使 $c(F)$ 最大的 $F\in\F$。
+\pr 任取无向图 $G$、$k\in\N$。令 $D:=V(G)\mathbin{\dot\cup}E(G)$，并令
+\[\F:=\{X\subseteq D:\text{对所有 }e=\{v,w\}\in E(G)\cap X,\ v\in X\text{ 或 }w\in X\}.\]
+$(D,\F)$ 可达且对并封闭，因此是反拟阵，特别由命题14.3，它是贪心结构。
+考虑 $\F':=\{X\in\F:|X|\le|E(G)|+k\}$。因(M1)、(M3)保留，$(D,\F')$ 仍是贪心结构。令 $c(e):=1$（$e\in E(G)$）、$c(v):=0$（$v\in V(G)$）。则存在 $F\in\F'$ 满足 $c(F)=|E(G)|$，当且仅当 $G$ 有大小为 $k$ 的顶点覆盖。\qed
+
+\srcpage{327}
+另一方面，有些有趣函数能在任意贪心结构上最大化，例如对 $c':E\to\R_+$，瓶颈函数 $c(F):=\min\{c'(e):e\in F\}$（习题2）。更多结果见 Korte、Lovász 和 Schrader [1991]。
+\sect{14.2\quad 多拟阵}
+由定理13.10可知拟阵与次模函数的紧密联系。次模函数定义了以下有趣的多面体类。
+\st{定义14.9} \textbf{多拟阵}（polymatroid）是如下形式的多胞体：
+\[P(f):=\left\{x\in\R^E:x\ge0,\ \sum_{e\in A}x_e\le f(A)\text{ 对所有 }A\subseteq E\right\},\]
+其中 $E$ 为有限集，$f:2^E\to\R_+$ 是次模函数。
+不难看出，对任意多拟阵，都可选取满足 $f(\varnothing)=0$ 且单调的 $f$（习题5；若 $X\subseteq Y\subseteq E$ 蕴含 $f(X)\le f(Y)$，则称 $f:2^E\to\R$ \textbf{单调}）。Edmonds 的原定义有所不同，见习题6。还需指出，polymatroid 一词有时用于二元组 $(E,f)$，而不是该多胞体。
+
+若 $f$ 是某拟阵的秩函数，则 $P(f)$ 是其独立集关联向量的凸包（定理13.21）。已知择优加入贪心算法能在拟阵多胞体上优化任意线性函数。类似的贪心算法也适用于一般多拟阵。假定 $f$ 单调。
+\alg{多拟阵贪心算法}
+\textbf{输入：}有限集 $E$，由预言机给出的次模、单调函数 $f:2^E\to\R_+$，以及向量 $c\in\R^E$。\par
+\textbf{输出：}使 $cx$ 最大的向量 $x\in P(f)$。
+\begin{enumerate}[label=\arabic*.]
+\item 将 $E=\{e_1,\ldots,e_n\}$ 排序，使 $c(e_1)\ge\cdots\ge c(e_k)>0\ge c(e_{k+1})\ge\cdots\ge c(e_n)$。
+\item 若 $k\ge1$，令 $x(e_1):=f(\{e_1\})$；对 $i=2,\ldots,k$，令
+\[x(e_i):=f(\{e_1,\ldots,e_i\})-f(\{e_1,\ldots,e_{i-1}\});\]
+对 $i=k+1,\ldots,n$，令 $x(e_i):=0$。
+\end{enumerate}
+\st{命题14.10} 设 $E=\{e_1,\ldots,e_n\}$，$f:2^E\to\R$ 是次模函数，且 $f(\varnothing)\ge0$。设 $b:E\to\R$，满足 $b(e_1)\le f(\{e_1\})$，且对 $i=2,\ldots,n$，$b(e_i)\le f(\{e_1,\ldots,e_i\})-f(\{e_1,\ldots,e_{i-1}\})$。则对所有 $A\subseteq E$，有 $\sum_{a\in A}b(a)\le f(A)$。
+
+\srcpage{328}
+\pr 对 $i=\max\{j:e_j\in A\}$ 归纳。$A=\varnothing$ 或 $A=\{e_1\}$ 时显然。若 $i\ge2$，则
+\begin{align*}
+\sum_{a\in A}b(a)&=\sum_{a\in A\setminus\{e_i\}}b(a)+b(e_i)\le f(A\setminus\{e_i\})+b(e_i)\\
+&\le f(A\setminus\{e_i\})+f(\{e_1,\ldots,e_i\})-f(\{e_1,\ldots,e_{i-1}\})\le f(A),
+\end{align*}
+第一个不等式来自归纳假设，第三个来自次模性。\qed
+\st{定理14.11} 多拟阵贪心算法能正确求得使 $cx$ 最大的 $x\in P(f)$。若 $f$ 为整数值函数，则 $x$ 也是整数向量。
+\pr 设 $x\in\R^E$ 是算法对 $E,f,c$ 的输出。由定义，若 $f$ 为整数值，则 $x$ 也为整数。因为 $f$ 单调，有 $x\ge0$，故由命题14.10，$x\in P(f)$。
+现设 $y\in\R_+^E$ 且 $cy>cx$。类似于定理13.19的证明，令 $d_j:=c(e_j)-c(e_{j+1})$（$j=1,\ldots,k-1$）、$d_k:=c(e_k)$，有
+\[\sum_{j=1}^kd_j\sum_{i=1}^jx(e_i)=cx<cy\le\sum_{j=1}^kc(e_j)y(e_j)
+=\sum_{j=1}^kd_j\sum_{i=1}^jy(e_i).\]
+因所有 $d_j\ge0$，存在 $j\in\{1,\ldots,k\}$，使 $\sum_{i=1}^jy(e_i)>\sum_{i=1}^jx(e_i)$。但 $\sum_{i=1}^jx(e_i)=f(\{e_1,\ldots,e_j\})$，故 $y\notin P(f)$。\qed
+与拟阵一样，也能处理两个多拟阵的交。下面的多拟阵交定理有许多推论。
+\st{定理14.12（Edmonds [1970,1979]）} 设 $E$ 是有限集，$f,g:2^E\to\R_+$ 是次模函数。则下述系统是全对偶整数的（TDI）：
+\[x\ge0,\qquad\sum_{e\in A}x_e\le f(A)\ (A\subseteq E),\qquad
+\sum_{e\in A}x_e\le g(A)\ (A\subseteq E).\]
+\pr 考虑下列互为原始与对偶的线性规划：
+\[\max\left\{cx:\sum_{e\in A}x_e\le f(A),\ \sum_{e\in A}x_e\le g(A)\text{ 对所有 }A\subseteq E,\ x\ge0\right\},\]
+以及
+\[\min\left\{\sum_{A\subseteq E}(f(A)y_A+g(A)z_A):\sum_{\substack{A\subseteq E\\e\in A}}(y_A+z_A)\ge c_e\text{ 对所有 }e\in E,\ y,z\ge0\right\}.\]
+为证明全对偶整数性，使用引理5.22。
+
+\srcpage{329}
+设 $c:E\to\Z$，取最优对偶解 $y,z$，使
+\[\sum_{A\subseteq E}(y_A+z_A)|A|\,|E\setminus A|\tag{14.1}\]
+尽可能小。断言 $\F:=\{A\subseteq E:y_A>0\}$ 是链，即任意 $A,B\in\F$ 都满足 $A\subseteq B$ 或 $B\subseteq A$。
+否则取 $A,B\in\F$，使 $A\cap B\ne A,B$。令 $\epsilon:=\min\{y_A,y_B\}$，令 $y'_A:=y_A-\epsilon$、$y'_B:=y_B-\epsilon$、$y'_{A\cap B}:=y_{A\cap B}+\epsilon$、$y'_{A\cup B}:=y_{A\cup B}+\epsilon$，其他分量不变。$y',z$ 是对偶可行解；由 $f$ 的次模性，它也最优。但对它而言(14.1)更小，与 $y$ 的选取矛盾。
+
+同理 $\F':=\{A\subseteq E:z_A>0\}$ 也是链。令 $M,M'$ 为列由 $E$ 的元素标号、行分别为 $\F,\F'$ 中集合的关联向量的矩阵。由引理5.22，只需证明 $\binom M{M'}$ 全幺模。
+使用 Ghouila-Houri 定理5.23。任取一组行 $\mathcal R=\{A_1,\ldots,A_p,B_1,\ldots,B_q\}$，其中 $A_1\supseteq\cdots\supseteq A_p$、$B_1\supseteq\cdots\supseteq B_q$。令
+\[\mathcal R_1:=\{A_i:i\text{ 为奇数}\}\cup\{B_i:i\text{ 为偶数}\},\qquad
+\mathcal R_2:=\mathcal R\setminus\mathcal R_1.\]
+对任意 $e\in E$，包含它的行构成 $\{A_1,\ldots,A_{p_e}\}\cup\{B_1,\ldots,B_{q_e}\}$，其中 $p_e\in\{0,\ldots,p\}$、$q_e\in\{0,\ldots,q\}$。因此 $\mathcal R_1$ 中各行之和减去 $\mathcal R_2$ 中各行之和，所得向量只含 $-1,0,1$。定理5.23的判据成立。\qed
+可以在两个多拟阵之交上优化线性函数，不过不像单个多拟阵那样容易。如果能解决每个多拟阵的分离问题，就可使用椭球法。第14.3节将再次讨论。
+\st{推论14.13（Edmonds [1970]）} 设 $(E,\mathcal M_1)$、$(E,\mathcal M_2)$ 是秩函数分别为 $r_1,r_2$ 的两个拟阵。则 $\mathcal M_1\cap\mathcal M_2$ 各元素关联向量的凸包为
+\[\left\{x\in\R_+^E:\sum_{e\in A}x_e\le\min\{r_1(A),r_2(A)\}\text{ 对所有 }A\subseteq E\right\}.\]
+\pr $r_1,r_2$ 非负且次模（定理13.10），故上述不等式系统 TDI（定理14.12）。因为 $r_1,r_2$ 是整数值函数，多胞体为整数多胞体（推论5.14）。由于对所有 $A\subseteq E$ 都有 $r_1(A)\le|A|$，其顶点均为0--1向量，因而是公共独立集（$\mathcal M_1\cap\mathcal M_2$ 中元素）的关联向量。由推论3.27，多胞体就是这些顶点的凸包。反之，每个这样的关联向量都满足不等式（由秩函数定义）。\qed
+取 $\mathcal M_1=\mathcal M_2$，当然得到拟阵多胞体的描述（定理13.21）。定理14.12还有以下推论。
+
+\srcpage{330}
+\st{推论14.14（Edmonds [1970]）} 设 $E$ 是有限集，$f,g:2^E\to\R_+$ 次模且单调。则
+\[\max\{\one x:x\in P(f)\cap P(g)\}=\min_{A\subseteq E}(f(A)+g(E\setminus A)).\]
+此外，若 $f,g$ 为整数值函数，则存在达到最大值的整数向量 $x$。
+\pr 由定理14.12，$\max\{\one x:x\in P(f)\cap P(g)\}$ 的对偶问题，即
+\[\min\left\{\sum_{A\subseteq E}(f(A)y_A+g(A)z_A):\sum_{\substack{A\subseteq E\\e\in A}}(y_A+z_A)\ge1\text{ 对所有 }e\in E,\ y,z\ge0\right\},\]
+具有整数最优解 $y,z$。令 $B:=\bigcup_{A:y_A\ge1}A$、$C:=\bigcup_{A:z_A\ge1}A$。令 $y'_B:=1$、$z'_C:=1$，其余分量均为0。则 $B\cup C=E$，且 $y',z'$ 是对偶可行解。由 $f,g$ 非负且次模，
+\[\sum_{A\subseteq E}(f(A)y_A+g(A)z_A)\ge f(B)+g(C).\]
+因为 $E\setminus B\subseteq C$ 且 $g$ 单调，右端至少为 $f(B)+g(E\setminus B)$，故“$\ge$”得证。
+另一方向“$\le$”显然：任取 $A\subseteq E$，令 $y_A:=1$、$z_{E\setminus A}:=1$，其他分量均为0，即得对偶可行解。整数性直接来自定理14.12与推论5.14。\qed
+定理13.31是其特例。此外还得到：
+\st{推论14.15（Frank [1982]）} 设 $E$ 是有限集，$f,g:2^E\to\R$，其中 $f$ 超模、$g$ 次模，且 $f\le g$。则存在模函数 $h:2^E\to\R$，使 $f\le h\le g$。若 $f,g$ 为整数值函数，则可取整数值的 $h$。
+\pr 令 $M:=2\max\{|f(A)|+|g(A)|:A\subseteq E\}$，并对所有 $A\subseteq E$ 定义
+\[f'(A):=g(E)-f(E\setminus A)+M|A|,\qquad g'(A):=g(A)-f(\varnothing)+M|A|.\]
+$f',g'$ 非负、次模且单调。应用推论14.14，得
+\begin{align*}
+\max\{\one x:x\in P(f')\cap P(g')\}
+&=\min_{A\subseteq E}(f'(A)+g'(E\setminus A))\\
+&=\min_{A\subseteq E}\bigl(g(E)-f(E\setminus A)+M|A|\\
+&\qquad+g(E\setminus A)-f(\varnothing)+M|E\setminus A|\bigr)\\
+&\ge g(E)-f(\varnothing)+M|E|.
+\end{align*}
+因此取 $x\in P(f')\cap P(g')$，使 $\one x=g(E)-f(\varnothing)+M|E|$。若 $f,g$ 为整数值，可取整数 $x$。令 $h'(A):=\sum_{e\in A}x_e$，并对所有 $A\subseteq E$ 令 $h(A):=h'(A)+f(\varnothing)-M|A|$。
+\srcpage{331}
+$h$ 是模函数。此外，对所有 $A\subseteq E$，有
+\[h(A)\le g'(A)+f(\varnothing)-M|A|=g(A),\]
+\begin{align*}
+h(A)&=\one x-h'(E\setminus A)+f(\varnothing)-M|A|\\
+&\ge g(E)+M|E|-M|A|-f'(E\setminus A)=f(A).
+\end{align*}\qed
+这与凸函数和凹函数的类比显而易见；另见习题9。
+\sect{14.3\quad 次模函数最小化}
+多拟阵 $P(f)$ 对向量 $x$ 的分离问题要求找出集合 $A$，使 $f(A)<\sum_{e\in A}x(e)$。故可归约为寻找使 $g(A)$ 最小的集合 $A$，其中 $g(A):=f(A)-\sum_{e\in A}x(e)$。注意若 $f$ 次模，则 $g$ 也次模。因此次模函数最小化是一个有趣的问题。
+
+另一动机是次模函数可视为凸函数的离散对应物（推论14.15及习题9）。第8.7节已经解决了一个特例：在无向图中寻找最小割，可视为在 $2^U\setminus\{\varnothing,U\}$ 上最小化某个对称次模函数 $f:2^U\to\R_+$。回到该特例之前，先说明如何最小化一般次模函数。假定已给出 $\operatorname{size}(f(S))$ 的上界。为简单起见，仅考虑整数值次模函数。
+\alg{次模函数最小化问题}
+\textbf{实例：}有限集 $U$，由预言机给出的次模函数 $f:2^U\to\Z$。\par
+\textbf{任务：}求使 $f(X)$ 最小的子集 $X\subseteq U$。
+
+Grötschel、Lovász 和 Schrijver [1981] 说明了如何借助椭球法求解。其思想是通过二分搜索确定最小值，从而将问题归约为某个多拟阵的分离问题。利用分离与优化的等价性（第4.6节），只需在多拟阵上优化线性函数；而多拟阵贪心算法很容易做到这一点。首先需要 $S\subseteq U$ 时 $|f(S)|$ 的上界。
+\st{命题14.16} 对任意次模函数 $f:2^U\to\Z$ 及任意 $S\subseteq U$，
+\[f(U)-\sum_{u\in U}\max\{0,f(\{u\})-f(\varnothing)\}
+\le f(S)\le f(\varnothing)+\sum_{u\in U}\max\{0,f(\{u\})-f(\varnothing)\}.\]
+特别地，只需 $|U|+2$ 次对 $f$ 的预言机调用，就能在线性时间内计算一个数 $B$，使所有 $S\subseteq U$ 都有 $|f(S)|\le B$。
+\pr 对 $\varnothing\ne S\subseteq U$，取 $x\in S$，反复应用次模性可得：
+
+\srcpage{332}
+\[f(S)\le-f(\varnothing)+f(S\setminus\{x\})+f(\{x\})
+\le\cdots\le-|S|f(\varnothing)+f(\varnothing)+\sum_{x\in S}f(\{x\}).\]
+对 $S\subset U$，取 $y\in U\setminus S$，有
+\begin{align*}
+f(S)&\ge-f(\{y\})+f(S\cup\{y\})+f(\varnothing)\\
+&\ge\cdots\ge-\sum_{y\in U\setminus S}f(\{y\})+f(U)+|U\setminus S|f(\varnothing).
+\end{align*}\qed
+\st{命题14.17} 以下问题可在多项式时间内求解：给定有限集 $U$，由预言机给出的次模、单调函数 $f:2^U\to\Z_+$，且 $S\ne\varnothing$ 时 $f(S)>0$；给定 $B\in\N$，使所有 $S\subseteq U$ 满足 $f(S)\le B$；再给定 $x\in\Z_+^U$。判定 $x\in P(f)$，若不成立则返回一个 $S\subseteq U$，使 $\sum_{v\in S}x(v)>f(S)$。
+\pr 这就是多拟阵 $P(f)$ 的分离问题。使用定理4.23，因为已解决 $P(f)$ 上的优化问题：多拟阵贪心算法能最大化其上的任意线性函数（定理14.11）。
+
+需检验定理4.23的前提。因零向量及所有单位向量都在 $P(f)$ 中，可取内点 $x_0:=\epsilon\one$，其中 $\epsilon=1/(|U|+1)$。有 $\operatorname{size}(x_0)=O(|U|\log|U|)$。此外，$P(f)$ 的每个顶点都可由多拟阵贪心算法对某个目标函数产生（参见定理14.11），故其编码长度为 $O(|U|(2+\log B))$。因此分离问题可在多项式时间内解决。由定理4.23，若 $x\notin P(f)$，就得到一个被 $x$ 违反的、定义 $P(f)$ 某个面的不等式，对应于某个满足 $\sum_{v\in S}x(v)>f(S)$ 的 $S\subseteq U$。\qed
+由于我们不要求 $f$ 单调，不能直接使用此结果，而考虑另一函数。
+\st{命题14.18} 设 $f:2^U\to\R$ 次模，$\beta\in\R$。定义 $g:2^U\to\R$ 为
+\[g(X):=f(X)-\beta+\sum_{e\in X}(f(U\setminus\{e\})-f(U)),\]
+则 $g$ 次模且单调。
+\pr 次模性直接来自 $f$ 的次模性。为证单调性，设 $X\subset U$、$e\in U\setminus X$。由次模性，
+\[g(X\cup\{e\})-g(X)=f(X\cup\{e\})-f(X)+f(U\setminus\{e\})-f(U)\ge0.\]\qed
+\st{定理14.19} 次模函数最小化问题可在关于 $|U|+\log\max\{|f(S)|:S\subseteq U\}$ 的多项式时间内求解。
+\pr 设 $U$ 有限，$f$ 由预言机给出。先计算 $B\in\N$，使所有 $S\subseteq U$ 都满足 $|f(S)|\le B$（命题14.16）。由 $f$ 的次模性，对每个 $e\in U$、$X\subseteq U\setminus\{e\}$，有：
+
+\srcpage{333}
+\[f(\{e\})-f(\varnothing)\ge f(X\cup\{e\})-f(X)\ge f(U)-f(U\setminus\{e\}).\tag{14.2}\]
+若某个 $e\in U$ 满足 $f(\{e\})-f(\varnothing)\le0$，则由(14.2)，存在包含 $e$ 的最优集合 $S$。此时考虑实例 $(U',B,f')$，其中 $U':=U\setminus\{e\}$，$f'(X):=f(X\cup\{e\})$（$X\subseteq U\setminus\{e\}$）。求出使 $f'(S')$ 最小的 $S'\subseteq U'$，并输出 $S:=S'\cup\{e\}$。
+
+同样，若 $f(U)-f(U\setminus\{e\})\ge0$，则由(14.2)，存在不含 $e$ 的最优集合 $S$。此时只需在 $U\setminus\{e\}$ 上最小化 $f$。两种情形都缩小了底集。
+
+故可假定所有 $e\in U$ 都满足 $f(\{e\})-f(\varnothing)>0$、$f(U\setminus\{e\})-f(U)>0$。令 $x(e):=f(U\setminus\{e\})-f(U)$。对每个整数 $-B\le\beta\le f(\varnothing)$，定义 $g(X):=f(X)-\beta+\sum_{e\in X}x(e)$。由命题14.18，$g$ 次模且单调。又有 $g(\varnothing)=f(\varnothing)-\beta\ge0$，且所有 $e\in U$ 满足 $g(\{e\})=f(\{e\})-\beta+x(e)>0$，故非空 $X$ 均有 $g(X)>0$。应用命题14.17检验 $x\in P(g)$。若成立，则所有 $X\subseteq U$ 都满足 $f(X)\ge\beta$，此次判定完成；否则得到满足 $f(S)<\beta$ 的集合 $S$。
+
+现作二分搜索，每次适当选择 $\beta$，经 $O(\log(2B))$ 次迭代，找到 $\beta^*\in\{-B,-B+1,\ldots,f(\varnothing)\}$，使所有 $X\subseteq U$ 满足 $f(X)\ge\beta^*$，但某个 $S\subseteq U$ 满足 $f(S)<\beta^*+1$。此 $S$ 即最小化 $f$。\qed
+首个强多项式时间算法由 Grötschel、Lovász 和 Schrijver [1988] 设计，同样基于椭球法。Schrijver [2000] 以及独立工作的 Iwata、Fleischer 和 Fujishige [2001] 找到了强多项式时间的组合算法。下一节描述 Schrijver 算法。
+\sect{14.4\quad Schrijver 算法}
+给定有限集 $U$ 及次模函数 $f:2^U\to\R$，不妨设 $U=\{1,\ldots,n\}$ 且 $f(\varnothing)=0$。Schrijver [2000] 的算法始终维持 $f$ 的所谓\textbf{基多面体}中的一个点 $x$。该多面体定义为
+\[\left\{x\in\R^U:\sum_{u\in A}x(u)\le f(A)\text{ 对所有 }A\subseteq U,\ \sum_{u\in U}x(u)=f(U)\right\}.\]
+其顶点集合恰为 $U$ 的所有全序 $\prec$ 对应的向量 $b^\prec$，其中
+\[b^\prec(u):=f(\{v\in U:v\preceq u\})-f(\{v\in U:v\prec u\})\quad(u\in U).\]
+这里不会用到这一事实；它可类似于定理14.11那样证明（习题13）。
+
+\srcpage{334}
+点 $x$ 始终显式写成这些顶点的凸组合 $x=\lambda_1b^{\prec_1}+\cdots+\lambda_kb^{\prec_k}$。初始可取 $k=1$ 及任意全序。
+\alg{Schrijver 算法}
+\textbf{输入：}有限集 $U=\{1,\ldots,n\}$；由预言机给出的次模函数 $f:2^U\to\Z$，满足 $f(\varnothing)=0$。\par
+\textbf{输出：}使 $f(X)$ 最小的子集 $X\subseteq U$。
+\begin{enumerate}[label=\arabic*.]
+\item 令 $k:=1$，取 $U$ 上任意全序 $\prec_1$，令 $x:=b^{\prec_1}$。
+\item 令 $D:=(U,A)$，其中 $A=\{(u,v):\text{某个 }i\in\{1,\ldots,k\}\text{ 满足 }u\prec_i v\}$。
+\item 令 $P:=\{v\in U:x(v)>0\}$、$N:=\{v\in U:x(v)<0\}$，令 $X$ 为 $D$ 中从 $P$ 不可达的顶点集。若 $N\subseteq X$，则停止。否则以 $d(v)$ 表示 $D$ 中 $P$ 到 $v$ 的距离。
+\item 在从 $P$ 可达的 $t\in N$ 中，选择使 $(d(t),t)$ 按字典序最大的顶点；再选择满足 $(s,t)\in A$、$d(s)=d(t)-1$ 且 $s$ 最大的顶点 $s$。选 $i\in\{1,\ldots,k\}$，使 $\alpha:=|\{v:s\prec_i v\preceq_i t\}|$ 最大（达到此最大值的下标数目记为 $\beta$）。
+\item 以 $\prec_i^{s,u}$ 表示将 $u$ 移到全序 $\prec_i$ 中紧靠 $s$ 之前所得的全序；以 $\chi^u$ 表示元素 $u$ 的关联向量（$u\in U$）。计算 $0\le\epsilon\le-x(t)$，并将 $x':=x+\epsilon(\chi^t-\chi^s)$ 显式写成至多 $n$ 个向量的凸组合，所用向量选自 $b^{\prec_1},\ldots,b^{\prec_k}$ 及满足 $s\prec_i u\preceq_i t$ 的 $b^{\prec_i^{s,u}}$；另外要求若 $x'(t)<0$，则凸组合中不出现 $b^{\prec_i}$。
+\item 令 $x:=x'$，将其凸组合中的向量重新命名为 $b^{\prec_1},\ldots,b^{\prec_k}$，返回步骤2。
+\end{enumerate}
+\st{定理14.20（Schrijver [2000]）} Schrijver 算法是正确的。
+\pr 算法在 $D$ 中没有从 $P$ 到 $N$ 的路时终止，输出从 $P$ 不可达的顶点集 $X$。显然 $N\subseteq X\subseteq U\setminus P$，故对每个 $W\subseteq U$，$\sum_{u\in X}x(u)\le\sum_{u\in W}x(u)$。此外，没有边进入 $X$，所以或者 $X=\varnothing$，或者对每个 $j\in\{1,\ldots,k\}$ 都存在 $v\in X$，使 $X=\{u\in U:u\preceq_jv\}$。由定义，所有 $j$ 都满足 $\sum_{u\in X}b^{\prec_j}(u)=f(X)$。又由命题14.10，对所有 $W\subseteq U$、$j\in\{1,\ldots,k\}$，有 $\sum_{u\in W}b^{\prec_j}(u)\le f(W)$。因此
+\begin{align*}
+f(W)&\ge\sum_{j=1}^k\lambda_j\sum_{u\in W}b^{\prec_j}(u)
+=\sum_{u\in W}\sum_{j=1}^k\lambda_jb^{\prec_j}(u)=\sum_{u\in W}x(u)\\
+&\ge\sum_{u\in X}x(u)=\sum_{u\in X}\sum_{j=1}^k\lambda_jb^{\prec_j}(u)
+=\sum_{j=1}^k\lambda_j\sum_{u\in X}b^{\prec_j}(u)=f(X),
+\end{align*}
+
+\srcpage{335}
+这证明了 $X$ 为最优解。\qed
+\st{引理14.21（Schrijver [2000]）} 每次迭代可在 $O(n^3+\gamma n^2)$ 时间内完成，其中 $\gamma$ 是一次预言机调用所需的时间。
+\pr 只需证明步骤5可在该时间内完成。设 $x=\sum_{j=1}^k\lambda_jb^{\prec_j}$，且 $s\prec_i t$。先证明：
+\textbf{断言：}对某个 $\delta\ge0$，$\delta(\chi^t-\chi^s)$ 可在 $O(\gamma n^2)$ 时间内写成向量 $b^{\prec_i^{s,v}}-b^{\prec_i}$（$s\prec_i v\preceq_i t$）的凸组合。
+
+先作准备。设 $s\prec_i v\preceq_i t$。由定义，当 $u\prec_i s$ 或 $u\succ_i v$ 时，$b^{\prec_i^{s,v}}(u)=b^{\prec_i}(u)$。由次模性，当 $s\preceq_i u\prec_i v$ 时，
+\begin{align*}
+b^{\prec_i^{s,v}}(u)
+&=f(\{w\in U:w\preceq_i^{s,v}u\})-f(\{w\in U:w\prec_i^{s,v}u\})\\
+&\le f(\{w\in U:w\preceq_i u\})-f(\{w\in U:w\prec_i u\})=b^{\prec_i}(u).
+\end{align*}
+而对 $u=v$，
+\begin{align*}
+b^{\prec_i^{s,v}}(v)
+&=f(\{w\in U:w\preceq_i^{s,v}v\})-f(\{w\in U:w\prec_i^{s,v}v\})\\
+&=f(\{w\in U:w\prec_i s\}\cup\{v\})-f(\{w\in U:w\prec_i s\})\\
+&\ge f(\{w\in U:w\preceq_i v\})-f(\{w\in U:w\prec_i v\})=b^{\prec_i}(v).
+\end{align*}
+还注意到 $\sum_{u\in U}b^{\prec_i^{s,v}}(u)=f(U)=\sum_{u\in U}b^{\prec_i}(u)$。
+若某个 $s\prec_i v\preceq_i t$ 满足 $b^{\prec_i^{s,v}}=b^{\prec_i}$，断言显然成立；故可假设所有这样的 $v$ 都满足 $b^{\prec_i^{s,v}}(v)>b^{\prec_i}(v)$。递归定义
+\[\kappa_v:=\frac{\chi^t_v-\sum_{v\prec_i w\preceq_i t}\kappa_w\bigl(b^{\prec_i^{s,w}}(v)-b^{\prec_i}(v)\bigr)}{b^{\prec_i^{s,v}}(v)-b^{\prec_i}(v)}\ge0
+\qquad(s\prec_i v\preceq_i t).\]
+可得 $\sum_{s\prec_i v\preceq_i t}\kappa_v(b^{\prec_i^{s,v}}-b^{\prec_i})=\chi^t-\chi^s$，因为对所有 $s\prec_i u\preceq_i t$，
+\begin{align*}
+\sum_{s\prec_i v\preceq_i t}\kappa_v\bigl(b^{\prec_i^{s,v}}(u)-b^{\prec_i}(u)\bigr)
+&=\sum_{u\preceq_i v\preceq_i t}\kappa_v\bigl(b^{\prec_i^{s,v}}(u)-b^{\prec_i}(u)\bigr)\\
+&=\chi^t_u,
+\end{align*}
+且全部分量之和为0。令 $\delta:=1/\sum_{s\prec_i v\preceq_i t}\kappa_v$，并将每个 $\kappa_u$ 乘以 $\delta$，断言得证。
+
+现取 $\epsilon:=\min\{\lambda_i\delta,-x(t)\}$，$x':=x+\epsilon(\chi^t-\chi^s)$。若 $\epsilon=\lambda_i\delta\le-x(t)$，则
+\[x'=\sum_{j=1}^k\lambda_jb^{\prec_j}+\lambda_i\sum_{s\prec_i v\preceq_i t}\kappa_v(b^{\prec_i^{s,v}}-b^{\prec_i}),\]
+即已将 $x'$ 写成 $b^{\prec_j}$（$j\ne i$）及 $b^{\prec_i^{s,v}}$（$s\prec_i v\preceq_i t$）的凸组合。若 $\epsilon=-x(t)$，还可使用 $b^{\prec_i}$。最后按第4章习题5所示，在 $O(n^3)$ 时间内将凸组合缩减为至多 $n$ 个向量。\qed
+\st{引理14.22（Vygen [2003]）} Schrijver 算法经过 $O(n^5)$ 次迭代后终止。
+\srcpage{336}
+\pr 若某次迭代的步骤5加入新向量 $b^{\prec_i^{s,v}}$ 后引入了边 $(v,w)$，则该次迭代中 $s\preceq_i w\prec_i v\preceq_i t$。所以 $d(w)\le d(s)+1=d(t)\le d(v)+1$，新边不会缩短从 $P$ 到任何 $v\in U$ 的距离。步骤5保证从不向 $P$ 添加元素，因此每个 $v\in U$ 的距离 $d(v)$ 从不减小。
+
+将顶点对 $(t,s)$ 保持不变的一段连续迭代称为一个\textbf{块}。每个块包含 $O(n^2)$ 次迭代，因为其中每次迭代都使 $(\alpha,\beta)$ 按字典序下降。只需证明块数为 $O(n^3)$。
+
+一个块只可能因以下至少一种原因结束（由 $t,s$ 的选择方式，且 $t=t^*$ 的迭代不会加入终点为 $t^*$ 的边，而顶点 $v$ 只有在 $v=s$ 时才能进入 $N$，此时 $d(v)<d(t)$）：
+\begin{enumerate}[label=(\alph*)]
+\item 某个 $v\in U$ 的距离 $d(v)$ 增加；
+\item $t$ 从 $N$ 中删除；
+\item $(s,t)$ 从 $A$ 中删除。
+\end{enumerate}
+分别计数。(a)型块显然有 $O(n^2)$ 个。
+
+考虑(b)型。断言：对每个 $t^*\in U$，满足 $t=t^*$ 且 $x'(t)=0$ 的迭代有 $O(n^2)$ 次。这容易看出：任意两次这样的迭代之间，必有某个 $v\in U$ 的 $d(v)$ 改变；由于距离只能增加，这只能发生 $O(n^2)$ 次。因此(b)型阶段总数为 $O(n^3)$。
+
+最后证明(c)型块有 $O(n^3)$ 个。只需说明：同一顶点对 $(s,t)$ 的下一个这种块出现之前，$d(t)$ 必改变。
+对 $s,t\in U$，若 $(s,t)\notin A$ 或 $d(t)\le d(s)$，就称 $s$ 对 $t$ \textbf{无趣}（$t$-boring）。固定 $s^*,t^*\in U$，考虑从一个 $s=s^*,t=t^*$ 的块因 $(s^*,t^*)$ 被删去而结束之后，到下一次 $d(t^*)$ 改变之前的时间段。证明每个 $v\in\{s^*,\ldots,n\}$ 在此段始终对 $t^*$ 无趣；取 $v=s^*$ 即完成证明。
+
+时间段开始时，由紧前一次迭代中 $s=s^*$ 的选择方式，每个 $v\in\{s^*+1,\ldots,n\}$ 都对 $t^*$ 无趣。由于 $(s^*,t^*)$ 被删除，$s^*$ 也对 $t^*$ 无趣。此段中 $d(t^*)$ 不变，而任意 $d(v)$ 从不减小，故只需检查新边的引入。
+假设某次选取 $(s,t)$ 的迭代后，向 $A$ 加入边 $(v,t^*)$，其中 $v\in\{s^*,\ldots,n\}$。由证明开头的观察，该次迭代中 $s\preceq_i t^*\prec_i v\preceq_i t$，因此 $d(t^*)\le d(s)+1=d(t)\le d(v)+1$。分两种情形：若 $s>v$，则 $d(t^*)\le d(s)$，因为或者 $t^*=s$，或者 $s$ 对 $t^*$ 无趣且 $(s,t^*)\in A$。若 $s<v$，则 $d(t)\le d(v)$，因为或者 $t=v$，或者由 $s$ 的选择及 $(v,t)\in A$ 得到。两种情形都推出 $d(t^*)\le d(v)$，所以 $v$ 仍对 $t^*$ 无趣。\qed
+定理14.20、引理14.21及引理14.22共同蕴含：
+\st{定理14.23} 次模函数最小化问题可在 $O(n^8+\gamma n^7)$ 时间内求解，其中 $\gamma$ 为一次预言机调用的时间。\qed
+
+\srcpage{337}
+Iwata [2002] 描述了一个完全组合的算法（仅用加法、减法、比较和预言机调用，不用乘除法），并改进了运行时间（Iwata [2003]）。
+\sect{14.5\quad 对称次模函数}
+若对所有 $A\subseteq U$，$f(A)=f(U\setminus A)$，则称次模函数 $f:2^U\to\R$ \textbf{对称}。此特例的次模函数最小化问题是平凡的，因为对所有 $A\subseteq U$，
+\[2f(\varnothing)=f(\varnothing)+f(U)\le f(A)+f(U\setminus A)=2f(A),\]
+所以空集最优。因此只有排除这一平凡情形才有意义：寻找 $U$ 的非空真子集 $A$，使 $f(A)$ 最小。
+
+Queyranne [1998] 推广第8.7节的算法，得到一个较简单的组合算法，仅用 $O(n^3)$ 次预言机调用。下述引理推广了引理8.38（习题14）。
+\st{引理14.24} 给定对称次模函数 $f:2^U\to\R$，设 $n:=|U|\ge2$，可在 $O(n^2\theta)$ 时间内找到不同的 $x,y\in U$，使
+\[f(\{x\})=\min\{f(X):x\in X\subseteq U\setminus\{y\}\},\]
+其中 $\theta$ 是 $f$ 的预言机时间上界。
+\pr 按以下方式对 $k=1,\ldots,n-1$ 构造次序 $U=\{u_1,\ldots,u_n\}$。假定已构造 $u_1,\ldots,u_{k-1}$，令 $U_{k-1}:=\{u_1,\ldots,u_{k-1}\}$。对 $C\subseteq U$，定义
+\[w_k(C):=f(C)-\tfrac12\bigl(f(C\setminus U_{k-1})+f(C\cup U_{k-1})-f(U_{k-1})\bigr).\]
+注意 $w_k$ 也对称。选取使 $w_k(\{u_k\})$ 最大的 $u_k\in U\setminus U_{k-1}$。最后令 $u_n$ 是 $U\setminus\{u_1,\ldots,u_{n-1}\}$ 中唯一的元素。显然次序的构造可在 $O(n^2\theta)$ 时间内完成。
+
+\textbf{断言：}对所有 $k=1,\ldots,n-1$，以及不同的 $x,y\in U\setminus U_{k-1}$，若 $w_k(\{x\})\le w_k(\{y\})$，则
+\[w_k(\{x\})=\min\{w_k(C):x\in C\subseteq U\setminus\{y\}\}.\]
+对 $k$ 归纳。$k=1$ 时显然，因为对所有 $C\subseteq U$，$w_1(C)=\tfrac12f(\varnothing)$。
+现设 $k>1$，且不同的 $x,y\in U\setminus U_{k-1}$ 满足 $w_k(\{x\})\le w_k(\{y\})$。另取 $Z\subseteq U$，使 $u_{k-1}\notin Z$，再取 $z\in Z\setminus U_{k-1}$。由 $u_{k-1}$ 的选取，$w_{k-1}(\{z\})\le w_{k-1}(\{u_{k-1}\})$，由归纳假设得 $w_{k-1}(\{z\})\le w_{k-1}(Z)$。此外，$f$ 的次模性给出：
+
+\srcpage{338}
+\begin{align*}
+&(w_k(Z)-w_{k-1}(Z))-(w_k(\{z\})-w_{k-1}(\{z\}))\\
+&=\tfrac12\bigl(f(Z\cup U_{k-2})-f(Z\cup U_{k-1})-f(U_{k-2})+f(U_{k-1})\bigr)\\
+&\quad-\tfrac12\bigl(f(\{z\}\cup U_{k-2})-f(\{z\}\cup U_{k-1})-f(U_{k-2})+f(U_{k-1})\bigr)\\
+&=\tfrac12\bigl(f(Z\cup U_{k-2})+f(\{z\}\cup U_{k-1})-f(Z\cup U_{k-1})-f(\{z\}\cup U_{k-2})\bigr)\\
+&\ge0.
+\end{align*}
+故 $w_k(Z)-w_k(\{z\})\ge w_{k-1}(Z)-w_{k-1}(\{z\})\ge0$。
+为完成断言的证明，取 $C\subseteq U$，满足 $x\in C$、$y\notin C$，分两种情形。
+
+\textbf{情形1：}$u_{k-1}\notin C$。取上式中的 $Z=C$、$z=x$，得 $w_k(C)\ge w_k(\{x\})$。
+
+\textbf{情形2：}$u_{k-1}\in C$。取 $Z=U\setminus C$、$z=y$，得 $w_k(C)=w_k(U\setminus C)\ge w_k(\{y\})\ge w_k(\{x\})$。
+
+断言得证。将其用于 $k=n-1$、$x=u_n$、$y=u_{n-1}$，得
+\[w_{n-1}(\{u_n\})=\min\{w_{n-1}(C):u_n\in C\subseteq U\setminus\{u_{n-1}\}\}.\]
+对所有满足 $u_n\in C$、$u_{n-1}\notin C$ 的 $C\subseteq U$，有
+\[w_{n-1}(C)=f(C)-\tfrac12\bigl(f(\{u_n\})+f(U\setminus\{u_{n-1}\})-f(U_{n-2})\bigr),\]
+因此引理成立（取 $x:=u_n$、$y:=u_{n-1}$）。\qed
+上述证明来自 Fujishige [1998]。现在可类似于定理8.39的证明继续。
+\st{定理14.25（Queyranne [1998]）} 给定对称次模函数 $f:2^U\to\R$，可以在 $O(n^3\theta)$ 时间内找到使 $f(A)$ 最小的非空真子集 $A\subset U$，其中 $\theta$ 是 $f$ 的预言机时间上界。
+\pr 若 $|U|=1$，问题平凡。否则应用引理14.24，在 $O(n^2\theta)$ 时间内找到不同的 $x,y\in U$，满足 $f(\{x\})=\min\{f(X):x\in X\subseteq U\setminus\{y\}\}$。接着递归寻找 $U\setminus\{x\}$ 的非空真子集，使 $f':2^{U\setminus\{x\}}\to\R$ 最小，其中 $y\notin X$ 时 $f'(X):=f(X)$，$y\in X$ 时 $f'(X):=f(X\cup\{x\})$。容易看出 $f'$ 对称且次模。
+
+设非空真子集 $Y\subset U\setminus\{x\}$ 最小化 $f'$。由对称性，不妨设 $y\in Y$。断言 $\{x\}$ 或 $Y\cup\{x\}$ 最小化 $f$（在 $U$ 的全部非空真子集上）。任取满足 $x\in C$ 的 $C\subset U$。若 $y\notin C$，由 $x,y$ 的选择，$f(\{x\})\le f(C)$；若 $y\in C$，则 $f(C)=f'(C\setminus\{x\})\ge f'(Y)=f(Y\cup\{x\})$。因此对所有非空真子集 $C$，有 $f(C)\ge\min\{f(\{x\}),f(Y\cup\{x\})\}$。
+
+为达到所述时间界，当然不能显式计算整个 $f'$。而是保存 $U$ 的一个划分，初始为全部单元素集。每层递归都把分别包含 $x,y$ 的两个块合并。这样便能借助 $f$ 的预言机高效计算 $f'$。\qed
+
+\srcpage{339}
+Nagamochi 和 Ibaraki [1998] 以及 Rizzi [2000] 进一步推广了该结果。
+\sect{第14章习题}
+\begin{enumerate}[label=\arabic*.]
+\item 设 $G$ 是无向图，$M$ 是 $G$ 中的最大匹配。令 $\F$ 为满足以下条件的 $X\subseteq E(G)$ 的全体：存在关于 $M$ 的特殊花森林 $F$，使 $E(F)\setminus M=X$。证明 $(E(G)\setminus M,\F)$ 是贪心结构。\par
+\textbf{提示：}使用第10章习题23。
+\item 设 $(E,\F)$ 是贪心结构，$c':E\to\R_+$。对 $F\subseteq E$，考虑瓶颈函数 $c(F):=\min\{c'(e):e\in F\}$。证明贪心结构的贪心算法应用于 $(E,\F)$ 和 $c$ 时，能找到使 $c(F)$ 最大的 $F\in\F$。
+\item 本题说明贪心结构也可定义为语言（参见定义15.1）。设 $E$ 是有限集。若字母表 $E$ 上的语言 $L$ 满足以下条件，则称其为\textbf{贪心结构语言}：
+\begin{enumerate}[label=(\alph*)]
+\item $L$ 包含空串；
+\item 对所有 $(x_1,\ldots,x_n)\in L$ 及 $1\le i<j\le n$，$x_i\ne x_j$；
+\item 对所有 $(x_1,\ldots,x_n)\in L$，$(x_1,\ldots,x_{n-1})\in L$；
+\item 若 $(x_1,\ldots,x_n),(y_1,\ldots,y_m)\in L$ 且 $m<n$，则存在 $i\in\{1,\ldots,n\}$，使 $(y_1,\ldots,y_m,x_i)\in L$。
+\end{enumerate}
+若 $L$ 满足(a)、(b)、(c)及以下条件，则称为\textbf{反拟阵语言}：\par
+(d$'$) 若 $(x_1,\ldots,x_n),(y_1,\ldots,y_m)\in L$，且 $\{x_1,\ldots,x_n\}\nsubseteq\{y_1,\ldots,y_m\}$，则存在 $i\in\{1,\ldots,n\}$，使 $(y_1,\ldots,y_m,x_i)\in L$。
+\par 证明：字母表 $E$ 上的语言 $L$ 是贪心结构语言（反拟阵语言），当且仅当集合系统 $(E,\F)$ 是贪心结构（反拟阵），其中 $\F:=\{\{x_1,\ldots,x_n\}:(x_1,\ldots,x_n)\in L\}$。
+\item 设 $U$ 有限，$f:2^U\to\R$。证明 $f$ 次模，当且仅当对所有 $X\subseteq U$、$y,z\in U$，有
+\[f(X\cup\{y,z\})-f(X\cup\{y\})\le f(X\cup\{z\})-f(X).\]
+\item 设 $P$ 是非空多拟阵。证明存在次模、单调函数 $f$，使 $f(\varnothing)=0$ 且 $P=P(f)$。（若所有 $A\subseteq B\subseteq E$ 都有 $f(A)\le f(B)$，则称 $f:2^E\to\R$ 单调。）
+\item[$6.^*$] 证明非空紧集 $P\subseteq\R_+^n$ 是多拟阵，当且仅当：
+\begin{enumerate}[label=(\alph*)]
+\item 对所有 $0\le x\le y\in P$，有 $x\in P$；
+\item 对所有 $x\in\R_+^n$，以及满足 $y,z\le x$、$y,z\in P$ 且对此性质极大的 $y,z$（即 $y\le w\le x$、$w\in P$ 蕴含 $w=y$，而 $z\le w\le x$、$w\in P$ 蕴含 $w=z$），有 $\one y=\one z$。
+\end{enumerate}
+\textbf{注：}这是 Edmonds [1970] 最初的定义。
+\setcounter{enumi}{6}
+\item 证明多拟阵贪心算法应用于向量 $c\in\R^E$ 和次模但未必单调的函数 $f:2^E\to\R$ 时，求得：
+\end{enumerate}
+
+\srcpage{340}
+\[\max\left\{cx:\sum_{e\in A}x_e\le f(A)\text{ 对所有 }A\subseteq E\right\}.\]
+\begin{enumerate}[label=\arabic*.,start=8]
+\item 当 $f,g$ 是拟阵秩函数时，利用带权拟阵交算法产生的 $c_1,c_2$ 构造整数最优对偶解，从而证明定理14.12这一特例。（Frank [1981]）
+\item[$9.^*$] 设 $S$ 是有限集，$f:2^S\to\R$。如下定义 $f':\R_+^S\to\R$：对任意 $x\in\R_+^S$，存在唯一的 $k\in\Z_+$、$\lambda_1,\ldots,\lambda_k>0$ 以及 $\varnothing\subset T_1\subset T_2\subset\cdots\subset T_k\subseteq S$，使 $x=\sum_{i=1}^k\lambda_i\chi^{T_i}$，其中 $\chi^{T_i}$ 是 $T_i$ 的关联向量。令 $f'(x):=\sum_{i=1}^k\lambda_i f(T_i)$。证明 $f$ 次模当且仅当 $f'$ 凸。（Lovász [1983]）
+\setcounter{enumi}{9}
+\item 设 $E$ 有限，$f:2^E\to\R_+$ 次模，且所有 $e\in E$ 满足 $f(\{e\})\le2$。（二元组 $(E,f)$ 有时称为\textbf{2-多拟阵}。）\textbf{多拟阵匹配问题}要求找出满足 $f(X)=2|X|$ 的最大基数集合 $X\subseteq E$（$f$ 当然由预言机给出）。
+\par 设 $E_1,\ldots,E_k$ 是两两不交的无序对，$(E,\F)$ 是由独立性预言机给出的拟阵，其中 $E=E_1\cup\cdots\cup E_k$。\textbf{拟阵奇偶问题}要求找出最大基数的 $I\subseteq\{1,\ldots,k\}$，使 $\bigcup_{i\in I}E_i\in\F$。
+\begin{enumerate}[label=(\alph*)]
+\item 证明拟阵奇偶问题可多项式归约到多拟阵匹配问题。
+\item[(b)$^*$] 证明多拟阵匹配问题可多项式归约到拟阵奇偶问题。\par
+\textbf{提示：}使用次模函数最小化算法。
+\item[(c)$^*$] 证明不存在运行时间关于 $|E|$ 为多项式的多拟阵匹配问题算法。（Jensen 和 Korte [1982]、Lovász [1981]）
+\end{enumerate}
+（一个问题多项式归约到另一个问题，意指前者可由使用后者预言机的多项式时间预言机算法求解，见第15章。）\par
+\textbf{注：}Lovász [1980,1981] 给出了一个重要特例的多项式时间算法。
+\item 若任意满足 $X\cap Y\ne\varnothing$、$X\cup Y\ne S$ 的 $X,Y\subseteq S$ 均有 $f(X)+f(Y)\ge f(X\cup Y)+f(X\cap Y)$，则称 $f:2^S\to\R\cup\{\infty\}$ 为\textbf{交叉次模函数}。
+\par \textbf{次模流问题}如下：给定有向图 $G$，函数 $l:E(G)\to\R\cup\{-\infty\}$、$u:E(G)\to\R\cup\{\infty\}$、$c:E(G)\to\R$，以及交叉次模函数 $b:2^{V(G)}\to\R\cup\{\infty\}$。可行次模流是函数 $f:E(G)\to\R$，满足所有 $e\in E(G)$ 的 $l(e)\le f(e)\le u(e)$，以及
+\[\sum_{e\in\delta^-(X)}f(e)-\sum_{e\in\delta^+(X)}f(e)\le b(X).\]
+\end{enumerate}
+
+\srcpage{341}
+上式对所有 $X\subseteq V(G)$ 都须成立。任务是判定可行流是否存在；若存在，求使下列费用尽可能小的一个：
+\[\sum_{e\in E(G)}c(e)f(e).\]
+\par 证明此问题推广了最小费用流问题，以及在两个多拟阵之交上优化线性函数的问题。
+\par \textbf{注：}Edmonds 和 Giles [1977] 引入的次模流问题可在强多项式时间内求解，见 Fujishige、Röck 和 Zimmermann [1989]；另见 Fleischer 和 Iwata [2000]。
+\begin{enumerate}[label=\arabic*.,start=12]
+\item[$12.^*$] 证明描述可行次模流的不等式系统（习题11）是 TDI。证明这蕴含定理14.12及19.10。（Edmonds 和 Giles [1977]）
+\setcounter{enumi}{12}
+\item 证明基多面体的顶点集合恰好是 $U$ 上所有全序 $\prec$ 所对应的向量 $b^\prec$ 的集合，其中
+\[b^\prec(u):=f(\{v\in U:v\preceq u\})-f(\{v\in U:v\prec u\})\quad(u\in U).\]
+\textbf{提示：}见定理14.11的证明。
+\item 证明引理8.38是引理14.24的特例。
+\end{enumerate}
+\sect{第14章参考文献}
+\input{references14a.tex}
+\srcpage{342}
+\input{references14b.tex}

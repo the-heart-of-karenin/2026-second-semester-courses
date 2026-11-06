@@ -1,0 +1,50 @@
+13.4 The Greedy Algorithm 305
+some solution found by the Best-In-Greedy for the Maximization Problem, and
+by OPT(E, F, c) the cost of an optimum solution. Then
+q(E, F) ≤ G(E, F, c)
+OPT(E, F, c) ≤ 1
+for all c : E → R+. There is a cost function where the lower bound is attained.
+Proof: Let E ={ e1, e2,..., en }, c : E → R+, and c(e1) ≥ c(e2) ≥ ... ≥ c(en).
+Let Gn be the solution found by the Best-In-Greedy (when sorting E like this),
+while On is an optimum solution. We deﬁne Ej :={ e1,..., ej }, G j := Gn ∩ Ej
+and Oj := On ∩ Ej ( j = 0,..., n). Set dn := c(en) and dj := c(ej ) − c(ej+1) for
+j = 1,..., n − 1.
+Since Oj ∈ F, we have |Oj |≤ r(Ej ). Since G j is a basis of Ej , we have
+|G j |≥ ρ(Ej ). With these two inequalities we conclude that
+c(Gn) =
+n∑
+j=1
+(|G j |−| G j− 1|) c(ej )
+=
+n∑
+j=1
+|G j | dj
+≥
+n∑
+j=1
+ρ(Ej ) dj
+≥ q(E, F)
+n∑
+j=1
+r(Ej ) dj (13.1)
+≥ q(E, F)
+n∑
+j=1
+|Oj | dj
+= q(E, F)
+n∑
+j=1
+(|Oj |−| Oj− 1|) c(ej )
+= q(E, F) c(On).
+Finally we show that the lower bound is sharp. Choose F ⊆ E and bases
+B1, B2 of F such that
+|B1|
+|B2| = q(E, F).
+Deﬁne
+c(e) :=
+{ 1 for e ∈ F
+0 for e ∈ E \ F
+and sort e1,..., en such that c(e1) ≥ c(e2) ≥ ... ≥ c(en) and B1 ={ e1,..., e|B1|}.
+Then G(E, F, c) =| B1| and OPT(E, F, c) =| B2|, and the lower bound is at-
+tained. 2
+In particular we have the so-called Edmonds-Rado Theorem:

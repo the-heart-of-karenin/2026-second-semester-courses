@@ -1,0 +1,86 @@
+\documentclass[UTF8,10pt,a4paper]{ctexart}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,urlcolor=blue!45!black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{动态图：维护层状证书的初步思路}
+\fancyhead[R]{问题 15.6 研究笔记}
+\fancyfoot[C]{\thepage}
+\newtheorem{proposition}{命题}[section]
+\newcommand{\cut}{\delta}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{动态图：维护层状证书的初步思路\\\large 问题 15.6 的独立研究笔记}
+\author{从《从次模割到层状证书》的原第九节移出}
+\date{2026 年 9 月}
+
+\begin{document}
+\maketitle
+
+\paragraph{问题与记号。}设 $G=(V,E)$ 是无向图，边费用 $c_e\ge0$，$f$ 是固定的非负、对称割需求。原始割覆盖 LP 与对偶分别为
+\begin{align*}
+\min\quad&\sum_{e\in E}c_ex_e
+&\text{s.t.}\quad&\sum_{e\in\cut(S)}x_e\ge f(S),\quad x_e\ge0,\\
+\max\quad&\sum_S f(S)\lambda_S
+&\text{s.t.}\quad&\sum_{S:e\in\cut(S)}\lambda_S\le c_e,\quad \lambda_S\ge0.
+\end{align*}
+其中 $S$ 遍历非平凡二划分，每个无向割只计一次。若一对可行解 $(x,\lambda)$ 的目标值相等，则由弱对偶知二者均最优。$\supp\lambda$ 表示正权割的集合；它无交叉时，固定根并取不含根的一侧，可将其看作层状集合族。本笔记保存原讲义中关于动态维护的初步观察，不构成完整的动态算法。
+
+\section{把「维护层状证书」写成数学问题}
+
+下述观察假定顶点集与需求 $f$ 固定，只允许候选边及其费用变化；若 $f$ 本身依赖图，更新还会改动指数多个割需求，是更广的问题。设更新前已有满足强对偶的原始/对偶对 $(x,\lambda)$，且 $\supp\lambda$ 无交叉。
+
+\subsection{树路径表示与两个精确免更新判据}
+
+固定根 $r$，将每个割取不含 $r$ 的代表。层状族的包含关系给出一棵树：每个有正权的集合对应树上一条向父节点的边，权重为 $\lambda_S$；补上必要的单点叶子。于是任意图边 $e=uv$ 的对偶负载
+\begin{equation}\label{eq:pathload}
+L(e)=\sum_{S:e\in\cut(S)}\lambda_S
+\end{equation}
+恰是这棵树上从 $u$ 到 $v$ 的路径权重和。\emph{在支撑树不变时}，可用通常的树路径求和数据结构加快负载查询；解交引起的树结构更新另需分析。
+
+\begin{proposition}[更新后无需改变最优证书的充分条件]\label{prop:no-op}
+保持 $f$ 不变。(i) 插入费用为 $c_e$ 的新边，若 $L(e)\le c_e$，旧 $(x,\lambda)$ 扩展 $x_e=0$ 后仍是一对最优解。(ii) 删除边 $e$，若旧 $x_e=0$，限制到余下边后的旧 $(x,\lambda)$ 仍是一对最优解。
+\end{proposition}
+\begin{proof}
+两种情形下，旧原始解与旧对偶解都在新 LP 中可行，且两者目标值仍相等。由弱对偶即为最优。
+\end{proof}
+
+费用变化也有类似的廉价检验：若增费的边满足 $x_e=0$，或降费后仍满足 $L(e)\le c'_e$ 且 $x_e=0$，旧证书仍最优。更一般时，旧原始与对偶提供更新后的上下界，可直接计算最优性差距。
+
+\subsection{一条新边可能迫使线性多个显式权重改变}
+
+\begin{proposition}[显式系数的线性改动例]
+存在固定、斜超模的 $0$--$1$ 需求和一幅 $n$ 顶点图，使插入\emph{一条}边后，任何新对偶可行解都必须改变旧最优层状对偶中 $\Omega(n)$ 个正权系数。
+\end{proposition}
+\begin{proof}
+取一条 $s=v_0,v_1,\ldots,v_k=t$ 的路径（$k=n-1$），每条边费用为 $1$。令 $f(S)=1$ 当且仅当 $S$ 分开 $s,t$。对于每个路径前缀 $S_i=\{v_0,\ldots,v_i\}$（$0\le i<k$），赋 $\lambda_{S_i}=1$。每条路径边恰被一个这样的前缀割跨过，故对偶可行，目标值为 $k$；原始问题中每个前缀割约束迫使相应路径边的 $x_e\ge1$，故这确为最优。它还是唯一的最优对偶：对任意可行 $\lambda$，将 $k$ 条路径边的对偶约束求和，得到
+\[
+\sum_S |\cut(S)\cap E|\lambda_S\le k,
+\qquad
+\sum_S f(S)\lambda_S\le\sum_S |\cut(S)\cap E|\lambda_S.
+\]
+第二式成立，因为路径连通，每个非平凡割至少跨越一条路径边，而 $f(S)\le1$。若目标达到 $k$，两式均取等号，所以正权割都恰跨越一条路径边且满足 $f(S)=1$；它们只能是上述前缀割（视互补为同一割）。每条路径边的约束又须取等号，故每个前缀权重均为 $1$。
+
+现在插入费用为 $1$ 的直连边 $st$。它跨越\emph{每个} $s$--$t$ 割，所以任何新对偶可行解满足 $\sum_{S\text{ 分开 }s,t}\lambda_S\le1$。原有 $k$ 个系数都为 $1$，其中至多一个还能保持为 $1$；至少 $k-1=\Omega(n)$ 个须改变。
+\end{proof}
+
+这只是\emph{显式逐系数写入}的障碍，不是隐式表示更新的时间下界。它提示合理目标应允许延迟或压缩表示，或者承认一次高影响更新需较大代价。
+
+\subsection{单边插入后的单调修复：一个可验证的基线}
+
+若新边 $e$ 使 $L(e)>c_e$，令过载量 $\Delta=L(e)-c_e$。只在分开 $e$ 两端的旧层状割上减少权重，选 $0\le d_S\le\lambda_S$、$\sum_{S:e\in\cut(S)}d_S=\Delta$，并令 $\lambda'_S=\lambda_S-d_S$。旧边负载只会下降，新边刚好满足约束，支撑仍层状。因此这是一个始终可行的\emph{局部修复}。在「只许逐坐标减少旧 $\lambda$」这个受限类别里，按 $f(S)$ 从小到大削减，相当于连续背包，最小化目标损失 $\sum_S f(S)d_S$。
+
+插边后旧原始解取 $x_e=0$ 仍可行，提供上界 $U=\sum_{a\in E}c_ax_a$；修复后的对偶提供下界 $D=\sum_S f(S)\lambda'_S$。若 $U\le(1+\varepsilon)D$，就得到可即时验证的 $(1+\varepsilon)$ 近似证书；若差距过大，再调用较昂贵的再优化。这个修复\emph{未必全局最优}，更没有自动得到多对数更新时间。如何高效实现树路径上的优先削减，以及如何摊还重新求解次数，才是值得推进的动态问题。
+
+\paragraph{后续路线。}若选动态方向作大作业，先固定需求 $f$ 和更新类型，做出命题~\ref{prop:no-op}、路径负载结构及单调修复的正确实现；再以更新序列比较「每次重算」「只用免更新判据」「局部修复+必要时重算」。若能给出非平凡的更新次数或摊还界，才是进一步的理论推进。
+
+\begin{thebibliography}{9}
+\bibitem{dynamiclp} S. Bhattacharya, P. Kiss, T. Saranurak, ``Dynamic Algorithms for Packing-Covering LPs via Multiplicative Weight Updates,'' arXiv:2207.07519 (2022). \url{https://arxiv.org/abs/2207.07519}。其一般 LP 的动态结果和条件下界不可直接当作结构化割 LP 的下界。
+\end{thebibliography}
+
+\end{document}

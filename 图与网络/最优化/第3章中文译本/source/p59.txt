@@ -1,0 +1,51 @@
+                                                                                    3.3 Duality            59
+
+                                                                                    
+                                        x         A    −I            x                  b
+          max            0   −1              :                                  ≤                .
+                                        w         0    −I            w                  0
+
+The dual of this LP is
+                                                                                            
+                              y         A       0          y                0
+    min      b       0              :                               =                   , y, z ≥ 0 ,
+                              z         −I       −I         z               −1
+
+or, equivalently,
+                                  min{yb : y A = 0, 0 ≤ y ≤ 1}.                                          (3.6)
+Since both (3.5) and (3.6) have a solution (x = 0, w = |b|, y = 0), we can apply
+Theorem 3.16. So the optimum values of (3.5) and (3.6) are the same. Since the
+system Ax ≤ b has a solution iff the optimum value of (3.5) is zero, the proof is
+complete.                                                                      2
+
+   So the fact that a linear inequality system Ax ≤ b has no solution can be
+proved by giving a vector y ≥ 0 with y A = 0 and yb < 0. We mention two
+equivalent formulations of Theorem 3.19:
+Corollary 3.20. There is a vector x ≥ 0 with Ax ≤ b if and only if yb ≥ 0 for
+each vector y ≥ 0 with y A ≥ 0.
+                                                         
+                                             A            b
+Proof: Apply Theorem 3.19 to the system           x≤          .            2
+                                             −I           0
+
+Corollary 3.21. (Farkas [1894]) There is a vector x ≥ 0 with Ax = b if and
+only if yb ≥ 0 for each vector y with y A ≥ 0.
+                                                          
+                                                A         b
+Proof: Apply Corollary 3.20 to the system           x≤         , x ≥ 0. 2
+                                               −A        −b
+
+    Corollary 3.21 is usually known as Farkas’ Lemma. The above results in turn
+imply the Duality Theorem 3.16 which is interesting since they have quite easy
+direct proofs (in fact they were known before the Simplex Algorithm); see
+Exercises 6 and 7.
+    We have seen how to prove that an LP is infeasible. How can we prove that
+an LP is unbounded? The next theorem answers this question.
+Theorem 3.22. If an LP is unbounded, then its dual LP is infeasible. If an LP has
+an optimum solution, then its dual also has an optimum solution.
+Proof: The ﬁrst statement follows immediately from Proposition 3.12.
+     To prove the second statement, suppose that the (primal) LP max{cx : Ax ≤ b}
+has an optimum solution x ∗ , but the dual min{yb : y A = c, y ≥ 0} is infeasible
+(it cannot be unbounded due to the ﬁrst statement).
+     If the dual is infeasible, i.e. there is no y ≥ 0 with A y = c, we apply Farkas’
+Lemma (Corollary 3.21) to get a vector z with z A ≥ 0 and zc < 0. But then x ∗ −z

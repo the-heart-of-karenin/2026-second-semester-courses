@@ -1,0 +1,47 @@
+14.3 Minimizing Submodular Functions 331
+f (∅) − M|A| for all A ⊆ E. h is modular. Moreover, for all A ⊆ E we have
+h(A) ≤ g′(A)+ f (∅)− M|A|= g(A) and h(A) = 1lx − h′(E \ A)+ f (∅)− M|A|≥
+g(E) + M|E|− M|A|− f ′(E \ A) = f (A). 2
+The analogy to convex and concave functions is obvious; see also Exercise 9.
+14.3 Minimizing Submodular Functions
+The Separation Problem for a polymatroid P( f ) and a vector x asks for a set A
+with f (A)< ∑
+e∈ A x(e). So this problem reduces to ﬁnding a set A minimizing
+g(A), where g(A) := f (A) − ∑
+e∈ A x(e). Note that if f is submodular, then g is
+also submodular. Therefore it is an interesting problem to minimize submodular
+functions.
+Another motivation might be that submodular functions can be regarded as
+the discrete analogue of convex functions (Corollary 14.15 and Exercise 9). We
+have already solved a special case in Section 8.7: ﬁnding the minimum cut in an
+undirected graph can be regarded as minimizing a certain symmetric submodular
+function f :2
+U → R+, over 2 U \{ ∅ , U }. Before returning to this special case
+we ﬁrst show how to minimize general submodular functions. We assume that we
+are given an upper bound on size ( f (S)). For simplicity we restrict ourselves to
+integer-valued submodular functions:
+Submodular Function Minimization Problem
+Instance: A ﬁnite set U. A submodular function f :2 U → Z (given by an
+oracle).
+Task: Find a subset X ⊆ U with f (X) minimum.
+Gr¨otschel, Lov´asz and Schrijver [1981] showed how this problem can be solved
+with the help of the Ellipsoid Method. The idea is to determine the minimum
+by binary search; this will reduce the problem to the Separation Problem for a
+polymatroid. Using the equivalence of separation and optimization (Section 4.6),
+it thus sufﬁces to optimize linear functions over polymatroids. However, this can
+be easily done by the Polymatroid Greedy Algorithm. We ﬁrst need an upper
+bound on | f (S)| for S ⊆ U:
+Proposition 14.16. For any submodular function f :2
+U → Z and any S ⊆ U
+we have
+f (U)−
+∑
+u∈ U
+max{0, f ({u})− f (∅)}≤ f (S) ≤ f (∅)+
+∑
+u∈ U
+max{0, f ({u})− f (∅)}.
+In particular, a number B with | f (S)|≤ B for all S ⊆ U can be computed in
+linear time, with |U |+ 2 oracle calls to f .
+Proof: By repeated application of submodularity we get for ∅ ̸= S ⊆ U (let
+x ∈ S):

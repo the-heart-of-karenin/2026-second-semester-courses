@@ -1,0 +1,43 @@
+13.1 Independence Systems and Matroids 293
+(7) Steiner Tree Problem
+Given a connected undirected graph G, weights c : E(G) → R+, and a set
+T ⊆ V(G) of terminals, ﬁnd a Steiner tree for T , i.e. a tree S with T ⊆ V(S)
+and E(S) ⊆ E(G), such that c(E(S)) is minimum.
+Here E = E(G) and F ={ F ⊆ E : F is a subset of a Steiner tree for T }.
+(8) Maximum Weight Branching Problem
+Given a digraph G and weights c : E(G) → R, ﬁnd a maximum weight
+branching in G.
+Here E = E(G) and F is the set of branchings in G.
+(9) Maximum Weight Matching Problem
+Given an undirected graph G and weights c : E(G) → R, ﬁnd a maximum
+weight matching in G.
+Here E = E(G) and F is the set of matchings in G.
+This list contains NP-hard problems ((1),(2),(4),(7)) as well as polynomially
+solvable problems ((5),(6),(8),(9)). Problem (3) is NP-hard in the above form but
+polynomially solvable for nonnegative weights. (See Chapter 15.)
+Deﬁnition 13.3. An independence system is a matroid if
+(M3) If X, Y ∈ F and |X | > |Y |, then there is an x ∈ X \ Y with Y ∪{ x}∈ F.
+The name matroid points out that the structure is a generalization of matrices.
+This will become clear by our ﬁrst example:
+Proposition 13.4. The following independence systems (E, F) are matroids:
+(a) E is a set of columns of a matrix A over some ﬁeld, and
+F :={ F ⊆ E : The columns in F are linearly independent over that ﬁeld }.
+(b) E is a set of edges of some undirected graph G and
+F :={ F ⊆ E : (V(G), F) is a forest }.
+(c) E is a ﬁnite set, k an integer and F :={ F ⊆ E : |F|≤ k}.
+(d) E is a set of edges of some undirected graph G, S a stable set in G, ks integers
+(s ∈ S) and F :={ F ⊆ E : |δF(s)|≤ ks for all s ∈ S}.
+(e) E is a set of edges of some digraph G, S ⊆ V(G), ks integers ( s ∈ S) and
+F :={ F ⊆ E : |δ−
+F (s)|≤ ks for all s ∈ S}.
+Proof: In all cases it is obvious that (E, F) is indeed an independence system.
+So it remains to show that (M3) holds. For (a) this is well known from Linear
+Algebra, for (c) it is trivial.
+To prove (M3) for (b), let X, Y ∈ F and suppose Y ∪{ x} ̸∈ F for all x ∈
+X \ Y . We show that |X |≤| Y |. For each edge x ={ v,w }∈ X, v and w are in
+the same connected component of (V(G), Y). Hence each connected component
+Z ⊆ V(G) of (V(G), X) is a subset of a connected component of (V(G), Y).S o
+the number p of connected components of the forest (V(G), X) is greater than
+or equal to the number q of connected components of the forest (V(G
+), Y). But
+then |V(G)|−| X |= p ≥ q =| V(G)|−| Y |, implying |X |≤| Y |.

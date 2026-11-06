@@ -1,0 +1,55 @@
+\documentclass[UTF8,11pt,a4paper,fontset=windows]{ctexart}
+\usepackage[margin=23mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,graphicx,enumitem,fancyhdr,hyperref,booktabs,longtable,tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\hypersetup{unicode=true,hypertexnames=false,colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,pdftitle={组合优化：理论与算法（第三版）拟阵学习笔记}}
+\pdfstringdefDisableCommands{\def\quad{ }}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\linespread{1.12}
+\setlist{nosep,leftmargin=2.5em}
+\allowdisplaybreaks
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small 组合优化：理论与算法（第三版）}
+\fancyhead[R]{\small 拟阵学习笔记}
+\fancyfoot[C]{\thepage}
+\newcommand{\F}{\mathcal F}
+\newcommand{\B}{\mathcal B}
+\newcommand{\Cc}{\mathcal C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\st}[1]{\par\medskip\noindent\textbf{#1}\quad}
+\newcommand{\pr}{\par\noindent\textbf{证明。}\;}
+\newcommand{\qed}{\hfill$\square$\par}
+\newcommand{\srcpage}[1]{\clearpage\phantomsection\pdfbookmark[3]{原书第#1页}{src#1}\noindent{\small\color{gray}原书第 #1 页}\par\smallskip}
+\newcommand{\sect}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\alg}[1]{\par\medskip\noindent\textbf{#1}\par}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\one}{\mathbf 1}
+\begin{document}
+\begin{titlepage}\centering\vspace*{25mm}
+{\Huge\bfseries 组合优化：理论与算法\par}\vspace{8mm}
+{\Large 第三版\par}\vspace{17mm}
+{\LARGE\bfseries 拟阵学习笔记\par}\vspace{5mm}
+\vspace{15mm}
+{\large Bernhard Korte\quad Jens Vygen\par}\vfill
+\begin{minipage}{0.88\textwidth}\small
+\textbf{学习稿说明}\quad 本稿依据 Bernhard Korte 与 Jens Vygen 的《组合优化：理论与算法》第三版中文译稿整理，选取并整理独立系统、拟阵及其贪心算法、拟阵交与拟阵划分等内容。参考文献的作者、题名和出版信息保留原文，以便检索。\par
+术语约定：matroid 译为“拟阵”，circuit 在拟阵语境中译为“回路”，greedoid 译为“贪心结构”，antimatroid 译为“反拟阵”，oracle 译为“预言机”。数学排版由 LaTeX 重建。\par
+\end{minipage}\par\vspace{12mm}
+{\small 中文学习稿\quad 2026年10月\par}
+\end{titlepage}
+\tableofcontents
+\input{chapter13.tex}
+\input{chapter_matroid_complexes.tex}
+\sect{参考文献}
+\input{references13a.tex}
+\input{references13b.tex}
+\end{document}

@@ -1,0 +1,51 @@
+13.4 The Greedy Algorithm 303
+1 ≤ min{c(A) : A ∈ F}
+= max
+{
+1ly : y ∈ RF ′
++ ,
+∑
+B∈ F ′:e∈ B
+yB ≤ c(e) for all e ∈ E
+}
+,
+so let y ∈ RF ′
++ be a vector with 1 ly = 1 and ∑
+B∈ F ′:e∈ B yB ≤ c(e) for all e ∈ E.
+Then xe :=∑
+B∈ F ′:e∈ B yB (e ∈ E) deﬁnes a vector x ∈ P′ with x ≤ c, proving
+that c ∈
+{
+x + y : x ∈ P′, y ∈ RE
++
+}
+. 2
+For example, this theorem implies the Max-Flow-Min-Cut Theorem 8.6 quite
+directly: Let (G, u, s, t) be a network. By Exercise 1 of Chapter 7 the minimum
+length of an s-t-path in (G, u) equals the maximum number of s-t-cuts such that
+each edge e is contained in at most u(e) of them. Hence the clutter of s-t-paths
+(example (3) in the above list) has the Max-Flow-Min-Cut Property, and so has
+its blocking clutter. Now (c) applied to the clutter of minimal s-t-cuts implies the
+Max-Flow-Min-Cut Theorem.
+Note however that Theorem 13.18 does not guarantee an integral vector attain-
+ing the maximum in (c), even if c is integral. The clutter of T -joins for G = K
+4
+and T = V(G) shows that this does not exist in general.
+13.4 The Greedy Algorithm
+Again, let (E, F) be an independence system and c : E → R+. We consider the
+Maximization Problem for (E, F, c) and formulate two “greedy algorithms”.
+We do not have to consider negative weights since elements with negative weight
+never appear in an optimum solution.
+We assume that (E, F) is given by an oracle. For the ﬁrst algorithm we simply
+assume an independence oracle, i.e. an oracle which, given a set F ⊆ E, decides
+whether F ∈ F or not.
+Best-In-Greedy Algorithm
+Input: An independence system (E, F), given by an independence oracle.
+Weights c : E → R+.
+Output: A set F ∈ F.
+1⃝ Sort E ={ e1, e2,..., en } such that c(e1) ≥ c(e2) ≥ ··· ≥ c(en).
+2⃝ Set F :=∅ .
+3⃝ For i := 1 to n do: If F ∪{ ei }∈ F then set F := F ∪{ ei }.
+The second algorithm requires a more complicated oracle. Given a set F ⊆ E,
+this oracle decides whether F contains a basis. Let us call such an oracle a basis-
+superset oracle .

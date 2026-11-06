@@ -1,0 +1,326 @@
+Journal of the Operations Research Society of Japan              ⃝
+                                                                 c The Operations Research Society of Japan
+Vol. 59, No. 2, April 2016, pp. 218–223
+
+
+
+
+ON UNCROSSING GAMES FOR SKEW-SUPERMODULAR FUNCTIONS
+
+
+                                               Hiroshi Hirai
+                                          The University of Tokyo
+
+
+                        (Received September 29, 2015; Revised December 12, 2015)
+
+Abstract In this note, we consider the uncrossing game for a skew-supermodular function f , which is a two-
+player game with players, Red and Blue, and abstracts the uncrossing procedure in the cut-covering linear
+program associated with f . Extending the earlier results by Karzanov for {0, 1}-valued skew-supermodular
+functions, we present an improved polynomial time strategy for Red to win, and give a strongly polynomial
+time uncrossing procedure for dual solutions of the cut-covering LP as its consequence. We also mention its
+implication on the optimality of laminar solutions.
+
+    Keywords: Combinatorial optimization, uncrossing game, skew-supermodular function,
+    cut-covering LP
+
+1. Introduction
+Let V be a finite set, and let S(V ) denote the set of all bi-partitions of V . A member
+{X, V \ X} of S(V ) is also denoted by X or V \ X (if no confusion occurs). A pair X, Y
+of members in S(V ) is said be crossing if X ∩ Y , V \ (X ∪ Y ), X \ Y , and Y \ X are all
+nonempty. A family F ⊆ S(V ) is called laminar if there is no crossing pair in F. A function
+f : S(V ) → R+ is called skew-supermodular if it satisfies
+
+              f (X) + f (Y ) ≤ max{f (X ∩ Y ) + f (X ∪ Y ), f (X \ Y ) + f (Y \ X)}
+
+for every pair X, Y ∈ S(V ). For a skew-supermodular function f , we consider the following
+game involving two players Blue and Red, which we call the uncrossing game.
+Uncrossing game for skew-supermodular function f
+Input: A family F ⊆ S(V ).
+Step 1: If F is laminar, then Red wins; the game terminates.
+Step 2: Otherwise, Red chooses a crossing pair (X, Y ) in F, chooses (X ′ , Y ′ ) ∈ {(X ∩
+    Y, X ∪ Y ), (X \ Y, Y \ X)} satisfying
+
+                                      f (X) + f (Y ) ≤ f (X ′ ) + f (Y ′ ),
+
+   and replaces X, Y by X ′ , Y ′ in F.
+Step 3: Blue returns one of X, Y to F. Go to step 1.
+Here we assume that Red has an evaluation oracle of f .
+   The uncrossing game abstracts the uncrossing procedure in combinatorial optimization,
+and was originally introduced by Hurkens, Lovász, Schrijver and Tardos [3]. The original
+formulation is the following. For an input family F of subsets of V , if F is a chain, then
+Red wins. Otherwise Red chooses an incomparable pair (X, Y ) in F and replaces (X, Y ) by
+(X ∩ Y, X ∪ Y ) in F. Then Blue returns one of X and Y to F. Hurkens, Lovász, Schrijver
+and Tardos showed that there is a strategy (i.e., a way of choosing (X, Y )) for Red to win
+
+
+                                                      218
+                                  Skew-supermodular Uncrossing Games                           219
+
+after a polynomial number O(|V ||F|) of iterations. Karzanov [5] considered a symmetric
+generalization on cross-closed families. Here a family S ⊆ S(V ) is called cross-closed if for
+X, Y ∈ S, X ∩ Y, X ∪ Y belong to S or X \ Y, Y \ X belong to S. In his uncrossing game,
+the input is a family F ⊆ S, and Red chooses a crossing pair (X, Y ) in F and chooses
+(X ′ , Y ′ ) ∈ {(X ∩ Y, X ∪ Y ), (X \ Y, Y \ X)} with X ′ , Y ′ ∈ S. As was noticed by Karzanov,
+the original uncrossing game can be viewed as a special case of the cross-closed family on
+V ∪ {s, t} consisting of X with |X ∪ {s, t}| = 1. He showed that there is a strategy for Red
+to win after O(|V |4 |F|) iterations.
+    A cross-closed family S is naturally identified with a {0, 1}-valued skew-supermodular
+function f defined by f (X) := 1 for X ∈ S and f (X) := 0 otherwise. By this identification,
+the uncrossing game on the cross-closed family S reduces to our setting. We do not know
+whether the converse reduction is possible. Also Karzanov’s strategy [5] seems not to be
+applied to our generalization. Indeed, his strategy includes selection rules of type “if X ̸∈ S,
+then Red takes...”[5, p. 222]. The main aim of this note is to present an improved Red-win
+strategy for our generalization.
+Theorem 1. For every skew-supermodular function f and every input F, there exists a
+strategy for Red to win after O(|V |3 |F|) iterations
+    The rest of the paper is organized as follows. In Section 2, we prove Theorem 1. Our
+strategy basically follows Karzanov’s one in high level, and incorporates nontrivial modifi-
+cations in an essential part. In Section 3, we explain implications of this result on skew-
+supermodular cut-covering linear programs, which constitute an important subclass of linear
+programs appearing from a wide variety of network design problems in combinatorial opti-
+mization. As was noted by [5] (for {0, 1}-skew-supermodular cases), the uncrossing game
+naturally arises from the uncrossing procedure of dual solutions, and a Red-win strategy
+gives rise to a strongly polynomial time uncrossing algorithm. Our strategy in Theorem 1 is
+applicable to general skew-supermodular cut-covering linear programs beyond that treated
+in [5]. We also present an unexpected consequence on the optimality property of laminar
+dual solutions.
+
+2. Proof
+Let F be a set of bi-partitions on V . A member X ∈ F is said to be trivial (in F) if no
+member of F is crossing with X. If Z is not crossing with X and Y , then it is not crossing
+with X ∩ Y , X ∪ Y , X \ Y , and Y \ X. In particular, a trivial member remains trivial after
+uncrossings. Therefore we can assume that a trivial member is removed from F whenever
+it appears. Define an equivalence relation ∼F on V by i ∼F j if there is no X ∈ F with
+|{i, j} ∩ X| = 1. An equivalence class of this relation is called an atom. If i ̸∼F j, then i and
+j are said to be separated. Obviously each X ∈ F is a disjoint union of atoms. Therefore
+we can identify the ground set V with the set of all atoms. Notice that i ∼{X∩Y,X∪Y } j
+implies i ∼{X,Y } j, and i ∼{X\Y,Y \X} j implies i ∼{X,Y } j. Therefore, if F ′ is obtained from
+F through iterations of the game, then ∼F ′ coarsens ∼F , i.e., i ∼F j implies i ∼F ′ j. By
+this fact together with the removal of trivial members, it happens that several atoms in F
+are joined to a single atom in F ′ . In this case, the cardinality of the ground set decreases.
+     We first consider the essential case of input F to which the argument in [5] is not directly
+applicable. Let V = {1, 2, . . . , n} (n ≥ 4). Suppose that F satisfies:
+(A) F is the disjoint union of two subsets A and B such that every member in A takes
+  form {1, 2, . . . , i} for some 2 ≤ i ≤ n − 2, and every member of B takes form {2, 3, . . . , j}
+  for some 3 ≤ j ≤ n − 1.
+
+
+               Copyright ⃝
+                         c by ORSJ. Unauthorized reproduction of this article is prohibited.
+ 220                                              H. Hirai
+
+In the following, we denote {i, i + 1, i + 2, . . . , j} by [i, j]. We may assume that B ̸= ∅. Let
+d(≥ 3) be the minimum number for which [2, d] belongs to B. We can assume that [1, i]
+belongs to A for i = 2, 3, . . . , d − 1; otherwise some i and i + 1 are not separated, and are
+joined to a single element. We give a strategy for Red to keep the game of form (A) and to
+decrease n + |B| after O(d) iterations.
+     Initially, Red evaluates f ([1, d−1])+f ([2, d]), f ({1})+f ({d}), and f ([2, d−1])+f ([1, d]).
+Suppose that f ([1, d−1])+f ([2, d]) ≤ f ({1})+f ({d}) holds. Red chooses X = [1, d−1], Y =
+[2, d], chooses X ′ = X \ Y = {1}, and Y ′ = Y \ X = {d}, and replaces X, Y by X ′ , Y ′ ; both
+X ′ , Y ′ are singletons (trivial) and vanish. If Blue returns X = [1, d − 1], then |B| decreases.
+If Blue returns Y = [2, d], then |B| does not change, d and d − 1 are not separated, and
+hence n decreases.
+     Suppose that f ([1, d − 1]) + f ([2, d]) > f ({1}) + f ({d}) holds. By skew-supermodularity,
+f ([1, d − 1]) + f ([2, d]) ≤ f ([2, d − 1]) + f ([1, d]) must hold. Suppose that d = 3. Red chooses
+X = [1, 2], Y = [2, 3], X ′ = X ∪ Y = [1, 3], and Y ′ = X ∩ Y = {2}. Then {2} vanishes;
+in particular |B| does not increase. If Blue returns X = [1, 2], then |B| decreases. If Blue
+returns Y = [2, 3], then 2 and 3 are not separated, and n decreases.
+     Suppose that d > 3. Red computes the smallest k ∈ [2, d − 1] such that
+       f ([1, l]) + f ([2, l + 1]) ≤ f ([2, l]) + f ([1, l + 1]) (l = k, k + 1, . . . , d − 1).   (2.1)
+Such an index k actually exists since f ([1, d−1])+f ([2, d]) ≤ f ([2, d−1])+f ([1, d]). If k > 2,
+then it holds f ([1, k − 1]) + f ([2, k]) > f ([2, k − 1]) + f ([1, k]), and by skew-supermodularity,
+it holds
+                           f ([1, k − 1]) + f ([2, k]) ≤ f ({1}) + f ({k}).                    (2.2)
+Also, in the case of k = 2, (2.2) holds since f ({1}) + f ({2}) ≤ f ({1}) + f ({2}). Adding
+inequalities (2.1), we obtain
+                             f ([1, k]) + f ([2, d]) ≤ f ([1, d]) + f ([2, k]).
+Red chooses X = [1, k], Y = [2, d], X ′ = X ∪ Y = [1, d], and Y ′ = X ∩ Y = [2, k], and
+replaces X, Y by X ′ , Y ′ . If Blue returns X = [1, k], then |B| does not change, d decreases,
+and Red goes to the initial stage above. Suppose that Blue returns Y = [2, d]. If k = 2,
+then Y ′ is a singleton and vanishes, and 2 and 3 are not separated; hence n + |B| decreases.
+Suppose that k > 2. In the next iteration, |B| increases by one, and d becomes k. By (2.2),
+Red chooses X = [1, k − 1], Y = [2, k], X ′ = X \ Y = {1}, and Y ′ = Y \ X = {k}. Both
+X ′ and Y ′ are singletons and vanish in the next iteration. If Blue returns [1, k − 1], then B
+decreases by one, k and k + 1 are not separated (since now [1, k] does not exist), and n + |B|
+is smaller than that in two iterations before. If Blue returns [2, k], then k − 1 and k are not
+separated, n + |B| is equal to that in two iterations before, d = k is smaller than before, and
+Red goes to the initial stage above.
+    Summarizing, by using the above strategy, Red can keep the game of form (A) and
+decrease n + |B| after O(d) iterations. Thus Red wins after O(n2 ) iterations. We remark
+that the above strategy is easily adapted for the case where Blue is allowed to return none
+of X, Y .
+    The rest of arguments is exactly the same as that given in [5], and is sketched as follows.
+A subset X ⊆ V is said to be 2-partitioned for F if X intersects at most two atoms with
+respect to F. Suppose that
+(B) the input F is the disjoint union of two laminar families C and D such that for each
+    X ∈ C, X or V \ X is 2-partitioned for D.
+
+
+                Copyright ⃝
+                          c by ORSJ. Unauthorized reproduction of this article is prohibited.
+                                  Skew-supermodular Uncrossing Games                           221
+
+In this case, for any X ∈ C the family D ∪ {X} satisfies the condition (A) after removing
+trivial members in D ∪ {X}. Indeed, D ∪ {X} consists of X and members Y1 , Y2 , . . . , Ym
+in D crossing with X. We can assume that X is 2-partitioned for D. By this condition, X
+is the disjoint union of Z1 and Z2 such that X ∩ Yi ∈ {Z1 , Z2 } for i = 1, 2, . . . , m. We can
+assume that both Z1 and Z2 are nonempty, and Z2 = X ∩ Yi for each i (by Yi ↔ V \ Yi ).
+By the laminarity of D together with ∅ =     ̸ Z1 ⊆ V \ (Yi ∪ Yj ) and ∅ ̸= Z2 ⊆ Yi ∩ Yj , we have
+Yi ⊂ Yj or Yj ⊂ Yi for i ̸= j. By rearranging them, we have Z2 ⊂ Y1 ⊂ Y2 ⊂ · · · ⊂ Ym .
+Atoms are Z1 , Z2 , Y1 \ Z2 , V \ (Ym ∪ Z1 ), and Yi+1 \ Yi for i = 1, 2, . . . , m − 1. Thus the
+situation reduces to (A) in the setting of A = {[1, 2]}, B = {[2, j] | 3 ≤ j ≤ m + 2}, and
+n = m + 3.
+    The strategy for Red is the following. Red chooses maximal {X, V \ X} ∈ C in the
+sense that X is 2-partitioned for D and there is no {Y, V \ Y } ∈ C such that X ⊂ Y
+(proper inclusion) and Y is 2-partitioned for D. As above, the family D ∪ {X} satisfies
+the condition (A) (after removing trivial members). Therefore Red plays the game within
+D ∪ {X} and obtains a laminar family D′ by the above strategy after O(|V |2 ) iterations.
+Since D′ is obtained from D ∪ {X} by uncrossings, ∼D′ coarsens ∼D∪{X} (see the beginning
+of Section 2). By this fact together with the maximality of X and the laminarity of C, the
+union of C ′ := C \ {X} and D′ satisfies the condition (B). Let C ← C ′ and D ← D′ . Red
+repeats the same procedure for C and D, and wins after |C| steps. The total number of
+iterations is O(|C||V |2 ) = O(|V |3 ); recall that the size of any laminar family on V is O(|V |).
+    Suppose finally that F is arbitrary. Red chooses a (maximal) laminar subset C of F,
+and chooses an arbitrary X ∈ B := F \ C. Then the union of C and D = {X} obviously
+satisfies (B). Red applies the above strategy for C ∪ D, and obtains a laminar family C ′ after
+O(|V |3 ) iterations. Let C ← C ′ and B ← B \{X}. Red repeats the same procedure for C and
+B (until B = ∅), and wins after O(|F|) steps. The total number of iterations is O(|V |3 |F|),
+as required.
+
+3. Implications
+As mentioned in Introduction, the uncrossing game abstracts the uncrossing procedure
+arising from a class of cut-covering linear programs. Let G = (V, E) be an undirected graph
+with edge-cost a : E → R+ , and let f : S(V ) → R+ be a skew-supermodular function.
+∑ skew-supermodular cut-covering LP is the following linear program: Minimize the cost
+The
+   e∈E a(e)x(e) over all edge-weights x : E → R+ satisfying the covering constraint:
+                               ∑
+                                    x(e) ≥ f (X) (X ∈ S(V )),
+                                 e∈δX
+
+where δX denotes the set of edges e = ij ∈ E with i ∈ X and j ̸∈ X. This class of LP
+and its variation capture a wide variety of network design problems and their fractional
+relaxations. Examples include matching, T-join, network synthesis, survivable network,
+traveling salesman, Steiner tree/forest, connectivity augmentation and so on; see, e.g., [4, 6].
+                                     ∑ its dual always admits a laminar optimal solution.
+An important feature of this LP is that
+The dual LP is given as: Maximize X∈S(V ) λ(X)f (X) over all λ : S(V ) → R+ satisfying
+                                 ∑
+                                          λ(X) ≤ a(e) (e ∈ E).
+                                X∈S(V ):e∈δX
+
+A feasible solution λ is called laminar if its nonzero support F(λ) := {X ∈ S(V ) | λ(X) ̸= 0}
+is laminar. Then there always exists a laminar optimal solution. This useful property has
+
+
+               Copyright ⃝
+                         c by ORSJ. Unauthorized reproduction of this article is prohibited.
+ 222                                             H. Hirai
+
+played key roles in algorithm design and analysis: Edmonds’ blossom algorithm [1] for
+weighted matching works with a laminar dual solution, which enables us to avoid keeping
+exponential number of inequalities/variables for matching polytope. Jain’s iterative round-
+ing algorithm [4] for survivable network was obtained by analyzing the larminarity property
+of skew-supermodular covering LPs.
+    The existence of a laminar dual solution can be seen from the following standard uncross-
+ing argument. Let λ be an arbitrary feasible solution. Suppose that F(λ) is not laminar.
+Choose a crossing pair (X, Y ) in F(λ), and choose (X ′ , Y ′ ) ∈ {(X ∩Y, X ∪Y ), (X \Y, Y \X)}
+with f (X) + f (Y ) ≤ f (X ′ ) + f (Y ′ ). Decrease λ by α := min{λ(X), λ(Y )} on X and
+Y , and increase λ by α on X ′ and Y ′ . The objective value does not decrease (by skew-
+supermodularity) and the feasibility is also preserved. This operation is called an uncross-
+ing. For rational λ, we obtain a laminar solution after a finite number of uncrossings, where
+λ is said to be uncrossed.
+    The uncrossing process gives rise to the uncrossing game with input F = F(λ), as
+mentioned in [5] (under the setting of a cross-closed family). Red chooses a crossing pair
+X, Y in F, and replaces X, Y by X ′ , Y ′ in F. Blue returns one X̃ of X, Y for λ(X̃) >
+min{λ(X), λ(Y )}; Blue returns none of them if α = λ(X) = λ(Y ). ∑     Then F = F(λ) holds in
+the next iteration. Suppose that λ is integer-valued. Observe that X∈S(V ) |X||V \ X|λ(X)
+strictly decreases in one uncrossing. Therefore, in any choices of uncrossing pairs, this
+process terminates after O(|V |2 |F(λ)|∥λ∥) iterations, where ∥λ∥ := maxX∈S(V ) λ(X). By
+using the Red-win strategy in Theorem 1, we can conduct the uncrossing procedure in time
+polynomial in |V | and |F(λ)|, not depending on the bit length of λ. Thus we have:
+Theorem 2. Any λ : S(V ) → R+ can be uncrossed in time polynomial of |V | and |F(λ)|.
+    This is a natural extension of [5, Theorem 2] to general skew-supermodular functions.
+In [2, Section 3.3], we found that the Red-win strategy of the uncrossing game also brings
+an interesting optimality property of laminar solutions, where we proved this property for
+{0, 1}-valued skew-supermodular functions (as a consequence of Karzanov’s uncrossing al-
+gorithm). Now we can state and prove this for general skew-supermodular functions.
+Proposition 3. Let λ be a nonoptimal laminar feasible function. For any ϵ > 0, there
+exists a laminar feasible solution λ∗ such that ∥λ − λ∗ ∥ ≤ ϵ and the objective value of λ∗ is
+greater than that of λ.
+
+Proof. The following proof method is due to [2]. We can assume that λ ̸= 0. We can
+choose a positive integer N such that every λ : S(V ) → R+ can be uncrossed by at most N
+uncrossings in the strategy of Theorem 1. Choose ϵ′ > 0. Since λ is not optimal, there exists
+a feasible (not necessarily laminar) solution λ′ such that ∥λ − λ′ ∥ ≤ ϵ′ and the objective
+value of λ′ is greater than that of λ; by convexity, λ′ can be taken from the segment between
+λ and an optimal solution. Apply the uncrossing procedure to λ′ according to the strategy
+of Theorem 1. Then we obtain a laminar feasible solution λ∗ with the objective value not
+less than that of λ′ .
+    We show that ∥λ − λ∗ ∥ ≤ ϵ if ϵ′ is suﬃciently small. Let λk denote λ′ after k uncrossings;
+λ0 = λ′ . Choose ϵ′ with ϵ′ ≤ 2−N minX∈F (λ) λ(X). Then it holds
+
+   min λk (Z) ≥ min λ(Z) − 2k ϵ′ ≥ 2k ϵ′ ≥ max λk (Z) (k = 0, 1, 2, . . . , N − 1).            (3.1)
+  Z∈F(λ)           Z∈F (λ)                           Z̸∈F (λ)
+
+
+We show (3.1) by induction on k. In the case of k = 0, this indeed holds (by ∥λ − λ′ ∥ ≤ ϵ′ ).
+The second inequality is obvious from the definition of ϵ′ . Suppose that (3.1) holds for
+k < N − 1. Each uncrossing step chooses X, Y so that at least one of X, Y does not belong
+
+
+               Copyright ⃝
+                         c by ORSJ. Unauthorized reproduction of this article is prohibited.
+                                  Skew-supermodular Uncrossing Games                           223
+
+to laminar family F(λ). By (3.1), in the (k + 1)-th uncrossing, α(= min{λ(X), λ(Y )}) is
+attained at S(V ) \ F(λ) and is bound by 2k ϵ′ . Thus minZ∈F (λ) λk+1 (Z) ≥ minZ∈F (λ) λk (Z) −
+2k ϵ′ ≥ 2k+1 ϵ′ , and maxZ̸∈F (λ) λk+1 (Z) ≤ maxZ̸∈F (λ) λk (Z) + 2k ϵ′ ≤ 2k+1 ϵ′ . Thus (3.1) holds
+after the (k + 1)-th uncrossing.
+                                ∑Nat S(Vk ) \ Fk−1
+     In particular, α is attained               (λ) in every
+                                                       ∑N step    k ≤ N , and ∥λk+1 − λk ∥ ≤ 2k ϵ′ .
+                     ∗    ′                                   k−1 ′
+Hence we have ∥λ − λ ∥ ≤ k=1 ∥λ − λ ∥ ≤ k=1 2 ϵ = (2N − 1)ϵ′ , and ∥λ − λ∗ ∥ ≤
+∥λ − λ′ ∥ + ∥λ∗ − λ′ ∥ ≤ 2N ϵ′ . Thus, by choosing ϵ′ as ϵ′ ≤ 2−N min{ϵ, minX∈F (λ) λ(X)}, we
+obtain the desired result.
+   From the view of convexity, this local-to-global optimality property is obvious without
+the laminarity requirement. The set of all laminar feasible solutions is not convex in the
+space of all functions on S(V ). Nevertheless this proposition says that the objective be-
+haves convex or unimodal over the space of laminar feasible solutions. This may suggest a
+laminarity-preserving primal-dual algorithm, like Edmonds’ blossom algorithm, for general
+skew-supermodular cut-covering LPs.
+
+Acknowledgments
+We thank the referees for helpful comments. The work was partially supported by JSPS
+KAKENHI Grant Numbers 25280004, 26330023, 26280004.
+
+References
+[1] J. Edmonds: Maximum matching and a polyhedron with 0,1-vertices. Journal of Research of
+    the National Bureau of Standards, 69B (1965), 125–130.
+[2] H. Hirai and G. Pap: Tree metrics and edge-disjoint S-paths. Mathematical Programming,
+    Series A, 147 (2014), 81–123.
+[3] C.A.J. Hurkens, L. Lovász, A. Schrijver, and É. Tardos: How to tidy up your set-system?
+    In A. Hajnal. L. Lovász, and V.T.Sós (eds.): Combinatorics (Proceedings Seventh Hungarian
+    Colloquium on Combinatorics, Eger, 1987) (North-Holland, Amsterdam, 1988), 309–314.
+[4] K. Jain: A factor 2 approximation algorithm for the generalized Steiner network problem.
+    Combinatorica, 21 (2001), 39–60.
+[5] A.V. Karzanov: How to tidy up a symmetric set-system by use of uncrossing operations.
+    Theoretical Computer Science, 157 (1996), 215–225.
+[6] A. Schrijver: Combinatorial Optimization (Springer-Verlag, Berlin, 2003).
+
+
+                                                       Hiroshi Hirai
+                                                       Department of Mathematical Informatics,
+                                                       Graduate School of Information Science and
+                                                       Technology, The University of Tokyo
+                                                       Tokyo, 113-8656, Japan
+                                                       E-mail: hirai@mist.i.u-tokyo.ac.jp
+
+
+
+
+               Copyright ⃝
+                         c by ORSJ. Unauthorized reproduction of this article is prohibited.
+

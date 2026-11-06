@@ -1,0 +1,57 @@
+14.2 Polymatroids 329
+Let c : E(G) → Z, and let y, z be an optimum dual solution for which
+∑
+A⊆ E
+(yA + z A)|A||E \ A| (14.1)
+is as small as possible. We claim that F :={ A ⊆ E : yA > 0} is a chain, i.e. for
+any A, B ∈ F either A ⊆ B or B ⊆ A.
+To see this, suppose A, B ∈ F with A ∩ B ̸= A and A ∩ B ̸= B. Let ϵ :=
+min{yA, yB }. Set y′
+A := yA − ϵ, y′
+B := yB − ϵ, y′
+A∩ B := yA∩ B +ϵ, y′
+A∪ B := yA∪ B +ϵ,
+and y′(S) := y(S) for all other S ⊆ E. Since y′, z is a feasible dual solution, it is
+also optimum ( f is submodular) and contradicts the choice of y, because (14.1)
+is smaller for y′, z.
+By the same argument, F′ :={ A ⊆ E : z A > 0} is a chain. Now let M and
+M′ be the matrices whose columns are indexed with the elements of E and whose
+rows are the incidence vectors of the elements F and F′, respectively. By Lemma
+5.22, it sufﬁces to show that
+(
+M
+M′
+)
+is totally unimodular.
+Here we use Ghouila-Houri’s Theorem 5.23. Let R be a set of rows, say
+R ={ A1,..., Ap, B1,..., Bq } with A1 ⊇ ··· ⊇ Ap and B1 ⊇ ··· ⊇ Bq . Let
+R1 :={ Ai : i odd}∪{ Bi : i even} and R2 := R \ R1. Since for any e ∈ E we
+have {R ∈ R : e ∈ R}={ A1,..., Ape }∪{ B1,..., Bqe } for some pe ∈{ 0,..., p}
+and qe ∈{ 0,..., q}, the sum of the rows in R1 minus the sum of the rows in R2
+is a vector with entries − 1, 0, 1 only. So the criterion of Theorem 5.23 is satisﬁed.
+2
+One can optimize linear functions over the intersection of two polymatroids.
+However, this is not as easy as with a single polymatroid. But we can use the El-
+lipsoid Method if we can solve the Separation Problem for each polymatroid.
+We return to this question in Section 14.3.
+Corollary 14.13. (Edmonds [1970]) Let (E, M1) and (E, M2) be two matroids
+with rank functions r1 and r2. Then the convex hull of the incidence vectors of the
+elements of M1 ∩ M2 is the polytope
+{
+x ∈ RE
++ :
+∑
+e∈ A
+xe ≤ min{r1(A), r2(A)} for all A ⊆ E
+}
+.
+Proof: As r1 and r2 are nonnegative and submodular (by Theorem 13.10), the
+above inequality system is TDI (by Theorem 14.12). Since r1 and r2 are integral,
+the polytope is integral (by Corollary 5.14). Since r1(A) ≤| A| for all A ⊆ E,
+the vertices (the convex hull of which the polytope is by Corollary 3.27) are 0-
+1-vectors, and thus incidence vectors of common independent sets (elements of
+M
+1 ∩ M2). On the other hand, each such incidence vector satisﬁes the inequalities
+(by deﬁnition of the rank function). 2
+Of course, the description of the matroid polytope (Theorem 13.21) follows
+from this by setting M1 = M2. Theorem 14.12 has some further consequences:

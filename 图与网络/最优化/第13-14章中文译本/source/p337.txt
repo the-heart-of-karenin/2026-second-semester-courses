@@ -1,0 +1,37 @@
+14.5 Symmetric Submodular Functions 337
+Iwata [2002] described a fully combinatorial algorithm (using only additions,
+subtractions, comparisons and oracle calls, but no multiplication or division). He
+also improved the running time (Iwata [2003]).
+14.5 Symmetric Submodular Functions
+A submodular function f :2 U → R is called symmetric if f (A) = f (U \ A)
+for all A ⊆ U. In this special case the Submodular Function Minimization
+Problem is trivial, since 2 f (∅) = f (∅) + f (U) ≤ f (A) + f (U \ A) = 2 f (A)
+for all A ⊆ U, implying that the empty set is optimal. Hence the problem is
+interesting only if this trivial case is excluded: one looks for a nonempty proper
+subset A of U such that f (A) is minimum.
+Generalizing the algorithm of Section 8.7, Queyranne [1998] has found a rel-
+atively simple combinatorial algorithm for this problem using only O(n
+3) oracle
+calls. The following lemma is a generalization of Lemma 8.38 (Exercise 14):
+Lemma 14.24. Given a symmetric submodular function f :2 U → R with n :=
+|U |≥ 2, we can ﬁnd two elements x, y ∈ U with x ̸= y and f ({x}) = min{ f (X) :
+x ∈ X ⊆ U \{ y}} in O(n2θ) time, where θ is the time bound of the oracle for f .
+Proof: We construct an order U ={ u1,..., un } by doing the following for
+k = 1,..., n − 1. Suppose that u1,..., uk− 1 are already constructed; let Uk− 1 :=
+{u1,..., uk− 1}. For C ⊆ U we deﬁne
+wk(C) := f (C) − 1
+2( f (C \ Uk− 1) + f (C ∪ Uk− 1) − f (Uk− 1)).
+Note that wk is also symmetric. Let uk be an element of U \ Uk− 1 that maximizes
+wk({uk }).
+Finally, let un be the only element in U \{ u1,..., un− 1}. Obviously the con-
+struction of the order u1,..., un can be done in O(n2θ) time.
+Claim: For all k = 1,..., n − 1 and all x, y ∈ U \ Uk− 1 with x ̸= y and
+wk({x}) ≤ wk({y}) we have
+wk({x}) = min{wk(C) : x ∈ C ⊆ U \{ y}}.
+We prove the claim by induction on k. For k = 1 the assertion is trivial since
+w1(C) = 1
+2 f (∅) for all C ⊆ U.
+Let now k > 1 and x, y ∈ U \ Uk− 1 with x ̸= y and wk({x}) ≤ wk({y}).
+Moreover, let Z ⊆ U with uk− 1 /∈ Z, and let z ∈ Z \ Uk− 1. By the choice of
+uk− 1 we have wk− 1({z}) ≤ wk− 1({uk− 1}); thus by the induction hypothesis we get
+wk− 1({z}) ≤ wk− 1(Z). Furthermore, the submodularity of f implies

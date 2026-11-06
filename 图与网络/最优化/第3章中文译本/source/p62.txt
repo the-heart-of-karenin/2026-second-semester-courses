@@ -1,0 +1,48 @@
+62      3. Linear Programming
+
+
+Corollary 3.28. Let (E, F) be a set system, P the convex hull of the incidence
+vectors of the elements of F, and c : E → R. Then max{cx : x ∈ P} = max{c(X ) :
+X ∈ F}.
+Proof: Since max{cx : x ∈ P} ≥ max{c(X ) : X ∈ F} is trivial, let x be an
+optimum solution of max{cx : x ∈ P} (note that P is a polytope by Theorem 3.26).
+By deﬁnition of P, xis a convex combination of incidence vectors y1      , . . . , yk of
+                      k                                                       k
+elements of F: x = i=1    λi yi for some λ1 , . . . , λk ≥ 0. Since cx = i=1        λi cyi ,
+we have cyi ≥ cx for at least one i ∈ {1, . . . , k}. This yi is the incidence vector
+of a set Y ∈ F with c(Y ) = cyi ≥ cx.                                                   2
+
+
+Exercises
+                                      is called afﬁnely independent if there is no λ ∈
+ 1. A set of vectors x1 , . . . , x k 
+                                         k
+    Rk \ {0} with λ 1l = 0 and i=1         λi xi = 0. Let ∅ = X ⊆ Rn . Show that the
+    maximum cardinality of an afﬁnely independent set of elements of X equals
+    dim X + 1.
+ 2. Let P be a polyhedron. Prove that the dimension of any facet of P is one less
+    than the dimension of P.
+ 3. Formulate the dual of the LP formulation (1.1) of the Job Assignment Prob-
+    lem. Show how to solve the primal and the dual LP in the case when there
+    are only two jobs (by a simple algorithm).
+ 4. Let G be a digraph, c : E(G) → R+ , E 1 , E 2 ⊆ E(G), and s, t ∈ V (G).
+    Consider the following linear program
+                           
+              min                  c(e)ye
+                          e∈E(G)
+
+              s.t.             ye       ≥ zw − zv          (e = (v, w) ∈ E(G))
+                          zt − zs       = 1
+                               ye       ≥ 0                (e ∈ E 1 )
+                               ye       ≤ 0                (e ∈ E 2 ).
+    Prove that there is an optimum solution (y, z) and s ∈ X ⊆ V (G) \ {t} with
+    ye = 1 for e ∈ δ + (X ), ye = −1 for e ∈ δ − (X ) \ E 1 , and ye = 0 for all other
+    edges e.
+    Hint: Consider the complementary slackness conditions for the edges entering
+    or leaving {v ∈ V (G) : z v ≤ z s }.
+ 5. Let Ax ≤ b be a linear inequality system in n variables. By multiplying each
+    row by a positive constant we may assume that the ﬁrst column of A is a
+    vector with entries 0, −1 and 1 only. So can write Ax ≤ b equivalently as
+                              ai x    ≤   bi   (i = 1, . . . , m 1 ),
+                     −x1 + a j x      ≤   bj   ( j = m 1 + 1, . . . , m 2 ),
+                      x1 + ak x       ≤   bk   (k = m 2 + 1, . . . , m),

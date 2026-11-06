@@ -1,0 +1,69 @@
+13.6 Matroid Partitioning 313
+13.6 Matroid Partitioning
+Instead of the intersection of matroids we now consider their union which is
+deﬁned as follows:
+Deﬁnition 13.33. Let (E, F1) ,...,( E, Fk) be k matroids. A set X ⊆ E is called
+partitionable if there exists a partition X = X1
+.
+∪ ···
+.
+∪ Xk with Xi ∈ Fi for
+i = 1,..., k. Let F be the family of partitionable subsets of E. Then (E, F) is
+called the union or sum of (E, F1) ,...,( E, Fk).
+We shall prove that the union of matroids is a matroid again. Moreover, we
+solve the following problem via matroid intersection:
+Matroid P artitioning Problem
+Instance: A number k ∈ N, k matroids (E, F1) ,...,( E, Fk), given by inde-
+pendence oracles.
+Task: Find a partitionable set X ⊆ E of maximum cardinality.
+The main theorem with respect to matroid partitioning is:
+Theorem 13.34. (Nash-Williams [1967]) Let (E, F1) ,...,( E, Fk) be matroids
+with rank functions r1,..., rk , and let (E, F) be their union. Then (E, F) is a ma-
+troid, and its rank function r is given by r(X) = minA⊆ X
+(
+|X \ A|+ ∑k
+i=1 ri (A)
+)
+.
+Proof: (E, F) is obviously an independence system. Let X ⊆ E. We ﬁrst prove
+r(X) = minA⊆ X
+(
+|X \ A|+ ∑k
+i=1 ri (A)
+)
+.
+For any Y ⊆ X such that Y is partitionable, i.e. Y = Y1
+.
+∪ ···
+.
+∪ Yk with
+Yi ∈ Fi (i = 1,..., k), and any A ⊆ X we have
+|Y |=| Y \ A|+| Y ∩ A|≤| X \ A|+
+k∑
+i=1
+|Yi ∩ A|≤| X \ A|+
+k∑
+i=1
+ri (A),
+so r(X) ≤ minA⊆ X
+(
+|X \ A|+ ∑k
+i=1 ri (A)
+)
+.
+On the other hand, let X ′ := X ×{ 1,..., k}. We deﬁne two matroids on X ′.
+For Q ⊆ X ′ and i ∈{ 1,..., k} we write Qi :={ e ∈ X : (e, i) ∈ Q}. Let
+I1 :={ Q ⊆ X ′ : Qi ∈ Fi for all i = 1,..., k}
+and
+I2 :={ Q ⊆ X ′ : Qi ∩ Qj =∅ for all i ̸= j}.
+Evidently, both (X ′, I1) and (X ′, I2) are matroids, and their rank functions are
+given by s1(Q) :=∑k
+i=1 ri (Qi ) and s2(Q) :=
+⏐⏐
+⏐
+⋃
+k
+i=1 Qi
+⏐⏐
+⏐ for Q ⊆ X
+′.

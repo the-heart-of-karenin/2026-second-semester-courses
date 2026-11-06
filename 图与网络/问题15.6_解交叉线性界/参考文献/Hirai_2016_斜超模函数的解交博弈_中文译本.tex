@@ -1,0 +1,462 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=2.4em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{斜超模函数的解交博弈}
+\fancyhead[R]{Hirai (2016) 中文译本}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命题}
+\numberwithin{equation}{section}
+\newcommand{\calS}{\mathcal S}
+\newcommand{\calF}{\mathcal F}
+\newcommand{\calA}{\mathcal A}
+\newcommand{\calB}{\mathcal B}
+\newcommand{\calC}{\mathcal C}
+\newcommand{\calD}{\mathcal D}
+\newcommand{\R}{\mathbb R}
+
+\title{斜超模函数的解交博弈\\\large On Uncrossing Games for Skew-Supermodular Functions}
+\author{Hiroshi Hirai（平井广志）\\东京大学}
+\date{原文发表于 2016 年 4 月；中文译本整理于 2026 年 9 月}
+
+\begin{document}
+\maketitle
+
+\begin{quote}\small
+原文：Hiroshi Hirai, ``On Uncrossing Games for Skew-Supermodular Functions,''
+\emph{Journal of the Operations Research Society of Japan}, Vol.~59, No.~2
+(2016), 218--223。本文为学习用中文翻译；数学符号、编号与参考文献尽量保持原貌。
+\end{quote}
+
+\begin{abstract}
+本文研究斜超模函数 $f$ 的解交博弈。这是一个由 Red 与 Blue 两位参与者进行的双人博弈，它抽象了与 $f$ 相联系的割覆盖线性规划中的解交过程。Karzanov 先前研究了取值于 $\{0,1\}$ 的斜超模函数；在其结果的基础上，本文给出一种改进的多项式时间策略，使 Red 获胜，并由此得到对割覆盖 LP 的对偶解进行解交的强多项式时间过程。本文还说明这一结果对层状解最优性所产生的推论。
+
+\noindent\textbf{关键词：}组合优化；解交博弈；斜超模函数；割覆盖 LP。
+\end{abstract}
+
+\section{引言}
+
+设 $V$ 为有限集，$\calS(V)$ 表示 $V$ 的所有二划分组成的集合。$\calS(V)$ 的成员
+$\{X,V\setminus X\}$ 在不致混淆时也简记为 $X$ 或 $V\setminus X$。若
+\[
+X\cap Y,\qquad V\setminus(X\cup Y),\qquad X\setminus Y,\qquad Y\setminus X
+\]
+全都非空，则称 $\calS(V)$ 中的两个成员 $X,Y$ \emph{交叉}（crossing）。若族
+$\calF\subseteq\calS(V)$ 中不存在交叉对，则称 $\calF$ 为\emph{层状的}（laminar）。函数
+$f:\calS(V)\to\R_+$ 称为\emph{斜超模的}（skew-supermodular），若对任意
+$X,Y\in\calS(V)$ 都有
+\[
+f(X)+f(Y)\le
+\max\bigl\{f(X\cap Y)+f(X\cup Y),
+f(X\setminus Y)+f(Y\setminus X)\bigr\}.
+\]
+
+对斜超模函数 $f$，考虑下面由 Blue 与 Red 两位参与者进行的博弈，称为\emph{解交博弈}。
+
+\medskip
+\noindent\textbf{斜超模函数 $f$ 的解交博弈}
+
+\noindent\textbf{输入：}一个族 $\calF\subseteq\calS(V)$。
+
+\begin{description}[style=nextline,leftmargin=2.5em]
+\item[步骤 1：]若 $\calF$ 是层状的，则 Red 获胜，博弈终止。
+\item[步骤 2：]否则，Red 从 $\calF$ 中选择一个交叉对 $(X,Y)$，再从
+\[
+\bigl\{(X\cap Y,X\cup Y),\ (X\setminus Y,Y\setminus X)\bigr\}
+\]
+中选择一对 $(X',Y')$，使
+\[
+f(X)+f(Y)\le f(X')+f(Y'),
+\]
+并在 $\calF$ 中用 $X',Y'$ 替换 $X,Y$。
+\item[步骤 3：]Blue 将 $X,Y$ 中的一个放回 $\calF$，然后返回步骤 1。
+\end{description}
+
+这里假设 Red 可以调用 $f$ 的求值 oracle。
+
+解交博弈抽象了组合优化中的解交过程，最初由 Hurkens、Lov\'asz、Schrijver 与
+Tardos~\cite{HLST} 提出。其原始形式如下：输入为 $V$ 的一个子集族 $\calF$；若
+$\calF$ 是一条链，则 Red 获胜。否则，Red 选择 $\calF$ 中不可比较的一对 $(X,Y)$，并在
+$\calF$ 中以 $(X\cap Y,X\cup Y)$ 替换它；随后 Blue 把 $X,Y$ 中的一个放回 $\calF$。
+Hurkens、Lov\'asz、Schrijver 与 Tardos 证明，Red 存在一种策略，能在
+$O(|V||\calF|)$ 轮后获胜。
+
+Karzanov~\cite{Karzanov} 在交叉封闭族上研究了一个对称推广。称
+$\calS\subseteq\calS(V)$ \emph{交叉封闭}（cross-closed），若对任意 $X,Y\in\calS$，或者
+$X\cap Y,X\cup Y\in\calS$，或者 $X\setminus Y,Y\setminus X\in\calS$。在他的解交博弈中，
+输入为 $\calF\subseteq\calS$；Red 选择 $\calF$ 中的交叉对 $(X,Y)$，再选择
+\[
+(X',Y')\in\bigl\{(X\cap Y,X\cup Y),
+(X\setminus Y,Y\setminus X)\bigr\}
+\]
+且要求 $X',Y'\in\calS$。Karzanov 指出，原始解交博弈可以看成一种特殊情形：在
+$V\cup\{s,t\}$ 上取由满足 $|X\cap\{s,t\}|=1$ 的 $X$ 所构成的交叉封闭族。他证明 Red
+存在一种策略，可在 $O(|V|^4|\calF|)$ 轮后获胜。
+
+交叉封闭族 $\calS$ 可以自然地与一个取值于 $\{0,1\}$ 的斜超模函数对应：令
+$X\in\calS$ 时 $f(X)=1$，否则 $f(X)=0$。借助这一对应，$\calS$ 上的解交博弈可归入本文的
+框架。我们不知道反向归约是否可能。此外，Karzanov 的策略~\cite{Karzanov} 看来不能直接用于
+本文的推广；事实上，他的策略包含“若 $X\notin\calS$，则 Red 采取……”这类选择规则
+\cite[p.~222]{Karzanov}。本文的主要目标，是为上述推广给出一种改进的 Red 获胜策略。
+
+\begin{theorem}\label{thm:main}
+对任意斜超模函数 $f$ 和任意输入 $\calF$，Red 都存在一种策略，能在
+$O(|V|^3|\calF|)$ 轮后获胜。
+\end{theorem}
+
+全文安排如下。第 2 节证明定理~\ref{thm:main}。在整体思路上，我们的策略沿用 Karzanov
+的策略，但在一个关键部分作了实质性的、非平凡的修改。第 3 节解释这一结果对斜超模割覆盖
+线性规划的意义。这类线性规划是组合优化中众多网络设计问题所产生的 LP 的一个重要子类。
+正如文献~\cite{Karzanov} 对 $\{0,1\}$ 值斜超模情形所指出的，解交博弈自然产生于对偶解的
+解交过程，而 Red 的获胜策略会给出强多项式时间的解交算法。定理~\ref{thm:main} 的策略适用于
+更一般的斜超模割覆盖线性规划，超出了文献~\cite{Karzanov} 所处理的范围。我们还将给出一个
+关于层状对偶解最优性性质的意外推论。
+
+\section{证明}
+
+设 $\calF$ 是 $V$ 上的二划分族。若 $X\in\calF$ 不与 $\calF$ 中任何成员交叉，则称
+$X$（相对于 $\calF$）为\emph{平凡成员}。如果 $Z$ 不与 $X,Y$ 交叉，那么它也不与
+$X\cap Y,X\cup Y,X\setminus Y,Y\setminus X$ 交叉。特别地，平凡成员在解交后仍然平凡。
+因此，只要平凡成员出现，我们就可以假设把它从 $\calF$ 中删去。
+
+在 $V$ 上定义等价关系 $\sim_{\calF}$：若不存在 $X\in\calF$ 使
+$|\{i,j\}\cap X|=1$，则令 $i\sim_{\calF}j$。这一等价关系的等价类称为\emph{原子}。
+若 $i\not\sim_{\calF}j$，则称 $i,j$ 被分开。显然，每个 $X\in\calF$ 都是若干原子的不交并，
+所以可以把底集 $V$ 与全体原子的集合等同起来。注意
+\[
+i\sim_{\{X,Y\}}j\quad\Longrightarrow\quad i\sim_{\{X\cap Y,X\cup Y\}}j,
+\]
+以及
+\[
+i\sim_{\{X,Y\}}j\quad\Longrightarrow\quad i\sim_{\{X\setminus Y,Y\setminus X\}}j.
+\]
+因此，若 $\calF'$ 是经过若干轮博弈后由 $\calF$ 得到的，那么
+$\sim_{\calF'}$ 比 $\sim_{\calF}$ 更粗；即 $i\sim_{\calF}j$ 蕴含
+$i\sim_{\calF'}j$。结合平凡成员的删除，可能出现这样的情况：$\calF$ 中的若干原子在
+$\calF'$ 中合并为一个原子。此时底集的基数减少。
+
+我们先处理文献~\cite{Karzanov} 中的论证无法直接适用的核心情形。令
+$V=\{1,2,\ldots,n\}$（$n\ge4$），并假设 $\calF$ 满足：
+
+\begin{quote}
+\textbf{(A)} $\calF$ 是两个子族 $\calA,\calB$ 的不交并；$\calA$ 的每个成员均形如
+$\{1,2,\ldots,i\}$，其中 $2\le i\le n-2$；$\calB$ 的每个成员均形如
+$\{2,3,\ldots,j\}$，其中 $3\le j\le n-1$。
+\end{quote}
+
+以下用 $[i,j]$ 表示 $\{i,i+1,\ldots,j\}$。不妨设 $\calB\ne\varnothing$。令
+$d\ge3$ 为满足 $[2,d]\in\calB$ 的最小整数。可以假设
+$[1,i]\in\calA$ 对 $i=2,3,\ldots,d-1$ 均成立；否则某个 $i$ 与 $i+1$ 未被分开，二者会合并为
+一个元素。下面给出一种 Red 策略，使博弈始终保持形式 (A)，并在 $O(d)$ 轮后使
+$n+|\calB|$ 减少。
+
+一开始，Red 计算
+\[
+f([1,d-1])+f([2,d]),\qquad f(\{1\})+f(\{d\}),\qquad
+f([2,d-1])+f([1,d]).
+\]
+先设
+\[
+f([1,d-1])+f([2,d])\le f(\{1\})+f(\{d\}).
+\]
+Red 选择 $X=[1,d-1]$、$Y=[2,d]$，并取
+$X'=X\setminus Y=\{1\}$、$Y'=Y\setminus X=\{d\}$，然后以 $X',Y'$ 替换 $X,Y$。
+$X',Y'$ 都是单点集，因而是平凡成员并消失。如果 Blue 放回 $X=[1,d-1]$，则
+$|\calB|$ 减少；如果 Blue 放回 $Y=[2,d]$，则 $|\calB|$ 不变，但 $d$ 与 $d-1$ 不再被分开，
+所以 $n$ 减少。
+
+再设
+\[
+f([1,d-1])+f([2,d])>f(\{1\})+f(\{d\}).
+\]
+由斜超模性必有
+\[
+f([1,d-1])+f([2,d])\le f([2,d-1])+f([1,d]).
+\]
+若 $d=3$，Red 选择 $X=[1,2]$、$Y=[2,3]$、$X'=X\cup Y=[1,3]$ 以及
+$Y'=X\cap Y=\{2\}$。此时 $\{2\}$ 消失，特别地，$|\calB|$ 不会增加。如果 Blue 放回
+$X=[1,2]$，则 $|\calB|$ 减少；如果 Blue 放回 $Y=[2,3]$，则 $2,3$ 不再被分开，因而
+$n$ 减少。
+
+以下设 $d>3$。Red 计算最小的 $k\in[2,d-1]$，使得
+\begin{equation}\label{eq:2.1}
+f([1,l])+f([2,l+1])\le f([2,l])+f([1,l+1])
+\qquad(l=k,k+1,\ldots,d-1).
+\end{equation}
+这样的 $k$ 确实存在，因为
+$f([1,d-1])+f([2,d])\le f([2,d-1])+f([1,d])$。若 $k>2$，则
+\[
+f([1,k-1])+f([2,k])>f([2,k-1])+f([1,k]),
+\]
+故由斜超模性可得
+\begin{equation}\label{eq:2.2}
+f([1,k-1])+f([2,k])\le f(\{1\})+f(\{k\}).
+\end{equation}
+当 $k=2$ 时，式~\eqref{eq:2.2} 也成立，因为此时它就是
+$f(\{1\})+f(\{2\})\le f(\{1\})+f(\{2\})$。把式~\eqref{eq:2.1} 中的不等式相加，得到
+\[
+f([1,k])+f([2,d])\le f([1,d])+f([2,k]).
+\]
+
+Red 选择 $X=[1,k]$、$Y=[2,d]$、$X'=X\cup Y=[1,d]$ 以及
+$Y'=X\cap Y=[2,k]$，并以 $X',Y'$ 替换 $X,Y$。如果 Blue 放回 $X=[1,k]$，则
+$|\calB|$ 不变而 $d$ 减少，Red 回到上面的初始阶段。以下设 Blue 放回 $Y=[2,d]$。
+若 $k=2$，则 $Y'$ 是单点集并消失，而且 $2,3$ 不再被分开，所以 $n+|\calB|$ 减少。
+若 $k>2$，则在下一轮中 $|\calB|$ 增加一，且 $d$ 变为 $k$。根据式~\eqref{eq:2.2}，
+Red 选择 $X=[1,k-1]$、$Y=[2,k]$、$X'=X\setminus Y=\{1\}$ 以及
+$Y'=Y\setminus X=\{k\}$。$X',Y'$ 均为单点集，并在下一轮消失。如果 Blue 放回
+$[1,k-1]$，则 $\calB$ 的大小减一，而且 $k,k+1$ 不再被分开（因为此时 $[1,k]$ 不存在），
+所以 $n+|\calB|$ 小于两轮之前的值。如果 Blue 放回 $[2,k]$，则 $k-1,k$ 不再被分开，
+$n+|\calB|$ 等于两轮之前的值，但 $d=k$ 比以前小；Red 再回到上述初始阶段。
+
+综上，采用上述策略，Red 可以使博弈始终保持形式 (A)，并在 $O(d)$ 轮后使
+$n+|\calB|$ 减少。因此 Red 在 $O(n^2)$ 轮后获胜。上述策略也很容易适用于允许 Blue 不放回
+$X,Y$ 中任何一个的情形。
+
+余下论证与文献~\cite{Karzanov} 完全相同，简述如下。若 $X\subseteq V$ 至多与相对于
+$\calF$ 的两个原子相交，则称 $X$ 对 $\calF$ 是\emph{二原子分割的}（2-partitioned）。假设：
+
+\begin{quote}
+\textbf{(B)} 输入族 $\calF$ 是两个层状族 $\calC,\calD$ 的不交并，并且对每个
+$X\in\calC$，$X$ 或 $V\setminus X$ 对 $\calD$ 是二原子分割的。
+\end{quote}
+
+此时，对任意 $X\in\calC$，删去 $\calD\cup\{X\}$ 中的平凡成员后，该族满足条件 (A)。
+事实上，$\calD\cup\{X\}$ 由 $X$ 以及 $\calD$ 中与 $X$ 交叉的成员
+$Y_1,Y_2,\ldots,Y_m$ 构成。不妨设 $X$ 对 $\calD$ 是二原子分割的。于是 $X$ 可以写成
+$Z_1,Z_2$ 的不交并，并且 $X\cap Y_i\in\{Z_1,Z_2\}$ 对所有 $i=1,2,\ldots,m$ 成立。
+不妨设 $Z_1,Z_2$ 都非空，并通过必要时以 $V\setminus Y_i$ 替换 $Y_i$，使
+$Z_2=X\cap Y_i$ 对每个 $i$ 都成立。由 $\calD$ 的层状性，以及
+\[
+\varnothing\ne Z_1\subseteq V\setminus(Y_i\cup Y_j),
+\qquad
+\varnothing\ne Z_2\subseteq Y_i\cap Y_j,
+\]
+当 $i\ne j$ 时必有 $Y_i\subset Y_j$ 或 $Y_j\subset Y_i$。重新排列后可设
+\[
+Z_2\subset Y_1\subset Y_2\subset\cdots\subset Y_m.
+\]
+相应原子为
+\[
+Z_1,\quad Z_2,\quad Y_1\setminus Z_2,\quad V\setminus(Y_m\cup Z_1),
+\quad Y_{i+1}\setminus Y_i\ (i=1,2,\ldots,m-1).
+\]
+因此，在 $\calA=\{[1,2]\}$、
+$\calB=\{[2,j]\mid3\le j\le m+2\}$、$n=m+3$ 的标号下，情形归约为 (A)。
+
+Red 的策略如下。Red 选择一个在如下意义下极大的 $\{X,V\setminus X\}\in\calC$：
+$X$ 对 $\calD$ 是二原子分割的，且不存在 $\{Y,V\setminus Y\}\in\calC$，使得
+$X\subset Y$（真包含）且 $Y$ 对 $\calD$ 也是二原子分割的。如上所述，删去平凡成员后，
+$\calD\cup\{X\}$ 满足条件 (A)。因此 Red 在 $\calD\cup\{X\}$ 内依照上述策略进行博弈，
+经过 $O(|V|^2)$ 轮得到层状族 $\calD'$。由于 $\calD'$ 是从 $\calD\cup\{X\}$ 经解交得到的，
+$\sim_{\calD'}$ 比 $\sim_{\calD\cup\{X\}}$ 更粗。结合 $X$ 的极大性和 $\calC$ 的层状性，
+$\calC':=\calC\setminus\{X\}$ 与 $\calD'$ 的并仍满足条件 (B)。令
+$\calC\leftarrow\calC'$、$\calD\leftarrow\calD'$，Red 对新的 $\calC,\calD$ 重复这一过程，
+在 $|\calC|$ 个阶段后获胜。总轮数为
+$O(|\calC||V|^2)=O(|V|^3)$；这里用到了 $V$ 上任意层状族的大小均为 $O(|V|)$。
+
+最后设 $\calF$ 任意。Red 先从 $\calF$ 中选择一个（极大）层状子族 $\calC$，再从
+$\calB:=\calF\setminus\calC$ 中任取一个 $X$。于是 $\calC$ 与
+$\calD:=\{X\}$ 的并显然满足条件 (B)。Red 对 $\calC\cup\calD$ 运用上述策略，经过
+$O(|V|^3)$ 轮得到一个层状族 $\calC'$。令 $\calC\leftarrow\calC'$、
+$\calB\leftarrow\calB\setminus\{X\}$，并重复这一过程直至 $\calB=\varnothing$。这样的阶段共有
+$O(|\calF|)$ 个，因此总轮数为 $O(|V|^3|\calF|)$，定理得证。
+
+\section{推论}
+
+如引言所述，解交博弈抽象了一类割覆盖线性规划中的解交过程。设 $G=(V,E)$ 为无向图，边费用
+$a:E\to\R_+$，$f:\calS(V)\to\R_+$ 为斜超模函数。相应的\emph{斜超模割覆盖 LP} 如下：
+在所有边权 $x:E\to\R_+$ 中，最小化费用
+\[
+\sum_{e\in E}a(e)x(e),
+\]
+并满足覆盖约束
+\[
+\sum_{e\in\delta X}x(e)\ge f(X)\qquad(X\in\calS(V)),
+\]
+其中 $\delta X$ 表示所有端点分别位于 $X$ 与 $V\setminus X$ 的边 $e=ij$。这类 LP 及其变体
+涵盖了许多网络设计问题及其分数松弛，例如匹配、$T$-join、网络综合、生存网络、旅行商、
+Steiner 树/森林以及连通性增广等；参见文献~\cite{Jain,Schrijver}。
+
+这个 LP 的一个重要性质是：其对偶总存在层状最优解。对偶 LP 为：在所有
+$\lambda:\calS(V)\to\R_+$ 中最大化
+\[
+\sum_{X\in\calS(V)}\lambda(X)f(X),
+\]
+并满足
+\[
+\sum_{X\in\calS(V):\,e\in\delta X}\lambda(X)\le a(e)\qquad(e\in E).
+\]
+若可行解 $\lambda$ 的非零支撑
+\[
+\calF(\lambda):=\{X\in\calS(V)\mid\lambda(X)\ne0\}
+\]
+是层状族，则称 $\lambda$ 为层状可行解。层状最优解总是存在。这一有用性质在算法设计与分析中
+发挥了关键作用：Edmonds 的带权匹配花算法~\cite{Edmonds} 使用层状对偶解，从而避免维护匹配
+多面体中指数多个不等式/变量；Jain 针对生存网络的迭代舍入算法~\cite{Jain} 则来自对斜超模
+覆盖 LP 的层状性性质的分析。
+
+层状对偶解的存在性可以由下面的标准解交论证看出。令 $\lambda$ 为任意可行解。若
+$\calF(\lambda)$ 不是层状的，则从中选择交叉对 $(X,Y)$，再选取
+\[
+(X',Y')\in\bigl\{(X\cap Y,X\cup Y),
+(X\setminus Y,Y\setminus X)\bigr\}
+\]
+使 $f(X)+f(Y)\le f(X')+f(Y')$。令
+$\alpha:=\min\{\lambda(X),\lambda(Y)\}$；把 $X,Y$ 上的 $\lambda$ 各减少 $\alpha$，并把
+$X',Y'$ 上的 $\lambda$ 各增加 $\alpha$。由于斜超模性，目标值不会下降；可行性也保持不变。
+这一操作称为一次\emph{解交}。当 $\lambda$ 为有理数值时，有限次解交后可得到一个层状解；此时称
+$\lambda$ 已被解交。
+
+上述过程产生了以 $\calF=\calF(\lambda)$ 为输入的解交博弈，文献~\cite{Karzanov} 已在交叉封闭
+族的框架下指出这一点。Red 在 $\calF$ 中选择交叉对 $X,Y$，并以 $X',Y'$ 替换它们。如果
+\[
+\lambda(\widetilde X)>\min\{\lambda(X),\lambda(Y)\}
+\]
+对 $\widetilde X\in\{X,Y\}$ 成立，Blue 就把这个 $\widetilde X$ 放回；若
+$\alpha=\lambda(X)=\lambda(Y)$，则 Blue 一个也不放回。这样，下一轮仍有
+$\calF=\calF(\lambda)$。
+
+若 $\lambda$ 取整数值，则每次解交都会使
+\[
+\sum_{X\in\calS(V)}|X|\,|V\setminus X|\lambda(X)
+\]
+严格减小。因此，无论如何选择解交对，过程都会在
+\[
+O\bigl(|V|^2|\calF(\lambda)|\,\|\lambda\|\bigr)
+\]
+轮后终止，其中 $\|\lambda\|:=\max_{X\in\calS(V)}\lambda(X)$。采用定理~\ref{thm:main}
+中的 Red 获胜策略，可以在关于 $|V|$ 与 $|\calF(\lambda)|$ 的多项式时间内完成解交，而且运行时间
+不依赖 $\lambda$ 的位长。因此得到：
+
+\begin{theorem}\label{thm:uncross}
+任意 $\lambda:\calS(V)\to\R_+$ 都可以在关于 $|V|$ 与 $|\calF(\lambda)|$ 的多项式时间内完成解交。
+\end{theorem}
+
+这是文献~\cite[Theorem~2]{Karzanov} 从取值于 $\{0,1\}$ 的斜超模函数到一般斜超模函数的自然推广。
+在文献~\cite[Section~3.3]{HiraiPap} 中，我们发现，解交博弈的 Red 获胜策略还会带来一个关于层状解
+的有趣最优性性质；在那里，我们把这一性质作为 Karzanov 解交算法的推论，对取值于
+$\{0,1\}$ 的斜超模函数作了证明。现在可以对一般斜超模函数陈述并证明它。
+
+\begin{proposition}\label{prop:local}
+设 $\lambda$ 是一个非最优的层状可行函数。对任意 $\epsilon>0$，都存在层状可行解
+$\lambda^*$，满足 $\|\lambda-\lambda^*\|\le\epsilon$，且 $\lambda^*$ 的目标值严格大于
+$\lambda$ 的目标值。
+\end{proposition}
+
+\begin{proof}
+下面的证明方法来自文献~\cite{HiraiPap}。不妨设 $\lambda\ne0$。根据定理~\ref{thm:main}
+的策略，可以选择正整数 $N$，使任意 $\lambda:\calS(V)\to\R_+$ 都能在至多 $N$ 次解交内完成解交。
+取 $\epsilon'>0$。由于 $\lambda$ 不是最优的，存在一个可行解 $\lambda'$（未必层状），满足
+$\|\lambda-\lambda'\|\le\epsilon'$，且 $\lambda'$ 的目标值大于 $\lambda$ 的目标值；由凸性，
+$\lambda'$ 可以取在 $\lambda$ 与某个最优解之间的线段上。按照定理~\ref{thm:main} 的策略对
+$\lambda'$ 进行解交，便得到层状可行解 $\lambda^*$，其目标值不小于 $\lambda'$ 的目标值。
+
+下面说明：只要 $\epsilon'$ 足够小，就有 $\|\lambda-\lambda^*\|\le\epsilon$。令
+$\lambda^k$ 表示 $\lambda'$ 经过 $k$ 次解交后的函数，故 $\lambda^0=\lambda'$。选择
+\[
+\epsilon'\le 2^{-N}\min_{X\in\calF(\lambda)}\lambda(X).
+\]
+则
+\begin{equation}\label{eq:3.1}
+\min_{Z\in\calF(\lambda)}\lambda^k(Z)
+\ge \min_{Z\in\calF(\lambda)}\lambda(Z)-2^k\epsilon'
+\ge 2^k\epsilon'
+\ge \max_{Z\notin\calF(\lambda)}\lambda^k(Z)
+\quad(k=0,1,\ldots,N-1).
+\end{equation}
+我们对 $k$ 归纳证明式~\eqref{eq:3.1}。$k=0$ 时，由
+$\|\lambda-\lambda'\|\le\epsilon'$ 可知它成立；第二个不等式直接来自 $\epsilon'$ 的选取。
+假设式~\eqref{eq:3.1} 对某个 $k<N-1$ 成立。每次解交所选的 $X,Y$ 中至少有一个不属于层状族
+$\calF(\lambda)$。根据式~\eqref{eq:3.1}，第 $k+1$ 次解交中的
+$\alpha=\min\{\lambda^k(X),\lambda^k(Y)\}$ 在
+$\calS(V)\setminus\calF(\lambda)$ 上取得，并且不超过 $2^k\epsilon'$。因此
+\[
+\min_{Z\in\calF(\lambda)}\lambda^{k+1}(Z)
+\ge \min_{Z\in\calF(\lambda)}\lambda^k(Z)-2^k\epsilon'
+\ge 2^{k+1}\epsilon',
+\]
+以及
+\[
+\max_{Z\notin\calF(\lambda)}\lambda^{k+1}(Z)
+\le \max_{Z\notin\calF(\lambda)}\lambda^k(Z)+2^k\epsilon'
+\le 2^{k+1}\epsilon'.
+\]
+故式~\eqref{eq:3.1} 对 $k+1$ 也成立。
+
+特别地，在每一步 $k\le N$ 中，$\alpha$ 都在
+$\calS(V)\setminus\calF(\lambda)$ 上取得，而且
+$\|\lambda^{k+1}-\lambda^k\|\le2^k\epsilon'$。于是
+\[
+\|\lambda^* -\lambda'\|
+\le\sum_{k=1}^{N}\|\lambda^k-\lambda^{k-1}\|
+\le\sum_{k=1}^{N}2^{k-1}\epsilon'
+=(2^N-1)\epsilon',
+\]
+进而
+\[
+\|\lambda-\lambda^*\|
+\le\|\lambda-\lambda'\|+\|\lambda^* -\lambda'\|
+\le2^N\epsilon'.
+\]
+因此，只要再令
+\[
+\epsilon'\le2^{-N}\min\left\{\epsilon,
+\min_{X\in\calF(\lambda)}\lambda(X)\right\},
+\]
+便得到所需结论。
+\end{proof}
+
+从凸性的角度看，若不要求层状性，这种“局部推出全局”的最优性性质是显然的。在所有定义于
+$\calS(V)$ 的函数所构成的空间里，全体层状可行解并不是凸集。尽管如此，命题~\ref{prop:local}
+说明，在层状可行解的空间上，目标函数表现得像凸函数或单峰函数。这或许暗示：对于一般的斜超模
+割覆盖 LP，可能存在一种保持层状性的原始--对偶算法，类似 Edmonds 的花算法。
+
+\section*{致谢}
+
+感谢审稿人提出的有益意见。本研究得到 JSPS KAKENHI 项目 25280004、26330023、26280004
+的部分资助。
+
+\begin{thebibliography}{9}
+\bibitem{Edmonds}
+J. Edmonds, ``Maximum matching and a polyhedron with 0,1-vertices,''
+\emph{Journal of Research of the National Bureau of Standards}, 69B (1965), 125--130.
+
+\bibitem{HiraiPap}
+H. Hirai and G. Pap, ``Tree metrics and edge-disjoint $S$-paths,''
+\emph{Mathematical Programming}, Series A, 147 (2014), 81--123.
+
+\bibitem{HLST}
+C. A. J. Hurkens, L. Lov\'asz, A. Schrijver, and \'E. Tardos,
+``How to tidy up your set-system?'' in A. Hajnal, L. Lov\'asz, and V. T. S\'os (eds.),
+\emph{Combinatorics: Proceedings of the Seventh Hungarian Colloquium on Combinatorics,
+Eger, 1987} (North-Holland, Amsterdam, 1988), 309--314.
+
+\bibitem{Jain}
+K. Jain, ``A factor 2 approximation algorithm for the generalized Steiner network problem,''
+\emph{Combinatorica}, 21 (2001), 39--60.
+
+\bibitem{Karzanov}
+A. V. Karzanov, ``How to tidy up a symmetric set-system by use of uncrossing operations,''
+\emph{Theoretical Computer Science}, 157 (1996), 215--225.
+
+\bibitem{Schrijver}
+A. Schrijver, \emph{Combinatorial Optimization} (Springer-Verlag, Berlin, 2003).
+\end{thebibliography}
+
+\bigskip
+\noindent\textbf{作者原文所列通信信息：}\quad
+Hiroshi Hirai，东京大学信息理工学系研究科数理信息学专攻，Tokyo 113--8656, Japan；
+\href{mailto:hirai@mist.i.u-tokyo.ac.jp}{hirai@mist.i.u-tokyo.ac.jp}。
+
+\end{document}

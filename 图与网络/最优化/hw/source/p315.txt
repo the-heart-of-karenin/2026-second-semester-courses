@@ -1,0 +1,35 @@
+13.7 Weighted Matroid Intersection 315
+We shall describe a primal-dual algorithm due to Frank [1981] for this problem.
+It generalizes Edmonds’ Matroid Intersection Algorithm. Again we start with
+X := X0 =∅ and increase the cardinality in each iteration by one. We obtain sets
+X0,..., Xm ∈ F1 ∩ F2 with |Xk |= k (k = 0,..., m) and m = max{|X | : X ∈
+F1 ∩ F2}. Each Xk will be optimum, i.e.
+c(Xk) = max{c(X) : X ∈ F1 ∩ F2, |X |= k}. (13.4)
+Hence at the end we just choose the optimum set among X0,..., Xm .
+The main idea is to split up the weight function. At any stage we have two
+functions c1, c2 : E → R with c1(e) + c2(e) = c(e) for all e ∈ E. For each k we
+shall guarantee
+ci (Xk) = max{ci (X) : X ∈ Fi , |X |= k} (i = 1, 2). (13.5)
+This condition obviously implies (13.4). To obtain (13.5) we use the optimality
+criterion of Theorem 13.23. Instead of G X , SX and TX only a subgraph ¯G and
+subsets ¯S, ¯T are considered.
+Weighted Matroid Intersection Algorithm
+Input: Two matroids (E, F1) and (E, F2), given by independence oracles.
+Weights c : E → R.
+Output: A set X ∈ F1 ∩ F2 of maximum weight.
+1⃝ Set k := 0 and X0 :=∅ . Set c1(e) := c(e) and c2(e) := 0 for all e ∈ E.
+2⃝ For each y ∈ E \ Xk and i ∈{ 1, 2} do: Compute
+Ci (Xk, y) :={ x ∈ Xk ∪{ y} : Xk ∪{ y} /∈ Fi ,( Xk ∪{ y}) \{ x}∈ Fi }.
+3⃝ Compute
+A(1) :={ (x, y) : y ∈ E \ Xk, x ∈ C1(Xk, y) \{ y}} ,
+A(2) :={ (y, x) : y ∈ E \ Xk, x ∈ C2(Xk, y) \{ y}} ,
+S :={ y ∈ E \ Xk : Xk ∪{ y}∈ F1 },
+T :={ y ∈ E \ Xk : Xk ∪{ y}∈ F2 }.
+4⃝ Compute
+m1 := max{c1(y) : y ∈ S}
+m2 := max{c2(y) : y ∈ T }
+¯S :={ y ∈ S : c1(y) = m1 }
+¯T :={ y ∈ T : c2(y) = m2 }
+¯A(1) :={ (x, y) ∈ A(1) : c1(x) = c1(y) },
+¯A(2) :={ (y, x) ∈ A(2) : c2(x) = c2(y) },
+¯G := (E, ¯A(1) ∪ ¯A(2)).

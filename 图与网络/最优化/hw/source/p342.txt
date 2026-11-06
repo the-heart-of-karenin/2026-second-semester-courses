@@ -1,0 +1,47 @@
+342 14. Generalizations of Matroids
+E.L. Johnson, B.H. Korte, G.L. Nemhauser, eds.), North-Holland, Amsterdam 1977, pp.
+185–204
+Fleischer, L., and Iwata, S. [2000]: Improved algorithms for submodular function mini-
+mization and submodular ﬂow. Proceedings of the 32nd Annual ACM Symposium on
+the Theory of Computing (2000), 107–116
+Frank, A. [1981]: A weighted matroid intersection algorithm. Journal of Algorithms 2
+(1981), 328–336
+Frank, A. [1982]: An algorithm for submodular functions on graphs. In: Bonn Workshop
+on Combinatorial Optimization; Annals of Discrete Mathematics 16 (A. Bachem, M.
+Gr¨otschel, B. Korte, eds.), North-Holland, Amsterdam 1982, pp. 97–120
+Fujishige, S. [1998]: Another simple proof of the validity of Nagamochi and Ibaraki’s
+min-cut algorithm and Queyranne’s extension to symmetric submodular function mini-
+mization. Journal of the Operations Research Society of Japan 41 (1998), 626–628
+Fujishige, S., R ¨ock, H., and Zimmermann, U. [1989]: A strongly polynomial algorithm
+for minimum cost submodular ﬂow problems. Mathematics of Operations Research 14
+(1989), 60–69
+Gr¨otschel, M., Lov ´asz, L., and Schrijver, A. [1981]: The ellipsoid method and its conse-
+quences in combinatorial optimization. Combinatorica 1 (1981), 169–197
+Gr¨otschel, M., Lov ´asz, L., and Schrijver, A. [1988]: Geometric Algorithms and Combina-
+torial Optimization. Springer, Berlin 1988
+Iwata, S. [2002]: A fully combinatorial algorithm for submodular function minimization.
+Journal of Combinatorial Theory B 84 (2002), 203–212
+Iwata, S. [2003]: A faster scaling algorithm for minimizing submodular functions. SIAM
+Journal on Computing 32 (2003), 833–840
+Iwata, S., Fleischer, L., L., and Fujishige, S. [2001]: A combinatorial, strongly polynomial-
+time algorithm for minimizing submodular functions. Journal of the ACM 48 (2001),
+761–777
+Jensen, P.M., and Korte, B. [1982]: Complexity of matroid property algorithms. SIAM
+Journal on Computing 11 (1982), 184–190
+Lov´asz, L. [1980]: Matroid matching and some applications. Journal of Combinatorial
+Theory B 28 (1980), 208–236
+Lov´asz, L. [1981]: The matroid matching problem. In: Algebraic Methods in Graph Theory;
+V ol. II (L. Lov´asz, V.T. S ´os, eds.), North-Holland, Amsterdam 1981, 495–517
+Lov´asz, L. [1983]: Submodular functions and convexity. In: Mathematical Programming:
+The State of the Art – Bonn 1982 (A. Bachem, M. Gr ¨otschel, B. Korte, eds.), Springer,
+Berlin 1983
+Nagamochi, H., and Ibaraki, T. [1998]: A note on minimizing submodular functions. In-
+formation Processing Letters 67 (1998), 239–244
+Queyranne, M. [1998]: Minimizing symmetric submodular functions. Mathematical Pro-
+gramming B 82 (1998), 3–12
+Rizzi, R. [2000]: On minimizing symmetric set functions. Combinatorica 20 (2000), 445–
+450
+Schrijver, A. [2000]: A combinatorial algorithm minimizing submodular functions in
+strongly polynomial time. Journal of Combinatorial Theory B 80 (2000), 346–355
+Vygen, J. [2003]: A note on Schrijver’s submodular function minimization algorithm. Jour-
+nal of Combinatorial Theory B 88 (2003), 399–402

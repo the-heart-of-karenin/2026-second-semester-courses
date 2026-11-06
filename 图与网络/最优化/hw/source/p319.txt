@@ -1,0 +1,57 @@
+Exercises 319
+14. Prove that if (E, F) is a matroid, then the Best-In-Greedy maximizes any
+bottleneck function c(F) = min{ce : e ∈ F} over the bases.
+15. Let (E, F) be a matroid and c : E → R such that c(e) ̸= c(e′) for all
+e ̸= e′ and c(e) ̸= 0 for all e. Prove that both the Maximization and the
+Minimization Problem for (E, F, c) have a unique optimum solution.
+16.∗ Prove that for matroids the independence, basis-superset, closure and rank
+oracles are polynomially equivalent.
+Hint: To show that the rank oracle reduces to the independence oracle, use
+the Best-In-Greedy. To show that the independence oracle reduces to the
+basis-superset oracle, use the W orst-Out-Greedy.
+(Hausmann and Korte [1981])
+17. Given an undirected graph G, we wish to colour the edges with a minimum
+number of colours such that for any circuit C of G, the edges of C do not
+all have the same colour. Show that there is a polynomial-time algorithm for
+this problem.
+18. Let (E, F
+1) ,...,( E, Fk) be matroids with rank functions r1,..., rk . Prove
+that a set X ⊆ E is partitionable if and only if |A|≤ ∑k
+i=1 ri (A) for all
+A ⊆ X. Show that Theorem 6.19 is a special case.
+(Edmonds and Fulkerson [1965])
+19. Let (E, F) be a matroid with rank function r. Prove (using Theorem 13.34):
+(a) (E, F) has k pairwise disjoint bases if and only if kr(A)+| E \ A|≥ kr(E)
+for all A ⊆ E.
+(b) (E, F) has k independent sets whose union is E if and only if kr(A) ≥| A|
+for all A ⊆ E.
+Show that Theorem 6.19 and Theorem 6.16 are special cases.
+20. Let (E, F1) and (E, F2) be two matroids. Let X be a maximal partitionable
+subset with respect to (E, F1) and (E, F∗
+2 ): X = X1
+.
+∪ X2 with X1 ∈ F1
+and X2 ∈ F∗
+2 . Let B2 ⊇ X2 be a basis of F∗
+2 . Prove that then X \ B2 is a
+maximum-cardinality set in F1 ∩ F2.
+(Edmonds [1970])
+21. Let (E, S) be a set system, and let (E, F) be a matroid with rank function
+r. Show that S has a transversal that is independent in (E, F) if and only if
+r
+(⋃
+B∈ B B
+)
+≥| B| for all B ⊆ S.
+Hint: First describe the rank function of the matroid whose independent sets
+are all transversals (Exercise 6), using Theorem 13.34. Then apply Theorem
+13.31.
+(Rado [1942])
+22. Show that the running time of the Weighted Matroid Intersection Algo-
+rithm (cf. Theorem 13.35) can be improved to O(|E|
+3θ).
+23. Let (E, F1) and (E, F2) be two matroids, and c : E → R. Let X0,..., Xm ∈
+F1 ∩ F2 with |Xk |= k and c(Xk) = max{c(X) : X ∈ F1 ∩ F2, |X |= k} for
+all k. Prove that for k = 1,..., m − 2
+c(Xk+1) − c(Xk) ≤ c(Xk) − c(Xk− 1).
+(Krogdahl [unpublished])

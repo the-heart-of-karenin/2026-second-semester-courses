@@ -1,0 +1,304 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.08}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\problem}{\par\textbf{Problem\quad 原题}\par}
+\newcommand{\solution}{\par\medskip\textbf{解答}\quad}
+\newcommand{\wind}{W}
+\title{复分析第5次作业标准解答}
+\author{}
+\date{Homework 5}
+\begin{document}
+\maketitle
+\vspace{-2em}
+题干保留作业原件的英文表述，解答采用中文。$A(\Omega)$表示$\Omega$上的全纯函数空间，
+$\Gamma$表示相应曲线的迹。第三题第一问按用户要求作为课堂已知定理使用，暂不证明；
+第二问直接由第一问推出。第四题也允许使用该已知定理。
+本答案采用用户所附课堂截图中的同调于零定义与 Cauchy 定理。
+
+\section*{1\quad Minimum modulus principle}
+\problem
+1) State and prove the minimum modulus principle for non-vanishing holomorphic functions
+$f$ on a domain $\Omega$.
+
+2) Let $\Omega$ be a bounded domain and $f\in A(\Omega)\cap C^0(\overline\Omega)$.
+Suppose that $|f(z)|$ is constant for $z\in\partial\Omega$.
+Show that either $f$ is constant or $f$ has a zero in $\Omega$.
+
+\subsection*{1)\quad 最小模原理}
+\solution \textbf{定理陈述。}
+设$\Omega\subset\C$为区域，$f\in A(\Omega)$且$f$在$\Omega$内处处非零。
+若$|f|$在$\Omega$内某点取得局部极小值，则$f$在$\Omega$上为常数。
+等价地，非常数且处处非零的全纯函数，其模在区域内部不能取得局部极小值。
+
+\textbf{证明。}
+由$f$处处非零，函数$g=1/f$在$\Omega$上全纯。
+如果$|f|$在$z_0\in\Omega$处局部极小，则$|g|=1/|f|$在$z_0$处局部极大。
+由最大模原理，$g$在连通区域$\Omega$上为常数，故$f$亦为常数。
+
+相应地，若$\Omega$有界、$f\in C(\overline\Omega)$且$f$在$\overline\Omega$上处处非零，
+则$|f|$的最小值在边界上取得。这是由闭包的紧性与刚证的内部最小模原理得到的。
+
+\subsection*{2)\quad 边界上模恒定}
+\solution 设边界上$|f|=c$，其中$c\ge0$。
+若$c=0$，最大模原理的边界形式给出$|f|\le0$，故$f\equiv0$。
+
+以下设$c>0$。若$f$在$\Omega$内已有零点，则结论成立。
+若$f$在$\Omega$内没有零点，则结合边界上$|f|=c>0$，
+$f$在整个$\overline\Omega$上都不为零。因此
+\[
+ f,\ \frac1f\in A(\Omega)\cap C(\overline\Omega).
+\]
+分别对$f$和$1/f$应用最大模原理的边界形式，得到
+\[
+ |f(z)|\le c,\qquad \left|\frac1{f(z)}\right|\le\frac1c
+ \quad(z\in\Omega).
+\]
+第二个不等式即$|f(z)|\ge c$，所以$|f|\equiv c$。
+由最大模原理，$f$为常数。故
+\[
+ \boxed{f\text{为常数，或者 }f\text{在 }\Omega\text{内有零点。}}
+\]
+
+\newpage
+\section*{2\quad Painlevé's theorem}
+\problem
+Prove the following \emph{Painlevé's Theorem}: Assume that $\Omega_1$ and $\Omega_2$
+are two domains with an adjacent piece-wise smooth boundary arc $L$.
+Let $f_j(z)$, $j=1,2$, be holomorphic functions on $\Omega_j$ which are continuous
+on $\overline{\Omega_j}$, respectively.
+Furthermore, suppose that $f_1(z)=f_2(z)$ for $z\in L$. Define
+\[
+ F(z)=
+ \begin{cases}
+  f_1(z),&z\in\Omega_1\cup L,\\
+  f_2(z),&z\in\Omega_2.
+ \end{cases}
+\]
+Then, $F$ is holomorphic on $\Omega_1\cup L\cup\Omega_2$.
+
+\solution 记$U=\Omega_1\cup L\cup\Omega_2$。
+按“相邻公共边界弧”的通常含义，$U$为开集：
+公共弧上每点附近的两侧分别属于$\Omega_1$与$\Omega_2$。
+弧的外侧端点若不属于$U$的内点，就不计入这里的拼接区域；
+全纯性的结论是对开区域$U$而言的。
+
+由于$f_1,f_2$分别连续到边界，且在$L$上取值相同，
+$F$在$U$上连续；在$U\setminus L$上它已经全纯。
+只需证明它在$L$附近全纯。
+
+任取$p\in L$，取以$p$为中心的小圆盘$D$，使$\overline D\subset U$，
+且$L\cap\overline D$包含在有限长度的分段光滑弧内。
+记这段弧的长度为$\ell$。下面证明：对任意闭三角形
+$T\subset D$，均有
+\[
+ \int_{\partial T}F(z)\dd z=0.
+\]
+于是由 Morera 定理，$F$在$D$上全纯。
+
+将$T$的每条边等分为$N$段，再作平行线，把它剖分成$N^2$个相似小三角形。
+令$h=\operatorname{diam}(T)/N$。各小三角形的直径不超过$h$，
+周长不超过$C_T h$，其中$C_T$与$N$无关。
+称闭包与$L$相交的小三角形为\emph{边界三角形}，其余的称为\emph{内部三角形}。
+
+每个内部三角形及其边界均位于某一个$\Omega_j$中。
+由 Cauchy 积分定理，$F$沿其正向边界的积分为零。
+
+边界三角形的个数$B_N$满足
+\[
+ B_N\le C_T\left(1+\frac{\ell}{h}\right).
+\]
+理由是：将上述有限长度弧按弧长分为长度不超过$h$的小段，
+共不超过$1+\ell/h$段；每段包含在一个半径$h$的圆盘内。
+在这组形状固定、大小为$h$的三角网格中，每个这样的圆盘
+至多与固定个数的小三角形相交，故得到上界。
+
+由$F$在紧集$T$上一致连续，令
+\[
+ \omega(h)=
+ \sup_{\substack{z,w\in T\\|z-w|\le h}}|F(z)-F(w)|,
+ \qquad \omega(h)\longrightarrow0\quad(h\to0).
+\]
+对每个边界三角形$Q$，任取$a_Q\in Q$。由于常数函数沿闭曲线的积分为零，
+\[
+ \left|\int_{\partial Q}F(z)\dd z\right|
+ =\left|\int_{\partial Q}\bigl(F(z)-F(a_Q)\bigr)\dd z\right|
+ \le C_T h\,\omega(h).
+\]
+把所有小三角形的正向边界积分相加，内部公共边两两抵消。
+内部三角形的积分又均为零，所以
+\[
+ \left|\int_{\partial T}F(z)\dd z\right|
+ \le B_N C_T h\,\omega(h)
+ \le C_T'(h+\ell)\omega(h)\longrightarrow0
+ \qquad(N\to\infty).
+\]
+左边与$N$无关，故必为零。由 Morera 定理，$F$在$D$上全纯。
+$p\in L$任意，结合$F$在$U\setminus L$上的全纯性，即得$F\in A(U)$。
+
+\newpage
+\section*{3\quad Homological Cauchy theorem and formula}
+\problem
+Let $\Omega$ be a domain. A chain on $\Omega$ is of the form
+$\sum_{j=1}^{m}c_j\gamma_j$, where $c_j\in\Z$ and $\gamma_j$'s are closed
+piece-wise smooth curves on $\Omega$.
+A chain $\sum_{j=1}^{m}c_j\gamma_j$ is said to be \emph{homologous to $0$},
+if for all $z\in\C\setminus\Omega$,
+\[
+ \sum_{j=1}^{m}c_jW(\gamma_j;z)=0.
+\]
+Show that for $f\in A(\Omega)$, if
+$\sum_{j=1}^{m}c_j\gamma_j$ is homologous to $0$ then
+\[
+ \sum_{j=1}^{m}c_j\oint_{\gamma_j}f(z)\dd z=0,
+\]
+and
+\[
+ \frac1{2\pi i}\sum_{j=1}^{m}c_j
+       \oint_{\gamma_j}\frac{f(\zeta)}{\zeta-z}\dd\zeta
+ =f(z)\sum_{j=1}^{m}c_jW(\gamma_j;z),
+ \qquad z\in\Omega\setminus\bigcup_{j=1}^{m}\Gamma_j.
+\]
+
+\subsection*{第一问\quad 同调形式的 Cauchy 定理}
+按用户要求，暂不证明，直接作为已知定理使用：
+若链$C=\sum_{j=1}^{m}c_j\gamma_j$在$\Omega$中同调于零，则
+\[
+ \boxed{\displaystyle
+  \sum_{j=1}^{m}c_j\oint_{\gamma_j}h(\zeta)\dd\zeta=0
+  \quad\text{对每个 }h\in A(\Omega).}
+\]
+
+\subsection*{第二问\quad 由第一问推出积分公式}
+\solution 固定
+$z\in\Omega\setminus\bigcup_{j=1}^{m}\Gamma_j$，定义
+\[
+ g_z(\zeta)=
+ \begin{cases}
+  \dfrac{f(\zeta)-f(z)}{\zeta-z},&\zeta\ne z,\\[6pt]
+  f'(z),&\zeta=z.
+ \end{cases}
+\]
+由$f$在$z$处的 Taylor 展开，$\zeta=z$是上述差商的可去奇点，
+按所给值补定义后有$g_z\in A(\Omega)$。
+
+对$g_z$应用第一问的已知定理，得
+\begin{align*}
+ 0
+ &=\sum_{j=1}^{m}c_j\oint_{\gamma_j}
+         \frac{f(\zeta)-f(z)}{\zeta-z}\dd\zeta\\
+ &=\sum_{j=1}^{m}c_j\oint_{\gamma_j}
+         \frac{f(\zeta)}{\zeta-z}\dd\zeta
+   -f(z)\sum_{j=1}^{m}c_j\oint_{\gamma_j}
+         \frac{\dd\zeta}{\zeta-z}.
+\end{align*}
+根据绕数的定义，
+\[
+ W(\gamma_j;z)=\frac1{2\pi i}
+                    \oint_{\gamma_j}\frac{\dd\zeta}{\zeta-z}.
+\]
+移项并除以$2\pi i$，便得
+\[
+ \boxed{\displaystyle
+ \frac1{2\pi i}\sum_{j=1}^{m}c_j
+       \oint_{\gamma_j}\frac{f(\zeta)}{\zeta-z}\dd\zeta
+ =f(z)\sum_{j=1}^{m}c_jW(\gamma_j;z).}
+\]
+这里使用的是整条链同调于零，并不要求每条$\gamma_j$分别同调于零。
+
+\newpage
+\section*{4\quad Winding number under a holomorphic map}
+\problem
+Let $\Omega$ be a domain and $f\in A(\Omega)$.
+Let $\gamma$ be a closed piece-wise smooth curve in $\Omega$ which is homologous
+to $0$. Let $\sigma=f\circ\gamma$ and suppose that $\sigma$ does not pass through
+$\alpha$. Let $\{a_j\}_{j=1}^{m}$ be the preimages of $\alpha$ under $f$,
+with multiplicity $r_j$, $1\le j\le m$. Prove that
+\[
+ W(\sigma;\alpha)=\sum_{j=1}^{m}r_jW(\gamma;a_j).
+\]
+
+\solution $\alpha\notin\sigma$等价于$f(\zeta)-\alpha$在$\gamma$上处处非零，
+所以没有$a_j$落在$\gamma$的迹上。
+题面以有限个点$a_1,\ldots,a_m$列出全部原像；
+以下按此条件，将它们视为互不相同的点，重数由$r_j$记录。
+
+若$f$为常数，则$f\ne\alpha$，原像集合为空，
+$\sigma$为常曲线，等式两边均为$0$。
+以下设$f$非常数。
+
+由零点的局部分解，可以定义
+\[
+ g(\zeta)=\frac{f(\zeta)-\alpha}
+                 {\prod_{j=1}^{m}(\zeta-a_j)^{r_j}}
+ \qquad(\zeta\notin\{a_1,\ldots,a_m\}).
+\]
+在每个$a_j$处，分子与分母恰有相同的零点阶数，故商的奇点可去，
+补定义后$g$在$\Omega$上全纯且处处非零。
+因此$g'/g\in A(\Omega)$，而在避开这些零点处，
+\[
+ \frac{f'(\zeta)}{f(\zeta)-\alpha}
+   =\sum_{j=1}^{m}\frac{r_j}{\zeta-a_j}+\frac{g'(\zeta)}{g(\zeta)}.
+\]
+
+由曲线积分换元$\sigma=f\circ\gamma$，
+\[
+ W(\sigma;\alpha)
+  =\frac1{2\pi i}\oint_{\sigma}\frac{\dd w}{w-\alpha}
+  =\frac1{2\pi i}\oint_{\gamma}
+             \frac{f'(\zeta)}{f(\zeta)-\alpha}\dd\zeta.
+\]
+将上面的分解代入。由于$\gamma$在$\Omega$中同调于零，
+对全纯函数$g'/g$应用第三题第一问的已知定理，有
+\[
+ \oint_{\gamma}\frac{g'(\zeta)}{g(\zeta)}\dd\zeta=0.
+\]
+故
+\begin{align*}
+ W(\sigma;\alpha)
+ &=\sum_{j=1}^{m}r_j
+       \frac1{2\pi i}\oint_{\gamma}\frac{\dd\zeta}{\zeta-a_j}\\
+ &=\sum_{j=1}^{m}r_jW(\gamma;a_j).
+\end{align*}
+这就证明了所求等式。这里不必假设$g$在$\Omega$上存在全纯对数。
+
+\newpage
+\section*{5\quad Higher order kernels}
+\problem
+Let $\gamma$ be a closed piece-wise smooth curve in $\C$ and denote by $\Gamma$
+its trace. Prove that, for any $n\ge2$,
+\[
+ \oint_{\gamma}\frac{\dd\zeta}{(\zeta-z)^n}=0,
+ \qquad z\notin\Gamma.
+\]
+
+\solution 固定$z\notin\Gamma$与整数$n\ge2$。
+在$\C\setminus\{z\}$上，函数$(\zeta-z)^{-n}$有单值全纯原函数
+\[
+ H(\zeta)=-\frac1{n-1}(\zeta-z)^{-(n-1)},\qquad
+ H'(\zeta)=\frac1{(\zeta-z)^n}.
+\]
+若$\gamma:[a,b]\to\C\setminus\{z\}$为分段光滑的闭曲线，
+逐段使用链式法则与微积分基本定理，得到
+\[
+ \oint_{\gamma}\frac{\dd\zeta}{(\zeta-z)^n}
+   =H(\gamma(b))-H(\gamma(a))=0.
+\]
+最后一步利用$\gamma(a)=\gamma(b)$，因此
+\[
+ \boxed{\displaystyle
+  \oint_{\gamma}\frac{\dd\zeta}{(\zeta-z)^n}=0.}
+\]
+此题不要求$\gamma$在$\C\setminus\{z\}$中同调于零；
+原函数的存在已足够。条件$n\ge2$是必要的：
+当$n=1$时，该积分为$2\pi iW(\gamma;z)$，未必为零。
+
+\end{document}

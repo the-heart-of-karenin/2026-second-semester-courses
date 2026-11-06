@@ -1,0 +1,45 @@
+Exercises 339
+This result has been further generalized by Nagamochi and Ibaraki [1998] and
+by Rizzi [2000].
+Exercises
+1. Let G be an undirected graph and M a maximum matching in G. Let F be the
+family of those subsets X ⊆ E(G) for which there exists a special blossom
+forest F with respect to M with E(F) \ M = X. Prove that (E(G) \ M, F)
+is a greedoid.
+Hint: Use Exercise 23 of Chapter 10.
+2. Let (E, F) be a greedoid and c
+′ : E → R+. We consider the bottleneck
+function c(F) := min{c′(e) : e ∈ F} for F ⊆ E. Show that the Greedy
+Algorithm For Greedoids, when applied to (E, F) and c, ﬁnds an F ∈ F
+with c(F) maximum.
+3. This exercise shows that greedoids can also be deﬁned as languages (cf. Deﬁ-
+nition 15.1). Let E be a ﬁnite set. A language L over the alphabet E is called
+a greedoid language if
+(a) L contains the empty string;
+(b) xi ̸= xj for all (x1,..., xn) ∈ L and 1 ≤ i < j ≤ n;
+(c) (x1,..., xn− 1) ∈ L for all (x1,..., xn) ∈ L;
+(d) If (x1,..., xn), (y1,..., ym) ∈ L with m < n, then there exists an i ∈
+{1,..., n} such that (y1,..., ym, xi ) ∈ L.
+L is called an antimatroid language if it satisﬁes (a), (b), (c) and
+(d′)I f (x1,..., xn), (y1,..., ym) ∈ L with {x1,..., xn } ̸⊆{ y1,..., ym }, then
+there exists an i ∈{ 1,..., n} such that (y1,..., ym, xi ) ∈ L.
+Prove: A language L over the alphabet E is a greedoid language (an antima-
+troid language) if and only if the set system (E, F) is a greedoid (antimatroid),
+where F :={ { x1,..., xn } : (x1,..., xn) ∈ L}.
+4. Let U be a ﬁnite set and f :2 U → R. Prove that f is submodular if and
+only if f (X ∪{ y, z}) − f (X ∪{ y}) ≤ f (X ∪{ z}− f (X) for all X ⊆ U and
+y, z ∈ U.
+5. Let P be a nonempty polymatroid. Show that then there is a submodular and
+monotone function f with f (∅) = 0 and P = P( f ).( f :2 E → R is called
+monotone if f (A) ≤ f (B) for all A ⊆ B ⊆ E).
+6.∗ Prove that a nonempty compact set P ⊆ Rn
++ is a polymatroid if and only if
+(a) For all 0 ≤ x ≤ y ∈ P we have x ∈ P.
+(b) For all x ∈ Rn
++ and all y, z ≤ x with y, z ∈ P that are maximal with this
+property (i.e. y ≤ w ≤ x and w ∈ P implies w = y, and z ≤ w ≤ x and
+w ∈ P implies w = z) we have 1 ly = 1lz.
+Note: This is the original deﬁnition of Edmonds [1970].
+7. Prove that the Polymatroid Greedy Algorithm, when applied to a vector
+c ∈ RE and a function f :2 E → R that is submodular but not necessarily
+monotone, ﬁnds

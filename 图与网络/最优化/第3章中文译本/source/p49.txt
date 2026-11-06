@@ -1,0 +1,38 @@
+3. Linear Programming
+
+
+
+
+In this chapter we review the most important facts about Linear Programming.
+Although this chapter is self-contained, it cannot be considered to be a compre-
+hensive treatment of the ﬁeld. The reader unfamiliar with Linear Programming is
+referred to the textbooks mentioned at the end of this chapter.
+    The general problem reads as follows:
+
+Linear Programming
+Instance:    A matrix A ∈ Rm×n and column vectors b ∈ Rm , c ∈ Rn .
+Task:        Find a column vector x ∈ Rn such that Ax ≤ b and c x is maximum,
+             decide that {x ∈ Rn : Ax ≤ b} is empty, or decide that for all α ∈ R
+             there is an x ∈ Rn with Ax ≤ b and c x > α.
+    A linear program (LP) is an instance of the above problem. We often write
+a linear program as max{c x : Ax ≤ b}. A feasible solution of an LP max{c x :
+Ax ≤ b} is a vector x with Ax ≤ b. A feasible solution attaining the maximum is
+called an optimum solution.
+    Here c x denotes the scalar product of the vectors. The notion x ≤ y for vectors
+x and y (of equal size) means that the inequality holds in each component. If no
+sizes are speciﬁed, the matrices and vectors are always assumed to be compatible
+in size. We often omit indicating the transposition of column vectors and write
+e.g. cx for the scalar product.
+    As the problem formulation indicates, there are two possibilities when an LP
+has no solution: The problem can be infeasible (i.e. P := {x ∈ Rn : Ax ≤ b} = ∅)
+or unbounded (i.e. for all α ∈ R there is an x ∈ P with cx > α). If an LP is neither
+infeasible nor unbounded it has an optimum solution, as we shall prove in Section
+3.2. This justiﬁes the notation max{c x : Ax ≤ b} instead of sup{c x : Ax ≤ b}.
+    Many combinatorial optimization problems can be formulated as LPs. To do
+this, we encode the feasible solutions as vectors in Rn for some n. In Section 3.4
+we show that one can optimize a linear objective function over a ﬁnite set S of
+vectors by solving a linear program. Although the feasible set of this LP contains
+not only the vectors in S but also all their convex combinations, one can show
+that among the optimum solutions there is always an element of S.
+    In Section 3.1 we compile some terminology and basic facts about polyhedra,
+the sets P = {x ∈ Rn : Ax ≤ b} of feasible solutions of LPs. In Section 3.2 we

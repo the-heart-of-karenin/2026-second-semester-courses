@@ -1,0 +1,47 @@
+14.4 Schrijver’s Algorithm 333
+f ({e}) − f (∅) ≥ f (X ∪{ e}) − f (X) ≥ f (U) − f (U \{ e}). (14.2)
+If, for some e ∈ U, f ({e}) − f (∅) ≤ 0, then by (14.2) there is an optimum
+set S containing e. In this case we consider the instance (U ′, B, f ′) deﬁned by
+U ′ := U \{ e} and f ′(X) := f (X ∪{ e}) for X ⊆ U \{ e}, ﬁnd a set S′ ⊆ U ′ with
+f ′(S′) minimum and output S := S′ ∪{ e}.
+Similarly, if f (U) − f (U \{ e}) ≥ 0, then by (14.2) there is an optimum set S
+not containing e. In this case we simply minimize f restricted to U \{ e}. In both
+cases we have reduced the size of the ground set.
+So we may assume that f ({e}) − f (∅)> 0 and f (U \{ e}) − f (U)> 0
+for all e ∈ U. Let x(e) := f (U \{ e}) − f (U). For each integer β with − B ≤
+β ≤ f (∅) we deﬁne g(X) := f (X) − β +∑
+e∈ X x(e). By Proposition 14.18, g
+is submodular and monotone. Furthermore we have g(∅) = f (∅) − β ≥ 0 and
+g({e}) = f ({e}) − β + x(e)> 0 for all e ∈ U, and thus g(X)> 0 for all
+∅ ̸= X ⊆ U. Now we apply Proposition 14.17 and check if x ∈ P(g). If yes, we
+have f (X) ≥ β for all X ⊆ U and we are done. Otherwise we get a set S with
+f (S)<β .
+Now we apply binary search: By choosing β appropriately each time, we ﬁnd
+after O(log(2B)) iterations the number β∗ ∈{ − B, − B + 1,..., f (∅)} for which
+f (X) ≥ β∗ for all X ⊆ U but f (S)<β ∗ + 1 for some S ⊆ U. This set S
+minimizes f . 2
+The ﬁrst strongly polynomial-time algorithm has been designed by Gr ¨otschel,
+Lov´asz and Schrijver [1988], also based on the ellipsoid method. Combinato-
+rial algorithms to solve the Submodular Function Minimization Problem in
+strongly polynomial time have been found by Schrijver [2000] and independently
+by Iwata, Fleischer and Fujishige [2001]. In the next section we describe Schri-
+jver’s algorithm.
+14.4 Schrijver’s Algorithm
+For a ﬁnite set U and a submodular function f :2 U → R, assume w.l.o.g. that
+U ={ 1,..., n} and f (∅) = 0. Schrijver’s [2000] algorithm has, at any stage, a
+point x in the so-called base polyhedron of f , deﬁned by
+{
+x ∈ RU :
+∑
+u∈ A
+x(u) ≤ f (A) for all A ⊆ U,
+∑
+u∈ U
+x(u) = f (U)
+}
+.
+We mention that the set of vertices of this base polyhedron is precisely the set of
+vectors b≺ for all total orders ≺ of U, where we deﬁne
+b≺ (u) := f ({v ∈ U : v ⪯ u}) − f ({v ∈ U : v ≺ u})
+(u ∈ U). This fact, which we will not need here, can be proved similar to Theorem
+14.11 (Exercise 13).

@@ -1,0 +1,44 @@
+                                                                                 References        63
+
+
+        where x  = (x2 , . . . , xn ) and a1 , . . . , am are the rows of A without the ﬁrst
+        entry. Then one can eliminate x1 : Prove that Ax ≤ b has a solution if and
+        only if the system
+                   ai x    ≤   bi               (i = 1, . . . , m 1 ),
+           a j x  − b j    ≤   bk − ak x    ( j = m 1 + 1, . . . , m 2 , k = m 2 + 1, . . . , m)
+        has a solution. Show that this technique, when iterated, leads to an algorithm
+        for solving a linear inequality system Ax ≤ b (or proving infeasibility).
+        Note: This method is known as Fourier-Motzkin elimination because it was
+        proposed by Fourier and studied by Motzkin [1936]. One can prove that it is
+        not a polynomial-time algorithm.
+     6. Use Fourier-Motzkin elimination (Exercise 5) to prove Theorem 3.19 directly.
+        (Kuhn [1956])
+     7. Show that Theorem 3.19 implies the Duality Theorem 3.16.
+     8. Prove the decomposition theorem for polyhedra: Any polyhedron P can be
+        written as P = {x + c : x ∈ X, c ∈ C}, where X is a polytope and C is a
+        polyhedral cone.
+        (Motzkin [1936])
+∗    9. Let P be a rational polyhedron and F a face of P. Show that
+                                 {c : cz = max {cx : x ∈ P} for all z ∈ F}
+      is a rational polyhedral cone.
+  10. Prove Carathéodory’s theorem:
+      If X ⊆ Rn and y ∈ conv(X ), then there are x1 , . . . , xn+1 ∈ X such that
+      y ∈ conv({x1 , . . . , xn+1 }).
+      (Carathéodory [1911])
+  11. Prove the following extension of Carathéodory’s theorem (Exercise 10):
+      If X ⊆ Rn and y, z ∈ conv(X ), then there are x1 , . . . , xn ∈ X such that
+      y ∈ conv({z, x1 , . . . , xn }).
+  12. Prove that the extreme points of a polyhedron are precisely its vertices.
+  13. Let P be a nonempty polytope. Consider the graph G(P) whose vertices are
+      the vertices of P and whose edges correspond to the 1-dimensional faces of
+      P. Let x be any vertex of P, and c a vector with c x < max{c z : z ∈ P}.
+      Prove that then there is a neighbour y of x in G(P) with c x < c y.
+∗ 14. Use Exercise 13 to prove that G(P) is n-connected for any n-dimensional
+      polytope P (n ≥ 1).
+
+
+    References
+    General Literature:
+    Chvátal, V. [1983]: Linear Programming. Freeman, New York 1983
+    Padberg, M. [1995]: Linear Optimization and Extensions. Springer, Berlin 1995
+    Schrijver, A. [1986]: Theory of Linear and Integer Programming. Wiley, Chichester 1986

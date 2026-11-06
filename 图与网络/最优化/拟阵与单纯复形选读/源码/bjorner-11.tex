@@ -1,0 +1,78 @@
+\section{具有特殊结构的复形}
+\sourcepage{1853}
+本节回顾在组合学中经常遇到的一些复形性质，它们表达了结构在某种意义上的简单性。
+\subsection*{可塌缩与可壳复形}\addcontentsline{toc}{subsection}{可塌缩与可壳复形}
+\entry{11.1}{}设 $\Delta$ 为单纯复形，且 $\sigma\in\Delta$ 恰为一个单形 $\tau\in\Delta$ 的真面。则
+\[
+\Delta'=\Delta\setminus\{\sigma,\tau\}
+\]
+称为由 $\Delta$ 经一次\textbf{初等塌缩}得到，而 $\Delta$ 由 $\Delta'$ 经一次\textbf{初等反塌缩}得到。注意 $\Delta'\simeq\Delta$。若经过一列初等塌缩，能将 $\Delta$ 化为单点，则称它\textbf{可塌缩}。
+
+\textbf{非回避复形}（nonevasive complex）递归定义如下：单个顶点是非回避的；若某个顶点 $x\in\Delta^0$ 的链接 $\lk_\Delta(x)$ 与删除 $\operatorname{dl}_\Delta(x)$ 都非回避，则 $\Delta$ 非回避。以下蕴含都是严格的，即逆命题不成立：
+\[
+\text{锥}\Longrightarrow\text{非回避}\Longrightarrow\text{可塌缩}
+\Longrightarrow\text{可缩}\Longrightarrow\Z\text{ 无环}.
+\]
+此外，对任意域 $\mathbf k$：
+\[
+\Z\text{ 无环}\Longrightarrow\mathbf k\text{ 无环}
+\Longrightarrow\Q\text{ 无环}\Longrightarrow\widetilde\chi=0,
+\]
+并且，$\Z$ 无环当且仅当对每个素数 $p$ 都 $\Z_p$ 无环。
+
+Kahn 等人 (1984) 定义非回避复形，是为了刻画第 2 节讨论的自变量复杂度。复形 $\Delta$ 非回避，当且仅当对所有 $F\subseteq\Delta^0$，都能用少于 $|\Delta^0|$ 个“$x\in F$ 吗？”这样的询问，判定 $F\in\Delta$ 是否成立。
+\tnote{这个询问模型按组合学约定把空面也纳入，见 9.1 的原文附注；否则单个顶点的基例会与空集输入产生约定冲突。}
+
+可塌缩性在组合拓扑中已有长期研究。值得注意：两个单连通有限复形同伦等价，当且仅当能通过一列初等塌缩与反塌缩将一个变为另一个，见 Cohen (1973)。特别地，可缩复形恰为能通过塌缩和反塌缩化为一点的复形。
+
+\sourcepage{1854}
+若偏序集 $P$ 的元素 $x$ 满足 $P_{>x}$ 有最小元或 $P_{<x}$ 有最大元，称 $x$ \textbf{不可约}。若有限偏序集可以反复移去不可约元素，最后成为单元素偏序集，称其\textbf{可拆除}。可拆除偏序集是非回避的。Stong (1966) 给出的可拆除偏序集的拓扑刻画已在 9.3 提到。\textbf{有向偏序集}，即任意 $x,y\in P$ 都有共同上界 $z\in P$，是可缩的。
+
+\entry{11.2}{}设 $\Delta$ 为纯 $d$ 维复形，且 $k$ 维面 $\sigma$ 恰包含于一个 $d$ 维面 $\tau$。则
+\[
+\Delta'=\Delta\setminus\{\gamma:\sigma\subseteq\gamma\subseteq\tau\}
+\]
+称为由 $\Delta$ 经一次\textbf{$(k,d)$ 塌缩}得到。若 $\sigma\ne\tau$，则 $\Delta'\simeq\Delta$。若可以通过一列 $(k,d)$ 塌缩（$0\le k\le d$）将 $\Delta$ 化为一个 $d$ 单形，则称 $\Delta$ \textbf{可壳}。
+\tnote{这里允许 $k=d$，即直接删除一个极大面；这种步骤未必保持同伦型。因此“可壳”不蕴含“可塌缩”或“可缩”。}
+
+纯单纯复形称为\textbf{顶点可分解}，若满足下列之一：(i) $\Delta=\varnothing$；(ii) $\Delta$ 为单个顶点；(iii) 存在 $x\in\Delta^0$，使 $\lk_\Delta(x)$ 与 $\operatorname{dl}_\Delta(x)$ 都顶点可分解。例如，每个单形及其边界都顶点可分解。\textbf{可构造复形}递归定义为：(i) 每个单形及空复形均可构造；(ii) 若 $\Delta_1,\Delta_2,\Delta_1\cap\Delta_2$ 均可构造，且
+\[
+\dim\Delta_1=\dim\Delta_2=1+\dim(\Delta_1\cap\Delta_2),
+\]
+则 $\Delta_1\cup\Delta_2$ 可构造。纯 $d$ 维复形的下列蕴含是严格的：
+\[
+\begin{gathered}
+\text{顶点可分解}\Longrightarrow\text{可壳}\Longrightarrow\text{可构造}\\
+\Longrightarrow(d-1)\text{ 连通}.
+\end{gathered}
+\]
+第一条蕴含以及顶点可分解的定义来自 Provan 与 Billera (1980)。可壳性的历史可追溯到 19 世纪，见 Grünbaum (1967)。可构造复形由 M. Hochster 定义，见 Stanley (1977)。
+
+可壳性通常被看作把复形\emph{拼起来}的方式，因此以下等价定义更常用。有限纯 $d$ 维复形可壳，当其 $d$ 维面可排为 $\sigma_1,\ldots,\sigma_t$，使对 $2\le k\le t$，
+\[
+(\partial\sigma_1\cup\cdots\cup\partial\sigma_{k-1})\cap\partial\sigma_k
+\]
+为纯 $(d-1)$ 维复形；这里 $\partial\sigma_j=2^{\sigma_j}\setminus\{\varnothing,\sigma_j\}$ 是该单形的边界复形。等价地，对任意 $1\le i<k\le t$，存在 $j<k$ 使
+\[
+\sigma_i\cap\sigma_k\subseteq\sigma_j\cap\sigma_k,\qquad
+\dim(\sigma_j\cap\sigma_k)=d-1.
+\]
+用语言说，第 $k$ 个极大面与先前极大面的并，沿着其边界的一部分相交，而这部分是该单形若干极大真面的并。这样的极大面排序称为\textbf{壳序}。
+
+若 $\Delta$ 可壳或可构造，则每个链接 $\lk_\Delta(\sigma)$ 也有相同性质。另一些复形与偏序集构造也保持可壳性，例如定理 11.13。单纯可壳性的一些基本性质，包括无限复形情形，综述于 Björner (1984b)。胞腔复形的可壳性见 Danaraj 与 Klee (1974)、Björner (1984a)，以及 Klee 与 Kleinschmidt 所写的第 18 章。证明偏序集的序复形可壳，有一种专门方法称为\textbf{字典序可壳性}，详见 Björner (1980) 和 Björner 与 Wachs (1983, 1994)。可壳性、顶点可分解性及其大多数有用性质，都容易推广到非纯复形，见 Björner 与 Wachs (1994)。
+
+\sourcepage{1855}
+\entry{11.3}{}单纯 PL 球面与 PL 闭球的定义见 12.2，PL 表示分片线性（piecewise linear）。PL 性是一种组合性质：几何单纯复形是否为 PL，只取决于其抽象单纯复形。
+
+为了证明具体复形同胚于球面或闭球，下列结果常常很有用。
+\entry{定理 11.4}{}设 $\Delta$ 为可构造的 $d$ 维单纯复形。
+\begin{enumerate}[label=(\roman*)]
+\item 若每个 $(d-1)$ 维面恰包含于两个 $d$ 维面，则 $\Delta$ 是 PL 球面。
+\item 若每个 $(d-1)$ 维面包含于一个或两个 $d$ 维面，且至少有一个只包含于一个 $d$ 维面，则 $\Delta$ 是 PL 闭球。
+\end{enumerate}
+这来自 PL 拓扑的一些基本事实，例如 12.2 引用的结果。对于可壳复形，这个定理隐含于 Bing (1964)，明确出现于 Danaraj 与 Klee (1974)。
+
+若 $\Delta$ 是 $d$ 维球面（或任意无边界流形）的三角剖分，$\sigma\in\Delta^k$，则 $\lk_\Delta(\sigma)$ 的同调与 $S^{d-1-k}$ 相同。若 $\sigma$ 为顶点，链接甚至与 $S^{d-1}$ 同伦等价。然而，若 $\Delta$ 是 PL $d$ 维球面，则每个 $k$ 维面的链接本身就是 PL $(d-1-k)$ 维球面。
+\tnote{原文这一段写“任意流形”；球面型局部同调的说法适用于无边界流形的面，或有边界流形中不位于边界的面。边界面需作相应调整。}
+
+\input{bjorner-11-cm}

@@ -1,0 +1,120 @@
+\subsection*{Cohen--Macaulay 复形}\addcontentsline{toc}{subsection}{Cohen--Macaulay 复形}
+\entry{11.5}{}设 $\mathbf k$ 为域或整数环 $\Z$。有限维单纯复形 $\Delta$ 称为\textbf{在 $\mathbf k$ 上 Cohen--Macaulay}，记为 $\cm/\mathbf k$；当系数已明确或不重要时简称 CM，若对每个 $\sigma\in\Delta\cup\{\varnothing\}$，链接 $\lk_\Delta(\sigma)$ 在 $\mathbf k$ 上均为
+\[
+(\dim\lk_\Delta(\sigma)-1)\text{ 无环}.
+\]
+若对所有这样的 $\sigma$，链接均为 $(\dim\lk_\Delta(\sigma)-1)$ 连通，则称 $\Delta$ 为\textbf{同伦 Cohen--Macaulay}（homotopy-CM）。以下蕴含为严格蕴含：
+\[
+\begin{gathered}
+\text{可构造}\Longrightarrow\text{同伦 CM}\Longrightarrow\cm/\Z\\
+\Longrightarrow\cm/\mathbf k\Longrightarrow\cm/\Q,
+\end{gathered}
+\]
+其中 $\mathbf k$ 为任意域。此外，$\cm/\Z$ 当且仅当对每个素数 $p$ 都为 $\cm/\Z_p$。第一条蕴含来自可构造性蕴含 $(d-1)$ 连通，且会被链接继承；第二条来自 9.15；其余来自万有系数定理。特别地，可壳复形都是同伦 CM 的。
+\tnote{链中的严格性应按不同系数情形理解：特征为 0 的域与 $\Q$ 在这里给出相同的同调消失条件，因此不能把最后一条对每个固定域都理解成真包含。正文保留原文的概括表述。}
+
+有限 CM 复形的一个重要方面，是存在等价的环论定义。设 $\Delta^0=\{x_1,\ldots,x_n\}$，在多项式环 $\mathbf k[x_1,\ldots,x_n]$ 中，取由所有满足
+\[
+\{x_{i_1},\ldots,x_{i_s}\}\notin\Delta,\qquad
+1\le i_1<\cdots<i_s\le n,\quad s\ge1
+\]
+的单项式 $x_{i_1}\cdots x_{i_s}$ 生成的理想 $I$。令
+\[
+\mathbf k[\Delta]=\mathbf k[x_1,\ldots,x_n]/I,
+\]
+称为 $\Delta$ 的 \textbf{Stanley--Reisner 环}或\textbf{面环}。则 $\Delta$ 为 $\cm/\mathbf k$，当且仅当 $\mathbf k[\Delta]$ 在交换代数意义下为 Cohen--Macaulay 环（Reisner 1976）。
+
+\sourcepage{1856}
+单纯复形的环论方面及其组合应用，可参阅 Stanley (1983a)。该书还讨论了其他由环论引出的复形类，例如 Gorenstein 复形和 Buchsbaum 复形。复形环论及 Reisner 定理的其他处理见 Baclawski 与 Garsia (1981)、Yuzvinsky (1987)。另见第 41 章“纯数学中的组合学”的第 5 节。
+
+Cohen--Macaulay 复形与偏序集约于 1974--1975 年在 Baclawski (1976, 1980)、Hochster (1977)、Reisner (1976)、Stanley (1975, 1977) 的工作中引入。同伦 CM 的概念最早出现于 Quillen (1978)。Björner、Garsia 与 Stanley (1982) 给出 CM 偏序集的初等介绍。
+
+Cohen--Macaulay 性的一个突出组合应用，是 Stanley 证明了 $d$ 维球面具有 $n$ 个顶点的三角剖分中，各维面数的精确上界（Stanley 1975, 1983a；另见 Klee 与 Kleinschmidt 所写的第 18 章）。关于下界的一个应用见 Stanley (1987a)。
+
+\entry{11.6}{}纯 $d$ 维复形称为\textbf{强连通}或\textbf{对偶连通}，若每对极大面 $\sigma,\tau\in\Delta^d$ 都可由一列极大面
+\[
+\sigma=\sigma_0,\sigma_1,\ldots,\sigma_n=\tau
+\]
+连接，使对每个 $1\le i\le n$，有 $\dim(\sigma_{i-1}\cap\sigma_i)=d-1$。
+
+\entry{命题 11.7}{}每个 CM 复形都是纯的且强连通。
+
+这来自以下引理；对 $\dim\Delta$ 归纳即可证明：设 $\Delta$ 为有限维单纯复形，假定对每个满足 $\dim\lk_\Delta(\sigma)\ge1$ 的 $\sigma\in\Delta\cup\{\varnothing\}$，$\lk_\Delta(\sigma)$ 都连通。则 $\Delta$ 纯且强连通。
+
+CM 性是拓扑不变量：$\Delta$ 是否为 $\cm/\mathbf k$ 只取决于 $\real\Delta$ 的拓扑。这由 Munkres (1984b) 给出的下列等价表述推出。
+
+\entry{定理 11.8}{}有限维复形 $\Delta$ 为 $\cm/\mathbf k$，当且仅当其空间 $T=\real\Delta$ 满足：对所有 $p\in T$ 及 $i<\dim\Delta$，
+\[
+\widetilde H_i(T)=H_i(T,T\setminus\{p\})=0.
+\]
+此处 $\widetilde H_i$ 为约化奇异同调，$H_i$ 为相对奇异同调，系数均取 $\mathbf k$。其推论是：若可三角剖分流形 $M$（可有边界）满足 $\widetilde H_i(M)=0$ 对全部 $i<\dim M$ 成立，则 $M$ 的每个三角剖分都 CM。例如：(1) $d$ 维球面、闭球或 $\R^d$ 的每个三角剖分均为 $\cm/\Z$，但未必同伦 CM；注意，同伦 CM 不是拓扑不变量。(2) 实射影 $d$ 维空间的三角剖分为 $\cm/\mathbf k$，当且仅当 $\operatorname{char}\mathbf k\ne2$。
+\tnote{第二个例子在 $d\ge2$ 的通常语境下成立；$\R P^1\cong S^1$ 对任意系数域均 CM，故低维情形须单独看待。}
+
+\entry{11.9}{}Cohen--Macaulay 偏序集，即序复形为 CM 的偏序集，值得补充一点说明。设 $P$ 具有有限秩，$\sigma:x_0<\cdots<x_k$ 为其中一条链。它在序复形中的链接是以下序和的序复形：
+\[
+P_{<x_0}*(x_0,x_1)*\cdots*(x_{k-1},x_k)*P_{>x_k}.
+\]
+因此，由 9.20，$P$ 为 CM（相应地，同伦 CM），当且仅当 $\widehat P$ 的每个开区间 $(x,y)$ 都为 $(\rk(x,y)-1)$ 无环（相应地，$(\rk(x,y)-1)$ 连通）。
+
+\sourcepage{1857}
+Cohen--Macaulay 偏序集在交换代数中的一些应用，见第 41 章“纯数学中的组合学”的第 5 节。
+
+\entry{11.10}{}组合学中有大量可壳复形与 CM 复形。这里只列举少数重要例子。
+\begin{enumerate}[label=(\roman*)]
+\item 单纯凸多胞形的边界复形可壳（Bruggesser 与 Mani 1971；Danaraj 与 Klee 1974；另见 Klee 与 Kleinschmidt 所写的第 18 章）。每个单纯 PL 球面都是某个可壳闭球的边界（Pachner 1986）。存在三维闭球的不可壳三角剖分（M. E. Rudin），也存在三维球面的不可壳三角剖分（见下）。球面与闭球可壳性的综述见 Danaraj 与 Klee (1978)。
+\item 对任意单纯球面，均有
+\[
+\text{可构造}\Longrightarrow\mathrm{PL}\Longrightarrow\text{同伦 CM}.
+\]
+五维球面有非同伦 CM 的三角剖分（R. D. Edwards，见 Daverman 1986），也有不可构造的 PL 三角剖分（Mandel 1982）。三维球面的每个三角剖分都是 PL，但并非全部可壳（Lickorish 1991；另见 Vince 1985）。正则复多胞形的面格是 CM 的（Orlik 1990）。
+\item 拟阵的独立集复形可构造（Stanley 1977），且顶点可分解（Provan 与 Billera 1980）。更一般地，由贪心结构（greedoid）的基的补集所生成的复形顶点可分解（Björner、Korte 与 Lovász 1985）。拟阵产生的复形见 Björner (1992)。
+\item 每个有限秩半模格，特别是几何格或模格，都是 CM 的（Folkman 1966）且可壳（Björner 1980）。对几何格 $L$ 的任意元素 $x$，偏序集 $L\setminus[x,\hat1]$ 可壳（Wachs 与 Walker 1986）。
+\item Tits 建筑是 CM 的（Solomon--Tits，见 Brown 1989 或 Ronan 1989）且可壳（Björner 1984b）。Ronan (1981)、Smith (1988)、Tits (1981) 等人，为了在群论中应用，也研究了与群有关的更一般几何的拓扑。通论见 Buekenhout (1995)、Ronan (1989)。
+\item Quillen (1978) 证明，有限群的初等交换 $p$ 子群偏序集在某些情形下为同伦 CM；另见 Stong (1984)。有限群 $G$ 的整个子群格可壳（或 CM），当且仅当 $G$ 超可解（Björner 1980）。各种子群偏序集已从拓扑角度得到研究，相关文献指南见 Thévenaz (1987)、Webb (1987)、Welker (1994)。
+\end{enumerate}
+
+\subsection*{诱导子复形}\addcontentsline{toc}{subsection}{诱导子复形}
+连通性、Cohen--Macaulay 性等，在一定条件下会被适当子复形继承。对于单纯复形 $\Delta$ 及 $A\subseteq\Delta^0$，记
+\[
+\Delta_A=\{\sigma\in\Delta:\sigma\subseteq A\},
+\]
+即 $A$ 上的\textbf{诱导子复形}。
+
+\entry{引理 11.11}{}设 $\Delta$ 为有限维复形，$A\subseteq V=\Delta^0$。假定对每个 $\sigma\in\Delta_{V\setminus A}$，$\lk_\Delta(\sigma)$ 都为 $k$ 连通。则 $\Delta_A$ 为 $k$ 连通，当且仅当 $\Delta$ 为 $k$ 连通。
+
+\sourcepage{1858}
+\entry{引理 11.12}{}设 $P$ 为有限秩偏序集，$A\subseteq P$。假定对每个 $x\in P\setminus A$，$P_{>x}$ 都为 $k$ 连通。则 $A$ 为 $k$ 连通，当且仅当 $P$ 为 $k$ 连通。
+
+\begin{proofcn}
+这两个引理等价。先证明引理 11.12。令 $f:A\to P$ 为嵌入映射。对 $x\in P$，
+\[
+f^{-1}(P_{\ge x})=
+\begin{cases}
+A_{\ge x},&x\in A,\\
+P_{>x}\cap A,&x\notin A.
+\end{cases}
+\]
+其中 $A_{\ge x}$ 是锥，故可缩；而 $P_{>x}\cap A$ 由对 $\rk P$ 的归纳为 $k$ 连通。于是由定理 10.5(ii) 得结论。
+
+为证明引理 11.11，令 $P=\mathcal P(\Delta)$，
+\[
+Q=\{\tau\in\Delta:\tau\cap A\ne\varnothing\}\subseteq P.
+\]
+对 $\sigma\in P\setminus Q$，有 $P_{>\sigma}\cong\mathcal P(\lk_\Delta(\sigma))$，故为 $k$ 连通，可以应用引理 11.12。另一方面，由推论 10.12，$Q$ 上的映射 $f(\tau)=\tau\cap A$ 诱导 $Q$ 与 $f(Q)=\mathcal P(\Delta_A)$ 之间的同伦等价。
+\end{proofcn}
+
+始终用 $k$ 无环替换 $k$ 连通，即得到两个引理的同调版本，证明方法平行。若将假设中的“$k$ 连通”改为“可缩”，则结论为 $\Delta_A$ 与 $\Delta$ 同伦等价，相应地 $A$ 与 $P$ 同伦等价。
+
+\entry{定理 11.13}{}设 $\Delta$ 为纯 $d$ 维单纯复形，$A\subseteq\Delta^0$，$1\le m\le d$。假定每个极大面 $\sigma\in\Delta^d$ 都满足 $|A\cap\sigma|=m$。若 $\Delta$ 为 $\cm/\mathbf k$、同伦 CM 或可壳，则 $\Delta_A$ 继承同一性质。
+
+关于 CM 性，这个结果的不同一般性版本分别由 Baclawski (1980)、Munkres (1984b)、Stanley (1979)、Walker (1981a) 证明。它容易由引理 11.11 得到。可壳性的证明见 Björner (1980, 1984b)。
+
+设纯 $d$ 维复形 $\Delta$ 有映射 $t:\Delta^0\to\{0,1,\ldots,d\}$，其在每个极大面上的限制均为双射。则称 $\Delta$ 为\textbf{完全平衡的}，或称有编号、有着色的复形，$t$ 称为\textbf{类型映射}。例如，纯偏序集的序复形完全平衡，以秩为类型映射，参见 9.2；建筑式关联几何（Buekenhout 1995）也产生完全平衡复形。这类 CM 复形由 Stanley (1979) 等人研究。
+
+对每个 $J\subseteq\{0,1,\ldots,d\}$，\textbf{类型选择子复形}
+\[
+\Delta_{(J)}:=\Delta_{t^{-1}(J)}
+\]
+是在 $t^{-1}(J)$ 上的诱导子复形。定理 11.13 表明，若 $\Delta$ 为 CM，则 $\Delta_{(J)}$ 也 CM，从而为 $(|J|-2)$ 无环。某种逆命题也成立，即下列结果；它给出完全平衡复形的 CM 性的另一种刻画。有限 CM 情形由 Baclawski 与 Garsia (1981) 给出；包括同伦情形的一般版本由 J. Walker 于 1981 年致作者的信中给出。
+
+\entry{定理 11.14}{}设 $\Delta$ 为纯 $d$ 维完全平衡复形。则 $\Delta$ 为 $\cm/\mathbf k$（相应地，同伦 CM），当且仅当对每个 $J\subseteq\{0,1,\ldots,d\}$，$\Delta_{(J)}$ 在 $\mathbf k$ 上为 $(|J|-2)$ 无环（相应地，为 $(|J|-2)$ 连通）。

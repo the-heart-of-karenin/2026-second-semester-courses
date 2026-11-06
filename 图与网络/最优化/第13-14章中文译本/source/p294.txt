@@ -1,0 +1,40 @@
+294 13. Matroids
+To verify (M3) for (d), let X, Y ∈ F with |X | > |Y |. Let S′ :={ s ∈ S :
+|δY (s)|= ks }.A s |X | > |Y | and |δX (s)|≤ ks for all s ∈ S′, there exists an
+e ∈ X \ Y with e /∈ δ(s) for s ∈ S′. Then Y ∪{ e}∈ F.
+For (e) the proof is identical except for replacing δ by δ− . 2
+Some of these matroids have special names: The matroid in (a) is called the
+vector matroid of A. Let M be a matroid. If there is a matrix A over the ﬁeld
+F such that M is the vector matroid of A, then M is called representable over
+F. There are matroids that are not representable over any ﬁeld.
+The matroid in (b) is called the cycle matroid of G and will sometimes be
+denoted by M(G). A matroid which is the cycle matroid of some graph is called
+a graphic matroid.
+The matroids in (c) are called uniform matroids.
+In our list of independence systems at the beginning of this section, the only
+matroids are the graphic matroids in (5) and (6). To check that all the other
+independence systems in the above list are not matroids in general is easily proved
+with the help of the following theorem (Exercise 1):
+Theorem 13.5. Let (E, F) be an independence system. Then the following state-
+ments are equivalent:
+(M3) If X, Y ∈ F and |X | > |Y |, then there is an x ∈ X \ Y with Y ∪{ x}∈ F.
+(M3
+′) If X, Y ∈ F and |X |=| Y |+ 1, then there is an x ∈ X \Y with Y ∪{ x}∈ F.
+(M3′′) For each X ⊆ E, all bases of X have the same cardinality.
+Proof: Trivially, (M3) ⇔ (M3′) and (M3) ⇒ (M3′′). To prove (M3 ′′)⇒ (M3), let
+X, Y ∈ F and |X | > |Y |.B y( M 3′′), Y cannot be a basis of X ∪ Y . So there must
+be an x ∈ (X ∪ Y) \ Y = X \ Y such that Y ∪{ x}∈ F. 2
+Sometimes it is useful to have a second rank function:
+Deﬁnition 13.6. Let (E, F) be an independence system. For X ⊆ E we deﬁne
+the lower rank by
+ρ(X) := min{|Y | : Y ⊆ X, Y ∈ F and Y ∪{ x} /∈ F for all x ∈ X \ Y }.
+The rank quotient of (E, F) is deﬁned by
+q(E, F) := min
+F⊆ E
+ρ(F)
+r(F) .
+Proposition 13.7. Let (E, F) be an independence system. Then q(E, F) ≤ 1.
+Furthermore, (E, F) is a matroid if and only if q(E, F) = 1.
+Proof: q(E, F) ≤ 1 follows from the deﬁnition. q(E, F) = 1 is obviously
+equivalent to (M3 ′′). 2
+To estimate the rank quotient, the following statement can be used:

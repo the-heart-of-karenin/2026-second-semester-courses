@@ -1,0 +1,70 @@
+334 14. Generalizations of Matroids
+The point x is always written as an explicit convex combination x = λ1b≺ 1 +
+···+ λk b≺ k of these vertices. Initially, one can choose k = 1 and any total order.
+Schrijver’s Algorithm
+Input: A ﬁnite set U ={ 1,..., n}. A submodular function f :2 U → Z
+with f (∅) = 0 (given by an oracle).
+Output: A subset X ⊆ U with f (X) minimum.
+1⃝ Set k := 1, let ≺ 1 be any total order on U, and set x := b≺ 1 .
+2⃝ Set D := (U, A), where A ={ (u,v) : u ≺ i v for some i ∈{ 1,..., k}}.
+3⃝ Let P :={ v ∈ U : x(v) > 0} and N :={ v ∈ U : x(v) < 0}, and let X be
+the set of vertices not reachable from P in D.
+If N ⊆ X, then stop. Otherwise let d(v) denote the distance from P to v
+in D.
+4⃝ Choose the vertex t ∈ N reachable from P with (d(t), t) lexicographically
+maximum, and then the vertex s with (s, t) ∈ A, d(s) = d(t) − 1, and s
+maximum.
+Let i ∈{ 1,..., k} such that α :=| { v : s ≺
+i v ⪯i t}| is maximum (the
+number of indices attaining this maximum will be denoted by β).
+5⃝ Let ≺ s,u
+i result from ≺ i by moving u just before s in the total order, and
+let χu denote the incidence vector of u (u ∈ U).
+Compute a number ϵ with 0 ≤ ϵ ≤− x(t) and write x′ := x + ϵ(χt − χs)
+as an explicit convex combination of at most n vectors, chosen among
+b≺ 1 ,..., b≺ k and b≺ s,u
+i for s ≺ i u ⪯i t, with the additional property that b≺ i
+does not occur if x′(t)< 0.
+6⃝ Set x := x′, rename the vectors in the convex combination of x as
+b≺ 1 ,..., b≺ k , and go to 2⃝.
+Theorem 14.20. (Schrijver [2000]) Schrijver’s Algorithmworks correctly.
+Proof: The algorithm terminates if D contains no path from P to N and out-
+puts the set X of vertices not reachable from P. Clearly N ⊆ X ⊆ U \ P,s o∑
+u∈ X x(u) ≤ ∑
+u∈ W x(u) for each W ⊆ U. Moreover, no edge enters X, so either
+X =∅ or for each j ∈{ 1,..., k} there exists a v ∈ X with X ={ u ∈ U : u ⪯j v}.
+Hence, by deﬁnition, ∑
+u∈ X b≺ j (u) = f (X) for all j ∈{ 1,..., k}. Moreover, by
+Proposition 14.10, ∑
+u∈ W b≺ j (u) ≤ f (W) for all W ⊆ U and j ∈{ 1,..., k}.
+Therefore, for each W ⊆ U,
+f (W) ≥
+k∑
+j=1
+λj
+∑
+u∈ W
+b≺ j (u) =
+∑
+u∈ W
+k∑
+j=1
+λj b≺ j (u) =
+∑
+u∈ W
+x(u)
+≥
+∑
+u∈ X
+x(u) =
+∑
+u∈ X
+k∑
+j=1
+λj b≺ j (u) =
+k∑
+j=1
+λj
+∑
+u∈ X
+b≺ j (u) = f (X),

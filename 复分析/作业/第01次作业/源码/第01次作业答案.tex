@@ -1,0 +1,257 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{enumitem}
+\setlist{nosep}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{复分析 · 作业 1 / Complex Analysis · HW 1}
+\fancyhead[R]{中英双语解答 / Bilingual Solutions}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CN}{\textbf{中文解答.}\enspace}
+\newcommand{\EN}{\textbf{English solution.}\enspace}
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries 复分析第 1 次作业解答}\\[5pt]
+  {\large Complex Analysis Homework 1: Solutions}
+\end{center}
+\vspace{4pt}
+\noindent\rule{\linewidth}{0.5pt}
+
+\section*{1. 复线性与 Cauchy--Riemann 方程 / Complex linearity and the Cauchy--Riemann equations}
+\textbf{题目 / Problem.} 设 $f=u+iv:\C\to\C$，$F=(u,v):\R^2\to\R^2$。
+证明若 $f$ 全纯，则 $J_F$ 是复线性映射，且 Cauchy--Riemann 方程等价于
+\[
+ \begin{pmatrix}0&-1\\1&0\end{pmatrix}
+ \begin{pmatrix}u_x&u_y\\v_x&v_y\end{pmatrix}
+ =
+ \begin{pmatrix}u_x&u_y\\v_x&v_y\end{pmatrix}
+ \begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\]
+Let $f=u+iv:\C\to\C$ and $F=(u,v):\R^2\to\R^2$. Show that holomorphicity
+of $f$ makes $J_F$ complex-linear, and that the Cauchy--Riemann equations
+are equivalent to the displayed matrix identity.
+
+\CN 令
+\[
+ A=J_F=\begin{pmatrix}u_x&u_y\\v_x&v_y\end{pmatrix},\qquad
+ J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\]
+在 $\R^2\cong\C$ 下，$J$ 正是“乘以 $i$”。实线性映射 $A$ 为复线性，当且仅当
+$A(iw)=iA(w)$ 对每个 $w$ 成立，亦即 $AJ=JA$。直接相乘得到
+\[
+ JA=\begin{pmatrix}-v_x&-v_y\\u_x&u_y\end{pmatrix},\qquad
+ AJ=\begin{pmatrix}u_y&-u_x\\v_y&-v_x\end{pmatrix}.
+\]
+两矩阵相等恰好等价于 $u_x=v_y$ 和 $u_y=-v_x$。若 $f$ 全纯，则实微分为
+$h\mapsto f'(z)h$，所以 $J_F$ 复线性，以上等式也证明了所要求的矩阵表述。
+
+\EN Under $\R^2\cong\C$, the matrix $J$ represents multiplication by $i$.
+A real-linear map $A=J_F$ is complex-linear exactly when $A(iw)=iA(w)$ for every $w$,
+or equivalently $AJ=JA$. The displayed products show that this commutation relation is
+precisely $u_x=v_y$ and $u_y=-v_x$. If $f$ is holomorphic, its real differential is
+$h\mapsto f'(z)h$, which is complex-linear. Thus its Jacobian commutes with $J$,
+and the matrix identity is equivalent to the Cauchy--Riemann equations.
+
+\section*{2. 极坐标形式 / Polar-coordinate form}
+\textbf{题目 / Problem.} 证明 $f=u+iv$ 的极坐标 Cauchy--Riemann 方程为
+$u_r=r^{-1}v_\theta$、$v_r=-r^{-1}u_\theta$。
+Show that the Cauchy--Riemann equations in polar coordinates take the form
+$u_r=r^{-1}v_\theta$ and $v_r=-r^{-1}u_\theta$.
+
+\CN 以下取 $r>0$。由 $x=r\cos\theta$、$y=r\sin\theta$ 及链式法则，
+\[
+ u_r=u_x\cos\theta+u_y\sin\theta,
+ \qquad \frac{v_\theta}{r}=-v_x\sin\theta+v_y\cos\theta.
+\]
+代入 $u_x=v_y$、$u_y=-v_x$，便得 $u_r=r^{-1}v_\theta$。同理，
+\[
+ v_r=v_x\cos\theta+v_y\sin\theta,
+ \qquad -\frac{u_\theta}{r}=u_x\sin\theta-u_y\cos\theta,
+\]
+故 $v_r=-r^{-1}u_\theta$。由于从 $(r,\theta)$ 到 $(x,y)$ 的雅可比行列式为 $r\ne0$，
+这些极坐标方程也反过来蕴含直角坐标的 Cauchy--Riemann 方程。
+
+\EN For $r>0$, the chain rule gives the four identities displayed above.
+Substituting $u_x=v_y$ and $u_y=-v_x$ yields
+\[
+ \boxed{\displaystyle u_r=\frac1r v_\theta,\qquad
+ v_r=-\frac1r u_\theta.}
+\]
+Conversely, the polar change of variables has Jacobian determinant $r\ne0$;
+reversing the same calculation recovers the Cartesian Cauchy--Riemann equations.
+The formulas are not asserted at $r=0$, where polar coordinates are singular.
+
+\section*{3. Laplace 算子与 Wirtinger 导数 / Laplacian and Wirtinger derivatives}
+\textbf{题目 / Problem.} 证明 $\Delta=4\partial_z\partial_{\bar z}$。
+Show that $\Delta=4\partial_z\partial_{\bar z}$.
+
+\CN 对任意 $C^2$ 函数，定义
+\[
+ \partial_z=\frac12(\partial_x-i\partial_y),\qquad
+ \partial_{\bar z}=\frac12(\partial_x+i\partial_y).
+\]
+由于混合偏导可交换，
+\[
+ 4\partial_z\partial_{\bar z}
+ =(\partial_x-i\partial_y)(\partial_x+i\partial_y)
+ =\partial_x^2+\partial_y^2=\Delta.
+\]
+\EN For a $C^2$ function, expand the product of the two Wirtinger operators as above.
+The mixed terms cancel because $\partial_x\partial_y=\partial_y\partial_x$,
+leaving $4\partial_z\partial_{\bar z}=\Delta$.
+
+\section*{4. 分式线性变换的分类 / Classification of fractional linear transformations}
+\textbf{题目 / Problem.} 设标准化的分式线性变换
+$T(z)=(az+b)/(cz+d)$ 有有限不动点 $z_1$，其乘子为 $\kappa=T'(z_1)$。
+按题意，抛物型指 $\kappa=1$，双曲型指 $\kappa>0$ 且 $\kappa\ne1$，
+椭圆型指 $|\kappa|=1$ 且 $\kappa\ne1$，其余为斜向型。
+证明这四种情形依次等价于 $a+d=\pm2$、$a+d\in\R$ 且 $|a+d|>2$、
+$a+d\in\R$ 且 $|a+d|<2$、以及 $a+d\notin\R$。
+题目提示还要求讨论不动点数、第二个不动点的乘子及
+$\kappa+\kappa^{-1}=(a+d)^2-2$。
+
+Let $T(z)=(az+b)/(cz+d)$ be normalized and have a finite fixed point $z_1$.
+Its multiplier is $\kappa=T'(z_1)$. The stated definitions are:
+parabolic for $\kappa=1$; hyperbolic for positive real $\kappa\ne1$;
+elliptic for $|\kappa|=1$, $\kappa\ne1$; and loxodromic otherwise.
+Prove that these correspond, respectively, to trace $a+d=\pm2$,
+real trace with $|a+d|>2$, real trace with $|a+d|<2$, and nonreal trace.
+The hints concern the number of fixed points, the multiplier at a second
+fixed point, and $\kappa+\kappa^{-1}=(a+d)^2-2$.
+
+\CN “标准化”指 $ad-bc=1$。设 $t=a+d$、
+$M=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\mathrm{SL}_2(\C)$。
+若有限不动点 $z_1$ 的对应特征值是 $\lambda=cz_1+d$，则
+\[
+ M\binom{z_1}{1}=\lambda\binom{z_1}{1},\qquad
+ \kappa=T'(z_1)=\frac{ad-bc}{(cz_1+d)^2}=\lambda^{-2}.
+\]
+另一特征值是 $\lambda^{-1}$，因此
+\begin{equation}\label{eq:trace}
+ \boxed{\displaystyle \kappa+\kappa^{-1}
+ =\lambda^{-2}+\lambda^2=t^2-2.}
+\end{equation}
+若有两个不同不动点，它们的乘子互为倒数；第二个点为 $\infty$ 时，
+在局部坐标 $w=1/z$ 中计算其乘子即可。若 $\kappa=1$，则 $t^2=4$，
+矩阵有重特征值；除恒等变换外，$T$ 恰有一个不动点。
+
+由式 \eqref{eq:trace} 可逐一判定：
+\begin{align*}
+ \kappa=1
+ &\iff t=\pm2;\\
+ \kappa>0,\ \kappa\ne1
+ &\iff t\in\R,\ |t|>2;\\
+ |\kappa|=1,\ \kappa\ne1
+ &\iff t\in\R,\ |t|<2.
+\end{align*}
+例如第二行中 $\kappa+\kappa^{-1}>2$，故 $t^2>4$；反向则由
+$X+X^{-1}=t^2-2>2$ 的两个根均为正实数可得。
+第三行对应 $\kappa+\kappa^{-1}\in[-2,2)$，故 $t^2\in[0,4)$；
+反向则两根在单位圆上。四类穷尽所有乘子，所以剩余的斜向型情形恰为 $t\notin\R$。
+
+\EN Write $t=\operatorname{tr}M$ and normalize $M$ by $\det M=1$.
+At a finite fixed point, $(z_1,1)^T$ is an eigenvector with eigenvalue
+$\lambda=cz_1+d$, and $\kappa=T'(z_1)=\lambda^{-2}$.
+The other eigenvalue is $\lambda^{-1}$, so equation \eqref{eq:trace} follows.
+Two distinct fixed points therefore have reciprocal multipliers (use $w=1/z$
+when one is at infinity). The alternatives now follow from the ranges of
+$\kappa+\kappa^{-1}$: it equals $2$ for $\kappa=1$, lies in $(2,\infty)$
+for positive real $\kappa\ne1$, and lies in $[-2,2)$ for unit-modulus
+$\kappa\ne1$. Conversely, the quadratic equation
+$X+X^{-1}=t^2-2$ gives the indicated type in each real-trace range.
+All remaining cases have nonreal trace and are loxodromic.
+
+\textbf{题目提示的例外 / Exception in the hint.}
+恒等变换也满足 $\kappa=1$ 和 $t=\pm2$，但它的每个点都是不动点。
+因此“$\kappa=1$ 当且仅当只有一个不动点”须排除恒等变换；
+提示中第二个不动点处的 $f'(z_2)$ 应为 $T'(z_2)$。
+The identity has multiplier $1$ and trace $\pm2$ but fixes every point;
+the unique-fixed-point claim needs this exception. The derivative in the
+second hint should be $T'(z_2)$.
+
+\section*{5. Schwarzian 导数 / Schwarzian derivative}
+\textbf{题目 / Problem.} 对全纯函数 $f$，其 Schwarzian 导数为
+\[
+ S(f)=\frac{f'''}{f'}-\frac32\left(\frac{f''}{f'}\right)^2.
+\]
+证明：(1) $S(f)\equiv0$ 当且仅当 $f$ 是分式线性变换；
+(2) 对全纯 $g$，有 $S(g\circ f)=(S(g)\circ f)(f')^2+S(f)$，
+特别地，若 $g$ 是分式线性变换，则 $S(g\circ f)=S(f)$。
+提示：令 $N(f)=f''/f'$，则 $S(f)=N(f)'-\tfrac12N(f)^2$。
+
+For a holomorphic $f$, define $S(f)=f'''/f'-\tfrac32(f''/f')^2$.
+Show that (1) $S(f)\equiv0$ exactly for fractional linear maps and
+(2) $S(g\circ f)=(S(g)\circ f)(f')^2+S(f)$ for holomorphic $g$;
+in particular, postcomposition by a fractional linear map leaves
+$S(f)$ unchanged. Hint: $N(f)=f''/f'$ satisfies
+$S(f)=N(f)'-\tfrac12N(f)^2$.
+
+\subsection*{(1) $S(f)\equiv0$ 与分式线性变换 / Vanishing Schwarzian and M\"obius maps}
+\CN 在连通定义域上先假设 $f'\ne0$，令 $N=f''/f'$。直接求导得
+\[
+ S(f)=N'-\frac12N^2.
+\]
+若 $S(f)=0$，则 $N'=N^2/2$。如果 $N$ 在某点为零，微分方程解的唯一性
+说明 $N\equiv0$，于是 $f(z)=Az+B$，其中 $A\ne0$。
+否则 $N$ 处处非零，且
+\[
+ \left(\frac1N\right)'=-\frac12,
+ \qquad N(z)=-\frac{2}{z-\zeta}
+\]
+（常数 $\zeta$ 不在定义域内）。积分两次得到
+$f'(z)=C(z-\zeta)^{-2}$ 与
+$f(z)=A(z-\zeta)^{-1}+B$，也是分式线性变换。
+反过来，对于 $f(z)=(az+b)/(cz+d)$，
+\[
+ f'(z)=\frac{ad-bc}{(cz+d)^2},\qquad
+ N(f)=-\frac{2c}{cz+d},\qquad
+ N(f)'=\frac{2c^2}{(cz+d)^2}=\frac12N(f)^2,
+\]
+故 $S(f)=0$。
+
+\EN On a connected domain where $f'\ne0$, put $N=f''/f'$.
+Then $S(f)=N'-N^2/2$. If $S(f)=0$, the differential equation
+$N'=N^2/2$ has either the zero solution, giving the affine map $Az+B$,
+or a nowhere-zero solution $N=-2/(z-\zeta)$, giving
+$f=A/(z-\zeta)+B$. Both are fractional linear maps.
+Conversely, the displayed derivative calculation for
+$f=(az+b)/(cz+d)$ gives $N'=N^2/2$, hence $S(f)=0$.
+If critical points of $f$ were initially allowed, a zero Schwarzian on the
+regular set actually rules them out: at a zero of $f'$ of order $m\ge1$,
+$S(f)$ has leading term $-m(m+2)/(2(z-z_0)^2)$.
+
+\subsection*{(2) 复合公式 / Composition law}
+\CN 在相关导数非零处，设 $A=(N(g)\circ f)f'$、$B=N(f)$。
+链式法则给出 $N(g\circ f)=A+B$，且
+\[
+ \begin{aligned}
+ S(g\circ f)
+ &=A'+B'-\tfrac12(A+B)^2\\
+ &=\bigl(N(g)'-\tfrac12N(g)^2\bigr)\circ f\,(f')^2
+   +\bigl(B'-\tfrac12B^2\bigr)
+   +(N(g)\circ f)\bigl(f''-f'B\bigr)\\
+ &=(S(g)\circ f)(f')^2+S(f),
+ \end{aligned}
+\]
+因为 $f'B=f''$。若 $g$ 是分式线性变换，由第 (1) 问 $S(g)=0$，
+遂有 $S(g\circ f)=S(f)$。
+
+\EN The chain rule gives $N(g\circ f)=(N(g)\circ f)f'+N(f)$.
+Expanding $N(g\circ f)'-\tfrac12N(g\circ f)^2$ as above,
+the cross term cancels because $f'N(f)=f''$. Thus
+\[
+ \boxed{\displaystyle S(g\circ f)=(S(g)\circ f)(f')^2+S(f).}
+\]
+For a fractional linear $g$, part (1) gives $S(g)=0$, so
+$S(g\circ f)=S(f)$.
+
+\end{document}

@@ -1,0 +1,69 @@
+13.7 Weighted Matroid Intersection 317
+and F2, implying c2(Xk+1) = c2(Xk ∪{ t}) = max{c2(Y) : Y ∈ F2, |Y |= k + 1}.
+In other words, (13.5) indeed holds for Xk+1.
+Now suppose we change c1 and c2 in 8⃝. We ﬁrst show that ε> 0. By
+(13.5) and Theorem 13.23 we have c1(x) ≥ c1(y) for all y ∈ E \ Xk and x ∈
+C1(Xk, y) \{ y}. So for any (x, y) ∈ A(1) we have c1(x) ≥ c1(y). Moreover, by
+the deﬁnition of R no edge (x, y) ∈ δ+(R) belongs to ¯A(1). This implies ε1 > 0.
+ε2 > 0 is proved analogously. m1 ≥ c1(y) holds for all y ∈ S. If in addition
+y /∈ R then y /∈ ¯S,s o m1 > c1(y). Therefore ε3 > 0. Similarly, ε4 > 0 (using
+¯T ∩ R =∅ ). We conclude that ε> 0.
+We can now prove that 8⃝ preserves (13.5). Let c′
+1 be the modiﬁed c1, i.e.
+c′
+1(x) :=
+{
+c1(x) − ε if x ∈ R
+c1(x) if x /∈ R . We prove that Xk and c′
+1 satisfy the conditions
+of Theorem 13.23 with respect to F1.
+To prove (a), let y ∈ E \ Xk and x ∈ C1(Xk, y) \{ y}. Suppose c′
+1(x)<
+c′
+1(y). Since c1(x) ≥ c1(y) and ε> 0, we must have x ∈ R and y /∈ R. Since
+also (x, y) ∈ A(1), we have ε ≤ ε1 ≤ c1(x) − c1(y) = (c′
+1(x) + ε)− c′
+1(y),a
+contradiction.
+To prove (b), let x ∈ Xk and y ∈ E \ Xk with Xk ∪{ y}∈ F1. Now suppose
+c′
+1(y)> c′
+1(x). Since c1(y) ≤ m1 ≤ c1(x), we must have x ∈ R and y /∈ R. Since
+y ∈ S we have ε ≤ ε3 ≤ m1 − c1(y) ≤ c1(x) − c1(y) = (c′
+1(x) + ε)− c′
+1(y),a
+contradiction.
+Let c′
+2 be the modiﬁed c2, i.e. c′
+2(x) :=
+{
+c2(x) + ε if x ∈ R
+c2(x) if x /∈ R . We show that
+Xk and c′
+2 satisfy the conditions of Theorem 13.23 with respect to F2.
+To prove (a), let y ∈ E \ Xk and x ∈ C2(Xk, y) \{ y}. Suppose c′
+2(x)< c′
+2(y).
+Since c2(x) ≥ c2(y), we must have y ∈ R and x /∈ R. Since also (y, x) ∈ A(2),
+we have ε≤ ε2 ≤ c2(x) − c2(y) = c′
+2(x) − (c′
+2(y) − ε), a contradiction.
+To prove (b), let x ∈ Xk and y ∈ E \ Xk with Xk ∪{ y}∈ F2. Now suppose
+c′
+2(y)> c′
+2(x). Since c2(y) ≤ m2 ≤ c2(x), we must have y ∈ R and x /∈ R. Since
+y ∈ T we have ε ≤ ε4 ≤ m2 − c2(y) ≤ c2(x) − c2(y) = c′
+2(x) − (c′
+2(y) − ε),a
+contradiction.
+So we have proved that (13.5) is not violated during 8⃝, and thus the algorithm
+works correctly.
+We now consider the running time. Observe that after 8⃝, the new sets ¯S, ¯T ,
+and R, as computed subsequently in 4⃝ and 5⃝, are supersets of the old ¯S, ¯T ,
+and R, respectively. If ε = ε4 < ∞ , an augmentation (increase of k) follows.
+Otherwise the cardinality of R increases immediately (in 5⃝) by at least one. So
+4⃝ – 8⃝ are repeated less than |E| times between two augmentations.
+Since the running time of 4⃝ – 8⃝ is O(|E|2), the total running time between
+two augmentations is O(|E|3) plus O(|E|2) oracle calls (in 2⃝). Since there are
+m ≤| E| augmentations, the stated overall running time follows. 2
+The running time can easily be improved to O(|E|3θ) (Exercise 22).

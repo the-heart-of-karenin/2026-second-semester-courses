@@ -1,0 +1,54 @@
+                                                                             3.1 Polyhedra            51
+
+
+     We ﬁrst observe that for each inequality ai x ≤ βi of A x ≤ b (i = 1, . . . , k)
+                                                                          k
+there is a point xi ∈ F such that ai xi < βi . Let x ∗ := 1k i=1             xi be the center of
+gravity of these points (if k = 0, we can choose an arbitrary x ∗ ∈ F); we have
+x ∗ ∈ F and ai x ∗ < βi for all i.
+     We have to prove that A y = b cannot hold for any y ∈ P \ F. So let y ∈ P \ F.
+We have cy < δ. Now consider z := x ∗ + (x ∗ − y) for some small  > 0; in
+                                      β  −ai x ∗
+particular let  be smaller than a i (x ∗ −y)      for all i ∈ {1, . . . , k} with ai x ∗ > ai y.
+                                       i
+     We have cz > δ and thus z ∈      / P. So there is an inequality ax ≤ β of Ax ≤ b
+such that az > β. Thus ax ∗ > ay. The inequality ax ≤ β cannot belong                         to A x ≤
+                                              ∗         ∗               ∗     β−ax ∗      ∗
+b , since otherwise we have az = ax + a(x − y) < ax + a(x ∗ −y) a(x − y) = β
+(by the choice of ). Hence the inequality ax ≤ β belongs to A x ≤ b . Since
+ay = a(x ∗ + 1 (x ∗ − z)) < β, this completes the proof.                                               2
+
+    As a trivial but important corollary we remark:
+Corollary 3.4. If max{cx : x ∈ P} is bounded for a nonempty polyhedron P and
+a vector c, then the set of points where the maximum is attained is a face of P. 2
+
+    The relation “is a face of ” is transitive:
+
+Corollary 3.5. Let P be a polyhedron and F a face of P. Then F is again a
+polyhedron. Furthermore, a set F  ⊆ F is a face of P if and only if it is a face
+of F.                                                                          2
+
+    The maximal faces distinct from P are particularly important:
+
+Deﬁnition 3.6. Let P be a polyhedron. A facet of P is a maximal face distinct
+from P. An inequality cx ≤ δ is facet-deﬁning for P if cx ≤ δ for all x ∈ P and
+{x ∈ P : cx = δ} is a facet of P.
+
+Proposition 3.7. Let P ⊆ {x ∈ Rn : Ax = b} be a nonempty polyhedron of
+dimension n − rank(A). Let A x ≤ b be a minimal inequality system such that
+P = {x : Ax = b, A x ≤ b }. Then each inequality of A x ≤ b is facet-deﬁning
+for P, and each facet of P is deﬁned by an inequality of A x ≤ b .
+Proof: If P = {x ∈ Rn : Ax = b}, then there are no facets and the statement
+is trivial. So let A x ≤ b be a minimal inequality system with P = {x : Ax =
+b, A x ≤ b }, let a  x ≤ β  be one of its inequalities and A x ≤ b be the rest of
+the system A x ≤ b . Let y be a vector with Ay = b, A y ≤ b and a  y > b
+(such a vector y exists as the inequality a  x ≤ b is not redundant). Let x ∈ P
+such that a  x < b (such a  vector must exist because dim P = n − rank(A)).
+                                                                             β  −a  x
+                            −a x
+     Consider z := x + aβ y−a                        
+                                 x (y − x). We have a z = β and, since 0 < a  y−a  x < 1,
+
+z ∈ P. Therefore F := {x ∈ P : a  x = β  } =     0 and F = P (as x ∈ P \ F). Thus
+F is a facet of P.
+     By Proposition 3.3 each facet is deﬁned by an inequality of A x ≤ b .              2

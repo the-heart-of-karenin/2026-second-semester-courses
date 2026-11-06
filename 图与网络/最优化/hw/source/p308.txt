@@ -1,0 +1,36 @@
+308 13. Matroids
+(b) For all y ∈ E \ X with X ∪{ y}∈ F and all x ∈ X we have c(x) ≥ c(y).
+Proof: The necessity is trivial: if one of the conditions is violated for some y
+and x, the k-element set X ′ := (X ∪{ y}) \{ x}∈ F has greater cost than X.
+To see the sufﬁciency, let F′ :={ F ∈ F : |F|≤ k} and c′(e) := c(e) + M
+for all e ∈ E, where M = max{|c(e)| : e ∈ E}. Sort E ={ e1,..., en } such that
+c′(e1) ≥ ··· ≥ c′(en) and, for any i, c′(ei ) = c′(ei+1) and ei+1 ∈ X imply ei ∈ X
+(i.e. elements of X come ﬁrst among those of equal weight).
+Let X ′ be the solution found by the Best-In-Greedy for the instance
+(E, F′, c′) (sorted like this). Since (E, F′) is a matroid, the Edmonds-Rado The-
+orem 13.20 implies:
+c(X ′) + kM = c′(X ′) = max{c′(Y) : Y ∈ F′}
+= max{c(Y) : Y ∈ F, |Y |= k}+ kM .
+We conclude the proof by showing that X = X ′. We know that |X |= k =| X ′|.S o
+suppose X ̸= X ′, and let ei ∈ X ′ \ X with i minimum. Then X ∩{ e1,..., ei− 1}=
+X ′ ∩{ e1,..., ei− 1}. Now if X ∪{ ei } /∈ F, then (a) implies C(X, ei ) ⊆ X ′,a
+contradiction. If X ∪{ ei }∈ F, then (b) implies X ⊆ X ′ which is also impossible.
+2
+We shall need this theorem in Section 13.7. The special case that (E, F) is a
+graphic matroid and k = r(E) is part of Theorem 6.2.
+13.5 Matroid Intersection
+Deﬁnition 13.24. Given two independence systems (E, F1) and (E, F2),w ed e -
+ﬁne their intersection by (E, F1 ∩ F2).
+The intersection of a ﬁnite number of independence systems is deﬁned analo-
+gously. It is clear that the result is again an independence system.
+Proposition 13.25. Any independence system (E, F) is the intersection of a ﬁnite
+number of matroids.
+Proof: Each circuit C of (E, F) deﬁnes a matroid (E, {F ⊆ E : C \ F ̸=∅ } )
+by Theorem 13.12. The intersection of all these matroids is of course (E, F). 2
+Since the intersection of matroids is not a matroid in general, we cannot hope
+to get an optimum common independent set by a greedy algorithm. However, the
+following result, together with Theorem 13.19, implies a bound for the solution
+found by the Best-In-Greedy:
+Proposition 13.26. If (E, F) is the intersection of p matroids, then q(E, F) ≥
+1
+p .

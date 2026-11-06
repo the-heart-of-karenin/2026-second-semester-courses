@@ -1,0 +1,37 @@
+13.2 Other Matroid Axioms 297
+(R3′) is trivial for x = y. For x ̸= y we have, by (R2) and (R3),
+2r(X) ≤ r(X) + r(X ∪{ x, y}) ≤ r(X ∪{ x}) + r(X ∪{ y}),
+implying (R3′).
+(c)⇒ (a): Let r :2 E → Z+ be a function satisfying (R1 ′)–(R3 ′). Let
+F :={ F ⊆ E : r(F) =| F|}.
+We claim that (E, F) is a matroid. (M1) follows from (R1 ′). (R2 ′) implies
+r(X) ≤| X | for all X ⊆ E.I f Y ∈ F, y ∈ Y and X := Y \{ y}, we have
+|X |+ 1 =| Y |= r(Y) = r(X ∪{ y}) ≤ r(X) + 1 ≤| X |+ 1,
+so X ∈ F. This implies (M2).
+Now let X, Y ∈ F and |X |=| Y |+ 1. Let X \ Y ={ x1,..., xk }. Suppose
+that (M3 ′) is violated, i.e. r(Y ∪{ xi }) =| Y | for i = 1,..., k. Then by (R3 ′)
+r(Y ∪{ x1, xi }) = r(Y) for i = 2,..., k. Repeated application of this argument
+yields r(Y) = r(Y ∪{ x1,..., xk }) = r(X ∪ Y) ≥ r(X), a contradiction.
+So (E, F) is indeed a matroid. To show that r is the rank function of this
+matroid, we have to prove that r(X) = max{|Y | : Y ⊆ X, r(Y) =| Y |} for all
+X ⊆ E.S ol e t X ⊆ E, and let Y a maximum subset of X with r(Y) =| Y |. For all
+x ∈ X \ Y we have r(Y ∪{ x})< |Y |+ 1, so by (R2 ′) r(Y ∪{ x}) =| Y |. Repeated
+application of (R3 ′) implies r(X) =| Y |. 2
+Theorem 13.11. Let E be a ﬁnite set and σ :2 E → 2E a function. σ is the
+closure operator of a matroid (E, F) if and only if the following conditions hold
+for all X, Y ⊆ E and x, y ∈ E:
+(S1) X ⊆ σ(X);
+(S2) X ⊆ Y ⊆ E implies σ(X) ⊆ σ(Y);
+(S3) σ(X) = σ(σ(X));
+(S4) If y /∈ σ(X) and y ∈ σ(X ∪{ x}) then x ∈ σ(X ∪{ y}).
+Proof: If σ is the closure operator of a matroid, then (S1) holds trivially.
+For X ⊆ Y and z ∈ σ(X) we have by (R3) and (R2)
+r(X) + r(Y) = r(X ∪{ z}) + r(Y)
+≥ r((X ∪{ z}) ∩ Y) + r(X ∪{ z}∪ Y)
+≥ r(X) + r(Y ∪{ z}),
+implying z ∈ σ(Y) and thus proving (S2).
+By repeated application of (R3 ′) we have r(σ(X)) = r(X) for all X, which
+implies (S3).
+To prove (S4), suppose that there are X, x, y with y /∈ σ(X), y ∈ σ(X ∪{ x})
+and x /∈ σ(X ∪{ y}). Then r(X ∪{ y}) = r(X) + 1, r(X ∪{ x, y}) = r(X ∪{ x}) and
+r(X ∪{ x, y}) = r(X ∪{ y}) + 1. Thus r(X ∪{ x}) = r(X) + 2, contradicting (R2 ′).

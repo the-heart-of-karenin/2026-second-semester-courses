@@ -1,0 +1,41 @@
+\documentclass[UTF8,a4paper,11pt,oneside]{ctexbook}
+\usepackage{amsmath,amssymb,amsthm,mathtools,geometry,enumitem,graphicx,longtable,booktabs,hyperref,needspace}
+\geometry{margin=2.45cm}
+\setmainfont{Times New Roman}
+\newfontfamily\symbolfont{Segoe UI Symbol}[BoldFont={Segoe UI Symbol}]
+\emergencystretch=3em
+\hypersetup{hidelinks,bookmarksnumbered=true}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.3em}
+\allowdisplaybreaks[2]
+\newcommand{\sourceblock}[2]{\par\smallskip\begingroup\centering\includegraphics[width=#1pt]{#2}\par\endgroup\smallskip}
+\newcommand{\eq}[1]{\par\smallskip\begingroup\centering\setbox0=\hbox{$\displaystyle#1$}\ifdim\wd0>\linewidth\resizebox{\linewidth}{!}{\box0}\else\box0\fi\par\endgroup\smallskip}
+\newcommand{\ex}[1]{\par\medskip\noindent\textbf{【例 #1】}\ }
+\newcommand{\prop}[1]{\par\medskip\noindent\textbf{【命题 #1】}\ }
+\newcommand{\thm}[1]{\par\medskip\noindent\textbf{【定理 #1】}\ }
+\newcommand{\pf}{\par\noindent\textbf{证明}\ }
+\newcommand{\sol}{\par\noindent\textbf{解}\ }
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\title{全国大学生数学竞赛解析教程\\高等代数与解析几何\\全书重排稿}
+\author{原书：佘志坤 主编；全国大学生数学竞赛命题组 编}
+\date{}
+\begin{document}
+\sloppy
+\maketitle
+\chapter*{重排说明}
+\noindent 本稿依照原书章节顺序重排，原书例题和训练题编号保留。
+
+正文采用可编辑的LaTeX排版。复杂公式、矩阵、图形及识别不可靠的相邻文字，以清晰的局部原图保留。第一章开头至例1.2.5已逐式转写；其余部分为保真优先的全书初稿，后续可继续逐处转成可编辑公式。
+
+本稿另保留前言、资源使用说明及参考文献；原书封面、版权页、旧目录和纯分隔页不重复排入。附带原书可供对照。
+\tableofcontents
+\input{full-preface.tex}
+\input{full-ch01.tex}
+\input{full-ch02.tex}
+\input{full-ch03.tex}
+\input{full-ch04.tex}
+\input{full-ch05.tex}
+\input{full-ch06.tex}
+\input{full-references.tex}
+\end{document}

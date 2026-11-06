@@ -1,0 +1,235 @@
+{
+  "statistics": {
+    "source_pages": 4,
+    "text_images": 13,
+    "examples": 3,
+    "latex_formulas": 39,
+    "text_blocks": 62,
+    "formula_images": 22
+  },
+  "items": [
+    {
+      "id": "p014-b000",
+      "kind": "text-image",
+      "ocr": "【例 1.2.5】设",
+      "native": "[9U 1.2.5]设",
+      "score": 0.9556
+    },
+    {
+      "id": "p015-b021",
+      "kind": "formula-image",
+      "ocr": "s",
+      "score": 0.8711144328117371
+    },
+    {
+      "id": "p015-b023",
+      "kind": "formula-image",
+      "ocr": "E , \\, H",
+      "score": 0.9415691494941711
+    },
+    {
+      "id": "p015-b025",
+      "kind": "formula-image",
+      "ocr": "E",
+      "score": 0.7631148099899292
+    },
+    {
+      "id": "p015-b027",
+      "kind": "text-image",
+      "ocr": "s2 = 0",
+      "native": "I 0 82 = I 0",
+      "score": 0.93381
+    },
+    {
+      "id": "p016-b005",
+      "kind": "text-image",
+      "ocr": "(1) 基于相似变换的计算法，如例 1.2.2. 更常见的情形是利用相似标准形(比如 Jor-",
+      "native": "(1) 基于相似变换的计算法，如例1. 2.2 . 更常见的情形是利用相似标准形(比如Jor­",
+      "score": 0.95356
+    },
+    {
+      "id": "p016-b014",
+      "kind": "formula-image",
+      "ocr": "n",
+      "score": 0.955658495426178
+    },
+    {
+      "id": "p016-b024",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "仲r",
+      "score": 0.90348
+    },
+    {
+      "id": "p016-b026",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "特A",
+      "score": 0.54523
+    },
+    {
+      "id": "p016-b027",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{A} \\sim\\boldsymbol{E}",
+      "score": 0.9335713982582092
+    },
+    {
+      "id": "p016-b028",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "件A",
+      "score": 0.7004
+    },
+    {
+      "id": "p016-b031",
+      "kind": "formula-image",
+      "ocr": "E",
+      "score": 0.7578033804893494
+    },
+    {
+      "id": "p016-b032",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "件",
+      "score": 0.68138
+    },
+    {
+      "id": "p016-b033",
+      "kind": "formula-image",
+      "ocr": "| \\boldsymbol{A} | \\neq0",
+      "score": 0.8994717001914978
+    },
+    {
+      "id": "p016-b034",
+      "kind": "text-image",
+      "ocr": "⇔齐次线性方程组",
+      "native": "特齐次线性方程组",
+      "score": 0.96898
+    },
+    {
+      "id": "p016-b035",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{A x}=\\boldsymbol{0}",
+      "score": 0.9525988101959229
+    },
+    {
+      "id": "p016-b037",
+      "kind": "text-image",
+      "ocr": "⇔线性方程组",
+      "native": "特线性方程组",
+      "score": 0.89667
+    },
+    {
+      "id": "p017-b000",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "件A",
+      "score": 0.88585
+    },
+    {
+      "id": "p017-b001",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{A}",
+      "score": 0.9351540803909302
+    },
+    {
+      "id": "p017-b003",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "特A",
+      "score": 0.85053
+    },
+    {
+      "id": "p017-b006",
+      "kind": "formula-image",
+      "ocr": "A^{*}",
+      "score": 0.9563209414482117
+    },
+    {
+      "id": "p017-b008",
+      "kind": "text-image",
+      "ocr": "⇔",
+      "native": "件A",
+      "score": 0.77564
+    },
+    {
+      "id": "p017-b012",
+      "kind": "formula-image",
+      "ocr": "A , B",
+      "score": 0.9640346765518188
+    },
+    {
+      "id": "p017-b014",
+      "kind": "formula-image",
+      "ocr": "n",
+      "score": 0.9294308423995972
+    },
+    {
+      "id": "p017-b016",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{E}-\\boldsymbol{B A}",
+      "score": 0.9291675090789795
+    },
+    {
+      "id": "p017-b018",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{E}-\\boldsymbol{A B}",
+      "score": 0.9385927319526672
+    },
+    {
+      "id": "p017-b029",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{E}-\\boldsymbol{B A}",
+      "score": 0.9472763538360596
+    },
+    {
+      "id": "p017-b031",
+      "kind": "formula-image",
+      "ocr": "| \\mathrm{\\boldmath~ E ~}-\\mathrm{\\boldmath~ B ~} \\mathrm{\\boldmath~ A ~} | \\neq0 ,",
+      "score": 0.9653854966163635
+    },
+    {
+      "id": "p017-b033",
+      "kind": "formula-image",
+      "ocr": "| \\boldsymbol{E}-\\boldsymbol{A} \\boldsymbol{B} | \\neq0",
+      "score": 0.9648928642272949
+    },
+    {
+      "id": "p017-b034",
+      "kind": "text-image",
+      "ocr": "，因此",
+      "native": "0，因此",
+      "score": 0.81301
+    },
+    {
+      "id": "p017-b035",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{E}-\\boldsymbol{A B}",
+      "score": 0.9551805257797241
+    },
+    {
+      "id": "p017-b038",
+      "kind": "formula-image",
+      "ocr": "( \\boldsymbol{E}-\\boldsymbol{A B} )^{-1}",
+      "score": 0.9191973209381104
+    },
+    {
+      "id": "p017-b042",
+      "kind": "formula-image",
+      "ocr": "\\begin{array} {c} {( E-A B ) ( E+A ( E-B A )^{-1} B )} \\\\ {\\} \\\\ {=( E-A B )+( E-A B ) A ( E-B A )^{-1} B} \\\\ {\\} \\\\ {=E-A B+A B=E .} \\\\ \\end{array}",
+      "score": 0.9878960251808167
+    },
+    {
+      "id": "p017-b050",
+      "kind": "formula-image",
+      "ocr": "\\boldsymbol{A}_{4}",
+      "score": 0.9573144912719727
+    },
+    {
+      "id": "p017-b052",
+      "kind": "formula-image",
+      "ocr": "n",
+      "score": 0.958937406539917
+    }
+  ]
+}

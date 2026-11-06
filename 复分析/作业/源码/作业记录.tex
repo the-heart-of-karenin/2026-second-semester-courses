@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{复分析 / Complex Analysis}
+\fancyhead[R]{作业记录 / Homework Notes}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 复分析作业记录}\\[4pt]
+{\large Complex Analysis Homework Notes}
+\end{center}
+
+% STUDY_RECORD_BEGIN id=complex-analysis-hw01-q01
+\section{第 1 次作业，第 1 题 / Homework 1, Problem 1}
+\label{note:complex-analysis-hw01-q01}
+\textbf{题目与出处 / Problem and source.}
+设 $f=u+iv:\mathbb C\to\mathbb C$，$F=(u,v):\mathbb R^2\to\mathbb R^2$。
+证明：若 $f$ 全纯，则 $J_F$ 是从 $\mathbb C$ 到 $\mathbb C$ 的复线性映射，
+且 Cauchy--Riemann 方程等价于
+\[
+\begin{pmatrix}0&-1\\1&0\end{pmatrix}
+\begin{pmatrix}u_x&u_y\\v_x&v_y\end{pmatrix}
+=
+\begin{pmatrix}u_x&u_y\\v_x&v_y\end{pmatrix}
+\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\]
+Let $f=u+iv:\mathbb C\to\mathbb C$ and $F=(u,v):\mathbb R^2\to\mathbb R^2$.
+Show that holomorphicity makes $J_F$ complex-linear, and that the
+Cauchy--Riemann equations are equivalent to the matrix identity above.
+来源：\texttt{第01次作业/作业原件.pdf}，第 1 题。
+
+\textbf{最初的问题 / Original question.} “复线性映射”是什么意思？给一个反例。
+
+\textbf{简短解释 / Brief explanation.} 复线性映射可把复数从映射中提出；
+对已知实线性的映射，只需检验 $A(iz)=iA(z)$。
+共轭映射 $A(z)=\bar z$ 是实线性但不复线性，因为
+$A(i)=-i\ne iA(1)=i$。
+A real-linear map is complex-linear exactly when it commutes with
+multiplication by $i$; conjugation does not.
+
+\textbf{进一步的疑问与解释：}在区域内，若 $F$ 已实可微，则 $f$ 全纯当且仅当每一点的实微分 $dF_z$ 复线性。
+实可微给出 $f(z+h)-f(z)=dF_z(h)+o(|h|)$；复线性时 $dF_z(h)=h\,dF_z(1)$，故复导数为 $dF_z(1)$。
+反之，复可微给出 $dF_z(h)=f'(z)h$。复线性又等价于 Jacobian 与乘以 $i$ 的矩阵交换，即 Cauchy--Riemann 方程。
+这里“已实可微”不能仅由偏导数存在代替。
+
+% STUDY_RECORD_END id=complex-analysis-hw01-q01
+
+% STUDY_RECORD_BEGIN id=complex-analysis-hw01-q02
+\section{第 1 次作业，第 2 题 / Homework 1, Problem 2}
+\label{note:complex-analysis-hw01-q02}
+\textbf{题目与出处 / Problem and source.}
+证明 $f=u+iv$ 的 Cauchy--Riemann 方程在极坐标 $(r,\theta)$ 下可写成
+\[
+u_r=\frac1r v_\theta,\qquad v_r=-\frac1r u_\theta.
+\]
+Show that the Cauchy--Riemann equations in polar coordinates take the
+displayed form. 来源：\texttt{第01次作业/作业原件.pdf}，第 2 题。
+
+\textbf{最初的问题 / Original question.} 为什么极坐标变换的 Jacobian 非零，
+就能由极坐标 Cauchy--Riemann 方程反推直角坐标方程？
+
+\textbf{简短解释 / Brief explanation.} 令 $c=\cos\theta$、$s=\sin\theta$，
+以 $E_1=u_x-v_y$、$E_2=u_y+v_x$ 表示直角坐标方程的误差，
+以 $P_1=u_r-v_\theta/r$、$P_2=v_r+u_\theta/r$ 表示极坐标方程的误差。
+链式法则给出
+\[
+\binom{P_1}{P_2}=
+\begin{pmatrix}c&s\\-s&c\end{pmatrix}\binom{E_1}{E_2}.
+\]
+中间矩阵行列式为 $1$，故 $P_1=P_2=0$ 蕴含 $E_1=E_2=0$。
+原坐标变换的 Jacobian 为 $r\ne0$，保证 $1/r$ 有意义且坐标变换可逆。
+The polar residuals are an invertible rotation of the Cartesian residuals,
+so their vanishing is equivalent.
+
+% STUDY_RECORD_END id=complex-analysis-hw01-q02
+
+% STUDY_RECORD_BEGIN id=complex-analysis-hw01-q04
+\section{第 1 次作业，第 4 题 / Homework 1, Problem 4}
+\label{note:complex-analysis-hw01-q04}
+\textbf{题目与出处 / Problem and source.}
+设标准化的分式线性变换 $T(z)=(az+b)/(cz+d)$ 有有限不动点 $z_1$，
+其乘子为 $\kappa=T'(z_1)$。按题意，抛物型指 $\kappa=1$，双曲型指
+$\kappa>0$ 且 $\kappa\ne1$，椭圆型指 $|\kappa|=1$ 且 $\kappa\ne1$，
+其余为斜向型。证明这四种情形依次等价于
+$a+d=\pm2$、$a+d\in\mathbb R$ 且 $|a+d|>2$、
+$a+d\in\mathbb R$ 且 $|a+d|<2$、以及 $a+d\notin\mathbb R$。
+提示涉及不动点数、第二个不动点的乘子及
+$\kappa+\kappa^{-1}=(a+d)^2-2$。
+
+来源：\texttt{第01次作业/作业原件.pdf}，第 4 题。
+
+\textbf{最初的问题 / Original question.}
+``Normalized form'' 对分式线性变换是什么意思？若不先规范化，题中关于迹
+$a+d$ 的判别是否仍成立？
+
+\textbf{简短解释 / Concise explanation.}
+分式线性变换的系数只确定到非零公因子。因 $ad-bc\ne0$，可把代表矩阵缩放到
+$ad-bc=1$；此后只剩 $M$ 与 $-M$ 两种选择，因此题中关于
+$a+d=\pm2$、$|a+d|$ 及迹是否为实数的分类不受影响，并且
+$T'(z)=1/(cz+d)^2$。未规范化时，迹本身随缩放而变，真正不依赖表示的是
+\[
+ q=\frac{(a+d)^2}{ad-bc},\qquad
+ \kappa+\kappa^{-1}=q-2.
+\]
+例如抛物型条件应写为 $(a+d)^2=4(ad-bc)$，不能直接写成
+$a+d=\pm2$。
+
+Normalize by rescaling the representing matrix to determinant $1$.
+Without normalization, replace trace conditions by the invariant
+$q=(a+d)^2/(ad-bc)$; in particular, the parabolic condition is $q=4$.
+
+% STUDY_RECORD_END id=complex-analysis-hw01-q04
+\end{document}

@@ -1,0 +1,58 @@
+                                                                3.3 Duality      57
+
+
+3.3 Duality
+
+Theorem 3.13 shows that the LPs (3.1) and (3.2) are related. This motivates the
+following deﬁnition:
+
+Deﬁnition 3.14. Given a linear program max{cx : Ax ≤ b}, we deﬁne the dual
+LP to be the linear program min{yb : y A = c, y ≥ 0}.
+   In this case, the original LP max{cx : Ax ≤ b} is often called the primal LP.
+Proposition 3.15. The dual of the dual of an LP is (equivalent to) the original
+LP.
+
+Proof: Let the primal LP max{cx : Ax ≤ b} be given. Its dual is min{yb : y A =
+c, y ≥ 0}, or equivalently
+                          ⎧    ⎛       ⎞      ⎛       ⎞⎫
+                          ⎪
+                          ⎨        A             c     ⎪
+                                                        ⎬
+                               ⎜       ⎟      ⎜       ⎟
+                   − max −by : ⎝ −A ⎠ y ≤ ⎝ −c ⎠ .
+                          ⎪
+                          ⎩                             ⎪
+                                                        ⎭
+                                   −I             0
+
+(Each equality constraint has been split up into two inequality constraints.) So the
+dual of the dual is
+             ⎧                                ⎛     ⎞                      ⎫
+             ⎪
+             ⎨                                    z                        ⎪
+                                                                           ⎬
+                                             ⎜  ⎟               
+       − min zc − z c : A −A −I ⎝ z ⎠ = −b, z, z , w ≥ 0
+             ⎪
+             ⎩                                                             ⎪
+                                                                           ⎭
+                                                  w
+
+which is equivalent to − min{−cx : −Ax − w = −b, w ≥ 0} (where we have
+substituted x for z  − z). By eliminating the slack variables w we see that this is
+equivalent to the primal LP.                                                      2
+
+   We now obtain the most important theorem in LP theory, the Duality Theorem:
+Theorem 3.16. (von Neumann [1947], Gale, Kuhn and Tucker [1951]) If the
+polyhedra P := {x : Ax ≤ b} and D := {y : y A = c, y ≥ 0} are both nonempty,
+then max{cx : x ∈ P} = min{yb : y ∈ D}.
+
+Proof: If D is nonempty, it has a vertex y. We run the Simplex Algorithm
+for min{yb : y ∈ D} and y. By Proposition 3.12, the existence of some x ∈ P
+guarantees that min{yb : y ∈ D} is not unbounded. Thus by Theorem 3.13, the
+Simplex Algorithm returns optimum solutions y and z of the LP min{yb : y ∈ D}
+and its dual. However, the dual is max{cx : x ∈ P} by Proposition 3.15. We have
+yb = cz, as required.                                                        2
+
+    We can say even more about the relation between the optimum solutions of
+the primal and dual LP:

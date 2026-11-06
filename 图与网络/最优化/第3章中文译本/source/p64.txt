@@ -1,0 +1,41 @@
+64      3. Linear Programming
+
+
+Cited References:
+Avis, D., and Chvátal, V. [1978]: Notes on Bland’s pivoting rule. Mathematical Program-
+   ming Study 8 (1978), 24–34
+Bland, R.G. [1977]: New ﬁnite pivoting rules for the simplex method. Mathematics of
+   Operations Research 2 (1977), 103–107
+Borgwardt, K.-H. [1982]: The average number of pivot steps required by the simplex
+   method is polynomial. Zeitschrift für Operations Research 26 (1982), 157–177
+Carathéodory, C. [1911]: Über den Variabilitätsbereich der Fourierschen Konstanten von
+   positiven harmonischen Funktionen. Rendiconto del Circolo Matematico di Palermo 32
+   (1911), 193–217
+Dantzig, G.B. [1951]: Maximization of a linear function of variables subject to linear
+   inequalities. In: Activity Analysis of Production and Allocation (T.C. Koopmans, ed.),
+   Wiley, New York 1951, pp. 359–373
+Dantzig, G.B., Orden, A., and Wolfe, P. [1955]: The generalized simplex method for min-
+   imizing a linear form under linear inequality restraints. Paciﬁc Journal of Mathematics
+   5 (1955), 183–195
+Farkas, G. [1894]: A Fourier-féle mechanikai elv alkalmazásai. Mathematikai és Termész-
+   ettudományi Értesitö 12 (1894), 457–472
+Gale, D., Kuhn, H.W., and Tucker, A.W. [1951]: Linear programming and the theory of
+   games. In: Activity Analysis of Production and Allocation (T.C. Koopmans, ed.), Wiley,
+   New York 1951, pp. 317–329
+Hoffman, A.J., and Kruskal, J.B. [1956]: Integral boundary points of convex polyhedra. In:
+   Linear Inequalities and Related Systems; Annals of Mathematical Study 38 (H.W. Kuhn,
+   A.W. Tucker, eds.), Princeton University Press, Princeton 1956, pp. 223–246
+Klee, V., and Minty, G.J. [1972]: How good is the simplex algorithm? In: Inequalities III
+   (O. Shisha, ed.), Academic Press, New York 1972, pp. 159–175
+Kuhn, H.W. [1956]: Solvability and consistency for linear equations and inequalities. The
+   American Mathematical Monthly 63 (1956), 217–232
+Minkowski, H. [1896]: Geometrie der Zahlen. Teubner, Leipzig 1896
+Motzkin, T.S. [1936]: Beiträge zur Theorie der linearen Ungleichungen (Dissertation).
+   Azriel, Jerusalem 1936
+von Neumann, J. [1947]: Discussion of a maximum problem. Working paper. Published in:
+   John von Neumann, Collected Works; Vol. VI (A.H. Taub, ed.), Pergamon Press, Oxford
+   1963, pp. 27–28
+Steinitz, E. [1916]: Bedingt konvergente Reihen und konvexe Systeme. Journal für die reine
+   und angewandte Mathematik 146 (1916), 1–52
+Weyl, H. [1935]: Elementare Theorie der konvexen Polyeder. Commentarii Mathematici
+   Helvetici 7 (1935), 290–306

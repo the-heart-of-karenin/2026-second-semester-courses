@@ -1,0 +1,40 @@
+13.5 Matroid Intersection 309
+Proof: By Theorem 13.12(b), X ∪{ e} contains at most p circuits for any X ∈ F
+and e ∈ E. The statement now follows from Theorem 13.8. 2
+Of particular interest are independence systems that are the intersection of two
+matroids. The prime example here is the matching problem in a bipartite graph
+G = (A
+.
+∪ B, E(G)).I f E = E(G) and F :={ F ⊆ E : F is a matching in G},
+(E, F) is the intersection of two matroids. Namely, let
+F1 :={ F ⊆ E : |δF(x)|≤ 1 for all x ∈ A} and
+F2 :={ F ⊆ E : |δF(x)|≤ 1 for all x ∈ B}.
+(E, F1), (E, F2) are matroids by Proposition 13.4(d). Clearly, F = F1 ∩ F2.
+A second example is the independence system consisting of all branchings in
+a digraph G (Example 8 of the list at the beginning of Section 13.1). Here one
+matroid contains all sets of edges such that each vertex has at most one entering
+edge (see Proposition 13.4(e)), while the second matroid is the cycle matroid
+M(G) of the underlying undirected graph.
+We shall now describe Edmonds’ algorithm for the following problem:
+Matroid Intersection Problem
+Instance: Two matroids (E, F1), (E, F2), given by independence oracles.
+Task: Find a set F ∈ F1 ∩ F2 such that |F| is maximum.
+We start with the following lemma. Recall that, for X ∈ F and e ∈ E, C(X, e)
+denotes the unique circuit in X ∪{ e} if X ∪{ e} /∈ F, and C(X, e) =∅ otherwise.
+Lemma 13.27. (Frank [1981]) Let (E, F) be a matroid and X ∈ F. Let
+x1,..., xs ∈ X and y1,..., ys /∈ X with
+(a) xk ∈ C(X, yk) for k = 1,..., s and
+(b) xj /∈ C(X, yk) for 1 ≤ j < k ≤ s.
+Then (X \{ x1,..., xs }) ∪{ y1,..., ys }∈ F.
+Proof: Let Xr := (X \{ x1,..., xr }) ∪{ y1,..., yr }. We show that Xr ∈ F for
+all r by induction. For r = 0 this is trivial. Let us assume that Xr − 1 ∈ F for
+some r ∈{ 1,..., s}.I f Xr − 1 ∪{ yr }∈ F then we immediately have Xr ∈ F.
+Otherwise Xr − 1 ∪{ yr } contains a unique circuit C (by Theorem 13.12(b)). Since
+C(X, yr ) ⊆ Xr − 1 ∪{ yr } (by (b)), we must have C = C(X, yr ). But then by (a)
+xr ∈ C(X, yr ) = C,s o Xr = (Xr − 1 ∪{ yr }) \{ xr }∈ F. 2
+The idea behind Edmonds’ Matroid Intersection Algorithm is the fol-
+lowing. Starting with X =∅ , we augment X by one element in each iteration.
+Since in general we cannot hope for an element e such that X ∪{ e}∈ F1 ∩ F2,w e
+shall look for “alternating paths”. To make this convenient, we deﬁne an auxiliary
+graph. We apply the notion C(X, e) to (E, F
+i ) and write Ci (X, e) (i = 1, 2).

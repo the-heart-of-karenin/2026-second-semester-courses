@@ -1,0 +1,51 @@
+56      3. Linear Programming
+
+
+algorithm. However, Borgwardt [1982] showed that the average running time (for
+random instances in a certain natural probabilistic model) can be bounded by a
+polynomial. Also in practice the Simplex Algorithm is quite fast if implemented
+skilfully.
+    We now show how to solve general linear programs with the Simplex Al-
+gorithm. More precisely, we show how to ﬁnd an initial vertex. Since there are
+polyhedra that do not have vertices at all, we put a given LP into a different form
+ﬁrst.
+    Let max{cx : Ax ≤ b} be an LP. We substitute x by y − z and write it
+equivalently in the form
+                                                                      
+                             y                         y
+      max        c −c              :    A −A               ≤ b, y, z ≥ 0 .
+                             z                         z
+
+So w.l.o.g. we assume that our LP has the form
+
+                        max{cx : A x ≤ b , A x ≤ b , x ≥ 0}                     (3.3)
+
+with b ≥ 0 and b < 0. We ﬁrst run the Simplex Algorithm on the instance
+
+                min{(1lA )x + 1ly : A x ≤ b , A x + y ≥ b , x, y ≥ 0},         (3.4)
+                                                                         
+                                                                       x
+where 1l denotes a vector whose entries are all 1. Since                      = 0 deﬁnes a
+                                                                       y
+vertex, this is possible. The LP is obviously not unbounded since the minimum       
+                                                                              x
+must be at least 1lb . For any feasible solution x of (3.3),                         is an
+                                                                         b − A x
+optimum solution of (3.4) of value 1lb . Hence if the minimum of (3.4) is greater
+than 1lb , then (3.3) is infeasible.
+                                       
+                                      x
+    In the contrary case, let              be an optimum vertex of (3.4) of value 1lb .
+                                      y
+We claim that x is a vertex of the polyhedron deﬁned by (3.3). To see this, ﬁrst
+observe that A x + y = b . Let n and m be the dimensions of x and y, respectively;
+then by Proposition 3.8 there is a set S of n + m inequalities of (3.4) satisﬁed
+with equality, such that the submatrix corresponding to these n + m inequalities
+is nonsingular.
+    Let S  be the inequalities of A x ≤ b and of x ≥ 0 that belong to S. Let S 
+consist of those inequalities of A x ≤ b for which the corresponding inequalities
+of A x+y ≥ b and y ≥ 0 both belong to S. Obviously |S  ∪S  | ≥ |S|−m = n, and
+the inequalities of S  ∪ S  are linearly independent and satisﬁed by x with equality.
+Hence x satisﬁes n linearly independent inequalities of (3.3) with equality; thus
+x is indeed a vertex. Therefore we can start the Simplex Algorithm with (3.3)
+and x.

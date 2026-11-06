@@ -1,0 +1,42 @@
+324 14. Generalizations of Matroids
+Proof: (a) ⇒ (b): Let X, Y ∈ F; we show that X ∪ Y ∈ F. Let Z be a maximal
+set with Z ∈ F and X ⊆ Z ⊆ X ∪ Y . Suppose Y \ Z ̸=∅ . By repeatedly applying
+accessibility to Y we get a set Y ′ ∈ F with Y ′ ⊆ Z and an element y ∈ Y \ Z with
+Y ′ ∪{ y}∈ F. We apply (a) to Z, Y ′ and y and obtain Z ∪{ y}∈ F, contradicting
+the choice of Z.
+(b) ⇒ (a) is trivial. 2
+If the conditions in Theorem 14.2 hold, then (E, F) is called an antimatroid.
+Proposition 14.3. Every antimatroid is a greedoid.
+Proof: Let (E, F) be an antimatroid, i.e. accessible and closed under union. To
+prove (M3), let X, Y ∈ F with |X | > |Y |. Since (E, F) is accessible there is an
+order X ={ x1,..., xn } with {x1,..., xi }∈ F for i = 0,..., n. Let i ∈{ 1,..., n}
+be the minimum index with xi /∈ Y ; then Y ∪{ xi }= Y ∪{ x1,..., xi }∈ F (since
+F is closed under union). 2
+Another equivalent deﬁnition of antimatroids is by a closure operator:
+Proposition 14.4. Let (E, F) be a set system such that F is closed under union
+and ∅∈ F. Deﬁne
+τ(A) :=
+⋂
+{X ⊆ E : A ⊆ X, E \ X ∈ F}
+Then τ is a closure operator, i.e. satisﬁes (S1)–(S3) of Theorem 13.11.
+Proof: Let X ⊆ Y ⊆ E. X ⊆ τ(X) ⊆ τ(Y) is trivial. To prove (S3), assume
+that there exists a y ∈ τ(τ(X)) \ τ(X). Then y ∈ Y for all Y ⊆ E with τ(X) ⊆ Y
+and E \ Y ∈ F, but there exists a Z ⊆ E \{ y} with X ⊆ Z and E \ Z ∈ F. This
+implies τ(X) ̸⊆ Z, a contradiction. 2
+Theorem 14.5. Let (E, F) be a set system such that F is closed under union
+and ∅∈ F. Then (E, F) is accessible if and only if the closure operator τ of
+Proposition 14.4 satisﬁes the anti-exchange property: if X ⊆ E, y, z ∈ E \ τ(X),
+y ̸= z and z ∈ τ(X ∪{ y}), then y /∈ τ(X ∪{ z}).
+Proof: If ((E, F) is accessible, then (M3) holds by Proposition 14.3. To show
+the anti-exchange property, let X ⊆ E, B := E \ τ(X), and y, z ∈ B with
+z /∈ A := E \ τ(X ∪{ y}). Observe that A ∈ F, B ∈ F and A ⊆ B \{ y, z}.
+By applying (M3) to A and B we get an element b ∈ B \ A ⊆ E \ (X ∪ A)
+with A ∪{ b}∈ F. A ∪{ b} cannot be a subset of E \ (X ∪{ y}) (otherwise
+τ(X ∪{ y}) ⊆ E \ (A ∪{ b}), contradicting τ(X ∪{ y}) = E \ A). Hence b = y.
+So we have A ∪{ y}∈ F and thus τ(X ∪{ z}) ⊆ E \ (A ∪{ y}). We have proved
+y /∈ τ(X ∪{ z}).
+To show the converse, let A ∈ F \ {∅} and let X := E \ A. We have τ(X) = X.
+Let a ∈ A such that |τ(X ∪{ a})| is minimum. We claim that τ(X ∪{ a}) = X ∪{ a},
+i.e. A \{ a}∈ F.
+Suppose, on the contrary, that b ∈ τ(X ∪{ a}) \ (X ∪{ a}). By (c) we have
+a /∈ τ(X ∪{ b}). Moreover,

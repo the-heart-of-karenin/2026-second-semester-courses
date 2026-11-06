@@ -1,0 +1,128 @@
+\section{预备知识}
+\textbf{有序单纯复形}是二元组 $\Psi=(E,\Delta)$，其中 $E$ 是有限全序集，$\Delta\subseteq2^E$ 是单纯复形，即若 $A\in\Delta$ 且 $B\subset A$，则 $B\in\Delta$。全文采用拟阵术语：$\Delta$ 的元素称为\textbf{独立集}；按包含关系极大的独立集称为\textbf{基}，基族记作 $\B$。若所有基的基数相同，称 $\Psi$ 为\textbf{纯的}。字典序最小基记为 $B_0$。不属于 $\Delta$ 的极小集合称为\textbf{回路}，回路族记作 $\C$。独立集的\textbf{秩}等于其基数；$A\subseteq E$ 的秩是包含于 $A$ 的独立集的最大秩。稍微滥用记号，将 $\Psi$ 的秩定义为 $E$ 的秩，通常记作 $d$。两个有序复形 $\Psi=(E,\Delta)$、$\Psi'=(E',\Delta')$ 称为\textbf{同构}，若 $|E|=|E'|$，且 $E$ 与 $E'$ 之间唯一的保序双射诱导 $\Delta$ 与 $\Delta'$ 之间的双射。
+
+$\Psi$ 的\textbf{环}是 $E$ 中不属于任何基的元素。不是环的元素称为\textbf{顶点}；顶点集记为 $V(\Psi)$。属于每个基的元素称为\textbf{余环}。对 $A\subseteq E$，\textbf{限制}定义为
+\[
+\Psi|_A=(A,\Delta|_A),\qquad \Delta|_A=\{I\in\Delta:I\subseteq A\}.
+\]
+不是余环的元素 $e$ 的\textbf{删除}，是限制到 $E\setminus\{e\}$ 所得复形。不是环的元素 $e$ 的\textbf{收缩}为
+\[
+\con_e\Psi=(E\setminus\{e\},\operatorname{Link}_\Delta(e)),\qquad
+\operatorname{Link}_\Delta(e)=\{I\in\Delta:e\notin I,\ I\cup\{e\}\in\Delta\}.
+\]
+独立集 $I$ 的收缩 $\con_I\Psi$ 是按任意顺序收缩 $I$ 中顶点所得的复形。令 $B_{I,0}$ 表示该收缩的字典序最小基。
+\tnote{源稿第 7 页将删除记作 $\Psi/\{e\}$、收缩记作 $\Psi\setminus\{e\}$，但后面部分定理反过来使用这两个符号。本稿统一采用 $\del_e\Psi$ 与 $\con_I\Psi$，以运算的文字定义为准。这里的收缩就是取链接（link），删除就是取诱导子复形。}
+
+\sourcepage{8}
+复形 $(\{e\},\{\varnothing\})$ 记作 $\Psi_{\rm loop}$，复形 $(\{e\},\{\varnothing,\{e\}\})$ 记作 $\Psi_{\rm coloop}$。
+
+给定 $\Psi=(E,\Delta)$、$\Psi'=(E',\Delta')$，$E$ 和 $E'$ 的一个\textbf{交错排序} $s(E,E')$ 是全序集 $X$，附有保序嵌入 $j:E\to X$、$j':E'\to X$，满足 $j(E)\cap j'(E')=\varnothing$ 且 $j(E)\cup j'(E')=X$。相应的\textbf{连接}（join）
+\[
+\Psi*_{s(E,E')}\Psi':=(s(E,E'),\Delta*\Delta')
+\]
+的独立集是形如 $j(I)\cup j'(I')$ 的集合，其中 $I\in\Delta$、$I'\in\Delta'$。若两个复形秩相同，则\textbf{连通和} $\Psi\#\Psi'$ 是通过唯一的保序双射将 $B_0$ 与 $B'_0$ 识别所得到的复形。$\Psi$ 的\textbf{秩 $k$ 骨架} $\Psi^{(k)}=(E,\Delta^{(k)})$ 由 $\Delta$ 中秩不超过 $k$ 的独立集构成。
+\tnote{这里的“连通和”按作者给出的识别构造理解；不要直接套用拓扑流形中“挖球后沿边界粘合”的定义。秩 $k$ 骨架对应通常的维数 $k-1$ 骨架。}
+
+设 $B$ 是基。若 $e\in E\setminus B$，且存在回路 $C\subseteq B\cup\{e\}$ 使 $e=\min C$，则称 $e$ 关于 $B$ \textbf{外部活动}；不外部活动时称为\textbf{外部被动}。外部活动和外部被动元素集分别记为 $\EA(B)$、$\EP(B)$。若 $b\in B$，且 $B$ 是包含 $B\setminus\{b\}$ 的字典序最小基，则称 $b$ \textbf{内部活动}。等价地，不存在 $b'<b$、$b'\notin B$ 使
+\[
+(B\setminus\{b\})\cup\{b'\}\in\B.
+\]
+非内部活动的 $b\in B$ 称为\textbf{内部被动}。相应集合记为 $\IA(B)$ 与 $\IP(B)$。
+
+$\Psi$ 的\textbf{破圈}是形如 $C\setminus\{\min C\}$ 的子集，其中 $C$ 为回路。\textbf{无破圈复形} $\operatorname{nbc}(\Psi)=(E,\Gamma)$ 的基，是 $\Psi$ 中不包含破圈的那些基。
+
+纯有序复形的\textbf{Gale 序}是基族上的偏序：若
+\[
+B=\{b_1<\cdots<b_d\},\qquad B'=\{b'_1<\cdots<b'_d\},
+\]
+则 $B\le_{\Gale}B'$ 当且仅当对每个 $i$ 都有 $b_i\le b'_i$。设 $J$ 为这个偏序集的序理想，则在 $J$ 处的\textbf{Gale 截断} $\Psi[J]=(E,\Delta[J])$ 是以 $J$ 的元素为基的复形。$\Psi$ 的\textbf{内部偏序集} $\operatorname{Int}(\Psi)$ 由关系
+\[
+B_1\le_{\rm int}B_2\quad\Longleftrightarrow\quad\IP(B_1)\subseteq\IP(B_2)
+\]
+定义。
+\tnote{以上是原稿的用语。在一般有序复形上，内部被动集可能不能区分基，因此该关系未必是偏序；无破圈基也未必存在。后文在具有适当性质的类中使用这些对象。第 4.2 节的可壳性保证相应内部被动集确实给出偏序。}
+
+有序复形 $\Psi$ 是\textbf{有序拟阵}，当且仅当下列三条等价公理中任意一条成立。
+\begin{enumerate}[label=\roman*.]
+\item \textbf{独立性公理：}若 $I_1,I_2$ 独立且 $|I_1|>|I_2|$，则存在 $i\in I_1\setminus I_2$，使 $I_2\cup\{i\}\in\Delta$。
+\item \textbf{交换公理：}若 $B_1,B_2$ 为基，$b_1\in B_1\setminus B_2$，则存在 $b_2\in B_2\setminus B_1$，使 $(B_1\setminus\{b_1\})\cup\{b_2\}$ 为基。
+\item \textbf{回路公理：}若 $C_1,C_2$ 为不同回路且 $c\in C_1\cap C_2$，则 $(C_1\cup C_2)\setminus\{c\}$ 包含一个回路 $C_3$。
+\end{enumerate}
+\tnote{原稿第三条漏写“不同”；若允许 $C_1=C_2$，则删除回路任一元素后的集合独立，结论不成立。上文补明这一必要条件。}
+
+拟阵对偶性的一个简单推论（例如见 [Gal68]）是：若 $\Psi$ 为有序拟阵，其 Gale 序同时有最小元和最大元。Gale 还证明，这实际上是拟阵的刻画性质。
+
+\sourcepage{9}
+\entry{定理 2.1}{[Bjö92]}单纯复形 $\Delta$ 是拟阵的独立复形，当且仅当对其顶点集的每一种排序 $E$，$\Psi=(E,\Delta)$ 的 Gale 偏序都有最小元。
+
+注意，拟阵的定义完全没有用到 $E$ 的排序。有序集 $E$ 上秩为 $d$ 的\textbf{有序均匀拟阵} $U_{E,d}=(E,X_d)$，以 $E$ 的全体 $d$ 元子集为基。
+
+有序复形 $\Psi=(E,\Delta)$ 称为\textbf{移位的}，若满足：对基 $B$，若 $i<j$、$i\notin B$ 且 $j\in B$，则 $(B\setminus\{j\})\cup\{i\}$ 仍为基。等价地，$\Psi$ 是某个 $U_{E,d}$ 的 Gale 截断。移位复形的 Gale 序同构于整数分拆的 Young 格的一个序理想。
+\tnote{源稿在上述替换式中误写为 $B\setminus\{i\}\cup\{j\}$；按其前提该集合仍是 $B$，不能表达移位性。本稿改为“删去 $j$，加入 $i$”。此处以基描述的移位复形及后面的均匀拟阵截断描述采用纯复形语境；一般非纯移位复形应在所有面上定义替换。}
+
+秩 $d$ 复形的 $f$ 向量为 $(f_0,f_1,\ldots,f_d)$，其中 $f_i$ 为秩 $i$ 独立集数。空集是唯一的秩 0 独立集，因此 $f_0=1$。$h$ 向量 $(h_0,\ldots,h_d)$ 由下式定义：
+\begin{equation}
+h(\Psi,t):=\sum_{j=0}^d h_jt^j=\sum_{j=0}^d f_jt^j(1-t)^{d-j}.\tag{1}
+\end{equation}
+$h$ 向量携带与 $f$ 向量相同的信息，有时更方便，尤其在通过交换代数研究单纯复形时。
+\tnote{源稿的 $f$ 向量重复写了 $f_0$，式 (1) 两边混用了 $x,t$；本稿分别整理为 $f_0,f_1,\ldots,f_d$ 和同一变量 $t$。}
+
+纯复形的\textbf{壳序}是基的排序 $B_1,\ldots,B_k$，使对每个 $i<j$，存在 $\ell<j$ 和 $b\in B_j$ 满足
+\[
+B_i\cap B_j\subseteq B_\ell\cap B_j=B_j\setminus\{b\}.
+\]
+存在壳序的复形称为\textbf{可壳的}。每个壳序都有以下性质：对每个 $j=1,\ldots,k$，存在 $B_j$ 的唯一极小子集 $R(B_j)$，它不包含于任何先前的 $B_i$（$i<j$）。并且
+\begin{equation}
+h(\Psi,x)=\sum_{j=1}^k x^{|R(B_j)|}.\tag{2}
+\end{equation}
+已知有序拟阵和纯移位复形都是可壳的，基的字典序就是壳序。这又给出一个刻画拟阵的性质。
+
+\entry{定理 2.2}{[Gal68]}单纯复形 $\Delta$ 是拟阵的独立复形，当且仅当对其顶点集的每一种排序 $E$，$\Psi=(E,\Delta)$ 的 Gale 偏序都有最小元。
+\tnote{所提供版本中，定理 2.1 和 2.2 的陈述完全重复，尽管前后文意在分别讨论字典序可壳刻画和 Gale 序刻画。本译稿保留原稿的重复陈述及编号；字典序可壳的刻画已在引言明确叙述。不要将这里的两段相同文字理解成两个不同结论。}
+
+\sourcepage{10}
+纯有序复形 $\Psi=(E,\Delta)$ 称为\textbf{顶点可分解的}，当且仅当满足下列条件之一：
+\begin{itemize}
+\item $\Psi$ 恰有一个基；
+\item 存在顶点 $e$，使 $\del_e\Psi$ 顶点可分解且与 $\Psi$ 同秩，同时 $\con_e\Psi$ 顶点可分解。
+\end{itemize}
+若 $\Psi$ 顶点可分解且不止一个基，则满足第二条的 $e$ 称为\textbf{脱落顶点}（shedding vertex）。Billera 与 Provan [PB80] 的定理表明，顶点可分解复形是可壳的。他们还证明拟阵顶点可分解，其中每个非余环顶点都是脱落顶点。纯移位复形也顶点可分解：最大顶点总可作为脱落顶点。
+\tnote{单基情形直接使用第一条。原稿关于拟阵的“任意顶点”须排除余环，因删除余环会降低秩；关于移位复形的最大顶点也应在非单基情形排除余环，采用最大非余环顶点。}
+
+对集合 $A,B$，记其\textbf{对称差}为 $A\triangle B=(A\setminus B)\cup(B\setminus A)$。考虑较小集合的子集时，为简化记号省略花括号与逗号。例如，$\{1,2,3,4,5\}$ 的子集 $\{2,4\}$ 记作 $24$。
+
+\section{有序复形的拟拟阵类}
+本节用 $\mathcal A$ 表示一个有序复形类。若对任意 $\Psi,\Psi'\in\mathcal A$ 以及底集的任意交错排序 $s$，连接 $\Psi*_s\Psi'$ 都属于 $\mathcal A$，则称 $\mathcal A$ \textbf{对连接封闭}。若每个复形删除底集的最大元素后仍在 $\mathcal A$ 中，则称其\textbf{对删除封闭}。若每个复形收缩其任意独立集后仍在 $\mathcal A$ 中，则称其\textbf{对收缩封闭}。下面的概念概括了本文研究的核心对象。
+
+\entry{定义 3.1}{}有序单纯复形类 $\mathcal A$ 称为\textbf{拟拟阵类}，若满足：
+\begin{enumerate}
+\item 每个有序拟阵都是 $\mathcal A$ 的对象。
+\item 若单纯复形 $\Delta$ 的顶点集为 $X$，且对 $X$ 的每个全序 $E$，$(E,\Delta)$ 均属于 $\mathcal A$，则 $\Delta$ 是拟阵的独立复形。
+\item 每个纯移位复形均在 $\mathcal A$ 中。
+\item $\mathcal A$ 对连接、删除、收缩封闭。
+\end{enumerate}
+
+定理 2.1 和 2.2 给出了两种不同的拟拟阵类。
+\entry{例 3.2}{}以下两个类是拟拟阵类：
+\begin{enumerate}
+\item $\mathrm{LEX}$：对连接、删除和收缩封闭，且基的字典序为壳序的纯有序复形类。
+\item $\mathrm{GALE}$：对连接、删除和收缩封闭，且 Gale 偏序有唯一极小基的纯有序复形类。
+\end{enumerate}
+
+\sourcepage{11}
+稍大一些、包含上述两类的例子如下。
+\entry{例 3.3}{}用 $\mathrm{PURE}$ 表示满足以下递归描述的纯有序复形类：$\Psi=(E,\Delta)$ 属于 $\mathrm{PURE}$，当且仅当以下之一成立：
+\begin{itemize}
+\item $\Psi$ 恰有一个基；或
+\item 若 $v$ 是 $\Psi$ 的最大非余环顶点，则 $\del_v\Psi$ 属于 $\mathrm{PURE}$，且与 $\Psi$ 同秩；此外，$\Psi$ 的每个收缩都属于 $\mathrm{PURE}$。
+\end{itemize}
+容易看出纯移位复形和拟阵都属于 $\mathrm{PURE}$。事实上，由以下经典定理，$\mathrm{PURE}$ 是拟拟阵类。
+
+\entry{定理 3.4}{[Sta96]}单纯复形 $\Delta$ 是拟阵的独立复形，当且仅当其每个诱导子复形都是纯的。
+
+$\mathrm{PURE}$ 解释了纯移位复形和拟阵之间最初几种良好的相似性。
+\entry{定理 3.5}{}$\mathrm{PURE}$ 中的每个有序复形都顶点可分解，因而可壳。
+
+虽然以上例子解释了移位复形和拟阵独立复形的一些相似性，但这些类太大，包含很多远离二者的复形。例如，它们都包含以 $12,13,24$ 为基的复形 $\Psi=([4],\Delta)$。这个复形是三条边组成的路径，也是 Laplace 算子具有非整数谱的典型例子。因此，希望研究更小的拟拟阵类，使其成员与拟阵和移位复形共享更深的结构性质。
+
+为此，引入拟拟阵类的几种基本构造。给定拟拟阵类 $\mathcal A,\mathcal A'$，由同时属于二者的复形组成的交集 $\mathcal A\cap\mathcal A'$ 显然也是拟拟阵类。若 $\mathcal A'$ 的全部元素都属于 $\mathcal A$，则称 $\mathcal A'$ 为 $\mathcal A$ 的\textbf{子类}。

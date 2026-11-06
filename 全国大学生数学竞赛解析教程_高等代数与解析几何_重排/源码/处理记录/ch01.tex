@@ -1,0 +1,97 @@
+\input{ch01-opening.tex}
+% SOURCE_PDF_PAGE 14
+
+\par\medskip\noindent \raisebox{-4.33pt}{\includegraphics[width=106.45pt]{images/p014-b000.png}}
+
+\typeout{OCRFORM p014-b001}\eq{\boldsymbol{A}=\left( \begin{array} {c c c c c c} {2} & {0} & {0} & {0} & {0} & {0} \\ {3} & {2} & {0} & {0} & {0} & {0} \\ {0} & {3} & {2} & {0} & {0} & {0} \\ {0} & {0} & {0} & {1} & {2} & {0} \\ {0} & {0} & {0} & {0} & {1} & {2} \\ {0} & {0} & {0} & {0} & {0} & {1} \\ \end{array} \right) ,}
+
+
+% SOURCE_PDF_PAGE 15
+求\typeout{OCRFORM p015-b001}$\boldsymbol{A}^{1 0 0}$。
+\sol 设
+\typeout{OCRFORM p015-b004}\eq{\boldsymbol{A}_{1}=\left( \begin{array} {c c c} {2} & {0} & {0} \\ {3} & {2} & {0} \\ {0} & {3} & {2} \\ \end{array} \right) , \quad\boldsymbol{A}_{2}=\left( \begin{array} {c c c} {1} & {2} & {0} \\ {0} & {1} & {2} \\ {0} & {0} & {1} \\ \end{array} \right) .}
+
+则\typeout{OCRFORM p015-b006}$\boldsymbol{A}$可写为如下分块形式:
+
+\typeout{OCRFORM p015-b008}\eq{{\boldsymbol A}=\left( \begin{array} {c c} {{\boldsymbol A}_{1}} & {} \\ {} & {{\boldsymbol A}_{2}} \\ \end{array} \right) \! ,}
+
+于是
+
+\typeout{OCRFORM p015-b010}\eq{{\boldsymbol A}^{1 0 0}=\left( \begin{array} {c c} {{\boldsymbol A}_{1}^{1 0 0}} & {{}} \\ {{}} & {{\boldsymbol A}_{2}^{1 0 0}} \\ \end{array} \right) \! .}
+
+将\typeout{OCRFORM p015-b012}$\boldsymbol{A}_{1} , \boldsymbol{A}_{2}$分解为
+\typeout{OCRFORM p015-b014}$\boldsymbol{A}_{1}=2 \boldsymbol{E}+3 \boldsymbol{S}$，其中\typeout{OCRFORM p015-b016}$\boldsymbol{S}=\left( \begin{array} {c c c} {0} & {0} & {0} \\ {1} & {0} & {0} \\ {0} & {1} & {0} \\ \end{array} \right) \! ;$
+\typeout{OCRFORM p015-b017}$\boldsymbol{A}_{2}=\boldsymbol{E}+2 \boldsymbol{H}$，其中\typeout{OCRFORM p015-b019}$\boldsymbol{H}=\left( \begin{array} {c c c} {0} & {1} & {0} \\ {0} & {0} & {1} \\ {0} & {0} & {0} \\ \end{array} \right) \! .$
+注意到\raisebox{-2.92pt}{\includegraphics[width=13.98pt]{images/p015-b021.png}}与\raisebox{-3.12pt}{\includegraphics[width=34.98pt]{images/p015-b023.png}}与\raisebox{-2.87pt}{\includegraphics[width=14.99pt]{images/p015-b025.png}}均可交换且
+\raisebox{-5.00pt}{\includegraphics[width=60.42pt]{images/p015-b027.png}}
+\typeout{OCRFORM p015-b028}\eq{\left( \begin{array} {c c} {0} & {0} \\ {0} & {0} \\ {0} & {0} \\ \end{array} \right) , \quad\boldsymbol{S}^{i}=\boldsymbol{O} \ ( i \geqslant3 ) , \quad\boldsymbol{H}^{2}=\left( \begin{array} {c c c} {0} & {0} & {1} \\ {0} & {0} & {0} \\ {0} & {0} & {0} \\ \end{array} \right) , \quad\boldsymbol{H}^{i}=\boldsymbol{O} \ ( i \geqslant3 ) .}
+
+0
+1
+由二项式定理
+
+\typeout{OCRFORM p015-b032}\eq{\begin{aligned} {\boldsymbol{A}_{1}^{1 0 0}} & {{}=( 2 \boldsymbol{E}+3 \boldsymbol{S} )^{1 0 0}=\sum_{i=0}^{1 0 0} \binom{1 0 0} {i} ( 2 \boldsymbol{E} )^{1 0 0-i} ( 3 \boldsymbol{S} )^{i}} \\ {} & {{}=\binom{1 0 0} {0} ( 2 \boldsymbol{E} )^{1 0 0}+\binom{1 0 0} {1} ( 2 \boldsymbol{E} )^{9 9} \cdot3 \boldsymbol{S}+\binom{1 0 0} {2} ( 2 \boldsymbol{E} )^{9 8} ( 3 \boldsymbol{S} )^{2}} \\ {} & {{}=2^{1 0 0} \boldsymbol{E}+3 0 0 \boldsymbol{S} \cdot2^{9 9} \boldsymbol{E}+\frac{1 0 0 \times9 9} {2} \cdot9 \boldsymbol{S}^{2} \cdot2^{9 8} \boldsymbol{E}} \\ {} & {{}=2^{1 0 0} \boldsymbol{E}+3 0 0 \cdot2^{9 9} \cdot\boldsymbol{S}+5 0 \cdot9 9 \cdot9 \cdot2^{9 8} \cdot\boldsymbol{S}^{2}} \\ \end{aligned}}
+
+
+% SOURCE_PDF_PAGE 16
+
+\typeout{OCRFORM p016-b000}\eq{= \left( \begin{array} {c c c} {2^{1 0 0}} & {0} & {0} \\ {3 \cdot5^{2} \cdot2^{1 0 1}} & {2^{1 0 0}} & {0} \\ {1 1 \cdot5^{2} \cdot3^{4} \cdot2^{9 9}} & {3 \cdot5^{2} \cdot2^{1 0 1}} & {2^{1 0 0}} \\ \end{array} \right) ,}
+
+
+\typeout{OCRFORM p016-b001}\eq{\begin{aligned} {\boldsymbol{A}_{2}^{1 0 0}=( \boldsymbol{E}+2 \boldsymbol{H} )^{1 0 0}} & {{}=\boldsymbol{E}^{1 0 0}+1 0 0 \cdot\boldsymbol{E}^{9 9} \cdot( 2 \boldsymbol{H} )+\frac{1 0 0 \times9 9} {2} \cdot\boldsymbol{E}^{9 8} \cdot( 2 \boldsymbol{H} )^{2}} \\ {} & {{}=\boldsymbol{E}+2 0 0 \boldsymbol{H}+1 9 8 0 0 \boldsymbol{H}^{2}} \\ {} & {{}=\left( \begin{array} {c c c} {1} & {2 0 0} & {1 9 8 0 0} \\ {0} & {1} & {2 0 0} \\ {0} & {0} & {1} \\ \end{array} \right) .} \\ \end{aligned}}
+
+因此
+
+\typeout{OCRFORM p016-b003}\eq{\boldsymbol{A}^{1 0 0}=\left( \begin{array} {c c c c c c} {2^{1 0 0}} & {0} & {0} & {0} & {0} & {0} \\ {3 \cdot5^{2} \cdot2^{1 0 1}} & {2^{1 0 0}} & {0} & {0} & {0} & {0} \\ {1 1 \cdot5^{2} \cdot3^{4} \cdot2^{0 9}} & {3 \cdot5^{2} \cdot2^{1 0 1}} & {2^{1 0 0}} & {0} & {0} & {0} \\ {0} & {0} & {0} & {1} & {2 0 0} & {1 9 8 0 0} \\ {0} & {0} & {0} & {0} & {1} & {2 0 0} \\ {0} & {0} & {0} & {0} & {0} & {1} \\ \end{array} \right) .}
+
+总结 计算方阵的方幂一般有三种方法:
+\par\begin{center}\includegraphics[width=446.01pt]{images/p016-b005.png}\end{center}
+dan 标准形)来进行计算
+
+\par\noindent (2) 利用递推公式法或者说数学归纳法，如例1. 2.3 和例1. 2 .4.
+
+\par\noindent (3) 基于方阵分解.然后利用二项式定理来进行计算，如例1. 2 .5.
+\subsection*{题型二矩阵可逆的判定及计算}
+\sol 此题型常用到如下熟知的结果.
+命题设\typeout{OCRFORM p016-b012}$\boldsymbol{A}$为\raisebox{-2.87pt}{\includegraphics[width=11.95pt]{images/p016-b014.png}}阶矩阵则有
+\typeout{OCRFORM p016-b016}$\boldsymbol{A}$可逆\typeout{OCRFORM p016-b018}$\Leftrightarrow\exists B$使得\typeout{OCRFORM p016-b020}$\boldsymbol{B A}=\boldsymbol{E}$
+\typeout{OCRFORM p016-b021}$\Leftrightarrow\exists C$使得\typeout{OCRFORM p016-b023}$\boldsymbol{A C}=\boldsymbol{E}$
+\raisebox{-3.45pt}{\includegraphics[width=22.87pt]{images/p016-b024.png}}\typeout{OCRFORM p016-b025}$\operatorname{r a n k} ( \boldsymbol{A} )=n$
+\raisebox{-3.45pt}{\includegraphics[width=23.57pt]{images/p016-b026.png}}\raisebox{-2.91pt}{\includegraphics[width=41.05pt]{images/p016-b027.png}}
+\raisebox{-3.45pt}{\includegraphics[width=23.19pt]{images/p016-b028.png}}\typeout{OCRFORM p016-b029}$\boldsymbol{A}$的最简行阶梯形为\raisebox{-3.02pt}{\includegraphics[width=14.89pt]{images/p016-b031.png}}
+\raisebox{-3.78pt}{\includegraphics[width=24.31pt]{images/p016-b032.png}}\raisebox{-3.51pt}{\includegraphics[width=42.26pt]{images/p016-b033.png}}
+\raisebox{-3.45pt}{\includegraphics[width=109.52pt]{images/p016-b034.png}}\raisebox{-2.89pt}{\includegraphics[width=44.68pt]{images/p016-b035.png}}只有零解
+\raisebox{-3.78pt}{\includegraphics[width=85.02pt]{images/p016-b037.png}}\typeout{OCRFORM p016-b038}$\boldsymbol{A x}=\boldsymbol{b}$有唯一解
+
+% SOURCE_PDF_PAGE 17
+\raisebox{-3.78pt}{\includegraphics[width=22.07pt]{images/p017-b000.png}}\raisebox{-2.92pt}{\includegraphics[width=14.95pt]{images/p017-b001.png}}的特征值均不为0
+\raisebox{-3.89pt}{\includegraphics[width=23.01pt]{images/p017-b003.png}}\typeout{OCRFORM p017-b004}$\boldsymbol{A}$的伴随矩阵\raisebox{-3.09pt}{\includegraphics[width=20.81pt]{images/p017-b006.png}}可逆
+\raisebox{-3.45pt}{\includegraphics[width=22.40pt]{images/p017-b008.png}}\typeout{OCRFORM p017-b009}$\boldsymbol{A}$是一些初等矩阵之积.
+
+\par\medskip\noindent 【例1. 2.6 】设\raisebox{-3.08pt}{\includegraphics[width=30.77pt]{images/p017-b012.png}}均为\raisebox{-2.85pt}{\includegraphics[width=12.87pt]{images/p017-b014.png}}阶方阵若\raisebox{-2.96pt}{\includegraphics[width=50.85pt]{images/p017-b016.png}}可逆，证明\raisebox{-2.98pt}{\includegraphics[width=50.45pt]{images/p017-b018.png}}可逆，并求
+其逆.
+\sol 考虑分块矩阵\typeout{OCRFORM p017-b022}$\left( \begin{array} {c c} {E} & {A} \\ {B} & {E} \\ \end{array} \right)$).则有'
+
+\typeout{OCRFORM p017-b024}\eq{\left( \begin{array} {c c} {{E}} & {{-A}} \\ {{O}} & {{E}} \end{array} \right) \left( \begin{array} {c c} {{E}} & {{A}} \\ {{B}} & {{E}} \end{array} \right)=\left( \begin{array} {c c} {{E-A B}} & {{O}} \\ {{B}} & {{E}} \end{array} \right) ,}
+
+
+\typeout{OCRFORM p017-b025}\eq{\left( \begin{array} {c c} {E} & {A} \\ {B} & {E} \\ \end{array} \right) \left( \begin{array} {c c} {E} & {-A} \\ {O} & {E} \\ \end{array} \right)=\left( \begin{array} {c c} {E} & {O} \\ {B} & {E-B A} \\ \end{array} \right) .}
+
+因此
+
+\typeout{OCRFORM p017-b027}\eq{\left| \begin{array} {c c} {E} & {A} \\ {B} & {E} \end{array} \right|=| E-A B |=| E-B A | .}
+
+由于\raisebox{-3.08pt}{\includegraphics[width=49.62pt]{images/p017-b029.png}}可逆，即\raisebox{-3.30pt}{\includegraphics[width=80.27pt]{images/p017-b031.png}}，所以\raisebox{-3.26pt}{\includegraphics[width=76.72pt]{images/p017-b033.png}}\raisebox{-3.89pt}{\includegraphics[width=33.56pt]{images/p017-b034.png}}\raisebox{-3.02pt}{\includegraphics[width=49.29pt]{images/p017-b035.png}}可逆. 下
+面进一步求(\raisebox{-3.42pt}{\includegraphics[width=70.11pt]{images/p017-b038.png}}. 由于
+
+\typeout{OCRFORM p017-b040}\eq{\begin{aligned} {\boldsymbol{A} \boldsymbol{B}} & {{}=\boldsymbol{A} ( \boldsymbol{E}-\boldsymbol{B} \boldsymbol{A} ) ( \boldsymbol{E}-\boldsymbol{B} \boldsymbol{A} )^{-1} \boldsymbol{B}} \\ {} & {{}=( \boldsymbol{A}-\boldsymbol{A} \boldsymbol{B} \boldsymbol{A} ) ( \boldsymbol{E}-\boldsymbol{B} \boldsymbol{A} )^{-1} \boldsymbol{B}} \\ {} & {{}=( \boldsymbol{E}-\boldsymbol{A} \boldsymbol{B} ) \boldsymbol{A} ( \boldsymbol{E}-\boldsymbol{B} \boldsymbol{A} )^{-1} \boldsymbol{B} ,} \\ \end{aligned}}
+
+故
+\par\begin{center}\includegraphics[width=237.75pt]{images/p017-b042.png}\end{center}
+进而
+
+\typeout{OCRFORM p017-b044}\eq{( \boldsymbol{E}-\boldsymbol{A} \boldsymbol{B} )^{-1}=\boldsymbol{E}+\boldsymbol{A} ( \boldsymbol{E}-\boldsymbol{B} \boldsymbol{A} )^{-1} \boldsymbol{B} .}
+
+
+\par\medskip\noindent 【例1. 2.7 】设\typeout{OCRFORM p017-b046}$A_{1}$为\typeout{OCRFORM p017-b048}$m$阶可逆矩阵，\raisebox{-2.99pt}{\includegraphics[width=19.90pt]{images/p017-b050.png}}为\raisebox{-2.86pt}{\includegraphics[width=12.26pt]{images/p017-b052.png}}阶可逆矩阵，\typeout{OCRFORM p017-b054}$A_{2}$为\typeout{OCRFORM p017-b056}$m \times n$矩阵，\typeout{OCRFORM p017-b058}$\boldsymbol{A}_{3}$
+为\typeout{OCRFORM p017-b060}$n \times m$矩阵.设

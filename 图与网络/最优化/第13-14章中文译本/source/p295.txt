@@ -1,0 +1,45 @@
+13.2 Other Matroid Axioms 295
+Theorem 13.8. (Hausmann, Jenkyns and Korte [1980]) Let (E, F) be an inde-
+pendence system. If, for any A ∈ F and e ∈ E, A ∪{ e} contains at most p circuits,
+then q(E, F) ≥ 1
+p .
+Proof: Let F ⊆ E and J, K two bases of F. We show |J |
+|K | ≥ 1
+p .
+Let J \ K ={ e1,..., et }. We construct a sequence K = K0, K1,..., Kt of
+independent subsets of J ∪ K such that J ∩ K ⊆ Ki , Ki ∩{ e1,..., et }={ e1,..., ei }
+and |Ki− 1 \ Ki |≤ p for i = 1,..., t.
+Since Ki ∪{ ei+1} contains at most p circuits and each such circuit must meet
+Ki \ J (because J is independent), there is an X ⊆ Ki \ J such that |X |≤ p and
+(Ki \ X) ∪{ ei+1}∈ F.W es e t Ki+1 := (Ki \ X) ∪{ ei+1}.
+Now J ⊆ Kt ∈ F. Since J is a basis of F, J = Kt . We conclude that
+|K \ J |=
+t∑
+i=1
+|Ki− 1 \ Ki |≤ pt = p |J \ K |,
+proving |K |≤ p |J |. 2
+This shows that in example (9) we have q(E, F) ≥ 1
+2 (see also Exercise 1 of
+Chapter 10). In fact q(E, F) = 1
+2 iff G contains a path of length 3 as a subgraph
+(otherwise q(E, F) = 1). For the independence system in example (1) of our list,
+the rank quotient can become arbitrarily small (choose G to be a star). In Exercise
+5, the rank quotients for other independence systems will be discussed.
+13.2 Other Matroid Axioms
+In this section we consider other axiom systems deﬁning matroids. They charac-
+terize fundamental properties of the family of bases, the rank function, the closure
+operator and the family of circuits of a matroid.
+Theorem 13.9. Let E be a ﬁnite set and B ⊆ 2
+E . B is the set of bases of some
+matroid (E, F) if and only if the following holds:
+(B1) B ̸=∅ ;
+(B2) For any B1, B2 ∈ B and x ∈ B1 \ B2 there exists a y ∈ B2 \ B1 with
+(B1 \{ x}) ∪{ y}∈ B.
+Proof: The set of bases of a matroid satisﬁes (B1) (by (M1)) and (B2): For bases
+B1, B2 and x ∈ B1 \ B2 we have that B1 \{ x} is independent. By (M3) there is
+some y ∈ B2 \ B1 such that (B1 \{ x}) ∪{ y} is independent. Indeed, it must be a
+basis, because all bases of a matroid have the same cardinality.
+On the other hand, let B satisfy (B1) and (B2). We ﬁrst show that all elements
+of B have the same cardinality: Otherwise let B1, B2 ∈ B with |B1| > |B2| such
+that |B1 ∩ B2| is maximum. Let x ∈ B1 \ B2. By (B2) there is a y ∈ B2 \ B1 with
+(B1 \{ x}) ∪{ y}∈ B, contradicting the maximality of |B1 ∩ B2|.

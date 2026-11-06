@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{复分析第 2 次作业答案}
+\author{}\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+题目来源：本目录的 \texttt{HW2.pdf}（共 1 页）。以下按原题编号给出题干的中文表述和完整解答。
+
+\section*{1. 解析函数的乘积与 Cauchy 乘积}
+\textbf{题目。}设 $f(z)=\sum_{n=0}^\infty a_nz^n$、$g(z)=\sum_{n=0}^\infty b_nz^n$ 在单位圆盘 $D$ 内解析，令
+\[c_n=\sum_{k=0}^n a_kb_{n-k}.
+\]
+证明 $fg$ 在 $D$ 内解析，且 $f(z)g(z)=\sum_{n=0}^\infty c_nz^n$。提示：使用 Leibniz 公式。
+
+\textbf{解答。}解析函数的乘积仍解析。由幂级数逐项求导，
+\[f^{(k)}(0)=k!a_k,\qquad g^{(n-k)}(0)=(n-k)!b_{n-k}.
+\]
+因此 Leibniz 公式给出
+\[\frac{(fg)^{(n)}(0)}{n!}
+=\frac1{n!}\sum_{k=0}^n\binom nk k!a_k(n-k)!b_{n-k}
+=\sum_{k=0}^n a_kb_{n-k}=c_n.
+\]
+任取 $0<r<1$，$fg$ 在包含闭圆盘 $|z|\le r$ 的开集上解析，故其以 $0$ 为中心的 Taylor 展开在 $|z|<r$ 内成立。由于 $r$ 任意，此展开在整个 $D$ 内成立。
+
+\section*{2. Legendre 多项式}
+\textbf{题目。}由
+\[\frac1{\sqrt{1-2\alpha z+z^2}}=1+\sum_{n=1}^\infty P_n(\alpha)z^n
+\]
+定义 Legendre 多项式，求前四个。平方根采用在 $z=0$ 处取值为 $1$ 的解析分支。
+
+\textbf{解答。}在 $z=0$ 的邻域使用二项式展开
+\[(1-u)^{-1/2}=1+\frac12u+\frac38u^2+\frac5{16}u^3+\frac{35}{128}u^4+O(u^5),
+\qquad u=2\alpha z-z^2.
+\]
+分别提取 $z,z^2,z^3,z^4$ 的系数，得到
+\begin{align*}
+P_1(\alpha)&=\alpha,\\
+P_2(\alpha)&=-\tfrac12+\tfrac38(4\alpha^2)=\tfrac12(3\alpha^2-1),\\
+P_3(\alpha)&=\tfrac38(-4\alpha)+\tfrac5{16}(8\alpha^3)
+=\tfrac12(5\alpha^3-3\alpha),\\
+P_4(\alpha)&=\tfrac38-\tfrac5{16}(12\alpha^2)+\tfrac{35}{128}(16\alpha^4)
+=\tfrac18(35\alpha^4-30\alpha^2+3).
+\end{align*}
+另有 $P_0(\alpha)=1$。若“前四个”从 $P_0$ 起计，则答案为 $P_0,P_1,P_2,P_3$；若按题干求和的起点计，则为上列 $P_1,P_2,P_3,P_4$。
+
+\section*{3. 三个收敛级数的乘积关系}
+\textbf{题目。}设 $a_n,b_n\in\mathbb C$，$c_n=\sum_{k=0}^na_kb_{n-k}$。若 $\sum a_n$、$\sum b_n$ 和 $\sum c_n$ 均收敛，证明
+\[\left(\sum_{n=0}^\infty a_n\right)\left(\sum_{n=0}^\infty b_n\right)=\sum_{n=0}^\infty c_n.
+\]
+提示：使用第 1 题与 Abel 定理。
+
+\textbf{解答。}记上述三和为 $A,B,C$。因为 $a_n\to0,b_n\to0,c_n\to0$，三个数列均有界。因此对于每个 $|z|<1$，
+\[F(z)=\sum_{n=0}^\infty a_nz^n,\quad G(z)=\sum_{n=0}^\infty b_nz^n,
+\quad H(z)=\sum_{n=0}^\infty c_nz^n
+\]
+绝对收敛，且定义圆盘内的解析函数。由第 1 题，$F(z)G(z)=H(z)$。
+沿实轴令 $r\uparrow1$，Abel 定理与题设的三个收敛条件给出
+\[F(r)\longrightarrow A,\qquad G(r)\longrightarrow B,\qquad H(r)\longrightarrow C.
+\]
+对 $F(r)G(r)=H(r)$ 取极限即得 $AB=C$。
+
+\textbf{条件的作用。}这里没有假设两个原级数绝对收敛；题设另行保证了 Cauchy 乘积级数收敛，才能对 $H$ 应用 Abel 定理。
+
+\section*{4. Fibonacci 数列的生成函数与 Binet 公式}
+\textbf{题目。}设 $a_0=a_1=1$，$a_n=a_{n-1}+a_{n-2}$（$n\ge2$）。
+\begin{enumerate}
+\item 证明 $\sum_{n=0}^\infty a_nz^n=1/(1-z-z^2)$，并求收敛半径。
+\item 推出 $a_n=\frac1{\sqrt5}\left[((1+\sqrt5)/2)^{n+1}-((1-\sqrt5)/2)^{n+1}\right]$。
+\end{enumerate}
+
+\textbf{解答。}先由归纳得到 $a_n\le2^n$，故 $F(z)=\sum a_nz^n$ 至少在 $|z|<1/2$ 内收敛。在此范围，
+\begin{align*}
+(1-z-z^2)F(z)
+&=a_0+(a_1-a_0)z+\sum_{n=2}^\infty(a_n-a_{n-1}-a_{n-2})z^n\\
+&=1.
+\end{align*}
+因此 $F$ 是有理函数 $1/(1-z-z^2)$ 在原点的 Taylor 展开。
+令
+\[\phi=\frac{1+\sqrt5}{2},\qquad \psi=\frac{1-\sqrt5}{2}.
+\]
+则 $1-z-z^2=(1-\phi z)(1-\psi z)$，两个零点为
+\[\phi^{-1}=\frac{\sqrt5-1}{2},\qquad \psi^{-1}=-\frac{1+\sqrt5}{2}.
+\]
+两者均为简单极点，离原点最近的极点距离为
+\[\boxed{R=\frac{\sqrt5-1}{2}}.
+\]
+理由是该有理函数在 $|z|<R$ 内解析，所以 Taylor 半径至少为 $R$；若半径大于 $R$，Taylor 和将解析地跨过该极点，与 $(1-z-z^2)F(z)=1$ 矛盾。
+
+利用 $\phi-\psi=\sqrt5$，部分分式分解为
+\[\frac1{1-z-z^2}=\frac1{\sqrt5}
+\left(\frac{\phi}{1-\phi z}-\frac{\psi}{1-\psi z}\right).
+\]
+在 $|z|<R$ 内展开两个几何级数，得
+\[F(z)=\sum_{n=0}^\infty\frac{\phi^{n+1}-\psi^{n+1}}{\sqrt5}z^n.
+\]
+比较系数即得所需 Binet 公式。
+
+\section*{5. 欧拉数与正割函数}
+\textbf{题目。}设
+\[\frac1{\cos z}=\sum_{n=0}^\infty\frac{E_{2n}}{(2n)!}z^{2n}.
+\]
+求收敛半径；证明 $E_{2n}$ 全为自然数，并计算 $0\le n\le6$ 的值。
+
+\subsection*{(1) 收敛半径}
+由 $\cos z=(e^{iz}+e^{-iz})/2$，其零点满足 $e^{2iz}=-1$，即
+\[z=\frac\pi2+k\pi,\qquad k\in\mathbb Z.
+\]
+各零点处 $\sin z=\pm1$，故均为简单零点，$1/\cos z$ 在这些点有简单极点。最近的两点是 $\pm\pi/2$，所以
+\[\boxed{R=\pi/2}.
+\]
+
+\subsection*{(2) 整数性、正性与具体数值}
+将正割级数与余弦级数相乘并比较系数：$E_0=1$，且对 $n\ge1$，
+\[\sum_{k=0}^n(-1)^k\binom{2n}{2k}E_{2n-2k}=0.
+\]
+因而
+\[\boxed{E_{2n}=\sum_{k=1}^n(-1)^{k+1}\binom{2n}{2k}E_{2n-2k}}.
+\]
+此式与 $E_0=1$ 已通过归纳证明所有 $E_{2n}$ 都是整数。但因递推有交替符号，仍需单独证明正性。
+
+令 $S(z)=\sec z$、$T(z)=\tan z$，并记 $s_m=S^{(m)}(0)$、$t_m=T^{(m)}(0)$。
+由 $S'=ST$、$T'=1+T^2$ 和 Leibniz 公式，
+\begin{align*}
+s_{m+1}&=\sum_{j=0}^m\binom mj s_jt_{m-j},\\
+t_{m+1}&=\delta_{m0}+\sum_{j=0}^m\binom mj t_jt_{m-j},
+\end{align*}
+其中 $s_0=1,t_0=0$，$\delta_{m0}$ 在 $m=0$ 时为 $1$，其他时候为 $0$。
+这些递推只包含非负整数的加法与乘法，故所有 $s_m,t_m$ 均为非负整数，且 $t_1=1$。
+对 $n\ge1$，第一式在 $m=2n-1$ 时的 $j=2n-2$ 项给出
+\[s_{2n}\ge(2n-1)s_{2n-2}t_1=(2n-1)s_{2n-2}>0,
+\]
+最后一个不等式由 $s_0=1$ 归纳得到。由于 $S$ 是偶函数且 $s_{2n}=E_{2n}$，所有 $E_{2n}$ 都是正整数。
+
+利用上面的余弦递推依次计算：
+\begin{align*}
+E_0&=1,\\
+E_2&=1,\\
+E_4&=6E_2-E_0=5,\\
+E_6&=15E_4-15E_2+E_0=61,\\
+E_8&=28E_6-70E_4+28E_2-E_0=1385,\\
+E_{10}&=45E_8-210E_6+210E_4-45E_2+E_0=50521,\\
+E_{12}&=66E_{10}-495E_8+924E_6-495E_4+66E_2-E_0\\
+&=2702765.
+\end{align*}
+\textbf{符号约定。}本题用 $\sec z$ 定义 $E_{2n}$，所以这些数为正；另一种常见约定用 $\operatorname{sech}z$ 定义，会得到交替符号，使用时应以本题定义为准。
+\end{document}

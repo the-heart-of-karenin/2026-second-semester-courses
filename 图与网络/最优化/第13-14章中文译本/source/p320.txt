@@ -1,0 +1,47 @@
+320 13. Matroids
+24. Consider the following problem. Given a digraph G with edge weights, a
+vertex s ∈ V(G), and a number K , ﬁnd a minimum weight subgraph H of G
+containing K edge-disjoint paths from s to each other vertex. Show that this
+reduces to the Weighted Matroid Intersection Problem.
+Hint: See Exercise 18 of Chapter 6 and Exercise 4 of this chapter.
+(Edmonds [1970]; Frank and Tardos [1989]; Gabow [1995])
+25. Let A and B be two ﬁnite sets of cardinality n ∈ N, ¯a ∈ A, and c : {{a, b} :
+a ∈ A, b ∈ B}→ R a cost function. Let T be the family of edge sets of all
+trees T with V(T) = A
+.
+∪ B and |δT (a)|= 2 for all a ∈ A \{ ¯a}. Show that
+a minimum cost element of T can be computed in O(n7) time. How many
+edges will be incident to ¯a?
+References
+General Literature:
+Bixby, R.E., and Cunningham, W.H. [1995]: Matroid optimization and algorithms. In:
+Handbook of Combinatorics; V ol. 1 (R.L. Graham, M. Gr ¨otschel, L. Lov ´asz, eds.), El-
+sevier, Amsterdam, 1995
+Cook, W.J., Cunningham, W.H., Pulleyblank, W.R., and Schrijver, A. [1998]: Combinato-
+rial Optimization. Wiley, New York 1998, Chapter 8
+Faigle, U. [1987]: Matroids in combinatorial optimization. In: Combinatorial Geometries
+(N. White, ed.), Cambridge University Press, 1987
+Gondran, M., and Minoux, M. [1984]: Graphs and Algorithms. Wiley, Chichester 1984,
+Chapter 9
+Lawler, E.L. [1976]: Combinatorial Optimization; Networks and Matroids. Holt, Rinehart
+and Winston, New York 1976, Chapters 7 and 8
+Oxley, J.G. [1992]: Matroid Theory. Oxford University Press, Oxford 1992
+von Randow, R. [1975]: Introduction to the Theory of Matroids. Springer, Berlin 1975
+Recski, A. [1989]: Matroid Theory and its Applications. Springer, Berlin, 1989
+Schrijver, A. [2003]: Combinatorial Optimization: Polyhedra and Efﬁciency. Springer,
+Berlin 2003, Chapters 39–42
+Welsh, D.J.A. [1976]: Matroid Theory. Academic Press, London 1976
+Cited References:
+Cunningham, W.H. [1986] : Improved bounds for matroid partition and intersection algo-
+rithms. SIAM Journal on Computing 15 (1986), 948–957
+Edmonds, J. [1970]: Submodular functions, matroids and certain polyhedra. In: Combina-
+torial Structures and Their Applications; Proceedings of the Calgary International Con-
+ference on Combinatorial Structures and Their Applications 1969 (R. Guy, H. Hanani,
+N. Sauer, J. Schonheim, eds.), Gordon and Breach, New York 1970, pp. 69–87
+Edmonds, J. [1971]: Matroids and the greedy algorithm. Mathematical Programming 1
+(1971), 127–136
+Edmonds, J. [1979]: Matroid intersection. In: Discrete Optimization I; Annals of Discrete
+Mathematics 4 (P.L. Hammer, E.L. Johnson, B.H. Korte, eds.), North-Holland, Amster-
+dam 1979, pp. 39–49
+Edmonds, J., and Fulkerson, D.R. [1965]: Transversals and matroid partition. Journal of
+Research of the National Bureau of Standards B 69 (1965), 67–72

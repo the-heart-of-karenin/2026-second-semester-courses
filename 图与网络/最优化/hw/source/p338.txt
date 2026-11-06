@@ -1,0 +1,44 @@
+338 14. Generalizations of Matroids
+(wk(Z) − wk− 1(Z)) − (wk({z}) − wk− 1({z}))
+= 1
+2 ( f (Z ∪ Uk− 2) − f (Z ∪ Uk− 1) − f (Uk− 2) + f (Uk− 1))
+− 1
+2 ( f ({z}∪ Uk− 2) − f ({z}∪ Uk− 1) − f (Uk− 2) + f (Uk− 1))
+= 1
+2( f (Z ∪ Uk− 2) + f ({z}∪ Uk− 1) − f (Z ∪ Uk− 1) − f ({z}∪ Uk− 2))
+≥ 0.
+Hence wk(Z) − wk({z}) ≥ wk− 1(Z) − wk− 1({z}) ≥ 0.
+To conclude the proof of the claim, let C ⊆ U with x ∈ C and y /∈ C. There
+are two cases:
+Case 1: u
+k− 1 /∈ C. Then the above result for Z = C and z = x yields wk(C) ≥
+wk({x}) as required.
+Case 2: uk− 1 ∈ C. Then we apply the above to Z = U \ C and z = y and get
+wk(C) = wk(U \ C) ≥ wk({y}) ≥ wk({x}).
+This completes the proof of the claim. Applying it to k = n − 1, x = un and
+y = un− 1 we get
+wn− 1({un }) = min{wn− 1(C) : un ∈ C ⊆ U \{ un− 1}}.
+Since wn− 1(C) = f (C) − 1
+2 ( f ({un }) + f (U \{ un− 1}) − f (Un− 2)) for all C ⊆ U
+with un ∈ C and un− 1 /∈ C, the lemma follows (set x := un and y := un− 1). 2
+The above proof is due to Fujishige [1998]. Now we can proceed analogously
+to the proof of Theorem 8.39:
+Theorem 14.25. (Queyranne [1998]) Given a symmetric submodular function
+f :2 U → R, a nonempty proper subset A of U such that f (A) is minimum can be
+found in O(n3θ) time where θ is the time bound of the oracle for f .
+Proof: If |U |= 1, the problem is trivial. Otherwise we apply Lemma 14.24
+and ﬁnd two elements x, y ∈ U with f ({x}) = min{ f (X) : x ∈ X ⊆ U \{ y}}
+in O(n2θ) time. Next we recursively ﬁnd a nonempty proper subset of U \{ x}
+minimizing the function f ′ :2 U \{x} → R, deﬁned by f ′(X) := f (X) if y /∈ X
+and f ′(X) := f (X ∪{ x}) if y ∈ X. One readily observes that f ′ is symmetric
+and submodular.
+Let ∅ ̸= Y ⊂ U \{ x} be a set minimizing f ′; w.l.o.g. y ∈ Y (as f ′ is
+symmetric). We claim that either {x} or Y ∪{ x} minimizes f (over all nonempty
+proper subsets of U). To see this, consider any C ⊂ U with x ∈ C.I f y /∈ C,
+then we have f ({x}) ≤ f (C) by the choice of x and y.I f y ∈ C, then f (C) =
+f ′(C \{ x}) ≥ f ′(Y) = f (Y ∪{ x}). Hence f (C) ≥ min{ f ({x}), f (Y ∪{ x})} for
+all nonempty proper subsets C of U.
+To achieve the asserted running time we of course cannot computef ′ explicitly.
+Rather we store a partition of U, initially consisting of the singletons. At each step
+of the recursion we build the union of those two sets of the partition that contain
+x and y. In this way f ′ can be computed efﬁciently (using the oracle for f ). 2

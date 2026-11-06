@@ -1,0 +1,30 @@
+14. Generalizations of Matroids
+There are several interesting generalizations of matroids. We have already seen in-
+dependence systems in Section 13.1, which arose from dropping the axiom (M3).
+In Section 14.1 we consider greedoids, arising by dropping (M2) instead. More-
+over, certain polytopes related to matroids and to submodular functions, called
+polymatroids, lead to strong generalizations of important theorems; we shall dis-
+cuss them in Section 14.2. In Sections 14.3 and 14.4 we consider two approaches
+to the problem of minimizing an arbitrary submodular function: one using the
+Ellipsoid Method, and one with a combinatorial algorithm. For the important
+special case of symmetric submodular functions we mention a simpler algorithm
+in Section 14.5.
+14.1 Greedoids
+By deﬁnition, set systems (E, F) are matroids if and only if they satisfy
+(M1) ∅∈ F;
+(M2) If X ⊆ Y ∈ F then X ∈ F;
+(M3) If X, Y ∈ F and |X | > |Y |, then there is an x ∈ X \ Y with Y ∪{ x}∈ F.
+If we drop (M3), we obtain independence systems, discussed in Sections 13.1 and
+13.4. Now we drop (M2) instead:
+Deﬁnition 14.1. A greedoid is a set system (E, F) satisfying (M1) and (M3).
+Instead of the subclusiveness (M2) we have accessibility: We call a set system
+(E, F) accessible if ∅∈ F and for any X ∈ F \ {∅} there exists an x ∈ X with
+X \{ x}∈ F. Greedoids are accessible (accessibility follows directly from (M1)
+and (M3)). Though more general than matroids, they comprise a rich structure
+and, on the other hand, generalize many different, seemingly unrelated concepts.
+We start with the following result:
+Theorem 14.2. Let (E, F) be an accessible set system. The following statements
+are equivalent:
+(a) For any X ⊆ Y ⊂ E and z ∈ E \ Y with X ∪{ z}∈ F and Y ∈ F we have
+Y ∪{ z}∈ F;
+(b) F is closed under union.

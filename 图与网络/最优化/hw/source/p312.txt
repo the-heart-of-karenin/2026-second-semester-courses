@@ -1,0 +1,33 @@
+312 13. Matroids
+Next we prove that r1(E \ R) =| X \ R|. If not, there would be a y ∈ (E \ R)\ X
+with (X \ R)∪{ y}∈ F1. Since X ∪{ y} /∈ F1 (because y /∈ SX ), the circuit C1(X, y)
+must contain an element x ∈ X ∩ R. But then (x, y) ∈ A(1)
+X means that there is an
+edge leaving R. This contradicts the deﬁnition of R.
+Altogether we have |X |= r2(R)+r1(E \ R). By Proposition 13.29, this implies
+optimality. 2
+The last paragraph of this proof yields the following min-max-equality:
+Theorem 13.31. (Edmonds [1970]) Let (E, F1) and (E, F2) be two matroids
+with rank functions r1 and r2. Then
+max {|X | : X ∈ F1 ∩ F2} = min {r1(Q) + r2(E \ Q) : Q ⊆ E}. 2
+We are now ready for a detailed description of the algorithm.
+Edmonds’ Matroid Intersection Algorithm
+Input: Two matroids (E, F1) and (E, F2), given by independence oracles.
+Output: A set X ∈ F1 ∩ F2 of maximum cardinality.
+1⃝ Set X :=∅ .
+2⃝ For each y ∈ E \ X and i ∈{ 1, 2} do: Compute
+Ci (X, y) :={ x ∈ X ∪{ y} : X ∪{ y} /∈ Fi ,( X ∪{ y}) \{ x}∈ Fi }.
+3⃝ Compute SX , TX , and G X as deﬁned above.
+4⃝ Apply BFS to ﬁnd a shortest SX -TX -path P in G X .
+If none exists then stop .
+5⃝ Set X := X △V(P) and go to 2⃝.
+Theorem 13.32. Edmonds’ Matroid Intersection Algorithm correctly
+solves the Matroid Intersection Problem in O(|E|3θ) time, where θ is the
+maximum complexity of the two independence oracles.
+Proof: The correctness follows from Lemmata 13.28 and 13.30. 2⃝ and 3⃝ can be
+done in O(|E|2θ), 4⃝ in O(|E|) time. Since there are at most |E| augmentations,
+the overall complexity is O(|E|3θ). 2
+Faster matroid intersection algorithms are discussed by Cunningham [1986]
+and Gabow and Xu [1996]. We remark that the problem of ﬁnding a maximum
+cardinality set in the intersection of three matroids is an NP-hard problem; see
+Exercise 14(c) of Chapter 15.

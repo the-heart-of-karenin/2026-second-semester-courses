@@ -1,0 +1,43 @@
+304 13. Matroids
+W orst-Out-Greedy Algorithm
+Input: An independence system (E, F), given by a basis-superset oracle.
+Weights c : E → R+.
+Output: A basis F of (E, F).
+1⃝ Sort E ={ e1, e2,..., en } such that c(e1) ≤ c(e2) ≤ ··· ≤ c(en).
+2⃝ Set F := E.
+3⃝ For i := 1 to n do: If F \{ ei } contains a basis then set F := F \{ ei }.
+Before we analyse these algorithms, let us take a closer look at the oracles
+required. It is an interesting questions whether such oracles are polynomially equiv-
+alent, i.e. whether one can be simulated by polynomial-time oracle algorithm using
+the other. The independence oracle and the basis-superset oracle do not seem to
+be polynomially equivalent:
+If we consider the independence system for the TSP (example (2) of the list
+in Section 13.1), it is easy (and the subject of Exercise 13) to decide whether a
+set of edges is independent, i.e. the subset of a Hamiltonian circuit (recall that we
+are working with a complete graph). On the other hand, it is a difﬁcult problem to
+decide whether a set of edges contains a Hamiltonian circuit (this is NP-complete;
+cf. Theorem 15.25).
+Conversely, in the independence system for the Shortest P ath Problem(ex-
+ample (3)), it is easy to decide whether a set of edges contains an s-t-path. Here it
+is not known how to decide whether a given set is independent (i.e. subset of an
+s-t-path) in polynomial time (Korte and Monma [1979] proved NP-completeness).
+For matroids, both oracles are polynomially equivalent. Other equivalent ora-
+cles are the rank oracle and closure oracle, which return the rank and the closure
+of a given subset of E, respectively (Exercise 16).
+However, even for matroids there are other natural oracles that are not polyno-
+mially equivalent. For example, the oracle deciding whether a given set is a basis
+is weaker than the independence oracle. The oracle which for a given F ⊆ E
+returns the minimum cardinality of a dependent subset of F is stronger than the
+independence oracle (Hausmann and Korte [1981]).
+One can analogously formulate both greedy algorithms for the Minimization
+Problem. It is easy to see that the Best-In-Greedy for the Maximization Prob-
+lem for (E, F, c) corresponds to the W orst-Out-Greedyfor the Minimization
+Problem for (E, F
+∗ , c): adding an element to F in the Best-In-Greedy corre-
+sponds to removing an element from F in the W orst-Out-Greedy. Observe that
+Kruskal’s Algorithm(see Section 6.1) is a Best-In-Greedy algorithm for the
+Minimization Problem in a cycle matroid.
+The rest of this section contains some results concerning the quality of a
+solution found by the greedy algorithms.
+Theorem 13.19. (Jenkyns [1976], Korte and Hausmann [1978]) Let (E, F) be
+an independence system. For c : E → R+ we denote by G(E, F, c) the cost of

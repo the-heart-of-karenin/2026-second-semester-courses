@@ -1,0 +1,42 @@
+298 13. Matroids
+To show the converse, let σ :2 E → 2E be a function satisfying (S1)–(S4). Let
+F :={ X ⊆ E : x /∈ σ(X \{ x}) for all x ∈ X }.
+We claim that (E, F) is a matroid.
+(M1) is trivial. For X ⊆ Y ∈ F and x ∈ X we have x /∈ σ(Y \{ x}) ⊇
+σ(X \{ x}),s o X ∈ F and (M2) holds. To prove (M3) we need the following
+statement:
+Claim: For X ∈ F and Y ⊆ E with |X | > |Y | we have X ̸⊆ σ(Y).
+We prove the claim by induction on |Y \ X |.I f Y ⊂ X, then let x ∈ X \
+Y .
+Since X ∈ F we have x /∈ σ(X \{ x}) ⊇ σ(Y) by (S2). Hence x ∈ X \ σ(Y) as
+required.
+If |Y \ X | > 0, then let y ∈ Y \ X. By the induction hypothesis there exists
+an x ∈ X \ σ(Y \{ y}).I f x ̸∈ σ(Y), then we are done. Otherwise x /∈ σ(Y \{ y})
+but x ∈ σ(Y) = σ((Y \{ y}) ∪{ y}), so by (S4) y ∈ σ((Y \{ y}) ∪{ x}). By (S1)
+we get Y ⊆ σ((Y \{ y}) ∪{ x}) and thus σ(Y) ⊆ σ((Y \{ y}) ∪{ x}) by (S2) and
+(S3). Applying the induction hypothesis to X and (Y \{ y}) ∪{ x} (note that x ̸= y)
+yields X ̸⊆ σ((Y \{ y}) ∪{ x}),s o X ̸⊆ σ(Y) as required.
+Having proved the claim we can easily verify (M3). Let X, Y ∈ F with
+|X | > |Y |. By the claim there exists an x ∈ X \ σ(Y). Now for each z ∈ Y ∪{ x}
+we have z /∈ σ(Y \{ z}), because Y ∈ F and x /∈ σ(Y) = σ(Y \{ x}). By (S4)
+z /∈ σ(Y \{ z}) and x /∈ σ(Y) imply z /∈ σ((Y \{ z}) ∪{ x}) ⊇ σ((Y ∪{ x}) \{ z}).
+Hence Y ∪{ x}∈ F.
+So (M3) indeed holds and (E, F) is a matroid, say with rank function r and
+closure operator σ′. It remains to prove that σ = σ′.
+By deﬁnition, σ′(X) ={ y ∈ E : r(X ∪{ y}) = r(X)} and
+r(X) = max{|Y | : Y ⊆ X, y /∈ σ(Y \{ y}) for all y ∈ Y }
+for all X ⊆ E.
+Let X ⊆ E. To show σ′(X) ⊆ σ(X), let z ∈ σ′(X) \ X. Let Y be a basis
+of X. Since r(Y ∪{ z}) ≤ r(X ∪{ z}) = r(X) =| Y | < |Y ∪{ z}| we have y ∈
+σ((Y ∪{ z}) \{ y}) for some y ∈ Y ∪{ z}.I f y = z, then we have z ∈ σ(Y).
+Otherwise (S4) and y /∈ σ(Y \{ y}) also yield z ∈ σ(Y). Hence by (S2) z ∈ σ(X).
+Together with (S1) this implies σ′(X) ⊆ σ(X).
+Now let z /∈ σ′(X), i.e. r(X ∪{ z})> r(X). Let now Y be a basis of X ∪{ z}.
+Then z ∈ Y and |Y \{ z} |=| Y |− 1 = r(X ∪{ z}) − 1 = r(X). Therefore Y \{ z} is
+a basis of X, implying X ⊆ σ′(Y \{ z}) ⊆ σ(Y \{ z}), and thus σ(X) ⊆ σ(Y \{ z}).
+As z /∈ σ(Y \{ z}), we conclude that z ̸∈ σ(X). 2
+Theorem 13.12. Let E be a ﬁnite set and C ⊆ 2E . C is set of circuits of an in-
+dependence system (E, F), where F ={ F ⊂ E : there exists no C ∈ C with C ⊆
+F}, if and only if the following conditions hold:
+(C1) ∅ /∈ C;
+(C2) For any C1, C2 ∈ C, C1 ⊆ C2 implies C1 = C2.

@@ -1,0 +1,35 @@
+13.3 Duality 299
+Moreover, if C is set of circuits of an independence system (E, F), then the follow-
+ing statements are equivalent:
+(a) (E, F) is a matroid.
+(b) For any X ∈ F and e ∈ E, X ∪{ e} contains at most one circuit.
+(C3) For any C1, C2 ∈ C with C1 ̸= C2 and e ∈ C1 ∩ C2 there exists a C3 ∈ C
+with C3 ⊆ (C1 ∪ C2) \{ e}.
+(C3′) For any C1, C2 ∈ C, e ∈ C1 ∩ C2 and f ∈ C1 \ C2 there exists a C3 ∈ C with
+f ∈ C3 ⊆ (C1 ∪ C2) \{ e}.
+Proof: By deﬁnition, the family of circuits of any independence system satisﬁes
+(C1) and (C2). If C satisﬁes (C1), then (E, F) is an independence system. If C
+also satisﬁes (C2), it is the set of circuits of this independence system.
+(a)⇒ (C3′): Let C be the family of circuits of a matroid, and let C1, C2 ∈ C,
+e ∈ C1 ∩ C2 and f ∈ C1 \ C2. By applying (R3) twice we have
+|C1|− 1 + r((C1 ∪ C2) \{ e, f }) +| C2|− 1
+= r(C1) + r((C1 ∪ C2) \{ e, f }) + r(C2)
+≥ r(C1) + r((C1 ∪ C2) \{ f }) + r(C2 \{ e})
+≥ r(C1 \{ f }) + r(C1 ∪ C2) + r(C2 \{ e})
+=| C1|− 1 + r(C1 ∪ C2) +| C2|− 1.
+So r((C1 ∪ C2) \{ e, f }) = r(C1 ∪ C2). Let B be a basis of (C1 ∪ C2) \{ e, f }.
+Then B ∪{ f } contains a circuit C3, with f ∈ C3 ⊆ (C1 ∪ C2) \{ e} as required.
+(C3′)⇒ (C3): trivial.
+(C3)⇒ (b): If X ∈ F and X ∪{ e} contains two circuits C1, C2, (C3) implies
+(C1 ∪ C2) \{ e} /∈ F. However, (C1 ∪ C2) \{ e} is a subset of X.
+(b)⇒ (a): Follows from Theorem 13.8 and Proposition 13.7. 2
+Especially property (b) will be used often. For X ∈ F and e ∈ E such that
+X ∪{ e} ̸∈ F we write C(X, e) for the unique circuit in X ∪{ e}.I f X ∪{ e}∈ F
+we write C(X, e) :=∅ .
+13.3 Duality
+Another basic concept in matroid theory is duality.
+Deﬁnition 13.13. Let (E, F) be an independence system. We deﬁne the dual of
+(E, F) by (E, F∗ ), where
+F∗ ={ F ⊆ E : there is a basis B of (E, F) such that F ∩ B =∅ } .
+It is obvious that the dual of an independence system is again an independence
+system.
