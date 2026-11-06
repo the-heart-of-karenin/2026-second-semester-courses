@@ -1,0 +1,204 @@
+\subsection*{4.4 利用积分估计级数的和}
+
+无穷级数是（数列）极限的一个等价形式，它与极限一样，主要有两个方面的内容：一是定性地判断是否收敛，二是定量地确定或估计极限值。无穷级数在这两个方面通常与求和问题相关，表现为对部分和或余和的估计。例如，常用的 $p$ 级数判别法的建立，就在于成功地估计了 $p$ 级数的部分和。
+
+作估计就是作化简。无穷级数的求和常常无法精确完成，却可以通过比较或积分估计它的界。以 $p$ 级数 $\sum_{n=1}^{\infty}n^{-p}$ 为例，其判别法的结论是：当 $p>1$ 时收敛，当 $p\leq1$ 时发散。知道这一结论以后，利用 $p$ 级数比较新的级数，是一个常用的方法。
+
+另一途径是借助广义积分。$p$ 级数的精确值通常难以求出，而相应的 $p$ 积分却容易计算。这就是 Cauchy 积分判别法的出发点；它还可以给出 $\sum_{n=2}^{\infty}1/(n\ln^q n)$、$\sum_{n=3}^{\infty}1/(n\ln n(\ln\ln n)^s)$ 等更精细级数的敛散性结论。
+
+\noindent\textbf{Cauchy 积分判别法}\quad 设 $f$ 在 $[1,+\infty)$ 上非负、连续且单调递减，则级数 $\sum_{n=1}^{\infty}f(n)$ 与广义积分 $\int_1^{+\infty}f(x)\,\mathrm dx$ 同敛散。
+
+很多情况下，积分比级数的和更容易计算。因此利用积分估计级数的和是有效的方法。不过，Cauchy 积分判别法要求函数具有单调性，这在有一定难度的题目里往往不能满足。下面给出较灵活的积分估计公式。
+
+\thm{4.4.1}（一阶 Euler--Maclaurin 公式）设 $m<n$ 为整数，$f$ 在 $[m,n]$ 上连续可微，则
+\[
+\sum_{k=m}^{n}f(k)
+=\frac{f(m)+f(n)}{2}+\int_m^n f(x)\,\mathrm dx
++\int_m^n\left(x-[x]-\frac12\right)f'(x)\,\mathrm dx,
+\]
+其中 $[x]$ 表示不超过 $x$ 的最大整数。
+
+\pf 从积分出发，在每个 $[k,k+1]$ 上分部积分：
+\begin{align*}
+\int_m^n f(x)\,\mathrm dx
+&=\sum_{k=m}^{n-1}\int_k^{k+1}f(x)\,\mathrm dx\\
+&=\sum_{k=m}^{n-1}\int_k^{k+1}f(x)\,\mathrm d\left(x-k-\frac12\right)\\
+&=\sum_{k=m}^{n-1}\left.\left(x-k-\frac12\right)f(x)\right|_k^{k+1}
+-\sum_{k=m}^{n-1}\int_k^{k+1}\left(x-k-\frac12\right)f'(x)\,\mathrm dx\\
+&=\sum_{k=m}^{n}f(k)-\frac{f(m)+f(n)}2
+-\int_m^n\left(x-[x]-\frac12\right)f'(x)\,\mathrm dx.
+\end{align*}
+整理即得。\hfill$\square$
+
+若 $f$ 还具有连续的二阶导数，则可继续分部积分。对任意常数 $a_2$，有
+\begin{align*}
+\sum_{k=m}^{n}f(k)-\int_m^n f(x)\,\mathrm dx
+={}&\frac{f(m)+f(n)}2
++\frac12\left(\frac14+a_2\right)\bigl(f'(n)-f'(m)\bigr)\\
+&-\frac12\int_m^n f''(x)
+\left(\left(x-[x]-\frac12\right)^2+a_2\right)\,\mathrm dx.
+\end{align*}
+取 $a_2=-1/12$，则函数 $\left(x-[x]-\tfrac12\right)^2-\tfrac1{12}$ 以 $1$ 为周期，而且它在每个周期上的积分为 $0$；这有利于写出统一形式的更高阶 Euler--Maclaurin 公式。
+
+\subsection*{4.5 幂级数}
+
+\subsubsection*{4.5.1 基本性质}
+
+\noindent\textbf{收敛半径与收敛域}\quad 幂级数 $\sum_{n=0}^{\infty}a_nx^n$ 的收敛半径 $R$ 有三种情形：$R=0$、$R\in(0,+\infty)$、$R=+\infty$。Cauchy--Hadamard 公式给出
+\[
+R=\frac1{\displaystyle\limsup_{n\to\infty}\sqrt[n]{|a_n|}},
+\]
+其中按通常约定处理分母为 $0$ 或 $+\infty$ 的情形。若 $R=0$，幂级数仅在 $x=0$ 处收敛；若 $R=+\infty$，它对每个实数 $x$ 收敛。若 $0<R<+\infty$，收敛域依两个端点的敛散性，可以是 $(-R,R)$、$[-R,R]$、$(-R,R]$ 或 $[-R,R)$。
+
+\noindent\textbf{一致收敛性与连续性}\quad 幂级数在其收敛域内闭一致收敛，因而在收敛域上连续。具体地，若 $0<R<+\infty$，且 $\sum_{n=0}^{\infty}a_nx^n$ 在 $x=R$（或 $x=-R$）处收敛，则其和函数在 $x=R$ 处左连续（在 $x=-R$ 处右连续）。
+
+\noindent\textbf{可微性}\quad 幂级数在收敛域的内部无限次可导。逐项求导后的幂级数 $\sum_{n=1}^{\infty}na_nx^{n-1}$ 的收敛半径不变，收敛域不扩大。若 $0<R<+\infty$，并且 $\sum_{n=1}^{\infty}na_nR^{n-1}$ 收敛，则原幂级数在 $x=R$ 处收敛，且其和函数在该处的左导数等于 $\sum_{n=1}^{\infty}na_nR^{n-1}$。在 $x=-R$ 处有相应的右导数结论。反之，原级数在端点处的单侧导数存在，并不保证逐项求导所得级数在那里收敛。
+
+\noindent\textbf{可积性}\quad 幂级数在收敛域的内部可以逐项积分。逐项积分后所得级数 $\sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}$ 的收敛半径不变，收敛域不缩小。若 $0<R<+\infty$，且 $\sum_{n=0}^{\infty}\frac{a_n}{n+1}R^{n+1}$ 收敛，则
+\[
+\int_0^R\sum_{n=0}^{\infty}a_nx^n\,\mathrm dx
+=\sum_{n=0}^{\infty}\frac{a_n}{n+1}R^{n+1}.
+\]
+此积分可能是反常积分，也可能是常义积分。同理，若逐项积分后的级数在 $x=-R$ 处收敛，则
+\[
+\int_{-R}^{0}\sum_{n=0}^{\infty}a_nx^n\,\mathrm dx
+=\sum_{n=0}^{\infty}\frac{a_n}{n+1}(-1)^nR^{n+1}.
+\]
+
+\noindent\textbf{数项级数的求和}\quad 对数项级数 $\sum_{n=0}^{\infty}a_n$ 引入恰当的幂级数，例如 $\sum_{n=0}^{\infty}a_nx^n$，有可能通过求幂级数的和，最终得到原数项级数的和。常用方法有三种：先求导后积分、先积分后求导，以及求导后得到微分方程并求解。第一种可以视为第三种的特例；求导和积分也可能反复进行。
+
+\subsubsection*{4.5.2 生成函数}
+
+幂级数 $\sum_{n=0}^{\infty}a_nx^n$ 称为数列 $\{a_n\}_{n=0}^{\infty}$ 的母函数，又称生成函数。利用母函数研究数列很有用；比较标准的对象是常系数线性差分方程。
+
+\ex{4.5.1}设 $a_0=1$，$a_1=2$，$a_{n+2}=3a_{n+1}+4a_n$（$n\geq0$）。求数列 $\{a_n\}$ 的通项公式。
+
+\sol \textbf{方法 1}\quad 易证 $|a_n|\leq4^n$（$n\geq0$），所以 $S(x)=\sum_{n=0}^{\infty}a_nx^n$ 在 $(-\tfrac14,\tfrac14)$ 内有定义。由
+\[
+\sum_{n=0}^{\infty}(a_{n+2}-3a_{n+1}-4a_n)x^{n+2}=0
+\]
+得到
+\[
+(1-3x-4x^2)S(x)=a_0+a_1x-3a_0x=1-x.
+\]
+于是
+\begin{align*}
+S(x)&=\frac{1-x}{1-3x-4x^2}
+=\frac{1-x}{(1+x)(1-4x)}
+=\frac2{5(1+x)}+\frac3{5(1-4x)}\\
+&=\frac25\sum_{n=0}^{\infty}(-1)^nx^n
++\frac35\sum_{n=0}^{\infty}4^nx^n,
+\qquad |x|<\frac14.
+\end{align*}
+比较系数得
+\[
+a_n=\frac{3\cdot4^n+2\cdot(-1)^n}{5},\qquad n\geq0.
+\]
+
+\noindent\textbf{方法 2}\quad 可以考虑相关数列 $\{a_n/n!\}$ 的母函数
+\[
+S(x)=\sum_{n=0}^{\infty}\frac{a_n}{n!}x^n.
+\]
+它在 $\mathbb R$ 上有定义，$S(0)=1$、$S'(0)=2$。由
+\[
+\sum_{n=0}^{\infty}\frac{a_{n+2}-3a_{n+1}-4a_n}{n!}x^n=0
+\]
+得到 $S''(x)-3S'(x)-4S(x)=0$。解得
+\[
+S(x)=\frac25e^{-x}+\frac35e^{4x}
+=\frac25\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}x^n
++\frac35\sum_{n=0}^{\infty}\frac{4^n}{n!}x^n,
+\]
+故仍有 $a_n=(3\cdot4^n+2\cdot(-1)^n)/5$。
+
+下例给出一个相对困难的问题。
+
+\ex{4.5.2}设 $a_0=a_1=1$，且
+\[
+a_{n+2}=a_{n+1}+\frac{2}{n+1}a_n,\qquad n\geq0.
+\]
+证明数列 $\{a_n/n^2\}$ 收敛，并求极限。
+
+\sol 归纳易证 $|a_n|\leq(n+1)^2$（$n\geq0$）。于是可考虑
+\[
+S(x)=\sum_{n=0}^{\infty}a_nx^n,\qquad |x|<1.
+\]
+令 $T(x)=\int_0^xS(t)\,\mathrm dt$。由递推式得
+\begin{align*}
+T(x)&=\sum_{n=0}^{\infty}\frac{a_n}{n+1}x^{n+1}
+=\frac12\sum_{n=0}^{\infty}(a_{n+2}-a_{n+1})x^{n+1}\\
+&=\frac{S(x)-a_0-a_1x}{2x}-\frac{S(x)-a_0}{2}
+=\frac{1-x}{2x}T'(x)-\frac1{2x},\qquad x\in(-1,1)\setminus\{0\}.
+\end{align*}
+因而
+\[
+T'(x)=\frac{2x}{1-x}T(x)+\frac1{1-x},\qquad |x|<1.
+\]
+结合 $T(0)=0$，得到
+\begin{align*}
+T(x)
+&=\frac{e^{-2x}}{(1-x)^2}\int_0^x(1-t)e^{2t}\,\mathrm dt\\
+&=\frac{e^{-2x}}{4(1-x)^2}\bigl(3e^{2x}-2e^{2x}x-3\bigr)\\
+&=\frac{3-2x-3e^{-2x}}{4(1-x)^2}\\
+&=\sum_{n=0}^{\infty}\frac{n+3}{4}x^n
+-\frac34\sum_{n=0}^{\infty}\sum_{k=0}^{n}\sum_{j=0}^{k}
+\frac{(-2)^j}{j!}x^n,\qquad |x|<1.
+\end{align*}
+比较系数得
+\[
+a_n=\frac{(n+1)(n+4)}4
+-\frac{3(n+1)}4\sum_{k=0}^{n+1}\sum_{j=0}^{k}\frac{(-2)^j}{j!},
+\qquad n\geq0.
+\]
+由 Stolz 公式，
+\begin{align*}
+\lim_{n\to\infty}\frac{a_n}{n^2}
+&=\frac14-\frac34\lim_{n\to\infty}\frac1n
+\sum_{k=0}^{n+1}\sum_{j=0}^{k}\frac{(-2)^j}{j!}\\
+&=\frac14-\frac34\lim_{n\to\infty}
+\sum_{j=0}^{n+2}\frac{(-2)^j}{j!}
+=\frac{1-3e^{-2}}4.
+\end{align*}
+
+\noindent\textbf{注 4.5.1}\quad 若递推式改为
+\[
+a_{n+2}=a_{n+1}+\frac{\alpha}{n+1}a_n,\qquad n\geq0,
+\]
+其中 $\alpha>0$，则形式上，对于 $\beta>0$，
+\[
+\lim_{n\to\infty}\frac{a_n}{n^\beta}
+=\lim_{n\to\infty}\frac{a_{n+1}-a_n}{\beta n^{\beta-1}}
+=\lim_{n\to\infty}\frac{\alpha a_{n-1}}{\beta n^\beta}.
+\]
+此时自然应猜测 $\lim_{n\to\infty}a_n/n^\alpha$ 存在。读者可尝试考察这是否正确。
+
+\subsubsection*{4.5.3 Abel 和、Ces\`aro 和}
+
+若级数 $\sum_{n=0}^{\infty}a_n$ 收敛到 $A$，则 Abel 定理给出
+\[
+\lim_{x\to1^-}\sum_{n=0}^{\infty}a_nx^n=A.
+\]
+反之不然。因此，极限 $\lim_{x\to1^-}\sum_{n=0}^{\infty}a_nx^n$ 推广了通常的求和概念。若该极限存在并等于 $A$，则称级数 $\sum_{n=0}^{\infty}a_n$ \textbf{Abel 可和}，$A$ 称为其 Abel 和。
+
+类似地，若 $\sum_{n=0}^{\infty}a_n$ 收敛到 $A$，由 Stolz 定理可得
+\[
+\lim_{n\to\infty}\frac1{n+1}\sum_{k=0}^{n}S_k=A,
+\qquad S_k=\sum_{j=0}^{k}a_j.
+\]
+反之也不然。若左侧极限存在并等于 $A$，称级数 $\sum_{n=0}^{\infty}a_n$ \textbf{Ces\`aro 可和}，$A$ 称为其 Ces\`aro 和。
+
+若 $\sum_{n=0}^{\infty}a_nx^n$ 是 $f(x)$ 的 Maclaurin 级数，则 $\sum_{n=0}^{\infty}S_nx^n$ 是 $f(x)/(1-x)$ 的 Maclaurin 级数。Abel 和与 Ces\`aro 和的性质时常隐含在问题中。以下列出几条常见性质，不附证明。
+\begin{enumerate}[label=（\roman*）,leftmargin=3em]
+\item 若 $\sum_{n=0}^{\infty}a_n$ Ces\`aro 可和，则它 Abel 可和，且两种和相等；反之不然。
+\item 若 $\sum_{n=0}^{\infty}a_n$、$\sum_{n=0}^{\infty}b_n$ Abel 可和，Abel 和分别为 $A$、$B$，则其 Cauchy 乘积 $\sum_{n=0}^{\infty}c_n$ Abel 可和，且和为 $AB$。特别地，若这三个级数均通常收敛，则 $\sum c_n=(\sum a_n)(\sum b_n)$。
+\item 若 $\sum_{n=0}^{\infty}a_n$ 与 $\sum_{n=0}^{\infty}b_n$ 分别通常收敛到 $A$ 和 $B$，则其 Cauchy 乘积 $\sum_{n=0}^{\infty}c_n$ Ces\`aro 可和，且和为 $AB$。
+\item 设 $\sum_{n=0}^{\infty}a_n$ Abel 可和，则它通常收敛当且仅当
+\[
+\lim_{n\to\infty}\frac{a_1+2a_2+\cdots+na_n}{n}=0.
+\]
+特别地，若它 Abel 可和，且 $na_n\to0$，则 $\sum_{n=0}^{\infty}a_n$ 收敛。
+\end{enumerate}
+
+\subsubsection*{4.5.4 解析函数}
+
+在数学分析中时常提到解析性，但很多教材没有明确给出实解析函数的定义。对复解析函数，往往在复变函数课程中才介绍，并且经常用复可导定义解析性。在数学分析中，用可展开为幂级数定义解析性是合适的。在这一意义下，解析函数的一些重要性质可以简单地证明，也可以扩充处理相关问题的方法。

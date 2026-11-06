@@ -1,0 +1,231 @@
+\subsection*{4.1 基本内容}
+
+\thm{4.1.1}（Cauchy 收敛原理）级数 $\sum_{n=1}^{\infty}a_n$ 收敛的充要条件是：对任意 $\varepsilon>0$，存在正整数 $N$，使得当 $n>m>N$ 时，
+\[
+|S_n-S_m|=|a_{m+1}+a_{m+2}+\cdots+a_n|<\varepsilon,
+\qquad S_n=\sum_{k=1}^{n}a_k.
+\]
+简言之，无穷和收敛的充要条件是它在无穷远处任意一段有限和都很小。
+
+研究级数的收敛性时，常用加括号的方式变形。Cauchy 收敛原理给出以下结论。
+
+\thm{4.1.2}设 $a_n\to0$，且 $\sum_{n=1}^{\infty}a_n$ 的一个加括号后的级数 $\sum_{n=1}^{\infty}b_n$ 满足下列两个条件之一：\textup{(1)} 存在常数 $M>0$，使每个括号内的项数不超过 $M$；\textup{(2)} 每个括号内的项均同号。则两级数的收敛性等价。
+
+正项级数通常可以用比较判别法和等价量代换研究；变号级数的等价通项却不一定保证同样的敛散性。对变号级数，常可先减去一个易于判断收敛性的主项，再考察余项。
+
+\ex{4.1.3}讨论级数
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{2/3}+(-1)^{n-1}}
+\]
+的收敛性。
+
+\sol 因
+\[
+\frac{(-1)^{n-1}}{n^{2/3}+(-1)^{n-1}}
+\sim\frac{(-1)^{n-1}}{n^{2/3}},
+\qquad n\to\infty,
+\]
+其绝对值级数与 $\sum n^{-2/3}$ 同敛散，故不绝对收敛。另一方面，
+\[
+\frac{(-1)^{n-1}}{n^{2/3}+(-1)^{n-1}}
+-\frac{(-1)^{n-1}}{n^{2/3}}
+=-\frac1{\bigl(n^{2/3}+(-1)^{n-1}\bigr)n^{2/3}}
+\sim-\frac1{n^{4/3}}.
+\]
+两项之差的级数绝对收敛，而 $\sum(-1)^{n-1}n^{-2/3}$ 由 Leibniz 判别法收敛。因此原级数条件收敛。
+
+虽然等价代换不能直接保留变号级数的收敛性，它仍可用来寻找应当减去的主项。
+
+\thm{4.1.3}（比值型比较判别法）设 $\sum a_n$ 与 $\sum b_n$ 均为正项级数，且当 $n$ 充分大时，
+\[
+\frac{a_{n+1}}{a_n}\leq\frac{b_{n+1}}{b_n}.
+\]
+则 $\sum b_n$ 收敛时 $\sum a_n$ 收敛；$\sum a_n$ 发散时 $\sum b_n$ 发散。
+
+在 Raabe、Bertrand 和 Gauss 判别法中，常使用 $a_n/a_{n+1}$ 的形式。它越大，级数越容易收敛；越小，级数越容易发散。研究一个新级数时，先通过极限或渐近展开式判断它可能的敛散性，再选用放大或缩小的比较级数。
+
+\thm{4.1.4}（比值型比较判别法的极限形式）设 $\sum a_n$、$\sum b_n$ 为正项级数，且相应极限存在并满足
+\[
+\lim_{n\to\infty}\frac{a_{n+1}}{a_n}
+<\lim_{n\to\infty}\frac{b_{n+1}}{b_n}.
+\]
+则 $\sum b_n$ 收敛蕴含 $\sum a_n$ 收敛，$\sum a_n$ 发散蕴含 $\sum b_n$ 发散。也可将上述严格分离条件写为
+\[
+\limsup_{n\to\infty}\frac{a_{n+1}}{a_n}
+<\liminf_{n\to\infty}\frac{b_{n+1}}{b_n}.
+\]
+
+对 $p$ 级数 $x_n^*=n^{-p}$ 和对数级数 $x_n^*=(n\ln^q n)^{-1}$，分别有
+\[
+\lim_{n\to\infty}n\left(\frac{x_n^*}{x_{n+1}^*}-1\right)=p,
+\qquad
+\lim_{n\to\infty}\ln n\left[n\left(\frac{x_n^*}{x_{n+1}^*}-1\right)-1\right]=q.
+\]
+下面两个判别法可由这些极限关系和比较判别法导出；这里仅列叙述。
+
+\thm{4.1.5}（Raabe 判别法）设 $x_n>0$。
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item 若存在 $p>1$ 及 $N$，使得当 $n>N$ 时 $n(x_n/x_{n+1}-1)\geq p$，则 $\sum x_n$ 收敛。
+\item 若存在 $N$，使得当 $n>N$ 时 $n(x_n/x_{n+1}-1)\leq1$，则 $\sum x_n$ 发散。
+\end{enumerate}
+
+\thm{4.1.6}（Bertrand 判别法）设 $x_n>0$。
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item 若存在 $q>1$ 及 $N$，使得当 $n>N$ 时
+\[
+\ln n\left[n\left(\frac{x_n}{x_{n+1}}-1\right)-1\right]\geq q,
+\]
+则 $\sum x_n$ 收敛。
+\item 若存在 $N$，使得当 $n>N$ 时
+\[
+\ln n\left[n\left(\frac{x_n}{x_{n+1}}-1\right)-1\right]\leq1,
+\]
+则 $\sum x_n$ 发散。
+\end{enumerate}
+
+\noindent\textbf{注 4.1.1}\quad Raabe、Bertrand 判别法以及下一节的某些推广，用于具体问题时未必方便。更有用的是其思想：以正项级数基本定理为基础，结合极限、微分和积分等方法判断级数的敛散性。
+
+\noindent\textbf{注 4.1.2}\quad 对通项单调下降且趋于零的正项级数，下列两个 Cauchy 判别法很有用：
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item 若 $a_n\geq0$ 且单调递减，则 $\sum_{n=1}^{\infty}a_n$ 收敛当且仅当 $\sum_{n=0}^{\infty}2^na_{2^n}$ 收敛。
+\item 若 $f$ 在 $[1,+\infty)$ 上非负且单调递减，则 $\sum_{n=1}^{\infty}f(n)$ 收敛当且仅当 $\int_1^{+\infty}f(x)\,\mathrm dx$ 收敛。第二条称为 Cauchy 积分判别法，它利用连续型的积分来估计离散型的级数。
+\end{enumerate}
+
+\subsection*{4.2 一些判别法的推广}
+
+\noindent\textbf{Leibniz 判别法的推广}\quad 称级数 $\sum_{n=1}^{\infty}a_n$ 为\textbf{分段变号级数}，如果 $|a_n|$ 单调趋于零，并且存在严格递增的正整数数列 $\{n_j\}$，使每一段 $\{a_i\}_{i=n_j}^{n_{j+1}-1}$ 有偶数个项，记为 $2k_j$，其中恰有 $k_j$ 项为正、$k_j$ 项为负。
+
+\ex{4.2.1}若 $\sum a_n$ 为分段变号级数，且上述 $k_j$ 有界，则 $\sum a_n$ 收敛。
+
+\ex{4.2.2}若 $\{b_n\}$ 单调趋于零，则
+\[
+\sum_{n=1}^{\infty}b_n\sin\frac{n^2\pi}{5}
+\]
+收敛；除去零项后，正负项可按四项一段分组。
+
+\noindent\textbf{比值判别法的推广}
+
+\ex{4.2.3}（二阶比值判别法）设 $a_n>0$，记
+\[
+U=\max\left\{\limsup_{n\to\infty}\frac{a_{2n}}{a_n},
+\limsup_{n\to\infty}\frac{a_{2n+1}}{a_n}\right\},\qquad
+L=\min\left\{\liminf_{n\to\infty}\frac{a_{2n}}{a_n},
+\liminf_{n\to\infty}\frac{a_{2n+1}}{a_n}\right\}.
+\]
+当 $U<\tfrac12$ 时 $\sum a_n$ 收敛；当 $L>\tfrac12$ 时发散；当 $L\leq\tfrac12\leq U$ 时，本判别法不能作出判断。
+
+\ex{4.2.4}判断级数
+\[
+\sum_{n=3}^{\infty}\frac{(2n-1)!!}{2^n(n+1)!}
+\]
+的收敛性。
+
+\sol 令 $a_n=(2n-1)!!/[2^n(n+1)!]$。容易计算得
+\begin{align*}
+\frac{a_{2n+1}}{a_n}
+&<\frac{a_{2n}}{a_n}
+=\frac{(2n+1)(2n+3)\cdots(4n-1)}{2^n(n+2)(n+3)\cdots(2n+1)}\\
+&=\frac12\frac{2n+3}{2n+4}\frac{2n+5}{2n+6}\cdots\frac{4n-1}{4n}\\
+&\leq\frac12\left(\frac{4n-1}{4n}\right)^{n-1}
+\longrightarrow\frac1{2\sqrt[4]{e}}<\frac12.
+\end{align*}
+由二阶比值判别法，原级数收敛。
+
+\ex{4.2.5}（$m$ 阶比值判别法）设 $a_n>0$，整数 $m>1$，记
+\[
+U=\max_{0\leq j<m}\limsup_{n\to\infty}\frac{a_{mn+j}}{a_n},
+\qquad
+L=\min_{0\leq j<m}\liminf_{n\to\infty}\frac{a_{mn+j}}{a_n}.
+\]
+当 $U<1/m$ 时 $\sum a_n$ 收敛；当 $L>1/m$ 时发散；当 $L\leq1/m\leq U$ 时，本判别法不能作出判断。
+
+\ex{4.2.6}设正数列 $\{a_n\}$ 单调递减，整数 $m>1$。若
+\[
+\limsup_{n\to\infty}\frac{a_{mn}}{a_n}<\frac1m,
+\]
+则 $\sum a_n$ 收敛；若
+\[
+\liminf_{n\to\infty}\frac{a_{m(n+1)-1}}{a_n}>\frac1m,
+\]
+则 $\sum a_n$ 发散。
+
+\ex{4.2.7}（二阶比值比较判别法）设 $\sum a_n$、$\sum b_n$ 均为正项级数。若当 $n$ 充分大时，
+\[
+\frac{a_{2n}}{a_n}\leq\frac{b_{2n}}{b_n},
+\qquad
+\frac{a_{2n+1}}{a_n}\leq\frac{b_{2n+1}}{b_n},
+\]
+则 $\sum b_n$ 为 $\sum a_n$ 的优级数：$\sum b_n$ 收敛蕴含 $\sum a_n$ 收敛；$\sum a_n$ 发散蕴含 $\sum b_n$ 发散。
+
+\noindent\textbf{Raabe 判别法的推广 I}\quad 以下例子说明 $R_n=n(a_n/a_{n+1}-1)$ 的临界不等式会受下标平移影响。
+
+\ex{4.2.8}对级数
+\[
+\sum_{n=1}^{\infty}\frac{(n-1)!\,n!\,4^n}{(2n)!\sqrt n},
+\]
+计算得
+\[
+\frac{a_n}{a_{n+1}}=1+\frac1n+\frac1{8n^2}+o(n^{-2}),
+\qquad
+R_n=1+\frac1{8n}+o(n^{-1})\longrightarrow1^+.
+\]
+通常的 Raabe 判别法在此不能判定敛散性。
+
+\ex{4.2.9}将同一级数的下标向左平移一位，写作
+\[
+\sum_{n=1}^{\infty}\frac{n!(n+1)!4^{n+1}}{(2n+2)!\sqrt{n+1}}.
+\]
+这时
+\begin{align*}
+\frac{a_n}{a_{n+1}}
+&=1+\frac1{n+1}+\frac1{8(n+1)^2}+o(n^{-2})\\
+&=1+\frac1n-\frac7{8n^2}+o(n^{-2}),
+\end{align*}
+从而 $R_n=1-7/(8n)+o(n^{-1})<1$ 对充分大的 $n$ 成立。Raabe 判别法给出原级数发散。
+
+\ex{4.2.10}（改进的 Raabe 判别法）设 $a_n>0$。若存在常数 $k>0$，使当 $n$ 充分大时
+\[
+R_n^{(k)}=(n-k)\left(\frac{a_n}{a_{n+1}}-1\right)\leq1,
+\]
+则 $\sum a_n$ 发散。
+
+\noindent\textbf{Raabe 判别法的推广 II}
+
+\ex{4.2.11}（二阶 Raabe 判别法）设 $a_n>0$，记
+\[
+R_{n,1}=\left(\frac{a_n}{a_{2n}}-2\right)\ln n,
+\qquad
+R_{n,2}=\left(\frac{a_n}{a_{2n+1}}-2\right)\ln n,
+\]
+并记
+\[
+U=\max\{\limsup R_{n,1},\limsup R_{n,2}\},\qquad
+L=\min\{\liminf R_{n,1},\liminf R_{n,2}\},
+\]
+其中各上、下极限均取 $n\to\infty$。当 $L>2\ln2$ 时 $\sum a_n$ 收敛；当 $U<2\ln2$ 时发散；当 $L\leq2\ln2\leq U$ 时，本判别法不能作出判断。
+
+\noindent\textbf{Kummer 判别法的推广}
+
+\ex{4.2.12}（二阶 Kummer 判别法）设 $a_n>0$。
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item 若存在正数列 $\{p_n\}$ 及常数 $r>0$，使得当 $n$ 充分大时，
+\[
+p_n\frac{a_n}{a_{2n}}-2p_{2n}>r,
+\qquad
+p_n\frac{a_n}{a_{2n+1}}-2p_{2n+1}>r,
+\]
+则 $\sum a_n$ 收敛。
+\item 若存在正数列 $\{p_n\}$，使得当 $n$ 充分大时下列三个条件之一成立，则 $\sum a_n$ 发散：
+\begin{enumerate}[label=（\roman*）,leftmargin=3em]
+\item $p_n a_n/a_{2n}-2p_{2n}<0$，且 $\sum_{k=1}^{\infty}1/(2^kp_{2^k})$ 发散；
+\item $p_n a_n/a_{2n+1}-2p_{2n+1}<0$，且存在 $n_0$，当 $n_k=2^k(n_0+1)-1$ 时，$\sum_{k=1}^{\infty}1/(n_kp_{n_k})$ 发散；
+\item 下列两个不等式同时成立：
+\[
+\frac{p_na_n}{a_{2n}}-2p_{2n}<0,\qquad
+\frac{p_na_n}{a_{2n+1}}-2p_{2n+1}<0.
+\]
+此外，$\sum_{n=1}^{\infty}1/(np_n)$ 发散。
+\end{enumerate}
+\end{enumerate}
+
+\noindent\textbf{注 4.2.2}\quad 二阶 Kummer 判别法发散条件中的前两种情形，本质上回到了子列的一阶 Kummer 判别法，实际意义较小。

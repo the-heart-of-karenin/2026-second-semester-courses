@@ -1,0 +1,79 @@
+\subsection*{3.5 真题选讲（节选）}
+
+\ex{3.5.2}设 $f$ 在包含 $0$ 的区间 $[a,b]$ 上二阶可导，$a<0<b$。记 $T_2$ 为 $f$ 的二阶 Maclaurin 多项式，$R_2=f-T_2$。证明
+\[
+\lim_{\substack{(u,v)\to(0,0)\\u\ne v}}
+\frac{R_2(u)-R_2(v)}{(u-v)\sqrt{u^2+v^2}}=0.
+\]
+\pf 由于 $R_2'(0)=R_2''(0)=0$，有 $R_2'(x)=o(x)$。记
+\[
+\omega(r)=\sup_{0<|x|\leq r}\left|\frac{R_2'(x)}{x}\right|,
+\]
+则 $\omega(r)\to0$（$r\downarrow0$）。由中值定理，对介于 $u,v$ 之间的某个 $\theta$，
+\[
+\left|\frac{R_2(u)-R_2(v)}{(u-v)\sqrt{u^2+v^2}}\right|
+=\frac{|R_2'(\theta)|}{\sqrt{u^2+v^2}}
+\leq\omega\!\left(\sqrt{u^2+v^2}\right),
+\]
+故所求极限为零。\hfill$\square$
+
+\ex{3.5.10}设 $f$ 在 $[0,1]$ 上连续且 $\int_0^1 f(x)\,\mathrm dx=0$。证明对于任意正整数 $n$，存在 $c\in(0,1)$ 使
+\[
+\int_0^c x^n f(x)\,\mathrm dx=e^{n+1}f(c).
+\]
+\pf 固定 $n$，令 $I(t)=\int_0^t x^nf(x)\,\mathrm dx$ 及 $K=e^{n+1}$。反设 $Kf(t)-I(t)$ 在 $(0,1)$ 内无零点，则它在该区间恒正或恒负。若恒正，函数
+\[
+J(t)=\exp\!\left(-\frac{t^{n+1}}{(n+1)K}\right)I(t)
+\]
+满足
+\[
+J'(t)=\exp\!\left(-\frac{t^{n+1}}{(n+1)K}\right)
+\frac{t^n}{K}\,[Kf(t)-I(t)]>0.
+\]
+由 $J(0)=0$，可得 $I(t)>0$，继而 $Kf(t)>I(t)>0$，与 $\int_0^1 f=0$ 矛盾。恒负时同理得到 $f(t)<0$，也矛盾。\hfill$\square$
+
+\ex{3.5.12}设 $f$ 是 $\mathbb R$ 上的凸函数，且对任意 $x,y\in\mathbb R$ 有
+\[
+f(x+y)+f(x-y)-2f(x)\leq y^2.
+\]
+证明 $f$ 可导，且 $|f'(x)-f'(y)|\leq|x-y|$。
+\pf 凸函数的左右导数存在且 $f'_-(x)\leq f'_+(x)$。将题设除以 $y>0$ 再令 $y\downarrow0$，得 $f'_+(x)\leq f'_-(x)$，因此两者相等，$f$ 可导。令 $G(t)=f(t)-t^2/2$。取 $x=(s+t)/2$、$y=(s-t)/2$，题设化为
+\[
+G(s)+G(t)\leq2G\!\left(\frac{s+t}{2}\right).
+\]
+由于 $G$ 连续，故它是凹函数，$G'=f'-t$ 单调递减。另一方面 $f'$ 因凸性而单调递增。于是当 $s>t$ 时，
+\[
+0\leq f'(s)-f'(t)\leq s-t,
+\]
+这就是所求。\hfill$\square$
+
+\ex{3.5.13}设 $g$ 是连续非零函数，且 $fg$ 与 $f/g$ 均在 $0$ 处可导。问 $f$ 是否在 $0$ 处可导？
+\sol 答案是肯定的。由 $fg$ 的连续性及 $g(0)\ne0$，先知 $f$ 在 $0$ 处连续。若 $f(0)\ne0$，则 $f^2=(fg)(f/g)$ 在 $0$ 处可导，且 $f$ 在 $0$ 的某邻域内不变号，故 $f$ 可由 $f^2$ 开平方得到，因而可导。若 $f(0)=0$，则 $fg(0)=0$，并且
+\[
+\frac{f(x)}x=\frac{(fg)(x)-(fg)(0)}x\cdot\frac1{g(x)}
+\longrightarrow\frac{(fg)'(0)}{g(0)}.
+\]
+因此 $f'(0)$ 存在。
+
+\ex{3.5.17}设
+\[
+a_n=\prod_{k=1}^{n}\frac{n^2+k}{n^2-k}.
+\]
+证明 $\lim_{n\to\infty}n(a_n-e)=e$。
+\pf 因 $0<k/n^2\leq1/n$，Taylor 展开在 $n$ 充分大时可一致应用：
+\[
+\log(1+t)-\log(1-t)=2t+O(t^3)\qquad(|t|\leq\tfrac12).
+\]
+故
+\[
+\log a_n
+=\sum_{k=1}^n\left[\log\left(1+\frac{k}{n^2}\right)
+-\log\left(1-\frac{k}{n^2}\right)\right]
+=\frac{2}{n^2}\sum_{k=1}^n k
++O\!\left(\frac1{n^6}\sum_{k=1}^n k^3\right)
+=1+\frac1n+O\!\left(\frac1{n^2}\right).
+\]
+令 $u_n=\log a_n-1$，则 $nu_n\to1$，从而
+\[
+n(a_n-e)=en(e^{u_n}-1)\longrightarrow e.\qquad\square
+\]

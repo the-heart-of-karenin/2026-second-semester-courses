@@ -1,0 +1,279 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,geometry,enumitem}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\newcommand{\ex}[1]{\par\medskip\noindent\textbf{【例 #1】}\ }
+\newcommand{\prop}[1]{\par\medskip\noindent\textbf{【命题 #1】}\ }
+\newcommand{\thm}[1]{\par\medskip\noindent\textbf{【定理 #1】}\ }
+\newcommand{\pf}{\par\noindent\textbf{证明}\ }
+\newcommand{\sol}{\par\noindent\textbf{解}\ }
+\begin{document}
+\section*{第2章 极限与连续}
+\subsection*{2.2 连续性}
+连续函数是数学分析中的重要研究对象。本节讨论与连续性有关的结论及应用。
+
+\prop{2.2.1}设 $f$ 定义在 $\mathbb R^n$ 上，则以下陈述等价：(i) $f$ 连续；(ii) 任意开集的原像是开集；(iii) 任意闭集的原像是闭集；(iv) 对 $\mathbb R^n$ 的任意子集 $E$，有 $f(\overline E)\subseteq\overline{f(E)}$。
+
+\thm{2.2.2}有界闭集上的连续函数的值域是有界闭集。因此，函数有界并取得最大值、最小值。
+
+\thm{2.2.3}（Brouwer 不动点定理）从 $n$ 维空间的闭球 $\overline B_r(0)$ 映到自身的连续映射必有不动点。闭球亦可替换为非空凸紧集。特别地，当 $n=1$，若 $f:[a,b]\to[a,b]$ 连续，则存在 $\xi\in[a,b]$ 使得 $f(\xi)=\xi$。
+
+\thm{2.2.4}（Bernstein 多项式逼近）若 $f$ 在 $[0,1]$ 上连续，则
+\[
+B_n(f;x)=\sum_{k=0}^{n}\binom nk f\!\left(\frac kn\right)x^k(1-x)^{n-k}
+\]
+在 $[0,1]$ 上一致收敛到 $f$。
+
+\thm{2.2.5}（Weierstrass 逼近定理）(i) 任意以 $2\pi$ 为周期的连续函数都可由三角多项式一致逼近；(ii) $[a,b]$ 上的任意连续函数都可由多项式一致逼近。
+
+\thm{2.2.6}（Baire 纲定理）非空完备度量空间是第二纲的。等价地，完备度量空间中可列个稠密开集的交仍然稠密。
+
+% 按用户要求，省略截图所示 G_delta/F_sigma、无处稠密集、纲集定义及相关例 2.2.1--2.2.4。
+
+
+\ex{2.2.5}设定义在区域 $D\subset\mathbb R^2$ 上的函数 $f$ 分别对 $x$、$y$ 连续。若 $f$ 对 $x$ 连续且关于 $y$ 一致，即对每个 $x_0$ 与 $\varepsilon>0$，存在与 $y$ 无关的 $\delta>0$，使 $|x-x_0|<\delta$ 时对一切 $y$ 都有 $|f(x,y)-f(x_0,y)|<\varepsilon$，则 $f$ 在 $D$ 上连续。原书将证明留给读者。
+
+\prop{2.2.7}连续函数将 $\mathbb R^n$ 中的连通集映到 $\mathbb R$ 中的连通集。
+
+\prop{2.2.8}设 $E\subset\mathbb R^n$、$x_0\in E'\cap E$。(i) $f$ 在 $x_0$ 上半连续（下半连续）的充要条件是 $\limsup_{x\to x_0}f(x)\le f(x_0)$（$\liminf_{x\to x_0}f(x)\ge f(x_0)$）；(ii) 若 $E$ 闭，则 $f$ 在 $E$ 上半连续的充要条件是对任意 $c\in\mathbb R$，集合 $\{x\in E:f(x)\ge c\}$ 闭。
+
+\ex{2.2.6}设 $E$ 是 $\mathbb R^n$ 的紧集，$f$ 在 $E$ 上上半连续（下半连续），则 $f$ 在 $E$ 上取得最大值（最小值）。
+
+\prop{2.2.9}设 $E\subset\mathbb R^n$ 非空，则 $f:E\to\mathbb R$ 一致连续，当且仅当存在单调递增的 $\omega:[0,+\infty)\to[0,+\infty)$，满足 $\omega(0)=\lim_{r\to0^+}\omega(r)=0$，且
+\[
+|f(x)-f(y)|\le\omega(|x-y|),\qquad x,y\in E.
+\]
+\pf 若上述不等式成立，定义立即给出一致连续。反之，令
+\[
+\omega(r)=\sup\{|f(x)-f(y)|:x,y\in E,\ |x-y|\le r\},
+\]
+即可得到所需函数。
+
+\thm{2.2.10}（Cantor 定理）$\mathbb R^n$ 中有界闭集上的连续函数一致连续。特别地，有限闭区间上的连续函数一致连续。
+
+\prop{2.2.11}若 $f$ 在 $E$ 上一致连续，则 $f$ 在 $E$ 上连续。
+
+\prop{2.2.12}$\mathbb R^n$ 中有界集 $E$ 上的连续函数 $f$ 一致连续，当且仅当对每个 $x\in\overline E$，沿 $E$ 趋于 $x$ 时 $f$ 有极限。特别地，有限开区间 $(a,b)$ 上的连续函数一致连续，当且仅当 $f(a+)$ 与 $f(b-)$ 存在。
+\pf 充分性：利用沿 $E$ 的极限将 $f$ 连续延拓至紧集 $\overline E$，再用 Cantor 定理。必要性：若 $f$ 一致连续，任取趋于 $x\in\overline E$ 的 $E$ 中点列 $\{x_k\}$，$\{f(x_k)\}$ 为 Cauchy 列，故收敛；由 Heine 定理得所需极限。\hfill$\square$
+
+\prop{2.2.13}若 $f$ 在 $\mathbb R^n$ 上一致连续，则它是线性增长的：存在 $a,b>0$，使
+\[
+|f(x)|\le a|x|+b,\qquad x\in\mathbb R^n.
+\]
+\pf 由一致连续性，取 $\delta>0$ 使得 $|x-y|\le\delta$ 时 $|f(x)-f(y)|<1$。把从 $0$ 到 $x$ 的线段分为约 $|x|/\delta+1$ 段并逐段应用不等式，得
+\[
+|f(x)|\le|f(0)|+1+\frac{|x|}{\delta}.
+\]\hfill$\square$
+
+\prop{2.2.14}在 $E$ 上满足 Lipschitz 条件的函数必一致连续。
+
+\ex{2.2.7}设 $E\subset\mathbb R^n$。函数 $f:E\to\mathbb R^m$ 一致连续，当且仅当对 $E$ 中任意两列 $\{x_k\},\{x'_k\}$，只要 $|x_k-x'_k|\to0$，便有 $|f(x_k)-f(x'_k)|\to0$。
+\pf 必要性由定义直接得出。若不一致连续，则存在 $\varepsilon_0>0$ 和两列点满足 $|x_k-x'_k|<1/k$，同时 $|f(x_k)-f(x'_k)|\ge\varepsilon_0$，与假设矛盾。\hfill$\square$
+
+\ex{2.2.8}若 $f:E\to F$、$g:F\to\mathbb R^k$ 均一致连续，则复合函数 $g\circ f$ 一致连续。
+
+\ex{2.2.9}设 $f$ 是 $[a,b]$ 上的实值函数。若对任意 $\varepsilon>0$，存在 $\delta>0$，使 $[a,b]$ 中任意有限个互不相交的开区间 $(x_i,y_i)$ 满足 $\sum(y_i-x_i)<\delta$ 时，都有
+\[
+\sum_i|f(y_i)-f(x_i)|<\varepsilon,
+\]
+则称 $f$ 在 $[a,b]$ 上绝对连续。证明：(i) 绝对连续函数一致连续；(ii) 满足 Lipschitz 条件的函数绝对连续。原书将证明留给读者。
+
+\ex{2.2.10}设 $f$ 在 $[a,b]$ 上 Riemann 可积，证明 $F(x)=\int_a^x f(t)\,\mathrm dt$ 是 $[a,b]$ 上的绝对连续函数。
+\pf 取 $M$ 使 $|f(x)|\le M$。若互不相交的区间 $(x_i,y_i)$ 满足 $\sum_i(y_i-x_i)<\delta$，则
+\[
+\sum_i|F(y_i)-F(x_i)|
+\le M\sum_i(y_i-x_i)<M\delta.
+\]
+取 $\delta<\varepsilon/M$ 即得。\hfill$\square$
+
+\ex{2.2.11}设 $\{f_n\}$ 是紧集 $E\subset\mathbb R^d$ 上一致收敛的连续函数列，证明 $\{f_n\}$ 在 $E$ 上等度连续。
+\pf 任取 $\varepsilon>0$，由一致收敛，取 $n_0$ 使 $n\ge n_0$ 时 $|f_n(x)-f_{n_0}(x)|<\varepsilon/3$ 对所有 $x\in E$ 成立。有限多个函数 $f_1,\ldots,f_{n_0}$ 在紧集上一致连续，因此存在统一的 $\delta>0$，使 $|x-y|<\delta$ 时 $|f_k(x)-f_k(y)|<\varepsilon/3$（$k\le n_0$）。三角不等式给出对所有 $n$ 的结论。\hfill$\square$
+
+\ex{2.2.12}称函数列 $\{S_n\}$ 在 $[a,b]$ 上\emph{拟一致收敛}于 $S$，若对任意 $\varepsilon>0$ 和自然数 $N$，存在 $N'>N$，使得对每个 $x\in[a,b]$，总有某个 $n_x\in[N,N']$ 满足 $|S_{n_x}(x)-S(x)|<\varepsilon$。证明：$[a,b]$ 上连续函数列的极限函数 $S$ 连续，当且仅当该函数列拟一致收敛。
+\pf 必要性：固定 $\varepsilon,N$。对每个 $x_0\in[a,b]$，由 $S_n(x_0)\to S(x_0)$，取 $n_0>N$ 使 $|S_{n_0}(x_0)-S(x_0)|<\varepsilon$。因 $S_{n_0}$ 与 $S$ 连续，这一不等式在 $x_0$ 的某个邻域仍成立。由有限覆盖取有限个这样的邻域，并以相应指标的最大值为 $N'$。
+
+充分性：固定 $x_0$ 与 $\varepsilon>0$，先取 $N$ 使 $n>N$ 时 $|S_n(x_0)-S(x_0)|<\varepsilon/3$。拟一致收敛给出 $N'>N$；有限多个 $S_n$（$N\le n\le N'$）在 $x_0$ 连续，故存在共同的 $\delta>0$，使 $|x-x_0|<\delta$ 时 $|S_n(x)-S_n(x_0)|<\varepsilon/3$。此时选择适于 $x$ 的 $n_x\in[N,N']$，利用
+\[
+|S(x)-S(x_0)|\le |S(x)-S_{n_x}(x)|+|S_{n_x}(x)-S_{n_x}(x_0)|+|S_{n_x}(x_0)-S(x_0)|<\varepsilon.
+\]\hfill$\square$
+
+\prop{2.2.15}（连续延拓）设 $F\subset\mathbb R^n$ 为闭集，$f:F\to\mathbb R$ 连续，则存在 $\mathbb R^n$ 上的连续函数 $g$，满足
+\[
+g|_F=f,\qquad \sup_{\mathbb R^n}g=\sup_F f,\qquad \inf_{\mathbb R^n}g=\inf_F f.
+\]
+\pf 先设 $f$ 有界，令 $M=(\sup_F f-\inf_F f)/2$，并作
+\[
+h(x)=f(x)-\tfrac12(\sup_Ff+\inf_Ff),\qquad x\in F.
+\]
+若 $M=0$，常值延拓即可。若 $M>0$，则 $|h|\le M$，$\sup_Fh=M=-\inf_Fh$。将 $F$ 分为闭集
+\[
+A=\{x\in F:M/3\le h(x)\le M\},\quad
+B=\{x\in F:-M\le h(x)\le-M/3\}
+\]
+以及余下的 $C=\{x\in F:-M/3<h(x)<M/3\}$。定义
+\[
+s_1(x)=\frac M3\,\frac{d(x,B)-d(x,A)}{d(x,B)+d(x,A)},\qquad x\in\mathbb R^n.
+\]
+由于 $A,B$ 是不交闭集，分母处处为正；$s_1$ 连续，$|s_1|\le M/3$，且在 $F$ 上 $|h-s_1|\le2M/3$。对余量重复构造，得到 $\mathbb R^n$ 上连续函数 $s_k$，使
+\[
+|s_k(x)|\le \frac M3\left(\frac23\right)^{k-1}\ (x\in\mathbb R^n),\qquad
+\left|h(x)-\sum_{j=1}^ks_j(x)\right|\le M\left(\frac23\right)^k\ (x\in F).
+\]
+因此 $s=\sum_{k\ge1}s_k$ 一致收敛、连续，且 $s|_F=h$、$|s|\le M$。令 $g=s+\tfrac12(\sup_Ff+\inf_Ff)$，即得结论。若 $f$ 无界，先把有界函数 $\arctan f$ 按上述方法延拓为 $\mu$。令 $d(x)=d(x,F)$，并将 $\mu(x)$ 换为 $\mu(x)/(1+d(x))$：在 $F$ 上数值不变，在 $F$ 外严格处于 $(-\pi/2,\pi/2)$ 内。再取其正切，得到连续延拓；若 $f$ 有有限的单侧界，则将所得函数在该侧截到原来的界上。这不改变 $F$ 上的值，并保证上、下确界与 $f$ 相同。\hfill$\square$
+
+\ex{2.2.13}若 $f$ 是 $[a,b]$ 上某函数的导函数，则 $f$ 与 $|f|$ 有相同的连续点。
+\pf $f$ 连续处 $|f|$ 显然连续。对任意闭子区间 $I\subset[a,b]$，由导函数的 Darboux 性质，若 $f$ 变号，则它在 $I$ 上取到 $0$；若不变号，两函数振幅相同。因此总有
+\[
+\sup_I f-\inf_I f\le 2\bigl(\sup_I|f|-\inf_I|f|\bigr).
+\]
+若 $|f|$ 在某点连续，右边在该点的收缩邻域中趋于 $0$，左边也趋于 $0$，于是 $f$ 在该点连续。\hfill$\square$
+
+\ex{2.2.14}设 $E\subset\mathbb R^n$，$f$ 定义在 $E$ 上。对 $a\in E$，定义 $f$ 在邻域中的振幅
+\[
+\omega_f(a,\delta)=\sup_{x\in E\cap B_\delta(a)}f(x)-\inf_{x\in E\cap B_\delta(a)}f(x),\qquad
+\omega_f(a)=\lim_{\delta\to0+}\omega_f(a,\delta).
+\]
+证明：(i) 若 $f$ 在 $E$ 上有界，则 $\omega_f(a)$ 存在；(ii) $f$ 在 $a$ 处连续当且仅当 $\omega_f(a)=0$。
+\pf (i) $\omega_f(a,\delta)$ 随 $\delta$ 增大而单调不减，且非负有界，故右极限存在。(ii) 连续时，对充分小的 $\delta$，所有 $x\in E\cap B_\delta(a)$ 满足 $|f(x)-f(a)|<\varepsilon$，故 $\omega_f(a,\delta)\le2\varepsilon$。反之，若 $\omega_f(a)=0$，则充分小的邻域上有 $|f(x)-f(a)|\le\omega_f(a,\delta)<\varepsilon$。\hfill$\square$
+
+\ex{2.2.15}设 $A$ 为 $n\times n$ 矩阵且 $\det A\ne0$。证明存在 $\alpha>\beta>0$，使所有 $x\in\mathbb R^n$ 满足 $\beta|x|\le|Ax|\le\alpha|x|$。
+\pf 连续函数 $x\mapsto|Ax|$ 在紧集 $S^{n-1}$ 上取到正的最小值 $\beta_0$ 与最大值 $\alpha_0$。取 $\beta\in(0,\beta_0]$、$\alpha>\max\{\alpha_0,\beta\}$，对 $x\ne0$ 将 $x/|x|$ 代入即可；$x=0$ 时显然成立。\hfill$\square$
+
+\ex{2.2.16}构造 $\mathbb R^2$ 上分别对 $x,y$ 连续，却在稠密集上不连续的函数。
+\sol 枚举所有有理数对 $r_n=(r_{n,1},r_{n,2})$，令
+\[
+f_n(x,y)=\begin{cases}
+\dfrac{(x-r_{n,1})(y-r_{n,2})}{(x-r_{n,1})^2+(y-r_{n,2})^2},&(x,y)\ne r_n,\\[3pt]
+0,&(x,y)=r_n.
+\end{cases}
+\qquad f(x,y)=\sum_{n=1}^{\infty}\frac{f_n(x,y)}{2^n}.
+\]
+每个 $f_n$ 分别连续，且 $|f_n|\le1/2$，所以级数一致收敛，$f$ 分别连续。在非有理数对处，各 $f_n$ 都连续，一致收敛又给出 $f$ 连续。固定 $k$，函数 $h_k=\sum_{n\ne k}2^{-n}f_n$ 在 $r_k$ 处连续，而 $2^{-k}f_k$ 在该点不连续；因此 $f$ 在每个有理数对处不连续。\hfill$\square$
+
+\ex{2.2.17}将 $(0,1)$ 中的实数写成小数 $0.a_1a_2a_3\cdots$，约定不用循环 $9$ 的表示法，定义
+\[
+f(0.a_1a_2a_3\cdots)=0.a_1\,0\,a_2\,0\,a_3\,0\cdots.
+\]
+求 $f$ 的连续点与不连续点。
+\sol 有限小数处不连续，无限小数处连续。若 $x_0=0.a_1\cdots a_n$，$a_n\ne0$，则 $f(x_0)=\sum_{k=1}^n a_k/10^{2k-1}$；由左侧趋近时尾部数字变为 $9$，可见 $f(x_0)-f(x)$ 保持一个正的间隔，故不左连续，但右连续。若 $x_0$ 为无限小数，对任意 $\varepsilon>0$ 取足够大的 $k$，使 $x_0$ 的第 $k,k+1$ 位既不全为 $0$，也不全为 $9$，且 $10^{-2k+2}<\varepsilon$。在足够小的 $x_0$ 邻域中，$x$ 与 $x_0$ 的前 $k-1$ 位相同，故 $|f(x)-f(x_0)|<\varepsilon$。\hfill$\square$
+
+\ex{2.2.18}设 $F=f-g$，其中 $f,g$ 是 $[a,b]$ 上的单调增加函数。若 $F$ 在每个子区间上具有介值性，证明 $F$ 连续。
+\pf 单调函数的单侧极限存在，故 $F$ 也有单侧极限。若 $F(x_0+)\ne F(x_0)$，则可在 $F(x_0)$ 与 $F(x_0+)$ 之间选一值；由右极限的定义，在足够短的 $[x_0,x]$ 上 $F$ 不取此值，违背介值性。同理左侧及端点，故 $F$ 连续。\hfill$\square$
+
+\ex{2.2.19}设 $f$ 在 $[0,\infty)$ 上连续且 $f(\sqrt n)\to0$。证明：$\lim_{x\to\infty}f(x)$ 存在，当且仅当 $f$ 在 $(0,\infty)$ 上一致连续。
+\pf 若 $f$ 一致连续，令 $m=\lfloor x^2\rfloor$，则 $|x-\sqrt m|\le1/x\to0$，从而 $f(x)-f(\sqrt m)\to0$，即 $f(x)\to0$。反之，若无穷远处极限存在，由 $f(\sqrt n)\to0$ 可知该极限为 $0$。在足够远的尾部，$|f|$ 任意小；在剩余紧区间，$f$ 一致连续。合并两部分即得全域的一致连续性。\hfill$\square$
+
+\ex{2.2.20}枚举 $[0,1]$ 中的有理点为 $\{r_n\}$，令
+\[
+f(x)=\sum_{n=1}^{\infty}\frac{|x-r_n|}{3^n},\qquad x\in[0,1].
+\]
+证明：$f$ 处处连续，在每个无理点处可微，在每个有理点处不可微。
+\pf 各项连续，级数一致收敛，故 $f$ 连续。无理点 $x_0$ 处，第 $n$ 项的导数为 $3^{-n}\operatorname{sgn}(x_0-r_n)$。差商与导数级数之差，分成前 $N$ 项与尾项；前者随 $x\to x_0$ 趋于 $0$，后者的绝对值不超过 $2\sum_{n>N}3^{-n}$，可任意小。因此 $f$ 在 $x_0$ 处可微。若 $x_0=r_k$，则 $\sum_{n\ne k}3^{-n}|x-r_n|$ 在 $x_0$ 处可微，而 $3^{-k}|x-r_k|$ 不可微，所以 $f$ 不可微。\hfill$\square$
+
+\ex{2.2.21}枚举有理数集 $\mathbb Q=\{x_1,x_2,\ldots\}$，令
+\[
+f(x)=\sum_{x_n\le x}\frac1{2^n}.
+\]
+证明 $f$ 恰在有理点处不连续。
+\pf 若 $x=x_\ell\in\mathbb Q$，对任何 $y<x_\ell$，有 $f(x_\ell)-f(y)\ge2^{-\ell}$，故不连续。若 $x_0\notin\mathbb Q$，给定 $\varepsilon>0$，取 $\ell$ 使 $\sum_{n>\ell}2^{-n}<\varepsilon$，再取 $\delta>0$ 使 $(x_0-\delta,x_0+\delta)$ 避开有限集 $\{x_1,\ldots,x_\ell\}$。当 $|x-x_0|<\delta$ 时，$|f(x)-f(x_0)|$ 仅由尾项贡献，小于 $\varepsilon$。\hfill$\square$
+
+\ex{2.2.22}（Cantor 函数）设 $C$ 为 $[0,1]$ 中的 Cantor 集，对
+\[
+x=2\sum_{i=1}^{\infty}\frac{a_i}{3^i}\in C,\qquad a_i\in\{0,1\},
+\]
+定义 $\phi(x)=\sum_{i=1}^{\infty}a_i/2^i$，再令
+\[
+\Phi(x)=\sup\{\phi(y):y\in C,\ y\le x\},\qquad x\in[0,1].
+\]
+证明 $\Phi$ 在 $[0,1]$ 上连续。
+\pf 先证 $\phi$ 在 $C$ 上递增。若 $x<y$，其三进制数字序列在第 $k$ 位首次不同，则 $a_k=0,b_k=1$；二进制对应值满足
+\[
+\phi(x)\le\sum_{i<k}\frac{a_i}{2^i}+\sum_{i>k}\frac1{2^i}
+=\sum_{i<k}\frac{b_i}{2^i}+\frac1{2^k}\le\phi(y).
+\]
+故 $\Phi$ 递增。而二进制展开给出 $\phi(C)=[0,1]$，所以 $\Phi([0,1])=[0,1]$。单调函数若在某点跳跃，值域必缺一段区间；因此 $\Phi$ 连续。\hfill$\square$
+
+\noindent\textbf{【注 2.2.10】}在构造 Cantor 集时移去的各中央三分开区间上，$\Phi$ 都是常数，故其导数在那里为 $0$。$\Phi$ 是连续递增且几乎处处导数为 $0$ 的“魔鬼阶梯”函数。
+
+\ex{2.2.23}（Peano 曲线）令
+\[
+W=\left\{\sum_{k=1}^{\infty}\frac{a_k}{3^k}:a_k\in\{0,1\}\right\}\subset[0,1],
+\qquad
+f\left(\sum_{k=1}^{\infty}\frac{a_k}{3^k}\right)
+=\left(\sum_{k=1}^{\infty}\frac{a_{2k-1}}{2^k},
+\sum_{k=1}^{\infty}\frac{a_{2k}}{2^k}\right).
+\]
+则 $f(W)=[0,1]^2$。集合 $W$ 闭，且 $f$ 在 $W$ 上连续。由连续延拓命题，可将 $f$ 延拓为 $[0,1]\to[0,1]^2$ 的连续满射；延拓时可分别将两个坐标限制在 $[0,1]$ 内。
+
+\ex{2.2.24}设 $f$ 在 $\mathbb R$ 上可导，且常数 $0<A<B$ 满足 $A\le|f'(x)|\le B$。证明 $(x,y)\mapsto f(\sqrt{x^2+y^2})$ 在 $\mathbb R^2$ 上一致连续，而 $(x,y)\mapsto f(x^3+y^3)$ 不一致连续。
+\pf 由中值定理及反三角不等式，
+\[
+\bigl|f(\sqrt{x_1^2+y_1^2})-f(\sqrt{x_2^2+y_2^2})\bigr|
+\le B\sqrt{(x_1-x_2)^2+(y_1-y_2)^2},
+\]
+故前者满足 Lipschitz 条件。取 $P_n=(n,0)$、$Q_n=(n+1/n,0)$，则 $|P_n-Q_n|=1/n\to0$，而
+\[
+|f((n+1/n)^3)-f(n^3)|
+\ge A\bigl((n+1/n)^3-n^3\bigr)
+=A\left(3n+\frac3n+\frac1{n^3}\right)\ge3A.
+\]
+所以后者不一致连续。\hfill$\square$
+
+\ex{2.2.25}设 $f$ 是 $[0,\infty)$ 上有界连续函数，$h$ 在 $[0,\infty)$ 上连续，且 $a=\int_0^\infty|h(t)|\,\mathrm dt<1$。令
+\[
+g_0(x)=f(x),\qquad g_n(x)=f(x)+\int_0^x h(t)g_{n-1}(t)\,\mathrm dt\quad(n\ge1).
+\]
+证明 $\{g_n\}$ 收敛于连续函数。
+\pf 记 $M=\sup_{x\ge0}|f(x)|$。归纳可得 $|g_n(x)|\le M(1+a+\cdots+a^n)$。又由递推式，
+\[
+\sup_{x\ge0}|g_n(x)-g_{n-1}(x)|
+\le a\sup_{x\ge0}|g_{n-1}(x)-g_{n-2}(x)|
+\le a^nM.
+\]
+因此函数项级数 $\sum_{n\ge1}(g_n-g_{n-1})$ 在 $[0,\infty)$ 上一致收敛，$\{g_n\}$ 的极限连续。\hfill$\square$
+
+\ex{2.2.26}$[-a,a]$ 上的连续奇函数可以被奇多项式一致逼近。
+\pf 设奇函数 $f$ 连续。任给 $\varepsilon>0$，由 Weierstrass 逼近定理，存在多项式 $P$，使 $|P(x)-f(x)|<\varepsilon$ 对 $x\in[-a,a]$ 成立。令 $Q(x)=(P(x)-P(-x))/2$，则 $Q$ 为奇多项式，且
+\[
+|f(x)-Q(x)|\le\tfrac12|f(x)-P(x)|+\tfrac12|f(-x)-P(-x)|<\varepsilon.
+\]\hfill$\square$
+
+\ex{2.2.27}若 $f$ 在 $[a,b]$ 上连续，则 $g(x)=\max_{a\le t\le x}f(t)$ 在 $[a,b]$ 上连续。
+\pf $g$ 定义良好，且单调不减。设 $\omega_f$ 为 $f$ 在 $[a,b]$ 上的连续模。对 $a\le x\le y\le b$，有
+\[
+g(x)\le g(y)=\max\left\{g(x),\max_{x\le t\le y}f(t)\right\}
+\le\max\{g(x),f(x)+\omega_f(y-x)\}
+\le g(x)+\omega_f(y-x).
+\]
+故 $|g(y)-g(x)|\le\omega_f(|y-x|)\to0$。\hfill$\square$
+
+\noindent\textbf{【注 2.2.12】}同理，$x\mapsto\min_{a\le t\le x}f(t)$ 也连续。
+
+\ex{2.2.28}设 $f$ 在 $[a,b]$ 上定义，且任意子区间 $[\alpha,\beta]\subset[a,b]$ 的像 $f([\alpha,\beta])$ 都是闭区间或单点。证明 $g(x)=\max_{a\le t\le x}f(t)$ 在 $(a,b)$ 上左连续。判断 $g$ 在 $[a,b)$ 上是否必右连续。
+\pf 由题设 $g$ 定义良好且单调增加。若 $x_0\in(a,b)$ 处左极限 $c<g(x_0)$，取 $\eta\in[a,x_0]$ 使 $f(\eta)=g(x_0)$，并取 $x_n\uparrow x_0$。由于 $f(t)\le g(x_n)\le c$ 对 $t\le x_n$ 成立，只能 $\eta=x_0$。于是 $f([a,x_0])$ 包含最大值 $g(x_0)$，却缺少 $(c,g(x_0))$ 中的值，矛盾。故 $g$ 左连续。
+
+右连续未必成立。例如在 $[-1,1]$ 上令
+\[
+f(x)=\begin{cases}0,&-1\le x\le0,\\ \sin(1/x),&0<x\le1.\end{cases}
+\]
+它满足题设的区间像条件，但 $g(x)=0$（$x\le0$），$g(x)=1$（$x>0$），所以 $g$ 在 $0$ 处不右连续。\hfill$\square$
+
+\thm{2.2.16}（Dini 定理）设 $f_n$ 为 $[a,b]$ 上连续函数，且对每个固定的 $x$，$\{f_n(x)\}$ 有界并随 $n$ 单调递减。令 $f(x)=\lim_{n\to\infty}f_n(x)$，则 $f$ 连续当且仅当 $f_n\to f$ 在 $[a,b]$ 上一致收敛。
+
+\ex{2.2.29}（Weierstrass 函数）令
+\[
+W(x)=\sum_{n=0}^{\infty}a^n\cos(b^n\pi x),
+\]
+其中 $0<a<1$，$b$ 为正奇数，$ab>1+\tfrac32\pi$。则 $W$ 在 $\mathbb R$ 上连续，且处处不可导。
+\pf 各项连续，且级数由 $\sum a^n$ 一致控制，故 $W$ 连续。原书对无处可导性给出证明思路：对每个 $x$ 构造两列趋于 $x$ 的点，使沿两列的差商呈现不同极限，由此排除导数存在。\hfill$\square$
+
+\noindent\textbf{【注 2.2.13】}Hardy 证明，在 $0<a<1\le ab$ 时，$\sum_{n\ge0}a^n\cos(b^n\pi x)$ 与 $\sum_{n\ge0}a^n\sin(b^n\pi x)$ 都在 $\mathbb R$ 上处处连续且无处可微。
+
+\noindent\textbf{【注 2.2.14】}将 $[-1,1]$ 上的 $|x|$ 以周期 $2$ 延拓到 $\mathbb R$，记为 $f$。van der Waerden 构造
+\[
+W(x)=\sum_{n=1}^{\infty}2^{-n}f(2^nx),
+\]
+它也处处连续、处处不可导。
+
+\end{document}

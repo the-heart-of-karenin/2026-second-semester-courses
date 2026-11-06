@@ -1,0 +1,618 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,geometry,enumitem}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\newcommand{\ex}[1]{\par\medskip\noindent\textbf{【例 #1】}\ }
+\newcommand{\prop}[1]{\par\medskip\noindent\textbf{【命题 #1】}\ }
+\newcommand{\thm}[1]{\par\medskip\noindent\textbf{【定理 #1】}\ }
+\newcommand{\pf}{\par\noindent\textbf{证明}\ }
+\newcommand{\sol}{\par\noindent\textbf{解}\ }
+\begin{document}
+\section*{第2章 极限与连续}
+\subsection*{2.1 极限}
+数学分析理论本质上是在极限的基础上展开的，熟练掌握极限的基本知识、求解方法与技巧十分重要。本节介绍若干有关极限问题的方法与技巧。
+
+\ex{2.1.1}考察极限 $\lim_{x\to0}x^x$。
+\sol 由于没有注明取极限时 $x$ 的取值范围，对该极限存在不同理解：
+\begin{enumerate}[label=（\arabic*）]
+\item 当 $x<0$ 时，$x^x$ 并不总有定义，因此若要求在一个去心邻域内有定义，极限不存在。
+\item 如果只考虑正的实数 $x$，则 $\lim_{x\to0^+}x^x=\lim_{x\to0^+}e^{x\ln x}=1$。
+\item 如果将 $x$ 限制在 $x^x$ 的实数自然定义域上，正数方向的极限是 $1$，但当 $x=-(2n+1)^{-1}$ 时，$x^x\to-1$，故极限不存在。
+\end{enumerate}
+
+下面的一些基本定理在求解极限时经常被使用。首先是第 1 章的 Cauchy 收敛准则。为加深理解，指出它等价于如下命题。
+
+\prop{2.1.1}$\mathbb R^n$ 中的点列 $\{x_k\}$ 收敛的充要条件为：对任意 $\varepsilon>0$，存在正整数 $N$，使得当 $k>N$ 时都有 $|x_k-x_N|<\varepsilon$。
+
+若数列为连续函数 $f$ 的某个点的轨道，即 $x_n=f^{\circ n}(x)$，则有以下特殊结果。
+
+\ex{2.1.2}设 $f:[c,d]\to[c,d]$ 连续，任取 $x\in[c,d]$，令 $x_n=f^{\circ n}(x)$。则 $\{x_n\}$ 收敛的充要条件为 $\lim_{n\to\infty}(x_{n+1}-x_n)=0$。
+\pf 必要性由 Cauchy 收敛准则直接得到。假设充分性不成立，则存在 $a<b$ 使得 $\{x_n\}$ 有分别收敛于 $a,b$ 的子列。由 $|x_{n+1}-x_n|\to0$，易证 $[a,b]$ 中每个点均为 $\{x_n\}$ 某个子列的极限。
+
+任取 $\eta\in[a,b]$，设 $x_{n_k}\to\eta$，则
+\[
+x_{n_k+1}=x_{n_k}+(x_{n_k+1}-x_{n_k})\longrightarrow\eta.
+\]
+由 $x_{n_k+1}=f(x_{n_k})$ 和 $f$ 的连续性，得 $f(\eta)=\eta$。这意味着 $[a,b]$ 中每个点均为 $f$ 的不动点。轨道若某项落在 $[a,b]$ 中，此后即恒定，与假设矛盾。故 $\{x_n\}$ 收敛。\hfill$\square$
+
+\thm{2.1.2}（Stolz 定理，$\infty/\infty$ 型）若数列 $\{a_n\},\{b_n\}$ 满足：$\{b_n\}$ 严格单调增加，$b_n\to+\infty$，且
+\[
+\lim_{n\to\infty}\frac{a_{n+1}-a_n}{b_{n+1}-b_n}=L,
+\]
+则 $\lim_{n\to\infty}a_n/b_n=L$，其中 $L$ 可以是有限数、$+\infty$ 或 $-\infty$。
+
+\thm{2.1.3}（Stolz 定理，$0/0$ 型）若 $\{b_n\}$ 严格单调递减且趋于零，$a_n\to0$，且
+\[
+\lim_{n\to\infty}\frac{a_{n+1}-a_n}{b_{n+1}-b_n}=L,
+\]
+则 $\lim_{n\to\infty}a_n/b_n=L$，其中 $L$ 可以是有限数、$+\infty$ 或 $-\infty$。
+
+上述两个定理可增强为下述命题。
+
+\prop{2.1.4}设 $\{x_n\}$、$\{y_n\}$ 是两个实数列。若 $\{y_n\}$ 严格单调增加且 $y_n\to+\infty$，则
+\[
+\liminf_{n\to\infty}\frac{x_{n+1}-x_n}{y_{n+1}-y_n}
+\le\liminf_{n\to\infty}\frac{x_n}{y_n}
+\le\limsup_{n\to\infty}\frac{x_n}{y_n}
+\le\limsup_{n\to\infty}\frac{x_{n+1}-x_n}{y_{n+1}-y_n}.
+\]
+\pf 对任何 $n>m\ge1$，由差商的加权平均性质，
+\[
+\inf_{k\ge m}\frac{x_{k+1}-x_k}{y_{k+1}-y_k}
+\le\frac{x_n-x_m}{y_n-y_m}
+\le\sup_{k\ge m}\frac{x_{k+1}-x_k}{y_{k+1}-y_k}.
+\]
+固定 $m$ 令 $n\to\infty$。因 $y_n\to+\infty$，中间一项与 $x_n/y_n$ 有相同的上下极限。再令 $m\to\infty$ 即得结论。\hfill$\square$
+
+下面介绍证明极限存在及求极限值的常见方法。
+
+\subsubsection*{1. 利用单调收敛定理}
+\ex{2.1.3}设正数数列 $\{x_n\}$ 满足
+\[
+x_{n+1}\le x_n+\int_n^{n+1}\frac{\mathrm dt}{t\ln^2t+\cos^2t},\qquad n\ge1.
+\]
+证明 $\{x_n\}$ 收敛。
+\pf 当 $n>1$ 时，
+\[
+x_{n+1}\le x_n+\int_n^{n+1}\frac{\mathrm dt}{t\ln^2t}
+=x_n+\frac1{\ln n}-\frac1{\ln(n+1)}.
+\]
+因此
+\[
+x_{n+1}+\frac1{\ln(n+1)}\le x_n+\frac1{\ln n}.
+\]
+所以正数数列 $\{x_n+1/\ln n\}_{n\ge2}$ 单调递减且下有界，故收敛。再由 $1/\ln n\to0$，得 $\{x_n\}$ 收敛。\hfill$\square$
+
+\noindent\textbf{【注 2.1.1】}一般地，若非负数列 $\{x_n\}$ 满足 $x_{n+1}\le x_n+b_n$，且级数 $\sum_{n=1}^{\infty}b_n$ 收敛，则 $\{x_n\}$ 收敛（见例 2.1.32）。
+
+\ex{2.1.4}设 $x_1>0$，$x_{n+1}=1+1/x_n$（$n=1,2,\ldots$）。证明 $\lim_{n\to\infty}x_n$ 存在。
+\pf 容易看出 $\{x_n\}$ 有界且 $x_n>1$（$n\ge2$）。另一方面，
+\[
+x_{n+4}-x_{n+2}=\frac{x_{n+2}-x_n}{x_nx_{n+1}x_{n+2}x_{n+3}},
+\]
+因而 $\{x_{2n}\}$ 与 $\{x_{2n-1}\}$ 均为单调有界数列。设其极限分别为 $L,\ell$，对递推式取极限得 $L=1+1/\ell$、$\ell=1+1/L$，故 $L=\ell$。于是原数列收敛。\hfill$\square$
+
+\ex{2.1.5}设 $0<a<1$，$x_n=(1+a)(1+a^2)\cdots(1+a^n)$（$n\ge1$）。证明 $\{x_n\}$ 收敛。
+\pf $\{x_n\}$ 单调递增。又由算术几何平均值不等式，
+\[
+x_n\le\left(1+\frac{a+a^2+\cdots+a^n}{n}\right)^n
+\le\left(1+\frac{a}{n(1-a)}\right)^n\le e^{a/(1-a)}.
+\]
+故 $\{x_n\}$ 有上界，因而收敛。也可用 $\ln x_n=\sum_{k=1}^{n}\ln(1+a^k)\le\sum_{k=1}^{\infty}a^k=a/(1-a)$。\hfill$\square$
+
+\ex{2.1.6}设 $x_n=\sum_{k=1}^{n}k^{-1/2}-2\sqrt n$（$n\ge1$）。证明 $\lim_{n\to\infty}x_n$ 存在。
+\pf 因为
+\begin{align*}
+x_{n+1}-x_n
+&=\frac1{\sqrt{n+1}}-2(\sqrt{n+1}-\sqrt n)\\
+&=\frac1{\sqrt{n+1}}-\frac2{\sqrt{n+1}+\sqrt n}<0,
+\end{align*}
+故 $\{x_n\}$ 单调递减。又
+\[
+x_{n+1}-x_n=-\frac1{\sqrt{n+1}(\sqrt{n+1}+\sqrt n)^2}>-\frac1{(n+1)^{3/2}}.
+\]
+从 $n=1$ 到 $m$ 求和得 $x_{m+1}-x_1>-\sum_{n=1}^{\infty}(n+1)^{-3/2}$，所以 $\{x_n\}$ 有下界，因而收敛。\hfill$\square$
+
+\ex{2.1.7}设 $x_1>-6$，$x_{n+1}=\sqrt{x_n+6}$（$n=1,2,\ldots$）。证明极限存在并求值。
+\sol 若 $-6<x_1<3$，归纳可得 $x_n\le3$，且
+\[
+x_{n+1}-x_n=\frac{x_n+6-x_n^2}{\sqrt{x_n+6}+x_n}\ge0\qquad(n\ge2),
+\]
+故数列单调增加有上界。若 $x_1\ge3$，归纳可得 $x_n\ge3$，上式不大于零，故数列单调减少有下界。两种情况下极限 $A$ 均存在，且 $A=\sqrt{A+6}$。解得 $A=3$。\hfill$\square$
+
+\ex{2.1.8}设数列为 $\sqrt3,\sqrt{3+\sqrt3},\sqrt{3+\sqrt{3+\sqrt3}},\ldots$。证明收敛并求极限。
+\pf 令 $x_1=\sqrt3$、$x_{n+1}=\sqrt{3+x_n}$。可见 $x_n\le x_{n+1}$。又 $x_1<3$，且若 $x_n\le3$，则 $x_{n+1}\le\sqrt6<3$，故 $\{x_n\}$ 单调增加有上界。设极限为 $A$，则 $A=\sqrt{3+A}$，所以 $A=(1+\sqrt{13})/2$。\hfill$\square$
+
+\subsubsection*{2. 利用 Stolz 定理}
+\ex{2.1.9}已知数列 $\{a_n\}$ 满足 $a_n-a_{n-2}\to0$。证明 $(a_n-a_{n-1})/n\to0$。
+\pf 设 $b_n=(a_n-a_{n-1})/n$。对偶数子列用 Stolz 定理，有
+\begin{align*}
+\lim_{n\to\infty}b_{2n}
+&=\lim_{n\to\infty}\frac{(a_{2n}-a_{2n-1})-(a_{2n-2}-a_{2n-3})}{2}\\
+&=\frac12\lim_{n\to\infty}\bigl[(a_{2n}-a_{2n-2})-(a_{2n-1}-a_{2n-3})\bigr]=0.
+\end{align*}
+同理 $b_{2n-1}\to0$，故 $b_n\to0$。\hfill$\square$
+
+\ex{2.1.10}设 $x_1>0$，$x_{n+1}=x_n+1/(\sqrt n\,x_n)$（$n\ge1$）。求 $\lim_{n\to\infty}x_n/n^{1/4}$。
+\sol 正数列 $\{x_n\}$ 单调递增，易得 $x_{n+1}/x_n\to1$。考察平方并用 Stolz 定理：
+\begin{align*}
+\lim_{n\to\infty}\frac{x_n^2}{\sqrt n}
+&=\lim_{n\to\infty}\frac{x_{n+1}^2-x_n^2}{\sqrt{n+1}-\sqrt n}\\
+&=\lim_{n\to\infty}
+\left(\sqrt{1+\frac1n}+1\right)
+\frac{x_{n+1}+x_n}{x_n}=4.
+\end{align*}
+因此 $x_n/n^{1/4}\to2$。
+
+\ex{2.1.11}已知 $a_n\to A$，$b_n>0$。记
+\[
+c_n=\frac{a_1b_1+a_2b_2+\cdots+a_nb_n}{b_1+b_2+\cdots+b_n}.
+\]
+证明：(i) 若 $\sum_{k=1}^{n}b_k\to+\infty$，则 $c_n\to A$；(ii) $\lim c_n$ 存在。
+\pf 记 $u_n=\sum_{k=1}^{n}a_kb_k$、$v_n=\sum_{k=1}^{n}b_k$。(i) 若 $v_n\to+\infty$，用 Stolz 定理得
+\[
+\lim c_n=\lim\frac{u_{n+1}-u_n}{v_{n+1}-v_n}=\lim a_{n+1}=A.
+\]
+(ii) 若 $v_n\to B>0$，则只需证明 $u_n$ 收敛。因 $\{a_n\}$ 有界，设 $|a_n|<L$，则
+\[
+|u_{n+k}-u_n|\le L|v_{n+k}-v_n|.
+\]
+由 Cauchy 收敛准则，$u_n$ 收敛，故 $c_n$ 收敛。\hfill$\square$
+
+\subsubsection*{3. 利用定积分的定义与性质}
+\prop{2.1.5}设 $f$ 在 $[a,b]$ 上 Riemann 可积。令 $\delta_n=(b-a)/n$，$f_{kn}=f(a+k\delta_n)$，则
+\begin{align*}
+\lim_{n\to\infty}\frac{f_{1n}+\cdots+f_{nn}}n&=\frac1{b-a}\int_a^b f(x)\,\mathrm dx,\\
+\lim_{n\to\infty}\sqrt[n]{f_{1n}\cdots f_{nn}}&=\exp\!\left(\frac1{b-a}\int_a^b\ln f(x)\,\mathrm dx\right),\\
+\lim_{n\to\infty}\frac{n}{1/f_{1n}+\cdots+1/f_{nn}}&=\frac{b-a}{\int_a^b 1/f(x)\,\mathrm dx}.
+\end{align*}
+这三个极限分别是 $f$ 的算术平均值、几何平均值与调和平均值。在后两式中，假设 $f$ 有正的下确界。
+
+\ex{2.1.12}设 $n,v$ 为正整数，$1\le v\le n$。记 $n_v$ 为 $v$ 除 $n$ 所产生的余数。计算
+\[
+\lim_{n\to\infty}\frac1n\sum_{v=1}^{n}\frac{n_v}{v},
+\qquad
+\lim_{n\to\infty}\frac1{n^2}\sum_{v=1}^{n}n_v.
+\]
+\sol 注意到 $n=v\lfloor n/v\rfloor+n_v$，其中 $\lfloor x\rfloor$ 表示不超过 $x$ 的最大整数。(i) 有
+\begin{align*}
+\lim_{n\to\infty}\frac1n\sum_{v=1}^{n}\frac{n_v}{v}
+&=\lim_{n\to\infty}\frac1n\sum_{v=1}^{n}\left(\frac nv-\left\lfloor\frac nv\right\rfloor\right)\\
+&=\int_0^1\left(\frac1x-\left\lfloor\frac1x\right\rfloor\right)\mathrm dx\\
+&=\lim_{n\to\infty}\left(\ln n-\sum_{k=1}^{n-1}\frac1{k+1}\right)=1-\gamma,
+\end{align*}
+其中 $\gamma\approx0.57721566$ 为 Euler 常数。(ii) 同理，
+\begin{align*}
+\lim_{n\to\infty}\frac1{n^2}\sum_{v=1}^{n}n_v
+&=\lim_{n\to\infty}\frac1n\sum_{v=1}^{n}
+\left(1-\frac vn\left\lfloor\frac nv\right\rfloor\right)\\
+&=1-\int_0^1x\left\lfloor\frac1x\right\rfloor\mathrm dx
+=1-\frac{\pi^2}{12}.
+\end{align*}
+
+\noindent\textbf{【注 2.1.2】}下列级数和是重要的：
+\[
+\sum_{n=1}^{\infty}\frac1{n^2}=\frac{\pi^2}6,\qquad
+\sum_{n=1}^{\infty}\frac1{(2n-1)^2}=\frac{\pi^2}8,\qquad
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^2}=\frac{\pi^2}{12}.
+\]
+
+\ex{2.1.13}设 $n,v$ 为正整数，$1\le v<n$。若 $n,v$ 按如下方式增加到无穷：
+\[
+\lim_{n\to\infty}\frac{v-n/2}{\sqrt n}=\lambda>0,
+\]
+则
+\[
+\lim_{n\to\infty}\frac{\sqrt n}{2^n}\binom nv=\sqrt{\frac2\pi}\,e^{-2\lambda^2}.
+\]
+\pf 先设 $n=2m$。由假设 $(v-m)/\sqrt m\to\lambda\sqrt2$，并且
+\[
+\frac{\binom{2m}{v}}{\binom{2m}{m}}
+=\prod_{j=1}^{v-m}\frac{m-j+1}{m+j}\longrightarrow e^{-2\lambda^2}.
+\]
+由 Stirling 公式 $n!\sim\sqrt{2\pi n}(n/e)^n$，得
+\[
+\binom{2m}{m}\sim\frac{2^{2m}}{\sqrt{\pi m}},
+\quad
+\frac{\sqrt{2m}}{2^{2m}}\binom{2m}{v}
+\longrightarrow\sqrt{\frac2\pi}\,e^{-2\lambda^2}.
+\]
+若 $n=2m+1$，利用
+\[
+\frac{\sqrt{2m}\,\binom{2m}{v}/2^{2m}}{\sqrt{2m+1}\,\binom{2m+1}{v}/2^{2m+1}}
+=\frac{2\sqrt{2m}}{\sqrt{2m+1}}\cdot\frac{2m+1-v}{2m+1}\longrightarrow1
+\]
+即可得到相同结论。\hfill$\square$
+
+\ex{2.1.14}求极限
+\[
+\lim_{n\to\infty}\sum_{i=1}^{n}\ln\!\left(1+\frac{i}{n^2}\right).
+\]
+\sol 当 $0<x<1$ 时，$x(1-x/2)\le\ln(1+x)\le x$。因此
+\[
+\left(1-\frac1{2n}\right)\sum_{i=1}^{n}\frac{i}{n^2}
+\le\sum_{i=1}^{n}\ln\!\left(1+\frac{i}{n^2}\right)
+\le\sum_{i=1}^{n}\frac{i}{n^2}.
+\]
+而 $\sum_{i=1}^{n}i/n^2\to\int_0^1x\,\mathrm dx=1/2$，故原极限为 $1/2$。
+
+\ex{2.1.15}设 $\alpha,\beta,\delta$ 为正数，证明
+\[
+\lim_{n\to\infty}\prod_{k=0}^{n-1}
+\frac{1+(\alpha+k\delta)/n}{1+(\beta+k\delta)/n}
+=(1+\delta)^{(\alpha-\beta)/\delta}.
+\]
+\pf 当 $\alpha=\beta$ 时显然。否则取对数并记 $h(x)=(\alpha-\beta)/(\delta(1+x))$，则
+\[
+\ln\frac{1+(\alpha+k\delta)/n}{1+(\beta+k\delta)/n}
+=h\!\left(\frac{\beta+k\delta}{n}\right)\frac\delta n+\alpha_{n,k},
+\]
+其中误差由 $\ln(1+x)-x$ 控制，满足 $\sum_{k=0}^{n-1}\alpha_{n,k}\to0$。因此
+\begin{align*}
+\lim_{n\to\infty}\sum_{k=0}^{n-1}
+\ln\frac{1+(\alpha+k\delta)/n}{1+(\beta+k\delta)/n}
+&=\int_0^\delta h(x)\,\mathrm dx\\
+&=\frac{\alpha-\beta}{\delta}\ln(1+\delta).
+\end{align*}
+取指数即得结论。\hfill$\square$
+
+\noindent\textbf{【注 2.1.3】}也可用 $\Gamma$ 函数的递推公式将乘积写成 $\Gamma$ 函数之比，再利用 Stirling 公式或 $\Gamma(x+s)/(\Gamma(x)x^s)\to1$。
+
+\ex{2.1.16}求极限
+\[
+\lim_{n\to\infty}\sum_{k=1}^{n}\frac{k-\sin^2k}{n^2}
+\bigl(\ln(n+k-\sin^2k)-\ln n\bigr).
+\]
+\sol 将对数写成 $\ln(1+(k-\sin^2k)/n)$，原式为 Riemann 和，其极限是
+\[
+\int_0^1x\ln(1+x)\,\mathrm dx=\frac14.
+\]
+
+\ex{2.1.17}求极限
+\[
+\lim_{n\to\infty}\sqrt n\left(1-\sum_{k=1}^{n}\frac1{n+\sqrt k}\right).
+\]
+\sol 化为
+\[
+\sqrt n\sum_{k=1}^{n}\left(\frac1n-\frac1{n+\sqrt k}\right)
+=\sum_{k=1}^{n}\frac{\sqrt k}{\sqrt n(n+\sqrt k)}.
+\]
+利用
+\[
+\frac1{n+\sqrt n}\sum_{k=1}^{n}\sqrt{\frac kn}
+\le\sum_{k=1}^{n}\frac{\sqrt k}{\sqrt n(n+\sqrt k)}
+\le\frac1n\sum_{k=1}^{n}\sqrt{\frac kn},
+\]
+由夹逼准则和 $\sqrt x$ 的可积性，所求极限为 $\int_0^1\sqrt x\,\mathrm dx=2/3$。
+
+\ex{2.1.18}求极限
+\[
+\lim_{n\to\infty}\frac1n\sqrt[2n]{n(n+1)(n+2)\cdots(3n-1)}.
+\]
+\sol 记所求数列为 $a_n$。取对数，
+\[
+\ln a_n=\frac1{2n}\sum_{k=0}^{2n-1}\ln\!\left(1+\frac kn\right).
+\]
+因此 $\lim\ln a_n=\frac12\int_0^2\ln(1+x)\,\mathrm dx=\frac32\ln3-1$，故极限为 $3\sqrt3/e$。
+
+\ex{2.1.19}设 $\alpha_n\to1$，$f$ 在 $[0,1]$ 上 Riemann 可积。证明
+\[
+\lim_{n\to\infty}\frac1n\sum_{k=1}^{n}\alpha_{n+k}f\!\left(\frac kn\right)
+=\int_0^1f(x)\,\mathrm dx.
+\]
+\pf 设 $M$ 是 $|f|$ 的上界。将左式分解为
+\[
+\frac1n\sum_{k=1}^{n}f\!\left(\frac kn\right)
++\frac1n\sum_{k=1}^{n}(\alpha_{n+k}-1)f\!\left(\frac kn\right).
+\]
+第一项趋于积分，第二项的绝对值不超过 $M\sup_{k\ge n}|\alpha_k-1|\to0$。\hfill$\square$
+
+\ex{2.1.20}求极限
+\[
+\lim_{n\to\infty}\int_0^1\frac{\mathrm dx}{1+(1+x/n)^n}.
+\]
+\sol 对每个 $x\in[0,1]$，$(1+x/n)^n$ 单调递增趋于 $e^x$。由 Dini 定理，相应函数列一致收敛于 $1/(1+e^x)$。于是极限与积分可以交换，
+\[
+\lim_{n\to\infty}\int_0^1\frac{\mathrm dx}{1+(1+x/n)^n}
+=\int_0^1\frac{\mathrm dx}{1+e^x}
+=\ln\frac{2e}{1+e}.
+\]
+
+\ex{2.1.21}设函数 $f$ 在 $[a,b]$ 上可导，且 $f'$ Riemann 可积，记
+\[
+\Delta_n=\int_a^bf(x)\,\mathrm dx
+-\frac{b-a}{n}\sum_{v=1}^{n}f\!\left(a+v\frac{b-a}{n}\right).
+\]
+求 $\lim_{n\to\infty}n\Delta_n$。
+\sol 设 $h=(b-a)/n$。由积分中值定理，将每个子区间上积分值与右端点矩形面积之差写成
+\[
+-\Delta_n=\sum_{v=1}^{n}\int_{a+(v-1)h}^{a+vh}
+(a+vh-x)f'(\xi_v)\,\mathrm dx,
+\]
+其中 $\xi_v$ 在第 $v$ 个子区间内。若 $m_v,M_v$ 是 $f'$ 在该子区间的下确界和上确界，则
+\[
+\frac{h^2}{2}\sum_{v=1}^{n}m_v\le-\Delta_n\le\frac{h^2}{2}\sum_{v=1}^{n}M_v.
+\]
+由 $f'$ 的 Riemann 可积性，得
+\[
+\lim_{n\to\infty}n\Delta_n
+=-\frac{b-a}{2}\int_a^bf'(x)\,\mathrm dx
+=\frac{(b-a)(f(a)-f(b))}{2}.
+\]
+
+\ex{2.1.22}计算
+\[
+\lim_{n\to\infty}\sum_{i=1}^{n}\sum_{j=1}^{2n}
+\frac2{n^2}\left\lfloor\frac{2i+j}{n}\right\rfloor.
+\]
+\sol 记 $D=[0,2]\times[0,2]$。横向 $n$ 等分、纵向 $2n$ 等分，则该二重和是 $f(x,y)=\lfloor x+y\rfloor$ 在 $D$ 上的一个 Riemann 和。函数在 $D$ 上分片连续，因此可积。直线 $x+y=1,2,3$ 将 $D$ 分成四部分，其上函数值依次为 $0,1,2,3$。故
+\[
+\lim_{n\to\infty}\sum_{i=1}^{n}\sum_{j=1}^{2n}
+\frac2{n^2}\left\lfloor\frac{2i+j}{n}\right\rfloor
+=\iint_D\lfloor x+y\rfloor\,\mathrm dx\,\mathrm dy=6.
+\]
+
+\subsubsection*{4. 利用级数收敛性}
+\prop{2.1.6}数列 $\{a_n\}$ 收敛的充要条件是级数 $\sum_{n=1}^{\infty}(a_{n+1}-a_n)$ 收敛。
+
+\ex{2.1.23}证明极限
+\[
+\lim_{n\to\infty}\left(1+\frac12+\cdots+\frac1n-\ln n\right)
+\]
+存在。
+\pf 设 $a_n=\sum_{k=1}^{n}1/k-\ln n$。由 Lagrange 中值定理，存在 $\theta\in(0,1)$，使得
+\[
+|a_n-a_{n-1}|=\left|\frac1n-\ln n+\ln(n-1)\right|
+=\left|\frac1n-\frac1{n-1+\theta}\right|
+<\frac1{(n-1)^2}.
+\]
+由于 $\sum(n-1)^{-2}$ 收敛，级数 $\sum(a_n-a_{n-1})$ 绝对收敛，故 $\{a_n\}$ 收敛。\hfill$\square$
+
+\ex{2.1.24}设 $\alpha>0$，$nx_n=1+o(n^{-\alpha})$（$n\to+\infty$）。证明 $\{x_1+\cdots+x_n-\ln n\}$ 收敛。
+\pf 记 $y_n=\sum_{k=1}^{n}x_k-\ln n$。由题设 $x_k-1/k=o(k^{-1-\alpha})$，故级数 $\sum(x_k-1/k)$ 收敛。而 $\sum_{k=1}^{n}1/k-\ln n\to\gamma$，从而 $y_n$ 收敛。也可用中值定理估计 $|y_{n+1}-y_n|\le2/n^2+|o((n+1)^{-1-\alpha})|$，再用例 2.1.23 的方法。\hfill$\square$
+
+\ex{2.1.25}设 $x_1>0$，$x_{n+1}=1+1/x_n$（$n\ge1$）。证明 $\lim x_n$ 存在。
+\pf 易证 $3/2\le x_n\le2$（$n\ge4$）。因此可忽略前几项，从而
+\[
+|x_{n+1}-x_n|=\frac{|x_n-x_{n-1}|}{x_nx_{n-1}}
+\le\frac49|x_n-x_{n-1}|
+\le\left(\frac49\right)^{n-1}|x_2-x_1|.
+\]
+于是级数 $\sum_{n\ge1}(x_{n+1}-x_n)$ 绝对收敛，其部分和给出 $\lim x_n$。\hfill$\square$
+
+\subsubsection*{5. 使用压缩映射原理}
+\prop{2.1.7}设 $(X,\rho)$ 是完备度量空间，$T:X\to X$ 为压缩映射，即存在 $0\le\theta<1$，使得对任意 $x,y\in X$ 有 $\rho(Tx,Ty)\le\theta\rho(x,y)$。则 $T$ 有唯一不动点 $\bar x$，并且对任意 $x_0\in X$，均有 $T^{\circ n}(x_0)\to\bar x$。
+
+以下是压缩映射原理的应用。原书指出，若在竞赛答题中直接应用，应仿照该原理的证明补全细节。
+
+\ex{2.1.26}设 $x_1>0$，$x_{n+1}=1+1/x_n$。证明 $\lim x_n$ 存在并求其值。
+\pf 设 $T(x)=1+1/x$。从某项起 $x_n\in[3/2,2]$。在该区间上 $|T'(x)|=1/x^2\le4/9<1$，故 $T$ 为压缩映射。由命题 2.1.7，$x_n$ 收敛到不动点 $b$，满足 $b=1+1/b$。解得 $b=(1+\sqrt5)/2$。\hfill$\square$
+
+\ex{2.1.27}设 $x_1\in(-1,1)$，实数 $\alpha,\beta$ 满足 $|\alpha|+|\beta|<1$，令 $x_{n+1}=\alpha x_n+\beta\sin x_n$。证明 $\{x_n\}$ 收敛并求极限。
+\pf 令 $f(x)=\alpha x+\beta\sin x$。则 $f([-1,1])\subseteq[-1,1]$，且
+\[
+|f'(x)|=|\alpha+\beta\cos x|\le|\alpha|+|\beta|<1.
+\]
+所以 $f$ 是压缩映射。其不动点 $A$ 满足 $A=\alpha A+\beta\sin A$。因 $|\alpha|+|\beta|<1$，唯一不动点为 $A=0$，故 $x_n\to0$。\hfill$\square$
+
+\subsubsection*{6. 使用上、下极限}
+\ex{2.1.28}设 $x_1>0$，$x_{n+1}=1+1/x_n$。证明 $\lim x_n$ 存在。
+\pf 当 $n\ge3$ 时 $1\le x_n\le2$。记 $L,\ell$ 分别为上、下极限，则
+\[
+L=1+\frac1\ell,\qquad \ell=1+\frac1L.
+\]
+两式推出 $L=\ell$，故数列收敛。\hfill$\square$
+
+\ex{2.1.29}设 $x_n>0$、$y_0=0$，$y_n=\sqrt{x_n+y_{n-1}}$。证明：$\lim x_n$ 存在的充要条件是 $\lim y_n$ 存在。
+\pf 必要性若 $y_n$ 收敛，则由 $x_n=y_n^2-y_{n-1}$ 可知 $x_n$ 收敛。反过来，设 $x_n\to A$。取 $M\ge1$ 使 $x_n\le M$，利用递推式得 $\{y_n\}$ 有界。记其上、下极限为 $L,\ell$，对递推式取上下极限得
+\[
+L^2=A+L,\qquad \ell^2=A+\ell.
+\]
+由于在非负数范围内 $t^2-t=A$ 只有一个解，得 $L=\ell$，故 $y_n$ 收敛。\hfill$\square$
+
+\ex{2.1.30}设 $\{f_n\}$ 在 $[a,b)$ 上一致收敛到 $f$，且 $\lim_{x\to a^+}f_n(x)=f_n(a)$。证明 $\lim_{x\to a^+}f(x)=f(a)$。
+\pf 对任意 $x\in[a,b)$，
+\[
+|f(x)-f(a)|\le |f_n(x)-f_n(a)|+2\sup_{s\in[a,b)}|f_n(s)-f(s)|.
+\]
+先令 $x\to a^+$，再令 $n\to\infty$，得所证结论。\hfill$\square$
+
+\ex{2.1.31}设正数列 $\{x_n\}$ 满足 $x_{n+2}\le(x_{n+1}+x_n)/2$（$n\ge1$）。证明 $\lim x_n$ 存在。
+\pf 易知 $0<x_n\le\max\{x_1,x_2\}$。记 $L=\limsup x_n$。任取 $\varepsilon>0$，从某项起 $x_n\le L+\varepsilon$。若此后有 $x_m<L-3\varepsilon$，则
+\[
+x_{m+1}\le\frac{x_m+x_{m-1}}2\le L-\varepsilon,
+\]
+并由递推关系得之后各项均不超过 $L-\varepsilon$，与 $L$ 为上极限矛盾。故从某项起 $x_n\ge L-3\varepsilon$。由于 $\varepsilon$ 任意，$x_n\to L$。\hfill$\square$
+
+\ex{2.1.32}设非负数列 $\{x_n\}$ 满足 $x_{n+1}\le x_n+b_n$，若级数 $\sum_{n=1}^{\infty}b_n$ 收敛，则 $\{x_n\}$ 收敛。
+\pf 由 $x_{n+1}\le x_1+\sum_{k=1}^{n}b_k$，$\{x_n\}$ 有上界。设 $L=\limsup x_n$。任取 $\varepsilon>0$，取 $N$ 使 $x_n\le L+\varepsilon$ 且尾和 $\sum_{k=n}^{n+t}b_k<\varepsilon$（$n>N$，$t\ge0$）。若有 $m>N$ 使 $x_m<L-2\varepsilon$，则所有 $n>m$ 均有 $x_n\le x_m+\sum_{k=m}^{n-1}b_k<L-\varepsilon$，与上极限矛盾。故 $x_n\to L$。\hfill$\square$
+
+\ex{2.1.33}求极限
+\[
+\lim_{n\to\infty}
+\frac{\int_0^1(1-x/2)^n(1-x/4)^n\,\mathrm dx}
+{\int_0^1(1-x/2)^n\,\mathrm dx}.
+\]
+\sol 对 $0<\alpha<1$，直接积分可得
+\[
+\lim_{n\to\infty}
+\frac{\int_0^1(1-\alpha x)^n\,\mathrm dx}
+{\int_0^1(1-x/2)^n\,\mathrm dx}=\frac1{2\alpha}.
+\]
+因 $(1-x/2)(1-x/4)=1-3x/4+x^2/8$，故乘积大于等于 $1-3x/4$。对任意 $\varepsilon\in(0,1)$，将积分分为 $[0,\varepsilon]$ 与 $[\varepsilon,1]$，后者相对于分母趋于零；在前者，乘积不超过 $1-(3-\varepsilon)x/4$。因此原比值的上下极限分别被 $2/3$ 与 $2/(3-\varepsilon)$ 夹住。令 $\varepsilon\downarrow0$，所求极限为 $2/3$。
+
+\ex{2.1.34}证明极限
+\[
+\lim_{n\to\infty}
+\frac{\int_0^1 \ln^n(1+x)x^{-n}\,\mathrm dx}
+{\int_0^1\sin^n x\,x^{1-n}\,\mathrm dx}
+\]
+存在并求其值。
+\pf $\ln(1+x)/x$ 和 $\sin x/x$ 在 $x=0$ 处补充定义后均连续，且都只在 $x=0$ 取最大值 $1$。故对任意固定 $\delta\in(0,1)$，积分的 $[\delta,1]$ 部分相对于 $[0,\delta]$ 部分趋于零。又在充分小的 $x>0$ 上，两函数分别满足
+\[
+1-\frac{x}{2}\le\frac{\ln(1+x)}x
+\le1-\frac{1-\varepsilon_\delta}{2}x,
+\quad
+1-\frac{x^2}{6}\le\frac{\sin x}x
+\le1-\frac{1-\varepsilon_\delta}{6}x^2,
+\]
+其中 $\varepsilon_\delta\to0$（$\delta\downarrow0$）。于是比值的上下极限均被相应的标准积分比控制，而标准积分给出 $2(1-\varepsilon_\delta)/3$ 与 $2/[3(1-\varepsilon_\delta)]$。令 $\delta\downarrow0$，得极限为 $2/3$。\hfill$\square$
+
+\subsubsection*{7. 使用 Taylor 公式}
+\ex{2.1.35}求极限
+\[
+\lim_{x\to0}\frac{x^2/2-\sqrt{1+x^2}+1}{(\cos x-e^{x^2})\sin^2x}.
+\]
+\sol 由 Taylor 展开，
+\[
+\sqrt{1+x^2}=1+\frac{x^2}2-\frac{x^4}8+o(x^4),\quad
+\cos x=1-\frac{x^2}2+o(x^2),\quad
+e^{x^2}=1+x^2+o(x^2),
+\]
+且 $\sin^2x\sim x^2$。所以分子为 $x^4/8+o(x^4)$，分母为 $-3x^4/2+o(x^4)$，极限为 $-1/12$。
+
+\ex{2.1.36}已知
+\[
+\lim_{x\to0}\frac{\ln(1+2x)+xf(x)}{x^2}=1,
+\]
+求 $\lim_{x\to0}(2+f(x))/x$。
+\sol 因
+\[
+\frac{2+f(x)}x
+=\frac{2x+xf(x)}{x^2}
+=\frac{\ln(1+2x)+xf(x)}{x^2}
++\frac{2x-\ln(1+2x)}{x^2},
+\]
+而 $\ln(1+2x)=2x-2x^2+o(x^2)$，故所求极限为 $3$。
+
+\ex{2.1.37}设当 $x\to0$ 时，$e^{\sin x}-e^x$ 与 $x^n$ 为同阶无穷小，求 $n$。
+\sol 因 $e^{\sin x}-e^x=e^x(e^{\sin x-x}-1)$，且
+\[
+e^{\sin x-x}-1\sim\sin x-x=-\frac{x^3}{6}+o(x^3),
+\]
+故 $n=3$。也可分别展开 $e^{\sin x}$、$e^x$ 到三阶后相减。
+
+\ex{2.1.38}设 $f$ 在 $x=0$ 的某个邻域内二阶可导，且
+\[
+\lim_{x\to0}\frac{\sin x+xf(x)}{x^3}=\frac12.
+\]
+求 $f(0),f'(0),f''(0)$。
+\sol 由 $\sin x=x-x^3/6+o(x^3)$ 与 $f(x)=f(0)+f'(0)x+f''(0)x^2/2+o(x^2)$，比较常数及各阶系数，得
+\[
+1+f(0)=0,\qquad f'(0)=0,\qquad \frac{f''(0)}2-\frac16=\frac12.
+\]
+故 $f(0)=-1$、$f'(0)=0$、$f''(0)=4/3$。也可由题设直接得 $f(x)=\frac12x^2-\sin x/x+o(x^2)=-1+\frac23x^2+o(x^2)$。
+
+\ex{2.1.39}设 $a_i,b_i$（$i=1,\ldots,n$）为实数，求极限
+\[
+\lim_{x\to0}\frac{1-\prod_{i=1}^{n}\cos^{b_i}(a_ix)}{x^2}.
+\]
+\sol 由 $\cos(a_ix)=1-a_i^2x^2/2+o(x^2)$，得
+\[
+\cos^{b_i}(a_ix)=1-\frac{a_i^2b_i}2x^2+o(x^2),
+\]
+从而 $\prod_{i=1}^{n}\cos^{b_i}(a_ix)=1-\frac12(\sum_{i=1}^{n}a_i^2b_i)x^2+o(x^2)$。故极限为 $\frac12\sum_{i=1}^{n}a_i^2b_i$。
+
+\ex{2.1.40}证明
+\[
+\lim_{n\to\infty}\frac{(2\sqrt[n]{n}-1)^n}{n^2}=1.
+\]
+\pf 只需证明其对数趋于零。因 $\sqrt[n]{n}-1=\ln n/n+o(\ln n/n)$，且 $\ln(1+x)=x-x^2/2+o(x^2)$，故
+\[
+\ln\frac{(2\sqrt[n]{n}-1)^n}{n^2}
+=n\ln\bigl(1+2(\sqrt[n]{n}-1)\bigr)-2\ln n
+=O\!\left(\frac{\ln^2 n}{n}\right)\to0.
+\]
+取指数得证。\hfill$\square$
+
+\ex{2.1.41}求极限
+\[
+\lim_{n\to\infty}\left(\sum_{k=1}^{n}\frac1{\sqrt{n^2+n+k}}\right)^n.
+\]
+\sol 对 $u\to0$，$(1+u)^{-1/2}=1-u/2+o(u)$。为使 $n$ 项中的误差一致，可取连续模 $\omega(r)\to0$ 控制余项。于是
+\begin{align*}
+\sum_{k=1}^{n}\frac1{\sqrt{n^2+n+k}}
+&=\frac1n\sum_{k=1}^{n}\left(1+\frac{n+k}{n^2}\right)^{-1/2}\\
+&=1-\frac1{2n}\sum_{k=1}^{n}\frac{n+k}{n^2}+o(1/n)
+=1-\frac{3}{4n}+o(1/n).
+\end{align*}
+故 $n$ 倍对数趋于 $-3/4$，所求极限为 $e^{-3/4}$。
+
+\subsubsection*{8. 综合使用极限的方法}
+\ex{2.1.42}求极限 $\lim_{n\to\infty}n^2\bigl(\arctan(a/n)-\arctan(a/(n+1))\bigr)$（$a\ne0$）。
+\sol 由 Lagrange 中值定理，存在 $\xi_n$ 介于 $a/n$ 与 $a/(n+1)$ 之间，使得差值等于 $[a/n-a/(n+1)]/(1+\xi_n^2)$。因此极限为 $a$。
+
+\ex{2.1.43}求极限
+\[
+\lim_{x\to2}\frac{\sin(x^x)-\sin(2^x)}{2^{x^x}-2^{2^x}}.
+\]
+\sol 对 $F(t)=\sin t$、$G(t)=2^t$ 使用 Cauchy 中值定理，原比值为 $F'(\xi_x)/G'(\xi_x)=\cos\xi_x/(2^{\xi_x}\ln2)$，其中 $\xi_x$ 位于 $x^x$ 与 $2^x$ 之间。二者均趋于 $4$，故极限为 $\cos4/(16\ln2)$。
+
+\ex{2.1.44}计算
+\[
+\lim_{n\to\infty}\sqrt n\prod_{k=1}^{n}\frac{e^{1-1/k}}{(1+1/k)^k}.
+\]
+\sol 利用 $\prod_{k=1}^{n}(1+1/k)^k=(n+1)^n/n!$，得原式为
+\[
+\sqrt n\,\frac{n!\,e^{n-H_n}}{(n+1)^n},\qquad H_n=\sum_{k=1}^{n}\frac1k.
+\]
+由 Stirling 公式与 $H_n=\ln n+\gamma+o(1)$，极限为 $\sqrt{2\pi}\,e^{-(1+\gamma)}$。
+
+\ex{2.1.45}设函数 $f$ 在 $\mathbb R$ 上可微，$f>0$ 且 $|f'|<mf$（$0<m<1$）。任取 $a_0\in\mathbb R$，定义 $a_n=\ln f(a_{n-1})$。证明 $\{a_n\}$ 收敛。
+\pf 令 $g=\ln f$，则 $|g'(x)|=|f'(x)/f(x)|<m<1$。因此 $g(x)-x$ 严格递减，且当 $x\to\pm\infty$ 时分别趋于 $\mp\infty$，故 $g$ 有唯一不动点 $x_0$。又
+\[
+|a_n-x_0|=|g(a_{n-1})-g(x_0)|\le m^n|a_0-x_0|\to0.
+\]
+因此 $a_n\to x_0$。\hfill$\square$
+
+\ex{2.1.46}求极限
+\[
+\lim_{n\to\infty}(\sqrt[n]{n}-1)^{1/(\ln n)^\alpha},\qquad \alpha>0.
+\]
+\sol 记原式的对数为 $L_n$。因 $\sqrt[n]{n}-1\sim(\ln n)/n$，
+\[
+L_n=\frac{\ln(\sqrt[n]{n}-1)}{(\ln n)^\alpha}
+\sim\frac{\ln\ln n-\ln n}{(\ln n)^\alpha}.
+\]
+故当 $\alpha>1$、$\alpha=1$、$0<\alpha<1$ 时，原式极限依次为 $1$、$e^{-1}$、$0$。
+
+\ex{2.1.47}设 $0<x_0<y_0<\pi/2$，$x_{n+1}=\sin x_n$、$y_{n+1}=\sin y_n$。证明 $x_n/y_n\to1$。
+\pf 两个数列均严格递减趋于零，且 $0<x_n<y_n$。取正整数 $\ell$ 使 $y_\ell<x_0$，则对任意 $n$，$y_{n+\ell}<x_n<y_n$。因此
+\[
+\frac{y_{n+\ell}}{y_n}<\frac{x_n}{y_n}<1.
+\]
+因为 $y_{n+1}/y_n=\sin y_n/y_n\to1$，固定的 $\ell$ 给出 $y_{n+\ell}/y_n\to1$。由夹逼准则得证。\hfill$\square$
+
+\noindent\textbf{【注 2.1.7】}进一步用 Stolz 定理可得 $\sqrt n\,x_n\to\sqrt3$、$\sqrt n\,y_n\to\sqrt3$。
+
+\ex{2.1.48}求极限
+\[
+\lim_{x\to+\infty}\left(\frac{\ln(1+x)}x\right)^{1/x}.
+\]
+\sol 取对数，
+\[
+\lim_{x\to+\infty}\frac{\ln\ln(1+x)-\ln x}{x}=0,
+\]
+因为两项各自除以 $x$ 都趋于零。故原极限为 $1$。
+
+\ex{2.1.49}设 $f$ 在 $(0,+\infty)$ 上有有界的二阶导函数，且 $\lim_{x\to+\infty}f(x)$ 存在。证明 $f'(x)\to0$。
+\pf 反设 $f'(x)$ 不趋于零。不妨设存在 $\alpha>0$ 及 $a_n\to+\infty$，使 $f'(a_n)>\alpha$。设 $|f''(x)|\le M$，取 $\delta>0$ 使 $\alpha-M\delta/2>\alpha/2$。由 Taylor 公式，
+\[
+f(a_n+\delta)-f(a_n)
+=f'(a_n)\delta+\frac{f''(\xi_n)}2\delta^2
+\ge\frac{\alpha\delta}{2}>0.
+\]
+但 $f$ 在无穷远处有极限，左边应趋于零，矛盾。\hfill$\square$
+
+\ex{2.1.50}设 $S_1$ 在 $[a,b]$ 上 Riemann 可积，定义
+\[
+S_{n+1}(x)=\int_a^x S_n(t)\,\mathrm dt,\qquad n=1,2,\ldots.
+\]
+证明 $\{S_n(x)\}$ 在 $[a,b]$ 上一致收敛。
+\pf $S_n\in C[a,b]$（$n\ge2$）。取 $M$ 使 $|S_2(x)-S_1(x)|\le M$。由归纳可得
+\[
+|S_{n+1}(x)-S_n(x)|\le\frac{M}{(n-1)!}(x-a)^{n-1},\qquad n\ge2.
+\]
+因 $\sum_{n=2}^{\infty}M(b-a)^{n-1}/(n-1)!$ 收敛，函数项级数 $\sum_{n=2}^{\infty}(S_{n+1}-S_n)$ 在 $[a,b]$ 上一致收敛，从而 $\{S_n\}$ 一致收敛。\hfill$\square$
+\end{document}

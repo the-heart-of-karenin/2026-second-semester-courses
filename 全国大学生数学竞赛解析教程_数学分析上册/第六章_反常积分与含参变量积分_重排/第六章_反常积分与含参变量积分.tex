@@ -1,0 +1,159 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,geometry,enumitem}
+\geometry{margin=2.35cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\newcommand{\ex}[1]{\par\noindent\textbf{【例 #1】}\;}
+\newcommand{\thm}[1]{\par\noindent\textbf{【定理 #1】}\;}
+\newcommand{\sol}{\par\noindent\textbf{解/证明}\;}
+\newcommand{\R}{\mathbb R}
+\title{第六章\quad 反常积分及含参变量积分\\\large 竞赛复习重排稿}
+\author{据《全国大学生数学竞赛解析教程·数学分析（上册）》转写}
+\date{}
+\begin{document}\maketitle
+\noindent 本章保留反常积分、含参变量积分与真题的主要内容；欧拉积分后段偏专门的乘积公式题予以省略。原书编号保留，以便对照。
+\section*{6.1 无穷区间上的积分}
+\thm{6.1.5（Cauchy 收敛准则）}若 $f$ 在每个 $[a,A]$ 上可积，则 $\int_a^{+\infty}f(x)\,dx$ 收敛当且仅当对每个 $\varepsilon>0$，存在 $M>a$，使 $b_2>b_1>M$ 时 $\left|\int_{b_1}^{b_2}f(x)\,dx\right|<\varepsilon$。绝对收敛蕴含收敛。
+\thm{6.1.6--6.1.10}非负函数的无穷积分收敛当且仅当其截断积分有上界。若充分大的 $x$ 上 $0\le f(x)\le g(x)$，则 $\int g$ 收敛推出 $\int f$ 收敛。若 $f,g\ge0$ 且 $f/g\to k$，则 $0<k<\infty$ 时两积分同敛散，$k=0$ 且 $\int g$ 收敛时 $\int f$ 收敛，$k=\infty$ 且 $\int g$ 发散时 $\int f$ 发散。非负单调递减 $f$ 的 $\int_1^\infty f(x)\,dx$ 与 $\sum_{n\ge1}f(n)$ 同敛散。
+\thm{6.1.11--6.1.12}Dirichlet 判别法：若 $\int_a^b f(x)\,dx$ 关于 $b$ 有界，$g$ 单调且 $g(x)\to0$，则 $\int_a^\infty f(x)g(x)\,dx$ 收敛。Abel 判别法：若 $\int_a^\infty f$ 收敛，而 $g$ 单调有界，则 $\int_a^\infty fg$ 收敛。
+\ex{6.1.1}若连续函数 $f$ 的 $\int_0^\infty f$ 收敛，则存在 $x_n\to\infty$ 使 $f(x_n)\to0$；若 $f$ 还一致连续，则 $f(x)\to0$。
+\sol 在每个 $(n,n+1)$ 上用积分中值定理选 $x_n$；尾积分趋于零。后一结论用一致连续性反证：若 $|f(x_n)|\ge\varepsilon$，则可在互不相交、长度固定的小区间上找到同号且绝对值有正下界的 $f$，与积分的 Cauchy 准则矛盾。
+\ex{6.1.2}设 $0<\alpha\le1$，$\beta>0$，$\alpha+\beta>1$，$f>0$ 且 $\int_1^\infty f(x)\,dx$ 收敛。证明 $\int_1^\infty f(x)^\alpha x^{-\beta}\,dx$ 收敛。
+\sol $\alpha=1$ 时直接比较。否则以加权 Young 不等式得到 $f^\alpha x^{-\beta}\le \alpha f+(1-\alpha)x^{-\beta/(1-\alpha)}$；后一幂函数可积。
+\ex{6.1.4--6.1.5}对任何实数 $\alpha$，$\int_1^\infty x^\alpha e^{-x}\,dx$ 收敛。积分 $\int_1^\infty \frac{x^2}{\sqrt{x+1}(x^4+x+1)}\,dx$ 收敛。
+\sol 前者用指数函数快于任意幂；后者的被积函数与 $x^{-5/2}$ 等价。
+\ex{6.1.6}若 $f$ 在 $[0,\infty)$ 连续可微，$\int_0^\infty f$ 与 $\int_0^\infty |f'|$ 都收敛，证明 $|f(x)|\le\int_x^\infty |f'(t)|\,dt$。
+\sol $\int|f'|$ 收敛使 $f(x)$ 有有限极限；$\int f$ 收敛迫使该极限为零。由 $f(y)-f(x)=\int_x^y f'$ 令 $y\to\infty$。
+\ex{6.1.7（最优积分不等式）}设 $f>0$ 连续，$\int_0^\infty 1/f(x)dx$ 收敛，$F(x)=\int_0^xf(t)dt$。证明
+\[\int_0^\infty\frac{x}{F(x)}dx<2\int_0^\infty\frac{dx}{f(x)},\]
+且系数 $2$ 最优。
+\sol 由 Cauchy--Schwarz，$x^2\le F(x)\int_0^x t^2/f(t)dt$，故 $x/F(x)\le4x^{-3}\int_0^xt^2/f(t)dt$。交换积分次序后，右端积分等于 $2\int_0^\infty1/f$。等号要求 $f$ 为常数，却与 $1/f$ 可积矛盾。取 $f_p(x)=(x+a)^p$，再令 $p\downarrow1$，两侧比值趋于 $2$。
+\ex{6.1.8（Dirichlet 积分）}求 $\int_0^\infty\frac{\sin x}{x}\,dx$。
+\sol 用 $\frac12+\sum_{k=1}^n\cos kx=\frac{\sin(n+1/2)x}{2\sin(x/2)}$ 在 $(0,\pi)$ 上积分，并用 Riemann--Lebesgue 引理处理 $1/x-1/(2\sin(x/2))$，得到 $\lim_{n\to\infty}\int_0^{(n+1/2)\pi}\sin u/u\,du=\pi/2$。Dirichlet 判别法保证原积分收敛，故值为 $\pi/2$。
+\ex{6.1.9}对正整数 $n$，计算 $\int_1^\infty [x(x+1)\cdots(x+n)]^{-1}\,dx$。
+\sol 部分分式系数为 $a_k=(-1)^k\binom nk/n!$，$\sum a_k=0$。因此答案为 $\displaystyle\frac1{n!}\sum_{k=0}^n(-1)^{k+1}\binom nk\ln(1+k)$。
+\ex{6.1.10}若 $a>1$，$f$ 在 $[1,\infty)$ 连续，且 $\lim_{x\to\infty}xf(x)$ 存在，证明 $\int_1^\infty f(x)/x\,dx$ 收敛，并且 $\lim_{n\to\infty}n\int_1^a f(x^n)\,dx=\int_1^\infty f(t)/t\,dt$。
+\sol 设 $|xf(x)|\le M$，则 $|f(x)/x|\le M/x^2$。代换 $t=x^n$ 后，左边为 $\int_1^{a^n}f(t)t^{1/n}/t\,dt$；在有界段一致收敛，在尾部用 $M/t^2$ 控制。
+\ex{6.1.11}设 $f$ 在 $\R$ 有三阶连续导数，且 $f,f',f'',f'''>0$、$f'''\le f$。证明
+\[\frac12f''(x)^2+\int_{-\infty}^x f'(t)^2dt\le f(x)f'(x),\qquad f'(x)<\left(\frac43\right)^{1/3}f(x).\]
+\sol 因 $f,f',f''$ 在 $-\infty$ 端的极限为零，且 $f''f'''+(f')^2\le ff''+(f')^2=(ff')'$，积分得第一式。又 $f''$ 单调递增，$\int_{-\infty}^x(f')^2\ge f'(x)^3/[3f''(x)]$；合并后对 $f''$ 用加权算术几何平均不等式，得到第二式。
+\section*{6.2 瑕积分}
+\thm{6.2.1--6.2.4}瑕点为 $a$ 时，把无穷积分判别法中的尾区间换成 $(a,a+\delta)$，即可得到 Cauchy 准则、绝对收敛判别法及非负函数的比较判别法与极限比较判别法。多个瑕点必须逐个检查。
+\ex{6.2.1}椭圆积分 $\displaystyle\int_0^1\frac{dx}{\sqrt{(1-x^2)(1-k^2x^2)}}$（$0<k<1$）收敛。
+\sol $x\to1^-$ 时被积函数与 $[2(1-k^2)]^{-1/2}(1-x)^{-1/2}$ 等价。
+\ex{6.2.2}积分 $\int_0^1\frac{\ln x}{1-x^2}\,dx$ 收敛。
+\sol $x=1$ 为可去奇点，极限为 $-1/2$；在零点附近被积函数的绝对值由常数倍 $|\ln x|$ 控制。
+\ex{6.2.3}设 $\beta\ge0$。积分 $\displaystyle\int_0^\infty\frac{x^\alpha\arctan x}{2+x^\beta}\,dx$ 收敛当且仅当 $\alpha>-2$ 且 $\beta>\alpha+1$。
+\sol 零点附近与 $x^{\alpha+1}/2$ 等价；无穷远处与 $(\pi/2)x^{\alpha-\beta}$ 等价。
+\ex{6.2.4}设 $I_n=\int_0^1\frac{\ln x}{(1+x)^{n+1}}\,dx$，$n\ge1$。求递推与 $\lim_{n\to\infty}nI_n/\ln n$。
+\sol $I_1=-\ln2$。部分分式化为 $I_n=\frac1n\int_0^1x^{-1}[(1+x)^{-n}-1]dx$，由此得到 $I_{n+1}=\frac n{n+1}I_n-\frac{1-2^{-n}}{n(n+1)}$。Stolz 定理给出所求极限 $-1$。
+\section*{6.3 含参变量积分}
+\thm{6.3.1--6.3.3}若 $f$ 在 $[a,b]\times[\alpha,\beta]$ 连续，则 $F(u)=\int_a^bf(x,u)\,dx$ 连续，且可交换积分次序。若 $\partial_u f$ 也连续，则 $F'(u)=\int_a^b\partial_u f(x,u)\,dx$。
+\thm{6.3.4--6.3.8}含参变量反常积分 $\int_a^\infty f(x,u)\,dx$ 在 $u\in[\alpha,\beta]$ 上一致收敛，当且仅当其尾积分的上确界趋零。可用 Weierstrass 控制函数判别、参数一致的 Dirichlet 判别及 Abel 判别。
+\thm{6.3.9--6.3.12}若被积函数连续且参数上一致收敛，则积分函数连续，并可在相应条件下交换有限积分次序。若 $\partial_u f$ 对应的反常积分也一致收敛，则可在积分号下求导；对双重反常积分，须验证适当的一致收敛和绝对收敛条件后方可交换次序。
+\ex{6.3.1}设 $f\in C[0,1]$，$F(t)=\int_0^1\frac{tf(x)}{x^2+t^2}\,dx$。讨论 $t=0$ 处的连续性。
+\sol $F(0)=0$，$t\to0^+$ 时 $F(t)\to\frac\pi2 f(0)$，$t\to0^-$ 时 $F(t)\to-\frac\pi2 f(0)$。故仅当 $f(0)=0$ 时在零点连续。
+\ex{6.3.2--6.3.3}若 $0<a<b$，则 $\displaystyle\int_0^1\frac{x^b-x^a}{\ln x}\,dx=\ln\frac{b+1}{a+1}$。又 $\displaystyle\int_0^1\frac{\ln(1+x)}{1+x^2}\,dx=\frac\pi8\ln2$。
+\sol 第一式由 $(x^b-x^a)/\ln x=\int_a^b x^u\,du$ 换序。第二式令 $I(u)=\int_0^1\ln(1+ux)/(1+x^2)\,dx$，求 $I'(u)$ 后在 $u\in[0,1]$ 积分。
+\ex{6.3.4--6.3.6}以下三种一致收敛性质分别成立：
+\begin{enumerate}[leftmargin=2em]
+\item 对 $\alpha,\beta_0>0$，$\int_0^\infty \frac{x\sin(\beta x)}{\alpha^2+x^2}\,dx$ 在 $\beta\in[\beta_0,\infty)$ 上一致收敛。
+\item 若 $0<p\le1$，$\int_0^\infty e^{-ux}\sin x/x^p\,dx$ 在 $u\ge0$ 上一致收敛。
+\item 若 $f(x,u)\ge0$ 且对 $x$ 单调递减，$\int_a^\infty f(x,u)dx$ 参数上一致收敛，则 $f(x,u)$ 关于参数一致趋零。
+\end{enumerate}
+\sol 前两题分别使用参数一致的 Dirichlet、Abel 判别法。最后一题用
+\[0\le f(b,u)\le\int_{b-1}^b f(x,u)dx.\]
+\ex{6.3.7--6.3.8}当 $0<a<b$，对任意实数 $\beta$，分别有
+\[\int_0^\infty\frac{e^{-ax}-e^{-bx}}x\,dx=\ln\frac ba,\qquad
+\int_0^\infty e^{-x^2}\cos(2\beta x)\,dx=\frac{\sqrt\pi}{2}e^{-\beta^2}.\]
+\sol 第一式把被积函数写成 $\int_a^b e^{-ux}du$ 后换序。第二式令积分为 $I(\beta)$，积分号下求导并分部积分得 $I'=-2\beta I$，再用 $I(0)=\sqrt\pi/2$。
+\ex{6.3.9--6.3.10}对 $a\ge0$，$\displaystyle\int_0^\infty\frac{\arctan(ax)}{x(1+x^2)}dx=\frac\pi2\ln(1+a)$，且 $\displaystyle\int_0^\infty\frac{\ln(1+a^2x^2)}{1+x^2}dx=\pi\ln(1+a)$。
+\sol 均对 $a$ 求导，在被积函数导数的一致可积性下交换求导与积分；两个导数分别为 $\pi/[2(1+a)]$ 和 $\pi/(1+a)$，再用 $a=0$ 时积分为零。
+\ex{6.3.11}若 $\psi(s)=\int_0^\infty\frac{\ln(1+sx)}{x(1+x)}dx$，则 $\psi(1)=\pi^2/6$，$\psi(2)=\pi^2/4$。
+\sol 对参数求导得 $\psi'(s)=\ln s/(s-1)$。再用 $\sum_{n\ge1}n^{-2}=\pi^2/6$ 及奇偶拆分积分。
+\paragraph{三类经典积分}Dirichlet 积分为 $\int_0^\infty\sin x/x\,dx=\pi/2$。对 $\alpha>0,\beta\ge0$，Laplace 积分为
+\[\int_0^\infty\frac{\cos(\beta x)}{\alpha^2+x^2}dx=\frac\pi{2\alpha}e^{-\alpha\beta},\qquad
+\int_0^\infty\frac{x\sin(\beta x)}{\alpha^2+x^2}dx=\frac\pi2e^{-\alpha\beta}\quad(\beta>0).\]
+这里第二个积分在 $\beta\ge\beta_0>0$ 上参数一致收敛，但在 $\beta=0$ 附近不能直接交换极限。Fresnel 积分为 $\int_0^\infty\sin(x^2)dx=\int_0^\infty\cos(x^2)dx=\sqrt{\pi/8}$。原书通过 $t=x^2$ 后引入 Laplace 因子、交换积分次序并令参数趋零来证明。
+\section*{6.4 Euler 积分}
+定义 $\Gamma(s)=\int_0^\infty t^{s-1}e^{-t}dt$，$B(p,q)=\int_0^1t^{p-1}(1-t)^{q-1}dt$（参数均为正）。核心关系为
+\[\Gamma(s+1)=s\Gamma(s),\qquad B(p,q)=\frac{\Gamma(p)\Gamma(q)}{\Gamma(p+q)},\qquad \Gamma(s)\Gamma(1-s)=\frac\pi{\sin\pi s}\quad(0<s<1).\]
+还有 $\Gamma(1/2)=\sqrt\pi$、$B(p,q)=\int_0^\infty t^{p-1}(1+t)^{-p-q}dt$ 以及倍增公式 $\Gamma(2s)=2^{2s-1}\Gamma(s)\Gamma(s+1/2)/\sqrt\pi$。
+\ex{6.4.1--6.4.3}当 $\alpha>1$，$\displaystyle\int_0^\infty\frac{dx}{1+x^\alpha}=\frac\pi{\alpha\sin(\pi/\alpha)}$。当 $0<p<1$，$\displaystyle\int_0^\infty\frac{x^{p-1}\ln x}{1+x}dx=-\frac{\pi^2\cos(\pi p)}{\sin^2(\pi p)}$，$\displaystyle\int_0^1\frac{x^{p-1}-x^{-p}}{1-x}dx=\pi\cot(\pi p)$。
+\sol 第一式代换 $t=x^\alpha$ 后用 Beta 函数。第二式对 $B(p,1-p)$ 求导。第三式由 Gamma 函数的对数导数及余元公式求得。
+\ex{6.4.4--6.4.5}当 $0<\alpha<2,\beta>0$，$\displaystyle\int_0^\infty\frac{\sin(\beta x)}{x^\alpha}dx=\frac{\pi\beta^{\alpha-1}}{2\Gamma(\alpha)\sin(\pi\alpha/2)}$；并有 $\displaystyle\int_0^1\ln\Gamma(x)dx=\frac12\ln(2\pi)$。
+\sol 前式用 Laplace 表示与 Gamma 反射公式；后式以 $x\mapsto1-x$ 对称化，再用反射公式和 $\int_0^\pi\ln\sin t\,dt=-\pi\ln2$。
+\section*{6.5 真题选讲}
+\ex{6.5.1（第二届全国决赛）}若 $0<f(x)<1$，且 $\int_0^\infty f$、$\int_0^\infty xf(x)dx$ 收敛，证明
+\[\int_0^\infty xf(x)dx>\frac12\left(\int_0^\infty f(x)dx\right)^2.\]
+\sol 令 $A=\int_0^\infty f(x)dx$。由于 $0<f<1$，
+\begin{align*}
+\int_A^\infty xf(x)dx
+&>A\int_A^\infty f(x)dx
+=A\left(A-\int_0^Af(x)dx\right)\\
+&=A\int_0^A[1-f(x)]dx
+>\int_0^Ax[1-f(x)]dx\\
+&=\frac{A^2}{2}-\int_0^Axf(x)dx.
+\end{align*}
+将右端最后一项移到左边即得结论。这个分割点 $A$ 由被积函数自身确定，是证明的关键。
+\ex{6.5.2（第五届全国决赛）}若 $f\ge0$、$f(0)=0$、$f'\le1/2$，且 $\int_0^\infty f<\infty$，则对 $\alpha>1$，令 $\beta=(\alpha+1)/2$，有
+\[\int_0^\infty f^\alpha(x)dx\le\left(\int_0^\infty f(x)dx\right)^\beta.\]
+\sol 先对有限上限 $t$ 证明。设
+\[A(t)=\int_0^tf(x)dx,\quad
+h(t)=\beta^{1/(\beta-1)}A(t)-f(t)^2,\quad
+G(t)=A(t)^\beta-\int_0^tf(x)^\alpha dx.\]
+由 $f(0)=0$ 和 $f'\le1/2$，
+\[h'(t)=f(t)\bigl[\beta^{1/(\beta-1)}-2f'(t)\bigr]\ge0,
+\qquad h(0)=0.\]
+故 $\beta A(t)^{\beta-1}\ge f(t)^{2(\beta-1)}=f(t)^{\alpha-1}$。于是
+\[G'(t)=f(t)\bigl[\beta A(t)^{\beta-1}-f(t)^{\alpha-1}\bigr]\ge0.\]
+由 $G(0)=0$ 得截断不等式；再令 $t\to\infty$。
+\ex{6.5.3（第三届全国初赛）}设 $F:[0,\infty)\to[0,\infty)$ 单调递减，$F(x)\to0$，且
+\[\lim_{n\to\infty}\int_0^\infty F(t)\sin(t/n)dt=0.\]
+证明 $xF(x)\to0$，并证明 $\lim_{x\to0}\int_0^\infty F(t)\sin(xt)dt=0$。
+\sol 记 $J(s)=\int_0^\infty F(t)\sin(st)dt$。由 Dirichlet 判别法，$s>0$ 时该积分收敛。把积分按长度为 $2\pi/s$ 的区间分组，单调递减性使每组积分非负。特别地，取 $s=1/n$，可得
+\[J(1/n)\ge n\bigl[F(\pi n/2)-F(\pi n)\bigr].\]
+已知 $J(1/n)\to0$，故 $n[F(\pi n/2)-F(\pi n)]\to0$。令 $n=2^{k+1}$，得到相邻二倍尺度的差为 $o(2^{-k})$。由于 $F(x)\downarrow0$，沿二的幂次把这些差相加，并用 Stolz 定理，推出 $2^kF(2^k\pi)\to0$。单调性把结论推广到所有 $x\to\infty$。
+
+对第二问，仍按 $2\pi/x$ 分组，得到 $J(x)\ge0$。在 $t=\pi/x$ 处分段，Dirichlet 尾估计与 $|\sin xt|\le xt$ 给出
+\[0\le J(x)\le x\int_0^{\pi/x}tF(t)dt+\frac{2F(\pi/x)}{x}.\]
+第一项利用 $tF(t)\to0$ 分割固定小段与其余部分后趋零；第二项等于 $2[(\pi/x)F(\pi/x)]/\pi$，也趋零。
+\ex{6.5.4（第三届全国决赛）}设 $F,G$ 非负单调递减，且 $x(F(x)+G(x))\to0$。证明对每个 $\varepsilon>0$，$\int_\varepsilon^\infty xF(xt)\cos t\,dt\to0$（$x\to\infty$）。若又 $\int_0^\infty(F-G)(t)\cos(t/n)dt\to0$（$n\to\infty$），证明 $\int_0^\infty(F-G)(t)\cos(xt)dt\to0$（$x\to0$）。
+\sol 对第一结论作 $u=xt$，得到 $\int_\varepsilon^\infty xF(xt)\cos t\,dt=\int_{x\varepsilon}^\infty F(u)\cos(u/x)du$。由于 $F$ 非负递减，Dirichlet 的第二中值定理给出
+\[\left|\int_{x\varepsilon}^\infty F(u)\cos(u/x)du\right|\le2xF(x\varepsilon)\longrightarrow0.\]
+对 $G$ 同理。第二结论令 $y=1/x\to\infty$，取 $n=\lfloor y\rfloor$，把 $\cos(t/y)$ 与 $\cos(t/n)$ 的差、区间 $[n,\infty)$ 的尾积分以及题设积分拆开。由 $t(F(t)+G(t))\le M$，紧区间差可用
+\[\int_0^n(F+G)(t)\left|\cos(t/y)-\cos(t/n)\right|dt\le M/y\]
+控制；尾段换元后用刚证的第一结论，其余项由题设趋零。
+\enlargethispage{6\baselineskip}
+\ex{6.5.5（第二届全国初赛）}设 $\varphi:(0,\infty)\to(0,\infty)$ 严格递减连续，$\varphi(0+)=\infty$，$a=\int_0^\infty\varphi(t)dt<\infty$，$\psi=\varphi^{-1}$。证明 $\int_0^\infty\psi=a$，并且
+\[\int_0^\infty\varphi(t)^2dt+\int_0^\infty\psi(t)^2dt\ge\frac12a^{3/2}.\]
+\sol 曲线 $y=\varphi(x)$ 下方第一象限区域的面积为 $a$。交换两坐标轴后它成为 $x=\psi(y)$ 左方区域，所以
+\[\int_0^\infty\psi(t)dt=\int_0^\infty\varphi(t)dt=a.\]
+通过 $\varphi_a(t)=a^{-1/2}\varphi(\sqrt a\,t)$ 将问题化为 $a=1$。严格递减性保证唯一的固定点 $p>0$ 满足 $\varphi(p)=p$；反函数也满足 $\psi(p)=p$。按图像分割第一象限的面积可得
+\[\int_0^p\varphi(t)dt+\int_0^p\psi(t)dt=1+p^2.\]
+令 $q=(1+p^2)/(2p)$。把两个平方积分各自减去 $q$ 再展开，得到
+\begin{align*}
+\int_0^\infty\varphi(t)^2dt+\int_0^\infty\psi(t)^2dt
+&\ge\int_0^p\varphi(t)^2dt+\int_0^p\psi(t)^2dt\\
+&\ge \frac{(1+p^2)^2}{2p}.
+\end{align*}
+右边在 $p=1/\sqrt3$ 取最小值 $8\sqrt3/9>1/2$，故归一化的不等式成立，再把尺度还原。原书还指出 $1/2$ 不是最佳常数。
+\ex{6.5.6（第四届全国初赛）}设 $f$ 在 $[0,\infty)$ 连续可导，$f(0)>0$ 且 $f'\ge0$。若 $\int_0^\infty\frac{dx}{f(x)+f'(x)}$ 收敛，证明 $\int_0^\infty\frac{dx}{f(x)}$ 收敛。
+\sol 因 $f'\ge0$，对任意 $A$，
+\begin{align*}
+0\le\int_0^A\left(\frac1f-\frac1{f+f'}\right)dx
+&=\int_0^A\frac{f'}{f(f+f')}dx\\
+&\le\int_0^A\frac{f'}{f^2}dx
+=\frac1{f(0)}-\frac1{f(A)}\le\frac1{f(0)}.
+\end{align*}
+因此 $\int_0^A1/f$ 一直被已知的收敛积分与固定常数 $1/f(0)$ 控制，令 $A\to\infty$ 即得。
+\ex{6.5.7（第七届全国初赛）}设 $f$ 为 $[0,\infty)$ 上有界连续函数，$h$ 连续且 $a=\int_0^\infty|h(t)|dt<1$。令 $g_0=f$，$g_n(x)=f(x)+\int_0^xh(t)g_{n-1}(t)dt$。证明 $g_n$ 一致收敛于连续函数 $g$，并求 $g$。
+\sol 记 $M=\sup_{x\ge0}|f(x)|$。先归纳得到
+\[|g_n(x)|\le(1+a+\cdots+a^n)M\le\frac M{1-a}.\]
+再由递推式相减，
+\[g_n(x)-g_{n-1}(x)=\int_0^xh(t)[g_{n-1}(t)-g_{n-2}(t)]dt,\]
+从而 $\|g_n-g_{n-1}\|_\infty\le a\|g_{n-1}-g_{n-2}\|_\infty\le a^nM$。级数 $\sum_{n\ge1}(g_n-g_{n-1})$ 一致收敛，极限 $g$ 连续。将极限传入积分得
+\[g(x)=f(x)+\int_0^xh(t)g(t)dt.\]
+令 $H(x)=\int_0^xh(t)dt$，$u(x)=\int_0^xh(t)g(t)dt$，则 $u'=h(f+u)$ 且 $u(0)=0$。乘积分因子 $e^{-H}$ 后积分，得到
+\[\boxed{\displaystyle g(x)=f(x)+e^{H(x)}\int_0^xe^{-H(t)}h(t)f(t)dt.}\]
+\end{document}

@@ -1,0 +1,260 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,geometry,enumitem}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\newcommand{\ex}[2]{\par\medskip\noindent\textbf{【例 #1】（#2）}\ }
+\newcommand{\pf}{\par\noindent\textbf{证明}\ }
+\newcommand{\sol}{\par\noindent\textbf{解}\ }
+\begin{document}
+\section*{第2章 极限与连续}
+\subsection*{2.4 真题选讲}
+
+\ex{2.4.1}{第一届全国决赛题}设 $f$ 在 $(-1,1)$ 内有定义，在 $x=0$ 处可导，且 $f(0)=0$。证明：
+\[
+\lim_{n\to+\infty}\sum_{k=1}^{n}f\!\left(\frac{k}{n^2}\right)=\frac{f'(0)}{2}.
+\]
+\pf 根据题目假设和 Taylor 展开式，有 $f(x)=f(0)+f'(0)x+\alpha(x)x$，其中 $\alpha(x)$ 是 $x$ 的函数，$\alpha(0)=0$，且当 $x\to0$ 时，$\alpha(x)\to0$。
+
+因此，对于任意给定的 $\varepsilon>0$，存在 $\delta>0$，使得当 $|x|<\delta$ 时，有 $|\alpha(x)|<\varepsilon$。对于任意自然数 $n$ 和 $k\le n$，总有
+\[
+f\!\left(\frac{k}{n^2}\right)=f'(0)\frac{k}{n^2}+\alpha\!\left(\frac{k}{n^2}\right)\frac{k}{n^2}.
+\]
+取 $N>\delta^{-1}$，则只要 $n>N$、$k\le n$，便有 $|\alpha(k/n^2)|<\varepsilon$。于是
+\[
+\left|\sum_{k=1}^{n}f\!\left(\frac{k}{n^2}\right)-f'(0)\sum_{k=1}^{n}\frac{k}{n^2}\right|
+\le\varepsilon\sum_{k=1}^{n}\frac{k}{n^2}.
+\]
+因为 $\sum_{k=1}^{n}k/n^2=(1+1/n)/2$，令 $n\to+\infty$，再由 $\varepsilon$ 的任意性，即得所证结论。\hfill$\square$
+
+\ex{2.4.2}{第八届全国决赛题}设 $n>1$ 为正整数，令
+\[
+S_n=\left(\frac1n\right)^n+\left(\frac2n\right)^n+\cdots+\left(\frac{n-1}{n}\right)^n.
+\]
+(i) 证明数列 $S_n$ 单调增且有界，从而极限 $\lim_{n\to+\infty}S_n$ 存在；(ii) 求该极限。
+
+\pf (i) 先证
+\[
+\left(\frac{k}{n}\right)^n<\left(\frac{k+1}{n+1}\right)^{n+1},\qquad k=1,2,\ldots,n-1.
+\]
+由均值不等式，
+\[
+k+1=\underbrace{\frac{k}{n}+\cdots+\frac{k}{n}}_{n\text{ 项}}+1
+>(n+1)\sqrt[n+1]{\left(\frac{k}{n}\right)^n}.
+\]
+于是
+\[
+S_{n+1}=\sum_{j=1}^{n}\left(\frac{j}{n+1}\right)^{n+1}
+\ge\sum_{k=1}^{n-1}\left(\frac{k+1}{n+1}\right)^{n+1}
+>\sum_{k=1}^{n-1}\left(\frac{k}{n}\right)^n=S_n.
+\]
+另一方面，由 $x^n$ 在 $[0,1]$ 上递增，
+\[
+\frac{S_n}{n}<\int_0^1 x^n\,\mathrm dx=\frac1{n+1},
+\]
+故 $S_n<n/(n+1)<1$。因此 $\{S_n\}$ 单调递增且有上界。
+
+(ii) 熟知当 $x\ne0$ 时 $e^x>1+x$，故
+\[
+\left(1-\frac{k}{n}\right)^n<e^{-k}.
+\]
+从而
+\[
+S_n=\sum_{k=1}^{n-1}\left(\frac{n-k}{n}\right)^n
+<\sum_{k=1}^{n-1}e^{-k}<\sum_{k=1}^{\infty}e^{-k}=\frac1{e-1}.
+\]
+记 $S=\lim_{n\to+\infty}S_n$，则 $S\le1/(e-1)$。另一方面，对任意正整数 $m$，取 $n>m$，则
+\[
+S_n\ge\sum_{k=1}^{m}\left(1-\frac{k}{n}\right)^n.
+\]
+令 $n\to+\infty$，得 $S\ge\sum_{k=1}^{m}e^{-k}$；再令 $m\to+\infty$，得 $S\ge1/(e-1)$。故
+\[
+\lim_{n\to+\infty}S_n=\frac1{e-1}.
+\]\hfill$\square$
+
+\ex{2.4.3}{第五届全国初赛题}设 $f$ 在区间 $[0,a]$ 上有二阶连续导数，$f'(0)=1$，$f''(0)\ne0$，且 $0<f(x)<x$，$x\in(0,a)$。令
+\[
+x_{n+1}=f(x_n),\qquad x_1\in(0,a).
+\]
+(1) 求证 $\{x_n\}$ 收敛并求极限；(2) 试问 $\{nx_n\}$ 是否收敛？若不收敛，则说明理由；若收敛，则求其极限。
+
+\pf (1) 由条件 $0<x_2=f(x_1)<x_1$，归纳可证 $0<x_{n+1}<x_n$。故 $\{x_n\}$ 有极限，设为 $x_0$。由 $f$ 的连续性及 $x_{n+1}=f(x_n)$ 得 $x_0=f(x_0)$。又因 $x>0$ 时 $f(x)<x$，所以 $x_0=0$。
+
+(2) 由 Stolz 定理和 L'Hospital 法则，
+\begin{align*}
+\lim_{n\to+\infty}nx_n
+&=\lim_{n\to+\infty}\frac{n}{1/x_n}
+=\lim_{n\to+\infty}\frac1{(1/x_{n+1})-(1/x_n)}\\
+&=\lim_{n\to+\infty}\frac{x_{n+1}x_n}{x_n-x_{n+1}}
+=\lim_{x\to0}\frac{x f(x)}{x-f(x)}\\
+&=\lim_{x\to0}\frac{f(x)+xf'(x)}{1-f'(x)}
+=\lim_{x\to0}\frac{2f'(x)+xf''(x)}{-f''(x)}
+=-\frac2{f''(0)}.
+\end{align*}
+\hfill$\square$
+
+\ex{2.4.4}{第六届全国初赛题}设 $f\in C[0,1]$ 是非负的严格单调增加函数。证明：(i) 对任意 $n\in\mathbb N$，存在唯一的 $x_n\in[0,1]$，使得
+\[
+(f(x_n))^n=\int_0^1(f(x))^n\,\mathrm dx;
+\]
+(ii) $\lim_{n\to+\infty}x_n=1$。
+
+\pf (i) 由题设有
+\[
+(f(0))^n\le\int_0^1(f(x))^n\,\mathrm dx\le(f(1))^n.
+\]
+由连续函数的介值性质得到 $x_n$ 的存在性。因为 $f$ 严格单调增加，所以 $x_n$ 唯一。
+
+(ii) 对任意小的 $\varepsilon>0$，由 $f$ 的非负性和单调性，有
+\[
+(f(x_n))^n\ge\int_{1-\varepsilon}^1(f(1-\varepsilon))^n\,\mathrm dx
+=\varepsilon(f(1-\varepsilon))^n.
+\]
+故 $f(x_n)\ge\sqrt[n]{\varepsilon}\,f(1-\varepsilon)$，从而 $\liminf_{n\to+\infty}f(x_n)\ge f(1-\varepsilon)$。由 $f$ 的单调性，$\liminf x_n\ge1-\varepsilon$。由 $\varepsilon$ 的任意性，可得 $x_n\to1$。\hfill$\square$
+
+\ex{2.4.5}{第二届全国初赛题}设 $\varepsilon\in(0,1)$，$x_0=a$，$x_{n+1}=a+\varepsilon\sin x_n$（$n=0,1,2,\ldots$）。证明 $\xi=\lim_{n\to+\infty}x_n$ 存在，且 $\xi$ 为方程 $x-\varepsilon\sin x=a$ 的唯一根。
+\pf 设 $f(x)=a+\varepsilon\sin x$，则
+\[
+|f(x)-f(y)|=\varepsilon|\sin x-\sin y|\le\varepsilon|x-y|,\qquad \forall x,y\in\mathbb R.
+\]
+即函数 $f$ 是压缩的。根据压缩映射的不动点原理，$f$ 存在唯一不动点 $\xi$，且 $x_n\to\xi$。\hfill$\square$
+
+\ex{2.4.6}{第十四届初赛题}设 $\beta_n\to0$，$|\beta_n|<1$，函数 $f$ 在 $[-1,2]$ 上有界，在 $[0,1]$ 上 Riemann 可积。证明：
+\[
+\lim_{n\to+\infty}\frac1n\sum_{k=1}^{n}f\!\left(\frac{k}{n}+\beta_n\right)=\int_0^1 f(x)\,\mathrm dx.
+\]
+\pf 假设在 $[-1,2]$ 上 $|f(x)|\le M$。取整数 $N\ge3$ 使得当 $n>N$ 时 $|\beta_n|<1/3$。以下任取 $n>N$。
+
+\textbf{情形 I} $\beta_n\ge0$。设正整数 $\ell$ 满足
+\[
+\beta_n+\frac\ell n\le1,\qquad \beta_n+\frac{\ell+1}{n}>1.
+\]
+则 $1\le\ell\le n$。将原式写为
+\begin{align*}
+\frac1n\sum_{k=1}^{n}f\!\left(\frac{k}{n}+\beta_n\right)
+={}&\left[f(\beta_n)\beta_n+\frac1n\sum_{k=1}^{\ell}f\!\left(\frac{k}{n}+\beta_n\right)
++f(1)\left(1-\beta_n-\frac\ell n\right)\right]\\
+&+\frac1n\sum_{k=\ell+1}^{n}f\!\left(\frac{k}{n}+\beta_n\right)
+-f(\beta_n)\beta_n-f(1)\left(1-\beta_n-\frac\ell n\right).
+\end{align*}
+注意到 $0\le1-\beta_n-\ell/n<1/n$，于是补上的端点项趋于零。又因 $\beta_n\le(n-\ell)/n<\beta_n+1/n$，故余下尾和的绝对值不超过 $M(n-\ell)/n\to0$。方括号内是 $[0,1]$ 上积分的 Riemann 和，故其极限为 $\int_0^1 f(x)\,\mathrm dx$。
+
+\textbf{情形 II} $\beta_n<0$。令 $g(x)=f(1-x)$（$x\in[-1,2]$），则
+\begin{align*}
+\frac1n\sum_{k=1}^{n}f\!\left(\frac{k}{n}+\beta_n\right)
+&=\frac1n\sum_{k=1}^{n}g\!\left(1-\frac{k}{n}-\beta_n\right)\\
+&=\frac1n\sum_{k=1}^{n}g\!\left(\frac{k}{n}-\beta_n\right)
+-\frac1n g(1-\beta_n)+\frac1n g(-\beta_n).
+\end{align*}
+由情形 I 的结果及末两项趋零，极限为 $\int_0^1g(x)\,\mathrm dx=\int_0^1f(x)\,\mathrm dx$。两种情形合并即得结论。\hfill$\square$
+
+\ex{2.4.7}{第六届全国初赛题}设 $f$ 在 $\mathbb R$ 上有二阶导数，$f,f',f''$ 都大于零，假设存在正数 $a,b$ 使得 $f''(x)\le a f(x)+b f'(x)$ 对一切 $x\in\mathbb R$ 成立。(i) 求证 $\lim_{x\to-\infty}f'(x)=0$；(ii) 求证存在常数 $c$ 使得 $f'(x)\le c f(x)$；(iii) 求使上面不等式成立的最小常数 $c$。
+\pf (i) 因 $f$ 及 $f'$ 是单调递增的正函数，故 $\lim_{x\to-\infty}f(x)$ 与 $\lim_{x\to-\infty}f'(x)$ 均存在。由微分中值定理，对任意 $x$ 存在 $\theta_x\in(0,1)$ 使得
+\[
+f(x+1)-f(x)=f'(x+\theta_x)>f'(x)>0.
+\]
+上式左边当 $x\to-\infty$ 时趋于零，故 $f'(x)\to0$。
+
+(ii) 取
+\[
+c=\frac{b+\sqrt{b^2+4a}}2,
+\]
+则 $c>b>0$，且 $a/(b-c)=-c$。由条件，
+\[
+f''(x)-cf'(x)\le(b-c)f'(x)+af(x)=(b-c)(f'(x)-cf(x)).
+\]
+这说明 $e^{-(b-c)x}(f'(x)-cf(x))$ 单调递减。该函数当 $x\to-\infty$ 时极限为零，故 $f'(x)-cf(x)\le0$。
+
+(iii) 常数 $c$ 是最佳的，因为取 $f(x)=e^{cx}$，则 $f''(x)=af(x)+bf'(x)$。\hfill$\square$
+
+\ex{2.4.8}{第六届全国初赛题}设 $\alpha\in(0,1)$，$\{a_n\}$ 是正数列且满足
+\[
+\lim_{n\to+\infty}n^\alpha\left(\frac{a_n}{a_{n+1}}-1\right)=\lambda\in(0,+\infty).
+\]
+求证：$\lim_{n\to+\infty}n^ka_n=0$，其中 $k>0$。
+\pf 由条件可从某项开始 $\{a_n\}$ 单调递减，故 $a_n\to a\ge0$。若 $a>0$，则
+\[
+\lim_{n\to+\infty}\frac{a_n-a_{n+1}}{1/n^\alpha}
+=\lim_{n\to+\infty}n^\alpha\left(\frac{a_n}{a_{n+1}}-1\right)a_{n+1}=\lambda a>0.
+\]
+由于 $\sum 1/n^\alpha$ 发散，$\sum(a_n-a_{n+1})$ 也应发散；但此级数收敛到 $a_1-a$，矛盾。故 $a=0$。令 $b_n=n^ka_n$，则
+\[
+n^\alpha\left(\frac{b_n}{b_{n+1}}-1\right)
+=\left(\frac{n}{n+1}\right)^k
+\left[n^\alpha\left(\frac{a_n}{a_{n+1}}-1\right)
+-n^\alpha\left(\left(1+\frac1n\right)^k-1\right)\right].
+\]
+因 $\left(1+1/n\right)^k-1\sim k/n$ 且 $\alpha<1$，上式极限为 $\lambda$。由前面的论证，$b_n\to0$，即所证结论。\hfill$\square$
+
+\ex{2.4.9}{第七届全国初赛题}数列 $\{a_n\}$ 满足 $a_{n+1}=a_n+n/a_n$，$a_1>0$。求证：$\lim_{n\to+\infty}n(a_n-n)$ 存在。
+\pf $a_2=a_1+1/a_1\ge2$。若 $a_n\ge n$，则
+\[
+a_{n+1}-(n+1)=\left(1-\frac1{a_n}\right)(a_n-n)\ge0.
+\]
+故 $a_n\ge n$（$n\ge2$），且 $\{a_n-n\}$ 单调递减。令 $b_n=n(a_n-n)$，则
+\begin{align*}
+b_{n+1}&=(n+1)(a_{n+1}-n-1)\\
+&=(a_n-n)(n+1)\left(1-\frac1{a_n}\right)\\
+&=\left(1+\frac{a_n-n}{na_n}-\frac1{na_n}\right)b_n
+=(1+R_n)b_n,
+\end{align*}
+其中 $R_n=(a_n-n)/(na_n)-1/(na_n)$。考虑
+\[
+|R_n|\le\left|\frac{a_n-n}{na_n}\right|+\frac1{na_n}
+\le\frac{1+|a_2-2|}{n^2},\qquad n\ge2.
+\]
+由于 $\sum |R_n|$ 收敛，无穷乘积 $\prod_{k=2}^{\infty}(1+R_k)$ 存在，故 $b_n=b_2\prod_{k=2}^{n-1}(1+R_k)$ 收敛。\hfill$\square$
+
+\ex{2.4.10}{第八届全国初赛题}设 $f_0,f_1$ 是 $[0,1]$ 上的正连续函数，满足 $\int_0^1f_0(x)\,\mathrm dx\le\int_0^1f_1(x)\,\mathrm dx$。设
+\[
+f_{n+1}(x)=\frac{2f_n^2(x)}{f_n(x)+f_{n-1}(x)},\qquad n=1,2,\ldots.
+\]
+求证：数列 $a_n=\int_0^1f_n(x)\,\mathrm dx$（$n=0,1,2,\ldots$）单调递增且收敛。
+\pf 因为
+\begin{align*}
+\int_0^1\frac{f_1^2}{f_1+f_0}\,\mathrm dx
+-\int_0^1\frac{f_0^2}{f_1+f_0}\,\mathrm dx
+&=\int_0^1(f_1-f_0)\,\mathrm dx\ge0,
+\end{align*}
+所以
+\begin{align*}
+a_2-a_1
+&=2\int_0^1\frac{f_1^2}{f_1+f_0}\,\mathrm dx-\int_0^1f_1\,\mathrm dx\\
+&\ge\int_0^1\frac{f_1^2+f_0^2-2f_1f_0}{2(f_1+f_0)}\,\mathrm dx\ge0.
+\end{align*}
+归纳得 $a_{n+1}\ge a_n$。由于 $f_0,f_1$ 是正连续函数，可取常数 $k\ge1$ 使得 $f_1\le kf_0$。设 $c_1=k$，递推得
+\[
+f_n(x)\le c_nf_{n-1}(x),\qquad c_{n+1}=\frac{2c_n}{c_n+1}.
+\]
+易证 $\{c_n\}$ 单调递减趋于 $1$，且 $c_n/(1+c_n)\le k/(k+1)$。又 $a_{n+1}\le c_{n+1}a_n$，故
+\[
+c_{n+1}a_{n+1}\le\frac{4c_n}{(c_n+1)^2}c_na_n\le c_na_n.
+\]
+因此 $\{c_na_n\}$ 为正单调递减数列，故收敛。由 $c_n\to1$ 知 $\{a_n\}$ 收敛。\hfill$\square$
+
+\ex{2.4.11}{第七届全国决赛题}设 $\alpha,f$ 为 $\mathbb R$ 上的连续函数，且对任意 $x\in\mathbb R$ 有 $\alpha(x)>0$。已知 $\int_0^\infty\alpha(x)\,\mathrm dx=+\infty$，$\lim_{x\to+\infty}f(x)/\alpha(x)=0$，$y'(x)+\alpha(x)y(x)=f(x)$。求证：$\lim_{x\to+\infty}y(x)=0$。
+\pf 令 $F(x)=\int_0^x\alpha(t)\,\mathrm dt$，则
+\[
+y(x)=Ce^{-F(x)}+\int_0^x f(t)e^{F(t)-F(x)}\,\mathrm dt.
+\]
+对任意 $\varepsilon>0$，存在 $x_0$，当 $t\ge x_0$ 时 $|f(t)|\le\varepsilon\alpha(t)$。将积分在 $x_0$ 处分开，其中
+\begin{align*}
+\left|e^{-F(x)}\int_{x_0}^{x}f(t)e^{F(t)}\,\mathrm dt\right|
+&\le\varepsilon e^{-F(x)}\int_{x_0}^{x}\alpha(t)e^{F(t)}\,\mathrm dt\\
+&=\varepsilon\bigl(1-e^{-F(x)+F(x_0)}\bigr)<\varepsilon.
+\end{align*}
+又 $F(x)\to+\infty$，故常数项及从 $0$ 到 $x_0$ 的积分项乘以 $e^{-F(x)}$ 后均趋零。因此
+\[
+\limsup_{x\to+\infty}|y(x)|\le\varepsilon.
+\]
+由 $\varepsilon$ 的任意性可知 $y(x)\to0$。\hfill$\square$
+
+\ex{2.4.12}{第一届全国决赛题}设 $f$ 在 $[0,+\infty)$ 上一致连续，且对于固定的 $x\in[0,+\infty)$，当自然数 $n\to+\infty$ 时 $f(x+n)\to0$。证明函数列 $\{f(x+n)\mid n=1,2,\ldots\}$ 在 $[0,1]$ 上一致收敛于 $0$。
+\pf 由 $f$ 在 $[0,+\infty)$ 上一致连续，故对任意 $\varepsilon>0$，存在 $\delta>0$，使得当 $|x_1-x_2|<\delta$（$x_1,x_2\ge0$）时，$|f(x_1)-f(x_2)|<\varepsilon/2$。
+
+取充分大的自然数 $m>\delta^{-1}$，在 $[0,1]$ 中取 $m+1$ 个点 $x_j=j/m$（$j=0,1,\ldots,m$），则 $|x_{j+1}-x_j|=1/m<\delta$。对每个 $x_j$，存在 $N_j$，使得 $n>N_j$ 时 $|f(x_j+n)|<\varepsilon/2$。令 $N=\max\{N_0,\ldots,N_m\}$。对任意 $x\in[0,1]$，取 $j$ 使得 $x\in[x_j,x_{j+1}]$，则当 $n>N$ 时
+\[
+|f(x+n)|\le|f(x+n)-f(x_j+n)|+|f(x_j+n)|<\varepsilon.
+\]
+$N$ 的选取与 $x$ 无关，故所给函数列在 $[0,1]$ 上一致收敛于 $0$。\hfill$\square$
+\end{document}

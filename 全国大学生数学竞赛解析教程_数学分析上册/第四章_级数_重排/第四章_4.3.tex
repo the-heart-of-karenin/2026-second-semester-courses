@@ -1,0 +1,126 @@
+\subsection*{4.3 比值渐近展开式与级数收敛性}
+
+本节讨论比值判别法的临界情形。以下只保留判别法的结论；例题的分析与解答仍予转写。
+
+\thm{4.3.1}（Gauss 判别法）设 $x_n>0$，且有常数 $r,p>0$ 使
+\[
+\frac{x_n}{x_{n+1}}=\frac1r+\frac pn+O\!\left(\frac1{n^2}\right).
+\]
+若 $r<1$，则 $\sum_{n=1}^{\infty}x_n$ 收敛；若 $r>1$，则发散。若 $r=1$，则 $p>1$ 时收敛，$p\leq1$ 时发散。
+
+\thm{4.3.2}设 $x_n>0$，参数 $r,p,q>0$。
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item 若 $x_n/x_{n+1}=1/r+o(1)$，则 $r<1$ 时级数收敛，$r>1$ 时发散。
+\item 若 $x_n/x_{n+1}=1+p/n+o(1/n)$，则 $p>1$ 时级数收敛，$p<1$ 时发散。
+\item 若 $x_n/x_{n+1}=1+1/n+q/(n\ln n)+o(1/(n\ln n))$，则 $q>1$ 时级数收敛，$q<1$ 时发散。
+\end{enumerate}
+等于临界值时，上述相应的渐近式本身不能判定敛散。
+
+\thm{4.3.3}设 $x_n>0$，而 $\sum b_n$ 与 $\sum b_n^2$ 均收敛。下列各式分别成立时，级数 $\sum x_n$ 均发散：
+\begin{enumerate}[label=（\arabic*）,leftmargin=3em]
+\item $\displaystyle \frac{x_n}{x_{n+1}}=1+b_n$；
+\item $\displaystyle \frac{x_n}{x_{n+1}}=1+\frac1n+b_n$；
+\item $\displaystyle \frac{x_n}{x_{n+1}}=1+\frac1n+\frac{q}{n\ln n}+b_n$，其中 $q\leq1$。
+\end{enumerate}
+\noindent\textit{校勘：原书第（3）项未限制 $q$，但 $q>1$ 时取 $b_n=0$ 即可得到收敛级数（其通项与 $1/[n(\ln n)^q]$ 等价）。故在第（3）项补上 $q\leq1$。}
+
+\ex{4.3.1}对 $x>0$，定义
+\[
+g(x)=\begin{cases}\ln x,&\ln x>1,\\1,&\text{其他情况},\end{cases}
+\qquad g_0(x)=1,\quad g_1(x)=g(x),\quad g_{k+1}(x)=g(g_k(x)).
+\]
+问级数
+\[
+\sum_{n=1}^{\infty}\frac{1}{n g_1(n)g_2(n)\cdots g_n(n)}
+\]
+是否收敛？
+\sol 发散。记 $F(x)=xg_1(x)g_2(x)\cdots$；对每个固定的 $x$，只有有限个因子不等于 $1$。$1/F(x)$ 最终单调递减，可用 Cauchy 积分判别法。令 $a_0=1$、$a_j=e^{a_{j-1}}$。在 $(a_{j-1},a_j)$ 上连续换元 $t=g_{j-1}(x)$，得到
+\[
+\int_{a_{j-1}}^{a_j}\frac{\mathrm dx}{F(x)}
+=\int_{a_{j-1}}^{a_j}\frac{\mathrm dx}{xg_1(x)\cdots g_j(x)}=1.
+\]
+故 $\int_1^{\infty}\!\mathrm dx/F(x)=\sum_{j=1}^{\infty}1=\infty$，所给级数发散。
+
+\ex{4.3.2}仍取上例的 $g_j,a_j$。在 $x\in[a_{j-1},a_j)$ 上把 $F$ 改为
+\[
+F(x)=xg_1(x)\cdots g_{j-2}(x)g_{j-1}(x)^2.
+\]
+问 $\sum_{n=1}^{\infty}1/F(n)$ 是否收敛？
+\sol 仍发散。除开首个有限区间，在每个区间 $(a_{j-1},a_j)$（$j\ge2$）上，积分的最后一步成为 $\int_1^e t^{-2}\,\mathrm dt$，于是
+\[
+\int_{a_1}^{\infty}\frac{\mathrm dx}{F(x)}
+=\sum_{j=2}^{\infty}\int_{a_{j-1}}^{a_j}\frac{\mathrm dx}{F(x)}
+=\sum_{j=2}^{\infty}(1-e^{-1})=\infty.
+\]
+这里虽然最后一个因子的幂次已从 $1$ 增到 $2$，但其出现的位置也随 $x$ 不断后移。
+
+\ex{4.3.3}仍沿用以上记号，在 $x\in[a_{j-1},a_j)$ 上改取
+\[
+F(x)=xg_1(x)\cdots g_{j-2}(x)g_{j-1}(x)^{j^2}.
+\]
+问 $\sum_{n=1}^{\infty}1/F(n)$ 是否收敛？
+\sol 收敛。逐段积分得
+\[
+\int_{a_{j-1}}^{a_j}\frac{\mathrm dx}{F(x)}
+=\int_1^e t^{-j^2}\,\mathrm dt
+=\frac{1-e^{1-j^2}}{j^2-1}\quad(j\ge2).
+\]
+由 $\sum_{j=2}^{\infty}(j^2-1)^{-1}<\infty$ 知 $\int_1^{\infty}\!\mathrm dx/F(x)<\infty$；再用积分判别法，所求级数收敛。
+
+\ex{4.3.4}令 $q_1<q_2<\cdots$ 为所有质数。证明 $\sum_{j=1}^{\infty}1/q_j$ 发散。
+\pf 假若收敛，则 $\prod_j(1-1/q_j)^{-1}$ 收敛于有限正数。但由整数的唯一素因子分解，对任意 $N$ 有
+\[
+\prod_{j=1}^{N}\frac1{1-q_j^{-1}}
+=\prod_{j=1}^{N}\left(\sum_{m=0}^{\infty}q_j^{-m}\right)
+\geq\sum_{m=1}^{N}\frac1m\longrightarrow\infty,
+\]
+矛盾。因此质数倒数之和发散。\hfill$\square$
+
+\ex{4.3.5}设 $A=\{n\in\mathbb N:n\text{ 的十进制表示中不含数字 }9\}$。证明 $\sum_{n\in A}1/n$ 收敛。
+\pf 有 $j$ 位且不含 $9$ 的正整数不超过 $8\cdot9^{j-1}$ 个，而每个都不小于 $10^{j-1}$。故
+\[
+\sum_{n\in A}\frac1n
+\leq\sum_{j=1}^{\infty}\frac{8\cdot9^{j-1}}{10^{j-1}}<\infty.
+\]
+\hfill$\square$
+
+\ex{4.3.6}将正整数 $s$ 视作一个固定的数字串，令
+\[
+A=\{n\in\mathbb N:n\text{ 的十进制表示中不含数字串 }s\}.
+\]
+证明 $\sum_{n\in A}1/n$ 收敛。
+\pf 设 $s$ 有 $t$ 位，置 $p=10^t$。考察所有 $p$ 进制表示中不含作为单个数字的 $s$ 的正整数集合 $B$。凡十进制表示不含串 $s$ 的整数，其 $p$ 进制表示也不含这个数字，所以 $A\subseteq B$。在有 $j$ 位的 $p$ 进制整数中，属于 $B$ 的数至多 $(p-2)(p-1)^{j-1}$ 个，每个至少为 $p^{j-1}$。于是
+\[
+\sum_{n\in A}\frac1n\leq\sum_{n\in B}\frac1n
+\leq\sum_{j=1}^{\infty}\frac{(p-2)(p-1)^{j-1}}{p^{j-1}}<\infty.
+\]
+\hfill$\square$
+
+\ex{4.3.7}证明 $\sum_{n=1}^{\infty}n^{-1-1/n}$ 发散。
+\pf 由于 $n^{1/n}\to1$，通项与 $1/n$ 等价，结论即得。原书也以积分判别说明此事：换元 $t=\ln x$ 后，
+\[
+\int_1^{\infty}x^{-1-1/x}\,\mathrm dx
+=\int_0^{\infty}e^{-t/e^t}\,\mathrm dt=\infty.
+\]
+\hfill$\square$
+
+\ex{4.3.8}证明 $\sum_{n=1}^{\infty}n^{-1-|\sin n|}$ 发散。
+\pf 关键是找出足够多满足 $|\sin n|$ 很小的整数。对 $j\ge2$，令
+\[
+A_j=\{1\leq k\leq 2^j:|\sin k|\leq 1/j\},\qquad m_j=|A_j|.
+\]
+把单位圆分为至多 $7j$ 条长度不超过 $1/j$ 的小弧。考察 $2^j+1$ 个点 $e^{ik}$（$0\leq k\leq2^j$），由抽屉原理，同一小弧内至少有 $\lceil(2^j+1)/(7j)\rceil$ 个点。取其中一个为基准，其余点的指标差给出互异的正整数 $k\leq2^j$，并满足 $|\sin k|\leq|e^{ik}-1|\leq1/j$。因而对充分大的 $j$，有 $m_j\geq 2^j/(8j)$。
+
+在 $2^{j-1}<k\leq2^j$ 的区间里，满足 $|\sin k|\leq1/j$ 的整数至少有 $m_j-m_{j-1}$ 个；其中每项不小于 $2^{-j-1}$。故前 $2^J$ 项之和至少为
+\[
+\sum_{j=2}^{J}\frac{m_j-m_{j-1}}{2^{j+1}}
+\geq -C+\sum_{j=2}^{J-1}\frac{m_j}{2^{j+2}}
+\geq-C+\frac1{32}\sum_{j\geq j_0}^{J-1}\frac1j\longrightarrow\infty.
+\]
+所给级数发散。\hfill$\square$
+
+\thm{4.3.4}设 $s$ 是无理数。对任意区间 $[a,b)\subset[0,1)$，令
+\[
+A_n=\{1\leq k\leq n:\{ks\}\in[a,b)\},\qquad m_n=|A_n|,
+\]
+其中 $\{x\}$ 为小数部分，则 $m_n/n\to b-a$。这说明数列 $\{ks\}$ 在 $[0,1)$ 上均匀分布。

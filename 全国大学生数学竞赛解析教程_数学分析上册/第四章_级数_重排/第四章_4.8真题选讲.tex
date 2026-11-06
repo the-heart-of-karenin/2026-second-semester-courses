@@ -1,0 +1,296 @@
+\subsection*{4.8 真题选讲}
+
+本节分析一些常见的级数题以及容易出现的错误。
+
+\ex{4.8.1}函数序列
+\[
+S_n(x)=n|\ln x|^a\left(\sin\frac{\pi x}{2}\right)^n
+\]
+在 $x\in(0,1)$ 上一致收敛，则参数 $a\in\mathbb R$ 满足什么条件？
+\sol 答案为 $a>2$。对每个 $x\in(0,1)$，有 $S_n(x)\to0$。当 $a\geq0$ 且 $0<x\leq\frac12$ 时，$x|\ln x|^a$ 有界，因而
+\[
+0\leq S_n(x)
+\leq n|\ln x|^a\sin\frac{\pi x}{2}
+\left(\sin\frac\pi4\right)^{n-1}
+\leq Cn\left(\sin\frac\pi4\right)^{n-1}.
+\]
+故在 $(0,\frac12]$ 上一致收敛。若在 $[\frac12,1)$ 上一致收敛，必有 $a\geq0$；否则每个 $S_n$ 在 $x=1$ 附近无界。
+
+在 $[\frac12,1)$ 上令 $t=\sin(\pi x/2)$。因为 $|\ln x|$ 与 $(1-t)^{1/2}$ 在此区间可比，存在常数 $C_2>C_1>0$ 使
+\[
+C_1\leq \frac{S_n(x)}{n(1-t)^{a/2}t^n}\leq C_2.
+\]
+于是所求一致收敛性等价于 $T_n(t)=n(1-t)^{a/2}t^n$ 在 $[\sin(\pi/4),1)$ 上一致趋于零。$n$ 充分大时，$T_n$ 在 $t=n/(n+a/2)$ 取得最大值
+\[
+\frac{n(a/2)^{a/2}}{(n+a/2)^{a/2}}
+\left(\frac{n}{n+a/2}\right)^n
+\sim (a/2)^{a/2}e^{-a/2}n^{1-a/2}.
+\]
+故当且仅当 $a>2$ 时一致收敛。
+
+\ex{4.8.2}使函数项级数
+\[
+\sum_{n=2}^{\infty}\frac{\sin nx}{n^{ax}}
+\]
+关于 $x\in[\pi,+\infty)$ 一致收敛的实常数 $a$ 的取值范围是什么？
+\sol 级数要在整个区间逐点收敛，须有 $a>0$。对任意 $\delta\in(0,\pi)$，三角和在 $[\pi,2\pi-\delta]$ 上一致有界，且 $n^{-ax}$ 单调趋零；由 Dirichlet 判别法，级数在这个区间一致收敛。
+
+若 $a\leq1/(2\pi)$，对任意 $m\geq2$，令 $x_m=2\pi-1/(2m)$。因为 $n/(2m)\in[1/2,1]$ 且 $ax_m\leq1$，有
+\[
+\left|\sum_{n=m+1}^{2m}\frac{\sin(nx_m)}{n^{ax_m}}\right|
+\geq\frac2\pi\sum_{n=m+1}^{2m}\frac{n/(2m)}n
+=\frac1\pi.
+\]
+一致收敛的 Cauchy 准则不成立。若 $a>1/(2\pi)$，可取 $\delta>0$ 使 $\alpha=a(2\pi-\delta)>1$。级数在 $[2\pi-\delta,+\infty)$ 上受收敛的级数 $\sum n^{-\alpha}$ 控制，故一致收敛。综上，条件是
+\[
+\boxed{a>\frac1{2\pi}}.
+\]
+
+\ex{4.8.3}函数项级数
+\[
+\sum_{n=1}^{\infty}\sqrt n\,x^n(1-x)^a
+\]
+在 $x\in[0,1]$ 上一致收敛，参数 $a\in\mathbb R$ 满足什么条件？
+\sol \textbf{原书勘误：}原书写为 $a>\frac12$，但该条件只保证通项一致趋于零，不能保证级数一致收敛。正确条件为 $a>\frac32$。
+
+首先，$a>0$ 是题式在 $x=1$ 有定义且通项为零的自然要求。对 $a>0$，每项的最大值满足
+\[
+\max_{x\in[0,1]}\sqrt n\,x^n(1-x)^a
+=\sqrt n\left(\frac{n}{n+a}\right)^n
+\left(\frac{a}{n+a}\right)^a
+\sim a^ae^{-a}n^{1/2-a}.
+\]
+这只推出必要条件 $a>\frac12$。若 $a>\frac32$，上式给出可求和的逐项上界 $Cn^{1/2-a}$；由 Weierstrass 判别法，原级数一致收敛。
+
+反过来，对 $0<a\leq\frac32$，令 $y=1-x\downarrow0$，则积分比较（或 Riemann 和）给出
+\[
+\sum_{n=1}^{\infty}\sqrt n\,(1-y)^n y^a
+\sim \Gamma\!\left(\frac32\right)y^{a-3/2}.
+\]
+当 $a<\frac32$ 时该值无界，当 $a=\frac32$ 时趋向非零常数，而级数在 $x=1$ 的和为 $0$。因此和函数在 $x=1$ 不连续，级数不可能一致收敛。
+
+\ex{4.8.4}判断无穷乘积
+\[
+\prod_{n=1}^{\infty}
+\left(\frac\pi2\prod_{k=1}^{n}
+\left(1-\frac1{(2k)^2}\right)\right)
+\]
+收敛还是发散。
+\sol 由 Wallis 公式或 Euler 正弦乘积公式，
+\[
+\lim_{n\to\infty}\frac\pi2\prod_{k=1}^{n}
+\left(1-\frac1{(2k)^2}\right)=1.
+\]
+但各有限乘积大于 $1$，且
+\[
+\begin{aligned}
+\ln\!\left(\frac\pi2\prod_{k=1}^{n}
+\left(1-\frac1{(2k)^2}\right)\right)
+&=-\ln\prod_{k=n+1}^{\infty}\left(1-\frac1{(2k)^2}\right)\\
+&=-\sum_{k=n+1}^{\infty}\ln\left(1-\frac1{(2k)^2}\right)
+\sim\frac1{4n}.
+\end{aligned}
+\]
+这些对数之和发散，故原无穷乘积发散（趋于 $+\infty$）。
+
+\ex{4.8.5}使函数项级数
+\[
+\sum_{n=2022}^{\infty}(-1)^n x^n
+\left(1+\frac{ax}{n}\right)^{-n^2}
+\]
+关于 $x\in[1,+\infty)$ 一致收敛的实常数 $a$ 的范围是什么？
+\sol 首先必须 $a>0$。当 $n$ 足够大时，
+\[
+x\left(1+\frac{ax}{n}\right)^{-n}\sim xe^{-ax}.
+\]
+后者的最大值为 $1/(ae)$，在 $x=1/a$ 处取得，提示临界值 $a=e^{-1}$。
+
+若 $0<a\leq e^{-1}$，取 $x=1/a\in[1,+\infty)$，则
+\[
+\limsup_{n\to\infty}\sup_{x\geq1}
+\left|(-1)^nx^n\left(1+\frac{ax}{n}\right)^{-n^2}\right|
+\geq\lim_{n\to\infty}e^n\left(1+\frac1n\right)^{-n^2}
+=e^{1/2}>0.
+\]
+通项不一致趋于零，原级数不一致收敛。
+
+若 $a>e^{-1}$，取 $e^{-1}<A\leq\min\{1,a\}$。对充分大的 $n$，存在 $c<1$ 使
+\[
+\frac1A\left(1-\frac1n\right)^{n-1}\leq c.
+\]
+于是
+\[
+\begin{aligned}
+\sup_{x\geq1}\left|(-1)^nx^n
+\left(1+\frac{ax}{n}\right)^{-n^2}\right|
+&\leq\sup_{x\geq1}
+\left(\frac{x}{(1+Ax/n)^n}\right)^n\\
+&\leq\left[\frac1A
+\left(1-\frac1n\right)^{n-1}\right]^n
+\leq c^n.
+\end{aligned}
+\]
+由 Weierstrass 判别法，原级数一致收敛。所以条件为 $a>e^{-1}$。
+
+\ex{4.8.6}设
+\[
+S(x)=\sum_{n=0}^{\infty}x^{3/2}\sqrt n\,e^{-nx},
+\]
+求 $S(x)$ 的定义域，并讨论其连续性、可微性。
+\sol 因 $x^{3/2}$ 的实数定义域为 $[0,+\infty)$，只需在此范围内考虑。$S(0)=0$。幂级数 $\sum_{n=0}^{\infty}\sqrt n\,t^n$ 在 $|t|<1$ 内收敛且可任意次求导；令 $t=e^{-x}$，可知 $S$ 在 $(0,+\infty)$ 上有定义且光滑。
+
+下证 $S$ 在 $0$ 处不连续。对任意 $x>0$、$n\geq1$ 及 $t\in[n-1,n]$，有
+\[
+\sqrt n\,e^{-nx}\geq e^{-x}\sqrt t\,e^{-tx}.
+\]
+因此
+\[
+\begin{aligned}
+S(x)
+&=\sum_{n=1}^{\infty}x^{3/2}\int_{n-1}^{n}\sqrt n\,e^{-nx}\,\mathrm dt\\
+&\geq e^{-x}\int_0^{\infty}x^{3/2}\sqrt t\,e^{-tx}\,\mathrm dt
+=e^{-x}\int_0^{\infty}\sqrt u\,e^{-u}\,\mathrm du.
+\end{aligned}
+\]
+右端当 $x\downarrow0$ 趋向正常数，故 $S$ 在 $0$ 点不连续，从而在该点不可导。也可取 $x=1/n$，直接得
+\[
+S\!\left(\frac1n\right)
+\geq\sum_{k=n+1}^{2n}\frac{\sqrt k}{n^{3/2}}e^{-k/n}
+\geq e^{-2}>0.
+\]
+% 原书第4章 4.8 真题选讲后半：纸书第182--190页，PDF第193--201页。
+% 按要求略去4.8.8、4.8.12、4.8.13（三角级数、Fourier级数）。
+
+\ex{4.8.9}设 $a_n\ne-1$（$n\ge1$），$\lim_{n\to\infty}a_n=0$，无穷乘积
+$\prod_{n=1}^{\infty}(1+a_n)$ 收敛。
+原题第（1）问要求构造收敛、发散例子，按筛选要求省略。现保留第（2）问：证明级数 $\sum_{n=1}^{\infty}a_n$ 收敛当且仅当 $\sum_{n=1}^{\infty}a_n^2$ 收敛。
+\pf 因为
+\[
+\lim_{x\to0}\frac{x-\ln(1+x)}{x^2}=\frac12,
+\]
+存在常数 $M>0$ 和充分大的 $N$，使得
+\[
+\frac1M a_n^2\le a_n-\ln(1+a_n)\le Ma_n^2\qquad(n\ge N).
+\]
+故 $\sum(a_n-\ln(1+a_n))$ 与 $\sum a_n^2$ 同敛散。
+题设保证 $\sum\ln(1+a_n)$ 收敛，因此 $\sum a_n$ 收敛当且仅当 $\sum a_n^2$ 收敛。
+
+\ex{4.8.10}设 $\mathbb R^n$ 上连续函数列 $\{f_k(x)\}$ 对于每一个 $x\in\mathbb R^n$ 都是有界的。证明：存在内点非空的集合 $E\subset\mathbb R^n$，使得 $\{f_k\}$ 在 $E$ 上一致有界，即存在与 $k$ 无关的常数 $M>0$，使
+\[
+|f_k(x)|\le M,\qquad \forall k\ge1,\ x\in E.
+\]
+\pf 否则，对任意 $x\in\mathbb R^n$ 及 $\delta>0$，$\{f_k\}$ 在以 $x$ 为中心、边长为 $2\delta$ 的闭方体 $Q_\delta(x)$ 上均不一致有界。
+
+先取 $x_0=0$。由于 $\{f_k\}$ 在 $Q_1(0)$ 上不一致有界，存在 $m_1\ge1$ 和 $\xi_1\in Q_1(x_0)$，使 $|f_{m_1}(\xi_1)|\ge2$。由 $f_{m_1}$ 的连续性，可选取 $x_1$ 与 $0<\delta_1<1/2$，使
+\[
+Q_{\delta_1}(x_1)\subset Q_1(x_0),\qquad
+|f_{m_1}(x)|\ge1\quad(\forall x\in Q_{\delta_1}(x_1)).
+\]
+类似地，由有限个连续函数在闭方体上有界，能选 $m_2>m_1$ 与 $\xi_2\in Q_{\delta_1}(x_1)$，使 $|f_{m_2}(\xi_2)|\ge3$。连续性又给出 $x_2$ 与 $0<\delta_2<\delta_1/2$，使
+\[
+Q_{\delta_2}(x_2)\subset Q_{\delta_1}(x_1),\qquad
+|f_{m_2}(x)|\ge2\quad(\forall x\in Q_{\delta_2}(x_2)).
+\]
+如此递推，得到 $m_1<m_2<\cdots$、$x_k\in\mathbb R^n$ 与 $\delta_k>0$，满足
+\[
+\delta_{k+1}<\frac{\delta_k}{2},\qquad
+Q_{\delta_{k+1}}(x_{k+1})\subset Q_{\delta_k}(x_k),\qquad
+|f_{m_k}(x)|\ge k\quad(\forall x\in Q_{\delta_k}(x_k)).
+\]
+由闭集套定理，这些闭方体有唯一公共点 $\xi$。于是
+$|f_{m_k}(\xi)|\ge k$（$k\ge1$），与题设中 $\{f_k(\xi)\}$ 有界矛盾。
+
+\ex{4.8.11}问无穷乘积
+\[
+\prod_{n=1}^{\infty}\frac{\ln(\sqrt{2n}+(-1)^n)}{\ln\sqrt{2n}}
+\]
+是否收敛？证明你的结论。
+\sol 从 $n\ge2$ 起，每个因子都为正，可将其对数写成
+\[
+\ln\frac{\ln(\sqrt{2n}+(-1)^n)}{\ln\sqrt{2n}}
+=\ln\left(1+
+\frac{\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)}{\ln\sqrt{2n}}
+\right).
+\]
+由于
+\begin{align*}
+&\lim_{n\to\infty} n\ln n\left[
+\frac{\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)}{\ln\sqrt{2n}}
+-\frac{(-1)^n}{\sqrt{2n}\ln\sqrt{2n}}
+\right]\\
+&\quad=\lim_{n\to\infty}2n\left[
+\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)
+-\frac{(-1)^n}{\sqrt{2n}}\right]
+=\lim_{x\to0}\frac{\ln(1+x)-x}{x^2}=-\frac12,
+\end{align*}
+级数
+\[
+\sum_{n=2}^{\infty}\left[
+\frac{\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)}{\ln\sqrt{2n}}
+-\frac{(-1)^n}{\sqrt{2n}\ln\sqrt{2n}}
+\right]
+\]
+发散。另一方面，$\sum_{n=2}^{\infty}(-1)^n/(\sqrt{2n}\ln\sqrt{2n})$ 收敛，因而
+\[
+\sum_{n=2}^{\infty}
+\frac{\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)}{\ln\sqrt{2n}}
+\quad\text{发散}.
+\]
+又因为该一般项趋于零，且
+\[
+\ln(1+u_n)-u_n=O(u_n^2),\qquad
+u_n=\frac{\ln\left(1+\frac{(-1)^n}{\sqrt{2n}}\right)}{\ln\sqrt{2n}},
+\]
+而 $\sum_{n=2}^{\infty}u_n^2$ 收敛，故 $\sum_{n=2}^{\infty}\ln(1+u_n)$ 发散。原无穷乘积发散。
+
+\ex{4.8.15}设 $\{a_n\}$ 为有界的正数列，$S_n=\sum_{k=1}^{n}a_k$。证明：级数 $\sum_{n=1}^{\infty}a_n$ 收敛，当且仅当级数
+\[
+\sum_{n=1}^{\infty}\frac{a_n}{S_n\ln(S_n+1)}
+\]
+收敛。
+\noindent\textit{校勘：原书只假设 $a_n>0$，结论并不成立。例如取 $a_n=\exp(e^n)$，则 $S_n\sim a_n$，右侧通项与 $e^{-n}$ 等价，因而右侧级数收敛，而 $\sum a_n$ 发散。这里补充原书证明实际使用的“有界”条件。}
+\pf 设 $a_n\le M$。由于 $\{S_n\}$ 单调增加，故
+$L:=\lim_{n\to\infty}S_n\in(0,+\infty]$。不论 $L<+\infty$（此时 $a_n\to0$），还是 $L=+\infty$，都有
+\[
+\lim_{n\to\infty}\frac{a_n}{S_n}=0,
+\qquad
+\lim_{n\to\infty}\frac{S_{n-1}}{S_n}=1.
+\]
+\textbf{方法1。}对 $n\ge2$ 比较相邻的双重对数差与原级数的一般项。由对数的标准极限，
+\begin{align*}
+&\lim_{n\to\infty}
+\frac{\ln\ln(S_n+1)-\ln\ln(S_{n-1}+1)}{a_n/[S_n\ln(S_n+1)]}\\
+&=\lim_{n\to\infty}
+\frac{\ln\bigl(\ln(S_n+1)/\ln(S_{n-1}+1)\bigr)}{a_n/[S_n\ln(S_n+1)]}\\
+&=\lim_{n\to\infty}
+\frac{\ln\bigl((S_n+1)/(S_{n-1}+1)\bigr)}{a_n/S_n}
+=\lim_{n\to\infty}\frac{S_n}{S_{n-1}+1}
+=\frac{1}{1+1/L}>0.
+\end{align*}
+故正项级数 $\sum a_n/[S_n\ln(S_n+1)]$ 与
+\[
+\sum_{n=2}^{\infty}\bigl[\ln\ln(S_n+1)-\ln\ln(S_{n-1}+1)\bigr]
+\]
+同敛散。后者为望远镜级数，其部分和等于
+$\ln\ln(S_N+1)-\ln\ln(S_1+1)$，恰在 $S_N$ 趋于有限值时收敛。这等价于 $\sum a_n$ 收敛。
+
+\textbf{方法2。}必要性：若 $\sum a_n$ 收敛，由 $S_n\ge a_1>0$，可得
+\[
+\frac{a_n}{S_n\ln(S_n+1)}
+\le\frac{a_n}{a_1\ln(a_1+1)},
+\]
+故所求级数收敛。充分性：若 $\sum a_n$ 发散，则 $S_n\to+\infty$。由中值定理，对于 $n\ge2$ 存在 $\xi_n\in(S_{n-1},S_n)$ 使
+\[
+\ln\ln(S_n+1)-\ln\ln(S_{n-1}+1)
+=\frac{a_n}{(\xi_n+1)\ln(\xi_n+1)}
+\le\frac{a_n}{S_{n-1}\ln(S_{n-1}+1)}.
+\]
+左侧求和发散，故右侧的正项级数发散。又有
+\[
+\lim_{n\to\infty}
+\frac{a_n/[S_n\ln(S_n+1)]}
+{a_n/[S_{n-1}\ln(S_{n-1}+1)]}=1,
+\]
+由比较判别法，$\sum a_n/[S_n\ln(S_n+1)]$ 也发散。
+
+

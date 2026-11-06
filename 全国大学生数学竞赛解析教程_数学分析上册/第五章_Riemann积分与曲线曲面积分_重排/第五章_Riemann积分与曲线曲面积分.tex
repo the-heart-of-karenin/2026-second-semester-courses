@@ -1,0 +1,186 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb,amsthm,geometry,enumitem}
+\geometry{margin=2.35cm}
+\setlength{\parindent}{2em}\setlength{\parskip}{4pt}
+\newcommand{\ex}[1]{\par\medskip\noindent\textbf{【例 #1】}\;}
+\newcommand{\thm}[1]{\par\medskip\noindent\textbf{【定理 #1】}\;}
+\newcommand{\sol}{\par\noindent\textbf{解/证明}\;}
+\newcommand{\R}{\mathbb R}
+\title{第五章\quad Riemann 积分、曲线积分及曲面积分\\\large 竞赛复习重排稿}
+\author{据《全国大学生数学竞赛解析教程·数学分析（上册）》转写}\date{}
+\begin{document}\maketitle
+\noindent 本章略去常规积分性质、曲线与曲面积分的繁复定义及重复计算题，保留非平凡结论、代表性计算与全部真题选讲。原书编号保留，以便检索。
+\section*{5.1 Riemann 积分}
+\thm{5.1.3（可积判别）}有界函数 $f$ 在有界区域 $D$ 上 Riemann 可积，当且仅当随分割直径趋于零，振幅和 $\sum_j\omega_j\operatorname{vol}(D_j)$ 趋于零。连续函数在有界闭区域可积。
+\thm{5.1.16--5.1.17}在适当光滑且一一的变量代换 $x=\Phi(t)$ 下，多重积分满足 $\int_D f(x)dx=\int_{D'}f(\Phi(t))|\det D\Phi(t)|dt$。有界区域上的多重积分在可积条件下可化为累次积分。
+\thm{5.1.20--5.1.21}若 $p,q>1$ 且 $1/p+1/q=1$，则 $\int_D|fg|\le(\int_D|f|^p)^{1/p}(\int_D|g|^q)^{1/q}$。特别地，$p=q=2$ 是积分型 Cauchy--Schwarz 不等式，并可推出 Minkowski 不等式。
+\ex{5.1.7（Riemann--Lebesgue 引理）}若 $f$ 在 $[a,b]$ 可积，证明 $\int_a^b f(x)\sin(nx)dx\to0$ 及 $\int_a^b f(x)\cos(nx)dx\to0$。
+\sol 先对阶梯函数逐段计算，积分是 $O(1/n)$；再以积分意义下的阶梯函数逼近 $f$，误差由 $\int|f-s|$ 控制。
+\ex{5.1.11}若可积函数列 $f_n$ 在 $[a,b]$ 上一致收敛于 $f$，则 $f$ 可积，且 $\int_a^b f=\lim_n\int_a^bf_n$。
+\sol 对任意分割，振幅和差别由 $2(b-a)\|f-f_n\|_\infty$ 控制；先固定足够大的 $n$ 再细分。
+\ex{5.1.13（Hardy 型不等式）}若 $f(a)=0$、$f$ 连续可导且 $p\ge1$，则
+\[\int_a^b|f(x)|^pdx\le\frac1p\int_a^b\bigl[(b-a)^p-(x-a)^p\bigr]|f'(x)|^pdx.\]
+\sol 由 Hölder 不等式，$|f(x)|^p\le(x-a)^{p-1}\int_a^x|f'(t)|^pdt$。在 $[a,b]$ 积分后交换积分次序，即得权函数 $[(b-a)^p-(t-a)^p]/p$。
+\ex{5.1.14（Gronwall 型估计）}若 $f$ 连续且 $|f(x)|\le M+c\int_0^x|f(t)|dt$，则 $|f(x)|\le Me^{cx}$。
+\sol 令 $F(x)=M+c\int_0^xf$，则 $F'\le cF$，所以 $e^{-cx}F(x)$ 非增。
+\ex{5.1.39（Chebyshev 积分不等式）}若 $f,g$ 在 $[0,1]$ 同向单调，则 $\int_0^1f(x)g(x)dx\ge(\int_0^1f)(\int_0^1g)$。
+\sol 将 $[f(x)-f(y)][g(x)-g(y)]\ge0$ 在单位方形积分并展开。
+\ex{5.1.15}设 $f$ 在 $[0,1]$ 可积，$\int_0^1f(x)dx=\int_0^1xf(x)dx=1$。证明 $\int_0^1f(x)^2dx\ge4$。
+\sol 对任意 $a,b$，$\int_0^1(f-ax-b)^2\ge0$。取 $a=6,b=-2$，利用已知两个矩并计算 $\int_0^1(6x-2)^2dx=4$，得到结论。
+\ex{5.1.16}若 $f\in C[0,1]$ 且 $xf(y)+yf(x)\le1$ 对一切 $x,y\in[0,1]$ 成立，证明 $\int_0^1f(x)dx\le\pi/4$。
+\sol 取 $x=\sin t,y=\cos t$，$0\le t\le\pi/2$，再对 $t$ 积分。两个被积项经变量替换相同，所以 $2\int_0^1f\le\pi/2$。$f(x)=\sqrt{1-x^2}$ 可达等号。
+\ex{5.1.17}若 $f(0)=0$、$f(1)=1$ 且 $f'$ 可积，则对任意 $a>0$ 有 $\int_0^1|af(x)+f'(x)|dx\ge1$。
+\sol $af+f'=e^{-ax}(e^{ax}f)'$，且 $e^{-ax}\ge e^{-a}$，故积分至少为 $e^{-a}|e^af(1)-f(0)|=1$。
+\ex{5.1.18}若 $f$ 在 $[a,b]$ 单调递增且连续，则 $\int_a^bxf(x)dx\ge\frac{a+b}{2}\int_a^bf(x)dx$。
+\sol 将 $[x-(a+b)/2][f(x)-f((a+b)/2)]$ 分别在中点两侧观察，均非负；积分后用 $\int_a^b[x-(a+b)/2]dx=0$。
+\ex{5.1.19}设 $f\in C[0,1]$，$0\le f(x)\le x$。证明
+\[\int_0^1f(x)dx-\left(\int_0^1f(x)dx\right)^2\ge\int_0^1x^2f(x)dx\ge\left(\int_0^1f(x)dx\right)^2.\]
+\sol 令 $F(x)=\int_0^xf$。由 $f(x)\le x$ 得 $F(x)\le x^2/2$，故 $\int_0^1x^2f\ge\int_0^12Ff=F(1)^2$。分部积分得 $\int_0^1x^2f=F(1)-\int_0^12xF\le F(1)-\int_0^12fF=F(1)-F(1)^2$。
+\ex{5.1.24（最优常数）}若 $f\in C^1[0,1]$，$f(0)=f(1)=0$，则
+\[\left(\int_0^1f(x)dx\right)^2\le\frac1{12}\int_0^1(f'(x))^2dx,\]
+等号当且仅当 $f(x)=Ax(1-x)$。
+\sol 对任何常数 $t$，分部积分得 $\int_0^1f=-\int_0^1(x+t)f'$。Cauchy--Schwarz 给出系数 $\int_0^1(x+t)^2dx$；取最小的 $t=-1/2$，该积分为 $1/12$。
+\ex{5.1.25（积分恒等式的逆向）}若 $f,g\in C[0,1]$，且对每个满足 $\varphi(0)=\varphi(1)=0$ 的 $C^1$ 函数 $\varphi$ 均有 $\int_0^1[f\varphi'+g\varphi]dx=0$，证明 $f$ 可导且 $f'=g$。
+\sol 令 $G(x)=\int_0^xg$，则分部积分后得到 $\int_0^1(f-G)\varphi'=0$。积分基本引理说明 $f-G$ 为常数。
+\ex{5.1.26（反函数积分）}若 $f:[a,b]\to[a,b]$ 连续严格递减，$f(a)=b$、$f(b)=a$，其反函数为 $g$，则 $\int_a^bf=\int_a^bg$。
+\sol 代换 $x=f(t)$，$\int_a^bg(x)dx=\int_b^atf'(t)dt=[tf(t)]_b^a-\int_b^af(t)dt=\int_a^bf(t)dt$；一般连续情形以光滑严格单调函数逼近。
+\ex{5.1.27}若 $f\in C^1[a,b]$，证明
+\[\max_{a\le x\le b}f(x)\le\frac1{b-a}\int_a^bf(x)dx+\int_a^b|f'(x)|dx.\]
+\sol 取最大点 $y$，由 $f(y)-f(x)\le\int_a^b|f'|$ 对 $x\in[a,b]$ 积分。\textbf{校勘：}原书此式把 $\int|f'|$ 也置于分母 $b-a$ 下，通常情形不成立；例如 $f(x)=x$ 于 $[0,10]$。
+\ex{5.1.31}若 $f\in C^2[0,1]$，$f(0)=f(1)=0$ 且 $f'(1)=a/2$，证明 $\int_0^1x(f''(x))^2dx\ge a^2/2$，并求等号情形。
+\sol 积分 $\int_0^1x(f''-a)^2\ge0$，并用 $\int_0^1xf''=f'(1)-f(1)+f(0)=a/2$；等号时 $f''=a$，故 $f(x)=\frac a2x(x-1)$。
+\ex{5.1.34}设 $f\not\equiv0$，$f(a)=f(b)=0$。证明存在 $c\in[a,b]$，使
+\[|f'(c)|>\frac4{(b-a)^2}\int_a^b|f(x)|dx.\]
+\sol 若 $|f'|\le M$，则 $|f(x)|\le M\min(x-a,b-x)$，从而 $\int_a^b|f|\le M(b-a)^2/4$。等号会迫使 $f$ 成为中点不可导的帐篷函数，矛盾，故为严格不等式。
+\ex{5.1.37--5.1.38（两种积分技巧）}若 $a>1$，则
+\[\int_0^{\pi/2}\ln(a^2-\cos^2x)dx=\pi\ln\frac{a+\sqrt{a^2-1}}2,\qquad \int_0^1\frac{\ln(1+x)}{1+x^2}dx=\frac\pi8\ln2.\]
+\sol 第一式对参数 $a$ 求导，化为可直接计算的有理型积分，再以 $a\to\infty$ 定积分常数。第二式代换 $x=\tan t$，利用 $t\mapsto\pi/4-t$ 的对称性。
+\ex{5.1.35（凸函数与积分）}设 $f$ 是 $[0,1]$ 上的凸函数。对每个 $t\in[0,1]$，证明
+\[t(1-t)f(t)\le(1-t)^2\int_0^tf(x)dx+t^2\int_t^1f(x)dx.\]
+\sol 凸性给出 $f(t)\le(1-t)f(tx)+tf(1-x+tx)$（$0\le x\le1$）。两边对 $x$ 积分并代换变量。
+\ex{5.1.36（弧长估计）}若 $f(0)=f'(0)=0$ 且 $f''(x)>0$（$0<x<a$），证明对 $0<x<a$，
+\[\int_0^x\sqrt{1+f'(t)^2}\,dt<x+\frac{f(x)f'(x)}{\sqrt{1+f'(x)^2}+1}.\]
+\sol 令 $h(s)=s/(\sqrt{1+s^2}+1)$。因 $f'$ 和 $h$ 在 $(0,x)$ 均严格递增，故 $\int_0^x(\sqrt{1+f'^2}-1)dt=\int_0^xh(f'(t))f'(t)dt<h(f'(x))f(x)$。
+\ex{5.1.46（均值性质）}若 $f$ 在任意有限区间可积，且对所有 $x$ 和 $a\ne0$ 满足 $f(x)=\frac1{2a}\int_{x-a}^{x+a}f(t)dt$，则 $f$ 是仿射函数。
+\sol 令 $a$ 变化并对等式求导，再将不同中心的等式相减，可推出对称差商不依赖中心，因而 $f''=0$（先由均值式得到必要的连续性和可微性）。
+\ex{5.1.45}设 $f$ 在 $[1,\infty)$ 连续且 $x\int_1^xf(t)dt=(x+1)\int_1^xtf(t)dt$。证明 $f\equiv0$。
+\sol 两边求导并消去积分项，得到 $f'(x)=(1-3x)f(x)/x^2$ 且 $f(1)=0$。一阶齐次线性方程解的唯一性给出结论。
+\ex{5.1.48}求连续函数 $f:\R\to\R$，使对一切正整数 $n$ 与实数 $x$ 有
+\[n^2\int_x^{x+1/n}f(t)dt=nf(x)+\frac12.\]
+\sol 除以 $n$ 后令 $n\to\infty$，差商给出 $f'(x)=1$。因此 $f(x)=x+C$；代回原式可验。
+\ex{5.1.51}若 $f>0$、$|f'|\le1$ 于 $[0,1]$，$m=\min f$、$M=\max f$，$\beta=\int_0^1dx/f(x)$，则 $M\le me^\beta$。
+\sol $\ln M-\ln m=\int_{x_m}^{x_M}f'/f\le\int_0^11/f=\beta$。
+\ex{5.1.54（Hardy 不等式）}若 $f\in C^1[0,1]$、$f(0)=0$，证明
+\[\int_0^1\frac{f(x)^2}{x^2}dx\le4\int_0^1f'(x)^2dx.\]
+\sol 对 $\varepsilon>0$ 在 $[\varepsilon,1]$ 分部积分，再以 Cauchy--Schwarz 控制 $\int f^2/x^2$ 与 $\int(f')^2$；令 $\varepsilon\downarrow0$。取接近 $x^{1/2}$ 的函数列可见常数 $4$ 最优。
+\ex{5.1.55}设 $f,g:[a,b]\to(0,\infty)$ 连续，$f\ne g$ 且 $\int_a^bf=\int_a^bg$。令 $I_n=\int_a^bf^{n+1}/g^n$。证明 $I_n$ 严格递增且 $I_n\to\infty$。
+\sol Cauchy--Schwarz 给 $I_1>I_0$，Hölder 不等式给 $I_n<I_{n+1}$。连续性与 $f\ne g$、积分相等保证某个小区间上 $f/g>1+\delta$，于是 $I_n$ 有指数下界。
+\ex{5.1.56--5.1.57（积分方程）}若 $g(x)=f(x)\int_0^xf(t)dt$ 且 $g$ 在 $\R$ 单调递减，则 $f\equiv0$。若 $f\in C[0,1]$ 满足 $\int_0^xf(t)dt\ge f(x)\ge0$，则 $f\equiv0$。
+\sol 第一题令 $F(x)=\int_0^xf$，$[F^2]'=2g$；$F^2$ 在零点取得最大值，所以恒零。第二题 $F'\le F$ 且 $F(0)=0$，故 $e^{-x}F(x)$ 非增；结合 $F\ge0$ 得 $F=0$。
+\ex{5.1.82（单纯形积分）}令 $\Omega_n(a)=\{x_i\ge0:\sum_{i=1}^nx_i\le a\}$。计算 $\displaystyle I_n(a)=\int_{\Omega_n(a)}x_1x_2\cdots x_n\,dx$。
+\sol 缩放 $x_i=at_i$ 得 $I_n(a)=a^{2n}I_n(1)$。逐次积分或 Dirichlet 积分给出 $\displaystyle I_n(a)=\frac{a^{2n}}{(2n)!}$。
+\section*{5.2 曲线积分}
+对参数曲线 $r(t)=(x(t),y(t),z(t))$，计算时只需记住
+\[\int_L f\,ds=\int f(r(t))|r'(t)|dt,\qquad \int_LPdx+Qdy+Rdz=\int(Px'+Qy'+Rz')dt.\]
+平面正向闭曲线的 Green 公式为 $\oint_{\partial D}Pdx+Qdy=\iint_D(Q_x-P_y)dxdy$。简单连通域中 $P_y=Q_x$ 蕴含路径无关；遇奇点须先挖去小邻域。
+\ex{5.2.7}沿球面 $x^2+y^2+z^2=R^2$ 与平面 $y=x\tan\alpha$ 的交线，自 $x$ 轴正向看为顺时针，计算 $\int_L(y-z)dx+(z-x)dy+(x-y)dz$。
+\sol 取 $x=R\sin\theta\cos\alpha$、$y=R\sin\theta\sin\alpha$、$z=R\cos\theta$，$0\le\theta\le2\pi$；代入化简得 $2\pi R^2(\sin\alpha-\cos\alpha)$。
+\ex{5.2.8}设 $f(0)=0$，积分 $\int_C(e^x+f(x))y\,dx+f(x)dy$ 与路径无关。求从 $(0,0)$ 到 $(1,1)$ 的积分。
+\sol 闭合性给出 $f'=e^x+f$，故 $f(x)=xe^x$。取先水平后竖直的折线路径，所得积分为 $f(1)=e$。
+\ex{5.2.9}设 $L:(x-1)^2+(y-1)^2=1$ 取逆时针方向，$f>0$ 可微，且 $\int_L[-y/f(x)]dx+xf(y)dy=2\pi$。求 $f$。
+\sol Green 公式给出 $\iint_D[f(y)+1/f(x)]dxdy=2\pi$。交换 $x,y$ 后取平均，用 $t+t^{-1}\ge2$；等号迫使 $f\equiv1$ 于相关区间。
+\ex{5.2.12（绕数与奇点）}圆 $L$ 以 $(1,0)$ 为中心、半径 $R\ne1$，逆时针方向。计算 $\displaystyle\oint_L\frac{x\,dy-y\,dx}{4x^2+y^2}$。
+\sol 原点外旋度为零。$R<1$ 时圆不围原点，答案零；$R>1$ 时挖去原点附近小椭圆，答案 $\pi$。
+\ex{5.2.13（Green 公式与唯一性）}若 $D$ 有光滑边界，$f\in C^2(\bar D)$，且 $\Delta f=2af_x+2bf_y+cf$（$c\ge0$），$f$ 在 $\partial D$ 上为零，证明 $f\equiv0$。
+\sol 取 $P=-f(f_y-bf)$、$Q=f(f_x-af)$，则 $Q_x-P_y=f_x^2+f_y^2+cf^2\ge0$；边界积分为零，所以右边在 $D$ 上恒零。
+\ex{5.2.14}设 $D$ 由光滑闭曲线围成，$f\in C^2(\bar D)$，$f=0$ 于边界，且 $e^yf_{xx}+e^xf_{yy}=0$。证明 $f\equiv0$。
+\sol 取 $P=-e^xf f_y$、$Q=e^y f f_x$，则 $Q_x-P_y=e^y f_x^2+e^x f_y^2+f(e^yf_{xx}+e^xf_{yy})$。Green 公式的边界积分为零，故两个平方项积分均为零。
+\ex{5.2.15}若 $D:x^2+y^2\le a^2$，$f=0$ 于边界且有连续一阶偏导，证明
+\[\left|\iint_Df(x,y)dxdy\right|\le\frac{\pi a^3}{3}\max_D\sqrt{f_x^2+f_y^2}.\]
+\sol 对向量场 $(-yf,xf)$ 用 Green 公式，边界积分为零，得到 $2\iint_Df=-\iint_D(xf_x+yf_y)$。由 Cauchy 不等式及 $\iint_D\sqrt{x^2+y^2}dxdy=2\pi a^3/3$ 即得。
+\section*{5.3 曲面积分}
+若曲面 $S$ 参数化为 $r(u,v)$，第一型积分的面积元为 $|r_u\times r_v|dudv$；第二型积分取定向面积元 $\mathbf n\,dS$。封闭曲面的 Gauss 公式为 $\iint_{\partial V}\mathbf F\cdot\mathbf n\,dS=\iiint_V\operatorname{div}\mathbf F\,dV$；Stokes 公式为 $\oint_{\partial S}\mathbf F\cdot d\mathbf r=\iint_S(\nabla\times\mathbf F)\cdot\mathbf n\,dS$。
+\ex{5.3.6（球面 Poisson 公式）}设 $S:x^2+y^2+z^2=1$，$f$ 连续，$k=(a^2+b^2+c^2)^{1/2}$。证明
+\[\iint_S f(ax+by+cz)dS=2\pi\int_{-1}^1f(kt)dt.\]
+\sol 把向量 $(a,b,c)$ 旋到第一坐标轴。单位球面的带状面积元为 $2\pi dt$，故立刻得到公式。
+\ex{5.3.9}设 $S$ 为第一卦限平面 $x+y+z=1$，法向与 $(1,1,1)$ 同向。求 $\iint_Sx\,dydz+y\,dzdx+z\,dxdy$。
+\sol 用坐标面补成单位四面体。三个补面通量均为零，散度为 $3$，体积为 $1/6$，故答案 $1/2$。
+\ex{5.3.10}设 $V=\{x^2+y^2+z^2\le z\}$，$S=\partial V$ 取外向。求 $\iint_Sxy^2\,dydz+yz^2\,dzdx+zx^2\,dxdy$。
+\sol 散度为 $x^2+y^2+z^2$。球心为 $(0,0,1/2)$、半径 $1/2$；平移球坐标积分得 $\pi/15$。
+\ex{5.3.11（通量与奇点）}令 $\mathbf F=(x,y,z)/(x^2+y^2+z^2)^{3/2}$，$S$ 是不经过原点的光滑闭曲面，取外法向。证明 $\iint_S\mathbf F\cdot\mathbf n\,dS$ 在原点位于 $S$ 外时为零，位于 $S$ 内时为 $4\pi$。
+\sol 原点外 $\operatorname{div}\mathbf F=0$。包含原点时挖掉半径 $\varepsilon$ 的球，再用 Gauss 公式与小球通量 $4\pi$。
+\ex{5.3.13（调和函数平均值）}若 $\Delta f=0$ 于闭球 $\bar B(P_0,R)$，则对 $0<r\le R$，$f(P_0)=\frac1{4\pi r^2}\iint_{\partial B(P_0,r)}f\,dS$。
+\sol 令右边为 $A(r)$，求导并用 Gauss 公式可得 $A'(r)=\frac1{4\pi r^2}\iiint_{B(P_0,r)}\Delta f\,dV=0$；令 $r\to0$。
+\ex{5.3.12（叉积通量）}设 $S$ 为上半单位球面，法向朝上，$f=(1+z)/(1+x^2+y^2)$，$g=xy+yz+zx$。求 $\iint_S(\nabla f\times\nabla g)\cdot d\mathbf S$。
+\sol $\nabla f\times\nabla g=\nabla\times(f\nabla g)$，其散度为零。用底圆盘补成闭曲面后，圆盘上 $z=0$，被积函数化为 $2(y^2-x^2)/(1+x^2+y^2)^2$，对称性给出积分 $0$。
+\ex{5.3.14}设 $S:x+y+z=1$ 位于第一卦限，法向与 $(1,1,1)$ 同向。求向量场 $(y^2,z^2,x^2)$ 沿 $S$ 的正向边界环量。
+\sol 旋度为 $(-2z,-2x,-2y)$，故 Stokes 公式给出 $-\frac2{\sqrt3}\iint_S(x+y+z)dS=-1$。
+\ex{5.3.15}椭圆抛物面 $z=3x^2+4y^2$ 与柱面 $4x^2+y^2=4y$ 交成闭曲线 $L$。按从 $z$ 轴正向看为顺时针的方向，求 $(y(z+1),xz,xy-z)$ 沿 $L$ 的环量。
+\sol 取抛物面覆盖的片 $S$，法向朝下。Stokes 公式将环量化为投影区域 $D:4x^2+y^2\le4y$ 上的面积积分；旋度与法向相乘为 $1$，而 $D$ 面积为 $2\pi$，故答案 $2\pi$。
+\section*{5.4 真题选讲}
+\ex{5.4.1（第一届全国初赛）}令 $a_n=\int_0^{\pi/2}t(\sin nt/\sin t)^3dt$，证明 $\sum_{n=1}^\infty1/a_n$ 发散。
+\sol 原书前题给出 $a_n\le(3n/8-1/4)\pi^2<6n$，故 $1/a_n>1/(6n)$。
+\ex{5.4.2（第一届全国决赛）}积分中值公式 $\int_a^xf(t)dt=(x-a)f(\xi)$；若 $f'_+(a)$ 存在且非零，求 $\lim_{x\to a+}(\xi-a)/(x-a)$。
+\sol 用 $f(a+h)=f(a)+hf'_+(a)+o(h)$；积分平均值与 $f(\xi)$ 比较得 $\xi-a=h/2+o(h)$，故极限 $1/2$。
+\ex{5.4.3（第二届全国初赛）}若 $0\le f\le1$ 且 $f$ 在 $[0,1]$ 可积，证明对任意 $\varepsilon>0$，有只取 $0,1$ 两值的有限段阶梯函数 $g$，使每个 $[\alpha,\beta]\subset[0,1]$ 满足 $|\int_\alpha^\beta(f-g)|<\varepsilon$。
+\sol 等分区间 $I_m$，令 $a_m=\int_{I_m}f$，在 $I_m$ 左端取长度 $a_m$ 的小段令 $g=1$，其余为零。每个整小段的积分差为零，任意区间至多留下两个端段，误差不超过 $2/n$。
+\ex{5.4.4（第二届全国决赛）}设 $f$ 在 $[0,1]$ 可积，$f(1)=0$ 且 $f'(1)=a$。证明
+\[\lim_{n\to\infty}n^2\int_0^1x^nf(x)dx=-a.\]
+\sol 固定 $\delta>0$，把积分分为 $[0,1-\delta]$ 与 $[1-\delta,1]$。可积函数有界，故第一部分乘 $n^2$ 后也趋零。由 $f(1)=0$、$f'(1)=a$，对于给定 $\varepsilon>0$ 可选 $\delta$ 使 $|f(x)-a(x-1)|\le\varepsilon(1-x)$（$1-\delta\le x\le1$）。于是余项乘 $n^2$ 后的绝对值不超过
+\[\varepsilon n^2\int_0^1x^n(1-x)dx
+=\varepsilon\frac{n^2}{(n+1)(n+2)}\le\varepsilon.\]
+而主项满足 $n^2\int_0^1x^n a(x-1)dx=-a n^2/[(n+1)(n+2)]\to-a$。先令 $n\to\infty$，再令 $\varepsilon\to0$。
+\ex{5.4.5（第三届全国初赛）}若 $f_1,\dots,f_n$ 为 $[0,1]$ 上非负连续函数，证明存在 $\xi$ 使 $\prod_{k=1}^nf_k(\xi)\le\prod_{k=1}^n\int_0^1f_k$。
+\sol 令 $a_k=\int f_k$。若某个 $a_k=0$ 则该函数恒零；否则由算术几何平均不等式，
+\[\int_0^1\left(\prod_{k=1}^n\frac{f_k(x)}{a_k}\right)^{1/n}dx\le\frac1n\sum_{k=1}^n\int_0^1\frac{f_k(x)}{a_k}dx=1.\]
+故某处被积函数不超过 $1$。
+\ex{5.4.6（第五届全国初赛）}若 $f$ 是 $[-1,1]$ 上偶函数并在 $[0,1]$ 单调递增，$g$ 在 $[-1,1]$ 凸，证明 $2\int_{-1}^1fg\ge(\int_{-1}^1f)(\int_{-1}^1g)$。
+\sol $h(x)=g(x)+g(-x)$ 在 $[0,1]$ 单调递增。对 $f,h$ 用 Chebyshev 积分不等式。
+\ex{5.4.7（第七届全国初赛）}设 $f$ 为 $\R$ 上连续且有上界或下界的函数，$a>0$，$f(x)+a\int_{x-1}^xf(t)dt$ 为常数。证明 $f$ 为常数。
+\sol 减去 $f$ 的下确界或上确界后可设 $g\ge0$。对方程求导，$g'+ag=ag(x-1)$，故 $e^{ax}g(x)$ 非减；将这一单调性代回积分方程可使 $g$ 获得与其下确界矛盾的正下界，故 $g$ 常值。
+\ex{5.4.8（第八届全国初赛）}若 $f,g:[0,1]\to[0,1]$ 单调递增，且 $\int_0^1f=\int_0^1g$，证明 $\int_0^1|f-g|\le1/2$。
+\sol 令公共积分为 $a$。分 $f\ge g$ 和 $f<g$ 的区间，用同向单调的 Chebyshev 不等式得 $\int|f-g|\le2a(1-a)\le1/2$。
+\ex{5.4.9（第九届全国初赛）}设 $f(x)=1-x^2+x^3$，求 $\lim_{n\to\infty}\frac{\int_0^1f(x)^n\ln(x+2)dx}{\int_0^1f(x)^ndx}$。
+\sol 注意 $f(x)=1-x^2(1-x)$，$0<f(x)<1$（$0<x<1$），只有端点取到最大值 $1$。须比较两端的权重：在零点附近 $1-f(x)\asymp x^2$，在一点附近 $1-f(x)\asymp1-x$。因此 $\int_0^\delta f^n$ 为 $n^{-1/2}$ 阶，而 $\int_{1-\delta}^1f^n$ 为 $n^{-1}$ 阶。具体地，对足够小的 $\delta$，$1-f(x)\le x^2$（$0\le x\le\delta$），故
+\[\int_0^\delta f(x)^ndx\ge\int_0^{1/\sqrt n}(1-x^2)^ndx
+\ge\frac1{\sqrt n}\left(1-\frac1n\right)^n.\]
+另一方面在 $1-\delta\le x\le1$，$1-f(x)\ge(1-\delta)^2(1-x)$，于是该段积分为 $O(1/n)$。中间紧区间上的积分指数衰减。因此对任意连续 $h$，
+\[\frac{\int_0^1f(x)^nh(x)dx}{\int_0^1f(x)^ndx}\longrightarrow h(0).\]
+取 $h(x)=\ln(x+2)$，答案为 $\ln2$。
+\ex{5.4.10（第六届全国决赛）}若 $f(0)=f(1)=0$、$f\in C^1[0,1]$，证明
+\[\left(\int_0^1xf(x)dx\right)^2\le\frac1{45}\int_0^1(f'(x))^2dx,\]
+等号当且仅当 $f(x)=A(x-x^3)$。
+\sol 两次使用边界条件。先有 $\int_0^1xf(x)dx=-\frac12\int_0^1x^2f'(x)dx$。又 $\int_0^1f'(x)dx=f(1)-f(0)=0$，故
+\[6\int_0^1xf(x)dx=\int_0^1(1-3x^2)f'(x)dx.\]
+由 Cauchy--Schwarz 不等式，
+\[36\left(\int_0^1xf\right)^2\le\left(\int_0^1(1-3x^2)^2dx\right)\left(\int_0^1(f')^2dx\right)=\frac45\int_0^1(f')^2dx.\]
+等号要求 $f'(x)=A(1-3x^2)$，积分并结合边界条件即 $f(x)=A(x-x^3)$。
+\ex{5.4.11（第七届全国决赛）}设 $D:x^2+2y^2\le2x+4y$，求 $\iint_D(x+y)dxdy$。
+\sol 配方得 $(x-1)^2+2(y-1)^2\le3$。令 $x=1+\sqrt3u$、$y=1+\sqrt{3/2}v$，则 $(u,v)$ 在单位圆盘上，Jacobian 为 $3/\sqrt2$，而 $x+y=2+\sqrt3u+\sqrt{3/2}v$。后两项在圆盘上的积分因对称性为零。因此
+\[\iint_D(x+y)dxdy=\frac3{\sqrt2}\cdot2\cdot\pi=3\sqrt2\pi.\]
+\ex{5.4.12（第七届全国决赛）}连续函数 $f$ 满足 $xf(x)=2\int_{x/2}^xf(t)dt+x^2/4$。求 $f$。
+\sol 令 $g(x)=f(x)-x$。直接计算 $x\cdot x=2\int_{x/2}^xtdt+x^2/4$，故 $g$ 满足
+\[xg(x)=2\int_{x/2}^xg(t)dt.\]
+对 $x>0$，$g(x)$ 等于 $[x/2,x]$ 上 $g$ 的平均值。固定 $r>0$，若 $g$ 在 $[0,r]$ 上有大于 $g(0)$ 的最大值，并在 $x_0>0$ 达到，则平均值等于最大值迫使 $g$ 在整个 $[x_0/2,x_0]$ 恒取该值。递归二分并利用连续性，得到 $g(0)$ 也等于该最大值，矛盾。对最小值同理，故 $g(x)=g(0)$（$x\ge0$）。对 $x\le0$ 使用区间 $[x,x/2]$ 的平均值作相同论证，得到 $g$ 在全实轴恒定。因此 $f(x)=x+C$，代回可验。
+\ex{5.4.13（第九届全国决赛）}若 $f\in C^2[0,1]$ 且 $f(0)f(1)\ge0$，证明 $\int_0^1|f'|\le2\int_0^1|f|+\int_0^1|f''|$。
+\sol 设 $M=\max_{[0,1]}|f'|$、$m=\min_{[0,1]}|f'|$。取达到最大和最小的两点，由基本定理与三角不等式得
+\[\int_0^1|f''(x)|dx\ge M-m,\qquad \int_0^1|f'(x)|dx\le M.\]
+因此只需证明 $m\le2\int_0^1|f(x)|dx$。若 $f'$ 在区间中有零点，则 $m=0$。否则 $f'$ 在 $[0,1]$ 恒正或恒负；不妨设恒正，于是 $f$ 严格递增，且 $|f'|\ge m$。由于 $f(0)f(1)\ge0$，$f$ 全程非负或全程非正。若 $f\ge0$，由 $f(x)-f(0)\ge mx$ 得 $\int_0^1|f|\ge m/2$；若 $f\le0$，由 $f(1)-f(x)\ge m(1-x)$ 同样得到该界。故结论成立。
+\ex{5.4.14（第十一届全国决赛）}方程 $x^3-3x=t$ 在 $[-2,2]$ 有三条连续反函数分支 $\varphi_1,\varphi_2,\varphi_3$。证明 $\varphi_1(-t)=-\varphi_3(t)$、$\varphi_2(-t)=-\varphi_2(t)$；若 $f$ 为偶函数，则 $\int_1^2f(x^3-3x)dx=\int_0^1f(x^3-3x)dx$。
+\sol 令 $h(x)=x^3-3x$。其导数为 $3(x-1)(x+1)$，故它在 $[-2,-1]$、$[-1,1]$、$[1,2]$ 上分别严格单调，并在每段恰好覆盖 $[-2,2]$，从而有三条连续反函数分支。$h$ 是奇函数，外侧两段相互对应，中间分支自对应，因此
+\[\varphi_1(-t)=-\varphi_3(t),\qquad\varphi_2(-t)=-\varphi_2(t).\]
+三根满足 Vieta 关系 $\varphi_1(t)+\varphi_2(t)+\varphi_3(t)=0$；对 $t\in(-2,2)$ 求导得三个导数之和为零。因为 $f$ 偶，$f(h(x))$ 也偶，于是两个目标积分之差可化为
+\[2\int_1^2f(h(x))dx-2\int_0^1f(h(x))dx
+=\int_{-2}^2f(t)\bigl[\varphi'_1(t)+\varphi'_2(t)+\varphi'_3(t)\bigr]dt=0.\]
+换元时分别取对应的严格单调区间，并按端点方向调整符号。
+\ex{5.4.15（第九届全国决赛）}求 $\int_\Gamma e^{\sin x}(\cos x\cos y\,dx-\sin y\,dy)+\cos z\,dz$，其中 $\Gamma:x=\pi\sin(t/2),y=t-\sin t,z=\sin2t$，$0\le t\le\pi$。
+\sol 向量场的旋度为零，积分与路径无关。端点为 $(0,0,0)$、$(\pi,\pi,0)$；改走坐标折线后积分为 $-2$。
+\ex{5.4.16（第八届全国决赛）}令 $S:z=-\sqrt{a^2-x^2-y^2}$（$a>0$）取朝上方向，求
+\[\iint_S\frac{ax\,dydz+(z+a)^2\,dxdy}{\sqrt{x^2+y^2+z^2}}.\]
+\sol 在 $S$ 上 $x^2+y^2+z^2=a^2$，分母等于 $a$。令 $D$ 为 $z=0$ 的半径 $a$ 的圆盘，$S^{-1}$ 表示把下半球法向改为朝外，则 $S^{-1}\cup D$ 是下半球 $B$ 的边界。对向量场 $\mathbf F=(ax,0,(z+a)^2)$ 用 Gauss 公式，
+\[\iint_{S^{-1}\cup D}\mathbf F\cdot d\mathbf S
+=\iiint_B\bigl(a+2(z+a)\bigr)dV
+=\iiint_B(3a+2z)dV=\frac32\pi a^4.\]
+这里下半球体积为 $2\pi a^3/3$，而 $\iiint_B z\,dV=-\pi a^4/4$。圆盘上 $z=0$ 且法向朝上，其通量为 $\pi a^4$。所以 $S^{-1}$ 上通量为 $\pi a^4/2$。题设方向与其相反，再除以分母 $a$，得
+\[\boxed{-\frac{\pi a^3}{2}}.\]
+\end{document}
